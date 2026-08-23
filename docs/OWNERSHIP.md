@@ -1,0 +1,129 @@
+# Ownership and Lifetime
+
+Ownership rules are safety requirements. Coverage goals never override them.
+
+## Ownership categories
+
+Every value crossing the native boundary must use exactly one category:
+
+| Category | Meaning | Managed responsibility |
+|---|---|---|
+| Value copy | Independent data copied across the ABI | No native lifetime |
+| Owning | Managed wrapper exclusively owns a native resource | Deterministic release |
+| Shared | Lifetime follows OCCT reference-counted semantics | Release one retained reference |
+| Borrowed | Resource is owned elsewhere | Never release; enforce valid lifetime |
+| Parent-bound | Borrowed resource is valid only while a parent remains alive | Retain/validate parent relationship |
+| Static/process | Process or library owns the resource | Never release; document concurrency |
+
+Unknown ownership is a model validation error, not an implicit category.
+
+## Rules
+
+- **O001** — Every owning object returned across the ABI has one matching native
+  release operation.
+- **O002** — Borrowed handles are never released by managed code.
+- **O003** — OCCT `Handle<T>` wrappers preserve intrusive reference counting and do
+  not become untracked raw pointers.
+- **O004** — A native reference or pointer is not exposed beyond its proven lifetime.
+- **O005** — Managed disposal is idempotent and cannot double free.
+- **O006** — Finalization is a fallback, not the primary release path.
+- **O007** — Access after disposal fails predictably before native dereference.
+- **O008** — Native exceptions cannot bypass cleanup or cross the C ABI.
+- **O009** — Native allocation and deallocation use the same module and allocator family.
+- **O010** — Parent-bound wrappers keep or validate the parent relationship for every call.
+- **O011** — Runtime casts retain the correct shared ownership and dynamic type semantics.
+- **O012** — Callback state, if later supported, has explicit pinning, cancellation,
+  reentrancy, and teardown rules.
+
+## OCCT-specific baselines
+
+### `Handle<T>` and `Standard_Transient`
+
+The generator must recognize handle declarations, inheritance, null handles, copies,
+base/derived conversions, and the retain/release behavior implemented by the native
+bridge. Multiple managed wrappers referring to one native object must be tested.
+
+The current shape-only bridge now registers each owning shape handle in a mutex-protected
+live set. Operations reject a non-null handle that is not registered, and release removes
+the registration before deletion, making repeated native release calls no-ops. This is a
+stale-handle guard for the owning shape category; it is not yet OCCT `Handle<T>` reference
+counting and does not make concurrent release/use safe.
+
+The experimental `SharedTransient` wrapper is the first shared category. Each native
+wrapper owns one `opencascade::handle<Standard_Transient>` value, so cloning increments
+OCCT's intrusive reference count and releasing a wrapper decrements it. Null handles are
+valid values with reference count zero. The wrapper registry protects the ABI wrapper
+pointer; it does not replace OCCT's object counter or provide weak references.
+
+The same probe exposes OCCT RTTI type names and `IsKind` base checks. ABI 1.8 adds one
+checked cast target, `OcctSharp_TransientDerived`: the native bridge validates the
+dynamic kind before copying the shared handle, and returns `TypeMismatch` for null or
+incompatible values. `SharedTransient.TryCastDerived` therefore creates a typed
+wrapper only after validation; it never reinterprets an unverified pointer.
+
+ABI 1.9 applies the validated shared category to configured generated types. Each
+`GeomCartesianPoint` wrapper owns one native wrapper and one intrusive reference;
+`Clone` copies that handle, mutations are visible through retained wrappers, and either
+managed wrapper may be disposed first. Per-type registries reject stale wrapper
+addresses. Borrowed handles, parent-bound handles, general casts, and concurrent
+release/use remain pending.
+
+### `TopoDS_*`
+
+ABI 1.10 and `TM007` implement the base `TopoDS_Shape` value category. Each registered
+native wrapper owns one independent C++ shape value; copy and reversal allocate new
+wrappers, but OCCT's internal `TShape` remains shared as normal. Disposing one wrapper
+cannot invalidate another copy. `IsPartner` compares `TShape`, `IsSame` adds location,
+and `IsEqual` adds orientation. Null state, shape kind, and orientation are generated.
+
+B04 adds `Compound`, `CompSolid`, `Solid`, `Shell`, `Face`, `Wire`, `Edge`, and `Vertex`
+wrappers. Each checked `TopoDS::Xxx` conversion copies into a new owning shape value;
+wrong non-null kinds return ABI `TypeMismatch`, and a successful typed wrapper remains
+valid after source disposal. Location mutation/composition, hashing, and topology
+children remain pending and must extend this value contract rather than infer ownership
+from a pointer spelling.
+
+### Iterators and child objects
+
+Explorer results, collection views, triangulations, document labels, and other child
+objects require explicit copied, retained, or parent-bound semantics. Temporary native
+objects may not escape through a borrowed wrapper.
+
+### B06 strings and sequences
+
+`TCollection_AsciiString` and `TCollection_ExtendedString` are owned opaque values.
+UTF-8 input buffers are borrowed only for the duration of one call; UTF-8 output is
+copied into caller-owned buffers and no native string pointer escapes. Extended-string
+length and character access use UTF-16 code units, while the friendly API exposes
+0-based indexing.
+
+`NCollection_Sequence<double>` is an owned opaque container. Creation copies the input
+array, clone creates an independent sequence value, and append/set/remove operate on
+the native sequence while translating friendly 0-based indices to OCCT's 1-based
+contract. Enumerators read values one at a time and do not retain native pointers.
+
+`NCollection_Array1<double>` is an owned opaque container created with OCCT's native
+lower bound 1. The managed wrapper exposes a 0-based view and translates each access;
+clone results are independent and enumerators read one value at a time. The OCCT 8
+`NCollection_Vector<double>` alias is backed by `NCollection_DynamicArray<double>` and
+is an owned zero-based dynamic container with the same copy/clone/no-pointer rules.
+
+`NCollection_DataMap<int,double>` and `NCollection_IndexedMap<int>` are owned opaque
+containers. Input key/value buffers are borrowed only for construction; map operations
+copy scalar keys and values, clone independently, and never return node or bucket
+pointers. Indexed-map key/index calls copy values and translate native 1-based indices
+to the friendly 0-based view. No native iterator escapes.
+
+## Required lifetime tests
+
+- Create, use, dispose, repeated dispose, and access after dispose.
+- Multiple wrappers over a shared native object.
+- Base-to-derived and derived-to-base conversion.
+- Parent disposed before and after child.
+- Managed GC and finalizer fallback.
+- Exception during construction, call, and conversion.
+- Collection enumeration and early exit.
+- Concurrent access where the API is documented as supported.
+- Stress loops with native leak and invalid-access diagnostics enabled.
+
+Any change to O001–O012 requires an ADR and corresponding tests.

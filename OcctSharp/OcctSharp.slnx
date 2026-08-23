@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/OcctSharp/OcctSharp.csproj" />
+    <Project Path="src/OcctSharp.Generator/OcctSharp.Generator.csproj" />
+  </Folder>
+  <Folder Name="/samples/">
+    <Project Path="samples/OcctSharp.Samples/OcctSharp.Samples.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/OcctSharp.Runtime.Tests/OcctSharp.Runtime.Tests.csproj" />
+    <Project Path="tests/OcctSharp.Generator.Tests/OcctSharp.Generator.Tests.csproj" />
+  </Folder>
+</Solution>

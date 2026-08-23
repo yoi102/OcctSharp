@@ -1,0 +1,79 @@
+[CmdletBinding()]
+param(
+    [string]$OcctRoot,
+
+    [string]$PackageVersion = '0.1.0-alpha.14',
+
+    [switch]$SkipBuild
+)
+
+$ErrorActionPreference = 'Stop'
+Set-StrictMode -Version Latest
+
+$workspaceRoot = Split-Path -Parent $PSScriptRoot
+$consumerProject = Join-Path $workspaceRoot 'tests\OcctSharp.PackageConsumer\OcctSharp.PackageConsumer.csproj'
+$packageDirectory = Join-Path $workspaceRoot 'artifacts\packages'
+$consumerRoot = Join-Path $workspaceRoot 'artifacts\package-consumer'
+$packageCache = Join-Path $consumerRoot 'packages'
+$publishDirectory = Join-Path $consumerRoot 'publish'
+
+& (Join-Path $PSScriptRoot 'pack.ps1') `
+    -OcctRoot $OcctRoot `
+    -PackageVersion $PackageVersion `
+    -SkipBuild:$SkipBuild
+if ($LASTEXITCODE -ne 0) {
+    throw "Package creation failed with exit code $LASTEXITCODE."
+}
+
+if (Test-Path -LiteralPath $consumerRoot) {
+    $resolvedConsumerRoot = (Resolve-Path -LiteralPath $consumerRoot).Path
+    $resolvedWorkspaceRoot = (Resolve-Path -LiteralPath $workspaceRoot).Path
+    if (-not $resolvedConsumerRoot.StartsWith(
+        $resolvedWorkspaceRoot + [IO.Path]::DirectorySeparatorChar,
+        [StringComparison]::OrdinalIgnoreCase)) {
+        throw "Refusing to remove package-consumer artifacts outside '$resolvedWorkspaceRoot'."
+    }
+
+    Remove-Item -LiteralPath $resolvedConsumerRoot -Recurse -Force
+}
+
+New-Item -ItemType Directory -Path $consumerRoot -Force | Out-Null
+
+& dotnet restore $consumerProject `
+    --source $packageDirectory `
+    --packages $packageCache `
+    "-p:OcctSharpPackageVersion=$PackageVersion"
+if ($LASTEXITCODE -ne 0) {
+    throw "Package consumer restore failed with exit code $LASTEXITCODE."
+}
+
+& dotnet publish $consumerProject `
+    --configuration Release `
+    --no-restore `
+    --output $publishDirectory `
+    "-p:PackageVersion=$PackageVersion"
+if ($LASTEXITCODE -ne 0) {
+    throw "Package consumer publish failed with exit code $LASTEXITCODE."
+}
+
+$consumerExecutable = Join-Path $publishDirectory 'OcctSharp.PackageConsumer.exe'
+if (-not (Test-Path -LiteralPath $consumerExecutable)) {
+    throw "Package consumer executable was not created: '$consumerExecutable'."
+}
+
+& $consumerExecutable
+if ($LASTEXITCODE -ne 0) {
+    throw "Package consumer failed with exit code $LASTEXITCODE."
+}
+
+$nativeDirectory = Join-Path $publishDirectory 'occt'
+$nativeFiles = @(Get-ChildItem -LiteralPath $nativeDirectory -File -Filter '*.dll')
+if ($nativeFiles.Count -eq 0) {
+    throw "No packaged native DLLs were found in '$nativeDirectory'."
+}
+
+if (Test-Path -LiteralPath (Join-Path $publishDirectory 'OcctSharp.Native.dll')) {
+    throw 'OcctSharp.Native.dll was incorrectly flattened beside the consumer executable.'
+}
+
+Write-Host "Clean package consumer verified $($nativeFiles.Count) DLLs under '$nativeDirectory'."

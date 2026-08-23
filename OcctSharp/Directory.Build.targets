@@ -1,0 +1,15 @@
+<Project>
+  <Target Name="CopyOcctSharpNativeRuntime"
+          AfterTargets="Build"
+          Condition="'$(CopyOcctSharpNativeRuntime)' == 'true'">
+    <ItemGroup>
+      <_OcctSharpNativeRuntime Include="$(OcctSharpNativeRuntimeDir)\*.dll" />
+    </ItemGroup>
+    <Error Condition="'@(_OcctSharpNativeRuntime)' == ''"
+           Text="OcctSharp native runtime was not found at '$(OcctSharpNativeRuntimeDir)'. Run eng/build.ps1 so the native bridge is built first." />
+    <MakeDir Directories="$(TargetDir)occt" />
+    <Copy SourceFiles="@(_OcctSharpNativeRuntime)"
+          DestinationFolder="$(TargetDir)occt"
+          SkipUnchangedFiles="true" />
+  </Target>
+</Project>

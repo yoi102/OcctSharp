@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <Description>Clang-based binding generator for OcctSharp.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ClangSharp" />
+    <PackageReference Include="libClangSharp" />
+    <PackageReference Include="libClangSharp.runtime.win-x64" />
+  </ItemGroup>
+</Project>

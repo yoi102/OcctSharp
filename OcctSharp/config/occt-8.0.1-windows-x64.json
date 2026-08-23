@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "occtVersion": "8.0.1",
+  "distribution": "opencascade-8.0.1-vc14-64-pch-with-debug-combined",
+  "platform": "windows",
+  "architecture": "x64",
+  "compilerLabel": "vc14",
+  "configurations": [
+    "Debug",
+    "Release"
+  ],
+  "requiredRelativePaths": [
+    "inc/Standard_Version.hxx",
+    "cmake/OpenCASCADEConfig.cmake",
+    "win64/vc14/bin/TKernel.dll",
+    "win64/vc14/bind/TKernel.dll",
+    "win64/vc14/lib/TKernel.lib",
+    "win64/vc14/libd/TKernel.lib"
+  ],
+  "verificationHashes": {
+    "inc/Standard_Version.hxx": "AA2FF17E272AFA05BB2DC1A1F6D72CB0A2F2E030F4163435F4BF9C372BC2F39A",
+    "cmake/OpenCASCADEConfig.cmake": "21085D33F076DFF0A7B964038B255A24C404BDC33B4EB3275A86155CAC429D1E",
+    "win64/vc14/bin/TKernel.dll": "3ECBC7F193EBB746CC88A81E03EB603D24FDF03470B346551698F45D4FAEB7B4",
+    "win64/vc14/bind/TKernel.dll": "87992A614FC25899181BBD93B208C81D6C7B3EA11821125B9BA4F74E56C2889D",
+    "win64/vc14/lib/TKernel.lib": "29A053380D3FF7A374DCFB7D2EF321E1B2B4B11A66EC256CC570E9C9342C2416",
+    "win64/vc14/libd/TKernel.lib": "C945D2559925872C30977B06161B235CD38DAFDCEAAC3E49741AF956422858FB"
+  },
+  "licenses": {
+    "LICENSE_LGPL_21.txt": "E237FA56668030E928551DDD60F05DF5FE957F75EAB874BBD017E085ED722E7C",
+    "OCCT_LGPL_EXCEPTION.txt": "04580A884EA6CEA294402649FF7B5CBB167D47462D1340A4ED33E550DB10A81B"
+  }
+}

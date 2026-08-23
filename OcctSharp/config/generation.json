@@ -1,0 +1,167 @@
+{
+  "schemaVersion": "1.4",
+  "occtVersion": "8.0.1",
+  "scope": "foundation-prototype",
+  "headers": [
+    "BRepPrimAPI_MakeBox.hxx",
+    "Geom_CartesianPoint.hxx",
+    "gp_Pnt.hxx",
+    "TopoDS.hxx",
+    "TopoDS_Shape.hxx",
+    "TopoDS_Compound.hxx",
+    "TopoDS_CompSolid.hxx",
+    "TopoDS_Solid.hxx",
+    "TopoDS_Shell.hxx",
+    "TopoDS_Face.hxx",
+    "TopoDS_Wire.hxx",
+    "TopoDS_Edge.hxx",
+    "TopoDS_Vertex.hxx"
+  ],
+  "toolkitByPackage": {
+    "Bnd": "TKMath",
+    "BRep": "TKBRep",
+    "BRepBuilderAPI": "TKTopAlgo",
+    "BRepPrim": "TKPrim",
+    "BRepPrimAPI": "TKPrim",
+    "Geom": "TKG3d",
+    "Geom2d": "TKG2d",
+    "GeomAbs": "TKMath",
+    "gp": "TKMath",
+    "Message": "TKernel",
+    "NCollection": "TKernel",
+    "Poly": "TKMath",
+    "Precision": "TKernel",
+    "Standard": "TKernel",
+    "StdFail": "TKernel",
+    "TCollection": "TKernel",
+    "TopAbs": "TKG3d",
+    "TopLoc": "TKMath",
+    "TopoDS": "TKBRep"
+  },
+  "inventoryPreambleHeaders": [
+    "Adaptor3d_Curve.hxx",
+    "Adaptor3d_Surface.hxx",
+    "NCollection_Map.hxx",
+    "Prs3d_Presentation.hxx",
+    "Standard_OStream.hxx"
+  ],
+  "generationScopes": [
+    {
+      "sourcePackage": "Precision",
+      "nativeNamePrefix": "Precision::",
+      "header": "Precision.hxx",
+      "exportNamePrefix": "precision",
+      "managedNamePrefix": "Precision"
+    },
+    {
+      "sourcePackage": "TopAbs",
+      "nativeNamePrefix": "TopAbs::",
+      "header": "TopAbs.hxx",
+      "exportNamePrefix": "top_abs",
+      "managedNamePrefix": "TopAbs"
+    },
+    {
+      "sourcePackage": "Standard",
+      "nativeNamePrefix": "Standard::GetAllocatorType",
+      "header": "Standard.hxx",
+      "exportNamePrefix": "standard",
+      "managedNamePrefix": "Standard"
+    },
+    {
+      "sourcePackage": "Standard",
+      "nativeNamePrefix": "Standard_Dump::JsonKeyLength",
+      "header": "Standard_Dump.hxx",
+      "exportNamePrefix": "standard_dump",
+      "managedNamePrefix": "StandardDump"
+    },
+    {
+      "sourcePackage": "Standard",
+      "nativeNamePrefix": "Standard_Failure::DefaultStackTraceLength",
+      "header": "Standard_Failure.hxx",
+      "exportNamePrefix": "standard_failure",
+      "managedNamePrefix": "StandardFailure"
+    },
+    {
+      "sourcePackage": "TopLoc",
+      "nativeNamePrefix": "TopLoc_Location::",
+      "header": "TopLoc_Location.hxx",
+      "exportNamePrefix": "top_loc",
+      "managedNamePrefix": "TopLocLocation"
+    },
+    {
+      "sourcePackage": "gp",
+      "nativeNamePrefix": "gp::",
+      "header": "gp.hxx",
+      "exportNamePrefix": "gp",
+      "managedNamePrefix": "Gp"
+    }
+  ],
+  "sharedHandleScopes": [
+    {
+      "sourcePackage": "Geom",
+      "nativeType": "Geom_CartesianPoint",
+      "header": "Geom_CartesianPoint.hxx",
+      "exportNamePrefix": "geom_cartesian_point",
+      "managedTypeName": "GeomCartesianPoint"
+    }
+  ],
+  "topologyScopes": [
+    {
+      "sourcePackage": "TopoDS",
+      "nativeType": "TopoDS_Shape",
+      "header": "TopoDS_Shape.hxx",
+      "exportNamePrefix": "topods_shape",
+      "managedTypeName": "Shape",
+      "typedTypes": [
+        {
+          "nativeType": "TopoDS_Compound",
+          "header": "TopoDS_Compound.hxx",
+          "managedTypeName": "Compound",
+          "shapeKind": "Compound"
+        },
+        {
+          "nativeType": "TopoDS_CompSolid",
+          "header": "TopoDS_CompSolid.hxx",
+          "managedTypeName": "CompSolid",
+          "shapeKind": "CompSolid"
+        },
+        {
+          "nativeType": "TopoDS_Solid",
+          "header": "TopoDS_Solid.hxx",
+          "managedTypeName": "Solid",
+          "shapeKind": "Solid"
+        },
+        {
+          "nativeType": "TopoDS_Shell",
+          "header": "TopoDS_Shell.hxx",
+          "managedTypeName": "Shell",
+          "shapeKind": "Shell"
+        },
+        {
+          "nativeType": "TopoDS_Face",
+          "header": "TopoDS_Face.hxx",
+          "managedTypeName": "Face",
+          "shapeKind": "Face"
+        },
+        {
+          "nativeType": "TopoDS_Wire",
+          "header": "TopoDS_Wire.hxx",
+          "managedTypeName": "Wire",
+          "shapeKind": "Wire"
+        },
+        {
+          "nativeType": "TopoDS_Edge",
+          "header": "TopoDS_Edge.hxx",
+          "managedTypeName": "Edge",
+          "shapeKind": "Edge"
+        },
+        {
+          "nativeType": "TopoDS_Vertex",
+          "header": "TopoDS_Vertex.hxx",
+          "managedTypeName": "Vertex",
+          "shapeKind": "Vertex"
+        }
+      ]
+    }
+  ]
+}

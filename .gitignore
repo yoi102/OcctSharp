@@ -1,0 +1,38 @@
+# Local and IDE state
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# .NET and native build output
+**/bin/
+**/obj/
+OcctSharp/artifacts/
+OcctSharp/build/
+OcctSharp/out/
+
+# Machine-specific dependency configuration
+OcctSharp/config/local.settings.json
+OcctSharp/CMakeUserPresets.json
+
+# Test and coverage output
+**/TestResults/
+**/*.coverage
+**/*.coveragexml
+**/coverage.*
+
+# Generated transient reports
+OcctSharp/reports/*.tmp
+
+# Local CAD sample inputs (licensing/provenance not yet approved for commit)
+/data/
+
+# Native diagnostics
+*.pdb
+*.ilk
+*.exp
+
+# OS files
+Thumbs.db
+.DS_Store

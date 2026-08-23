@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <Description>Console samples for OcctSharp geometry and file exchange workflows.</Description>
+    <CopyOcctSharpNativeRuntime>true</CopyOcctSharpNativeRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\OcctSharp\OcctSharp.csproj" />
+  </ItemGroup>
+</Project>

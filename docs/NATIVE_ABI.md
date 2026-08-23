@@ -1,0 +1,236 @@
+# Native ABI
+
+## Scope
+
+The native bridge is implemented in C++ and links to OCCT, but its exported surface
+is a versioned C ABI. Managed code must not bind directly to OCCT C++ symbols.
+
+## ABI rules
+
+1. Export names are explicit and stable; C++ name mangling is not part of the ABI.
+2. Calling convention is explicit for every supported platform.
+3. ABI integers use fixed-width types where width matters.
+4. ABI booleans use an explicitly sized integer representation.
+5. Enums have an explicit underlying representation.
+6. Struct layout, alignment, and field order are documented and verified.
+7. Strings specify encoding, length unit, null behavior, and ownership.
+8. Arrays specify element count, element layout, and allocation ownership.
+9. C++ classes, references, exceptions, templates, and STL containers never cross
+   the ABI directly.
+10. Memory is released by the same native module and allocation family that created it.
+
+## Handle model
+
+Native objects exposed across the boundary use opaque handles. Before implementation,
+the handle representation must specify:
+
+- Owning, shared, borrowed, or value-copy category.
+- Runtime type identity and legal casts.
+- Null representation.
+- Destruction function and idempotency guarantees.
+- Parent/child lifetime relationship.
+- Thread-affinity or concurrency restrictions.
+- Behavior after disposal and invalid-handle detection.
+
+Passing an untyped pointer is not sufficient evidence of ownership or runtime type.
+
+## Error model
+
+Every exported operation that can fail must participate in one consistent error
+contract. The native boundary catches at least:
+
+- `Standard_Failure`.
+- `std::exception`.
+- Unknown C++ exceptions.
+
+The managed side receives a stable error category/code and UTF-8 diagnostic text,
+then creates an appropriate managed exception. The lifetime of diagnostic text must
+not depend on an unsafe temporary buffer. No failure may be converted silently into
+a successful default value.
+
+ADR-0005 selects a stable status return plus out parameters and a thread-local UTF-8
+diagnostic string for the initial ABI. Managed code reads the diagnostic immediately
+after a failed call. Future result shapes require an ABI-versioned ADR.
+
+ABI 1.1 adds `FileIoError` and `TransferFailed` without changing existing numeric
+values. File paths are passed as non-owning UTF-8 strings valid for the call. Successful
+shape reads and transforms return new owning `OcctSharp_ShapeHandle` values; compound
+addition copies the OCCT topology value into the target compound and does not transfer
+ownership of the child handle.
+
+The current exchange exports are ordinary geometry operations:
+
+- STEP reads all transferable roots and returns `OneShape()`.
+- STEP writes one shape or compound with `STEPControl_AsIs`.
+- STL performs explicit incremental meshing before writing.
+- IGES writes millimeter BRep geometry.
+- Rigid transforms rotate about the origin and then translate.
+
+ABI 1.2 adds a one-shot metadata-preserving STEPCAF/XDE merge operation. XDE document,
+label, and attribute lifetimes remain entirely inside the native call; no OCAF pointer,
+label, or `Handle<T>` crosses the ABI.
+
+```c
+typedef struct OcctSharp_StepAssemblyInput
+{
+  const char* file_path;
+  double translation_x;
+  double translation_y;
+  double translation_z;
+  double rotation_axis_x;
+  double rotation_axis_y;
+  double rotation_axis_z;
+  double rotation_angle_radians;
+} OcctSharp_StepAssemblyInput;
+
+OcctSharp_Status occtsharp_step_merge_xde(
+  const OcctSharp_StepAssemblyInput* inputs,
+  int32_t input_count,
+  const char* output_path);
+```
+
+`inputs` is a non-null, call-bound contiguous array with at least one element;
+`file_path` and `output_path` are non-null UTF-8, null-terminated paths valid for the
+call. On Windows x64 the struct is 64 bytes with 8-byte alignment: `file_path` is at
+offset 0, `translation_x` at 8, and `rotation_angle_radians` at 56. Native compile-time
+assertions and managed runtime tests verify that layout.
+
+Every input is read by `STEPCAFControl_Reader` into a source XDE document. Its complete
+label tree and supported metadata are cloned into one output document, then placed as a
+component below an `OcctSharp Assembly` root using a rigid `TopLoc_Location`. The writer
+uses `STEPCAFControl_Writer` with color, name, layer, property, metadata, SHUO, dimension/
+tolerance, material, and visual-material modes enabled. The rigid transform is rotation
+about the origin followed by translation; all values must be finite and the axis non-zero.
+
+ABI 1.3 adds the first generated value-copy operation:
+
+```c
+typedef struct OcctSharp_Point3d
+{
+  double x;
+  double y;
+  double z;
+} OcctSharp_Point3d;
+
+OcctSharp_Point3d occtsharp_generated_gp_pnt_create(double x, double y, double z);
+```
+
+`OcctSharp_Point3d` is 24 bytes with 8-byte alignment on the current Windows x64
+baseline. The implementation constructs an OCCT `gp_Pnt` and copies its accessor
+values into the ABI struct; native `gp_Pnt` layout never crosses the boundary. This
+operation has no native lifetime and follows value-copy ownership.
+
+ABI 1.4 adds 28 generated static value-copy exports: 20 `Precision::*` methods, three
+`TopAbs::*` enum methods, and five scalar methods from `Standard`, `TopLoc`, and `gp`.
+It also carries the default and copy `gp_Pnt` constructors alongside the coordinate
+constructor, for 31 generated declarations total. `double` values cross directly, enum
+values use validated `int32_t`, and `Standard_Boolean` results cross as normalized
+`int32_t` zero or one. Native export names contain a deterministic overload ordinal
+derived from normalized signature order, such as
+`occtsharp_generated_precision_p_approximation_0` and `_1`. No OCCT object, reference,
+pointer, or ownership-bearing value crosses these exports. `Standard::Purge` remains
+excluded because its process-wide side effects are outside the value-copy ABI contract.
+
+## ABI versioning
+
+The native library must expose a queryable ABI version and build identity. Managed
+initialization must reject incompatible major ABI versions with a clear diagnostic.
+Additive compatibility within an ABI major version is a goal, not an assumption; it
+must be tested against the supported package matrix.
+
+ABI 1.5 adds `OCCTSHARP_STATUS_INVALID_HANDLE` (8). Shape handles are registered while
+live; all shape operations validate registration before dereferencing, and repeated
+release is a no-op. This guard does not claim concurrent release/use safety or implement
+OCCT `Handle<T>` reference counting.
+
+ABI 1.6 adds an experimental `Standard_Transient` shared-handle probe. Its wrapper owns
+one `opencascade::handle<Standard_Transient>` and exposes create, null-create, clone,
+null-state, reference-count, and release operations. Only opaque wrapper pointers cross
+the C ABI; the OCCT object pointer and intrusive counter remain native-local. Wrapper
+registration still rejects stale pointers and repeated release is safe.
+
+ABI 1.7 adds shared-handle runtime type identity queries: an OCCT RTTI type name and an
+`IsKind` check against a UTF-8 type name. The derived probe uses OCCT's registered RTTI;
+compiler-mangled `typeid` names and `Standard_Type` pointers never cross the ABI.
+
+ABI 1.8 adds the experimental `occtsharp_transient_try_cast_derived` operation. It
+validates that the live, non-null wrapper is an `OcctSharp_TransientDerived` through
+OCCT RTTI before copying the native shared handle. Incompatible and null values return
+`OCCTSHARP_STATUS_TYPE_MISMATCH` (9), and the output remains null on failure.
+
+ABI 1.9 adds generated per-type shared-handle operations. The first scope wraps
+`Geom_CartesianPoint` construction, coordinate/value access and mutation, clone,
+reference count, RTTI name/`IsKind`, and idempotent release. Each opaque
+`OcctSharp_GeomCartesianPointHandle` contains one intrusive OCCT handle and is validated
+by its per-type registry before use. All generated translation units preserve the same
+thread-local error contract through the bridge-internal error setter.
+
+ABI 1.10 adds eight generated `TopoDS_Shape` value operations: clone, null state,
+shape kind, orientation, reversal, `IsPartner`, `IsSame`, and `IsEqual`. Every result
+shape is a newly registered opaque wrapper owning an independent C++ value. OCCT's
+internal `TShape` sharing, location, and orientation semantics are preserved; no native
+shape layout or object pointer crosses the C ABI. Shape-kind and orientation values use
+validated 32-bit enum projections.
+
+ABI 1.11 adds eight generated checked topology conversions from `TopoDS_Shape` through
+`TopoDS::Compound`, `CompSolid`, `Solid`, `Shell`, `Face`, `Wire`, `Edge`, and `Vertex`.
+Each successful result is a newly registered opaque shape value. OCCT
+`Standard_TypeMismatch` is caught inside the bridge and returned as status 9.
+
+ABI 1.12 adds an opaque registry-validated `gp_Trsf` value bridge: identity and
+finite translation/rotation construction, clone, inversion, multiplication, 1-based
+3x4 matrix reads, release, and shape application. Results are independent native
+values and no `gp_Trsf` layout crosses the boundary.
+
+ABI 1.13 adds an opaque registry-validated `TopLoc_Location` value bridge: identity,
+construction from `gp_Trsf`, clone, inversion, multiplication, identity query,
+conversion back to `gp_Trsf`, and absolute/relative shape placement.
+
+ABI 1.14 completes the B05 transformation family with opaque registry-validated
+`gp_Vec`, `gp_Dir`, `gp_Ax1`, and `gp_Mat` handles. Vector operations include finite
+construction, clone, component reads, magnitude, dot, and cross; directions add
+non-zero validation and reversal; axes add origin/direction reads and reversal; matrices
+add nine-value construction, identity, clone, 1-based value reads, and determinant.
+Vector translation and axis rotation create independent `gp_Trsf` results. These
+operations never expose C++ layouts, and all handles use the same stale-handle and
+thread-local diagnostic contract.
+
+The current native ABI is 1.14 and the bridge implementation version is 0.15.0.
+
+ABI 1.15 begins B06 with opaque registry-validated `TCollection_AsciiString`,
+`TCollection_ExtendedString`, and `NCollection_Sequence<double>` handles. String
+creation and mutation accept explicit UTF-8 byte buffers; reads copy UTF-8 bytes into
+caller-provided buffers and never return OCCT-owned pointers. Extended strings expose
+UTF-16 code-unit length/value plus UTF-8 length/conversion. Real sequences copy finite
+`double` values, preserve native clone/mutation semantics, and translate friendly 0-based
+indices to OCCT's 1-based sequence operations. No C++ string/container layout crosses
+the ABI.
+
+The current native ABI is 1.15 and the bridge implementation version is 0.16.0.
+
+ABI 1.16 adds opaque registry-validated `NCollection_Array1<double>` and
+`NCollection_Vector<double>`/`NCollection_DynamicArray<double>` value collections.
+Array creation copies finite values into a native 1-based array and exposes its lower
+bound explicitly; managed callers translate a 0-based index. Vector creation copies
+finite values into the OCCT 8 dynamic-array implementation, whose native indices are
+zero-based. Both support clone, count/value reads, bounded mutation, enumeration by
+individual value calls, and idempotent release without crossing container layout.
+
+The current native ABI is 1.16 and the bridge implementation version is 0.17.0.
+
+ABI 1.17 adds opaque registry-validated `NCollection_DataMap<int,double>` and
+`NCollection_IndexedMap<int>` value collections. Data maps copy finite values and expose
+key lookup, bind, unbind, extent, clone, and bound checks. Indexed maps copy unique keys
+and expose ordered 1-based native index/key lookup through a 0-based managed view,
+append, last-item removal, clone, and idempotent release. No hash buckets, node pointers,
+or native iterators cross the ABI.
+
+The current native ABI is 1.17 and the bridge implementation version is 0.18.0.
+
+## Verification
+
+- Compile consumer tests against the exported C headers.
+- Inspect exports and native dependencies on every supported platform.
+- Verify struct sizes and offsets in both native and managed tests.
+- Exercise exception, null, invalid handle, double-dispose, and wrong-type paths.
+- Run memory and sanitizer diagnostics where supported.
