@@ -3,20 +3,51 @@
 
 #include <BRep_Builder.hxx>
 #include <BRepBuilderAPI_Transform.hxx>
+#include <BRepBuilderAPI_MakeEdge.hxx>
+#include <BRepBuilderAPI_MakeFace.hxx>
+#include <BRepBuilderAPI_MakePolygon.hxx>
+#include <BRep_Tool.hxx>
 #include <BRepMesh_IncrementalMesh.hxx>
 #include <BRepPrimAPI_MakeBox.hxx>
+#include <BRepPrimAPI_MakeSphere.hxx>
+#include <BRepPrimAPI_MakeCylinder.hxx>
+#include <BRepAlgoAPI_Fuse.hxx>
+#include <BRepAlgoAPI_Cut.hxx>
+#include <BRepAlgoAPI_Common.hxx>
+#include <BRepAdaptor_Curve.hxx>
+#include <BRepAdaptor_Surface.hxx>
+#include <BRepExtrema_DistShapeShape.hxx>
+#include <BRepGProp.hxx>
+#include <AIS_InteractiveContext.hxx>
+#include <AIS_Shape.hxx>
+#include <Aspect_DisplayConnection.hxx>
+#include <BinDrivers.hxx>
+#include <BinXCAFDrivers.hxx>
+#include <DEGLTF_Provider.hxx>
+#include <DEOBJ_ConfigurationNode.hxx>
+#include <DEOBJ_Provider.hxx>
+#include <DEPLY_ConfigurationNode.hxx>
+#include <DEPLY_Provider.hxx>
+#include <DEVRML_ConfigurationNode.hxx>
+#include <DEVRML_Provider.hxx>
+#include <GProp_GProps.hxx>
+#include <GProp_PrincipalProps.hxx>
 #include <IFSelect_ReturnStatus.hxx>
 #include <IGESControl_Writer.hxx>
+#include <IGESControl_Reader.hxx>
 #include <NCollection_DataMap.hxx>
 #include <NCollection_Array1.hxx>
 #include <NCollection_DynamicArray.hxx>
 #include <NCollection_IndexedMap.hxx>
 #include <NCollection_Sequence.hxx>
+#include <OpenGl_GraphicDriver.hxx>
 #include <STEPControl_Reader.hxx>
 #include <STEPControl_StepModelType.hxx>
 #include <STEPControl_Writer.hxx>
 #include <STEPCAFControl_Reader.hxx>
 #include <STEPCAFControl_Writer.hxx>
+#include <ShapeFix_Shape.hxx>
+#include <ShapeUpgrade_UnifySameDomain.hxx>
 #include <Standard_TypeDef.hxx>
 #include <Standard_Failure.hxx>
 #include <Standard_Handle.hxx>
@@ -24,10 +55,14 @@
 #include <Standard_Version.hxx>
 #include <Standard_Transient.hxx>
 #include <StlAPI_Writer.hxx>
+#include <StlAPI_Reader.hxx>
 #include <TCollection_ExtendedString.hxx>
 #include <TCollection_AsciiString.hxx>
 #include <TDataStd_Name.hxx>
 #include <TDataStd_TreeNode.hxx>
+#include <TDF_TagSource.hxx>
+#include <TDF_Tool.hxx>
+#include <TDocStd_Application.hxx>
 #include <TDocStd_Document.hxx>
 #include <TopAbs_ShapeEnum.hxx>
 #include <TopExp_Explorer.hxx>
@@ -35,18 +70,33 @@
 #include <TopoDS.hxx>
 #include <TopoDS_Compound.hxx>
 #include <TopoDS_Shape.hxx>
+#include <Poly_Triangulation.hxx>
+#include <Poly_Triangle.hxx>
+#include <Quantity_ColorRGBA.hxx>
+#include <TCollection_HAsciiString.hxx>
+#include <XCAFDoc_ColorTool.hxx>
 #include <XCAFDoc_DocumentTool.hxx>
 #include <XCAFDoc_Editor.hxx>
 #include <XCAFDoc_MaterialTool.hxx>
+#include <XCAFDoc_LayerTool.hxx>
 #include <XCAFDoc_ShapeTool.hxx>
 #include <XCAFDoc_VisMaterial.hxx>
 #include <XCAFDoc.hxx>
+#include <V3d_View.hxx>
+#include <V3d_Viewer.hxx>
+#include <WNT_Window.hxx>
 #include <gp_Ax1.hxx>
 #include <gp_Dir.hxx>
 #include <gp_Pnt.hxx>
 #include <gp_Trsf.hxx>
 #include <gp_Vec.hxx>
 #include <gp_Mat.hxx>
+#include <gp_XYZ.hxx>
+#include <gp_Lin.hxx>
+#include <gp_Circ.hxx>
+#include <gp_Ax2.hxx>
+#include <gp_Ax3.hxx>
+#include <gp_Pln.hxx>
 
 #include <cmath>
 #include <cstddef>
@@ -56,8 +106,13 @@
 #include <string>
 #include <type_traits>
 #include <unordered_set>
+#include <unordered_map>
 #include <utility>
 #include <mutex>
+#include <limits>
+#include <memory>
+#include <vector>
+#include <thread>
 
 class OcctSharp_TransientDerived final : public Standard_Transient
 {
@@ -70,6 +125,29 @@ static_assert(sizeof(Standard_Boolean) == sizeof(bool));
 static_assert(sizeof(std::underlying_type_t<TopAbs_ShapeEnum>) == sizeof(int32_t));
 static_assert(sizeof(OcctSharp_StepAssemblyInput) == 64);
 static_assert(alignof(OcctSharp_StepAssemblyInput) == 8);
+static_assert(sizeof(OcctSharp_Xyz) == 24);
+static_assert(alignof(OcctSharp_Xyz) == 8);
+static_assert(sizeof(OcctSharp_Line) == 48);
+static_assert(sizeof(OcctSharp_Circle) == 56);
+static_assert(sizeof(OcctSharp_Ax2) == 96);
+static_assert(sizeof(OcctSharp_Ax3) == 96);
+static_assert(sizeof(OcctSharp_Plane) == 48);
+static_assert(sizeof(OcctSharp_EdgeCurveSnapshot) == 72);
+static_assert(alignof(OcctSharp_EdgeCurveSnapshot) == 8);
+static_assert(offsetof(OcctSharp_EdgeCurveSnapshot, curve_type) == 0);
+static_assert(offsetof(OcctSharp_EdgeCurveSnapshot, first_parameter) == 8);
+static_assert(offsetof(OcctSharp_EdgeCurveSnapshot, start_point) == 24);
+static_assert(sizeof(OcctSharp_FaceSurfaceSnapshot) == 40);
+static_assert(alignof(OcctSharp_FaceSurfaceSnapshot) == 8);
+static_assert(offsetof(OcctSharp_FaceSurfaceSnapshot, surface_type) == 0);
+static_assert(offsetof(OcctSharp_FaceSurfaceSnapshot, first_u_parameter) == 8);
+static_assert(sizeof(OcctSharp_ShapeDistanceResult) == 64);
+static_assert(sizeof(OcctSharp_XdeColor) == 32);
+static_assert(alignof(OcctSharp_ShapeDistanceResult) == 8);
+static_assert(offsetof(OcctSharp_ShapeDistanceResult, distance) == 0);
+static_assert(offsetof(OcctSharp_ShapeDistanceResult, point_on_first) == 8);
+static_assert(offsetof(OcctSharp_ShapeDistanceResult, point_on_second) == 32);
+static_assert(offsetof(OcctSharp_ShapeDistanceResult, solution_count) == 56);
 static_assert(offsetof(OcctSharp_StepAssemblyInput, file_path) == 0);
 static_assert(offsetof(OcctSharp_StepAssemblyInput, translation_x) == 8);
 static_assert(offsetof(OcctSharp_StepAssemblyInput, rotation_angle_radians) == 56);
@@ -125,11 +203,35 @@ struct OcctSharp_RealArrayHandle { explicit OcctSharp_RealArrayHandle(NCollectio
 struct OcctSharp_RealVectorHandle { explicit OcctSharp_RealVectorHandle(NCollection_DynamicArray<double> value) : Value(std::move(value)) {} NCollection_DynamicArray<double> Value; };
 struct OcctSharp_IntRealMapHandle { explicit OcctSharp_IntRealMapHandle(NCollection_DataMap<int32_t, double> value) : Value(std::move(value)) {} NCollection_DataMap<int32_t, double> Value; };
 struct OcctSharp_IntIndexedMapHandle { explicit OcctSharp_IntIndexedMapHandle(NCollection_IndexedMap<int32_t> value) : Value(std::move(value)) {} NCollection_IndexedMap<int32_t> Value; };
+struct OcctSharp_GPropsHandle { explicit OcctSharp_GPropsHandle(GProp_GProps value) : Value(std::move(value)) {} GProp_GProps Value; };
+struct OcctSharp_OcafDocumentHandle
+{
+  OcctSharp_OcafDocumentHandle(opencascade::handle<TDocStd_Application> application,
+                               opencascade::handle<TDocStd_Document> document)
+    : Application(std::move(application)), Document(std::move(document))
+  {
+  }
+
+  opencascade::handle<TDocStd_Application> Application;
+  opencascade::handle<TDocStd_Document> Document;
+};
+struct OcctSharp_ViewerHandle
+{
+  opencascade::handle<Aspect_DisplayConnection> Display;
+  opencascade::handle<OpenGl_GraphicDriver> Driver;
+  opencascade::handle<V3d_Viewer> Viewer;
+  opencascade::handle<AIS_InteractiveContext> Context;
+  opencascade::handle<V3d_View> View;
+  opencascade::handle<WNT_Window> Window;
+  std::unordered_map<int64_t, opencascade::handle<AIS_Shape>> Presentations;
+  int64_t NextPresentationId = 1;
+  std::thread::id OwnerThread;
+};
 
 namespace
 {
-constexpr uint32_t AbiVersion = 0x00010011U;
-constexpr const char* BridgeVersion = "0.18.0";
+constexpr uint32_t AbiVersion = 0x00010020U;
+constexpr const char* BridgeVersion = "0.40.0";
 thread_local std::string LastError;
 std::mutex LiveShapesMutex;
 std::unordered_set<const OcctSharp_ShapeHandle*> LiveShapes;
@@ -147,6 +249,9 @@ std::unordered_set<const OcctSharp_RealArrayHandle*> LiveRealArrays;
 std::unordered_set<const OcctSharp_RealVectorHandle*> LiveRealVectors;
 std::unordered_set<const OcctSharp_IntRealMapHandle*> LiveIntRealMaps;
 std::unordered_set<const OcctSharp_IntIndexedMapHandle*> LiveIntIndexedMaps;
+std::unordered_set<const OcctSharp_GPropsHandle*> LiveGProps;
+std::unordered_set<const OcctSharp_OcafDocumentHandle*> LiveOcafDocuments;
+std::unordered_set<const OcctSharp_ViewerHandle*> LiveViewers;
 
 class OperationFailure final : public std::runtime_error
 {
@@ -483,6 +588,97 @@ void ValidateShape(const OcctSharp_ShapeHandle* shape)
   }
 }
 
+void ValidateUsableShape(const OcctSharp_ShapeHandle* shape)
+{
+  ValidateShape(shape);
+  if (shape->Value.IsNull())
+  {
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The topology shape is null.");
+  }
+}
+
+void ValidateMeshParameters(const double linear_deflection, const double angular_deflection)
+{
+  if (!std::isfinite(linear_deflection) || linear_deflection <= 0.0
+      || !std::isfinite(angular_deflection) || angular_deflection <= 0.0)
+  {
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT,
+      "Mesh deflections must be finite and greater than zero.");
+  }
+}
+
+struct MeshData
+{
+  std::vector<OcctSharp_MeshVertex> Vertices;
+  std::vector<int32_t> Indices;
+};
+
+MeshData BuildMesh(const OcctSharp_ShapeHandle* shape,
+                   const double linear_deflection,
+                   const double angular_deflection)
+{
+  ValidateShape(shape);
+  ValidateMeshParameters(linear_deflection, angular_deflection);
+  BRepMesh_IncrementalMesh mesher(shape->Value, linear_deflection, false, angular_deflection, true);
+  MeshData data;
+  for (TopExp_Explorer explorer(shape->Value, TopAbs_FACE); explorer.More(); explorer.Next())
+  {
+    const TopoDS_Face face = TopoDS::Face(explorer.Current());
+    TopLoc_Location location;
+    const opencascade::handle<Poly_Triangulation> triangulation = BRep_Tool::Triangulation(face, location);
+    if (triangulation.IsNull())
+    {
+      continue;
+    }
+
+    for (int32_t triangleIndex = 1; triangleIndex <= triangulation->NbTriangles(); ++triangleIndex)
+    {
+      Poly_Triangle triangle = triangulation->Triangle(triangleIndex);
+      int node1 = 0;
+      int node2 = 0;
+      int node3 = 0;
+      triangle.Get(node1, node2, node3);
+      gp_Pnt point1 = triangulation->Node(node1);
+      gp_Pnt point2 = triangulation->Node(node2);
+      gp_Pnt point3 = triangulation->Node(node3);
+      const gp_Trsf locationTransform = location.Transformation();
+      point1.Transform(locationTransform);
+      point2.Transform(locationTransform);
+      point3.Transform(locationTransform);
+
+      gp_Vec normal(point1, point2);
+      normal = normal.Crossed(gp_Vec(point1, point3));
+      if (normal.SquareMagnitude() > 1.0e-24)
+      {
+        normal.Normalize();
+        if (face.Orientation() == TopAbs_REVERSED)
+        {
+          normal.Reverse();
+        }
+      }
+
+      const int32_t base = static_cast<int32_t>(data.Vertices.size());
+      const auto appendVertex = [&](const gp_Pnt& point)
+      {
+        data.Vertices.push_back(OcctSharp_MeshVertex{
+          point.X(), point.Y(), point.Z(), normal.X(), normal.Y(), normal.Z()});
+      };
+      appendVertex(point1);
+      appendVertex(point2);
+      appendVertex(point3);
+      if (face.Orientation() == TopAbs_REVERSED)
+      {
+        data.Indices.insert(data.Indices.end(), {base, base + 2, base + 1});
+      }
+      else
+      {
+        data.Indices.insert(data.Indices.end(), {base, base + 1, base + 2});
+      }
+    }
+  }
+  return data;
+}
+
 void ValidateTransient(const OcctSharp_TransientHandle* handle)
 {
   if (handle == nullptr)
@@ -704,6 +900,398 @@ const char* OCCTSHARP_CALL occtsharp_get_last_error(void)
   return LastError.c_str();
 }
 
+void ValidateGProps(const OcctSharp_GPropsHandle* handle)
+{
+  if (handle == nullptr) throw OperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The GProp_GProps handle is null.");
+  if (!IsLiveValue(handle, LiveGProps)) throw OperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The GProp_GProps handle is invalid or already released.");
+}
+
+void ValidateOcafDocument(const OcctSharp_OcafDocumentHandle* handle)
+{
+  if (handle == nullptr)
+  {
+    throw OperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The OCAF document handle is null.");
+  }
+  if (!IsLiveValue(handle, LiveOcafDocuments))
+  {
+    throw OperationFailure(
+      OCCTSHARP_STATUS_INVALID_HANDLE,
+      "The OCAF document handle is invalid or already released.");
+  }
+  if (handle->Application.IsNull() || handle->Document.IsNull())
+  {
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The OCAF document is closed.");
+  }
+}
+
+OcctSharp_Xyz OCCTSHARP_CALL occtsharp_gp_xyz_default(void)
+{
+  const gp_XYZ value;
+  return { value.X(), value.Y(), value.Z() };
+}
+
+OcctSharp_Xyz OCCTSHARP_CALL occtsharp_gp_xyz_create(const double x, const double y, const double z)
+{
+  const gp_XYZ value(x, y, z);
+  return { value.X(), value.Y(), value.Z() };
+}
+
+OcctSharp_Xyz OCCTSHARP_CALL occtsharp_gp_xyz_copy(const OcctSharp_Xyz value)
+{
+  return value;
+}
+
+OcctSharp_Xyz OCCTSHARP_CALL occtsharp_gp_xyz_added(const OcctSharp_Xyz left, const OcctSharp_Xyz right)
+{
+  const gp_XYZ result = gp_XYZ(left.x, left.y, left.z).Added(gp_XYZ(right.x, right.y, right.z));
+  return { result.X(), result.Y(), result.Z() };
+}
+
+OcctSharp_Xyz OCCTSHARP_CALL occtsharp_gp_xyz_crossed(const OcctSharp_Xyz left, const OcctSharp_Xyz right)
+{
+  const gp_XYZ result = gp_XYZ(left.x, left.y, left.z).Crossed(gp_XYZ(right.x, right.y, right.z));
+  return { result.X(), result.Y(), result.Z() };
+}
+
+double OCCTSHARP_CALL occtsharp_gp_xyz_dot(const OcctSharp_Xyz left, const OcctSharp_Xyz right)
+{
+  return gp_XYZ(left.x, left.y, left.z).Dot(gp_XYZ(right.x, right.y, right.z));
+}
+
+double OCCTSHARP_CALL occtsharp_gp_xyz_modulus(const OcctSharp_Xyz value)
+{
+  return gp_XYZ(value.x, value.y, value.z).Modulus();
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_gp_xyz_normalized(const OcctSharp_Xyz value, OcctSharp_Xyz* result)
+{
+  if (result == nullptr) { SetLastError("The gp_XYZ normalized output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  return Guard([&]
+  {
+    const gp_XYZ normalized = gp_XYZ(value.x, value.y, value.z).Normalized();
+    *result = { normalized.X(), normalized.Y(), normalized.Z() };
+  });
+}
+
+OcctSharp_Line OCCTSHARP_CALL occtsharp_gp_lin_default(void)
+{
+  const gp_Lin line;
+  return { { line.Location().X(), line.Location().Y(), line.Location().Z() }, { line.Direction().X(), line.Direction().Y(), line.Direction().Z() } };
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_gp_lin_create(const OcctSharp_Xyz origin, const OcctSharp_Xyz direction, OcctSharp_Line* result)
+{
+  if (result == nullptr) { SetLastError("The gp_Lin output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  return Guard([&]
+  {
+    const gp_Lin line(gp_Pnt(origin.x, origin.y, origin.z), gp_Dir(direction.x, direction.y, direction.z));
+    *result = { { line.Location().X(), line.Location().Y(), line.Location().Z() }, { line.Direction().X(), line.Direction().Y(), line.Direction().Z() } };
+  });
+}
+
+OcctSharp_Line OCCTSHARP_CALL occtsharp_gp_lin_reversed(const OcctSharp_Line value)
+{
+  const gp_Lin source(gp_Pnt(value.origin.x, value.origin.y, value.origin.z), gp_Dir(value.direction.x, value.direction.y, value.direction.z));
+  const gp_Lin line = source.Reversed();
+  return { { line.Location().X(), line.Location().Y(), line.Location().Z() }, { line.Direction().X(), line.Direction().Y(), line.Direction().Z() } };
+}
+
+double OCCTSHARP_CALL occtsharp_gp_lin_distance(const OcctSharp_Line line, const OcctSharp_Xyz point)
+{
+  return gp_Lin(gp_Pnt(line.origin.x, line.origin.y, line.origin.z), gp_Dir(line.direction.x, line.direction.y, line.direction.z)).Distance(gp_Pnt(point.x, point.y, point.z));
+}
+
+double OCCTSHARP_CALL occtsharp_gp_lin_angle(const OcctSharp_Line left, const OcctSharp_Line right)
+{
+  return gp_Lin(gp_Pnt(left.origin.x, left.origin.y, left.origin.z), gp_Dir(left.direction.x, left.direction.y, left.direction.z)).Angle(gp_Lin(gp_Pnt(right.origin.x, right.origin.y, right.origin.z), gp_Dir(right.direction.x, right.direction.y, right.direction.z)));
+}
+
+OcctSharp_Circle OCCTSHARP_CALL occtsharp_gp_circ_default(void)
+{
+  const gp_Circ circle;
+  return { { circle.Location().X(), circle.Location().Y(), circle.Location().Z() }, { circle.Axis().Direction().X(), circle.Axis().Direction().Y(), circle.Axis().Direction().Z() }, circle.Radius() };
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_gp_circ_create(const OcctSharp_Xyz center, const OcctSharp_Xyz normal, const double radius, OcctSharp_Circle* result)
+{
+  if (result == nullptr) { SetLastError("The gp_Circ output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  return Guard([&]
+  {
+    const gp_Circ circle(gp_Ax2(gp_Pnt(center.x, center.y, center.z), gp_Dir(normal.x, normal.y, normal.z)), radius);
+    *result = { { circle.Location().X(), circle.Location().Y(), circle.Location().Z() }, { circle.Axis().Direction().X(), circle.Axis().Direction().Y(), circle.Axis().Direction().Z() }, circle.Radius() };
+  });
+}
+
+double OCCTSHARP_CALL occtsharp_gp_circ_area(const OcctSharp_Circle value)
+{ return gp_Circ(gp_Ax2(gp_Pnt(value.center.x, value.center.y, value.center.z), gp_Dir(value.normal.x, value.normal.y, value.normal.z)), value.radius).Area(); }
+
+double OCCTSHARP_CALL occtsharp_gp_circ_length(const OcctSharp_Circle value)
+{ return gp_Circ(gp_Ax2(gp_Pnt(value.center.x, value.center.y, value.center.z), gp_Dir(value.normal.x, value.normal.y, value.normal.z)), value.radius).Length(); }
+
+double OCCTSHARP_CALL occtsharp_gp_circ_distance(const OcctSharp_Circle value, const OcctSharp_Xyz point)
+{ return gp_Circ(gp_Ax2(gp_Pnt(value.center.x, value.center.y, value.center.z), gp_Dir(value.normal.x, value.normal.y, value.normal.z)), value.radius).Distance(gp_Pnt(point.x, point.y, point.z)); }
+
+OcctSharp_Ax2 OCCTSHARP_CALL occtsharp_gp_ax2_default(void)
+{
+  const gp_Ax2 axis;
+  return { { axis.Location().X(), axis.Location().Y(), axis.Location().Z() }, { axis.XDirection().X(), axis.XDirection().Y(), axis.XDirection().Z() }, { axis.YDirection().X(), axis.YDirection().Y(), axis.YDirection().Z() }, { axis.Direction().X(), axis.Direction().Y(), axis.Direction().Z() } };
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_gp_ax2_create(const OcctSharp_Xyz origin, const OcctSharp_Xyz normal, const OcctSharp_Xyz x_direction, OcctSharp_Ax2* result)
+{
+  if (result == nullptr) { SetLastError("The gp_Ax2 output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  return Guard([&]
+  {
+    const gp_Ax2 axis(gp_Pnt(origin.x, origin.y, origin.z), gp_Dir(normal.x, normal.y, normal.z), gp_Dir(x_direction.x, x_direction.y, x_direction.z));
+    *result = { { axis.Location().X(), axis.Location().Y(), axis.Location().Z() }, { axis.XDirection().X(), axis.XDirection().Y(), axis.XDirection().Z() }, { axis.YDirection().X(), axis.YDirection().Y(), axis.YDirection().Z() }, { axis.Direction().X(), axis.Direction().Y(), axis.Direction().Z() } };
+  });
+}
+
+double OCCTSHARP_CALL occtsharp_gp_ax2_angle(const OcctSharp_Ax2 left, const OcctSharp_Ax2 right)
+{
+  const gp_Ax2 a(gp_Pnt(left.origin.x, left.origin.y, left.origin.z), gp_Dir(left.direction.x, left.direction.y, left.direction.z), gp_Dir(left.x_direction.x, left.x_direction.y, left.x_direction.z));
+  const gp_Ax2 b(gp_Pnt(right.origin.x, right.origin.y, right.origin.z), gp_Dir(right.direction.x, right.direction.y, right.direction.z), gp_Dir(right.x_direction.x, right.x_direction.y, right.x_direction.z));
+  return a.Angle(b);
+}
+
+OcctSharp_Ax3 OCCTSHARP_CALL occtsharp_gp_ax3_default(void)
+{
+  const gp_Ax3 axis;
+  return { { axis.Location().X(), axis.Location().Y(), axis.Location().Z() },
+           { axis.XDirection().X(), axis.XDirection().Y(), axis.XDirection().Z() },
+           { axis.YDirection().X(), axis.YDirection().Y(), axis.YDirection().Z() },
+           { axis.Direction().X(), axis.Direction().Y(), axis.Direction().Z() } };
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_gp_ax3_create(
+  const OcctSharp_Xyz origin, const OcctSharp_Xyz normal, const OcctSharp_Xyz x_direction,
+  OcctSharp_Ax3* result)
+{
+  if (result == nullptr) { SetLastError("The gp_Ax3 output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  return Guard([&]
+  {
+    const gp_Ax3 axis(gp_Pnt(origin.x, origin.y, origin.z),
+                      gp_Dir(normal.x, normal.y, normal.z),
+                      gp_Dir(x_direction.x, x_direction.y, x_direction.z));
+    *result = { { axis.Location().X(), axis.Location().Y(), axis.Location().Z() },
+                { axis.XDirection().X(), axis.XDirection().Y(), axis.XDirection().Z() },
+                { axis.YDirection().X(), axis.YDirection().Y(), axis.YDirection().Z() },
+                { axis.Direction().X(), axis.Direction().Y(), axis.Direction().Z() } };
+  });
+}
+
+int32_t OCCTSHARP_CALL occtsharp_gp_ax3_direct(const OcctSharp_Ax3 value)
+{
+  const gp_Ax3 axis(gp_Pnt(value.origin.x, value.origin.y, value.origin.z),
+                    gp_Dir(value.direction.x, value.direction.y, value.direction.z),
+                    gp_Dir(value.x_direction.x, value.x_direction.y, value.x_direction.z));
+  return axis.Direct() ? 1 : 0;
+}
+
+OcctSharp_Plane OCCTSHARP_CALL occtsharp_gp_pln_default(void)
+{ return { { 0., 0., 0. }, { 0., 0., 1. } }; }
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_gp_pln_create(const OcctSharp_Xyz origin, const OcctSharp_Xyz normal, OcctSharp_Plane* result)
+{
+  if (result == nullptr) { SetLastError("The gp_Pln output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *result = {};
+  return Guard([&]
+  {
+    const gp_Pln plane(gp_Pnt(origin.x, origin.y, origin.z), gp_Dir(normal.x, normal.y, normal.z));
+    *result = { { plane.Location().X(), plane.Location().Y(), plane.Location().Z() }, { plane.Axis().Direction().X(), plane.Axis().Direction().Y(), plane.Axis().Direction().Z() } };
+  });
+}
+
+double OCCTSHARP_CALL occtsharp_gp_pln_distance(const OcctSharp_Plane plane, const OcctSharp_Xyz point)
+{ return gp_Pln(gp_Pnt(plane.origin.x, plane.origin.y, plane.origin.z), gp_Dir(plane.normal.x, plane.normal.y, plane.normal.z)).Distance(gp_Pnt(point.x, point.y, point.z)); }
+
+double OCCTSHARP_CALL occtsharp_gp_pln_signed_distance(const OcctSharp_Plane plane, const OcctSharp_Xyz point)
+{ return gp_Pln(gp_Pnt(plane.origin.x, plane.origin.y, plane.origin.z), gp_Dir(plane.normal.x, plane.normal.y, plane.normal.z)).SignedDistance(gp_Pnt(point.x, point.y, point.z)); }
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_gprops_create(OcctSharp_GPropsHandle** out_properties)
+{
+  if (out_properties == nullptr) { SetLastError("The output GProp_GProps pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_properties = nullptr;
+  return Guard([&] { *out_properties = AllocateValue(new OcctSharp_GPropsHandle(GProp_GProps()), LiveGProps); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_gprops_from_shape(
+  const OcctSharp_ShapeHandle* shape, const int32_t mode, const int32_t only_closed,
+  OcctSharp_GPropsHandle** out_properties)
+{
+  if (out_properties == nullptr) { SetLastError("The output GProp_GProps pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_properties = nullptr;
+  if (mode < 0 || mode > 2) { SetLastError("GProp mode must be 0 (linear), 1 (surface), or 2 (volume)."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateShape(shape);
+    GProp_GProps value;
+    if (mode == 0)
+      BRepGProp::LinearProperties(shape->Value, value);
+    else if (mode == 1)
+      BRepGProp::SurfaceProperties(shape->Value, value);
+    else
+      BRepGProp::VolumeProperties(shape->Value, value, only_closed != 0);
+    *out_properties = AllocateValue(new OcctSharp_GPropsHandle(std::move(value)), LiveGProps);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_gprops_clone(
+  const OcctSharp_GPropsHandle* source, OcctSharp_GPropsHandle** out_properties)
+{
+  if (out_properties == nullptr) { SetLastError("The output GProp_GProps pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_properties = nullptr;
+  return Guard([&]
+  {
+    ValidateGProps(source);
+    *out_properties = AllocateValue(new OcctSharp_GPropsHandle(source->Value), LiveGProps);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_gprops_add(
+  OcctSharp_GPropsHandle* target, const OcctSharp_GPropsHandle* item, const double density)
+{
+  return Guard([&]
+  {
+    ValidateGProps(target);
+    ValidateGProps(item);
+    if (!std::isfinite(density) || density <= 0.0)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "GProp density must be finite and greater than zero.");
+    target->Value.Add(item->Value, density);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_gprops_mass(
+  const OcctSharp_GPropsHandle* properties, double* mass)
+{
+  if (mass == nullptr) { SetLastError("The GProp mass output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *mass = 0.0;
+  return Guard([&] { ValidateGProps(properties); *mass = properties->Value.Mass(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_gprops_center(
+  const OcctSharp_GPropsHandle* properties, OcctSharp_Xyz* center)
+{
+  if (center == nullptr) { SetLastError("The GProp center output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *center = {};
+  return Guard([&]
+  {
+    ValidateGProps(properties);
+    const gp_Pnt value = properties->Value.CentreOfMass();
+    *center = { value.X(), value.Y(), value.Z() };
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_gprops_inertia_value(
+  const OcctSharp_GPropsHandle* properties, const int32_t row, const int32_t column, double* value)
+{
+  if (value == nullptr) { SetLastError("The GProp inertia output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *value = 0.0;
+  if (row < 1 || row > 3 || column < 1 || column > 3) { SetLastError("GProp inertia indices are 1-based and must be 1..3."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&] { ValidateGProps(properties); *value = properties->Value.MatrixOfInertia().Value(row, column); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_gprops_principal_moments(
+  const OcctSharp_GPropsHandle* properties, double* first, double* second, double* third)
+{
+  if (first == nullptr || second == nullptr || third == nullptr) { SetLastError("The principal-moment output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *first = *second = *third = 0.0;
+  return Guard([&]
+  {
+    ValidateGProps(properties);
+    properties->Value.PrincipalProperties().Moments(*first, *second, *third);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_gprops_symmetry(
+  const OcctSharp_GPropsHandle* properties, int32_t* axis, int32_t* point)
+{
+  if (axis == nullptr || point == nullptr) { SetLastError("The symmetry output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *axis = *point = 0;
+  return Guard([&]
+  {
+    ValidateGProps(properties);
+    const GProp_PrincipalProps principal = properties->Value.PrincipalProperties();
+    *axis = principal.HasSymmetryAxis() ? 1 : 0;
+    *point = principal.HasSymmetryPoint() ? 1 : 0;
+  });
+}
+
+void OCCTSHARP_CALL occtsharp_gprops_release(OcctSharp_GPropsHandle* properties)
+{
+  if (properties != nullptr && UnregisterValue(properties, LiveGProps)) delete properties;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_edge_curve_snapshot(
+  const OcctSharp_ShapeHandle* edge, OcctSharp_EdgeCurveSnapshot* out_snapshot)
+{
+  if (out_snapshot == nullptr)
+  {
+    SetLastError("The edge curve snapshot output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_snapshot = {};
+  return Guard([&]
+  {
+    ValidateUsableShape(edge);
+    if (edge->Value.ShapeType() != TopAbs_EDGE)
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "A BRep curve snapshot requires an edge shape.");
+
+    const BRepAdaptor_Curve curve(TopoDS::Edge(edge->Value));
+    const double first = curve.FirstParameter();
+    const double last = curve.LastParameter();
+    if (!std::isfinite(first) || !std::isfinite(last))
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The edge curve does not have finite parameter bounds.");
+
+    const gp_Pnt start = curve.Value(first);
+    const gp_Pnt end = curve.Value(last);
+    *out_snapshot = {
+      static_cast<int32_t>(curve.GetType()),
+      first,
+      last,
+      { start.X(), start.Y(), start.Z() },
+      { end.X(), end.Y(), end.Z() }
+    };
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_face_surface_snapshot(
+  const OcctSharp_ShapeHandle* face, const int32_t restrict_to_face,
+  OcctSharp_FaceSurfaceSnapshot* out_snapshot)
+{
+  if (out_snapshot == nullptr)
+  {
+    SetLastError("The face surface snapshot output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_snapshot = {};
+  if (restrict_to_face != 0 && restrict_to_face != 1)
+  {
+    SetLastError("The face surface restriction flag must be zero or one.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  return Guard([&]
+  {
+    ValidateUsableShape(face);
+    if (face->Value.ShapeType() != TopAbs_FACE)
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "A BRep surface snapshot requires a face shape.");
+
+    const BRepAdaptor_Surface surface(TopoDS::Face(face->Value), restrict_to_face != 0);
+    *out_snapshot = {
+      static_cast<int32_t>(surface.GetType()),
+      surface.FirstUParameter(),
+      surface.LastUParameter(),
+      surface.FirstVParameter(),
+      surface.LastVParameter()
+    };
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_box(
   const double size_x,
   const double size_y,
@@ -729,6 +1317,93 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_box(
   {
     TopoDS_Shape shape = BRepPrimAPI_MakeBox(size_x, size_y, size_z).Shape();
     *out_shape = AllocateShape(std::move(shape));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_null(
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr)
+  {
+    SetLastError("The null shape output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_shape = nullptr;
+  return Guard([&] { *out_shape = AllocateShape(TopoDS_Shape()); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_sphere(
+  const double radius, OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The output shape pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (!std::isfinite(radius) || radius <= 0.0) { SetLastError("Sphere radius must be finite and greater than zero."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&] { *out_shape = AllocateShape(BRepPrimAPI_MakeSphere(radius).Shape()); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_cylinder(
+  const double radius, const double height, OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The output shape pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (!std::isfinite(radius) || !std::isfinite(height) || radius <= 0.0 || height <= 0.0)
+  { SetLastError("Cylinder radius and height must be finite and greater than zero."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&] { *out_shape = AllocateShape(BRepPrimAPI_MakeCylinder(radius, height).Shape()); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_edge(
+  const OcctSharp_Xyz start, const OcctSharp_Xyz end, OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The edge output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  return Guard([&]
+  {
+    ValidateFinite(start.x, "Edge start X must be finite."); ValidateFinite(start.y, "Edge start Y must be finite."); ValidateFinite(start.z, "Edge start Z must be finite.");
+    ValidateFinite(end.x, "Edge end X must be finite."); ValidateFinite(end.y, "Edge end Y must be finite."); ValidateFinite(end.z, "Edge end Z must be finite.");
+    if (start.x == end.x && start.y == end.y && start.z == end.z)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Edge endpoints must be distinct.");
+    BRepBuilderAPI_MakeEdge builder(gp_Pnt(start.x, start.y, start.z), gp_Pnt(end.x, end.y, end.z));
+    if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT edge construction did not complete.");
+    *out_shape = AllocateShape(builder.Shape());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_polygon_wire(
+  const OcctSharp_Xyz* points, const int32_t count, const int32_t close,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The wire output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (count < 2 || points == nullptr) { SetLastError("A polygon wire requires at least two points."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    BRepBuilderAPI_MakePolygon builder;
+    for (int32_t index = 0; index < count; ++index)
+    {
+      ValidateFinite(points[index].x, "Wire point X must be finite.");
+      ValidateFinite(points[index].y, "Wire point Y must be finite.");
+      ValidateFinite(points[index].z, "Wire point Z must be finite.");
+      builder.Add(gp_Pnt(points[index].x, points[index].y, points[index].z));
+    }
+    if (close != 0) builder.Close();
+    if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT polygon wire construction did not complete.");
+    *out_shape = AllocateShape(builder.Shape());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_planar_face(
+  const OcctSharp_ShapeHandle* wire, OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The face output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  return Guard([&]
+  {
+    ValidateUsableShape(wire);
+    if (wire->Value.ShapeType() != TopAbs_WIRE)
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Planar face construction requires a wire shape.");
+    BRepBuilderAPI_MakeFace builder(TopoDS::Wire(wire->Value));
+    if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT planar face construction did not complete.");
+    *out_shape = AllocateShape(builder.Shape());
   });
 }
 
@@ -758,6 +1433,284 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_get_face_count(
     }
 
     *out_face_count = count;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_face_snapshot(
+  const OcctSharp_ShapeHandle* shape,
+  OcctSharp_ShapeHandle** out_faces,
+  const int32_t capacity,
+  int32_t* out_written)
+{
+  if (out_written == nullptr) { SetLastError("The face snapshot count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_written = 0;
+  if (capacity < 0 || (capacity > 0 && out_faces == nullptr))
+  { SetLastError("The face snapshot capacity or output buffer is invalid."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateShape(shape);
+    int32_t required = 0;
+    for (TopExp_Explorer explorer(shape->Value, TopAbs_FACE); explorer.More(); explorer.Next()) ++required;
+    *out_written = required;
+    if (capacity < required)
+    { throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The face snapshot buffer is too small."); }
+    int32_t index = 0;
+    try
+    {
+      for (TopExp_Explorer explorer(shape->Value, TopAbs_FACE); explorer.More(); explorer.Next())
+      {
+        out_faces[index++] = AllocateShape(TopoDS::Face(explorer.Current()));
+      }
+    }
+    catch (...)
+    {
+      for (int32_t cleanup = 0; cleanup < index; ++cleanup) occtsharp_shape_release(out_faces[cleanup]);
+      *out_written = 0;
+      throw;
+    }
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_subshape_snapshot(
+  const OcctSharp_ShapeHandle* shape,
+  const int32_t kind,
+  OcctSharp_ShapeHandle** out_shapes,
+  const int32_t capacity,
+  int32_t* out_written)
+{
+  if (out_written == nullptr) { SetLastError("The subshape snapshot count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_written = 0;
+  if (kind < 0 || kind > 7) { SetLastError("The subshape kind must be a TopAbs kind from Compound through Vertex."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (capacity < 0 || (capacity > 0 && out_shapes == nullptr))
+  { SetLastError("The subshape snapshot capacity or output buffer is invalid."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateShape(shape);
+    const TopAbs_ShapeEnum targetKind = static_cast<TopAbs_ShapeEnum>(kind);
+    int32_t required = 0;
+    for (TopExp_Explorer explorer(shape->Value, targetKind); explorer.More(); explorer.Next()) ++required;
+    *out_written = required;
+    if (capacity < required)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The subshape snapshot buffer is too small.");
+    int32_t index = 0;
+    try
+    {
+      for (TopExp_Explorer explorer(shape->Value, targetKind); explorer.More(); explorer.Next())
+        out_shapes[index++] = AllocateShape(explorer.Current());
+    }
+    catch (...)
+    {
+      for (int32_t cleanup = 0; cleanup < index; ++cleanup) occtsharp_shape_release(out_shapes[cleanup]);
+      *out_written = 0;
+      throw;
+    }
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_subshape_count(
+  const OcctSharp_ShapeHandle* shape, const int32_t kind, int32_t* out_count)
+{
+  if (out_count == nullptr) { SetLastError("The subshape count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_count = 0;
+  if (kind < 0 || kind > 7) { SetLastError("The subshape kind must be a TopAbs kind from Compound through Vertex."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateShape(shape);
+    for (TopExp_Explorer explorer(shape->Value, static_cast<TopAbs_ShapeEnum>(kind)); explorer.More(); explorer.Next()) ++*out_count;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_boolean_fuse(
+  const OcctSharp_ShapeHandle* left, const OcctSharp_ShapeHandle* right,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The boolean fuse output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  return Guard([&]
+  {
+    ValidateUsableShape(left); ValidateUsableShape(right);
+    BRepAlgoAPI_Fuse operation(left->Value, right->Value);
+    operation.Build();
+    if (!operation.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT boolean fuse did not complete.");
+    *out_shape = AllocateShape(operation.Shape());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_boolean_cut(
+  const OcctSharp_ShapeHandle* left, const OcctSharp_ShapeHandle* right,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The boolean cut output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  return Guard([&]
+  {
+    ValidateUsableShape(left); ValidateUsableShape(right);
+    BRepAlgoAPI_Cut operation(left->Value, right->Value);
+    operation.Build();
+    if (!operation.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT boolean cut did not complete.");
+    *out_shape = AllocateShape(operation.Shape());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_boolean_common(
+  const OcctSharp_ShapeHandle* left, const OcctSharp_ShapeHandle* right,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The boolean common output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  return Guard([&]
+  {
+    ValidateUsableShape(left); ValidateUsableShape(right);
+    BRepAlgoAPI_Common operation(left->Value, right->Value);
+    operation.Build();
+    if (!operation.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT boolean common did not complete.");
+    TopoDS_Shape result = operation.Shape();
+    if (result.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT boolean common produced a null result.");
+    *out_shape = AllocateShape(std::move(result));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_distance(
+  const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second,
+  OcctSharp_ShapeDistanceResult* out_result)
+{
+  if (out_result == nullptr) { SetLastError("The shape distance output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_result = {};
+  return Guard([&]
+  {
+    ValidateUsableShape(first); ValidateUsableShape(second);
+    BRepExtrema_DistShapeShape operation(first->Value, second->Value);
+    if (!operation.IsDone() || operation.NbSolution() <= 0)
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT shape distance did not produce a solution.");
+
+    const gp_Pnt point1 = operation.PointOnShape1(1);
+    const gp_Pnt point2 = operation.PointOnShape2(1);
+    *out_result = {
+      operation.Value(),
+      { point1.X(), point1.Y(), point1.Z() },
+      { point2.X(), point2.Y(), point2.Z() },
+      operation.NbSolution()
+    };
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_fix(
+  const OcctSharp_ShapeHandle* shape,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr)
+  {
+    SetLastError("The shape fix output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_shape = nullptr;
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    ShapeFix_Shape fixer(shape->Value);
+    fixer.Perform();
+    TopoDS_Shape fixed = fixer.Shape();
+    if (fixed.IsNull())
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "ShapeFix_Shape produced a null result.");
+    }
+    *out_shape = AllocateShape(std::move(fixed));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_unify_same_domain(
+  const OcctSharp_ShapeHandle* shape,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr)
+  {
+    SetLastError("The unify-same-domain output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_shape = nullptr;
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    ShapeUpgrade_UnifySameDomain operation(shape->Value, true, true, false);
+    operation.Build();
+    TopoDS_Shape unified = operation.Shape();
+    if (unified.IsNull())
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "ShapeUpgrade_UnifySameDomain produced a null result.");
+    }
+    *out_shape = AllocateShape(std::move(unified));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_mesh_count(
+  const OcctSharp_ShapeHandle* shape,
+  const double linear_deflection,
+  const double angular_deflection,
+  int32_t* out_vertex_count,
+  int32_t* out_index_count)
+{
+  if (out_vertex_count == nullptr || out_index_count == nullptr)
+  {
+    SetLastError("The mesh count output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_vertex_count = 0;
+  *out_index_count = 0;
+  return Guard([&]
+  {
+    MeshData data = BuildMesh(shape, linear_deflection, angular_deflection);
+    if (data.Vertices.size() > static_cast<size_t>(std::numeric_limits<int32_t>::max())
+        || data.Indices.size() > static_cast<size_t>(std::numeric_limits<int32_t>::max()))
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The mesh is too large for the 32-bit ABI.");
+    }
+    *out_vertex_count = static_cast<int32_t>(data.Vertices.size());
+    *out_index_count = static_cast<int32_t>(data.Indices.size());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_mesh_snapshot(
+  const OcctSharp_ShapeHandle* shape,
+  const double linear_deflection,
+  const double angular_deflection,
+  OcctSharp_MeshVertex* vertices,
+  const int32_t vertex_capacity,
+  int32_t* out_vertex_count,
+  int32_t* indices,
+  const int32_t index_capacity,
+  int32_t* out_index_count)
+{
+  if (out_vertex_count == nullptr || out_index_count == nullptr)
+  {
+    SetLastError("The mesh snapshot count pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_vertex_count = 0;
+  *out_index_count = 0;
+  if (vertex_capacity < 0 || index_capacity < 0
+      || (vertex_capacity > 0 && vertices == nullptr)
+      || (index_capacity > 0 && indices == nullptr))
+  {
+    SetLastError("The mesh snapshot capacity or output buffer is invalid.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  return Guard([&]
+  {
+    MeshData data = BuildMesh(shape, linear_deflection, angular_deflection);
+    *out_vertex_count = static_cast<int32_t>(data.Vertices.size());
+    *out_index_count = static_cast<int32_t>(data.Indices.size());
+    if (vertex_capacity < *out_vertex_count || index_capacity < *out_index_count)
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The mesh snapshot buffer is too small.");
+    }
+    if (*out_vertex_count > 0)
+    {
+      std::memcpy(vertices, data.Vertices.data(), data.Vertices.size() * sizeof(OcctSharp_MeshVertex));
+    }
+    if (*out_index_count > 0)
+    {
+      std::memcpy(indices, data.Indices.data(), data.Indices.size() * sizeof(int32_t));
+    }
   });
 }
 
@@ -794,6 +1747,105 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_step(
 
     *out_shape = AllocateShape(std::move(shape));
   });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_iges(
+  const char* file_path,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr)
+  {
+    SetLastError("The IGES output shape pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_shape = nullptr;
+  return Guard([&]
+  {
+    ValidatePath(file_path);
+    IGESControl_Reader reader;
+    if (reader.ReadFile(file_path) != IFSelect_RetDone)
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not read the IGES file.");
+    }
+    if (reader.TransferRoots() <= 0)
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The IGES file produced no transferable roots.");
+    }
+    TopoDS_Shape shape = reader.OneShape();
+    if (shape.IsNull())
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The IGES transfer produced a null shape.");
+    }
+    *out_shape = AllocateShape(std::move(shape));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_stl(
+  const char* file_path,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr)
+  {
+    SetLastError("The STL output shape pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_shape = nullptr;
+  return Guard([&]
+  {
+    ValidatePath(file_path);
+    StlAPI_Reader reader;
+    TopoDS_Shape shape;
+    if (!reader.Read(shape, file_path))
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not read the STL file.");
+    }
+    if (shape.IsNull())
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The STL transfer produced a null shape.");
+    }
+    *out_shape = AllocateShape(std::move(shape));
+  });
+}
+
+template <typename TProvider>
+OcctSharp_Status ReadMeshExchangeShape(
+  const char* file_path, OcctSharp_ShapeHandle** out_shape, TProvider& provider,
+  const char* failure_message)
+{
+  if (out_shape == nullptr) { SetLastError("The mesh exchange read output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  return Guard([&]
+  {
+    ValidatePath(file_path);
+    TopoDS_Shape shape;
+    if (!provider.Read(TCollection_AsciiString(file_path), shape) || shape.IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, failure_message);
+    *out_shape = AllocateShape(std::move(shape));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_obj(
+  const char* file_path, OcctSharp_ShapeHandle** out_shape)
+{
+  occ::handle<DEOBJ_ConfigurationNode> node = new DEOBJ_ConfigurationNode();
+  DEOBJ_Provider provider(node);
+  return ReadMeshExchangeShape(file_path, out_shape, provider, "OCCT OBJ transfer failed.");
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_gltf(
+  const char* file_path, OcctSharp_ShapeHandle** out_shape)
+{
+  occ::handle<DEGLTF_ConfigurationNode> node = new DEGLTF_ConfigurationNode();
+  DEGLTF_Provider provider(node);
+  return ReadMeshExchangeShape(file_path, out_shape, provider, "OCCT glTF transfer failed.");
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_vrml(
+  const char* file_path, OcctSharp_ShapeHandle** out_shape)
+{
+  occ::handle<DEVRML_ConfigurationNode> node = new DEVRML_ConfigurationNode();
+  DEVRML_Provider provider(node);
+  return ReadMeshExchangeShape(file_path, out_shape, provider, "OCCT VRML transfer failed.");
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_write_step(
@@ -864,6 +1916,55 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_write_iges(
       throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not write the IGES file.");
     }
   });
+}
+
+template <typename TProvider>
+OcctSharp_Status WriteMeshExchangeShape(
+  const OcctSharp_ShapeHandle* shape, const char* file_path, TProvider& provider,
+  const char* failure_message)
+{
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    ValidatePath(file_path);
+    BRepMesh_IncrementalMesh mesh(shape->Value, 0.1, false, 0.5, true);
+    if (!mesh.IsDone())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT meshing did not complete before mesh exchange.");
+    if (!provider.Write(TCollection_AsciiString(file_path), shape->Value))
+      throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, failure_message);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_write_obj(
+  const OcctSharp_ShapeHandle* shape, const char* file_path)
+{
+  occ::handle<DEOBJ_ConfigurationNode> node = new DEOBJ_ConfigurationNode();
+  DEOBJ_Provider provider(node);
+  return WriteMeshExchangeShape(shape, file_path, provider, "OCCT OBJ write failed.");
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_write_ply(
+  const OcctSharp_ShapeHandle* shape, const char* file_path)
+{
+  occ::handle<DEPLY_ConfigurationNode> node = new DEPLY_ConfigurationNode();
+  DEPLY_Provider provider(node);
+  return WriteMeshExchangeShape(shape, file_path, provider, "OCCT PLY write failed.");
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_write_gltf(
+  const OcctSharp_ShapeHandle* shape, const char* file_path)
+{
+  occ::handle<DEGLTF_ConfigurationNode> node = new DEGLTF_ConfigurationNode();
+  DEGLTF_Provider provider(node);
+  return WriteMeshExchangeShape(shape, file_path, provider, "OCCT glTF write failed.");
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_write_vrml(
+  const OcctSharp_ShapeHandle* shape, const char* file_path)
+{
+  occ::handle<DEVRML_ConfigurationNode> node = new DEVRML_ConfigurationNode();
+  DEVRML_Provider provider(node);
+  return WriteMeshExchangeShape(shape, file_path, provider, "OCCT VRML write failed.");
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_transform(
@@ -1592,6 +2693,21 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_real_sequence_remove(OcctSharp_RealSeq
   return Guard([&] { ValidateRealSequence(sequence); ValidateSequenceIndex(sequence, index); sequence->Value.Remove(index); });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_real_sequence_snapshot(
+  const OcctSharp_RealSequenceHandle* sequence, double* values, const int32_t capacity, int32_t* written)
+{
+  if (written == nullptr) { SetLastError("The real sequence snapshot count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *written = 0;
+  return Guard([&]
+  {
+    ValidateRealSequence(sequence);
+    const int32_t length = sequence->Value.Length();
+    if (capacity < length || (length > 0 && values == nullptr)) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The real sequence snapshot buffer is too small or null.");
+    for (int32_t index = 0; index < length; ++index) values[index] = sequence->Value.Value(index + 1);
+    *written = length;
+  });
+}
+
 void OCCTSHARP_CALL occtsharp_real_sequence_release(OcctSharp_RealSequenceHandle* sequence)
 { if (sequence != nullptr && UnregisterValue(sequence, LiveRealSequences)) delete sequence; }
 
@@ -1641,6 +2757,21 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_real_array_set_value(OcctSharp_RealArr
   return Guard([&] { ValidateRealArray(array); ValidateArrayIndex(array, index); ValidateFinite(value, "Array values must be finite."); array->Value.SetValue(index, value); });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_real_array_snapshot(
+  const OcctSharp_RealArrayHandle* array, double* values, const int32_t capacity, int32_t* written)
+{
+  if (written == nullptr) { SetLastError("The real array snapshot count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *written = 0;
+  return Guard([&]
+  {
+    ValidateRealArray(array);
+    const int32_t length = array->Value.Length();
+    if (capacity < length || (length > 0 && values == nullptr)) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The real array snapshot buffer is too small or null.");
+    for (int32_t index = 0; index < length; ++index) values[index] = array->Value.Value(array->Value.Lower() + index);
+    *written = length;
+  });
+}
+
 void OCCTSHARP_CALL occtsharp_real_array_release(OcctSharp_RealArrayHandle* array)
 { if (array != nullptr && UnregisterValue(array, LiveRealArrays)) delete array; }
 
@@ -1687,6 +2818,21 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_real_vector_append(OcctSharp_RealVecto
 OcctSharp_Status OCCTSHARP_CALL occtsharp_real_vector_set_value(OcctSharp_RealVectorHandle* vector, const int32_t index, const double value)
 {
   return Guard([&] { ValidateRealVector(vector); ValidateVectorIndex(vector, index); ValidateFinite(value, "Vector values must be finite."); vector->Value.SetValue(index, value); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_real_vector_snapshot(
+  const OcctSharp_RealVectorHandle* vector, double* values, const int32_t capacity, int32_t* written)
+{
+  if (written == nullptr) { SetLastError("The real vector snapshot count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *written = 0;
+  return Guard([&]
+  {
+    ValidateRealVector(vector);
+    const int32_t length = vector->Value.Length();
+    if (capacity < length || (length > 0 && values == nullptr)) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The real vector snapshot buffer is too small or null.");
+    for (int32_t index = 0; index < length; ++index) values[index] = vector->Value.Value(index);
+    *written = length;
+  });
 }
 
 void OCCTSHARP_CALL occtsharp_real_vector_release(OcctSharp_RealVectorHandle* vector)
@@ -1742,6 +2888,27 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_int_real_map_unbind(OcctSharp_IntRealM
   if (removed == nullptr) { SetLastError("The integer-real map removal output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
   *removed = 0;
   return Guard([&] { ValidateIntRealMap(map); *removed = map->Value.UnBind(key) ? 1 : 0; });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_int_real_map_snapshot(
+  const OcctSharp_IntRealMapHandle* map, int32_t* keys, double* values, const int32_t capacity, int32_t* written)
+{
+  if (written == nullptr) { SetLastError("The integer-real map snapshot count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *written = 0;
+  return Guard([&]
+  {
+    ValidateIntRealMap(map);
+    const int32_t extent = map->Value.Extent();
+    if (capacity < extent || (extent > 0 && (keys == nullptr || values == nullptr))) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The integer-real map snapshot buffers are too small or null.");
+    int32_t index = 0;
+    for (NCollection_DataMap<int32_t, double>::Iterator iterator(map->Value); iterator.More(); iterator.Next())
+    {
+      keys[index] = iterator.Key();
+      values[index] = iterator.Value();
+      ++index;
+    }
+    *written = extent;
+  });
 }
 
 void OCCTSHARP_CALL occtsharp_int_real_map_release(OcctSharp_IntRealMapHandle* map)
@@ -1800,6 +2967,21 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_int_indexed_map_remove_last(OcctSharp_
   if (removed_key == nullptr) { SetLastError("The indexed map removed-key output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
   *removed_key = 0;
   return Guard([&] { ValidateIntIndexedMap(map); const int extent = map->Value.Extent(); if (extent <= 0) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Cannot remove the last key from an empty indexed map."); *removed_key = map->Value.FindKey(extent); map->Value.RemoveLast(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_int_indexed_map_snapshot(
+  const OcctSharp_IntIndexedMapHandle* map, int32_t* keys, const int32_t capacity, int32_t* written)
+{
+  if (written == nullptr) { SetLastError("The indexed map snapshot count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *written = 0;
+  return Guard([&]
+  {
+    ValidateIntIndexedMap(map);
+    const int32_t extent = map->Value.Extent();
+    if (capacity < extent || (extent > 0 && keys == nullptr)) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The indexed map snapshot buffer is too small or null.");
+    for (int32_t index = 0; index < extent; ++index) keys[index] = map->Value.FindKey(index + 1);
+    *written = extent;
+  });
 }
 
 void OCCTSHARP_CALL occtsharp_int_indexed_map_release(OcctSharp_IntIndexedMapHandle* map)
@@ -1989,6 +3171,1185 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_step_merge_xde(
         "OCCT could not write the XDE STEP assembly.");
     }
   });
+}
+
+namespace
+{
+TCollection_ExtendedString MakeExtendedUtf8(const char* utf8, const int32_t length)
+{
+  ValidateUtf8Input(utf8, length);
+  return TCollection_ExtendedString(MakeAsciiString(utf8, length), true);
+}
+
+std::string ExtendedToUtf8(const TCollection_ExtendedString& value)
+{
+  const int32_t capacity = value.LengthOfCString() + 1;
+  std::string result(static_cast<size_t>(capacity), '\0');
+  Standard_PCharacter output = result.data();
+  const int32_t written = value.ToUTF8CString(output);
+  result.resize(static_cast<size_t>(written));
+  return result;
+}
+
+void CopyUtf8Result(const std::string& value, char* buffer, const int32_t capacity, int32_t* written)
+{
+  if (written == nullptr)
+  {
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The UTF-8 output length pointer is null.");
+  }
+  *written = 0;
+  ValidateOutputBuffer(buffer, capacity, static_cast<int32_t>(value.size()) + 1);
+  if (!value.empty())
+  {
+    std::memcpy(buffer, value.data(), value.size());
+  }
+  buffer[value.size()] = '\0';
+  *written = static_cast<int32_t>(value.size());
+}
+
+TDF_Label ResolveOcafLabel(const OcctSharp_OcafDocumentHandle* document, const char* entry)
+{
+  ValidateOcafDocument(document);
+  if (entry == nullptr || entry[0] == '\0')
+  {
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The OCAF label entry is null or empty.");
+  }
+  TDF_Label label;
+  TDF_Tool::Label(document->Document->GetData(), entry, label, false);
+  if (label.IsNull())
+  {
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The OCAF label entry does not exist.");
+  }
+  return label;
+}
+
+void RequireOpenOcafCommand(const OcctSharp_OcafDocumentHandle* document)
+{
+  if (!document->Document->HasOpenCommand())
+  {
+    throw OperationFailure(
+      OCCTSHARP_STATUS_INVALID_ARGUMENT,
+      "An OCAF transaction must be open before modifying labels.");
+  }
+}
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_document_create(
+  OcctSharp_OcafDocumentHandle** out_document)
+{
+  if (out_document == nullptr)
+  {
+    SetLastError("The output OCAF document pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_document = nullptr;
+  return Guard([&]
+  {
+    opencascade::handle<TDocStd_Application> application = new TDocStd_Application();
+    BinDrivers::DefineFormat(application);
+    opencascade::handle<TDocStd_Document> document;
+    application->NewDocument(TCollection_ExtendedString("BinOcaf"), document);
+    if (document.IsNull())
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT returned a null OCAF document.");
+    }
+    document->SetUndoLimit(10);
+    *out_document = AllocateValue(
+      new OcctSharp_OcafDocumentHandle(std::move(application), std::move(document)),
+      LiveOcafDocuments);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_document_open(
+  const char* file_path, OcctSharp_OcafDocumentHandle** out_document)
+{
+  if (out_document == nullptr)
+  {
+    SetLastError("The output OCAF document pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_document = nullptr;
+  return Guard([&]
+  {
+    ValidatePath(file_path);
+    opencascade::handle<TDocStd_Application> application = new TDocStd_Application();
+    BinDrivers::DefineFormat(application);
+    opencascade::handle<TDocStd_Document> document;
+    const PCDM_ReaderStatus status = application->Open(
+      TCollection_ExtendedString(file_path, true), document);
+    if (status != PCDM_RS_OK || document.IsNull())
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not open the binary OCAF document.");
+    }
+    document->SetUndoLimit(10);
+    *out_document = AllocateValue(
+      new OcctSharp_OcafDocumentHandle(std::move(application), std::move(document)),
+      LiveOcafDocuments);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_document_save(
+  const OcctSharp_OcafDocumentHandle* document, const char* file_path)
+{
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    ValidatePath(file_path);
+    if (document->Document->HasOpenCommand())
+    {
+      throw OperationFailure(
+        OCCTSHARP_STATUS_INVALID_ARGUMENT,
+        "The OCAF transaction must be committed or aborted before saving.");
+    }
+    const PCDM_StoreStatus status = document->Application->SaveAs(
+      document->Document, TCollection_ExtendedString(file_path, true));
+    if (status != PCDM_SS_OK)
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not save the binary OCAF document.");
+    }
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_document_has_open_command(
+  const OcctSharp_OcafDocumentHandle* document, int32_t* has_open_command)
+{
+  if (has_open_command == nullptr)
+  {
+    SetLastError("The OCAF command-state output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *has_open_command = 0;
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    *has_open_command = document->Document->HasOpenCommand() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_document_begin_command(
+  OcctSharp_OcafDocumentHandle* document)
+{
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    if (document->Document->HasOpenCommand())
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "An OCAF transaction is already open.");
+    }
+    document->Document->NewCommand();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_document_commit_command(
+  OcctSharp_OcafDocumentHandle* document, int32_t* changed)
+{
+  if (changed == nullptr)
+  {
+    SetLastError("The OCAF commit result pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *changed = 0;
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    RequireOpenOcafCommand(document);
+    *changed = document->Document->CommitCommand() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_document_abort_command(
+  OcctSharp_OcafDocumentHandle* document)
+{
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    RequireOpenOcafCommand(document);
+    document->Document->AbortCommand();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_document_main_entry(
+  const OcctSharp_OcafDocumentHandle* document,
+  char* buffer,
+  const int32_t capacity,
+  int32_t* written)
+{
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    TCollection_AsciiString entry;
+    TDF_Tool::Entry(document->Document->Main(), entry);
+    CopyUtf8Result(std::string(entry.ToCString()), buffer, capacity, written);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_label_add_child(
+  OcctSharp_OcafDocumentHandle* document, const char* parent_entry, int32_t* child_tag)
+{
+  if (child_tag == nullptr)
+  {
+    SetLastError("The OCAF child-tag output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *child_tag = 0;
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    RequireOpenOcafCommand(document);
+    const TDF_Label parent = ResolveOcafLabel(document, parent_entry);
+    const TDF_Label child = TDF_TagSource::NewChild(parent);
+    if (child.IsNull())
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT returned a null OCAF child label.");
+    }
+    *child_tag = child.Tag();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_label_child_count(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t* count)
+{
+  if (count == nullptr)
+  {
+    SetLastError("The OCAF child-count output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *count = 0;
+  return Guard([&] { *count = ResolveOcafLabel(document, entry).NbChildren(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_label_set_name(
+  OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  const char* utf8,
+  const int32_t length)
+{
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    RequireOpenOcafCommand(document);
+    TDataStd_Name::Set(ResolveOcafLabel(document, entry), MakeExtendedUtf8(utf8, length));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_label_name_utf8_length(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  int32_t* has_name,
+  int32_t* length)
+{
+  if (has_name == nullptr || length == nullptr)
+  {
+    SetLastError("An OCAF name metadata output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *has_name = 0;
+  *length = 0;
+  return Guard([&]
+  {
+    opencascade::handle<TDataStd_Name> name;
+    if (ResolveOcafLabel(document, entry).FindAttribute(TDataStd_Name::GetID(), name))
+    {
+      *has_name = 1;
+      *length = name->Get().LengthOfCString();
+    }
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_label_name_to_utf8(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  char* buffer,
+  const int32_t capacity,
+  int32_t* written)
+{
+  return Guard([&]
+  {
+    opencascade::handle<TDataStd_Name> name;
+    if (!ResolveOcafLabel(document, entry).FindAttribute(TDataStd_Name::GetID(), name))
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The OCAF label has no name attribute.");
+    }
+    CopyUtf8Result(ExtendedToUtf8(name->Get()), buffer, capacity, written);
+  });
+}
+
+void OCCTSHARP_CALL occtsharp_ocaf_document_release(OcctSharp_OcafDocumentHandle* document)
+{
+  if (document != nullptr && UnregisterValue(document, LiveOcafDocuments))
+  {
+    if (!document->Application.IsNull() && !document->Document.IsNull())
+    {
+      if (document->Document->HasOpenCommand())
+      {
+        document->Document->AbortCommand();
+      }
+      document->Application->Close(document->Document);
+    }
+    delete document;
+  }
+}
+
+namespace
+{
+OcctSharp_OcafDocumentHandle* CreateOwnedXdeDocument()
+{
+  opencascade::handle<TDocStd_Application> application = new TDocStd_Application();
+  BinXCAFDrivers::DefineFormat(application);
+  opencascade::handle<TDocStd_Document> document;
+  application->NewDocument(TCollection_ExtendedString("BinXCAF"), document);
+  if (document.IsNull())
+  {
+    throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT returned a null XDE document.");
+  }
+  document->SetUndoLimit(10);
+  InitializeXdeTools(document);
+  return AllocateValue(
+    new OcctSharp_OcafDocumentHandle(std::move(application), std::move(document)),
+    LiveOcafDocuments);
+}
+
+void CopyLabelEntry(const TDF_Label& label, char* buffer, const int32_t capacity, int32_t* written)
+{
+  if (label.IsNull())
+  {
+    throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT returned a null XDE label.");
+  }
+  TCollection_AsciiString entry;
+  TDF_Tool::Entry(label, entry);
+  CopyUtf8Result(std::string(entry.ToCString()), buffer, capacity, written);
+}
+
+opencascade::handle<XCAFDoc_ShapeTool> GetXdeShapeTool(
+  const OcctSharp_OcafDocumentHandle* document)
+{
+  ValidateOcafDocument(document);
+  return XCAFDoc_DocumentTool::ShapeTool(document->Document->Main());
+}
+
+bool GetAssignedMaterial(
+  const TDF_Label& label,
+  opencascade::handle<TCollection_HAsciiString>& name,
+  opencascade::handle<TCollection_HAsciiString>& description,
+  double& density,
+  opencascade::handle<TCollection_HAsciiString>& densityName,
+  opencascade::handle<TCollection_HAsciiString>& densityType)
+{
+  opencascade::handle<TDataStd_TreeNode> reference;
+  if (!label.FindAttribute(XCAFDoc::MaterialRefGUID(), reference) || !reference->HasFather())
+  {
+    return false;
+  }
+  return XCAFDoc_MaterialTool::GetMaterial(
+    reference->Father()->Label(), name, description, density, densityName, densityType);
+}
+
+std::string MaterialFieldUtf8(const TDF_Label& label, const int32_t field)
+{
+  opencascade::handle<TCollection_HAsciiString> name;
+  opencascade::handle<TCollection_HAsciiString> description;
+  opencascade::handle<TCollection_HAsciiString> densityName;
+  opencascade::handle<TCollection_HAsciiString> densityType;
+  double density = 0.0;
+  if (!GetAssignedMaterial(label, name, description, density, densityName, densityType))
+  {
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label has no material assignment.");
+  }
+  const opencascade::handle<TCollection_HAsciiString>* selected = nullptr;
+  switch (field)
+  {
+    case 0: selected = &name; break;
+    case 1: selected = &description; break;
+    case 2: selected = &densityName; break;
+    case 3: selected = &densityType; break;
+    default:
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE material field index is invalid.");
+  }
+  return selected->IsNull() ? std::string() : std::string((*selected)->ToCString());
+}
+
+opencascade::handle<NCollection_HSequence<TCollection_ExtendedString>> GetXdeLayers(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry)
+{
+  const TDF_Label label = ResolveOcafLabel(document, entry);
+  return XCAFDoc_DocumentTool::LayerTool(document->Document->Main())->GetLayers(label);
+}
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_create(
+  OcctSharp_OcafDocumentHandle** out_document)
+{
+  if (out_document == nullptr)
+  {
+    SetLastError("The output XDE document pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_document = nullptr;
+  return Guard([&] { *out_document = CreateOwnedXdeDocument(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_open(
+  const char* file_path, OcctSharp_OcafDocumentHandle** out_document)
+{
+  if (out_document == nullptr)
+  {
+    SetLastError("The output XDE document pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_document = nullptr;
+  return Guard([&]
+  {
+    ValidatePath(file_path);
+    opencascade::handle<TDocStd_Application> application = new TDocStd_Application();
+    BinXCAFDrivers::DefineFormat(application);
+    opencascade::handle<TDocStd_Document> document;
+    const PCDM_ReaderStatus status = application->Open(
+      TCollection_ExtendedString(file_path, true), document);
+    if (status != PCDM_RS_OK || document.IsNull())
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not open the binary XDE document.");
+    }
+    document->SetUndoLimit(10);
+    InitializeXdeTools(document);
+    *out_document = AllocateValue(
+      new OcctSharp_OcafDocumentHandle(std::move(application), std::move(document)),
+      LiveOcafDocuments);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step(
+  const char* file_path, OcctSharp_OcafDocumentHandle** out_document)
+{
+  if (out_document == nullptr)
+  {
+    SetLastError("The output XDE document pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_document = nullptr;
+  return Guard([&]
+  {
+    ValidatePath(file_path);
+    OcctSharp_OcafDocumentHandle* result = CreateOwnedXdeDocument();
+    try
+    {
+      STEPCAFControl_Reader reader;
+      ConfigureXdeReader(reader);
+      if (reader.ReadFile(file_path) != IFSelect_RetDone || !reader.Transfer(result->Document))
+      {
+        throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not transfer STEP into the XDE document.");
+      }
+      *out_document = result;
+    }
+    catch (...)
+    {
+      occtsharp_ocaf_document_release(result);
+      throw;
+    }
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step(
+  const OcctSharp_OcafDocumentHandle* document, const char* file_path)
+{
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    ValidatePath(file_path);
+    if (document->Document->HasOpenCommand())
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE transaction must be closed before STEP export.");
+    }
+    STEPCAFControl_Writer writer;
+    ConfigureXdeWriter(writer);
+    if (!writer.Transfer(document->Document, STEPControl_AsIs)
+        || writer.Write(file_path) != IFSelect_RetDone)
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not write the XDE STEP document.");
+    }
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_add_shape(
+  OcctSharp_OcafDocumentHandle* document,
+  const OcctSharp_ShapeHandle* shape,
+  const char* name_utf8,
+  const int32_t name_length,
+  char* entry_buffer,
+  const int32_t entry_capacity,
+  int32_t* entry_written)
+{
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    RequireOpenOcafCommand(document);
+    ValidateUsableShape(shape);
+    TDF_Label label = GetXdeShapeTool(document)->AddShape(shape->Value, false, false);
+    TDataStd_Name::Set(label, MakeExtendedUtf8(name_utf8, name_length));
+    CopyLabelEntry(label, entry_buffer, entry_capacity, entry_written);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_add_assembly(
+  OcctSharp_OcafDocumentHandle* document,
+  const char* name_utf8,
+  const int32_t name_length,
+  char* entry_buffer,
+  const int32_t entry_capacity,
+  int32_t* entry_written)
+{
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    RequireOpenOcafCommand(document);
+    TDF_Label label = GetXdeShapeTool(document)->NewShape();
+    TDataStd_Name::Set(label, MakeExtendedUtf8(name_utf8, name_length));
+    CopyLabelEntry(label, entry_buffer, entry_capacity, entry_written);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_add_component(
+  OcctSharp_OcafDocumentHandle* document,
+  const char* assembly_entry,
+  const char* part_entry,
+  const OcctSharp_LocationHandle* location,
+  char* entry_buffer,
+  const int32_t entry_capacity,
+  int32_t* entry_written)
+{
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    RequireOpenOcafCommand(document);
+    ValidateLocationHandle(location);
+    const TDF_Label assembly = ResolveOcafLabel(document, assembly_entry);
+    const TDF_Label part = ResolveOcafLabel(document, part_entry);
+    TDF_Label occurrence = GetXdeShapeTool(document)->AddComponent(assembly, part, location->Value);
+    GetXdeShapeTool(document)->UpdateAssemblies();
+    CopyLabelEntry(occurrence, entry_buffer, entry_capacity, entry_written);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_get_shape(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr)
+  {
+    SetLastError("The output XDE shape pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_shape = nullptr;
+  return Guard([&]
+  {
+    TopoDS_Shape shape;
+    if (!XCAFDoc_ShapeTool::GetShape(ResolveOcafLabel(document, entry), shape) || shape.IsNull())
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The XDE label does not contain a shape.");
+    }
+    *out_shape = AllocateShape(std::move(shape));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_is_assembly(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t* is_assembly)
+{
+  if (is_assembly == nullptr)
+  {
+    SetLastError("The XDE assembly-state output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *is_assembly = 0;
+  return Guard([&] { *is_assembly = XCAFDoc_ShapeTool::IsAssembly(ResolveOcafLabel(document, entry)) ? 1 : 0; });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_component_count(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t* count)
+{
+  if (count == nullptr)
+  {
+    SetLastError("The XDE component-count output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *count = 0;
+  return Guard([&] { *count = XCAFDoc_ShapeTool::NbComponents(ResolveOcafLabel(document, entry), false); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_component_entry(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  const int32_t index,
+  char* buffer,
+  const int32_t capacity,
+  int32_t* written)
+{
+  return Guard([&]
+  {
+    NCollection_Sequence<TDF_Label> components;
+    if (!XCAFDoc_ShapeTool::GetComponents(ResolveOcafLabel(document, entry), components, false)
+        || index < 1 || index > components.Length())
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE component index is out of range.");
+    }
+    CopyLabelEntry(components.Value(index), buffer, capacity, written);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_referred_entry(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  char* buffer,
+  const int32_t capacity,
+  int32_t* written)
+{
+  return Guard([&]
+  {
+    TDF_Label referred;
+    if (!XCAFDoc_ShapeTool::GetReferredShape(ResolveOcafLabel(document, entry), referred))
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a component occurrence.");
+    }
+    CopyLabelEntry(referred, buffer, capacity, written);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_get_location(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  OcctSharp_LocationHandle** out_location)
+{
+  if (out_location == nullptr)
+  {
+    SetLastError("The output XDE location pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_location = nullptr;
+  return Guard([&]
+  {
+    *out_location = AllocateLocation(XCAFDoc_ShapeTool::GetLocation(ResolveOcafLabel(document, entry)));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_free_shape_count(
+  const OcctSharp_OcafDocumentHandle* document, int32_t* count)
+{
+  if (count == nullptr)
+  {
+    SetLastError("The XDE free-shape count pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *count = 0;
+  return Guard([&]
+  {
+    NCollection_Sequence<TDF_Label> labels;
+    GetXdeShapeTool(document)->GetFreeShapes(labels);
+    *count = labels.Length();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_free_shape_entry(
+  const OcctSharp_OcafDocumentHandle* document,
+  const int32_t index,
+  char* buffer,
+  const int32_t capacity,
+  int32_t* written)
+{
+  return Guard([&]
+  {
+    NCollection_Sequence<TDF_Label> labels;
+    GetXdeShapeTool(document)->GetFreeShapes(labels);
+    if (index < 1 || index > labels.Length())
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE free-shape index is out of range.");
+    }
+    CopyLabelEntry(labels.Value(index), buffer, capacity, written);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_color(
+  OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  const OcctSharp_XdeColor color)
+{
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    RequireOpenOcafCommand(document);
+    const double values[] = {color.red, color.green, color.blue, color.alpha};
+    for (const double value : values)
+    {
+      if (!std::isfinite(value) || value < 0.0 || value > 1.0)
+      {
+        throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "XDE color channels must be finite values from zero through one.");
+      }
+    }
+    const Quantity_ColorRGBA nativeColor(
+      static_cast<float>(color.red),
+      static_cast<float>(color.green),
+      static_cast<float>(color.blue),
+      static_cast<float>(color.alpha));
+    const TDF_Label label = ResolveOcafLabel(document, entry);
+    const opencascade::handle<XCAFDoc_ColorTool> colorTool =
+      XCAFDoc_DocumentTool::ColorTool(document->Document->Main());
+    colorTool->SetColor(label, nativeColor, XCAFDoc_ColorGen);
+    colorTool->SetColor(label, nativeColor, XCAFDoc_ColorSurf);
+    colorTool->SetColor(label, nativeColor, XCAFDoc_ColorCurv);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_get_color(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  int32_t* has_color,
+  OcctSharp_XdeColor* color)
+{
+  if (has_color == nullptr || color == nullptr)
+  {
+    SetLastError("An XDE color output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *has_color = 0;
+  *color = {};
+  return Guard([&]
+  {
+    Quantity_ColorRGBA nativeColor;
+    const TDF_Label label = ResolveOcafLabel(document, entry);
+    if (XCAFDoc_ColorTool::GetColor(label, XCAFDoc_ColorGen, nativeColor)
+        || XCAFDoc_ColorTool::GetColor(label, XCAFDoc_ColorSurf, nativeColor)
+        || XCAFDoc_ColorTool::GetColor(label, XCAFDoc_ColorCurv, nativeColor))
+    {
+      *has_color = 1;
+      *color = {
+        nativeColor.GetRGB().Red(), nativeColor.GetRGB().Green(),
+        nativeColor.GetRGB().Blue(), nativeColor.Alpha()};
+    }
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_layer(
+  OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  const char* layer_utf8,
+  const int32_t layer_length,
+  const int32_t replace_existing)
+{
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    RequireOpenOcafCommand(document);
+    XCAFDoc_DocumentTool::LayerTool(document->Document->Main())->SetLayer(
+      ResolveOcafLabel(document, entry), MakeExtendedUtf8(layer_utf8, layer_length), replace_existing != 0);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_layer_count(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t* count)
+{
+  if (count == nullptr)
+  {
+    SetLastError("The XDE layer count pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *count = 0;
+  return Guard([&]
+  {
+    const auto layers = GetXdeLayers(document, entry);
+    *count = layers.IsNull() ? 0 : layers->Length();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_layer_name_utf8_length(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  const int32_t index,
+  int32_t* length)
+{
+  if (length == nullptr)
+  {
+    SetLastError("The XDE layer-name length pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *length = 0;
+  return Guard([&]
+  {
+    const auto layers = GetXdeLayers(document, entry);
+    if (layers.IsNull() || index < 1 || index > layers->Length())
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE layer index is out of range.");
+    }
+    *length = layers->Value(index).LengthOfCString();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_layer_name_to_utf8(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  const int32_t index,
+  char* buffer,
+  const int32_t capacity,
+  int32_t* written)
+{
+  return Guard([&]
+  {
+    const auto layers = GetXdeLayers(document, entry);
+    if (layers.IsNull() || index < 1 || index > layers->Length())
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE layer index is out of range.");
+    }
+    CopyUtf8Result(ExtendedToUtf8(layers->Value(index)), buffer, capacity, written);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_material(
+  OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  const char* name,
+  const int32_t name_length,
+  const char* description,
+  const int32_t description_length,
+  const double density,
+  const char* density_name,
+  const int32_t density_name_length,
+  const char* density_type,
+  const int32_t density_type_length)
+{
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    RequireOpenOcafCommand(document);
+    ValidateFinite(density, "XDE material density must be finite.");
+    if (density < 0.0)
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "XDE material density cannot be negative.");
+    }
+    ValidateUtf8Input(name, name_length);
+    ValidateUtf8Input(description, description_length);
+    ValidateUtf8Input(density_name, density_name_length);
+    ValidateUtf8Input(density_type, density_type_length);
+    auto makeString = [](const char* value, const int32_t length)
+    {
+      return opencascade::handle<TCollection_HAsciiString>(
+        new TCollection_HAsciiString(MakeAsciiString(value, length)));
+    };
+    XCAFDoc_DocumentTool::MaterialTool(document->Document->Main())->SetMaterial(
+      ResolveOcafLabel(document, entry),
+      makeString(name, name_length),
+      makeString(description, description_length),
+      density,
+      makeString(density_name, density_name_length),
+      makeString(density_type, density_type_length));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_material_info(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  int32_t* has_material,
+  double* density)
+{
+  if (has_material == nullptr || density == nullptr)
+  {
+    SetLastError("An XDE material output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *has_material = 0;
+  *density = 0.0;
+  return Guard([&]
+  {
+    opencascade::handle<TCollection_HAsciiString> name;
+    opencascade::handle<TCollection_HAsciiString> description;
+    opencascade::handle<TCollection_HAsciiString> densityName;
+    opencascade::handle<TCollection_HAsciiString> densityType;
+    *has_material = GetAssignedMaterial(
+      ResolveOcafLabel(document, entry), name, description, *density, densityName, densityType) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_material_field_utf8_length(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  const int32_t field,
+  int32_t* length)
+{
+  if (length == nullptr)
+  {
+    SetLastError("The XDE material field length pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *length = 0;
+  return Guard([&] { *length = static_cast<int32_t>(MaterialFieldUtf8(ResolveOcafLabel(document, entry), field).size()); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_material_field_to_utf8(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  const int32_t field,
+  char* buffer,
+  const int32_t capacity,
+  int32_t* written)
+{
+  return Guard([&]
+  {
+    CopyUtf8Result(MaterialFieldUtf8(ResolveOcafLabel(document, entry), field), buffer, capacity, written);
+  });
+}
+
+namespace
+{
+void ValidateViewer(const OcctSharp_ViewerHandle* viewer)
+{
+  if (viewer == nullptr)
+  {
+    throw OperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The viewer handle is null.");
+  }
+  if (!IsLiveValue(viewer, LiveViewers))
+  {
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The viewer handle is invalid or already released.");
+  }
+}
+
+void ValidateViewerThread(const OcctSharp_ViewerHandle* viewer)
+{
+  ValidateViewer(viewer);
+  if (viewer->OwnerThread != std::this_thread::get_id())
+  {
+    throw OperationFailure(
+      OCCTSHARP_STATUS_INVALID_ARGUMENT,
+      "Viewer operations must run on the thread that created the viewer.");
+  }
+}
+
+opencascade::handle<AIS_Shape> FindPresentation(
+  const OcctSharp_ViewerHandle* viewer,
+  const int64_t presentationId)
+{
+  const auto iterator = viewer->Presentations.find(presentationId);
+  if (iterator == viewer->Presentations.end())
+  {
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The viewer presentation ID does not exist.");
+  }
+  return iterator->second;
+}
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_create(
+  const intptr_t window_handle, OcctSharp_ViewerHandle** out_viewer)
+{
+  if (out_viewer == nullptr)
+  {
+    SetLastError("The output viewer pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_viewer = nullptr;
+  return Guard([&]
+  {
+    if (window_handle == 0)
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "A non-zero native window handle is required.");
+    }
+    std::unique_ptr<OcctSharp_ViewerHandle> viewer(new OcctSharp_ViewerHandle());
+    viewer->OwnerThread = std::this_thread::get_id();
+    viewer->Display = new Aspect_DisplayConnection();
+    viewer->Driver = new OpenGl_GraphicDriver(viewer->Display);
+    viewer->Viewer = new V3d_Viewer(viewer->Driver);
+    viewer->Viewer->SetDefaultLights();
+    viewer->Viewer->SetLightOn();
+    viewer->Context = new AIS_InteractiveContext(viewer->Viewer);
+    viewer->View = viewer->Viewer->CreateView();
+    viewer->Window = new WNT_Window(reinterpret_cast<Aspect_Handle>(window_handle));
+    viewer->View->SetWindow(viewer->Window);
+    viewer->View->MustBeResized();
+    *out_viewer = AllocateValue(viewer.release(), LiveViewers);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_display_shape(
+  OcctSharp_ViewerHandle* viewer,
+  const OcctSharp_ShapeHandle* shape,
+  int64_t* presentation_id)
+{
+  if (presentation_id == nullptr)
+  {
+    SetLastError("The viewer presentation ID output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *presentation_id = 0;
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    ValidateUsableShape(shape);
+    opencascade::handle<AIS_Shape> presentation = new AIS_Shape(shape->Value);
+    const int64_t id = viewer->NextPresentationId++;
+    viewer->Presentations.emplace(id, presentation);
+    viewer->Context->Display(presentation, false);
+    *presentation_id = id;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_visible(
+  OcctSharp_ViewerHandle* viewer,
+  const int64_t presentation_id,
+  const int32_t visible)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const opencascade::handle<AIS_Shape> presentation = FindPresentation(viewer, presentation_id);
+    if (visible != 0) viewer->Context->Display(presentation, false);
+    else viewer->Context->Erase(presentation, false);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_remove_presentation(
+  OcctSharp_ViewerHandle* viewer,
+  const int64_t presentation_id)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const opencascade::handle<AIS_Shape> presentation = FindPresentation(viewer, presentation_id);
+    viewer->Context->Remove(presentation, false);
+    viewer->Presentations.erase(presentation_id);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_fit_all(OcctSharp_ViewerHandle* viewer)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->View->FitAll(0.01, true);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_redraw(OcctSharp_ViewerHandle* viewer)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->View->Redraw();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_resize(OcctSharp_ViewerHandle* viewer)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->View->MustBeResized();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_move_to(
+  OcctSharp_ViewerHandle* viewer,
+  const int32_t x,
+  const int32_t y,
+  int32_t* detected)
+{
+  if (detected == nullptr)
+  {
+    SetLastError("The viewer detection output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *detected = 0;
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->Context->MoveTo(x, y, viewer->View, false);
+    *detected = viewer->Context->HasDetected() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_select_at(
+  OcctSharp_ViewerHandle* viewer,
+  const int32_t x,
+  const int32_t y,
+  int32_t* selected_count)
+{
+  if (selected_count == nullptr)
+  {
+    SetLastError("The viewer selected-count output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *selected_count = 0;
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->Context->MoveTo(x, y, viewer->View, false);
+    viewer->Context->SelectDetected(AIS_SelectionScheme_Replace);
+    *selected_count = viewer->Context->NbSelected();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_selected_snapshot(
+  OcctSharp_ViewerHandle* viewer,
+  int64_t* presentation_ids,
+  const int32_t capacity,
+  int32_t* written)
+{
+  if (written == nullptr)
+  {
+    SetLastError("The viewer selection snapshot count pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *written = 0;
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    std::vector<int64_t> ids;
+    for (viewer->Context->InitSelected(); viewer->Context->MoreSelected(); viewer->Context->NextSelected())
+    {
+      const opencascade::handle<AIS_InteractiveObject> selected = viewer->Context->SelectedInteractive();
+      for (const auto& presentation : viewer->Presentations)
+      {
+        if (presentation.second == selected)
+        {
+          ids.push_back(presentation.first);
+          break;
+        }
+      }
+    }
+    if (capacity < static_cast<int32_t>(ids.size()) || (!ids.empty() && presentation_ids == nullptr))
+    {
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The viewer selection snapshot buffer is too small or null.");
+    }
+    for (size_t index = 0; index < ids.size(); ++index) presentation_ids[index] = ids[index];
+    *written = static_cast<int32_t>(ids.size());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_selected_count(
+  OcctSharp_ViewerHandle* viewer,
+  int32_t* count)
+{
+  if (count == nullptr)
+  {
+    SetLastError("The viewer selected-count output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *count = 0;
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    *count = viewer->Context->NbSelected();
+  });
+}
+
+void OCCTSHARP_CALL occtsharp_viewer_release(OcctSharp_ViewerHandle* viewer)
+{
+  if (viewer != nullptr && UnregisterValue(viewer, LiveViewers))
+  {
+    if (!viewer->Context.IsNull()) viewer->Context->RemoveAll(false);
+    viewer->Presentations.clear();
+    viewer->View.Nullify();
+    viewer->Context.Nullify();
+    viewer->Viewer.Nullify();
+    viewer->Driver.Nullify();
+    viewer->Window.Nullify();
+    viewer->Display.Nullify();
+    delete viewer;
+  }
 }
 
 void OCCTSHARP_CALL occtsharp_shape_release(OcctSharp_ShapeHandle* shape)

@@ -18,9 +18,9 @@ later layer passed.
 | Real-file test | Specific CAD data behaves as expected | All CAD files are supported |
 | Packaging test | Fresh consumer can restore and load dependencies | Every API is correct |
 
-The initial package test restores only the newly built local `OcctSharp` package,
-publishes a Windows x64 console consumer, verifies that all 36 native DLLs are below
-the output `occt` directory, and runs runtime identity plus box creation. A local clean
+The package test restores only the newly built local `OcctSharp` package,
+publishes a Windows x64 console consumer, verifies that all 45 current native DLLs are below
+the output `occt` directory, and runs runtime identity, modeling, and exchange calls. A local clean
 consumer pass is not a public-release license, provenance, signing, or CI pass.
 
 ## Generator tests
@@ -39,6 +39,9 @@ Use small controlled C++ fixtures for parsing and generation behavior, including
   byte stability through isolated report staging.
 - Full-library header inventory filtering and deterministic package grouping; semantic
   batch failure isolation must preserve declarations from unaffected headers.
+- Full-inventory final classification must assign every discovered stable ID and every
+  catalogued header a disposition, report zero pending/HD099 entries, and produce a
+  byte-identical report in two runs with the same batch size and normalized inputs.
 
 At least one test set must parse real headers from the pinned OCCT baseline.
 
@@ -76,6 +79,11 @@ Each generated typed shared wrapper additionally requires construction, all emit
 member paths, clone/reference-count, shared mutation visibility, either-wrapper-first
 disposal, access-after-dispose, RTTI, and generated error-contract tests.
 
+When generated shared members reference native enums, tests must also cover every enum
+family's numeric definition and at least one managed-to-native-to-managed round-trip.
+Inventory evidence must reconcile generated manifest IDs as `Emitted`; leaving those IDs
+as `SupportedUnselected` is a reporting failure even when runtime tests pass.
+
 Each generated topology value wrapper additionally requires null/type/orientation,
 copy independence, partner/same/equal distinctions, reversal/location behavior,
 either-wrapper-first disposal, access-after-dispose, and invalid-handle tests.
@@ -84,6 +92,42 @@ Each typed topology cast additionally requires successful `ShapeType` validation
 wrong-kind `TryCast` and throwing-cast paths, identity/equality preservation, and
 source-disposal independence. Every configured subtype export must compile even when
 the current fixture set cannot construct that subtype directly.
+
+Each BRep adaptor snapshot requires fixed-layout assertions on both sides of the ABI,
+representative analytic geometry values, exact topology-kind rejection, finite-bound
+handling, source-disposal behavior, and proof that the copied snapshot remains usable
+without a native parent or release call.
+
+Each modeling-result operation requires algorithm completion and null-result checks,
+null/disposed input failures, result independence after both inputs are disposed, and
+representative geometry assertions. Value-copy extrema results additionally require
+fixed-layout, distance, point ordering, and solution-count checks.
+
+An owning-result/no-history profile additionally requires an explicit history exclusion,
+result use after all inputs are disposed, null and disposed input failures, native
+completion/null-result diagnostics, and a package consumer that executes every included
+algorithm family. It does not imply coverage of modes or generated/modified/deleted maps.
+
+A geometry-only provider profile additionally requires explicit provider configuration,
+non-empty files for every supported writer, non-null/non-empty topology for every
+supported reader, source/result lifetime independence, documented unsupported directions,
+and clean-package verification of the expanded native toolkit closure.
+
+An OCAF document profile additionally requires commit and abort behavior, mutation
+rejection outside commands, save rejection during commands, UTF-8 attribute copies,
+stable-entry lookup, parent-disposal failures, empty-label abort semantics, binary
+persistence round-trip, and clean-package verification of persistence drivers.
+
+An XDE profile additionally requires parent disposal, same-document label guards,
+shape and location ownership, assembly occurrence/referred-part checks, copied name/
+color/layer/material records, and the same metadata assertions in memory, BinXCAF, and
+STEPCAF round-trips. Color tests must account for Gen/Surf/Curv channel normalization.
+
+A visualization-core profile additionally requires a real HWND, OpenGL view creation,
+shape display independent of source disposal, hide/show/remove, resize/fit/redraw,
+creating-thread enforcement, mouse detection/selection, copied selection IDs, and child
+invalidation. Package validation must load TKOpenGl from `occt`; compiling an interactive
+sample alone is not runtime evidence that the user closed or visually inspected it.
 
 ## Real CAD fixtures
 

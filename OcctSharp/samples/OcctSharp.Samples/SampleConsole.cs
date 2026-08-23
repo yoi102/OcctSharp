@@ -11,6 +11,7 @@ internal static class SampleConsole
         Console.WriteLine("3. 创建实体并输出 STL");
         Console.WriteLine("4. 创建实体并输出 IGES");
         Console.WriteLine("5. 读取多个 STEP、变换并合并为 XDE STEP");
+        Console.WriteLine("6. 打开交互式 OCCT Viewer");
         Console.WriteLine("0. 退出");
         Console.Write("请选择操作：");
     }

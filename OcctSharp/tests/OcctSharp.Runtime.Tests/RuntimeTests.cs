@@ -11,9 +11,630 @@ public sealed class RuntimeTests
     {
         OcctRuntimeInfo info = OcctRuntime.Info;
 
-        Assert.Equal(new Version(1, 17), info.AbiVersion);
-        Assert.Equal("0.18.0", info.BridgeVersion);
+        Assert.Equal(new Version(1, 32), info.AbiVersion);
+        Assert.Equal("0.40.0", info.BridgeVersion);
         Assert.Equal("8.0.1", info.OcctVersion);
+    }
+
+    [Fact]
+    public void GpPointUsesGeneratedValueCopyAndDistanceSemantics()
+    {
+        GpPoint origin = GpPoint.Origin;
+        GpPoint point = GpPoint.Create(3, 4, 12);
+        GpPoint copy = point.Copy();
+
+        Assert.Equal(new GpPoint(0, 0, 0), origin);
+        Assert.Equal(point, copy);
+        Assert.Equal(13, point.DistanceTo(origin), 12);
+        Assert.Throws<ArgumentOutOfRangeException>(() => GpPoint.Create(double.NaN, 0, 0));
+        Assert.Throws<ArgumentOutOfRangeException>(() => GpPoint.Create(0, 0, double.PositiveInfinity));
+    }
+
+    [Fact]
+    public void GpXyzPreservesOcctVectorAlgebraAndZeroNormalizationFailure()
+    {
+        GpXyz x = GpXyz.Create(1, 0, 0);
+        GpXyz y = GpXyz.Create(0, 1, 0);
+        Assert.Equal(new GpXyz(1, 1, 0), x.Added(y));
+        Assert.Equal(new GpXyz(0, 0, 1), x.Crossed(y));
+        Assert.Equal(0, x.Dot(y), 12);
+        Assert.Equal(1, x.Crossed(y).Modulus, 12);
+        Assert.Equal(new GpXyz(1, 0, 0), x.Normalized());
+        Assert.Throws<OcctException>(() => GpXyz.Origin.Normalized());
+        Assert.Throws<ArgumentOutOfRangeException>(() => GpXyz.Create(double.NaN, 0, 0));
+    }
+
+    [Fact]
+    public void GpLinePreservesDirectionDistanceAngleAndConstructionFailure()
+    {
+        GpLine line = GpLine.Create(GpXyz.Origin, GpXyz.Create(1, 0, 0));
+        Assert.Equal(1, line.DistanceTo(GpXyz.Create(0, 1, 0)), 12);
+        Assert.Equal(Math.PI / 2, line.AngleTo(GpLine.Create(GpXyz.Origin, GpXyz.Create(0, 1, 0))), 12);
+        Assert.Equal(new GpXyz(-1, 0, 0), line.Reversed().Direction);
+        Assert.Equal(new GpXyz(0, 0, 1), GpLine.Default.Direction);
+        Assert.Throws<OcctException>(() => GpLine.Create(GpXyz.Origin, GpXyz.Origin));
+    }
+
+    [Fact]
+    public void GpCirclePreservesRadiusAreaLengthDistanceAndValidation()
+    {
+        GpCircle circle = GpCircle.Create(GpXyz.Origin, GpXyz.Create(0, 0, 1), 2);
+        Assert.Equal(2, circle.Radius, 12);
+        Assert.Equal(4 * Math.PI, circle.Area, 12);
+        Assert.Equal(4 * Math.PI, circle.Length, 12);
+        Assert.Equal(0, circle.DistanceTo(GpXyz.Create(2, 0, 0)), 12);
+        Assert.Throws<OcctException>(() => GpCircle.Create(GpXyz.Origin, GpXyz.Origin, 2));
+        Assert.Throws<OcctException>(() => GpCircle.Create(GpXyz.Origin, GpXyz.Create(0, 0, 1), -1));
+    }
+
+    [Fact]
+    public void GpAx2AndPlanePreserveCoordinateAndDistanceSemantics()
+    {
+        GpAx2Value axis = GpAx2Value.Create(GpXyz.Origin, GpXyz.Create(0, 0, 1), GpXyz.Create(1, 0, 0));
+        Assert.Equal(new GpXyz(0, 1, 0), axis.YDirection);
+        Assert.Equal(0, axis.AngleTo(GpAx2Value.Default), 12);
+        GpPlane plane = GpPlane.Create(GpXyz.Origin, GpXyz.Create(0, 0, 1));
+        Assert.Equal(2, plane.DistanceTo(GpXyz.Create(0, 0, 2)), 12);
+        Assert.Equal(-2, plane.SignedDistanceTo(GpXyz.Create(0, 0, -2)), 12);
+        Assert.Throws<OcctException>(() => GpAx2Value.Create(GpXyz.Origin, GpXyz.Create(0, 0, 1), GpXyz.Create(0, 0, 1)));
+        Assert.Throws<OcctException>(() => GpPlane.Create(GpXyz.Origin, GpXyz.Origin));
+    }
+
+    [Fact]
+    public void GpAx3PreservesRightHandedDirectionsAndConstructionFailure()
+    {
+        GpAx3Value axis = GpAx3Value.Create(
+            GpXyz.Origin,
+            GpXyz.Create(0, 0, 1),
+            GpXyz.Create(1, 0, 0));
+
+        Assert.Equal(new GpXyz(0, 1, 0), axis.YDirection);
+        Assert.True(axis.IsDirect);
+        Assert.True(GpAx3Value.Default.IsDirect);
+        Assert.Throws<OcctException>(() => GpAx3Value.Create(
+            GpXyz.Origin,
+            GpXyz.Create(0, 0, 1),
+            GpXyz.Create(0, 0, 1)));
+    }
+
+    [Fact]
+    public void GPropPropertiesComputesVolumeCenterAndInertiaForBox()
+    {
+        using Shape box = ShapeFactory.CreateBox(10, 20, 30);
+        using GPropProperties properties = GPropProperties.FromShape(box);
+
+        Assert.Equal(6000, properties.Mass, 8);
+        Assert.Equal(new GpPoint(5, 10, 15), properties.CenterOfMass);
+        Assert.True(properties.InertiaValue(1, 1) > 0);
+        Assert.Equal(properties.InertiaValue(1, 2), properties.InertiaValue(2, 1), 12);
+        (double firstMoment, double secondMoment, double thirdMoment) = properties.PrincipalMoments;
+        Assert.True(firstMoment >= 0 && secondMoment >= 0 && thirdMoment >= 0);
+        _ = properties.Symmetry;
+
+        using GPropProperties clone = properties.Clone();
+        using GPropProperties combined = GPropProperties.Create();
+        combined.Add(properties);
+        combined.Add(clone, 0.5);
+        Assert.Equal(9000, combined.Mass, 8);
+        Assert.Throws<ArgumentException>(() => combined.Add(properties, 0));
+        Assert.Throws<ArgumentException>(() => properties.InertiaValue(0, 1));
+    }
+
+    [Fact]
+    public void ShapeFactoryCreatesSphereAndCylinderSolids()
+    {
+        using Shape sphere = ShapeFactory.CreateSphere(2);
+        using Shape cylinder = ShapeFactory.CreateCylinder(2, 5);
+        Assert.Equal(1, sphere.FaceCount);
+        Assert.Equal(3, cylinder.FaceCount);
+        Assert.Throws<ArgumentException>(() => ShapeFactory.CreateSphere(0));
+        Assert.Throws<ArgumentException>(() => ShapeFactory.CreateCylinder(2, double.NaN));
+    }
+
+    [Fact]
+    public void ShapeFactoryCreatesEdgeWireAndPlanarFace()
+    {
+        using Shape edge = ShapeFactory.CreateEdge(GpPoint.Origin, GpPoint.Create(5, 0, 0));
+        Assert.Equal(ShapeKind.Edge, edge.Kind);
+
+        GpPoint[] corners =
+        [
+            GpPoint.Origin,
+            GpPoint.Create(5, 0, 0),
+            GpPoint.Create(5, 4, 0),
+            GpPoint.Create(0, 4, 0),
+        ];
+        using Shape wire = ShapeFactory.CreatePolygonWire(corners, close: true);
+        using Shape face = ShapeFactory.CreatePlanarFace(wire);
+        Assert.Equal(ShapeKind.Wire, wire.Kind);
+        Assert.Equal(ShapeKind.Face, face.Kind);
+        Assert.Equal(1, face.FaceCount);
+        wire.Dispose();
+        Assert.Equal(1, face.FaceCount);
+
+        Assert.Throws<ArgumentException>(() => ShapeFactory.CreateEdge(GpPoint.Origin, GpPoint.Origin));
+        Assert.Throws<ArgumentException>(() => ShapeFactory.CreatePolygonWire([GpPoint.Origin]));
+        Assert.Throws<InvalidCastException>(() => ShapeFactory.CreatePlanarFace(edge));
+    }
+
+    [Fact]
+    public void BRepAdaptorSnapshotsCopyEdgeCurveAndFaceSurfaceValues()
+    {
+        using Shape edge = ShapeFactory.CreateEdge(GpPoint.Create(1, 2, 3), GpPoint.Create(5, 2, 3));
+        EdgeCurveSnapshot curve = edge.GetEdgeCurveSnapshot();
+        Assert.Equal(CurveGeometryType.Line, curve.CurveType);
+        Assert.Equal(0, curve.FirstParameter, 12);
+        Assert.Equal(4, curve.LastParameter, 12);
+        Assert.Equal(new GpPoint(1, 2, 3), curve.StartPoint);
+        Assert.Equal(new GpPoint(5, 2, 3), curve.EndPoint);
+
+        using Shape wire = ShapeFactory.CreatePolygonWire(
+        [
+            GpPoint.Origin,
+            GpPoint.Create(5, 0, 0),
+            GpPoint.Create(5, 4, 0),
+            GpPoint.Create(0, 4, 0),
+        ], close: true);
+        using Shape face = ShapeFactory.CreatePlanarFace(wire);
+        FaceSurfaceSnapshot surface = face.GetFaceSurfaceSnapshot();
+        Assert.Equal(SurfaceGeometryType.Plane, surface.SurfaceType);
+        Assert.Equal(5, surface.LastUParameter - surface.FirstUParameter, 12);
+        Assert.Equal(4, surface.LastVParameter - surface.FirstVParameter, 12);
+
+        edge.Dispose();
+        face.Dispose();
+        Assert.Equal(new GpPoint(1, 2, 3), curve.StartPoint);
+        Assert.Equal(SurfaceGeometryType.Plane, surface.SurfaceType);
+        Assert.Throws<ObjectDisposedException>(() => edge.GetEdgeCurveSnapshot());
+        Assert.Throws<ObjectDisposedException>(() => face.GetFaceSurfaceSnapshot());
+    }
+
+    [Fact]
+    public void BRepAdaptorSnapshotsRejectWrongTopologyKinds()
+    {
+        using Shape box = ShapeFactory.CreateBox(1, 2, 3);
+        using Shape edge = ShapeFactory.CreateEdge(GpPoint.Origin, GpPoint.Create(1, 0, 0));
+        Assert.Throws<InvalidCastException>(() => box.GetEdgeCurveSnapshot());
+        Assert.Throws<InvalidCastException>(() => edge.GetFaceSurfaceSnapshot());
+    }
+
+    [Fact]
+    public void BRepAdaptorSnapshotAbiLayoutsAreStable()
+    {
+        Assert.Equal(72, Marshal.SizeOf<EdgeCurveSnapshotRaw>());
+        Assert.Equal(0, Marshal.OffsetOf<EdgeCurveSnapshotRaw>(nameof(EdgeCurveSnapshotRaw.CurveType)).ToInt32());
+        Assert.Equal(8, Marshal.OffsetOf<EdgeCurveSnapshotRaw>(nameof(EdgeCurveSnapshotRaw.FirstParameter)).ToInt32());
+        Assert.Equal(24, Marshal.OffsetOf<EdgeCurveSnapshotRaw>(nameof(EdgeCurveSnapshotRaw.StartPoint)).ToInt32());
+        Assert.Equal(40, Marshal.SizeOf<FaceSurfaceSnapshotRaw>());
+        Assert.Equal(0, Marshal.OffsetOf<FaceSurfaceSnapshotRaw>(nameof(FaceSurfaceSnapshotRaw.SurfaceType)).ToInt32());
+        Assert.Equal(8, Marshal.OffsetOf<FaceSurfaceSnapshotRaw>(nameof(FaceSurfaceSnapshotRaw.FirstUParameter)).ToInt32());
+    }
+
+    [Fact]
+    public void FaceSnapshotCopiesTopologyAndSurvivesParentDisposal()
+    {
+        Shape[] faces;
+        using (Shape box = ShapeFactory.CreateBox(2, 3, 4))
+        {
+            faces = box.GetFaces();
+            Assert.Equal(6, faces.Length);
+            Assert.All(faces, face => Assert.Equal(1, face.FaceCount));
+        }
+
+        try
+        {
+            Assert.All(faces, face => Assert.Equal(1, face.FaceCount));
+        }
+        finally
+        {
+            foreach (Shape face in faces) face.Dispose();
+        }
+    }
+
+    [Fact]
+    public void SubshapeSnapshotCoversEdgesWiresAndVertices()
+    {
+        using Shape box = ShapeFactory.CreateBox(2, 3, 4);
+        Shape[] edges = box.GetSubShapes(ShapeKind.Edge);
+        Shape[] wires = box.GetSubShapes(ShapeKind.Wire);
+        Shape[] vertices = box.GetSubShapes(ShapeKind.Vertex);
+        try
+        {
+            Assert.Equal(24, edges.Length);
+            Assert.Equal(6, wires.Length);
+            Assert.Equal(48, vertices.Length);
+            Assert.Throws<ArgumentOutOfRangeException>(() => box.GetSubShapes(ShapeKind.Shape));
+        }
+        finally
+        {
+            foreach (Shape child in edges) child.Dispose();
+            foreach (Shape child in wires) child.Dispose();
+            foreach (Shape child in vertices) child.Dispose();
+        }
+    }
+
+    [Fact]
+    public void BooleanFuseAndCutReturnOwnedTopologyResults()
+    {
+        using Shape baseBox = ShapeFactory.CreateBox(10, 10, 10);
+        using Shape tool = ShapeFactory.CreateBox(4, 4, 4).Transformed(ShapeTransform.CreateTranslationAndRotationZ(3, 3, 3, 0));
+        using Shape fused = baseBox.Fuse(tool);
+        using Shape cut = baseBox.Cut(tool);
+
+        Assert.True(fused.FaceCount > 0);
+        Assert.True(cut.FaceCount > 0);
+        baseBox.Dispose();
+        tool.Dispose();
+        Assert.True(fused.FaceCount > 0);
+        Assert.True(cut.FaceCount > 0);
+    }
+
+    [Fact]
+    public void BooleanCommonAndMinimumDistanceReturnIndependentValues()
+    {
+        using Shape first = ShapeFactory.CreateBox(1, 1, 1);
+        using Shape overlap = ShapeFactory.CreateBox(1, 1, 1)
+            .Transformed(ShapeTransform.CreateTranslationAndRotationZ(0.5, 0, 0, 0));
+        using Shape common = first.Common(overlap);
+        Assert.True(common.FaceCount > 0);
+
+        using Shape separated = ShapeFactory.CreateBox(1, 1, 1)
+            .Transformed(ShapeTransform.CreateTranslationAndRotationZ(5, 0, 0, 0));
+        ShapeDistanceResult distance = first.DistanceTo(separated);
+        Assert.Equal(4, distance.Distance, 10);
+        Assert.True(distance.SolutionCount > 0);
+        Assert.Equal(1, distance.PointOnFirst.X, 10);
+        Assert.Equal(5, distance.PointOnSecond.X, 10);
+
+        first.Dispose();
+        overlap.Dispose();
+        separated.Dispose();
+        Assert.True(common.FaceCount > 0);
+        Assert.Equal(4, distance.Distance, 10);
+    }
+
+    [Fact]
+    public void ModelingAlgorithmsRejectNullAndDisposedInputsAndDistanceLayoutIsStable()
+    {
+        using Shape valid = ShapeFactory.CreateBox(1, 1, 1);
+        using Shape empty = ShapeFactory.CreateNull();
+        Assert.Throws<ArgumentException>(() => valid.Common(empty));
+        Assert.Throws<ArgumentException>(() => valid.DistanceTo(empty));
+        valid.Dispose();
+        Assert.Throws<ObjectDisposedException>(() => valid.Common(empty));
+        Assert.Throws<ObjectDisposedException>(() => valid.DistanceTo(empty));
+
+        Assert.Equal(64, Marshal.SizeOf<ShapeDistanceResultRaw>());
+        Assert.Equal(0, Marshal.OffsetOf<ShapeDistanceResultRaw>(nameof(ShapeDistanceResultRaw.Distance)).ToInt32());
+        Assert.Equal(8, Marshal.OffsetOf<ShapeDistanceResultRaw>(nameof(ShapeDistanceResultRaw.PointOnFirst)).ToInt32());
+        Assert.Equal(32, Marshal.OffsetOf<ShapeDistanceResultRaw>(nameof(ShapeDistanceResultRaw.PointOnSecond)).ToInt32());
+        Assert.Equal(56, Marshal.OffsetOf<ShapeDistanceResultRaw>(nameof(ShapeDistanceResultRaw.SolutionCount)).ToInt32());
+    }
+
+    [Fact]
+    public void MeshSnapshotReturnsBulkTrianglesAndNormals()
+    {
+        using Shape box = ShapeFactory.CreateBox(10, 20, 30);
+        MeshSnapshot mesh = box.CreateMesh(0.1, 0.5);
+
+        Assert.True(mesh.Vertices.Count > 0);
+        Assert.True(mesh.Indices.Count > 0);
+        Assert.Equal(0, mesh.Indices.Count % 3);
+        Assert.Equal(mesh.Indices.Count / 3, mesh.TriangleCount);
+        Assert.All(mesh.Indices, index => Assert.InRange(index, 0, mesh.Vertices.Count - 1));
+        Assert.All(mesh.Vertices, vertex =>
+        {
+            Assert.True(double.IsFinite(vertex.X));
+            Assert.True(double.IsFinite(vertex.NormalX));
+            Assert.True(double.IsFinite(vertex.NormalY));
+            Assert.True(double.IsFinite(vertex.NormalZ));
+        });
+    }
+
+    [Fact]
+    public void ShapeFixReturnsIndependentOwnedResult()
+    {
+        using Shape source = ShapeFactory.CreateBox(2, 3, 4);
+        using Shape fixedShape = source.Fixed();
+
+        Assert.False(fixedShape.IsNull);
+        Assert.Equal(source.FaceCount, fixedShape.FaceCount);
+        source.Dispose();
+        Assert.Equal(6, fixedShape.FaceCount);
+    }
+
+    [Fact]
+    public void ShapeUpgradeUnifySameDomainReturnsOwnedResult()
+    {
+        using Shape source = ShapeFactory.CreateBox(2, 3, 4);
+        using Shape unified = source.UnifiedSameDomain();
+
+        Assert.False(unified.IsNull);
+        Assert.Equal(source.FaceCount, unified.FaceCount);
+        source.Dispose();
+        Assert.True(unified.FaceCount > 0);
+    }
+
+    [Fact]
+    public void NullTopologyIsRejectedByBooleanAndHealingOperations()
+    {
+        using Shape valid = ShapeFactory.CreateBox(1, 2, 3);
+        using Shape empty = ShapeFactory.CreateNull();
+
+        Assert.True(empty.IsNull);
+        ArgumentException fuseError = Assert.Throws<ArgumentException>(() => valid.Fuse(empty));
+        Assert.Contains("null", fuseError.Message, StringComparison.OrdinalIgnoreCase);
+        Assert.Throws<ArgumentException>(() => valid.Cut(empty));
+        Assert.Throws<ArgumentException>(() => empty.Fixed());
+        Assert.Throws<ArgumentException>(() => empty.UnifiedSameDomain());
+    }
+
+    [Fact]
+    public void IgesGeometryRoundTripReadsAnOwnedShape()
+    {
+        string path = Path.Combine(Path.GetTempPath(), $"occtsharp-{Guid.NewGuid():N}.igs");
+        try
+        {
+            using Shape source = ShapeFactory.CreateBox(2, 3, 4);
+            ShapeExchange.WriteIges(source, path);
+            using Shape restored = ShapeExchange.ReadIges(path);
+            Assert.True(restored.FaceCount > 0);
+            source.Dispose();
+            Assert.True(restored.FaceCount > 0);
+        }
+        finally
+        {
+            if (File.Exists(path)) File.Delete(path);
+        }
+    }
+
+    [Fact]
+    public void StlGeometryRoundTripReadsAnOwnedFacetedShape()
+    {
+        string path = Path.Combine(Path.GetTempPath(), $"occtsharp-{Guid.NewGuid():N}.stl");
+        try
+        {
+            using Shape source = ShapeFactory.CreateBox(2, 3, 4);
+            ShapeExchange.WriteStl(source, path);
+            using Shape restored = ShapeExchange.ReadStl(path);
+            Assert.True(restored.FaceCount > 0);
+            source.Dispose();
+            Assert.True(restored.FaceCount > 0);
+        }
+        finally
+        {
+            if (File.Exists(path)) File.Delete(path);
+        }
+    }
+
+    [Fact]
+    public void MeshExchangeFormatsRoundTripSupportedProviders()
+    {
+        WithTemporaryDirectory(directory =>
+        {
+            using Shape source = ShapeFactory.CreateBox(2, 3, 4);
+            string obj = ShapeExchange.WriteObj(source, Path.Combine(directory, "box.obj"));
+            string ply = ShapeExchange.WritePly(source, Path.Combine(directory, "box.ply"));
+            string glb = ShapeExchange.WriteGltf(source, Path.Combine(directory, "box.glb"));
+            string vrml = ShapeExchange.WriteVrml(source, Path.Combine(directory, "box.wrl"));
+
+            Assert.True(new FileInfo(obj).Length > 0);
+            Assert.True(new FileInfo(ply).Length > 0);
+            Assert.True(new FileInfo(glb).Length > 0);
+            Assert.True(new FileInfo(vrml).Length > 0);
+
+            using Shape objShape = ShapeExchange.ReadObj(obj);
+            using Shape gltfShape = ShapeExchange.ReadGltf(glb);
+            using Shape vrmlShape = ShapeExchange.ReadVrml(vrml);
+            Assert.True(objShape.FaceCount > 0);
+            Assert.True(gltfShape.FaceCount > 0);
+            Assert.True(vrmlShape.FaceCount > 0);
+            source.Dispose();
+            Assert.True(objShape.FaceCount > 0);
+        });
+    }
+
+    [Fact]
+    public void OcafDocumentTransactionsPersistenceAndParentLifetimeAreDeterministic()
+    {
+        WithTemporaryDirectory(directory =>
+        {
+            string path = Path.Combine(directory, "document.cbf");
+            string childEntry;
+            OcafLabel disposedLabel;
+            using (OcafDocument document = OcafDocument.Create())
+            {
+                Assert.False(document.HasOpenTransaction);
+                Assert.Null(document.RootLabel.Name);
+                Assert.Throws<ArgumentException>(() => document.RootLabel.AddChild());
+
+                using (OcafTransaction transaction = document.BeginTransaction())
+                {
+                    document.RootLabel.Name = "根";
+                    OcafLabel child = document.RootLabel.AddChild();
+                    child.Name = "零件 A";
+                    childEntry = child.Entry;
+                    Assert.True(transaction.Commit());
+                }
+
+                Assert.False(document.HasOpenTransaction);
+                Assert.Equal("根", document.RootLabel.Name);
+                Assert.Equal(1, document.RootLabel.ChildCount);
+                Assert.Equal("零件 A", document.GetLabel(childEntry).Name);
+
+                using (document.BeginTransaction())
+                {
+                    document.RootLabel.Name = "aborted";
+                    _ = document.RootLabel.AddChild();
+                }
+
+                Assert.Equal("根", document.RootLabel.Name);
+                // OCAF rolls attributes back but retains the allocated empty label node.
+                Assert.Equal(2, document.RootLabel.ChildCount);
+
+                using (OcafTransaction open = document.BeginTransaction())
+                {
+                    Assert.Throws<ArgumentException>(() => document.Save(path));
+                    open.Abort();
+                }
+
+                Assert.Equal(path, document.Save(path));
+                Assert.True(new FileInfo(path).Length > 0);
+                disposedLabel = document.GetLabel(childEntry);
+            }
+
+            Assert.Throws<ObjectDisposedException>(() => _ = disposedLabel.Name);
+
+            using OcafDocument restored = OcafDocument.Open(path);
+            Assert.Equal("根", restored.RootLabel.Name);
+            Assert.Equal(1, restored.RootLabel.ChildCount);
+            Assert.Equal("零件 A", restored.GetLabel(childEntry).Name);
+        });
+    }
+
+    [Fact]
+    public void XdeMetadataAssemblyBinXcafAndStepcafRoundTrip()
+    {
+        WithTemporaryDirectory(directory =>
+        {
+            string binaryPath = Path.Combine(directory, "assembly.xbf");
+            string stepPath = Path.Combine(directory, "assembly.step");
+            string partEntry;
+            string assemblyEntry;
+            string occurrenceEntry;
+            XdeLabel disposedPart;
+
+            using (Shape box = ShapeFactory.CreateBox(2, 3, 4))
+            using (GpTrsf translation = GpTrsf.Create(10, 20, 30))
+            using (TopLocLocation location = TopLocLocation.FromTransform(translation))
+            using (XdeDocument document = XdeDocument.Create())
+            {
+                using (XdeTransaction transaction = document.BeginTransaction())
+                {
+                    XdeLabel part = document.AddShape(box, "Part A");
+                    part.Color = new XdeColor(0.25, 0.5, 0.75, 1.0);
+                    part.SetLayer("Mechanical");
+                    part.AddLayer("Purchased");
+                    part.Material = new XdeMaterial("Steel", "Structural steel", 7.85, "Density", "g/cm3");
+
+                    XdeLabel assembly = document.AddAssembly("Assembly A");
+                    XdeLabel occurrence = document.AddComponent(assembly, part, location);
+                    partEntry = part.Entry;
+                    assemblyEntry = assembly.Entry;
+                    occurrenceEntry = occurrence.Entry;
+                    Assert.True(transaction.Commit());
+                }
+
+                XdeLabel partLabel = document.GetLabel(partEntry);
+                Assert.Equal("Part A", partLabel.Name);
+                Assert.Equal(2, partLabel.Layers.Count);
+                Assert.Equal("Mechanical", partLabel.Layers[0]);
+                Assert.Equal("Purchased", partLabel.Layers[1]);
+                Assert.Equal(new XdeMaterial("Steel", "Structural steel", 7.85, "Density", "g/cm3"), partLabel.Material);
+                XdeColor color = Assert.IsType<XdeColor>(partLabel.Color);
+                Assert.Equal(0.25, color.Red, 6);
+                Assert.Equal(0.5, color.Green, 6);
+                Assert.Equal(0.75, color.Blue, 6);
+
+                XdeLabel assemblyLabel = document.GetLabel(assemblyEntry);
+                Assert.True(assemblyLabel.IsAssembly);
+                Assert.Equal(1, assemblyLabel.ComponentCount);
+                Assert.Equal(occurrenceEntry, Assert.Single(assemblyLabel.GetComponents()).Entry);
+                XdeLabel occurrenceLabel = document.GetLabel(occurrenceEntry);
+                Assert.Equal(partEntry, occurrenceLabel.ReferredShape.Entry);
+                using TopLocLocation copiedLocation = occurrenceLabel.Location;
+                using GpTrsf copiedTransform = copiedLocation.ToTransform();
+                Assert.Equal(10, copiedTransform.Value(1, 4), 10);
+                Assert.Equal(20, copiedTransform.Value(2, 4), 10);
+                Assert.Equal(30, copiedTransform.Value(3, 4), 10);
+                using Shape copiedShape = partLabel.Shape;
+                Assert.Equal(6, copiedShape.FaceCount);
+
+                Assert.Single(document.GetFreeShapes());
+                document.Save(binaryPath);
+                document.WriteStep(stepPath);
+                Assert.True(new FileInfo(binaryPath).Length > 0);
+                Assert.True(new FileInfo(stepPath).Length > 0);
+                disposedPart = partLabel;
+            }
+
+            Assert.Throws<ObjectDisposedException>(() => _ = disposedPart.Name);
+
+            using (XdeDocument binary = XdeDocument.Open(binaryPath))
+            {
+                XdeLabel part = binary.GetLabel(partEntry);
+                Assert.Equal("Part A", part.Name);
+                Assert.Equal(2, part.Layers.Count);
+                Assert.Equal("Mechanical", part.Layers[0]);
+                Assert.Equal("Purchased", part.Layers[1]);
+                Assert.Equal("Steel", part.Material?.Name);
+                Assert.True(binary.GetLabel(assemblyEntry).IsAssembly);
+                Assert.Equal(partEntry, binary.GetLabel(occurrenceEntry).ReferredShape.Entry);
+            }
+
+            using XdeDocument step = XdeDocument.ReadStep(stepPath);
+            XdeLabel stepAssembly = Assert.Single(step.GetFreeShapes());
+            Assert.True(stepAssembly.IsAssembly);
+            XdeLabel stepOccurrence = Assert.Single(stepAssembly.GetComponents());
+            XdeLabel stepPart = stepOccurrence.ReferredShape;
+            Assert.Equal("Part A", stepPart.Name);
+            Assert.Contains("Mechanical", stepPart.Layers);
+            Assert.Contains("Purchased", stepPart.Layers);
+            Assert.Equal("Steel", stepPart.Material?.Name);
+            XdeColor stepColor = Assert.IsType<XdeColor>(stepPart.Color ?? stepOccurrence.Color);
+            Assert.Equal(0.25, stepColor.Red, 6);
+            Assert.Equal(0.5, stepColor.Green, 6);
+            Assert.Equal(0.75, stepColor.Blue, 6);
+            using Shape stepShape = stepPart.Shape;
+            Assert.Equal(6, stepShape.FaceCount);
+        });
+    }
+
+    [Fact]
+    public void ViewerOwnsPresentationsEnforcesThreadAndProducesSelectionSnapshots()
+    {
+        nint window = NativeWindowMethods.CreateWindowEx(
+            0, "STATIC", "OcctSharp viewer test", 0x80000000u,
+            -32000, -32000, 256, 256, 0, 0, 0, 0);
+        Assert.NotEqual(0, window);
+        try
+        {
+            _ = NativeWindowMethods.ShowWindow(window, 4);
+            _ = NativeWindowMethods.UpdateWindow(window);
+            using OcctViewer viewer = OcctViewer.Create(window);
+            Shape box = ShapeFactory.CreateBox(10, 20, 30);
+            ViewerPresentation presentation = viewer.Display(box);
+            box.Dispose();
+
+            presentation.Hide();
+            presentation.Show();
+            viewer.Resize();
+            viewer.FitAll();
+            viewer.Redraw();
+            Assert.Throws<InvalidOperationException>(() =>
+                Task.Run(viewer.Redraw).GetAwaiter().GetResult());
+
+            Assert.True(viewer.MoveTo(128, 128));
+            Assert.Contains(presentation, viewer.SelectAt(128, 128));
+            Assert.Contains(presentation, viewer.GetSelection());
+
+            presentation.Dispose();
+            Assert.Throws<ObjectDisposedException>(presentation.Hide);
+        }
+        finally
+        {
+            Assert.True(NativeWindowMethods.DestroyWindow(window));
+        }
+    }
+
+    [Fact]
+    public void MeshSnapshotRejectsInvalidDeflectionsAndDisposedShapes()
+    {
+        using Shape box = ShapeFactory.CreateBox(1, 2, 3);
+        Assert.Throws<ArgumentException>(() => box.CreateMesh(0, 0.5));
+        Assert.Throws<ArgumentException>(() => box.CreateMesh(0.1, double.NaN));
+        box.Dispose();
+        Assert.Throws<ObjectDisposedException>(() => box.CreateMesh());
     }
 
     [Fact]
@@ -624,6 +1245,44 @@ public sealed class RuntimeTests
         Assert.Throws<ArgumentException>(() => OcctIntIndexedMap.Create([1, 1]));
     }
 
+    [Fact]
+    public void CollectionSnapshotsAreStableAcrossMutationAndDispose()
+    {
+        using OcctRealSequence sequence = OcctRealSequence.Create([1, 2]);
+        using OcctRealArray array = OcctRealArray.Create([3, 4]);
+        using OcctRealVector vector = OcctRealVector.Create([5, 6]);
+        using OcctIntIndexedMap indexed = OcctIntIndexedMap.Create([7, 8]);
+        using OcctIntRealMap map = OcctIntRealMap.Create([new(9, 10.0), new(11, 12.0)]);
+
+        double[] sequenceSnapshot = sequence.Snapshot();
+        double[] arraySnapshot = array.Snapshot();
+        double[] vectorSnapshot = vector.Snapshot();
+        int[] indexedSnapshot = indexed.Snapshot();
+        KeyValuePair<int, double>[] mapSnapshot = map.Snapshot();
+
+        sequence.Set(0, 100); array.Set(0, 200); vector.Set(0, 300); indexed.Add(13); map[9] = 900;
+        Assert.Equal([1.0, 2.0], sequenceSnapshot);
+        Assert.Equal([3.0, 4.0], arraySnapshot);
+        Assert.Equal([5.0, 6.0], vectorSnapshot);
+        Assert.Equal([7, 8], indexedSnapshot);
+        Assert.Equal(10.0, mapSnapshot.Single(pair => pair.Key == 9).Value, 12);
+    }
+
+    [Fact]
+    public void CollectionEnumerationFailsClosedAfterDisposeAndEmptySnapshotsAreSafe()
+    {
+        OcctRealSequence sequence = OcctRealSequence.Create([]);
+        Assert.Empty(sequence.Snapshot());
+        IEnumerator<double> enumerator = sequence.GetEnumerator();
+        sequence.Dispose();
+        Assert.Throws<ObjectDisposedException>(() => enumerator.MoveNext());
+
+        using OcctIntRealMap map = OcctIntRealMap.Create([]);
+        Assert.Empty(map.Snapshot());
+        using OcctIntIndexedMap indexed = OcctIntIndexedMap.Create([]);
+        Assert.Empty(indexed.Snapshot());
+    }
+
     private static void WithTemporaryDirectory(Action<string> action)
     {
         string directory = Path.Combine(Path.GetTempPath(), $"occtsharp-runtime-{Guid.NewGuid():N}");
@@ -636,5 +1295,35 @@ public sealed class RuntimeTests
         {
             Directory.Delete(directory, recursive: true);
         }
+    }
+
+    private static class NativeWindowMethods
+    {
+        [DllImport("user32.dll", EntryPoint = "CreateWindowExW", CharSet = CharSet.Unicode)]
+        internal static extern nint CreateWindowEx(
+            uint extendedStyle,
+            string className,
+            string windowName,
+            uint style,
+            int x,
+            int y,
+            int width,
+            int height,
+            nint parent,
+            nint menu,
+            nint instance,
+            nint parameter);
+
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        internal static extern bool ShowWindow(nint window, int command);
+
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        internal static extern bool UpdateWindow(nint window);
+
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        internal static extern bool DestroyWindow(nint window);
     }
 }

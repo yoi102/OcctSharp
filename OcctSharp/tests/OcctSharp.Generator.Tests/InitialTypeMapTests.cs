@@ -44,6 +44,7 @@ public sealed class InitialTypeMapTests
             out BindingTypeProjection? projection));
         Assert.Equal("TM004", projection?.RuleId);
         Assert.Equal("int32_t", projection?.AbiType);
+        Assert.Equal("SampleKind", projection?.ManagedFriendlyType);
     }
 
     [Fact]

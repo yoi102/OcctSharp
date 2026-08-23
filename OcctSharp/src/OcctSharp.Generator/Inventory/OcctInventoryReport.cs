@@ -12,7 +12,8 @@ public sealed record OcctInventoryReport(
     OcctHeaderInventory Headers,
     OcctDeclarationInventory? Declarations,
     IReadOnlyList<OcctInventoryBatch> Batches,
-    IReadOnlyList<OcctInventoryFailure> Failures);
+    IReadOnlyList<OcctInventoryFailure> Failures,
+    OcctFinalClassification? FinalClassification);
 
 public sealed record OcctHeaderInventory(
     int Total,
@@ -54,3 +55,39 @@ public sealed record OcctInventoryBatch(
 public sealed record OcctInventoryFailure(
     string Header,
     string Error);
+
+public sealed record OcctFinalClassification(
+    bool IsComplete,
+    int DeclarationTotal,
+    int DeclarationClassified,
+    int DeclarationPending,
+    IReadOnlyList<OcctDispositionCount> DeclarationStates,
+    IReadOnlyList<OcctReasonCount> DeclarationReasons,
+    int HeaderTotal,
+    int HeaderClassified,
+    int HeaderPending,
+    IReadOnlyList<OcctDispositionCount> HeaderStates,
+    IReadOnlyList<OcctReasonCount> HeaderReasons,
+    IReadOnlyList<OcctDeclarationDisposition> Declarations,
+    IReadOnlyList<OcctHeaderDisposition> Headers);
+
+public sealed record OcctDispositionCount(string State, int Count);
+
+public sealed record OcctReasonCount(string Code, string Category, int Count);
+
+public sealed record OcctDeclarationDisposition(
+    string StableId,
+    string NativeName,
+    string Kind,
+    string Header,
+    string SourcePackage,
+    string? SourceToolkit,
+    string State,
+    string Code,
+    string Category);
+
+public sealed record OcctHeaderDisposition(
+    string Header,
+    string State,
+    string Code,
+    string Category);

@@ -82,14 +82,14 @@ evidence updated.
 - Status: Open
 - Severity: High
 - Area: Generator
-- Problem: Deterministic native/managed emission now produces 58 declarations across
-  value-copy scopes, the first generated typed shared handle, base topology values, and
-  checked typed topology casts, but this is only 1.8948%
-  of the selected 3,062-declaration dependency closure and not full OCCT coverage. The
+- Problem: Deterministic native/managed emission now produces 171 declarations across
+  value-copy scopes, eleven generated typed shared-handle types, typed enums, base
+  topology values, and checked typed topology casts, but this is only 5.0206%
+  of the selected 3,406-declaration dependency closure and not full OCCT coverage. The
   validated shape and exchange bridges remain manual.
 - Current mitigation: `TM001`–`TM007`, explicit generation scopes, support diagnostics,
-  and compile/runtime/lifetime tests prevent unknown ownership cases from being emitted
-  merely to increase counts.
+  manifest-aware inventory, and compile/runtime/lifetime tests prevent unknown ownership
+  cases from being emitted merely to increase counts.
 - Planned resolution: Expand coherent generated package scopes after each required
   value/shared/topology/borrowed lifetime rule is proven, then replace manual raw
   functions only when generated equivalents have equal evidence.

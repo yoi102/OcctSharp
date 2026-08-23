@@ -1,5 +1,11 @@
 # Dependency Management
 
+Optional integration prerequisites are separately declared in
+`OcctSharp/config/dependency-profiles.json` and checked by
+`OcctSharp/eng/audit-dependency-profiles.ps1`. They are not silently inherited from a
+developer machine and do not enter the core NuGet closure. See
+[`OPTIONAL_INTEGRATIONS.md`](OPTIONAL_INTEGRATIONS.md) and ADR-0047.
+
 ## Goal
 
 Every supported build and generation run must be reproducible from an immutable,
@@ -48,7 +54,8 @@ developer preferences.
 | vcpkg | Convenient | Must not require package manager on user machines | Candidate |
 
 ADR-0004 selects the supplied prebuilt combined distribution for the first local
-baseline. Automated CI acquisition and stronger artifact provenance remain pending.
+baseline. B20 configures CI acquisition through an immutable archive URL plus SHA256;
+hosted execution still requires repository variables and has not been run.
 
 ## Native redistribution
 
@@ -56,7 +63,7 @@ NuGet consumers should not manually locate OCCT runtime libraries. Published pac
 must either carry the complete allowed native dependency closure for a RID or declare
 an explicit supported external-runtime contract. ADR-0008 selects one self-contained
 package for the initial Windows x64-only matrix. Its transitive build asset copies the
-bridge and 35 dependent runtime DLLs into the application's `occt` directory.
+bridge and 44 dependent runtime DLLs into the application's `occt` directory.
 
 Runtime packaging validation must inspect actual binary dependencies, not only the
 presence of the OcctSharp native bridge.
@@ -70,5 +77,11 @@ public-release gate; creating a local package is not evidence that publication i
 - Verify downloaded artifact hashes.
 - Preserve third-party license and notice files.
 - Do not commit unlicensed CAD fixtures or binaries.
-- Record provenance for native release artifacts.
-- Add SBOM and signing policy before public release.
+- Regenerate the implemented CycloneDX SBOM, provenance, and fixed-order SHA256 evidence
+  for every release candidate.
+- Resolve all `unknown` non-OCCT component versions/licenses and define signing policy
+  before public release.
+
+The current local evidence records 45 native files, including the bridge, in
+`artifacts/release/`. This is technical provenance only; it does not replace legal review
+or make `publicReleaseReady` true.

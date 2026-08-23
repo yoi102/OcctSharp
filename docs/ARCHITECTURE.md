@@ -56,6 +56,12 @@ The accepted boundaries are recorded in ADRs:
   direction, axis, and matrix values.
 - [ADR-0021](adr/0021-opaque-occt-strings-and-real-sequence.md): opaque OCCT strings
   and real sequences with explicit buffer/index contracts.
+- [ADR-0046](adr/0046-hwnd-thread-affine-viewer-and-presentation-ids.md): HWND-bound,
+  thread-affine visualization ownership and parent-bound presentation IDs.
+- [ADR-0047](adr/0047-optional-dependency-profiles-and-package-isolation.md): explicit
+  optional dependency profiles and isolated future packages.
+- [ADR-0048](adr/0048-final-long-tail-and-header-classification.md): deterministic
+  final dispositions for full-inventory declarations and failed entry headers.
 
 ## Components
 
@@ -99,6 +105,11 @@ collection values are copied through bounded value calls; no native string point
 container layout, element reference, or iterator crosses the boundary. C++ class layouts
 and STL types never cross this boundary.
 
+The B17 Windows visualization profile owns the complete display-driver/viewer/context/
+view/window graph in one native wrapper bound to an application-owned HWND. AIS objects
+remain native and are addressed by parent-scoped IDs; selection is copied as IDs. The
+application forwards window/input events on the creating thread, with no reverse callback.
+
 ### Managed raw bindings
 
 Mirror the generated C ABI closely enough for traceability. They own marshalling,
@@ -108,6 +119,11 @@ checks. Raw bindings are not necessarily the preferred public API.
 Generated raw bindings live in the internal `OcctSharp.Generated` namespace. Generated
 native exports use the `occtsharp_generated_` prefix. These sources and their ownership
 manifest are committed and must be changed by regeneration, not direct editing.
+
+Referenced native enums are emitted as public typed managed enums from discovered
+enumerators while their raw ABI remains validated `int32_t`. Qualified and unqualified
+C++ spellings resolve to one canonical managed enum name; the enum declaration stable ID
+is owned by the same generated manifest as the methods that reference it.
 
 ### Friendly managed API
 
@@ -157,6 +173,11 @@ Normal generation remains a deliberately small, fast dependency closure. The sep
 inventory workflow catalogs every public `.h`/`.hxx` entry header, parses deterministic
 batches, isolates failures, and deduplicates semantic stable IDs. Only a complete scan
 may establish the full-OCCT declaration denominator; partial totals remain diagnostics.
+
+B19 additionally produces a complete *classification* over all declarations discovered
+from successful headers and all catalogued headers. This does not fill declarations that
+cannot be parsed and never promotes blocked/eligible-unselected items into generated
+coverage. Semantic inventory, classification, emission, and validation remain separate.
 
 These items must be resolved through ADRs before their implementation becomes
 structural or difficult to reverse.

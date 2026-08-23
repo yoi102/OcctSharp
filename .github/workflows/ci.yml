@@ -1,0 +1,63 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  generator-tests:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: OcctSharp
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.400
+          cache: true
+          cache-dependency-path: OcctSharp/**/packages.lock.json
+      - name: Restore generator tests
+        run: dotnet restore .\tests\OcctSharp.Generator.Tests\OcctSharp.Generator.Tests.csproj --locked-mode
+      - name: Run generator tests
+        run: dotnet test .\tests\OcctSharp.Generator.Tests\OcctSharp.Generator.Tests.csproj --configuration Release --no-restore
+
+  full-windows:
+    if: ${{ vars.OCCT_ARTIFACT_URL != '' && vars.OCCT_ARTIFACT_SHA256 != '' }}
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: OcctSharp
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.400
+          cache: true
+          cache-dependency-path: OcctSharp/**/packages.lock.json
+      - name: Acquire pinned OCCT artifact
+        env:
+          OCCT_ARTIFACT_URL: ${{ vars.OCCT_ARTIFACT_URL }}
+          OCCT_ARTIFACT_SHA256: ${{ vars.OCCT_ARTIFACT_SHA256 }}
+        run: |
+          Invoke-WebRequest -Uri $env:OCCT_ARTIFACT_URL -OutFile "$env:RUNNER_TEMP\occt.zip"
+          $hash = (Get-FileHash -LiteralPath "$env:RUNNER_TEMP\occt.zip" -Algorithm SHA256).Hash
+          if ($hash -ne $env:OCCT_ARTIFACT_SHA256) { throw "OCCT archive hash mismatch." }
+          Expand-Archive -LiteralPath "$env:RUNNER_TEMP\occt.zip" -DestinationPath "$env:RUNNER_TEMP\occt"
+          $versionHeader = Get-ChildItem -LiteralPath "$env:RUNNER_TEMP\occt" -Recurse -Filter Standard_Version.hxx -File | Select-Object -First 1
+          if ($null -eq $versionHeader) { throw "Standard_Version.hxx was not found in the artifact." }
+          "OCCTSHARP_OCCT_ROOT=$($versionHeader.Directory.Parent.FullName)" >> $env:GITHUB_ENV
+      - name: Release engineering gates
+        run: .\eng\release-check.ps1
+      - name: Upload release evidence
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: occtsharp-release-evidence
+          path: |
+            OcctSharp/artifacts/release/
+            OcctSharp/artifacts/generator-reports/dependency-profiles.json
+            OcctSharp/artifacts/generator-reports/full-inventory.json
+          if-no-files-found: warn

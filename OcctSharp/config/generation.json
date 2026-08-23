@@ -1,11 +1,21 @@
 {
-  "schemaVersion": "1.4",
+  "schemaVersion": "1.5",
   "occtVersion": "8.0.1",
   "scope": "foundation-prototype",
   "headers": [
     "BRepPrimAPI_MakeBox.hxx",
     "Geom_CartesianPoint.hxx",
     "gp_Pnt.hxx",
+    "StepBasic_Address.hxx",
+    "StepBasic_CalendarDate.hxx",
+    "StepBasic_CoordinatedUniversalTimeOffset.hxx",
+    "StepBasic_Date.hxx",
+    "StepBasic_DimensionalExponents.hxx",
+    "StepBasic_LocalTime.hxx",
+    "StepBasic_OrdinalDate.hxx",
+    "StepBasic_Person.hxx",
+    "StepBasic_SiUnit.hxx",
+    "StepBasic_WeekOfYearAndDayDate.hxx",
     "TopoDS.hxx",
     "TopoDS_Shape.hxx",
     "TopoDS_Compound.hxx",
@@ -16,6 +26,9 @@
     "TopoDS_Wire.hxx",
     "TopoDS_Edge.hxx",
     "TopoDS_Vertex.hxx"
+  ],
+  "headerPatterns": [
+    "StepBasic_*.hxx"
   ],
   "toolkitByPackage": {
     "Bnd": "TKMath",
@@ -33,6 +46,8 @@
     "Precision": "TKernel",
     "Standard": "TKernel",
     "StdFail": "TKernel",
+    "StepBasic": "TKDESTEP",
+    "StepData": "TKXSBase",
     "TCollection": "TKernel",
     "TopAbs": "TKG3d",
     "TopLoc": "TKMath",
@@ -43,6 +58,7 @@
     "Adaptor3d_Surface.hxx",
     "NCollection_Map.hxx",
     "Prs3d_Presentation.hxx",
+    "StepData_Factors.hxx",
     "Standard_OStream.hxx"
   ],
   "generationScopes": [
@@ -103,6 +119,83 @@
       "header": "Geom_CartesianPoint.hxx",
       "exportNamePrefix": "geom_cartesian_point",
       "managedTypeName": "GeomCartesianPoint"
+    },
+    {
+      "sourcePackage": "StepBasic",
+      "nativeType": "StepBasic_Address",
+      "header": "StepBasic_Address.hxx",
+      "exportNamePrefix": "step_basic_address",
+      "managedTypeName": "StepBasicAddress"
+    },
+    {
+      "sourcePackage": "StepBasic",
+      "nativeType": "StepBasic_CalendarDate",
+      "header": "StepBasic_CalendarDate.hxx",
+      "exportNamePrefix": "step_basic_calendar_date",
+      "managedTypeName": "StepBasicCalendarDate"
+    },
+    {
+      "sourcePackage": "StepBasic",
+      "nativeType": "StepBasic_CoordinatedUniversalTimeOffset",
+      "header": "StepBasic_CoordinatedUniversalTimeOffset.hxx",
+      "exportNamePrefix": "step_basic_coordinated_universal_time_offset",
+      "managedTypeName": "StepBasicCoordinatedUniversalTimeOffset"
+    },
+    {
+      "sourcePackage": "StepBasic",
+      "nativeType": "StepBasic_Date",
+      "header": "StepBasic_Date.hxx",
+      "exportNamePrefix": "step_basic_date",
+      "managedTypeName": "StepBasicDate"
+    },
+    {
+      "sourcePackage": "StepBasic",
+      "nativeType": "StepBasic_DimensionalExponents",
+      "header": "StepBasic_DimensionalExponents.hxx",
+      "exportNamePrefix": "step_basic_dimensional_exponents",
+      "managedTypeName": "StepBasicDimensionalExponents"
+    },
+    {
+      "sourcePackage": "StepBasic",
+      "nativeType": "StepBasic_LocalTime",
+      "header": "StepBasic_LocalTime.hxx",
+      "exportNamePrefix": "step_basic_local_time",
+      "managedTypeName": "StepBasicLocalTime"
+    },
+    {
+      "sourcePackage": "StepBasic",
+      "nativeType": "StepBasic_OrdinalDate",
+      "header": "StepBasic_OrdinalDate.hxx",
+      "exportNamePrefix": "step_basic_ordinal_date",
+      "managedTypeName": "StepBasicOrdinalDate"
+    },
+    {
+      "sourcePackage": "StepBasic",
+      "nativeType": "StepBasic_Person",
+      "header": "StepBasic_Person.hxx",
+      "exportNamePrefix": "step_basic_person",
+      "managedTypeName": "StepBasicPerson"
+    },
+    {
+      "sourcePackage": "StepBasic",
+      "nativeType": "StepBasic_SiUnit",
+      "header": "StepBasic_SiUnit.hxx",
+      "exportNamePrefix": "step_basic_si_unit",
+      "managedTypeName": "StepBasicSiUnit"
+    },
+    {
+      "sourcePackage": "StepBasic",
+      "nativeType": "StepBasic_WeekOfYearAndDayDate",
+      "header": "StepBasic_WeekOfYearAndDayDate.hxx",
+      "exportNamePrefix": "step_basic_week_of_year_and_day_date",
+      "managedTypeName": "StepBasicWeekOfYearAndDayDate"
+    }
+  ],
+  "sharedHandlePackageScopes": [
+    {
+      "sourcePackage": "StepBasic",
+      "nativeTypePrefix": "StepBasic_",
+      "excludedNativeTypes": []
     }
   ],
   "topologyScopes": [

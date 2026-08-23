@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 17)
-    || runtime.BridgeVersion != "0.18.0"
+if (runtime.AbiVersion != new Version(1, 32)
+    || runtime.BridgeVersion != "0.40.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -35,6 +35,186 @@ using Shape box = ShapeFactory.CreateBox(10, 20, 30);
 if (box.FaceCount != 6)
 {
     throw new InvalidOperationException($"Expected 6 box faces, received {box.FaceCount}.");
+}
+
+using StepBasicCoordinatedUniversalTimeOffset packagedOffset = new();
+packagedOffset.Init(9, true, 30, StepBasicAheadOrBehind.StepBasic_aobAhead);
+using StepBasicCoordinatedUniversalTimeOffset packagedOffsetClone = packagedOffset.Clone();
+if (packagedOffset.ReferenceCount != 2
+    || packagedOffsetClone.HourOffset() != 9
+    || packagedOffsetClone.MinuteOffset() != 30
+    || packagedOffsetClone.Sense() != StepBasicAheadOrBehind.StepBasic_aobAhead)
+{
+    throw new InvalidOperationException("The packaged generated StepBasic shared/enum binding did not preserve state.");
+}
+
+Type[] packagedStepBasicTypes = typeof(StepBasicDate).Assembly.GetExportedTypes()
+    .Where(static type => type.IsClass
+        && type.Name.StartsWith("StepBasic", StringComparison.Ordinal)
+        && typeof(IDisposable).IsAssignableFrom(type)
+        && type.GetConstructor(Type.EmptyTypes) is not null)
+    .OrderBy(static type => type.FullName, StringComparer.Ordinal)
+    .ToArray();
+if (packagedStepBasicTypes.Length != 129)
+{
+    throw new InvalidOperationException($"Expected 129 packaged generated StepBasic types, received {packagedStepBasicTypes.Length}.");
+}
+foreach (Type type in packagedStepBasicTypes)
+{
+    IDisposable instance = (IDisposable)(Activator.CreateInstance(type)
+        ?? throw new InvalidOperationException($"Could not create packaged {type.FullName}."));
+    IDisposable? stepClone = null;
+    try
+    {
+        stepClone = (IDisposable)(type.GetMethod("Clone")!.Invoke(instance, null)
+            ?? throw new InvalidOperationException($"Could not clone packaged {type.FullName}."));
+        if ((int)type.GetProperty("ReferenceCount")!.GetValue(instance)! != 2)
+        {
+            throw new InvalidOperationException($"Packaged {type.FullName} did not retain its shared clone.");
+        }
+    }
+    finally
+    {
+        instance.Dispose();
+        stepClone?.Dispose();
+    }
+}
+
+using Shape packagedSphere = ShapeFactory.CreateSphere(2);
+using Shape packagedCylinder = ShapeFactory.CreateCylinder(2, 5);
+if (packagedSphere.FaceCount != 1 || packagedCylinder.FaceCount != 3)
+{
+    throw new InvalidOperationException("The packaged primitive builders did not create expected solids.");
+}
+
+Shape[] packagedFaces = box.GetFaces();
+if (packagedFaces.Length != 6 || packagedFaces.Any(face => face.FaceCount != 1))
+{
+    throw new InvalidOperationException("The packaged topology face snapshot was not preserved.");
+}
+
+Shape[] packagedEdges = box.GetSubShapes(ShapeKind.Edge);
+if (packagedEdges.Length != 24)
+{
+    throw new InvalidOperationException("The packaged edge snapshot did not preserve box topology.");
+}
+foreach (Shape edge in packagedEdges) edge.Dispose();
+
+using Shape packagedEdge = ShapeFactory.CreateEdge(GpPoint.Origin, GpPoint.Create(4, 0, 0));
+EdgeCurveSnapshot packagedCurve = packagedEdge.GetEdgeCurveSnapshot();
+FaceSurfaceSnapshot packagedSurface = packagedFaces[0].GetFaceSurfaceSnapshot();
+if (packagedCurve.CurveType != CurveGeometryType.Line
+    || packagedCurve.StartPoint != GpPoint.Origin
+    || packagedCurve.EndPoint != GpPoint.Create(4, 0, 0)
+    || packagedSurface.SurfaceType != SurfaceGeometryType.Plane)
+{
+    throw new InvalidOperationException("The packaged BRepAdaptor snapshots did not preserve copied geometry values.");
+}
+foreach (Shape face in packagedFaces) face.Dispose();
+
+using Shape booleanTool = ShapeFactory.CreateBox(2, 2, 2).Transformed(ShapeTransform.CreateTranslationAndRotationZ(1, 1, 1, 0));
+using Shape fused = box.Fuse(booleanTool);
+using Shape cut = box.Cut(booleanTool);
+if (fused.FaceCount <= 0 || cut.FaceCount <= 0)
+{
+    throw new InvalidOperationException("The packaged boolean bridge did not return valid topology.");
+}
+
+using Shape fixedShape = box.Fixed();
+using Shape unifiedShape = box.UnifiedSameDomain();
+using Shape nullShape = ShapeFactory.CreateNull();
+if (fixedShape.FaceCount <= 0 || unifiedShape.FaceCount <= 0 || !nullShape.IsNull)
+{
+    throw new InvalidOperationException("The packaged healing result profile did not preserve topology/null semantics.");
+}
+try
+{
+    _ = box.Cut(nullShape);
+    throw new InvalidOperationException("The packaged null-topology contract accepted an invalid Boolean input.");
+}
+catch (ArgumentException)
+{
+}
+try
+{
+    _ = nullShape.Fixed();
+    throw new InvalidOperationException("The packaged null-topology contract accepted an invalid healing input.");
+}
+catch (ArgumentException)
+{
+}
+
+using Shape common = box.Common(booleanTool);
+using Shape distant = ShapeFactory.CreateBox(1, 1, 1).Transformed(ShapeTransform.CreateTranslationAndRotationZ(20, 0, 0, 0));
+ShapeDistanceResult packageDistance = box.DistanceTo(distant);
+if (common.FaceCount <= 0 || packageDistance.Distance <= 0 || packageDistance.SolutionCount <= 0)
+{
+    throw new InvalidOperationException("The packaged modeling algorithm profile did not return valid common/distance results.");
+}
+
+GpPoint packagePoint = GpPoint.Create(3, 4, 12);
+if (packagePoint.DistanceTo(GpPoint.Origin) != 13)
+{
+    throw new InvalidOperationException("The packaged GpPoint facade did not round-trip its generated value contract.");
+}
+
+if (GpXyz.Create(1, 0, 0).Crossed(GpXyz.Create(0, 1, 0)) != new GpXyz(0, 0, 1))
+{
+    throw new InvalidOperationException("The packaged GpXyz facade did not preserve cross-product semantics.");
+}
+
+if (GpLine.Create(GpXyz.Origin, GpXyz.Create(1, 0, 0)).DistanceTo(GpXyz.Create(0, 1, 0)) != 1)
+{
+    throw new InvalidOperationException("The packaged GpLine facade did not preserve distance semantics.");
+}
+
+if (GpCircle.Create(GpXyz.Origin, GpXyz.Create(0, 0, 1), 2).Area != 4 * Math.PI)
+{
+    throw new InvalidOperationException("The packaged GpCircle facade did not preserve area semantics.");
+}
+
+if (GpPlane.Create(GpXyz.Origin, GpXyz.Create(0, 0, 1)).DistanceTo(GpXyz.Create(0, 0, 2)) != 2)
+{
+    throw new InvalidOperationException("The packaged GpPlane facade did not preserve distance semantics.");
+}
+
+if (!GpAx3Value.Create(GpXyz.Origin, GpXyz.Create(0, 0, 1), GpXyz.Create(1, 0, 0)).IsDirect)
+{
+    throw new InvalidOperationException("The packaged GpAx3 facade did not preserve right-handed semantics.");
+}
+
+using GPropProperties packagedProperties = GPropProperties.FromShape(box);
+if (Math.Abs(packagedProperties.Mass - 6000) > 1e-8
+    || packagedProperties.CenterOfMass != new GpPoint(5, 10, 15))
+{
+    throw new InvalidOperationException("The packaged GProp_GProps bridge did not preserve volume properties.");
+}
+
+nint viewerWindow = PackageWindowMethods.CreateWindowEx(
+    0, "STATIC", "OcctSharp package viewer", 0x80000000u,
+    -32000, -32000, 256, 256, 0, 0, 0, 0);
+if (viewerWindow == 0)
+{
+    throw new InvalidOperationException("The package consumer could not create a viewer HWND.");
+}
+try
+{
+    _ = PackageWindowMethods.ShowWindow(viewerWindow, 4);
+    _ = PackageWindowMethods.UpdateWindow(viewerWindow);
+    using OcctViewer packagedViewer = OcctViewer.Create(viewerWindow);
+    using ViewerPresentation packagedPresentation = packagedViewer.Display(box);
+    packagedViewer.Resize();
+    packagedViewer.FitAll();
+    packagedViewer.Redraw();
+    if (!packagedViewer.MoveTo(128, 128)
+        || !packagedViewer.SelectAt(128, 128).Contains(packagedPresentation))
+    {
+        throw new InvalidOperationException("The packaged viewer did not produce the expected selection snapshot.");
+    }
+}
+finally
+{
+    _ = PackageWindowMethods.DestroyWindow(viewerWindow);
 }
 
 if (box.IsNull || box.Kind != ShapeKind.Solid || box.Orientation != ShapeOrientation.Forward)
@@ -127,6 +307,131 @@ if (map[2] != 3.0 || indexedMap[2] != 7 || indexedMap.FindIndex(5) != 0)
     throw new InvalidOperationException("The packaged map bridge returned unexpected values.");
 }
 
+string exchangeDirectory = Path.Combine(Path.GetTempPath(), $"OcctSharp.PackageConsumer.{Guid.NewGuid():N}");
+Directory.CreateDirectory(exchangeDirectory);
+try
+{
+    string objPath = ShapeExchange.WriteObj(box, Path.Combine(exchangeDirectory, "box.obj"));
+    string plyPath = ShapeExchange.WritePly(box, Path.Combine(exchangeDirectory, "box.ply"));
+    string glbPath = ShapeExchange.WriteGltf(box, Path.Combine(exchangeDirectory, "box.glb"));
+    string vrmlPath = ShapeExchange.WriteVrml(box, Path.Combine(exchangeDirectory, "box.wrl"));
+
+    if (new[] { objPath, plyPath, glbPath, vrmlPath }.Any(path => new FileInfo(path).Length == 0))
+    {
+        throw new InvalidOperationException("A packaged mesh-format writer produced an empty file.");
+    }
+
+    using Shape objShape = ShapeExchange.ReadObj(objPath);
+    using Shape gltfShape = ShapeExchange.ReadGltf(glbPath);
+    using Shape vrmlShape = ShapeExchange.ReadVrml(vrmlPath);
+    if (objShape.IsNull || gltfShape.IsNull || vrmlShape.IsNull
+        || objShape.FaceCount == 0 || gltfShape.FaceCount == 0 || vrmlShape.FaceCount == 0)
+    {
+        throw new InvalidOperationException("A packaged mesh-format reader returned empty topology.");
+    }
+
+    string ocafPath = Path.Combine(exchangeDirectory, "package-document.cbf");
+    string childEntry;
+    using (OcafDocument document = OcafDocument.Create())
+    {
+        using OcafTransaction transaction = document.BeginTransaction();
+        document.RootLabel.Name = "Package root";
+        OcafLabel child = document.RootLabel.AddChild();
+        child.Name = "包零件";
+        childEntry = child.Entry;
+        if (!transaction.Commit())
+        {
+            throw new InvalidOperationException("The packaged OCAF transaction did not create a delta.");
+        }
+        document.Save(ocafPath);
+    }
+
+    using OcafDocument restoredDocument = OcafDocument.Open(ocafPath);
+    if (restoredDocument.RootLabel.Name != "Package root"
+        || restoredDocument.RootLabel.ChildCount != 1
+        || restoredDocument.GetLabel(childEntry).Name != "包零件")
+    {
+        throw new InvalidOperationException("The packaged binary OCAF document did not preserve labels and names.");
+    }
+
+    string xdePath = Path.Combine(exchangeDirectory, "package-assembly.xbf");
+    string xdeStepPath = Path.Combine(exchangeDirectory, "package-assembly.step");
+    string xdePartEntry;
+    string xdeAssemblyEntry;
+    using (XdeDocument xde = XdeDocument.Create())
+    {
+        using XdeTransaction transaction = xde.BeginTransaction();
+        XdeLabel part = xde.AddShape(box, "Package part");
+        part.Color = new XdeColor(0.2, 0.4, 0.6);
+        part.SetLayer("Package layer");
+        part.Material = new XdeMaterial("Steel", "Package material", 7.85, "Density", "g/cm3");
+        XdeLabel assembly = xde.AddAssembly("Package assembly");
+        _ = xde.AddComponent(assembly, part, location);
+        xdePartEntry = part.Entry;
+        xdeAssemblyEntry = assembly.Entry;
+        transaction.Commit();
+        xde.Save(xdePath);
+        xde.WriteStep(xdeStepPath);
+    }
+
+    using (XdeDocument binaryXde = XdeDocument.Open(xdePath))
+    {
+        XdeLabel part = binaryXde.GetLabel(xdePartEntry);
+        if (part.Name != "Package part" || part.Color is null
+            || !part.Layers.Contains("Package layer") || part.Material?.Name != "Steel"
+            || !binaryXde.GetLabel(xdeAssemblyEntry).IsAssembly)
+        {
+            throw new InvalidOperationException("The packaged BinXCAF metadata round-trip failed.");
+        }
+    }
+
+    using XdeDocument stepXde = XdeDocument.ReadStep(xdeStepPath);
+    XdeLabel stepAssembly = stepXde.GetFreeShapes().Single();
+    XdeLabel stepPart = stepAssembly.GetComponents().Single().ReferredShape;
+    if (!stepAssembly.IsAssembly || stepPart.Name != "Package part" || stepPart.Color is null
+        || !stepPart.Layers.Contains("Package layer") || stepPart.Material?.Name != "Steel")
+    {
+        throw new InvalidOperationException("The packaged STEPCAF metadata round-trip failed.");
+    }
+}
+finally
+{
+    Directory.Delete(exchangeDirectory, recursive: true);
+}
+
 Console.WriteLine(
     $"Package consumer passed with {nativeFiles.Length} DLLs in 'occt', "
     + $"ABI {runtime.AbiVersion}, bridge {runtime.BridgeVersion}, OCCT {runtime.OcctVersion}.");
+
+internal static class PackageWindowMethods
+{
+    [System.Runtime.InteropServices.DllImport(
+        "user32.dll",
+        EntryPoint = "CreateWindowExW",
+        CharSet = System.Runtime.InteropServices.CharSet.Unicode)]
+    internal static extern nint CreateWindowEx(
+        uint extendedStyle,
+        string className,
+        string windowName,
+        uint style,
+        int x,
+        int y,
+        int width,
+        int height,
+        nint parent,
+        nint menu,
+        nint instance,
+        nint parameter);
+
+    [System.Runtime.InteropServices.DllImport("user32.dll")]
+    [return: System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.Bool)]
+    internal static extern bool ShowWindow(nint window, int command);
+
+    [System.Runtime.InteropServices.DllImport("user32.dll")]
+    [return: System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.Bool)]
+    internal static extern bool UpdateWindow(nint window);
+
+    [System.Runtime.InteropServices.DllImport("user32.dll")]
+    [return: System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.Bool)]
+    internal static extern bool DestroyWindow(nint window);
+}

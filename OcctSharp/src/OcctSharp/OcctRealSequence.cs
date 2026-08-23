@@ -18,6 +18,14 @@ public sealed class OcctRealSequence : IReadOnlyList<double>, IDisposable
     public void Add(double value) { ThrowIfDisposed(); NativeError.ThrowIfFailed(NativeMethods.AppendRealSequence(handle, value), "real_sequence_append"); }
     public void Set(int index, double value) { ThrowIfDisposed(); ArgumentOutOfRangeException.ThrowIfNegative(index); NativeError.ThrowIfFailed(NativeMethods.SetRealSequenceValue(handle, index + 1, value), "real_sequence_set_value"); }
     public void RemoveAt(int index) { ThrowIfDisposed(); ArgumentOutOfRangeException.ThrowIfNegative(index); NativeError.ThrowIfFailed(NativeMethods.RemoveRealSequence(handle, index + 1), "real_sequence_remove"); }
+    /// <summary>Copies the current values in one native call; the returned array is independent of this collection.</summary>
+    public double[] Snapshot()
+    {
+        ThrowIfDisposed(); int count = Count;
+        nint memory = Marshal.AllocHGlobal(Math.Max(1, sizeof(double) * count));
+        try { NativeError.ThrowIfFailed(NativeMethods.SnapshotRealSequence(handle, memory, count, out int written), "real_sequence_snapshot"); double[] result = new double[written]; if (written > 0) Marshal.Copy(memory, result, 0, written); return result; }
+        finally { Marshal.FreeHGlobal(memory); }
+    }
     public IEnumerator<double> GetEnumerator() { ThrowIfDisposed(); for (int index = 0; index < Count; index++) yield return this[index]; }
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     public void Dispose() { handle.Dispose(); GC.SuppressFinalize(this); }

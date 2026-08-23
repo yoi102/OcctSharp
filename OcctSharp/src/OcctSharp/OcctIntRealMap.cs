@@ -30,6 +30,14 @@ public sealed class OcctIntRealMap : IDisposable
     public bool ContainsKey(int key) { ThrowIfDisposed(); NativeError.ThrowIfFailed(NativeMethods.IsIntRealMapBound(handle, key, out int bound), "int_real_map_is_bound"); return bound != 0; }
     public double this[int key] { get { ThrowIfDisposed(); NativeError.ThrowIfFailed(NativeMethods.FindIntRealMap(handle, key, out double value), "int_real_map_find"); return value; } set { ThrowIfDisposed(); NativeError.ThrowIfFailed(NativeMethods.BindIntRealMap(handle, key, value), "int_real_map_bind"); } }
     public bool Remove(int key) { ThrowIfDisposed(); NativeError.ThrowIfFailed(NativeMethods.UnbindIntRealMap(handle, key, out int removed), "int_real_map_unbind"); return removed != 0; }
+    /// <summary>Copies key/value pairs in one native call; the result is independent of this map.</summary>
+    public KeyValuePair<int, double>[] Snapshot()
+    {
+        ThrowIfDisposed(); int count = Count;
+        nint keys = Marshal.AllocHGlobal(Math.Max(1, sizeof(int) * count)); nint values = Marshal.AllocHGlobal(Math.Max(1, sizeof(double) * count));
+        try { NativeError.ThrowIfFailed(NativeMethods.SnapshotIntRealMap(handle, keys, values, count, out int written), "int_real_map_snapshot"); int[] keyArray = new int[written]; double[] valueArray = new double[written]; if (written > 0) { Marshal.Copy(keys, keyArray, 0, written); Marshal.Copy(values, valueArray, 0, written); } return Enumerable.Range(0, written).Select(index => new KeyValuePair<int, double>(keyArray[index], valueArray[index])).ToArray(); }
+        finally { Marshal.FreeHGlobal(keys); Marshal.FreeHGlobal(values); }
+    }
     public OcctIntRealMap Clone() { ThrowIfDisposed(); NativeError.ThrowIfFailed(NativeMethods.CloneIntRealMap(handle, out nint result), "int_real_map_clone"); return FromNative(result); }
     public void Dispose() { handle.Dispose(); GC.SuppressFinalize(this); }
     private void ThrowIfDisposed() => ObjectDisposedException.ThrowIf(handle.IsClosed, this);

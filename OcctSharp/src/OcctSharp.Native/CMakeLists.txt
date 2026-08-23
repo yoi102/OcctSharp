@@ -11,6 +11,9 @@ add_library(OcctSharp.Native SHARED
 
 target_compile_features(OcctSharp.Native PRIVATE cxx_std_20)
 target_compile_definitions(OcctSharp.Native PRIVATE OCCTSHARP_NATIVE_EXPORTS NOMINMAX WIN32_LEAN_AND_MEAN)
+if(MSVC)
+  target_compile_options(OcctSharp.Native PRIVATE /bigobj)
+endif()
 target_include_directories(OcctSharp.Native
   PUBLIC
     "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>")
@@ -27,16 +30,24 @@ target_link_libraries(OcctSharp.Native
     TKTopAlgo
     TKPrim
     TKMesh
+    TKShHealing
     TKDESTEP
     TKDEIGES
-    TKDESTL)
+    TKDESTL
+    TKDEOBJ
+    TKDEPLY
+    TKDEGLTF
+    TKDEVRML)
 
 target_link_libraries(OcctSharp.Native
   PRIVATE
     TKXCAF
     TKCDF
     TKLCAF
-    TKCAF)
+    TKCAF
+    TKBin
+    TKBinXCAF)
+target_link_libraries(OcctSharp.Native PRIVATE TKOpenGl)
 
 set_target_properties(OcctSharp.Native PROPERTIES
   OUTPUT_NAME "OcctSharp.Native"
@@ -64,10 +75,19 @@ set(OCCTSHARP_RUNTIME_TARGETS
   TKDESTEP
   TKDEIGES
   TKDESTL
+  TKDEOBJ
+  TKDEPLY
+  TKDEGLTF
+  TKDEVRML
+  TKRWMesh
   TKXCAF
   TKCDF
   TKLCAF
   TKCAF
+  TKBin
+  TKBinL
+  TKBinXCAF
+  TKOpenGl
   TKVCAF
   TKService
   TKV3d)

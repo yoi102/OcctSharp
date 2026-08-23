@@ -89,7 +89,15 @@ public sealed class InitialBindingEmitterTests
                 BindingDeclarationKind.Enum,
                 "TopAbs.hxx",
                 1,
-                1),
+                1)
+            {
+                EnumUnderlyingType = "int",
+                EnumValues =
+                [
+                    new BindingEnumValue("TopAbs_FORWARD", "0", false),
+                    new BindingEnumValue("TopAbs_REVERSED", "1", false),
+                ],
+            },
             CreateScopeMethod(
                 "topabs:compose",
                 "TopAbs::Compose",

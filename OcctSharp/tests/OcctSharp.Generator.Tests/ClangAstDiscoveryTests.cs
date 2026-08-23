@@ -21,7 +21,7 @@ public sealed class ClangAstDiscoveryTests
                 Path.Combine(includeRoot, "Sample.hxx"),
                 """
                 namespace opencascade { template<class T> class handle {}; }
-                enum class SampleKind { First };
+                enum class SampleKind { First = -2, Second = 7 };
                 class SampleBase {};
                 class Sample : public SampleBase {
                 public:
@@ -83,8 +83,12 @@ public sealed class ClangAstDiscoveryTests
             Assert.True(make.ReturnType.IsOcctHandle);
             Assert.Equal("SampleBase", make.ReturnType.HandleTargetType);
 
-            Assert.Contains(report.Model.Declarations, declaration =>
+            BindingDeclaration sampleKind = Assert.Single(report.Model.Declarations, declaration =>
                 declaration is { NativeName: "SampleKind", Kind: BindingDeclarationKind.Enum });
+            Assert.Equal("int", sampleKind.EnumUnderlyingType);
+            Assert.Equal(
+                [new BindingEnumValue("First", "-2", false), new BindingEnumValue("Second", "7", false)],
+                sampleKind.EnumValues);
         }
         finally
         {

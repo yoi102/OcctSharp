@@ -2,7 +2,7 @@
 
 ## Current package
 
-The current experimental package is `OcctSharp` `0.1.0-alpha.14` for .NET 10 and
+The current experimental package is `OcctSharp` `0.1.0-alpha.39` for .NET 10 and
 Windows x64. It contains:
 
 - `lib/net10.0/OcctSharp.dll` and XML documentation.
@@ -17,9 +17,10 @@ contains a package hash and would make the artifact self-referential. Release no
 the stable architecture/topic documents are packaged; status remains authoritative in
 the repository.
 
-This package is validated locally but is not approved for publication. A project
-license, complete third-party notices, immutable native provenance, CI, and the other
-release gates remain required.
+This package is validated locally but is not approved for publication. B20 now produces
+immutable native provenance, SBOM/checksum evidence, API diff, and CI configuration.
+A project license and complete third-party notices remain blocked; hosted CI, signing,
+and publication are `NOT RUN`.
 
 ## Application output layout
 
@@ -55,19 +56,31 @@ From the inner `OcctSharp/` workspace:
 package to `artifacts/packages/`. `verify-package.ps1` restores only that local package
 into `tests/OcctSharp.PackageConsumer`, publishes it, checks the output layout, loads
 the native runtime, checks ABI/OCCT identity, and exercises generated
-`GeomCartesianPoint`, base `TopoDS_Shape`, and typed topology behavior.
+`GeomCartesianPoint`, base `TopoDS_Shape`, typed topology, modeling, mesh, exchange,
+generated StepBasic scalar/shared entities and typed enums,
+copied BRep adaptor snapshot behavior, OBJ/PLY/GLB/VRML provider workflows, BinOcaf
+document persistence, BinXCAF/STEPCAF metadata assemblies, and an HWND-bound viewer
+display/selection smoke. The current application-local closure contains 45 DLLs.
 
 ## Consumer use
 
 Once a package source contains the package, an application uses the normal command:
 
 ```powershell
-dotnet add package OcctSharp --version 0.1.0-alpha.14
+dotnet add package OcctSharp --version 0.1.0-alpha.39
 ```
 
 The application must run as a Windows x64 process on the current compatibility matrix.
 Missing or incomplete native assets produce an exception naming the expected `occt`
 directory rather than falling back to a machine-wide OCCT installation.
+
+## Release evidence
+
+`eng/release-check.ps1` rebuilds and revalidates the package, then writes the API diff,
+CycloneDX SBOM, provenance, gate report, and SHA256 checksum list under
+`artifacts/release/`. The checksum list covers the four JSON evidence records and the
+`.nupkg` after the gate report is finalized. A passing local package consumer and a
+completed B20 batch do not override a `BLOCKED` or `NOT RUN` publication gate.
 
 ## Planned package split
 

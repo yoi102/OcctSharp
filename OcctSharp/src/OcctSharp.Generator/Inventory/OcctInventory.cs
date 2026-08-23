@@ -27,6 +27,7 @@ public static partial class OcctInventory
         int batchSize,
         IReadOnlyDictionary<string, string>? toolkitByPackage = null,
         IReadOnlyList<string>? preambleHeaders = null,
+        IReadOnlySet<string>? emittedStableIds = null,
         Action<string>? progress = null)
     {
         if (batchSize < 1)
@@ -66,7 +67,8 @@ public static partial class OcctInventory
             successfulHeaders,
             declarations.Values,
             batches,
-            failures);
+            failures,
+            emittedStableIds);
     }
 
     private static void DiscoverWithIsolation(
@@ -151,7 +153,8 @@ public static partial class OcctInventory
         IEnumerable<string> successfulHeaders,
         IEnumerable<BindingDeclaration> declarations,
         IEnumerable<OcctInventoryBatch> batches,
-        IEnumerable<OcctInventoryFailure> failures)
+        IEnumerable<OcctInventoryFailure> failures,
+        IReadOnlySet<string>? emittedStableIds = null)
     {
         string[] scanned = successfulHeaders.Order(StringComparer.Ordinal).ToArray();
         BindingDeclaration[] declarationArray = declarations
@@ -177,7 +180,15 @@ public static partial class OcctInventory
                 BuildHeaderPackages(context.Headers)),
             semanticScan ? BuildDeclarationInventory(declarationArray) : null,
             batches.OrderBy(static batch => batch.Sequence).ToArray(),
-            failureArray);
+            failureArray,
+            semanticScan
+                ? LongTailClassification.Create(
+                    declarationArray,
+                    context.Headers,
+                    scanned.ToHashSet(StringComparer.Ordinal),
+                    failureArray,
+                    emittedStableIds)
+                : null);
     }
 
     private static OcctPackageHeaderInventory[] BuildHeaderPackages(IEnumerable<string> headers) =>

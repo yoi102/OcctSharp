@@ -14,9 +14,22 @@ public sealed record DiscoveryConfiguration(
 
     public IReadOnlyList<SharedHandleScopeConfiguration> SharedHandleScopes { get; init; } = [];
 
+    public IReadOnlyList<SharedHandlePackageScopeConfiguration> SharedHandlePackageScopes { get; init; } = [];
+
     public IReadOnlyList<TopologyScopeConfiguration> TopologyScopes { get; init; } = [];
 
     public IReadOnlyList<string> InventoryPreambleHeaders { get; init; } = [];
+
+    public IReadOnlyList<string> HeaderPatterns { get; init; } = [];
+}
+
+public sealed record SharedHandlePackageScopeConfiguration
+{
+    public string SourcePackage { get; init; } = string.Empty;
+
+    public string NativeTypePrefix { get; init; } = string.Empty;
+
+    public IReadOnlyList<string> ExcludedNativeTypes { get; init; } = [];
 }
 
 public sealed record TopologyScopeConfiguration

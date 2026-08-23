@@ -702,6 +702,7 @@ public static class SharedHandleBindingEmitter
     private static string RenderManagedRawArgument(GeneratedParameter parameter) => parameter.Projection.RuleId switch
     {
         "TM003" => $"{parameter.Name} ? 1 : 0",
+        "TM004" => $"(int){parameter.Name}",
         "TM005" => $"new Point3dRaw({parameter.Name}.X, {parameter.Name}.Y, {parameter.Name}.Z)",
         _ => parameter.Name,
     };
@@ -709,6 +710,7 @@ public static class SharedHandleBindingEmitter
     private static string RenderFriendlyReturn(string value, BindingTypeProjection projection) => projection.RuleId switch
     {
         "TM003" => value + " != 0",
+        "TM004" => $"({projection.ManagedFriendlyType}){value}",
         "TM005" => $"new Point3d({value}.X, {value}.Y, {value}.Z)",
         _ => value,
     };

@@ -23,6 +23,7 @@ internal static class Program
                     "3" => StlExportSample.Run(),
                     "4" => IgesExportSample.Run(),
                     "5" => XdeStepAssemblySample.Run(),
+                    "6" => ViewerSample.Run(),
                     _ => SampleConsole.InvalidChoice(),
                 };
 

@@ -30,14 +30,39 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0021](adr/0021-opaque-occt-strings-and-real-sequence.md) | Preserve OCCT UTF-8/UTF-16 strings and `NCollection_Sequence<double>` behind explicit buffer/index contracts | Accepted |
 | [ADR-0022](adr/0022-opaque-occt-real-array-and-vector.md) | Preserve `NCollection_Array1<double>` and the OCCT 8 dynamic-array-backed vector alias behind opaque bound/index contracts | Accepted |
 | [ADR-0023](adr/0023-opaque-occt-integer-key-maps.md) | Preserve scalar integer-key maps behind opaque lookup/index contracts | Accepted |
+| [ADR-0024](adr/0024-b06-snapshot-enumeration.md) | Use caller-owned one-shot snapshots instead of native iterators across the ABI | Accepted |
+| [ADR-0025](adr/0025-gp-point-friendly-value-facade.md) | Expose generated `gp_Pnt` through an immutable validated `GpPoint` facade | Accepted |
+| [ADR-0026](adr/0026-opaque-gp-xyz-value-bridge.md) | Preserve `gp_XYZ` algebra behind an explicitly sized opaque value-copy ABI | Accepted |
+| [ADR-0027](adr/0027-opaque-gp-line-value-bridge.md) | Preserve `gp_Lin` origin/direction and core geometry operations behind an opaque value ABI | Accepted |
+| [ADR-0028](adr/0028-opaque-gp-circle-value-bridge.md) | Preserve `gp_Circ` center/normal/radius and core measurements behind an opaque value ABI | Accepted |
+| [ADR-0029](adr/0029-opaque-gp-ax3-value-bridge.md) | Preserve `gp_Ax3` coordinate-system values behind an opaque value ABI | Accepted |
+| [ADR-0030](adr/0030-opaque-gprop-properties-bridge.md) | Keep `GProp_GProps` and BRepGProp computations behind an owning opaque handle | Accepted |
+| [ADR-0031](adr/0031-primitive-solid-builders.md) | Keep BRep primitive builders native-local and expose safe owning Shape results | Accepted |
+| [ADR-0032](adr/0032-topology-face-snapshot.md) | Snapshot topology faces as owning copies without exposing native explorers | Accepted |
+| [ADR-0033](adr/0033-opaque-boolean-shape-operations.md) | Keep BRepAlgoAPI Fuse/Cut state native-local and return owning shape results | Accepted |
+| [ADR-0034](adr/0034-brep-mesh-bulk-snapshot.md) | Transfer triangulated mesh data through caller-owned copied buffers | Accepted |
+| [ADR-0035](adr/0035-opaque-shapefix-result.md) | Keep ShapeFix_Shape native-local and return an owning fixed shape | Accepted |
+| [ADR-0036](adr/0036-opaque-unify-same-domain-result.md) | Keep ShapeUpgrade_UnifySameDomain native-local and return an owning result | Accepted |
+| [ADR-0037](adr/0037-iges-read-bridge.md) | Keep initial IGES read transfer native-local and return one owning shape | Accepted |
+| [ADR-0038](adr/0038-null-shape-failure-contract.md) | Reject null topology values at modeling/healing operation boundaries | Accepted |
+| [ADR-0039](adr/0039-basic-brep-edge-wire-face-builders.md) | Return owning topology from native-local edge, wire, and face builders | Accepted |
+| [ADR-0040](adr/0040-brep-adaptor-value-snapshots.md) | Copy BRep adaptor curve/surface values without exposing borrowed geometry | Accepted |
+| [ADR-0041](adr/0041-basic-modeling-algorithm-results.md) | Return owning Common/Fuse topology and copied minimum-distance values | Accepted |
+| [ADR-0042](adr/0042-boolean-healing-owning-results-without-history.md) | Close Boolean/healing result ownership while keeping history native-local | Accepted |
+| [ADR-0043](adr/0043-native-local-mesh-format-providers.md) | Keep mesh-format providers/configuration native-local and expose geometry-only owning results | Accepted |
+| [ADR-0044](adr/0044-ocaf-document-and-stable-entry-labels.md) | Own OCAF documents and represent parent-bound labels by stable TDF entries | Accepted |
+| [ADR-0045](adr/0045-parent-bound-xde-metadata-and-assemblies.md) | Keep XCAF tools native-local and expose parent-bound labels plus copied metadata/occurrences | Accepted |
+| [ADR-0046](adr/0046-hwnd-thread-affine-viewer-and-presentation-ids.md) | Own the HWND-bound visualization graph on one thread and expose presentations/selection as IDs | Accepted |
+| [ADR-0047](adr/0047-optional-dependency-profiles-and-package-isolation.md) | Classify optional SDK/toolkit profiles reproducibly and isolate their future packages from core | Accepted |
+| [ADR-0048](adr/0048-final-long-tail-and-header-classification.md) | Give every full-inventory declaration and entry header a deterministic final disposition | Accepted |
+| [ADR-0049](adr/0049-release-evidence-and-publication-gates.md) | Use one reproducible release evidence pipeline and keep batch completion separate from publication readiness | Superseded in part by ADR-0050 |
+| [ADR-0050](adr/0050-completion-gates-are-not-classification-gates.md) | Do not treat complete classification or release tooling as completed migration batches | Accepted |
 
 ## Pending decisions
 
 | ID | Decision needed | Required by |
 |---|---|---|
-| PD-009 | Canonical API manifest schema and stable symbol ID | Upgrade diff implementation |
 | PD-010 | Large test data, Git LFS, and fixture licensing policy | Real-file tests |
-| PD-011 | Automated/CI acquisition of the pinned OCCT artifact | Initial CI |
 | PD-012 | Project license and bundled third-party notice layout | First package |
 
 ## ADR template

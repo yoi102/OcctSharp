@@ -1,7 +1,7 @@
 # Build and Release
 
-This document defines the build and future release process. The initial local build is
-implemented; packaging and public release stages remain planned.
+This document defines the build and release process. Local packaging and reproducible
+B20 release evidence are implemented; public publication remains externally gated.
 
 ## Validated baseline
 
@@ -129,7 +129,7 @@ signing, and public publication are not.
 - Release artifacts are produced by CI from a tagged, reviewable source state.
 - Local and CI builds use the same versioned presets or configuration inputs.
 
-## Planned build stages
+## Release pipeline stages
 
 1. Validate dependency and toolchain locks.
 2. Acquire or build the pinned OCCT baseline.
@@ -191,5 +191,22 @@ Each release should preserve:
 
 Native configure/build, managed restore/build, deterministic model/discovery runs, and
 tests are implemented in `eng/build.ps1`. Local package creation and clean-consumer
-restore/publish/runtime validation are implemented. CI, complete license/notice review,
-SBOM/provenance, signing, and release publication are `NOT RUN`.
+restore/publish/runtime validation are implemented. `eng/release-check.ps1` additionally
+runs Release and Debug, generated freshness, a fresh full inventory, clean-source
+regeneration, the 606-signature API compatibility diff, SBOM/provenance/gate generation,
+fixed-order SHA256 checksums, and Git whitespace validation.
+
+The root CI workflow has a dependency-free generator job and a complete Windows job that
+runs this same entry point after acquiring an archive from configured immutable URL and
+SHA256 variables. Hosted CI execution is `NOT RUN`. Project licensing and non-OCCT
+third-party legal review are `BLOCKED`; package signing and NuGet publication are
+`NOT RUN`. Therefore local B20 implementation is complete while public release readiness
+is false.
+
+```powershell
+cd OcctSharp
+.\eng\release-check.ps1
+```
+
+Release evidence is written below `OcctSharp/artifacts/release/`: `api-diff.json`,
+`sbom.cdx.json`, `provenance.json`, `release-gates.json`, and `checksums.sha256`.

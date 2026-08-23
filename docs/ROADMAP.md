@@ -99,10 +99,11 @@ Planned outcomes:
   composition/conversion, matrix access, and topology placement/transform entry points.
   B05 is deliberately closed as one coarse ownership batch; these manual bridges remain
   pending replacement by generalized generated value rules.
-- [ ] B06 foundation strings/collections (in progress): UTF-8/UTF-16 OCCT strings,
+- [x] B06 foundation strings/collections: UTF-8/UTF-16 OCCT strings,
   `NCollection_Sequence<double>`, `NCollection_Array1<double>`, and the OCCT 8
-  dynamic-array-backed `NCollection_Vector<double>` alias now use explicit opaque
-  buffer/index contracts; maps, richer elements, and iterators remain in the same coarse batch.
+  dynamic-array-backed `NCollection_Vector<double>` alias use explicit opaque
+  buffer/index contracts; integer-key maps use caller-owned snapshot buffers and no
+  native iterator crosses the ABI.
 - [ ] Broader memory diagnostics and stress tooling.
 
 Exit criteria:
@@ -138,6 +139,12 @@ Goal: generalize rules across selected geometry and BRep packages.
 Planned outcomes include geometry/adaptors, BRep construction, transformations,
 boolean operations, and module-level coverage reporting.
 
+Current evidence includes the complete B08 safe profile: owned `GProp_GProps` property
+accumulators and value-copy `BRepAdaptor_Curve`/`BRepAdaptor_Surface` snapshots. General
+borrowed adaptor objects and underlying curve/surface handles remain outside this profile.
+The B11/B12 basic algorithm profiles are also complete for owning/value results without
+cross-ABI history: Fuse/Common/Cut, minimum distance, ShapeFix, and same-domain unification.
+
 Exit criteria are set after Phase 3 evidence identifies the next safe scope.
 
 ## Phase 5: Mesh and bulk transfer
@@ -162,14 +169,26 @@ tests remain required.
 Goal: add viewer, selection, window integration, callbacks, and thread-affinity rules
 after core ownership and platform contracts are stable.
 
+B17 completes the Windows visualization-core profile: an application-owned HWND is
+bound to a thread-affine OpenGL/V3d/AIS owner, presentations are parent-bound IDs,
+selection is copied, and applications explicitly forward input/resize events. Native
+callbacks and broad generated visualization declarations remain B19 long-tail scope.
+
 ## Phase 8: Distribution
 
 Goal: publish validated NuGet packages for the declared compatibility matrix.
 
-Initial local evidence: one experimental package now carries the managed assembly and
+Implemented local evidence: one experimental package now carries the managed assembly and
 the complete Windows x64 native closure, copies it below the consumer's `occt` directory,
-and passes a clean restore/publish/runtime consumer. This does not authorize public
-publication; license/notice, provenance, CI, signing, and broader release gates remain.
+and passes a clean restore/publish/runtime consumer. B20 also implements API baselines,
+clean-source regeneration, immutable-artifact CI configuration, SBOM/provenance/checksums,
+release notes, and explicit machine-readable gates. This does not authorize public
+publication; project-license and third-party review remain blocked, and hosted CI,
+signing, and NuGet publication are `NOT RUN`.
 
-Planned outcomes include native runtime dependency closure, clean-consumer tests,
-licenses/notices, SBOM/provenance, package signing, release notes, and upgrade reports.
+B00-B18 are complete (19/21). B19 classification infrastructure and B19.1's first ten
+StepBasic generated shared entities are complete, but B19 binding migration remains open
+because 10,338 bindable declarations are still unselected and broad LT001-LT004
+projection/ownership blockers remain. B20 release engineering is
+implemented, but its complete-migration gates remain open. Work continues through real
+emitted/manual coverage rather than reclassification-only milestones.

@@ -64,6 +64,12 @@ The configured `TopAbs` static scope now exercises `TM004` end to end: enum para
 are converted from `int32_t` to the native enum before the C++ call, and enum returns are
 converted back to `int32_t` for the managed raw binding.
 
+B19.1 completes the managed side of `TM004`: the AST model records enum definitions,
+explicit signed/unsigned values, and underlying types; the emitter writes typed public
+enums and rejects values outside the verified Int32 range. Canonical qualified names and
+unique unqualified spellings map to the same managed type, which covers nested
+`Standard::AllocatorType` and the StepBasic enum families without alias drift.
+
 `TM006` applies only when semantic discovery identifies an OCCT
 `opencascade::handle<T>` value. It preserves intrusive sharing through a native wrapper
 and `SafeHandle`; no OCCT object pointer crosses the ABI. Pointer/reference layers,

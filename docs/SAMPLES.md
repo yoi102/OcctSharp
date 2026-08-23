@@ -30,6 +30,13 @@ STEPCAF supports those entities. It prints input/output counts for color, style,
 product-definition, and assembly-usage entities so that a metadata-free fixture is not
 mistaken for a preservation result.
 
+The sixth item opens a native Win32 window backed by `OcctViewer`, displays a box, and
+runs a standard message loop. Resizing forwards `WM_SIZE`, painting requests redraw,
+mouse movement updates detection, and a left click selects at the client coordinate and
+updates the title with the copied selection count. Close the viewer window to return to
+the console menu. The sample keeps window ownership outside the viewer and performs all
+viewer calls on the creating UI thread.
+
 The validated local run on 2026-08-21 consumed seven STEP files from `data/` and wrote
 one assembly STEP. The inputs contained 73 `COLOUR_RGB`, 106 `STYLED_ITEM`, 73
 `PRESENTATION_STYLE_ASSIGNMENT`, 4 material-property, and 8 product-definition records.

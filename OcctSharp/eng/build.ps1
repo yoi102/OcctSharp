@@ -167,6 +167,8 @@ try {
         if ($LASTEXITCODE -ne 0) { throw "dotnet test failed with exit code $LASTEXITCODE." }
     }
 
+    & .\eng\audit-dependency-profiles.ps1 -OcctRoot $resolvedOcctRoot
+
     Write-Host "Build completed with .NET SDK $sdkVersion. Model SHA256: $firstHash. OCCT discovery SHA256: $firstDiscoveryHash. Coverage SHA256: $firstCoverageHash. Diagnostics SHA256: $firstDiagnosticsHash"
 }
 finally {

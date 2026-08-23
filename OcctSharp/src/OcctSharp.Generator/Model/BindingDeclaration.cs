@@ -22,6 +22,10 @@ public sealed record BindingDeclaration(
 
     public IReadOnlyList<BindingBaseType> BaseTypes { get; init; } = [];
 
+    public IReadOnlyList<BindingEnumValue> EnumValues { get; init; } = [];
+
+    public string? EnumUnderlyingType { get; init; }
+
     public bool IsConst { get; init; }
 
     public bool IsStatic { get; init; }

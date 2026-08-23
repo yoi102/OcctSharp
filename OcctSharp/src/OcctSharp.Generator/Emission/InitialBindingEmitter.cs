@@ -100,6 +100,12 @@ public static class InitialBindingEmitter
             topologyScopes);
         files.AddRange(topology.Files);
         sourceStableIds.AddRange(topology.SourceStableIds);
+        GeneratedBindingSet enums = EnumBindingEmitter.Emit(
+            report.OcctVersion,
+            eligibleModel,
+            sourceStableIds);
+        files.AddRange(enums.Files);
+        sourceStableIds.AddRange(enums.SourceStableIds);
         return new GeneratedBindingSet(
             report.OcctVersion,
             sourceStableIds.Distinct(StringComparer.Ordinal).Order(StringComparer.Ordinal).ToArray(),

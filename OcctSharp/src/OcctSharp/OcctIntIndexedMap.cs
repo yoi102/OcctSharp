@@ -29,6 +29,14 @@ public sealed class OcctIntIndexedMap : IReadOnlyList<int>, IDisposable
     public int FindIndex(int key) { ThrowIfDisposed(); NativeError.ThrowIfFailed(NativeMethods.FindIntIndexedMapIndex(handle, key, out int index), "int_indexed_map_find_index"); return index == 0 ? -1 : index - 1; }
     public bool Add(int key) { ThrowIfDisposed(); NativeError.ThrowIfFailed(NativeMethods.AddIntIndexedMap(handle, key, out _, out int added), "int_indexed_map_add"); return added != 0; }
     public int RemoveLast() { ThrowIfDisposed(); NativeError.ThrowIfFailed(NativeMethods.RemoveLastIntIndexedMap(handle, out int key), "int_indexed_map_remove_last"); return key; }
+    /// <summary>Copies the current ordered keys in one native call; the returned array is independent of this map.</summary>
+    public int[] Snapshot()
+    {
+        ThrowIfDisposed(); int count = Count;
+        nint memory = Marshal.AllocHGlobal(Math.Max(1, sizeof(int) * count));
+        try { NativeError.ThrowIfFailed(NativeMethods.SnapshotIntIndexedMap(handle, memory, count, out int written), "int_indexed_map_snapshot"); int[] result = new int[written]; if (written > 0) Marshal.Copy(memory, result, 0, written); return result; }
+        finally { Marshal.FreeHGlobal(memory); }
+    }
     public OcctIntIndexedMap Clone() { ThrowIfDisposed(); NativeError.ThrowIfFailed(NativeMethods.CloneIntIndexedMap(handle, out nint result), "int_indexed_map_clone"); return FromNative(result); }
     public IEnumerator<int> GetEnumerator() { ThrowIfDisposed(); for (int index = 0; index < Count; index++) yield return this[index]; }
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();

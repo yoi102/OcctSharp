@@ -7,7 +7,7 @@ public sealed class TopLocLocation : IDisposable
 {
     private readonly LocationHandle handle;
 
-    private TopLocLocation(LocationHandle handle)
+    internal TopLocLocation(LocationHandle handle)
     {
         this.handle = handle;
     }

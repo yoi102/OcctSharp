@@ -5,6 +5,7 @@ using OcctSharp.Generator.Emission;
 using OcctSharp.Generator.Inventory;
 using OcctSharp.Generator.Model;
 using OcctSharp.Generator.Reporting;
+using OcctSharp.Generator.Transformation;
 
 return args switch
 {
@@ -18,7 +19,9 @@ return args switch
     ["inventory-catalog", "--occt-root", string occtRoot, "--output", string outputPath]
         => await RunInventoryCatalogAsync(occtRoot, outputPath),
     ["inventory", "--occt-root", string occtRoot, "--config", string configPath, "--output", string outputPath, "--batch-size", string batchSize]
-        => await RunInventoryAsync(occtRoot, configPath, outputPath, batchSize),
+        => await RunInventoryAsync(occtRoot, configPath, outputPath, batchSize, manifestPath: null),
+    ["inventory", "--occt-root", string occtRoot, "--config", string configPath, "--output", string outputPath, "--batch-size", string batchSize, "--manifest", string manifestPath]
+        => await RunInventoryAsync(occtRoot, configPath, outputPath, batchSize, manifestPath),
     _ => PrintUsage(),
 };
 
@@ -43,7 +46,8 @@ static async Task<int> RunInventoryAsync(
     string occtRoot,
     string configPath,
     string outputPath,
-    string batchSizeText)
+    string batchSizeText,
+    string? manifestPath)
 {
     try
     {
@@ -53,11 +57,24 @@ static async Task<int> RunInventoryAsync(
         }
 
         DiscoveryConfiguration configuration = await ReadConfigurationAsync(configPath);
+        HashSet<string>? emittedStableIds = null;
+        if (manifestPath is not null)
+        {
+            GeneratedManifest? manifest = JsonSerializer.Deserialize<GeneratedManifest>(
+                await File.ReadAllTextAsync(manifestPath),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            if (manifest is null || !string.Equals(manifest.OcctVersion, configuration.OcctVersion, StringComparison.Ordinal))
+            {
+                throw new InvalidDataException("The generated manifest is missing or targets a different OCCT version.");
+            }
+            emittedStableIds = manifest.SourceStableIds.ToHashSet(StringComparer.Ordinal);
+        }
         OcctInventoryReport report = OcctInventory.Discover(
             occtRoot,
             batchSize,
             configuration.ToolkitByPackage,
             configuration.InventoryPreambleHeaders,
+            emittedStableIds,
             Console.WriteLine);
         if (!string.Equals(configuration.OcctVersion, report.OcctVersion, StringComparison.Ordinal))
         {
@@ -67,8 +84,8 @@ static async Task<int> RunInventoryAsync(
 
         await WriteJsonAsync(outputPath, report);
         Console.WriteLine(
-            $"Inventoried {report.Headers.Scanned}/{report.Headers.Total} headers and {report.Declarations?.Total ?? 0} unique declarations; complete: {report.IsComplete}; report: '{Path.GetFullPath(outputPath)}'.");
-        return report.IsComplete ? 0 : 3;
+            $"Inventoried {report.Headers.Scanned}/{report.Headers.Total} headers and {report.Declarations?.Total ?? 0} unique declarations; semantic complete: {report.IsComplete}; classification complete: {report.FinalClassification?.IsComplete}; report: '{Path.GetFullPath(outputPath)}'.");
+        return report.FinalClassification?.IsComplete == true ? 0 : 3;
     }
     catch (Exception error)
     {
@@ -109,7 +126,7 @@ static async Task<int> RunConfiguredDiscoveryAsync(string occtRoot, string confi
 
         return await RunDiscoveryAsync(
             occtRoot,
-            configuration.Headers,
+            ExpandHeaders(occtRoot, configuration),
             configuration.OcctVersion,
             outputPath,
             configuration.ToolkitByPackage);
@@ -127,17 +144,22 @@ static async Task<int> RunGenerationAsync(string occtRoot, string configPath, st
     {
         DiscoveryConfiguration configuration = await ReadConfigurationAsync(configPath);
         DiscoveryReport report = ClangAstDiscovery.Discover(
-            new DiscoveryOptions(occtRoot, configuration.Headers, configuration.ToolkitByPackage));
+            new DiscoveryOptions(occtRoot, ExpandHeaders(occtRoot, configuration), configuration.ToolkitByPackage));
         if (!string.Equals(configuration.OcctVersion, report.OcctVersion, StringComparison.Ordinal))
         {
             throw new InvalidDataException(
                 $"Configuration expects OCCT {configuration.OcctVersion}, but the selected installation reports {report.OcctVersion}.");
         }
 
+        IReadOnlyList<SharedHandleScopeConfiguration> sharedHandleScopes =
+            SharedHandlePackageScopeExpander.Expand(
+                report.Model,
+                configuration.SharedHandleScopes,
+                configuration.SharedHandlePackageScopes);
         GeneratedBindingSet bindingSet = InitialBindingEmitter.Emit(
             report,
             configuration.GenerationScopes,
-            configuration.SharedHandleScopes,
+            sharedHandleScopes,
             configuration.TopologyScopes);
         GeneratedManifest manifest = GeneratedOutputWriter.Replace(outputRoot, bindingSet);
         GenerationReportSet reports = GenerationReportWriter.Create(report, bindingSet);
@@ -166,6 +188,27 @@ static async Task<DiscoveryConfiguration> ReadConfigurationAsync(string configPa
     }
 
     return configuration;
+}
+
+static IReadOnlyList<string> ExpandHeaders(string occtRoot, DiscoveryConfiguration configuration)
+{
+    string includeRoot = Path.Combine(Path.GetFullPath(occtRoot), "inc");
+    SortedSet<string> headers = new(configuration.Headers, StringComparer.Ordinal);
+    foreach (string pattern in configuration.HeaderPatterns.Order(StringComparer.Ordinal))
+    {
+        if (string.IsNullOrWhiteSpace(pattern)
+            || Path.IsPathRooted(pattern)
+            || pattern.Contains("..", StringComparison.Ordinal))
+        {
+            throw new InvalidDataException($"Header pattern '{pattern}' must be a non-rooted include-directory pattern.");
+        }
+        foreach (string path in Directory.GetFiles(includeRoot, pattern, SearchOption.TopDirectoryOnly)
+            .Order(StringComparer.Ordinal))
+        {
+            headers.Add(Path.GetFileName(path));
+        }
+    }
+    return headers.ToArray();
 }
 
 static async Task<int> RunDiscoveryAsync(
@@ -219,7 +262,7 @@ static JsonSerializerOptions CreateJsonOptions()
 }
 
 static bool IsSupportedConfigurationSchema(string schemaVersion) =>
-    schemaVersion is "1.1" or "1.2" or "1.3" or "1.4";
+    schemaVersion is "1.1" or "1.2" or "1.3" or "1.4" or "1.5";
 
 static int PrintUsage()
 {

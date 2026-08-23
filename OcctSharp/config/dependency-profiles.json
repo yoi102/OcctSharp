@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0",
+  "targetPlatform": "windows-x64",
+  "profiles": [
+    {
+      "id": "windows-viewer",
+      "package": "OcctSharp.Visualization",
+      "intendedUse": "Runtime",
+      "requiredPlatforms": [ "windows-x64" ],
+      "language": "native-cpp",
+      "headerGlobs": [ "WNT_*.hxx" ],
+      "toolkits": [ "TKService", "TKOpenGl", "TKV3d" ],
+      "externalHeaders": [],
+      "externalRuntimeFiles": [],
+      "expectedState": "Available"
+    },
+    {
+      "id": "ivtk",
+      "package": "OcctSharp.IVtk",
+      "intendedUse": "OptionalRuntime",
+      "requiredPlatforms": [ "windows-x64" ],
+      "language": "native-cpp",
+      "headerGlobs": [ "IVtk*.hxx" ],
+      "toolkits": [ "TKIVtk", "TKIVtkDraw" ],
+      "externalHeaders": [ "vtkType.h", "vtkSmartPointer.h", "vtkPolyData.h" ],
+      "externalRuntimeFiles": [ "vtkInteractionStyle-9.4.dll", "vtkRenderingOpenGL2-9.4.dll", "vtkCommonCore-9.4.dll", "vtksys-9.4.dll" ],
+      "expectedState": "BlockedExternalDependency"
+    },
+    {
+      "id": "opengles",
+      "package": "OcctSharp.Visualization.OpenGles",
+      "intendedUse": "OptionalRuntime",
+      "requiredPlatforms": [ "windows-x64" ],
+      "language": "native-cpp",
+      "headerGlobs": [ "OpenGl_GLES*.hxx" ],
+      "toolkits": [ "TKOpenGles" ],
+      "externalHeaders": [ "GLES2/gl2.h", "EGL/egl.h" ],
+      "externalRuntimeFiles": [ "libEGL.dll", "libGLESv2.dll" ],
+      "expectedState": "BlockedExternalDependency"
+    },
+    {
+      "id": "draw-test-harness",
+      "package": null,
+      "intendedUse": "TestOnly",
+      "requiredPlatforms": [ "windows-x64" ],
+      "language": "native-cpp",
+      "headerGlobs": [ "Draw*.hxx" ],
+      "toolkits": [ "TKDraw" ],
+      "externalHeaders": [],
+      "externalRuntimeFiles": [ "tcl86.dll", "tk86.dll" ],
+      "expectedState": "IgnoredByDesign"
+    },
+    {
+      "id": "non-windows-window-adapters",
+      "package": null,
+      "intendedUse": "PlatformAdapter",
+      "requiredPlatforms": [ "linux-x64", "macos-x64", "macos-arm64" ],
+      "language": "native-cpp",
+      "headerGlobs": [ "Cocoa_*.hxx", "Xw_*.hxx", "Aspect_XAtom.hxx" ],
+      "toolkits": [],
+      "externalHeaders": [],
+      "externalRuntimeFiles": [],
+      "expectedState": "UnavailablePlatform"
+    },
+    {
+      "id": "cpp-cli-haft",
+      "package": null,
+      "intendedUse": "LanguageAdapter",
+      "requiredPlatforms": [ "windows-x64" ],
+      "language": "cpp-cli",
+      "headerGlobs": [ "NCollection_Haft.h" ],
+      "toolkits": [],
+      "externalHeaders": [],
+      "externalRuntimeFiles": [],
+      "expectedState": "ExcludedLanguage"
+    }
+  ]
+}

@@ -231,6 +231,10 @@ public sealed class ClangAstDiscovery
         {
             factDeclaration = definition;
         }
+        else if (declaration is EnumDecl enumDeclaration && enumDeclaration.Definition is { } resolvedEnumDefinition)
+        {
+            factDeclaration = resolvedEnumDefinition;
+        }
         factDeclaration.Location.GetSpellingLocation(out CXFile file, out uint line, out uint column, out _);
         string filePath = file.Name.CString;
         if (string.IsNullOrWhiteSpace(filePath))
@@ -258,6 +262,7 @@ public sealed class ClangAstDiscovery
         FunctionDecl? function = factDeclaration as FunctionDecl;
         CXXMethodDecl? method = factDeclaration as CXXMethodDecl;
         CXXRecordDecl? recordDefinition = factDeclaration as CXXRecordDecl;
+        EnumDecl? enumDefinition = factDeclaration as EnumDecl;
         BindingParameter[] parameters = function is null
             ? []
             : function.Parameters
@@ -275,6 +280,16 @@ public sealed class ClangAstDiscovery
                     MapAccess(baseType.AccessSpecifier),
                     baseType.IsVirtual))
                 .OrderBy(static baseType => baseType.Type.CanonicalSpelling, StringComparer.Ordinal)
+                .ToArray();
+        BindingEnumValue[] enumValues = enumDefinition is null
+            ? []
+            : enumDefinition.Enumerators
+                .Select(static enumerator => new BindingEnumValue(
+                    enumerator.Name,
+                    enumerator.IsUnsigned
+                        ? enumerator.UnsignedInitVal.ToString(CultureInfo.InvariantCulture)
+                        : enumerator.InitVal.ToString(CultureInfo.InvariantCulture),
+                    enumerator.IsUnsigned))
                 .ToArray();
         bool isTemplated = factDeclaration.IsTemplated;
         uint templateParameterListCount = factDeclaration switch
@@ -307,6 +322,8 @@ public sealed class ClangAstDiscovery
                 : CreateBindingType(function.ReturnType),
             Parameters = parameters,
             BaseTypes = baseTypes,
+            EnumValues = enumValues,
+            EnumUnderlyingType = enumDefinition?.IntegerType.AsString,
             IsConst = method?.IsConst ?? false,
             IsStatic = function?.IsStatic ?? false,
             IsVariadic = function?.IsVariadic ?? false,

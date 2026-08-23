@@ -4,19 +4,40 @@ namespace OcctSharp.Generator.TypeMapping;
 
 public sealed class InitialTypeMap
 {
-    private readonly HashSet<string> _enumTypes;
+    private readonly IReadOnlyDictionary<string, string> _managedEnumTypes;
 
     public InitialTypeMap(IEnumerable<string>? enumTypes = null)
     {
-        _enumTypes = new HashSet<string>(enumTypes ?? [], StringComparer.Ordinal);
+        _managedEnumTypes = (enumTypes ?? [])
+            .Select(NormalizeBaseType)
+            .Distinct(StringComparer.Ordinal)
+            .ToDictionary(static name => name, ToManagedTypeName, StringComparer.Ordinal);
     }
+
+    private InitialTypeMap(IReadOnlyDictionary<string, string> managedEnumTypes) =>
+        _managedEnumTypes = managedEnumTypes;
 
     public static InitialTypeMap FromModel(BindingModel model)
     {
         ArgumentNullException.ThrowIfNull(model);
-        return new InitialTypeMap(model.Declarations
+        BindingDeclaration[] enums = model.Declarations
             .Where(static declaration => declaration.Kind == BindingDeclarationKind.Enum)
-            .Select(static declaration => declaration.NativeName));
+            .ToArray();
+        Dictionary<string, string> mappings = enums.ToDictionary(
+            static declaration => NormalizeBaseType(declaration.NativeName),
+            static declaration => ToManagedTypeName(declaration.NativeName),
+            StringComparer.Ordinal);
+        foreach (IGrouping<string, BindingDeclaration> group in enums.GroupBy(
+            static declaration => GetUnqualifiedName(NormalizeBaseType(declaration.NativeName)),
+            StringComparer.Ordinal))
+        {
+            if (group.Count() == 1)
+            {
+                BindingDeclaration declaration = group.Single();
+                mappings.TryAdd(group.Key, ToManagedTypeName(declaration.NativeName));
+            }
+        }
+        return new InitialTypeMap(mappings);
     }
 
     public bool TryMap(
@@ -96,13 +117,14 @@ public sealed class InitialTypeMap
             return true;
         }
 
-        if (_enumTypes.Contains(nativeType) || _enumTypes.Contains(canonicalType))
+        if (_managedEnumTypes.TryGetValue(nativeType, out string? managedEnumType)
+            || _managedEnumTypes.TryGetValue(canonicalType, out managedEnumType))
         {
             projection = new BindingTypeProjection(
                 "TM004",
                 "int32_t",
                 "int",
-                nativeType,
+                managedEnumType,
                 "ValueCopy",
                 "Enum value is converted through its compile-validated 32-bit underlying representation.");
             return true;
@@ -168,5 +190,11 @@ public sealed class InitialTypeMap
             StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
         return string.Concat(parts.Select(static part =>
             part.Length == 0 ? string.Empty : char.ToUpperInvariant(part[0]) + part[1..]));
+    }
+
+    private static string GetUnqualifiedName(string nativeType)
+    {
+        int separator = nativeType.LastIndexOf("::", StringComparison.Ordinal);
+        return separator < 0 ? nativeType : nativeType[(separator + 2)..];
     }
 }

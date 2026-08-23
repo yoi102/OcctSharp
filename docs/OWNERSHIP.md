@@ -68,6 +68,12 @@ managed wrapper may be disposed first. Per-type registries reject stale wrapper
 addresses. Borrowed handles, parent-bound handles, general casts, and concurrent
 release/use remain pending.
 
+B19.1 applies that same generated shared category without changing O001-O012 to ten
+StepBasic entity classes. Constructors create one intrusive handle, `Clone` retains the
+same entity, scalar/boolean/enum members operate through a registry-validated receiver,
+and disposal releases one retained reference. Handle-valued fields and parameters remain
+unemitted until cross-generated-type conversion and null semantics are generalized.
+
 ### `TopoDS_*`
 
 ABI 1.10 and `TM007` implement the base `TopoDS_Shape` value category. Each registered
@@ -88,6 +94,76 @@ from a pointer spelling.
 Explorer results, collection views, triangulations, document labels, and other child
 objects require explicit copied, retained, or parent-bound semantics. Temporary native
 objects may not escape through a borrowed wrapper.
+
+### BRep adaptor snapshots
+
+`BRepAdaptor_Curve` and `BRepAdaptor_Surface` exist only within a native bridge call.
+Their topology references and underlying curve/surface accessors never cross the ABI.
+The edge and face snapshot APIs copy enum, parameter, UV-bound, and point values into
+caller-owned structures. These results are value copies with no native lifetime and
+remain valid after the source topology wrapper is disposed. Wrong topology kinds fail
+before adaptor construction.
+
+### Basic modeling results
+
+`BRepAlgoAPI_Fuse` and `BRepAlgoAPI_Common` never leave the native call; each successful
+shape is copied into a new registered owning wrapper that does not retain its inputs.
+`BRepExtrema_DistShapeShape` likewise remains call-local, while distance, one point pair,
+and solution count cross as a value copy. Support topology, parameters, progress state,
+and history are deliberately not borrowed or parent-bound through this profile.
+
+### Boolean and healing history exclusion
+
+Cut, ShapeFix, and same-domain unification return new registered owning shapes and do
+not retain their inputs. Their BOP/ShapeFix/ShapeUpgrade history and mode state remain
+native-local. No history object, modified/generated topology map, status reference, or
+borrowed child crosses the ABI in the B12 owning-result/no-history profile.
+
+### Mesh-format exchange providers
+
+OBJ, PLY, glTF/GLB, and VRML provider/configuration objects are created and destroyed
+inside one native call. Writers borrow a live shape only during the call and build its
+triangulation before export. OBJ, glTF/GLB, and VRML readers copy the transferred result
+into a new registered owning `Shape`; it has no dependency on provider, document, or
+scene lifetime. No provider configuration, progress object, label, native mesh, or
+metadata graph crosses the ABI. PLY read has no ownership contract because it is not
+implemented by OCCT 8.0.1 and is exposed as unsupported.
+
+### OCAF documents and labels
+
+`OcafDocument` owns one native wrapper containing retained `TDocStd_Application` and
+`TDocStd_Document` handles. Native release aborts any open command, closes the document
+from the application session, and deletes the registered wrapper. `OcafLabel` has no
+native handle: it stores a stable TDF entry plus a strong reference to its parent
+document. Every operation resolves that entry against the current data framework, so
+explicit parent disposal deterministically invalidates all labels. Names are UTF-8
+copies. Transactions are parent-owned command state; an uncommitted managed transaction
+aborts on dispose. Abort rolls back attributes but OCCT may retain allocated empty label
+nodes, which are not treated as independent child owners.
+
+### XDE metadata and assemblies
+
+`XdeDocument` uses the same owning application/document category as OCAF with BinXCAF
+drivers. `XdeLabel` is parent-bound by stable entry. XCAF tools, free-shape/component
+sequences, color/layer/material tables, reference tree nodes, and STEPCAF state remain
+inside each native call. Shape and occurrence-location results are new independent owners.
+Names, effective RGBA, layer arrays, material records, counts, and entries are copied.
+An occurrence's referred part is represented by another parent-bound entry, not a native
+reference handle. Effective color deliberately maps Gen/Surf/Curv because STEPCAF may
+normalize an overall color between those document-owned channels.
+
+### Visualization graph and presentations
+
+`OcctViewer` is an owning, thread-affine wrapper for the display connection, OpenGL
+driver, viewer, interactive context, view, and `WNT_Window` bound to an application-owned
+HWND. The application must keep the HWND alive until the viewer is disposed and must call
+viewer methods only on the creating thread. The viewer does not own or destroy the HWND.
+
+`ViewerPresentation` is parent-bound and owns no native allocation. Its 64-bit ID is
+resolved through the parent viewer for every show/hide/remove operation. Display copies
+the source topology into an `AIS_Shape`, so the source `Shape` can be disposed immediately.
+Selection returns a caller-owned managed snapshot derived from copied presentation IDs;
+no `AIS_InteractiveObject`, selector iterator, or native pointer crosses the ABI.
 
 ### B06 strings and sequences
 

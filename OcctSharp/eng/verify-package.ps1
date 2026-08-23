@@ -2,7 +2,7 @@
 param(
     [string]$OcctRoot,
 
-    [string]$PackageVersion = '0.1.0-alpha.14',
+    [string]$PackageVersion = '0.1.0-alpha.40',
 
     [switch]$SkipBuild
 )
@@ -39,8 +39,19 @@ if (Test-Path -LiteralPath $consumerRoot) {
 
 New-Item -ItemType Directory -Path $consumerRoot -Force | Out-Null
 
+$nugetConfig = Join-Path $consumerRoot 'NuGet.Config'
+@"
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <clear />
+    <add key="local-package" value="$packageDirectory" />
+    <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
+  </packageSources>
+</configuration>
+"@ | Set-Content -LiteralPath $nugetConfig -Encoding utf8
 & dotnet restore $consumerProject `
-    --source $packageDirectory `
+    --configfile $nugetConfig `
     --packages $packageCache `
     "-p:OcctSharpPackageVersion=$PackageVersion"
 if ($LASTEXITCODE -ne 0) {

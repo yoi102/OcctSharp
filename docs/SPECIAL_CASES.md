@@ -30,7 +30,7 @@ rules or design:
 | SCI-004 | `NCollection_*` | Investigation | Container semantics and index bases vary |
 | SCI-005 | Multiple inheritance | Investigation | Managed projection and runtime cast ambiguity |
 | SCI-006 | XDE/OCAF documents and labels | Deferred | Parent/document lifetime and metadata graph |
-| SCI-007 | Visualization callbacks and window handles | Deferred | Platform integration, reentrancy, threading |
+| SCI-007 | Visualization callbacks and window handles | Partial | B17 accepts an existing HWND and explicit same-thread event forwarding; callbacks remain excluded under SC-031 |
 | SCI-008 | Bulk mesh transfer | Deferred | Performance-sensitive array and lifetime contract |
 
 ## SC-001: Interim manual geometry exchange bridge
@@ -269,3 +269,359 @@ rules or design:
 - Removal criteria: Replace this manual bridge after generated template rules can model
   key/value element mapping, allocator ownership, and iterator lifetime. Do not count
   this bridge as generated declaration coverage.
+
+## SC-011: Caller-owned scalar collection snapshots
+
+- Status: Accepted B06 completion wave.
+- Scope: `OcctRealSequence`, `OcctRealArray`, `OcctRealVector`, `OcctIntRealMap`, and
+  `OcctIntIndexedMap` snapshot APIs.
+- Reason: Native iterators and node pointers cannot safely cross the ABI or survive
+  mutation/disposal. A one-shot copy gives a deterministic early-exit and lifetime
+  contract without exposing implementation layout.
+- Native/ABI/managed behavior: ABI 1.18 validates live handles and buffer capacity,
+  copies scalar values or key/value pairs, and returns the number written. Managed
+  `Snapshot()` allocates caller-owned arrays; empty snapshots use a non-null sentinel
+  allocation internally and return empty managed arrays.
+- Ownership: Snapshot buffers are borrowed for one call and are never retained by OCCT;
+  returned managed arrays are independent values. No native iterator is created or
+  released by managed code.
+- Validation: Debug/Release builds pass 32 generator and 40 runtime tests, including
+  mutation independence, empty collections, disposal during enumeration, and package
+  consumer validation with ABI 1.18/bridge 0.19.0.
+- Upgrade impact: Re-check collection length/index semantics and map iteration order;
+  keep capacity validation and stale-handle rejection fail-closed.
+- Removal criteria: Replace with generated safe iterators only after a documented parent
+  lifetime, mutation, and early-exit contract is proven for each element family.
+
+## SC-012: Opaque `gp_XYZ` value algebra
+
+- Status: Accepted B07 first geometry value wave.
+- Scope: OCCT 8.0.1 `gp_XYZ` default/create/copy/add/cross/dot/modulus/normalized.
+- Reason: The type is a C++ value with checked normalization and must not cross through
+  an assumed managed object layout. The selected algebra is a closed value-copy family.
+- Native/ABI/managed behavior: ABI 1.19 exposes a 24-byte `OcctSharp_Xyz` contract and
+  status-returning normalization. `GpXyz` validates finite construction inputs and maps
+  zero-normalization failure through `OcctException`.
+- Ownership: No allocation or handle ownership; every result is an independent value.
+- Validation: Debug/Release pass 32 generator and 42 runtime tests; alpha.17 clean
+  package consumer passes with 36 native DLLs, ABI 1.19, and bridge 0.20.0.
+- Upgrade impact: Re-check `gp_XYZ` normalization exception text/conditions, arithmetic
+  semantics, and value size/alignment on every OCCT/compiler upgrade.
+- Removal criteria: Replace with generated value emission after trivial-layout and
+  exception-preserving rules cover this family; do not count this manual bridge as a
+  generated declaration.
+
+## SC-013: Opaque `gp_Lin` geometry value
+
+- Status: Accepted B07 line sub-batch.
+- Scope: `gp_Lin` default/create/reversed/distance/angle with copied `gp_Pnt` origin and
+  unit `gp_Dir` direction.
+- Reason: A line embeds native axis state and direction invariants; exposing references
+  or C++ layout would make zero-direction failures and lifetime ambiguous.
+- Native/ABI/managed behavior: ABI 1.20 exposes a 48-byte origin/direction value. Native
+  creation delegates to `gp_Lin(gp_Pnt,gp_Dir)` and catches OCCT construction failures;
+  managed `GpLine` remains immutable.
+- Ownership: Value-copy only; no allocation or handle ownership crosses the ABI.
+- Validation: Debug/Release and alpha.18 package consumer pass; tests cover default Z
+  direction, zero-direction rejection, distance, angle, and reversal.
+- Removal criteria: Replace with generated value emission after axis composition and
+  constructor exception rules are generalized and proven.
+
+## SC-014: Opaque `gp_Circ` geometry value
+
+- Status: Accepted B07 circle sub-batch.
+- Scope: `gp_Circ` default/create/area/length/distance with copied center, normal, and radius values.
+- Reason: Circle construction owns axis invariants and raises on negative radius or a zero normal; native object layout and axis references must remain hidden.
+- Native/ABI/managed behavior: ABI 1.21 exposes a 56-byte value. Native construction and measurements delegate to OCCT; managed `GpCircle` is immutable and validates finite radius input.
+- Ownership: Value-copy only; no allocation or handle ownership crosses the ABI.
+- Validation: Debug/Release tests and alpha.19 package consumer pass with 44 runtime tests, ABI 1.21, bridge 0.22.0, and 36 packaged DLLs.
+- Removal criteria: Replace with generated value emission after `gp_Ax2` orientation, axis mutation, and constructor exception rules are generalized.
+
+## SC-015: Opaque `gp_Ax3` coordinate-system value
+
+- Status: Accepted B07 axis sub-batch.
+- Scope: `GpAx3Value` over OCCT 8.0.1 `gp_Ax3` default/create/direct semantics.
+- Reason: `gp_Ax3` embeds an axis and two derived directions; native references and
+  compiler layout must not be projected into managed code. OCCT also rejects zero or
+  parallel direction inputs during construction.
+- Native/ABI/managed behavior: ABI 1.24 exposes an explicitly sized 96-byte copied value;
+  construction is status-returning and `Direct` is normalized to `int32_t`. The managed
+  facade is immutable and returns copied `GpXyz` values.
+- Ownership: Value-copy only; no allocation or handle ownership crosses the ABI.
+- Validation: Release native/managed tests and alpha.21 clean package consumer pass with
+  ABI 1.24, bridge 0.25.0, and 36 native DLLs under application-local `occt`.
+- Upgrade impact: Re-check direction normalization, directness, exception behavior, and
+  value size/alignment on every OCCT/compiler upgrade.
+- Removal criteria: Replace with generated value emission after generalized axis
+  composition and exception rules cover this family.
+
+## SC-016: Opaque `GProp_GProps` property accumulator
+
+- Status: Accepted B08 first property sub-batch.
+- Scope: `GPropProperties` over `GProp_GProps`, plus shape-driven `BRepGProp` linear,
+  surface, and volume calculations.
+- Reason: The native accumulator owns mutable inertia state and returns C++ `gp_Pnt`/
+  `gp_Mat` values. Exposing its layout or references would make lifetime and mutation
+  unsafe; BRepGProp also has explicit mode and closed-solid semantics.
+- Native/ABI/managed behavior: ABI 1.24 adds registry-validated opaque handles,
+  explicit mode validation, copied centre/inertia values, clone, and density-weighted
+  add. The managed facade owns disposal and rejects invalid density/index inputs.
+- Ownership: Every created property result is an owning native allocation released by
+  the matching bridge module; source `Shape` remains caller-owned and is not retained.
+- Validation: Release runtime and alpha.22 clean package consumer pass for box volume,
+  centre, inertia symmetry, clone/composition, invalid density/index, and 36-DLL loading.
+- Upgrade impact: Re-check BRepGProp tolerances, only-closed behavior, and matrix
+  semantics on every OCCT/compiler upgrade.
+- Removal criteria: Replace with generated safe wrappers only after parent/lifetime and
+  output-value rules are generalized for GProp families.
+
+## SC-017: Native-local basic BRep builders
+
+- Status: Accepted B09 complete basic construction profile.
+- Scope: Box/sphere/cylinder solids plus straight edge, polygon wire, and planar face
+  builders backed by BRepPrimAPI/BRepBuilderAPI.
+- Reason: Builder objects and C++ topology construction state are native-owned; only
+  the resulting `TopoDS_Shape` value should cross through the existing owning handle.
+- Native/ABI/managed behavior: Additive ABI 1.24 exports validate finite-positive
+  dimensions, contain OCCT exceptions, and return registry-validated `Shape` handles.
+- Validation: Release/Debug runtime tests and alpha.32 clean package consumer validate
+  topology kinds, invalid dimensions/endpoints/cardinality/type, source independence,
+  disposal, and 36-DLL loading.
+- Removal criteria: Replace each manual constructor with generated safe builder output
+  after constructor/result ownership rules are generalized.
+
+## SC-018: Owning `TopoExp_Explorer` face snapshots
+
+- Status: Accepted B10 complete owning-snapshot profile.
+- Scope: `Shape.GetFaces()`, `Shape.GetSubShapes(ShapeKind)`, and the native face/
+  subshape snapshot exports for `TopAbs_FACE`, `EDGE`, `WIRE`, and `VERTEX`.
+- Reason: Native explorers are parent-bound mutable cursors; exposing them would make
+  early exit and parent disposal unsafe. A one-shot copied snapshot gives deterministic
+  lifetime and avoids native iterator ABI leakage.
+- Ownership: Every returned face is an independent owning `TopoDS_Shape` wrapper. The
+  source shape is not retained and may be disposed immediately after the snapshot.
+- Validation: Release/Debug runtime and alpha.32 clean package consumer validate
+  six faces, 24 edge occurrences, six wires, 48 vertex occurrences, one-face child
+  semantics, parent disposal, cleanup, and 36-DLL loading.
+- Removal criteria: Replace with generated child iterators only after parent lifetime,
+  mutation, and early-exit contracts are generalized for all topology kinds.
+
+## SC-019: Opaque BRepAlgoAPI Fuse/Cut operations
+
+- Status: Accepted B11/B12 complete basic owning-result profiles.
+- Scope: `Shape.Fuse` and `Shape.Cut` over OCCT `BRepAlgoAPI_Fuse` and `BRepAlgoAPI_Cut`.
+- Reason: Boolean builders own native algorithm state and may raise OCCT exceptions;
+  history and builder internals must not cross the C ABI.
+- Ownership: Inputs are validated but not retained. Each successful operation returns a
+  new owning `Shape` handle with independent disposal.
+- Validation: Release/Debug runtime 64/64 and alpha.34 package consumer validate
+  transformed overlapping boxes, non-empty results, both-input disposal independence,
+  null rejection, and application-local 36-DLL loading.
+- Removal criteria: Replace with generated algorithm bindings after generalized history,
+  failure, and result ownership rules are proven.
+
+## SC-020: Caller-owned BRep mesh snapshots
+
+- Status: Accepted B13 first bulk-transfer sub-batch.
+- Scope: `Shape.CreateMesh`, `occtsharp_shape_mesh_count`, and
+  `occtsharp_shape_mesh_snapshot` over `BRepMesh_IncrementalMesh` and
+  `Poly_Triangulation` for all traversed faces.
+- Reason: Triangulation handles, node arrays, and face-local locations are native-owned
+  and may be invalidated by remeshing; exposing them would leak parent-bound pointers.
+  A count-then-copy ABI provides a bounded bulk transfer without a zero-copy lifetime
+  promise.
+- Ownership: Managed arrays own copied `MeshVertex` records (position plus normal) and
+  32-bit triangle indices. Native mesher and triangulation objects remain bridge-local.
+  Three vertices are copied per triangle so no native vertex map or topology identity is
+  implied.
+- Validation: Release/Debug runtime tests cover non-empty box meshes, index bounds,
+  finite positions/normals, invalid deflections, disposed sources, and native build.
+- Removal criteria: Replace with generated Poly/RWMesh projections only after an explicit
+  stable vertex identity, normals, buffer capacity, and benchmark contract is accepted.
+
+## SC-021: Opaque ShapeFix_Shape healing result
+
+- Status: Accepted B12 complete owning-result/no-history profile.
+- Scope: `Shape.Fixed` and `occtsharp_shape_fix` over `ShapeFix_Shape`.
+- Reason: Shape-fix modes and status internals are native algorithm state; exposing the
+  fixer would require a broader parent/lifetime and history model. The minimal safe
+  contract is one contained pass returning a copied owning result.
+- Ownership: The input is validated but not retained. A successful non-null result is a
+  new registry-validated owning `Shape`, independent of source disposal. OCCT failures
+  map to the existing status/diagnostic channel.
+- Validation: Release/Debug runtime tests cover non-null result, topology preservation,
+  source disposal independence, and native exception containment.
+- Removal criteria: Replace with generated ShapeFix/ShapeUpgrade bindings only after
+  mode, history, diagnostics, and lifetime semantics are explicitly modeled.
+
+## SC-022: Opaque ShapeUpgrade_UnifySameDomain result
+
+- Status: Accepted B12 complete owning-result/no-history profile.
+- Scope: `Shape.UnifiedSameDomain` and `occtsharp_shape_unify_same_domain` with OCCT
+  default edge/face unification and BSpline concatenation disabled.
+- Reason: The operation owns mutable topology maps and optional `BRepTools_History`;
+  exposing those internals would cross an unproven ownership boundary.
+- Ownership: Input is validated but not retained. Successful output is a new owning
+  registry shape, independent of source lifetime. The native bridge links TKShHealing.
+- Validation: Release/Debug runtime and clean package consumer validate non-null output,
+  topology presence, source disposal independence, and the native dependency closure.
+- Removal criteria: Replace with generated ShapeUpgrade APIs after history, mode, and
+  parent-bound topology semantics have dedicated rules and tests.
+
+## SC-023: Interim IGES reader transfer bridge
+
+- Status: Accepted B14 first exchange sub-batch.
+- Scope: `ShapeExchange.ReadIges` and `occtsharp_shape_read_iges` over
+  `IGESControl_Reader` on OCCT 8.0.1.
+- Reason: Reader model and transfer roots are native-local; exposing them would require
+  a document/metadata lifetime model. A one-shot owning shape matches the existing STEP
+  geometry contract.
+- Ownership: Reader and transient model are destroyed in the native call. The returned
+  `Shape` owns an independent copied `TopoDS_Shape` and survives source disposal.
+- Validation: Release/Debug round-trip tests and alpha.29 clean package consumer cover
+  non-empty transfer and application-local native loading.
+- Removal criteria: Replace with generated reader bindings after document, metadata, and
+  transfer-history ownership rules are accepted.
+
+## SC-024: Interim STL reader transfer bridge
+
+- Status: Accepted B14 first exchange sub-batch.
+- Scope: `ShapeExchange.ReadStl` and `occtsharp_shape_read_stl` over `StlAPI_Reader`.
+- Reason: STL reader state and per-facet construction remain native-local; a one-shot
+  faceted shape is the safe counterpart to the existing STL writer.
+- Ownership: The reader is destroyed after the call and the returned faceted shape is
+  an independent owning handle.
+- Validation: Release/Debug round-trip tests and alpha.30 clean package consumer cover
+  non-empty transfer and source-disposal independence.
+- Removal criteria: Replace with generated RWStl/Poly bindings after mesh identity and
+  bulk ownership rules are accepted.
+
+## SC-025: Null-topology modeling failure contract
+
+- Status: Accepted B12 failure sub-batch.
+- Scope: `ShapeFactory.CreateNull` and null validation in Fuse, Cut, Fixed, and
+  UnifiedSameDomain.
+- Reason: Null `TopoDS_Shape` values are representable but invalid algorithm inputs;
+  relying on native exception text is not a stable managed contract.
+- Ownership: The null fixture is an owning shape wrapper. Operations reject it before
+  OCCT dereference and return `InvalidArgument` with a stable diagnostic.
+- Validation: Release/Debug runtime tests and alpha.31 clean package consumer cover
+  null inspection, boolean rejection, healing rejection, and disposal.
+- Removal criteria: Retain the guard unless a future generated input rule explicitly
+  models empty-topology behavior for each algorithm family.
+
+## SC-026: Call-local BRep adaptor value snapshots
+
+- Status: Accepted B08 completion profile.
+- Scope: OCCT 8.0.1 `BRepAdaptor_Curve` for an edge and `BRepAdaptor_Surface` for a
+  face; toolkits `TKBRep`, `TKGeomBase`, and `TKGeomAlgo` through the existing bridge.
+- Reason: Adaptors contain topology references and expose underlying borrowed geometry.
+  Returning the adaptor or its references would make source disposal and future OCCT
+  upgrades unsafe.
+- Native/ABI/managed behavior: ABI 1.25 adds fixed 72-byte edge and 40-byte face
+  snapshot structures. Native code copies curve/surface enum values, parameter bounds,
+  and edge endpoint coordinates during one call. Managed snapshots are immutable values.
+- Ownership: Both snapshots are value copies with no release operation or parent
+  lifetime. The input shape is borrowed only for the call and must be a live edge/face.
+- Validation: Release/Debug runtime tests cover line/plane semantics, native/managed
+  layout, wrong-kind `TypeMismatch`, source disposal, and alpha.33 clean-consumer use.
+- Upgrade impact: Re-check enum numeric values, finite curve bounds, UV restriction,
+  inherited adaptor behavior, and fixed structure layouts.
+- Removal criteria: Replace with generated adaptor projections only when they can emit
+  equivalent value-copy operations without exposing borrowed native geometry.
+
+## SC-027: Native-local basic modeling algorithm results
+
+- Status: Accepted B11 complete basic profile.
+- Scope: `BRepAlgoAPI_Fuse`, `BRepAlgoAPI_Common`, and
+  `BRepExtrema_DistShapeShape` on OCCT 8.0.1.
+- Reason: Boolean/extrema builders own mutable execution state, support topology, and
+  optional history. Those objects cannot cross the ABI without separate ownership rules.
+- Native/ABI/managed behavior: Fuse/Common return existing owning shape handles.
+  ABI 1.26 adds a fixed 64-byte distance result containing the minimum distance, one
+  copied point pair, and solution count. The native algorithm is destroyed in the call.
+- Ownership: Shape results are independent owners. Distance results are pure values.
+  Inputs are borrowed only for the call and are never retained by either result.
+- Validation: Release/Debug 64/64 runtime tests, layout assertions, null/disposed and
+  source-independence paths, freshness, and alpha.34 clean consumer pass.
+- Upgrade impact: Re-check completion, null-result, solution indexing, point ordering,
+  layout, and toolkit closure.
+- Removal criteria: Replace with generated algorithms only after builder/result/history
+  descriptors can reproduce the same fail-closed ownership contract.
+
+## SC-028: Native-local mesh-format providers
+
+- Status: Accepted B14 complete geometry-exchange profile.
+- Scope: `DEOBJ_Provider`, `DEGLTF_Provider`, and `DEVRML_Provider` read/write plus
+  `DEPLY_Provider` write on OCCT 8.0.1.
+- Reason: Provider configuration, document/scene state, unit handling, progress, and
+  metadata graphs have no accepted cross-ABI ownership contract. Explicit configuration
+  nodes are also required for working providers in the pinned build.
+- Ownership: Every provider and configuration node is call-local. Writers borrow a live
+  shape only for the call and mesh it before export. Readers return one independent
+  registered owning shape. No provider, document, label, or mesh pointer escapes.
+- Unsupported direction: PLY read is `UNSUPPORTED` because OCCT 8.0.1's provider does
+  not implement it; the managed API does not pretend otherwise.
+- Validation: Release/Debug 65/65 runtime tests, generated freshness, and the alpha.35
+  clean consumer write OBJ/PLY/GLB/VRML, read OBJ/GLB/VRML, and load all 41 packaged
+  runtime DLLs from `occt`.
+- Removal criteria: Replace with generated DataExchange bindings only after provider,
+  configuration, document, unit, progress, and metadata lifetimes are modeled.
+
+## SC-029: OCAF document owner and stable-entry labels
+
+- Status: Accepted B15 complete document profile.
+- Scope: `TDocStd_Application`, `TDocStd_Document`, TDF labels/tags/entries,
+  `TDataStd_Name`, command transactions, and BinOcaf persistence.
+- Reason: `TDF_Label` is a parent-bound value over internal label nodes; copying its C++
+  layout or pretending it is independently owned would outlive the data framework.
+- Ownership: `OcafDocument` owns a native wrapper retaining application and document
+  handles. `OcafLabel` owns no native resource; it stores a stable entry and a strong
+  parent reference. Every operation re-resolves the entry and fails after parent dispose.
+- Transactions: Mutations require an open command. Uncommitted transaction disposal
+  aborts attributes. OCCT retains newly allocated empty label nodes after abort; this is
+  documented behavior, while default BinOcaf persistence omits empty labels.
+- Validation: Release/Debug 66/66, freshness, and alpha.36 clean consumer cover commit,
+  abort, invalid mutation, UTF-8 names, persistence, parent disposal, and the 43-DLL
+  runtime closure.
+- Removal criteria: Replace with generated OCAF projections only when stable-entry
+  parent binding, application/document ownership, transactions, and persistence statuses
+  can be emitted equivalently.
+
+## SC-030: Parent-bound XDE labels and copied metadata
+
+- Status: Accepted B16 complete metadata/assembly profile.
+- Scope: XCAF shape/color/layer/material tools, assembly occurrences, BinXCAF, and
+  STEPCAF read/write.
+- Reason: XCAF tools and reference attributes are document-owned and expose label trees;
+  returning them as independent managed handles would violate B15 ownership.
+- Ownership: `XdeDocument` owns the application/document pair. Labels are stable-entry
+  parent-bound values. Shapes and locations are independent owners. Names, colors,
+  layers, materials, entries, and counts are caller-owned copies.
+- Color rule: Friendly effective color writes Gen/Surf/Curv and reads Gen then Surf then
+  Curv so STEPCAF channel normalization does not appear as metadata loss.
+- Validation: Release/Debug 67/67, freshness, and alpha.37 clean consumer validate
+  memory/BinXCAF/STEPCAF shape, two layers, RGB, material, assembly, occurrence,
+  referred part, transform, and 44-DLL loading.
+- Removal criteria: Replace with generated XCAF bindings only when document-parent
+  relations, reference attributes, copied sequences, and channel semantics are emitted.
+
+## SC-031: Native-owned HWND visualization graph and presentation IDs
+
+- Status: Accepted B17 visualization-core profile.
+- Scope: OCCT 8.0.1 Windows `Aspect_DisplayConnection`, `OpenGl_GraphicDriver`,
+  `V3d_Viewer`, `AIS_InteractiveContext`, `V3d_View`, `WNT_Window`, and `AIS_Shape`.
+- Reason: Viewer objects form a mutable, thread-affine ownership graph and expose
+  callbacks, selectors, and transient handles that cannot safely cross a generic C ABI.
+- Native/ABI/managed behavior: One registered viewer wrapper owns the complete graph for
+  an application-owned HWND. Managed presentations carry parent-scoped 64-bit IDs.
+  Applications explicitly forward resize/mouse events; no callback crosses into .NET.
+- Ownership: The viewer releases presentations and the OCCT graph but never destroys the
+  HWND. Each displayed AIS shape owns a copied topology value. Selection copies IDs into
+  caller-owned buffers. Presentation removal and parent disposal invalidate child APIs.
+- Validation: Release/Debug 68/68, actual HWND display/redraw/selection, cross-thread
+  rejection, source-disposal independence, freshness, interactive sample build, and
+  alpha.38 clean consumer with 45-DLL loading all pass.
+- Removal criteria: Replace with generated visualization projections only after creator
+  threading, parent graphs, callback cancellation/reentrancy, and selector snapshots can
+  be emitted with equivalent fail-closed semantics.

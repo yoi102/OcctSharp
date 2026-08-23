@@ -30,6 +30,14 @@ public sealed class OcctRealVector : IReadOnlyList<double>, IDisposable
     public OcctRealVector Clone() { ThrowIfDisposed(); NativeError.ThrowIfFailed(NativeMethods.CloneRealVector(handle, out nint value), "real_vector_clone"); return FromNative(value); }
     public void Add(double value) { ThrowIfDisposed(); NativeError.ThrowIfFailed(NativeMethods.AppendRealVector(handle, value), "real_vector_append"); }
     public void Set(int index, double value) { ThrowIfDisposed(); ArgumentOutOfRangeException.ThrowIfNegative(index); NativeError.ThrowIfFailed(NativeMethods.SetRealVectorValue(handle, index, value), "real_vector_set_value"); }
+    /// <summary>Copies the current values in one native call; the returned array is independent of this collection.</summary>
+    public double[] Snapshot()
+    {
+        ThrowIfDisposed(); int count = Count;
+        nint memory = Marshal.AllocHGlobal(Math.Max(1, sizeof(double) * count));
+        try { NativeError.ThrowIfFailed(NativeMethods.SnapshotRealVector(handle, memory, count, out int written), "real_vector_snapshot"); double[] result = new double[written]; if (written > 0) Marshal.Copy(memory, result, 0, written); return result; }
+        finally { Marshal.FreeHGlobal(memory); }
+    }
     public IEnumerator<double> GetEnumerator() { ThrowIfDisposed(); for (int index = 0; index < Count; index++) yield return this[index]; }
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     public void Dispose() { handle.Dispose(); GC.SuppressFinalize(this); }

@@ -28,6 +28,134 @@ internal static partial class NativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial nint GetLastError();
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_xyz_default")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial XyzRaw CreateXyzDefault();
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_xyz_create")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial XyzRaw CreateXyz(double x, double y, double z);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_xyz_copy")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial XyzRaw CopyXyz(XyzRaw value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_xyz_added")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial XyzRaw AddXyz(XyzRaw left, XyzRaw right);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_xyz_crossed")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial XyzRaw CrossXyz(XyzRaw left, XyzRaw right);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_xyz_dot")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial double DotXyz(XyzRaw left, XyzRaw right);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_xyz_modulus")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial double GetXyzModulus(XyzRaw value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_xyz_normalized")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus NormalizeXyz(XyzRaw value, out XyzRaw result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_lin_default")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial LineRaw CreateLineDefault();
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_lin_create")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateLine(XyzRaw origin, XyzRaw direction, out LineRaw result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_lin_reversed")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial LineRaw ReverseLine(LineRaw value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_lin_distance")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial double GetLineDistance(LineRaw line, XyzRaw point);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_lin_angle")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial double GetLineAngle(LineRaw left, LineRaw right);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_circ_default")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial CircleRaw CreateCircleDefault();
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_circ_create")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateCircle(XyzRaw center, XyzRaw normal, double radius, out CircleRaw result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_circ_area")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial double GetCircleArea(CircleRaw value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_circ_length")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial double GetCircleLength(CircleRaw value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_circ_distance")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial double GetCircleDistance(CircleRaw value, XyzRaw point);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_ax2_default")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial Ax2Raw CreateAx2Default();
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_ax2_create")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateAx2(XyzRaw origin, XyzRaw normal, XyzRaw xDirection, out Ax2Raw result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_ax2_angle")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial double GetAx2Angle(Ax2Raw left, Ax2Raw right);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_ax3_default")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial Ax3Raw CreateAx3Default();
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_ax3_create")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateAx3(XyzRaw origin, XyzRaw normal, XyzRaw xDirection, out Ax3Raw result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_ax3_direct")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial int IsAx3Direct(Ax3Raw value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_pln_default")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial PlaneRaw CreatePlaneDefault();
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_pln_create")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreatePlane(XyzRaw origin, XyzRaw normal, out PlaneRaw result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_pln_distance")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial double GetPlaneDistance(PlaneRaw plane, XyzRaw point);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gp_pln_signed_distance")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial double GetPlaneSignedDistance(PlaneRaw plane, XyzRaw point);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gprops_create")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateGProps(out nint properties);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gprops_from_shape")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateGPropsFromShape(ShapeHandle shape, int mode, int onlyClosed, out nint properties);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gprops_clone")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CloneGProps(GPropsHandle source, out nint properties);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gprops_add")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus AddGProps(GPropsHandle target, GPropsHandle item, double density);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gprops_mass")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetGPropsMass(GPropsHandle properties, out double mass);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gprops_center")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetGPropsCenter(GPropsHandle properties, out XyzRaw center);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gprops_inertia_value")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetGPropsInertiaValue(GPropsHandle properties, int row, int column, out double value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gprops_principal_moments")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetGPropsPrincipalMoments(GPropsHandle properties, out double first, out double second, out double third);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gprops_symmetry")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetGPropsSymmetry(GPropsHandle properties, out int axis, out int point);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_gprops_release")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial void ReleaseGProps(nint properties);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_edge_curve_snapshot")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetEdgeCurveSnapshot(
+        ShapeHandle edge,
+        out EdgeCurveSnapshotRaw snapshot);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_face_surface_snapshot")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetFaceSurfaceSnapshot(
+        ShapeHandle face,
+        int restrictToFace,
+        out FaceSurfaceSnapshotRaw snapshot);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_box")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus CreateBox(
@@ -35,10 +163,81 @@ internal static partial class NativeMethods
         double sizeY,
         double sizeZ,
         out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_null")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateNullShape(out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_sphere")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateSphere(double radius, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_cylinder")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateCylinder(double radius, double height, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_edge")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateEdge(XyzRaw start, XyzRaw end, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_polygon_wire")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus CreatePolygonWire(
+        XyzRaw* points, int count, int close, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_planar_face")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreatePlanarFace(ShapeHandle wire, out nint shape);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_get_face_count")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus GetFaceCount(ShapeHandle shape, out int faceCount);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_face_snapshot")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus GetFaceSnapshot(
+        ShapeHandle shape, nint* faces, int capacity, out int written);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_subshape_snapshot")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus GetSubshapeSnapshot(
+        ShapeHandle shape, int kind, nint* shapes, int capacity, out int written);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_subshape_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetSubshapeCount(ShapeHandle shape, int kind, out int count);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_boolean_fuse")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus BooleanFuse(ShapeHandle left, ShapeHandle right, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_boolean_cut")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus BooleanCut(ShapeHandle left, ShapeHandle right, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_boolean_common")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus BooleanCommon(ShapeHandle left, ShapeHandle right, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_distance")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetShapeDistance(
+        ShapeHandle first,
+        ShapeHandle second,
+        out ShapeDistanceResultRaw result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_fix")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus FixShape(ShapeHandle shape, out nint fixedShape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_unify_same_domain")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus UnifySameDomain(ShapeHandle shape, out nint unifiedShape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_mesh_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetMeshCount(
+        ShapeHandle shape,
+        double linearDeflection,
+        double angularDeflection,
+        out int vertexCount,
+        out int indexCount);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_mesh_snapshot")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus GetMeshSnapshot(
+        ShapeHandle shape,
+        double linearDeflection,
+        double angularDeflection,
+        MeshVertexRaw* vertices,
+        int vertexCapacity,
+        out int vertexCount,
+        int* indices,
+        int indexCapacity,
+        out int indexCount);
 
     [LibraryImport(
         LibraryName,
@@ -46,6 +245,27 @@ internal static partial class NativeMethods
         StringMarshalling = StringMarshalling.Utf8)]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus ReadStep(string filePath, out nint shape);
+    [LibraryImport(
+        LibraryName,
+        EntryPoint = "occtsharp_shape_read_iges",
+        StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ReadIges(string filePath, out nint shape);
+    [LibraryImport(
+        LibraryName,
+        EntryPoint = "occtsharp_shape_read_stl",
+        StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ReadStl(string filePath, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_read_obj", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ReadObj(string filePath, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_read_gltf", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ReadGltf(string filePath, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_read_vrml", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ReadVrml(string filePath, out nint shape);
 
     [LibraryImport(
         LibraryName,
@@ -72,6 +292,18 @@ internal static partial class NativeMethods
         StringMarshalling = StringMarshalling.Utf8)]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus WriteIges(ShapeHandle shape, string filePath);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_write_obj", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus WriteObj(ShapeHandle shape, string filePath);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_write_ply", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus WritePly(ShapeHandle shape, string filePath);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_write_gltf", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus WriteGltf(ShapeHandle shape, string filePath);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_write_vrml", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus WriteVrml(ShapeHandle shape, string filePath);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_transform")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -333,6 +565,9 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_real_sequence_remove")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus RemoveRealSequence(RealSequenceHandle sequence, int index);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_real_sequence_snapshot")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SnapshotRealSequence(RealSequenceHandle sequence, nint values, int capacity, out int written);
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_real_sequence_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void ReleaseRealSequence(nint sequence);
@@ -355,6 +590,9 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_real_array_set_value")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus SetRealArrayValue(RealArrayHandle array, int index, double value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_real_array_snapshot")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SnapshotRealArray(RealArrayHandle array, nint values, int capacity, out int written);
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_real_array_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void ReleaseRealArray(nint array);
@@ -377,6 +615,9 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_real_vector_set_value")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus SetRealVectorValue(RealVectorHandle vector, int index, double value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_real_vector_snapshot")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SnapshotRealVector(RealVectorHandle vector, nint values, int capacity, out int written);
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_real_vector_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void ReleaseRealVector(nint vector);
@@ -402,6 +643,9 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_int_real_map_unbind")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus UnbindIntRealMap(IntRealMapHandle map, int key, out int removed);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_int_real_map_snapshot")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SnapshotIntRealMap(IntRealMapHandle map, nint keys, nint values, int capacity, out int written);
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_int_real_map_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void ReleaseIntRealMap(nint map);
@@ -427,6 +671,9 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_int_indexed_map_remove_last")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus RemoveLastIntIndexedMap(IntIndexedMapHandle map, out int removedKey);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_int_indexed_map_snapshot")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SnapshotIntIndexedMap(IntIndexedMapHandle map, nint keys, int capacity, out int written);
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_int_indexed_map_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void ReleaseIntIndexedMap(nint map);
@@ -448,6 +695,210 @@ internal static partial class NativeMethods
         nint inputs,
         int inputCount,
         string outputPath);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_ocaf_document_create")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateOcafDocument(out nint document);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_ocaf_document_open", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus OpenOcafDocument(string filePath, out nint document);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_ocaf_document_save", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SaveOcafDocument(OcafDocumentHandle document, string filePath);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_ocaf_document_has_open_command")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus HasOpenOcafCommand(OcafDocumentHandle document, out int hasOpenCommand);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_ocaf_document_begin_command")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus BeginOcafCommand(OcafDocumentHandle document);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_ocaf_document_commit_command")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CommitOcafCommand(OcafDocumentHandle document, out int changed);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_ocaf_document_abort_command")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus AbortOcafCommand(OcafDocumentHandle document);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_ocaf_document_main_entry")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetOcafMainEntry(OcafDocumentHandle document, nint buffer, int capacity, out int written);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_ocaf_label_add_child", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus AddOcafChild(OcafDocumentHandle document, string parentEntry, out int childTag);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_ocaf_label_child_count", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetOcafChildCount(OcafDocumentHandle document, string entry, out int count);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_ocaf_label_set_name", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetOcafLabelName(OcafDocumentHandle document, string entry, nint utf8, int length);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_ocaf_label_name_utf8_length", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetOcafLabelNameLength(OcafDocumentHandle document, string entry, out int hasName, out int length);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_ocaf_label_name_to_utf8", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetOcafLabelName(OcafDocumentHandle document, string entry, nint buffer, int capacity, out int written);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_ocaf_document_release")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial void ReleaseOcafDocument(nint document);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_create")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateXdeDocument(out nint document);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_open", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus OpenXdeDocument(string filePath, out nint document);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_read_step", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ReadStepXdeDocument(string filePath, out nint document);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_write_step", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus WriteStepXdeDocument(OcafDocumentHandle document, string filePath);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_add_shape")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus AddXdeShape(OcafDocumentHandle document, ShapeHandle shape, nint nameUtf8, int nameLength, nint entryBuffer, int entryCapacity, out int entryWritten);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_add_assembly")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus AddXdeAssembly(OcafDocumentHandle document, nint nameUtf8, int nameLength, nint entryBuffer, int entryCapacity, out int entryWritten);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_add_component", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus AddXdeComponent(OcafDocumentHandle document, string assemblyEntry, string partEntry, LocationHandle location, nint entryBuffer, int entryCapacity, out int entryWritten);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_get_shape", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeShape(OcafDocumentHandle document, string entry, out nint shape);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_is_assembly", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus IsXdeAssembly(OcafDocumentHandle document, string entry, out int isAssembly);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_component_count", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeComponentCount(OcafDocumentHandle document, string entry, out int count);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_component_entry", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeComponentEntry(OcafDocumentHandle document, string entry, int index, nint buffer, int capacity, out int written);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_referred_entry", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeReferredEntry(OcafDocumentHandle document, string entry, nint buffer, int capacity, out int written);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_get_location", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeLocation(OcafDocumentHandle document, string entry, out nint location);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_free_shape_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeFreeShapeCount(OcafDocumentHandle document, out int count);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_free_shape_entry")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeFreeShapeEntry(OcafDocumentHandle document, int index, nint buffer, int capacity, out int written);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_set_color", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetXdeColor(OcafDocumentHandle document, string entry, XdeColorRaw color);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_get_color", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeColor(OcafDocumentHandle document, string entry, out int hasColor, out XdeColorRaw color);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_set_layer", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetXdeLayer(OcafDocumentHandle document, string entry, nint layerUtf8, int layerLength, int replaceExisting);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_layer_count", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeLayerCount(OcafDocumentHandle document, string entry, out int count);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_layer_name_utf8_length", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeLayerNameLength(OcafDocumentHandle document, string entry, int index, out int length);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_layer_name_to_utf8", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeLayerName(OcafDocumentHandle document, string entry, int index, nint buffer, int capacity, out int written);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_set_material", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetXdeMaterial(OcafDocumentHandle document, string entry, nint name, int nameLength, nint description, int descriptionLength, double density, nint densityName, int densityNameLength, nint densityType, int densityTypeLength);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_material_info", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeMaterialInfo(OcafDocumentHandle document, string entry, out int hasMaterial, out double density);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_material_field_utf8_length", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeMaterialFieldLength(OcafDocumentHandle document, string entry, int field, out int length);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_material_field_to_utf8", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeMaterialField(OcafDocumentHandle document, string entry, int field, nint buffer, int capacity, out int written);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_create")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateViewer(nint windowHandle, out nint viewer);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_display_shape")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus DisplayViewerShape(ViewerHandle viewer, ShapeHandle shape, out long presentationId);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_presentation_visible")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerPresentationVisible(ViewerHandle viewer, long presentationId, int visible);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_remove_presentation")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus RemoveViewerPresentation(ViewerHandle viewer, long presentationId);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_fit_all")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus FitAllViewer(ViewerHandle viewer);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_redraw")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus RedrawViewer(ViewerHandle viewer);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_resize")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ResizeViewer(ViewerHandle viewer);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_move_to")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus MoveViewerTo(ViewerHandle viewer, int x, int y, out int detected);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_select_at")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SelectViewerAt(ViewerHandle viewer, int x, int y, out int selectedCount);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_selected_snapshot")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus SnapshotViewerSelection(ViewerHandle viewer, long* presentationIds, int capacity, out int written);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_selected_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetViewerSelectedCount(ViewerHandle viewer, out int count);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_release")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial void ReleaseViewer(nint viewer);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

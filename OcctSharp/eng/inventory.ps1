@@ -79,7 +79,7 @@ try {
     if ($CatalogOnly) {
         & dotnet run --project .\src\OcctSharp.Generator\OcctSharp.Generator.csproj --no-build --configuration Release -- inventory-catalog --occt-root $resolvedOcctRoot --output $resolvedOutputPath
     } else {
-        & dotnet run --project .\src\OcctSharp.Generator\OcctSharp.Generator.csproj --no-build --configuration Release -- inventory --occt-root $resolvedOcctRoot --config .\config\generation.json --output $resolvedOutputPath --batch-size $BatchSize
+        & dotnet run --project .\src\OcctSharp.Generator\OcctSharp.Generator.csproj --no-build --configuration Release -- inventory --occt-root $resolvedOcctRoot --config .\config\generation.json --output $resolvedOutputPath --batch-size $BatchSize --manifest .\generated\manifest.json
     }
 
     if ($LASTEXITCODE -ne 0) {

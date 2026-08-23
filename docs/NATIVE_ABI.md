@@ -227,6 +227,156 @@ or native iterators cross the ABI.
 
 The current native ABI is 1.17 and the bridge implementation version is 0.18.0.
 
+ABI 1.18 adds one-shot caller-owned snapshot exports for the scalar sequence, array,
+vector, integer-real map, and indexed map families. The native side validates the live
+registry handle and destination capacity, copies values into caller-provided buffers,
+and returns the number written. No iterator object, node pointer, or container layout
+crosses the ABI; snapshots remain valid after subsequent native mutation or disposal.
+
+The current native ABI is 1.18 and the bridge implementation version is 0.19.0.
+
+ABI 1.19 adds the explicitly sized `OcctSharp_Xyz` value-copy exports for the first B07
+geometry family. Default/create/copy/add/cross/dot/modulus are non-throwing value calls;
+normalization uses the status/diagnostic contract so zero vectors fail closed.
+
+The current native ABI is 1.19 and the bridge implementation version is 0.20.0.
+
+ABI 1.20 adds the explicitly sized 48-byte `OcctSharp_Line` value-copy exports for the
+first line primitive. Construction delegates to `gp_Lin`/`gp_Dir` and preserves the
+zero-direction failure; reversal, point distance, and line angle remain native OCCT
+operations.
+
+The current native ABI is 1.20 and the bridge implementation version is 0.21.0.
+
+ABI 1.21 adds the explicitly sized 56-byte `OcctSharp_Circle` value-copy exports for
+`gp_Circ` default/create/area/length/distance. Native construction preserves OCCT axis,
+normal, and negative-radius failures.
+
+The current native ABI is 1.21 and the bridge implementation version is 0.22.0.
+
+ABI 1.22 and 1.23 add the explicitly sized `OcctSharp_Ax2` and `OcctSharp_Plane`
+value-copy exports for right-handed orientation and signed plane distance. ABI 1.24
+adds the explicitly sized 96-byte `OcctSharp_Ax3` value-copy exports for coordinate
+system construction and OCCT directness evaluation. Construction remains status-returning
+so zero or parallel directions cannot silently cross the boundary.
+
+The current native ABI is 1.24 and the bridge implementation version is 0.32.0.
+
+The B08 property bridge is additive within ABI 1.24: `GProp_GProps` is represented by
+an owning opaque handle with registry validation. Shape-driven BRepGProp calculations
+accept an explicit mode (linear/surface/volume), and mass, centre, inertia reads, clone,
+and density-weighted composition stay inside the C ABI. No native property layout crosses.
+
+The first B09 construction wave is also additive within ABI 1.24: sphere and cylinder
+exports validate dimensions and return the existing registry-validated owning shape
+handle. `BRepPrimAPI` builder objects never cross the boundary.
+
+The first B10 traversal wave is additive within ABI 1.24: subshape snapshots accept a
+caller-owned opaque-handle buffer and a validated `TopAbs` kind, copy face/edge/wire/
+vertex values into registry-validated owners, and return the written count. Native
+explorers and parent references never cross the C ABI; managed disposal releases each
+returned owner.
+
+The first B11/B12 boolean wave is additive within ABI 1.24: Fuse and Cut accept two
+validated shape handles, contain OCCT algorithm failures, and return a new owning shape
+handle. Algorithm history and native builder state remain bridge-local.
+
+The first B12 healing and B13 bulk waves are additive within ABI 1.24. B12 adds
+`occtsharp_shape_fix`, which keeps `ShapeFix_Shape` native-local and returns a new
+owning shape after a contained OCCT failure check. B13 adds
+`occtsharp_shape_mesh_count` and
+`occtsharp_shape_mesh_snapshot` run `BRepMesh_IncrementalMesh` and copy triangulated
+face data into caller-owned vertex/normal and 32-bit index buffers. Every triangle owns
+three copied vertices, face orientation is reflected in winding and normals, and no
+`Poly_Triangulation` or native array pointer crosses the ABI. The two-call count/snapshot
+contract rejects invalid deflections and undersized buffers before writing past a caller
+buffer. B12 also adds `occtsharp_shape_unify_same_domain`, which keeps
+`ShapeUpgrade_UnifySameDomain` native-local and returns an owning unified result;
+the bridge implementation advances to 0.28.0.
+
+The first B14 exchange extension adds `occtsharp_shape_read_iges`, which keeps
+`IGESControl_Reader` and transfer-root state native-local and returns one owning
+shape after file/transfer validation. The bridge implementation advances to 0.29.0.
+
+The same B14 extension adds `occtsharp_shape_read_stl`, which keeps
+`StlAPI_Reader` native-local and returns one owning faceted shape after file and
+null-result validation. The bridge implementation advances to 0.30.0.
+
+The B12 failure contract adds `occtsharp_shape_create_null` as a diagnostic fixture
+and rejects null topology values in Fuse, Cut, ShapeFix, and UnifySameDomain before
+calling OCCT. These paths return `InvalidArgument` with a stable diagnostic; the
+bridge implementation advances to 0.31.0.
+
+The B09 completion adds straight-edge, polygon-wire, and planar-face owning builder
+exports. Point arrays are copied for the call, planar face inputs require a live wire,
+and builder state stays native-local. The bridge implementation advances to 0.32.0.
+
+ABI 1.25 completes the B08 safe adaptor snapshot profile with
+`occtsharp_shape_edge_curve_snapshot` and `occtsharp_shape_face_surface_snapshot`.
+The 72-byte edge value contains a 32-bit `GeomAbs_CurveType`, finite first/last
+parameters, and two copied `OcctSharp_Xyz` endpoints. The 40-byte face value contains
+a 32-bit `GeomAbs_SurfaceType` and four copied UV bounds. Native compile-time and
+managed runtime assertions verify size and offsets. Adaptors and their borrowed
+geometry remain call-local; wrong shape kinds return `TypeMismatch`. The bridge
+implementation advances to 0.33.0.
+
+The current native ABI is 1.25 and the bridge implementation version is 0.33.0.
+
+ABI 1.26 completes the B11 basic modeling-result profile. The additive
+`occtsharp_shape_boolean_common` export returns a registered owning shape from a
+native-local `BRepAlgoAPI_Common`. `occtsharp_shape_distance` uses native-local
+`BRepExtrema_DistShapeShape` and copies a 64-byte result containing the minimum
+distance, the first corresponding point on each input, and solution count. No support
+topology, history, or algorithm state crosses the ABI. The bridge advances to 0.34.0.
+
+The current native ABI is 1.26 and the bridge implementation version is 0.34.0.
+
+ABI 1.27 completes the B14 geometry-exchange profile with one-shot OBJ, glTF/GLB,
+and VRML read/write exports plus PLY write. Each call creates an explicit format
+configuration node and provider, keeps provider/document/scene state native-local,
+and returns the existing registered owning shape category on reads. Writers mesh the
+input before export. OCCT 8.0.1 does not implement PLY import, so no PLY read export is
+declared. The runtime closure adds TKDEOBJ, TKDEPLY, TKDEGLTF, TKDEVRML, and TKRWMesh.
+
+The current native ABI is 1.27 and the bridge implementation version is 0.35.0.
+
+ABI 1.28 adds the B15 OCAF document profile. One registered owning document wrapper
+retains `TDocStd_Application` and `TDocStd_Document`; labels cross only as stable UTF-8
+TDF entries and are resolved per call. Command begin/commit/abort, child-tag creation,
+child count, copied `TDataStd_Name`, and BinOcaf save/open exports contain all OCAF
+objects and exceptions inside the bridge. Release aborts any open command and closes
+the application session. TKBin and TKBinL expand the runtime closure to 43 DLLs.
+
+The current native ABI is 1.28 and the bridge implementation version is 0.36.0.
+
+ABI 1.29 adds the B16 XDE metadata/assembly profile. XDE documents reuse the registered
+application/document owner with BinXCAF drivers. Shape/assembly creation, component
+occurrences, referred labels, locations, free shapes, copied RGBA/layers/materials, and
+STEPCAF read/write are status-returning exports. Stable entries and caller-owned copies
+cross the ABI; XCAF tools, sequences, reference tree nodes, and transfer state do not.
+The effective-color export maps Gen/Surf/Curv channels to survive STEP normalization.
+TKBinXCAF expands the runtime closure to 44 DLLs.
+
+The current native ABI is 1.29 and the bridge implementation version is 0.37.0.
+
+ABI 1.30 adds the B17 Windows visualization profile. One registered viewer owner holds
+the display connection, OpenGL driver, V3d viewer, AIS context, view, and WNT window.
+Presentation IDs, visibility/removal, resize/redraw/fit, mouse detection/selection, and
+caller-owned selected-ID snapshots are status-returning exports. The HWND remains
+application-owned, calls are checked against the creating thread, and no callback or
+OCCT visualization pointer crosses the ABI. TKOpenGl expands the runtime closure to
+45 DLLs.
+
+The current native ABI is 1.30 and the bridge implementation version is 0.38.0.
+
+ABI 1.31 adds the B19.1 generated StepBasic scalar/shared-entity profile. Ten generated
+registries retain `Handle<T>` values for Address, date/time, dimensions, Person, and
+SiUnit entities. Constructors, scalar/boolean/enum members, clone, RTTI, reference count,
+and release use the existing status and exception boundary. Enum values cross only as
+validated `int32_t`; native enum and entity layouts do not cross the ABI.
+
+The current native ABI is 1.31 and the bridge implementation version is 0.39.0.
+
 ## Verification
 
 - Compile consumer tests against the exported C headers.

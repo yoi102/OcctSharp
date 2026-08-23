@@ -1,0 +1,159 @@
+using System.Reflection;
+using System.Runtime.Versioning;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+
+return args switch
+{
+    ["snapshot", string assemblyPath, string outputPath] => await SnapshotAsync(assemblyPath, outputPath),
+    ["diff", string baselinePath, string assemblyPath, string outputPath] =>
+        await DiffAsync(baselinePath, assemblyPath, outputPath),
+    _ => Usage(),
+};
+
+static async Task<int> SnapshotAsync(string assemblyPath, string outputPath)
+{
+    ApiSnapshot snapshot = CreateSnapshot(assemblyPath);
+    await WriteJsonAsync(outputPath, snapshot);
+    Console.WriteLine($"API snapshot contains {snapshot.Signatures.Count} signatures: '{Path.GetFullPath(outputPath)}'.");
+    return 0;
+}
+
+static async Task<int> DiffAsync(string baselinePath, string assemblyPath, string outputPath)
+{
+    ApiSnapshot? baseline = JsonSerializer.Deserialize<ApiSnapshot>(
+        await File.ReadAllTextAsync(baselinePath),
+        JsonOptions());
+    if (baseline is null || baseline.SchemaVersion != "1.0")
+    {
+        throw new InvalidDataException("The API baseline is missing or has an unsupported schema.");
+    }
+
+    ApiSnapshot current = CreateSnapshot(assemblyPath);
+    string[] added = current.Signatures.Except(baseline.Signatures, StringComparer.Ordinal)
+        .Order(StringComparer.Ordinal).ToArray();
+    string[] removed = baseline.Signatures.Except(current.Signatures, StringComparer.Ordinal)
+        .Order(StringComparer.Ordinal).ToArray();
+    ApiDiff diff = new(
+        "1.0",
+        baseline.AssemblyVersion,
+        current.AssemblyVersion,
+        added.Length,
+        removed.Length,
+        removed.Length > 0,
+        added,
+        removed);
+    await WriteJsonAsync(outputPath, diff);
+    Console.WriteLine($"API diff: {added.Length} added, {removed.Length} removed, breaking: {diff.HasBreakingChanges}.");
+    return diff.HasBreakingChanges ? 4 : 0;
+}
+
+static ApiSnapshot CreateSnapshot(string assemblyPath)
+{
+    string fullAssemblyPath = Path.GetFullPath(assemblyPath);
+    Assembly assembly = Assembly.LoadFrom(fullAssemblyPath);
+    string targetFramework = assembly.GetCustomAttribute<TargetFrameworkAttribute>()?.FrameworkName ?? string.Empty;
+    List<string> signatures = [];
+
+    foreach (Type type in assembly.GetExportedTypes().OrderBy(static type => type.FullName, StringComparer.Ordinal))
+    {
+        signatures.Add(FormatType(type));
+        const BindingFlags flags = BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly;
+        signatures.AddRange(type.GetConstructors(flags).Select(FormatConstructor));
+        signatures.AddRange(type.GetMethods(flags).Where(static method => !method.IsSpecialName).Select(FormatMethod));
+        signatures.AddRange(type.GetProperties(flags).Select(FormatProperty));
+        signatures.AddRange(type.GetFields(flags).Select(FormatField));
+        signatures.AddRange(type.GetEvents(flags).Select(FormatEvent));
+    }
+
+    return new ApiSnapshot(
+        "1.0",
+        assembly.GetName().Name ?? string.Empty,
+        assembly.GetName().Version?.ToString() ?? string.Empty,
+        targetFramework,
+        signatures.Distinct(StringComparer.Ordinal).Order(StringComparer.Ordinal).ToArray());
+}
+
+static string FormatType(Type type)
+{
+    string kind = type.IsEnum ? "enum" : type.IsValueType ? "struct" : type.IsInterface ? "interface" : "class";
+    string baseType = type.BaseType is null || type.BaseType == typeof(object) || type.IsEnum || type.IsValueType
+        ? string.Empty
+        : $" : {FormatTypeName(type.BaseType)}";
+    string interfaces = string.Join(",", type.GetInterfaces().Select(FormatTypeName).Order(StringComparer.Ordinal));
+    return $"T {kind} {FormatTypeName(type)}{baseType}{(interfaces.Length == 0 ? string.Empty : $" implements {interfaces}")}";
+}
+
+static string FormatConstructor(ConstructorInfo constructor) =>
+    $"C {FormatTypeName(constructor.DeclaringType!)}({FormatParameters(constructor.GetParameters())})";
+
+static string FormatMethod(MethodInfo method)
+{
+    string generic = method.IsGenericMethodDefinition
+        ? $"<{string.Join(",", method.GetGenericArguments().Select(static argument => argument.Name))}>"
+        : string.Empty;
+    return $"M {FormatTypeName(method.DeclaringType!)}.{method.Name}{generic}({FormatParameters(method.GetParameters())}) -> {FormatTypeName(method.ReturnType)}";
+}
+
+static string FormatProperty(PropertyInfo property)
+{
+    string accessors = $"{{{(property.GetMethod?.IsPublic == true ? "get;" : string.Empty)}{(property.SetMethod?.IsPublic == true ? "set;" : string.Empty)}}}";
+    return $"P {FormatTypeName(property.DeclaringType!)}.{property.Name}({FormatParameters(property.GetIndexParameters())}) -> {FormatTypeName(property.PropertyType)} {accessors}";
+}
+
+static string FormatField(FieldInfo field) =>
+    $"F {FormatTypeName(field.DeclaringType!)}.{field.Name} -> {FormatTypeName(field.FieldType)}";
+
+static string FormatEvent(EventInfo eventInfo) =>
+    $"E {FormatTypeName(eventInfo.DeclaringType!)}.{eventInfo.Name} -> {FormatTypeName(eventInfo.EventHandlerType!)}";
+
+static string FormatParameters(IEnumerable<ParameterInfo> parameters) => string.Join(
+    ",",
+    parameters.Select(parameter =>
+        $"{(parameter.IsOut ? "out " : parameter.ParameterType.IsByRef ? "ref " : string.Empty)}{FormatTypeName(parameter.ParameterType.IsByRef ? parameter.ParameterType.GetElementType()! : parameter.ParameterType)}"));
+
+static string FormatTypeName(Type type)
+{
+    if (type.IsArray) return $"{FormatTypeName(type.GetElementType()!)}[{new string(',', type.GetArrayRank() - 1)}]";
+    if (type.IsGenericParameter) return type.Name;
+    if (!type.IsGenericType) return type.FullName ?? type.Name;
+    string name = (type.GetGenericTypeDefinition().FullName ?? type.Name).Split('`')[0];
+    return $"{name}<{string.Join(",", type.GetGenericArguments().Select(FormatTypeName))}>";
+}
+
+static async Task WriteJsonAsync<T>(string outputPath, T value)
+{
+    string fullPath = Path.GetFullPath(outputPath);
+    Directory.CreateDirectory(Path.GetDirectoryName(fullPath)!);
+    await File.WriteAllTextAsync(fullPath, JsonSerializer.Serialize(value, JsonOptions()) + Environment.NewLine);
+}
+
+static JsonSerializerOptions JsonOptions()
+{
+    JsonSerializerOptions options = new() { WriteIndented = true };
+    options.Converters.Add(new JsonStringEnumConverter());
+    return options;
+}
+
+static int Usage()
+{
+    Console.Error.WriteLine("Usage: OcctSharp.ApiTool snapshot <assembly> <output> | diff <baseline> <assembly> <output>");
+    return 2;
+}
+
+internal sealed record ApiSnapshot(
+    string SchemaVersion,
+    string AssemblyName,
+    string AssemblyVersion,
+    string TargetFramework,
+    IReadOnlyList<string> Signatures);
+
+internal sealed record ApiDiff(
+    string SchemaVersion,
+    string BaselineAssemblyVersion,
+    string CurrentAssemblyVersion,
+    int AddedCount,
+    int RemovedCount,
+    bool HasBreakingChanges,
+    IReadOnlyList<string> Added,
+    IReadOnlyList<string> Removed);
