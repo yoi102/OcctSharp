@@ -82,7 +82,7 @@ runtime/lifetime tests, package consumer, documentation, and coverage update.
 | B16 | Complete (metadata/assembly profile) | XDE and metadata | Parent-bound XDE labels; shapes, assemblies, occurrences, locations; copied names/RGBA/layers/materials; BinXCAF and STEPCAF | Release/Debug 67/67, memory/BinXCAF/STEPCAF round-trip, freshness, alpha.37 consumer, 44-DLL closure |
 | B17 | Complete (Windows core profile) | Visualization core | HWND-bound Aspect/OpenGl/V3d/AIS owner, parent-bound presentations, explicit input forwarding, copied selection IDs | Release/Debug 68/68, real HWND display/selection/thread tests, freshness, interactive sample, alpha.38 consumer, 45-DLL closure |
 | B18 | Complete (dependency-profile classification) | Optional integrations | Versioned audit for IVtk/VTK, OpenGL ES, Draw/test, WNT, Cocoa/X11, and C++/CLI; isolated future package boundaries | 6/6 profiles classified; Windows viewer available, named optional dependencies blocked/excluded without entering core; Release/Debug audit passes |
-| B19 | In progress (B19.1-B19.2 complete) | Long-tail and templates | Classification is complete; B19.2 emits 333 manifest IDs, while 10,177 `SupportedUnselected` declarations and LT001-LT004 projection/ownership work remain | Close only when every bindable declaration is emitted or accepted manual and no safety-critical unknown projection remains |
+| B19 | In progress (B19.1-B19.3 complete) | Long-tail and templates | Classification is complete; B19.3 reconciles 333 emitted plus 18 accepted manual declarations, while 10,177 `SupportedUnselected` declarations and LT001-LT004 projection/ownership work remain | Close only when every bindable declaration is emitted or accepted manual and no safety-critical unknown projection remains |
 | B20 | In progress (release engineering implemented) | Upgrade and release | 606-signature API baseline/diff, immutable-artifact CI, clean regeneration, notices, SBOM/provenance/checksums, explicit gates | Release tooling passes locally, but bindable-emission, license/notice, hosted CI, signing, and publication-scope gates remain open |
 
 Current batch progress is 19 of 21 complete (90.5%). This measures execution batches,
@@ -94,7 +94,8 @@ not OCCT declaration coverage or public-release readiness.
 |---|---|---|---|
 | B19.1 | Complete | Ten StepBasic scalar/shared entities plus typed enum emission and manifest-aware inventory reconciliation | 171/3,406 selected emitted; Release/Debug Generator 40/40 and Runtime 73/73; alpha.39 45-DLL clean consumer; 13-file freshness |
 | B19.2 | Complete | StepBasic package-level default-constructible shared-entity closure | 333/5,503 selected emitted; 129 public generated StepBasic types; Release/Debug Generator 41/41 and Runtime 75/75; alpha.40 45-DLL clean consumer; 13-file freshness |
-| B19.3 | Next | High-frequency modeling, topology, transform, exchange/XDE, mesh, and visualization closure | Select a coherent common-API dependency closure before additional low-value STEP data entities; repeat generation, ownership/lifetime, package, inventory, documentation, and commit gates |
+| B19.3 | Complete | High-frequency common modeling and topology operations | Cone/torus, extrusion/revolution, all/single-edge fillet/chamfer, offset, section, bounds, validity/count; 18 schema-1.6 Manual IDs; Release/Debug 44/44 + 81/81; alpha.41 47-DLL consumer |
+| B19.4 | Next | High-frequency geometry/curve and advanced topology closure | Select a coherent Geom/Geom2d construction/evaluation/projection plus topology-map/history snapshot ownership family before low-value data entities |
 
 ## Batch sizing
 
@@ -143,8 +144,8 @@ global catalog.
 
 ## Immediate execution order
 
-1. Execute B19.2 as a larger `StepBasic`/`StepRepr` scalar shared-entity family, then
-   continue through eligible package/ownership closures.
+1. Execute B19.4 as a high-frequency Geom/Geom2d construction, evaluation, projection,
+   and advanced topology-map/history snapshot closure.
 2. Replace LT001-LT004 broad blockers with implemented enum/value/handle/borrowed-view
    projection rules or narrow evidence-backed unsupported reasons.
 3. Re-run B20 evidence after B19 completion, then resolve license/notices/hosted-CI and

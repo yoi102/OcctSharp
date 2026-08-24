@@ -1,6 +1,6 @@
 # Third-Party Notices and Review Status
 
-The local alpha.40 package is not approved for public redistribution. This inventory is
+The local alpha.41 package is not approved for public redistribution. This inventory is
 a release gate, not a declaration that every license review is complete.
 
 ## Open CASCADE Technology
@@ -11,7 +11,7 @@ with the Open CASCADE exception. The package carries the upstream
 
 ## Other native files observed in the pinned distribution
 
-The current 45-DLL closure also contains `tbb12.dll`, `jemalloc.dll`, `freetype.dll`,
+The current 47-DLL closure also contains `tbb12.dll`, `jemalloc.dll`, `freetype.dll`,
 `FreeImage.dll`, `openvr_api.dll`, and FFmpeg-family `avcodec-57.dll`,
 `avformat-57.dll`, `avutil-55.dll`, and `swscale-4.dll`. Their exact upstream versions,
 build options, source offers where applicable, and redistribution notices are not present

@@ -69,12 +69,16 @@ static async Task<int> RunInventoryAsync(
             }
             emittedStableIds = manifest.SourceStableIds.ToHashSet(StringComparer.Ordinal);
         }
+        HashSet<string> manualStableIds = configuration.ManualBindings
+            .Select(static binding => binding.StableId)
+            .ToHashSet(StringComparer.Ordinal);
         OcctInventoryReport report = OcctInventory.Discover(
             occtRoot,
             batchSize,
             configuration.ToolkitByPackage,
             configuration.InventoryPreambleHeaders,
             emittedStableIds,
+            manualStableIds,
             Console.WriteLine);
         if (!string.Equals(configuration.OcctVersion, report.OcctVersion, StringComparison.Ordinal))
         {
@@ -129,7 +133,8 @@ static async Task<int> RunConfiguredDiscoveryAsync(string occtRoot, string confi
             ExpandHeaders(occtRoot, configuration),
             configuration.OcctVersion,
             outputPath,
-            configuration.ToolkitByPackage);
+            configuration.ToolkitByPackage,
+            configuration.ManualBindings);
     }
     catch (Exception error)
     {
@@ -145,6 +150,7 @@ static async Task<int> RunGenerationAsync(string occtRoot, string configPath, st
         DiscoveryConfiguration configuration = await ReadConfigurationAsync(configPath);
         DiscoveryReport report = ClangAstDiscovery.Discover(
             new DiscoveryOptions(occtRoot, ExpandHeaders(occtRoot, configuration), configuration.ToolkitByPackage));
+        report = ApplyManualBindings(report, configuration.ManualBindings);
         if (!string.Equals(configuration.OcctVersion, report.OcctVersion, StringComparison.Ordinal))
         {
             throw new InvalidDataException(
@@ -216,12 +222,14 @@ static async Task<int> RunDiscoveryAsync(
     IReadOnlyList<string> headers,
     string? expectedOcctVersion,
     string outputPath,
-    IReadOnlyDictionary<string, string>? toolkitByPackage = null)
+    IReadOnlyDictionary<string, string>? toolkitByPackage = null,
+    IReadOnlyList<ManualBindingConfiguration>? manualBindings = null)
 {
     try
     {
         DiscoveryReport report = ClangAstDiscovery.Discover(
             new DiscoveryOptions(occtRoot, headers, toolkitByPackage));
+        report = ApplyManualBindings(report, manualBindings ?? []);
         if (expectedOcctVersion is not null
             && !string.Equals(expectedOcctVersion, report.OcctVersion, StringComparison.Ordinal))
         {
@@ -262,7 +270,19 @@ static JsonSerializerOptions CreateJsonOptions()
 }
 
 static bool IsSupportedConfigurationSchema(string schemaVersion) =>
-    schemaVersion is "1.1" or "1.2" or "1.3" or "1.4" or "1.5";
+    schemaVersion is "1.1" or "1.2" or "1.3" or "1.4" or "1.5" or "1.6";
+
+static DiscoveryReport ApplyManualBindings(
+    DiscoveryReport report,
+    IReadOnlyList<ManualBindingConfiguration> manualBindings)
+{
+    BindingModel model = ManualBindingPass.Apply(report.Model, manualBindings);
+    return report with
+    {
+        Model = model,
+        Support = BindingSupportSummary.Create(model),
+    };
+}
 
 static int PrintUsage()
 {

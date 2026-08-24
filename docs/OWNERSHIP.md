@@ -112,6 +112,16 @@ shape is copied into a new registered owning wrapper that does not retain its in
 and solution count cross as a value copy. Support topology, parameters, progress state,
 and history are deliberately not borrowed or parent-bound through this profile.
 
+### Common feature-modeling results
+
+Cone/torus builders, prism/revolution builders, fillet/chamfer contour state, offset
+state, section state, `Bnd_Box`, and `BRepCheck_Analyzer` remain call-local under
+SC-032/ADR-0052. Input shapes, vectors, axes, and selected edges are borrowed only for
+the call. Every topology result is a new registered owning shape and does not retain an
+input wrapper. Bounding boxes are six copied doubles with no native lifetime; validity
+and subshape counts are copied scalar values. Algorithm history, progress, contours,
+and per-face offset state do not cross the B19.3 ABI.
+
 ### Boolean and healing history exclusion
 
 Cut, ShapeFix, and same-domain unification return new registered owning shapes and do
@@ -209,3 +219,8 @@ existing O004 generated intrusive shared-handle contract from ten to 129 StepBas
 types. Each wrapper registry owns exactly one retained `Handle<T>` value; `Clone()` adds
 one intrusive reference, disposal releases one wrapper, and every generated type is
 runtime-tested through 1-to-2-to-1 reference counts and disposed-use rejection.
+
+B19.3 likewise introduces no new ownership category. Its 18 audited declarations are
+reported as accepted manual bindings because generalized builder/history descriptors do
+not yet exist; their runtime behavior reuses O001/O004/O005/O007/O008 and the registered
+owning `Shape` category.

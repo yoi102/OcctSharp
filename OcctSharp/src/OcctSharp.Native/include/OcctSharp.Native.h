@@ -130,6 +130,16 @@ typedef struct OcctSharp_ShapeDistanceResult
   int32_t solution_count;
 } OcctSharp_ShapeDistanceResult;
 
+typedef struct OcctSharp_BoundingBox
+{
+  double min_x;
+  double min_y;
+  double min_z;
+  double max_x;
+  double max_y;
+  double max_z;
+} OcctSharp_BoundingBox;
+
 typedef struct OcctSharp_StepAssemblyInput
 {
   const char* file_path;
@@ -219,6 +229,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_sphere(
   double radius, OcctSharp_ShapeHandle** out_shape);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_cylinder(
   double radius, double height, OcctSharp_ShapeHandle** out_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_cone(
+  double bottom_radius, double top_radius, double height, OcctSharp_ShapeHandle** out_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_torus(
+  double major_radius, double minor_radius, OcctSharp_ShapeHandle** out_shape);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_edge(
   OcctSharp_Xyz start, OcctSharp_Xyz end, OcctSharp_ShapeHandle** out_shape);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_polygon_wire(
@@ -243,6 +257,32 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_subshape_snapshot(
   int32_t* out_written);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_subshape_count(
   const OcctSharp_ShapeHandle* shape, int32_t kind, int32_t* out_count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_extrude(
+  const OcctSharp_ShapeHandle* shape, const OcctSharp_VecHandle* direction,
+  OcctSharp_ShapeHandle** out_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_revolve(
+  const OcctSharp_ShapeHandle* shape, const OcctSharp_Ax1Handle* axis,
+  double angle_radians, OcctSharp_ShapeHandle** out_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_fillet_all(
+  const OcctSharp_ShapeHandle* shape, double radius, OcctSharp_ShapeHandle** out_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_fillet_edge(
+  const OcctSharp_ShapeHandle* shape, const OcctSharp_ShapeHandle* edge,
+  double radius, OcctSharp_ShapeHandle** out_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_chamfer_all(
+  const OcctSharp_ShapeHandle* shape, double distance, OcctSharp_ShapeHandle** out_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_chamfer_edge(
+  const OcctSharp_ShapeHandle* shape, const OcctSharp_ShapeHandle* edge,
+  double distance, OcctSharp_ShapeHandle** out_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_offset(
+  const OcctSharp_ShapeHandle* shape, double offset, double tolerance,
+  OcctSharp_ShapeHandle** out_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_section(
+  const OcctSharp_ShapeHandle* left, const OcctSharp_ShapeHandle* right,
+  OcctSharp_ShapeHandle** out_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_bounding_box(
+  const OcctSharp_ShapeHandle* shape, OcctSharp_BoundingBox* out_bounds);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_is_valid(
+  const OcctSharp_ShapeHandle* shape, int32_t* out_is_valid);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_boolean_fuse(
   const OcctSharp_ShapeHandle* left, const OcctSharp_ShapeHandle* right,
   OcctSharp_ShapeHandle** out_shape);

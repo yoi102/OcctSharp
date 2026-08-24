@@ -24,8 +24,10 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   C++/CLI, and platform-adapter availability and package boundaries.
 - [Full inventory classification](FULL_INVENTORY_CLASSIFICATION.md) — B19 declaration
   and header dispositions, reason codes, and complete-versus-generated metrics.
-- [Alpha.40 release notes](RELEASE_NOTES_0.1.0_ALPHA_40.md) — current locally validated scope,
-  B19.2 package-expanded StepBasic coverage, native bootstrap, and publication blockers.
+- [Alpha.41 release notes](RELEASE_NOTES_0.1.0_ALPHA_41.md) — current common-modeling,
+  manual-stable-ID accounting, package evidence, and publication blockers.
+- [Alpha.40 release notes](RELEASE_NOTES_0.1.0_ALPHA_40.md) — prior B19.2 package-expanded
+  StepBasic coverage and repository-native bootstrap evidence.
 - [Alpha.39 release notes](RELEASE_NOTES_0.1.0_ALPHA_39.md) — prior B19.1 generated
   StepBasic/enum scope and evidence.
 - [Alpha.38 release notes](RELEASE_NOTES_0.1.0_ALPHA_38.md) — prior locally validated scope,

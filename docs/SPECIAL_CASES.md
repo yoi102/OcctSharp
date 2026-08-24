@@ -625,3 +625,39 @@ rules or design:
 - Removal criteria: Replace with generated visualization projections only after creator
   threading, parent graphs, callback cancellation/reentrancy, and selector snapshots can
   be emitted with equivalent fail-closed semantics.
+
+## SC-032: Native-local common modeling operations with audited stable IDs
+
+- Status: Accepted B19.3 common modeling profile.
+- Scope: OCCT 8.0.1 `BRepPrimAPI_MakeCone`, `BRepPrimAPI_MakeTorus`,
+  `BRepPrimAPI_MakePrism`, `BRepPrimAPI_MakeRevol`, `BRepFilletAPI_MakeFillet`,
+  `BRepFilletAPI_MakeChamfer`, `BRepOffsetAPI_MakeOffsetShape`,
+  `BRepAlgoAPI_Section`, `BRepBndLib::AddOptimal`, `BRepCheck_Analyzer`, and
+  `TopExp::MapShapes`; toolkits `TKPrim`, `TKTopAlgo`, `TKBO`, `TKFillet`,
+  `TKOffset`, `TKBRep`, and `TKMath`.
+- Reason: These builders and analyzers own mutable algorithm, contour, history, progress,
+  or referenced topology state. Exposing them as general managed objects would require
+  unimplemented history/borrowed/parent-bound contracts. The common result-oriented
+  workflows are safe as one-shot calls.
+- Native/ABI/managed behavior: ABI 1.33 adds cone/torus creation, extrusion/revolution,
+  all-edge and single-edge fillet/chamfer, skin/join offset, shape section, copied finite
+  bounds, and validity checks. Friendly `Shape` APIs return independent owners or the
+  immutable `BoundingBox3d` value. Public `CountSubShapes` exposes the existing copied
+  occurrence-count operation.
+- Ownership: Inputs are borrowed only for a call. Builders, indexed edge maps, bounds,
+  analyzers, history, and progress state remain native-local. Each topology result is a
+  new registered owning `Shape`; bounds and booleans are copied values with no native
+  lifetime. Source disposal cannot invalidate a successful result.
+- Coverage accounting: Schema 1.6 lists the 18 directly used declaration stable IDs.
+  Discovery requires all IDs, the inventory reports them as `Manual/MN001`, and any
+  duplicate, unknown, malformed, or emitted/manual overlap fails closed.
+- Validation: Release/Debug Generator 44/44 and Runtime 81/81 cover result semantics,
+  all/single-edge variants, finite bounds/layout, validity/count, null/disposed/wrong-kind
+  and numeric failures, and source independence. The alpha.41 clean consumer loads 47
+  application-local DLLs and exercises the new profile.
+- Upgrade impact: Re-run semantic discovery before generation; stable-ID signature drift
+  is an intentional hard failure. Re-check completion, result nullability, edge membership,
+  offset defaults, analyzer behavior, bounding tolerance, and toolkit closure.
+- Removal criteria: Replace each manual raw operation only after generalized generated
+  algorithm-result descriptors can reproduce the same owning/value, error, history
+  exclusion, coverage, and runtime/lifetime evidence.

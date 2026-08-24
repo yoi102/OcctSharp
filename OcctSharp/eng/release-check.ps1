@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [string]$OcctRoot,
-    [string]$PackageVersion = '0.1.0-alpha.40',
+    [string]$PackageVersion = '0.1.0-alpha.41',
     [string]$ApiBaselineVersion = '0.1.0-alpha.38'
 )
 
@@ -41,6 +41,9 @@ $remainingBindableCount = if ($remainingBindable.Count -eq 0) { 0 } else { [int]
 $emittedCount = [int](@($inventory.finalClassification.declarationStates |
     Where-Object state -eq 'Emitted' |
     Select-Object -First 1 -ExpandProperty count) | Select-Object -First 1)
+$manualCount = [int](@($inventory.finalClassification.declarationStates |
+    Where-Object state -eq 'Manual' |
+    Select-Object -First 1 -ExpandProperty count) | Select-Object -First 1)
 
 & (Join-Path $PSScriptRoot 'generate-release-metadata.ps1') -PackageVersion $PackageVersion
 
@@ -55,10 +58,10 @@ $gates = @(
     [ordered]@{ id = 'local-release-debug'; state = 'PASS'; evidence = 'Release and Debug build/test completed in this run.' },
     [ordered]@{ id = 'generated-freshness'; state = 'PASS'; evidence = '13 manifest-owned files current.' },
     [ordered]@{ id = 'clean-regeneration'; state = 'PASS'; evidence = 'Fresh source copy build and byte comparison completed.' },
-    [ordered]@{ id = 'package-consumer'; state = 'PASS'; evidence = 'alpha.40 clean restore/publish/runtime with 45 DLLs and generated StepBasic shared/enum behavior.' },
+    [ordered]@{ id = 'package-consumer'; state = 'PASS'; evidence = 'alpha.41 clean restore/publish/runtime with 47 DLLs, generated StepBasic shared/enum behavior, and common modeling APIs.' },
     [ordered]@{ id = 'api-compatibility'; state = 'PASS'; evidence = 'Compared with the alpha.38 606-signature baseline; additive changes are allowed and removals are blocked.' },
     [ordered]@{ id = 'full-classification'; state = 'PASS'; evidence = '116214 declarations and 7090 headers classified; zero pending/HD099.' },
-    [ordered]@{ id = 'bindable-emission-completeness'; state = if ($remainingBindableCount -eq 0) { 'PASS' } else { 'BLOCKED' }; evidence = "$remainingBindableCount declarations remain SupportedUnselected; $emittedCount generated stable IDs are reconciled through the manifest." },
+    [ordered]@{ id = 'bindable-emission-completeness'; state = if ($remainingBindableCount -eq 0) { 'PASS' } else { 'BLOCKED' }; evidence = "$remainingBindableCount declarations remain SupportedUnselected; $emittedCount generated and $manualCount accepted manual stable IDs are reconciled." },
     [ordered]@{ id = 'sbom-provenance-checksums'; state = 'PASS'; evidence = 'CycloneDX, provenance, and SHA256 files generated.' },
     [ordered]@{ id = 'ci-configuration'; state = 'PASS'; evidence = '.github/workflows/ci.yml is configured.' },
     [ordered]@{ id = 'ci-hosted-execution'; state = 'NOT RUN'; evidence = 'No remote workflow was dispatched from this local task.' },

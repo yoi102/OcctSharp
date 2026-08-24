@@ -58,6 +58,7 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0049](adr/0049-release-evidence-and-publication-gates.md) | Use one reproducible release evidence pipeline and keep batch completion separate from publication readiness | Superseded in part by ADR-0050 |
 | [ADR-0050](adr/0050-completion-gates-are-not-classification-gates.md) | Do not treat complete classification or release tooling as completed migration batches | Accepted |
 | [ADR-0051](adr/0051-repository-native-bootstrap.md) | Bootstrap repository native runtime from pinned local or immutable OCCT inputs | Accepted |
+| [ADR-0052](adr/0052-native-local-common-modeling-operations.md) | Keep common modeling algorithms native-local and reconcile audited manual stable IDs | Accepted |
 
 ## Pending decisions
 

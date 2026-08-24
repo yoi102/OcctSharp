@@ -133,6 +133,10 @@ The B19.2 package expansion is additive ABI 1.32/bridge 0.40.0 and advances the 
 to `0.1.0-alpha.40`. It expands the same verified ownership contract to 129 generated
 StepBasic public types and 333 manifest IDs without removing an existing managed or
 native API.
+The B19.3 common-modeling profile is additive ABI 1.33/bridge 0.41.0 and advances the
+package to `0.1.0-alpha.41`. It adds owning cone/torus, extrusion/revolution,
+fillet/chamfer, offset, and section results plus copied bounds/validity/count values;
+schema 1.6 reconciles the 18 directly used declarations as accepted manual bindings.
 
 ## Upgrade classification
 

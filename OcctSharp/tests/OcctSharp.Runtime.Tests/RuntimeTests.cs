@@ -11,8 +11,8 @@ public sealed class RuntimeTests
     {
         OcctRuntimeInfo info = OcctRuntime.Info;
 
-        Assert.Equal(new Version(1, 32), info.AbiVersion);
-        Assert.Equal("0.40.0", info.BridgeVersion);
+        Assert.Equal(new Version(1, 33), info.AbiVersion);
+        Assert.Equal("0.41.0", info.BridgeVersion);
         Assert.Equal("8.0.1", info.OcctVersion);
     }
 
@@ -611,8 +611,15 @@ public sealed class RuntimeTests
             viewer.Resize();
             viewer.FitAll();
             viewer.Redraw();
-            Assert.Throws<InvalidOperationException>(() =>
-                Task.Run(viewer.Redraw).GetAwaiter().GetResult());
+            Exception? threadError = null;
+            Thread worker = new(() =>
+            {
+                try { viewer.Redraw(); }
+                catch (Exception error) { threadError = error; }
+            });
+            worker.Start();
+            worker.Join();
+            Assert.IsType<InvalidOperationException>(threadError);
 
             Assert.True(viewer.MoveTo(128, 128));
             Assert.Contains(presentation, viewer.SelectAt(128, 128));

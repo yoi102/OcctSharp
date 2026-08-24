@@ -172,6 +172,12 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_cylinder")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus CreateCylinder(double radius, double height, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_cone")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateCone(double bottomRadius, double topRadius, double height, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_torus")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateTorus(double majorRadius, double minorRadius, out nint shape);
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_edge")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus CreateEdge(XyzRaw start, XyzRaw end, out nint shape);
@@ -197,6 +203,36 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_subshape_count")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus GetSubshapeCount(ShapeHandle shape, int kind, out int count);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_extrude")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ExtrudeShape(ShapeHandle shape, VectorHandle direction, out nint result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_revolve")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus RevolveShape(ShapeHandle shape, AxisHandle axis, double angleRadians, out nint result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_fillet_all")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus FilletAllEdges(ShapeHandle shape, double radius, out nint result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_fillet_edge")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus FilletEdge(ShapeHandle shape, ShapeHandle edge, double radius, out nint result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_chamfer_all")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ChamferAllEdges(ShapeHandle shape, double distance, out nint result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_chamfer_edge")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ChamferEdge(ShapeHandle shape, ShapeHandle edge, double distance, out nint result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_offset")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus OffsetShape(ShapeHandle shape, double offset, double tolerance, out nint result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_section")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SectionShapes(ShapeHandle left, ShapeHandle right, out nint result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_bounding_box")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetBoundingBox(ShapeHandle shape, out BoundingBoxRaw bounds);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_is_valid")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus IsShapeValid(ShapeHandle shape, out int isValid);
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_boolean_fuse")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus BooleanFuse(ShapeHandle left, ShapeHandle right, out nint shape);

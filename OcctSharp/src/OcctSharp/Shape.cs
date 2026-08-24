@@ -110,6 +110,18 @@ public partial class Shape : IDisposable
         }
     }
 
+    /// <summary>Counts occurrences of one supported topological subshape kind.</summary>
+    public int CountSubShapes(ShapeKind kind)
+    {
+        if (kind is < ShapeKind.Compound or > ShapeKind.Vertex)
+            throw new ArgumentOutOfRangeException(nameof(kind), "Only Compound through Vertex can be explored.");
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.GetSubshapeCount(handle, (int)kind, out int count),
+            "shape_subshape_count");
+        return count;
+    }
+
     /// <summary>Copies the adapted curve type, parameter range, and endpoint values for an edge.</summary>
     public EdgeCurveSnapshot GetEdgeCurveSnapshot()
     {
@@ -181,6 +193,121 @@ public partial class Shape : IDisposable
         ArgumentNullException.ThrowIfNull(location);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         return location.Move(this);
+    }
+
+    /// <summary>Extrudes this topology along an OCCT vector and returns an independently owned result.</summary>
+    public Shape Extrude(GpVec direction)
+    {
+        ArgumentNullException.ThrowIfNull(direction);
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        ObjectDisposedException.ThrowIf(direction.Handle.IsClosed, direction);
+        NativeError.ThrowIfFailed(
+            NativeMethods.ExtrudeShape(handle, direction.Handle, out nint result),
+            "shape_extrude");
+        return ShapeFactory.FromNativeHandle(result, "shape_extrude");
+    }
+
+    /// <summary>Revolves this topology around an OCCT axis by at most one full turn.</summary>
+    public Shape Revolve(GpAx1 axis, double angleRadians)
+    {
+        ArgumentNullException.ThrowIfNull(axis);
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        ObjectDisposedException.ThrowIf(axis.Handle.IsClosed, axis);
+        NativeError.ThrowIfFailed(
+            NativeMethods.RevolveShape(handle, axis.Handle, angleRadians, out nint result),
+            "shape_revolve");
+        return ShapeFactory.FromNativeHandle(result, "shape_revolve");
+    }
+
+    /// <summary>Applies one radius to every unique edge and returns an independently owned fillet result.</summary>
+    public Shape Fillet(double radius)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.FilletAllEdges(handle, radius, out nint result),
+            "shape_fillet_all");
+        return ShapeFactory.FromNativeHandle(result, "shape_fillet_all");
+    }
+
+    /// <summary>Applies a radius to one edge belonging to this shape.</summary>
+    public Shape Fillet(Shape edge, double radius)
+    {
+        ArgumentNullException.ThrowIfNull(edge);
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        ObjectDisposedException.ThrowIf(edge.handle.IsClosed, edge);
+        NativeError.ThrowIfFailed(
+            NativeMethods.FilletEdge(handle, edge.handle, radius, out nint result),
+            "shape_fillet_edge");
+        return ShapeFactory.FromNativeHandle(result, "shape_fillet_edge");
+    }
+
+    /// <summary>Applies one distance to every unique edge and returns an independently owned chamfer result.</summary>
+    public Shape Chamfer(double distance)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.ChamferAllEdges(handle, distance, out nint result),
+            "shape_chamfer_all");
+        return ShapeFactory.FromNativeHandle(result, "shape_chamfer_all");
+    }
+
+    /// <summary>Applies a chamfer distance to one edge belonging to this shape.</summary>
+    public Shape Chamfer(Shape edge, double distance)
+    {
+        ArgumentNullException.ThrowIfNull(edge);
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        ObjectDisposedException.ThrowIf(edge.handle.IsClosed, edge);
+        NativeError.ThrowIfFailed(
+            NativeMethods.ChamferEdge(handle, edge.handle, distance, out nint result),
+            "shape_chamfer_edge");
+        return ShapeFactory.FromNativeHandle(result, "shape_chamfer_edge");
+    }
+
+    /// <summary>Builds an offset shape using OCCT's skin/join algorithm.</summary>
+    public Shape Offset(double distance, double tolerance = 1e-6)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.OffsetShape(handle, distance, tolerance, out nint result),
+            "shape_offset");
+        return ShapeFactory.FromNativeHandle(result, "shape_offset");
+    }
+
+    /// <summary>Computes section curves between this shape and another shape.</summary>
+    public Shape Section(Shape other)
+    {
+        ArgumentNullException.ThrowIfNull(other);
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        ObjectDisposedException.ThrowIf(other.handle.IsClosed, other);
+        NativeError.ThrowIfFailed(
+            NativeMethods.SectionShapes(handle, other.handle, out nint result),
+            "shape_section");
+        return ShapeFactory.FromNativeHandle(result, "shape_section");
+    }
+
+    /// <summary>Copies finite axis-aligned bounds from OCCT.</summary>
+    public BoundingBox3d GetBoundingBox()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.GetBoundingBox(handle, out BoundingBoxRaw bounds),
+            "shape_bounding_box");
+        return new BoundingBox3d(
+            new GpPoint(bounds.MinX, bounds.MinY, bounds.MinZ),
+            new GpPoint(bounds.MaxX, bounds.MaxY, bounds.MaxZ));
+    }
+
+    /// <summary>Gets whether OCCT reports the complete topology as valid.</summary>
+    public bool IsValid
+    {
+        get
+        {
+            ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+            NativeError.ThrowIfFailed(
+                NativeMethods.IsShapeValid(handle, out int isValid),
+                "shape_is_valid");
+            return isValid != 0;
+        }
     }
 
     /// <summary>Computes an OCCT boolean union and returns an independently owned result.</summary>

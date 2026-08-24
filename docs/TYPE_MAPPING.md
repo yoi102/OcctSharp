@@ -35,6 +35,7 @@ returns remain unmapped until ownership and lifetime rules exist.
 | OCCT string class | UTF-8 copy or opaque handle by use case | `string` or wrapper | Pending |
 | `Handle<T>` value | `OcctSharp_TransientHandle*` typed opaque shared wrapper | `SharedTransientHandle` plus generated public type | Implemented (`TM006`) for configured shared scopes |
 | `TopoDS_Shape` | Registered opaque wrapper owning one C++ value | `ShapeHandle` / `Shape` | Implemented (`TM007`) |
+| Common BRep builder/analyzer results | Registered owning `Shape`, fixed copied bounds, or copied scalar | `Shape`, `BoundingBox3d`, or `bool`/`int` | Manual B19.3 (`SC-032`) |
 | Typed `TopoDS_*` | Checked opaque topology value projection | Specialized topology wrappers | Implemented (`B04` / `ADR-0017`) |
 | `gp_Pnt` | Explicit `OcctSharp_Point3d` X/Y/Z copy, never native layout | internal `Point3dRaw`; friendly `Point3d` pending | Implemented (`TM005`) for coordinate, default, and const-copy constructors |
 | `gp_Trsf` | Registry-validated opaque native value | `GpTrsf` owning wrapper | Manual B05 (`SC-005`) |
@@ -105,6 +106,12 @@ header family, and the package scope expands only records proven to derive from
 `Standard_Transient` with a supported public default construction path. Unknown
 parameters, returns, borrowed references, and non-default-constructible entities remain
 classified rather than receiving an invented mapping.
+
+B19.3 adds no general TypeMap. Schema 1.6 instead records 18 audited algorithm declarations
+as `Manual/MN001`. `TopoDS_Shape` results reuse TM007-compatible registered owners,
+`gp_Vec`/`gp_Ax1` inputs reuse the existing opaque values for call-bound borrowing, and
+the six-double bounding structure is a dedicated value-copy contract. Builder/history,
+edge-map, progress, and analyzer layouts remain unmapped.
 
 ## Change process
 

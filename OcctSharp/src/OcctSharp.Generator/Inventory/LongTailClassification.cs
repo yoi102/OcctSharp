@@ -11,17 +11,19 @@ public static class LongTailClassification
         IReadOnlyList<string> allHeaders,
         IReadOnlySet<string> successfulHeaders,
         IReadOnlyList<OcctInventoryFailure> failures,
-        IReadOnlySet<string>? emittedStableIds = null)
+        IReadOnlySet<string>? emittedStableIds = null,
+        IReadOnlySet<string>? manualStableIds = null)
     {
         ArgumentNullException.ThrowIfNull(declarations);
         ArgumentNullException.ThrowIfNull(allHeaders);
         ArgumentNullException.ThrowIfNull(successfulHeaders);
         ArgumentNullException.ThrowIfNull(failures);
 
+        ValidateKnownStableIds(declarations, emittedStableIds, manualStableIds);
         InitialTypeMap typeMap = InitialTypeMap.FromModel(new BindingModel(declarations));
         OcctDeclarationDisposition[] declarationDispositions = declarations
             .OrderBy(static declaration => declaration.StableId, StringComparer.Ordinal)
-            .Select(declaration => ClassifyDeclaration(declaration, typeMap, emittedStableIds))
+            .Select(declaration => ClassifyDeclaration(declaration, typeMap, emittedStableIds, manualStableIds))
             .ToArray();
 
         Dictionary<string, OcctInventoryFailure> failureByHeader = failures
@@ -56,10 +58,20 @@ public static class LongTailClassification
     private static OcctDeclarationDisposition ClassifyDeclaration(
         BindingDeclaration declaration,
         InitialTypeMap typeMap,
-        IReadOnlySet<string>? emittedStableIds)
+        IReadOnlySet<string>? emittedStableIds,
+        IReadOnlySet<string>? manualStableIds)
     {
+        if (emittedStableIds?.Contains(declaration.StableId) == true
+            && manualStableIds?.Contains(declaration.StableId) == true)
+        {
+            throw new InvalidDataException(
+                $"Declaration '{declaration.StableId}' cannot be both emitted and manual.");
+        }
+
         (string State, string Code, string Category) disposition = emittedStableIds?.Contains(declaration.StableId) == true
             ? ("Emitted", "EM001", "GeneratedBinding")
+            : manualStableIds?.Contains(declaration.StableId) == true
+                ? ("Manual", "MN001", "ManualBinding")
             : declaration.SupportState switch
         {
             BindingSupportState.Supported => ("SupportedUnselected", "LT000", "EligibleUnselected"),
@@ -80,6 +92,27 @@ public static class LongTailClassification
             disposition.State,
             disposition.Code,
             disposition.Category);
+    }
+
+    private static void ValidateKnownStableIds(
+        IReadOnlyList<BindingDeclaration> declarations,
+        IReadOnlySet<string>? emittedStableIds,
+        IReadOnlySet<string>? manualStableIds)
+    {
+        HashSet<string> discovered = declarations
+            .Select(static declaration => declaration.StableId)
+            .ToHashSet(StringComparer.Ordinal);
+        string[] unknown = (emittedStableIds ?? new HashSet<string>(StringComparer.Ordinal))
+            .Concat(manualStableIds ?? new HashSet<string>(StringComparer.Ordinal))
+            .Where(stableId => !discovered.Contains(stableId))
+            .Distinct(StringComparer.Ordinal)
+            .Order(StringComparer.Ordinal)
+            .ToArray();
+        if (unknown.Length != 0)
+        {
+            throw new InvalidDataException(
+                $"Manifest stable IDs were not found in the inventory: {string.Join(", ", unknown)}.");
+        }
     }
 
     private static (string State, string Code, string Category) ClassifyPending(

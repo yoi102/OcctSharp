@@ -66,8 +66,9 @@ must not renumber or silently redefine an existing code.
 The following simple-binding eligibility pass now promotes only value-copy constructors
 and static methods whose complete parameter and return projections are known to the
 central TypeMap. Instance receivers, pointer/reference returns, and any unknown ownership
-remain pending. In the selected 5,503-declaration scope, 453 declarations are currently
-eligible, 3,962 remain pending, and 1,088 retain their stable skip reasons. Eligibility
+remain pending. In the selected 9,567-declaration scope, 740 declarations are currently
+eligible, 18 are accepted manual, 6,781 remain pending, and 2,028 retain their stable
+skip reasons. Eligibility
 does not imply that every candidate is emitted yet.
 
 The first batch emitter selects the `gp_Pnt` value-copy constructors and the configured
@@ -108,6 +109,10 @@ stable, so package expansion does not weaken `TM006` ownership checks.
 Referenced `TM004` enums are emitted into a separate manifest-owned managed file from
 their discovered definitions. Full inventory receives the same manifest stable IDs so
 generated declarations become `Emitted/EM001` instead of remaining eligible-unselected.
+Schema 1.6 adds `manualBindings`. Each entry names a discovered stable ID and an SC-xxx
+record. The manual-binding pass rejects empty/duplicate IDs, malformed special-case IDs,
+and missing declarations. Full inventory also rejects emitted/manual overlap and unknown
+IDs, then reports accepted entries as `Manual/MN001`.
 
 ## Full-library inventory
 
@@ -198,7 +203,8 @@ dotnet run --project .\src\OcctSharp.Generator\OcctSharp.Generator.csproj -- gen
 Generation currently selects three validated `gp_Pnt` value-copy constructors plus 28
 value-copy static methods across `Precision`, `TopAbs`, `Standard`, `TopLoc`, and `gp`,
 plus typed shared-handle declarations for `Geom_CartesianPoint` and 129 StepBasic types,
-and eight `TopoDS_Shape` value-semantic declarations. It owns 333 stable IDs and emits
+and eight `TopoDS_Shape` value-semantic declarations. It owns 333 generated stable IDs,
+while schema 1.6 separately reconciles 18 audited SC-032 manual declarations, and emits
 13 native/managed files into
 module-partitioned isolated staging, verifies their hashes, replaces the generated set, removes only stale
 paths owned by the previous manifest, and writes the coverage/diagnostics reports through

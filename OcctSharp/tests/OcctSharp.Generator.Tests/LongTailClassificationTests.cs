@@ -61,6 +61,32 @@ public sealed class LongTailClassificationTests
         Assert.DoesNotContain(result.DeclarationStates, item => item.State == "SupportedUnselected");
     }
 
+    [Fact]
+    public void MarksConfiguredManualStableIdsAndRejectsManifestOverlap()
+    {
+        BindingDeclaration declaration = Create("manual", BindingDeclarationKind.Method);
+        HashSet<string> manual = new([declaration.StableId], StringComparer.Ordinal);
+
+        OcctFinalClassification result = LongTailClassification.Create(
+            [declaration],
+            ["Good.hxx"],
+            new HashSet<string>(["Good.hxx"], StringComparer.Ordinal),
+            [],
+            emittedStableIds: null,
+            manualStableIds: manual);
+
+        OcctDeclarationDisposition disposition = Assert.Single(result.Declarations);
+        Assert.Equal("Manual", disposition.State);
+        Assert.Equal("MN001", disposition.Code);
+        Assert.Throws<InvalidDataException>(() => LongTailClassification.Create(
+            [declaration],
+            ["Good.hxx"],
+            new HashSet<string>(["Good.hxx"], StringComparer.Ordinal),
+            [],
+            emittedStableIds: manual,
+            manualStableIds: manual));
+    }
+
     [Theory]
     [InlineData("OpenGl_GLESExtensions.hxx", "HD002")]
     [InlineData("RWGltf_GltfOStreamWriter.hxx", "HD003")]

@@ -385,6 +385,15 @@ translation units compile with `/bigobj` without changing the public contract.
 
 The current native ABI is 1.32 and the bridge implementation version is 0.40.0.
 
+ABI 1.33 adds the B19.3 common-modeling profile. Cone/torus, prism/revolution,
+all-edge and single-edge fillet/chamfer, skin/join offset, and shape section exports
+return new registered owning shapes. Bounding-box extraction copies six doubles through
+a fixed 48-byte structure; validity and subshape occurrence counts copy scalars. Builder,
+indexed-edge, history, progress, `Bnd_Box`, and analyzer state remain native-local.
+`TKFillet` and `TKOffset` expand the application-local runtime closure to 47 DLLs.
+
+The current native ABI is 1.33 and the bridge implementation version is 0.41.0.
+
 ## Verification
 
 - Compile consumer tests against the exported C headers.

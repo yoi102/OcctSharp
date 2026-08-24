@@ -36,7 +36,7 @@ dotnet run --project .\samples\OcctSharp.Samples --configuration Debug
 ```
 
 If the Debug native runtime is missing or stale, MSBuild invokes
-`eng/ensure-native.ps1`, builds only the native bridge and 45-DLL closure, and copies it
+`eng/ensure-native.ps1`, builds only the native bridge and current 47-DLL closure, and copies it
 to the Sample output's `occt/` directory. It does not call `eng/build.ps1` and cannot
 recurse into the managed build. A clone without any configured OCCT input fails with
 instructions for the three supported input methods. NuGet consumers are different:

@@ -35,14 +35,15 @@ See [the documentation index](docs/DOCUMENTATION_INDEX.md),
   owners/values, geometry and metadata exchange, OCAF/XDE, and Windows HWND visualization
   are implemented for their declared profiles.
 - Full inventory classifies 116,214 discovered declarations and all 7,090 catalogued
-  headers. B19.2 raises actual generated coverage to 333 of 5,503 selected declarations
-  (6.0512%); 10,177 full-inventory declarations remain `SupportedUnselected`.
+  headers. B19.3 accounts for 333 emitted plus 18 accepted manual declarations across
+  9,567 selected declarations (3.6689%); 10,177 full-inventory declarations remain
+  `SupportedUnselected`.
   Classification completeness must not be read as binding coverage.
 - The .NET 10 console sample contains six separate workflows: entity creation,
   STEP/STL/IGES export, transformed metadata-preserving XDE STEP assembly, and Viewer.
-- Local package `OcctSharp.0.1.0-alpha.40.nupkg` restores and publishes into a clean
-  consumer with 45 native DLLs under application-local `occt/`, including generated
-  construction/clone/lifetime checks for all 129 StepBasic shared types.
+- Local package `OcctSharp.0.1.0-alpha.41.nupkg` restores and publishes into a clean
+  consumer with 47 native DLLs under application-local `occt/`, including all 129
+  generated StepBasic shared types and the common modeling profile.
 - A configured fresh clone can run the Sample project directly: an incremental
   native-only bootstrap builds the missing bridge from a manifest-validated local SDK
   or immutable URL/SHA256 input, then copies the runtime below Sample output `occt/`.
@@ -50,4 +51,4 @@ See [the documentation index](docs/DOCUMENTATION_INDEX.md),
   CycloneDX SBOM, provenance, checksums, release gates, and CI configuration.
 - Public release is blocked until the project license and remaining third-party notices
   are resolved; hosted CI, signing, and NuGet publication have not been run.
-- Architecture and behavior are recorded through ADR-0050.
+- Architecture and behavior are recorded through ADR-0052.

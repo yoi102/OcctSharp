@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 32)
-    || runtime.BridgeVersion != "0.40.0"
+if (runtime.AbiVersion != new Version(1, 33)
+    || runtime.BridgeVersion != "0.41.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -82,9 +82,24 @@ foreach (Type type in packagedStepBasicTypes)
 
 using Shape packagedSphere = ShapeFactory.CreateSphere(2);
 using Shape packagedCylinder = ShapeFactory.CreateCylinder(2, 5);
-if (packagedSphere.FaceCount != 1 || packagedCylinder.FaceCount != 3)
+using Shape packagedCone = ShapeFactory.CreateCone(3, 1, 5);
+using Shape packagedTorus = ShapeFactory.CreateTorus(4, 1);
+if (packagedSphere.FaceCount != 1 || packagedCylinder.FaceCount != 3
+    || !packagedCone.IsValid || !packagedTorus.IsValid
+    || Math.Abs(packagedTorus.GetBoundingBox().SizeX - 10) > 1e-5)
 {
     throw new InvalidOperationException("The packaged primitive builders did not create expected solids.");
+}
+
+using Shape packagedProfileWire = ShapeFactory.CreatePolygonWire(
+    [new GpPoint(0, 0, 0), new GpPoint(2, 0, 0), new GpPoint(2, 2, 0), new GpPoint(0, 2, 0)],
+    close: true);
+using Shape packagedProfileFace = ShapeFactory.CreatePlanarFace(packagedProfileWire);
+using GpVec packagedExtrusionVector = GpVec.Create(0, 0, 3);
+using Shape packagedPrism = packagedProfileFace.Extrude(packagedExtrusionVector);
+if (packagedPrism.Kind != ShapeKind.Solid || packagedPrism.CountSubShapes(ShapeKind.Face) != 6)
+{
+    throw new InvalidOperationException("The packaged extrusion bridge did not create the expected solid.");
 }
 
 Shape[] packagedFaces = box.GetFaces();
@@ -113,9 +128,16 @@ if (packagedCurve.CurveType != CurveGeometryType.Line
 foreach (Shape face in packagedFaces) face.Dispose();
 
 using Shape booleanTool = ShapeFactory.CreateBox(2, 2, 2).Transformed(ShapeTransform.CreateTranslationAndRotationZ(1, 1, 1, 0));
+using Shape sectionTool = ShapeFactory.CreateBox(2, 2, 2).Transformed(ShapeTransform.CreateTranslationAndRotationZ(9, 1, 1, 0));
 using Shape fused = box.Fuse(booleanTool);
 using Shape cut = box.Cut(booleanTool);
-if (fused.FaceCount <= 0 || cut.FaceCount <= 0)
+using Shape section = box.Section(sectionTool);
+using Shape filleted = box.Fillet(1);
+using Shape chamfered = box.Chamfer(1);
+using Shape offsetShape = box.Offset(0.25);
+if (fused.FaceCount <= 0 || cut.FaceCount <= 0
+    || section.CountSubShapes(ShapeKind.Edge) <= 0
+    || !filleted.IsValid || !chamfered.IsValid || !offsetShape.IsValid)
 {
     throw new InvalidOperationException("The packaged boolean bridge did not return valid topology.");
 }

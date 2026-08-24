@@ -84,10 +84,12 @@ evidence updated.
 - Area: Generator
 - Problem: Deterministic native/managed emission now owns 333 stable IDs across
   value-copy scopes, `Geom_CartesianPoint`, 129 generated StepBasic shared types, typed
-  enums, base topology values, and checked typed topology casts, but this is only 6.0512%
-  of the selected 5,503-declaration dependency closure and not full OCCT coverage. The
+  enums, base topology values, and checked typed topology casts. Schema 1.6 additionally
+  reconciles 18 audited common-modeling declarations as Manual, but accepted binding
+  coverage is only 351/9,567 (3.6689%) of the expanded selected dependency closure and
+  is not full OCCT coverage. The
   validated shape and exchange bridges remain manual.
-- Current mitigation: `TM001`–`TM007`, explicit generation scopes, support diagnostics,
+- Current mitigation: `TM001`–`TM007`, explicit generated/manual scopes, support diagnostics,
   manifest-aware inventory, and compile/runtime/lifetime tests prevent unknown ownership
   cases from being emitted merely to increase counts.
 - Planned resolution: Expand coherent generated package scopes after each required

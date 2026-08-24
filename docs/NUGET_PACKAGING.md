@@ -2,7 +2,7 @@
 
 ## Current package
 
-The current experimental package is `OcctSharp` `0.1.0-alpha.40` for .NET 10 and
+The current experimental package is `OcctSharp` `0.1.0-alpha.41` for .NET 10 and
 Windows x64. It contains:
 
 - `lib/net10.0/OcctSharp.dll` and XML documentation.
@@ -60,14 +60,16 @@ the native runtime, checks ABI/OCCT identity, and exercises generated
 all 129 generated StepBasic shared types and typed enums,
 copied BRep adaptor snapshot behavior, OBJ/PLY/GLB/VRML provider workflows, BinOcaf
 document persistence, BinXCAF/STEPCAF metadata assemblies, and an HWND-bound viewer
-display/selection smoke. The current application-local closure contains 45 DLLs.
+display/selection smoke. It also exercises cone/torus, extrusion, fillet/chamfer,
+offset, section, bounding, validity, and topology-count operations. The current
+application-local closure contains 47 DLLs.
 
 ## Consumer use
 
 Once a package source contains the package, an application uses the normal command:
 
 ```powershell
-dotnet add package OcctSharp --version 0.1.0-alpha.40
+dotnet add package OcctSharp --version 0.1.0-alpha.41
 ```
 
 The application must run as a Windows x64 process on the current compatibility matrix.

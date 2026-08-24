@@ -2,12 +2,12 @@
 
 - Last updated: 2026-08-24
 - Current phase: B19 long-tail binding migration in progress; B20 release engineering implemented but not closed
-- Engineering roadmap progress: 93% estimate (not OCCT API coverage or release readiness)
+- Engineering roadmap progress: 94% estimate (not OCCT API coverage or release readiness)
 - Complete-migration batch progress: 19 of 21 batches complete (90.5%); only B00-B18 satisfy their batch exits
-- Selected-scope emitted coverage: 333 of 5,503 declarations (6.0512%); selected-scope safe-support coverage: 453 of 5,503 (8.2319%)
-- Full-OCCT coverage: not yet established; the audit scans 7,058 of 7,090 entry headers and finds 116,214 unique declarations in the successful portion, so 333 emitted declarations are at most 0.2865% of the eventual complete denominator
+- Selected-scope emitted coverage: 333 of 9,567 declarations (3.4807%); accepted binding coverage is 351 of 9,567 (3.6689%) after adding 18 audited manual declarations; selected-scope safe-support coverage is 758 of 9,567 (7.9231%)
+- Full-OCCT coverage: not yet established; the audit scans 7,058 of 7,090 entry headers and finds 116,214 unique declarations in the successful portion, so 333 emitted declarations are at most 0.2865% and 351 emitted/manual declarations are at most 0.3020% of the eventual complete denominator
 - Full-inventory classification: 116,214/116,214 discovered declarations and 7,090/7,090 catalogued headers have final dispositions; both pending counts and HD099 are zero
-- Overall state: classification is 100% for observed declarations/headers, the generated manifest reconciles 333 declarations as `Emitted`, 10,177 bindable declarations remain unselected, and B19/B20 are not complete
+- Overall state: classification is 100% for observed declarations/headers, the generated manifest reconciles 333 declarations as `Emitted`, schema 1.6 reconciles 18 declarations as `Manual`, 10,177 bindable declarations remain unselected, and B19/B20 are not complete
 
 ## Current focus
 
@@ -290,6 +290,24 @@ batch completion, and public-release readiness as four independent facts.
   a simulated missing Debug bridge was rebuilt and copied to Sample output before an
   English entity-creation workflow loaded OCCT successfully.
 
+### B19.3 high-frequency common modeling closure complete
+
+- Added cone and torus solid builders; extrusion and revolution; all-edge and single-edge
+  fillet/chamfer; skin/join offset; shape/shape section; public subshape occurrence count;
+  copied finite bounding boxes; and full-topology validity checks.
+- Builder, algorithm, indexed-edge, bounding, and analyzer objects remain native-local.
+  Shape results are independent registered owners, bounding boxes are fixed 48-byte value
+  copies, and source disposal does not invalidate results.
+- Configuration schema 1.6 adds validated stable-ID manual-binding declarations. Missing
+  stable IDs, duplicates, malformed special-case references, and emitted/manual overlap
+  fail closed. The selected scope has 9,567 declarations: 333 emitted, 18 manual,
+  740 supported, 6,781 pending, and 2,028 skipped.
+- Full inventory reconciles 333 `Emitted`, 18 `Manual`, 10,177 `SupportedUnselected`,
+  27,310 `Skipped`, and 78,376 `Blocked`; declaration/header classification remains complete.
+- Release and Debug pass Generator 44/44 and Runtime 81/81. The alpha.41 clean consumer
+  loads 47 DLLs from `occt/` and exercises the new modeling families with ABI 1.33 and
+  bridge 0.41.0.
+
 ### B20 release engineering implemented; batch exit remains open
 
 - Added a 606-signature schema-1.0 managed public API baseline and compatibility diff;
@@ -514,9 +532,9 @@ batch completion, and public-release readiness as four independent facts.
 
 ## Next tasks
 
-1. Execute B19.3 as a coherent high-frequency modeling/topology closure. Prioritize
-   common builders, traversal/transforms, fillet/chamfer/offset, STEP/IGES/STL/XDE,
-   mesh, and visualization APIs before additional low-value data-entity expansion.
+1. Execute B19.4 as a coherent high-frequency geometry/curve and advanced topology
+   closure. Prioritize common Geom/Geom2d construction/evaluation, projections,
+   topology maps/history snapshots, and modeling options before low-value data entities.
 2. Continue replacing LT001-LT004 with enum/value/shared/parent-bound rules until all
    bindable declarations are emitted or accepted manual.
 3. Resolve license/notices/hosted CI/signing only after the B19 binding gate closes;
@@ -541,34 +559,35 @@ batch completion, and public-release readiness as four independent facts.
 | Release native build | PASS | `eng/build.ps1 -Configuration Release` |
 | Release managed build | PASS | 5 projects, 0 warnings, 0 errors |
 | Debug native/managed build | PASS | 5 projects, 0 warnings, 0 errors |
-| Generator unit tests | PASS | B19.2 Release/Debug `eng/build.ps1`: 41/41 |
-| Runtime/lifetime tests | PASS | B19.2 Release/Debug `eng/build.ps1`: 75/75 in both configurations |
+| Generator unit tests | PASS | B19.3 Release/Debug `eng/build.ps1`: 44/44 |
+| Runtime/lifetime tests | PASS | B19.3 Release/Debug `eng/build.ps1`: 81/81 in both configurations |
 | Controlled semantic Clang parse | PASS | Record, method, constructor, and enum discovery |
-| OCCT semantic discovery | PASS | Selected scope: 5,503 declarations, zero diagnostics |
+| OCCT semantic discovery | PASS | Selected scope: 9,567 declarations, zero diagnostics; 18 configured manual stable IDs found |
 | Full OCCT header catalog | PASS | 7,090 entry headers: 7,084 `.hxx`, 6 `.h`, 407 filename-derived packages |
 | Full OCCT semantic inventory | BLOCKED | 7,058/7,090 headers; 116,214 partial unique declarations; 32 named dependency/artifact failures |
-| B19 full-inventory classification | PASS | 333 emitted, 10,177 supported-unselected, 27,310 skipped, 78,394 blocked; 116,214/116,214 declarations and 7,090/7,090 headers classified; SHA256 `C558D677152C629C67E49BEA7FC4D66026AD2B703E531FF3362805CA0AE9D8E6` |
-| Discovery determinism | PASS | Two Release runs SHA256 `0D2367057194346A208EE0BFD27BC7A1FC9ED7C50370346B85BAC2D8281E6BDF` |
+| B19 full-inventory classification | PASS | 333 emitted, 18 manual, 10,177 supported-unselected, 27,310 skipped, 78,376 blocked; 116,214/116,214 declarations and 7,090/7,090 headers classified; SHA256 `A6E86542CE4538EA63F14B6A58F35F628D793E4098C86BC17CDCA935EFF7257D` |
+| Discovery determinism | PASS | Release/Debug two-run SHA256 `28672A7508A9BB50815ED65FC738A3A5909B3B0FEED9A01C86586D9AFB00ABEC` |
 | Model determinism | PASS | Two runs SHA256 `980C73635039CAC3066E33413928F27060A8EF2F7043097BE13A7D4C51B292F9` |
 | Documentation navigation | PASS | One repository README; local Markdown targets checked |
 | Structured canonical model compile | PASS | Generator Release build, 0 warnings and 0 errors |
 | Structured canonical model tests | PASS | 3 generator tests; signature, qualifier, inheritance, template/handle facts |
 | Structured OCCT fact inventory | PASS | 1,965 parameterized, 2,388 returning, 61 inherited, 29 templated declarations; 236 handle uses |
-| Source package/toolkit identity | PASS | 5,503 of 5,503 declarations mapped; 0 unresolved in selected scope |
+| Source package/toolkit identity | PASS | 9,567 of 9,567 declarations mapped; 0 unresolved in selected scope |
 | Support classification tests | PASS | 2 tests; rule order, stable codes, complete/sorted summary |
-| Selected-scope support summary | PASS | 453 supported; 3,962 pending; 1,088 skipped |
+| Selected-scope support summary | PASS | 740 supported; 18 manual; 6,781 pending; 2,028 skipped |
 | Simple binding eligibility | PASS | Value-copy constructors/static methods promoted; instance/pointer/unknown-lifetime cases remain pending |
-| Coverage and diagnostics reports | PASS | 5,503 declarations; all states and stable disposition codes reported |
-| Report determinism | PASS | Release/Debug two-run match: coverage SHA256 `7C1296208E5500058DCC9FF7109A818845E288FCAE180EE71772DAB3A8411A4A`; diagnostics SHA256 `CB713CA3711BEA62B12311C520379D1475624F0DF9D41EB1A3EA11CC9E6AF1BA` |
+| Coverage and diagnostics reports | PASS | 9,567 declarations; all states and stable disposition codes reported |
+| Report determinism | PASS | Release/Debug two-run match: coverage SHA256 `F9EBFBCF2EF7AB8B0FA68E226A954B1A91CE292E013147D1F55CFE5999C011C5`; diagnostics SHA256 `3C8C07A5866CC3521CAC9B13D11675FB0269F97345D4A87A6A29E0C02050D826` |
 | Initial TypeMap tests | PASS | 9 tests; `TM001`–`TM007`, const-reference/top-level const input, unsafe pointer/reference rejection |
 | Native TypeMap compile fixture | PASS | OCCT scalar and enum width assertions in Release native build |
-| Configured generation scopes | PASS | Schema 1.5 selects seven value scopes, StepBasic package-expanded typed shared scopes, one topology scope, and eight checked typed topology identities |
+| Configured generation scopes | PASS | Schema 1.6 adds 18 validated SC-032 manual stable IDs to the existing generated scopes |
 | Generated value-copy bindings | PASS | Three `gp_Pnt` constructors plus 28 scalar static methods (20 `Precision`, three `TopAbs`, and five ownership-neutral additions) emitted to native/managed source; compiled and called in Release and Debug |
 | Generated typed shared binding | PASS | `Geom_CartesianPoint` plus 129 generated StepBasic public types and 333 total manifest IDs; construction, scalar/boolean/enum mutation, sharing, RTTI, and disposal pass in Release and Debug |
 | Generated topology binding | PASS | 8 base `TopoDS_Shape` operations plus 8 checked typed casts; solid/compound success, wrong-kind rejection, and source-disposal independence pass |
 | B05.1 opaque `gp_Trsf` bridge | PASS | Debug/Release runtime tests cover identity, composition, clone, inverse, finite/index validation, and shape application |
 | B05.2 opaque `TopLoc_Location` bridge | PASS | Debug/Release runtime tests cover identity, composition, clone, inverse, conversion, and absolute/relative shape placement |
 | B05 complete opaque `gp` value family | PASS | Debug/Release runtime tests cover `GpVec`, `GpDir`, `GpAx1`, `GpMat`, validation, conversion, and disposal; B05 is reported as one coarse batch |
+| B19.3 common modeling APIs | PASS | Release/Debug cover cone/torus, extrusion/revolution, all/single-edge fillet/chamfer, offset, section, finite bounds, validity/count, failures, layouts, and source independence |
 | B06 string/sequence/array/vector/map wave | PASS | Debug/Release runtime tests (40) cover UTF-8/UTF-16 conversion, finite mutation, lower-bound translation, map lookup/bind/unbind, ordered keys, clone ownership, one-shot snapshots, empty collections, stale disposal, and early-exit enumeration |
 | Generated staging and stale cleanup | PASS | Generator tests cover deterministic output and manifest-owned stale removal |
 | Generated source freshness | PASS | `eng/verify-generated.ps1 -Configuration Release`; 13 tracked files, no generated diff |
@@ -579,35 +598,35 @@ batch completion, and public-release readiness as four independent facts.
 | Interactive console samples | PASS (scoped) | Six-class menu compiles; first five workflows have redirected-input evidence; Viewer UI launch NOT RUN, while its HWND path is runtime/package tested |
 | B17 HWND visualization core | PASS | Release/Debug real HWND display, source-independent AIS shape, hide/show/resize/fit/redraw, thread rejection, detection/selection snapshot, and removal |
 | B18 optional dependency profiles | PASS | Release/Debug build audit classifies 6/6 profiles; IVtk/VTK and EGL/GLES blockers are named; core package unchanged |
-| Native runtime dependency closure | PASS | 45 DLLs in the alpha.40 Release package; TKOpenGl and TKDESTEP load from `occt` in the clean consumer |
+| Native runtime dependency closure | PASS | 47 DLLs in the alpha.41 Release package; new TKFillet/TKOffset plus prior closure load from `occt` |
 | XDE two-box assembly | PASS | One XDE assembly root, two occurrences, and 12-face STEP round-trip |
 | STEPCAF/XDE metadata | PASS (scoped) | Seven local inputs: color/style records retained, 4 material-property records retained, 7 assembly occurrences |
 | XDE native runtime libraries | PASS | `TKXCAF`, `TKCAF`, `TKLCAF`, and `TKCDF` present in Debug and Release runtime directories |
 | Checked shared-handle cast | PASS | Release/Debug `TryCastDerived` and `CastDerived`: retained success, wrong/null rejection, and `InvalidCastException` |
-| NuGet package contents | PASS | `0.1.0-alpha.40`; managed/XML/docs, 45 native DLLs, OCCT license and exception |
+| NuGet package contents | PASS | `0.1.0-alpha.41`; managed/XML/docs, 47 native DLLs, OCCT license and exception |
 | Package output layout | PASS | Published executable has `occt/` closure and no root `OcctSharp.Native.dll` |
-| Packaging/clean consumer | PASS | Local alpha.40 package plus NuGet restore/publish, ABI 1.32/bridge 0.40.0, 45 DLLs, all 129 generated StepBasic types, and prior profiles |
+| Packaging/clean consumer | PASS | Local alpha.41 package plus NuGet restore/publish, ABI 1.33/bridge 0.41.0, 47 DLLs, common modeling APIs, all 129 generated StepBasic types, and prior profiles |
 | Fresh-clone Sample native bootstrap | PASS | Missing Debug bridge simulation rebuilt 45 DLLs through `ensure-native.ps1`, copied `occt/`, and ran English entity creation |
 | Git whitespace checks | PASS | `git diff --check` and `git diff --cached --check` |
 | CI configuration | PASS | Generator job plus immutable URL/SHA full Windows release-check job configured in `.github/workflows/ci.yml` |
 | Hosted CI execution | NOT RUN | No remote workflow was dispatched from this local task |
-| B20 release engineering | PASS (implementation) | Alpha.38 API baseline 606, alpha.40 diff 1,132 additions/0 removals, 13-file freshness, SBOM/provenance/checksums/gates, Release/Debug and package gates |
+| B20 release engineering | PASS (implementation) | Alpha.38 API baseline 606, alpha.41 diff 1,157 additions/0 removals, 13-file freshness, SBOM/provenance/checksums/gates, Release/Debug and package gates |
 | Public release readiness | BLOCKED | Project license and non-OCCT third-party review unresolved; signing/publication NOT RUN |
 
 ## Migration loop state
 
 ```text
 LOOP_STATE: CONTINUE
-CURRENT_BATCH: B19.2
-COMPLETED_THIS_TURN: Expanded and validated the StepBasic package to 129 generated public shared types and 333 manifest IDs; added English-only Samples and repository-native bootstrap
-NEXT_BATCH: B19.3 HIGH-FREQUENCY MODELING AND TOPOLOGY APIS
-NEXT_ACTION: Select a coherent common-API closure covering modeling builders, traversal/transforms, fillet/chamfer/offset, exchange/XDE, mesh, and visualization priorities
-ENGINEERING_PROGRESS: 93%
+CURRENT_BATCH: B19.3
+COMPLETED_THIS_TURN: Added and validated common modeling operations plus schema-1.6 stable manual-binding reconciliation for 18 declarations
+NEXT_BATCH: B19.4 HIGH-FREQUENCY GEOMETRY AND ADVANCED TOPOLOGY APIS
+NEXT_ACTION: Select a coherent Geom/Geom2d construction, evaluation, projection, and topology-map ownership closure
+ENGINEERING_PROGRESS: 94%
 BATCH_PROGRESS: 19/21 (90.5%)
-SELECTED_BINDING_COVERAGE: 333/5503 (6.0512%)
+SELECTED_BINDING_COVERAGE: 351/9567 emitted plus accepted manual (3.6689%)
 FULL_PROFILE_COVERAGE: NOT ESTABLISHED
 INVENTORY_COMPLETENESS: 7058/7090 headers semantically scanned (99.5487%); 116214/116214 discovered declarations and 7090/7090 catalogued headers classified
-LAST_VALIDATION: B19.2 Release/Debug Generator 41/41 and Runtime 75/75, 13-file freshness, alpha.40 45-DLL clean consumer, manifest-aware inventory, and missing-native Sample bootstrap
+LAST_VALIDATION: B19.3 Release/Debug Generator 44/44 and Runtime 81/81, alpha.41 47-DLL clean consumer, and full inventory with 333 emitted plus 18 manual declarations
 BLOCKER: NONE
 ```
 

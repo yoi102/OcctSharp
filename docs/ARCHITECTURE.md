@@ -64,6 +64,8 @@ The accepted boundaries are recorded in ADRs:
   final dispositions for full-inventory declarations and failed entry headers.
 - [ADR-0051](adr/0051-repository-native-bootstrap.md): incremental repository-native
   bootstrap from pinned local or immutable OCCT inputs.
+- [ADR-0052](adr/0052-native-local-common-modeling-operations.md): native-local common
+  modeling algorithms plus fail-closed stable-ID accounting for manual bindings.
 
 ## Components
 
@@ -111,6 +113,13 @@ The B17 Windows visualization profile owns the complete display-driver/viewer/co
 view/window graph in one native wrapper bound to an application-owned HWND. AIS objects
 remain native and are addressed by parent-scoped IDs; selection is copied as IDs. The
 application forwards window/input events on the creating thread, with no reverse callback.
+
+The B19.3 common-modeling profile follows the existing owning-shape category. Primitive,
+feature, offset, section, bounding, and analyzer objects exist only during one native
+call. Topology results are independent registered owners; bounds are fixed copied values.
+Configuration schema 1.6 links each directly used manual declaration stable ID to SC-032,
+and both selected discovery and full inventory fail when a configured ID disappears or
+overlaps generated ownership.
 
 ### Managed raw bindings
 

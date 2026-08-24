@@ -1,9 +1,19 @@
 {
-  "schemaVersion": "1.5",
+  "schemaVersion": "1.6",
   "occtVersion": "8.0.1",
   "scope": "foundation-prototype",
   "headers": [
+    "BRepAlgoAPI_Section.hxx",
+    "BRepBndLib.hxx",
+    "BRepCheck_Analyzer.hxx",
+    "BRepFilletAPI_MakeChamfer.hxx",
+    "BRepFilletAPI_MakeFillet.hxx",
+    "BRepOffsetAPI_MakeOffsetShape.hxx",
     "BRepPrimAPI_MakeBox.hxx",
+    "BRepPrimAPI_MakeCone.hxx",
+    "BRepPrimAPI_MakePrism.hxx",
+    "BRepPrimAPI_MakeRevol.hxx",
+    "BRepPrimAPI_MakeTorus.hxx",
     "Geom_CartesianPoint.hxx",
     "gp_Pnt.hxx",
     "StepBasic_Address.hxx",
@@ -34,11 +44,19 @@
     "Bnd": "TKMath",
     "BRep": "TKBRep",
     "BRepBuilderAPI": "TKTopAlgo",
+    "BRepAlgoAPI": "TKBO",
+    "BRepCheck": "TKBRep",
+    "BRepFilletAPI": "TKFillet",
+    "BRepOffset": "TKOffset",
+    "BRepOffsetAPI": "TKOffset",
     "BRepPrim": "TKPrim",
     "BRepPrimAPI": "TKPrim",
     "Geom": "TKG3d",
     "Geom2d": "TKG2d",
     "GeomAbs": "TKMath",
+    "ChFi3d": "TKFillet",
+    "ChFiDS": "TKFillet",
+    "ChFiKPart": "TKFillet",
     "gp": "TKMath",
     "Message": "TKernel",
     "NCollection": "TKernel",
@@ -50,7 +68,9 @@
     "StepData": "TKXSBase",
     "TCollection": "TKernel",
     "TopAbs": "TKG3d",
+    "TopExp": "TKBRep",
     "TopLoc": "TKMath",
+    "TopTools": "TKBRep",
     "TopoDS": "TKBRep"
   },
   "inventoryPreambleHeaders": [
@@ -60,6 +80,80 @@
     "Prs3d_Presentation.hxx",
     "StepData_Factors.hxx",
     "Standard_OStream.hxx"
+  ],
+  "manualBindings": [
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@BRepAlgoAPI_Section#&1$@S@TopoDS_Shape#S0_#b#",
+      "specialCaseId": "SC-032"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@Build#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-032"
+    },
+    {
+      "stableId": "c:@S@BRepBndLib@F@AddOptimal#&1$@S@TopoDS_Shape#&$@S@Bnd_Box#b#b#S",
+      "specialCaseId": "SC-032"
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@BRepCheck_Analyzer#&1$@S@TopoDS_Shape#b#b#b#",
+      "specialCaseId": "SC-032"
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@IsValid#1",
+      "specialCaseId": "SC-032"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@Add#d#&1$@S@TopoDS_Edge#",
+      "specialCaseId": "SC-032"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@BRepFilletAPI_MakeChamfer#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-032"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@Build#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-032"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Add#d#&1$@S@TopoDS_Edge#",
+      "specialCaseId": "SC-032"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@BRepFilletAPI_MakeFillet#&1$@S@TopoDS_Shape#$@E@ChFi3d_FilletShape#",
+      "specialCaseId": "SC-032"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Build#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-032"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffsetShape@F@BRepOffsetAPI_MakeOffsetShape#",
+      "specialCaseId": "SC-032"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffsetShape@F@PerformByJoin#&1$@S@TopoDS_Shape#d#d#$@E@BRepOffset_Mode#b#b#$@E@GeomAbs_JoinType#b#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-032"
+    },
+    {
+      "stableId": "c:@S@BRepPrimAPI_MakeCone@F@BRepPrimAPI_MakeCone#d#d#d#",
+      "specialCaseId": "SC-032"
+    },
+    {
+      "stableId": "c:@S@BRepPrimAPI_MakePrism@F@BRepPrimAPI_MakePrism#&1$@S@TopoDS_Shape#&1$@S@gp_Vec#b#b#",
+      "specialCaseId": "SC-032"
+    },
+    {
+      "stableId": "c:@S@BRepPrimAPI_MakeRevol@F@BRepPrimAPI_MakeRevol#&1$@S@TopoDS_Shape#&1$@S@gp_Ax1#d#b#",
+      "specialCaseId": "SC-032"
+    },
+    {
+      "stableId": "c:@S@BRepPrimAPI_MakeTorus@F@BRepPrimAPI_MakeTorus#d#d#",
+      "specialCaseId": "SC-032"
+    },
+    {
+      "stableId": "c:@S@TopExp@F@MapShapes#&1$@S@TopoDS_Shape#$@E@TopAbs_ShapeEnum#&$@S@NCollection_IndexedMap>#S1_#$@S@TopTools_ShapeMapHasher#S",
+      "specialCaseId": "SC-032"
+    }
   ],
   "generationScopes": [
     {

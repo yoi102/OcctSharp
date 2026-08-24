@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([string]$PackageVersion = '0.1.0-alpha.40')
+param([string]$PackageVersion = '0.1.0-alpha.41')
 
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
@@ -18,7 +18,7 @@ $nativeComponents = @(Get-ChildItem -LiteralPath $nativeDirectory -Filter '*.dll
     $isOcct = $_.Name -like 'TK*.dll' -or $_.Name -eq 'TKernel.dll'
     [ordered]@{
         name = $_.Name
-        version = if ($isBridge) { '0.40.0' } elseif ($isOcct) { '8.0.1' } else { 'unknown' }
+        version = if ($isBridge) { '0.41.0' } elseif ($isOcct) { '8.0.1' } else { 'unknown' }
         type = 'file'
         hashes = @([ordered]@{ alg = 'SHA-256'; content = (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash })
         licenses = if ($isOcct) { @([ordered]@{ expression = 'LGPL-2.1-only WITH OCCT-exception-1.0' }) } else { @() }
@@ -55,8 +55,8 @@ $provenance = [ordered]@{
         dotnetSdk = (& dotnet --version).Trim()
         platform = 'windows-x64'
         configuration = 'Release'
-        nativeAbi = '1.32'
-        bridgeVersion = '0.40.0'
+        nativeAbi = '1.33'
+        bridgeVersion = '0.41.0'
         occtVersion = '8.0.1'
     }
     inputs = @($inputPaths | ForEach-Object {

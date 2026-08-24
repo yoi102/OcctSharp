@@ -21,6 +21,15 @@ public sealed record DiscoveryConfiguration(
     public IReadOnlyList<string> InventoryPreambleHeaders { get; init; } = [];
 
     public IReadOnlyList<string> HeaderPatterns { get; init; } = [];
+
+    public IReadOnlyList<ManualBindingConfiguration> ManualBindings { get; init; } = [];
+}
+
+public sealed record ManualBindingConfiguration
+{
+    public string StableId { get; init; } = string.Empty;
+
+    public string SpecialCaseId { get; init; } = string.Empty;
 }
 
 public sealed record SharedHandlePackageScopeConfiguration

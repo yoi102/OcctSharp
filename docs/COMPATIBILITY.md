@@ -7,7 +7,7 @@ reported as supported.
 
 | OcctSharp | Generator | Native ABI | OCCT | Platform | Compiler | .NET | Status |
 |---|---|---|---|---|---|---|---|
-| 0.1.0-alpha.40 workspace | ClangSharp 21.1.8.4 | 1.32 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
+| 0.1.0-alpha.41 workspace | ClangSharp 21.1.8.4 | 1.33 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
 
 Validated in both Debug and Release: native and managed build, ABI/runtime identity,
 OCCT box creation, topology traversal, error/disposal behavior, STEP geometry
@@ -71,13 +71,17 @@ generated StepBasic public types selected by schema 1.5. Release/Debug and clean
 tests construct, clone, reference-count, and dispose every type. A missing-native
 repository Sample simulation also rebuilds the 45-DLL Debug runtime and runs an English
 entity-creation workflow.
+The alpha.41 package adds native-local cone/torus, extrusion/revolution,
+all/single-edge fillet/chamfer, offset, section, finite bounds, validity, and public
+subshape-count APIs. Release/Debug runtime tests and the clean consumer validate owning
+result independence, value layouts, errors, and the 47-DLL closure with TKFillet/TKOffset.
 
 The map wave adds integer-key real lookup/bind/unbind and ordered indexed-key behavior
 with clone and duplicate-key validation in Debug and Release.
 
-The local `OcctSharp.0.1.0-alpha.40.nupkg` is clean-consumer validated for Windows x64:
-45 native DLLs are copied below the published application's `occt` directory, automatic
-native resolution reports ABI 1.32/bridge 0.40.0/OCCT 8.0.1, and generated, modeling,
+The local `OcctSharp.0.1.0-alpha.41.nupkg` is clean-consumer validated for Windows x64:
+47 native DLLs are copied below the published application's `occt` directory, automatic
+native resolution reports ABI 1.33/bridge 0.41.0/OCCT 8.0.1, and generated, modeling,
 exchange, OCAF, BinXCAF, STEPCAF metadata/assembly, adaptor, and viewer checks succeed.
 
 This is not yet `Supported`: CI, broad ownership, generated XDE/OCAF bindings,

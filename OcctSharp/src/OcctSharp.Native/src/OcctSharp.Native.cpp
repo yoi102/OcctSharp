@@ -11,9 +11,19 @@
 #include <BRepPrimAPI_MakeBox.hxx>
 #include <BRepPrimAPI_MakeSphere.hxx>
 #include <BRepPrimAPI_MakeCylinder.hxx>
+#include <BRepPrimAPI_MakeCone.hxx>
+#include <BRepPrimAPI_MakePrism.hxx>
+#include <BRepPrimAPI_MakeRevol.hxx>
+#include <BRepPrimAPI_MakeTorus.hxx>
 #include <BRepAlgoAPI_Fuse.hxx>
 #include <BRepAlgoAPI_Cut.hxx>
 #include <BRepAlgoAPI_Common.hxx>
+#include <BRepAlgoAPI_Section.hxx>
+#include <BRepBndLib.hxx>
+#include <BRepCheck_Analyzer.hxx>
+#include <BRepFilletAPI_MakeChamfer.hxx>
+#include <BRepFilletAPI_MakeFillet.hxx>
+#include <BRepOffsetAPI_MakeOffsetShape.hxx>
 #include <BRepAdaptor_Curve.hxx>
 #include <BRepAdaptor_Surface.hxx>
 #include <BRepExtrema_DistShapeShape.hxx>
@@ -66,7 +76,9 @@
 #include <TDocStd_Document.hxx>
 #include <TopAbs_ShapeEnum.hxx>
 #include <TopExp_Explorer.hxx>
+#include <TopExp.hxx>
 #include <TopLoc_Location.hxx>
+#include <TopTools_ShapeMapHasher.hxx>
 #include <TopoDS.hxx>
 #include <TopoDS_Compound.hxx>
 #include <TopoDS_Shape.hxx>
@@ -142,6 +154,10 @@ static_assert(alignof(OcctSharp_FaceSurfaceSnapshot) == 8);
 static_assert(offsetof(OcctSharp_FaceSurfaceSnapshot, surface_type) == 0);
 static_assert(offsetof(OcctSharp_FaceSurfaceSnapshot, first_u_parameter) == 8);
 static_assert(sizeof(OcctSharp_ShapeDistanceResult) == 64);
+static_assert(sizeof(OcctSharp_BoundingBox) == 48);
+static_assert(alignof(OcctSharp_BoundingBox) == 8);
+static_assert(offsetof(OcctSharp_BoundingBox, min_x) == 0);
+static_assert(offsetof(OcctSharp_BoundingBox, max_x) == 24);
 static_assert(sizeof(OcctSharp_XdeColor) == 32);
 static_assert(alignof(OcctSharp_ShapeDistanceResult) == 8);
 static_assert(offsetof(OcctSharp_ShapeDistanceResult, distance) == 0);
@@ -230,8 +246,8 @@ struct OcctSharp_ViewerHandle
 
 namespace
 {
-constexpr uint32_t AbiVersion = 0x00010020U;
-constexpr const char* BridgeVersion = "0.40.0";
+constexpr uint32_t AbiVersion = 0x00010021U;
+constexpr const char* BridgeVersion = "0.41.0";
 thread_local std::string LastError;
 std::mutex LiveShapesMutex;
 std::unordered_set<const OcctSharp_ShapeHandle*> LiveShapes;
@@ -1351,6 +1367,50 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_cylinder(
   return Guard([&] { *out_shape = AllocateShape(BRepPrimAPI_MakeCylinder(radius, height).Shape()); });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_cone(
+  const double bottom_radius, const double top_radius, const double height,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The cone output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (!std::isfinite(bottom_radius) || !std::isfinite(top_radius) || !std::isfinite(height)
+      || bottom_radius < 0.0 || top_radius < 0.0 || height <= 0.0
+      || (bottom_radius == 0.0 && top_radius == 0.0) || bottom_radius == top_radius)
+  {
+    SetLastError("Cone radii must be finite, non-negative, different, and not both zero; height must be finite and greater than zero.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  return Guard([&]
+  {
+    BRepPrimAPI_MakeCone builder(bottom_radius, top_radius, height);
+    TopoDS_Shape result = builder.Shape();
+    if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT cone construction did not complete.");
+    if (result.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT cone construction produced a null result.");
+    *out_shape = AllocateShape(std::move(result));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_torus(
+  const double major_radius, const double minor_radius, OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The torus output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (!std::isfinite(major_radius) || !std::isfinite(minor_radius)
+      || major_radius <= 0.0 || minor_radius <= 0.0 || major_radius <= minor_radius)
+  {
+    SetLastError("Torus radii must be finite and greater than zero, and the major radius must exceed the minor radius.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  return Guard([&]
+  {
+    BRepPrimAPI_MakeTorus builder(major_radius, minor_radius);
+    TopoDS_Shape result = builder.Shape();
+    if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT torus construction did not complete.");
+    if (result.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT torus construction produced a null result.");
+    *out_shape = AllocateShape(std::move(result));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_edge(
   const OcctSharp_Xyz start, const OcctSharp_Xyz end, OcctSharp_ShapeHandle** out_shape)
 {
@@ -1517,6 +1577,207 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_subshape_count(
   {
     ValidateShape(shape);
     for (TopExp_Explorer explorer(shape->Value, static_cast<TopAbs_ShapeEnum>(kind)); explorer.More(); explorer.Next()) ++*out_count;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_extrude(
+  const OcctSharp_ShapeHandle* shape, const OcctSharp_VecHandle* direction,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The extrusion output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  return Guard([&]
+  {
+    ValidateUsableShape(shape); ValidateVector(direction);
+    if (direction->Value.SquareMagnitude() <= 0.0)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The extrusion direction must be non-zero.");
+    BRepPrimAPI_MakePrism builder(shape->Value, direction->Value, false, false);
+    if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT extrusion did not complete.");
+    TopoDS_Shape result = builder.Shape();
+    if (result.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT extrusion produced a null result.");
+    *out_shape = AllocateShape(std::move(result));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_revolve(
+  const OcctSharp_ShapeHandle* shape, const OcctSharp_Ax1Handle* axis,
+  const double angle_radians, OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The revolution output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  const double full_turn = 2.0 * std::acos(-1.0);
+  if (!std::isfinite(angle_radians) || angle_radians == 0.0 || std::abs(angle_radians) > full_turn)
+  {
+    SetLastError("The revolution angle must be finite, non-zero, and no greater than one full turn in magnitude.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  return Guard([&]
+  {
+    ValidateUsableShape(shape); ValidateAxis(axis);
+    BRepPrimAPI_MakeRevol builder(shape->Value, axis->Value, angle_radians, false);
+    if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT revolution did not complete.");
+    TopoDS_Shape result = builder.Shape();
+    if (result.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT revolution produced a null result.");
+    *out_shape = AllocateShape(std::move(result));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_fillet_all(
+  const OcctSharp_ShapeHandle* shape, const double radius, OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The fillet output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (!std::isfinite(radius) || radius <= 0.0) { SetLastError("The fillet radius must be finite and greater than zero."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> edges;
+    TopExp::MapShapes(shape->Value, TopAbs_EDGE, edges);
+    if (edges.IsEmpty()) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The source shape has no edges to fillet.");
+    BRepFilletAPI_MakeFillet builder(shape->Value);
+    for (Standard_Integer index = 1; index <= edges.Extent(); ++index) builder.Add(radius, TopoDS::Edge(edges(index)));
+    builder.Build();
+    if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT fillet construction did not complete.");
+    TopoDS_Shape result = builder.Shape();
+    if (result.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT fillet construction produced a null result.");
+    *out_shape = AllocateShape(std::move(result));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_fillet_edge(
+  const OcctSharp_ShapeHandle* shape, const OcctSharp_ShapeHandle* edge,
+  const double radius, OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The fillet output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (!std::isfinite(radius) || radius <= 0.0) { SetLastError("The fillet radius must be finite and greater than zero."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateUsableShape(shape); ValidateUsableShape(edge);
+    if (edge->Value.ShapeType() != TopAbs_EDGE)
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Fillet construction requires an edge shape.");
+    BRepFilletAPI_MakeFillet builder(shape->Value);
+    builder.Add(radius, TopoDS::Edge(edge->Value));
+    builder.Build();
+    if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT fillet construction did not complete.");
+    TopoDS_Shape result = builder.Shape();
+    if (result.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT fillet construction produced a null result.");
+    *out_shape = AllocateShape(std::move(result));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_chamfer_all(
+  const OcctSharp_ShapeHandle* shape, const double distance, OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The chamfer output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (!std::isfinite(distance) || distance <= 0.0) { SetLastError("The chamfer distance must be finite and greater than zero."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> edges;
+    TopExp::MapShapes(shape->Value, TopAbs_EDGE, edges);
+    if (edges.IsEmpty()) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The source shape has no edges to chamfer.");
+    BRepFilletAPI_MakeChamfer builder(shape->Value);
+    for (Standard_Integer index = 1; index <= edges.Extent(); ++index) builder.Add(distance, TopoDS::Edge(edges(index)));
+    builder.Build();
+    if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT chamfer construction did not complete.");
+    TopoDS_Shape result = builder.Shape();
+    if (result.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT chamfer construction produced a null result.");
+    *out_shape = AllocateShape(std::move(result));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_chamfer_edge(
+  const OcctSharp_ShapeHandle* shape, const OcctSharp_ShapeHandle* edge,
+  const double distance, OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The chamfer output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (!std::isfinite(distance) || distance <= 0.0) { SetLastError("The chamfer distance must be finite and greater than zero."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateUsableShape(shape); ValidateUsableShape(edge);
+    if (edge->Value.ShapeType() != TopAbs_EDGE)
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Chamfer construction requires an edge shape.");
+    BRepFilletAPI_MakeChamfer builder(shape->Value);
+    builder.Add(distance, TopoDS::Edge(edge->Value));
+    builder.Build();
+    if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT chamfer construction did not complete.");
+    TopoDS_Shape result = builder.Shape();
+    if (result.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT chamfer construction produced a null result.");
+    *out_shape = AllocateShape(std::move(result));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_offset(
+  const OcctSharp_ShapeHandle* shape, const double offset, const double tolerance,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The offset output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (!std::isfinite(offset) || offset == 0.0 || !std::isfinite(tolerance) || tolerance <= 0.0)
+  {
+    SetLastError("The offset must be finite and non-zero, and tolerance must be finite and greater than zero.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    BRepOffsetAPI_MakeOffsetShape builder;
+    builder.PerformByJoin(shape->Value, offset, tolerance);
+    if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT offset construction did not complete.");
+    TopoDS_Shape result = builder.Shape();
+    if (result.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT offset construction produced a null result.");
+    *out_shape = AllocateShape(std::move(result));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_section(
+  const OcctSharp_ShapeHandle* left, const OcctSharp_ShapeHandle* right,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The section output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  return Guard([&]
+  {
+    ValidateUsableShape(left); ValidateUsableShape(right);
+    BRepAlgoAPI_Section builder(left->Value, right->Value, false);
+    builder.Build();
+    if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT section construction did not complete.");
+    TopoDS_Shape result = builder.Shape();
+    if (result.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT section construction produced a null result.");
+    *out_shape = AllocateShape(std::move(result));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_bounding_box(
+  const OcctSharp_ShapeHandle* shape, OcctSharp_BoundingBox* out_bounds)
+{
+  if (out_bounds == nullptr) { SetLastError("The bounding-box output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_bounds = {};
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    Bnd_Box box;
+    BRepBndLib::AddOptimal(shape->Value, box, false, true);
+    if (box.IsVoid() || box.IsOpen())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT did not produce finite shape bounds.");
+    box.Get(out_bounds->min_x, out_bounds->min_y, out_bounds->min_z,
+            out_bounds->max_x, out_bounds->max_y, out_bounds->max_z);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_is_valid(
+  const OcctSharp_ShapeHandle* shape, int32_t* out_is_valid)
+{
+  if (out_is_valid == nullptr) { SetLastError("The validity output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_is_valid = 0;
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    BRepCheck_Analyzer analyzer(shape->Value);
+    *out_is_valid = analyzer.IsValid() ? 1 : 0;
   });
 }
 

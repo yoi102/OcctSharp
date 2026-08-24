@@ -40,6 +40,26 @@ public static class ShapeFactory
         return FromNativeHandle(nativeShape, "shape_create_cylinder");
     }
 
+    /// <summary>Creates a conical solid with distinct non-negative radii and a positive height.</summary>
+    public static Shape CreateCone(double bottomRadius, double topRadius, double height)
+    {
+        OcctRuntime.EnsureCompatible();
+        NativeError.ThrowIfFailed(
+            NativeMethods.CreateCone(bottomRadius, topRadius, height, out nint nativeShape),
+            "shape_create_cone");
+        return FromNativeHandle(nativeShape, "shape_create_cone");
+    }
+
+    /// <summary>Creates a toroidal solid whose major radius exceeds its positive minor radius.</summary>
+    public static Shape CreateTorus(double majorRadius, double minorRadius)
+    {
+        OcctRuntime.EnsureCompatible();
+        NativeError.ThrowIfFailed(
+            NativeMethods.CreateTorus(majorRadius, minorRadius, out nint nativeShape),
+            "shape_create_torus");
+        return FromNativeHandle(nativeShape, "shape_create_torus");
+    }
+
     /// <summary>Creates a straight owning edge between two distinct finite points.</summary>
     public static Shape CreateEdge(GpPoint start, GpPoint end)
     {

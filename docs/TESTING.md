@@ -131,10 +131,16 @@ sample alone is not runtime evidence that the user closed or visually inspected 
 
 A repository-native bootstrap change additionally requires a recoverable missing-bridge
 simulation: remove or rename only the expected configuration's bridge, run the ordinary
-Sample build, verify native-only CMake recreation and the 45-DLL output `occt/` closure,
+Sample build, verify native-only CMake recreation and the current 47-DLL output `occt/` closure,
 then execute a non-UI OCCT Sample operation. The test must also prove that an
 unconfigured clone receives actionable SDK/archive instructions. This is separate from
 NuGet clean-consumer validation because package consumers carry native assets already.
+
+A common-modeling result profile additionally requires cone/torus, extrusion/revolution,
+all-edge and single-edge fillet/chamfer, offset, section, bounding-box fixed layout and
+numerics, full-topology validity, public subshape counts, invalid/null/disposed/wrong-kind
+paths, and source/result lifetime independence in both Release and Debug. Package
+validation must load `TKFillet` and `TKOffset` from application-local `occt/`.
 
 ## Real CAD fixtures
 

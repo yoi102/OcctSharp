@@ -29,6 +29,9 @@ target_link_libraries(OcctSharp.Native
     TKGeomAlgo
     TKTopAlgo
     TKPrim
+    TKBO
+    TKFillet
+    TKOffset
     TKMesh
     TKShHealing
     TKDESTEP
@@ -65,6 +68,8 @@ set(OCCTSHARP_RUNTIME_TARGETS
   TKGeomAlgo
   TKTopAlgo
   TKPrim
+  TKFillet
+  TKOffset
   TKMesh
   TKShHealing
   TKBO
