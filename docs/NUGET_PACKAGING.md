@@ -2,7 +2,7 @@
 
 ## Current package
 
-The current experimental package is `OcctSharp` `0.1.0-alpha.39` for .NET 10 and
+The current experimental package is `OcctSharp` `0.1.0-alpha.40` for .NET 10 and
 Windows x64. It contains:
 
 - `lib/net10.0/OcctSharp.dll` and XML documentation.
@@ -57,7 +57,7 @@ package to `artifacts/packages/`. `verify-package.ps1` restores only that local 
 into `tests/OcctSharp.PackageConsumer`, publishes it, checks the output layout, loads
 the native runtime, checks ABI/OCCT identity, and exercises generated
 `GeomCartesianPoint`, base `TopoDS_Shape`, typed topology, modeling, mesh, exchange,
-generated StepBasic scalar/shared entities and typed enums,
+all 129 generated StepBasic shared types and typed enums,
 copied BRep adaptor snapshot behavior, OBJ/PLY/GLB/VRML provider workflows, BinOcaf
 document persistence, BinXCAF/STEPCAF metadata assemblies, and an HWND-bound viewer
 display/selection smoke. The current application-local closure contains 45 DLLs.
@@ -67,12 +67,18 @@ display/selection smoke. The current application-local closure contains 45 DLLs.
 Once a package source contains the package, an application uses the normal command:
 
 ```powershell
-dotnet add package OcctSharp --version 0.1.0-alpha.39
+dotnet add package OcctSharp --version 0.1.0-alpha.40
 ```
 
 The application must run as a Windows x64 process on the current compatibility matrix.
 Missing or incomplete native assets produce an exception naming the expected `occt`
 directory rather than falling back to a machine-wide OCCT installation.
+
+This self-contained NuGet consumer path is intentionally separate from a repository
+ProjectReference. A fresh repository clone does not commit third-party native DLLs, so
+the Sample project uses ADR-0051's incremental `eng/ensure-native.ps1` bootstrap from a
+manifest-validated SDK or immutable archive. In both cases the executable receives the
+same application-local `occt/` directory and the managed resolver behavior is identical.
 
 ## Release evidence
 

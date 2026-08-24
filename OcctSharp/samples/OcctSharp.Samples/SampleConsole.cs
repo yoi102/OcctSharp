@@ -5,20 +5,20 @@ internal static class SampleConsole
     public static void WriteMenu()
     {
         Console.WriteLine();
-        Console.WriteLine("=== OcctSharp 示例 ===");
-        Console.WriteLine("1. 创建实体");
-        Console.WriteLine("2. 创建实体并输出 STEP");
-        Console.WriteLine("3. 创建实体并输出 STL");
-        Console.WriteLine("4. 创建实体并输出 IGES");
-        Console.WriteLine("5. 读取多个 STEP、变换并合并为 XDE STEP");
-        Console.WriteLine("6. 打开交互式 OCCT Viewer");
-        Console.WriteLine("0. 退出");
-        Console.Write("请选择操作：");
+        Console.WriteLine("=== OcctSharp Samples ===");
+        Console.WriteLine("1. Create a solid");
+        Console.WriteLine("2. Create a solid and export STEP");
+        Console.WriteLine("3. Create a solid and export STL");
+        Console.WriteLine("4. Create a solid and export IGES");
+        Console.WriteLine("5. Read, transform, and merge STEP files into an XDE STEP assembly");
+        Console.WriteLine("6. Open the interactive OCCT Viewer");
+        Console.WriteLine("0. Exit");
+        Console.Write("Choose an operation: ");
     }
 
     public static string ReadOutputPath(string defaultFileName)
     {
-        Console.Write($"输出文件路径（直接回车使用 artifacts/samples/{defaultFileName}）：");
+        Console.Write($"Output path (press Enter to use artifacts/samples/{defaultFileName}): ");
         string? input = Console.ReadLine()?.Trim();
         return string.IsNullOrWhiteSpace(input)
             ? SamplePaths.GetDefaultOutputPath(defaultFileName)
@@ -27,7 +27,7 @@ internal static class SampleConsole
 
     public static string[] ReadStepInputs()
     {
-        Console.Write("STEP 输入文件数量（直接回车使用 data 文件夹中的全部 STEP）：");
+        Console.Write("Number of STEP input files (press Enter to use every STEP file in data): ");
         string? countText = Console.ReadLine()?.Trim();
         if (string.IsNullOrWhiteSpace(countText))
         {
@@ -36,17 +36,17 @@ internal static class SampleConsole
 
         if (!int.TryParse(countText, out int count) || count <= 0)
         {
-            throw new ArgumentException("STEP 文件数量必须是大于零的整数。");
+            throw new ArgumentException("The STEP file count must be a positive integer.");
         }
 
         string[] paths = new string[count];
         for (int index = 0; index < count; index++)
         {
-            Console.Write($"第 {index + 1} 个 STEP 文件路径：");
+            Console.Write($"Path to STEP file {index + 1}: ");
             string? path = Console.ReadLine()?.Trim();
             if (string.IsNullOrWhiteSpace(path))
             {
-                throw new ArgumentException("STEP 文件路径不能为空。");
+                throw new ArgumentException("A STEP file path cannot be empty.");
             }
 
             paths[index] = Path.GetFullPath(path);
@@ -57,14 +57,14 @@ internal static class SampleConsole
 
     public static int InvalidChoice()
     {
-        Console.WriteLine("无效选择，请输入菜单中的数字。");
+        Console.WriteLine("Invalid choice. Enter a number shown in the menu.");
         return 2;
     }
 
     public static void Pause()
     {
         Console.WriteLine();
-        Console.Write("按回车返回主菜单...");
+        Console.Write("Press Enter to return to the main menu...");
         Console.ReadLine();
     }
 }

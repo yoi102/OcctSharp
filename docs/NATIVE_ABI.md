@@ -377,6 +377,14 @@ validated `int32_t`; native enum and entity layouts do not cross the ABI.
 
 The current native ABI is 1.31 and the bridge implementation version is 0.39.0.
 
+ABI 1.32 adds the B19.2 package-expanded StepBasic shared-entity closure. The generator
+uses the same per-type registry, retained clone, RTTI, reference-count, status, and
+exception contract for 129 public managed StepBasic types. The manifest owns 333 stable
+IDs; no entity layout or raw `Handle<T>` pointer crosses the ABI. Large generated MSVC
+translation units compile with `/bigobj` without changing the public contract.
+
+The current native ABI is 1.32 and the bridge implementation version is 0.40.0.
+
 ## Verification
 
 - Compile consumer tests against the exported C headers.

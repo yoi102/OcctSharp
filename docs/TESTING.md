@@ -129,6 +129,13 @@ creating-thread enforcement, mouse detection/selection, copied selection IDs, an
 invalidation. Package validation must load TKOpenGl from `occt`; compiling an interactive
 sample alone is not runtime evidence that the user closed or visually inspected it.
 
+A repository-native bootstrap change additionally requires a recoverable missing-bridge
+simulation: remove or rename only the expected configuration's bridge, run the ordinary
+Sample build, verify native-only CMake recreation and the 45-DLL output `occt/` closure,
+then execute a non-UI OCCT Sample operation. The test must also prove that an
+unconfigured clone receives actionable SDK/archive instructions. This is separate from
+NuGet clean-consumer validation because package consumers carry native assets already.
+
 ## Real CAD fixtures
 
 Every committed fixture must have:

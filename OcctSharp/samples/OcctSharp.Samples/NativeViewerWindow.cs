@@ -33,7 +33,7 @@ internal sealed class NativeViewerWindow : IDisposable
 
     public static NativeViewerWindow Create(string title, int width, int height)
     {
-        if (string.IsNullOrWhiteSpace(title)) throw new ArgumentException("窗口标题不能为空。", nameof(title));
+        if (string.IsNullOrWhiteSpace(title)) throw new ArgumentException("The window title cannot be empty.", nameof(title));
         ArgumentOutOfRangeException.ThrowIfNegativeOrZero(width);
         ArgumentOutOfRangeException.ThrowIfNegativeOrZero(height);
         _ = WindowClassAtom;
@@ -64,7 +64,7 @@ internal sealed class NativeViewerWindow : IDisposable
     {
         ArgumentNullException.ThrowIfNull(viewer);
         ObjectDisposedException.ThrowIf(Handle == 0, this);
-        if (_viewer is not null) throw new InvalidOperationException("窗口已经绑定 Viewer。");
+        if (_viewer is not null) throw new InvalidOperationException("The window is already bound to a viewer.");
         _viewer = viewer;
         viewer.Resize();
     }
@@ -83,7 +83,7 @@ internal sealed class NativeViewerWindow : IDisposable
 
         if (_callbackFailure is not null)
         {
-            throw new InvalidOperationException("Viewer 窗口消息处理失败。", _callbackFailure);
+            throw new InvalidOperationException("Viewer window message processing failed.", _callbackFailure);
         }
     }
 

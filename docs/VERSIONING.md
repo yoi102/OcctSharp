@@ -129,6 +129,10 @@ snapshots without exposing AIS/V3d pointers or reverse callbacks.
 The B19.1 StepBasic generated-binding wave is additive ABI 1.31/bridge 0.39.0 and
 advances the package to `0.1.0-alpha.39`. It adds typed Int32-backed enums and ten
 registry-validated intrusive shared-entity wrappers without changing existing exports.
+The B19.2 package expansion is additive ABI 1.32/bridge 0.40.0 and advances the package
+to `0.1.0-alpha.40`. It expands the same verified ownership contract to 129 generated
+StepBasic public types and 333 manifest IDs without removing an existing managed or
+native API.
 
 ## Upgrade classification
 

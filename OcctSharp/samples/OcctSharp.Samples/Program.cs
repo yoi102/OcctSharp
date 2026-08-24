@@ -10,7 +10,7 @@ internal static class Program
             string? choice = Console.ReadLine()?.Trim();
             if (choice is null || choice == "0")
             {
-                Console.WriteLine("程序结束。");
+                Console.WriteLine("Program ended.");
                 return 0;
             }
 
@@ -32,7 +32,7 @@ internal static class Program
             catch (Exception error)
             {
                 Console.WriteLine();
-                Console.WriteLine($"操作失败：{error.Message}");
+                Console.WriteLine($"Operation failed: {error.Message}");
                 SampleConsole.Pause();
             }
         }

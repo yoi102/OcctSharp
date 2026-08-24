@@ -4,7 +4,7 @@ internal static class ViewerSample
 {
     public static int Run()
     {
-        Console.WriteLine("即将打开 OCCT Viewer：移动鼠标可高亮实体，单击可选择，关闭窗口后返回菜单。");
+        Console.WriteLine("Opening the OCCT Viewer. Move the pointer to highlight the solid, click to select it, and close the window to return to the menu.");
 
         using NativeViewerWindow window = NativeViewerWindow.Create("OcctSharp Viewer Sample", 960, 640);
         using OcctViewer viewer = OcctViewer.Create(window.Handle);

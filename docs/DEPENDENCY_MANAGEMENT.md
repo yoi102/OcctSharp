@@ -45,17 +45,23 @@ Generation depends on both OCCT and the C++ parser toolchain. Pin and record:
 Compiler arguments that affect parsing are part of the generator input, not local
 developer preferences.
 
-## Acquisition strategies under consideration
+## Acquisition strategies
 
 | Strategy | Development | Release | Current state |
 |---|---|---|---|
 | Controlled OCCT source build | Reproducible but slower | Strong provenance | Candidate |
-| Verified prebuilt OCCT artifacts | Fast | Requires trusted build metadata | Selected for local Phase 0 |
+| Verified prebuilt OCCT artifacts | Fast | Requires trusted build metadata | Implemented for local/CI immutable URL plus SHA256 inputs; no public URL approved |
 | vcpkg | Convenient | Must not require package manager on user machines | Candidate |
 
 ADR-0004 selects the supplied prebuilt combined distribution for the first local
 baseline. B20 configures CI acquisition through an immutable archive URL plus SHA256;
 hosted execution still requires repository variables and has not been run.
+ADR-0051 extends the same fail-closed input to repository Sample bootstrap:
+`eng/ensure-native.ps1` accepts a manifest-validated extracted SDK or an absolute HTTPS
+archive plus SHA256, caches it below ignored `artifacts/dependencies/`, and builds only
+the native bridge. It never searches for a machine-wide OCCT installation. The archive
+mechanism is implemented, but selecting and approving an authoritative URL remains an
+external provenance decision.
 
 ## Native redistribution
 

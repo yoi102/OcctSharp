@@ -1,6 +1,6 @@
 # Third-Party Notices and Review Status
 
-The local alpha.39 package is not approved for public redistribution. This inventory is
+The local alpha.40 package is not approved for public redistribution. This inventory is
 a release gate, not a declaration that every license review is complete.
 
 ## Open CASCADE Technology

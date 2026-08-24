@@ -203,3 +203,9 @@ to the friendly 0-based view. No native iterator escapes.
 - Stress loops with native leak and invalid-access diagnostics enabled.
 
 Any change to O001–O012 requires an ADR and corresponding tests.
+
+B19.2 does not introduce a new ownership category. Package-level discovery expands the
+existing O004 generated intrusive shared-handle contract from ten to 129 StepBasic
+types. Each wrapper registry owns exactly one retained `Handle<T>` value; `Clone()` adds
+one intrusive reference, disposal releases one wrapper, and every generated type is
+runtime-tested through 1-to-2-to-1 reference counts and disposed-use rejection.

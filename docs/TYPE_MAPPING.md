@@ -99,6 +99,13 @@ type, generation fails with both source locations and rule IDs. A context-specif
 mapping requires an explicit rule and documentation rather than accidental emitter
 behavior.
 
+B19.2 keeps `TM004` enum and `TM006` intrusive shared-handle semantics unchanged while
+generalizing selection. Schema 1.5 header patterns discover the complete StepBasic
+header family, and the package scope expands only records proven to derive from
+`Standard_Transient` with a supported public default construction path. Unknown
+parameters, returns, borrowed references, and non-default-constructible entities remain
+classified rather than receiving an invented mapping.
+
 ## Change process
 
 1. Identify the canonical native type and all affected use sites.

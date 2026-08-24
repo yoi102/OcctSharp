@@ -57,6 +57,7 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0048](adr/0048-final-long-tail-and-header-classification.md) | Give every full-inventory declaration and entry header a deterministic final disposition | Accepted |
 | [ADR-0049](adr/0049-release-evidence-and-publication-gates.md) | Use one reproducible release evidence pipeline and keep batch completion separate from publication readiness | Superseded in part by ADR-0050 |
 | [ADR-0050](adr/0050-completion-gates-are-not-classification-gates.md) | Do not treat complete classification or release tooling as completed migration batches | Accepted |
+| [ADR-0051](adr/0051-repository-native-bootstrap.md) | Bootstrap repository native runtime from pinned local or immutable OCCT inputs | Accepted |
 
 ## Pending decisions
 

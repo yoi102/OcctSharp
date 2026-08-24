@@ -186,9 +186,13 @@ release notes, and explicit machine-readable gates. This does not authorize publ
 publication; project-license and third-party review remain blocked, and hosted CI,
 signing, and NuGet publication are `NOT RUN`.
 
-B00-B18 are complete (19/21). B19 classification infrastructure and B19.1's first ten
-StepBasic generated shared entities are complete, but B19 binding migration remains open
-because 10,338 bindable declarations are still unselected and broad LT001-LT004
+B00-B18 are complete (19/21). B19 classification infrastructure, B19.1, and B19.2's
+129 generated StepBasic shared types are complete, but B19 binding migration remains open
+because 10,177 bindable declarations are still unselected and broad LT001-LT004
 projection/ownership blockers remain. B20 release engineering is
 implemented, but its complete-migration gates remain open. Work continues through real
 emitted/manual coverage rather than reclassification-only milestones.
+
+B19.3 prioritizes high-frequency modeling, topology traversal/transforms,
+fillet/chamfer/offset, STEP/IGES/STL/XDE, mesh, and visualization API closures before
+additional low-value STEP data-entity expansion.

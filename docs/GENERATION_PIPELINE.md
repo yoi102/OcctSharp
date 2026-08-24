@@ -66,8 +66,8 @@ must not renumber or silently redefine an existing code.
 The following simple-binding eligibility pass now promotes only value-copy constructors
 and static methods whose complete parameter and return projections are known to the
 central TypeMap. Instance receivers, pointer/reference returns, and any unknown ownership
-remain pending. In the selected 3,406-declaration scope, 273 declarations are currently
-eligible, 2,370 remain pending, and 763 retain their stable skip reasons. Eligibility
+remain pending. In the selected 5,503-declaration scope, 453 declarations are currently
+eligible, 3,962 remain pending, and 1,088 retain their stable skip reasons. Eligibility
 does not imply that every candidate is emitted yet.
 
 The first batch emitter selects the `gp_Pnt` value-copy constructors and the configured
@@ -77,10 +77,11 @@ three from `TopAbs`, and five ownership-neutral methods from `Standard`, `TopLoc
 `gp`, for 31 declarations total including three constructors. `Standard::Purge` remains
 excluded because it has process-wide side effects rather than value-copy semantics.
 The typed shared-handle emitter selects 11 safe constructors and instance members for
-configured `Geom_CartesianPoint` plus 106 scalar/shared members across ten StepBasic
-entities. The enum emitter adds seven referenced enum declarations. The topology emitter
+configured `Geom_CartesianPoint` plus a schema-1.5 package expansion covering 129
+default-constructible StepBasic shared types. The enum emitter adds referenced enum
+declarations. The topology emitter
 selects eight `TopoDS_Shape` value-semantic declarations and eight checked typed topology
-casts, bringing the current emitted total to 171.
+casts, bringing the current manifest total to 333 stable IDs.
 This still excludes borrowed receivers, typed topology subclasses, and other packages
 until each scope has focused semantic tests. Static overloads are grouped by
 native name, ordered by normalized native signature then stable ID, and receive a
@@ -99,6 +100,11 @@ identity gates the generated shared category after `TM006` and the shared-handle
 eligibility pass prove each selected member.
 Schema 1.4 adds `topologyScopes`; the initial fail-closed emitter accepts only the
 reviewed `TopoDS_Shape`/`Shape` scope and produces module-partitioned `Topology` output.
+Schema 1.5 adds deterministic `headerPatterns` plus `sharedHandlePackageScopes`.
+The expander derives explicit per-type scopes only from discovered records that match
+the package/native prefix, derive from `Standard_Transient`, and expose a supported
+public default constructor. Exclusions remain configured and the resulting type order is
+stable, so package expansion does not weaken `TM006` ownership checks.
 Referenced `TM004` enums are emitted into a separate manifest-owned managed file from
 their discovered definitions. Full inventory receives the same manifest stable IDs so
 generated declarations become `Emitted/EM001` instead of remaining eligible-unselected.
@@ -191,8 +197,9 @@ dotnet run --project .\src\OcctSharp.Generator\OcctSharp.Generator.csproj -- gen
 
 Generation currently selects three validated `gp_Pnt` value-copy constructors plus 28
 value-copy static methods across `Precision`, `TopAbs`, `Standard`, `TopLoc`, and `gp`,
-plus 11 typed shared-handle declarations for `Geom_CartesianPoint` and eight
-`TopoDS_Shape` value-semantic declarations. It emits twelve native/managed files into
+plus typed shared-handle declarations for `Geom_CartesianPoint` and 129 StepBasic types,
+and eight `TopoDS_Shape` value-semantic declarations. It owns 333 stable IDs and emits
+13 native/managed files into
 module-partitioned isolated staging, verifies their hashes, replaces the generated set, removes only stale
 paths owned by the previous manifest, and writes the coverage/diagnostics reports through
 separate isolated report staging.

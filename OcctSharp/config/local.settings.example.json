@@ -1,4 +1,6 @@
 {
   "occtRoot": "C:/path/to/opencascade-8.0.1-vc14-64",
-  "visualStudioRoot": "C:/Program Files/Microsoft Visual Studio/18/Enterprise"
+  "visualStudioRoot": "C:/Program Files/Microsoft Visual Studio/18/Enterprise",
+  "occtArtifactUrl": "",
+  "occtArtifactSha256": ""
 }

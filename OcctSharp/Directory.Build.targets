@@ -1,12 +1,31 @@
 <Project>
-  <Target Name="CopyOcctSharpNativeRuntime"
+  <ItemGroup Condition="'$(CopyOcctSharpNativeRuntime)' == 'true'">
+    <_OcctSharpNativeBuildInput Include="$(MSBuildThisFileDirectory)CMakeLists.txt" />
+    <_OcctSharpNativeBuildInput Include="$(MSBuildThisFileDirectory)CMakePresets.json" />
+    <_OcctSharpNativeBuildInput Include="$(MSBuildThisFileDirectory)src\OcctSharp.Native\CMakeLists.txt" />
+    <_OcctSharpNativeBuildInput Include="$(MSBuildThisFileDirectory)src\OcctSharp.Native\include\**\*" />
+    <_OcctSharpNativeBuildInput Include="$(MSBuildThisFileDirectory)src\OcctSharp.Native\src\**\*" />
+    <_OcctSharpNativeBuildInput Include="$(MSBuildThisFileDirectory)src\OcctSharp.Native\generated\**\*" />
+  </ItemGroup>
+
+  <Target Name="EnsureOcctSharpNativeRuntime"
+          BeforeTargets="Build"
+          Condition="'$(CopyOcctSharpNativeRuntime)' == 'true'"
+          Inputs="@(_OcctSharpNativeBuildInput)"
+          Outputs="$(OcctSharpNativeRuntimeDir)\OcctSharp.Native.dll">
+    <Error Condition="'$(OS)' != 'Windows_NT'"
+           Text="Repository-native bootstrap currently supports Windows x64 only." />
+    <Exec Command="powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File &quot;$(MSBuildThisFileDirectory)eng\ensure-native.ps1&quot; -Configuration &quot;$(Configuration)&quot;" />
+  </Target>
+
+  <Target Name="CopyOcctSharpNativeRuntimeFiles"
           AfterTargets="Build"
           Condition="'$(CopyOcctSharpNativeRuntime)' == 'true'">
     <ItemGroup>
       <_OcctSharpNativeRuntime Include="$(OcctSharpNativeRuntimeDir)\*.dll" />
     </ItemGroup>
     <Error Condition="'@(_OcctSharpNativeRuntime)' == ''"
-           Text="OcctSharp native runtime was not found at '$(OcctSharpNativeRuntimeDir)'. Run eng/build.ps1 so the native bridge is built first." />
+           Text="OcctSharp native runtime bootstrap did not produce DLLs at '$(OcctSharpNativeRuntimeDir)'." />
     <MakeDir Directories="$(TargetDir)occt" />
     <Copy SourceFiles="@(_OcctSharpNativeRuntime)"
           DestinationFolder="$(TargetDir)occt"

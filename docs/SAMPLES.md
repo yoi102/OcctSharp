@@ -5,11 +5,26 @@ console entry point for current examples. It shows a menu and reads choices and 
 with `Console.ReadLine`; each workflow has its own English-named class. There are no
 command-line subcommands or separate sample README files.
 
-Run these commands from the inner `OcctSharp/` workspace after `eng/build.ps1`:
+Run this command from the inner `OcctSharp/` workspace:
 
 ```powershell
 dotnet run --project .\samples\OcctSharp.Samples --configuration Release
 ```
+
+All Sample source, prompts, diagnostics, and output text are English. On a fresh clone,
+the Sample build automatically invokes the native-only bootstrap when the requested
+native runtime is absent or stale, then copies all DLLs below its output `occt/`
+directory. Configure one of these dependency inputs before the first run:
+
+- Set `OCCTSHARP_OCCT_ROOT` to the pinned OCCT 8.0.1 SDK root; or
+- copy `config/local.settings.example.json` to ignored `config/local.settings.json` and
+  set `occtRoot`; or
+- set `OCCTSHARP_OCCT_ARTIFACT_URL` and
+  `OCCTSHARP_OCCT_ARTIFACT_SHA256` to an approved immutable HTTPS archive.
+
+The bootstrap runs CMake only and does not recursively build the managed solution or
+run the complete test pipeline. Use `eng/build.ps1` when regeneration and full tests are
+required.
 
 Choose an item from the menu. The first item creates a `40 x 30 x 20` box. The next
 three items create a box and write STEP, binary STL, or BRep-mode IGES. For each export,

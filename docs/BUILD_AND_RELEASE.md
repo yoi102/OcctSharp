@@ -23,6 +23,25 @@ Copy `OcctSharp/config/local.settings.example.json` to
 The committed `OcctSharp/config/occt-8.0.1-windows-x64.json` records the expected
 distribution layout and verification hashes without local paths.
 
+As an alternative to a pre-extracted SDK path, set both
+`OCCTSHARP_OCCT_ARTIFACT_URL` and `OCCTSHARP_OCCT_ARTIFACT_SHA256`, or set the matching
+`occtArtifactUrl`/`occtArtifactSha256` local settings. Only an absolute HTTPS URL with a
+64-digit SHA256 is accepted. The verified archive is cached and extracted below ignored
+`artifacts/dependencies/`; no artifact URL is currently committed or implicitly trusted.
+
+Repository Sample builds have a smaller first-run path:
+
+```powershell
+dotnet run --project .\samples\OcctSharp.Samples --configuration Debug
+```
+
+If the Debug native runtime is missing or stale, MSBuild invokes
+`eng/ensure-native.ps1`, builds only the native bridge and 45-DLL closure, and copies it
+to the Sample output's `occt/` directory. It does not call `eng/build.ps1` and cannot
+recurse into the managed build. A clone without any configured OCCT input fails with
+instructions for the three supported input methods. NuGet consumers are different:
+their package already contains `occt/` and they do not need an OCCT SDK.
+
 ## Current local commands
 
 From the inner `OcctSharp/` workspace:
@@ -73,7 +92,7 @@ Create and verify the experimental NuGet package with:
 ```
 
 The package verifier restores the new local package into a package-only consumer,
-publishes it, confirms all 36 native runtime DLLs are below `occt`, then loads OCCT and
+publishes it, confirms all 45 native runtime DLLs are below `occt`, then loads OCCT and
 executes box, generated typed-handle, and generated topology-value checks. See
 [NuGet packaging](NUGET_PACKAGING.md) for the exact layout.
 
@@ -122,6 +141,8 @@ signing, and public publication are not.
 ## Build principles
 
 - A clean checkout must not depend on an unrecorded machine-wide OCCT installation.
+- Repository-native bootstrap must use a manifest-validated SDK or an immutable
+  HTTPS archive plus SHA256 and must never recursively invoke the managed build.
 - Dependency resolution, generation, native build, managed build, tests, packaging,
   and package-consumer validation are distinct stages.
 - Build output and downloaded dependencies stay under ignored inner-workspace paths.

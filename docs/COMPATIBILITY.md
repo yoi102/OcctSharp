@@ -7,7 +7,7 @@ reported as supported.
 
 | OcctSharp | Generator | Native ABI | OCCT | Platform | Compiler | .NET | Status |
 |---|---|---|---|---|---|---|---|
-| 0.1.0-alpha.39 workspace | ClangSharp 21.1.8.4 | 1.31 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
+| 0.1.0-alpha.40 workspace | ClangSharp 21.1.8.4 | 1.32 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
 
 Validated in both Debug and Release: native and managed build, ABI/runtime identity,
 OCCT box creation, topology traversal, error/disposal behavior, STEP geometry
@@ -66,13 +66,18 @@ The alpha.39 package adds generated typed enums and ten StepBasic intrusive shar
 entities. Release/Debug tests cover scalar, boolean, enum, clone/reference-count, RTTI,
 idempotent disposal, and disposed-use behavior; the clean consumer repeats a shared
 clone and enum round-trip.
+The alpha.40 package expands the same ownership contract to all 129 default-constructible
+generated StepBasic public types selected by schema 1.5. Release/Debug and clean-consumer
+tests construct, clone, reference-count, and dispose every type. A missing-native
+repository Sample simulation also rebuilds the 45-DLL Debug runtime and runs an English
+entity-creation workflow.
 
 The map wave adds integer-key real lookup/bind/unbind and ordered indexed-key behavior
 with clone and duplicate-key validation in Debug and Release.
 
-The local `OcctSharp.0.1.0-alpha.39.nupkg` is clean-consumer validated for Windows x64:
+The local `OcctSharp.0.1.0-alpha.40.nupkg` is clean-consumer validated for Windows x64:
 45 native DLLs are copied below the published application's `occt` directory, automatic
-native resolution reports ABI 1.31/bridge 0.39.0/OCCT 8.0.1, and generated, modeling,
+native resolution reports ABI 1.32/bridge 0.40.0/OCCT 8.0.1, and generated, modeling,
 exchange, OCAF, BinXCAF, STEPCAF metadata/assembly, adaptor, and viewer checks succeed.
 
 This is not yet `Supported`: CI, broad ownership, generated XDE/OCAF bindings,

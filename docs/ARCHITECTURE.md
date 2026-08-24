@@ -62,6 +62,8 @@ The accepted boundaries are recorded in ADRs:
   optional dependency profiles and isolated future packages.
 - [ADR-0048](adr/0048-final-long-tail-and-header-classification.md): deterministic
   final dispositions for full-inventory declarations and failed entry headers.
+- [ADR-0051](adr/0051-repository-native-bootstrap.md): incremental repository-native
+  bootstrap from pinned local or immutable OCCT inputs.
 
 ## Components
 
@@ -139,6 +141,13 @@ consumer's `occt` output directory. An assembly-level resolver loads the bridge 
 that exact application-local path; process `PATH` and machine-wide OCCT installations
 are not package dependencies.
 
+Repository projects use a distinct developer bootstrap. The Sample project's incremental
+MSBuild target invokes `eng/ensure-native.ps1` only when the requested native artifact is
+missing or stale. That script validates the pinned OCCT manifest and builds CMake native
+targets without invoking the managed solution. Inputs come from an explicit/local SDK
+path or an immutable HTTPS archive plus SHA256; no floating or machine-wide fallback is
+allowed. Both the repository and NuGet paths converge on the same output `occt/` layout.
+
 ### Reports and baselines
 
 Generation produces machine-readable and human-readable reports for discovered,
@@ -158,7 +167,8 @@ manifest supports upgrade diffs between pinned OCCT baselines.
 
 ## Explicitly unresolved decisions
 
-- Automated acquisition/provenance mechanism for the OCCT 8.0.1 baseline.
+- The repository supports immutable URL/SHA256 acquisition, but an approved public
+  OCCT 8.0.1 artifact location is not yet selected or committed.
 - General shared, borrowed, parent-bound, and runtime-typed handle representation.
 
 The first checked cast boundary is implemented for the experimental

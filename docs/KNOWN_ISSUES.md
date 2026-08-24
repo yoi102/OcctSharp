@@ -82,10 +82,10 @@ evidence updated.
 - Status: Open
 - Severity: High
 - Area: Generator
-- Problem: Deterministic native/managed emission now produces 171 declarations across
-  value-copy scopes, eleven generated typed shared-handle types, typed enums, base
-  topology values, and checked typed topology casts, but this is only 5.0206%
-  of the selected 3,406-declaration dependency closure and not full OCCT coverage. The
+- Problem: Deterministic native/managed emission now owns 333 stable IDs across
+  value-copy scopes, `Geom_CartesianPoint`, 129 generated StepBasic shared types, typed
+  enums, base topology values, and checked typed topology casts, but this is only 6.0512%
+  of the selected 5,503-declaration dependency closure and not full OCCT coverage. The
   validated shape and exchange bridges remain manual.
 - Current mitigation: `TM001`–`TM007`, explicit generation scopes, support diagnostics,
   manifest-aware inventory, and compile/runtime/lifetime tests prevent unknown ownership

@@ -82,7 +82,7 @@ runtime/lifetime tests, package consumer, documentation, and coverage update.
 | B16 | Complete (metadata/assembly profile) | XDE and metadata | Parent-bound XDE labels; shapes, assemblies, occurrences, locations; copied names/RGBA/layers/materials; BinXCAF and STEPCAF | Release/Debug 67/67, memory/BinXCAF/STEPCAF round-trip, freshness, alpha.37 consumer, 44-DLL closure |
 | B17 | Complete (Windows core profile) | Visualization core | HWND-bound Aspect/OpenGl/V3d/AIS owner, parent-bound presentations, explicit input forwarding, copied selection IDs | Release/Debug 68/68, real HWND display/selection/thread tests, freshness, interactive sample, alpha.38 consumer, 45-DLL closure |
 | B18 | Complete (dependency-profile classification) | Optional integrations | Versioned audit for IVtk/VTK, OpenGL ES, Draw/test, WNT, Cocoa/X11, and C++/CLI; isolated future package boundaries | 6/6 profiles classified; Windows viewer available, named optional dependencies blocked/excluded without entering core; Release/Debug audit passes |
-| B19 | In progress (B19.1 complete) | Long-tail and templates | Classification is complete; B19.1 emits 171 manifest IDs, while 10,338 `SupportedUnselected` declarations and LT001-LT004 projection/ownership work remain | Close only when every bindable declaration is emitted or accepted manual and no safety-critical unknown projection remains |
+| B19 | In progress (B19.1-B19.2 complete) | Long-tail and templates | Classification is complete; B19.2 emits 333 manifest IDs, while 10,177 `SupportedUnselected` declarations and LT001-LT004 projection/ownership work remain | Close only when every bindable declaration is emitted or accepted manual and no safety-critical unknown projection remains |
 | B20 | In progress (release engineering implemented) | Upgrade and release | 606-signature API baseline/diff, immutable-artifact CI, clean regeneration, notices, SBOM/provenance/checksums, explicit gates | Release tooling passes locally, but bindable-emission, license/notice, hosted CI, signing, and publication-scope gates remain open |
 
 Current batch progress is 19 of 21 complete (90.5%). This measures execution batches,
@@ -93,7 +93,8 @@ not OCCT declaration coverage or public-release readiness.
 | Sub-batch | Status | Scope | Evidence |
 |---|---|---|---|
 | B19.1 | Complete | Ten StepBasic scalar/shared entities plus typed enum emission and manifest-aware inventory reconciliation | 171/3,406 selected emitted; Release/Debug Generator 40/40 and Runtime 73/73; alpha.39 45-DLL clean consumer; 13-file freshness |
-| B19.2 | Next | Larger StepBasic/StepRepr scalar shared-entity closure | Select 100-500 declarations, then repeat generation, lifetime, package, and inventory gates |
+| B19.2 | Complete | StepBasic package-level default-constructible shared-entity closure | 333/5,503 selected emitted; 129 public generated StepBasic types; Release/Debug Generator 41/41 and Runtime 75/75; alpha.40 45-DLL clean consumer; 13-file freshness |
+| B19.3 | Next | High-frequency modeling, topology, transform, exchange/XDE, mesh, and visualization closure | Select a coherent common-API dependency closure before additional low-value STEP data entities; repeat generation, ownership/lifetime, package, inventory, documentation, and commit gates |
 
 ## Batch sizing
 
