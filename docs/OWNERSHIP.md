@@ -68,11 +68,30 @@ managed wrapper may be disposed first. Per-type registries reject stale wrapper
 addresses. Borrowed handles, parent-bound handles, general casts, and concurrent
 release/use remain pending.
 
-B19.1 applies that same generated shared category without changing O001-O012 to ten
+The initial generated StepBasic milestone applies that same shared category without changing O001-O012 to ten
 StepBasic entity classes. Constructors create one intrusive handle, `Clone` retains the
 same entity, scalar/boolean/enum members operate through a registry-validated receiver,
 and disposal releases one retained reference. Handle-valued fields and parameters remain
 unemitted until cross-generated-type conversion and null semantics are generalized.
+
+The alpha.44 package-level expansion applies the same category to selected BRepMesh,
+Poly, ShapeAnalysis, ShapeFix, and ShapeUpgrade records. Binding-model schema 1.2
+records `IsAbstract`, and abstract records are excluded even when a public constructor
+is visible. The 61 emitted concrete types keep per-type live registries, one retained
+OCCT intrusive handle per managed wrapper, and value-copy scalar/enum arguments/results.
+No algorithm child, mesh buffer, topology reference, or cross-type `Handle<T>` value is
+  borrowed through this profile.
+
+The alpha.45 STEP model expansion applies the same owning-wrapper category to concrete
+`StepGeom`, `StepRepr`, `StepShape`, and `StepVisual` entities. Each managed wrapper retains
+one OCCT intrusive reference and can be cloned independently.
+
+Alpha.46 generalizes relationships between selected generated shared-handle types. Managed
+`null` maps to a null OCCT handle. A non-null parameter is checked for disposal before its
+opaque registry token is passed, then the target-specific native registry validates it.
+A returned non-null handle is copied into a newly allocated target wrapper and therefore
+remains valid after the source argument or receiver is disposed. Returned null handles map
+to managed `null`; no borrowed relationship wrapper is created.
 
 ### `TopoDS_*`
 
@@ -120,7 +139,7 @@ SC-032/ADR-0052. Input shapes, vectors, axes, and selected edges are borrowed on
 the call. Every topology result is a new registered owning shape and does not retain an
 input wrapper. Bounding boxes are six copied doubles with no native lifetime; validity
 and subshape counts are copied scalar values. Algorithm history, progress, contours,
-and per-face offset state do not cross the B19.3 ABI.
+and per-face offset state do not cross the common-modeling ABI.
 
 ### Boolean and healing history exclusion
 
@@ -214,13 +233,46 @@ to the friendly 0-based view. No native iterator escapes.
 
 Any change to O001–O012 requires an ADR and corresponding tests.
 
-B19.2 does not introduce a new ownership category. Package-level discovery expands the
+The package-level StepBasic milestone does not introduce a new ownership category. Discovery expands the
 existing O004 generated intrusive shared-handle contract from ten to 129 StepBasic
 types. Each wrapper registry owns exactly one retained `Handle<T>` value; `Clone()` adds
 one intrusive reference, disposal releases one wrapper, and every generated type is
 runtime-tested through 1-to-2-to-1 reference counts and disposed-use rejection.
 
-B19.3 likewise introduces no new ownership category. Its 18 audited declarations are
+The generated Geom/Geom2d expansion also reuses O004 without a new ownership category.
+Eight additional public wrappers each own exactly one retained `Handle<T>` in a
+type-specific live registry. `Clone()` shares and increments the intrusive count;
+disposal releases only that wrapper. Scalar, enum, and copied-point parameters/results
+do not retain managed storage, and no borrowed curve/surface member is emitted.
+
+The common-modeling milestone likewise introduces no new ownership category. Its 18 audited declarations are
 reported as accepted manual bindings because generalized builder/history descriptors do
 not yet exist; their runtime behavior reuses O001/O004/O005/O007/O008 and the registered
 owning `Shape` category.
+
+The current high-value B workstream adds 43 SC-033 declarations without adding a raw
+native ownership category. Curve/surface adaptors, GeomAPI projectors, curve builders,
+loft/pipe/sewing/thick-solid builders, topology maps, and Boolean algorithm history are
+call-local. Curve/surface evaluations and history summaries are immutable copied values.
+Adjacency snapshots own independent `Shape` copies plus managed offset/index arrays;
+disposing the source cannot invalidate them, while disposing the map disposes all owned
+shape copies. This does not close the entire B batch. Multi-shape input arrays borrow every `SafeHandle` only after paired
+`DangerousAddRef` acquisition and release all acquired references in reverse order.
+
+`XdeDocument.ImportStep` mutates only the destination owned document during an open
+transaction. Source STEPCAF documents, source labels, XCAF tools, clone maps, and
+material maps die inside the native call. Returned `XdeLabel` values are destination-
+parent-bound stable entries; commit preserves them, abort may remove their attributes,
+and destination disposal invalidates them. No source-document relationship survives.
+
+### Generated placement-allocator shared objects
+
+Types explicitly listed in configuration schema 1.8 under
+`placementAllocatorNativeTypes` are still O004 intrusive shared objects, but their native
+wrapper owns an additional allocator retention. The allocator field is declared before
+the OCCT object handle so C++ destroys the object first and releases the retained
+allocator last. Constructor emission requires a non-null generated
+`NCollection_IncAllocator` wrapper, uses `new (allocator) T(...)`, and clone emission
+copies both retained handles. Ordinary `new`, global `::new`, and a wrapper that stores
+only the object handle are forbidden for these types because their allocation and delete
+contracts do not match or can free incremental storage during object destruction.

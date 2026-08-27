@@ -3,8 +3,9 @@
 The roadmap is outcome-based. A phase completes only when all exit criteria have
 evidence; creating files or generating a large method count is not sufficient.
 
-The detailed B00–B20 execution batches and future package boundaries are maintained in
-[the complete migration plan](MIGRATION_PLAN.md).
+The retired B00–B20 capability milestones and future package boundaries are documented
+in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the one current
+product-scale batch `B`; none is a separate current batch or commit boundary.
 
 ## Phase D0: Documentation and decisions
 
@@ -180,20 +181,24 @@ Goal: publish validated NuGet packages for the declared compatibility matrix.
 
 Implemented local evidence: one experimental package now carries the managed assembly and
 the complete Windows x64 native closure, copies it below the consumer's `occt` directory,
-and passes a clean restore/publish/runtime consumer. B20 also implements API baselines,
-clean-source regeneration, immutable-artifact CI configuration, SBOM/provenance/checksums,
-release notes, and explicit machine-readable gates. This does not authorize public
+and passes a clean restore/publish/runtime consumer. The release workstream also implements
+API baselines, clean-source regeneration, immutable-artifact CI configuration,
+SBOM/provenance/checksums, release notes, and explicit machine-readable gates. This does not authorize public
 publication; project-license and third-party review remain blocked, and hosted CI,
 signing, and NuGet publication are `NOT RUN`.
 
-B00-B18 are complete (19/21). B19 classification infrastructure, B19.1-B19.3,
-129 generated StepBasic shared types, and the audited common-modeling profile are complete,
-but B19 binding migration remains open
-because 10,177 bindable declarations are still unselected and broad LT001-LT004
-projection/ownership blockers remain. B20 release engineering is
-implemented, but its complete-migration gates remain open. Work continues through real
-emitted/manual coverage rather than reclassification-only milestones.
+The former B00-B20 plan is now one product-scale migration batch `B`. Foundation,
+generated StepBasic sharing, common modeling, classification, and release engineering are
+capability milestones inside B, not separately completed batches. B remains open because
+bindable declarations are still unselected and broad LT001-LT004 projection/ownership
+blockers remain. Work continues through real emitted/manual coverage rather than
+reclassification-only milestones.
 
-B19.4 prioritizes high-frequency Geom/Geom2d construction/evaluation/projection and
-advanced topology maps/history snapshots before additional low-value STEP data-entity
-expansion.
+The current large workstream prioritizes high-frequency Geom/Geom2d construction,
+evaluation, projection, advanced topology maps/history snapshots, modeling workflows,
+and composable XDE operations before additional low-value STEP data-entity expansion.
+The next completed generator expansion adds concrete BRepMesh, Poly, ShapeAnalysis,
+ShapeFix, and ShapeUpgrade shared owners under binding-model schema 1.2; abstract
+records are rejected before emission rather than maintained in a class deny list.
+Any future batch uses a whole letter and the same product-scale sizing; numbered or dotted
+batch fragments are not used.

@@ -33,17 +33,24 @@ press Enter at the path prompt to use `artifacts/samples/box.step`, `box.stl`, o
 
 The assembly item first asks for an output path, then asks for the number of STEP input
 files. Press Enter at the count prompt to use all STEP files in the repository-root
-`data/` directory, or enter a count and provide one path per prompt. It reads each input
-through STEPCAF/XDE, copies its XDE label tree and supported metadata, applies
-deterministic translation and Z-axis rotation as an assembly-component location, and
-writes one STEP file with an `OcctSharp Assembly` root. The `data/` directory is ignored
-until fixture provenance and licensing policy PD-010 is resolved.
+`data/` directory, or enter a count and provide one path per prompt. It demonstrates the
+composable `XdeDocument` API: create a caller-named assembly, import each STEP file with
+`ImportStep`, place every imported root with `AddComponent` and `TopLocLocation`, commit,
+then call `WriteStep`. Import copies the source XDE label tree and supported metadata; the
+Sample applies deterministic translation and Z-axis rotation. The `data/` directory is
+ignored until fixture provenance and licensing policy PD-010 is resolved.
 
 The command does not perform Boolean fuse. It preserves colors, styles, names, layers,
 properties, physical materials, and the input part/assembly structure where OCCT 8.0.1
 STEPCAF supports those entities. It prints input/output counts for color, style, material,
 product-definition, and assembly-usage entities so that a metadata-free fixture is not
 mistaken for a preservation result.
+
+`StepAssembly.WriteXde` remains only as an obsolete compatibility convenience. New code
+should use the document operations shown by the Sample so applications can choose their
+own hierarchy, mix imported and in-memory parts, edit metadata, persist BinXCAF, or export
+STEP later. The other console examples already call general `ShapeFactory`,
+`ShapeExchange`, `ShapeAssembly`, and `OcctViewer` APIs and contain no Sample-only wrapper.
 
 The sixth item opens a native Win32 window backed by `OcctViewer`, displays a box, and
 runs a standard message loop. Resizing forwards `WM_SIZE`, painting requests redraw,

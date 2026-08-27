@@ -1,9 +1,7 @@
-using System.Runtime.InteropServices;
-using OcctSharp.Interop;
-
 namespace OcctSharp;
 
 /// <summary>Provides metadata-preserving STEPCAF/XDE assembly workflows.</summary>
+[Obsolete("Use XdeDocument.ImportStep, AddAssembly, AddComponent, and WriteStep for composable XDE workflows.")]
 public static class StepAssembly
 {
     /// <summary>
@@ -21,51 +19,23 @@ public static class StepAssembly
             throw new ArgumentException("At least one STEP input is required.", nameof(inputs));
         }
 
-        string fullOutputPath = Path.GetFullPath(outputPath);
-        string? outputDirectory = Path.GetDirectoryName(fullOutputPath);
-        if (!string.IsNullOrEmpty(outputDirectory))
+        using XdeDocument document = XdeDocument.Create();
+        using (XdeTransaction transaction = document.BeginTransaction())
         {
-            Directory.CreateDirectory(outputDirectory);
-        }
-
-        int itemSize = Marshal.SizeOf<NativeStepAssemblyInput>();
-        nint nativeItems = Marshal.AllocHGlobal(checked(itemSize * items.Length));
-        List<nint> nativePaths = new(items.Length);
-        try
-        {
-            for (int index = 0; index < items.Length; index++)
+            XdeLabel assembly = document.AddAssembly("OcctSharp Assembly");
+            foreach (StepAssemblyInput item in items)
             {
-                StepAssemblyInput item = items[index]
-                    ?? throw new ArgumentException("STEP inputs cannot contain null entries.", nameof(inputs));
-                ArgumentException.ThrowIfNullOrWhiteSpace(item.FilePath);
-                string fullInputPath = Path.GetFullPath(item.FilePath);
-                if (!File.Exists(fullInputPath))
+                if (item is null)
                 {
-                    throw new FileNotFoundException("The STEP input file does not exist.", fullInputPath);
+                    throw new ArgumentException("STEP inputs cannot contain null entries.", nameof(inputs));
                 }
-
-                nint nativePath = Marshal.StringToCoTaskMemUTF8(fullInputPath);
-                nativePaths.Add(nativePath);
-                Marshal.StructureToPtr(
-                    new NativeStepAssemblyInput(nativePath, item.Transform),
-                    nativeItems + index * itemSize,
-                    fDeleteOld: false);
+                using GpTrsf transform = item.Transform.ToGpTrsf();
+                using TopLocLocation location = TopLocLocation.FromTransform(transform);
+                foreach (XdeLabel importedRoot in document.ImportStep(item.FilePath))
+                    _ = document.AddComponent(assembly, importedRoot, location);
             }
-
-            OcctRuntime.EnsureCompatible();
-            NativeError.ThrowIfFailed(
-                NativeMethods.MergeStepXde(nativeItems, items.Length, fullOutputPath),
-                "step_merge_xde");
-            return fullOutputPath;
+            _ = transaction.Commit();
         }
-        finally
-        {
-            foreach (nint nativePath in nativePaths)
-            {
-                Marshal.FreeCoTaskMem(nativePath);
-            }
-
-            Marshal.FreeHGlobal(nativeItems);
-        }
+        return document.WriteStep(outputPath);
     }
 }

@@ -2,7 +2,7 @@
 
 - Status: Accepted
 - Date: 2026-08-24
-- Scope: B19.3 common modeling APIs on OCCT 8.0.1, Windows x64
+- Scope: common modeling APIs inside batch B on OCCT 8.0.1, Windows x64
 
 ## Context
 

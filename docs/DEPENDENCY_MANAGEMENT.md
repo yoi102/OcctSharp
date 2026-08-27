@@ -88,6 +88,6 @@ public-release gate; creating a local package is not evidence that publication i
 - Resolve all `unknown` non-OCCT component versions/licenses and define signing policy
   before public release.
 
-The current local evidence records 45 native files, including the bridge, in
+The current local alpha.49 evidence records 62 native files, including the bridge, in
 `artifacts/release/`. This is technical provenance only; it does not replace legal review
 or make `publicReleaseReady` true.

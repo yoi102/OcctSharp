@@ -11,13 +11,15 @@ public static class SharedHandleBindingEligibilityPass
 
         InitialTypeMap typeMap = InitialTypeMap.FromModel(model);
         HashSet<string> transientTypes = FindTransientTypes(model);
+        HashSet<string> abstractTypes = FindAbstractTypes(model);
         return new BindingModel(model.Declarations.Select(declaration =>
-            Promote(declaration, transientTypes, typeMap)));
+            Promote(declaration, transientTypes, abstractTypes, typeMap)));
     }
 
     private static BindingDeclaration Promote(
         BindingDeclaration declaration,
         HashSet<string> transientTypes,
+        HashSet<string> abstractTypes,
         InitialTypeMap typeMap)
     {
         if (declaration.SupportState != BindingSupportState.Pending
@@ -35,14 +37,22 @@ public static class SharedHandleBindingEligibilityPass
         bool isEligible = declaration.Kind switch
         {
             BindingDeclarationKind.Constructor =>
-                declaration.Parameters.All(parameter => IsValueCopy(parameter.Type, typeMap)),
+                !abstractTypes.Contains(declaringType)
+                &&
+                declaration.Parameters.All(parameter => IsSupportedParameter(
+                    parameter.Type,
+                    transientTypes,
+                    typeMap)),
             BindingDeclarationKind.Method =>
                 !declaration.IsStatic
                 && !declaration.IsPureVirtual
                 && !declaration.IsOverloadedOperator
                 && !IsDestructor(declaration, declaringType)
-                && IsValueOrVoidReturn(declaration.ReturnType, typeMap)
-                && declaration.Parameters.All(parameter => IsValueCopy(parameter.Type, typeMap)),
+                && IsSupportedReturn(declaration.ReturnType, transientTypes, typeMap)
+                && declaration.Parameters.All(parameter => IsSupportedParameter(
+                    parameter.Type,
+                    transientTypes,
+                    typeMap)),
             _ => false,
         };
 
@@ -83,11 +93,37 @@ public static class SharedHandleBindingEligibilityPass
         return result;
     }
 
+    private static HashSet<string> FindAbstractTypes(BindingModel model)
+    {
+        HashSet<string> result = model.Declarations
+            .Where(static declaration => declaration.Kind == BindingDeclarationKind.Record && declaration.IsAbstract)
+            .Select(static declaration => NormalizeTypeName(declaration.NativeName))
+            .ToHashSet(StringComparer.Ordinal);
+        foreach (BindingDeclaration method in model.Declarations.Where(static declaration =>
+                     declaration.Kind == BindingDeclarationKind.Method && declaration.IsPureVirtual))
+        {
+            string? declaringType = GetDeclaringType(method.NativeName);
+            if (declaringType is not null)
+                result.Add(declaringType);
+        }
+
+        return result;
+    }
+
     private static bool IsValueCopy(BindingType type, InitialTypeMap typeMap) =>
         typeMap.TryMap(type, BindingTypeUsage.Parameter, out BindingTypeProjection? projection)
         && string.Equals(projection?.Ownership, "ValueCopy", StringComparison.Ordinal);
 
-    private static bool IsValueOrVoidReturn(BindingType? type, InitialTypeMap typeMap)
+    private static bool IsSupportedParameter(
+        BindingType type,
+        HashSet<string> transientTypes,
+        InitialTypeMap typeMap) =>
+        IsValueCopy(type, typeMap) || IsSharedHandle(type, transientTypes, typeMap, BindingTypeUsage.Parameter);
+
+    private static bool IsSupportedReturn(
+        BindingType? type,
+        HashSet<string> transientTypes,
+        InitialTypeMap typeMap)
     {
         if (type is null)
         {
@@ -100,9 +136,24 @@ public static class SharedHandleBindingEligibilityPass
             return true;
         }
 
-        return typeMap.TryMap(type, BindingTypeUsage.ReturnValue, out BindingTypeProjection? projection)
-            && string.Equals(projection?.Ownership, "ValueCopy", StringComparison.Ordinal);
+        return IsValueCopyReturn(type, typeMap)
+            || IsSharedHandle(type, transientTypes, typeMap, BindingTypeUsage.ReturnValue);
     }
+
+    private static bool IsValueCopyReturn(BindingType type, InitialTypeMap typeMap) =>
+        typeMap.TryMap(type, BindingTypeUsage.ReturnValue, out BindingTypeProjection? projection)
+        && string.Equals(projection?.Ownership, "ValueCopy", StringComparison.Ordinal);
+
+    private static bool IsSharedHandle(
+        BindingType type,
+        HashSet<string> transientTypes,
+        InitialTypeMap typeMap,
+        BindingTypeUsage usage) =>
+        type.IsOcctHandle
+        && !string.IsNullOrWhiteSpace(type.HandleTargetType)
+        && transientTypes.Contains(NormalizeTypeName(type.HandleTargetType))
+        && typeMap.TryMap(type, usage, out BindingTypeProjection? projection)
+        && string.Equals(projection?.Ownership, "Shared", StringComparison.Ordinal);
 
     private static bool IsDestructor(BindingDeclaration declaration, string declaringType)
     {

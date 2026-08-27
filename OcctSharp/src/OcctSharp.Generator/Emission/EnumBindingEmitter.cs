@@ -39,6 +39,10 @@ public static class EnumBindingEmitter
         HashSet<string> referencedEnumNames = [];
         foreach (BindingDeclaration declaration in model.Declarations.Where(item => selected.Contains(item.StableId)))
         {
+            if (declaration.Kind == BindingDeclarationKind.Enum)
+            {
+                referencedEnumNames.Add(ToManagedTypeName(declaration.NativeName));
+            }
             if (declaration.ReturnType is not null)
             {
                 AddEnumType(declaration.ReturnType, BindingTypeUsage.ReturnValue, typeMap, referencedEnumNames);

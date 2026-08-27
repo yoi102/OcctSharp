@@ -11,8 +11,8 @@ public sealed class RuntimeTests
     {
         OcctRuntimeInfo info = OcctRuntime.Info;
 
-        Assert.Equal(new Version(1, 33), info.AbiVersion);
-        Assert.Equal("0.41.0", info.BridgeVersion);
+        Assert.Equal(new Version(1, 41), info.AbiVersion);
+        Assert.Equal("0.49.0", info.BridgeVersion);
         Assert.Equal("8.0.1", info.OcctVersion);
     }
 
@@ -679,18 +679,24 @@ public sealed class RuntimeTests
         Assert.Equal(NativeStatus.Success, createStatus);
         Assert.NotEqual(nint.Zero, nativeShape);
 
-        NativeStatus firstAccess = NativeMethods.GetFaceCount(new ShapeHandle(nativeShape), out int faceCount);
+        using ShapeHandle accessHandle = new(nativeShape);
+        NativeStatus firstAccess = NativeMethods.GetFaceCount(accessHandle, out int faceCount);
         Assert.Equal(NativeStatus.Success, firstAccess);
         Assert.Equal(6, faceCount);
+        accessHandle.SetHandleAsInvalid();
 
         NativeMethods.ReleaseShape(nativeShape);
         NativeMethods.ReleaseShape(nativeShape);
 
-        NativeStatus staleAccess = NativeMethods.GetFaceCount(new ShapeHandle(nativeShape), out _);
+        using ShapeHandle staleHandle = new(nativeShape);
+        NativeStatus staleAccess = NativeMethods.GetFaceCount(staleHandle, out _);
+        staleHandle.SetHandleAsInvalid();
         Assert.Equal(NativeStatus.InvalidHandle, staleAccess);
         Assert.Contains("already released", Marshal.PtrToStringUTF8(NativeMethods.GetLastError()), StringComparison.OrdinalIgnoreCase);
 
-        NativeStatus arbitraryAccess = NativeMethods.GetFaceCount(new ShapeHandle((nint)0x1234), out _);
+        using ShapeHandle arbitraryHandle = new((nint)0x1234);
+        NativeStatus arbitraryAccess = NativeMethods.GetFaceCount(arbitraryHandle, out _);
+        arbitraryHandle.SetHandleAsInvalid();
         Assert.Equal(NativeStatus.InvalidHandle, arbitraryAccess);
     }
 
@@ -939,19 +945,31 @@ public sealed class RuntimeTests
                 ShapeExchange.WriteStep(second, secondPath);
             }
 
-            StepAssembly.WriteXde(
-            [
-                new StepAssemblyInput(firstPath, ShapeTransform.Identity),
-                new StepAssemblyInput(
-                    secondPath,
-                    ShapeTransform.CreateTranslationAndRotationZ(50, 25, 5, 30)),
-            ],
-            assemblyPath);
+            using (XdeDocument document = XdeDocument.Create())
+            {
+                using XdeTransaction transaction = document.BeginTransaction();
+                XdeLabel assembly = document.AddAssembly("Imported assembly");
+                XdeLabel firstRoot = Assert.Single(document.ImportStep(firstPath));
+                XdeLabel secondRoot = Assert.Single(document.ImportStep(secondPath));
+                using TopLocLocation identity = TopLocLocation.Identity;
+                using GpTrsf transform = ShapeTransform
+                    .CreateTranslationAndRotationZ(50, 25, 5, 30)
+                    .ToGpTrsf();
+                using TopLocLocation placement = TopLocLocation.FromTransform(transform);
+                _ = document.AddComponent(assembly, firstRoot, identity);
+                _ = document.AddComponent(assembly, secondRoot, placement);
+                Assert.True(transaction.Commit());
+                document.WriteStep(assemblyPath);
+            }
 
             string stepText = File.ReadAllText(assemblyPath);
             Assert.Contains("NEXT_ASSEMBLY_USAGE_OCCURRENCE", stepText, StringComparison.OrdinalIgnoreCase);
             using Shape roundTripped = ShapeExchange.ReadStep(assemblyPath);
             Assert.Equal(12, roundTripped.FaceCount);
+            using XdeDocument restored = XdeDocument.ReadStep(assemblyPath);
+            XdeLabel restoredAssembly = Assert.Single(restored.GetFreeShapes());
+            Assert.True(restoredAssembly.IsAssembly);
+            Assert.Equal(2, restoredAssembly.ComponentCount);
         });
     }
 
@@ -995,22 +1013,22 @@ public sealed class RuntimeTests
     [Fact]
     public void GeneratedPrecisionStaticsExecuteThroughTheValueCopyAbi()
     {
-        double angular = GeneratedNativeMethods.PrecisionAngular0();
-        double confusion = GeneratedNativeMethods.PrecisionConfusion0();
-        double parameterizedApproximation = GeneratedNativeMethods.PrecisionPApproximation1(100.0);
+        double angular = GeneratedNativeMethods.PrecisionStaticAngular0();
+        double confusion = GeneratedNativeMethods.PrecisionStaticConfusion0();
+        double parameterizedApproximation = GeneratedNativeMethods.PrecisionStaticPApproximation1(100.0);
 
         Assert.True(double.IsFinite(angular) && angular > 0.0);
         Assert.True(double.IsFinite(confusion) && confusion > 0.0);
         Assert.True(double.IsFinite(parameterizedApproximation) && parameterizedApproximation > 0.0);
-        Assert.Equal(1, GeneratedNativeMethods.PrecisionIsInfinite0(double.PositiveInfinity));
-        Assert.Equal(0, GeneratedNativeMethods.PrecisionIsInfinite0(1.0));
+        Assert.Equal(1, GeneratedNativeMethods.PrecisionStaticIsInfinite0(double.PositiveInfinity));
+        Assert.Equal(0, GeneratedNativeMethods.PrecisionStaticIsInfinite0(1.0));
     }
 
     [Fact]
     public void GeneratedTopAbsEnumStaticsExecuteThroughInt32Abi()
     {
-        int composed = GeneratedNativeMethods.TopAbsCompose0(0, 0);
-        int reversed = GeneratedNativeMethods.TopAbsReverse0(0);
+        int composed = GeneratedNativeMethods.TopAbsStaticCompose0(0, 0);
+        int reversed = GeneratedNativeMethods.TopAbsStaticReverse0(0);
 
         Assert.InRange(composed, 0, 3);
         Assert.InRange(reversed, 0, 3);
@@ -1019,11 +1037,11 @@ public sealed class RuntimeTests
     [Fact]
     public void GeneratedAdditionalScalarStaticsExecuteThroughValueCopyAbi()
     {
-        double resolution = GeneratedNativeMethods.GpResolution0();
-        double scalePrecision = GeneratedNativeMethods.TopLocLocationScalePrec0();
-        int allocatorType = GeneratedNativeMethods.StandardGetAllocatorType0();
-        int stackTraceLength = GeneratedNativeMethods.StandardFailureDefaultStackTraceLength0();
-        int jsonKeyLength = GeneratedNativeMethods.StandardDumpJsonKeyLength0(0);
+        double resolution = GeneratedNativeMethods.GpStaticResolution0();
+        double scalePrecision = GeneratedNativeMethods.TopLocLocationStaticScalePrec0();
+        int allocatorType = GeneratedNativeMethods.StandardStaticGetAllocatorType0();
+        int stackTraceLength = GeneratedNativeMethods.StandardFailureStaticDefaultStackTraceLength0();
+        int jsonKeyLength = GeneratedNativeMethods.StandardDumpStaticJsonKeyLength0(0);
 
         Assert.True(double.IsFinite(resolution) && resolution > 0.0);
         Assert.True(double.IsFinite(scalePrecision) && scalePrecision > 0.0);

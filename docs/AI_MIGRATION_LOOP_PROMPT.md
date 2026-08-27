@@ -97,8 +97,8 @@ At the beginning of every invocation:
    current versions, coverage reports, and latest validation evidence.
 4. Treat all existing changes as user-owned unless their origin is proven. Preserve and
    work around unrelated changes. Never reset or discard them.
-5. Determine the first incomplete batch in docs/MIGRATION_PLAN.md whose dependencies are
-   complete. STATUS.md is the checkpoint; verify it against code and reports.
+5. Recover the current large workstream inside the single migration batch B.
+   STATUS.md is the checkpoint; verify it against code and reports.
 6. If an earlier work unit is partially implemented, finish or safely repair it before
    selecting new scope.
 7. Detect stale claims: a generated count is not compile evidence; compile evidence is
@@ -120,15 +120,19 @@ RECOVER
 - Restore current facts using section 3.
 
 SELECT
-- Select exactly one coherent migration work unit.
-- Prefer the next B00-B20 batch, but split a large batch into explicit sub-batches by
-  dependency closure or one high-risk ownership category.
-- A normal low-risk sub-batch may target roughly 100-500 emitted declarations.
-- A high-risk ownership/lifetime batch may be much smaller and is still substantial.
-- Do not mix unrelated ownership categories merely to increase the count.
+- Continue the single product-scale migration batch `B`. Every former B00-B20 or dotted
+  Bxx.y item belongs to B; never create a numbered or dotted B fragment.
+- Select one large coherent implementation wave inside B. Combine as many related
+  packages, API families, and user workflows as can share truthful ownership and
+  validation evidence. Prefer broad common-use coverage before low-value entities.
+- Different lifetime categories, optional dependencies, or independently failing gates
+  may use separate workstreams, but those workstreams are not batches and receive no
+  B-derived identifier.
+- If a genuinely new product program is needed after B, use the next whole letter and
+  the same product-scale sizing. Never move unfinished B work into a future letter.
 
 CONTRACT
-- Before editing, state the batch/sub-batch ID, packages, toolkits, entry headers,
+- Before editing, state `CURRENT_BATCH: B`, the active workstream, packages, toolkits, entry headers,
   declarations or declaration family, dependencies, intended public API, ownership
   categories, ABI impact, package impact, required tests, and exit criteria.
 - Record explicit non-goals and blocked constructs.
@@ -179,7 +183,7 @@ GENERATE
 VALIDATE
 - Run validation proportional to the work unit and report only commands actually run.
 - Use only PASS, FAIL, NOT RUN, BLOCKED, or UNSUPPORTED.
-- At minimum for a material binding batch:
+- At minimum for a material binding wave:
   1. Focused parser/model/emitter tests.
   2. Native and managed compile.
   3. Focused ABI tests.
@@ -204,7 +208,7 @@ On failure:
   ABI, runtime, lifetime, integration, packaging, dependency, or documentation.
 - Fix the owning layer, regenerate if applicable, and rerun the failed layer plus any
   invalidated downstream layers.
-- Do not bypass a failing safety check to make the batch pass.
+- Do not bypass a failing safety check to make B appear complete.
 
 RECONCILE
 - Read actual generated reports after validation.
@@ -215,7 +219,7 @@ RECONCILE
   4. full-profile binding coverage, only when the denominator is complete;
   5. validation coverage;
   6. engineering roadmap estimate;
-  7. completed migration batches out of 21.
+  7. single-batch B completion against its explicit exit gates.
 - Never use the 116,214 partial declaration count as a complete full-OCCT denominator.
 - Reconcile totals: pending + skipped + supported + manual must follow the report schema,
   and emitted declarations must match manifest stable IDs and documented output counts.
@@ -224,13 +228,16 @@ RECONCILE
 
 DOCUMENT
 - Update docs/STATUS.md after every material work unit.
-- Update MIGRATION_PLAN.md batch/sub-batch status and immediate execution order.
-- Update ROADMAP.md and every affected topic document.
-- Update TYPE_MAPPING.md and OWNERSHIP.md for semantic contracts.
+- Update MIGRATION_PLAN.md B status, active workstream, and immediate execution order.
+- Update ROADMAP.md only when phase outcomes or ordering change. Update topic documents
+  only when their facts or contracts change; do not mechanically repeat the same batch
+  summary across unrelated documents.
+- Update TYPE_MAPPING.md and OWNERSHIP.md only for new or changed semantic contracts.
 - Update NATIVE_ABI.md, VERSIONING.md, COMPATIBILITY.md, NUGET_PACKAGING.md, and
-  BUILD_AND_RELEASE.md when their facts change.
-- Update TESTING.md with new required evidence patterns.
-- Update SPECIAL_CASES.md and KNOWN_ISSUES.md honestly.
+  BUILD_AND_RELEASE.md only when their facts change.
+- Update TESTING.md only for a new reusable evidence pattern.
+- Update SPECIAL_CASES.md for manual exceptions and KNOWN_ISSUES.md when an issue is
+  added, resolved, or materially changed.
 - Add an ADR and DECISIONS.md entry when required.
 - Keep one root README and do not create nested README files.
 - New filenames must be English.
@@ -239,12 +246,12 @@ HANDOFF
 - Stage intended files only if that matches the existing workflow; never commit or push
   without explicit user authorization.
 - Give a concise, evidence-backed report in Chinese containing:
-  1. completed batch/sub-batch and concrete API/semantic outcomes;
+  1. completed workstream outcomes inside B and concrete API/semantic outcomes;
   2. files/rules/ADRs materially changed;
   3. exact validation results and NOT RUN/BLOCKED items;
   4. all progress percentages with denominators;
   5. remaining risks or blockers;
-  6. next batch and its first concrete action;
+  6. next large workstream inside B and its first concrete action;
   7. the machine-readable loop footer defined in section 8.
 
 ============================================================
@@ -286,7 +293,8 @@ Never:
 - add machine-specific absolute paths to committed configuration or generated files;
 - bundle unlicensed fixtures or dependencies;
 - publish, commit, push, or create releases without explicit authority;
-- mark a batch complete while an exit criterion is FAIL, NOT RUN, or silently omitted.
+- mark B complete while an exit criterion is FAIL, NOT RUN, or silently omitted;
+- create B00-B20, Bxx.y, or another numbered/dotted fragment as a current batch.
 
 Prefer fail-closed behavior: pending with a stable diagnostic is better than an unsafe
 binding that appears complete.
@@ -298,7 +306,7 @@ binding that appears complete.
 Use LOOP_STATE=CONTINUE when:
 - a safe next work unit exists;
 - tests failed but the failure is locally actionable;
-- the current batch needs another sub-batch;
+- batch B needs another large implementation wave;
 - one optional profile is blocked but useful core-profile work remains.
 
 Use LOOP_STATE=BLOCKED only when:
@@ -321,12 +329,13 @@ merely builds or a report with pending declarations is not complete.
 End every invocation with exactly one footer in this shape:
 
 LOOP_STATE: CONTINUE | BLOCKED | COMPLETE
-CURRENT_BATCH: Bxx or Bxx.sub-id
+CURRENT_BATCH: B
+CURRENT_WORKSTREAM: short unnumbered description
 COMPLETED_THIS_TURN: short factual description
-NEXT_BATCH: Bxx or NONE
+NEXT_WORKSTREAM: short unnumbered description or NONE
 NEXT_ACTION: one concrete first action
 ENGINEERING_PROGRESS: nn%
-BATCH_PROGRESS: completed/21 (nn.n%)
+BATCH_PROGRESS: B IN PROGRESS | B COMPLETE (100%)
 SELECTED_BINDING_COVERAGE: emitted/selected (nn.nnnn%)
 FULL_PROFILE_COVERAGE: value or NOT ESTABLISHED
 INVENTORY_COMPLETENESS: scanned/catalogued for named profile (nn.nnnn%)
@@ -342,7 +351,7 @@ as an estimate in the human report.
 
 LOOP_STATE=COMPLETE requires all of the following for every declared supported profile:
 
-- B00-B20 are complete or explicitly inapplicable with accepted rationale.
+- The single batch B is complete; every former B00-B20 capability belongs to this gate.
 - Header inventory for the profile is complete.
 - Every public declaration has a stable disposition and owner.
 - Every bindable declaration is generated or an accepted documented manual binding.

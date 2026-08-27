@@ -30,4 +30,4 @@ contract. No native pointer, reference, or C++ layout crosses the boundary.
 
 Release runtime tests cover construction, copy, add, cross, dot, modulus, normalization,
 zero-normalization failure, and non-finite input. Debug validation is required before
-closing the B07 sub-batch; clean package consumer validation is required for alpha.17.
+accepting the geometry-value workstream; clean package consumer validation is required for alpha.17.

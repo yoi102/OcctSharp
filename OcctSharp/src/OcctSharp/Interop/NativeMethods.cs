@@ -155,6 +155,25 @@ internal static partial class NativeMethods
         ShapeHandle face,
         int restrictToFace,
         out FaceSurfaceSnapshotRaw snapshot);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_edge_evaluate")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus EvaluateEdge(
+        ShapeHandle edge, double parameter, out CurveEvaluationRaw result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_edge_length")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetEdgeLength(ShapeHandle edge, out double length);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_edge_project_point")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ProjectPointOnEdge(
+        ShapeHandle edge, XyzRaw point, out CurveProjectionRaw result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_face_evaluate")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus EvaluateFace(
+        ShapeHandle face, double uParameter, double vParameter, out SurfaceEvaluationRaw result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_face_project_point")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ProjectPointOnFace(
+        ShapeHandle face, XyzRaw point, double tolerance, out SurfaceProjectionRaw result);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_box")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -178,9 +197,45 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_torus")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus CreateTorus(double majorRadius, double minorRadius, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_wedge")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateWedge(
+        double sizeX, double sizeY, double sizeZ, double topXLength, out nint shape);
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_edge")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus CreateEdge(XyzRaw start, XyzRaw end, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_circle_edge")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateCircleEdge(
+        XyzRaw center, XyzRaw normal, double radius, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_arc_edge")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateArcEdge(
+        XyzRaw start, XyzRaw middle, XyzRaw end, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_ellipse_edge")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateEllipseEdge(
+        XyzRaw center, XyzRaw normal, XyzRaw xDirection,
+        double majorRadius, double minorRadius, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_bezier_edge")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus CreateBezierEdge(
+        XyzRaw* poles, int count, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_interpolated_edge")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus CreateInterpolatedEdge(
+        XyzRaw* points, int count, int periodic, double tolerance, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_loft")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus CreateLoft(
+        nint* sections, int count, int makeSolid, int ruled, double tolerance, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_pipe")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreatePipe(ShapeHandle spine, ShapeHandle profile, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_sew")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus SewShapes(
+        nint* shapes, int count, double tolerance, out nint shape);
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_create_polygon_wire")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static unsafe partial NativeStatus CreatePolygonWire(
@@ -203,6 +258,20 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_subshape_count")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus GetSubshapeCount(ShapeHandle shape, int kind, out int count);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_topology_adjacency_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetTopologyAdjacencyCount(
+        ShapeHandle shape, int itemKind, int ancestorKind,
+        out int itemCount, out int ancestorCount, out int relationCount);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_topology_adjacency_snapshot")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus GetTopologyAdjacencySnapshot(
+        ShapeHandle shape, int itemKind, int ancestorKind,
+        nint* items, int itemCapacity,
+        nint* ancestors, int ancestorCapacity,
+        int* offsets, int offsetCapacity,
+        int* ancestorIndices, int relationCapacity,
+        out int itemsWritten, out int ancestorsWritten, out int relationsWritten);
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_extrude")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus ExtrudeShape(ShapeHandle shape, VectorHandle direction, out nint result);
@@ -224,6 +293,11 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_offset")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus OffsetShape(ShapeHandle shape, double offset, double tolerance, out nint result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_make_thick_solid")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus MakeThickSolid(
+        ShapeHandle shape, nint* closingFaces, int faceCount,
+        double offset, double tolerance, out nint result);
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_section")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus SectionShapes(ShapeHandle left, ShapeHandle right, out nint result);
@@ -242,6 +316,15 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_boolean_common")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus BooleanCommon(ShapeHandle left, ShapeHandle right, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_boolean_with_history")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus BooleanWithHistory(
+        ShapeHandle left,
+        ShapeHandle right,
+        int operation,
+        int trackedKind,
+        out nint shape,
+        out BooleanHistorySummaryRaw history);
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_distance")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus GetShapeDistance(
@@ -791,6 +874,11 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_create")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus CreateXdeDocument(out nint document);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_import_step", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ImportStepIntoXdeDocument(
+        OcafDocumentHandle document, string filePath, out int rootCount);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_open", StringMarshalling = StringMarshalling.Utf8)]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

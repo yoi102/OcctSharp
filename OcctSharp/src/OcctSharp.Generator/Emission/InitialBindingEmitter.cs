@@ -14,29 +14,38 @@ public static class InitialBindingEmitter
     private const string GeneratedStaticManagedPath = "src/OcctSharp/Generated/ScalarRaw.Generated.cs";
 
     public static GeneratedBindingSet Emit(DiscoveryReport report)
-        => Emit(report, [GenerationScopeConfiguration.Precision], [], []);
+        => Emit(report, [GenerationScopeConfiguration.Precision], [], [], []);
 
     public static GeneratedBindingSet Emit(
         DiscoveryReport report,
         IReadOnlyList<GenerationScopeConfiguration> generationScopes)
-        => Emit(report, generationScopes, [], []);
+        => Emit(report, generationScopes, [], [], []);
 
     public static GeneratedBindingSet Emit(
         DiscoveryReport report,
         IReadOnlyList<GenerationScopeConfiguration> generationScopes,
         IReadOnlyList<SharedHandleScopeConfiguration> sharedHandleScopes)
-        => Emit(report, generationScopes, sharedHandleScopes, []);
+        => Emit(report, generationScopes, sharedHandleScopes, [], []);
 
     public static GeneratedBindingSet Emit(
         DiscoveryReport report,
         IReadOnlyList<GenerationScopeConfiguration> generationScopes,
         IReadOnlyList<SharedHandleScopeConfiguration> sharedHandleScopes,
         IReadOnlyList<TopologyScopeConfiguration> topologyScopes)
+        => Emit(report, generationScopes, sharedHandleScopes, topologyScopes, []);
+
+    public static GeneratedBindingSet Emit(
+        DiscoveryReport report,
+        IReadOnlyList<GenerationScopeConfiguration> generationScopes,
+        IReadOnlyList<SharedHandleScopeConfiguration> sharedHandleScopes,
+        IReadOnlyList<TopologyScopeConfiguration> topologyScopes,
+        IReadOnlyList<string> generatedPreambleHeaders)
     {
         ArgumentNullException.ThrowIfNull(report);
         ArgumentNullException.ThrowIfNull(generationScopes);
         ArgumentNullException.ThrowIfNull(sharedHandleScopes);
         ArgumentNullException.ThrowIfNull(topologyScopes);
+        ArgumentNullException.ThrowIfNull(generatedPreambleHeaders);
 
         BindingModel valueEligibleModel = SimpleBindingEligibilityPass.Apply(report.Model);
         BindingModel eligibleModel = SharedHandleBindingEligibilityPass.Apply(valueEligibleModel);
@@ -91,7 +100,8 @@ public static class InitialBindingEmitter
         GeneratedBindingSet sharedHandles = SharedHandleBindingEmitter.Emit(
             report.OcctVersion,
             eligibleModel,
-            sharedHandleScopes);
+            sharedHandleScopes,
+            generatedPreambleHeaders);
         files.AddRange(sharedHandles.Files);
         sourceStableIds.AddRange(sharedHandles.SourceStableIds);
         GeneratedBindingSet topology = TopologyBindingEmitter.Emit(
@@ -100,6 +110,12 @@ public static class InitialBindingEmitter
             topologyScopes);
         files.AddRange(topology.Files);
         sourceStableIds.AddRange(topology.SourceStableIds);
+        sourceStableIds.AddRange(eligibleModel.Declarations
+            .Where(static declaration =>
+                declaration.Kind == BindingDeclarationKind.Enum
+                && declaration.SupportState != BindingSupportState.Skipped
+                && EnumBindingEligibility.HasStableManagedTypeIdentity(declaration))
+            .Select(static declaration => declaration.StableId));
         GeneratedBindingSet enums = EnumBindingEmitter.Emit(
             report.OcctVersion,
             eligibleModel,
@@ -121,7 +137,7 @@ public static class InitialBindingEmitter
         return generationScopes
             .OrderBy(static scope => scope.SourcePackage, StringComparer.Ordinal)
             .SelectMany(scope => model.Declarations
-                .Where(declaration => IsStaticValueCopyMethod(declaration, typeMap, scope))
+                .Where(declaration => IsStaticValueCopyCallable(declaration, typeMap, scope))
                 .GroupBy(static declaration => declaration.NativeName, StringComparer.Ordinal)
                 .OrderBy(static group => group.Key, StringComparer.Ordinal)
                 .SelectMany(group => group
@@ -157,8 +173,8 @@ public static class InitialBindingEmitter
             declaration,
             returnProjection,
             parameters,
-            $"occtsharp_generated_{scope.ExportNamePrefix}_{normalizedMemberName}_{overloadIndex}",
-            $"{scope.ManagedNamePrefix}{memberName}{overloadIndex}",
+            $"occtsharp_generated_{scope.ExportNamePrefix}_static_{normalizedMemberName}_{overloadIndex}",
+            $"{scope.ManagedNamePrefix}Static{memberName}{overloadIndex}",
             scope);
     }
 
@@ -445,6 +461,7 @@ public static class InitialBindingEmitter
     {
         "TM003" => $"({parameter.Name} != 0)",
         "TM004" => $"static_cast<{parameter.Type.BaseCanonicalSpelling}>({parameter.Name})",
+        "TM005" => $"gp_Pnt({parameter.Name}.x, {parameter.Name}.y, {parameter.Name}.z)",
         _ => parameter.Name,
     };
 
@@ -465,24 +482,27 @@ public static class InitialBindingEmitter
         }
     }
 
-    private static bool IsStaticValueCopyMethod(
+    private static bool IsStaticValueCopyCallable(
         BindingDeclaration declaration,
         InitialTypeMap typeMap,
         GenerationScopeConfiguration scope)
     {
         if (declaration.SupportState != BindingSupportState.Supported
-            || declaration.Kind != BindingDeclarationKind.Method
-            || !declaration.IsStatic
+            || (declaration.Kind != BindingDeclarationKind.Function
+                && (declaration.Kind != BindingDeclarationKind.Method || !declaration.IsStatic))
             || !string.Equals(declaration.SourcePackage, scope.SourcePackage, StringComparison.Ordinal)
-            || !declaration.NativeName.StartsWith(scope.NativeNamePrefix, StringComparison.Ordinal)
+            || (scope.ExactNativeName
+                ? !string.Equals(declaration.NativeName, scope.NativeNamePrefix, StringComparison.Ordinal)
+                    || !string.Equals(declaration.Header, scope.Header, StringComparison.Ordinal)
+                : !declaration.NativeName.StartsWith(scope.NativeNamePrefix, StringComparison.Ordinal))
             || declaration.ReturnType is null
-            || !TryGetScalarProjection(declaration.ReturnType, BindingTypeUsage.ReturnValue, typeMap, out _))
+            || !TryGetStaticProjection(declaration.ReturnType, BindingTypeUsage.ReturnValue, typeMap, out _))
         {
             return false;
         }
 
         return declaration.Parameters.All(parameter =>
-            TryGetScalarProjection(parameter.Type, BindingTypeUsage.Parameter, typeMap, out _));
+            TryGetStaticProjection(parameter.Type, BindingTypeUsage.Parameter, typeMap, out _));
     }
 
     private static void ValidateGenerationScopes(IReadOnlyList<GenerationScopeConfiguration> scopes)
@@ -505,7 +525,8 @@ public static class InitialBindingEmitter
                 throw new InvalidDataException("Every generated static-method scope must define package, prefix, header, and naming fields.");
             }
 
-            string identity = scope.SourcePackage + "\u001f" + scope.NativeNamePrefix;
+            string identity = scope.SourcePackage + "\u001f" + scope.NativeNamePrefix
+                + (scope.ExactNativeName ? "\u001f" + scope.Header : string.Empty);
             if (!identities.Add(identity))
             {
                 throw new InvalidDataException(
@@ -531,12 +552,25 @@ public static class InitialBindingEmitter
             && projection.RuleId is "TM001" or "TM002" or "TM003" or "TM004";
     }
 
+    private static bool TryGetStaticProjection(
+        BindingType type,
+        BindingTypeUsage usage,
+        InitialTypeMap typeMap,
+        out BindingTypeProjection? projection)
+    {
+        return typeMap.TryMap(type, usage, out projection)
+            && projection is not null
+            && ((projection.Ownership == "ValueCopy"
+                    && projection.RuleId is "TM001" or "TM002" or "TM003" or "TM004" or "TM005")
+                || (usage == BindingTypeUsage.ReturnValue && projection.RuleId == "TM000"));
+    }
+
     private static BindingTypeProjection GetProjection(
         BindingType type,
         BindingTypeUsage usage,
         InitialTypeMap typeMap)
     {
-        if (!TryGetScalarProjection(type, usage, typeMap, out BindingTypeProjection? projection))
+        if (!TryGetStaticProjection(type, usage, typeMap, out BindingTypeProjection? projection))
         {
             throw new InvalidDataException(
                 $"Declaration type '{type.NativeSpelling}' lacks a supported scalar value-copy projection.");

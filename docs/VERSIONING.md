@@ -126,19 +126,55 @@ The B17 visualization-core completion is additive ABI 1.30/bridge 0.38.0 and adv
 the package to `0.1.0-alpha.38`. It adds an HWND-bound thread-affine viewer owner,
 parent-bound presentation IDs, explicit input/resize forwarding, and copied selection
 snapshots without exposing AIS/V3d pointers or reverse callbacks.
-The B19.1 StepBasic generated-binding wave is additive ABI 1.31/bridge 0.39.0 and
+The alpha.39 StepBasic generated-binding milestone is additive ABI 1.31/bridge 0.39.0 and
 advances the package to `0.1.0-alpha.39`. It adds typed Int32-backed enums and ten
 registry-validated intrusive shared-entity wrappers without changing existing exports.
-The B19.2 package expansion is additive ABI 1.32/bridge 0.40.0 and advances the package
+The alpha.40 package expansion is additive ABI 1.32/bridge 0.40.0 and advances the package
 to `0.1.0-alpha.40`. It expands the same verified ownership contract to 129 generated
 StepBasic public types and 333 manifest IDs without removing an existing managed or
 native API.
-The B19.3 common-modeling profile is additive ABI 1.33/bridge 0.41.0 and advances the
+The alpha.41 common-modeling profile is additive ABI 1.33/bridge 0.41.0 and advances the
 package to `0.1.0-alpha.41`. It adds owning cone/torus, extrusion/revolution,
 fillet/chamfer, offset, and section results plus copied bounds/validity/count values;
 schema 1.6 reconciles the 18 directly used declarations as accepted manual bindings.
+The current large geometry/topology/XDE workstream is additive ABI 1.34/bridge 0.42.0
+and advances the package to `0.1.0-alpha.42`. It adds curve/surface construction,
+evaluation and projection, topology adjacency, loft/pipe/sewing, wedge/thick-solid,
+Boolean history summaries, and composable STEPCAF import without removing the obsolete
+compatibility assembly facade. Schema 1.6 now reconciles 61 accepted manual stable IDs.
+The generated Geom/Geom2d expansion is additive ABI 1.35/bridge 0.43.0 and advances the
+package to `0.1.0-alpha.43`. It reuses the generated intrusive shared-handle contract for
+eight new public types and 67 additional emitted stable IDs; existing public/native APIs
+are not removed.
+The generated mesh/analysis/healing expansion is additive ABI 1.36/bridge 0.44.0 and
+advances the package to `0.1.0-alpha.44`. Binding-model schema 1.2 records abstract
+records and excludes them from package-level construction; 61 public types and 375
+emitted stable IDs are added without removing an existing public/native API.
+The generated STEP model expansion is additive ABI 1.37/bridge 0.45.0 and advances the
+package to `0.1.0-alpha.45`. It adds concrete StepGeom, StepRepr, StepShape, and StepVisual
+shared owners while keeping cross-generated Handle<T> relationships gated.
+The cross-generated shared-handle expansion is additive ABI 1.38/bridge 0.46.0 and
+advances the package to `0.1.0-alpha.46`. It adds nullable handle parameters and returns
+between already selected generated owners, with target-registry validation and independent
+retention of returned wrappers; existing public/native APIs are not removed.
+The extended STEP entity expansion is additive ABI 1.39/bridge 0.47.0 and advances the
+package to `0.1.0-alpha.47`. It adds selected StepAP203/AP214/AP242, DimTol, Element, FEA,
+and Kinematics shared entities under the existing TM006 ownership contract.
+The IGES entity expansion is additive ABI 1.40/bridge 0.48.0 and advances the package to
+`0.1.0-alpha.48`. It adds selected IGES application/basic/definition/dimension/drawing/
+geometry/graphics/solid entities without treating IGES sessions as standalone owners.
+The final Batch B long-tail wave is additive ABI 1.41/bridge 0.49.0 and advances the
+package to `0.1.0-alpha.49`. It emits all named Int32-compatible enums in the generated
+profile, adds verified void/static and Standard foundation free-function projections,
+and replaces LT001-LT004 with narrow evidence-backed dispositions. Existing public and
+native APIs are not removed.
 
 ## Upgrade classification
+
+Alpha.49 generation records 16,353 emitted and 61 accepted manual declarations. The
+observed full inventory remains separate: 116,272 classified declarations, zero
+supported-unselected, and 50,514 narrow blocked dispositions. Package verification is
+pinned to .NET SDK 10.0.400 by the inner workspace `global.json`.
 
 An OCCT upgrade report must classify:
 

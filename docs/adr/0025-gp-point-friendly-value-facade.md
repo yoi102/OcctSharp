@@ -2,7 +2,7 @@
 
 - Status: Accepted
 - Date: 2026-08-22
-- Scope: B07 first geometry primitive sub-batch on OCCT 8.0.1, Windows x64
+- Scope: geometry primitive workstream inside B on OCCT 8.0.1, Windows x64
 
 ## Context
 

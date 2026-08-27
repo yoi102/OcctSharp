@@ -36,6 +36,8 @@ public sealed record BindingDeclaration(
 
     public bool IsPureVirtual { get; init; }
 
+    public bool IsAbstract { get; init; }
+
     public bool IsTemplated { get; init; }
 
     public int TemplateParameterListCount { get; init; }

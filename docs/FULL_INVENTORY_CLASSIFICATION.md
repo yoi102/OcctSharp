@@ -1,7 +1,8 @@
 # Full Inventory Classification
 
-B19 provides complete classification for the pinned OCCT 8.0.1 public entry-header
-catalog. It does not claim complete generated C# bindings.
+The long-tail workstream inside B provides complete classification for the pinned OCCT
+8.0.1 public entry-header catalog. Generated coverage and classification remain separate:
+a blocked declaration is not a package API.
 
 ## Current metrics
 
@@ -10,32 +11,47 @@ catalog. It does not claim complete generated C# bindings.
 | Catalogued entry headers | 7,090 |
 | Semantically parsed headers | 7,058 (99.5487%) |
 | Isolated header failures | 32 |
-| Unique declarations from parsed headers | 116,214 |
-| Finally classified declarations | 116,214 (100%) |
+| Unique declarations from parsed headers | 116,272 |
+| Finally classified declarations | 116,272 (100%) |
 | Finally classified headers | 7,090 (100%) |
 | Final declaration/header pending | 0 / 0 |
 | Unowned header fallback `HD099` | 0 |
-| Selected generated bindings | 333/9,567 (3.4807% of selected scope) |
-| Selected emitted plus accepted manual bindings | 351/9,567 (3.6689% of selected scope) |
+| Generated manifest stable IDs | 16,353 |
+| Accepted manual stable IDs | 61 |
+| `SupportedUnselected` | 0 |
+| Broad `LT001`-`LT004` reasons | 0 |
 
 The successful declarations have these final dispositions:
 
 | State | Count | Meaning |
 |---|---:|---|
-| `Emitted` | 333 | The generated manifest owns the declaration stable ID (`EM001`) |
-| `Manual` | 18 | Schema 1.6 links the stable ID to accepted SC-032 behavior (`MN001`) |
-| `SupportedUnselected` | 10,177 | Initial value-copy rules consider the declaration eligible, but no full-profile emitter selection/validation exists |
-| `Skipped` | 27,310 | Deleted, non-public, variadic, template declaration, or operator exclusion with existing `SK` code |
-| `Blocked` | 78,376 | Public candidate needs a declaration, receiver ownership, return, or parameter projection rule |
+| `Emitted` | 16,353 | The generated manifest owns the declaration stable ID (`EM001`) |
+| `Manual` | 61 | Schema 1.6 links the stable ID to accepted SC-032/SC-033 behavior (`MN001`) |
+| `SupportedUnselected` | 0 | No declaration accepted by the active safe generator rules remains outside the manifest |
+| `Skipped` | 49,344 | Non-public/language-level exclusions or narrow accepted non-callable declarations |
+| `Blocked` | 50,514 | Public declarations with a specific unresolved ABI, export, type, or ownership boundary |
 | `Pending` | 0 | No unowned declaration disposition remains |
 
-Blocked reason counts are `LT001 DeclarationProjection` 13,140,
-`LT002 InstanceOwnership` 43,459, `LT003 ReturnProjection` 20,349, and
-`LT004 ParameterProjection` 1,428. `LT000 EligibleUnselected` accounts for 10,177,
-while `EM001 GeneratedBinding` accounts for 333 manifest-reconciled declarations and
-`MN001 ManualBinding` accounts for 18 stable-ID-reconciled declarations.
-Skipped counts remain `SK002` 856, `SK003` 4,577, `SK004` 6, `SK005` 119, and
-`SK006` 21,752.
+The former broad LT001-LT004 buckets are eliminated. Narrow blocker counts are:
+
+| Code | Category | Count |
+|---|---|---:|
+| `BL002` | Missing toolkit provenance | 445 |
+| `BL003` | Unverified free-function export | 117 |
+| `BL102` | Non-transient receiver ownership | 19,194 |
+| `BL103` | Non-transient value construction | 6,649 |
+| `BL202` | Raw pointer lifetime | 3,550 |
+| `BL203` | Rvalue-reference transfer | 1,277 |
+| `BL204` | Borrowed or output reference | 8,820 |
+| `BL205` | Unselected intrusive-handle target | 2,752 |
+| `BL206` | Template-instantiation projection | 630 |
+| `BL208` | Unmapped value type | 7,080 |
+
+New accepted skip reasons are `SK012 TypeMetadata` 11,603, `SK013
+InternalHeaderFunction` 4, `SK014 DestructorLifecycleBoundary` 4,182, `SK015
+PureVirtualDispatch` 1,050, `SK016 AbstractTypeConstruction` 458, and `SK017
+AnonymousOrUnnameableEnum` 41. Existing deterministic SK002-SK011 reasons remain in the
+machine-readable report.
 
 ## Header dispositions
 
@@ -48,14 +64,15 @@ Skipped counts remain `SK002` 856, `SK003` 4,577, `SK004` 6, `SK005` 119, and
 | `HD004` | C++/CLI-only | 1 |
 | `HD005` | Missing generated OCCT header in the artifact | 10 |
 
-The machine-readable report is generated under
-`OcctSharp/artifacts/generator-reports/full-inventory.json`. The current BatchSize=128
-manifest-aware report has SHA256
-`A6E86542CE4538EA63F14B6A58F35F628D793E4098C86BC17CDCA935EFF7257D`.
+The manifest-aware BatchSize=128 report is
+`OcctSharp/artifacts/generator-reports/full-inventory.json`, SHA256
+`EC57888D76FD7726806EB5D4247CBB2020C588481651FDF834E2A13F1F3E0DB6`.
 
 ## Interpretation
 
-Classification completeness answers “does every observed surface have an accountable
-state?” Binding coverage answers “how much safe API is actually emitted and validated?”
-They must never be merged. `SupportedUnselected` and `Blocked` are not package APIs, and
-the 32 failed headers contribute header dispositions rather than invented declarations.
+Classification completeness answers whether every observed surface has an accountable
+state. Binding coverage answers how much safe API is actually emitted and validated.
+The 32 failed headers contribute header dispositions rather than invented declarations.
+Batch implementation completion additionally requires local build, runtime, freshness,
+package-consumer, compatibility, and release-engineering gates; public release readiness
+still has independent legal, hosted-CI, signing, and publication gates.

@@ -1,7 +1,7 @@
 # Build and Release
 
 This document defines the build and release process. Local packaging and reproducible
-B20 release evidence are implemented; public publication remains externally gated.
+Release evidence tooling is implemented inside batch B; public publication remains externally gated.
 
 ## Validated baseline
 
@@ -36,7 +36,7 @@ dotnet run --project .\samples\OcctSharp.Samples --configuration Debug
 ```
 
 If the Debug native runtime is missing or stale, MSBuild invokes
-`eng/ensure-native.ps1`, builds only the native bridge and current 47-DLL closure, and copies it
+`eng/ensure-native.ps1`, builds only the native bridge and current 62-DLL closure, and copies it
 to the Sample output's `occt/` directory. It does not call `eng/build.ps1` and cannot
 recurse into the managed build. A clone without any configured OCCT input fails with
 instructions for the three supported input methods. NuGet consumers are different:
@@ -92,7 +92,7 @@ Create and verify the experimental NuGet package with:
 ```
 
 The package verifier restores the new local package into a package-only consumer,
-publishes it, confirms all 45 native runtime DLLs are below `occt`, then loads OCCT and
+publishes it, confirms all 62 native runtime DLLs are below `occt`, then loads OCCT and
 executes box, generated typed-handle, and generated topology-value checks. See
 [NuGet packaging](NUGET_PACKAGING.md) for the exact layout.
 
@@ -221,7 +221,7 @@ The root CI workflow has a dependency-free generator job and a complete Windows 
 runs this same entry point after acquiring an archive from configured immutable URL and
 SHA256 variables. Hosted CI execution is `NOT RUN`. Project licensing and non-OCCT
 third-party legal review are `BLOCKED`; package signing and NuGet publication are
-`NOT RUN`. Therefore local B20 implementation is complete while public release readiness
+`NOT RUN`. Therefore local release-tooling implementation is complete while public release readiness
 is false.
 
 ```powershell

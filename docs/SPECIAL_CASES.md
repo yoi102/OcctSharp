@@ -313,7 +313,7 @@ rules or design:
 
 ## SC-013: Opaque `gp_Lin` geometry value
 
-- Status: Accepted B07 line sub-batch.
+- Status: Accepted line-geometry capability milestone inside B.
 - Scope: `gp_Lin` default/create/reversed/distance/angle with copied `gp_Pnt` origin and
   unit `gp_Dir` direction.
 - Reason: A line embeds native axis state and direction invariants; exposing references
@@ -329,7 +329,7 @@ rules or design:
 
 ## SC-014: Opaque `gp_Circ` geometry value
 
-- Status: Accepted B07 circle sub-batch.
+- Status: Accepted circle-geometry capability milestone inside B.
 - Scope: `gp_Circ` default/create/area/length/distance with copied center, normal, and radius values.
 - Reason: Circle construction owns axis invariants and raises on negative radius or a zero normal; native object layout and axis references must remain hidden.
 - Native/ABI/managed behavior: ABI 1.21 exposes a 56-byte value. Native construction and measurements delegate to OCCT; managed `GpCircle` is immutable and validates finite radius input.
@@ -339,7 +339,7 @@ rules or design:
 
 ## SC-015: Opaque `gp_Ax3` coordinate-system value
 
-- Status: Accepted B07 axis sub-batch.
+- Status: Accepted axis-geometry capability milestone inside B.
 - Scope: `GpAx3Value` over OCCT 8.0.1 `gp_Ax3` default/create/direct semantics.
 - Reason: `gp_Ax3` embeds an axis and two derived directions; native references and
   compiler layout must not be projected into managed code. OCCT also rejects zero or
@@ -357,7 +357,7 @@ rules or design:
 
 ## SC-016: Opaque `GProp_GProps` property accumulator
 
-- Status: Accepted B08 first property sub-batch.
+- Status: Accepted property capability milestone inside B.
 - Scope: `GPropProperties` over `GProp_GProps`, plus shape-driven `BRepGProp` linear,
   surface, and volume calculations.
 - Reason: The native accumulator owns mutable inertia state and returns C++ `gp_Pnt`/
@@ -422,7 +422,7 @@ rules or design:
 
 ## SC-020: Caller-owned BRep mesh snapshots
 
-- Status: Accepted B13 first bulk-transfer sub-batch.
+- Status: Accepted mesh bulk-transfer capability milestone inside B.
 - Scope: `Shape.CreateMesh`, `occtsharp_shape_mesh_count`, and
   `occtsharp_shape_mesh_snapshot` over `BRepMesh_IncrementalMesh` and
   `Poly_Triangulation` for all traversed faces.
@@ -470,7 +470,7 @@ rules or design:
 
 ## SC-023: Interim IGES reader transfer bridge
 
-- Status: Accepted B14 first exchange sub-batch.
+- Status: Accepted IGES exchange capability milestone inside B.
 - Scope: `ShapeExchange.ReadIges` and `occtsharp_shape_read_iges` over
   `IGESControl_Reader` on OCCT 8.0.1.
 - Reason: Reader model and transfer roots are native-local; exposing them would require
@@ -485,7 +485,7 @@ rules or design:
 
 ## SC-024: Interim STL reader transfer bridge
 
-- Status: Accepted B14 first exchange sub-batch.
+- Status: Accepted STL exchange capability milestone inside B.
 - Scope: `ShapeExchange.ReadStl` and `occtsharp_shape_read_stl` over `StlAPI_Reader`.
 - Reason: STL reader state and per-facet construction remain native-local; a one-shot
   faceted shape is the safe counterpart to the existing STL writer.
@@ -498,7 +498,7 @@ rules or design:
 
 ## SC-025: Null-topology modeling failure contract
 
-- Status: Accepted B12 failure sub-batch.
+- Status: Accepted topology-failure capability milestone inside B.
 - Scope: `ShapeFactory.CreateNull` and null validation in Fuse, Cut, Fixed, and
   UnifiedSameDomain.
 - Reason: Null `TopoDS_Shape` values are representable but invalid algorithm inputs;
@@ -628,7 +628,7 @@ rules or design:
 
 ## SC-032: Native-local common modeling operations with audited stable IDs
 
-- Status: Accepted B19.3 common modeling profile.
+- Status: Accepted common modeling profile inside batch B.
 - Scope: OCCT 8.0.1 `BRepPrimAPI_MakeCone`, `BRepPrimAPI_MakeTorus`,
   `BRepPrimAPI_MakePrism`, `BRepPrimAPI_MakeRevol`, `BRepFilletAPI_MakeFillet`,
   `BRepFilletAPI_MakeChamfer`, `BRepOffsetAPI_MakeOffsetShape`,
@@ -661,3 +661,90 @@ rules or design:
 - Removal criteria: Replace each manual raw operation only after generalized generated
   algorithm-result descriptors can reproduce the same owning/value, error, history
   exclusion, coverage, and runtime/lifetime evidence.
+
+## SC-033: Native-local high-value geometry and topology workflows
+
+- Status: Accepted current workstream inside batch B; complete-batch exit remains open.
+- Scope: 43 OCCT 8.0.1 declarations across `BRepAdaptor`, `BRep_Tool`,
+  `BRepBuilderAPI`, `BRepOffsetAPI`, `BRepAlgoAPI`, `BRepPrimAPI`, `GC`, `GCPnts`,
+  `Geom`, `GeomAPI`, and `TopExp`. The public families are circle/ellipse/arc/Bezier/
+  interpolated edges, curve length/evaluation/projection, surface evaluation/projection,
+  topology adjacency, loft, pipe, sewing, Boolean history summaries, wedge, and thick
+  solid.
+- Reason: The involved OCCT builders, adaptors, projectors, history lists, indexed maps,
+  and algorithms carry mutable, borrowed, or parent-related state for which the general
+  generator does not yet emit a safe ownership graph. The selected high-frequency
+  workflows can safely keep that state inside one native call and cross only owning
+  topology or copied snapshots.
+- Native/ABI/managed behavior: ABI 1.34 adds one-shot native operations. Successful
+  topology results are registered owning `Shape` values. Curve/surface results are fixed
+  copied points, vectors, parameters, distances, and counts. Adjacency is copied into
+  independent owning shapes plus compact managed offset/index arrays. Boolean history
+  returns an owning result and copied modified/generated/deleted summaries.
+- Ownership: Every input shape is borrowed only for the call. Multi-shape calls acquire
+  all `SafeHandle` references before entering native code and release them in reverse
+  order. No adaptor, curve/surface handle, projector, OCCT list/map, builder, progress
+  object, or history object crosses the ABI. Returned shapes and snapshots remain valid
+  after all inputs are disposed.
+- Coverage accounting: Schema 1.6 lists all 43 directly used stable IDs. Discovery must
+  find every ID; inventory reconciliation reports them as `Manual/MN001`. Unknown,
+  duplicate, malformed, or emitted/manual-overlap IDs fail generation.
+- Validation: Current Debug validation passes Generator 44/44 and Runtime 90/90,
+  including success, wrong-kind, empty, invalid-number, disposal, layout, adjacency,
+  builder, and history behavior. Release, freshness, full inventory, alpha.42 package
+  consumer, and release-check evidence remain required before accepting the current
+  package evidence chain.
+- Upgrade impact: Re-run stable-ID discovery and re-check parameter ranges, curve/surface
+  domains, tolerance behavior, builder completion/null results, topology-map ordering,
+  history semantics, toolkit closure, and ABI layouts on every OCCT upgrade.
+- Removal criteria: Replace each operation only when generated algorithm/adaptor/history
+  descriptors reproduce the same call-local ownership, copied-result, validation,
+  coverage, and runtime/lifetime guarantees.
+
+## SC-034: Generated incremental-allocator placement construction
+
+- Status: Accepted generator exception inside batch B; full-wave compile and runtime
+  validation remain open.
+- Scope: OCCT 8.0.1 `BRepMeshData_Curve` construction with
+  `Handle<NCollection_IncAllocator>`.
+- Reason: `DEFINE_INC_ALLOC` removes ordinary allocation and supplies allocator placement
+  new plus a no-op ordinary delete. Emitting `new T(allocator)` is ill-formed, while
+  forcing global allocation would mismatch the class deletion contract.
+- Generated behavior: Configuration schema 1.8 marks the exact native type. The emitter
+  requires exactly one generated incremental-allocator parameter, calls
+  `new (allocator) T(allocator)`, and stores an additional allocator handle in every
+  native wrapper and clone.
+- Ownership: The wrapper declares the retained allocator before the object handle, so
+  reverse field destruction releases the object while allocator storage remains alive.
+  Managed construction rejects a null allocator. No allocator pointer crosses the ABI.
+- Validation: Generator 53/53 passes. Full Release native/managed compile, allocator
+  lifetime runtime stress, Debug, package consumer, and release gates are `NOT RUN`.
+- Upgrade impact: Recheck the type's allocation macros, constructor parameter, member
+  allocator retention, and delete behavior on every OCCT upgrade.
+- Removal criteria: Replace the explicit type marker only after semantic discovery models
+  class-specific allocation/deallocation operators and proves equivalent lifetime order.
+
+## SC-035: Final long-tail disposition and export-proof boundary
+
+- Status: Accepted for the alpha.49 Batch B completion gate.
+- Scope: Full OCCT 8.0.1 observed declaration inventory and standalone generated enum,
+  static method, and free-function selection.
+- Reason: The former LT001-LT004 buckets mixed non-callable type metadata, destructors,
+  abstract/pure-virtual surfaces, pointer/reference lifetime, handle targets, templates,
+  unmapped values, and link-unproven free functions. A single broad blocker could not
+  prove whether a declaration was safely bindable or deliberately excluded.
+- Generated behavior: Named Int32-compatible enums are emitted independently of callable
+  references. Anonymous enum declarations are `SK017`. Void returns reuse the no-value
+  TM000 projection. Free functions are generated only for the export-proven Standard
+  foundation profile; missing toolkit provenance and other unverified exports are BL002
+  and BL003. Exact method/function scopes include the declaring header and cannot overlap
+  a broader automatic prefix.
+- Ownership: No new pointer, reference, borrowed view, or C++ layout crosses the ABI.
+  BL102/BL103 and BL202-BL208 retain the exact unresolved ownership/type boundary.
+- Validation: Release and Debug native/managed builds pass; Generator 62/62, Runtime
+  105/105, discovery/report determinism, and dependency profiles 6/6 pass. The final
+  inventory has 16,353 emitted, 61 manual, zero supported-unselected, zero LT001-LT004,
+  zero pending/HD099, and 50,514 narrow blocked dispositions.
+- Upgrade impact: Re-run exact symbol/export inspection before broadening any free-function
+  profile. Recompute every reason count and fail the completion gate if LT001-LT004,
+  supported-unselected, pending, or HD099 reappears.

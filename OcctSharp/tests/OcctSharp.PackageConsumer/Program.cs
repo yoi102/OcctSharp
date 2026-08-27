@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 33)
-    || runtime.BridgeVersion != "0.41.0"
+if (runtime.AbiVersion != new Version(1, 41)
+    || runtime.BridgeVersion != "0.49.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -37,6 +37,48 @@ if (box.FaceCount != 6)
     throw new InvalidOperationException($"Expected 6 box faces, received {box.FaceCount}.");
 }
 
+using Geom2dCartesianPoint generated2dPoint = new(2, 3);
+using Geom2dDirection generated2dDirection = new(3, 4);
+using Geom2dTransformation generated2dTransform = new();
+using Geom2dVectorWithMagnitude generated2dVector = new(3, 4);
+using GeomDirection generated3dDirection = new(2, 3, 6);
+using GeomPlane generatedPlane = new(0, 0, 1, 0);
+using GeomTransformation generated3dTransform = new();
+using GeomVectorWithMagnitude generated3dVector = new(2, 3, 6);
+using Geom2dCartesianPoint generated2dPointClone = generated2dPoint.Clone();
+generated2dPointClone.SetCoord(5, 7);
+generated3dTransform.SetTranslation(new Point3d(1, 2, 3), new Point3d(4, 6, 8));
+if (generated2dPoint.ReferenceCount != 2
+    || generated2dPoint.X() != 5 || generated2dPoint.Y() != 7
+    || Math.Abs(generated2dDirection.Magnitude() - 1) > 1e-12
+    || generated2dTransform.ScaleFactor() != 1
+    || generated2dVector.Magnitude() != 5
+    || Math.Abs(generated3dDirection.Magnitude() - 1) > 1e-12
+    || Math.Abs(generatedPlane.EvalD0(2, 3).Z) > 1e-12
+    || generated3dTransform.Value(1, 4) != 3
+    || generated3dVector.Magnitude() != 7)
+{
+    throw new InvalidOperationException("The packaged generated Geom/Geom2d shared bindings failed.");
+}
+
+using BRepMeshIncrementalMesh generatedMesh = new();
+using PolyTriangulationParameters generatedMeshParameters = new(0.25, 0.5, 0.01);
+using ShapeAnalysisTransferParameters generatedAnalysis = new();
+using ShapeFixRoot generatedFix = new();
+using ShapeUpgradeTool generatedUpgrade = new();
+generatedFix.SetPrecision(0.01);
+generatedUpgrade.SetPrecision(0.02);
+if (generatedMesh.TypeName != "BRepMesh_IncrementalMesh"
+    || generatedMesh.GetStatusFlags() != 0
+    || generatedMeshParameters.Deflection() != 0.25
+    || generatedAnalysis.TypeName != "ShapeAnalysis_TransferParameters"
+    || generatedFix.Precision() != 0.01
+    || generatedUpgrade.Precision() != 0.02)
+{
+    throw new InvalidOperationException(
+        "The packaged generated mesh, analysis, and healing bindings failed.");
+}
+
 using StepBasicCoordinatedUniversalTimeOffset packagedOffset = new();
 packagedOffset.Init(9, true, 30, StepBasicAheadOrBehind.StepBasic_aobAhead);
 using StepBasicCoordinatedUniversalTimeOffset packagedOffsetClone = packagedOffset.Clone();
@@ -46,6 +88,22 @@ if (packagedOffset.ReferenceCount != 2
     || packagedOffsetClone.Sense() != StepBasicAheadOrBehind.StepBasic_aobAhead)
 {
     throw new InvalidOperationException("The packaged generated StepBasic shared/enum binding did not preserve state.");
+}
+
+using StepBasicAction packagedAction = new();
+using StepBasicActionMethod packagedMethod = new();
+packagedAction.SetChosenMethod(packagedMethod);
+using StepBasicActionMethod packagedReturnedMethod = packagedAction.ChosenMethod()
+    ?? throw new InvalidOperationException("The packaged cross-generated shared handle returned null.");
+packagedMethod.Dispose();
+if (packagedReturnedMethod.TypeName != "StepBasic_ActionMethod")
+{
+    throw new InvalidOperationException("The packaged cross-generated shared handle was not retained independently.");
+}
+packagedAction.SetChosenMethod(null);
+if (packagedAction.ChosenMethod() is not null)
+{
+    throw new InvalidOperationException("The packaged cross-generated shared handle did not round-trip null.");
 }
 
 Type[] packagedStepBasicTypes = typeof(StepBasicDate).Assembly.GetExportedTypes()
@@ -77,6 +135,66 @@ foreach (Type type in packagedStepBasicTypes)
     {
         instance.Dispose();
         stepClone?.Dispose();
+    }
+}
+
+using StepGeomCartesianPoint packagedStepPoint = new();
+packagedStepPoint.SetNbCoordinates(3);
+using StepReprRepresentationItem packagedRepresentationItem = new();
+using StepShapeBoxDomain packagedBoxDomain = new();
+packagedBoxDomain.SetXlength(4);
+packagedBoxDomain.SetYlength(5);
+packagedBoxDomain.SetZlength(6);
+using StepVisualColourRgb packagedColour = new();
+packagedColour.SetRed(0.25);
+packagedColour.SetGreen(0.5);
+packagedColour.SetBlue(0.75);
+if (packagedStepPoint.NbCoordinates() != 3
+    || packagedRepresentationItem.TypeName != "StepRepr_RepresentationItem"
+    || packagedBoxDomain.Xlength() != 4
+    || packagedBoxDomain.Ylength() != 5
+    || packagedBoxDomain.Zlength() != 6
+    || packagedColour.Red() != 0.25
+    || packagedColour.Green() != 0.5
+    || packagedColour.Blue() != 0.75)
+{
+    throw new InvalidOperationException(
+        "The packaged generated STEP geometry, representation, shape, or visual bindings failed.");
+}
+
+(string Prefix, int ExpectedCount)[] packagedStepFamilies =
+[
+    ("IGESAppli", 23),
+    ("IGESBasic", 20),
+    ("IGESDefs", 11),
+    ("IGESDimen", 27),
+    ("IGESDraw", 18),
+    ("IGESGeom", 27),
+    ("IGESGraph", 18),
+    ("IGESSolid", 28),
+    ("StepAP203", 11),
+    ("StepAP214", 27),
+    ("StepAP242", 4),
+    ("StepDimTol", 50),
+    ("StepElement", 21),
+    ("StepFEA", 55),
+    ("StepGeom", 85),
+    ("StepKinematics", 81),
+    ("StepRepr", 79),
+    ("StepShape", 92),
+    ("StepVisual", 110),
+];
+Type[] packagedTypes = typeof(StepBasicDate).Assembly.GetExportedTypes();
+foreach ((string prefix, int expectedCount) in packagedStepFamilies)
+{
+    int actualCount = packagedTypes.Count(type => type.IsClass
+        && type.Name.StartsWith(prefix, StringComparison.Ordinal)
+        && typeof(IDisposable).IsAssignableFrom(type)
+        && type.GetConstructor(Type.EmptyTypes) is not null);
+    if (actualCount != expectedCount)
+    {
+        throw new InvalidOperationException(
+            $"Expected {expectedCount} packaged generated {prefix} types, received {actualCount}.");
     }
 }
 
@@ -135,11 +253,58 @@ using Shape section = box.Section(sectionTool);
 using Shape filleted = box.Fillet(1);
 using Shape chamfered = box.Chamfer(1);
 using Shape offsetShape = box.Offset(0.25);
+using Shape wedge = ShapeFactory.CreateWedge(6, 5, 4, 2);
 if (fused.FaceCount <= 0 || cut.FaceCount <= 0
     || section.CountSubShapes(ShapeKind.Edge) <= 0
-    || !filleted.IsValid || !chamfered.IsValid || !offsetShape.IsValid)
+    || !filleted.IsValid || !chamfered.IsValid || !offsetShape.IsValid || !wedge.IsValid)
 {
     throw new InvalidOperationException("The packaged boolean bridge did not return valid topology.");
+}
+
+using Shape circleEdge = ShapeFactory.CreateCircleEdge(GpPoint.Origin, new GpPoint(0, 0, 1), 2);
+using Shape bezierEdge = ShapeFactory.CreateBezierEdge(
+    [GpPoint.Origin, new GpPoint(1, 2, 0), new GpPoint(3, 0, 0)]);
+CurveEvaluation curveEvaluation = bezierEdge.EvaluateEdge(0.5);
+CurveProjection curveProjection = circleEdge.ProjectPointOnEdge(new GpPoint(3, 0, 0));
+if (circleEdge.GetEdgeLength() <= 0 || !double.IsFinite(curveEvaluation.Point.X)
+    || Math.Abs(curveProjection.Distance - 1) > 1e-8)
+{
+    throw new InvalidOperationException("The packaged curve construction/evaluation profile failed.");
+}
+
+Shape[] topologyFaces = box.GetFaces();
+try
+{
+    FaceSurfaceSnapshot surfaceBounds = topologyFaces[0].GetFaceSurfaceSnapshot();
+    SurfaceEvaluation surfaceEvaluation = topologyFaces[0].EvaluateFace(
+        (surfaceBounds.FirstUParameter + surfaceBounds.LastUParameter) / 2,
+        (surfaceBounds.FirstVParameter + surfaceBounds.LastVParameter) / 2);
+    SurfaceProjection surfaceProjection = topologyFaces[0].ProjectPointOnFace(surfaceEvaluation.Point);
+    using TopologyAdjacencyMap adjacency = box.GetTopologyAdjacency(ShapeKind.Edge, ShapeKind.Face);
+    using Shape thickSolid = box.MakeThickSolid([topologyFaces[0]], -0.5);
+    using Shape sewn = ShapeFactory.Sew(topologyFaces);
+    if (surfaceProjection.Distance > 1e-7 || adjacency.Items.Count != 12
+        || adjacency.RelationCount != 24 || !thickSolid.IsValid || !sewn.IsValid)
+    {
+        throw new InvalidOperationException("The packaged surface/topology/thick-solid profile failed.");
+    }
+}
+finally
+{
+    foreach (Shape face in topologyFaces) face.Dispose();
+}
+
+using Shape loftLower = ShapeFactory.CreatePolygonWire(
+    [new GpPoint(-1, -1, 0), new GpPoint(1, -1, 0), new GpPoint(1, 1, 0), new GpPoint(-1, 1, 0)], true);
+using Shape loftUpper = ShapeFactory.CreatePolygonWire(
+    [new GpPoint(-2, -2, 4), new GpPoint(2, -2, 4), new GpPoint(2, 2, 4), new GpPoint(-2, 2, 4)], true);
+using Shape loft = ShapeFactory.CreateLoft([loftLower, loftUpper], makeSolid: true);
+using Shape pipeSpine = ShapeFactory.CreatePolygonWire([GpPoint.Origin, new GpPoint(0, 0, 4)]);
+using Shape pipe = ShapeFactory.CreatePipe(pipeSpine, loftLower);
+using BooleanOperationResult history = box.CutWithHistory(booleanTool, ShapeKind.Face);
+if (!loft.IsValid || !pipe.IsValid || history.History.Left.SourceCount != 6 || !history.Shape.IsValid)
+{
+    throw new InvalidOperationException("The packaged loft/pipe/Boolean-history profile failed.");
 }
 
 using Shape fixedShape = box.Fixed();
@@ -404,6 +569,26 @@ try
             || !binaryXde.GetLabel(xdeAssemblyEntry).IsAssembly)
         {
             throw new InvalidOperationException("The packaged BinXCAF metadata round-trip failed.");
+        }
+    }
+
+    string composedStepPath = Path.Combine(exchangeDirectory, "package-composed-assembly.step");
+    using (XdeDocument composedXde = XdeDocument.Create())
+    {
+        using XdeTransaction transaction = composedXde.BeginTransaction();
+        XdeLabel importedRoot = composedXde.ImportStep(xdeStepPath).Single();
+        XdeLabel assembly = composedXde.AddAssembly("Composed package assembly");
+        using TopLocLocation identity = TopLocLocation.Identity;
+        _ = composedXde.AddComponent(assembly, importedRoot, identity);
+        transaction.Commit();
+        composedXde.WriteStep(composedStepPath);
+    }
+    using (XdeDocument composedRoundTrip = XdeDocument.ReadStep(composedStepPath))
+    {
+        XdeLabel composedAssembly = composedRoundTrip.GetFreeShapes().Single();
+        if (!composedAssembly.IsAssembly || composedAssembly.ComponentCount != 1)
+        {
+            throw new InvalidOperationException("The packaged composable XDE STEP import workflow failed.");
         }
     }
 

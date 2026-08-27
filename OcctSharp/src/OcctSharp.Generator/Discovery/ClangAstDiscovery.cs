@@ -112,7 +112,7 @@ public sealed class ClangAstDiscovery
         BindingModel eligibleModel = SharedHandleBindingEligibilityPass.Apply(valueEligibleModel);
 
         return new DiscoveryReport(
-            "1.1",
+            "1.2",
             occtVersion,
             "ClangSharp/libClangSharp 21.1.8",
             headers,
@@ -206,7 +206,7 @@ public sealed class ClangAstDiscovery
 
         if (declaration is not NamedDecl namedDeclaration
             || string.IsNullOrWhiteSpace(namedDeclaration.Name)
-            || !declaration.IsCanonicalDecl)
+            || (!declaration.IsCanonicalDecl && !HasResolvedDefinition(declaration)))
         {
             return false;
         }
@@ -329,6 +329,7 @@ public sealed class ClangAstDiscovery
             IsVariadic = function?.IsVariadic ?? false,
             IsVirtual = method?.IsVirtual ?? false,
             IsPureVirtual = method?.IsPure ?? false,
+            IsAbstract = recordDefinition?.IsAbstract ?? false,
             IsTemplated = isTemplated,
             TemplateParameterListCount = checked((int)templateParameterListCount),
             TemplateSpecializationKind = specializationKind.ToString()
@@ -340,6 +341,13 @@ public sealed class ClangAstDiscovery
         };
         return true;
     }
+
+    private static bool HasResolvedDefinition(Decl declaration) => declaration switch
+    {
+        CXXRecordDecl { Definition: not null } => true,
+        EnumDecl { Definition: not null } => true,
+        _ => false,
+    };
 
     private static BindingType CreateBindingType(ClangSharp.Type type)
     {

@@ -32,7 +32,7 @@ public sealed class LongTailClassificationTests
         Assert.Equal(3, result.DeclarationClassified);
         Assert.Equal(0, result.DeclarationPending);
         Assert.Equal("SupportedUnselected", Find(result, "supported").State);
-        Assert.Equal("LT002", Find(result, "instance").Code);
+        Assert.Equal("BL101", Find(result, "instance").Code);
         Assert.Equal("SK005", Find(result, "skipped").Code);
         Assert.Contains(result.Headers, item => item.Header == "IVtk_Types.hxx"
             && item.Code == "HD001"
@@ -102,6 +102,67 @@ public sealed class LongTailClassificationTests
 
         Assert.True(result.IsComplete);
         Assert.Equal(expectedCode, Assert.Single(result.Headers).Code);
+    }
+
+    [Fact]
+    public void AssignsConfiguredPackageDisposition()
+    {
+        BindingDeclaration declaration = Create("draw", BindingDeclarationKind.Method) with
+        {
+            SourcePackage = "Draw",
+            SupportState = BindingSupportState.Supported,
+        };
+
+        OcctFinalClassification result = LongTailClassification.Create(
+            [declaration],
+            ["Draw.hxx"],
+            new HashSet<string>(["Draw.hxx"], StringComparer.Ordinal),
+            [],
+            excludedPackages: new Dictionary<string, BindingSkipReason>(StringComparer.Ordinal)
+            {
+                ["Draw"] = new BindingSkipReason("SK009", "TestHarness", "test-only"),
+            });
+
+        OcctDeclarationDisposition disposition = Assert.Single(result.Declarations);
+        Assert.Equal("Skipped", disposition.State);
+        Assert.Equal("SK009", disposition.Code);
+        Assert.Equal("TestHarness", disposition.Category);
+    }
+
+    [Fact]
+    public void ReplacesBroadLongTailBucketsWithStructuralDispositions()
+    {
+        BindingType pointer = new(
+            "double *",
+            "double *",
+            "double",
+            "double",
+            [
+                new BindingTypeLayer(BindingTypeLayerKind.PointerIndirection, false),
+                new BindingTypeLayer(BindingTypeLayerKind.Value, false),
+            ],
+            null,
+            [],
+            false,
+            null);
+        BindingDeclaration record = Create("record", BindingDeclarationKind.Record);
+        BindingDeclaration function = Create("function", BindingDeclarationKind.Function) with
+        {
+            SourcePackage = "Standard",
+            SourceToolkit = "TKernel",
+            ReturnType = pointer,
+        };
+
+        OcctFinalClassification result = LongTailClassification.Create(
+            [record, function],
+            ["Good.hxx"],
+            new HashSet<string>(["Good.hxx"], StringComparer.Ordinal),
+            []);
+
+        Assert.Equal("SK012", Find(result, "record").Code);
+        Assert.Equal("BL202", Find(result, "function").Code);
+        Assert.DoesNotContain(result.DeclarationReasons, item =>
+            item.Code is "LT001" or "LT002" or "LT003" or "LT004");
     }
 
     private static BindingDeclaration Create(string id, BindingDeclarationKind kind) => new(

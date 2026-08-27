@@ -2,7 +2,7 @@
 
 - Status: Accepted
 - Date: 2026-08-22
-- Scope: B07 geometry primitive axis sub-batch on OCCT 8.0.1, Windows x64
+- Scope: geometry primitive axis workstream inside B on OCCT 8.0.1, Windows x64
 
 ## Decision
 

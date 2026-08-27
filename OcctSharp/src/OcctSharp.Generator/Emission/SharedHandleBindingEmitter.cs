@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text;
 using OcctSharp.Generator.Discovery;
 using OcctSharp.Generator.Model;
@@ -17,11 +18,14 @@ public static class SharedHandleBindingEmitter
     public static GeneratedBindingSet Emit(
         string occtVersion,
         BindingModel model,
-        IReadOnlyList<SharedHandleScopeConfiguration> scopes)
+        IReadOnlyList<SharedHandleScopeConfiguration> scopes,
+        IReadOnlyList<string>? preambleHeaders = null)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(occtVersion);
         ArgumentNullException.ThrowIfNull(model);
         ArgumentNullException.ThrowIfNull(scopes);
+        preambleHeaders ??= [];
+        ValidatePreambleHeaders(preambleHeaders);
 
         if (scopes.Count == 0)
         {
@@ -30,9 +34,11 @@ public static class SharedHandleBindingEmitter
 
         ValidateScopes(scopes);
         InitialTypeMap typeMap = InitialTypeMap.FromModel(model);
+        IReadOnlyDictionary<string, SharedHandleScopeConfiguration> scopeByNativeType = scopes
+            .ToDictionary(static scope => scope.NativeType, StringComparer.Ordinal);
         SharedTypeBinding[] bindings = scopes
             .OrderBy(static scope => scope.NativeType, StringComparer.Ordinal)
-            .Select(scope => CreateBinding(model, typeMap, scope))
+            .Select(scope => CreateBinding(model, typeMap, scope, scopeByNativeType))
             .ToArray();
         BindingDeclaration[] declarations = bindings
             .SelectMany(static binding => binding.Constructors
@@ -46,7 +52,7 @@ public static class SharedHandleBindingEmitter
             declarations.Select(static declaration => declaration.StableId).ToArray(),
             [
                 new GeneratedFile(NativeHeaderPath, EmitNativeHeader(bindings, declarations)),
-                new GeneratedFile(NativeSourcePath, EmitNativeSource(bindings, declarations)),
+                new GeneratedFile(NativeSourcePath, EmitNativeSource(bindings, declarations, preambleHeaders)),
                 new GeneratedFile(ManagedRawPath, EmitManagedRaw(bindings, declarations)),
                 new GeneratedFile(ManagedFriendlyPath, EmitManagedFriendly(bindings, declarations)),
             ]);
@@ -55,99 +61,176 @@ public static class SharedHandleBindingEmitter
     private static SharedTypeBinding CreateBinding(
         BindingModel model,
         InitialTypeMap typeMap,
-        SharedHandleScopeConfiguration scope)
+        SharedHandleScopeConfiguration scope,
+        IReadOnlyDictionary<string, SharedHandleScopeConfiguration> scopeByNativeType)
     {
         string constructorName = scope.NativeType + "::" + GetUnqualifiedName(scope.NativeType);
-        SharedConstructor[] constructors = model.Declarations
+        SharedConstructor[] constructors = scope.SuppressConstructors
+            ? []
+            : model.Declarations
             .Where(declaration => declaration.SupportState == BindingSupportState.Supported
                 && declaration.Kind == BindingDeclarationKind.Constructor
                 && string.Equals(declaration.SourcePackage, scope.SourcePackage, StringComparison.Ordinal)
                 && string.Equals(declaration.NativeName, constructorName, StringComparison.Ordinal)
-                && declaration.Parameters.All(parameter => TryValueProjection(
-                    parameter.Type,
-                    BindingTypeUsage.Parameter,
-                    typeMap,
-                    out _)))
+                && !scope.ExcludedStableIds.Contains(declaration.StableId, StringComparer.Ordinal)
+                && declaration.Parameters.All(parameter => IsSupportedParameter(
+                    parameter.Type, typeMap, scopeByNativeType)))
             .OrderBy(static declaration => declaration.NativeSignature, StringComparer.Ordinal)
             .ThenBy(static declaration => declaration.StableId, StringComparer.Ordinal)
-            .Select((declaration, index) => new SharedConstructor(
+            .Select((declaration, index) => CreateConstructor(
                 declaration,
-                CreateParameters(declaration.Parameters, typeMap),
                 index,
-                $"occtsharp_generated_{scope.ExportNamePrefix}_create_{index}",
-                $"{scope.ManagedTypeName}Create{index}"))
+                scope,
+                typeMap,
+                scopeByNativeType))
             .ToArray();
 
-        if (constructors.Length == 0)
+        if (constructors.Length == 0 && !scope.SuppressConstructors)
         {
             throw new InvalidDataException(
-                $"Shared-handle scope '{scope.NativeType}' has no supported public value-copy constructor.");
+                $"Shared-handle scope '{scope.NativeType}' has no supported public constructor.");
         }
 
         SharedMethod[] methods = model.Declarations
-            .Where(declaration => IsSupportedMethod(declaration, scope, typeMap))
-            .GroupBy(static declaration => declaration.NativeName, StringComparer.Ordinal)
+            .Where(declaration => IsSupportedMethod(
+                declaration, scope, typeMap, scopeByNativeType))
+            .GroupBy(
+                static declaration => ToSnakeCase(GetMemberName(declaration.NativeName)),
+                StringComparer.Ordinal)
             .OrderBy(static group => group.Key, StringComparer.Ordinal)
             .SelectMany(group => group
-                .OrderBy(static declaration => declaration.NativeSignature, StringComparer.Ordinal)
+                .OrderBy(static declaration => declaration.NativeName, StringComparer.Ordinal)
+                .ThenBy(static declaration => declaration.NativeSignature, StringComparer.Ordinal)
                 .ThenBy(static declaration => declaration.StableId, StringComparer.Ordinal)
                 .Select((declaration, index) =>
                 {
                     bool returnsVoid = IsVoid(declaration.ReturnType!);
                     BindingTypeProjection? returnProjection = returnsVoid
                         ? null
-                        : GetValueProjection(declaration.ReturnType!, BindingTypeUsage.ReturnValue, typeMap);
-                    string memberName = declaration.NativeName[(declaration.NativeName.LastIndexOf("::", StringComparison.Ordinal) + 2)..];
+                        : TryValueProjection(declaration.ReturnType!, BindingTypeUsage.ReturnValue, typeMap, out BindingTypeProjection? projection)
+                            ? projection
+                            : null;
+                    SharedHandleScopeConfiguration? returnSharedScope = returnsVoid || returnProjection is not null
+                        ? null
+                        : GetSharedScope(declaration.ReturnType!, scopeByNativeType);
+                    string memberName = GetMemberName(declaration.NativeName);
                     return new SharedMethod(
                         declaration,
-                        CreateParameters(declaration.Parameters, typeMap),
+                        CreateParameters(declaration.Parameters, typeMap, scopeByNativeType),
                         returnProjection,
+                        returnSharedScope,
                         returnsVoid,
                         index,
-                        $"occtsharp_generated_{scope.ExportNamePrefix}_{ToSnakeCase(memberName)}_{index}",
-                        $"{scope.ManagedTypeName}{memberName}{index}",
-                        memberName);
+                        $"occtsharp_generated_{scope.ExportNamePrefix}_method_{ToSnakeCase(memberName)}_{index}",
+                        $"{scope.ManagedTypeName}Method{ToManagedMemberName(memberName)}{index}",
+                        memberName,
+                        ToManagedMemberName(memberName));
                 }))
             .ToArray();
 
+        methods = AssignUniqueManagedMemberNames(methods);
+
         return new SharedTypeBinding(scope, constructors, methods);
+    }
+
+    private static SharedConstructor CreateConstructor(
+        BindingDeclaration declaration,
+        int index,
+        SharedHandleScopeConfiguration scope,
+        InitialTypeMap typeMap,
+        IReadOnlyDictionary<string, SharedHandleScopeConfiguration> scopeByNativeType)
+    {
+        GeneratedParameter[] parameters = CreateParameters(
+            declaration.Parameters, typeMap, scopeByNativeType);
+        GeneratedParameter? placementAllocator = null;
+        if (scope.UsesPlacementAllocator)
+        {
+            GeneratedParameter[] candidates = parameters
+                .Where(static parameter => string.Equals(
+                    parameter.SharedScope?.NativeType,
+                    "NCollection_IncAllocator",
+                    StringComparison.Ordinal))
+                .ToArray();
+            if (candidates.Length != 1)
+            {
+                throw new InvalidDataException(
+                    $"Placement-allocated shared type '{scope.NativeType}' constructor '{declaration.StableId}' must have exactly one generated NCollection_IncAllocator handle parameter.");
+            }
+            placementAllocator = candidates[0];
+        }
+
+        return new SharedConstructor(
+            declaration,
+            parameters,
+            placementAllocator,
+            index,
+            $"occtsharp_generated_{scope.ExportNamePrefix}_create_{index}",
+            $"{scope.ManagedTypeName}Create{index}");
     }
 
     private static bool IsSupportedMethod(
         BindingDeclaration declaration,
         SharedHandleScopeConfiguration scope,
-        InitialTypeMap typeMap)
+        InitialTypeMap typeMap,
+        IReadOnlyDictionary<string, SharedHandleScopeConfiguration> scopeByNativeType)
     {
         if (declaration.SupportState != BindingSupportState.Supported
             || declaration.Kind != BindingDeclarationKind.Method
             || declaration.IsStatic
             || declaration.IsPureVirtual
             || declaration.IsOverloadedOperator
-            || !string.Equals(declaration.SourcePackage, scope.SourcePackage, StringComparison.Ordinal)
             || !declaration.NativeName.StartsWith(scope.NativeType + "::", StringComparison.Ordinal)
             || declaration.NativeName.Contains("::~", StringComparison.Ordinal)
             || declaration.ReturnType is null
+            || scope.ExcludedStableIds.Contains(declaration.StableId, StringComparer.Ordinal)
             || (!IsVoid(declaration.ReturnType)
-                && !TryValueProjection(declaration.ReturnType, BindingTypeUsage.ReturnValue, typeMap, out _)))
+                && !TryValueProjection(declaration.ReturnType, BindingTypeUsage.ReturnValue, typeMap, out _)
+                && GetSharedScope(declaration.ReturnType, scopeByNativeType) is null))
         {
             return false;
         }
 
-        return declaration.Parameters.All(parameter => TryValueProjection(
-            parameter.Type,
-            BindingTypeUsage.Parameter,
-            typeMap,
-            out _));
+        return declaration.Parameters.All(parameter => IsSupportedParameter(
+            parameter.Type, typeMap, scopeByNativeType));
     }
 
     private static GeneratedParameter[] CreateParameters(
         IReadOnlyList<BindingParameter> parameters,
-        InitialTypeMap typeMap) => parameters
-        .Select(parameter => new GeneratedParameter(
-            parameter,
-            ToParameterName(parameter.Name, parameter.Position),
-            GetValueProjection(parameter.Type, BindingTypeUsage.Parameter, typeMap)))
+        InitialTypeMap typeMap,
+        IReadOnlyDictionary<string, SharedHandleScopeConfiguration> scopeByNativeType) => parameters
+        .Select(parameter =>
+        {
+            BindingTypeProjection? projection = TryValueProjection(
+                parameter.Type, BindingTypeUsage.Parameter, typeMap, out BindingTypeProjection? valueProjection)
+                ? valueProjection
+                : null;
+            return new GeneratedParameter(
+                parameter,
+                ToParameterName(parameter.Name, parameter.Position),
+                projection,
+                projection is null ? GetSharedScope(parameter.Type, scopeByNativeType) : null);
+        })
         .ToArray();
+
+    private static bool IsSupportedParameter(
+        BindingType type,
+        InitialTypeMap typeMap,
+        IReadOnlyDictionary<string, SharedHandleScopeConfiguration> scopeByNativeType) =>
+        TryValueProjection(type, BindingTypeUsage.Parameter, typeMap, out _)
+        || GetSharedScope(type, scopeByNativeType) is not null;
+
+    private static SharedHandleScopeConfiguration? GetSharedScope(
+        BindingType type,
+        IReadOnlyDictionary<string, SharedHandleScopeConfiguration> scopeByNativeType)
+    {
+        if (!type.IsOcctHandle || string.IsNullOrWhiteSpace(type.HandleTargetType))
+        {
+            return null;
+        }
+
+        scopeByNativeType.TryGetValue(type.HandleTargetType.Trim(), out SharedHandleScopeConfiguration? scope);
+        return scope;
+    }
 
     private static string EmitNativeHeader(
         IReadOnlyList<SharedTypeBinding> bindings,
@@ -167,10 +250,15 @@ public static class SharedHandleBindingEmitter
             string nativeHandle = NativeHandleName(binding.Scope);
             builder.AppendLine();
             builder.AppendLine($"typedef struct {nativeHandle} {nativeHandle};");
+        }
+
+        foreach (SharedTypeBinding binding in bindings)
+        {
+            string nativeHandle = NativeHandleName(binding.Scope);
             foreach (SharedConstructor constructor in binding.Constructors)
             {
                 builder.AppendLine();
-                AppendNativeFunctionDeclaration(builder, constructor.ExportName, constructor.Parameters, null, nativeHandle);
+                AppendNativeFunctionDeclaration(builder, constructor.ExportName, constructor.Parameters, null, null, nativeHandle);
             }
 
             foreach (SharedMethod method in binding.Methods)
@@ -181,6 +269,7 @@ public static class SharedHandleBindingEmitter
                     method.ExportName,
                     method.Parameters,
                     method.ReturnProjection,
+                    method.ReturnSharedScope,
                     nativeHandle,
                     hasReceiver: true,
                     returnsVoid: method.ReturnsVoid);
@@ -217,11 +306,16 @@ public static class SharedHandleBindingEmitter
 
     private static string EmitNativeSource(
         IReadOnlyList<SharedTypeBinding> bindings,
-        IReadOnlyList<BindingDeclaration> declarations)
+        IReadOnlyList<BindingDeclaration> declarations,
+        IReadOnlyList<string> preambleHeaders)
     {
         StringBuilder builder = StartFile(declarations);
         builder.AppendLine("#include \"OcctSharp.SharedHandles.Generated.h\"");
         builder.AppendLine("#include \"../include/OcctSharp.Native.Internal.hxx\"");
+        foreach (string header in preambleHeaders.Order(StringComparer.Ordinal))
+        {
+            builder.AppendLine($"#include <{header}>");
+        }
         foreach (string header in bindings.Select(static binding => binding.Scope.Header)
             .Distinct(StringComparer.Ordinal).Order(StringComparer.Ordinal))
         {
@@ -261,13 +355,17 @@ public static class SharedHandleBindingEmitter
 
         foreach (SharedTypeBinding binding in bindings)
         {
-            AppendNativeTypeImplementation(builder, binding);
+            AppendNativeTypeInfrastructure(builder, binding);
+        }
+        foreach (SharedTypeBinding binding in bindings)
+        {
+            AppendNativeTypeOperations(builder, binding);
         }
 
         return Normalize(builder.ToString());
     }
 
-    private static void AppendNativeTypeImplementation(StringBuilder builder, SharedTypeBinding binding)
+    private static void AppendNativeTypeInfrastructure(StringBuilder builder, SharedTypeBinding binding)
     {
         SharedHandleScopeConfiguration scope = binding.Scope;
         string handleType = NativeHandleName(scope);
@@ -275,7 +373,15 @@ public static class SharedHandleBindingEmitter
         builder.AppendLine();
         builder.AppendLine($"struct {handleType}");
         builder.AppendLine("{");
-        builder.AppendLine($"  explicit {handleType}(opencascade::handle<{scope.NativeType}> value) : Value(std::move(value)) {{}}");
+        if (scope.UsesPlacementAllocator)
+        {
+            builder.AppendLine($"  {handleType}(opencascade::handle<{scope.NativeType}> value, opencascade::handle<NCollection_IncAllocator> allocator) : ConstructionAllocator(std::move(allocator)), Value(std::move(value)) {{}}");
+            builder.AppendLine("  opencascade::handle<NCollection_IncAllocator> ConstructionAllocator;");
+        }
+        else
+        {
+            builder.AppendLine($"  explicit {handleType}(opencascade::handle<{scope.NativeType}> value) : Value(std::move(value)) {{}}");
+        }
         builder.AppendLine($"  opencascade::handle<{scope.NativeType}> Value;");
         builder.AppendLine("};");
         builder.AppendLine();
@@ -284,9 +390,13 @@ public static class SharedHandleBindingEmitter
         builder.AppendLine($"std::mutex {helperPrefix}Mutex;");
         builder.AppendLine($"std::unordered_set<const {handleType}*> Live{helperPrefix}Handles;");
         builder.AppendLine();
-        builder.AppendLine($"{handleType}* Allocate{helperPrefix}(opencascade::handle<{scope.NativeType}> value)");
+        string allocatorParameter = scope.UsesPlacementAllocator
+            ? ", opencascade::handle<NCollection_IncAllocator> allocator"
+            : string.Empty;
+        builder.AppendLine($"{handleType}* Allocate{helperPrefix}(opencascade::handle<{scope.NativeType}> value{allocatorParameter})");
         builder.AppendLine("{");
-        builder.AppendLine($"  {handleType}* handle = new {handleType}(std::move(value));");
+        string allocatorArgument = scope.UsesPlacementAllocator ? ", std::move(allocator)" : string.Empty;
+        builder.AppendLine($"  {handleType}* handle = new {handleType}(std::move(value){allocatorArgument});");
         builder.AppendLine("  try");
         builder.AppendLine("  {");
         builder.AppendLine($"    std::lock_guard<std::mutex> lock({helperPrefix}Mutex);");
@@ -305,7 +415,13 @@ public static class SharedHandleBindingEmitter
         builder.AppendLine("  return handle;");
         builder.AppendLine("}");
         builder.AppendLine("}");
+    }
 
+    private static void AppendNativeTypeOperations(StringBuilder builder, SharedTypeBinding binding)
+    {
+        SharedHandleScopeConfiguration scope = binding.Scope;
+        string handleType = NativeHandleName(scope);
+        string helperPrefix = scope.ManagedTypeName;
         foreach (SharedConstructor constructor in binding.Constructors)
         {
             builder.AppendLine();
@@ -325,7 +441,10 @@ public static class SharedHandleBindingEmitter
         builder.AppendLine($"  {handleType}** out_handle)");
         builder.AppendLine("{");
         AppendOutputCheck(builder, "out_handle", "The output generated shared handle pointer is null.", "nullptr");
-        builder.AppendLine($"  return GeneratedGuard([&] {{ const {handleType}* value = Validate{helperPrefix}(source); *out_handle = Allocate{helperPrefix}(value->Value); }});");
+        string cloneAllocatorArgument = scope.UsesPlacementAllocator
+            ? ", value->ConstructionAllocator"
+            : string.Empty;
+        builder.AppendLine($"  return GeneratedGuard([&] {{ const {handleType}* value = Validate{helperPrefix}(source); *out_handle = Allocate{helperPrefix}(value->Value{cloneAllocatorArgument}); }});");
         builder.AppendLine("}");
         builder.AppendLine();
         builder.AppendLine($"OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_{prefix}_get_ref_count(");
@@ -373,11 +492,23 @@ public static class SharedHandleBindingEmitter
         AppendNativeParameters(builder, constructor.Parameters, $"{handleType}** out_handle");
         builder.AppendLine("{");
         AppendOutputCheck(builder, "out_handle", "The output generated shared handle pointer is null.", "nullptr");
-        string arguments = string.Join(", ", constructor.Parameters.Select(RenderNativeArgument));
+        string arguments = string.Join(", ", constructor.Parameters.Select(parameter =>
+            ReferenceEquals(parameter, constructor.PlacementAllocatorParameter)
+                ? "constructionAllocator"
+                : RenderNativeArgument(parameter)));
         builder.AppendLine("  return GeneratedGuard([&]");
         builder.AppendLine("  {");
-        builder.AppendLine($"    opencascade::handle<{binding.Scope.NativeType}> value = new {binding.Scope.NativeType}({arguments});");
-        builder.AppendLine($"    *out_handle = Allocate{binding.Scope.ManagedTypeName}(std::move(value));");
+        if (constructor.PlacementAllocatorParameter is not null)
+        {
+            builder.AppendLine($"    opencascade::handle<NCollection_IncAllocator> constructionAllocator = ValidateNCollectionIncAllocator({constructor.PlacementAllocatorParameter.Name})->Value;");
+            builder.AppendLine($"    opencascade::handle<{binding.Scope.NativeType}> createdHandle = new (constructionAllocator) {binding.Scope.NativeType}({arguments});");
+            builder.AppendLine($"    *out_handle = Allocate{binding.Scope.ManagedTypeName}(std::move(createdHandle), std::move(constructionAllocator));");
+        }
+        else
+        {
+            builder.AppendLine($"    opencascade::handle<{binding.Scope.NativeType}> createdHandle = new {binding.Scope.NativeType}({arguments});");
+            builder.AppendLine($"    *out_handle = Allocate{binding.Scope.ManagedTypeName}(std::move(createdHandle));");
+        }
         builder.AppendLine("  });");
         builder.AppendLine("}");
     }
@@ -389,9 +520,12 @@ public static class SharedHandleBindingEmitter
     {
         string handleType = NativeHandleName(binding.Scope);
         builder.AppendLine($"OcctSharp_Status OCCTSHARP_CALL {method.ExportName}(");
-        List<string> trailing = method.Parameters.Select(parameter =>
-            $"{parameter.Projection.AbiType} {parameter.Name}").ToList();
-        if (!method.ReturnsVoid)
+        List<string> trailing = method.Parameters.Select(RenderNativeParameterDeclaration).ToList();
+        if (method.ReturnSharedScope is not null)
+        {
+            trailing.Add($"{NativeHandleName(method.ReturnSharedScope)}** out_handle");
+        }
+        else if (!method.ReturnsVoid)
         {
             trailing.Add($"{method.ReturnProjection!.AbiType}* out_value");
         }
@@ -401,7 +535,11 @@ public static class SharedHandleBindingEmitter
             builder.AppendLine($"  {trailing[index]}{(index == trailing.Count - 1 ? ")" : ",")}");
         }
         builder.AppendLine("{");
-        if (!method.ReturnsVoid)
+        if (method.ReturnSharedScope is not null)
+        {
+            AppendOutputCheck(builder, "out_handle", "The generated shared return pointer is null.", "nullptr");
+        }
+        else if (!method.ReturnsVoid)
         {
             AppendOutputCheck(builder, "out_value", "The generated method output pointer is null.", DefaultAbiValue(method.ReturnProjection!));
         }
@@ -413,10 +551,15 @@ public static class SharedHandleBindingEmitter
         {
             builder.AppendLine($"    {invocation};");
         }
+        else if (method.ReturnSharedScope is not null)
+        {
+            builder.AppendLine($"    opencascade::handle<{method.ReturnSharedScope.NativeType}> returnedHandle = {invocation};");
+            builder.AppendLine($"    if (!returnedHandle.IsNull()) *out_handle = Allocate{method.ReturnSharedScope.ManagedTypeName}(std::move(returnedHandle));");
+        }
         else if (method.ReturnProjection!.RuleId == "TM005")
         {
-            builder.AppendLine($"    const gp_Pnt value = {invocation};");
-            builder.AppendLine("    *out_value = {value.X(), value.Y(), value.Z()};");
+            builder.AppendLine($"    const gp_Pnt nativeValue = {invocation};");
+            builder.AppendLine("    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};");
         }
         else if (method.ReturnProjection.RuleId == "TM003")
         {
@@ -439,6 +582,7 @@ public static class SharedHandleBindingEmitter
         IReadOnlyList<BindingDeclaration> declarations)
     {
         StringBuilder builder = StartFile(declarations);
+        builder.AppendLine("#nullable enable");
         builder.AppendLine("using Microsoft.Win32.SafeHandles;");
         builder.AppendLine("using System.Runtime.CompilerServices;");
         builder.AppendLine("using System.Runtime.InteropServices;");
@@ -468,7 +612,7 @@ public static class SharedHandleBindingEmitter
                 AppendLibraryImport(builder, constructor.ExportName);
                 builder.Append($"    internal static partial global::OcctSharp.Interop.NativeStatus {constructor.ManagedName}(");
                 List<string> parameters = constructor.Parameters
-                    .Select(parameter => $"{parameter.Projection.ManagedRawType} {parameter.Name}")
+                    .Select(RenderManagedRawParameterDeclaration)
                     .ToList();
                 parameters.Add("out nint handle");
                 builder.Append(string.Join(", ", parameters));
@@ -477,15 +621,20 @@ public static class SharedHandleBindingEmitter
 
             foreach (SharedMethod method in binding.Methods)
             {
+                string resultName = GetUniqueGeneratedName(method.Parameters, "resultValue");
                 AppendLibraryImport(builder, method.ExportName);
                 builder.Append($"    internal static partial global::OcctSharp.Interop.NativeStatus {method.ManagedName}({handleName} handle");
                 foreach (GeneratedParameter parameter in method.Parameters)
                 {
-                    builder.Append($", {parameter.Projection.ManagedRawType} {parameter.Name}");
+                    builder.Append($", {RenderManagedRawParameterDeclaration(parameter)}");
                 }
-                if (!method.ReturnsVoid)
+                if (method.ReturnSharedScope is not null)
                 {
-                    builder.Append($", out {method.ReturnProjection!.ManagedRawType} value");
+                    builder.Append(", out nint handleValue");
+                }
+                else if (!method.ReturnsVoid)
+                {
+                    builder.Append($", out {method.ReturnProjection!.ManagedRawType} {resultName}");
                 }
                 builder.AppendLine(");");
             }
@@ -512,6 +661,7 @@ public static class SharedHandleBindingEmitter
         IReadOnlyList<BindingDeclaration> declarations)
     {
         StringBuilder builder = StartFile(declarations);
+        builder.AppendLine("#nullable enable");
         builder.AppendLine("using System.Runtime.InteropServices;");
         builder.AppendLine("using OcctSharp.Generated;");
         builder.AppendLine();
@@ -537,10 +687,15 @@ public static class SharedHandleBindingEmitter
                 builder.AppendLine();
                 builder.AppendLine($"    /// <summary>Creates a retained OCCT {binding.Scope.NativeType} shared object.</summary>");
                 builder.Append($"    public {managedType}(");
-                builder.Append(string.Join(", ", constructor.Parameters.Select(RenderFriendlyParameter)));
+                builder.Append(string.Join(", ", constructor.Parameters.Select(parameter =>
+                    RenderFriendlyConstructorParameter(constructor, parameter))));
                 builder.AppendLine(")");
                 builder.AppendLine("    {");
                 builder.AppendLine("        OcctRuntime.EnsureCompatible();");
+                if (constructor.PlacementAllocatorParameter is not null)
+                {
+                    builder.AppendLine($"        ArgumentNullException.ThrowIfNull({constructor.PlacementAllocatorParameter.Name});");
+                }
                 builder.Append($"        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.{constructor.ManagedName}(");
                 builder.Append(string.Join(", ", constructor.Parameters.Select(RenderManagedRawArgument)));
                 if (constructor.Parameters.Length > 0) builder.Append(", ");
@@ -551,10 +706,15 @@ public static class SharedHandleBindingEmitter
 
             foreach (SharedMethod method in binding.Methods)
             {
+                string resultName = GetUniqueGeneratedName(method.Parameters, "resultValue");
                 builder.AppendLine();
                 builder.AppendLine($"    /// <summary>Invokes OCCT {binding.Scope.NativeType}::{method.MemberName}.</summary>");
-                string returnType = method.ReturnsVoid ? "void" : method.ReturnProjection!.ManagedFriendlyType;
-                builder.Append($"    public {returnType} {method.MemberName}(");
+                string returnType = method.ReturnsVoid
+                    ? "void"
+                    : method.ReturnSharedScope is not null
+                        ? method.ReturnSharedScope.ManagedTypeName + "?"
+                        : method.ReturnProjection!.ManagedFriendlyType;
+                builder.Append($"    public {returnType} {method.ManagedMemberName}(");
                 builder.Append(string.Join(", ", method.Parameters.Select(RenderFriendlyParameter)));
                 builder.AppendLine(")");
                 builder.AppendLine("    {");
@@ -564,14 +724,22 @@ public static class SharedHandleBindingEmitter
                 {
                     builder.Append(", " + RenderManagedRawArgument(parameter));
                 }
-                if (!method.ReturnsVoid)
+                if (method.ReturnSharedScope is not null)
                 {
-                    builder.Append($", out {method.ReturnProjection!.ManagedRawType} value");
+                    builder.Append(", out nint handleValue");
+                }
+                else if (!method.ReturnsVoid)
+                {
+                    builder.Append($", out {method.ReturnProjection!.ManagedRawType} {resultName}");
                 }
                 builder.AppendLine($"), \"{method.ExportName}\");");
-                if (!method.ReturnsVoid)
+                if (method.ReturnSharedScope is not null)
                 {
-                    builder.AppendLine("        return " + RenderFriendlyReturn("value", method.ReturnProjection!) + ";");
+                    builder.AppendLine($"        return global::OcctSharp.{method.ReturnSharedScope.ManagedTypeName}.FromNative(handleValue, \"{method.ExportName}\");");
+                }
+                else if (!method.ReturnsVoid)
+                {
+                    builder.AppendLine("        return " + RenderFriendlyReturn(resultName, method.ReturnProjection!) + ";");
                 }
                 builder.AppendLine("    }");
             }
@@ -619,6 +787,18 @@ public static class SharedHandleBindingEmitter
             builder.AppendLine("    /// <summary>Releases this wrapper's retained OCCT reference.</summary>");
             builder.AppendLine("    public void Dispose() => handle.Dispose();");
             builder.AppendLine();
+            builder.AppendLine($"    internal {handleType} NativeHandle");
+            builder.AppendLine("    {");
+            builder.AppendLine("        get");
+            builder.AppendLine("        {");
+            builder.AppendLine("            ObjectDisposedException.ThrowIf(handle.IsClosed, this);");
+            builder.AppendLine("            return handle;");
+            builder.AppendLine("        }");
+            builder.AppendLine("    }");
+            builder.AppendLine();
+            builder.AppendLine($"    internal static {managedType}? FromNative(nint nativeHandle, string operation) =>");
+            builder.AppendLine($"        nativeHandle == 0 ? null : new {managedType}(CreateHandle(nativeHandle, operation));");
+            builder.AppendLine();
             builder.AppendLine($"    private static {handleType} CreateHandle(nint nativeHandle, string operation)");
             builder.AppendLine("    {");
             builder.AppendLine("        if (nativeHandle == 0) throw new OcctException(\"UnknownException\", $\"Native operation '{operation}' returned a null generated shared handle.\");");
@@ -635,6 +815,7 @@ public static class SharedHandleBindingEmitter
         string exportName,
         IReadOnlyList<GeneratedParameter> parameters,
         BindingTypeProjection? returnProjection,
+        SharedHandleScopeConfiguration? returnSharedScope,
         string handleType,
         bool hasReceiver = false,
         bool returnsVoid = false)
@@ -642,10 +823,14 @@ public static class SharedHandleBindingEmitter
         builder.AppendLine($"OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL {exportName}(");
         List<string> items = [];
         if (hasReceiver) items.Add($"const {handleType}* handle");
-        items.AddRange(parameters.Select(parameter => $"{parameter.Projection.AbiType} {parameter.Name}"));
+        items.AddRange(parameters.Select(RenderNativeParameterDeclaration));
         if (returnProjection is not null)
         {
             items.Add($"{returnProjection.AbiType}* out_value");
+        }
+        else if (returnSharedScope is not null)
+        {
+            items.Add($"{NativeHandleName(returnSharedScope)}** out_handle");
         }
         else if (!returnsVoid)
         {
@@ -662,8 +847,7 @@ public static class SharedHandleBindingEmitter
         IReadOnlyList<GeneratedParameter> parameters,
         string finalParameter)
     {
-        List<string> items = parameters.Select(parameter =>
-            $"{parameter.Projection.AbiType} {parameter.Name}").ToList();
+        List<string> items = parameters.Select(RenderNativeParameterDeclaration).ToList();
         items.Add(finalParameter);
         for (int index = 0; index < items.Count; index++)
         {
@@ -688,24 +872,59 @@ public static class SharedHandleBindingEmitter
         builder.AppendLine("    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]");
     }
 
-    private static string RenderNativeArgument(GeneratedParameter parameter) => parameter.Projection.RuleId switch
+    private static string RenderNativeParameterDeclaration(GeneratedParameter parameter) =>
+        parameter.SharedScope is not null
+            ? $"const {NativeHandleName(parameter.SharedScope)}* {parameter.Name}"
+            : $"{parameter.Projection.AbiType} {parameter.Name}";
+
+    private static string RenderManagedRawParameterDeclaration(GeneratedParameter parameter) =>
+        parameter.SharedScope is not null
+            ? $"nint {parameter.Name}"
+            : $"{parameter.Projection.ManagedRawType} {parameter.Name}";
+
+    private static string RenderNativeArgument(GeneratedParameter parameter)
     {
-        "TM003" => $"({parameter.Name} != 0)",
-        "TM004" => $"static_cast<{parameter.Parameter.Type.BaseCanonicalSpelling}>({parameter.Name})",
-        "TM005" => $"gp_Pnt({parameter.Name}.x, {parameter.Name}.y, {parameter.Name}.z)",
-        _ => parameter.Name,
-    };
+        if (parameter.SharedScope is not null)
+        {
+            return $"({parameter.Name} == nullptr ? opencascade::handle<{parameter.SharedScope.NativeType}>() : Validate{parameter.SharedScope.ManagedTypeName}({parameter.Name})->Value)";
+        }
+
+        return parameter.Projection.RuleId switch
+        {
+            "TM003" => $"({parameter.Name} != 0)",
+            "TM004" => $"static_cast<{parameter.Parameter.Type.BaseCanonicalSpelling}>({parameter.Name})",
+            "TM005" => $"gp_Pnt({parameter.Name}.x, {parameter.Name}.y, {parameter.Name}.z)",
+            _ => parameter.Name,
+        };
+    }
 
     private static string RenderFriendlyParameter(GeneratedParameter parameter) =>
-        $"{parameter.Projection.ManagedFriendlyType} {parameter.Name}";
+        parameter.SharedScope is not null
+            ? $"{parameter.SharedScope.ManagedTypeName}? {parameter.Name}"
+            : $"{parameter.Projection.ManagedFriendlyType} {parameter.Name}";
 
-    private static string RenderManagedRawArgument(GeneratedParameter parameter) => parameter.Projection.RuleId switch
+    private static string RenderFriendlyConstructorParameter(
+        SharedConstructor constructor,
+        GeneratedParameter parameter) =>
+        ReferenceEquals(parameter, constructor.PlacementAllocatorParameter)
+            ? $"{parameter.SharedScope!.ManagedTypeName} {parameter.Name}"
+            : RenderFriendlyParameter(parameter);
+
+    private static string RenderManagedRawArgument(GeneratedParameter parameter)
     {
-        "TM003" => $"{parameter.Name} ? 1 : 0",
-        "TM004" => $"(int){parameter.Name}",
-        "TM005" => $"new Point3dRaw({parameter.Name}.X, {parameter.Name}.Y, {parameter.Name}.Z)",
-        _ => parameter.Name,
-    };
+        if (parameter.SharedScope is not null)
+        {
+            return $"{parameter.Name} is null ? nint.Zero : {parameter.Name}.NativeHandle.DangerousGetHandle()";
+        }
+
+        return parameter.Projection.RuleId switch
+        {
+            "TM003" => $"{parameter.Name} ? 1 : 0",
+            "TM004" => $"(int){parameter.Name}",
+            "TM005" => $"new Point3dRaw({parameter.Name}.X, {parameter.Name}.Y, {parameter.Name}.Z)",
+            _ => parameter.Name,
+        };
+    }
 
     private static string RenderFriendlyReturn(string value, BindingTypeProjection projection) => projection.RuleId switch
     {
@@ -766,6 +985,21 @@ public static class SharedHandleBindingEmitter
         }
     }
 
+    private static void ValidatePreambleHeaders(IReadOnlyList<string> headers)
+    {
+        HashSet<string> unique = new(StringComparer.Ordinal);
+        foreach (string header in headers)
+        {
+            if (string.IsNullOrWhiteSpace(header)
+                || header.IndexOfAny(['\r', '\n', '<', '>', '"']) >= 0
+                || !unique.Add(header))
+            {
+                throw new InvalidDataException(
+                    $"Generated preamble header '{header}' is empty, unsafe, or configured more than once.");
+            }
+        }
+    }
+
     private static StringBuilder StartFile(IEnumerable<BindingDeclaration> declarations)
     {
         StringBuilder builder = new();
@@ -786,14 +1020,90 @@ public static class SharedHandleBindingEmitter
         return separator < 0 ? nativeType : nativeType[(separator + 2)..];
     }
 
+    private static string GetMemberName(string nativeName)
+    {
+        int separator = nativeName.LastIndexOf("::", StringComparison.Ordinal);
+        return separator < 0 ? nativeName : nativeName[(separator + 2)..];
+    }
+
+    private static SharedMethod[] AssignUniqueManagedMemberNames(IReadOnlyList<SharedMethod> methods)
+    {
+        Dictionary<string, int> signatureCounts = new(StringComparer.Ordinal);
+        List<SharedMethod> result = new(methods.Count);
+        foreach (SharedMethod method in methods)
+        {
+            string parameterSignature = string.Join(",", method.Parameters.Select(GetManagedParameterType));
+            string baseSignature = $"{method.ManagedMemberName}({parameterSignature})";
+            signatureCounts.TryGetValue(baseSignature, out int duplicateIndex);
+            signatureCounts[baseSignature] = duplicateIndex + 1;
+            result.Add(duplicateIndex == 0
+                ? method
+                : method with { ManagedMemberName = method.ManagedMemberName + "Generated" + duplicateIndex });
+        }
+
+        return result.ToArray();
+    }
+
+    private static string GetManagedParameterType(GeneratedParameter parameter) =>
+        parameter.SharedScope is not null
+            ? parameter.SharedScope.ManagedTypeName
+            : parameter.Projection.ManagedFriendlyType;
+
+    private static string GetUniqueGeneratedName(
+        IReadOnlyList<GeneratedParameter> parameters,
+        string preferredName)
+    {
+        HashSet<string> names = parameters
+            .Select(static parameter => parameter.Name)
+            .ToHashSet(StringComparer.Ordinal);
+        if (!names.Contains(preferredName))
+        {
+            return preferredName;
+        }
+
+        for (int suffix = 2; ; suffix++)
+        {
+            string candidate = preferredName + suffix.ToString(CultureInfo.InvariantCulture);
+            if (!names.Contains(candidate))
+            {
+                return candidate;
+            }
+        }
+    }
+
     private static string ToParameterName(string name, int position)
     {
         if (string.IsNullOrWhiteSpace(name)) return "value" + position;
         string value = char.ToLowerInvariant(name[0]) + name[1..];
-        return value is "event" or "params" or "string" or "object" or "ref" or "out" or "in"
-            ? "@" + value
-            : value;
+        return IsReservedParameterName(value) ? value + "_value" : value;
     }
+
+    private static bool IsReservedParameterName(string value) => value is
+        "alignas" or "alignof" or "and" or "and_eq" or "asm" or "auto" or "bitand" or
+        "bitor" or "bool" or "break" or "case" or "catch" or "char" or "class" or
+        "compl" or "concept" or "const" or "consteval" or "constexpr" or "constinit" or
+        "const_cast" or "continue" or "co_await" or "co_return" or "co_yield" or
+        "decltype" or "default" or "delete" or "do" or "double" or "dynamic_cast" or
+        "else" or "enum" or "explicit" or "export" or "extern" or "false" or "float" or
+        "for" or "friend" or "goto" or "if" or "inline" or "int" or "long" or
+        "mutable" or "namespace" or "new" or "noexcept" or "not" or "not_eq" or
+        "nullptr" or "operator" or "or" or "or_eq" or "private" or "protected" or
+        "public" or "register" or "reinterpret_cast" or "requires" or "return" or
+        "short" or "signed" or "sizeof" or "static" or "static_assert" or "static_cast" or
+        "struct" or "switch" or "template" or "this" or "thread_local" or "throw" or
+        "true" or "try" or "typedef" or "typeid" or "typename" or "union" or "unsigned" or
+        "using" or "virtual" or "void" or "volatile" or "wchar_t" or "while" or "xor" or
+        "xor_eq" or "abstract" or "as" or "base" or "byte" or "checked" or "decimal" or
+        "delegate" or "event" or "fixed" or "foreach" or "implicit" or "in" or
+        "interface" or "internal" or "is" or "lock" or "object" or "out" or "override" or
+        "params" or "readonly" or "ref" or "sbyte" or "sealed" or "stackalloc" or "string" or
+        "uint" or "ulong" or "unchecked" or "unsafe" or "ushort";
+
+    private static string ToManagedMemberName(string nativeName) => nativeName is
+        "GetType" or "Equals" or "GetHashCode" or "ToString" or "Clone" or "Dispose" or
+        "IsKind" or "ReferenceCount" or "TypeName"
+            ? "Occt" + nativeName
+            : nativeName;
 
     private static string ToSnakeCase(string value)
     {
@@ -819,6 +1129,7 @@ public static class SharedHandleBindingEmitter
     private sealed record SharedConstructor(
         BindingDeclaration Declaration,
         GeneratedParameter[] Parameters,
+        GeneratedParameter? PlacementAllocatorParameter,
         int OverloadIndex,
         string ExportName,
         string ManagedName);
@@ -827,14 +1138,23 @@ public static class SharedHandleBindingEmitter
         BindingDeclaration Declaration,
         GeneratedParameter[] Parameters,
         BindingTypeProjection? ReturnProjection,
+        SharedHandleScopeConfiguration? ReturnSharedScope,
         bool ReturnsVoid,
         int OverloadIndex,
         string ExportName,
         string ManagedName,
-        string MemberName);
+        string MemberName,
+        string ManagedMemberName);
 
     private sealed record GeneratedParameter(
         BindingParameter Parameter,
         string Name,
-        BindingTypeProjection Projection);
+        BindingTypeProjection? ValueProjection,
+        SharedHandleScopeConfiguration? SharedScope)
+    {
+        public bool IsShared => SharedScope is not null;
+
+        public BindingTypeProjection Projection => ValueProjection
+            ?? throw new InvalidOperationException("A shared-handle parameter has no value projection.");
+    }
 }

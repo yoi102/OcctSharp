@@ -6,6 +6,7 @@
 #include <BRepBuilderAPI_MakeEdge.hxx>
 #include <BRepBuilderAPI_MakeFace.hxx>
 #include <BRepBuilderAPI_MakePolygon.hxx>
+#include <BRepBuilderAPI_Sewing.hxx>
 #include <BRep_Tool.hxx>
 #include <BRepMesh_IncrementalMesh.hxx>
 #include <BRepPrimAPI_MakeBox.hxx>
@@ -15,19 +16,32 @@
 #include <BRepPrimAPI_MakePrism.hxx>
 #include <BRepPrimAPI_MakeRevol.hxx>
 #include <BRepPrimAPI_MakeTorus.hxx>
+#include <BRepPrimAPI_MakeWedge.hxx>
 #include <BRepAlgoAPI_Fuse.hxx>
 #include <BRepAlgoAPI_Cut.hxx>
 #include <BRepAlgoAPI_Common.hxx>
+#include <BRepAlgoAPI_BooleanOperation.hxx>
 #include <BRepAlgoAPI_Section.hxx>
 #include <BRepBndLib.hxx>
 #include <BRepCheck_Analyzer.hxx>
 #include <BRepFilletAPI_MakeChamfer.hxx>
 #include <BRepFilletAPI_MakeFillet.hxx>
 #include <BRepOffsetAPI_MakeOffsetShape.hxx>
+#include <BRepOffsetAPI_MakeThickSolid.hxx>
+#include <BRepOffsetAPI_MakePipe.hxx>
+#include <BRepOffsetAPI_ThruSections.hxx>
 #include <BRepAdaptor_Curve.hxx>
 #include <BRepAdaptor_Surface.hxx>
 #include <BRepExtrema_DistShapeShape.hxx>
 #include <BRepGProp.hxx>
+#include <GC_MakeArcOfCircle.hxx>
+#include <GCPnts_AbscissaPoint.hxx>
+#include <GeomAPI_Interpolate.hxx>
+#include <GeomAPI_ProjectPointOnCurve.hxx>
+#include <GeomAPI_ProjectPointOnSurf.hxx>
+#include <Geom_BezierCurve.hxx>
+#include <Geom_Curve.hxx>
+#include <Geom_Surface.hxx>
 #include <AIS_InteractiveContext.hxx>
 #include <AIS_Shape.hxx>
 #include <Aspect_DisplayConnection.hxx>
@@ -48,7 +62,10 @@
 #include <NCollection_DataMap.hxx>
 #include <NCollection_Array1.hxx>
 #include <NCollection_DynamicArray.hxx>
+#include <NCollection_IndexedDataMap.hxx>
 #include <NCollection_IndexedMap.hxx>
+#include <NCollection_HArray1.hxx>
+#include <NCollection_List.hxx>
 #include <NCollection_Sequence.hxx>
 #include <OpenGl_GraphicDriver.hxx>
 #include <STEPControl_Reader.hxx>
@@ -106,6 +123,7 @@
 #include <gp_XYZ.hxx>
 #include <gp_Lin.hxx>
 #include <gp_Circ.hxx>
+#include <gp_Elips.hxx>
 #include <gp_Ax2.hxx>
 #include <gp_Ax3.hxx>
 #include <gp_Pln.hxx>
@@ -153,6 +171,15 @@ static_assert(sizeof(OcctSharp_FaceSurfaceSnapshot) == 40);
 static_assert(alignof(OcctSharp_FaceSurfaceSnapshot) == 8);
 static_assert(offsetof(OcctSharp_FaceSurfaceSnapshot, surface_type) == 0);
 static_assert(offsetof(OcctSharp_FaceSurfaceSnapshot, first_u_parameter) == 8);
+static_assert(sizeof(OcctSharp_CurveEvaluation) == 56);
+static_assert(sizeof(OcctSharp_CurveProjection) == 48);
+static_assert(sizeof(OcctSharp_SurfaceEvaluation) == 64);
+static_assert(sizeof(OcctSharp_SurfaceProjection) == 56);
+static_assert(sizeof(OcctSharp_BooleanHistorySummary) == 48);
+static_assert(offsetof(OcctSharp_CurveEvaluation, point) == 8);
+static_assert(offsetof(OcctSharp_CurveProjection, solution_count) == 40);
+static_assert(offsetof(OcctSharp_SurfaceEvaluation, point) == 16);
+static_assert(offsetof(OcctSharp_SurfaceProjection, solution_count) == 48);
 static_assert(sizeof(OcctSharp_ShapeDistanceResult) == 64);
 static_assert(sizeof(OcctSharp_BoundingBox) == 48);
 static_assert(alignof(OcctSharp_BoundingBox) == 8);
@@ -246,8 +273,8 @@ struct OcctSharp_ViewerHandle
 
 namespace
 {
-constexpr uint32_t AbiVersion = 0x00010021U;
-constexpr const char* BridgeVersion = "0.41.0";
+constexpr uint32_t AbiVersion = 0x00010029U;
+constexpr const char* BridgeVersion = "0.49.0";
 thread_local std::string LastError;
 std::mutex LiveShapesMutex;
 std::unordered_set<const OcctSharp_ShapeHandle*> LiveShapes;
@@ -857,6 +884,64 @@ void ConfigureXdeWriter(STEPCAFControl_Writer& writer)
   writer.SetMaterialMode(true);
   writer.SetVisualMaterialMode(true);
 }
+
+std::vector<TDF_Label> ImportStepRootsIntoXdeDocument(
+  const char* file_path,
+  const occ::handle<TDocStd_Document>& output_document)
+{
+  ValidatePath(file_path);
+  occ::handle<TDocStd_Document> source_document = CreateXdeDocument();
+  InitializeXdeTools(source_document);
+  STEPCAFControl_Reader reader;
+  ConfigureXdeReader(reader);
+  if (reader.ReadFile(file_path) != IFSelect_RetDone)
+    throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not read a STEP input through STEPCAF.");
+  if (!reader.Transfer(source_document))
+    throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "A STEP input could not be transferred into an XDE document.");
+
+  occ::handle<XCAFDoc_ShapeTool> source_shape_tool =
+    XCAFDoc_DocumentTool::ShapeTool(source_document->Main());
+  occ::handle<XCAFDoc_ShapeTool> output_shape_tool =
+    XCAFDoc_DocumentTool::ShapeTool(output_document->Main());
+  NCollection_Sequence<TDF_Label> source_roots;
+  source_shape_tool->GetFreeShapes(source_roots);
+  if (source_roots.IsEmpty())
+    throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "A STEP input produced no free XDE shape roots.");
+
+  std::vector<TDF_Label> imported_roots;
+  imported_roots.reserve(static_cast<size_t>(source_roots.Size()));
+  NCollection_DataMap<occ::handle<XCAFDoc_VisMaterial>, occ::handle<XCAFDoc_VisMaterial>>
+    visual_material_map;
+  for (NCollection_Sequence<TDF_Label>::Iterator root_iterator(source_roots); root_iterator.More();
+       root_iterator.Next())
+  {
+    NCollection_DataMap<TDF_Label, TDF_Label> label_map;
+    TDF_Label cloned_root = XCAFDoc_Editor::CloneShapeLabel(
+      root_iterator.Value(), source_shape_tool, output_shape_tool, label_map);
+    if (cloned_root.IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "An XDE shape tree could not be cloned into the destination document.");
+
+    for (NCollection_DataMap<TDF_Label, TDF_Label>::Iterator label_iterator(label_map);
+         label_iterator.More(); label_iterator.Next())
+    {
+      occ::handle<TDataStd_TreeNode> material_reference;
+      const bool has_material_reference =
+        label_iterator.Key().FindAttribute(XCAFDoc::MaterialRefGUID(), material_reference)
+        && material_reference->HasFather();
+      XCAFDoc_Editor::CloneMetaData(
+        label_iterator.Key(), label_iterator.Value(), &visual_material_map,
+        true, true, true, true, true);
+      if (has_material_reference && label_iterator.Value() != cloned_root)
+      {
+        XCAFDoc_Editor::CloneMetaData(
+          label_iterator.Key(), cloned_root, &visual_material_map,
+          false, false, true, false, false);
+      }
+    }
+    imported_roots.push_back(cloned_root);
+  }
+  return imported_roots;
+}
 }
 
 void OcctSharp_Internal_SetLastError(const char* message)
@@ -1308,6 +1393,146 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_face_surface_snapshot(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_edge_evaluate(
+  const OcctSharp_ShapeHandle* edge, const double parameter, OcctSharp_CurveEvaluation* out_result)
+{
+  if (out_result == nullptr) { SetLastError("The curve evaluation output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_result = {};
+  if (!std::isfinite(parameter)) { SetLastError("The curve parameter must be finite."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateUsableShape(edge);
+    if (edge->Value.ShapeType() != TopAbs_EDGE)
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Curve evaluation requires an edge shape.");
+    const BRepAdaptor_Curve curve(TopoDS::Edge(edge->Value));
+    const double first = curve.FirstParameter();
+    const double last = curve.LastParameter();
+    if (parameter < first || parameter > last)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The curve parameter is outside the edge range.");
+    gp_Pnt point;
+    gp_Vec derivative;
+    curve.D1(parameter, point, derivative);
+    if (derivative.SquareMagnitude() <= 0.0)
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The edge has no defined tangent at the requested parameter.");
+    const gp_Dir tangent(derivative);
+    *out_result = { parameter,
+      { point.X(), point.Y(), point.Z() },
+      { tangent.X(), tangent.Y(), tangent.Z() } };
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_edge_length(
+  const OcctSharp_ShapeHandle* edge, double* out_length)
+{
+  if (out_length == nullptr) { SetLastError("The edge length output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_length = 0.0;
+  return Guard([&]
+  {
+    ValidateUsableShape(edge);
+    if (edge->Value.ShapeType() != TopAbs_EDGE)
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Curve length requires an edge shape.");
+    const BRepAdaptor_Curve curve(TopoDS::Edge(edge->Value));
+    *out_length = GCPnts_AbscissaPoint::Length(curve, curve.FirstParameter(), curve.LastParameter());
+    if (!std::isfinite(*out_length) || *out_length < 0.0)
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT returned an invalid edge length.");
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_edge_project_point(
+  const OcctSharp_ShapeHandle* edge, const OcctSharp_Xyz point, OcctSharp_CurveProjection* out_result)
+{
+  if (out_result == nullptr) { SetLastError("The curve projection output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_result = {};
+  return Guard([&]
+  {
+    ValidateFinite(point.x, "Projection point X must be finite.");
+    ValidateFinite(point.y, "Projection point Y must be finite.");
+    ValidateFinite(point.z, "Projection point Z must be finite.");
+    ValidateUsableShape(edge);
+    if (edge->Value.ShapeType() != TopAbs_EDGE)
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Curve projection requires an edge shape.");
+    double first = 0.0;
+    double last = 0.0;
+    const opencascade::handle<Geom_Curve> curve = BRep_Tool::Curve(TopoDS::Edge(edge->Value), first, last);
+    if (curve.IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The edge has no 3D curve to project onto.");
+    GeomAPI_ProjectPointOnCurve projection(gp_Pnt(point.x, point.y, point.z), curve, first, last);
+    const int count = projection.NbPoints();
+    if (count <= 0)
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT found no point projection on the edge curve.");
+    const gp_Pnt nearest = projection.NearestPoint();
+    *out_result = { projection.LowerDistanceParameter(),
+      { nearest.X(), nearest.Y(), nearest.Z() }, projection.LowerDistance(), count };
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_face_evaluate(
+  const OcctSharp_ShapeHandle* face, const double u_parameter, const double v_parameter,
+  OcctSharp_SurfaceEvaluation* out_result)
+{
+  if (out_result == nullptr) { SetLastError("The surface evaluation output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_result = {};
+  if (!std::isfinite(u_parameter) || !std::isfinite(v_parameter))
+  { SetLastError("Surface parameters must be finite."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateUsableShape(face);
+    if (face->Value.ShapeType() != TopAbs_FACE)
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Surface evaluation requires a face shape.");
+    const BRepAdaptor_Surface surface(TopoDS::Face(face->Value), true);
+    if (u_parameter < surface.FirstUParameter() || u_parameter > surface.LastUParameter()
+        || v_parameter < surface.FirstVParameter() || v_parameter > surface.LastVParameter())
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The UV parameters are outside the face range.");
+    gp_Pnt point;
+    gp_Vec derivative_u;
+    gp_Vec derivative_v;
+    surface.D1(u_parameter, v_parameter, point, derivative_u, derivative_v);
+    gp_Vec normal = derivative_u.Crossed(derivative_v);
+    if (normal.SquareMagnitude() <= 0.0)
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The face has no defined normal at the requested parameters.");
+    normal.Normalize();
+    if (face->Value.Orientation() == TopAbs_REVERSED) normal.Reverse();
+    *out_result = { u_parameter, v_parameter,
+      { point.X(), point.Y(), point.Z() }, { normal.X(), normal.Y(), normal.Z() } };
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_face_project_point(
+  const OcctSharp_ShapeHandle* face, const OcctSharp_Xyz point, const double tolerance,
+  OcctSharp_SurfaceProjection* out_result)
+{
+  if (out_result == nullptr) { SetLastError("The surface projection output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_result = {};
+  if (!std::isfinite(tolerance) || tolerance <= 0.0)
+  { SetLastError("Surface projection tolerance must be finite and greater than zero."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateFinite(point.x, "Projection point X must be finite.");
+    ValidateFinite(point.y, "Projection point Y must be finite.");
+    ValidateFinite(point.z, "Projection point Z must be finite.");
+    ValidateUsableShape(face);
+    if (face->Value.ShapeType() != TopAbs_FACE)
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Surface projection requires a face shape.");
+    const TopoDS_Face topology_face = TopoDS::Face(face->Value);
+    const BRepAdaptor_Surface bounds(topology_face, true);
+    const opencascade::handle<Geom_Surface> surface = BRep_Tool::Surface(topology_face);
+    if (surface.IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The face has no surface to project onto.");
+    GeomAPI_ProjectPointOnSurf projection(
+      gp_Pnt(point.x, point.y, point.z), surface,
+      bounds.FirstUParameter(), bounds.LastUParameter(),
+      bounds.FirstVParameter(), bounds.LastVParameter(), tolerance);
+    const int count = projection.NbPoints();
+    if (!projection.IsDone() || count <= 0)
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT found no point projection on the face surface.");
+    double u = 0.0;
+    double v = 0.0;
+    projection.LowerDistanceParameters(u, v);
+    const gp_Pnt nearest = projection.NearestPoint();
+    *out_result = { u, v, { nearest.X(), nearest.Y(), nearest.Z() }, projection.LowerDistance(), count };
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_box(
   const double size_x,
   const double size_y,
@@ -1411,6 +1636,29 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_torus(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_wedge(
+  const double size_x, const double size_y, const double size_z, const double top_x_length,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The wedge output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (!std::isfinite(size_x) || !std::isfinite(size_y) || !std::isfinite(size_z)
+      || !std::isfinite(top_x_length) || size_x <= 0.0 || size_y <= 0.0 || size_z <= 0.0
+      || top_x_length < 0.0)
+  {
+    SetLastError("Wedge dimensions must be finite and greater than zero, and the top X length must be finite and non-negative.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  return Guard([&]
+  {
+    BRepPrimAPI_MakeWedge builder(size_x, size_y, size_z, top_x_length);
+    builder.Build();
+    if (!builder.IsDone() || builder.Shape().IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT wedge construction did not complete.");
+    *out_shape = AllocateShape(builder.Shape());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_edge(
   const OcctSharp_Xyz start, const OcctSharp_Xyz end, OcctSharp_ShapeHandle** out_shape)
 {
@@ -1425,6 +1673,192 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_edge(
     BRepBuilderAPI_MakeEdge builder(gp_Pnt(start.x, start.y, start.z), gp_Pnt(end.x, end.y, end.z));
     if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT edge construction did not complete.");
     *out_shape = AllocateShape(builder.Shape());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_circle_edge(
+  const OcctSharp_Xyz center, const OcctSharp_Xyz normal, const double radius,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The circle edge output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (!std::isfinite(radius) || radius <= 0.0)
+  { SetLastError("The circle radius must be finite and greater than zero."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateFinite(center.x, "Circle center X must be finite."); ValidateFinite(center.y, "Circle center Y must be finite."); ValidateFinite(center.z, "Circle center Z must be finite.");
+    ValidateFinite(normal.x, "Circle normal X must be finite."); ValidateFinite(normal.y, "Circle normal Y must be finite."); ValidateFinite(normal.z, "Circle normal Z must be finite.");
+    BRepBuilderAPI_MakeEdge builder(gp_Circ(gp_Ax2(gp_Pnt(center.x, center.y, center.z), gp_Dir(normal.x, normal.y, normal.z)), radius));
+    if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT circle edge construction did not complete.");
+    *out_shape = AllocateShape(builder.Shape());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_arc_edge(
+  const OcctSharp_Xyz start, const OcctSharp_Xyz middle, const OcctSharp_Xyz end,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The arc edge output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  return Guard([&]
+  {
+    ValidateFinite(start.x, "Arc start X must be finite."); ValidateFinite(start.y, "Arc start Y must be finite."); ValidateFinite(start.z, "Arc start Z must be finite.");
+    ValidateFinite(middle.x, "Arc middle X must be finite."); ValidateFinite(middle.y, "Arc middle Y must be finite."); ValidateFinite(middle.z, "Arc middle Z must be finite.");
+    ValidateFinite(end.x, "Arc end X must be finite."); ValidateFinite(end.y, "Arc end Y must be finite."); ValidateFinite(end.z, "Arc end Z must be finite.");
+    GC_MakeArcOfCircle arc(gp_Pnt(start.x, start.y, start.z), gp_Pnt(middle.x, middle.y, middle.z), gp_Pnt(end.x, end.y, end.z));
+    if (!arc.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT circular arc construction did not complete.");
+    BRepBuilderAPI_MakeEdge builder(arc.Value());
+    if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT arc edge construction did not complete.");
+    *out_shape = AllocateShape(builder.Shape());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_ellipse_edge(
+  const OcctSharp_Xyz center, const OcctSharp_Xyz normal, const OcctSharp_Xyz x_direction,
+  const double major_radius, const double minor_radius, OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The ellipse edge output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (!std::isfinite(major_radius) || !std::isfinite(minor_radius)
+      || major_radius <= 0.0 || minor_radius <= 0.0 || major_radius < minor_radius)
+  { SetLastError("Ellipse radii must be finite and positive, with major radius greater than or equal to minor radius."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateFinite(center.x, "Ellipse center X must be finite."); ValidateFinite(center.y, "Ellipse center Y must be finite."); ValidateFinite(center.z, "Ellipse center Z must be finite.");
+    ValidateFinite(normal.x, "Ellipse normal X must be finite."); ValidateFinite(normal.y, "Ellipse normal Y must be finite."); ValidateFinite(normal.z, "Ellipse normal Z must be finite.");
+    ValidateFinite(x_direction.x, "Ellipse X direction X must be finite."); ValidateFinite(x_direction.y, "Ellipse X direction Y must be finite."); ValidateFinite(x_direction.z, "Ellipse X direction Z must be finite.");
+    const gp_Ax2 axis(gp_Pnt(center.x, center.y, center.z), gp_Dir(normal.x, normal.y, normal.z), gp_Dir(x_direction.x, x_direction.y, x_direction.z));
+    BRepBuilderAPI_MakeEdge builder(gp_Elips(axis, major_radius, minor_radius));
+    if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT ellipse edge construction did not complete.");
+    *out_shape = AllocateShape(builder.Shape());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_bezier_edge(
+  const OcctSharp_Xyz* poles, const int32_t count, OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The Bezier edge output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (poles == nullptr || count < 2) { SetLastError("A Bezier edge requires at least two poles."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    NCollection_Array1<gp_Pnt> native_poles(1, count);
+    for (int32_t index = 0; index < count; ++index)
+    {
+      ValidateFinite(poles[index].x, "Bezier pole X must be finite."); ValidateFinite(poles[index].y, "Bezier pole Y must be finite."); ValidateFinite(poles[index].z, "Bezier pole Z must be finite.");
+      native_poles.SetValue(index + 1, gp_Pnt(poles[index].x, poles[index].y, poles[index].z));
+    }
+    const opencascade::handle<Geom_BezierCurve> curve = new Geom_BezierCurve(native_poles);
+    BRepBuilderAPI_MakeEdge builder(curve);
+    if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT Bezier edge construction did not complete.");
+    *out_shape = AllocateShape(builder.Shape());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_interpolated_edge(
+  const OcctSharp_Xyz* points, const int32_t count, const int32_t periodic, const double tolerance,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The interpolated edge output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (points == nullptr || count < 2 || (periodic != 0 && count < 3))
+  { SetLastError("Interpolation requires at least two points, or three for a periodic curve."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if ((periodic != 0 && periodic != 1) || !std::isfinite(tolerance) || tolerance <= 0.0)
+  { SetLastError("The periodic flag must be zero or one and tolerance must be finite and greater than zero."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    const opencascade::handle<NCollection_HArray1<gp_Pnt>> native_points =
+      new NCollection_HArray1<gp_Pnt>(1, count);
+    for (int32_t index = 0; index < count; ++index)
+    {
+      ValidateFinite(points[index].x, "Interpolation point X must be finite."); ValidateFinite(points[index].y, "Interpolation point Y must be finite."); ValidateFinite(points[index].z, "Interpolation point Z must be finite.");
+      native_points->SetValue(index + 1, gp_Pnt(points[index].x, points[index].y, points[index].z));
+    }
+    GeomAPI_Interpolate interpolation(native_points, periodic != 0, tolerance);
+    interpolation.Perform();
+    if (!interpolation.IsDone() || interpolation.Curve().IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT curve interpolation did not complete.");
+    BRepBuilderAPI_MakeEdge builder(interpolation.Curve());
+    if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT interpolated edge construction did not complete.");
+    *out_shape = AllocateShape(builder.Shape());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_loft(
+  const OcctSharp_ShapeHandle* const* sections, const int32_t count,
+  const int32_t make_solid, const int32_t ruled, const double tolerance,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The loft output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (sections == nullptr || count < 2)
+  { SetLastError("A loft requires at least two wire or endpoint-vertex sections."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if ((make_solid != 0 && make_solid != 1) || (ruled != 0 && ruled != 1)
+      || !std::isfinite(tolerance) || tolerance <= 0.0)
+  { SetLastError("Loft flags must be zero or one and tolerance must be finite and greater than zero."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    BRepOffsetAPI_ThruSections builder(make_solid != 0, ruled != 0, tolerance);
+    builder.CheckCompatibility(true);
+    for (int32_t index = 0; index < count; ++index)
+    {
+      ValidateUsableShape(sections[index]);
+      const TopAbs_ShapeEnum kind = sections[index]->Value.ShapeType();
+      if (kind == TopAbs_WIRE) builder.AddWire(TopoDS::Wire(sections[index]->Value));
+      else if (kind == TopAbs_VERTEX && (index == 0 || index == count - 1))
+        builder.AddVertex(TopoDS::Vertex(sections[index]->Value));
+      else
+        throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Loft sections must be wires; only the first or last section may be a vertex.");
+    }
+    builder.Build();
+    if (!builder.IsDone() || builder.Shape().IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT loft construction did not complete.");
+    *out_shape = AllocateShape(builder.Shape());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_pipe(
+  const OcctSharp_ShapeHandle* spine, const OcctSharp_ShapeHandle* profile,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The pipe output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  return Guard([&]
+  {
+    ValidateUsableShape(spine);
+    ValidateUsableShape(profile);
+    if (spine->Value.ShapeType() != TopAbs_WIRE)
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Pipe construction requires a wire spine.");
+    BRepOffsetAPI_MakePipe builder(TopoDS::Wire(spine->Value), profile->Value);
+    builder.Build();
+    if (!builder.IsDone() || builder.Shape().IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT pipe construction did not complete.");
+    *out_shape = AllocateShape(builder.Shape());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_sew(
+  const OcctSharp_ShapeHandle* const* shapes, const int32_t count, const double tolerance,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The sewing output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (shapes == nullptr || count < 1)
+  { SetLastError("Sewing requires at least one topology shape."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!std::isfinite(tolerance) || tolerance <= 0.0)
+  { SetLastError("Sewing tolerance must be finite and greater than zero."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    BRepBuilderAPI_Sewing builder(tolerance, true, true, true, false);
+    for (int32_t index = 0; index < count; ++index)
+    {
+      ValidateUsableShape(shapes[index]);
+      builder.Add(shapes[index]->Value);
+    }
+    builder.Perform();
+    TopoDS_Shape result = builder.SewedShape();
+    if (result.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT sewing produced a null result.");
+    *out_shape = AllocateShape(std::move(result));
   });
 }
 
@@ -1577,6 +2011,118 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_subshape_count(
   {
     ValidateShape(shape);
     for (TopExp_Explorer explorer(shape->Value, static_cast<TopAbs_ShapeEnum>(kind)); explorer.More(); explorer.Next()) ++*out_count;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_topology_adjacency_count(
+  const OcctSharp_ShapeHandle* shape, const int32_t item_kind, const int32_t ancestor_kind,
+  int32_t* out_item_count, int32_t* out_ancestor_count, int32_t* out_relation_count)
+{
+  if (out_item_count == nullptr || out_ancestor_count == nullptr || out_relation_count == nullptr)
+  { SetLastError("Topology adjacency count output pointers must not be null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_item_count = *out_ancestor_count = *out_relation_count = 0;
+  if (item_kind < 0 || item_kind > 7 || ancestor_kind < 0 || ancestor_kind > 7)
+  { SetLastError("Topology adjacency kinds must be TopAbs kinds from Compound through Vertex."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (item_kind <= ancestor_kind)
+  { SetLastError("The topology item kind must be lower-level than the ancestor kind."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> items;
+    NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> ancestors;
+    NCollection_IndexedDataMap<TopoDS_Shape, NCollection_List<TopoDS_Shape>, TopTools_ShapeMapHasher> adjacency;
+    TopExp::MapShapes(shape->Value, static_cast<TopAbs_ShapeEnum>(item_kind), items);
+    TopExp::MapShapes(shape->Value, static_cast<TopAbs_ShapeEnum>(ancestor_kind), ancestors);
+    TopExp::MapShapesAndUniqueAncestors(
+      shape->Value, static_cast<TopAbs_ShapeEnum>(item_kind),
+      static_cast<TopAbs_ShapeEnum>(ancestor_kind), adjacency, false);
+    int64_t relations = 0;
+    for (int32_t index = 1; index <= items.Extent(); ++index)
+      if (adjacency.Contains(items.FindKey(index))) relations += adjacency.FindFromKey(items.FindKey(index)).Extent();
+    if (items.Extent() > std::numeric_limits<int32_t>::max()
+        || ancestors.Extent() > std::numeric_limits<int32_t>::max()
+        || relations > std::numeric_limits<int32_t>::max())
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The topology adjacency snapshot exceeds 32-bit capacity.");
+    *out_item_count = items.Extent();
+    *out_ancestor_count = ancestors.Extent();
+    *out_relation_count = static_cast<int32_t>(relations);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_topology_adjacency_snapshot(
+  const OcctSharp_ShapeHandle* shape, const int32_t item_kind, const int32_t ancestor_kind,
+  OcctSharp_ShapeHandle** out_items, const int32_t item_capacity,
+  OcctSharp_ShapeHandle** out_ancestors, const int32_t ancestor_capacity,
+  int32_t* out_offsets, const int32_t offset_capacity,
+  int32_t* out_ancestor_indices, const int32_t relation_capacity,
+  int32_t* out_items_written, int32_t* out_ancestors_written, int32_t* out_relations_written)
+{
+  if (out_items_written == nullptr || out_ancestors_written == nullptr || out_relations_written == nullptr)
+  { SetLastError("Topology adjacency written-count pointers must not be null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_items_written = *out_ancestors_written = *out_relations_written = 0;
+  if (item_kind < 0 || item_kind > 7 || ancestor_kind < 0 || ancestor_kind > 7 || item_kind <= ancestor_kind)
+  { SetLastError("Topology adjacency kinds are invalid or not ordered from item to ancestor."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (item_capacity < 0 || ancestor_capacity < 0 || offset_capacity < 1 || relation_capacity < 0
+      || (item_capacity > 0 && out_items == nullptr)
+      || (ancestor_capacity > 0 && out_ancestors == nullptr)
+      || out_offsets == nullptr
+      || (relation_capacity > 0 && out_ancestor_indices == nullptr))
+  { SetLastError("Topology adjacency buffer pointers or capacities are invalid."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> items;
+    NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> ancestors;
+    NCollection_IndexedDataMap<TopoDS_Shape, NCollection_List<TopoDS_Shape>, TopTools_ShapeMapHasher> adjacency;
+    TopExp::MapShapes(shape->Value, static_cast<TopAbs_ShapeEnum>(item_kind), items);
+    TopExp::MapShapes(shape->Value, static_cast<TopAbs_ShapeEnum>(ancestor_kind), ancestors);
+    TopExp::MapShapesAndUniqueAncestors(
+      shape->Value, static_cast<TopAbs_ShapeEnum>(item_kind),
+      static_cast<TopAbs_ShapeEnum>(ancestor_kind), adjacency, false);
+    int32_t relations = 0;
+    for (int32_t index = 1; index <= items.Extent(); ++index)
+      if (adjacency.Contains(items.FindKey(index))) relations += adjacency.FindFromKey(items.FindKey(index)).Extent();
+    if (item_capacity < items.Extent() || ancestor_capacity < ancestors.Extent()
+        || offset_capacity < items.Extent() + 1 || relation_capacity < relations)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "A topology adjacency snapshot buffer is too small.");
+
+    int32_t item_written = 0;
+    int32_t ancestor_written = 0;
+    try
+    {
+      for (int32_t index = 1; index <= items.Extent(); ++index)
+        out_items[item_written++] = AllocateShape(items.FindKey(index));
+      for (int32_t index = 1; index <= ancestors.Extent(); ++index)
+        out_ancestors[ancestor_written++] = AllocateShape(ancestors.FindKey(index));
+
+      int32_t relation_written = 0;
+      out_offsets[0] = 0;
+      for (int32_t index = 1; index <= items.Extent(); ++index)
+      {
+        const TopoDS_Shape& item = items.FindKey(index);
+        if (adjacency.Contains(item))
+        {
+          const NCollection_List<TopoDS_Shape>& list = adjacency.FindFromKey(item);
+          for (NCollection_List<TopoDS_Shape>::Iterator iterator(list); iterator.More(); iterator.Next())
+          {
+            const int ancestor_index = ancestors.FindIndex(iterator.Value());
+            if (ancestor_index <= 0)
+              throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT returned an ancestor outside the indexed topology map.");
+            out_ancestor_indices[relation_written++] = ancestor_index - 1;
+          }
+        }
+        out_offsets[index] = relation_written;
+      }
+      *out_items_written = item_written;
+      *out_ancestors_written = ancestor_written;
+      *out_relations_written = relation_written;
+    }
+    catch (...)
+    {
+      for (int32_t index = 0; index < item_written; ++index) occtsharp_shape_release(out_items[index]);
+      for (int32_t index = 0; index < ancestor_written; ++index) occtsharp_shape_release(out_ancestors[index]);
+      throw;
+    }
   });
 }
 
@@ -1733,6 +2279,41 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_offset(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_make_thick_solid(
+  const OcctSharp_ShapeHandle* shape,
+  const OcctSharp_ShapeHandle* const* closing_faces, const int32_t face_count,
+  const double offset, const double tolerance, OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The thick-solid output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (closing_faces == nullptr || face_count < 1)
+  { SetLastError("A thick solid requires at least one closing face to remove."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (!std::isfinite(offset) || offset == 0.0 || !std::isfinite(tolerance) || tolerance <= 0.0)
+  {
+    SetLastError("The wall offset must be finite and non-zero, and tolerance must be finite and greater than zero.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    if (shape->Value.ShapeType() != TopAbs_SOLID)
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Thick-solid construction requires a solid source shape.");
+    NCollection_List<TopoDS_Shape> faces;
+    for (int32_t index = 0; index < face_count; ++index)
+    {
+      ValidateUsableShape(closing_faces[index]);
+      if (closing_faces[index]->Value.ShapeType() != TopAbs_FACE)
+        throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Every thick-solid closing shape must be a face.");
+      faces.Append(closing_faces[index]->Value);
+    }
+    BRepOffsetAPI_MakeThickSolid builder;
+    builder.MakeThickSolidByJoin(shape->Value, faces, offset, tolerance);
+    if (!builder.IsDone() || builder.Shape().IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT thick-solid construction did not complete.");
+    *out_shape = AllocateShape(builder.Shape());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_section(
   const OcctSharp_ShapeHandle* left, const OcctSharp_ShapeHandle* right,
   OcctSharp_ShapeHandle** out_shape)
@@ -1828,6 +2409,73 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_boolean_common(
     TopoDS_Shape result = operation.Shape();
     if (result.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT boolean common produced a null result.");
     *out_shape = AllocateShape(std::move(result));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_boolean_with_history(
+  const OcctSharp_ShapeHandle* left, const OcctSharp_ShapeHandle* right,
+  const int32_t operation_kind, const int32_t tracked_kind,
+  OcctSharp_ShapeHandle** out_shape, OcctSharp_BooleanHistorySummary* out_history)
+{
+  if (out_shape == nullptr || out_history == nullptr)
+  { SetLastError("Boolean history output pointers must not be null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  *out_history = {};
+  if (operation_kind < 0 || operation_kind > 2)
+  { SetLastError("Boolean history operation must be Fuse, Cut, or Common."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (tracked_kind < 0 || tracked_kind > 7)
+  { SetLastError("Boolean history tracked kind must be Compound through Vertex."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateUsableShape(left);
+    ValidateUsableShape(right);
+    std::unique_ptr<BRepAlgoAPI_BooleanOperation> operation;
+    if (operation_kind == 0) operation = std::make_unique<BRepAlgoAPI_Fuse>(left->Value, right->Value);
+    else if (operation_kind == 1) operation = std::make_unique<BRepAlgoAPI_Cut>(left->Value, right->Value);
+    else operation = std::make_unique<BRepAlgoAPI_Common>(left->Value, right->Value);
+    operation->Build();
+    if (!operation->IsDone() || operation->Shape().IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT boolean operation with history did not complete.");
+
+    const TopAbs_ShapeEnum kind = static_cast<TopAbs_ShapeEnum>(tracked_kind);
+    auto summarize = [&](const TopoDS_Shape& input,
+                         int32_t& source_count,
+                         int32_t& modified_source_count,
+                         int32_t& generated_source_count,
+                         int32_t& deleted_source_count,
+                         int32_t& modified_result_count,
+                         int32_t& generated_result_count)
+    {
+      NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> sources;
+      TopExp::MapShapes(input, kind, sources);
+      source_count = sources.Extent();
+      for (int32_t index = 1; index <= sources.Extent(); ++index)
+      {
+        const TopoDS_Shape& source = sources.FindKey(index);
+        const auto& modified = operation->Modified(source);
+        const auto& generated = operation->Generated(source);
+        if (!modified.IsEmpty()) ++modified_source_count;
+        if (!generated.IsEmpty()) ++generated_source_count;
+        if (operation->IsDeleted(source)) ++deleted_source_count;
+        modified_result_count += modified.Extent();
+        generated_result_count += generated.Extent();
+      }
+    };
+    summarize(left->Value,
+      out_history->left_source_count,
+      out_history->left_modified_source_count,
+      out_history->left_generated_source_count,
+      out_history->left_deleted_source_count,
+      out_history->left_modified_result_count,
+      out_history->left_generated_result_count);
+    summarize(right->Value,
+      out_history->right_source_count,
+      out_history->right_modified_source_count,
+      out_history->right_generated_source_count,
+      out_history->right_deleted_source_count,
+      out_history->right_modified_result_count,
+      out_history->right_generated_result_count);
+    *out_shape = AllocateShape(operation->Shape());
   });
 }
 
@@ -3848,6 +4496,25 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_create(
   }
   *out_document = nullptr;
   return Guard([&] { *out_document = CreateOwnedXdeDocument(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_import_step(
+  OcctSharp_OcafDocumentHandle* document, const char* file_path, int32_t* out_root_count)
+{
+  if (out_root_count == nullptr)
+  {
+    SetLastError("The imported STEP root-count pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_root_count = 0;
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    RequireOpenOcafCommand(document);
+    std::vector<TDF_Label> roots = ImportStepRootsIntoXdeDocument(file_path, document->Document);
+    GetXdeShapeTool(document)->UpdateAssemblies();
+    *out_root_count = static_cast<int32_t>(roots.size());
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_open(

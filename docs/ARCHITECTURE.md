@@ -66,6 +66,10 @@ The accepted boundaries are recorded in ADRs:
   bootstrap from pinned local or immutable OCCT inputs.
 - [ADR-0052](adr/0052-native-local-common-modeling-operations.md): native-local common
   modeling algorithms plus fail-closed stable-ID accounting for manual bindings.
+- [ADR-0057](adr/0057-core-toolkit-closure-and-auto-package-exclusions.md): one explicit
+  core native toolkit/runtime closure plus auditable automatic package exclusions.
+- [ADR-0058](adr/0058-narrow-long-tail-dispositions-and-local-completion-gate.md): narrow
+  final long-tail dispositions and separate local implementation/publication gates.
 
 ## Components
 
@@ -114,12 +118,38 @@ view/window graph in one native wrapper bound to an application-owned HWND. AIS 
 remain native and are addressed by parent-scoped IDs; selection is copied as IDs. The
 application forwards window/input events on the creating thread, with no reverse callback.
 
-The B19.3 common-modeling profile follows the existing owning-shape category. Primitive,
+The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native
 call. Topology results are independent registered owners; bounds are fixed copied values.
 Configuration schema 1.6 links each directly used manual declaration stable ID to SC-032,
 and both selected discovery and full inventory fail when a configured ID disappears or
 overlaps generated ownership.
+
+The current high-value API work inside B extends this result-oriented boundary across
+curves, surfaces, topology maps, multi-shape construction, solid features, and Boolean
+history summaries. Builder, adaptor, projection, adjacency, sewing, pipe, loft, thick-
+solid, and history objects remain native-local. Only registered owning shapes, immutable
+value snapshots, and caller-owned compact index arrays cross the ABI. Schema 1.6 now
+reconciles 61 audited manual stable IDs across SC-032 and SC-033. This is progress inside
+the single product-scale B batch, not completion of its full long-tail exit criteria.
+
+XDE STEP composition uses the established document/label boundary. `XdeDocument.ImportStep`
+clones source roots and metadata into an existing destination document during a
+transaction and returns destination-parent-bound labels. The application chooses the
+assembly graph, locations, metadata edits, persistence, and export timing. The older
+one-shot `StepAssembly` facade is obsolete compatibility surface rather than the primary
+architecture.
+
+Package-level generated shared-handle expansion now applies the same O004 category to
+selected `Geom`, `Geom2d`, `BRepMesh`, `Poly`, `ShapeAnalysis`, `ShapeFix`, and
+`ShapeUpgrade` descendants of `Standard_Transient`. Header-pattern discovery selects
+only concrete records with at least one independently supported value-copy constructor.
+Instance members may use verified scalar/enum/copied-point projections or nullable
+relationships to other selected generated shared-handle wrappers. Binding-model
+schema 1.2 carries Clang's abstract-record fact so abstract bases cannot reach native
+construction. Each generated wrapper owns one retained intrusive handle behind a
+type-specific registry; no class layout, raw `Handle<T>`, or borrowed member crosses
+the ABI.
 
 ### Managed raw bindings
 
@@ -193,7 +223,7 @@ inventory workflow catalogs every public `.h`/`.hxx` entry header, parses determ
 batches, isolates failures, and deduplicates semantic stable IDs. Only a complete scan
 may establish the full-OCCT declaration denominator; partial totals remain diagnostics.
 
-B19 additionally produces a complete *classification* over all declarations discovered
+The long-tail workstream additionally produces a complete *classification* over all declarations discovered
 from successful headers and all catalogued headers. This does not fill declarations that
 cannot be parsed and never promotes blocked/eligible-unselected items into generated
 coverage. Semantic inventory, classification, emission, and validation remain separate.

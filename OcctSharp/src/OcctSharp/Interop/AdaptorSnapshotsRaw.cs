@@ -21,3 +21,39 @@ internal readonly struct FaceSurfaceSnapshotRaw
     internal readonly double FirstVParameter;
     internal readonly double LastVParameter;
 }
+
+[StructLayout(LayoutKind.Sequential)]
+internal readonly struct CurveEvaluationRaw
+{
+    internal readonly double Parameter;
+    internal readonly XyzRaw Point;
+    internal readonly XyzRaw Tangent;
+}
+
+[StructLayout(LayoutKind.Sequential)]
+internal readonly struct CurveProjectionRaw
+{
+    internal readonly double Parameter;
+    internal readonly XyzRaw Point;
+    internal readonly double Distance;
+    internal readonly int SolutionCount;
+}
+
+[StructLayout(LayoutKind.Sequential)]
+internal readonly struct SurfaceEvaluationRaw
+{
+    internal readonly double UParameter;
+    internal readonly double VParameter;
+    internal readonly XyzRaw Point;
+    internal readonly XyzRaw Normal;
+}
+
+[StructLayout(LayoutKind.Sequential)]
+internal readonly struct SurfaceProjectionRaw
+{
+    internal readonly double UParameter;
+    internal readonly double VParameter;
+    internal readonly XyzRaw Point;
+    internal readonly double Distance;
+    internal readonly int SolutionCount;
+}

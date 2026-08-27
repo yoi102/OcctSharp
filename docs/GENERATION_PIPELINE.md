@@ -66,8 +66,8 @@ must not renumber or silently redefine an existing code.
 The following simple-binding eligibility pass now promotes only value-copy constructors
 and static methods whose complete parameter and return projections are known to the
 central TypeMap. Instance receivers, pointer/reference returns, and any unknown ownership
-remain pending. In the selected 9,567-declaration scope, 740 declarations are currently
-eligible, 18 are accepted manual, 6,781 remain pending, and 2,028 retain their stable
+remain pending. In the selected 16,633-declaration scope, 1,767 declarations are currently
+eligible, 61 are accepted manual, 11,397 remain pending, and 3,408 retain their stable
 skip reasons. Eligibility
 does not imply that every candidate is emitted yet.
 
@@ -77,12 +77,13 @@ eligible static methods whose parameters and return values use only `TM001` thro
 three from `TopAbs`, and five ownership-neutral methods from `Standard`, `TopLoc`, and
 `gp`, for 31 declarations total including three constructors. `Standard::Purge` remains
 excluded because it has process-wide side effects rather than value-copy semantics.
-The typed shared-handle emitter selects 11 safe constructors and instance members for
-configured `Geom_CartesianPoint` plus a schema-1.5 package expansion covering 129
-default-constructible StepBasic shared types. The enum emitter adds referenced enum
+The typed shared-handle emitter selects safe constructors and instance members for nine
+Geom/Geom2d public types, a schema-1.5 package expansion covering 129
+default-constructible StepBasic shared types, and 61 concrete BRepMesh/Poly/
+ShapeAnalysis/ShapeFix/ShapeUpgrade types. The enum emitter adds referenced enum
 declarations. The topology emitter
 selects eight `TopoDS_Shape` value-semantic declarations and eight checked typed topology
-casts, bringing the current manifest total to 333 stable IDs.
+casts, bringing the current manifest total to 775 stable IDs.
 This still excludes borrowed receivers, typed topology subclasses, and other packages
 until each scope has focused semantic tests. Static overloads are grouped by
 native name, ordered by normalized native signature then stable ID, and receive a
@@ -202,14 +203,53 @@ dotnet run --project .\src\OcctSharp.Generator\OcctSharp.Generator.csproj -- gen
 
 Generation currently selects three validated `gp_Pnt` value-copy constructors plus 28
 value-copy static methods across `Precision`, `TopAbs`, `Standard`, `TopLoc`, and `gp`,
-plus typed shared-handle declarations for `Geom_CartesianPoint` and 129 StepBasic types,
-and eight `TopoDS_Shape` value-semantic declarations. It owns 333 generated stable IDs,
-while schema 1.6 separately reconciles 18 audited SC-032 manual declarations, and emits
+plus typed shared-handle declarations for nine Geom/Geom2d, 129 StepBasic, and 61
+BRepMesh/Poly/ShapeAnalysis/ShapeFix/ShapeUpgrade types, and eight `TopoDS_Shape`
+value-semantic declarations. It owns 775 generated stable IDs,
+while schema 1.6 separately reconciles 61 audited SC-032/SC-033 manual declarations, and emits
 13 native/managed files into
 module-partitioned isolated staging, verifies their hashes, replaces the generated set, removes only stale
 paths owned by the previous manifest, and writes the coverage/diagnostics reports through
 separate isolated report staging.
-Discovery reports use schema 1.1 and include structured declaration facts plus the
-support summary. Exit code `0` means success, `1` means discovery/configuration/parsing/
+Discovery reports use binding-model schema 1.2 and include structured declaration facts,
+record abstractness, and the support summary. Package-level shared-handle expansion
+rejects abstract records before emission, even when they expose public constructors.
+Exit code `0` means success, `1` means discovery/configuration/parsing/
 generation failed, `2` means command-line usage is invalid, and a semantic inventory
 returns `3` after writing its report when one or more headers could not be scanned.
+
+## Full-selection generated symbol namespaces
+
+Configuration schema 1.8 reserves distinct native entry-point segments for each
+generated operation category. Static value-copy functions use
+`occtsharp_generated_<scope>_static_<member>_<ordinal>`, while generated shared instance
+methods use `occtsharp_generated_<type>_method_<member>_<ordinal>`. Shared constructors
+retain `_create_`; clone, RTTI, reference-count, and release entry points retain their
+fixed infrastructure names. Ordinals are assigned across the complete normalized member
+name group, not separately for case-sensitive native spellings.
+
+When two emitted methods would have the same friendly C# name and parameter-type
+signature, the later deterministic declaration receives `GeneratedN`. Legal C# overloads
+keep one public name, and native case variants remain case variants when their managed
+signatures are distinct.
+
+`placementAllocatorNativeTypes` is an exact package-scope list. Each selected constructor
+of such a type must expose exactly one generated `Handle<NCollection_IncAllocator>`
+parameter or generation fails. The emitter uses allocator placement new and makes the
+native wrapper retain the allocator; this is an ownership rule, not a text substitution.
+
+`generatedPreambleHeaders` is an ordered, validated list of completion headers emitted
+before generated shared-scope headers. It is reserved for artifact headers that instantiate
+a template over a forward-declared element type and therefore fail in a standalone
+generated translation unit. Entries must be exact safe include names; duplicates, empty
+values, and include-delimiter/newline injection fail generation. The current OCCT 8.0.1
+entry is `RWGltf_GltfPrimArrayData.hxx`, required before
+`RWGltf_GltfLatePrimitiveArray.hxx`.
+
+`excludedAutoPackages` is a configuration-level core-package boundary. Each entry groups
+exact discovered `sourcePackage` names under one stable reason code, category, and detail.
+The configured exclusion pass marks those declarations before automatic static/shared
+scope expansion, and full inventory applies the same disposition. `SK009` records
+Draw/command/test harness packages; `SK010` records IVtk packages blocked behind the
+isolated VTK-dependent profile. Exact stable-ID exclusions remain mandatory for narrow
+artifact symbol gaps and are not replaced by broad package filtering.

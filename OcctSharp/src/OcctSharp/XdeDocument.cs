@@ -34,6 +34,35 @@ public sealed class XdeDocument : IDisposable
         return new XdeTransaction(this);
     }
 
+    /// <summary>
+    /// Imports every free STEPCAF/XDE shape root into this document and returns the
+    /// newly cloned parent-bound labels. The caller can compose them into any assembly.
+    /// </summary>
+    public IReadOnlyList<XdeLabel> ImportStep(string filePath)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(filePath);
+        string fullPath = Path.GetFullPath(filePath);
+        if (!File.Exists(fullPath)) throw new FileNotFoundException("The STEP input file does not exist.", fullPath);
+        ThrowIfDisposed();
+
+        HashSet<string> existingEntries = GetFreeShapes()
+            .Select(static label => label.Entry)
+            .ToHashSet(StringComparer.Ordinal);
+        NativeError.ThrowIfFailed(
+            NativeMethods.ImportStepIntoXdeDocument(Handle, fullPath, out int importedCount),
+            "xde_document_import_step");
+        XdeLabel[] imported = GetFreeShapes()
+            .Where(label => !existingEntries.Contains(label.Entry))
+            .ToArray();
+        if (imported.Length != importedCount)
+        {
+            throw new OcctException(
+                NativeStatus.UnknownException.ToString(),
+                $"The XDE STEP importer reported {importedCount} roots but exposed {imported.Length} new labels.");
+        }
+        return imported;
+    }
+
     /// <summary>Adds a top-level shape inside the current transaction.</summary>
     public XdeLabel AddShape(Shape shape, string name)
     {

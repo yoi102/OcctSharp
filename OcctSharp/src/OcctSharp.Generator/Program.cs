@@ -72,6 +72,8 @@ static async Task<int> RunInventoryAsync(
         HashSet<string> manualStableIds = configuration.ManualBindings
             .Select(static binding => binding.StableId)
             .ToHashSet(StringComparer.Ordinal);
+        IReadOnlyDictionary<string, BindingSkipReason> excludedBindings = GetExcludedBindings(configuration);
+        IReadOnlyDictionary<string, BindingSkipReason> excludedPackages = GetExcludedAutoPackages(configuration);
         OcctInventoryReport report = OcctInventory.Discover(
             occtRoot,
             batchSize,
@@ -79,6 +81,8 @@ static async Task<int> RunInventoryAsync(
             configuration.InventoryPreambleHeaders,
             emittedStableIds,
             manualStableIds,
+            excludedBindings,
+            excludedPackages,
             Console.WriteLine);
         if (!string.Equals(configuration.OcctVersion, report.OcctVersion, StringComparison.Ordinal))
         {
@@ -134,7 +138,9 @@ static async Task<int> RunConfiguredDiscoveryAsync(string occtRoot, string confi
             configuration.OcctVersion,
             outputPath,
             configuration.ToolkitByPackage,
-            configuration.ManualBindings);
+            configuration.ManualBindings,
+            GetExcludedBindings(configuration),
+            GetExcludedAutoPackages(configuration));
     }
     catch (Exception error)
     {
@@ -151,22 +157,34 @@ static async Task<int> RunGenerationAsync(string occtRoot, string configPath, st
         DiscoveryReport report = ClangAstDiscovery.Discover(
             new DiscoveryOptions(occtRoot, ExpandHeaders(occtRoot, configuration), configuration.ToolkitByPackage));
         report = ApplyManualBindings(report, configuration.ManualBindings);
+        report = ApplyConfiguredExclusions(
+            report,
+            GetExcludedBindings(configuration),
+            GetExcludedAutoPackages(configuration));
         if (!string.Equals(configuration.OcctVersion, report.OcctVersion, StringComparison.Ordinal))
         {
             throw new InvalidDataException(
                 $"Configuration expects OCCT {configuration.OcctVersion}, but the selected installation reports {report.OcctVersion}.");
         }
 
+        IReadOnlyList<SharedHandlePackageScopeConfiguration> sharedHandlePackageScopes =
+            ExpandSharedHandlePackageScopes(report.Model, configuration);
         IReadOnlyList<SharedHandleScopeConfiguration> sharedHandleScopes =
             SharedHandlePackageScopeExpander.Expand(
                 report.Model,
                 configuration.SharedHandleScopes,
-                configuration.SharedHandlePackageScopes);
+                sharedHandlePackageScopes);
+        IReadOnlyList<GenerationScopeConfiguration> generationScopes =
+            GenerationScopeExpander.Expand(
+                report.Model,
+                configuration.GenerationScopes,
+                configuration.AutoGenerationScopes);
         GeneratedBindingSet bindingSet = InitialBindingEmitter.Emit(
             report,
-            configuration.GenerationScopes,
+            generationScopes,
             sharedHandleScopes,
-            configuration.TopologyScopes);
+            configuration.TopologyScopes,
+            configuration.GeneratedPreambleHeaders);
         GeneratedManifest manifest = GeneratedOutputWriter.Replace(outputRoot, bindingSet);
         GenerationReportSet reports = GenerationReportWriter.Create(report, bindingSet);
         GenerationReportWriter.Write(outputRoot, reports);
@@ -214,7 +232,20 @@ static IReadOnlyList<string> ExpandHeaders(string occtRoot, DiscoveryConfigurati
             headers.Add(Path.GetFileName(path));
         }
     }
-    return headers.ToArray();
+    HashSet<string> excluded = new(StringComparer.Ordinal);
+    foreach (string header in configuration.ExcludedHeaders)
+    {
+        if (string.IsNullOrWhiteSpace(header)
+            || Path.IsPathRooted(header)
+            || header.Contains("..", StringComparison.Ordinal)
+            || !string.Equals(Path.GetFileName(header), header, StringComparison.Ordinal))
+        {
+            throw new InvalidDataException(
+                $"Excluded header '{header}' must be a non-rooted include-directory file name.");
+        }
+        excluded.Add(header);
+    }
+    return headers.Where(header => !excluded.Contains(header)).ToArray();
 }
 
 static async Task<int> RunDiscoveryAsync(
@@ -223,13 +254,19 @@ static async Task<int> RunDiscoveryAsync(
     string? expectedOcctVersion,
     string outputPath,
     IReadOnlyDictionary<string, string>? toolkitByPackage = null,
-    IReadOnlyList<ManualBindingConfiguration>? manualBindings = null)
+    IReadOnlyList<ManualBindingConfiguration>? manualBindings = null,
+    IReadOnlyDictionary<string, BindingSkipReason>? excludedBindings = null,
+    IReadOnlyDictionary<string, BindingSkipReason>? excludedPackages = null)
 {
     try
     {
         DiscoveryReport report = ClangAstDiscovery.Discover(
             new DiscoveryOptions(occtRoot, headers, toolkitByPackage));
         report = ApplyManualBindings(report, manualBindings ?? []);
+        report = ApplyConfiguredExclusions(
+            report,
+            excludedBindings ?? new Dictionary<string, BindingSkipReason>(StringComparer.Ordinal),
+            excludedPackages ?? new Dictionary<string, BindingSkipReason>(StringComparer.Ordinal));
         if (expectedOcctVersion is not null
             && !string.Equals(expectedOcctVersion, report.OcctVersion, StringComparison.Ordinal))
         {
@@ -270,7 +307,7 @@ static JsonSerializerOptions CreateJsonOptions()
 }
 
 static bool IsSupportedConfigurationSchema(string schemaVersion) =>
-    schemaVersion is "1.1" or "1.2" or "1.3" or "1.4" or "1.5" or "1.6";
+    schemaVersion is "1.1" or "1.2" or "1.3" or "1.4" or "1.5" or "1.6" or "1.7" or "1.8";
 
 static DiscoveryReport ApplyManualBindings(
     DiscoveryReport report,
@@ -282,6 +319,127 @@ static DiscoveryReport ApplyManualBindings(
         Model = model,
         Support = BindingSupportSummary.Create(model),
     };
+}
+
+static DiscoveryReport ApplyConfiguredExclusions(
+    DiscoveryReport report,
+    IReadOnlyDictionary<string, BindingSkipReason> exclusions,
+    IReadOnlyDictionary<string, BindingSkipReason>? packageExclusions = null)
+{
+    BindingModel model = ConfiguredExclusionPass.Apply(report.Model, exclusions, packageExclusions);
+    return report with
+    {
+        Model = model,
+        Support = BindingSupportSummary.Create(model),
+    };
+}
+
+static IReadOnlyDictionary<string, BindingSkipReason> GetExcludedAutoPackages(
+    DiscoveryConfiguration configuration)
+{
+    Dictionary<string, BindingSkipReason> result = new(StringComparer.Ordinal);
+    foreach (ExcludedAutoPackageConfiguration package in configuration.ExcludedAutoPackages)
+    {
+        if (package.SourcePackages.Count == 0
+            || package.SourcePackages.Any(string.IsNullOrWhiteSpace)
+            || string.IsNullOrWhiteSpace(package.Code)
+            || string.IsNullOrWhiteSpace(package.Category)
+            || string.IsNullOrWhiteSpace(package.Detail))
+        {
+            throw new InvalidDataException(
+                "Every excluded auto package group must define sourcePackages, code, category, and detail.");
+        }
+        foreach (string sourcePackage in package.SourcePackages)
+        {
+            if (!result.TryAdd(
+                    sourcePackage,
+                    new BindingSkipReason(package.Code, package.Category, package.Detail)))
+            {
+                throw new InvalidDataException(
+                    $"Excluded auto package '{sourcePackage}' is configured more than once.");
+            }
+        }
+    }
+    return result;
+}
+
+static IReadOnlyDictionary<string, BindingSkipReason> GetExcludedBindings(
+    DiscoveryConfiguration configuration)
+{
+    Dictionary<string, BindingSkipReason> result = new(StringComparer.Ordinal);
+    foreach (ExcludedBindingConfiguration binding in configuration.ExcludedBindings)
+    {
+        if (string.IsNullOrWhiteSpace(binding.StableId)
+            || string.IsNullOrWhiteSpace(binding.Code)
+            || string.IsNullOrWhiteSpace(binding.Category)
+            || string.IsNullOrWhiteSpace(binding.Detail))
+        {
+            throw new InvalidDataException(
+                "Every excluded binding must define stableId, code, category, and detail.");
+        }
+        if (!result.TryAdd(
+                binding.StableId,
+                new BindingSkipReason(binding.Code, binding.Category, binding.Detail)))
+        {
+            throw new InvalidDataException(
+                $"Excluded binding stable ID '{binding.StableId}' is configured more than once.");
+        }
+    }
+
+    HashSet<string> emitterExclusions = configuration.SharedHandleScopes
+        .SelectMany(static scope => scope.ExcludedStableIds)
+        .Concat(configuration.SharedHandlePackageScopes.SelectMany(static scope => scope.ExcludedStableIds))
+        .ToHashSet(StringComparer.Ordinal);
+    string[] missingDispositions = emitterExclusions.Except(result.Keys, StringComparer.Ordinal)
+        .Order(StringComparer.Ordinal)
+        .ToArray();
+    string[] unusedDispositions = result.Keys.Except(emitterExclusions, StringComparer.Ordinal)
+        .Order(StringComparer.Ordinal)
+        .ToArray();
+    if (missingDispositions.Length != 0 || unusedDispositions.Length != 0)
+    {
+        throw new InvalidDataException(
+            $"Emitter exclusions and excluded binding dispositions differ. Missing dispositions: {string.Join(", ", missingDispositions)}; unused dispositions: {string.Join(", ", unusedDispositions)}.");
+    }
+
+    return result;
+}
+
+static IReadOnlyList<SharedHandlePackageScopeConfiguration> ExpandSharedHandlePackageScopes(
+    BindingModel model,
+    DiscoveryConfiguration configuration)
+{
+    if (!configuration.AutoSharedHandlePackageScopes)
+    {
+        return configuration.SharedHandlePackageScopes;
+    }
+
+    List<SharedHandlePackageScopeConfiguration> result = [.. configuration.SharedHandlePackageScopes];
+    HashSet<string> identities = result
+        .Select(static scope => scope.SourcePackage + "\u001f" + scope.NativeTypePrefix)
+        .ToHashSet(StringComparer.Ordinal);
+    foreach ((string package, string prefix) in model.Declarations
+                 .Where(static declaration => declaration.Kind == BindingDeclarationKind.Record)
+                 .Where(static declaration =>
+                     !string.IsNullOrWhiteSpace(declaration.SourcePackage)
+                     && declaration.NativeName.IndexOf('_', StringComparison.Ordinal) > 0)
+                 .Select(static declaration => (
+                     Package: declaration.SourcePackage,
+                     Prefix: declaration.NativeName[..(declaration.NativeName.IndexOf('_', StringComparison.Ordinal) + 1)]))
+                 .Distinct()
+                 .OrderBy(static item => item.Package, StringComparer.Ordinal)
+                 .ThenBy(static item => item.Prefix, StringComparer.Ordinal))
+    {
+        if (identities.Add(package + "\u001f" + prefix))
+        {
+            result.Add(new SharedHandlePackageScopeConfiguration
+            {
+                SourcePackage = package,
+                NativeTypePrefix = prefix,
+            });
+        }
+    }
+    return result;
 }
 
 static int PrintUsage()

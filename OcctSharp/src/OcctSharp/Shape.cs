@@ -152,6 +152,136 @@ public partial class Shape : IDisposable
             snapshot.LastVParameter);
     }
 
+    /// <summary>Evaluates a copied point and oriented unit tangent at an edge parameter.</summary>
+    public CurveEvaluation EvaluateEdge(double parameter)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.EvaluateEdge(handle, parameter, out CurveEvaluationRaw result),
+            "shape_edge_evaluate");
+        return new CurveEvaluation(
+            result.Parameter,
+            ToPoint(result.Point),
+            ToPoint(result.Tangent));
+    }
+
+    /// <summary>Computes the finite length of an edge over its complete parameter range.</summary>
+    public double GetEdgeLength()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(NativeMethods.GetEdgeLength(handle, out double length), "shape_edge_length");
+        return length;
+    }
+
+    /// <summary>Projects a point onto the bounded 3D curve of an edge.</summary>
+    public CurveProjection ProjectPointOnEdge(GpPoint point)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.ProjectPointOnEdge(handle, ShapeFactory.ToRaw(point), out CurveProjectionRaw result),
+            "shape_edge_project_point");
+        return new CurveProjection(result.Parameter, ToPoint(result.Point), result.Distance, result.SolutionCount);
+    }
+
+    /// <summary>Evaluates a copied point and oriented unit normal at bounded face parameters.</summary>
+    public SurfaceEvaluation EvaluateFace(double uParameter, double vParameter)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.EvaluateFace(handle, uParameter, vParameter, out SurfaceEvaluationRaw result),
+            "shape_face_evaluate");
+        return new SurfaceEvaluation(
+            result.UParameter,
+            result.VParameter,
+            ToPoint(result.Point),
+            ToPoint(result.Normal));
+    }
+
+    /// <summary>Projects a point onto the bounded surface domain of a face.</summary>
+    public SurfaceProjection ProjectPointOnFace(GpPoint point, double tolerance = 1e-7)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.ProjectPointOnFace(
+                handle, ShapeFactory.ToRaw(point), tolerance, out SurfaceProjectionRaw result),
+            "shape_face_project_point");
+        return new SurfaceProjection(
+            result.UParameter,
+            result.VParameter,
+            ToPoint(result.Point),
+            result.Distance,
+            result.SolutionCount);
+    }
+
+    /// <summary>
+    /// Copies unique subshapes, unique ancestors, and their zero-based adjacency indices.
+    /// The returned map owns every copied topology value.
+    /// </summary>
+    public unsafe TopologyAdjacencyMap GetTopologyAdjacency(ShapeKind itemKind, ShapeKind ancestorKind)
+    {
+        if (itemKind is < ShapeKind.Compound or > ShapeKind.Vertex)
+            throw new ArgumentOutOfRangeException(nameof(itemKind));
+        if (ancestorKind is < ShapeKind.Compound or > ShapeKind.Vertex)
+            throw new ArgumentOutOfRangeException(nameof(ancestorKind));
+        if (itemKind <= ancestorKind)
+            throw new ArgumentException("The item kind must be lower-level than the ancestor kind.", nameof(itemKind));
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.GetTopologyAdjacencyCount(
+                handle, (int)itemKind, (int)ancestorKind,
+                out int itemCount, out int ancestorCount, out int relationCount),
+            "shape_topology_adjacency_count");
+
+        nint[] nativeItems = new nint[itemCount];
+        nint[] nativeAncestors = new nint[ancestorCount];
+        int[] offsets = new int[itemCount + 1];
+        int[] ancestorIndices = new int[relationCount];
+        fixed (nint* itemPointer = nativeItems)
+        fixed (nint* ancestorPointer = nativeAncestors)
+        fixed (int* offsetPointer = offsets)
+        fixed (int* indexPointer = ancestorIndices)
+        {
+            NativeError.ThrowIfFailed(
+                NativeMethods.GetTopologyAdjacencySnapshot(
+                    handle, (int)itemKind, (int)ancestorKind,
+                    itemPointer, nativeItems.Length,
+                    ancestorPointer, nativeAncestors.Length,
+                    offsetPointer, offsets.Length,
+                    indexPointer, ancestorIndices.Length,
+                    out int itemsWritten, out int ancestorsWritten, out int relationsWritten),
+                "shape_topology_adjacency_snapshot");
+            if (itemsWritten != itemCount || ancestorsWritten != ancestorCount || relationsWritten != relationCount)
+            {
+                for (int index = 0; index < itemsWritten; ++index) NativeMethods.ReleaseShape(nativeItems[index]);
+                for (int index = 0; index < ancestorsWritten; ++index) NativeMethods.ReleaseShape(nativeAncestors[index]);
+                throw new OcctException(
+                    NativeStatus.UnknownException.ToString(),
+                    "The topology adjacency snapshot counts changed during enumeration.");
+            }
+        }
+
+        Shape[] items = new Shape[itemCount];
+        Shape[] ancestors = new Shape[ancestorCount];
+        int createdItems = 0;
+        int createdAncestors = 0;
+        try
+        {
+            for (; createdItems < itemCount; ++createdItems)
+                items[createdItems] = ShapeFactory.FromNativeHandle(nativeItems[createdItems], "shape_topology_adjacency_snapshot");
+            for (; createdAncestors < ancestorCount; ++createdAncestors)
+                ancestors[createdAncestors] = ShapeFactory.FromNativeHandle(nativeAncestors[createdAncestors], "shape_topology_adjacency_snapshot");
+            return new TopologyAdjacencyMap(itemKind, ancestorKind, items, ancestors, offsets, ancestorIndices);
+        }
+        catch
+        {
+            for (int index = 0; index < createdItems; ++index) items[index].Dispose();
+            for (int index = createdItems; index < itemCount; ++index) NativeMethods.ReleaseShape(nativeItems[index]);
+            for (int index = 0; index < createdAncestors; ++index) ancestors[index].Dispose();
+            for (int index = createdAncestors; index < ancestorCount; ++index) NativeMethods.ReleaseShape(nativeAncestors[index]);
+            throw;
+        }
+    }
+
     /// <summary>Creates an owned shape with the supplied rigid transform applied.</summary>
     public Shape Transformed(ShapeTransform transform)
     {
@@ -273,6 +403,25 @@ public partial class Shape : IDisposable
         return ShapeFactory.FromNativeHandle(result, "shape_offset");
     }
 
+    /// <summary>Hollows this solid by removing copied closing faces and offsetting the remaining walls.</summary>
+    public unsafe Shape MakeThickSolid(
+        IReadOnlyList<Shape> closingFaces,
+        double offset,
+        double tolerance = 1e-6)
+    {
+        ArgumentNullException.ThrowIfNull(closingFaces);
+        if (closingFaces.Count == 0)
+            throw new ArgumentException("A thick solid requires at least one closing face.", nameof(closingFaces));
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        return ShapeFactory.WithBorrowedShapeHandles(closingFaces, (pointers, count) =>
+        {
+            NativeError.ThrowIfFailed(
+                NativeMethods.MakeThickSolid(handle, pointers, count, offset, tolerance, out nint result),
+                "shape_make_thick_solid");
+            return ShapeFactory.FromNativeHandle(result, "shape_make_thick_solid");
+        });
+    }
+
     /// <summary>Computes section curves between this shape and another shape.</summary>
     public Shape Section(Shape other)
     {
@@ -340,6 +489,54 @@ public partial class Shape : IDisposable
             NativeMethods.BooleanCommon(handle, other.handle, out nint result),
             "shape_boolean_common");
         return ShapeFactory.FromNativeHandle(result, "shape_boolean_common");
+    }
+
+    /// <summary>Computes a union and copies history counts for one unique topology kind.</summary>
+    public BooleanOperationResult FuseWithHistory(Shape other, ShapeKind trackedKind = ShapeKind.Face) =>
+        RunBooleanWithHistory(other, BooleanOperationKind.Fuse, trackedKind);
+
+    /// <summary>Computes a subtraction and copies history counts for one unique topology kind.</summary>
+    public BooleanOperationResult CutWithHistory(Shape tool, ShapeKind trackedKind = ShapeKind.Face) =>
+        RunBooleanWithHistory(tool, BooleanOperationKind.Cut, trackedKind);
+
+    /// <summary>Computes an intersection and copies history counts for one unique topology kind.</summary>
+    public BooleanOperationResult CommonWithHistory(Shape other, ShapeKind trackedKind = ShapeKind.Face) =>
+        RunBooleanWithHistory(other, BooleanOperationKind.Common, trackedKind);
+
+    private BooleanOperationResult RunBooleanWithHistory(
+        Shape other,
+        BooleanOperationKind operation,
+        ShapeKind trackedKind)
+    {
+        ArgumentNullException.ThrowIfNull(other);
+        if (trackedKind is < ShapeKind.Compound or > ShapeKind.Vertex)
+            throw new ArgumentOutOfRangeException(nameof(trackedKind));
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        ObjectDisposedException.ThrowIf(other.handle.IsClosed, other);
+        NativeError.ThrowIfFailed(
+            NativeMethods.BooleanWithHistory(
+                handle, other.handle, (int)operation, (int)trackedKind,
+                out nint result, out BooleanHistorySummaryRaw history),
+            "shape_boolean_with_history");
+        Shape resultShape = ShapeFactory.FromNativeHandle(result, "shape_boolean_with_history");
+        BooleanHistorySideSummary left = new(
+            history.LeftSourceCount,
+            history.LeftModifiedSourceCount,
+            history.LeftGeneratedSourceCount,
+            history.LeftDeletedSourceCount,
+            history.LeftModifiedResultCount,
+            history.LeftGeneratedResultCount);
+        BooleanHistorySideSummary right = new(
+            history.RightSourceCount,
+            history.RightModifiedSourceCount,
+            history.RightGeneratedSourceCount,
+            history.RightDeletedSourceCount,
+            history.RightModifiedResultCount,
+            history.RightGeneratedResultCount);
+        return new BooleanOperationResult(
+            operation,
+            resultShape,
+            new BooleanHistorySummary(trackedKind, left, right));
     }
 
     /// <summary>Copies the minimum distance and one corresponding point pair from OCCT.</summary>
@@ -417,6 +614,8 @@ public partial class Shape : IDisposable
 
         return new MeshSnapshot(vertices, indices);
     }
+
+    private static GpPoint ToPoint(XyzRaw value) => new(value.X, value.Y, value.Z);
 
     /// <summary>Releases the owned native shape.</summary>
     public void Dispose()

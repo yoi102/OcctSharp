@@ -22,13 +22,27 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   automatic native loading, and clean-consumer verification.
 - [Optional integrations](OPTIONAL_INTEGRATIONS.md) — IVtk/VTK, OpenGL ES, Draw,
   C++/CLI, and platform-adapter availability and package boundaries.
-- [Full inventory classification](FULL_INVENTORY_CLASSIFICATION.md) — B19 declaration
+- [Full inventory classification](FULL_INVENTORY_CLASSIFICATION.md) — complete declaration
   and header dispositions, reason codes, and complete-versus-generated metrics.
-- [Alpha.41 release notes](RELEASE_NOTES_0.1.0_ALPHA_41.md) — current common-modeling,
+- [Alpha.48 release notes](RELEASE_NOTES_0.1.0_ALPHA_48.md) — current IGES entity
+  expansion, final inventory counts, and complete local evidence.
+- [Alpha.47 release notes](RELEASE_NOTES_0.1.0_ALPHA_47.md) — prior extended STEP
+  entity expansion and complete local evidence.
+- [Alpha.46 release notes](RELEASE_NOTES_0.1.0_ALPHA_46.md) — prior cross-generated
+  shared-handle expansion and complete local evidence.
+- [Alpha.45 release notes](RELEASE_NOTES_0.1.0_ALPHA_45.md) — prior generated STEP
+  geometry/representation/shape/visual expansion and complete local evidence.
+- [Alpha.44 release notes](RELEASE_NOTES_0.1.0_ALPHA_44.md) — prior generated
+  mesh/Poly/analysis/healing expansion and abstract-record safety.
+- [Alpha.43 release notes](RELEASE_NOTES_0.1.0_ALPHA_43.md) — prior generated
+  Geom/Geom2d expansion, package evidence, and remaining migration gates.
+- [Alpha.42 release notes](RELEASE_NOTES_0.1.0_ALPHA_42.md) — prior geometry/topology,
+  composable XDE, package evidence, and remaining migration gates.
+- [Alpha.41 release notes](RELEASE_NOTES_0.1.0_ALPHA_41.md) — prior common-modeling,
   manual-stable-ID accounting, package evidence, and publication blockers.
-- [Alpha.40 release notes](RELEASE_NOTES_0.1.0_ALPHA_40.md) — prior B19.2 package-expanded
+- [Alpha.40 release notes](RELEASE_NOTES_0.1.0_ALPHA_40.md) — prior package-expanded
   StepBasic coverage and repository-native bootstrap evidence.
-- [Alpha.39 release notes](RELEASE_NOTES_0.1.0_ALPHA_39.md) — prior B19.1 generated
+- [Alpha.39 release notes](RELEASE_NOTES_0.1.0_ALPHA_39.md) — prior generated
   StepBasic/enum scope and evidence.
 - [Alpha.38 release notes](RELEASE_NOTES_0.1.0_ALPHA_38.md) — prior locally validated scope,
   evidence, and publication blockers for the visualization-core prerelease.

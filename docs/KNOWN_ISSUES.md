@@ -1,5 +1,22 @@
 # Known Issues
 
+## KI-026: Full-selection 16,017-binding wave is not yet compile-accepted
+
+- Status: Open; batch B exit blocker.
+- The generated manifest contains 16,017 IDs from a 116,190-declaration selection, but
+  the last accepted Release wave remains 6,555 bindings.
+- The first native compile exposed collisions between static and shared exports,
+  constructor and instance `Create` exports, normalized case variants, and invalid
+  ordinary allocation of `BRepMeshData_Curve`.
+- Generator fixes reserve `_static_` and `_method_` namespaces, assign ordinals across
+  normalized member groups, disambiguate duplicate managed signatures, and implement
+  allocator-retaining placement construction. Generator 53/53 passes.
+- Full regeneration and native compilation are still `NOT RUN` after those fixes; more
+  compile or link gaps may appear. Do not report the 16,017 IDs as accepted coverage.
+- The next compile reached the RWGltf family and exposed an incomplete template element
+  in an OCCT artifact header. The generator now emits the exact completion header through
+  `generatedPreambleHeaders`; the full retry is pending.
+
 Issues remain in this document after resolution, with their status and resolution
 evidence updated.
 
@@ -82,11 +99,12 @@ evidence updated.
 - Status: Open
 - Severity: High
 - Area: Generator
-- Problem: Deterministic native/managed emission now owns 333 stable IDs across
-  value-copy scopes, `Geom_CartesianPoint`, 129 generated StepBasic shared types, typed
-  enums, base topology values, and checked typed topology casts. Schema 1.6 additionally
-  reconciles 18 audited common-modeling declarations as Manual, but accepted binding
-  coverage is only 351/9,567 (3.6689%) of the expanded selected dependency closure and
+- Problem: Deterministic native/managed emission now owns 775 stable IDs across
+  value-copy scopes, nine generated Geom/Geom2d types, 129 generated StepBasic shared
+  types, 61 generated mesh/Poly/analysis/healing types, typed enums, base topology
+  values, and checked typed topology casts. Schema 1.6
+  additionally reconciles 61 audited modeling declarations as Manual, but accepted binding
+  coverage is only 836/16,633 (5.0262%) of the expanded selected dependency closure and
   is not full OCCT coverage. The
   validated shape and exchange bridges remain manual.
 - Current mitigation: `TM001`–`TM007`, explicit generated/manual scopes, support diagnostics,
@@ -147,7 +165,7 @@ evidence updated.
   semantically scans only 7,058. The 32 isolated failures comprise 19 IVtk headers that
   need VTK headers, ten headers that reference generated OCCT files absent from the
   bundle, one RapidJSON-dependent header, one C++/CLI-only header, and one OpenGL ES
-  platform header. Therefore the 116,214 declarations found so far are a partial
+  platform header. Therefore the 116,272 declarations found so far are a partial
   denominator, not full OCCT coverage.
 - Current mitigation: The inventory recursively isolates failures, writes a normalized
   partial report, returns a distinct non-zero exit code, and keeps normal generation
@@ -157,3 +175,39 @@ evidence updated.
   and RapidJSON development headers used by this build. Then define explicit inventory
   profiles for optional IVtk, C++/CLI, and OpenGL ES surfaces and rerun the audit to a
   complete profile-specific denominator.
+
+## KI-013: StepData declarations are not uniformly linkable from the supplied binary
+
+- Status: Open
+- Severity: Medium
+- Area: Generator/STEP exchange infrastructure
+- Problem: Package-level construction of `StepData` found public header declarations for
+  `StepData_FreeFormEntity::StepData_FreeFormEntity()` and
+  `StepData_UndefinedEntity::Super()` whose symbols are absent from the supplied
+  TKXSBase/TKDESTEP import libraries. Treating every `StepData_` record as an ordinary
+  entity therefore compiles but fails native linking.
+- Current mitigation: `StepData_*.hxx` remains in semantic discovery and classification,
+  but `StepData` is not a package-level shared-entity emission scope. No per-class
+  blacklist or generated-source edit is used. Seven related STEP entity packages remain
+  generated and link-validated.
+- Planned resolution: Verify the matching OCCT source/build export configuration and
+  design a dedicated StepData interface/session ownership profile before enabling this
+  infrastructure package.
+
+## KI-014: Abstract shared-handle classification is incomplete
+
+- Status: Open
+- Severity: High
+- Area: Generator/shared handles
+- Problem: The current semantic model's `IsAbstract` fact does not include every class
+  made abstract by inherited pure virtual members. Broadly emitting constructor-less
+  handle bases therefore selected `BRepMesh_BaseMeshAlgo` and related types as if they
+  were constructible. Nested helper records in `Poly_MakeLoops` also demonstrate that
+  name-prefix selection alone is not a valid transient-type test.
+- Current mitigation: Package shared-handle scopes require a public, supported
+  constructor and close intrusive-handle constructor dependencies only over generated
+  target scopes. The failed abstract-base expansion was regenerated away; Release
+  native compilation remains clean for the active generated output.
+- Planned resolution: Build an inheritance-complete pure-virtual classifier and retain
+  only `Standard_Transient` descendants before enabling constructor-less abstract
+  shared-handle scopes.

@@ -67,6 +67,71 @@ public sealed class SimpleBindingEligibilityPassTests
         Assert.Equal("SK003", Find(result, "private").SkipReason?.Code);
     }
 
+    [Fact]
+    public void LeavesTransientConstructorsForSharedOwnershipAnalysis()
+    {
+        BindingModel classified = SupportClassificationPass.Apply(new BindingModel(
+        [
+            Create("transient", "Standard_Transient", BindingDeclarationKind.Record),
+            Create("record", "Example_Transient", BindingDeclarationKind.Record) with
+            {
+                BaseTypes = [new BindingBaseType(CreateValueType("Standard_Transient"), BindingAccess.Public, false)],
+            },
+            Create("ctor", "Example_Transient::Example_Transient", BindingDeclarationKind.Constructor) with
+            {
+                Access = BindingAccess.Public,
+            },
+        ]));
+
+        BindingModel result = SimpleBindingEligibilityPass.Apply(classified);
+
+        Assert.Equal(BindingSupportState.Pending, Find(result, "ctor").SupportState);
+    }
+
+    [Fact]
+    public void SkipsMembersOwnedByNestedOrTemplatedRecords()
+    {
+        BindingModel classified = SupportClassificationPass.Apply(new BindingModel(
+        [
+            Create("nested-record", "Owner::Nested", BindingDeclarationKind.Record),
+            Create("nested-method", "Owner::Nested::Value", BindingDeclarationKind.Method) with
+            {
+                Access = BindingAccess.Public,
+                IsStatic = true,
+                ReturnType = CreateValueType("double"),
+            },
+        ]));
+
+        BindingDeclaration method = Find(classified, "nested-method");
+        Assert.Equal(BindingSupportState.Skipped, method.SupportState);
+        Assert.Equal("SK011", method.SkipReason?.Code);
+    }
+
+    [Fact]
+    public void PromotesExportTrackedFreeFunctionsIncludingVoidReturns()
+    {
+        BindingDeclaration scalar = Create("scalar", "IntegerFirst", BindingDeclarationKind.Function) with
+        {
+            SourcePackage = "Standard",
+            SourceToolkit = "TKernel",
+            Access = BindingAccess.Public,
+            ReturnType = CreateValueType("int"),
+        };
+        BindingDeclaration noValue = Create("void", "Standard_ASSERT_DO_NOTHING", BindingDeclarationKind.Function) with
+        {
+            SourcePackage = "Standard",
+            SourceToolkit = "TKernel",
+            Access = BindingAccess.Public,
+            ReturnType = CreateValueType("void"),
+        };
+
+        BindingModel result = SimpleBindingEligibilityPass.Apply(
+            SupportClassificationPass.Apply(new BindingModel([scalar, noValue])));
+
+        Assert.Equal(BindingSupportState.Supported, Find(result, "scalar").SupportState);
+        Assert.Equal(BindingSupportState.Supported, Find(result, "void").SupportState);
+    }
+
     private static BindingDeclaration Create(
         string stableId,
         string nativeName,

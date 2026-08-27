@@ -2,7 +2,7 @@
 
 - Status: Accepted
 - Date: 2026-08-22
-- Scope: B11/B12 first modeling and boolean sub-batch on OCCT 8.0.1, Windows x64
+- Scope: modeling and Boolean workstream inside B on OCCT 8.0.1, Windows x64
 
 ## Decision
 

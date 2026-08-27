@@ -49,7 +49,7 @@ public static class GeneratedOutputWriter
             GeneratedManifest manifest = new(
                 "1.0",
                 bindingSet.OcctVersion,
-                "1.1",
+                "1.2",
                 bindingSet.SourceStableIds.Order(StringComparer.Ordinal).ToArray(),
                 files.Select(file => new GeneratedManifestFile(
                         file.RelativePath,
@@ -85,14 +85,15 @@ public static class GeneratedOutputWriter
                 string source = Path.Combine(stagingRoot, ToPlatformPath(file.RelativePath));
                 string destination = Path.Combine(fullOutputRoot, ToPlatformPath(file.RelativePath));
                 Directory.CreateDirectory(Path.GetDirectoryName(destination)!);
-                File.Copy(source, destination, overwrite: true);
+                CopyIfChanged(source, destination, manifest.Files.Single(
+                    item => string.Equals(item.RelativePath, file.RelativePath, StringComparison.Ordinal)).Sha256);
             }
 
             Directory.CreateDirectory(Path.GetDirectoryName(manifestPath)!);
-            File.Copy(
+            CopyIfChanged(
                 Path.Combine(stagingRoot, ToPlatformPath(ManifestRelativePath)),
                 manifestPath,
-                overwrite: true);
+                ComputeSha256(manifestContent));
             return manifest;
         }
         finally
@@ -173,8 +174,25 @@ public static class GeneratedOutputWriter
         File.WriteAllText(path, content, new UTF8Encoding(encoderShouldEmitUTF8Identifier: false));
     }
 
+    private static void CopyIfChanged(string source, string destination, string expectedSha256)
+    {
+        if (File.Exists(destination)
+            && string.Equals(ComputeFileSha256(destination), expectedSha256, StringComparison.Ordinal))
+        {
+            return;
+        }
+
+        File.Copy(source, destination, overwrite: true);
+    }
+
     private static string ComputeSha256(string content) =>
         Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(content)));
+
+    private static string ComputeFileSha256(string path)
+    {
+        using FileStream stream = File.OpenRead(path);
+        return Convert.ToHexString(SHA256.HashData(stream));
+    }
 
     private static string ToPlatformPath(string relativePath) =>
         relativePath.Replace('/', Path.DirectorySeparatorChar);

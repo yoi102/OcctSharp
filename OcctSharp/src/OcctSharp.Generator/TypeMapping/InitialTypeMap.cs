@@ -56,6 +56,19 @@ public sealed class InitialTypeMap
         string nativeType = NormalizeBaseType(type.BaseNativeSpelling);
         string canonicalType = NormalizeBaseType(type.BaseCanonicalSpelling);
 
+        if (usage == BindingTypeUsage.ReturnValue
+            && Matches(nativeType, canonicalType, "void"))
+        {
+            projection = new BindingTypeProjection(
+                "TM000",
+                "void",
+                "void",
+                "void",
+                "NoValue",
+                "A void return carries no value or lifetime across the ABI.");
+            return true;
+        }
+
         if (type.IsOcctHandle && !string.IsNullOrWhiteSpace(type.HandleTargetType))
         {
             string targetType = NormalizeBaseType(type.HandleTargetType);

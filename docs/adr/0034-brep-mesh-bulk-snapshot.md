@@ -39,4 +39,4 @@ Poly algorithms, RWMesh formats, and benchmark gates remain later work.
 
 Release and Debug native/managed builds, runtime tests for non-empty meshes, finite
 normals, index bounds, invalid deflections, disposed sources, and a package consumer
-are required before this sub-batch is marked complete.
+are required before this capability workstream is accepted.

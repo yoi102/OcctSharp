@@ -6,6 +6,58 @@ namespace OcctSharp.Generator.Tests;
 public sealed class ClangAstDiscoveryTests
 {
     [Fact]
+    public void RetainsNonCanonicalRecordDefinitionNeededForInheritanceClosure()
+    {
+        string testRoot = Path.Combine(Path.GetTempPath(), $"occtsharp-generator-test-{Guid.NewGuid():N}");
+        string includeRoot = Path.Combine(testRoot, "inc");
+        Directory.CreateDirectory(includeRoot);
+
+        try
+        {
+            File.WriteAllText(
+                Path.Combine(includeRoot, "Standard_Version.hxx"),
+                "#define OCC_VERSION_COMPLETE \"test\"\n");
+            File.WriteAllText(
+                Path.Combine(includeRoot, "Forward.hxx"),
+                "class SharedBase;\n");
+            File.WriteAllText(
+                Path.Combine(includeRoot, "Definitions.hxx"),
+                """
+                class Standard_Transient {};
+                class SharedBase : public Standard_Transient {
+                public:
+                    virtual void Apply() = 0;
+                };
+                class ConcreteShared : public SharedBase {
+                public:
+                    ConcreteShared();
+                    void Apply() override;
+                };
+                """);
+
+            DiscoveryReport report = ClangAstDiscovery.Discover(
+                new DiscoveryOptions(testRoot, ["Forward.hxx", "Definitions.hxx"]));
+
+            BindingDeclaration sharedBase = Assert.Single(report.Model.Declarations, declaration =>
+                declaration is { NativeName: "SharedBase", Kind: BindingDeclarationKind.Record });
+            Assert.Equal("Standard_Transient", Assert.Single(sharedBase.BaseTypes).Type.BaseCanonicalSpelling);
+            Assert.True(sharedBase.IsAbstract);
+
+            BindingDeclaration concrete = Assert.Single(report.Model.Declarations, declaration =>
+                declaration is
+                {
+                    NativeName: "ConcreteShared::ConcreteShared",
+                    Kind: BindingDeclarationKind.Constructor,
+                });
+            Assert.Equal(BindingSupportState.Supported, concrete.SupportState);
+        }
+        finally
+        {
+            Directory.Delete(testRoot, recursive: true);
+        }
+    }
+
+    [Fact]
     public void DiscoversDeclarationsFromSemanticCppAst()
     {
         string testRoot = Path.Combine(Path.GetTempPath(), $"occtsharp-generator-test-{Guid.NewGuid():N}");
@@ -48,6 +100,7 @@ public sealed class ClangAstDiscoveryTests
                 declaration is { NativeName: "Sample", Kind: BindingDeclarationKind.Record });
             Assert.Equal("Sample", sample.SourcePackage);
             Assert.Equal("TKSample", sample.SourceToolkit);
+            Assert.True(sample.IsAbstract);
             BindingBaseType baseType = Assert.Single(sample.BaseTypes);
             Assert.Equal("SampleBase", baseType.Type.NativeSpelling);
             Assert.Equal(BindingAccess.Public, baseType.Access);

@@ -7,7 +7,7 @@ reported as supported.
 
 | OcctSharp | Generator | Native ABI | OCCT | Platform | Compiler | .NET | Status |
 |---|---|---|---|---|---|---|---|
-| 0.1.0-alpha.41 workspace | ClangSharp 21.1.8.4 | 1.33 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
+| 0.1.0-alpha.49 workspace | ClangSharp 21.1.8.4 | 1.41 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
 
 Validated in both Debug and Release: native and managed build, ABI/runtime identity,
 OCCT box creation, topology traversal, error/disposal behavior, STEP geometry
@@ -75,19 +75,47 @@ The alpha.41 package adds native-local cone/torus, extrusion/revolution,
 all/single-edge fillet/chamfer, offset, section, finite bounds, validity, and public
 subshape-count APIs. Release/Debug runtime tests and the clean consumer validate owning
 result independence, value layouts, errors, and the 47-DLL closure with TKFillet/TKOffset.
+The alpha.42 package adds curve/surface construction, evaluation and projection,
+topology adjacency, loft/pipe/sewing, wedge/thick-solid, copied Boolean history, and
+composable XDE STEP import. Release/Debug pass Generator 44/44 and Runtime 90/90; the
+clean consumer exercises these families with the unchanged 47-DLL runtime closure.
+The alpha.43 package expands deterministic shared-handle generation to eight additional
+Geom/Geom2d types and 67 emitted declarations. Release/Debug pass Generator 44/44 and
+Runtime 93/93; the clean consumer exercises point, direction, vector, plane, transform,
+clone/reference-count, RTTI, and disposal behavior.
+The alpha.44 package expands the same shared-owner generator to 61 BRepMesh, Poly,
+ShapeAnalysis, ShapeFix, and ShapeUpgrade types and 375 additional emitted declarations.
+Binding-model schema 1.2 excludes abstract records before emission. Release/Debug pass
+Generator 44/44 and Runtime 96/96; the clean consumer exercises representatives from all
+five package families, retained ownership, RTTI, scalar state, and the 47-DLL closure.
 
 The map wave adds integer-key real lookup/bind/unbind and ordered indexed-key behavior
 with clone and duplicate-key validation in Debug and Release.
 
-The local `OcctSharp.0.1.0-alpha.41.nupkg` is clean-consumer validated for Windows x64:
+The local `OcctSharp.0.1.0-alpha.44.nupkg` is clean-consumer validated for Windows x64:
 47 native DLLs are copied below the published application's `occt` directory, automatic
-native resolution reports ABI 1.33/bridge 0.41.0/OCCT 8.0.1, and generated, modeling,
+native resolution reports ABI 1.36/bridge 0.44.0/OCCT 8.0.1, and generated, modeling,
 exchange, OCAF, BinXCAF, STEPCAF metadata/assembly, adaptor, and viewer checks succeed.
 
 This is not yet `Supported`: CI, broad ownership, generated XDE/OCAF bindings,
 committed licensed fixtures, complete third-party notices/provenance, and public release gates have
 not run. A manual STEPCAF/XDE assembly has been validated with local metadata-bearing
 fixtures in Debug/Release scope; it is not a general document API.
+
+The alpha.48 package adds the selected IGESAppli, IGESBasic, IGESDefs, IGESDimen,
+IGESDraw, IGESGeom, IGESGraph, and IGESSolid entity families. Release and Debug native/
+managed builds pass Generator 44/44 and Runtime 147/147; 13 generated files are fresh,
+clean regeneration is byte-identical, and the alpha.38 API diff is 10,272 additions and
+zero removals. A clean SDK 10.0.400 consumer restores, publishes, and runs with all 47
+native DLLs below `occt`, reporting ABI 1.40, bridge 0.48.0, and OCCT 8.0.1. This remains
+Experimental because B still has 11,144 supported-unselected declarations and unresolved
+publication/legal gates.
+
+The alpha.49 workspace expands the generated manifest to 16,353 stable IDs and removes
+the final supported-unselected and LT001-LT004 inventory states. Release and Debug pass
+Generator 62/62 and Runtime 105/105 with ABI 1.41/bridge 0.49.0. Clean alpha.49 package
+consumer and complete release-check evidence are recorded separately in `STATUS.md`;
+public legal, hosted-CI, signing, and publication gates remain independent.
 
 ## Planned validation dimensions
 

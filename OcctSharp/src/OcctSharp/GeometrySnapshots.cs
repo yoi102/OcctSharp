@@ -65,3 +65,28 @@ public readonly record struct FaceSurfaceSnapshot(
     double LastUParameter,
     double FirstVParameter,
     double LastVParameter);
+
+/// <summary>A copied point and unit tangent evaluated on an edge curve.</summary>
+public readonly record struct CurveEvaluation(double Parameter, GpPoint Point, GpPoint Tangent);
+
+/// <summary>The nearest copied point projection on an edge curve.</summary>
+public readonly record struct CurveProjection(
+    double Parameter,
+    GpPoint Point,
+    double Distance,
+    int SolutionCount);
+
+/// <summary>A copied point and oriented unit normal evaluated on a face surface.</summary>
+public readonly record struct SurfaceEvaluation(
+    double UParameter,
+    double VParameter,
+    GpPoint Point,
+    GpPoint Normal);
+
+/// <summary>The nearest copied point projection on a bounded face surface.</summary>
+public readonly record struct SurfaceProjection(
+    double UParameter,
+    double VParameter,
+    GpPoint Point,
+    double Distance,
+    int SolutionCount);

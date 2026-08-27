@@ -1,19 +1,37 @@
 {
-  "schemaVersion": "1.6",
+  "schemaVersion": "1.8",
   "occtVersion": "8.0.1",
   "scope": "foundation-prototype",
   "headers": [
+    "BRepAdaptor_Curve.hxx",
+    "BRepAdaptor_Surface.hxx",
+    "BRepAlgoAPI_BooleanOperation.hxx",
     "BRepAlgoAPI_Section.hxx",
     "BRepBndLib.hxx",
+    "BRepBuilderAPI_MakeEdge.hxx",
+    "BRepBuilderAPI_Sewing.hxx",
     "BRepCheck_Analyzer.hxx",
     "BRepFilletAPI_MakeChamfer.hxx",
     "BRepFilletAPI_MakeFillet.hxx",
     "BRepOffsetAPI_MakeOffsetShape.hxx",
+    "BRepOffsetAPI_MakePipe.hxx",
+    "BRepOffsetAPI_MakeThickSolid.hxx",
+    "BRepOffsetAPI_ThruSections.hxx",
     "BRepPrimAPI_MakeBox.hxx",
     "BRepPrimAPI_MakeCone.hxx",
     "BRepPrimAPI_MakePrism.hxx",
     "BRepPrimAPI_MakeRevol.hxx",
     "BRepPrimAPI_MakeTorus.hxx",
+    "BRepPrimAPI_MakeWedge.hxx",
+    "BRep_Tool.hxx",
+    "GC_MakeArcOfCircle.hxx",
+    "GCPnts_AbscissaPoint.hxx",
+    "GeomAPI_Interpolate.hxx",
+    "GeomAPI_ProjectPointOnCurve.hxx",
+    "GeomAPI_ProjectPointOnSurf.hxx",
+    "Geom_BezierCurve.hxx",
+    "Geom_Curve.hxx",
+    "Geom_Surface.hxx",
     "Geom_CartesianPoint.hxx",
     "gp_Pnt.hxx",
     "StepBasic_Address.hxx",
@@ -38,22 +56,71 @@
     "TopoDS_Vertex.hxx"
   ],
   "headerPatterns": [
-    "StepBasic_*.hxx"
+    "*.h",
+    "*.hxx"
+  ],
+  "excludedHeaders": [
+    "BOPDS_DataMapOfIntegerListOfPaveBlock.hxx",
+    "BOPDS_DataMapOfPaveBlockListOfPaveBlock.hxx",
+    "BOPDS_IndexedDataMapOfPaveBlockListOfPaveBlock.hxx",
+    "BOPDS_VectorOfListOfPaveBlock.hxx",
+    "ExprIntrp_yaccintrf.hxx",
+    "GeomBndLib_Curve.hxx",
+    "GeomBndLib_Curve2d.hxx",
+    "GeomBndLib_Line.hxx",
+    "GeomBndLib_Line2d.hxx",
+    "Graphic3d_MapIteratorOfMapOfStructure.hxx",
+    "IVtk_IShape.hxx",
+    "IVtk_IShapeData.hxx",
+    "IVtk_IShapeMesher.hxx",
+    "IVtk_IShapePickerAlgo.hxx",
+    "IVtk_Types.hxx",
+    "IVtkDraw_HighlightAndSelectionPipeline.hxx",
+    "IVtkDraw_Interactor.hxx",
+    "IVtkOCC_SelectableObject.hxx",
+    "IVtkOCC_Shape.hxx",
+    "IVtkOCC_ShapeMesher.hxx",
+    "IVtkOCC_ShapePickerAlgo.hxx",
+    "IVtkTools_DisplayModeFilter.hxx",
+    "IVtkTools_ShapeDataSource.hxx",
+    "IVtkTools_ShapeObject.hxx",
+    "IVtkTools_ShapePicker.hxx",
+    "IVtkTools_SubPolyDataFilter.hxx",
+    "IVtkTools.hxx",
+    "IVtkVTK_ShapeData.hxx",
+    "IVtkVTK_View.hxx",
+    "NCollection_Haft.h",
+    "OpenGl_GLESExtensions.hxx",
+    "RWGltf_GltfOStreamWriter.hxx",
+    "TObj_Container.hxx"
   ],
   "toolkitByPackage": {
     "Bnd": "TKMath",
     "BRep": "TKBRep",
+    "BRepAdaptor": "TKBRep",
     "BRepBuilderAPI": "TKTopAlgo",
     "BRepAlgoAPI": "TKBO",
     "BRepCheck": "TKBRep",
     "BRepFilletAPI": "TKFillet",
+    "BRepMesh": "TKMesh",
     "BRepOffset": "TKOffset",
     "BRepOffsetAPI": "TKOffset",
     "BRepPrim": "TKPrim",
     "BRepPrimAPI": "TKPrim",
+    "GC": "TKG3d",
+    "GCPnts": "TKGeomBase",
     "Geom": "TKG3d",
+    "GeomAPI": "TKGeomAlgo",
     "Geom2d": "TKG2d",
     "GeomAbs": "TKMath",
+    "IGESAppli": "TKDEIGES",
+    "IGESBasic": "TKDEIGES",
+    "IGESDefs": "TKDEIGES",
+    "IGESDimen": "TKDEIGES",
+    "IGESDraw": "TKDEIGES",
+    "IGESGeom": "TKDEIGES",
+    "IGESGraph": "TKDEIGES",
+    "IGESSolid": "TKDEIGES",
     "ChFi3d": "TKFillet",
     "ChFiDS": "TKFillet",
     "ChFiKPart": "TKFillet",
@@ -63,8 +130,22 @@
     "Poly": "TKMath",
     "Precision": "TKernel",
     "Standard": "TKernel",
+    "ShapeAnalysis": "TKShHealing",
+    "ShapeFix": "TKShHealing",
+    "ShapeUpgrade": "TKShHealing",
     "StdFail": "TKernel",
     "StepBasic": "TKDESTEP",
+    "StepAP203": "TKDESTEP",
+    "StepAP214": "TKDESTEP",
+    "StepAP242": "TKDESTEP",
+    "StepDimTol": "TKDESTEP",
+    "StepElement": "TKDESTEP",
+    "StepFEA": "TKDESTEP",
+    "StepGeom": "TKDESTEP",
+    "StepRepr": "TKDESTEP",
+    "StepShape": "TKDESTEP",
+    "StepVisual": "TKDESTEP",
+    "StepKinematics": "TKDESTEP",
     "StepData": "TKXSBase",
     "TCollection": "TKernel",
     "TopAbs": "TKG3d",
@@ -80,6 +161,9 @@
     "Prs3d_Presentation.hxx",
     "StepData_Factors.hxx",
     "Standard_OStream.hxx"
+  ],
+  "generatedPreambleHeaders": [
+    "RWGltf_GltfPrimArrayData.hxx"
   ],
   "manualBindings": [
     {
@@ -153,8 +237,328 @@
     {
       "stableId": "c:@S@TopExp@F@MapShapes#&1$@S@TopoDS_Shape#$@E@TopAbs_ShapeEnum#&$@S@NCollection_IndexedMap>#S1_#$@S@TopTools_ShapeMapHasher#S",
       "specialCaseId": "SC-032"
+    },
+    {
+      "stableId": "c:@S@BRepAdaptor_Curve@F@BRepAdaptor_Curve#&1$@S@TopoDS_Edge#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepAdaptor_Surface@F@BRepAdaptor_Surface#&1$@S@TopoDS_Face#b#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Curve#&1$@S@TopoDS_Edge#&d#S2_#S",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Surface#&1$@S@TopoDS_Face#S",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Circ#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@S@gp_Elips#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@GC_MakeArcOfCircle@F@GC_MakeArcOfCircle#&1$@S@gp_Pnt#S0_#S0_#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@GC_MakeArcOfCircle@F@Value#1",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@Geom_BezierCurve@F@Geom_BezierCurve#&1$@S@NCollection_Array1>#$@S@gp_Pnt#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_Interpolate@F@GeomAPI_Interpolate#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@S@gp_Pnt#b#d#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_Interpolate@F@Perform#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_Interpolate@F@Curve#1",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@GCPnts_AbscissaPoint@F@Length#&1$@S@Adaptor3d_Curve#d#d#S",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@GeomAPI_ProjectPointOnCurve#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#d#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@NbPoints#1",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@NearestPoint#1",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@LowerDistance#1",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@LowerDistanceParameter#1",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@GeomAPI_ProjectPointOnSurf#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#d#$@E@Extrema_ExtAlgo#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@IsDone#1",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@NbPoints#1",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@NearestPoint#1",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@LowerDistance#1",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnSurf@F@LowerDistanceParameters#&d#S0_#1",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@TopExp@F@MapShapesAndUniqueAncestors#&1$@S@TopoDS_Shape#$@E@TopAbs_ShapeEnum#S2_#&$@S@NCollection_IndexedDataMap>#S1_#$@S@NCollection_List>#S1_#$@S@TopTools_ShapeMapHasher#b#S",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@BRepOffsetAPI_ThruSections#b#b#d#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@CheckCompatibility#b#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@AddWire#&1$@S@TopoDS_Wire#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@AddVertex#&1$@S@TopoDS_Vertex#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@Build#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipe@F@BRepOffsetAPI_MakePipe#&1$@S@TopoDS_Wire#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipe@F@Build#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@BRepBuilderAPI_Sewing#d#b#b#b#b#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@Add#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@Perform#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@SewedShape#1",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@Modified#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@Generated#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@IsDeleted#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepPrimAPI_MakeWedge@F@BRepPrimAPI_MakeWedge#d#d#d#d#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeThickSolid@F@BRepOffsetAPI_MakeThickSolid#",
+      "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeThickSolid@F@MakeThickSolidByJoin#&1$@S@TopoDS_Shape#&1$@S@NCollection_List>#S1_#d#d#$@E@BRepOffset_Mode#b#b#$@E@GeomAbs_JoinType#b#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-033"
     }
   ],
+  "excludedBindings": [
+    {
+      "stableId": "c:@S@Standard_Transient@F@Standard_Transient#",
+      "code": "SK007",
+      "category": "SuppressedConstruction",
+      "detail": "The generic Standard_Transient base is return-only; construct concrete derived wrappers instead."
+    },
+    {
+      "stableId": "c:@S@StepData_FreeFormEntity@F@StepData_FreeFormEntity#",
+      "code": "SK008",
+      "category": "ArtifactUnavailable",
+      "detail": "The pinned OCCT import libraries do not export StepData_FreeFormEntity::StepData_FreeFormEntity()."
+    },
+    {
+      "stableId": "c:@S@StepData_UndefinedEntity@F@Super#1",
+      "code": "SK008",
+      "category": "ArtifactUnavailable",
+      "detail": "The pinned OCCT import libraries do not export StepData_UndefinedEntity::Super() const."
+    },
+    {
+      "stableId": "c:@S@IFSelect_EditForm@F@NbTouched#1",
+      "code": "SK008",
+      "category": "ArtifactUnavailable",
+      "detail": "The pinned OCCT import libraries do not export IFSelect_EditForm::NbTouched() const."
+    },
+    {
+      "stableId": "c:@S@IGESSelect_SelectBasicGeom@F@CurvesOnly#1",
+      "code": "SK008",
+      "category": "ArtifactUnavailable",
+      "detail": "The pinned OCCT import libraries do not export IGESSelect_SelectBasicGeom::CurvesOnly() const."
+    },
+    {
+      "stableId": "c:@S@IntPatch_RLine@F@SetParamOnS1#d#d#",
+      "code": "SK008",
+      "category": "ArtifactUnavailable",
+      "detail": "The pinned OCCT import libraries do not export IntPatch_RLine::SetParamOnS1(double, double)."
+    },
+    {
+      "stableId": "c:@S@OpenGl_ShaderManager@F@BindFontProgram#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#",
+      "code": "SK008",
+      "category": "ArtifactUnavailable",
+      "detail": "The pinned OCCT import libraries do not export OpenGl_ShaderManager::BindFontProgram(const Handle(OpenGl_ShaderProgram)&)."
+    },
+    {
+      "stableId": "c:@S@OpenGl_ShadowMap@F@OpenGl_ShadowMap#",
+      "code": "SK008",
+      "category": "ArtifactUnavailable",
+      "detail": "The pinned OCCT import libraries do not export OpenGl_ShadowMap::OpenGl_ShadowMap()."
+    },
+    {
+      "stableId": "c:@S@OpenGl_Structure@F@IsRaytracable#1",
+      "code": "SK008",
+      "category": "ArtifactUnavailable",
+      "detail": "The pinned OCCT import libraries do not export OpenGl_Structure::IsRaytracable() const."
+    },
+    {
+      "stableId": "c:@S@OpenGl_View@F@SetBackgroundGradientType#$@E@Aspect_GradientFillMethod#",
+      "code": "SK008",
+      "category": "ArtifactUnavailable",
+      "detail": "The pinned OCCT import libraries do not export OpenGl_View::SetBackgroundGradientType(Aspect_GradientFillMethod)."
+    },
+    {
+      "stableId": "c:@S@OpenGl_View@F@SetBackgroundTextureStyle#$@E@Aspect_FillMethod#",
+      "code": "SK008",
+      "category": "ArtifactUnavailable",
+      "detail": "The pinned OCCT import libraries do not export OpenGl_View::SetBackgroundTextureStyle(Aspect_FillMethod)."
+    },
+    {
+      "stableId": "c:@S@OpenGl_View@F@SetTextureEnv#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureEnv#",
+      "code": "SK008",
+      "category": "ArtifactUnavailable",
+      "detail": "The pinned OCCT import libraries do not export the two-argument OpenGl_View::SetTextureEnv overload."
+    },
+    {
+      "stableId": "c:@S@OpenGl_Workspace@F@ResetAppliedAspect#",
+      "code": "SK008",
+      "category": "ArtifactUnavailable",
+      "detail": "The pinned OCCT import libraries do not export OpenGl_Workspace::ResetAppliedAspect()."
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_GeomTolerance@F@XCAFDoc_GeomTolerance#&1$@N@opencascade@S@handle>#$@S@XCAFDoc_GeomTolerance#",
+      "code": "SK008",
+      "category": "ArtifactUnavailable",
+      "detail": "The pinned OCCT import libraries do not export XCAFDoc_GeomTolerance construction from Handle(XCAFDoc_GeomTolerance)."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_TriangularFrustumSet@F@SelectMgr_TriangularFrustumSet#",
+      "code": "SK008",
+      "category": "ArtifactUnavailable",
+      "detail": "The pinned OCCT header declares SelectMgr_TriangularFrustumSet() without Standard_EXPORT, and TKV3d.dll/TKV3d.lib do not export the constructor."
+    }
+  ],
+  "excludedAutoPackages": [
+    {
+      "sourcePackages": [
+        "BOPTest",
+        "BRepTest",
+        "D3DHostTest",
+        "DBRep",
+        "DDF",
+        "DDataStd",
+        "DDocStd",
+        "DNaming",
+        "DPrsStd",
+        "Draw",
+        "DrawDim",
+        "DrawFairCurve",
+        "DrawTrSurf",
+        "GeometryTest",
+        "GeomliteTest",
+        "HLRTest",
+        "MeshTest",
+        "OpenGlTest",
+        "QADNaming",
+        "QADraw",
+        "SWDRAW",
+        "TObjDRAW",
+        "ViewerTest",
+        "XDEDRAW",
+        "XSDRAW",
+        "XSDRAWDE",
+        "XSDRAWGLTF",
+        "XSDRAWIGES",
+        "XSDRAWOBJ",
+        "XSDRAWPLY",
+        "XSDRAWSTEP",
+        "XSDRAWSTL",
+        "XSDRAWVRML"
+      ],
+      "code": "SK009",
+      "category": "TestHarness",
+      "detail": "OCCT Draw and command/test harness declarations are not public core runtime APIs and require the excluded Draw/Tcl/Tk toolchain."
+    },
+    {
+      "sourcePackages": [
+        "IVtk",
+        "IVtkDraw",
+        "IVtkOCC",
+        "IVtkTools",
+        "IVtkVTK"
+      ],
+      "code": "SK010",
+      "category": "OptionalExternalDependency",
+      "detail": "IVtk declarations belong to the isolated OcctSharp.IVtk profile and require the pinned VTK SDK/runtime that is absent from the core artifact."
+    }
+  ],
+  "autoGenerationScopes": true,
+  "autoSharedHandlePackageScopes": true,
   "generationScopes": [
     {
       "sourcePackage": "Precision",
@@ -204,15 +608,268 @@
       "header": "gp.hxx",
       "exportNamePrefix": "gp",
       "managedNamePrefix": "Gp"
+    },
+    {
+      "sourcePackage": "BOPAlgo",
+      "nativeNamePrefix": "BOPAlgo_Options::GetParallelMode",
+      "header": "BOPAlgo_Options.hxx",
+      "exportNamePrefix": "bop_algo_options",
+      "managedNamePrefix": "BopAlgoOptions"
+    },
+    {
+      "sourcePackage": "BRepMesh",
+      "nativeNamePrefix": "BRepMesh_CircleInspector::IsEqual",
+      "header": "BRepMesh_CircleInspector.hxx",
+      "exportNamePrefix": "brep_mesh_circle_inspector",
+      "managedNamePrefix": "BRepMeshCircleInspector"
+    },
+    {
+      "sourcePackage": "BRepMesh",
+      "nativeNamePrefix": "BRepMesh_Deflection::IsConsistent",
+      "header": "BRepMesh_Deflection.hxx",
+      "exportNamePrefix": "brep_mesh_deflection",
+      "managedNamePrefix": "BRepMeshDeflection"
+    },
+    {
+      "sourcePackage": "BRepMesh",
+      "nativeNamePrefix": "BRepMesh_IncrementalMesh::IsParallelDefault",
+      "header": "BRepMesh_IncrementalMesh.hxx",
+      "exportNamePrefix": "brep_mesh_incremental_mesh",
+      "managedNamePrefix": "BRepMeshIncrementalMesh"
+    },
+    {
+      "sourcePackage": "BRepMesh",
+      "nativeNamePrefix": "BRepMesh_VertexInspector::IsEqual",
+      "header": "BRepMesh_VertexInspector.hxx",
+      "exportNamePrefix": "brep_mesh_vertex_inspector",
+      "managedNamePrefix": "BRepMeshVertexInspector"
+    },
+    {
+      "sourcePackage": "BSplCLib",
+      "nativeNamePrefix": "BSplCLib::",
+      "header": "BSplCLib.hxx",
+      "exportNamePrefix": "bspl_clib",
+      "managedNamePrefix": "BSplCLib"
+    },
+    {
+      "sourcePackage": "ElCLib",
+      "nativeNamePrefix": "ElCLib::InPeriod",
+      "header": "ElCLib.hxx",
+      "exportNamePrefix": "el_clib",
+      "managedNamePrefix": "ElCLib"
+    },
+    {
+      "sourcePackage": "GCPnts",
+      "nativeNamePrefix": "GCPnts_TangentialDeflection::ArcAngularStep",
+      "header": "GCPnts_TangentialDeflection.hxx",
+      "exportNamePrefix": "gcpnts_tangential_deflection",
+      "managedNamePrefix": "GCPntsTangentialDeflection"
+    },
+    {
+      "sourcePackage": "Geom",
+      "nativeNamePrefix": "Geom_BezierCurve::MaxDegree",
+      "header": "Geom_BezierCurve.hxx",
+      "exportNamePrefix": "geom_bezier_curve",
+      "managedNamePrefix": "GeomBezierCurve"
+    },
+    {
+      "sourcePackage": "Geom",
+      "nativeNamePrefix": "Geom_BezierSurface::MaxDegree",
+      "header": "Geom_BezierSurface.hxx",
+      "exportNamePrefix": "geom_bezier_surface",
+      "managedNamePrefix": "GeomBezierSurface"
+    },
+    {
+      "sourcePackage": "Geom",
+      "nativeNamePrefix": "Geom_BSplineCurve::MaxDegree",
+      "header": "Geom_BSplineCurve.hxx",
+      "exportNamePrefix": "geom_bspline_curve",
+      "managedNamePrefix": "GeomBSplineCurve"
+    },
+    {
+      "sourcePackage": "Geom",
+      "nativeNamePrefix": "Geom_BSplineSurface::MaxDegree",
+      "header": "Geom_BSplineSurface.hxx",
+      "exportNamePrefix": "geom_bspline_surface",
+      "managedNamePrefix": "GeomBSplineSurface"
+    },
+    {
+      "sourcePackage": "Geom2d",
+      "nativeNamePrefix": "Geom2d_BezierCurve::MaxDegree",
+      "header": "Geom2d_BezierCurve.hxx",
+      "exportNamePrefix": "geom2d_bezier_curve",
+      "managedNamePrefix": "Geom2dBezierCurve"
+    },
+    {
+      "sourcePackage": "Geom2d",
+      "nativeNamePrefix": "Geom2d_BSplineCurve::MaxDegree",
+      "header": "Geom2d_BSplineCurve.hxx",
+      "exportNamePrefix": "geom2d_bspline_curve",
+      "managedNamePrefix": "Geom2dBSplineCurve"
+    },
+    {
+      "sourcePackage": "IMeshTools",
+      "nativeNamePrefix": "IMeshTools_Parameters::RelMinSize",
+      "header": "IMeshTools_Parameters.hxx",
+      "exportNamePrefix": "imesh_tools_parameters",
+      "managedNamePrefix": "IMeshToolsParameters"
+    },
+    {
+      "sourcePackage": "PLib",
+      "nativeNamePrefix": "PLib::",
+      "header": "PLib.hxx",
+      "exportNamePrefix": "plib",
+      "managedNamePrefix": "PLib"
+    },
+    {
+      "sourcePackage": "ShapeExtend",
+      "nativeNamePrefix": "ShapeExtend::",
+      "header": "ShapeExtend.hxx",
+      "exportNamePrefix": "shape_extend",
+      "managedNamePrefix": "ShapeExtend"
+    },
+    {
+      "sourcePackage": "Standard",
+      "nativeNamePrefix": "Standard::Purge",
+      "header": "Standard.hxx",
+      "exportNamePrefix": "standard_purge",
+      "managedNamePrefix": "StandardPurge"
+    },
+    {
+      "sourcePackage": "BRepMesh",
+      "nativeNamePrefix": "BRepMesh_GeomTool::SquareDeflectionOfSegment",
+      "header": "BRepMesh_GeomTool.hxx",
+      "exportNamePrefix": "brep_mesh_geom_tool",
+      "managedNamePrefix": "BRepMeshGeomTool"
+    },
+    {
+      "sourcePackage": "Message",
+      "nativeNamePrefix": "Message_ExecStatus::",
+      "header": "Message_ExecStatus.hxx",
+      "exportNamePrefix": "message_exec_status",
+      "managedNamePrefix": "MessageExecStatus"
+    },
+    {
+      "sourcePackage": "Standard",
+      "nativeNamePrefix": "Standard_ErrorHandler::IsInTryBlock",
+      "header": "Standard_ErrorHandler.hxx",
+      "exportNamePrefix": "standard_error_handler",
+      "managedNamePrefix": "StandardErrorHandler"
     }
   ],
   "sharedHandleScopes": [
+    {
+      "sourcePackage": "Standard",
+      "nativeType": "Standard_Transient",
+      "header": "Standard_Transient.hxx",
+      "exportNamePrefix": "standard_transient",
+      "managedTypeName": "StandardTransient",
+      "suppressConstructors": true,
+      "excludedStableIds": [
+        "c:@S@Standard_Transient@F@Standard_Transient#"
+      ]
+    },
     {
       "sourcePackage": "Geom",
       "nativeType": "Geom_CartesianPoint",
       "header": "Geom_CartesianPoint.hxx",
       "exportNamePrefix": "geom_cartesian_point",
       "managedTypeName": "GeomCartesianPoint"
+    },
+    {
+      "sourcePackage": "ExprIntrp",
+      "nativeType": "ExprIntrp_GenExp",
+      "header": "ExprIntrp_GenExp.hxx",
+      "exportNamePrefix": "expr_intrp_gen_exp",
+      "managedTypeName": "ExprIntrpGenExp",
+      "suppressConstructors": true
+    },
+    {
+      "sourcePackage": "ExprIntrp",
+      "nativeType": "ExprIntrp_GenFct",
+      "header": "ExprIntrp_GenFct.hxx",
+      "exportNamePrefix": "expr_intrp_gen_fct",
+      "managedTypeName": "ExprIntrpGenFct",
+      "suppressConstructors": true
+    },
+    {
+      "sourcePackage": "ExprIntrp",
+      "nativeType": "ExprIntrp_GenRel",
+      "header": "ExprIntrp_GenRel.hxx",
+      "exportNamePrefix": "expr_intrp_gen_rel",
+      "managedTypeName": "ExprIntrpGenRel",
+      "suppressConstructors": true
+    },
+    {
+      "sourcePackage": "Geom2dEval",
+      "nativeType": "Geom2dEval_RepCurveDesc::Base",
+      "header": "Geom2dEval_RepCurveDesc.hxx",
+      "exportNamePrefix": "geom2d_eval_rep_curve_desc_base",
+      "managedTypeName": "Geom2dEvalRepCurveDescBase",
+      "suppressConstructors": true
+    },
+    {
+      "sourcePackage": "IGESData",
+      "nativeType": "IGESData_GlobalNodeOfWriterLib",
+      "header": "IGESData_GlobalNodeOfWriterLib.hxx",
+      "exportNamePrefix": "iges_data_global_node_of_writer_lib",
+      "managedTypeName": "IGESDataGlobalNodeOfWriterLib"
+    },
+    {
+      "sourcePackage": "IGESDefs",
+      "nativeType": "IGESDefs_ReadWriteModule",
+      "header": "IGESDefs_ReadWriteModule.hxx",
+      "exportNamePrefix": "iges_defs_read_write_module",
+      "managedTypeName": "IGESDefsReadWriteModule"
+    },
+    {
+      "sourcePackage": "IGESDimen",
+      "nativeType": "IGESDimen_ReadWriteModule",
+      "header": "IGESDimen_ReadWriteModule.hxx",
+      "exportNamePrefix": "iges_dimen_read_write_module",
+      "managedTypeName": "IGESDimenReadWriteModule"
+    },
+    {
+      "sourcePackage": "IGESDraw",
+      "nativeType": "IGESDraw_ReadWriteModule",
+      "header": "IGESDraw_ReadWriteModule.hxx",
+      "exportNamePrefix": "iges_draw_read_write_module",
+      "managedTypeName": "IGESDrawReadWriteModule"
+    },
+    {
+      "sourcePackage": "Storage",
+      "nativeType": "Storage_Schema",
+      "header": "Storage_Schema.hxx",
+      "exportNamePrefix": "storage_schema",
+      "managedTypeName": "StorageSchema"
+    },
+    {
+      "sourcePackage": "TDataStd",
+      "nativeType": "TDataStd_DeltaOnModificationOfExtStringArray",
+      "header": "TDataStd_DeltaOnModificationOfExtStringArray.hxx",
+      "exportNamePrefix": "tdata_std_delta_on_modification_of_ext_string_array",
+      "managedTypeName": "TDataStdDeltaOnModificationOfExtStringArray"
+    },
+    {
+      "sourcePackage": "TDataStd",
+      "nativeType": "TDataStd_DeltaOnModificationOfIntArray",
+      "header": "TDataStd_DeltaOnModificationOfIntArray.hxx",
+      "exportNamePrefix": "tdata_std_delta_on_modification_of_int_array",
+      "managedTypeName": "TDataStdDeltaOnModificationOfIntArray"
+    },
+    {
+      "sourcePackage": "TDataStd",
+      "nativeType": "TDataStd_DeltaOnModificationOfIntPackedMap",
+      "header": "TDataStd_DeltaOnModificationOfIntPackedMap.hxx",
+      "exportNamePrefix": "tdata_std_delta_on_modification_of_int_packed_map",
+      "managedTypeName": "TDataStdDeltaOnModificationOfIntPackedMap"
+    },
+    {
+      "sourcePackage": "TDataStd",
+      "nativeType": "TDataStd_DeltaOnModificationOfRealArray",
+      "header": "TDataStd_DeltaOnModificationOfRealArray.hxx",
+      "exportNamePrefix": "tdata_std_delta_on_modification_of_real_array",
+      "managedTypeName": "TDataStdDeltaOnModificationOfRealArray"
     },
     {
       "sourcePackage": "StepBasic",
@@ -287,9 +944,335 @@
   ],
   "sharedHandlePackageScopes": [
     {
+      "sourcePackage": "Adaptor2d",
+      "nativeTypePrefix": "Adaptor2d_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "Adaptor3d",
+      "nativeTypePrefix": "Adaptor3d_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "BOPAlgo",
+      "nativeTypePrefix": "BOPAlgo_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "BRepCheck",
+      "nativeTypePrefix": "BRepCheck_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "BRep",
+      "nativeTypePrefix": "BRep_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "BRepBuilderAPI",
+      "nativeTypePrefix": "BRepBuilderAPI_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "BRepTools",
+      "nativeTypePrefix": "BRepTools_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "BSplCLib",
+      "nativeTypePrefix": "BSplCLib_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "BSplSLib",
+      "nativeTypePrefix": "BSplSLib_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "BRepAdaptor",
+      "nativeTypePrefix": "BRepAdaptor_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "ChFiDS",
+      "nativeTypePrefix": "ChFiDS_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "Geom",
+      "nativeTypePrefix": "Geom_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "GeomAdaptor",
+      "nativeTypePrefix": "GeomAdaptor_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "Geom2dAdaptor",
+      "nativeTypePrefix": "Geom2dAdaptor_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "IFSelect",
+      "nativeTypePrefix": "IFSelect_",
+      "excludedNativeTypes": [],
+      "excludedStableIds": [
+        "c:@S@IFSelect_EditForm@F@NbTouched#1"
+      ]
+    },
+    {
+      "sourcePackage": "SelectMgr",
+      "nativeTypePrefix": "SelectMgr_",
+      "excludedNativeTypes": [],
+      "excludedStableIds": [
+        "c:@S@SelectMgr_TriangularFrustumSet@F@SelectMgr_TriangularFrustumSet#"
+      ]
+    },
+    {
+      "sourcePackage": "StepAP203",
+      "nativeTypePrefix": "StepAP203_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "StepAP214",
+      "nativeTypePrefix": "StepAP214_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "StepAP242",
+      "nativeTypePrefix": "StepAP242_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "StepDimTol",
+      "nativeTypePrefix": "StepDimTol_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "StepElement",
+      "nativeTypePrefix": "StepElement_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "StepFEA",
+      "nativeTypePrefix": "StepFEA_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "Geom2d",
+      "nativeTypePrefix": "Geom2d_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "IGESAppli",
+      "nativeTypePrefix": "IGESAppli_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "IMeshData",
+      "nativeTypePrefix": "IMeshData_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "IMeshTools",
+      "nativeTypePrefix": "IMeshTools_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "IGESBasic",
+      "nativeTypePrefix": "IGESBasic_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "IGESDefs",
+      "nativeTypePrefix": "IGESDefs_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "IGESDimen",
+      "nativeTypePrefix": "IGESDimen_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "IGESDraw",
+      "nativeTypePrefix": "IGESDraw_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "IGESGeom",
+      "nativeTypePrefix": "IGESGeom_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "IGESGraph",
+      "nativeTypePrefix": "IGESGraph_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "IGESData",
+      "nativeTypePrefix": "IGESData_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "IGESSelect",
+      "nativeTypePrefix": "IGESSelect_",
+      "excludedNativeTypes": [],
+      "excludedStableIds": [
+        "c:@S@IGESSelect_SelectBasicGeom@F@CurvesOnly#1"
+      ]
+    },
+    {
+      "sourcePackage": "IGESSolid",
+      "nativeTypePrefix": "IGESSolid_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "IntPatch",
+      "nativeTypePrefix": "IntPatch_",
+      "excludedNativeTypes": [],
+      "excludedStableIds": [
+        "c:@S@IntPatch_RLine@F@SetParamOnS1#d#d#"
+      ]
+    },
+    {
+      "sourcePackage": "BRepMesh",
+      "nativeTypePrefix": "BRepMesh_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "BRepMeshData",
+      "nativeTypePrefix": "BRepMeshData_",
+      "excludedNativeTypes": [],
+      "placementAllocatorNativeTypes": [
+        "BRepMeshData_Curve"
+      ]
+    },
+    {
+      "sourcePackage": "Poly",
+      "nativeTypePrefix": "Poly_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "ShapeAnalysis",
+      "nativeTypePrefix": "ShapeAnalysis_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "ShapeExtend",
+      "nativeTypePrefix": "ShapeExtend_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "ShapeFix",
+      "nativeTypePrefix": "ShapeFix_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "ShapeUpgrade",
+      "nativeTypePrefix": "ShapeUpgrade_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "Interface",
+      "nativeTypePrefix": "Interface_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "Message",
+      "nativeTypePrefix": "Message_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "NCollection",
+      "nativeTypePrefix": "NCollection_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "OpenGl",
+      "nativeTypePrefix": "OpenGl_",
+      "excludedNativeTypes": [],
+      "excludedStableIds": [
+        "c:@S@OpenGl_ShaderManager@F@BindFontProgram#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#",
+        "c:@S@OpenGl_ShadowMap@F@OpenGl_ShadowMap#",
+        "c:@S@OpenGl_Structure@F@IsRaytracable#1",
+        "c:@S@OpenGl_View@F@SetBackgroundGradientType#$@E@Aspect_GradientFillMethod#",
+        "c:@S@OpenGl_View@F@SetBackgroundTextureStyle#$@E@Aspect_FillMethod#",
+        "c:@S@OpenGl_View@F@SetTextureEnv#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureEnv#",
+        "c:@S@OpenGl_Workspace@F@ResetAppliedAspect#"
+      ]
+    },
+    {
+      "sourcePackage": "ShapeBuild",
+      "nativeTypePrefix": "ShapeBuild_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "Standard",
+      "nativeTypePrefix": "Standard_",
+      "excludedNativeTypes": []
+    },
+    {
       "sourcePackage": "StepBasic",
       "nativeTypePrefix": "StepBasic_",
       "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "StepData",
+      "nativeTypePrefix": "StepData_",
+      "excludedNativeTypes": [],
+      "excludedStableIds": [
+        "c:@S@StepData_FreeFormEntity@F@StepData_FreeFormEntity#",
+        "c:@S@StepData_UndefinedEntity@F@Super#1"
+      ]
+    },
+    {
+      "sourcePackage": "StepGeom",
+      "nativeTypePrefix": "StepGeom_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "StepKinematics",
+      "nativeTypePrefix": "StepKinematics_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "StepRepr",
+      "nativeTypePrefix": "StepRepr_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "StepShape",
+      "nativeTypePrefix": "StepShape_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "StepVisual",
+      "nativeTypePrefix": "StepVisual_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "TCollection",
+      "nativeTypePrefix": "TCollection_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "TopLoc",
+      "nativeTypePrefix": "TopLoc_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "TopoDS",
+      "nativeTypePrefix": "TopoDS_",
+      "excludedNativeTypes": []
+    },
+    {
+      "sourcePackage": "XCAFDoc",
+      "nativeTypePrefix": "XCAFDoc_",
+      "excludedNativeTypes": [],
+      "excludedStableIds": [
+        "c:@S@XCAFDoc_GeomTolerance@F@XCAFDoc_GeomTolerance#&1$@N@opencascade@S@handle>#$@S@XCAFDoc_GeomTolerance#"
+      ]
     }
   ],
   "topologyScopes": [

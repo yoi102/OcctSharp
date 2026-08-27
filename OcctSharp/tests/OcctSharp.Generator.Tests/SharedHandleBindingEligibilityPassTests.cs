@@ -10,6 +10,7 @@ public sealed class SharedHandleBindingEligibilityPassTests
     {
         BindingType real = Value("double");
         BindingType voidType = Value("void");
+        BindingType actionMethodHandle = Handle("StepBasic_ActionMethod");
         BindingType pointer = new(
             "double *",
             "double *",
@@ -29,6 +30,7 @@ public sealed class SharedHandleBindingEligibilityPassTests
             Record("transient", "Standard_Transient"),
             Record("base", "Geom_Point", "Standard_Transient"),
             Record("derived", "Geom_CartesianPoint", "Geom_Point"),
+            Record("action-method", "StepBasic_ActionMethod", "Standard_Transient"),
             Declaration("ctor", "Geom_CartesianPoint::Geom_CartesianPoint", BindingDeclarationKind.Constructor) with
             {
                 Access = BindingAccess.Public,
@@ -45,6 +47,17 @@ public sealed class SharedHandleBindingEligibilityPassTests
                 Access = BindingAccess.Public,
                 ReturnType = voidType,
                 Parameters = [new BindingParameter(0, "x", real, false)],
+            },
+            Declaration("handle-getter", "Geom_CartesianPoint::ActionMethod", BindingDeclarationKind.Method) with
+            {
+                Access = BindingAccess.Public,
+                ReturnType = actionMethodHandle,
+            },
+            Declaration("handle-setter", "Geom_CartesianPoint::SetActionMethod", BindingDeclarationKind.Method) with
+            {
+                Access = BindingAccess.Public,
+                ReturnType = voidType,
+                Parameters = [new BindingParameter(0, "method", actionMethodHandle, false)],
             },
             Declaration("pointer", "Geom_CartesianPoint::Unsafe", BindingDeclarationKind.Method) with
             {
@@ -63,8 +76,28 @@ public sealed class SharedHandleBindingEligibilityPassTests
         Assert.Equal(BindingSupportState.Supported, Find(result, "ctor").SupportState);
         Assert.Equal(BindingSupportState.Supported, Find(result, "getter").SupportState);
         Assert.Equal(BindingSupportState.Supported, Find(result, "setter").SupportState);
+        Assert.Equal(BindingSupportState.Supported, Find(result, "handle-getter").SupportState);
+        Assert.Equal(BindingSupportState.Supported, Find(result, "handle-setter").SupportState);
         Assert.Equal(BindingSupportState.Pending, Find(result, "pointer").SupportState);
         Assert.Equal(BindingSupportState.Pending, Find(result, "destructor").SupportState);
+    }
+
+    [Fact]
+    public void DoesNotPromoteAbstractTransientConstructor()
+    {
+        BindingModel classified = SupportClassificationPass.Apply(new BindingModel(
+        [
+            Record("transient", "Standard_Transient"),
+            Record("abstract", "Example_Abstract", "Standard_Transient") with { IsAbstract = true },
+            Declaration("ctor", "Example_Abstract::Example_Abstract", BindingDeclarationKind.Constructor) with
+            {
+                Access = BindingAccess.Public,
+            },
+        ]));
+
+        BindingModel result = SharedHandleBindingEligibilityPass.Apply(classified);
+
+        Assert.Equal(BindingSupportState.Pending, Find(result, "ctor").SupportState);
     }
 
     private static BindingDeclaration Record(string id, string name, string? baseType = null) =>
@@ -95,4 +128,15 @@ public sealed class SharedHandleBindingEligibilityPassTests
         [],
         false,
         null);
+
+    private static BindingType Handle(string targetType) => new(
+        $"opencascade::handle<{targetType}>",
+        $"opencascade::handle<{targetType}>",
+        $"opencascade::handle<{targetType}>",
+        $"opencascade::handle<{targetType}>",
+        [new BindingTypeLayer(BindingTypeLayerKind.Value, false)],
+        "opencascade::handle",
+        [],
+        true,
+        targetType);
 }

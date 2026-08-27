@@ -9,7 +9,8 @@ public static class SimpleBindingEligibilityPass
     {
         ArgumentNullException.ThrowIfNull(model);
         InitialTypeMap typeMap = InitialTypeMap.FromModel(model);
-        return new BindingModel(model.Declarations.Select(declaration => Promote(declaration, typeMap)));
+        HashSet<string> transientTypes = FindTransientTypes(model);
+        return new BindingModel(model.Declarations.Select(declaration => Promote(declaration, typeMap, transientTypes)));
     }
 
     public static SimpleBindingEligibilityAssessment Assess(
@@ -23,6 +24,7 @@ public static class SimpleBindingEligibilityPass
         {
             BindingDeclarationKind.Constructor => AssessConstructor(declaration, typeMap),
             BindingDeclarationKind.Method => AssessMethod(declaration, typeMap),
+            BindingDeclarationKind.Function => AssessFunction(declaration, typeMap),
             _ => new SimpleBindingEligibilityAssessment(
                 "EL001",
                 "DeclarationKind",
@@ -33,9 +35,20 @@ public static class SimpleBindingEligibilityPass
 
     private static BindingDeclaration Promote(
         BindingDeclaration declaration,
-        InitialTypeMap typeMap)
+        InitialTypeMap typeMap,
+        HashSet<string> transientTypes)
     {
         if (declaration.SupportState != BindingSupportState.Pending)
+        {
+            return declaration;
+        }
+
+        // Intrusive-handle records need receiver/constructor ownership analysis from the
+        // shared-handle pass. Treating their constructors as ordinary value copies also
+        // promoted constructors of abstract transient classes that cannot be invoked.
+        if (declaration.Kind == BindingDeclarationKind.Constructor
+            && GetDeclaringType(declaration.NativeName) is string declaringType
+            && transientTypes.Contains(declaringType))
         {
             return declaration;
         }
@@ -78,8 +91,7 @@ public static class SimpleBindingEligibilityPass
                 false);
         }
 
-        if (declaration.ReturnType is null
-            || !TryMapValueCopy(declaration.ReturnType, typeMap, BindingTypeUsage.ReturnValue, out _))
+        if (!IsSupportedReturn(declaration.ReturnType, typeMap))
         {
             return new SimpleBindingEligibilityAssessment(
                 "EL003",
@@ -89,6 +101,61 @@ public static class SimpleBindingEligibilityPass
         }
 
         return AssessParameters(declaration.Parameters, typeMap);
+    }
+
+    private static SimpleBindingEligibilityAssessment AssessFunction(
+        BindingDeclaration declaration,
+        InitialTypeMap typeMap)
+    {
+        if (string.IsNullOrWhiteSpace(declaration.SourceToolkit))
+        {
+            return new SimpleBindingEligibilityAssessment(
+                "EL005",
+                "ToolkitProvenance",
+                "The free function has no toolkit provenance for deterministic native link closure.",
+                false);
+        }
+
+        if (!declaration.Header.EndsWith(".hxx", StringComparison.OrdinalIgnoreCase))
+        {
+            return new SimpleBindingEligibilityAssessment(
+                "EL006",
+                "InternalHeaderSurface",
+                "The free function is declared by a C/parser/internal header rather than a public OCCT .hxx entry header.",
+                false);
+        }
+
+        if (!string.Equals(declaration.SourcePackage, "Standard", StringComparison.Ordinal))
+        {
+            return new SimpleBindingEligibilityAssessment(
+                "EL007",
+                "FreeFunctionExportProvenance",
+                "Only the verified Standard foundation free-function profile has exact native export evidence.",
+                false);
+        }
+
+        if (!IsSupportedReturn(declaration.ReturnType, typeMap))
+        {
+            return new SimpleBindingEligibilityAssessment(
+                "EL003",
+                "ReturnProjection",
+                "The return value does not have a verified value-copy or void projection.",
+                false);
+        }
+
+        return AssessParameters(declaration.Parameters, typeMap);
+    }
+
+    private static bool IsSupportedReturn(BindingType? type, InitialTypeMap typeMap)
+    {
+        if (type is null)
+        {
+            return false;
+        }
+
+        return typeMap.TryMap(type, BindingTypeUsage.ReturnValue, out BindingTypeProjection? projection)
+            && (string.Equals(projection?.Ownership, "ValueCopy", StringComparison.Ordinal)
+                || string.Equals(projection?.RuleId, "TM000", StringComparison.Ordinal));
     }
 
     private static SimpleBindingEligibilityAssessment AssessParameters(
@@ -160,5 +227,53 @@ public static class SimpleBindingEligibilityPass
         return string.Equals(unqualifiedType, memberName, StringComparison.Ordinal)
             ? declaringType
             : null;
+    }
+
+    private static HashSet<string> FindTransientTypes(BindingModel model)
+    {
+        Dictionary<string, string[]> bases = model.Declarations
+            .Where(static declaration => declaration.Kind == BindingDeclarationKind.Record)
+            .GroupBy(static declaration => NormalizeTypeName(declaration.NativeName), StringComparer.Ordinal)
+            .ToDictionary(
+                static group => group.Key,
+                static group => group
+                    .SelectMany(static declaration => declaration.BaseTypes)
+                    .Select(static baseType => NormalizeTypeName(baseType.Type.BaseCanonicalSpelling))
+                    .Distinct(StringComparer.Ordinal)
+                    .ToArray(),
+                StringComparer.Ordinal);
+
+        HashSet<string> result = new(StringComparer.Ordinal) { "Standard_Transient" };
+        bool changed;
+        do
+        {
+            changed = false;
+            foreach ((string type, string[] baseTypes) in bases)
+            {
+                if (!result.Contains(type) && baseTypes.Any(result.Contains))
+                {
+                    changed |= result.Add(type);
+                }
+            }
+        }
+        while (changed);
+
+        return result;
+    }
+
+    private static string NormalizeTypeName(string value)
+    {
+        string normalized = value.Trim();
+        foreach (string prefix in new[] { "class ", "struct ", "const " })
+        {
+            if (normalized.StartsWith(prefix, StringComparison.Ordinal))
+            {
+                normalized = normalized[prefix.Length..].TrimStart();
+            }
+        }
+
+        return normalized.EndsWith(" const", StringComparison.Ordinal)
+            ? normalized[..^6].TrimEnd()
+            : normalized;
     }
 }

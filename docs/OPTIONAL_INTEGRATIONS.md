@@ -36,3 +36,7 @@ ownership rules, package tests, and a compatibility row are required first.
 - Draw/test binaries are development tools and are not redistributed through runtime NuGet.
 - Platform adapters are validated and packaged per RID; a header catalog on Windows is
   not evidence for Linux or macOS support.
+- Automatic core generation enforces this boundary through schema-1.8
+  `excludedAutoPackages`. Draw/test families receive `SK009 / TestHarness`, and IVtk
+  families receive `SK010 / OptionalExternalDependency` in both selected discovery and
+  full-inventory classification.

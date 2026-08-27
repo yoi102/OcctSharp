@@ -2,7 +2,7 @@
 param(
     [string]$OcctRoot,
 
-    [string]$PackageVersion = '0.1.0-alpha.41',
+    [string]$PackageVersion = '0.1.0-alpha.49',
 
     [switch]$SkipBuild
 )
@@ -11,6 +11,8 @@ $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
 $workspaceRoot = Split-Path -Parent $PSScriptRoot
+Push-Location -LiteralPath $workspaceRoot
+try {
 $consumerProject = Join-Path $workspaceRoot 'tests\OcctSharp.PackageConsumer\OcctSharp.PackageConsumer.csproj'
 $packageDirectory = Join-Path $workspaceRoot 'artifacts\packages'
 $consumerRoot = Join-Path $workspaceRoot 'artifacts\package-consumer'
@@ -88,3 +90,7 @@ if (Test-Path -LiteralPath (Join-Path $publishDirectory 'OcctSharp.Native.dll'))
 }
 
 Write-Host "Clean package consumer verified $($nativeFiles.Count) DLLs under '$nativeDirectory'."
+}
+finally {
+    Pop-Location
+}

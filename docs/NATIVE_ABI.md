@@ -369,7 +369,7 @@ OCCT visualization pointer crosses the ABI. TKOpenGl expands the runtime closure
 
 The current native ABI is 1.30 and the bridge implementation version is 0.38.0.
 
-ABI 1.31 adds the B19.1 generated StepBasic scalar/shared-entity profile. Ten generated
+ABI 1.31 adds the alpha.39 generated StepBasic scalar/shared-entity profile. Ten generated
 registries retain `Handle<T>` values for Address, date/time, dimensions, Person, and
 SiUnit entities. Constructors, scalar/boolean/enum members, clone, RTTI, reference count,
 and release use the existing status and exception boundary. Enum values cross only as
@@ -377,7 +377,7 @@ validated `int32_t`; native enum and entity layouts do not cross the ABI.
 
 The current native ABI is 1.31 and the bridge implementation version is 0.39.0.
 
-ABI 1.32 adds the B19.2 package-expanded StepBasic shared-entity closure. The generator
+ABI 1.32 adds the alpha.40 package-expanded StepBasic shared-entity closure. The generator
 uses the same per-type registry, retained clone, RTTI, reference-count, status, and
 exception contract for 129 public managed StepBasic types. The manifest owns 333 stable
 IDs; no entity layout or raw `Handle<T>` pointer crosses the ABI. Large generated MSVC
@@ -385,7 +385,7 @@ translation units compile with `/bigobj` without changing the public contract.
 
 The current native ABI is 1.32 and the bridge implementation version is 0.40.0.
 
-ABI 1.33 adds the B19.3 common-modeling profile. Cone/torus, prism/revolution,
+ABI 1.33 adds the alpha.41 common-modeling profile. Cone/torus, prism/revolution,
 all-edge and single-edge fillet/chamfer, skin/join offset, and shape section exports
 return new registered owning shapes. Bounding-box extraction copies six doubles through
 a fixed 48-byte structure; validity and subshape occurrence counts copy scalars. Builder,
@@ -394,7 +394,71 @@ indexed-edge, history, progress, `Bnd_Box`, and analyzer state remain native-loc
 
 The current native ABI is 1.33 and the bridge implementation version is 0.41.0.
 
+ABI 1.34 adds the current high-value geometry/topology workstream inside batch B.
+One-shot exports cover circle/ellipse/arc/Bezier/interpolated edge construction,
+curve/surface evaluation and projection, curve length, owning topology-adjacency
+snapshots, loft, pipe, sewing, wedge, thick solid, and copied Boolean history summaries.
+Call-local builders, adaptors, projectors, indexed maps, lists, progress state, and
+history objects do not cross the ABI. Curve/surface/history data crosses as fixed copied
+values; every returned topology value is registered and owning.
+
+ABI 1.34 also adds transaction-bound STEPCAF import into an existing owned XDE document.
+The source document, XCAF tools, clone maps, and material maps stay native-local; newly
+imported roots cross as destination-parent-bound stable entries. The compatibility
+one-shot STEP assembly export remains present.
+
+The current native ABI is 1.34 and the bridge implementation version is 0.42.0.
+
+ABI 1.35 expands the existing generated intrusive shared-handle contract across selected
+`Geom` and `Geom2d` types. Eight new public wrappers add 67 manifest stable IDs for 2D
+Cartesian points, 2D/3D directions and vectors with magnitude, 2D/3D transformations,
+and planes. Registry ownership, retained clone, RTTI, reference count, status, exception,
+and release semantics are unchanged. Parameters and results cross only through existing
+scalar, enum, and copied `gp_Pnt` projections; no OCCT geometry layout or raw
+`Handle<T>` pointer crosses the ABI.
+
+The current native ABI is 1.35 and the bridge implementation version is 0.43.0.
+
+ABI 1.36 expands the same generated intrusive shared-handle ABI to selected BRepMesh,
+Poly, ShapeAnalysis, ShapeFix, and ShapeUpgrade records. Sixty-one new public wrappers
+add 375 manifest stable IDs. No new pointer category is introduced: each wrapper owns
+one typed OCCT intrusive handle, clones retain it, scalar/enum/value-copy calls reuse
+the existing projections, and native exceptions stay inside the status boundary.
+Binding-model schema 1.2 records abstract records and prevents their construction.
+
+ABI 1.37 expands the generated intrusive shared-handle ABI to concrete `StepGeom`,
+`StepRepr`, `StepShape`, and `StepVisual` records with safe scalar/enum/value-copy members.
+It is retained as the alpha.45 baseline.
+
+ABI 1.38 generalizes parameters and returns between selected generated
+`opencascade::handle<T>` types. A null native wrapper pointer maps to a null OCCT handle;
+non-null inputs are validated through the target type registry. Non-null results allocate
+a new target wrapper that retains its own intrusive reference. The C ABI exposes only
+typed opaque wrapper pointers and never an OCCT handle layout.
+
+ABI 1.39 expands the same generated shared-handle ABI across selected `StepAP203`,
+`StepAP214`, `StepAP242`, `StepDimTol`, `StepElement`, `StepFEA`, and
+`StepKinematics` entities. It introduces no new ownership category or ABI layout.
+
+ABI 1.40 expands the same generated shared-handle ABI across selected `IGESAppli`,
+`IGESBasic`, `IGESDefs`, `IGESDimen`, `IGESDraw`, `IGESGeom`, `IGESGraph`, and
+`IGESSolid` entity packages. No IGES session/reader/selector ownership is implied.
+
+The current native ABI is 1.40 and the bridge implementation version is 0.48.0.
+
+ABI 1.41 is the alpha.49 final long-tail generation boundary. It adds export-proven
+Standard foundation free-function and verified void-return entry points using the same
+fixed-width C ABI conventions as generated static methods. Standalone enum generation
+is managed metadata and does not expose C++ enum layout. The current native ABI is 1.41
+and the bridge implementation version is 0.49.0.
+
 ## Verification
+
+Alpha.48 verification confirms the existing ABI contract for all 162 IGES public
+wrappers: 156 default-constructible wrappers passed construction, clone, RTTI,
+reference-count, and disposal checks. IGES session, selector, reader, and transfer
+state remains native-local. The clean package consumer loaded the 47-DLL closure from
+the application-local `occt` directory under SDK 10.0.400.
 
 - Compile consumer tests against the exported C headers.
 - Inspect exports and native dependencies on every supported platform.

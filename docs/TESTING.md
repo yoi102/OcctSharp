@@ -131,7 +131,7 @@ sample alone is not runtime evidence that the user closed or visually inspected 
 
 A repository-native bootstrap change additionally requires a recoverable missing-bridge
 simulation: remove or rename only the expected configuration's bridge, run the ordinary
-Sample build, verify native-only CMake recreation and the current 47-DLL output `occt/` closure,
+Sample build, verify native-only CMake recreation and the current 62-DLL output `occt/` closure,
 then execute a non-UI OCCT Sample operation. The test must also prove that an
 unconfigured clone receives actionable SDK/archive instructions. This is separate from
 NuGet clean-consumer validation because package consumers carry native assets already.

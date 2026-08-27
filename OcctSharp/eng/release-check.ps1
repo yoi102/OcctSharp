@@ -1,13 +1,15 @@
 [CmdletBinding()]
 param(
     [string]$OcctRoot,
-    [string]$PackageVersion = '0.1.0-alpha.41',
+    [string]$PackageVersion = '0.1.0-alpha.49',
     [string]$ApiBaselineVersion = '0.1.0-alpha.38'
 )
 
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 $workspaceRoot = Split-Path -Parent $PSScriptRoot
+Push-Location -LiteralPath $workspaceRoot
+try {
 $repositoryRoot = Split-Path -Parent $workspaceRoot
 $releaseDirectory = Join-Path $workspaceRoot 'artifacts\release'
 [IO.Directory]::CreateDirectory($releaseDirectory) | Out-Null
@@ -38,12 +40,28 @@ $remainingBindable = @($inventory.finalClassification.declarationStates |
     Where-Object state -eq 'SupportedUnselected' |
     Select-Object -First 1 -ExpandProperty count)
 $remainingBindableCount = if ($remainingBindable.Count -eq 0) { 0 } else { [int]$remainingBindable[0] }
+$broadLongTailCodes = @('LT001', 'LT002', 'LT003', 'LT004')
+$broadLongTailCounts = @($inventory.finalClassification.declarationReasons |
+    Where-Object code -in $broadLongTailCodes |
+    Select-Object -ExpandProperty count)
+$broadLongTailCount = if ($broadLongTailCounts.Count -eq 0) {
+    0
+}
+else {
+    [int](($broadLongTailCounts | Measure-Object -Sum).Sum)
+}
+$narrowBlockedCount = [int](@($inventory.finalClassification.declarationStates |
+    Where-Object state -eq 'Blocked' |
+    Select-Object -First 1 -ExpandProperty count) | Select-Object -First 1)
 $emittedCount = [int](@($inventory.finalClassification.declarationStates |
     Where-Object state -eq 'Emitted' |
     Select-Object -First 1 -ExpandProperty count) | Select-Object -First 1)
 $manualCount = [int](@($inventory.finalClassification.declarationStates |
     Where-Object state -eq 'Manual' |
     Select-Object -First 1 -ExpandProperty count) | Select-Object -First 1)
+$declarationTotal = [int]$inventory.finalClassification.declarationTotal
+$headerTotal = [int]$inventory.finalClassification.headerTotal
+$nativeDllCount = @(Get-ChildItem -LiteralPath (Join-Path $workspaceRoot 'artifacts\native\Release') -File -Filter '*.dll').Count
 
 & (Join-Path $PSScriptRoot 'generate-release-metadata.ps1') -PackageVersion $PackageVersion
 
@@ -58,10 +76,11 @@ $gates = @(
     [ordered]@{ id = 'local-release-debug'; state = 'PASS'; evidence = 'Release and Debug build/test completed in this run.' },
     [ordered]@{ id = 'generated-freshness'; state = 'PASS'; evidence = '13 manifest-owned files current.' },
     [ordered]@{ id = 'clean-regeneration'; state = 'PASS'; evidence = 'Fresh source copy build and byte comparison completed.' },
-    [ordered]@{ id = 'package-consumer'; state = 'PASS'; evidence = 'alpha.41 clean restore/publish/runtime with 47 DLLs, generated StepBasic shared/enum behavior, and common modeling APIs.' },
+    [ordered]@{ id = 'package-consumer'; state = 'PASS'; evidence = "$PackageVersion clean restore/publish/runtime with $nativeDllCount DLLs, $emittedCount generated declarations, IGES/session infrastructure, prior geometry/modeling/exchange/XDE APIs, and composable XDE STEP import." },
     [ordered]@{ id = 'api-compatibility'; state = 'PASS'; evidence = 'Compared with the alpha.38 606-signature baseline; additive changes are allowed and removals are blocked.' },
-    [ordered]@{ id = 'full-classification'; state = 'PASS'; evidence = '116214 declarations and 7090 headers classified; zero pending/HD099.' },
+    [ordered]@{ id = 'full-classification'; state = 'PASS'; evidence = "$declarationTotal declarations and $headerTotal headers classified; zero pending/HD099." },
     [ordered]@{ id = 'bindable-emission-completeness'; state = if ($remainingBindableCount -eq 0) { 'PASS' } else { 'BLOCKED' }; evidence = "$remainingBindableCount declarations remain SupportedUnselected; $emittedCount generated and $manualCount accepted manual stable IDs are reconciled." },
+    [ordered]@{ id = 'broad-long-tail-elimination'; state = if ($broadLongTailCount -eq 0) { 'PASS' } else { 'BLOCKED' }; evidence = "$broadLongTailCount declarations retain broad LT001-LT004 reasons; $narrowBlockedCount declarations have narrow evidence-backed ABI, ownership, or projection dispositions." },
     [ordered]@{ id = 'sbom-provenance-checksums'; state = 'PASS'; evidence = 'CycloneDX, provenance, and SHA256 files generated.' },
     [ordered]@{ id = 'ci-configuration'; state = 'PASS'; evidence = '.github/workflows/ci.yml is configured.' },
     [ordered]@{ id = 'ci-hosted-execution'; state = 'NOT RUN'; evidence = 'No remote workflow was dispatched from this local task.' },
@@ -70,11 +89,26 @@ $gates = @(
     [ordered]@{ id = 'package-signing'; state = 'NOT RUN'; evidence = 'No signing certificate or authorization was provided.' },
     [ordered]@{ id = 'nuget-publication'; state = 'NOT RUN'; evidence = 'No NuGet credential or publication authorization was provided.' }
 )
+$localBatchGateIds = @(
+    'local-release-debug',
+    'generated-freshness',
+    'clean-regeneration',
+    'package-consumer',
+    'api-compatibility',
+    'full-classification',
+    'bindable-emission-completeness',
+    'broad-long-tail-elimination',
+    'sbom-provenance-checksums',
+    'ci-configuration'
+)
+$batchImplementationComplete = $remainingBindableCount -eq 0 `
+    -and $broadLongTailCount -eq 0 `
+    -and @($gates | Where-Object { $_.id -in $localBatchGateIds -and $_.state -ne 'PASS' }).Count -eq 0
 $report = [ordered]@{
     schemaVersion = '1.1'
     packageVersion = $PackageVersion
     releaseEngineeringImplemented = $true
-    batchImplementationComplete = $false
+    batchImplementationComplete = $batchImplementationComplete
     publicReleaseReady = @($gates | Where-Object state -in @('BLOCKED', 'NOT RUN')).Count -eq 0
     gates = $gates
 }
@@ -100,3 +134,7 @@ $checksumLines = @($checksumInputs | ForEach-Object {
     $checksumLines,
     [Text.UTF8Encoding]::new($false))
 Write-Host "Release engineering checks completed. Public release ready: $($report.publicReleaseReady). Gate report: '$gatePath'."
+}
+finally {
+    Pop-Location
+}

@@ -56,56 +56,65 @@ Native assets later move to RID-specific packages such as
 `OcctSharp.Native.win-x64`. Native code remains one bridge until a central cross-module
 handle registry and creator-owned release contract prove that module bridge DLLs are safe.
 
-## Binding batches
+## Single migration batch B
 
-Each batch uses the same sequence: inventory, semantic rules, generation, compile,
-runtime/lifetime tests, package consumer, documentation, and coverage update.
+The current program has exactly one batch: `B`. The former B00-B20 and dotted Bxx.y
+labels are retired planning labels, not current batches or commit boundaries.
+Repository/toolchain, generator, ownership, foundation, modeling, mesh, exchange, XDE,
+visualization, long-tail generation, upgrade, and release engineering all belong to B.
+If a later product program truly requires another batch, it uses the next whole letter
+and the same product-scale sizing; numbered or dotted batch fragments are forbidden.
 
-| Batch | Status | Scope | Primary outcomes | Exit criteria |
-|---|---|---|---|---|
-| B00 | Complete | Repository and toolchain | .NET 10, C ABI, deterministic generator, local package | Validated baseline |
-| B01 | Complete | Scalars and small values | Integers, reals, booleans, enums, `gp_Pnt`, configured static methods | Complete for selected declarations |
-| B02 | Complete foundation | Shared transient foundation | `Handle<T>`, intrusive retention, RTTI, checked casts, first typed class | First generated class complete; broad hierarchy continues in B07 |
-| B03 | Complete | Topology value foundation | `TopoDS_Shape` copy/null/type/orientation/reversal/equality semantics | Debug/Release, lifetime, freshness, and package consumer passed |
-| B04 | Complete | Typed topology hierarchy | Compound, CompSolid, Solid, Shell, Face, Wire, Edge, Vertex; checked conversions | Eight casts validate `ShapeType`; no layout crossing; Debug/Release/package passed |
-| B05 | Complete | Location and transformation values | `gp_Trsf`, `TopLoc_Location`, `gp_Vec`, `gp_Dir`, `gp_Ax1`, and `gp_Mat` opaque value contracts plus transform conversion | Debug/Release, lifetime, freshness, and alpha.11 package gates passed |
-| B06 | Complete | Foundation collections and strings | UTF-8/UTF-16 OCCT strings, scalar sequences/arrays/vectors, integer-key maps, and caller-owned snapshot enumeration | Debug/Release, stale-handle, double-dispose, empty, mutation, snapshot, and package gates |
-| B07 | Complete (immutable profile) | Geometry primitives | `gp_Pnt`, `gp_XYZ`, `gp_Lin`, `gp_Circ`, `gp_Ax2`, `gp_Pln`, and `gp_Ax3` immutable value families | Debug/Release deterministic values, validation, geometry math, and package gates passed |
-| B08 | Complete (safe value/owner profile) | Adaptors and properties | `GProp_GProps`/`BRepGProp` owned property accumulator; copied BRepAdaptor edge curve and face surface snapshots | Debug/Release numerics, layout, wrong-kind, disposal, freshness, and package gates passed; borrowed adaptor views remain excluded |
-| B09 | Complete (basic construction profile) | BRep construction | Box/sphere/cylinder solids plus straight edge, polygon wire, and planar face owning builders | Debug/Release topology, invalid input/type, lifetime, and package gates passed |
-| B10 | Complete (owning snapshot profile) | Topology traversal | Owning face/edge/wire/vertex `TopExp_Explorer` snapshots and child-kind maps | Parent/copy lifetime, empty/invalid kind, cleanup, and package gates passed |
-| B11 | Complete (basic result profile) | Modeling algorithms | Owning Fuse/Common results plus copied `BRepExtrema_DistShapeShape` minimum-distance values | Release/Debug completion/failure, layout, null/disposed, source independence, freshness, and package gates passed |
-| B12 | Complete (owning-result/no-history profile) | Boolean and healing | Owning Cut, ShapeFix, and same-domain-unification results with deterministic null rejection; BOP/ShapeFix/ShapeUpgrade history stays native-local | Release/Debug null/disposed/result lifetime plus alpha.34 package family checks passed; advanced history/modes remain later profiles |
-| B13 | Complete (first bulk wave) | Mesh and bulk transfer | `BRepMesh_IncrementalMesh`, copied triangle vertices/normals/indices | Release/Debug, invalid-parameter, capacity, and package gates passed; Poly/RWMesh and benchmark profile remain pending |
-| B14 | Complete (geometry-exchange profile) | Basic data exchange | STEP/IGES/STL geometry loops; OBJ/GLTF/VRML read/write; PLY write; existing STEPCAF/XDE assembly path | Release/Debug 65/65, freshness, alpha.35 clean consumer, 41-DLL closure; PLY read is upstream-unsupported, generated provider/options/metadata continue in B16/B19 |
-| B15 | Complete (document/label profile) | OCAF document model | Owning TDocStd application/document, stable-entry parent-bound TDF labels, TDataStd names, transactions, BinOcaf persistence | Release/Debug 66/66, parent disposal, abort semantics, persistence, freshness, alpha.36 clean consumer, 43-DLL closure |
-| B16 | Complete (metadata/assembly profile) | XDE and metadata | Parent-bound XDE labels; shapes, assemblies, occurrences, locations; copied names/RGBA/layers/materials; BinXCAF and STEPCAF | Release/Debug 67/67, memory/BinXCAF/STEPCAF round-trip, freshness, alpha.37 consumer, 44-DLL closure |
-| B17 | Complete (Windows core profile) | Visualization core | HWND-bound Aspect/OpenGl/V3d/AIS owner, parent-bound presentations, explicit input forwarding, copied selection IDs | Release/Debug 68/68, real HWND display/selection/thread tests, freshness, interactive sample, alpha.38 consumer, 45-DLL closure |
-| B18 | Complete (dependency-profile classification) | Optional integrations | Versioned audit for IVtk/VTK, OpenGL ES, Draw/test, WNT, Cocoa/X11, and C++/CLI; isolated future package boundaries | 6/6 profiles classified; Windows viewer available, named optional dependencies blocked/excluded without entering core; Release/Debug audit passes |
-| B19 | In progress (B19.1-B19.3 complete) | Long-tail and templates | Classification is complete; B19.3 reconciles 333 emitted plus 18 accepted manual declarations, while 10,177 `SupportedUnselected` declarations and LT001-LT004 projection/ownership work remain | Close only when every bindable declaration is emitted or accepted manual and no safety-critical unknown projection remains |
-| B20 | In progress (release engineering implemented) | Upgrade and release | 606-signature API baseline/diff, immutable-artifact CI, clean regeneration, notices, SBOM/provenance/checksums, explicit gates | Release tooling passes locally, but bindable-emission, license/notice, hosted CI, signing, and publication-scope gates remain open |
-
-Current batch progress is 19 of 21 complete (90.5%). This measures execution batches,
-not OCCT declaration coverage or public-release readiness.
-
-### B19 emitted-binding sub-batches
-
-| Sub-batch | Status | Scope | Evidence |
+| Batch | Status | Completed evidence | Remaining exit conditions |
 |---|---|---|---|
-| B19.1 | Complete | Ten StepBasic scalar/shared entities plus typed enum emission and manifest-aware inventory reconciliation | 171/3,406 selected emitted; Release/Debug Generator 40/40 and Runtime 73/73; alpha.39 45-DLL clean consumer; 13-file freshness |
-| B19.2 | Complete | StepBasic package-level default-constructible shared-entity closure | 333/5,503 selected emitted; 129 public generated StepBasic types; Release/Debug Generator 41/41 and Runtime 75/75; alpha.40 45-DLL clean consumer; 13-file freshness |
-| B19.3 | Complete | High-frequency common modeling and topology operations | Cone/torus, extrusion/revolution, all/single-edge fillet/chamfer, offset, section, bounds, validity/count; 18 schema-1.6 Manual IDs; Release/Debug 44/44 + 81/81; alpha.41 47-DLL consumer |
-| B19.4 | Next | High-frequency geometry/curve and advanced topology closure | Select a coherent Geom/Geom2d construction/evaluation/projection plus topology-map/history snapshot ownership family before low-value data entities |
+| B | Complete (local implementation) | Reproducible .NET 10/native foundation; deterministic generation; safe value, shared, topology, document, metadata, exchange, modeling, mesh, and visualization profiles; 16,353 emitted plus 61 manual stable IDs; zero supported-unselected/LT001-LT004; complete observed classification; Release/Debug/runtime, 13-file freshness, byte-identical clean regeneration, 62-DLL package consumer, compatibility, provenance/SBOM/checksum, and local release gates passing | None inside Batch B. Public license/notice, hosted CI, signing, credentials, and publication remain independent release-readiness gates |
 
-## Batch sizing
+Current B completion is not represented by counting retired planning labels. Engineering
+progress, selected binding coverage, full-profile coverage, inventory completeness,
+validation coverage, and publication readiness are reported independently. B is 100%
+because every local exit condition above now has evidence; this does not make the public
+package release-ready.
 
-Work is selected by dependency closure, not raw header count. Batches are intentionally
-coarse: one batch should complete a coherent ownership family, several closely related
-OCCT packages, or roughly 100–500 emitted public declarations. We only split when a
-failure would otherwise hide the owning rule or make validation inseparable. B05 is the
-model for this sizing: all transformation/value families were completed together behind
-one ABI contract. Every batch records its source packages, toolkits, entry headers,
-emitted stable IDs, test matrix, package impact, and next blocked rule.
+### Completed capability milestones inside B
+
+- Deterministic generator, C ABI, .NET 10 workspace, package-local `occt/` runtime, and
+  fresh-clone native bootstrap.
+- Scalar/enums, intrusive shared handles, typed topology, transforms, strings and common
+  scalar collections, geometry values/adaptors, construction, traversal, Boolean/healing,
+  mesh snapshots, geometry exchange, OCAF/XDE metadata and assemblies, and Windows viewer.
+- Generated StepBasic default-constructible shared-entity closure: 333 emitted
+  declarations and 129 public generated types.
+- Generated Geom/Geom2d shared-handle expansion: eight additional public types and 67
+  additional emitted declarations.
+- Generated common mesh/analysis/healing expansion: binding-model schema 1.2 excludes
+  abstract records and adds 61 public BRepMesh/Poly/ShapeAnalysis/ShapeFix/ShapeUpgrade
+  types plus 375 emitted declarations, bringing the manifest to 775 stable IDs.
+- Accepted common-modeling bridge: 18 audited manual declarations for cone/torus,
+  extrusion/revolution, fillet/chamfer, offset, section, bounds, validity, and counts.
+- Current high-value bridge wave: 43 additional audited declarations for curve/surface
+  construction and evaluation, projection, adjacency, loft/pipe/sewing/thick-solid,
+  Boolean history summaries, wedge construction, and composable XDE STEP import.
+- Alpha.48 IGES wave: generated IGESAppli, IGESBasic, IGESDefs, IGESDimen, IGESDraw,
+  IGESGeom, IGESGraph, and IGESSolid shared entities add 984 emitted declarations and
+  162 public wrappers. ABI 1.40/bridge 0.48.0, Generator 44/44, Runtime 147/147,
+  clean regeneration, package consumer, and API diff (10,272 additions/0 removals)
+  are validated on .NET SDK 10.0.400. The full observed inventory is classification-
+  complete with 4,060 emitted, 61 manual, 11,144 supported-unselected, 27,310 skipped,
+  and 73,639 blocked declarations; B remains in progress.
+- Alpha.49 final long-tail wave: 16,353 emitted and 61 manual stable IDs; zero
+  supported-unselected and zero LT001-LT004; 50,514 remaining candidates have narrow
+  ABI/export/ownership/type dispositions. Release and Debug pass Generator 62/62,
+  Runtime 105/105, and dependency profiles 6/6 with deterministic discovery/reports.
+
+### Work sizing inside B
+
+Work is selected by dependency closure, not raw header count. Each implementation wave
+combines as many related packages, API families, and user workflows as can share a
+truthful ownership contract and validation matrix. Tiny convenience methods are folded
+into the active wave. Different lifetime categories or optional external dependencies
+may be implemented and validated separately, but they do not create another batch.
+Every material wave records source packages/toolkits, stable IDs, tests, package impact,
+coverage change, and the next large workstream before work continues.
 
 ## Generated output partitioning
 
@@ -132,7 +141,7 @@ The same header may be available in several profiles. Coverage is always reporte
 the profile name; profile exclusions require stable reasons and do not disappear from the
 global catalog.
 
-## Per-batch required evidence
+## Required evidence for B and each material work wave
 
 - Deterministic discovery, generated source, coverage, and diagnostics.
 - No unclassified public declaration in the selected batch.
@@ -140,13 +149,15 @@ global catalog.
 - Focused ABI, runtime, ownership, failure, and disposal tests.
 - Generated-source freshness and `git diff --check`.
 - Clean NuGet consumer whenever public/runtime assets change.
-- Updated `STATUS.md`, this plan, topic documents, and ADRs for semantic changes.
+- Updated `STATUS.md` and this plan; only factually affected topic documents and ADRs.
 
-## Immediate execution order
+## Post-B execution boundary
 
-1. Execute B19.4 as a high-frequency Geom/Geom2d construction, evaluation, projection,
-   and advanced topology-map/history snapshot closure.
-2. Replace LT001-LT004 broad blockers with implemented enum/value/handle/borrowed-view
-   projection rules or narrow evidence-backed unsupported reasons.
-3. Re-run B20 evidence after B19 completion, then resolve license/notices/hosted-CI and
-   signing/publication scope gates without publishing absent explicit authority.
+1. Keep the completed local Batch B result separate from public release readiness; do
+   not convert legal, hosted-CI, signing, or publication gates to PASS.
+2. Before any public release, project owners must select the project license and complete
+   the non-OCCT third-party legal/notice review.
+3. Hosted CI, package signing, credentials, and NuGet publication require explicit
+   authorization and remain `NOT RUN`.
+4. Any future product-scale migration uses the next whole-letter batch only when its
+   scope is comparable; narrow API additions do not create dotted batches.

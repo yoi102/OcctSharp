@@ -29,6 +29,8 @@ public static partial class OcctInventory
         IReadOnlyList<string>? preambleHeaders = null,
         IReadOnlySet<string>? emittedStableIds = null,
         IReadOnlySet<string>? manualStableIds = null,
+        IReadOnlyDictionary<string, BindingSkipReason>? excludedBindings = null,
+        IReadOnlyDictionary<string, BindingSkipReason>? excludedPackages = null,
         Action<string>? progress = null)
     {
         if (batchSize < 1)
@@ -70,7 +72,9 @@ public static partial class OcctInventory
             batches,
             failures,
             emittedStableIds,
-            manualStableIds);
+            manualStableIds,
+            excludedBindings,
+            excludedPackages);
     }
 
     private static void DiscoverWithIsolation(
@@ -157,7 +161,9 @@ public static partial class OcctInventory
         IEnumerable<OcctInventoryBatch> batches,
         IEnumerable<OcctInventoryFailure> failures,
         IReadOnlySet<string>? emittedStableIds = null,
-        IReadOnlySet<string>? manualStableIds = null)
+        IReadOnlySet<string>? manualStableIds = null,
+        IReadOnlyDictionary<string, BindingSkipReason>? excludedBindings = null,
+        IReadOnlyDictionary<string, BindingSkipReason>? excludedPackages = null)
     {
         string[] scanned = successfulHeaders.Order(StringComparer.Ordinal).ToArray();
         BindingDeclaration[] declarationArray = declarations
@@ -191,7 +197,9 @@ public static partial class OcctInventory
                     scanned.ToHashSet(StringComparer.Ordinal),
                     failureArray,
                     emittedStableIds,
-                    manualStableIds)
+                    manualStableIds,
+                    excludedBindings,
+                    excludedPackages)
                 : null);
     }
 

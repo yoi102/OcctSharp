@@ -1,5 +1,6 @@
 using OcctSharp.Generator.Emission;
 using OcctSharp.Generator.Model;
+using OcctSharp.Generator.Transformation;
 
 namespace OcctSharp.Generator.Tests;
 
@@ -74,6 +75,47 @@ public sealed class EnumBindingEmitterTests
             EnumBindingEmitter.Emit("test", new BindingModel([enumDeclaration, method]), [method.StableId]));
 
         Assert.Contains("outside the verified 32-bit ABI range", error.Message, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void EmitsAnExplicitlySelectedStandaloneEnum()
+    {
+        BindingDeclaration enumDeclaration = new(
+            "enum:Standalone_Mode",
+            "Standalone_Mode",
+            BindingDeclarationKind.Enum,
+            "Standalone_Mode.hxx",
+            1,
+            1)
+        {
+            EnumUnderlyingType = "int",
+            EnumValues = [new BindingEnumValue("Standalone_Off", "0", false)],
+        };
+
+        GeneratedBindingSet result = EnumBindingEmitter.Emit(
+            "test",
+            new BindingModel([enumDeclaration]),
+            [enumDeclaration.StableId]);
+
+        Assert.Equal([enumDeclaration.StableId], result.SourceStableIds);
+        Assert.Contains("public enum StandaloneMode", Assert.Single(result.Files).Content, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void RejectsAnonymousEnumAsAStandaloneManagedType()
+    {
+        BindingDeclaration declaration = new(
+            "enum:anonymous",
+            "(unnamed enum at C:\\sdk\\Example.hxx:1:1)",
+            BindingDeclarationKind.Enum,
+            "Example.hxx",
+            1,
+            1)
+        {
+            EnumValues = [new BindingEnumValue("Example_Value", "0", false)],
+        };
+
+        Assert.False(EnumBindingEligibility.HasStableManagedTypeIdentity(declaration));
     }
 
     private static BindingType CreateEnumType(string name) => new(

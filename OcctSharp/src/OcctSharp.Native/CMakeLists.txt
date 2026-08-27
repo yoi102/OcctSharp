@@ -18,39 +18,68 @@ target_include_directories(OcctSharp.Native
   PUBLIC
     "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>")
 
-target_link_libraries(OcctSharp.Native
-  PRIVATE
-    TKernel
-    TKMath
-    TKG2d
-    TKG3d
-    TKGeomBase
-    TKBRep
-    TKGeomAlgo
-    TKTopAlgo
-    TKPrim
-    TKBO
-    TKFillet
-    TKOffset
-    TKMesh
-    TKShHealing
-    TKDESTEP
-    TKDEIGES
-    TKDESTL
-    TKDEOBJ
-    TKDEPLY
-    TKDEGLTF
-    TKDEVRML)
+set(OCCTSHARP_CORE_TOOLKITS
+  # FoundationClasses
+  TKernel
+  TKMath
+  # ModelingData
+  TKG2d
+  TKG3d
+  TKGeomBase
+  TKBRep
+  # ModelingAlgorithms
+  TKGeomAlgo
+  TKTopAlgo
+  TKPrim
+  TKBO
+  TKShHealing
+  TKBool
+  TKHLR
+  TKHelix
+  TKFillet
+  TKOffset
+  TKFeat
+  TKMesh
+  TKXMesh
+  TKExpress
+  # Supported Windows visualization closure. IVtk and OpenGL ES are isolated
+  # optional profiles and Draw/test toolkits are intentionally absent.
+  TKService
+  TKV3d
+  TKOpenGl
+  TKMeshVS
+  TKD3DHost
+  # ApplicationFramework
+  TKCDF
+  TKLCAF
+  TKCAF
+  TKBinL
+  TKXmlL
+  TKBin
+  TKXml
+  TKStdL
+  TKStd
+  TKTObj
+  TKBinTObj
+  TKXmlTObj
+  TKVCAF
+  # DataExchange
+  TKDE
+  TKXSBase
+  TKDESTEP
+  TKXCAF
+  TKDEIGES
+  TKDESTL
+  TKDEVRML
+  TKRWMesh
+  TKDECascade
+  TKBinXCAF
+  TKXmlXCAF
+  TKDEOBJ
+  TKDEGLTF
+  TKDEPLY)
 
-target_link_libraries(OcctSharp.Native
-  PRIVATE
-    TKXCAF
-    TKCDF
-    TKLCAF
-    TKCAF
-    TKBin
-    TKBinXCAF)
-target_link_libraries(OcctSharp.Native PRIVATE TKOpenGl)
+target_link_libraries(OcctSharp.Native PRIVATE ${OCCTSHARP_CORE_TOOLKITS})
 
 set_target_properties(OcctSharp.Native PROPERTIES
   OUTPUT_NAME "OcctSharp.Native"
@@ -58,44 +87,7 @@ set_target_properties(OcctSharp.Native PROPERTIES
   LIBRARY_OUTPUT_DIRECTORY "${OCCTSHARP_NATIVE_OUTPUT_DIR}/$<CONFIG>"
   ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/lib/$<CONFIG>")
 
-set(OCCTSHARP_RUNTIME_TARGETS
-  TKernel
-  TKMath
-  TKG2d
-  TKG3d
-  TKGeomBase
-  TKBRep
-  TKGeomAlgo
-  TKTopAlgo
-  TKPrim
-  TKFillet
-  TKOffset
-  TKMesh
-  TKShHealing
-  TKBO
-  TKBool
-  TKHLR
-  TKDE
-  TKXSBase
-  TKDESTEP
-  TKDEIGES
-  TKDESTL
-  TKDEOBJ
-  TKDEPLY
-  TKDEGLTF
-  TKDEVRML
-  TKRWMesh
-  TKXCAF
-  TKCDF
-  TKLCAF
-  TKCAF
-  TKBin
-  TKBinL
-  TKBinXCAF
-  TKOpenGl
-  TKVCAF
-  TKService
-  TKV3d)
+set(OCCTSHARP_RUNTIME_TARGETS ${OCCTSHARP_CORE_TOOLKITS})
 
 foreach(OCCT_TARGET IN LISTS OCCTSHARP_RUNTIME_TARGETS)
   add_custom_command(TARGET OcctSharp.Native POST_BUILD

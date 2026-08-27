@@ -27,6 +27,7 @@ returns remain unmapped until ownership and lifetime rules exist.
 
 | Native concept | ABI candidate | Managed candidate | Status |
 |---|---|---|---|
+| `void` return | `void` | `void` | Implemented (`TM000`, return-only no-value projection) |
 | `Standard_Integer` | `int32_t` after compile-time width verification | `int` | Implemented (`TM001`) |
 | `Standard_Real` | `double` after compile-time width verification | `double` | Implemented (`TM002`) |
 | `Standard_Boolean` | `int32_t`, normalized to 0 or 1 | raw `int`, friendly `bool` | Implemented (`TM003`) |
@@ -35,8 +36,8 @@ returns remain unmapped until ownership and lifetime rules exist.
 | OCCT string class | UTF-8 copy or opaque handle by use case | `string` or wrapper | Pending |
 | `Handle<T>` value | `OcctSharp_TransientHandle*` typed opaque shared wrapper | `SharedTransientHandle` plus generated public type | Implemented (`TM006`) for configured shared scopes |
 | `TopoDS_Shape` | Registered opaque wrapper owning one C++ value | `ShapeHandle` / `Shape` | Implemented (`TM007`) |
-| Common BRep builder/analyzer results | Registered owning `Shape`, fixed copied bounds, or copied scalar | `Shape`, `BoundingBox3d`, or `bool`/`int` | Manual B19.3 (`SC-032`) |
-| Typed `TopoDS_*` | Checked opaque topology value projection | Specialized topology wrappers | Implemented (`B04` / `ADR-0017`) |
+| Common BRep builder/analyzer results | Registered owning `Shape`, fixed copied bounds, or copied scalar | `Shape`, `BoundingBox3d`, or `bool`/`int` | Manual (`SC-032`) |
+| Typed `TopoDS_*` | Checked opaque topology value projection | Specialized topology wrappers | Implemented (`ADR-0017`) |
 | `gp_Pnt` | Explicit `OcctSharp_Point3d` X/Y/Z copy, never native layout | internal `Point3dRaw`; friendly `Point3d` pending | Implemented (`TM005`) for coordinate, default, and const-copy constructors |
 | `gp_Trsf` | Registry-validated opaque native value | `GpTrsf` owning wrapper | Manual B05 (`SC-005`) |
 | `TopLoc_Location` | Registry-validated opaque native value | `TopLocLocation` owning wrapper | Manual B05 (`SC-006`) |
@@ -65,7 +66,7 @@ The configured `TopAbs` static scope now exercises `TM004` end to end: enum para
 are converted from `int32_t` to the native enum before the C++ call, and enum returns are
 converted back to `int32_t` for the managed raw binding.
 
-B19.1 completes the managed side of `TM004`: the AST model records enum definitions,
+The generated StepBasic enum milestone completes the managed side of `TM004`: the AST model records enum definitions,
 explicit signed/unsigned values, and underlying types; the emitter writes typed public
 enums and rejects values outside the verified Int32 range. Canonical qualified names and
 unique unqualified spellings map to the same managed type, which covers nested
@@ -100,18 +101,32 @@ type, generation fails with both source locations and rule IDs. A context-specif
 mapping requires an explicit rule and documentation rather than accidental emitter
 behavior.
 
-B19.2 keeps `TM004` enum and `TM006` intrusive shared-handle semantics unchanged while
+The package-level StepBasic milestone keeps `TM004` enum and `TM006` intrusive shared-handle semantics unchanged while
 generalizing selection. Schema 1.5 header patterns discover the complete StepBasic
 header family, and the package scope expands only records proven to derive from
 `Standard_Transient` with a supported public default construction path. Unknown
 parameters, returns, borrowed references, and non-default-constructible entities remain
 classified rather than receiving an invented mapping.
 
-B19.3 adds no general TypeMap. Schema 1.6 instead records 18 audited algorithm declarations
+The Geom/Geom2d package expansion uses the same `TM004`, `TM005`, and `TM006` rules.
+Package selection emits only `Standard_Transient` descendants with a supported public
+constructor; instance methods require value/void returns and value-copy parameters.
+This produces 67 additional generated stable IDs without adding a pointer, reference,
+borrowed-view, or layout projection.
+
+The common-modeling milestone adds no general TypeMap. Schema 1.6 instead records 18 audited algorithm declarations
 as `Manual/MN001`. `TopoDS_Shape` results reuse TM007-compatible registered owners,
 `gp_Vec`/`gp_Ax1` inputs reuse the existing opaque values for call-bound borrowing, and
 the six-double bounding structure is a dedicated value-copy contract. Builder/history,
-edge-map, progress, and analyzer layouts remain unmapped.
+  edge-map, progress, and analyzer layouts remain unmapped.
+
+The alpha.45 STEP model expansion reuses TM006 for concrete `StepGeom_*`, `StepRepr_*`,
+`StepShape_*`, and `StepVisual_*` records. Alpha.46 extends TM006 to method parameters and
+returns when the target is another selected generated `Standard_Transient` wrapper.
+Parameters are nullable, target-registry-validated opaque tokens; results are nullable
+independent retained wrappers. Package expansion still requires an independently supported
+value-copy constructor, so a type cannot enter the selected scope solely because its
+constructor depends on another handle.
 
 ## Change process
 
