@@ -11,8 +11,8 @@ public sealed class RuntimeTests
     {
         OcctRuntimeInfo info = OcctRuntime.Info;
 
-        Assert.Equal(new Version(1, 41), info.AbiVersion);
-        Assert.Equal("0.49.0", info.BridgeVersion);
+        Assert.Equal(new Version(1, 42), info.AbiVersion);
+        Assert.Equal("0.50.0", info.BridgeVersion);
         Assert.Equal("8.0.1", info.OcctVersion);
     }
 
@@ -591,6 +591,100 @@ public sealed class RuntimeTests
     }
 
     [Fact]
+    public void CommonCadWaveRunsBrepInspectModifyMeshXdeAndStepEndToEnd()
+    {
+        WithTemporaryDirectory(directory =>
+        {
+            string brepPath = Path.Combine(directory, "common-wave.brep");
+            string stepPath = Path.Combine(directory, "common-wave.step");
+            using Shape source = ShapeFactory.CreateBox(20, 30, 40);
+            ShapeTopologySummary sourceSummary = source.GetTopologySummary();
+            Assert.True(sourceSummary.IsClosed);
+            Assert.True(sourceSummary.IsValid);
+            Assert.Equal(8, sourceSummary.UniqueCounts.VertexCount);
+            Assert.Equal(12, sourceSummary.UniqueCounts.EdgeCount);
+            Assert.Equal(6, sourceSummary.UniqueCounts.FaceCount);
+            Assert.Equal(1, sourceSummary.UniqueCounts.SolidCount);
+            Assert.True(sourceSummary.VertexTolerance.Maximum >= sourceSummary.VertexTolerance.Minimum);
+            Assert.True(sourceSummary.EdgeTolerance.Maximum >= sourceSummary.EdgeTolerance.Minimum);
+            Assert.True(sourceSummary.FaceTolerance.Maximum >= sourceSummary.FaceTolerance.Minimum);
+
+            using Shape chamfered = source.Chamfer(1.5);
+            using Shape moved = chamfered.Transformed(
+                ShapeTransform.CreateTranslationAndRotationZ(5, 7, 11, 15));
+            Assert.Equal(brepPath, ShapeExchange.WriteBrep(moved, brepPath));
+            using Shape restored = ShapeExchange.ReadBrep(brepPath);
+            ShapeTopologySummary restoredSummary = restored.GetTopologySummary();
+            Assert.True(restoredSummary.IsClosed);
+            Assert.True(restoredSummary.IsValid);
+            Assert.Equal(restoredSummary.UniqueCounts.FaceCount, restored.FaceCount);
+            Assert.True(restoredSummary.UniqueCounts.FaceCount > sourceSummary.UniqueCounts.FaceCount);
+
+            DetailedMeshSnapshot mesh = restored.CreateDetailedMesh(0.25, 0.35);
+            Assert.Equal(restored.FaceCount, mesh.FaceCount);
+            Assert.NotEmpty(mesh.Vertices);
+            Assert.NotEmpty(mesh.Triangles);
+            Assert.True(mesh.HasUv);
+            Assert.All(mesh.Vertices, vertex =>
+            {
+                double magnitude = Math.Sqrt(
+                    vertex.NormalX * vertex.NormalX
+                    + vertex.NormalY * vertex.NormalY
+                    + vertex.NormalZ * vertex.NormalZ);
+                Assert.Equal(1.0, magnitude, 8);
+            });
+            Assert.All(mesh.Triangles, triangle =>
+            {
+                Assert.InRange(triangle.VertexA, 0, mesh.Vertices.Count - 1);
+                Assert.InRange(triangle.VertexB, 0, mesh.Vertices.Count - 1);
+                Assert.InRange(triangle.VertexC, 0, mesh.Vertices.Count - 1);
+                Assert.InRange(triangle.FaceIndex, 0, mesh.FaceCount - 1);
+            });
+
+            using (XdeDocument document = XdeDocument.Create())
+            {
+                using XdeTransaction transaction = document.BeginTransaction();
+                XdeLabel partLabel = document.AddPart(chamfered, new XdePartMetadata(
+                    "Common Wave Part",
+                    new XdeColor(0.15, 0.35, 0.75, 1),
+                    ["Mechanical", "Purchased"],
+                    new XdeMaterial("Steel", "Structural steel", 7.85, "Density", "g/cm3")));
+                Assert.Equal(["Mechanical", "Purchased"], partLabel.Layers);
+                Assert.Equal("Steel", partLabel.Material?.Name);
+                Assert.Equal(0.15, Assert.IsType<XdeColor>(partLabel.Color).Red, 6);
+                XdeLabel assembly = document.AddAssembly("Common Wave Assembly");
+                using TopLocLocation identity = TopLocLocation.Identity;
+                _ = document.AddComponent(assembly, partLabel, identity);
+                Assert.True(transaction.Commit());
+                Assert.Equal(stepPath, document.WriteStep(stepPath));
+            }
+
+            using XdeDocument imported = XdeDocument.ReadStep(stepPath);
+            XdeLabel importedAssembly = Assert.Single(imported.GetFreeShapes());
+            XdeLabel importedOccurrence = Assert.Single(importedAssembly.GetComponents());
+            XdeLabel part = importedOccurrence.ReferredShape;
+            Assert.Equal("Common Wave Part", part.Name);
+            Assert.Contains("Mechanical", part.Layers.Concat(importedOccurrence.Layers));
+            Assert.Contains("Purchased", part.Layers.Concat(importedOccurrence.Layers));
+            Assert.Equal("Steel", (part.Material ?? importedOccurrence.Material)?.Name);
+            XdeColor color = Assert.IsType<XdeColor>(part.Color ?? importedOccurrence.Color);
+            Assert.Equal(0.15, color.Red, 6);
+            using Shape importedShape = part.Shape;
+            Assert.True(importedShape.GetTopologySummary().IsValid);
+            Assert.NotEmpty(importedShape.CreateDetailedMesh().Triangles);
+        });
+    }
+
+    [Fact]
+    public void CommonCadWaveAbiLayoutsAreStable()
+    {
+        Assert.Equal(32, Marshal.SizeOf<TopologyCountsRaw>());
+        Assert.Equal(120, Marshal.SizeOf<ShapeTopologySummaryRaw>());
+        Assert.Equal(72, Marshal.SizeOf<DetailedMeshVertexRaw>());
+        Assert.Equal(20, Marshal.SizeOf<DetailedMeshTriangleRaw>());
+    }
+
+    [Fact]
     public void ViewerOwnsPresentationsEnforcesThreadAndProducesSelectionSnapshots()
     {
         nint window = NativeWindowMethods.CreateWindowEx(
@@ -606,9 +700,19 @@ public sealed class RuntimeTests
             ViewerPresentation presentation = viewer.Display(box);
             box.Dispose();
 
+            presentation.SetColor(new ViewerColor(0.2, 0.4, 0.8));
+            presentation.SetTransparency(0.25);
+            presentation.SetDisplayMode(ViewerDisplayMode.Wireframe);
+            presentation.SetDisplayMode(ViewerDisplayMode.Shaded);
+            Assert.Throws<ArgumentOutOfRangeException>(() => presentation.SetColor(new ViewerColor(-1, 0, 0)));
             presentation.Hide();
             presentation.Show();
             viewer.Resize();
+            viewer.SetProjection(ViewerProjection.Front);
+            viewer.SetProjection(ViewerProjection.Top);
+            viewer.SetProjection(ViewerProjection.Axonometric);
+            viewer.Zoom(1.1);
+            viewer.Pan(8, -4);
             viewer.FitAll();
             viewer.Redraw();
             Exception? threadError = null;
@@ -624,6 +728,12 @@ public sealed class RuntimeTests
             Assert.True(viewer.MoveTo(128, 128));
             Assert.Contains(presentation, viewer.SelectAt(128, 128));
             Assert.Contains(presentation, viewer.GetSelection());
+            viewer.ClearSelection();
+            Assert.Empty(viewer.GetSelection());
+            Assert.Contains(presentation, viewer.SelectAt(128, 128, ViewerSelectionMode.Add));
+            Assert.Empty(viewer.SelectAt(128, 128, ViewerSelectionMode.Remove));
+            Assert.Contains(presentation, viewer.SelectAt(128, 128, ViewerSelectionMode.Toggle));
+            Assert.Empty(viewer.SelectAt(128, 128, ViewerSelectionMode.Toggle));
 
             presentation.Dispose();
             Assert.Throws<ObjectDisposedException>(presentation.Hide);

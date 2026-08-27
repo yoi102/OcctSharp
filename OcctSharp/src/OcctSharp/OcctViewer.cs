@@ -57,6 +57,29 @@ public sealed class OcctViewer : IDisposable
         NativeError.ThrowIfFailed(NativeMethods.ResizeViewer(Handle), "viewer_resize");
     }
 
+    /// <summary>Sets one of the standard Z-up camera projections.</summary>
+    public void SetProjection(ViewerProjection projection)
+    {
+        if (!Enum.IsDefined(projection)) throw new ArgumentOutOfRangeException(nameof(projection));
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.SetViewerProjection(Handle, (int)projection), "viewer_set_projection");
+    }
+
+    /// <summary>Applies a positive zoom factor relative to the current interaction start.</summary>
+    public void Zoom(double factor)
+    {
+        if (!double.IsFinite(factor) || factor <= 0) throw new ArgumentOutOfRangeException(nameof(factor));
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.ZoomViewer(Handle, factor), "viewer_zoom");
+    }
+
+    /// <summary>Pans the view by client pixels.</summary>
+    public void Pan(int deltaX, int deltaY)
+    {
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.PanViewer(Handle, deltaX, deltaY), "viewer_pan");
+    }
+
     /// <summary>Updates dynamic detection from client pixel coordinates.</summary>
     public bool MoveTo(int x, int y)
     {
@@ -71,6 +94,24 @@ public sealed class OcctViewer : IDisposable
         EnsureThread();
         NativeError.ThrowIfFailed(NativeMethods.SelectViewerAt(Handle, x, y, out _), "viewer_select_at");
         return GetSelection();
+    }
+
+    /// <summary>Selects using replace, add, remove, or toggle semantics.</summary>
+    public IReadOnlyList<ViewerPresentation> SelectAt(int x, int y, ViewerSelectionMode mode)
+    {
+        if (!Enum.IsDefined(mode)) throw new ArgumentOutOfRangeException(nameof(mode));
+        EnsureThread();
+        NativeError.ThrowIfFailed(
+            NativeMethods.SelectViewerAtMode(Handle, x, y, (int)mode, out _),
+            "viewer_select_at_mode");
+        return GetSelection();
+    }
+
+    /// <summary>Clears the current selection without forcing a redraw.</summary>
+    public void ClearSelection()
+    {
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.ClearViewerSelection(Handle), "viewer_clear_selection");
     }
 
     /// <summary>Returns a copied snapshot of selected managed presentations.</summary>
@@ -104,6 +145,34 @@ public sealed class OcctViewer : IDisposable
         NativeError.ThrowIfFailed(
             NativeMethods.SetViewerPresentationVisible(Handle, presentation.Id, visible ? 1 : 0),
             "viewer_set_presentation_visible");
+    }
+
+    internal void SetColor(ViewerPresentation presentation, ViewerColor color)
+    {
+        color.Validate();
+        EnsurePresentation(presentation);
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerPresentationColor(Handle, presentation.Id, color.Red, color.Green, color.Blue),
+            "viewer_set_presentation_color");
+    }
+
+    internal void SetTransparency(ViewerPresentation presentation, double transparency)
+    {
+        if (!double.IsFinite(transparency) || transparency is < 0 or > 1)
+            throw new ArgumentOutOfRangeException(nameof(transparency));
+        EnsurePresentation(presentation);
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerPresentationTransparency(Handle, presentation.Id, transparency),
+            "viewer_set_presentation_transparency");
+    }
+
+    internal void SetDisplayMode(ViewerPresentation presentation, ViewerDisplayMode displayMode)
+    {
+        if (!Enum.IsDefined(displayMode)) throw new ArgumentOutOfRangeException(nameof(displayMode));
+        EnsurePresentation(presentation);
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerPresentationDisplayMode(Handle, presentation.Id, (int)displayMode),
+            "viewer_set_presentation_display_mode");
     }
 
     internal void Remove(ViewerPresentation presentation)

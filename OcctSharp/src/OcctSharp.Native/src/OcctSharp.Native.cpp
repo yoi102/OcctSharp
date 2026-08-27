@@ -8,6 +8,7 @@
 #include <BRepBuilderAPI_MakePolygon.hxx>
 #include <BRepBuilderAPI_Sewing.hxx>
 #include <BRep_Tool.hxx>
+#include <BRepTools.hxx>
 #include <BRepMesh_IncrementalMesh.hxx>
 #include <BRepPrimAPI_MakeBox.hxx>
 #include <BRepPrimAPI_MakeSphere.hxx>
@@ -43,6 +44,7 @@
 #include <Geom_Curve.hxx>
 #include <Geom_Surface.hxx>
 #include <AIS_InteractiveContext.hxx>
+#include <AIS_SelectionScheme.hxx>
 #include <AIS_Shape.hxx>
 #include <Aspect_DisplayConnection.hxx>
 #include <BinDrivers.hxx>
@@ -102,6 +104,7 @@
 #include <Poly_Triangulation.hxx>
 #include <Poly_Triangle.hxx>
 #include <Quantity_ColorRGBA.hxx>
+#include <Quantity_Color.hxx>
 #include <TCollection_HAsciiString.hxx>
 #include <XCAFDoc_ColorTool.hxx>
 #include <XCAFDoc_DocumentTool.hxx>
@@ -112,11 +115,13 @@
 #include <XCAFDoc_VisMaterial.hxx>
 #include <XCAFDoc.hxx>
 #include <V3d_View.hxx>
+#include <V3d_TypeOfOrientation.hxx>
 #include <V3d_Viewer.hxx>
 #include <WNT_Window.hxx>
 #include <gp_Ax1.hxx>
 #include <gp_Dir.hxx>
 #include <gp_Pnt.hxx>
+#include <gp_Pnt2d.hxx>
 #include <gp_Trsf.hxx>
 #include <gp_Vec.hxx>
 #include <gp_Mat.hxx>
@@ -128,6 +133,7 @@
 #include <gp_Ax3.hxx>
 #include <gp_Pln.hxx>
 
+#include <algorithm>
 #include <cmath>
 #include <cstddef>
 #include <cstring>
@@ -186,6 +192,17 @@ static_assert(alignof(OcctSharp_BoundingBox) == 8);
 static_assert(offsetof(OcctSharp_BoundingBox, min_x) == 0);
 static_assert(offsetof(OcctSharp_BoundingBox, max_x) == 24);
 static_assert(sizeof(OcctSharp_XdeColor) == 32);
+static_assert(sizeof(OcctSharp_TopologyCounts) == 32);
+static_assert(sizeof(OcctSharp_ShapeTopologySummary) == 120);
+static_assert(alignof(OcctSharp_ShapeTopologySummary) == 8);
+static_assert(offsetof(OcctSharp_ShapeTopologySummary, unique_counts) == 0);
+static_assert(offsetof(OcctSharp_ShapeTopologySummary, occurrence_counts) == 32);
+static_assert(offsetof(OcctSharp_ShapeTopologySummary, is_closed) == 64);
+static_assert(offsetof(OcctSharp_ShapeTopologySummary, min_vertex_tolerance) == 72);
+static_assert(sizeof(OcctSharp_DetailedMeshVertex) == 72);
+static_assert(alignof(OcctSharp_DetailedMeshVertex) == 8);
+static_assert(offsetof(OcctSharp_DetailedMeshVertex, has_uv) == 64);
+static_assert(sizeof(OcctSharp_DetailedMeshTriangle) == 20);
 static_assert(alignof(OcctSharp_ShapeDistanceResult) == 8);
 static_assert(offsetof(OcctSharp_ShapeDistanceResult, distance) == 0);
 static_assert(offsetof(OcctSharp_ShapeDistanceResult, point_on_first) == 8);
@@ -273,8 +290,8 @@ struct OcctSharp_ViewerHandle
 
 namespace
 {
-constexpr uint32_t AbiVersion = 0x00010029U;
-constexpr const char* BridgeVersion = "0.49.0";
+constexpr uint32_t AbiVersion = 0x0001002AU;
+constexpr const char* BridgeVersion = "0.50.0";
 thread_local std::string LastError;
 std::mutex LiveShapesMutex;
 std::unordered_set<const OcctSharp_ShapeHandle*> LiveShapes;
@@ -656,6 +673,83 @@ struct MeshData
   std::vector<int32_t> Indices;
 };
 
+int32_t CheckedTopologyCount(const TopoDS_Shape& shape, const TopAbs_ShapeEnum kind, const bool unique)
+{
+  size_t count = 0;
+  if (unique)
+  {
+    NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> shapes;
+    TopExp::MapShapes(shape, kind, shapes);
+    count = static_cast<size_t>(shapes.Extent());
+  }
+  else
+  {
+    if (shape.ShapeType() == kind) ++count;
+    for (TopExp_Explorer explorer(shape, kind); explorer.More(); explorer.Next()) ++count;
+  }
+  if (count > static_cast<size_t>(std::numeric_limits<int32_t>::max()))
+  {
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The topology count exceeds the 32-bit ABI.");
+  }
+  return static_cast<int32_t>(count);
+}
+
+OcctSharp_TopologyCounts BuildTopologyCounts(const TopoDS_Shape& shape, const bool unique)
+{
+  return {
+    CheckedTopologyCount(shape, TopAbs_VERTEX, unique),
+    CheckedTopologyCount(shape, TopAbs_EDGE, unique),
+    CheckedTopologyCount(shape, TopAbs_WIRE, unique),
+    CheckedTopologyCount(shape, TopAbs_FACE, unique),
+    CheckedTopologyCount(shape, TopAbs_SHELL, unique),
+    CheckedTopologyCount(shape, TopAbs_SOLID, unique),
+    CheckedTopologyCount(shape, TopAbs_COMPSOLID, unique),
+    CheckedTopologyCount(shape, TopAbs_COMPOUND, unique)
+  };
+}
+
+void BuildToleranceRange(
+  const TopoDS_Shape& shape,
+  const TopAbs_ShapeEnum kind,
+  double& minimum,
+  double& maximum)
+{
+  NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> shapes;
+  TopExp::MapShapes(shape, kind, shapes);
+  minimum = 0.0;
+  maximum = 0.0;
+  if (shapes.IsEmpty()) return;
+
+  minimum = std::numeric_limits<double>::infinity();
+  for (int32_t index = 1; index <= shapes.Extent(); ++index)
+  {
+    const TopoDS_Shape& item = shapes(index);
+    double tolerance = 0.0;
+    switch (kind)
+    {
+      case TopAbs_VERTEX: tolerance = BRep_Tool::Tolerance(TopoDS::Vertex(item)); break;
+      case TopAbs_EDGE: tolerance = BRep_Tool::Tolerance(TopoDS::Edge(item)); break;
+      case TopAbs_FACE: tolerance = BRep_Tool::Tolerance(TopoDS::Face(item)); break;
+      default: throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Tolerance is available only for vertices, edges, and faces.");
+    }
+    minimum = std::min(minimum, tolerance);
+    maximum = std::max(maximum, tolerance);
+  }
+}
+
+bool IsTopologyClosed(const TopoDS_Shape& shape)
+{
+  NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> shells;
+  TopExp::MapShapes(shape, TopAbs_SHELL, shells);
+  if (!shells.IsEmpty())
+  {
+    for (int32_t index = 1; index <= shells.Extent(); ++index)
+      if (!BRep_Tool::IsClosed(shells(index))) return false;
+    return true;
+  }
+  return BRep_Tool::IsClosed(shape);
+}
+
 MeshData BuildMesh(const OcctSharp_ShapeHandle* shape,
                    const double linear_deflection,
                    const double angular_deflection)
@@ -717,6 +811,78 @@ MeshData BuildMesh(const OcctSharp_ShapeHandle* shape,
       {
         data.Indices.insert(data.Indices.end(), {base, base + 1, base + 2});
       }
+    }
+  }
+  return data;
+}
+
+struct DetailedMeshData
+{
+  std::vector<OcctSharp_DetailedMeshVertex> Vertices;
+  std::vector<OcctSharp_DetailedMeshTriangle> Triangles;
+  int32_t FaceCount = 0;
+};
+
+DetailedMeshData BuildDetailedMesh(
+  const OcctSharp_ShapeHandle* shape,
+  const double linear_deflection,
+  const double angular_deflection)
+{
+  ValidateUsableShape(shape);
+  ValidateMeshParameters(linear_deflection, angular_deflection);
+  BRepMesh_IncrementalMesh mesher(shape->Value, linear_deflection, false, angular_deflection, true);
+  DetailedMeshData data;
+  for (TopExp_Explorer explorer(shape->Value, TopAbs_FACE); explorer.More(); explorer.Next())
+  {
+    if (data.FaceCount == std::numeric_limits<int32_t>::max())
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The face count exceeds the 32-bit ABI.");
+    const int32_t faceIndex = data.FaceCount++;
+    const TopoDS_Face face = TopoDS::Face(explorer.Current());
+    TopLoc_Location location;
+    opencascade::handle<Poly_Triangulation> triangulation = BRep_Tool::Triangulation(face, location);
+    if (triangulation.IsNull()) continue;
+    if (!triangulation->HasNormals()) triangulation->ComputeNormals();
+
+    const size_t baseValue = data.Vertices.size();
+    if (baseValue + static_cast<size_t>(triangulation->NbNodes())
+        > static_cast<size_t>(std::numeric_limits<int32_t>::max()))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The detailed mesh exceeds the 32-bit ABI.");
+    const int32_t base = static_cast<int32_t>(baseValue);
+    const gp_Trsf locationTransform = location.Transformation();
+    const bool isReversed = face.Orientation() == TopAbs_REVERSED;
+    const bool hasUv = triangulation->HasUVNodes();
+    for (int32_t nodeIndex = 1; nodeIndex <= triangulation->NbNodes(); ++nodeIndex)
+    {
+      gp_Pnt point = triangulation->Node(nodeIndex);
+      point.Transform(locationTransform);
+      gp_Dir normal = triangulation->Normal(nodeIndex);
+      normal.Transform(locationTransform);
+      if (isReversed) normal.Reverse();
+      double u = 0.0;
+      double v = 0.0;
+      if (hasUv)
+      {
+        const gp_Pnt2d uv = triangulation->UVNode(nodeIndex);
+        u = uv.X();
+        v = uv.Y();
+      }
+      data.Vertices.push_back({
+        point.X(), point.Y(), point.Z(),
+        normal.X(), normal.Y(), normal.Z(),
+        u, v, hasUv ? 1 : 0 });
+    }
+
+    for (int32_t triangleIndex = 1; triangleIndex <= triangulation->NbTriangles(); ++triangleIndex)
+    {
+      int node1 = 0;
+      int node2 = 0;
+      int node3 = 0;
+      triangulation->Triangle(triangleIndex).Get(node1, node2, node3);
+      int32_t vertexA = base + node1 - 1;
+      int32_t vertexB = base + node2 - 1;
+      int32_t vertexC = base + node3 - 1;
+      if (isReversed) std::swap(vertexB, vertexC);
+      data.Triangles.push_back({ vertexA, vertexB, vertexC, faceIndex, isReversed ? 1 : 0 });
     }
   }
   return data;
@@ -2362,6 +2528,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_is_valid(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_topology_summary(
+  const OcctSharp_ShapeHandle* shape, OcctSharp_ShapeTopologySummary* out_summary)
+{
+  if (out_summary == nullptr)
+  {
+    SetLastError("The topology-summary output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_summary = {};
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    out_summary->unique_counts = BuildTopologyCounts(shape->Value, true);
+    out_summary->occurrence_counts = BuildTopologyCounts(shape->Value, false);
+    out_summary->is_closed = IsTopologyClosed(shape->Value) ? 1 : 0;
+    BRepCheck_Analyzer analyzer(shape->Value);
+    out_summary->is_valid = analyzer.IsValid() ? 1 : 0;
+    BuildToleranceRange(shape->Value, TopAbs_VERTEX,
+      out_summary->min_vertex_tolerance, out_summary->max_vertex_tolerance);
+    BuildToleranceRange(shape->Value, TopAbs_EDGE,
+      out_summary->min_edge_tolerance, out_summary->max_edge_tolerance);
+    BuildToleranceRange(shape->Value, TopAbs_FACE,
+      out_summary->min_face_tolerance, out_summary->max_face_tolerance);
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_boolean_fuse(
   const OcctSharp_ShapeHandle* left, const OcctSharp_ShapeHandle* right,
   OcctSharp_ShapeHandle** out_shape)
@@ -2623,6 +2815,97 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_mesh_snapshot(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_detailed_mesh_count(
+  const OcctSharp_ShapeHandle* shape,
+  const double linear_deflection,
+  const double angular_deflection,
+  int32_t* out_vertex_count,
+  int32_t* out_triangle_count,
+  int32_t* out_face_count)
+{
+  if (out_vertex_count == nullptr || out_triangle_count == nullptr || out_face_count == nullptr)
+  {
+    SetLastError("A detailed-mesh count output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_vertex_count = 0;
+  *out_triangle_count = 0;
+  *out_face_count = 0;
+  return Guard([&]
+  {
+    DetailedMeshData data = BuildDetailedMesh(shape, linear_deflection, angular_deflection);
+    if (data.Vertices.size() > static_cast<size_t>(std::numeric_limits<int32_t>::max())
+        || data.Triangles.size() > static_cast<size_t>(std::numeric_limits<int32_t>::max()))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The detailed mesh exceeds the 32-bit ABI.");
+    *out_vertex_count = static_cast<int32_t>(data.Vertices.size());
+    *out_triangle_count = static_cast<int32_t>(data.Triangles.size());
+    *out_face_count = data.FaceCount;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_detailed_mesh_snapshot(
+  const OcctSharp_ShapeHandle* shape,
+  const double linear_deflection,
+  const double angular_deflection,
+  OcctSharp_DetailedMeshVertex* vertices,
+  const int32_t vertex_capacity,
+  int32_t* out_vertex_count,
+  OcctSharp_DetailedMeshTriangle* triangles,
+  const int32_t triangle_capacity,
+  int32_t* out_triangle_count,
+  int32_t* out_face_count)
+{
+  if (out_vertex_count == nullptr || out_triangle_count == nullptr || out_face_count == nullptr)
+  {
+    SetLastError("A detailed-mesh snapshot count output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_vertex_count = 0;
+  *out_triangle_count = 0;
+  *out_face_count = 0;
+  if (vertex_capacity < 0 || triangle_capacity < 0
+      || (vertex_capacity > 0 && vertices == nullptr)
+      || (triangle_capacity > 0 && triangles == nullptr))
+  {
+    SetLastError("The detailed-mesh snapshot capacity or output buffer is invalid.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  return Guard([&]
+  {
+    DetailedMeshData data = BuildDetailedMesh(shape, linear_deflection, angular_deflection);
+    *out_vertex_count = static_cast<int32_t>(data.Vertices.size());
+    *out_triangle_count = static_cast<int32_t>(data.Triangles.size());
+    *out_face_count = data.FaceCount;
+    if (vertex_capacity < *out_vertex_count || triangle_capacity < *out_triangle_count)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The detailed-mesh snapshot buffer is too small.");
+    if (*out_vertex_count > 0)
+      std::memcpy(vertices, data.Vertices.data(), data.Vertices.size() * sizeof(OcctSharp_DetailedMeshVertex));
+    if (*out_triangle_count > 0)
+      std::memcpy(triangles, data.Triangles.data(), data.Triangles.size() * sizeof(OcctSharp_DetailedMeshTriangle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_brep(
+  const char* file_path,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr)
+  {
+    SetLastError("The BREP output shape pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_shape = nullptr;
+  return Guard([&]
+  {
+    ValidatePath(file_path);
+    BRep_Builder builder;
+    TopoDS_Shape shape;
+    if (!BRepTools::Read(shape, file_path, builder) || shape.IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not read the BREP file.");
+    *out_shape = AllocateShape(std::move(shape));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_step(
   const char* file_path,
   OcctSharp_ShapeHandle** out_shape)
@@ -2775,6 +3058,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_write_step(
     {
       throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not write the STEP file.");
     }
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_write_brep(
+  const OcctSharp_ShapeHandle* shape,
+  const char* file_path)
+{
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    ValidatePath(file_path);
+    if (!BRepTools::Write(shape->Value, file_path))
+      throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not write the BREP file.");
   });
 }
 
@@ -5059,6 +5355,33 @@ opencascade::handle<AIS_Shape> FindPresentation(
   }
   return iterator->second;
 }
+
+V3d_TypeOfOrientation ToViewerProjection(const int32_t projection)
+{
+  switch (projection)
+  {
+    case 0: return V3d_TypeOfOrientation_Zup_Front;
+    case 1: return V3d_TypeOfOrientation_Zup_Back;
+    case 2: return V3d_TypeOfOrientation_Zup_Top;
+    case 3: return V3d_TypeOfOrientation_Zup_Bottom;
+    case 4: return V3d_TypeOfOrientation_Zup_Left;
+    case 5: return V3d_TypeOfOrientation_Zup_Right;
+    case 6: return V3d_TypeOfOrientation_Zup_AxoRight;
+    default: throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The viewer projection is outside the supported range.");
+  }
+}
+
+AIS_SelectionScheme ToSelectionScheme(const int32_t selectionMode)
+{
+  switch (selectionMode)
+  {
+    case 0: return AIS_SelectionScheme_Replace;
+    case 1: return AIS_SelectionScheme_Add;
+    case 2: return AIS_SelectionScheme_Remove;
+    case 3: return AIS_SelectionScheme_XOR;
+    default: throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The viewer selection mode is outside the supported range.");
+  }
+}
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_create(
@@ -5129,6 +5452,63 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_visible(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_color(
+  OcctSharp_ViewerHandle* viewer,
+  const int64_t presentation_id,
+  const double red,
+  const double green,
+  const double blue)
+{
+  if (!std::isfinite(red) || !std::isfinite(green) || !std::isfinite(blue)
+      || red < 0.0 || red > 1.0 || green < 0.0 || green > 1.0 || blue < 0.0 || blue > 1.0)
+  {
+    SetLastError("Viewer RGB components must be finite values in the inclusive range 0 to 1.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const opencascade::handle<AIS_Shape> presentation = FindPresentation(viewer, presentation_id);
+    viewer->Context->SetColor(presentation, Quantity_Color(red, green, blue, Quantity_TOC_RGB), false);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_transparency(
+  OcctSharp_ViewerHandle* viewer,
+  const int64_t presentation_id,
+  const double transparency)
+{
+  if (!std::isfinite(transparency) || transparency < 0.0 || transparency > 1.0)
+  {
+    SetLastError("Viewer transparency must be a finite value in the inclusive range 0 to 1.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const opencascade::handle<AIS_Shape> presentation = FindPresentation(viewer, presentation_id);
+    viewer->Context->SetTransparency(presentation, transparency, false);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_display_mode(
+  OcctSharp_ViewerHandle* viewer,
+  const int64_t presentation_id,
+  const int32_t display_mode)
+{
+  if (display_mode < 0 || display_mode > 1)
+  {
+    SetLastError("Viewer display mode must be wireframe or shaded.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const opencascade::handle<AIS_Shape> presentation = FindPresentation(viewer, presentation_id);
+    viewer->Context->SetDisplayMode(presentation, display_mode, false);
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_remove_presentation(
   OcctSharp_ViewerHandle* viewer,
   const int64_t presentation_id)
@@ -5166,6 +5546,45 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_resize(OcctSharp_ViewerHandle* 
   {
     ValidateViewerThread(viewer);
     viewer->View->MustBeResized();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_projection(
+  OcctSharp_ViewerHandle* viewer,
+  const int32_t projection)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->View->SetProj(ToViewerProjection(projection));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_zoom(
+  OcctSharp_ViewerHandle* viewer,
+  const double factor)
+{
+  if (!std::isfinite(factor) || factor <= 0.0)
+  {
+    SetLastError("Viewer zoom factor must be finite and greater than zero.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->View->SetZoom(factor, true);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_pan(
+  OcctSharp_ViewerHandle* viewer,
+  const int32_t delta_x,
+  const int32_t delta_y)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->View->Pan(delta_x, delta_y, 1.0, true);
   });
 }
 
@@ -5207,6 +5626,38 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_select_at(
     viewer->Context->MoveTo(x, y, viewer->View, false);
     viewer->Context->SelectDetected(AIS_SelectionScheme_Replace);
     *selected_count = viewer->Context->NbSelected();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_select_at_mode(
+  OcctSharp_ViewerHandle* viewer,
+  const int32_t x,
+  const int32_t y,
+  const int32_t selection_mode,
+  int32_t* selected_count)
+{
+  if (selected_count == nullptr)
+  {
+    SetLastError("The viewer selected-count output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *selected_count = 0;
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->Context->MoveTo(x, y, viewer->View, false);
+    viewer->Context->SelectDetected(ToSelectionScheme(selection_mode));
+    *selected_count = viewer->Context->NbSelected();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_clear_selection(
+  OcctSharp_ViewerHandle* viewer)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->Context->ClearSelected(false);
   });
 }
 

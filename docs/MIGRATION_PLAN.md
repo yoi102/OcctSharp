@@ -74,7 +74,7 @@ forbidden.
 | Batch | Status | Completed evidence | Remaining exit conditions |
 |---|---|---|---|
 | B | Complete (local implementation) | Reproducible .NET 10/native foundation; deterministic generation; safe value, shared, topology, document, metadata, exchange, modeling, mesh, and visualization profiles; 16,353 emitted plus 61 manual stable IDs; zero supported-unselected/LT001-LT004; complete observed classification; Release/Debug/runtime, 13-file freshness, byte-identical clean regeneration, 62-DLL package consumer, compatibility, provenance/SBOM/checksum, and local release gates passing | None inside Batch B. Signing credentials and NuGet publication remain independent release-readiness gates |
-| C — Common CAD API Expansion | Active; implementation not started | ADR-0060 fixes the priority, large-wave sizing, common workflow matrix, and validation cadence | Deliver the complete high-frequency model/inspect, build/modify/deliver, and present/interact workflow contract below; pass focused evidence per family and one complete validation chain per large wave |
+| C — Common CAD API Expansion | Active; first large wave complete locally | ADR-0060 fixes the priority and alpha.51 validates a cross-family topology/BREP/mesh/XDE/viewer workflow through the complete local gate chain | Continue closing the remaining high-frequency model/inspect, build/modify/deliver, and present/interact workflow contract; pass focused evidence per family and one complete validation chain per large wave |
 
 Current B completion is not represented by counting retired planning labels. Engineering
 progress, selected binding coverage, full-profile coverage, inventory completeness,
@@ -84,9 +84,11 @@ package release-ready. New implementation progress is reported against C, never 
 reopening B or inventing B-derived labels.
 
 The 16,353 emitted plus 61 accepted manual stable IDs are Batch B's baseline binding
-coverage, not evidence that Batch C's workflows are complete. Batch C common-workflow
-coverage remains `NOT ESTABLISHED` until the current public/generated surface is reconciled
-against the workflow matrix below and a declared-workflow denominator is recorded.
+coverage, not evidence that Batch C's workflows are complete. The first Batch C wave
+adds nine accepted manual stable IDs and locks the capability denominator in
+`COMMON_API_GAP_INVENTORY.md`; every declared capability in that first-wave denominator
+is runtime/package validated. Remaining Batch C workflow coverage is still open and is
+not inferred from the declaration counts.
 
 ### Completed capability milestones inside B
 
@@ -176,7 +178,7 @@ lanes so that it finishes a user workflow rather than a class list.
   and application-owned mouse/keyboard event forwarding without exposing AIS/V3d/
   SelectMgr pointers or reverse callbacks.
 
-### First large implementation wave
+### First large implementation wave — complete local checkpoint
 
 The first C wave is **common solid editing and inspection**. It is one cross-family wave,
 not several tasks: expand geometry/topology query primitives, common BRep construction
@@ -193,9 +195,12 @@ create or import
   -> display and select
 ```
 
-Exact declarations and generated/manual ownership are selected from the pinned AST and
-current public API inventory before code changes. Scope selection must favor generalized
-rules that unlock several listed families. It must not shrink to a single easy class.
+Alpha.51 completes this declared workflow through nine audited SC-036 manual stable IDs
+and existing generated/friendly dependencies. Release and Debug, runtime/lifetime,
+real-HWND, clean regeneration, clean package consumer, API compatibility, inventory,
+runtime manifest, SBOM/provenance/checksum, and local release gates pass. The exact
+capability denominator and evidence are recorded in `COMMON_API_GAP_INVENTORY.md`.
+This checkpoint does not mark the whole Batch C exit contract complete.
 
 ### Large-wave execution rules
 

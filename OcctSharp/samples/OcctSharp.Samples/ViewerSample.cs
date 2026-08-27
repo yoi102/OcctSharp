@@ -12,6 +12,10 @@ internal static class ViewerSample
 
         using Shape box = ShapeFactory.CreateBox(80, 60, 40);
         using ViewerPresentation presentation = viewer.Display(box);
+        presentation.SetColor(new ViewerColor(0.15, 0.45, 0.85));
+        presentation.SetTransparency(0.1);
+        presentation.SetDisplayMode(ViewerDisplayMode.Shaded);
+        viewer.SetProjection(ViewerProjection.Axonometric);
         viewer.FitAll();
         viewer.Redraw();
 

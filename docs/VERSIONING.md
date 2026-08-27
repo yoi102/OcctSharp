@@ -173,6 +173,12 @@ package to `0.1.0-alpha.50`. It adds the MIT project license, committed SHA256-p
 Windows x64 runtime, complete bundled notices, and Sample `--smoke` entry point. No
 managed or native API is removed.
 
+The first Batch C common-workflow wave is additive ABI 1.42/bridge 0.50.0 and advances
+the package to `0.1.0-alpha.51`. It adds native BREP exchange, topology/tolerance
+summaries, detailed UV/normal/face-mapped meshes, XDE part metadata convenience, and
+viewer appearance/camera/selection controls. The committed Windows x64 runtime and
+manifest advance with the source so a fresh clone cannot load the alpha.50 bridge.
+
 ## Upgrade classification
 
 Alpha.50 uses the unchanged alpha.49 generated surface: 16,353 emitted and 61 accepted

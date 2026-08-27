@@ -409,6 +409,42 @@
     {
       "stableId": "c:@S@BRepOffsetAPI_MakeThickSolid@F@MakeThickSolidByJoin#&1$@S@TopoDS_Shape#&1$@S@NCollection_List>#S1_#d#d#$@E@BRepOffset_Mode#b#b#$@E@GeomAbs_JoinType#b#&1$@S@Message_ProgressRange#",
       "specialCaseId": "SC-033"
+    },
+    {
+      "stableId": "c:@S@BRepTools@F@Read#&$@S@TopoDS_Shape#*1C#&1$@S@BRep_Builder#&1$@S@Message_ProgressRange#S",
+      "specialCaseId": "SC-036"
+    },
+    {
+      "stableId": "c:@S@BRepTools@F@Write#&1$@S@TopoDS_Shape#*1C#&1$@S@Message_ProgressRange#S",
+      "specialCaseId": "SC-036"
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@IsClosed#&1$@S@TopoDS_Shape#S",
+      "specialCaseId": "SC-036"
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Tolerance#&1$@S@TopoDS_Edge#S",
+      "specialCaseId": "SC-036"
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Tolerance#&1$@S@TopoDS_Face#S",
+      "specialCaseId": "SC-036"
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Tolerance#&1$@S@TopoDS_Vertex#S",
+      "specialCaseId": "SC-036"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Normal#I#1",
+      "specialCaseId": "SC-036"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@UVNode#I#1",
+      "specialCaseId": "SC-036"
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@SetColor#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#&1$@S@Quantity_Color#b#",
+      "specialCaseId": "SC-036"
     }
   ],
   "excludedBindings": [

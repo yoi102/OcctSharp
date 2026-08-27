@@ -452,6 +452,13 @@ fixed-width C ABI conventions as generated static methods. Standalone enum gener
 is managed metadata and does not expose C++ enum layout. The current native ABI is 1.41
 and the bridge implementation version is 0.49.0.
 
+ABI 1.42 is the alpha.51 first Batch C common-workflow boundary. It adds native BREP
+read/write, fixed 120-byte topology summaries, 72-byte detailed mesh vertices, 20-byte
+face-mapped triangles, and thread-affine viewer appearance/camera/selection exports.
+Topology and mesh data are copied snapshots; BREP reads return registered owning shapes;
+XDE labels and viewer presentations keep their existing parent-bound contracts. The
+current native ABI is 1.42 and the bridge implementation version is 0.50.0.
+
 ## Verification
 
 Alpha.48 verification confirms the existing ABI contract for all 162 IGES public

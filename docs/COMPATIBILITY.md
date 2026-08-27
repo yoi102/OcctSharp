@@ -7,7 +7,7 @@ reported as supported.
 
 | OcctSharp | Generator | Native ABI | OCCT | Platform | Compiler | .NET | Status |
 |---|---|---|---|---|---|---|---|
-| 0.1.0-alpha.50 workspace | ClangSharp 21.1.8.4 | 1.41 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
+| 0.1.0-alpha.51 workspace | ClangSharp 21.1.8.4 | 1.42 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
 
 Validated in both Debug and Release: native and managed build, ABI/runtime identity,
 OCCT box creation, topology traversal, error/disposal behavior, STEP geometry
@@ -121,6 +121,13 @@ The alpha.50 distribution keeps the same API, ABI, bridge, and OCCT identities w
 adding the committed 62-DLL Windows x64 runtime. Debug and Release Sample smoke must run
 from an ordinary clone without an OCCT SDK; each committed runtime and notice file is
 verified against `runtime-manifest.json`.
+
+The alpha.51 workspace advances to ABI 1.42/bridge 0.50.0 for the first Batch C
+cross-family checkpoint. Release and Debug pass Generator 62/62 and Runtime 107/107.
+Clean regeneration is byte-identical, the clean package consumer runs with all 62 DLLs,
+and runtime tests cover native BREP, topology/tolerance snapshots, detailed mesh
+normals/UV/face mapping, XDE part metadata composition, and real-HWND viewer appearance,
+camera, and selection modes.
 
 ## Planned validation dimensions
 

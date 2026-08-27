@@ -459,6 +459,23 @@ public partial class Shape : IDisposable
         }
     }
 
+    /// <summary>Copies unique/occurrence counts, closedness, validity, and common tolerance ranges.</summary>
+    public ShapeTopologySummary GetTopologySummary()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.GetShapeTopologySummary(handle, out ShapeTopologySummaryRaw summary),
+            "shape_topology_summary");
+        return new ShapeTopologySummary(
+            ToTopologyCounts(summary.UniqueCounts),
+            ToTopologyCounts(summary.OccurrenceCounts),
+            summary.IsClosed != 0,
+            summary.IsValid != 0,
+            new ToleranceRange(summary.MinVertexTolerance, summary.MaxVertexTolerance),
+            new ToleranceRange(summary.MinEdgeTolerance, summary.MaxEdgeTolerance),
+            new ToleranceRange(summary.MinFaceTolerance, summary.MaxFaceTolerance));
+    }
+
     /// <summary>Computes an OCCT boolean union and returns an independently owned result.</summary>
     public Shape Fuse(Shape other)
     {
@@ -614,6 +631,70 @@ public partial class Shape : IDisposable
 
         return new MeshSnapshot(vertices, indices);
     }
+
+    /// <summary>
+    /// Copies OCCT triangulation nodes, transformed node normals, UVs, triangle winding,
+    /// and zero-based source-face mappings into caller-owned managed arrays.
+    /// </summary>
+    public unsafe DetailedMeshSnapshot CreateDetailedMesh(
+        double linearDeflection = 0.1,
+        double angularDeflection = 0.5)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.GetDetailedMeshCount(
+                handle, linearDeflection, angularDeflection,
+                out int vertexCount, out int triangleCount, out int faceCount),
+            "shape_detailed_mesh_count");
+        DetailedMeshVertexRaw[] nativeVertices = new DetailedMeshVertexRaw[vertexCount];
+        DetailedMeshTriangleRaw[] nativeTriangles = new DetailedMeshTriangleRaw[triangleCount];
+        fixed (DetailedMeshVertexRaw* vertexPointer = nativeVertices)
+        fixed (DetailedMeshTriangleRaw* trianglePointer = nativeTriangles)
+        {
+            NativeError.ThrowIfFailed(
+                NativeMethods.GetDetailedMeshSnapshot(
+                    handle, linearDeflection, angularDeflection,
+                    vertexPointer, nativeVertices.Length, out int writtenVertices,
+                    trianglePointer, nativeTriangles.Length, out int writtenTriangles,
+                    out int writtenFaces),
+                "shape_detailed_mesh_snapshot");
+            if (writtenVertices != nativeVertices.Length
+                || writtenTriangles != nativeTriangles.Length
+                || writtenFaces != faceCount)
+                throw new OcctException(
+                    NativeStatus.UnknownException.ToString(),
+                    "The native detailed-mesh snapshot count changed during extraction.");
+        }
+
+        DetailedMeshVertex[] vertices = new DetailedMeshVertex[nativeVertices.Length];
+        for (int index = 0; index < vertices.Length; ++index)
+        {
+            DetailedMeshVertexRaw value = nativeVertices[index];
+            vertices[index] = new DetailedMeshVertex(
+                value.X, value.Y, value.Z,
+                value.NormalX, value.NormalY, value.NormalZ,
+                value.U, value.V, value.HasUv != 0);
+        }
+        DetailedMeshTriangle[] triangles = new DetailedMeshTriangle[nativeTriangles.Length];
+        for (int index = 0; index < triangles.Length; ++index)
+        {
+            DetailedMeshTriangleRaw value = nativeTriangles[index];
+            triangles[index] = new DetailedMeshTriangle(
+                value.VertexA, value.VertexB, value.VertexC,
+                value.FaceIndex, value.IsReversed != 0);
+        }
+        return new DetailedMeshSnapshot(vertices, triangles, faceCount);
+    }
+
+    private static TopologyCounts ToTopologyCounts(TopologyCountsRaw counts) => new(
+        counts.VertexCount,
+        counts.EdgeCount,
+        counts.WireCount,
+        counts.FaceCount,
+        counts.ShellCount,
+        counts.SolidCount,
+        counts.CompSolidCount,
+        counts.CompoundCount);
 
     private static GpPoint ToPoint(XyzRaw value) => new(value.X, value.Y, value.Z);
 

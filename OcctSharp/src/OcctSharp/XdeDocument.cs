@@ -76,6 +76,30 @@ public sealed class XdeDocument : IDisposable
         return new XdeLabel(this, entry);
     }
 
+    /// <summary>
+    /// Adds a top-level part and applies its common name, color, layers, and material
+    /// metadata as one friendly operation inside the current transaction.
+    /// </summary>
+    public XdeLabel AddPart(Shape shape, XdePartMetadata metadata)
+    {
+        ArgumentNullException.ThrowIfNull(shape);
+        ArgumentNullException.ThrowIfNull(metadata);
+        ArgumentException.ThrowIfNullOrWhiteSpace(metadata.Name);
+        XdeLabel part = AddShape(shape, metadata.Name);
+        if (metadata.Color is XdeColor color) part.Color = color;
+        if (metadata.Layers is { Count: > 0 } layers)
+        {
+            for (int index = 0; index < layers.Count; ++index)
+            {
+                ArgumentException.ThrowIfNullOrWhiteSpace(layers[index]);
+                if (index == 0) part.SetLayer(layers[index]);
+                else part.AddLayer(layers[index]);
+            }
+        }
+        if (metadata.Material is not null) part.Material = metadata.Material;
+        return part;
+    }
+
     /// <summary>Adds an initially empty assembly inside the current transaction.</summary>
     public XdeLabel AddAssembly(string name)
     {

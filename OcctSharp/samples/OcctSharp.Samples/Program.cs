@@ -31,6 +31,7 @@ internal static class Program
                     "4" => IgesExportSample.Run(),
                     "5" => XdeStepAssemblySample.Run(),
                     "6" => ViewerSample.Run(),
+                    "7" => CommonApiWaveSample.Run(),
                     _ => SampleConsole.InvalidChoice(),
                 };
 
@@ -58,8 +59,8 @@ internal static class Program
         }
 
         OcctRuntimeInfo runtime = OcctRuntime.Info;
-        if (runtime.AbiVersion != new Version(1, 41)
-            || runtime.BridgeVersion != "0.49.0"
+        if (runtime.AbiVersion != new Version(1, 42)
+            || runtime.BridgeVersion != "0.50.0"
             || runtime.OcctVersion != "8.0.1")
         {
             throw new InvalidOperationException(
@@ -67,13 +68,16 @@ internal static class Program
         }
 
         using Shape box = ShapeFactory.CreateBox(10, 20, 30);
-        if (box.FaceCount != 6)
+        ShapeTopologySummary topology = box.GetTopologySummary();
+        DetailedMeshSnapshot mesh = box.CreateDetailedMesh();
+        if (box.FaceCount != 6 || !topology.IsClosed || !topology.IsValid
+            || topology.UniqueCounts.VertexCount != 8 || mesh.TriangleCount == 0)
         {
-            throw new InvalidOperationException($"Expected a six-face box, found {box.FaceCount} faces.");
+            throw new InvalidOperationException("The common CAD smoke workflow returned unexpected topology or mesh data.");
         }
 
         Console.WriteLine(
-            $"OcctSharp smoke passed: ABI {runtime.AbiVersion}, bridge {runtime.BridgeVersion}, OCCT {runtime.OcctVersion}, {nativeFiles.Length} DLLs, box faces {box.FaceCount}.");
+            $"OcctSharp smoke passed: ABI {runtime.AbiVersion}, bridge {runtime.BridgeVersion}, OCCT {runtime.OcctVersion}, {nativeFiles.Length} DLLs, box faces {box.FaceCount}, mesh triangles {mesh.TriangleCount}.");
         return 0;
     }
 }

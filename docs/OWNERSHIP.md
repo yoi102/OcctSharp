@@ -276,3 +276,19 @@ allocator last. Constructor emission requires a non-null generated
 copies both retained handles. Ordinary `new`, global `::new`, and a wrapper that stores
 only the object handle are forbidden for these types because their allocation and delete
 contracts do not match or can free incremental storage during object destruction.
+
+### Batch C common workflow snapshots and presentation state
+
+`Shape.GetTopologySummary` returns only copied counts, Booleans, and tolerance ranges.
+All `TopExp` maps, typed subshapes, `BRepCheck_Analyzer`, and tolerance references die
+inside the native call. `Shape.CreateDetailedMesh` returns caller-owned arrays of copied
+node positions, transformed normals, optional UV values, triangle indices, source-face
+indices, and orientation flags. No `Poly_Triangulation`, face, location, or source-shape
+relationship survives the call.
+
+`ShapeExchange.ReadBrep` returns a registered owning shape; `WriteBrep` borrows its shape
+only for the call. `XdeDocument.AddPart` creates one parent-bound label and composes the
+existing copied metadata operations inside the caller's open transaction. Viewer color,
+transparency, display mode, projection, zoom, pan, and selection operations mutate only
+the parent viewer on its creation thread; presentation IDs never become standalone
+owners.

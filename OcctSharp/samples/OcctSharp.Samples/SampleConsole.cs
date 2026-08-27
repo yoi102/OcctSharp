@@ -12,6 +12,7 @@ internal static class SampleConsole
         Console.WriteLine("4. Create a solid and export IGES");
         Console.WriteLine("5. Read, transform, and merge STEP files into an XDE STEP assembly");
         Console.WriteLine("6. Open the interactive OCCT Viewer");
+        Console.WriteLine("7. Run the common BREP/topology/mesh/XDE workflow");
         Console.WriteLine("0. Exit");
         Console.Write("Choose an operation: ");
     }

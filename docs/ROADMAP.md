@@ -24,10 +24,17 @@ Priority order inside each large wave:
 4. Only then additional cold schema entities, optional integrations, or low-frequency
    infrastructure declarations.
 
-The first active wave is common solid editing and inspection across geometry/topology
-queries, BRep construction/modification, mesh extraction, STEP/XDE round trip, and viewer
-presentation/selection. It is not split into per-class or numbered tasks. See
-[the complete migration plan](MIGRATION_PLAN.md) for the exact Batch C contract.
+The first large wave, common solid editing and inspection, is complete at the alpha.51
+local checkpoint. It crossed topology/tolerance query, BRep exchange, detailed mesh,
+XDE metadata, and viewer presentation/camera/selection, with Release/Debug, clean
+regeneration, package-consumer, inventory, and release gates passing. It remains one
+wave rather than per-class or numbered tasks.
+
+The next C wave must close another end-to-end high-frequency slice from the remaining
+geometry evaluation, topology diagnostics/editing, exchange options/units, XDE property
+and occurrence queries, and viewer rotation/input gaps. Select its complete dependency
+closure before implementation and retain the same large-wave validation cadence. See
+[the complete migration plan](MIGRATION_PLAN.md) for the Batch C contract.
 
 The phase record below is retained as Batch B history and architecture context; it is not
 the active execution sequence for C.

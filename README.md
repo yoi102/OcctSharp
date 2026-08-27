@@ -23,8 +23,8 @@ cd OcctSharp\OcctSharp
 dotnet run --project .\samples\OcctSharp.Samples -- --smoke
 ```
 
-The command verifies ABI 1.41, bridge 0.49.0, OCCT 8.0.1, all 62 application-local
-DLLs, and creates a six-face OCCT box. Run without `--smoke` for the interactive sample
+The command verifies ABI 1.42, bridge 0.50.0, OCCT 8.0.1, all 62 application-local
+DLLs, and exercises topology and detailed-mesh inspection on a six-face OCCT box. Run without `--smoke` for the interactive sample
 menu. No OCCT installation, CMake, Visual Studio C++ workload, environment variable, or
 private settings file is required for these examples.
 
@@ -44,19 +44,20 @@ See [the documentation index](docs/DOCUMENTATION_INDEX.md),
 
 ## Current state
 
-- The single migration batch B is locally complete. Generated/API coverage and public
-  publication authority remain separate facts.
+- Batch B is locally complete. Batch C is active, and its first cross-family common-CAD
+  workflow checkpoint is implemented and fully validated locally. Generated/API coverage
+  and public publication authority remain separate facts.
 - Managed target is .NET 10; the validated baseline is Windows x64 and OCCT 8.0.1.
 - ClangSharp semantic discovery, deterministic generation, native C ABI, friendly managed
   owners/values, geometry and metadata exchange, OCAF/XDE, and Windows HWND visualization
   are implemented for their declared profiles.
 - Full inventory classifies 116,272 discovered declarations and all 7,090 catalogued
   headers with zero `SupportedUnselected`, zero broad LT001-LT004 reasons, and 16,353
-  generated plus 61 accepted manual stable IDs. Narrow blocked dispositions are not
+  generated plus 70 accepted manual stable IDs. Narrow blocked dispositions are not
   claimed as managed APIs.
-- The .NET 10 console sample contains six separate workflows: entity creation,
-  STEP/STL/IGES export, transformed metadata-preserving XDE STEP assembly, and Viewer.
-- Package version `0.1.0-alpha.50` carries the same committed 62-DLL runtime and complete
+- The .NET 10 console sample contains seven separate workflows, including native BREP,
+  topology/tolerance inspection, detailed mesh transfer, XDE metadata, and Viewer controls.
+- Package version `0.1.0-alpha.51` carries the committed 62-DLL ABI 1.42 runtime and complete
   license/notice layout below application-local `occt/` and `licenses/`.
 - An ordinary clone runs the Sample directly from the SHA256-pinned committed runtime.
   The SDK/CMake bootstrap remains available only as an explicit contributor override.
@@ -64,4 +65,4 @@ See [the documentation index](docs/DOCUMENTATION_INDEX.md),
   CycloneDX SBOM, provenance, checksums, release gates, and CI configuration.
 - Project code is MIT licensed. OCCT and third-party runtime terms are preserved beside
   the bundled DLLs; hosted CI, signing, and NuGet publication remain separate gates.
-- Architecture and behavior are recorded through ADR-0059.
+- Architecture and behavior are recorded through ADR-0060 and SC-036.

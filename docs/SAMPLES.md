@@ -56,6 +56,13 @@ updates the title with the copied selection count. Close the viewer window to re
 the console menu. The sample keeps window ownership outside the viewer and performs all
 viewer calls on the creating UI thread.
 
+The seventh item runs the first Batch C common-API workflow without a window. It creates
+and chamfers a solid, copies unique/occurrence topology counts and tolerance ranges,
+extracts an orientation-correct detailed mesh with normals/UVs/face mapping, writes and
+reads native BREP, adds name/color/layers/material with `XdeDocument.AddPart`, and writes
+an XDE STEP assembly. Its default outputs are `common-api-part.brep` and
+`common-api-assembly.step` under `artifacts/samples/`.
+
 The validated local run on 2026-08-21 consumed seven STEP files from `data/` and wrote
 one assembly STEP. The inputs contained 73 `COLOUR_RGB`, 106 `STYLED_ITEM`, 73
 `PRESENTATION_STYLE_ASSIGNMENT`, 4 material-property, and 8 product-definition records.

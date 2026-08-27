@@ -5,6 +5,15 @@ namespace OcctSharp;
 /// <summary>Provides geometry-only BRep and mesh exchange workflows.</summary>
 public static class ShapeExchange
 {
+    /// <summary>Reads an OCCT native BREP file into one independently owned shape.</summary>
+    public static Shape ReadBrep(string filePath)
+    {
+        string fullPath = ResolveInputPath(filePath);
+        OcctRuntime.EnsureCompatible();
+        NativeError.ThrowIfFailed(NativeMethods.ReadBrep(fullPath, out nint nativeShape), "shape_read_brep");
+        return ShapeFactory.FromNativeHandle(nativeShape, "shape_read_brep");
+    }
+
     /// <summary>Reads all transferable roots from a STEP file into one owned shape.</summary>
     public static Shape ReadStep(string filePath)
     {
@@ -48,6 +57,15 @@ public static class ShapeExchange
         ArgumentNullException.ThrowIfNull(shape);
         string fullPath = PrepareOutputPath(filePath);
         NativeError.ThrowIfFailed(NativeMethods.WriteStep(shape.Handle, fullPath), "shape_write_step");
+        return fullPath;
+    }
+
+    /// <summary>Writes a shape in OCCT's native BREP format, including available triangulation.</summary>
+    public static string WriteBrep(Shape shape, string filePath)
+    {
+        ArgumentNullException.ThrowIfNull(shape);
+        string fullPath = PrepareOutputPath(filePath);
+        NativeError.ThrowIfFailed(NativeMethods.WriteBrep(shape.Handle, fullPath), "shape_write_brep");
         return fullPath;
     }
 

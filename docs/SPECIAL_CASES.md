@@ -748,3 +748,42 @@ rules or design:
 - Upgrade impact: Re-run exact symbol/export inspection before broadening any free-function
   profile. Recompute every reason count and fail the completion gate if LT001-LT004,
   supported-unselected, pending, or HD099 reappears.
+
+## SC-036: Batch C common CAD cross-family workflow facade
+
+- Status: Accepted for the first Batch C large-wave checkpoint.
+- Scope: Nine directly used OCCT 8.0.1 declarations from `BRepTools`, `BRep_Tool`,
+  `Poly_Triangulation`, and `AIS_InteractiveContext`, combined with already emitted
+  `TopExp`, `BRepCheck`, `BRepMesh`, `Poly`, `V3d`, and AIS operations. The friendly
+  surface covers native BREP exchange, whole-shape topology/tolerance inspection,
+  detailed mesh snapshots, XDE part metadata convenience, and viewer appearance,
+  camera, and selection modes.
+- Reason: BREP stream/build state, typed topology references, triangulation-owned node
+  data, and viewer-owned presentations cannot safely cross the stable C ABI as borrowed
+  OCCT objects. Keeping them call-local unlocks one common workflow across five connected
+  families without exposing C++ layout or lifetime.
+- Native/ABI/managed behavior: ABI 1.42 adds fixed copied topology, tolerance, mesh-node,
+  UV, triangle, face-index, and Boolean/scalar records plus status-returning BREP and
+  viewer calls. Existing generated declarations reused by the facade are not counted as
+  manual. `XdeDocument.AddPart` composes the existing transaction-bound metadata calls.
+- Ownership: BREP and topology inputs are borrowed for one call; returned shapes are
+  registered owning copies. Detailed mesh arrays are caller-owned snapshots and retain
+  no `Poly_Triangulation`, face, location, or shape reference. XDE labels remain parent-
+  bound. Viewer presentations remain parent-bound and every viewer operation remains
+  owner-thread-affine.
+- Coverage accounting: Configuration schema 1.8 lists the nine newly direct manual
+  stable IDs. Discovery must find each ID and must reject emitted/manual overlap. Methods
+  already emitted by the generated surface, including UV/normal presence, transparency,
+  display mode, clear selection, projection, zoom, and pan, stay outside the manual
+  denominator.
+- Validation: Focused Release native and managed compilation plus the BREP-to-STEP common
+  workflow and real-HWND viewer tests are required during implementation. Full Release,
+  Debug, clean regeneration, package consumer, inventory, and release gates are recorded
+  once at the coherent wave checkpoint.
+- Upgrade impact: Recheck BREP format defaults, shape closedness, topology-map ordering,
+  tolerance semantics, `Poly_Triangulation` node/UV/normal conventions, reversed-face
+  winding, selection schemes, Z-up orientations, and AIS display-mode indices on every
+  OCCT upgrade.
+- Removal criteria: Replace the exception only after generalized generated descriptors
+  can reproduce the same copied snapshots, owning results, parent/thread boundaries,
+  validation, and end-to-end runtime evidence.

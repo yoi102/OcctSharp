@@ -307,6 +307,9 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_is_valid")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus IsShapeValid(ShapeHandle shape, out int isValid);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_topology_summary")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetShapeTopologySummary(ShapeHandle shape, out ShapeTopologySummaryRaw summary);
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_boolean_fuse")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus BooleanFuse(ShapeHandle left, ShapeHandle right, out nint shape);
@@ -358,6 +361,37 @@ internal static partial class NativeMethods
         int indexCapacity,
         out int indexCount);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_detailed_mesh_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetDetailedMeshCount(
+        ShapeHandle shape,
+        double linearDeflection,
+        double angularDeflection,
+        out int vertexCount,
+        out int triangleCount,
+        out int faceCount);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_detailed_mesh_snapshot")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus GetDetailedMeshSnapshot(
+        ShapeHandle shape,
+        double linearDeflection,
+        double angularDeflection,
+        DetailedMeshVertexRaw* vertices,
+        int vertexCapacity,
+        out int vertexCount,
+        DetailedMeshTriangleRaw* triangles,
+        int triangleCapacity,
+        out int triangleCount,
+        out int faceCount);
+
+    [LibraryImport(
+        LibraryName,
+        EntryPoint = "occtsharp_shape_read_brep",
+        StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ReadBrep(string filePath, out nint shape);
+
     [LibraryImport(
         LibraryName,
         EntryPoint = "occtsharp_shape_read_step",
@@ -392,6 +426,13 @@ internal static partial class NativeMethods
         StringMarshalling = StringMarshalling.Utf8)]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus WriteStep(ShapeHandle shape, string filePath);
+
+    [LibraryImport(
+        LibraryName,
+        EntryPoint = "occtsharp_shape_write_brep",
+        StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus WriteBrep(ShapeHandle shape, string filePath);
 
     [LibraryImport(
         LibraryName,
@@ -988,6 +1029,18 @@ internal static partial class NativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus SetViewerPresentationVisible(ViewerHandle viewer, long presentationId, int visible);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_presentation_color")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerPresentationColor(ViewerHandle viewer, long presentationId, double red, double green, double blue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_presentation_transparency")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerPresentationTransparency(ViewerHandle viewer, long presentationId, double transparency);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_presentation_display_mode")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerPresentationDisplayMode(ViewerHandle viewer, long presentationId, int displayMode);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_remove_presentation")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus RemoveViewerPresentation(ViewerHandle viewer, long presentationId);
@@ -1004,6 +1057,18 @@ internal static partial class NativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus ResizeViewer(ViewerHandle viewer);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_projection")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerProjection(ViewerHandle viewer, int projection);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_zoom")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ZoomViewer(ViewerHandle viewer, double factor);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_pan")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus PanViewer(ViewerHandle viewer, int deltaX, int deltaY);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_move_to")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus MoveViewerTo(ViewerHandle viewer, int x, int y, out int detected);
@@ -1011,6 +1076,14 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_select_at")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus SelectViewerAt(ViewerHandle viewer, int x, int y, out int selectedCount);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_select_at_mode")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SelectViewerAtMode(ViewerHandle viewer, int x, int y, int selectionMode, out int selectedCount);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_clear_selection")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ClearViewerSelection(ViewerHandle viewer);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_selected_snapshot")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

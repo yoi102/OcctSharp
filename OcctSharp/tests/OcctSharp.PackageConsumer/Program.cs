@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 41)
-    || runtime.BridgeVersion != "0.49.0"
+if (runtime.AbiVersion != new Version(1, 42)
+    || runtime.BridgeVersion != "0.50.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -32,9 +32,13 @@ if (runtime.AbiVersion != new Version(1, 41)
 }
 
 using Shape box = ShapeFactory.CreateBox(10, 20, 30);
-if (box.FaceCount != 6)
+ShapeTopologySummary packagedTopology = box.GetTopologySummary();
+DetailedMeshSnapshot packagedDetailedMesh = box.CreateDetailedMesh();
+if (box.FaceCount != 6 || !packagedTopology.IsClosed || !packagedTopology.IsValid
+    || packagedTopology.UniqueCounts.VertexCount != 8
+    || packagedDetailedMesh.TriangleCount == 0 || !packagedDetailedMesh.HasUv)
 {
-    throw new InvalidOperationException($"Expected 6 box faces, received {box.FaceCount}.");
+    throw new InvalidOperationException("The packaged common topology/detailed-mesh workflow failed.");
 }
 
 using Geom2dCartesianPoint generated2dPoint = new(2, 3);
@@ -390,13 +394,27 @@ try
     _ = PackageWindowMethods.UpdateWindow(viewerWindow);
     using OcctViewer packagedViewer = OcctViewer.Create(viewerWindow);
     using ViewerPresentation packagedPresentation = packagedViewer.Display(box);
+    packagedPresentation.SetColor(new ViewerColor(0.2, 0.4, 0.8));
+    packagedPresentation.SetTransparency(0.2);
+    packagedPresentation.SetDisplayMode(ViewerDisplayMode.Shaded);
     packagedViewer.Resize();
+    packagedViewer.SetProjection(ViewerProjection.Front);
+    packagedViewer.SetProjection(ViewerProjection.Axonometric);
+    packagedViewer.Zoom(1.05);
+    packagedViewer.Pan(4, -2);
     packagedViewer.FitAll();
     packagedViewer.Redraw();
     if (!packagedViewer.MoveTo(128, 128)
         || !packagedViewer.SelectAt(128, 128).Contains(packagedPresentation))
     {
         throw new InvalidOperationException("The packaged viewer did not produce the expected selection snapshot.");
+    }
+    packagedViewer.ClearSelection();
+    if (packagedViewer.GetSelection().Count != 0
+        || !packagedViewer.SelectAt(128, 128, ViewerSelectionMode.Add).Contains(packagedPresentation)
+        || packagedViewer.SelectAt(128, 128, ViewerSelectionMode.Remove).Count != 0)
+    {
+        throw new InvalidOperationException("The packaged viewer selection modes failed.");
     }
 }
 finally
@@ -498,6 +516,12 @@ string exchangeDirectory = Path.Combine(Path.GetTempPath(), $"OcctSharp.PackageC
 Directory.CreateDirectory(exchangeDirectory);
 try
 {
+    string brepPath = ShapeExchange.WriteBrep(box, Path.Combine(exchangeDirectory, "box.brep"));
+    using Shape brepShape = ShapeExchange.ReadBrep(brepPath);
+    if (!brepShape.GetTopologySummary().IsValid || brepShape.CreateDetailedMesh().TriangleCount == 0)
+    {
+        throw new InvalidOperationException("The packaged BREP/topology/detailed-mesh round-trip failed.");
+    }
     string objPath = ShapeExchange.WriteObj(box, Path.Combine(exchangeDirectory, "box.obj"));
     string plyPath = ShapeExchange.WritePly(box, Path.Combine(exchangeDirectory, "box.ply"));
     string glbPath = ShapeExchange.WriteGltf(box, Path.Combine(exchangeDirectory, "box.glb"));
@@ -548,10 +572,11 @@ try
     using (XdeDocument xde = XdeDocument.Create())
     {
         using XdeTransaction transaction = xde.BeginTransaction();
-        XdeLabel part = xde.AddShape(box, "Package part");
-        part.Color = new XdeColor(0.2, 0.4, 0.6);
-        part.SetLayer("Package layer");
-        part.Material = new XdeMaterial("Steel", "Package material", 7.85, "Density", "g/cm3");
+        XdeLabel part = xde.AddPart(box, new XdePartMetadata(
+            "Package part",
+            new XdeColor(0.2, 0.4, 0.6),
+            ["Package layer"],
+            new XdeMaterial("Steel", "Package material", 7.85, "Density", "g/cm3")));
         XdeLabel assembly = xde.AddAssembly("Package assembly");
         _ = xde.AddComponent(assembly, part, location);
         xdePartEntry = part.Entry;
