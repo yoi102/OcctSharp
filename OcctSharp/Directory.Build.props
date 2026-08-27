@@ -11,6 +11,11 @@
     <PlatformTarget>x64</PlatformTarget>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <OcctSharpBundledRuntimeRoot>$(MSBuildThisFileDirectory)runtime\win-x64</OcctSharpBundledRuntimeRoot>
+    <OcctSharpBundledNativeRuntimeDir>$(OcctSharpBundledRuntimeRoot)\occt</OcctSharpBundledNativeRuntimeDir>
+    <OcctSharpUseBundledNativeRuntime Condition="'$(OcctSharpUseBundledNativeRuntime)' == '' and Exists('$(OcctSharpBundledNativeRuntimeDir)\OcctSharp.Native.dll')">true</OcctSharpUseBundledNativeRuntime>
+    <OcctSharpUseBundledNativeRuntime Condition="'$(OcctSharpUseBundledNativeRuntime)' == ''">false</OcctSharpUseBundledNativeRuntime>
+    <OcctSharpNativeRuntimeDir Condition="'$(OcctSharpNativeRuntimeDir)' == '' and '$(OcctSharpUseBundledNativeRuntime)' == 'true'">$(OcctSharpBundledNativeRuntimeDir)</OcctSharpNativeRuntimeDir>
     <OcctSharpNativeRuntimeDir Condition="'$(OcctSharpNativeRuntimeDir)' == ''">$(MSBuildThisFileDirectory)artifacts\native\$(Configuration)</OcctSharpNativeRuntimeDir>
   </PropertyGroup>
 </Project>

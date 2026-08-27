@@ -155,8 +155,8 @@ global catalog.
 
 1. Keep the completed local Batch B result separate from public release readiness; do
    not convert legal, hosted-CI, signing, or publication gates to PASS.
-2. Before any public release, project owners must select the project license and complete
-   the non-OCCT third-party legal/notice review.
+2. ADR-0059 resolves the MIT project license and bundled third-party notice layout;
+   keep those files and the runtime manifest current for every distribution change.
 3. Hosted CI, package signing, credentials, and NuGet publication require explicit
    authorization and remain `NOT RUN`.
 4. Any future product-scale migration uses the next whole-letter batch only when its

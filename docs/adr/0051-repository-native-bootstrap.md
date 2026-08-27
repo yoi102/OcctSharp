@@ -1,6 +1,6 @@
 # ADR-0051: Bootstrap Repository Native Runtime from Pinned OCCT Inputs
 
-- Status: Accepted
+- Status: Superseded in part by ADR-0059
 - Date: 2026-08-24
 - Scope: Repository samples and developer builds
 
@@ -16,6 +16,10 @@ The repository needs a repeatable native-only bootstrap without making managed b
 recursively invoke `eng/build.ps1`, and without silently downloading an unverified SDK.
 
 ## Decision
+
+ADR-0059 now makes a verified committed Windows x64 Release runtime the default Sample
+input. The bootstrap below remains accepted for contributors who set
+`OcctSharpUseBundledNativeRuntime=false` to rebuild native output from pinned inputs.
 
 - `eng/ensure-native.ps1` is the repository-native bootstrap entry point. It validates
   the pinned OCCT 8.0.1 manifest, configures CMake, builds only the requested Debug or

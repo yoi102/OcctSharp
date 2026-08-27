@@ -84,15 +84,14 @@ evidence updated.
 
 ## KI-007: OCCT acquisition is machine-local
 
-- Status: Open
-- Severity: High
+- Status: Resolved for Sample/package consumption; remains a contributor rebuild input
+- Severity: Medium
 - Area: Dependencies/CI
 - Problem: The validated OCCT bundle exists in a local Downloads directory and is not
   automatically acquired on a clean machine or CI agent.
-- Current mitigation: The local path is ignored; a committed manifest records the
-  expected version, layout, and representative hashes.
-- Planned resolution: Define a licensed artifact source or controlled source-build
-  pipeline before CI claims reproducible clean acquisition.
+- Resolution: ADR-0059 commits the verified 62-DLL Windows x64 runtime and exact hashes,
+  so an ordinary clone can run the Sample without acquiring an SDK. Generator/native
+  rebuilds still require the pinned local or immutable ADR-0051 SDK input.
 
 ## KI-008: Generator emitter coverage remains narrow
 
@@ -146,15 +145,14 @@ evidence updated.
 - Status: Open
 - Severity: High
 - Area: Packaging/release
-- Problem: Local NuGet creation and clean-consumer execution pass, but the repository
-  has no selected project license and does not yet carry a complete reviewed notice and
-  provenance set for every bundled OCCT third-party runtime.
-- Current mitigation: The package is explicitly experimental and remains under ignored
-  local artifacts. It includes the OCCT LGPL 2.1 text and OCCT linking exception and is
-  not uploaded by any script.
-- Planned resolution: Resolve PD-012 with the user, audit every redistributed DLL,
-  include complete notices and provenance, then add CI, SBOM, signing, and publication
-  approval gates.
+- Problem: Local NuGet creation and clean-consumer execution pass, but package signing,
+  hosted release execution, credentials, and NuGet publication authorization have not
+  been provided or run.
+- Current mitigation: ADR-0059 resolves the MIT project license and commits notices,
+  license texts, and SHA256 provenance for the 62-DLL runtime. No script publishes the
+  package automatically.
+- Planned resolution: Run the hosted release matrix and establish signing/publication
+  policy only after explicit owner authorization and credentials exist.
 
 ## KI-012: Full OCCT semantic inventory is incomplete with the supplied bundle
 

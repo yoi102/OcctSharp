@@ -1,9 +1,16 @@
+using OcctSharp;
+
 namespace OcctSharp.Samples;
 
 internal static class Program
 {
-    public static int Main()
+    public static int Main(string[] args)
     {
+        if (args.Length == 1 && string.Equals(args[0], "--smoke", StringComparison.OrdinalIgnoreCase))
+        {
+            return RunSmoke();
+        }
+
         while (true)
         {
             SampleConsole.WriteMenu();
@@ -36,5 +43,37 @@ internal static class Program
                 SampleConsole.Pause();
             }
         }
+    }
+
+    private static int RunSmoke()
+    {
+        string nativeDirectory = Path.Combine(AppContext.BaseDirectory, "occt");
+        string[] nativeFiles = Directory.Exists(nativeDirectory)
+            ? Directory.GetFiles(nativeDirectory, "*.dll")
+            : [];
+        if (nativeFiles.Length != 62)
+        {
+            throw new InvalidOperationException(
+                $"Expected 62 bundled native DLLs below '{nativeDirectory}', found {nativeFiles.Length}.");
+        }
+
+        OcctRuntimeInfo runtime = OcctRuntime.Info;
+        if (runtime.AbiVersion != new Version(1, 41)
+            || runtime.BridgeVersion != "0.49.0"
+            || runtime.OcctVersion != "8.0.1")
+        {
+            throw new InvalidOperationException(
+                $"Unexpected runtime identity: ABI {runtime.AbiVersion}, bridge {runtime.BridgeVersion}, OCCT {runtime.OcctVersion}.");
+        }
+
+        using Shape box = ShapeFactory.CreateBox(10, 20, 30);
+        if (box.FaceCount != 6)
+        {
+            throw new InvalidOperationException($"Expected a six-face box, found {box.FaceCount} faces.");
+        }
+
+        Console.WriteLine(
+            $"OcctSharp smoke passed: ABI {runtime.AbiVersion}, bridge {runtime.BridgeVersion}, OCCT {runtime.OcctVersion}, {nativeFiles.Length} DLLs, box faces {box.FaceCount}.");
+        return 0;
     }
 }

@@ -23,6 +23,26 @@ jobs:
       - name: Run generator tests
         run: dotnet test .\tests\OcctSharp.Generator.Tests\OcctSharp.Generator.Tests.csproj --configuration Release --no-restore
 
+  bundled-runtime-smoke:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: OcctSharp
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.400
+          cache: true
+          cache-dependency-path: OcctSharp/**/packages.lock.json
+      - name: Verify committed runtime manifest
+        run: .\eng\verify-bundled-runtime.ps1
+      - name: Run Release sample smoke without an OCCT SDK
+        run: dotnet run --project .\samples\OcctSharp.Samples --configuration Release -- --smoke
+      - name: Run Debug sample smoke without an OCCT SDK
+        run: dotnet run --project .\samples\OcctSharp.Samples --configuration Debug -- --smoke
+
   full-windows:
     if: ${{ vars.OCCT_ARTIFACT_URL != '' && vars.OCCT_ARTIFACT_SHA256 != '' }}
     runs-on: windows-latest

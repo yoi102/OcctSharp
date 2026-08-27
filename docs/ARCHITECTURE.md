@@ -70,6 +70,8 @@ The accepted boundaries are recorded in ADRs:
   core native toolkit/runtime closure plus auditable automatic package exclusions.
 - [ADR-0058](adr/0058-narrow-long-tail-dispositions-and-local-completion-gate.md): narrow
   final long-tail dispositions and separate local implementation/publication gates.
+- [ADR-0059](adr/0059-committed-windows-runtime-and-mit-license.md): committed,
+  manifest-verified Windows x64 runtime and MIT project license.
 
 ## Components
 
@@ -180,12 +182,12 @@ consumer's `occt` output directory. An assembly-level resolver loads the bridge 
 that exact application-local path; process `PATH` and machine-wide OCCT installations
 are not package dependencies.
 
-Repository projects use a distinct developer bootstrap. The Sample project's incremental
-MSBuild target invokes `eng/ensure-native.ps1` only when the requested native artifact is
-missing or stale. That script validates the pinned OCCT manifest and builds CMake native
-targets without invoking the managed solution. Inputs come from an explicit/local SDK
-path or an immutable HTTPS archive plus SHA256; no floating or machine-wide fallback is
-allowed. Both the repository and NuGet paths converge on the same output `occt/` layout.
+Repository Sample projects default to the committed, SHA256-manifested Windows x64
+Release closure below `runtime/win-x64/occt`. Debug and Release managed builds copy that
+same ABI-compatible closure to output `occt/`, so clone-and-run needs only the pinned
+.NET SDK. Contributors can set `OcctSharpUseBundledNativeRuntime=false` to invoke
+ADR-0051's incremental `eng/ensure-native.ps1` path from an explicit SDK or immutable
+HTTPS archive plus SHA256. Repository and NuGet paths converge on the same output layout.
 
 ### Reports and baselines
 

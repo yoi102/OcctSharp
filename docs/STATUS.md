@@ -1,12 +1,35 @@
 # Current Status
 
 - Last updated: 2026-08-27
-- Current phase: single migration batch B is locally complete; public-release authority and external gates remain separate
+- Current phase: single migration batch B and alpha.50 clone-and-run distribution are locally complete; publication authority remains separate
 - Batch B engineering progress: 100% for the accepted local implementation scope (not a claim that every OCCT declaration is a managed API or that public release is ready)
 - Complete-migration batch progress: B is complete; retired B00-B20 labels are not counted as batches
 - Accepted generated surface: 16,353 manifest IDs from the 116,263-declaration selected discovery model; Release and Debug native/managed builds, Generator 62/62, Runtime 105/105, discovery/report determinism, and dependency profiles 6/6 pass
 - Last complete full inventory: 116,272/116,272 declarations and 7,090/7,090 headers have final dispositions; `Emitted` 16,353, `Manual` 61, `SupportedUnselected` 0, `Skipped` 49,344, `Blocked` 50,514, pending 0, HD099 0
-- Overall state: broad LT001-LT004 buckets are eliminated and replaced by generated bindings or narrow evidence-backed ABI/ownership dispositions. The complete alpha.49 local release check passes and records `batchImplementationComplete: true`; `publicReleaseReady` remains false because project licensing/legal review, hosted CI execution, signing, and NuGet publication are separate external gates
+- Overall state: broad LT001-LT004 buckets are eliminated and replaced by generated bindings or narrow evidence-backed ABI/ownership dispositions. The complete alpha.50 local release check passes and records `batchImplementationComplete: true`. MIT licensing, bundled third-party notices, and committed runtime evidence pass; `publicReleaseReady` remains false because hosted release execution, signing, and NuGet publication are separate external gates
+
+### Alpha.50 clone-and-run distribution wave
+
+- Package version is `0.1.0-alpha.50`; native ABI remains 1.41 and bridge remains
+  0.49.0. The generated/public API is unchanged from alpha.49.
+- The repository now commits the accepted 62-DLL Windows x64 Release closure under
+  `OcctSharp/runtime/win-x64/occt/`: 98,990,032 bytes total, largest file 14,863,872
+  bytes, with no GitHub 100 MiB object-limit violation.
+- `runtime-manifest.json` pins 62 DLLs and 11 notice/license files by path, size, and
+  SHA256. The complete Release rebuild is byte-identical to the committed DLL closure.
+- Repository project builds prefer the committed runtime and clean stale output DLLs;
+  ADR-0051's OCCT SDK bootstrap remains an explicit contributor override.
+- A genuinely new local Git clone with no `local.settings.json` and no OCCT environment
+  variables passed manifest verification, Release smoke, Debug smoke, and alpha.50 pack.
+  Both smokes loaded ABI 1.41/bridge 0.49.0/OCCT 8.0.1, copied exactly 62 DLLs, and
+  created a six-face box.
+- MIT project licensing and packaged OCCT, oneTBB, FreeImage, FreeType, OpenVR, FFmpeg,
+  and jemalloc notice/license material resolve PD-012. The unavailable jemalloc bundle
+  version is disclosed rather than guessed.
+- The complete alpha.50 release check passes: Release/Debug Generator 62/62 and Runtime
+  105/105, byte-identical 13-file clean regeneration, clean package consumer, API diff
+  36,602 additions/0 removals, 116,272-declaration/7,090-header classification, runtime
+  manifest/build identity, SBOM/provenance/checksums, and Git whitespace gates.
 
 ### Alpha.49 final long-tail and completion-gate wave
 
@@ -871,21 +894,21 @@ publication remain external release work and are not silently included in Batch 
 | Interactive console samples | PASS (scoped) | Six-class menu compiles; first five workflows have redirected-input evidence; Viewer UI launch NOT RUN, while its HWND path is runtime/package tested |
 | B17 HWND visualization core | PASS | Release/Debug real HWND display, source-independent AIS shape, hide/show/resize/fit/redraw, thread rejection, detection/selection snapshot, and removal |
 | B18 optional dependency profiles | PASS | Release/Debug build audit classifies 6/6 profiles; IVtk/VTK and EGL/GLES blockers are named; core package unchanged |
-| Native runtime dependency closure | PASS | 47 DLLs in the alpha.48 Release package; complete closure loads from `occt` |
+| Native runtime dependency closure | PASS | 62 DLLs in committed alpha.50 runtime; complete Release rebuild is byte-identical and loads from `occt` |
 | XDE two-box assembly | PASS | One XDE assembly root, two occurrences, and 12-face STEP round-trip |
 | STEPCAF/XDE metadata | PASS (scoped) | Seven local inputs: color/style records retained, 4 material-property records retained, 7 assembly occurrences |
 | XDE native runtime libraries | PASS | `TKXCAF`, `TKCAF`, `TKLCAF`, and `TKCDF` present in Debug and Release runtime directories |
 | Checked shared-handle cast | PASS | Release/Debug `TryCastDerived` and `CastDerived`: retained success, wrong/null rejection, and `InvalidCastException` |
-| NuGet package contents | PASS | `0.1.0-alpha.48`; managed/XML/docs, 47 native DLLs, OCCT license and exception |
+| NuGet package contents | PASS | `0.1.0-alpha.50`; managed/XML/docs, MIT metadata/license, 62 native DLLs, and 11 bundled notice/license files |
 | Package output layout | PASS | Published executable has `occt/` closure and no root `OcctSharp.Native.dll` |
 | Packaging/clean consumer | PASS | Local alpha.49 package plus clean SDK 10.0.400 NuGet restore/publish/runtime, ABI 1.41/bridge 0.49.0, 62 DLLs, 16,353 generated declarations, IGES/session infrastructure, generated cross-type handles, mesh/Poly/analysis/healing, Geom/Geom2d, current geometry/topology/XDE APIs, and prior profiles |
-| Fresh-clone Sample native bootstrap | PASS | Missing Debug bridge simulation rebuilt 45 DLLs through `ensure-native.ps1`, copied `occt/`, and ran English entity creation |
+| Fresh-clone Sample bundled runtime | PASS | New clone without local settings/OCCT environment passed manifest, Release/Debug `--smoke`, exact 62-DLL output, box creation, and package creation |
 | Git whitespace checks | PASS | `git diff --check` and `git diff --cached --check` |
-| CI configuration | PASS | Generator job plus immutable URL/SHA full Windows release-check job configured in `.github/workflows/ci.yml` |
+| CI configuration | PASS | Generator tests, clone-only bundled-runtime Release/Debug smoke, and immutable URL/SHA full Windows release-check jobs configured |
 | Hosted CI execution | NOT RUN | No remote workflow was dispatched from this local task |
 | API compatibility | PASS | Alpha.38 606-signature baseline comparison: 36,602 additions, zero removals, non-breaking |
-| Release engineering | PASS (alpha.49) | Complete alpha.49 release check passes: Release/Debug, freshness, 62-DLL clean consumer, byte-identical clean-source regeneration, API diff, full inventory, release metadata/checksums, and whitespace gates; `batchImplementationComplete` is true |
-| Public release readiness | BLOCKED | Project license and non-OCCT third-party review unresolved; signing/publication NOT RUN |
+| Release engineering | PASS (alpha.50) | Complete alpha.50 release check passes, including committed-runtime hash/build identity and fresh-clone smoke; `batchImplementationComplete` is true |
+| Public release readiness | BLOCKED | MIT and bundled notices PASS; hosted release execution, signing, and NuGet publication are NOT RUN |
 
 ## Migration loop state
 
@@ -893,16 +916,16 @@ publication remain external release work and are not silently included in Batch 
 LOOP_STATE: COMPLETE
 CURRENT_BATCH: B
 CURRENT_WORKSTREAM: BATCH B LOCAL IMPLEMENTATION COMPLETE
-COMPLETED_THIS_TURN: Closed the alpha.49 long-tail generation and classification wave, eliminated SupportedUnselected and LT001-LT004, fixed zero-item gate aggregation, and passed the complete local release check
+COMPLETED_THIS_TURN: Added MIT, committed and hash-pinned the 62-DLL Windows x64 runtime with complete bundled notices, made ordinary clones run Debug/Release samples without OCCT, and passed the complete alpha.50 release check
 NEXT_WORKSTREAM: NONE INSIDE B; PUBLIC-RELEASE GATES ARE SEPARATE
-NEXT_ACTION: User/project owners must choose the project license and complete third-party legal review before hosted CI, signing, credentials, or publication can be authorized
+NEXT_ACTION: Push alpha.50 and observe hosted clone-only CI; signing credentials and NuGet publication still require separate owner authorization
 ENGINEERING_PROGRESS: 100% FOR B LOCAL IMPLEMENTATION
 BATCH_PROGRESS: B COMPLETE (declaration coverage and public-release readiness reported separately)
 SELECTED_BINDING_COVERAGE: 16414/16414 generated plus accepted manual stable IDs (100%)
 FULL_PROFILE_ACCOUNTING: 116272/116272 declarations classified; 50514 have narrow blocked dispositions and are not claimed as managed APIs
 INVENTORY_COMPLETENESS: 7058/7090 headers semantically scanned (99.5487%); 116272/116272 discovered declarations and 7090/7090 catalogued headers classified
-LAST_VALIDATION: Complete alpha.49 release check passed; Generator 62/62 and Runtime 105/105 in Release/Debug and clean copy, 62-DLL clean consumer at ABI 1.41/bridge 0.49.0 under SDK 10.0.400, 13-file freshness and byte-identical clean regeneration, 36602 additions/0 removals API diff, full inventory, release metadata/checksums, and whitespace checks passed
-BLOCKER: NONE FOR B; PUBLIC RELEASE BLOCKED BY LICENSE AND THIRD-PARTY LEGAL REVIEW
+LAST_VALIDATION: Complete alpha.50 release check plus an independent fresh clone passed; Generator 62/62 and Runtime 105/105 in Release/Debug and clean copy, committed/build-identical 62-DLL runtime at ABI 1.41/bridge 0.49.0, 13-file byte-identical regeneration, 36602 additions/0 removals, full inventory, package consumer, SBOM/provenance/checksums, and whitespace checks passed
+BLOCKER: NONE FOR B OR CLONE-AND-RUN; PUBLIC PACKAGE RELEASE STILL REQUIRES HOSTED RELEASE EXECUTION, SIGNING, AND NUGET PUBLICATION AUTHORIZATION
 ```
 
 ## Known risks

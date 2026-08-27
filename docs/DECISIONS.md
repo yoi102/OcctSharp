@@ -57,7 +57,7 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0048](adr/0048-final-long-tail-and-header-classification.md) | Give every full-inventory declaration and entry header a deterministic final disposition | Accepted |
 | [ADR-0049](adr/0049-release-evidence-and-publication-gates.md) | Use one reproducible release evidence pipeline and keep batch completion separate from publication readiness | Superseded in part by ADR-0050 |
 | [ADR-0050](adr/0050-completion-gates-are-not-classification-gates.md) | Keep classification separate from completion; its numbered-batch model is superseded by ADR-0054 | Superseded in part by ADR-0054 |
-| [ADR-0051](adr/0051-repository-native-bootstrap.md) | Bootstrap repository native runtime from pinned local or immutable OCCT inputs | Accepted |
+| [ADR-0051](adr/0051-repository-native-bootstrap.md) | Bootstrap repository native runtime from pinned local or immutable OCCT inputs | Superseded in part by ADR-0059 |
 | [ADR-0052](adr/0052-native-local-common-modeling-operations.md) | Keep common modeling algorithms native-local and reconcile audited manual stable IDs | Accepted |
 | [ADR-0053](adr/0053-composable-xde-step-import.md) | Import STEP roots into an owned XDE document for composable assembly workflows | Accepted |
 | [ADR-0054](adr/0054-single-complete-migration-batch.md) | Merge the former B00-B20 plan into one complete migration batch B | Accepted |
@@ -65,13 +65,14 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0056](adr/0056-generated-translation-unit-completion-headers.md) | Complete forward-declared template elements before generated scope headers | Accepted |
 | [ADR-0057](adr/0057-core-toolkit-closure-and-auto-package-exclusions.md) | Link one explicit core toolkit closure and give excluded automatic packages stable dispositions | Accepted |
 | [ADR-0058](adr/0058-narrow-long-tail-dispositions-and-local-completion-gate.md) | Replace LT001-LT004 with narrow evidence and require all local implementation gates for Batch B completion | Accepted |
+| [ADR-0059](adr/0059-committed-windows-runtime-and-mit-license.md) | Commit the verified Windows x64 runtime and license OcctSharp project code under MIT | Accepted |
 
 ## Pending decisions
 
 | ID | Decision needed | Required by |
 |---|---|---|
 | PD-010 | Large test data, Git LFS, and fixture licensing policy | Real-file tests |
-| PD-012 | Project license and bundled third-party notice layout | First package |
+| PD-012 | Project license and bundled third-party notice layout | Resolved by ADR-0059: MIT plus runtime-local notices and license texts |
 
 ## ADR template
 

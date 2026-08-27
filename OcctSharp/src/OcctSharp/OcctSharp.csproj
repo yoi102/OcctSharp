@@ -4,16 +4,18 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>OcctSharp</PackageId>
-    <Version>0.1.0-alpha.49</Version>
+    <Version>0.1.0-alpha.50</Version>
     <Authors>OcctSharp contributors</Authors>
     <PackageDescription>.NET 10 bindings and friendly API for Open CASCADE Technology 8.0.1 on Windows x64.</PackageDescription>
     <PackageTags>OCCT;OpenCASCADE;CAD;STEP;STL;IGES;XDE</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <IsPackable>true</IsPackable>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\..\LICENSE" Pack="true" PackagePath="\" />
     <None Include="..\..\..\docs\**\*.md"
           Exclude="..\..\..\docs\STATUS.md"
           Pack="true"
@@ -24,13 +26,11 @@
     <None Include="$(OcctSharpNativeRuntimeDir)\*.dll"
           Pack="true"
           PackagePath="buildTransitive\win-x64\occt\" />
-    <None Include="$(OcctSharpOcctRoot)\LICENSE_LGPL_21.txt"
+    <None Include="$(OcctSharpBundledRuntimeRoot)\licenses\**\*"
           Pack="true"
-          PackagePath="licenses\occt\"
-          Condition="Exists('$(OcctSharpOcctRoot)\LICENSE_LGPL_21.txt')" />
-    <None Include="$(OcctSharpOcctRoot)\OCCT_LGPL_EXCEPTION.txt"
+          PackagePath="licenses\%(RecursiveDir)" />
+    <None Include="$(OcctSharpBundledRuntimeRoot)\THIRD_PARTY_NOTICES.md"
           Pack="true"
-          PackagePath="licenses\occt\"
-          Condition="Exists('$(OcctSharpOcctRoot)\OCCT_LGPL_EXCEPTION.txt')" />
+          PackagePath="licenses\" />
   </ItemGroup>
 </Project>

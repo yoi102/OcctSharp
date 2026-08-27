@@ -168,10 +168,15 @@ package to `0.1.0-alpha.49`. It emits all named Int32-compatible enums in the ge
 profile, adds verified void/static and Standard foundation free-function projections,
 and replaces LT001-LT004 with narrow evidence-backed dispositions. Existing public and
 native APIs are not removed.
+The clone-and-run distribution wave keeps ABI 1.41/bridge 0.49.0 and advances the
+package to `0.1.0-alpha.50`. It adds the MIT project license, committed SHA256-pinned
+Windows x64 runtime, complete bundled notices, and Sample `--smoke` entry point. No
+managed or native API is removed.
 
 ## Upgrade classification
 
-Alpha.49 generation records 16,353 emitted and 61 accepted manual declarations. The
+Alpha.50 uses the unchanged alpha.49 generated surface: 16,353 emitted and 61 accepted
+manual declarations. The
 observed full inventory remains separate: 116,272 classified declarations, zero
 supported-unselected, and 50,514 narrow blocked dispositions. Package verification is
 pinned to .NET SDK 10.0.400 by the inner workspace `global.json`.

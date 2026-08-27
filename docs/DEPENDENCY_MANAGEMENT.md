@@ -56,7 +56,8 @@ developer preferences.
 ADR-0004 selects the supplied prebuilt combined distribution for the first local
 baseline. B20 configures CI acquisition through an immutable archive URL plus SHA256;
 hosted execution still requires repository variables and has not been run.
-ADR-0051 extends the same fail-closed input to repository Sample bootstrap:
+ADR-0059 makes the manifest-verified committed runtime the default repository Sample
+input. ADR-0051 still provides the fail-closed contributor rebuild path:
 `eng/ensure-native.ps1` accepts a manifest-validated extracted SDK or an absolute HTTPS
 archive plus SHA256, caches it below ignored `artifacts/dependencies/`, and builds only
 the native bridge. It never searches for a machine-wide OCCT installation. The archive
@@ -74,9 +75,10 @@ bridge and 44 dependent runtime DLLs into the application's `occt` directory.
 Runtime packaging validation must inspect actual binary dependencies, not only the
 presence of the OcctSharp native bridge.
 
-The current local package includes the OCCT LGPL 2.1 text and OCCT linking exception.
-Complete notices and redistribution review for every bundled third-party DLL remain a
-public-release gate; creating a local package is not evidence that publication is ready.
+The committed runtime and package include the OCCT LGPL 2.1 text/exception plus the
+oneTBB, FreeImage, FreeType, OpenVR, FFmpeg, and jemalloc notices recorded by ADR-0059.
+Every file is SHA256-pinned. Publication authorization and signing remain separate from
+technical redistribution evidence.
 
 ## Supply-chain requirements
 
@@ -85,9 +87,9 @@ public-release gate; creating a local package is not evidence that publication i
 - Do not commit unlicensed CAD fixtures or binaries.
 - Regenerate the implemented CycloneDX SBOM, provenance, and fixed-order SHA256 evidence
   for every release candidate.
-- Resolve all `unknown` non-OCCT component versions/licenses and define signing policy
-  before public release.
+- Keep every non-OCCT component version/license recorded; where supplied metadata is
+  unavailable (currently jemalloc), disclose that fact instead of inventing a version.
 
-The current local alpha.49 evidence records 62 native files, including the bridge, in
-`artifacts/release/`. This is technical provenance only; it does not replace legal review
-or make `publicReleaseReady` true.
+The alpha.50 repository records 62 native files, including the bridge, in both the
+committed runtime manifest and generated release evidence. This does not by itself grant
+signing credentials or NuGet publication authorization.

@@ -10,7 +10,23 @@ runtime tests against the first OCCT 8.0.1 baseline. An experimental local NuGet
 also delivers the complete native runtime below an application's `occt` directory.
 Generation also produces deterministic package coverage and per-declaration diagnostics
 for review during binding and OCCT upgrade work. A separate batched inventory audits the
-entire public OCCT header surface without slowing the normal build.
+entire public OCCT header surface without slowing the normal build. The verified Windows
+x64 runtime is committed, so examples do not require a separate OCCT SDK.
+
+## Clone and run
+
+On Windows x64 with .NET SDK 10.0.400:
+
+```powershell
+git clone https://github.com/yoi102/OcctSharp.git
+cd OcctSharp\OcctSharp
+dotnet run --project .\samples\OcctSharp.Samples -- --smoke
+```
+
+The command verifies ABI 1.41, bridge 0.49.0, OCCT 8.0.1, all 62 application-local
+DLLs, and creates a six-face OCCT box. Run without `--smoke` for the interactive sample
+menu. No OCCT installation, CMake, Visual Studio C++ workload, environment variable, or
+private settings file is required for these examples.
 
 ## Repository boundary
 
@@ -28,27 +44,24 @@ See [the documentation index](docs/DOCUMENTATION_INDEX.md),
 
 ## Current state
 
-- B00-B18 are complete; B19 binding completion and B20 release completion remain open.
-  Current batch progress is 19 of 21 (90.5%).
+- The single migration batch B is locally complete. Generated/API coverage and public
+  publication authority remain separate facts.
 - Managed target is .NET 10; the validated baseline is Windows x64 and OCCT 8.0.1.
 - ClangSharp semantic discovery, deterministic generation, native C ABI, friendly managed
   owners/values, geometry and metadata exchange, OCAF/XDE, and Windows HWND visualization
   are implemented for their declared profiles.
-- Full inventory classifies 116,214 discovered declarations and all 7,090 catalogued
-  headers. B19.3 accounts for 333 emitted plus 18 accepted manual declarations across
-  9,567 selected declarations (3.6689%); 10,177 full-inventory declarations remain
-  `SupportedUnselected`.
-  Classification completeness must not be read as binding coverage.
+- Full inventory classifies 116,272 discovered declarations and all 7,090 catalogued
+  headers with zero `SupportedUnselected`, zero broad LT001-LT004 reasons, and 16,353
+  generated plus 61 accepted manual stable IDs. Narrow blocked dispositions are not
+  claimed as managed APIs.
 - The .NET 10 console sample contains six separate workflows: entity creation,
   STEP/STL/IGES export, transformed metadata-preserving XDE STEP assembly, and Viewer.
-- Local package `OcctSharp.0.1.0-alpha.41.nupkg` restores and publishes into a clean
-  consumer with 47 native DLLs under application-local `occt/`, including all 129
-  generated StepBasic shared types and the common modeling profile.
-- A configured fresh clone can run the Sample project directly: an incremental
-  native-only bootstrap builds the missing bridge from a manifest-validated local SDK
-  or immutable URL/SHA256 input, then copies the runtime below Sample output `occt/`.
+- Package version `0.1.0-alpha.50` carries the same committed 62-DLL runtime and complete
+  license/notice layout below application-local `occt/` and `licenses/`.
+- An ordinary clone runs the Sample directly from the SHA256-pinned committed runtime.
+  The SDK/CMake bootstrap remains available only as an explicit contributor override.
 - The release pipeline records a 606-signature API baseline, clean regeneration,
   CycloneDX SBOM, provenance, checksums, release gates, and CI configuration.
-- Public release is blocked until the project license and remaining third-party notices
-  are resolved; hosted CI, signing, and NuGet publication have not been run.
-- Architecture and behavior are recorded through ADR-0052.
+- Project code is MIT licensed. OCCT and third-party runtime terms are preserved beside
+  the bundled DLLs; hosted CI, signing, and NuGet publication remain separate gates.
+- Architecture and behavior are recorded through ADR-0059.

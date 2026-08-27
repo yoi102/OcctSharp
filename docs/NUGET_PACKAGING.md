@@ -2,7 +2,7 @@
 
 ## Current package
 
-The current experimental package is `OcctSharp` `0.1.0-alpha.49` for .NET 10 and
+The current experimental package is `OcctSharp` `0.1.0-alpha.50` for .NET 10 and
 Windows x64. It contains:
 
 - `lib/net10.0/OcctSharp.dll` and XML documentation.
@@ -10,7 +10,8 @@ Windows x64. It contains:
 - The Release `OcctSharp.Native.dll` bridge.
 - The complete currently inspected OCCT and third-party runtime DLL closure.
 - A transitive MSBuild target that copies native files for build and publish.
-- The OCCT LGPL 2.1 text and OCCT linking exception.
+- The MIT project-license expression and repository license.
+- OCCT, oneTBB, FreeImage, FreeType, OpenVR, FFmpeg, and jemalloc license/notice material.
 
 The live repository `docs/STATUS.md` is intentionally not embedded in the package: it
 contains a package hash and would make the artifact self-referential. Release notes and
@@ -19,8 +20,8 @@ the repository.
 
 This package is validated locally but is not approved for publication. The release workstream produces
 immutable native provenance, SBOM/checksum evidence, API diff, and CI configuration.
-A project license and complete third-party notices remain blocked; hosted CI, signing,
-and publication are `NOT RUN`.
+The project license and bundled third-party notice layout are resolved by ADR-0059;
+hosted release execution, signing, and publication are separate `NOT RUN` gates.
 
 ## Application output layout
 
@@ -73,18 +74,17 @@ application-local closure contains 62 DLLs.
 Once a package source contains the package, an application uses the normal command:
 
 ```powershell
-dotnet add package OcctSharp --version 0.1.0-alpha.49
+dotnet add package OcctSharp --version 0.1.0-alpha.50
 ```
 
 The application must run as a Windows x64 process on the current compatibility matrix.
 Missing or incomplete native assets produce an exception naming the expected `occt`
 directory rather than falling back to a machine-wide OCCT installation.
 
-This self-contained NuGet consumer path is intentionally separate from a repository
-ProjectReference. A fresh repository clone does not commit third-party native DLLs, so
-the Sample project uses ADR-0051's incremental `eng/ensure-native.ps1` bootstrap from a
-manifest-validated SDK or immutable archive. In both cases the executable receives the
-same application-local `occt/` directory and the managed resolver behavior is identical.
+The repository ProjectReference and NuGet consumer paths both use a self-contained
+runtime. A fresh clone copies the committed, manifest-verified DLL closure; native
+contributors may explicitly opt into ADR-0051's SDK bootstrap. In all cases the
+executable receives the same application-local `occt/` directory.
 
 ## Release evidence
 
@@ -96,12 +96,10 @@ completed release tooling do not override a `BLOCKED` or `NOT RUN` publication g
 
 ## Planned package split
 
-Alpha.49 package verification ran from the inner `OcctSharp/` workspace, where
+Alpha.50 package verification runs from the inner `OcctSharp/` workspace, where
 `global.json` selects SDK 10.0.400. The clean consumer restored, published, and ran
-successfully with ABI 1.41, bridge 0.49.0, and 62 native DLLs under `occt`. The release
-gate remains non-public because license,
-third-party notice, signing, hosted-CI, and publication authorization gates are still
-blocked or not run.
+with ABI 1.41, bridge 0.49.0, and 62 native DLLs under `occt`. Signing, hosted release
+execution, and publication authorization remain separate gates.
 
 ADR-0015 keeps one package during the topology/modeling foundation, then introduces
 Runtime, Foundation, Modeling, Mesh, DataExchange, Xde, Visualization, and optional IVtk

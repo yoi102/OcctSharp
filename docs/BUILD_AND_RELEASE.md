@@ -11,7 +11,22 @@ Release evidence tooling is implemented inside batch B; public publication remai
 - OCCT: 8.0.1 combined VC14 x64 distribution with Debug and Release libraries.
 - AST: ClangSharp 21.1.8.4 with libClangSharp 21.1.8.2.
 
-## Local configuration
+## Clone-and-run sample
+
+No native developer configuration is required for the committed examples:
+
+```powershell
+git clone https://github.com/yoi102/OcctSharp.git
+cd OcctSharp\OcctSharp
+.\eng\verify-bundled-runtime.ps1
+dotnet run --project .\samples\OcctSharp.Samples -- --smoke
+```
+
+The repository supplies the 62-DLL Windows x64 Release closure. Both Debug and Release
+managed configurations use it. The smoke command verifies runtime identity and creates
+an OCCT box, without reading local settings or building C++.
+
+## Native contributor configuration
 
 Copy `OcctSharp/config/local.settings.example.json` to
 `OcctSharp/config/local.settings.json` and set:
@@ -29,18 +44,18 @@ As an alternative to a pre-extracted SDK path, set both
 64-digit SHA256 is accepted. The verified archive is cached and extracted below ignored
 `artifacts/dependencies/`; no artifact URL is currently committed or implicitly trusted.
 
-Repository Sample builds have a smaller first-run path:
+To deliberately rebuild the native bridge instead of using the committed runtime:
 
 ```powershell
-dotnet run --project .\samples\OcctSharp.Samples --configuration Debug
+dotnet run --project .\samples\OcctSharp.Samples --configuration Debug `
+  -p:OcctSharpUseBundledNativeRuntime=false
 ```
 
-If the Debug native runtime is missing or stale, MSBuild invokes
+With the bundled runtime disabled, if the Debug native runtime is missing or stale, MSBuild invokes
 `eng/ensure-native.ps1`, builds only the native bridge and current 62-DLL closure, and copies it
 to the Sample output's `occt/` directory. It does not call `eng/build.ps1` and cannot
-recurse into the managed build. A clone without any configured OCCT input fails with
-instructions for the three supported input methods. NuGet consumers are different:
-their package already contains `occt/` and they do not need an OCCT SDK.
+recurse into the managed build. This override requires one of the documented pinned
+OCCT inputs; the default clone-and-run path does not.
 
 ## Current local commands
 
@@ -84,10 +99,10 @@ deterministic batches, isolates individual failing headers, and writes
 `artifacts/generator-reports/full-inventory.json`. An incomplete scan writes its partial
 report but exits non-zero so automation cannot mistake it for a full denominator.
 
-Create and verify the experimental NuGet package with:
+Create and verify the package from the committed runtime without a native rebuild with:
 
 ```powershell
-.\eng\pack.ps1
+.\eng\pack.ps1 -SkipBuild
 .\eng\verify-package.ps1 -SkipBuild
 ```
 

@@ -37,7 +37,7 @@ Planned outcomes:
 - [x] One Git repository at the outer root.
 - [x] Inner solution and native CMake workspace.
 - [x] Pinned dependency and toolchain manifests.
-- [ ] CI skeleton for the initial platform.
+- [x] CI skeleton for the initial platform, including clone-only bundled-runtime smoke.
 - [x] Minimal manually written C ABI probe with ABI/build version query.
 - [x] Managed invocation of the probe with clear load diagnostics.
 - [x] OCCT-backed box creation and topology face-count runtime path.

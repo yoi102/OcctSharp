@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [string]$OcctRoot,
-    [string]$PackageVersion = '0.1.0-alpha.49',
+    [string]$PackageVersion = '0.1.0-alpha.50',
     [string]$ApiBaselineVersion = '0.1.0-alpha.38'
 )
 
@@ -16,6 +16,7 @@ $releaseDirectory = Join-Path $workspaceRoot 'artifacts\release'
 
 & (Join-Path $PSScriptRoot 'build.ps1') -Configuration Release -OcctRoot $OcctRoot
 & (Join-Path $PSScriptRoot 'build.ps1') -Configuration Debug -OcctRoot $OcctRoot
+& (Join-Path $PSScriptRoot 'verify-bundled-runtime.ps1') -CompareBuiltRuntime
 & (Join-Path $PSScriptRoot 'verify-generated.ps1') -Configuration Release
 & (Join-Path $PSScriptRoot 'verify-package.ps1') -SkipBuild -OcctRoot $OcctRoot -PackageVersion $PackageVersion
 & (Join-Path $PSScriptRoot 'verify-clean-regeneration.ps1') -OcctRoot $OcctRoot
@@ -74,6 +75,7 @@ $projectLicensePresent = (Test-Path -LiteralPath (Join-Path $repositoryRoot 'LIC
     (Test-Path -LiteralPath (Join-Path $repositoryRoot 'LICENSE.md'))
 $gates = @(
     [ordered]@{ id = 'local-release-debug'; state = 'PASS'; evidence = 'Release and Debug build/test completed in this run.' },
+    [ordered]@{ id = 'bundled-runtime'; state = 'PASS'; evidence = 'Committed Windows x64 runtime manifest, 62 DLL hashes, and all included license/notice hashes verified.' },
     [ordered]@{ id = 'generated-freshness'; state = 'PASS'; evidence = '13 manifest-owned files current.' },
     [ordered]@{ id = 'clean-regeneration'; state = 'PASS'; evidence = 'Fresh source copy build and byte comparison completed.' },
     [ordered]@{ id = 'package-consumer'; state = 'PASS'; evidence = "$PackageVersion clean restore/publish/runtime with $nativeDllCount DLLs, $emittedCount generated declarations, IGES/session infrastructure, prior geometry/modeling/exchange/XDE APIs, and composable XDE STEP import." },
@@ -85,12 +87,13 @@ $gates = @(
     [ordered]@{ id = 'ci-configuration'; state = 'PASS'; evidence = '.github/workflows/ci.yml is configured.' },
     [ordered]@{ id = 'ci-hosted-execution'; state = 'NOT RUN'; evidence = 'No remote workflow was dispatched from this local task.' },
     [ordered]@{ id = 'project-license'; state = if ($projectLicensePresent) { 'PASS' } else { 'BLOCKED' }; evidence = if ($projectLicensePresent) { 'Repository license exists.' } else { 'PD-012 requires the user to select the project license.' } },
-    [ordered]@{ id = 'third-party-legal-review'; state = 'BLOCKED'; evidence = 'Exact versions/notices/source obligations for non-OCCT DLLs remain unresolved.' },
+    [ordered]@{ id = 'third-party-notices'; state = 'PASS'; evidence = 'OCCT, oneTBB, FreeImage, FreeType, OpenVR, FFmpeg, and jemalloc notices and license texts are committed and packaged; the unavailable jemalloc bundle version is disclosed.' },
     [ordered]@{ id = 'package-signing'; state = 'NOT RUN'; evidence = 'No signing certificate or authorization was provided.' },
     [ordered]@{ id = 'nuget-publication'; state = 'NOT RUN'; evidence = 'No NuGet credential or publication authorization was provided.' }
 )
 $localBatchGateIds = @(
     'local-release-debug',
+    'bundled-runtime',
     'generated-freshness',
     'clean-regeneration',
     'package-consumer',

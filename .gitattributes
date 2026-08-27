@@ -12,3 +12,5 @@ CMakeLists.txt text eol=lf
 *.md text eol=lf
 *.ps1 text eol=crlf
 *.bat text eol=crlf
+*.dll -text
+OcctSharp/runtime/win-x64/licenses/** -text whitespace=-trailing-space
