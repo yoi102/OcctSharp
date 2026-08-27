@@ -4,8 +4,33 @@ The roadmap is outcome-based. A phase completes only when all exit criteria have
 evidence; creating files or generating a large method count is not sufficient.
 
 The retired B00–B20 capability milestones and future package boundaries are documented
-in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the one current
+in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the completed
 product-scale batch `B`; none is a separate current batch or commit boundary.
+Batch B is complete. ADR-0060 opens Batch `C` as the active common-CAD-API product batch.
+
+## Current priority: Batch C common CAD workflows
+
+The active roadmap is one large product outcome: make the routine CAD path usable from
+.NET without unmanaged escape hatches. Work advances model/inspect, build/modify/deliver,
+and present/interact coverage together. These are lanes inside C, not phases or batches.
+
+Priority order inside each large wave:
+
+1. High-frequency end-to-end workflow gaps and generalized generator/type-map/ownership
+   rules that unlock several related API families.
+2. Complete family semantics: overloads, options, status/diagnostics, ownership,
+   disposal, failure paths, bulk transfer, and friendly composition.
+3. Runtime, integration, real-file, viewer, and package evidence for the whole workflow.
+4. Only then additional cold schema entities, optional integrations, or low-frequency
+   infrastructure declarations.
+
+The first active wave is common solid editing and inspection across geometry/topology
+queries, BRep construction/modification, mesh extraction, STEP/XDE round trip, and viewer
+presentation/selection. It is not split into per-class or numbered tasks. See
+[the complete migration plan](MIGRATION_PLAN.md) for the exact Batch C contract.
+
+The phase record below is retained as Batch B history and architecture context; it is not
+the active execution sequence for C.
 
 ## Phase D0: Documentation and decisions
 
@@ -179,26 +204,20 @@ callbacks and broad generated visualization declarations remain B19 long-tail sc
 
 Goal: publish validated NuGet packages for the declared compatibility matrix.
 
-Implemented local evidence: one experimental package now carries the managed assembly and
+Implemented evidence: one experimental package now carries the managed assembly and
 the complete Windows x64 native closure, copies it below the consumer's `occt` directory,
 and passes a clean restore/publish/runtime consumer. The release workstream also implements
 API baselines, clean-source regeneration, immutable-artifact CI configuration,
-SBOM/provenance/checksums, release notes, and explicit machine-readable gates. This does not authorize public
-publication; project-license and third-party review remain blocked, and hosted CI,
-signing, and NuGet publication are `NOT RUN`.
+SBOM/provenance/checksums, release notes, and explicit machine-readable gates. MIT,
+bundled notices, clone-only hosted CI, and the committed runtime pass. This does not
+authorize signing or NuGet publication.
 
-The former B00-B20 plan is now one product-scale migration batch `B`. Foundation,
-generated StepBasic sharing, common modeling, classification, and release engineering are
-capability milestones inside B, not separately completed batches. B remains open because
-bindable declarations are still unselected and broad LT001-LT004 projection/ownership
-blockers remain. Work continues through real emitted/manual coverage rather than
-reclassification-only milestones.
+The former B00-B20 plan is the completed product-scale migration batch `B`. Foundation,
+generated sharing, modeling, classification, and release engineering are historical
+capability milestones inside B, not active batches.
 
-The current large workstream prioritizes high-frequency Geom/Geom2d construction,
-evaluation, projection, advanced topology maps/history snapshots, modeling workflows,
-and composable XDE operations before additional low-value STEP data-entity expansion.
-The next completed generator expansion adds concrete BRepMesh, Poly, ShapeAnalysis,
-ShapeFix, and ShapeUpgrade shared owners under binding-model schema 1.2; abstract
-records are rejected before emission rather than maintained in a class deny list.
-Any future batch uses a whole letter and the same product-scale sizing; numbered or dotted
-batch fragments are not used.
+Batch C now prioritizes the common workflow matrix defined by ADR-0060. Numbered or
+dotted fragments, per-class batches, and small completion percentages are not used.
+Focused checks may run during implementation, but full Release/Debug/package/inventory
+evidence is amortized at a coherent large-wave checkpoint rather than repeated after
+each method.

@@ -72,6 +72,8 @@ The accepted boundaries are recorded in ADRs:
   final long-tail dispositions and separate local implementation/publication gates.
 - [ADR-0059](adr/0059-committed-windows-runtime-and-mit-license.md): committed,
   manifest-verified Windows x64 runtime and MIT project license.
+- [ADR-0060](adr/0060-common-cad-api-product-batch.md): one product-scale Batch C that
+  prioritizes common end-to-end CAD workflows and large cross-family implementation waves.
 
 ## Components
 
@@ -127,7 +129,7 @@ Configuration schema 1.6 links each directly used manual declaration stable ID t
 and both selected discovery and full inventory fail when a configured ID disappears or
 overlaps generated ownership.
 
-The current high-value API work inside B extends this result-oriented boundary across
+Batch B's high-value API work extended this result-oriented boundary across
 curves, surfaces, topology maps, multi-shape construction, solid features, and Boolean
 history summaries. Builder, adaptor, projection, adjacency, sewing, pipe, loft, thick-
 solid, and history objects remain native-local. Only registered owning shapes, immutable

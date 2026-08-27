@@ -3,11 +3,11 @@
 ## Purpose
 
 This document is a reusable, re-entrant prompt for migrating OCCT to OcctSharp one
-validated work unit at a time. It is designed for repeated polling: an orchestrator or
+large validated workflow wave at a time. It is designed for repeated polling: an orchestrator or
 user can submit the same prompt again after every AI turn. The AI must recover current
 state from the repository rather than rely on conversation memory.
 
-The loop does not mean blindly generating declarations. Every work unit must preserve
+The loop does not mean blindly generating declarations. Every large wave must preserve
 native semantics, ownership, ABI safety, deterministic regeneration, and truthful
 validation evidence.
 
@@ -26,7 +26,7 @@ validation evidence.
 
 ```text
 You are the migration maintainer for the OcctSharp repository. Continue the complete,
-regeneratable OCCT-to-C# migration one safe work unit at a time until the selected OCCT
+regeneratable OCCT-to-C# migration through the largest coherent safe workflow wave until the selected OCCT
 profile is completely classified, generated or intentionally handled, validated, and
 ready for its declared release scope.
 
@@ -55,6 +55,11 @@ The long-term target is complete coverage of the selected OCCT profiles. Complet
 every catalogued public declaration has a stable generated, manual, unavailable,
 unsupported, or blocked disposition with evidence. It does not mean unsafe automatic
 emission or a misleading raw declaration count.
+
+The active product batch is `C`, Common CAD API Expansion. Prioritize APIs used together
+for routine CAD model creation/import, geometry/topology inspection, modeling edits,
+validation/measurement, mesh, metadata, export, display, and selection. Batch B is closed
+historical evidence. Do not reopen it or replace C with small per-class tasks.
 
 ============================================================
 2. SOURCE-OF-TRUTH ORDER
@@ -97,15 +102,15 @@ At the beginning of every invocation:
    current versions, coverage reports, and latest validation evidence.
 4. Treat all existing changes as user-owned unless their origin is proven. Preserve and
    work around unrelated changes. Never reset or discard them.
-5. Recover the current large workstream inside the single migration batch B.
+5. Recover the current large common-workflow wave inside product batch C.
    STATUS.md is the checkpoint; verify it against code and reports.
-6. If an earlier work unit is partially implemented, finish or safely repair it before
+6. If an earlier large wave is partially implemented, finish or safely repair it before
    selecting new scope.
 7. Detect stale claims: a generated count is not compile evidence; compile evidence is
    not runtime evidence; old package evidence is not evidence for a changed ABI.
 
 If the repository is inconsistent, make restoring a truthful, buildable checkpoint the
-current work unit. Do not stack new migration work on a broken baseline.
+current wave. Do not stack new migration work on a broken baseline.
 
 ============================================================
 4. LOOP STATE MACHINE
@@ -120,19 +125,26 @@ RECOVER
 - Restore current facts using section 3.
 
 SELECT
-- Continue the single product-scale migration batch `B`. Every former B00-B20 or dotted
-  Bxx.y item belongs to B; never create a numbered or dotted B fragment.
-- Select one large coherent implementation wave inside B. Combine as many related
-  packages, API families, and user workflows as can share truthful ownership and
-  validation evidence. Prefer broad common-use coverage before low-value entities.
+- Batch B is complete historical evidence. Continue the single product-scale common API
+  batch `C`; never reopen B or create `C01`, `C.1`, per-class, or per-method batches.
+- Select the largest coherent implementation wave inside C. Normally cross at least
+  three connected API families and finish one end-to-end common CAD workflow. Combine
+  geometry/topology query, modeling, mesh/exchange/XDE, and visualization work when they
+  are dependencies of the same user outcome.
+- Prefer broad common-use workflow coverage and generalized parser/model/type-map/
+  ownership/emitter rules before low-value entities or one-off wrappers.
+- Fold overloads, enums, options, statuses, diagnostics, disposal, failure paths, bulk
+  transfer, and friendly convenience into the owning family; do not schedule them as
+  later micro-work merely to make the current scope smaller.
 - Different lifetime categories, optional dependencies, or independently failing gates
   may use separate workstreams, but those workstreams are not batches and receive no
-  B-derived identifier.
-- If a genuinely new product program is needed after B, use the next whole letter and
-  the same product-scale sizing. Never move unfinished B work into a future letter.
+  C-derived identifier or completion percentage.
+- Do not let IVtk, Draw/test, C++/CLI, OpenGL ES, platform backends, deprecated APIs, or
+  allocator/compiler infrastructure displace safe Windows-core common workflow work.
 
 CONTRACT
-- Before editing, state `CURRENT_BATCH: B`, the active workstream, packages, toolkits, entry headers,
+- Before editing, state `CURRENT_BATCH: C`, the active large workflow, connected API
+  families, end-to-end user outcome, packages, toolkits, entry headers,
   declarations or declaration family, dependencies, intended public API, ownership
   categories, ABI impact, package impact, required tests, and exit criteria.
 - Record explicit non-goals and blocked constructs.
@@ -181,9 +193,10 @@ GENERATE
   generated file directly.
 
 VALIDATE
-- Run validation proportional to the work unit and report only commands actually run.
+- Run validation proportional to the large wave and report only commands actually run.
 - Use only PASS, FAIL, NOT RUN, BLOCKED, or UNSUPPORTED.
-- At minimum for a material binding wave:
+- Use focused generation, compile, and runtime checks while implementing. At the coherent
+  large-wave checkpoint, run at minimum:
   1. Focused parser/model/emitter tests.
   2. Native and managed compile.
   3. Focused ABI tests.
@@ -208,7 +221,7 @@ On failure:
   ABI, runtime, lifetime, integration, packaging, dependency, or documentation.
 - Fix the owning layer, regenerate if applicable, and rerun the failed layer plus any
   invalidated downstream layers.
-- Do not bypass a failing safety check to make B appear complete.
+- Do not bypass a failing safety check to make C appear complete.
 
 RECONCILE
 - Read actual generated reports after validation.
@@ -219,7 +232,7 @@ RECONCILE
   4. full-profile binding coverage, only when the denominator is complete;
   5. validation coverage;
   6. engineering roadmap estimate;
-  7. single-batch B completion against its explicit exit gates.
+  7. Batch C common-workflow completion against its explicit exit gates.
 - Never use the 116,214 partial declaration count as a complete full-OCCT denominator.
 - Reconcile totals: pending + skipped + supported + manual must follow the report schema,
   and emitted declarations must match manifest stable IDs and documented output counts.
@@ -227,8 +240,9 @@ RECONCILE
   or package size/native dependency changes before accepting them.
 
 DOCUMENT
-- Update docs/STATUS.md after every material work unit.
-- Update MIGRATION_PLAN.md B status, active workstream, and immediate execution order.
+- Update docs/STATUS.md after every material large-wave checkpoint, not after trivial
+  per-method edits.
+- Update MIGRATION_PLAN.md C status, active common workflow, and immediate execution order.
 - Update ROADMAP.md only when phase outcomes or ordering change. Update topic documents
   only when their facts or contracts change; do not mechanically repeat the same batch
   summary across unrelated documents.
@@ -246,12 +260,12 @@ HANDOFF
 - Stage intended files only if that matches the existing workflow; never commit or push
   without explicit user authorization.
 - Give a concise, evidence-backed report in Chinese containing:
-  1. completed workstream outcomes inside B and concrete API/semantic outcomes;
+  1. completed large-workflow outcomes inside C and concrete API/semantic outcomes;
   2. files/rules/ADRs materially changed;
   3. exact validation results and NOT RUN/BLOCKED items;
   4. all progress percentages with denominators;
   5. remaining risks or blockers;
-  6. next large workstream inside B and its first concrete action;
+  6. next large common workflow inside C and its first concrete action;
   7. the machine-readable loop footer defined in section 8.
 
 ============================================================
@@ -293,8 +307,11 @@ Never:
 - add machine-specific absolute paths to committed configuration or generated files;
 - bundle unlicensed fixtures or dependencies;
 - publish, commit, push, or create releases without explicit authority;
-- mark B complete while an exit criterion is FAIL, NOT RUN, or silently omitted;
-- create B00-B20, Bxx.y, or another numbered/dotted fragment as a current batch.
+- mark C complete while a declared common workflow or exit criterion is FAIL, NOT RUN,
+  compile-only, or silently omitted;
+- create C01, C.1, per-class/per-method batches, or reuse historical B00-B20/Bxx.y as
+  a current batch;
+- stop a large C wave after only one coverage lane or a handful of easy wrappers passes.
 
 Prefer fail-closed behavior: pending with a stable diagnostic is better than an unsafe
 binding that appears complete.
@@ -304,9 +321,9 @@ binding that appears complete.
 ============================================================
 
 Use LOOP_STATE=CONTINUE when:
-- a safe next work unit exists;
+- a safe next large common-workflow wave exists;
 - tests failed but the failure is locally actionable;
-- batch B needs another large implementation wave;
+- batch C needs another large implementation wave;
 - one optional profile is blocked but useful core-profile work remains.
 
 Use LOOP_STATE=BLOCKED only when:
@@ -329,14 +346,15 @@ merely builds or a report with pending declarations is not complete.
 End every invocation with exactly one footer in this shape:
 
 LOOP_STATE: CONTINUE | BLOCKED | COMPLETE
-CURRENT_BATCH: B
-CURRENT_WORKSTREAM: short unnumbered description
+CURRENT_BATCH: C
+CURRENT_WORKSTREAM: short unnumbered common workflow description
 COMPLETED_THIS_TURN: short factual description
 NEXT_WORKSTREAM: short unnumbered description or NONE
 NEXT_ACTION: one concrete first action
 ENGINEERING_PROGRESS: nn%
-BATCH_PROGRESS: B IN PROGRESS | B COMPLETE (100%)
-SELECTED_BINDING_COVERAGE: emitted/selected (nn.nnnn%)
+BATCH_PROGRESS: C IN PROGRESS | C COMPLETE (100%)
+B_BASELINE_BINDING_COVERAGE: emitted plus accepted manual/bindable (nn.nnnn%)
+C_COMMON_WORKFLOW_COVERAGE: validated declared workflows/declared workflows (nn.nnnn%) or NOT ESTABLISHED
 FULL_PROFILE_COVERAGE: value or NOT ESTABLISHED
 INVENTORY_COMPLETENESS: scanned/catalogued for named profile (nn.nnnn%)
 LAST_VALIDATION: exact command summary
@@ -349,12 +367,20 @@ as an estimate in the human report.
 9. COMPLETE-MIGRATION GATES
 ============================================================
 
-LOOP_STATE=COMPLETE requires all of the following for every declared supported profile:
+LOOP_STATE=COMPLETE requires all of the following for Batch C and each profile used by
+its declared common-workflow contract:
 
-- The single batch B is complete; every former B00-B20 capability belongs to this gate.
-- Header inventory for the profile is complete.
-- Every public declaration has a stable disposition and owner.
-- Every bindable declaration is generated or an accepted documented manual binding.
+- Batch B remains complete and Batch C's model/inspect, build/modify/deliver, and
+  present/interact workflow contract is complete.
+- No declared common workflow requires an undocumented unmanaged escape hatch.
+- Each completed large wave crosses connected API families and has end-to-end runtime,
+  ownership, failure, integration, and representative real-file evidence.
+- The global header/declaration inventory remains stably classified for the profile;
+  known unavailable or cold declarations retain narrow evidence-backed dispositions.
+- Every declaration inside the declared common-workflow closure has a stable disposition
+  and owner.
+- Every bindable declaration required by that closure is generated or an accepted
+  documented manual binding. C does not have to absorb unrelated cold or optional APIs.
 - No safety-critical unknown ownership/type/ABI projection remains.
 - Generated source and reports are deterministic and freshness verification passes.
 - Required Release/Debug native and managed builds pass.
@@ -373,7 +399,7 @@ LOOP_STATE=COMPLETE requires all of the following for every declared supported p
 If publication authorization is the only missing item, report migration engineering as
 complete but keep public publication BLOCKED; do not upload anything.
 
-Begin now with RECOVER. Then perform the largest coherent safe work unit that can be
+Begin now with RECOVER. Then perform the largest coherent safe common-workflow wave that can be
 fully validated in this invocation. Do not stop after merely writing a plan when local,
 authorized implementation work can proceed.
 ```

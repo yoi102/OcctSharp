@@ -66,6 +66,7 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0057](adr/0057-core-toolkit-closure-and-auto-package-exclusions.md) | Link one explicit core toolkit closure and give excluded automatic packages stable dispositions | Accepted |
 | [ADR-0058](adr/0058-narrow-long-tail-dispositions-and-local-completion-gate.md) | Replace LT001-LT004 with narrow evidence and require all local implementation gates for Batch B completion | Accepted |
 | [ADR-0059](adr/0059-committed-windows-runtime-and-mit-license.md) | Commit the verified Windows x64 runtime and license OcctSharp project code under MIT | Accepted |
+| [ADR-0060](adr/0060-common-cad-api-product-batch.md) | Make Batch C one large common-CAD-API product batch instead of small per-class work | Accepted |
 
 ## Pending decisions
 

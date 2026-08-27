@@ -1,12 +1,32 @@
 # Current Status
 
 - Last updated: 2026-08-27
-- Current phase: single migration batch B and alpha.50 clone-and-run distribution are locally complete; publication authority remains separate
+- Current phase: Batch B and alpha.50 distribution are complete; Batch C common-CAD-API expansion is active at documentation/contract stage
 - Batch B engineering progress: 100% for the accepted local implementation scope (not a claim that every OCCT declaration is a managed API or that public release is ready)
-- Complete-migration batch progress: B is complete; retired B00-B20 labels are not counted as batches
+- Batch C implementation progress: not started; this update changes planning/priority documents only and contains no code or binding changes
+- Complete-migration batch progress: B is complete; C is active at contract stage; retired B00-B20 labels are not counted as batches
 - Accepted generated surface: 16,353 manifest IDs from the 116,263-declaration selected discovery model; Release and Debug native/managed builds, Generator 62/62, Runtime 105/105, discovery/report determinism, and dependency profiles 6/6 pass
 - Last complete full inventory: 116,272/116,272 declarations and 7,090/7,090 headers have final dispositions; `Emitted` 16,353, `Manual` 61, `SupportedUnselected` 0, `Skipped` 49,344, `Blocked` 50,514, pending 0, HD099 0
-- Overall state: broad LT001-LT004 buckets are eliminated and replaced by generated bindings or narrow evidence-backed ABI/ownership dispositions. The complete alpha.50 local release check passes and records `batchImplementationComplete: true`. MIT licensing, bundled third-party notices, and committed runtime evidence pass; `publicReleaseReady` remains false because hosted release execution, signing, and NuGet publication are separate external gates
+- Overall state: broad LT001-LT004 buckets are eliminated and Batch B's complete alpha.50 evidence remains accepted. ADR-0060 now makes Batch C one product-scale common-API program: prioritize end-to-end modeling/query/mesh/exchange/XDE/viewing usefulness, use large cross-family waves, and forbid per-class or numbered C fragments. No Batch C implementation has been claimed yet
+
+### Batch C common-API priority and sizing contract
+
+- The active product outcome is the routine CAD path: create/import, inspect underlying
+  geometry and topology, perform common modeling edits, validate/measure, mesh, preserve
+  document metadata, export, display, and select.
+- C advances three coverage lanes together: model/inspect, build/modify/deliver, and
+  present/interact. They are not sub-batches or independently completable phases.
+- A normal implementation wave must cross at least three connected API families and
+  finish an end-to-end workflow. Single-class/method work is folded into the active wave
+  unless it is a demonstrated blocker across several common families.
+- The first large wave is common solid editing and inspection across geometry/topology
+  queries, BRep construction/modification, mesh extraction, STEP/XDE state, and viewer
+  presentation/selection.
+- Focused checks run during construction; the complete Release/Debug/freshness/clean
+  regeneration/package/inventory/release chain runs at the large-wave checkpoint rather
+  than after each small addition.
+- This planning update is documentation-only. Generated surface, ABI 1.41, bridge
+  0.49.0, package alpha.50, runtime assets, and all prior validation evidence are unchanged.
 
 ### Alpha.50 clone-and-run distribution wave
 
@@ -151,12 +171,11 @@
 
 ## Current focus
 
-Batch B is locally complete. The final accounting has zero `SupportedUnselected`, zero
-LT001-LT004, zero pending declarations/headers, and all local implementation gates pass.
-Keep emitted coverage, classification completeness, batch completion, and public-release
-readiness as four independent facts. Any later product-scale migration starts a new whole-
-letter batch; project licensing, third-party legal review, hosted CI, signing, and NuGet
-publication remain external release work and are not silently included in Batch B.
+Batch C is active under ADR-0060. The immediate focus is not another declaration-count
+wave and not one easy wrapper. Before implementation, reconcile the current friendly and
+generated API against the complete common-workflow matrix, then select one cross-family
+closure large enough to deliver common solid editing and inspection end to end. Batch B
+evidence stays closed and is not reused as Batch C progress.
 
 ### Shared-handle dependency-closure hardening
 
@@ -809,31 +828,32 @@ publication remain external release work and are not silently included in Batch 
   STL/IGES output; geometry and XDE STEP assembly; validate errors, ownership, and
   disposal.
 
-## Not implemented
+## Current gaps and deferred work
 
-- Broad type-map and ownership passes beyond the initial value-copy rules, manually
-  designed shape handle, and the B05 transformation bridges.
-- Generalized native and managed source emission beyond the configured value-copy,
-  first typed shared, and topology scopes; B05 values remain manual until generalized
-  opaque-value emission is safe, and general XDE/OCAF bindings remain pending.
-- Broader collection profiles remain open: sets, richer element mappings, and borrowed
-  parent-bound views; the safe scalar array/vector/map snapshot subset is covered by
-  SC-009/SC-010 and ABI 1.18.
-- Broad `Handle<T>` coverage, generalized borrowed/parent-bound objects, generated
-  XDE/OCAF/visualization declarations, and advanced bulk mesh APIs.
-- Project licensing, complete third-party legal/notice review, signing, and an authorized
-  package publication workflow. SBOM/provenance/checksum generation is implemented.
-- Hosted execution of the configured immutable-artifact CI path and automated source
-  build of OCCT on a clean machine.
+- Batch C common-workflow coverage is not yet established. The next gap inventory must
+  compare the current friendly/generated surface with every routine workflow declared in
+  `MIGRATION_PLAN.md`; Batch B's 16,353 emitted and 61 manual IDs are only the baseline.
+- Common geometry/topology inspection, solid editing, bulk mesh, STEP/XDE metadata, and
+  viewer interaction still need one dependency-closed C scope with explicit public/raw,
+  ownership, failure, threading, and data-transfer contracts.
+- Additional collections, borrowed/parent-bound views, and generator/type-map/ownership
+  rules are pulled into C when they unlock several common workflow families; they are not
+  scheduled as isolated micro-batches.
+- Hosted full release execution, signing, credentials, and NuGet publication remain
+  separate release-readiness work and require explicit authorization.
+- Automated OCCT source builds on a clean machine remain deferred; the committed,
+  manifest-verified Windows x64 runtime is the current clone-and-run baseline.
 
 ## Next tasks
 
-1. Continue replacing LT001-LT004 with enum/value/shared/parent-bound rules until all
-   bindable declarations are emitted or accepted manual.
-2. Expand common Geom/Geom2d, BRep, mesh, exchange, XDE, and visualization families in
-   large related waves before low-value data entities.
-3. Resolve license/notices/hosted CI/signing only after the B binding gate closes;
-   public publication still requires explicit authorization.
+1. Reconcile the current friendly/generated APIs against the complete Batch C workflow
+   matrix and publish one auditable common-workflow gap inventory and denominator.
+2. Lock the first dependency-closed common solid editing and inspection wave across at
+   least three connected families, including its end-to-end runtime outcome and gates.
+3. Implement that wave as one coherent unit. Use focused checks while building it and run
+   the full Release/Debug/regeneration/package/inventory/release chain at its checkpoint.
+4. Keep cold/optional declarations classified without allowing them to displace routine
+   CAD workflows; keep signing and publication outside implementation authority.
 
 ## Do not change without an ADR
 
@@ -854,22 +874,22 @@ publication remain external release work and are not silently included in Batch 
 | Release native build | PASS | `eng/build.ps1 -Configuration Release` |
 | Release managed build | PASS | 5 projects, 0 warnings, 0 errors |
 | Debug native/managed build | PASS | 5 projects, 0 warnings, 0 errors |
-| Generator unit tests | PASS | Current Debug `eng/build.ps1`: 44/44 |
-| Runtime/lifetime tests | PASS | Current Release and Debug builds: 96/96 |
+| Generator unit tests | PASS | Alpha.50 Release and Debug `eng/build.ps1`: 62/62 |
+| Runtime/lifetime tests | PASS | Alpha.50 Release and Debug builds: 105/105 |
 | Controlled semantic Clang parse | PASS | Record, method, constructor, and enum discovery |
-| OCCT semantic discovery | PASS | Selected scope: 22,879 declarations; 61 configured manual stable IDs reconciled |
+| OCCT semantic discovery | PASS | Selected model: 116,263 declarations; 61 configured manual stable IDs reconciled |
 | Full OCCT header catalog | PASS | 7,090 entry headers: 7,084 `.hxx`, 6 `.h`, 407 filename-derived packages |
-| Full OCCT semantic inventory | BLOCKED | 7,058/7,090 headers; 116,214 partial unique declarations; 32 named dependency/artifact failures |
-| Full-inventory classification | PASS | 4,060 emitted, 61 manual, 11,144 supported-unselected, 27,310 skipped, 73,639 blocked; 116,214/116,214 declarations and 7,090/7,090 headers classified; SHA256 `D46B10BFF1A5246721A19E19DA13A26E55E27242F8F95E0EFC7A2C7555A43963` |
+| Full OCCT semantic inventory | BLOCKED | 7,058/7,090 headers semantically scanned; 32 named dependency/artifact failures retain stable dispositions |
+| Full-inventory classification | PASS | 16,353 emitted, 61 manual, 0 supported-unselected, 49,344 skipped, 50,514 blocked; 116,272/116,272 declarations and 7,090/7,090 headers classified; SHA256 `EC57888D76FD7726806EB5D4247CBB2020C588481651FDF834E2A13F1F3E0DB6` |
 | Discovery determinism | PASS | Two-run SHA256 `2E93694B6DDC90BD5F9381B288A5AD7187DD0A83D37EF55043385043B8DDFB4B` |
 | Model determinism | PASS | Two runs SHA256 `5C0FAF4B37C0D5A56ADCB11A0729C6FB5BCF79D5789EAA4356465CB354D0C064` |
-| Documentation navigation | PASS | One repository README; local Markdown targets checked |
+| Documentation navigation | PASS | Current planning edit: 102 tracked/untracked Markdown source files checked for local targets |
 | Structured canonical model compile | PASS | Generator Release build, 0 warnings and 0 errors |
 | Structured canonical model tests | PASS | 3 generator tests; signature, qualifier, inheritance, template/handle facts |
 | Structured OCCT fact inventory | PASS | Binding-model schema 1.2 retains abstract-record facts in the selected 22,879-declaration semantic model |
 | Source package/toolkit identity | PASS | 22,879 of 22,879 declarations classified in the selected scope |
 | Support classification tests | PASS | 2 tests; rule order, stable codes, complete/sorted summary |
-| Selected-scope support summary | PASS | Current selected scope has 6,494 supported; 4,060 emitted plus 61 accepted manual stable IDs |
+| Selected-scope support summary | PASS | Batch B baseline has 16,353 emitted plus 61 accepted manual stable IDs and zero supported-unselected declarations |
 | Simple binding eligibility | PASS | Value-copy constructors/static methods promoted; instance/pointer/unknown-lifetime cases remain pending |
 | Coverage and diagnostics reports | PASS | 22,879 declarations; all states and stable disposition codes reported |
 | Report determinism | PASS | Coverage SHA256 `50CAFAD12E347A3E76B6CBF959FCA42F548B59373C673641191AAACC79DE6BBE`; diagnostics SHA256 `0BC79186F9564A1CEAF911FCF3EB073C38AE6B174FA43B7020AE8ADB6A8EE03C` |
@@ -886,7 +906,7 @@ publication remain external release work and are not silently included in Batch 
 | Current geometry/topology/XDE APIs | PASS | Release/Debug and the clean package consumer cover curve/surface evaluation and projection, adjacency, loft/pipe/sewing, wedge/thick solid, Boolean history, and composable STEP import |
 | B06 string/sequence/array/vector/map wave | PASS | Debug/Release runtime tests (40) cover UTF-8/UTF-16 conversion, finite mutation, lower-bound translation, map lookup/bind/unbind, ordered keys, clone ownership, one-shot snapshots, empty collections, stale disposal, and early-exit enumeration |
 | Generated staging and stale cleanup | PASS | Generator tests cover deterministic output and manifest-owned stale removal |
-| Generated source freshness | PASS | Alpha.44 temporarily staged only the intended six changed generated files; 13 manifest-owned files were current, then temporary staging was removed |
+| Generated source freshness | PASS | Alpha.50 release check verified all 13 manifest-owned files and byte-identical clean regeneration |
 | Generated value ABI layout | PASS | Native 24-byte/8-byte assertions and managed 24-byte runtime assertion |
 | STEP geometry round-trip | PASS | Generated box and transformed two-box compound round-tripped with 6 and 12 faces |
 | STL/IGES file output | PASS | Binary STL and BRep-mode IGES created and checked non-empty |
@@ -901,7 +921,7 @@ publication remain external release work and are not silently included in Batch 
 | Checked shared-handle cast | PASS | Release/Debug `TryCastDerived` and `CastDerived`: retained success, wrong/null rejection, and `InvalidCastException` |
 | NuGet package contents | PASS | `0.1.0-alpha.50`; managed/XML/docs, MIT metadata/license, 62 native DLLs, and 11 bundled notice/license files |
 | Package output layout | PASS | Published executable has `occt/` closure and no root `OcctSharp.Native.dll` |
-| Packaging/clean consumer | PASS | Local alpha.49 package plus clean SDK 10.0.400 NuGet restore/publish/runtime, ABI 1.41/bridge 0.49.0, 62 DLLs, 16,353 generated declarations, IGES/session infrastructure, generated cross-type handles, mesh/Poly/analysis/healing, Geom/Geom2d, current geometry/topology/XDE APIs, and prior profiles |
+| Packaging/clean consumer | PASS | Local alpha.50 package plus clean SDK 10.0.400 NuGet restore/publish/runtime, ABI 1.41/bridge 0.49.0, 62 DLLs, 16,353 generated declarations, IGES/session infrastructure, generated cross-type handles, mesh/Poly/analysis/healing, Geom/Geom2d, current geometry/topology/XDE APIs, and prior profiles |
 | Fresh-clone Sample bundled runtime | PASS | New clone without local settings/OCCT environment passed manifest, Release/Debug `--smoke`, exact 62-DLL output, box creation, and package creation |
 | Git whitespace checks | PASS | `git diff --check` and `git diff --cached --check` |
 | CI configuration | PASS | Generator tests, clone-only bundled-runtime Release/Debug smoke, and immutable URL/SHA full Windows release-check jobs configured |
@@ -913,19 +933,20 @@ publication remain external release work and are not silently included in Batch 
 ## Migration loop state
 
 ```text
-LOOP_STATE: COMPLETE
-CURRENT_BATCH: B
-CURRENT_WORKSTREAM: BATCH B LOCAL IMPLEMENTATION COMPLETE
-COMPLETED_THIS_TURN: Added MIT, committed and hash-pinned the 62-DLL Windows x64 runtime with complete bundled notices, made ordinary clones run Debug/Release samples without OCCT, and passed the complete alpha.50 release check
-NEXT_WORKSTREAM: NONE INSIDE B; PUBLIC-RELEASE GATES ARE SEPARATE
-NEXT_ACTION: Configure hosted full-release artifact variables only when an approved SDK source exists; signing credentials and NuGet publication still require separate owner authorization
-ENGINEERING_PROGRESS: 100% FOR B LOCAL IMPLEMENTATION
-BATCH_PROGRESS: B COMPLETE (declaration coverage and public-release readiness reported separately)
-SELECTED_BINDING_COVERAGE: 16414/16414 generated plus accepted manual stable IDs (100%)
+LOOP_STATE: CONTINUE
+CURRENT_BATCH: C
+CURRENT_WORKSTREAM: COMMON SOLID EDITING AND INSPECTION LARGE WAVE
+COMPLETED_THIS_TURN: Documentation-only reprioritization to common CAD workflows, large cross-family waves, and checkpoint validation cadence; no code changed
+NEXT_WORKSTREAM: Implement the common solid editing and inspection workflow as one coherent C wave
+NEXT_ACTION: Reconcile current friendly/generated APIs against the Batch C workflow matrix and lock one dependency-closed scope spanning at least three connected families before editing code
+ENGINEERING_PROGRESS: B 100% COMPLETE; C IMPLEMENTATION NOT STARTED
+BATCH_PROGRESS: C IN PROGRESS AT CONTRACT STAGE (not a code-completion claim)
+B_BASELINE_BINDING_COVERAGE: 16414/16414 generated plus accepted manual stable IDs (100%)
+C_COMMON_WORKFLOW_COVERAGE: NOT ESTABLISHED; common-workflow gap inventory is the next action
 FULL_PROFILE_ACCOUNTING: 116272/116272 declarations classified; 50514 have narrow blocked dispositions and are not claimed as managed APIs
 INVENTORY_COMPLETENESS: 7058/7090 headers semantically scanned (99.5487%); 116272/116272 discovered declarations and 7090/7090 catalogued headers classified
-LAST_VALIDATION: Complete alpha.50 release check plus an independent fresh clone passed; Generator 62/62 and Runtime 105/105 in Release/Debug and clean copy, committed/build-identical 62-DLL runtime at ABI 1.41/bridge 0.49.0, 13-file byte-identical regeneration, 36602 additions/0 removals, full inventory, package consumer, SBOM/provenance/checksums, and whitespace checks passed; GitHub run 33064559589 then passed generator and clone-only manifest/Release/Debug jobs at c8a38c2
-BLOCKER: NONE FOR B OR CLONE-AND-RUN; PUBLIC PACKAGE RELEASE STILL REQUIRES HOSTED RELEASE EXECUTION, SIGNING, AND NUGET PUBLICATION AUTHORIZATION
+LAST_VALIDATION: Local Markdown target scan PASS for 102 tracked/untracked source files; git diff --check PASS; changed-files-only-Markdown PASS; code build and tests NOT RUN per user request
+BLOCKER: NONE FOR BATCH C PLANNING; IMPLEMENTATION HAS NOT STARTED
 ```
 
 ## Known risks

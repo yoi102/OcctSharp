@@ -9,11 +9,11 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Architecture](ARCHITECTURE.md) — system boundaries and component ownership.
 - [Repository layout](REPOSITORY_LAYOUT.md) — physical separation of documentation
   and code-related files.
-- [Roadmap](ROADMAP.md) — staged implementation plan and exit criteria.
-- [Complete migration plan](MIGRATION_PLAN.md) — full OCCT batches, module/package
-  boundaries, metrics, and per-batch gates.
+- [Roadmap](ROADMAP.md) — active Batch C common-workflow priority and historical phases.
+- [Complete migration plan](MIGRATION_PLAN.md) — Batch C common API matrix, large-wave
+  rules, module/package boundaries, metrics, and product-scale gates.
 - [AI migration loop prompt](AI_MIGRATION_LOOP_PROMPT.md) — reusable re-entrant prompt
-  for safely executing and polling one migration work unit at a time.
+  for executing the largest coherent common-workflow wave instead of per-class tasks.
 - [Status](STATUS.md) — current phase, blockers, and last verified results.
 - [Decisions](DECISIONS.md) — accepted and pending architecture decisions.
 - [Build and release](BUILD_AND_RELEASE.md) — current .NET 10/OCCT environment,
