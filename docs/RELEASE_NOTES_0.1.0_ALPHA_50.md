@@ -35,3 +35,5 @@ The smoke validates 62 copied DLLs, runtime identity, and six-face OCCT box crea
 - Clean-source regeneration: 13 generated files byte-identical; API diff 36,602 added,
   0 removed; full classification 116,272 declarations and 7,090 headers.
 - Alpha.50 clean package consumer, SBOM, provenance, checksums, and whitespace gates PASS.
+- GitHub Actions run 33064559589: generator tests plus clean hosted checkout/runtime
+  manifest/Release smoke/Debug smoke PASS at commit `c8a38c2`.

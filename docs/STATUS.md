@@ -905,7 +905,7 @@ publication remain external release work and are not silently included in Batch 
 | Fresh-clone Sample bundled runtime | PASS | New clone without local settings/OCCT environment passed manifest, Release/Debug `--smoke`, exact 62-DLL output, box creation, and package creation |
 | Git whitespace checks | PASS | `git diff --check` and `git diff --cached --check` |
 | CI configuration | PASS | Generator tests, clone-only bundled-runtime Release/Debug smoke, and immutable URL/SHA full Windows release-check jobs configured |
-| Hosted CI execution | NOT RUN | No remote workflow was dispatched from this local task |
+| Hosted CI execution | PASS (clone/runtime); full release NOT RUN | GitHub run 33064559589: generator-tests and bundled-runtime manifest/Release/Debug smoke succeeded at commit c8a38c2; SDK-dependent full-windows was conditionally skipped because artifact variables are not configured |
 | API compatibility | PASS | Alpha.38 606-signature baseline comparison: 36,602 additions, zero removals, non-breaking |
 | Release engineering | PASS (alpha.50) | Complete alpha.50 release check passes, including committed-runtime hash/build identity and fresh-clone smoke; `batchImplementationComplete` is true |
 | Public release readiness | BLOCKED | MIT and bundled notices PASS; hosted release execution, signing, and NuGet publication are NOT RUN |
@@ -918,13 +918,13 @@ CURRENT_BATCH: B
 CURRENT_WORKSTREAM: BATCH B LOCAL IMPLEMENTATION COMPLETE
 COMPLETED_THIS_TURN: Added MIT, committed and hash-pinned the 62-DLL Windows x64 runtime with complete bundled notices, made ordinary clones run Debug/Release samples without OCCT, and passed the complete alpha.50 release check
 NEXT_WORKSTREAM: NONE INSIDE B; PUBLIC-RELEASE GATES ARE SEPARATE
-NEXT_ACTION: Push alpha.50 and observe hosted clone-only CI; signing credentials and NuGet publication still require separate owner authorization
+NEXT_ACTION: Configure hosted full-release artifact variables only when an approved SDK source exists; signing credentials and NuGet publication still require separate owner authorization
 ENGINEERING_PROGRESS: 100% FOR B LOCAL IMPLEMENTATION
 BATCH_PROGRESS: B COMPLETE (declaration coverage and public-release readiness reported separately)
 SELECTED_BINDING_COVERAGE: 16414/16414 generated plus accepted manual stable IDs (100%)
 FULL_PROFILE_ACCOUNTING: 116272/116272 declarations classified; 50514 have narrow blocked dispositions and are not claimed as managed APIs
 INVENTORY_COMPLETENESS: 7058/7090 headers semantically scanned (99.5487%); 116272/116272 discovered declarations and 7090/7090 catalogued headers classified
-LAST_VALIDATION: Complete alpha.50 release check plus an independent fresh clone passed; Generator 62/62 and Runtime 105/105 in Release/Debug and clean copy, committed/build-identical 62-DLL runtime at ABI 1.41/bridge 0.49.0, 13-file byte-identical regeneration, 36602 additions/0 removals, full inventory, package consumer, SBOM/provenance/checksums, and whitespace checks passed
+LAST_VALIDATION: Complete alpha.50 release check plus an independent fresh clone passed; Generator 62/62 and Runtime 105/105 in Release/Debug and clean copy, committed/build-identical 62-DLL runtime at ABI 1.41/bridge 0.49.0, 13-file byte-identical regeneration, 36602 additions/0 removals, full inventory, package consumer, SBOM/provenance/checksums, and whitespace checks passed; GitHub run 33064559589 then passed generator and clone-only manifest/Release/Debug jobs at c8a38c2
 BLOCKER: NONE FOR B OR CLONE-AND-RUN; PUBLIC PACKAGE RELEASE STILL REQUIRES HOSTED RELEASE EXECUTION, SIGNING, AND NUGET PUBLICATION AUTHORIZATION
 ```
 
