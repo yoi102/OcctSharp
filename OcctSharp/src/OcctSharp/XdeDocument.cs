@@ -26,6 +26,23 @@ public sealed class XdeDocument : IDisposable
     /// <summary>Imports a STEP file with STEPCAF/XDE metadata enabled.</summary>
     public static XdeDocument ReadStep(string filePath) => OpenCore(filePath, NativeMethods.ReadStepXdeDocument, "xde_document_read_step");
 
+    /// <summary>Imports a STEP file with explicit common STEPCAF metadata switches.</summary>
+    public static XdeDocument ReadStep(string filePath, XdeStepReadOptions options)
+    {
+        ArgumentNullException.ThrowIfNull(options);
+        return OpenCore(
+            filePath,
+            (string path, out nint document) => NativeMethods.ReadStepXdeDocumentWithOptions(
+                path,
+                options.ReadNames ? 1 : 0,
+                options.ReadColors ? 1 : 0,
+                options.ReadLayers ? 1 : 0,
+                options.ReadValidationProperties ? 1 : 0,
+                options.ReadMaterials ? 1 : 0,
+                out document),
+            "xde_document_read_step_options");
+    }
+
     /// <summary>Begins an XDE/OCAF transaction.</summary>
     public XdeTransaction BeginTransaction()
     {
@@ -157,6 +174,26 @@ public sealed class XdeDocument : IDisposable
     /// <summary>Writes this document through STEPCAF with metadata enabled.</summary>
     public string WriteStep(string filePath) => WriteFile(filePath, NativeMethods.WriteStepXdeDocument, "xde_document_write_step");
 
+    /// <summary>Writes this document through STEPCAF with explicit common metadata and representation options.</summary>
+    public string WriteStep(string filePath, XdeStepWriteOptions options)
+    {
+        ArgumentNullException.ThrowIfNull(options);
+        if (!Enum.IsDefined(options.ModelType))
+            throw new ArgumentOutOfRangeException(nameof(options), "The STEP model type is not defined.");
+        return WriteFile(
+            filePath,
+            (document, path) => NativeMethods.WriteStepXdeDocumentWithOptions(
+                document,
+                path,
+                (int)options.ModelType,
+                options.WriteNames ? 1 : 0,
+                options.WriteColors ? 1 : 0,
+                options.WriteLayers ? 1 : 0,
+                options.WriteValidationProperties ? 1 : 0,
+                options.WriteMaterials ? 1 : 0),
+            "xde_document_write_step_options");
+    }
+
     internal Shape GetShape(string entry)
     {
         ThrowIfDisposed();
@@ -221,6 +258,88 @@ public sealed class XdeDocument : IDisposable
         ThrowIfDisposed();
         NativeError.ThrowIfFailed(NativeMethods.GetXdeLocation(Handle, entry, out nint location), "xde_label_get_location");
         return new TopLocLocation(new LocationHandle(location));
+    }
+
+    internal XdeValidationProperties GetValidationProperties(string entry)
+    {
+        ThrowIfDisposed();
+        NativeError.ThrowIfFailed(
+            NativeMethods.GetXdeValidationProperties(Handle, entry, out XdeValidationPropertiesRaw raw),
+            "xde_label_validation_properties");
+        return new XdeValidationProperties(
+            raw.HasArea != 0 ? raw.Area : null,
+            raw.HasVolume != 0 ? raw.Volume : null,
+            raw.HasCentroid != 0
+                ? new GpPoint(raw.Centroid.X, raw.Centroid.Y, raw.Centroid.Z)
+                : null);
+    }
+
+    internal void SetValidationProperties(string entry, XdeValidationProperties properties)
+    {
+        ThrowIfDisposed();
+        GpPoint centroid = properties.Centroid.GetValueOrDefault();
+        XdeValidationPropertiesRaw raw = new(
+            properties.Area.GetValueOrDefault(),
+            properties.Volume.GetValueOrDefault(),
+            new XyzRaw(centroid.X, centroid.Y, centroid.Z),
+            properties.Area.HasValue ? 1 : 0,
+            properties.Volume.HasValue ? 1 : 0,
+            properties.Centroid.HasValue ? 1 : 0);
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetXdeValidationProperties(Handle, entry, in raw),
+            "xde_label_set_validation_properties");
+    }
+
+    internal XdeValidationProperties UpdateValidationPropertiesFromShape(string entry)
+    {
+        using Shape shape = GetShape(entry);
+        using GPropProperties surface = GPropProperties.FromShape(shape, GPropMode.Surface);
+        using GPropProperties volume = GPropProperties.FromShape(shape, GPropMode.Volume, onlyClosed: true);
+        double areaValue = Math.Abs(surface.Mass);
+        double volumeValue = Math.Abs(volume.Mass);
+        GpPoint centroid = volumeValue > 1e-12 ? volume.CenterOfMass : surface.CenterOfMass;
+        XdeValidationProperties properties = new(areaValue, volumeValue, centroid);
+        SetValidationProperties(entry, properties);
+        return properties;
+    }
+
+    internal IReadOnlyList<XdeOccurrence> GetOccurrences(string entry, bool recursive)
+    {
+        ThrowIfDisposed();
+        XdeLabel root = new(this, entry);
+        if (!root.IsAssembly) return [];
+
+        List<XdeOccurrence> results = [];
+        HashSet<string> activeAssemblies = new(StringComparer.Ordinal) { root.Entry };
+        try
+        {
+            using TopLocLocation identity = TopLocLocation.Identity;
+            Walk(root, identity, []);
+            return results;
+        }
+        catch
+        {
+            foreach (XdeOccurrence occurrence in results) occurrence.Dispose();
+            throw;
+        }
+
+        void Walk(XdeLabel assembly, TopLocLocation parentLocation, IReadOnlyList<string> parentPath)
+        {
+            foreach (XdeLabel occurrenceLabel in assembly.GetComponents())
+            {
+                using TopLocLocation localLocation = occurrenceLabel.Location;
+                TopLocLocation worldLocation = parentLocation.Multiplied(localLocation);
+                XdeLabel referredLabel = occurrenceLabel.ReferredShape;
+                string[] path = [.. parentPath, occurrenceLabel.Entry];
+                results.Add(new XdeOccurrence(occurrenceLabel, referredLabel, path, worldLocation));
+
+                if (!recursive || !referredLabel.IsAssembly) continue;
+                if (!activeAssemblies.Add(referredLabel.Entry))
+                    throw new InvalidOperationException("The XDE assembly graph contains a component cycle.");
+                try { Walk(referredLabel, worldLocation, path); }
+                finally { activeAssemblies.Remove(referredLabel.Entry); }
+            }
+        }
     }
 
     internal void SetColor(string entry, XdeColor color)

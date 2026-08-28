@@ -456,8 +456,19 @@ ABI 1.42 is the alpha.51 first Batch C common-workflow boundary. It adds native 
 read/write, fixed 120-byte topology summaries, 72-byte detailed mesh vertices, 20-byte
 face-mapped triangles, and thread-affine viewer appearance/camera/selection exports.
 Topology and mesh data are copied snapshots; BREP reads return registered owning shapes;
-XDE labels and viewer presentations keep their existing parent-bound contracts. The
-current native ABI is 1.42 and the bridge implementation version is 0.50.0.
+XDE labels and viewer presentations keep their existing parent-bound contracts.
+
+ABI 1.43 is the alpha.52 import-diagnostics and repair boundary. It adds fixed 8-byte
+validation issues, fixed 24-byte STEP read reports, two-call BRepCheck issue snapshots,
+and thread-affine V3d mouse-rotation exports. Analyzer, result, status-list, STEP reader,
+transfer, and ShapeFix state remains native-local.
+
+ABI 1.44 is the alpha.53 XDE validation-property, occurrence, and STEP-options boundary.
+It adds a fixed 56-byte optional area/volume/centroid record plus XDE label read/set and
+option-bearing STEPCAF document read/write exports. XCAF attributes and tools, component
+sequences/references, and STEPCAF state remain document- or call-local. Occurrence world
+locations and located shapes use the existing opaque owning contracts. The current native
+ABI is 1.44 and the bridge implementation version is 0.52.0.
 
 ## Verification
 

@@ -4,7 +4,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>OcctSharp</PackageId>
-    <Version>0.1.0-alpha.51</Version>
+    <Version>0.1.0-alpha.53</Version>
     <Authors>OcctSharp contributors</Authors>
     <PackageDescription>.NET 10 bindings and friendly API for Open CASCADE Technology 8.0.1 on Windows x64.</PackageDescription>
     <PackageTags>OCCT;OpenCASCADE;CAD;STEP;STL;IGES;XDE</PackageTags>

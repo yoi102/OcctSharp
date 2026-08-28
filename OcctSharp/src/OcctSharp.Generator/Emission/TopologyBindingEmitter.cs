@@ -7,10 +7,10 @@ namespace OcctSharp.Generator.Emission;
 
 public static class TopologyBindingEmitter
 {
-    private const string NativeHeaderPath = "src/OcctSharp.Native/generated/Topology/OcctSharp.Topology.Generated.h";
-    private const string NativeSourcePath = "src/OcctSharp.Native/generated/Topology/OcctSharp.Topology.Generated.cpp";
-    private const string ManagedRawPath = "src/OcctSharp/Generated/Topology/TopologyRaw.Generated.cs";
-    private const string ManagedFriendlyPath = "src/OcctSharp/Generated/Topology/Topology.Generated.cs";
+    private const string NativeHeaderPath = "src/OcctSharp.Native/generated/Modeling/OcctSharp.Modeling.Topology.Generated.h";
+    private const string NativeSourcePath = "src/OcctSharp.Native/generated/Modeling/OcctSharp.Modeling.Topology.Generated.cpp";
+    private const string ManagedRawPath = "src/OcctSharp/Generated/Modeling/Modeling.TopologyRaw.Generated.cs";
+    private const string ManagedFriendlyPath = "src/OcctSharp/Generated/Modeling/Modeling.Topology.Generated.cs";
 
     public static GeneratedBindingSet Emit(
         string occtVersion,
@@ -39,10 +39,10 @@ public static class TopologyBindingEmitter
                 .Order(StringComparer.Ordinal)
                 .ToArray(),
             [
-                new GeneratedFile(NativeHeaderPath, EmitNativeHeader(declarations, scope, typedBindings)),
-                new GeneratedFile(NativeSourcePath, EmitNativeSource(declarations, scope, typedBindings)),
-                new GeneratedFile(ManagedRawPath, EmitManagedRaw(declarations, typedBindings)),
-                new GeneratedFile(ManagedFriendlyPath, EmitManagedFriendly(declarations, typedBindings)),
+                new GeneratedFile(NativeHeaderPath, EmitNativeHeader(declarations, scope, typedBindings), OcctProductModule.Modeling, GeneratedApiLayer.Raw, "Topology.NativeHeader"),
+                new GeneratedFile(NativeSourcePath, EmitNativeSource(declarations, scope, typedBindings), OcctProductModule.Modeling, GeneratedApiLayer.Raw, "Topology.NativeSource"),
+                new GeneratedFile(ManagedRawPath, EmitManagedRaw(declarations, typedBindings), OcctProductModule.Modeling, GeneratedApiLayer.Raw, "Topology.ManagedRaw"),
+                new GeneratedFile(ManagedFriendlyPath, EmitManagedFriendly(declarations, typedBindings), OcctProductModule.Modeling, GeneratedApiLayer.SafeManaged, "Topology.ManagedFriendly"),
             ]);
     }
 
@@ -319,7 +319,7 @@ public static class TopologyBindingEmitter
         IReadOnlyList<TypedTopologyBinding> typedBindings)
     {
         StringBuilder builder = CreatePreamble(declarations);
-        builder.AppendLine("#include \"OcctSharp.Topology.Generated.h\"");
+        builder.AppendLine("#include \"OcctSharp.Modeling.Topology.Generated.h\"");
         builder.AppendLine("#include \"../../include/OcctSharp.Native.Internal.hxx\"");
         builder.AppendLine();
         builder.AppendLine("#include <Standard_Failure.hxx>");

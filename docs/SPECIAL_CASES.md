@@ -776,10 +776,9 @@ rules or design:
   already emitted by the generated surface, including UV/normal presence, transparency,
   display mode, clear selection, projection, zoom, and pan, stay outside the manual
   denominator.
-- Validation: Focused Release native and managed compilation plus the BREP-to-STEP common
-  workflow and real-HWND viewer tests are required during implementation. Full Release,
-  Debug, clean regeneration, package consumer, inventory, and release gates are recorded
-  once at the coherent wave checkpoint.
+- Validation: Release and Debug native/managed builds, runtime workflows, clean package
+  consumer, generated freshness/regeneration, inventory, and local release gates pass at
+  the alpha.51 checkpoint.
 - Upgrade impact: Recheck BREP format defaults, shape closedness, topology-map ordering,
   tolerance semantics, `Poly_Triangulation` node/UV/normal conventions, reversed-face
   winding, selection schemes, Z-up orientations, and AIS display-mode indices on every
@@ -787,3 +786,72 @@ rules or design:
 - Removal criteria: Replace the exception only after generalized generated descriptors
   can reproduce the same copied snapshots, owning results, parent/thread boundaries,
   validation, and end-to-end runtime evidence.
+
+## SC-037: STEP import diagnostics, BRepCheck issue snapshot, and repair comparison
+
+- Status: Accepted for the second Batch C cross-family checkpoint.
+- Scope: Six directly used OCCT 8.0.1 declarations from `STEPControl_Reader`,
+  `XSControl_Reader`, `BRepCheck_Analyzer`, and `BRepCheck_Result`, composed with the
+  existing ShapeFix owning-result bridge and generated V3d rotation operations.
+- Reason: Reader/work-session transfer state, analyzer result handles, status lists, and
+  subshape iterators are borrowed or algorithm-owned. They cannot become independent
+  managed objects without adding unsafe lifetime coupling. A call-local copied report
+  closes the common import-diagnose-repair workflow across four families.
+- Native/ABI/managed behavior: ABI 1.43 adds fixed 24-byte STEP read reports, fixed 8-byte
+  validation issues, a two-call validation count/snapshot protocol, and thread-affine
+  V3d start/continue rotation exports. The friendly API exposes typed read/validation
+  statuses and a repaired owning shape with immutable before/after reports.
+- Ownership: STEP readers, work sessions, transfer roots, BRepCheck analyzers/results/
+  lists, and ShapeFix algorithm state remain native-local. STEP read and repair return
+  independent registered owning shapes. Reports contain only copied scalar/enum values;
+  viewer rotation mutates only its parent viewer on the creating thread.
+- Coverage accounting: Configuration schema 1.8 lists the six newly direct manual stable
+  IDs. Existing generated or previously reconciled declarations used by the workflow are
+  not counted again. Discovery rejects missing IDs and generated/manual overlap.
+- Validation: Release and Debug native/managed builds pass with Generator 62/62 and
+  Runtime 107/107. The clean package consumer, full inventory, regeneration, and local
+  release gates are required at the alpha.52 checkpoint.
+- Upgrade impact: Recheck `IFSelect_ReturnStatus` values, reader transfer-count and unit
+  semantics, `BRepCheck_Status` ordering, analyzer exact/geometric modes, status-list
+  stability, ShapeFix output ownership, and V3d rotation threshold behavior on every
+  OCCT upgrade.
+- Removal criteria: Replace the exception only after generated reader/analyzer/result
+  descriptors can reproduce the same call-local state, copied reports, owning shapes,
+  option validation, and runtime/lifetime evidence.
+
+## SC-038: XDE validation properties, recursive occurrences, and STEPCAF options
+
+- Status: Accepted for the third Batch C cross-family checkpoint.
+- Scope: Nine directly used OCCT 8.0.1 declarations covering `Get`, `Set`, and `GetID`
+  on `XCAFDoc_Area`, `XCAFDoc_Volume`, and `XCAFDoc_Centroid`, composed with existing
+  BRepGProp, XDE assembly/location, and STEPCAF reader/writer facilities.
+- Reason: XCAF attributes are document-owned and transaction-bound, while assembly
+  component/reference traversal and STEPCAF mode objects are parent- or call-local.
+  Exposing those native objects would add unsafe borrowed lifetime coupling. Copied
+  nullable values, parent-bound labels, owning locations/shapes, and call-local exchange
+  state close the workflow without crossing native layouts.
+- Native/ABI/managed behavior: ABI 1.44 adds a fixed 56-byte validation-property record,
+  read/set exports, and option-bearing XDE STEP read/write exports. The existing no-option
+  exports retain all-metadata defaults. Managed APIs compute properties through existing
+  BRepGProp owners, flatten direct or recursive occurrences with cycle rejection, compose
+  world locations, and select STEP representation plus name/color/layer/property/material
+  modes.
+- Ownership: Area, volume, centroid, occurrence entries, and paths are copied values.
+  `XdeOccurrence` owns one independent composed `TopLocLocation`; its located shape is a
+  separate registered owner. Labels remain parent-bound to their XDE document. STEPCAF
+  readers/writers, XCAF tools, sequences, references, and attribute handles remain native-
+  local, and validation-property mutation requires an open document transaction.
+- Coverage accounting: Configuration schema 1.8 lists exactly nine SC-038 stable IDs.
+  Discovery requires all nine and rejects overlap with generated ownership. Existing
+  BRepGProp/location/STEPCAF declarations are not counted again.
+- Validation: Release and Debug native/managed builds pass with Generator 62/62 and
+  Runtime 108/108. Nested assembly traversal composes world translation `(11,22,33)`,
+  creates an independent located shape, round-trips complete properties through BinXCAF
+  and STEPCAF, verifies reader/writer filters, clears attributes transactionally, and is
+  repeated by the clean alpha.53 package consumer.
+- Upgrade impact: Recheck XCAF attribute GUIDs and missing-value behavior, BRepGProp mass/
+  centroid conventions, `TopLoc_Location` multiplication order, XDE reference-cycle
+  behavior, STEP model-type numeric values, and every STEPCAF mode on each OCCT upgrade.
+- Removal criteria: Replace the exception only after generated document-attribute and
+  traversal descriptors preserve the same copied/parent-bound/owning contracts, option
+  validation, deterministic stable-ID accounting, and end-to-end evidence.

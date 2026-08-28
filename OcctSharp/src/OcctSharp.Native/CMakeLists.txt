@@ -1,12 +1,12 @@
+file(GLOB_RECURSE OCCTSHARP_GENERATED_NATIVE_SOURCES CONFIGURE_DEPENDS
+  "${CMAKE_CURRENT_SOURCE_DIR}/generated/*.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/generated/*.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/generated/*.hxx")
+
 add_library(OcctSharp.Native SHARED
   include/OcctSharp.Native.h
   include/OcctSharp.Native.Internal.hxx
-  generated/OcctSharp.Generated.h
-  generated/OcctSharp.Generated.cpp
-  generated/OcctSharp.SharedHandles.Generated.h
-  generated/OcctSharp.SharedHandles.Generated.cpp
-  generated/Topology/OcctSharp.Topology.Generated.h
-  generated/Topology/OcctSharp.Topology.Generated.cpp
+  ${OCCTSHARP_GENERATED_NATIVE_SOURCES}
   src/OcctSharp.Native.cpp)
 
 target_compile_features(OcctSharp.Native PRIVATE cxx_std_20)

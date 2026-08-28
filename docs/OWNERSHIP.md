@@ -292,3 +292,34 @@ existing copied metadata operations inside the caller's open transaction. Viewer
 transparency, display mode, projection, zoom, pan, and selection operations mutate only
 the parent viewer on its creation thread; presentation IDs never become standalone
 owners.
+
+### Batch C import diagnostics, repair comparison, and rotation
+
+`Shape.GetValidationReport` constructs `BRepCheck_Analyzer` and all per-subshape
+`BRepCheck_Result`/status lists inside each native call, then returns only copied shape
+kinds and status values. The two-call count/snapshot protocol owns no native iterator or
+result; the source shape is borrowed for each call. `Shape.RepairWithReport` owns one
+independent repaired `Shape` and two immutable managed validation snapshots. Disposing the
+result releases only the repaired shape.
+
+`ShapeExchange.ReadStepWithReport` keeps `STEPControl_Reader`, work session, roots, and
+transfer state call-local. It returns one registered owning shape plus copied counts,
+status, and system-length-unit data. `OcctViewer.StartRotation` and `Rotate` mutate only
+the parent viewer's `V3d_View` on the creation thread and introduce no input callback or
+standalone camera owner.
+
+### Batch C XDE validation properties, recursive occurrences, and STEP options
+
+Area, volume, centroid, stable entries, and occurrence paths cross as copied managed
+values. XCAF attribute handles and IDs never cross the ABI. Attribute writes and clears
+use the existing XDE transaction boundary; reads remain parent-resolved by stable entry.
+
+Each `XdeOccurrence` owns one independently allocated composed `TopLoc_Location` and
+holds parent-bound occurrence/referred labels. `GetWorldLocation` clones that owner;
+`GetLocatedShape` returns a separate registered owning shape. Recursive traversal keeps
+component sequences and XCAF references call-local, copies path entries, and disposes all
+partially created location owners if traversal fails or detects an active-assembly cycle.
+
+STEPCAF readers, writers, work sessions, metadata tools, and transfer state remain native-
+local. Read results own their XDE document; write operations borrow the document only for
+the call. Metadata switches and STEP model type cross as validated scalar values.

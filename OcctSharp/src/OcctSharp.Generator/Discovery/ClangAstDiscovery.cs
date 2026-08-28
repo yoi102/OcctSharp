@@ -112,7 +112,7 @@ public sealed class ClangAstDiscovery
         BindingModel eligibleModel = SharedHandleBindingEligibilityPass.Apply(valueEligibleModel);
 
         return new DiscoveryReport(
-            "1.2",
+            "1.3",
             occtVersion,
             "ClangSharp/libClangSharp 21.1.8",
             headers,
@@ -316,6 +316,7 @@ public sealed class ClangAstDiscovery
             NativeSignature = CreateNativeSignature(qualifiedName, function),
             SourcePackage = sourcePackage,
             SourceToolkit = sourceToolkit,
+            ProductModule = OcctProductModuleClassifier.Classify(sourcePackage, sourceToolkit),
             Access = MapAccess(factDeclaration.Access),
             ReturnType = function is null || factDeclaration is CXXConstructorDecl
                 ? null

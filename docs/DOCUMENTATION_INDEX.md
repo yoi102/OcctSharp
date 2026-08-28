@@ -24,6 +24,12 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   C++/CLI, and platform-adapter availability and package boundaries.
 - [Full inventory classification](FULL_INVENTORY_CLASSIFICATION.md) — complete declaration
   and header dispositions, reason codes, and complete-versus-generated metrics.
+- [Alpha.53 release notes](RELEASE_NOTES_0.1.0_ALPHA_53.md) — XCAF validation
+  properties, recursive XDE occurrences, and explicit STEPCAF options.
+- [Alpha.52 release notes](RELEASE_NOTES_0.1.0_ALPHA_52.md) — STEP import diagnostics,
+  detailed validation/repair comparison, and viewer mouse rotation.
+- [Alpha.51 release notes](RELEASE_NOTES_0.1.0_ALPHA_51.md) — first Batch C common API
+  workflow across topology, BREP, detailed mesh, XDE, and viewer controls.
 - [Alpha.50 release notes](RELEASE_NOTES_0.1.0_ALPHA_50.md) — MIT licensing,
   committed Windows x64 runtime, notices, and clone-and-run smoke.
 - [Alpha.49 release notes](RELEASE_NOTES_0.1.0_ALPHA_49.md) — completed Batch B

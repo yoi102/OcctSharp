@@ -310,6 +310,15 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_topology_summary")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus GetShapeTopologySummary(ShapeHandle shape, out ShapeTopologySummaryRaw summary);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_validation_issue_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetShapeValidationIssueCount(
+        ShapeHandle shape, int geometryChecks, int exact, out int isValid, out int issueCount);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_validation_issues")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus GetShapeValidationIssues(
+        ShapeHandle shape, int geometryChecks, int exact,
+        ValidationIssueRaw* issues, int capacity, out int isValid, out int issueCount);
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_boolean_fuse")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus BooleanFuse(ShapeHandle left, ShapeHandle right, out nint shape);
@@ -398,6 +407,13 @@ internal static partial class NativeMethods
         StringMarshalling = StringMarshalling.Utf8)]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus ReadStep(string filePath, out nint shape);
+    [LibraryImport(
+        LibraryName,
+        EntryPoint = "occtsharp_shape_read_step_report",
+        StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ReadStepWithReport(
+        string filePath, out nint shape, out StepReadReportRaw report);
     [LibraryImport(
         LibraryName,
         EntryPoint = "occtsharp_shape_read_iges",
@@ -929,9 +945,32 @@ internal static partial class NativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus ReadStepXdeDocument(string filePath, out nint document);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_read_step_options", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ReadStepXdeDocumentWithOptions(
+        string filePath,
+        int readNames,
+        int readColors,
+        int readLayers,
+        int readValidationProperties,
+        int readMaterials,
+        out nint document);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_write_step", StringMarshalling = StringMarshalling.Utf8)]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus WriteStepXdeDocument(OcafDocumentHandle document, string filePath);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_write_step_options", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus WriteStepXdeDocumentWithOptions(
+        OcafDocumentHandle document,
+        string filePath,
+        int modelType,
+        int writeNames,
+        int writeColors,
+        int writeLayers,
+        int writeValidationProperties,
+        int writeMaterials);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_add_shape")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -1017,6 +1056,20 @@ internal static partial class NativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus GetXdeMaterialField(OcafDocumentHandle document, string entry, int field, nint buffer, int capacity, out int written);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_validation_properties", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeValidationProperties(
+        OcafDocumentHandle document,
+        string entry,
+        out XdeValidationPropertiesRaw properties);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_set_validation_properties", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetXdeValidationProperties(
+        OcafDocumentHandle document,
+        string entry,
+        in XdeValidationPropertiesRaw properties);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_create")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus CreateViewer(nint windowHandle, out nint viewer);
@@ -1068,6 +1121,15 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_pan")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus PanViewer(ViewerHandle viewer, int deltaX, int deltaY);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_start_rotation")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus StartViewerRotation(
+        ViewerHandle viewer, int x, int y, double zRotationThreshold);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_rotate")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus RotateViewer(ViewerHandle viewer, int x, int y);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_move_to")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

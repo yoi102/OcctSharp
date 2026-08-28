@@ -7,4 +7,9 @@ public sealed record GeneratedManifest(
     IReadOnlyList<string> SourceStableIds,
     IReadOnlyList<GeneratedManifestFile> Files);
 
-public sealed record GeneratedManifestFile(string RelativePath, string Sha256);
+public sealed record GeneratedManifestFile(
+    string RelativePath,
+    string Sha256,
+    string ProductModule,
+    string ApiLayer,
+    string OutputShard);

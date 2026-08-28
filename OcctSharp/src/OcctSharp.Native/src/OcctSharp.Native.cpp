@@ -25,6 +25,8 @@
 #include <BRepAlgoAPI_Section.hxx>
 #include <BRepBndLib.hxx>
 #include <BRepCheck_Analyzer.hxx>
+#include <BRepCheck_Result.hxx>
+#include <BRepCheck_Status.hxx>
 #include <BRepFilletAPI_MakeChamfer.hxx>
 #include <BRepFilletAPI_MakeFillet.hxx>
 #include <BRepOffsetAPI_MakeOffsetShape.hxx>
@@ -107,11 +109,14 @@
 #include <Quantity_Color.hxx>
 #include <TCollection_HAsciiString.hxx>
 #include <XCAFDoc_ColorTool.hxx>
+#include <XCAFDoc_Area.hxx>
+#include <XCAFDoc_Centroid.hxx>
 #include <XCAFDoc_DocumentTool.hxx>
 #include <XCAFDoc_Editor.hxx>
 #include <XCAFDoc_MaterialTool.hxx>
 #include <XCAFDoc_LayerTool.hxx>
 #include <XCAFDoc_ShapeTool.hxx>
+#include <XCAFDoc_Volume.hxx>
 #include <XCAFDoc_VisMaterial.hxx>
 #include <XCAFDoc.hxx>
 #include <V3d_View.hxx>
@@ -192,6 +197,11 @@ static_assert(alignof(OcctSharp_BoundingBox) == 8);
 static_assert(offsetof(OcctSharp_BoundingBox, min_x) == 0);
 static_assert(offsetof(OcctSharp_BoundingBox, max_x) == 24);
 static_assert(sizeof(OcctSharp_XdeColor) == 32);
+static_assert(sizeof(OcctSharp_XdeValidationProperties) == 56);
+static_assert(alignof(OcctSharp_XdeValidationProperties) == 8);
+static_assert(offsetof(OcctSharp_XdeValidationProperties, area) == 0);
+static_assert(offsetof(OcctSharp_XdeValidationProperties, centroid) == 16);
+static_assert(offsetof(OcctSharp_XdeValidationProperties, has_area) == 40);
 static_assert(sizeof(OcctSharp_TopologyCounts) == 32);
 static_assert(sizeof(OcctSharp_ShapeTopologySummary) == 120);
 static_assert(alignof(OcctSharp_ShapeTopologySummary) == 8);
@@ -203,6 +213,9 @@ static_assert(sizeof(OcctSharp_DetailedMeshVertex) == 72);
 static_assert(alignof(OcctSharp_DetailedMeshVertex) == 8);
 static_assert(offsetof(OcctSharp_DetailedMeshVertex, has_uv) == 64);
 static_assert(sizeof(OcctSharp_DetailedMeshTriangle) == 20);
+static_assert(sizeof(OcctSharp_ValidationIssue) == 8);
+static_assert(sizeof(OcctSharp_StepReadReport) == 24);
+static_assert(offsetof(OcctSharp_StepReadReport, system_length_unit) == 16);
 static_assert(alignof(OcctSharp_ShapeDistanceResult) == 8);
 static_assert(offsetof(OcctSharp_ShapeDistanceResult, distance) == 0);
 static_assert(offsetof(OcctSharp_ShapeDistanceResult, point_on_first) == 8);
@@ -290,8 +303,8 @@ struct OcctSharp_ViewerHandle
 
 namespace
 {
-constexpr uint32_t AbiVersion = 0x0001002AU;
-constexpr const char* BridgeVersion = "0.50.0";
+constexpr uint32_t AbiVersion = 0x0001002CU;
+constexpr const char* BridgeVersion = "0.52.0";
 thread_local std::string LastError;
 std::mutex LiveShapesMutex;
 std::unordered_set<const OcctSharp_ShapeHandle*> LiveShapes;
@@ -750,6 +763,43 @@ bool IsTopologyClosed(const TopoDS_Shape& shape)
   return BRep_Tool::IsClosed(shape);
 }
 
+struct ValidationData
+{
+  bool IsValid = false;
+  std::vector<OcctSharp_ValidationIssue> Issues;
+};
+
+ValidationData BuildValidationData(
+  const OcctSharp_ShapeHandle* shape,
+  const bool geometryChecks,
+  const bool exact)
+{
+  ValidateUsableShape(shape);
+  BRepCheck_Analyzer analyzer(shape->Value, geometryChecks, false, exact);
+  ValidationData data;
+  data.IsValid = analyzer.IsValid();
+  NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> subshapes;
+  TopExp::MapShapes(shape->Value, subshapes);
+  for (int32_t index = 1; index <= subshapes.Extent(); ++index)
+  {
+    const TopoDS_Shape& subshape = subshapes(index);
+    const opencascade::handle<BRepCheck_Result>& result = analyzer.Result(subshape);
+    if (result.IsNull()) continue;
+    const NCollection_List<BRepCheck_Status>& statuses = result->Status();
+    for (NCollection_List<BRepCheck_Status>::Iterator iterator(statuses); iterator.More(); iterator.Next())
+    {
+      const BRepCheck_Status status = iterator.Value();
+      if (status == BRepCheck_NoError) continue;
+      if (data.Issues.size() == static_cast<size_t>(std::numeric_limits<int32_t>::max()))
+        throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The validation issue count exceeds the 32-bit ABI.");
+      data.Issues.push_back({
+        static_cast<int32_t>(subshape.ShapeType()),
+        static_cast<int32_t>(status) });
+    }
+  }
+  return data;
+}
+
 MeshData BuildMesh(const OcctSharp_ShapeHandle* shape,
                    const double linear_deflection,
                    const double angular_deflection)
@@ -1024,30 +1074,42 @@ void InitializeXdeTools(const occ::handle<TDocStd_Document>& document)
   XCAFDoc_DocumentTool::ViewTool(main);
 }
 
-void ConfigureXdeReader(STEPCAFControl_Reader& reader)
+void ConfigureXdeReader(
+  STEPCAFControl_Reader& reader,
+  const bool read_names = true,
+  const bool read_colors = true,
+  const bool read_layers = true,
+  const bool read_validation_properties = true,
+  const bool read_materials = true)
 {
-  reader.SetColorMode(true);
-  reader.SetNameMode(true);
-  reader.SetLayerMode(true);
-  reader.SetPropsMode(true);
+  reader.SetColorMode(read_colors);
+  reader.SetNameMode(read_names);
+  reader.SetLayerMode(read_layers);
+  reader.SetPropsMode(read_validation_properties);
   reader.SetMetaMode(true);
   reader.SetProductMetaMode(true);
   reader.SetSHUOMode(true);
   reader.SetGDTMode(true);
-  reader.SetMatMode(true);
+  reader.SetMatMode(read_materials);
   reader.SetViewMode(true);
 }
 
-void ConfigureXdeWriter(STEPCAFControl_Writer& writer)
+void ConfigureXdeWriter(
+  STEPCAFControl_Writer& writer,
+  const bool write_names = true,
+  const bool write_colors = true,
+  const bool write_layers = true,
+  const bool write_validation_properties = true,
+  const bool write_materials = true)
 {
-  writer.SetColorMode(true);
-  writer.SetNameMode(true);
-  writer.SetLayerMode(true);
-  writer.SetPropsMode(true);
+  writer.SetColorMode(write_colors);
+  writer.SetNameMode(write_names);
+  writer.SetLayerMode(write_layers);
+  writer.SetPropsMode(write_validation_properties);
   writer.SetMetadataMode(true);
   writer.SetSHUOMode(true);
   writer.SetDimTolMode(true);
-  writer.SetMaterialMode(true);
+  writer.SetMaterialMode(write_materials);
   writer.SetVisualMaterialMode(true);
 }
 
@@ -2554,6 +2616,57 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_topology_summary(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_validation_issue_count(
+  const OcctSharp_ShapeHandle* shape,
+  const int32_t geometry_checks,
+  const int32_t exact,
+  int32_t* out_is_valid,
+  int32_t* out_issue_count)
+{
+  if (out_is_valid == nullptr || out_issue_count == nullptr)
+  {
+    SetLastError("A validation count output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_is_valid = 0;
+  *out_issue_count = 0;
+  return Guard([&]
+  {
+    ValidationData data = BuildValidationData(shape, geometry_checks != 0, exact != 0);
+    *out_is_valid = data.IsValid ? 1 : 0;
+    *out_issue_count = static_cast<int32_t>(data.Issues.size());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_validation_issues(
+  const OcctSharp_ShapeHandle* shape,
+  const int32_t geometry_checks,
+  const int32_t exact,
+  OcctSharp_ValidationIssue* issues,
+  const int32_t capacity,
+  int32_t* out_is_valid,
+  int32_t* out_issue_count)
+{
+  if (out_is_valid == nullptr || out_issue_count == nullptr || capacity < 0
+      || (capacity > 0 && issues == nullptr))
+  {
+    SetLastError("The validation output buffer is invalid.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_is_valid = 0;
+  *out_issue_count = 0;
+  return Guard([&]
+  {
+    ValidationData data = BuildValidationData(shape, geometry_checks != 0, exact != 0);
+    *out_is_valid = data.IsValid ? 1 : 0;
+    *out_issue_count = static_cast<int32_t>(data.Issues.size());
+    if (capacity < *out_issue_count)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The validation issue buffer is too small.");
+    if (*out_issue_count > 0)
+      std::memcpy(issues, data.Issues.data(), data.Issues.size() * sizeof(OcctSharp_ValidationIssue));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_boolean_fuse(
   const OcctSharp_ShapeHandle* left, const OcctSharp_ShapeHandle* right,
   OcctSharp_ShapeHandle** out_shape)
@@ -2968,6 +3081,39 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_iges(
     {
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The IGES transfer produced a null shape.");
     }
+    *out_shape = AllocateShape(std::move(shape));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_step_report(
+  const char* file_path,
+  OcctSharp_ShapeHandle** out_shape,
+  OcctSharp_StepReadReport* out_report)
+{
+  if (out_shape == nullptr || out_report == nullptr)
+  {
+    SetLastError("A STEP report output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_shape = nullptr;
+  *out_report = {};
+  return Guard([&]
+  {
+    ValidatePath(file_path);
+    STEPControl_Reader reader;
+    const IFSelect_ReturnStatus readStatus = reader.ReadFile(file_path);
+    out_report->read_status = static_cast<int32_t>(readStatus);
+    if (readStatus != IFSelect_RetDone)
+      throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not read the STEP file.");
+    out_report->candidate_root_count = reader.NbRootsForTransfer();
+    out_report->system_length_unit = reader.SystemLengthUnit();
+    out_report->transferred_root_count = reader.TransferRoots();
+    out_report->shape_count = reader.NbShapes();
+    if (out_report->transferred_root_count <= 0)
+      throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The STEP file produced no transferable roots.");
+    TopoDS_Shape shape = reader.OneShape();
+    if (shape.IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The STEP transfer produced a null shape.");
     *out_shape = AllocateShape(std::move(shape));
   });
 }
@@ -4845,6 +4991,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_open(
 OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step(
   const char* file_path, OcctSharp_OcafDocumentHandle** out_document)
 {
+  return occtsharp_xde_document_read_step_options(
+    file_path, 1, 1, 1, 1, 1, out_document);
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step_options(
+  const char* file_path,
+  const int32_t read_names,
+  const int32_t read_colors,
+  const int32_t read_layers,
+  const int32_t read_validation_properties,
+  const int32_t read_materials,
+  OcctSharp_OcafDocumentHandle** out_document)
+{
   if (out_document == nullptr)
   {
     SetLastError("The output XDE document pointer is null.");
@@ -4853,12 +5012,22 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step(
   *out_document = nullptr;
   return Guard([&]
   {
+    const auto is_flag = [](const int32_t value) { return value == 0 || value == 1; };
+    if (!is_flag(read_names) || !is_flag(read_colors) || !is_flag(read_layers)
+        || !is_flag(read_validation_properties) || !is_flag(read_materials))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "An XDE STEP read option is not Boolean.");
     ValidatePath(file_path);
     OcctSharp_OcafDocumentHandle* result = CreateOwnedXdeDocument();
     try
     {
       STEPCAFControl_Reader reader;
-      ConfigureXdeReader(reader);
+      ConfigureXdeReader(
+        reader,
+        read_names != 0,
+        read_colors != 0,
+        read_layers != 0,
+        read_validation_properties != 0,
+        read_materials != 0);
       if (reader.ReadFile(file_path) != IFSelect_RetDone || !reader.Transfer(result->Document))
       {
         throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not transfer STEP into the XDE document.");
@@ -4876,8 +5045,29 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step(
 OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step(
   const OcctSharp_OcafDocumentHandle* document, const char* file_path)
 {
+  return occtsharp_xde_document_write_step_options(
+    document, file_path, 0, 1, 1, 1, 1, 1);
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step_options(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* file_path,
+  const int32_t model_type,
+  const int32_t write_names,
+  const int32_t write_colors,
+  const int32_t write_layers,
+  const int32_t write_validation_properties,
+  const int32_t write_materials)
+{
   return Guard([&]
   {
+    const auto is_flag = [](const int32_t value) { return value == 0 || value == 1; };
+    if (model_type < static_cast<int32_t>(STEPControl_AsIs)
+        || model_type > static_cast<int32_t>(STEPControl_Hybrid))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The STEP model type is outside the supported range.");
+    if (!is_flag(write_names) || !is_flag(write_colors) || !is_flag(write_layers)
+        || !is_flag(write_validation_properties) || !is_flag(write_materials))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "An XDE STEP write option is not Boolean.");
     ValidateOcafDocument(document);
     ValidatePath(file_path);
     if (document->Document->HasOpenCommand())
@@ -4885,8 +5075,14 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step(
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE transaction must be closed before STEP export.");
     }
     STEPCAFControl_Writer writer;
-    ConfigureXdeWriter(writer);
-    if (!writer.Transfer(document->Document, STEPControl_AsIs)
+    ConfigureXdeWriter(
+      writer,
+      write_names != 0,
+      write_colors != 0,
+      write_layers != 0,
+      write_validation_properties != 0,
+      write_materials != 0);
+    if (!writer.Transfer(document->Document, static_cast<STEPControl_StepModelType>(model_type))
         || writer.Write(file_path) != IFSelect_RetDone)
     {
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not write the XDE STEP document.");
@@ -5319,6 +5515,69 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_material_field_to_utf8(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_validation_properties(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  OcctSharp_XdeValidationProperties* properties)
+{
+  if (properties == nullptr)
+  {
+    SetLastError("The XDE validation-properties output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *properties = {};
+  return Guard([&]
+  {
+    const TDF_Label label = ResolveOcafLabel(document, entry);
+    gp_Pnt centroid;
+    properties->has_area = XCAFDoc_Area::Get(label, properties->area) ? 1 : 0;
+    properties->has_volume = XCAFDoc_Volume::Get(label, properties->volume) ? 1 : 0;
+    properties->has_centroid = XCAFDoc_Centroid::Get(label, centroid) ? 1 : 0;
+    if (properties->has_centroid != 0)
+      properties->centroid = {centroid.X(), centroid.Y(), centroid.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_validation_properties(
+  OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  const OcctSharp_XdeValidationProperties* properties)
+{
+  if (properties == nullptr)
+  {
+    SetLastError("The XDE validation-properties input pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    RequireOpenOcafCommand(document);
+    const auto is_flag = [](const int32_t value) { return value == 0 || value == 1; };
+    if (!is_flag(properties->has_area) || !is_flag(properties->has_volume)
+        || !is_flag(properties->has_centroid))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "An XDE validation-property presence flag is not Boolean.");
+    if ((properties->has_area != 0 && (!std::isfinite(properties->area) || properties->area < 0.0))
+        || (properties->has_volume != 0 && (!std::isfinite(properties->volume) || properties->volume < 0.0)))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "XDE area and volume must be finite and non-negative.");
+    if (properties->has_centroid != 0
+        && (!std::isfinite(properties->centroid.x)
+            || !std::isfinite(properties->centroid.y)
+            || !std::isfinite(properties->centroid.z)))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE centroid must be finite.");
+
+    const TDF_Label label = ResolveOcafLabel(document, entry);
+    if (properties->has_area != 0) XCAFDoc_Area::Set(label, properties->area);
+    else label.ForgetAttribute(XCAFDoc_Area::GetID());
+    if (properties->has_volume != 0) XCAFDoc_Volume::Set(label, properties->volume);
+    else label.ForgetAttribute(XCAFDoc_Volume::GetID());
+    if (properties->has_centroid != 0)
+      XCAFDoc_Centroid::Set(
+        label,
+        gp_Pnt(properties->centroid.x, properties->centroid.y, properties->centroid.z));
+    else label.ForgetAttribute(XCAFDoc_Centroid::GetID());
+  });
+}
+
 namespace
 {
 void ValidateViewer(const OcctSharp_ViewerHandle* viewer)
@@ -5585,6 +5844,36 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_pan(
   {
     ValidateViewerThread(viewer);
     viewer->View->Pan(delta_x, delta_y, 1.0, true);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_start_rotation(
+  OcctSharp_ViewerHandle* viewer,
+  const int32_t x,
+  const int32_t y,
+  const double z_rotation_threshold)
+{
+  if (!std::isfinite(z_rotation_threshold) || z_rotation_threshold < 0.0)
+  {
+    SetLastError("Viewer Z rotation threshold must be finite and non-negative.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->View->StartRotation(x, y, z_rotation_threshold);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_rotate(
+  OcctSharp_ViewerHandle* viewer,
+  const int32_t x,
+  const int32_t y)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->View->Rotation(x, y);
   });
 }
 

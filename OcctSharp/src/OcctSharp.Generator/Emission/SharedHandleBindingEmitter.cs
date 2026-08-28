@@ -2,6 +2,7 @@ using System.Globalization;
 using System.Text;
 using OcctSharp.Generator.Discovery;
 using OcctSharp.Generator.Model;
+using OcctSharp.Generator.Transformation;
 using OcctSharp.Generator.TypeMapping;
 
 #pragma warning disable CA1305 // Interpolated values are normalized identifiers and signatures, not locale-sensitive data.
@@ -10,11 +11,6 @@ namespace OcctSharp.Generator.Emission;
 
 public static class SharedHandleBindingEmitter
 {
-    private const string NativeHeaderPath = "src/OcctSharp.Native/generated/OcctSharp.SharedHandles.Generated.h";
-    private const string NativeSourcePath = "src/OcctSharp.Native/generated/OcctSharp.SharedHandles.Generated.cpp";
-    private const string ManagedRawPath = "src/OcctSharp/Generated/SharedHandlesRaw.Generated.cs";
-    private const string ManagedFriendlyPath = "src/OcctSharp/Generated/SharedHandles.Generated.cs";
-
     public static GeneratedBindingSet Emit(
         string occtVersion,
         BindingModel model,
@@ -47,16 +43,124 @@ public static class SharedHandleBindingEmitter
             .OrderBy(static declaration => declaration.StableId, StringComparer.Ordinal)
             .ToArray();
 
+        SharedTypeBinding[] assignedBindings = bindings
+            .Select(binding => binding with { ProductModule = GetProductModule(model, binding.Scope) })
+            .ToArray();
+        List<GeneratedFile> files =
+        [
+            new GeneratedFile(
+                "src/OcctSharp.Native/generated/Runtime/OcctSharp.Runtime.SharedSupport.Generated.hxx",
+                EmitNativeSupportHeader(),
+                OcctProductModule.Runtime,
+                GeneratedApiLayer.Runtime,
+                "SharedHandles.NativeSupport"),
+        ];
+        foreach (IGrouping<OcctProductModule, SharedTypeBinding> moduleGroup in assignedBindings
+            .GroupBy(static binding => binding.ProductModule)
+            .OrderBy(static group => group.Key))
+        {
+            OcctProductModule module = moduleGroup.Key;
+            SharedTypeBinding[] moduleBindings = moduleGroup
+                .OrderBy(static binding => binding.Scope.NativeType, StringComparer.Ordinal)
+                .ToArray();
+            BindingDeclaration[] moduleDeclarations = GetDeclarations(moduleBindings);
+            SharedHandleScopeConfiguration[] referencedScopes = GetReferencedScopes(moduleBindings);
+            OcctProductModule[] referencedModules = referencedScopes
+                .Select(scope => assignedBindings.Single(binding =>
+                    string.Equals(binding.Scope.NativeType, scope.NativeType, StringComparison.Ordinal)).ProductModule)
+                .Distinct()
+                .Order()
+                .ToArray();
+            string moduleName = module.ToString();
+            string nativeBase = $"src/OcctSharp.Native/generated/{moduleName}/OcctSharp.{moduleName}.SharedHandles.Generated";
+            string managedBase = $"src/OcctSharp/Generated/{moduleName}/{moduleName}.SharedHandles";
+            files.Add(new GeneratedFile(
+                nativeBase + ".h",
+                EmitNativeHeader(moduleBindings, moduleDeclarations, referencedScopes),
+                module,
+                GeneratedApiLayer.Raw,
+                "SharedHandles.NativeHeader"));
+            files.Add(new GeneratedFile(
+                nativeBase + ".cpp",
+                EmitNativeSource(moduleBindings, moduleDeclarations, referencedScopes, referencedModules, preambleHeaders, moduleName),
+                module,
+                GeneratedApiLayer.Raw,
+                "SharedHandles.NativeSource"));
+            files.Add(new GeneratedFile(
+                managedBase + "Raw.Generated.cs",
+                EmitManagedRaw(moduleBindings, moduleDeclarations),
+                module,
+                GeneratedApiLayer.Raw,
+                "SharedHandles.ManagedRaw"));
+            files.Add(new GeneratedFile(
+                managedBase + ".Generated.cs",
+                EmitManagedFriendly(
+                    moduleBindings,
+                    moduleDeclarations,
+                    includePointValue: module == OcctProductModule.Geometry),
+                module,
+                GeneratedApiLayer.SafeManaged,
+                "SharedHandles.ManagedFriendly"));
+        }
+
         return new GeneratedBindingSet(
             occtVersion,
             declarations.Select(static declaration => declaration.StableId).ToArray(),
-            [
-                new GeneratedFile(NativeHeaderPath, EmitNativeHeader(bindings, declarations)),
-                new GeneratedFile(NativeSourcePath, EmitNativeSource(bindings, declarations, preambleHeaders)),
-                new GeneratedFile(ManagedRawPath, EmitManagedRaw(bindings, declarations)),
-                new GeneratedFile(ManagedFriendlyPath, EmitManagedFriendly(bindings, declarations)),
-            ]);
+            files.OrderBy(static file => file.RelativePath, StringComparer.Ordinal).ToArray());
     }
+
+    private static BindingDeclaration[] GetDeclarations(IEnumerable<SharedTypeBinding> bindings) => bindings
+        .SelectMany(static binding => binding.Constructors
+            .Select(static constructor => constructor.Declaration)
+            .Concat(binding.Methods.Select(static method => method.Declaration)))
+        .OrderBy(static declaration => declaration.StableId, StringComparer.Ordinal)
+        .ToArray();
+
+    private static SharedHandleScopeConfiguration[] GetReferencedScopes(IEnumerable<SharedTypeBinding> bindings) => bindings
+        .SelectMany(static binding =>
+            binding.Constructors.SelectMany(static constructor => constructor.Parameters)
+                .Concat(binding.Methods.SelectMany(static method => method.Parameters))
+                .Select(static parameter => parameter.SharedScope)
+                .Concat(binding.Methods.Select(static method => method.ReturnSharedScope))
+                .Append(binding.Scope))
+        .Where(static scope => scope is not null)
+        .Cast<SharedHandleScopeConfiguration>()
+        .DistinctBy(static scope => scope.NativeType, StringComparer.Ordinal)
+        .OrderBy(static scope => scope.NativeType, StringComparer.Ordinal)
+        .ToArray();
+
+    private static OcctProductModule GetProductModule(
+        BindingModel model,
+        SharedHandleScopeConfiguration scope)
+    {
+        BindingDeclaration? declaration = model.Declarations.FirstOrDefault(item =>
+            string.Equals(item.SourcePackage, scope.SourcePackage, StringComparison.Ordinal)
+            && (string.Equals(item.NativeName, scope.NativeType, StringComparison.Ordinal)
+                || item.NativeName.StartsWith(scope.NativeType + "::", StringComparison.Ordinal)));
+        return declaration?.ProductModule is not null and not OcctProductModule.Unassigned
+            ? declaration.ProductModule
+            : OcctProductModuleClassifier.ClassifyOrThrow(scope.SourcePackage, declaration?.SourceToolkit);
+    }
+
+    private static string EmitNativeSupportHeader() => Normalize(
+        """
+        // <auto-generated />
+        #pragma once
+
+        #include "../../include/OcctSharp.Native.h"
+        #include <stdexcept>
+
+        namespace OcctSharpGenerated
+        {
+        class GeneratedOperationFailure final : public std::runtime_error
+        {
+        public:
+          GeneratedOperationFailure(const OcctSharp_Status status, const char* message)
+            : std::runtime_error(message), Status(status) {}
+          OcctSharp_Status Status;
+        };
+        }
+        """);
 
     private static SharedTypeBinding CreateBinding(
         BindingModel model,
@@ -130,7 +234,7 @@ public static class SharedHandleBindingEmitter
 
         methods = AssignUniqueManagedMemberNames(methods);
 
-        return new SharedTypeBinding(scope, constructors, methods);
+        return new SharedTypeBinding(scope, constructors, methods, OcctProductModule.Unassigned);
     }
 
     private static SharedConstructor CreateConstructor(
@@ -234,20 +338,21 @@ public static class SharedHandleBindingEmitter
 
     private static string EmitNativeHeader(
         IReadOnlyList<SharedTypeBinding> bindings,
-        IReadOnlyList<BindingDeclaration> declarations)
+        IReadOnlyList<BindingDeclaration> declarations,
+        IReadOnlyList<SharedHandleScopeConfiguration> referencedScopes)
     {
         StringBuilder builder = StartFile(declarations);
         builder.AppendLine("#pragma once");
         builder.AppendLine();
-        builder.AppendLine("#include \"OcctSharp.Generated.h\"");
+        builder.AppendLine("#include \"../Geometry/OcctSharp.Geometry.Values.Generated.h\"");
         builder.AppendLine();
         builder.AppendLine("#ifdef __cplusplus");
         builder.AppendLine("extern \"C\" {");
         builder.AppendLine("#endif");
 
-        foreach (SharedTypeBinding binding in bindings)
+        foreach (SharedHandleScopeConfiguration scope in referencedScopes)
         {
-            string nativeHandle = NativeHandleName(binding.Scope);
+            string nativeHandle = NativeHandleName(scope);
             builder.AppendLine();
             builder.AppendLine($"typedef struct {nativeHandle} {nativeHandle};");
         }
@@ -301,22 +406,61 @@ public static class SharedHandleBindingEmitter
         builder.AppendLine("#ifdef __cplusplus");
         builder.AppendLine("}");
         builder.AppendLine("#endif");
+        builder.AppendLine();
+        builder.AppendLine("#ifdef __cplusplus");
+        foreach (string header in bindings.Select(static binding => binding.Scope.Header)
+            .Concat(bindings.Where(static binding => binding.Scope.UsesPlacementAllocator)
+                .Select(static _ => "NCollection_IncAllocator.hxx"))
+            .Distinct(StringComparer.Ordinal)
+            .Order(StringComparer.Ordinal))
+        {
+            builder.AppendLine($"#include <{header}>");
+        }
+        builder.AppendLine("#include <utility>");
+        foreach (SharedTypeBinding binding in bindings)
+        {
+            SharedHandleScopeConfiguration scope = binding.Scope;
+            string handleType = NativeHandleName(scope);
+            builder.AppendLine();
+            builder.AppendLine($"struct {handleType}");
+            builder.AppendLine("{");
+            if (scope.UsesPlacementAllocator)
+            {
+                builder.AppendLine($"  {handleType}(opencascade::handle<{scope.NativeType}> value, opencascade::handle<NCollection_IncAllocator> allocator) : ConstructionAllocator(std::move(allocator)), Value(std::move(value)) {{}}");
+                builder.AppendLine("  opencascade::handle<NCollection_IncAllocator> ConstructionAllocator;");
+            }
+            else
+            {
+                builder.AppendLine($"  explicit {handleType}(opencascade::handle<{scope.NativeType}> value) : Value(std::move(value)) {{}}");
+            }
+            builder.AppendLine($"  opencascade::handle<{scope.NativeType}> Value;");
+            builder.AppendLine("};");
+        }
+        builder.AppendLine("#endif");
         return Normalize(builder.ToString());
     }
 
     private static string EmitNativeSource(
         IReadOnlyList<SharedTypeBinding> bindings,
         IReadOnlyList<BindingDeclaration> declarations,
-        IReadOnlyList<string> preambleHeaders)
+        IReadOnlyList<SharedHandleScopeConfiguration> referencedScopes,
+        IReadOnlyList<OcctProductModule> referencedModules,
+        IReadOnlyList<string> preambleHeaders,
+        string moduleName)
     {
         StringBuilder builder = StartFile(declarations);
-        builder.AppendLine("#include \"OcctSharp.SharedHandles.Generated.h\"");
-        builder.AppendLine("#include \"../include/OcctSharp.Native.Internal.hxx\"");
+        builder.AppendLine($"#include \"OcctSharp.{moduleName}.SharedHandles.Generated.h\"");
+        foreach (OcctProductModule referencedModule in referencedModules.Where(item => item != bindings[0].ProductModule))
+        {
+            builder.AppendLine($"#include \"../{referencedModule}/OcctSharp.{referencedModule}.SharedHandles.Generated.h\"");
+        }
+        builder.AppendLine("#include \"../Runtime/OcctSharp.Runtime.SharedSupport.Generated.hxx\"");
+        builder.AppendLine("#include \"../../include/OcctSharp.Native.Internal.hxx\"");
         foreach (string header in preambleHeaders.Order(StringComparer.Ordinal))
         {
             builder.AppendLine($"#include <{header}>");
         }
-        foreach (string header in bindings.Select(static binding => binding.Scope.Header)
+        foreach (string header in referencedScopes.Select(static scope => scope.Header)
             .Distinct(StringComparer.Ordinal).Order(StringComparer.Ordinal))
         {
             builder.AppendLine($"#include <{header}>");
@@ -331,23 +475,28 @@ public static class SharedHandleBindingEmitter
         builder.AppendLine("#include <unordered_set>");
         builder.AppendLine("#include <utility>");
         builder.AppendLine();
+        builder.AppendLine("namespace OcctSharpGenerated");
+        builder.AppendLine("{");
+        foreach (SharedHandleScopeConfiguration scope in referencedScopes)
+        {
+            string allocatorParameter = scope.UsesPlacementAllocator
+                ? ", opencascade::handle<NCollection_IncAllocator> allocator"
+                : string.Empty;
+            builder.AppendLine($"{NativeHandleName(scope)}* Allocate{scope.ManagedTypeName}(opencascade::handle<{scope.NativeType}> value{allocatorParameter});");
+            builder.AppendLine($"const {NativeHandleName(scope)}* Validate{scope.ManagedTypeName}(const {NativeHandleName(scope)}* handle);");
+        }
+        builder.AppendLine("}");
+        builder.AppendLine("using namespace OcctSharpGenerated;");
+        builder.AppendLine();
         builder.AppendLine("namespace");
         builder.AppendLine("{");
-        builder.AppendLine("class GeneratedOperationFailure final : public std::runtime_error");
-        builder.AppendLine("{");
-        builder.AppendLine("public:");
-        builder.AppendLine("  GeneratedOperationFailure(const OcctSharp_Status status, const char* message)");
-        builder.AppendLine("    : std::runtime_error(message), Status(status) {}");
-        builder.AppendLine("  OcctSharp_Status Status;");
-        builder.AppendLine("};");
-        builder.AppendLine();
         builder.AppendLine("template <typename TAction>");
         builder.AppendLine("OcctSharp_Status GeneratedGuard(TAction&& action)");
         builder.AppendLine("{");
         builder.AppendLine("  OcctSharp_Internal_SetLastError(\"\");");
         builder.AppendLine("  try { action(); return OCCTSHARP_STATUS_SUCCESS; }");
         builder.AppendLine("  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }");
-        builder.AppendLine("  catch (const GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }");
+        builder.AppendLine("  catch (const OcctSharpGenerated::GeneratedOperationFailure& error) { OcctSharp_Internal_SetLastError(error.what()); return error.Status; }");
         builder.AppendLine("  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }");
         builder.AppendLine("  catch (...) { OcctSharp_Internal_SetLastError(\"Unknown C++ exception in generated shared binding.\"); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }");
         builder.AppendLine("}");
@@ -371,25 +520,14 @@ public static class SharedHandleBindingEmitter
         string handleType = NativeHandleName(scope);
         string helperPrefix = scope.ManagedTypeName;
         builder.AppendLine();
-        builder.AppendLine($"struct {handleType}");
-        builder.AppendLine("{");
-        if (scope.UsesPlacementAllocator)
-        {
-            builder.AppendLine($"  {handleType}(opencascade::handle<{scope.NativeType}> value, opencascade::handle<NCollection_IncAllocator> allocator) : ConstructionAllocator(std::move(allocator)), Value(std::move(value)) {{}}");
-            builder.AppendLine("  opencascade::handle<NCollection_IncAllocator> ConstructionAllocator;");
-        }
-        else
-        {
-            builder.AppendLine($"  explicit {handleType}(opencascade::handle<{scope.NativeType}> value) : Value(std::move(value)) {{}}");
-        }
-        builder.AppendLine($"  opencascade::handle<{scope.NativeType}> Value;");
-        builder.AppendLine("};");
-        builder.AppendLine();
         builder.AppendLine("namespace");
         builder.AppendLine("{");
         builder.AppendLine($"std::mutex {helperPrefix}Mutex;");
         builder.AppendLine($"std::unordered_set<const {handleType}*> Live{helperPrefix}Handles;");
+        builder.AppendLine("}");
         builder.AppendLine();
+        builder.AppendLine("namespace OcctSharpGenerated");
+        builder.AppendLine("{");
         string allocatorParameter = scope.UsesPlacementAllocator
             ? ", opencascade::handle<NCollection_IncAllocator> allocator"
             : string.Empty;
@@ -658,7 +796,8 @@ public static class SharedHandleBindingEmitter
 
     private static string EmitManagedFriendly(
         IReadOnlyList<SharedTypeBinding> bindings,
-        IReadOnlyList<BindingDeclaration> declarations)
+        IReadOnlyList<BindingDeclaration> declarations,
+        bool includePointValue)
     {
         StringBuilder builder = StartFile(declarations);
         builder.AppendLine("#nullable enable");
@@ -666,9 +805,12 @@ public static class SharedHandleBindingEmitter
         builder.AppendLine("using OcctSharp.Generated;");
         builder.AppendLine();
         builder.AppendLine("namespace OcctSharp;");
-        builder.AppendLine();
-        builder.AppendLine("/// <summary>A copied OCCT three-dimensional point value.</summary>");
-        builder.AppendLine("public readonly record struct Point3d(double X, double Y, double Z);");
+        if (includePointValue)
+        {
+            builder.AppendLine();
+            builder.AppendLine("/// <summary>A copied OCCT three-dimensional point value.</summary>");
+            builder.AppendLine("public readonly record struct Point3d(double X, double Y, double Z);");
+        }
 
         foreach (SharedTypeBinding binding in bindings)
         {
@@ -1124,7 +1266,8 @@ public static class SharedHandleBindingEmitter
     private sealed record SharedTypeBinding(
         SharedHandleScopeConfiguration Scope,
         SharedConstructor[] Constructors,
-        SharedMethod[] Methods);
+        SharedMethod[] Methods,
+        OcctProductModule ProductModule);
 
     private sealed record SharedConstructor(
         BindingDeclaration Declaration,

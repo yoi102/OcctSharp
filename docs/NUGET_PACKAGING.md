@@ -2,7 +2,7 @@
 
 ## Current package
 
-The current experimental package is `OcctSharp` `0.1.0-alpha.51` for .NET 10 and
+The current experimental package is `OcctSharp` `0.1.0-alpha.53` for .NET 10 and
 Windows x64. It contains:
 
 - `lib/net10.0/OcctSharp.dll` and XML documentation.
@@ -67,8 +67,10 @@ display/selection smoke. It also exercises cone/torus, extrusion, fillet/chamfer
 offset, section, bounding, validity, topology-count, curve/surface evaluation and
 projection, topology adjacency, loft/pipe/sewing, wedge/thick-solid, Boolean history,
 composable XDE STEP import, native BREP read/write, topology/tolerance summaries,
-detailed mesh normals/UV/face mapping, atomic XDE part metadata, and common viewer
-appearance/camera/selection operations. The current
+detailed mesh normals/UV/face mapping, atomic XDE part metadata, typed STEP read reports,
+per-subshape validation, repair comparison, XCAF validation properties, recursive XDE
+occurrences/world locations, explicit STEPCAF options, and common viewer appearance/
+camera/selection/rotation operations. The current
 application-local closure contains 62 DLLs.
 
 ## Consumer use
@@ -76,7 +78,7 @@ application-local closure contains 62 DLLs.
 Once a package source contains the package, an application uses the normal command:
 
 ```powershell
-dotnet add package OcctSharp --version 0.1.0-alpha.51
+dotnet add package OcctSharp --version 0.1.0-alpha.53
 ```
 
 The application must run as a Windows x64 process on the current compatibility matrix.
@@ -98,9 +100,9 @@ completed release tooling do not override a `BLOCKED` or `NOT RUN` publication g
 
 ## Planned package split
 
-Alpha.51 package verification runs from the inner `OcctSharp/` workspace, where
+Alpha.53 package verification runs from the inner `OcctSharp/` workspace, where
 `global.json` selects SDK 10.0.400. The clean consumer restored, published, and ran
-with ABI 1.42, bridge 0.50.0, and 62 native DLLs under `occt`. Signing, hosted release
+with ABI 1.44, bridge 0.52.0, and 62 native DLLs under `occt`. Signing, hosted release
 execution, and publication authorization remain separate gates.
 
 ADR-0015 keeps one package during the topology/modeling foundation, then introduces

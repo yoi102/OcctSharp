@@ -7,7 +7,7 @@ reported as supported.
 
 | OcctSharp | Generator | Native ABI | OCCT | Platform | Compiler | .NET | Status |
 |---|---|---|---|---|---|---|---|
-| 0.1.0-alpha.51 workspace | ClangSharp 21.1.8.4 | 1.42 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
+| 0.1.0-alpha.53 workspace | ClangSharp 21.1.8.4 | 1.44 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
 
 Validated in both Debug and Release: native and managed build, ABI/runtime identity,
 OCCT box creation, topology traversal, error/disposal behavior, STEP geometry
@@ -128,6 +128,19 @@ Clean regeneration is byte-identical, the clean package consumer runs with all 6
 and runtime tests cover native BREP, topology/tolerance snapshots, detailed mesh
 normals/UV/face mapping, XDE part metadata composition, and real-HWND viewer appearance,
 camera, and selection modes.
+
+The alpha.52 workspace advances to ABI 1.43/bridge 0.51.0 for the second Batch C
+cross-family checkpoint. Release and Debug pass Generator 62/62 and Runtime 107/107.
+Runtime tests cover typed STEP read/transfer/unit reports, copied per-subshape BRepCheck
+statuses, owning ShapeFix repair with before/after validation, and real-HWND mouse
+rotation. Clean package and release evidence are recorded in `STATUS.md`.
+
+The alpha.53 workspace advances to ABI 1.44/bridge 0.52.0 for the third Batch C
+cross-family checkpoint. Release and Debug pass Generator 62/62 and Runtime 108/108.
+Runtime tests cover BRepGProp-derived XCAF properties, nullable attribute mutation and
+clearing, nested occurrence/world-location traversal, independent located shapes, and
+STEPCAF metadata/model-type options. Clean package and release evidence are recorded in
+`STATUS.md`.
 
 ## Planned validation dimensions
 

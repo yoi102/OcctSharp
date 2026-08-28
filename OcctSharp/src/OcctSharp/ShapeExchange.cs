@@ -24,6 +24,23 @@ public static class ShapeExchange
         return ShapeFactory.FromNativeHandle(nativeShape, "shape_read_step");
     }
 
+    /// <summary>Reads STEP geometry and returns copied root/transfer/unit diagnostics.</summary>
+    public static StepReadResult ReadStepWithReport(string filePath)
+    {
+        string fullPath = ResolveInputPath(filePath);
+        OcctRuntime.EnsureCompatible();
+        NativeError.ThrowIfFailed(
+            NativeMethods.ReadStepWithReport(fullPath, out nint nativeShape, out StepReadReportRaw raw),
+            "shape_read_step_report");
+        Shape shape = ShapeFactory.FromNativeHandle(nativeShape, "shape_read_step_report");
+        return new StepReadResult(shape, new StepReadReport(
+            raw.CandidateRootCount,
+            raw.TransferredRootCount,
+            raw.ShapeCount,
+            (StepReadStatus)raw.ReadStatus,
+            raw.SystemLengthUnit));
+    }
+
     /// <summary>Reads all transferable roots from an IGES file into one owned shape.</summary>
     public static Shape ReadIges(string filePath)
     {

@@ -14,6 +14,8 @@ public sealed record BindingDeclaration(
 
     public string? SourceToolkit { get; init; }
 
+    public OcctProductModule ProductModule { get; init; }
+
     public BindingAccess Access { get; init; }
 
     public BindingType? ReturnType { get; init; }

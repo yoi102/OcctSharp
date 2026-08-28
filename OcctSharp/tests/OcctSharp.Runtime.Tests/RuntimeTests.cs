@@ -11,8 +11,8 @@ public sealed class RuntimeTests
     {
         OcctRuntimeInfo info = OcctRuntime.Info;
 
-        Assert.Equal(new Version(1, 42), info.AbiVersion);
-        Assert.Equal("0.50.0", info.BridgeVersion);
+        Assert.Equal(new Version(1, 44), info.AbiVersion);
+        Assert.Equal("0.52.0", info.BridgeVersion);
         Assert.Equal("8.0.1", info.OcctVersion);
     }
 
@@ -591,6 +591,153 @@ public sealed class RuntimeTests
     }
 
     [Fact]
+    public void XdeValidationPropertiesOccurrencesAndStepOptionsRoundTrip()
+    {
+        WithTemporaryDirectory(directory =>
+        {
+            string allMetadataPath = Path.Combine(directory, "validation-all.step");
+            string noPropertiesPath = Path.Combine(directory, "validation-no-properties.step");
+            using Shape box = ShapeFactory.CreateBox(2, 3, 4);
+            using XdeDocument document = XdeDocument.Create();
+            XdeLabel rootAssembly;
+            string partEntry;
+
+            using (GpTrsf partTranslation = GpTrsf.Create(1, 2, 3))
+            using (TopLocLocation partLocation = TopLocLocation.FromTransform(partTranslation))
+            using (GpTrsf assemblyTranslation = GpTrsf.Create(10, 20, 30))
+            using (TopLocLocation assemblyLocation = TopLocLocation.FromTransform(assemblyTranslation))
+            using (XdeTransaction transaction = document.BeginTransaction())
+            {
+                XdeLabel part = document.AddPart(box, new XdePartMetadata(
+                    "Property Part",
+                    new XdeColor(0.2, 0.4, 0.6),
+                    ["Validation"],
+                    new XdeMaterial("Steel", "Validation material", 7.85, "Density", "g/cm3")));
+                XdeValidationProperties computed = part.UpdateValidationPropertiesFromShape();
+                partEntry = part.Entry;
+                Assert.Equal(52, computed.Area!.Value, 10);
+                Assert.Equal(24, computed.Volume!.Value, 10);
+                Assert.Equal(new GpPoint(1, 1.5, 2), computed.Centroid!.Value);
+
+                XdeLabel subassembly = document.AddAssembly("Property Subassembly");
+                _ = document.AddComponent(subassembly, part, partLocation);
+                rootAssembly = document.AddAssembly("Property Root");
+                _ = document.AddComponent(rootAssembly, subassembly, assemblyLocation);
+                Assert.True(transaction.Commit());
+            }
+
+            IReadOnlyList<XdeOccurrence> direct = rootAssembly.GetOccurrences(recursive: false);
+            try
+            {
+                XdeOccurrence subassemblyOccurrence = Assert.Single(direct);
+                Assert.True(subassemblyOccurrence.IsAssembly);
+                Assert.Equal(1, subassemblyOccurrence.Depth);
+            }
+            finally { foreach (XdeOccurrence occurrence in direct) occurrence.Dispose(); }
+
+            IReadOnlyList<XdeOccurrence> flattened = rootAssembly.GetOccurrences();
+            try
+            {
+                Assert.Equal(2, flattened.Count);
+                XdeOccurrence partOccurrence = flattened.Single(occurrence => !occurrence.IsAssembly);
+                Assert.Equal(2, partOccurrence.Depth);
+                using TopLocLocation worldLocation = partOccurrence.GetWorldLocation();
+                using GpTrsf worldTransform = worldLocation.ToTransform();
+                Assert.Equal(11, worldTransform.Value(1, 4), 10);
+                Assert.Equal(22, worldTransform.Value(2, 4), 10);
+                Assert.Equal(33, worldTransform.Value(3, 4), 10);
+                using Shape located = partOccurrence.GetLocatedShape();
+                BoundingBox3d bounds = located.GetBoundingBox();
+                Assert.Equal(11, bounds.Minimum.X, 6);
+                Assert.Equal(22, bounds.Minimum.Y, 6);
+                Assert.Equal(33, bounds.Minimum.Z, 6);
+            }
+            finally { foreach (XdeOccurrence occurrence in flattened) occurrence.Dispose(); }
+
+            Assert.Equal(
+                allMetadataPath,
+                document.WriteStep(allMetadataPath, new XdeStepWriteOptions(
+                    ModelType: XdeStepModelType.AsIs,
+                    WriteValidationProperties: true)));
+            Assert.Equal(
+                noPropertiesPath,
+                document.WriteStep(noPropertiesPath, new XdeStepWriteOptions(
+                    WriteNames: false,
+                    WriteColors: false,
+                    WriteLayers: false,
+                    WriteValidationProperties: false,
+                    WriteMaterials: false)));
+            Assert.Throws<ArgumentOutOfRangeException>(() => document.WriteStep(
+                Path.Combine(directory, "invalid.step"),
+                new XdeStepWriteOptions((XdeStepModelType)999)));
+
+            using (XdeDocument restored = XdeDocument.ReadStep(allMetadataPath))
+            {
+                XdeLabel restoredRoot = Assert.Single(restored.GetFreeShapes());
+                IReadOnlyList<XdeOccurrence> occurrences = restoredRoot.GetOccurrences();
+                try
+                {
+                    XdeLabel restoredPart = occurrences.Single(item => !item.IsAssembly).ReferredLabel;
+                    XdeValidationProperties properties = restoredPart.ValidationProperties;
+                    Assert.True(properties.IsComplete);
+                    Assert.Equal(52, properties.Area!.Value, 8);
+                    Assert.Equal(24, properties.Volume!.Value, 8);
+                    Assert.Equal(new GpPoint(1, 1.5, 2), properties.Centroid!.Value);
+                }
+                finally { foreach (XdeOccurrence occurrence in occurrences) occurrence.Dispose(); }
+            }
+
+            using (XdeDocument filteredByWriter = XdeDocument.ReadStep(noPropertiesPath))
+            {
+                XdeLabel filteredRoot = Assert.Single(filteredByWriter.GetFreeShapes());
+                IReadOnlyList<XdeOccurrence> occurrences = filteredRoot.GetOccurrences();
+                try
+                {
+                    XdeLabel filteredPart = occurrences.Single(item => !item.IsAssembly).ReferredLabel;
+                    Assert.False(filteredPart.ValidationProperties.HasAny);
+                    Assert.Null(filteredPart.Color);
+                    Assert.Empty(filteredPart.Layers);
+                    Assert.Null(filteredPart.Material);
+                    Assert.NotEqual("Property Part", filteredPart.Name);
+                }
+                finally { foreach (XdeOccurrence occurrence in occurrences) occurrence.Dispose(); }
+            }
+
+            using (XdeDocument filteredByReader = XdeDocument.ReadStep(
+                allMetadataPath,
+                new XdeStepReadOptions(
+                    ReadNames: false,
+                    ReadColors: false,
+                    ReadLayers: false,
+                    ReadValidationProperties: false,
+                    ReadMaterials: false)))
+            {
+                XdeLabel filteredRoot = Assert.Single(filteredByReader.GetFreeShapes());
+                IReadOnlyList<XdeOccurrence> occurrences = filteredRoot.GetOccurrences();
+                try
+                {
+                    XdeLabel filteredPart = occurrences.Single(item => !item.IsAssembly).ReferredLabel;
+                    Assert.False(filteredPart.ValidationProperties.HasAny);
+                    Assert.Null(filteredPart.Color);
+                    Assert.Empty(filteredPart.Layers);
+                    Assert.Null(filteredPart.Material);
+                    Assert.NotEqual("Property Part", filteredPart.Name);
+                }
+                finally { foreach (XdeOccurrence occurrence in occurrences) occurrence.Dispose(); }
+            }
+
+            XdeLabel originalPart = document.GetLabel(partEntry);
+            Assert.Throws<ArgumentException>(() => originalPart.ValidationProperties = new(null, null, null));
+            using (XdeTransaction transaction = document.BeginTransaction())
+            {
+                originalPart.ValidationProperties = new(null, null, null);
+                Assert.True(transaction.Commit());
+            }
+            Assert.False(originalPart.ValidationProperties.HasAny);
+        });
+    }
+
+    [Fact]
     public void CommonCadWaveRunsBrepInspectModifyMeshXdeAndStepEndToEnd()
     {
         WithTemporaryDirectory(directory =>
@@ -659,6 +806,19 @@ public sealed class RuntimeTests
                 Assert.Equal(stepPath, document.WriteStep(stepPath));
             }
 
+            using StepReadResult geometryRead = ShapeExchange.ReadStepWithReport(stepPath);
+            Assert.True(geometryRead.Report.CandidateRootCount > 0);
+            Assert.True(geometryRead.Report.TransferredRootCount > 0);
+            Assert.True(geometryRead.Report.ShapeCount > 0);
+            Assert.Equal(StepReadStatus.Done, geometryRead.Report.ReadStatus);
+            Assert.True(double.IsFinite(geometryRead.Report.SystemLengthUnit));
+            ShapeValidationReport validation = geometryRead.Shape.GetValidationReport();
+            Assert.True(validation.IsValid);
+            Assert.Empty(validation.Issues);
+            using ShapeRepairResult repair = geometryRead.Shape.RepairWithReport();
+            Assert.True(repair.Before.IsValid);
+            Assert.True(repair.After.IsValid);
+
             using XdeDocument imported = XdeDocument.ReadStep(stepPath);
             XdeLabel importedAssembly = Assert.Single(imported.GetFreeShapes());
             XdeLabel importedOccurrence = Assert.Single(importedAssembly.GetComponents());
@@ -682,6 +842,9 @@ public sealed class RuntimeTests
         Assert.Equal(120, Marshal.SizeOf<ShapeTopologySummaryRaw>());
         Assert.Equal(72, Marshal.SizeOf<DetailedMeshVertexRaw>());
         Assert.Equal(20, Marshal.SizeOf<DetailedMeshTriangleRaw>());
+        Assert.Equal(8, Marshal.SizeOf<ValidationIssueRaw>());
+        Assert.Equal(24, Marshal.SizeOf<StepReadReportRaw>());
+        Assert.Equal(56, Marshal.SizeOf<XdeValidationPropertiesRaw>());
     }
 
     [Fact]
@@ -713,6 +876,9 @@ public sealed class RuntimeTests
             viewer.SetProjection(ViewerProjection.Axonometric);
             viewer.Zoom(1.1);
             viewer.Pan(8, -4);
+            viewer.StartRotation(128, 128);
+            viewer.Rotate(136, 132);
+            Assert.Throws<ArgumentOutOfRangeException>(() => viewer.StartRotation(0, 0, -0.1));
             viewer.FitAll();
             viewer.Redraw();
             Exception? threadError = null;

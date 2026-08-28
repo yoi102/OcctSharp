@@ -17,6 +17,7 @@ public sealed class EnumBindingEmitterTests
             1,
             1)
         {
+            ProductModule = OcctProductModule.Foundation,
             EnumUnderlyingType = "int",
             EnumValues =
             [
@@ -40,7 +41,7 @@ public sealed class EnumBindingEmitterTests
 
         Assert.Equal([enumDeclaration.StableId], result.SourceStableIds);
         GeneratedFile file = Assert.Single(result.Files);
-        Assert.Equal("src/OcctSharp/Generated/Enums.Generated.cs", file.RelativePath);
+        Assert.Equal("src/OcctSharp/Generated/Foundation/Foundation.Enums.Generated.cs", file.RelativePath);
         Assert.Contains("public enum SampleKind", file.Content, StringComparison.Ordinal);
         Assert.Contains("Sample_First = -1", file.Content, StringComparison.Ordinal);
         Assert.Contains("Sample_Second = 4", file.Content, StringComparison.Ordinal);
@@ -57,6 +58,7 @@ public sealed class EnumBindingEmitterTests
             1,
             1)
         {
+            ProductModule = OcctProductModule.Foundation,
             EnumUnderlyingType = "unsigned long long",
             EnumValues = [new BindingEnumValue("TooLarge", "4294967295", true)],
         };
@@ -88,6 +90,7 @@ public sealed class EnumBindingEmitterTests
             1,
             1)
         {
+            ProductModule = OcctProductModule.Foundation,
             EnumUnderlyingType = "int",
             EnumValues = [new BindingEnumValue("Standalone_Off", "0", false)],
         };

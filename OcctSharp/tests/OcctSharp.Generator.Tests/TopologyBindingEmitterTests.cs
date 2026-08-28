@@ -48,11 +48,11 @@ public sealed class TopologyBindingEmitterTests
             Assert.Equal(4, result.Files.Count);
             Assert.Contains(
                 result.Files,
-                file => file.RelativePath == "src/OcctSharp.Native/generated/Topology/OcctSharp.Topology.Generated.cpp"
+                file => file.RelativePath == "src/OcctSharp.Native/generated/Modeling/OcctSharp.Modeling.Topology.Generated.cpp"
                     && file.Content.Contains("IsPartner", StringComparison.Ordinal));
             Assert.Contains(
                 result.Files,
-                file => file.RelativePath == "src/OcctSharp/Generated/Topology/Topology.Generated.cs"
+                file => file.RelativePath == "src/OcctSharp/Generated/Modeling/Modeling.Topology.Generated.cs"
                     && file.Content.Contains("public Shape Reversed()", StringComparison.Ordinal)
                     && file.Content.Contains("public enum ShapeKind", StringComparison.Ordinal));
         }

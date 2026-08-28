@@ -108,6 +108,21 @@ typedef struct OcctSharp_DetailedMeshTriangle
   int32_t is_reversed;
 } OcctSharp_DetailedMeshTriangle;
 
+typedef struct OcctSharp_ValidationIssue
+{
+  int32_t shape_kind;
+  int32_t status;
+} OcctSharp_ValidationIssue;
+
+typedef struct OcctSharp_StepReadReport
+{
+  int32_t candidate_root_count;
+  int32_t transferred_root_count;
+  int32_t shape_count;
+  int32_t read_status;
+  double system_length_unit;
+} OcctSharp_StepReadReport;
+
 typedef struct OcctSharp_Xyz
 {
   double x;
@@ -151,6 +166,16 @@ typedef struct OcctSharp_XdeColor
   double blue;
   double alpha;
 } OcctSharp_XdeColor;
+
+typedef struct OcctSharp_XdeValidationProperties
+{
+  double area;
+  double volume;
+  OcctSharp_Xyz centroid;
+  int32_t has_area;
+  int32_t has_volume;
+  int32_t has_centroid;
+} OcctSharp_XdeValidationProperties;
 
 typedef struct OcctSharp_EdgeCurveSnapshot
 {
@@ -431,6 +456,13 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_is_valid(
   const OcctSharp_ShapeHandle* shape, int32_t* out_is_valid);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_topology_summary(
   const OcctSharp_ShapeHandle* shape, OcctSharp_ShapeTopologySummary* out_summary);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_validation_issue_count(
+  const OcctSharp_ShapeHandle* shape, int32_t geometry_checks, int32_t exact,
+  int32_t* out_is_valid, int32_t* out_issue_count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_validation_issues(
+  const OcctSharp_ShapeHandle* shape, int32_t geometry_checks, int32_t exact,
+  OcctSharp_ValidationIssue* issues, int32_t capacity,
+  int32_t* out_is_valid, int32_t* out_issue_count);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_boolean_fuse(
   const OcctSharp_ShapeHandle* left, const OcctSharp_ShapeHandle* right,
   OcctSharp_ShapeHandle** out_shape);
@@ -494,6 +526,9 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_brep(
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_step(
   const char* file_path,
   OcctSharp_ShapeHandle** out_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_step_report(
+  const char* file_path, OcctSharp_ShapeHandle** out_shape,
+  OcctSharp_StepReadReport* out_report);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_iges(
   const char* file_path,
   OcctSharp_ShapeHandle** out_shape);
@@ -856,8 +891,25 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_open(
   const char* file_path, OcctSharp_OcafDocumentHandle** out_document);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step(
   const char* file_path, OcctSharp_OcafDocumentHandle** out_document);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step_options(
+  const char* file_path,
+  int32_t read_names,
+  int32_t read_colors,
+  int32_t read_layers,
+  int32_t read_validation_properties,
+  int32_t read_materials,
+  OcctSharp_OcafDocumentHandle** out_document);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step(
   const OcctSharp_OcafDocumentHandle* document, const char* file_path);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step_options(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* file_path,
+  int32_t model_type,
+  int32_t write_names,
+  int32_t write_colors,
+  int32_t write_layers,
+  int32_t write_validation_properties,
+  int32_t write_materials);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_add_shape(
   OcctSharp_OcafDocumentHandle* document,
   const OcctSharp_ShapeHandle* shape,
@@ -972,6 +1024,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_material_field
   char* buffer,
   int32_t capacity,
   int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_validation_properties(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  OcctSharp_XdeValidationProperties* properties);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_validation_properties(
+  OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  const OcctSharp_XdeValidationProperties* properties);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_create(
   intptr_t window_handle, OcctSharp_ViewerHandle** out_viewer);
@@ -1016,6 +1076,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_pan(
   OcctSharp_ViewerHandle* viewer,
   int32_t delta_x,
   int32_t delta_y);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_start_rotation(
+  OcctSharp_ViewerHandle* viewer, int32_t x, int32_t y, double z_rotation_threshold);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_rotate(
+  OcctSharp_ViewerHandle* viewer, int32_t x, int32_t y);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_move_to(
   OcctSharp_ViewerHandle* viewer,
   int32_t x,

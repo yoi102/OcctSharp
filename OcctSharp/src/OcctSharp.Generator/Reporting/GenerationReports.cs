@@ -17,6 +17,7 @@ public sealed record GenerationCoverageReport(
     string OcctVersion,
     string BindingModelSchemaVersion,
     GenerationStateCounts Totals,
+    IReadOnlyList<GenerationModuleCoverage> Modules,
     IReadOnlyList<GenerationPackageCoverage> Packages);
 
 public sealed record GenerationDiagnosticsReport(
@@ -36,8 +37,13 @@ public sealed record GenerationStateCounts(
 public sealed record GenerationPackageCoverage(
     string SourcePackage,
     string? SourceToolkit,
+    string ProductModule,
     GenerationStateCounts States,
     IReadOnlyList<GenerationReasonCount> SkipReasons);
+
+public sealed record GenerationModuleCoverage(
+    string ProductModule,
+    GenerationStateCounts States);
 
 public sealed record GenerationReasonCount(string Code, int Count);
 
@@ -51,6 +57,7 @@ public sealed record GenerationDeclarationDiagnostic(
     int Column,
     string SourcePackage,
     string? SourceToolkit,
+    string ProductModule,
     string SupportState,
     bool IsEmitted,
     string Code,
@@ -89,10 +96,11 @@ public static class GenerationReportWriter
 
         return new GenerationReportSet(
             new GenerationCoverageReport(
-                "1.0",
+                "1.1",
                 discovery.OcctVersion,
                 discovery.SchemaVersion,
                 CountStates(discovery.Model.Declarations, emittedIds),
+                BuildModuleCoverage(discovery.Model.Declarations, emittedIds),
                 BuildPackageCoverage(discovery.Model.Declarations, emittedIds)),
             new GenerationDiagnosticsReport(
                 "1.0",
@@ -141,12 +149,13 @@ public static class GenerationReportWriter
     {
         return declarations
             .GroupBy(
-                static declaration => (declaration.SourcePackage, declaration.SourceToolkit))
+                static declaration => (declaration.SourcePackage, declaration.SourceToolkit, declaration.ProductModule))
             .OrderBy(static group => group.Key.SourcePackage, StringComparer.Ordinal)
             .ThenBy(static group => group.Key.SourceToolkit, StringComparer.Ordinal)
             .Select(group => new GenerationPackageCoverage(
                 group.Key.SourcePackage,
                 group.Key.SourceToolkit,
+                group.Key.ProductModule.ToString(),
                 CountStates(group, emittedIds),
                 group.Where(static declaration => declaration.SkipReason is not null)
                     .GroupBy(static declaration => declaration.SkipReason!.Code, StringComparer.Ordinal)
@@ -155,6 +164,16 @@ public static class GenerationReportWriter
                     .ToArray()))
             .ToArray();
     }
+
+    private static GenerationModuleCoverage[] BuildModuleCoverage(
+        IReadOnlyList<BindingDeclaration> declarations,
+        HashSet<string> emittedIds) => declarations
+        .GroupBy(static declaration => declaration.ProductModule)
+        .OrderBy(static group => group.Key)
+        .Select(group => new GenerationModuleCoverage(
+            group.Key.ToString(),
+            CountStates(group, emittedIds)))
+        .ToArray();
 
     private static GenerationDeclarationDiagnostic[] BuildDiagnostics(
         BindingModel model,
@@ -202,6 +221,7 @@ public static class GenerationReportWriter
             declaration.Column,
             declaration.SourcePackage,
             declaration.SourceToolkit,
+            declaration.ProductModule.ToString(),
             declaration.SupportState.ToString(),
             isEmitted,
             Code,

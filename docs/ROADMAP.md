@@ -30,11 +30,20 @@ XDE metadata, and viewer presentation/camera/selection, with Release/Debug, clea
 regeneration, package-consumer, inventory, and release gates passing. It remains one
 wave rather than per-class or numbered tasks.
 
-The next C wave must close another end-to-end high-frequency slice from the remaining
-geometry evaluation, topology diagnostics/editing, exchange options/units, XDE property
-and occurrence queries, and viewer rotation/input gaps. Select its complete dependency
-closure before implementation and retain the same large-wave validation cadence. See
-[the complete migration plan](MIGRATION_PLAN.md) for the Batch C contract.
+The third large wave is complete at the alpha.53 local checkpoint. It closes BRepGProp
+measurement, XCAF validation-property attributes, recursive XDE occurrence/world-
+location traversal, and explicit STEPCAF read/write options as one dependency-closed
+workflow. The following C wave must again select a complete high-frequency slice from
+remaining geometry evaluation/editing, topology relationships, richer exchange behavior,
+and application input.
+
+ADR-0061's generated-output architecture wave is also complete locally: canonical
+declarations and generated files now carry stable Foundation, Geometry, Modeling, Mesh,
+Documents, DataExchange, Xde, Visualization, and optional-module identities, with Raw,
+SafeManaged, and Runtime layers. This is infrastructure for the next large API wave, not
+a fourth common-workflow checkpoint and not a managed-project/native-DLL split.
+Retain the same large-wave validation cadence. See [the complete migration plan](MIGRATION_PLAN.md)
+for the Batch C contract.
 
 The phase record below is retained as Batch B history and architecture context; it is not
 the active execution sequence for C.

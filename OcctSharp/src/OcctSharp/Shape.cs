@@ -476,6 +476,39 @@ public partial class Shape : IDisposable
             new ToleranceRange(summary.MinFaceTolerance, summary.MaxFaceTolerance));
     }
 
+    /// <summary>Copies detailed BRepCheck statuses for every unique subshape.</summary>
+    public unsafe ShapeValidationReport GetValidationReport(
+        bool geometryChecks = true,
+        bool exact = false)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.GetShapeValidationIssueCount(
+                handle, geometryChecks ? 1 : 0, exact ? 1 : 0,
+                out int isValid, out int issueCount),
+            "shape_validation_issue_count");
+        ValidationIssueRaw[] nativeIssues = new ValidationIssueRaw[issueCount];
+        fixed (ValidationIssueRaw* issuePointer = nativeIssues)
+        {
+            NativeError.ThrowIfFailed(
+                NativeMethods.GetShapeValidationIssues(
+                    handle, geometryChecks ? 1 : 0, exact ? 1 : 0,
+                    issuePointer, nativeIssues.Length,
+                    out int writtenValid, out int writtenCount),
+                "shape_validation_issues");
+            if (writtenValid != isValid || writtenCount != nativeIssues.Length)
+                throw new OcctException(
+                    NativeStatus.UnknownException.ToString(),
+                    "The native validation issue count changed during extraction.");
+        }
+        ShapeValidationIssue[] issues = new ShapeValidationIssue[nativeIssues.Length];
+        for (int index = 0; index < issues.Length; ++index)
+            issues[index] = new ShapeValidationIssue(
+                (ShapeKind)nativeIssues[index].ShapeKind,
+                (ShapeValidationStatus)nativeIssues[index].Status);
+        return new ShapeValidationReport(isValid != 0, issues);
+    }
+
     /// <summary>Computes an OCCT boolean union and returns an independently owned result.</summary>
     public Shape Fuse(Shape other)
     {
@@ -578,6 +611,25 @@ public partial class Shape : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         NativeError.ThrowIfFailed(NativeMethods.FixShape(handle, out nint result), "shape_fix");
         return ShapeFactory.FromNativeHandle(result, "shape_fix");
+    }
+
+    /// <summary>Runs ShapeFix and returns copied validation snapshots from before and after repair.</summary>
+    public ShapeRepairResult RepairWithReport(bool geometryChecks = true, bool exact = false)
+    {
+        ShapeValidationReport before = GetValidationReport(geometryChecks, exact);
+        Shape repaired = Fixed();
+        try
+        {
+            return new ShapeRepairResult(
+                repaired,
+                before,
+                repaired.GetValidationReport(geometryChecks, exact));
+        }
+        catch
+        {
+            repaired.Dispose();
+            throw;
+        }
     }
 
     /// <summary>Unifies compatible neighbouring faces and edges into an owned result.</summary>

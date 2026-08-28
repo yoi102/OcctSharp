@@ -113,8 +113,10 @@ public sealed class SharedHandleBindingEmitterTests
 
         Assert.Equal(first.SourceStableIds, second.SourceStableIds);
         Assert.Equal(first.Files, second.Files);
-        Assert.Equal(4, first.Files.Count);
+        Assert.Equal(5, first.Files.Count);
         Assert.Equal(14, first.SourceStableIds.Count);
+        Assert.Single(first.Files, static file =>
+            file.Content.Contains("public readonly record struct Point3d", StringComparison.Ordinal));
         Assert.Contains(first.Files, static file =>
             file.RelativePath.EndsWith("SharedHandles.Generated.cpp", StringComparison.Ordinal)
             && file.Content.Contains("opencascade::handle<Geom_CartesianPoint>", StringComparison.Ordinal)
@@ -186,12 +188,14 @@ public sealed class SharedHandleBindingEmitterTests
             "8.0.1", model, [allocatorScope, curveScope]);
 
         GeneratedFile native = Assert.Single(result.Files, static file =>
-            file.RelativePath.EndsWith("SharedHandles.Generated.cpp", StringComparison.Ordinal));
+            file.RelativePath.EndsWith("OcctSharp.Mesh.SharedHandles.Generated.cpp", StringComparison.Ordinal));
+        GeneratedFile nativeHeader = Assert.Single(result.Files, static file =>
+            file.RelativePath.EndsWith("OcctSharp.Mesh.SharedHandles.Generated.h", StringComparison.Ordinal));
         GeneratedFile managed = Assert.Single(result.Files, static file =>
-            file.RelativePath.EndsWith("SharedHandles.Generated.cs", StringComparison.Ordinal));
+            file.RelativePath.EndsWith("Mesh.SharedHandles.Generated.cs", StringComparison.Ordinal));
         Assert.Contains(
             "opencascade::handle<NCollection_IncAllocator> ConstructionAllocator;\n  opencascade::handle<BRepMeshData_Curve> Value;",
-            native.Content,
+            nativeHeader.Content,
             StringComparison.Ordinal);
         Assert.Contains(
             "new (constructionAllocator) BRepMeshData_Curve(constructionAllocator)",

@@ -22,7 +22,7 @@ public sealed class InitialBindingEmitterTests
         Assert.Equal(3, first.Files.Count);
         Assert.Equal([TestStableId], first.SourceStableIds);
         Assert.Contains(first.Files, static file =>
-            file.RelativePath.EndsWith("OcctSharp.Generated.cpp", StringComparison.Ordinal)
+            file.RelativePath.EndsWith("OcctSharp.Geometry.Values.Generated.cpp", StringComparison.Ordinal)
             && file.Content.Contains("gp_Pnt value", StringComparison.Ordinal));
         Assert.Contains(first.Files, static file =>
             file.RelativePath.EndsWith("Point3dRaw.Generated.cs", StringComparison.Ordinal)
@@ -61,10 +61,9 @@ public sealed class InitialBindingEmitterTests
 
         GeneratedBindingSet result = InitialBindingEmitter.Emit(baseReport with { Model = model });
 
-        Assert.Equal(4, result.Files.Count);
         Assert.Equal(4, result.SourceStableIds.Count);
         GeneratedFile native = Assert.Single(result.Files, static file =>
-            file.RelativePath.EndsWith("OcctSharp.Generated.cpp", StringComparison.Ordinal));
+            file.RelativePath.EndsWith("OcctSharp.Foundation.Values.Generated.cpp", StringComparison.Ordinal));
         GeneratedFile managed = Assert.Single(result.Files, static file =>
             file.RelativePath.EndsWith("ScalarRaw.Generated.cs", StringComparison.Ordinal));
         Assert.Contains("occtsharp_generated_precision_static_p_approximation_0(void)", native.Content, StringComparison.Ordinal);
@@ -91,6 +90,8 @@ public sealed class InitialBindingEmitterTests
                 1,
                 1)
             {
+                SourcePackage = "TopAbs",
+                SourceToolkit = "TKG3d",
                 EnumUnderlyingType = "int",
                 EnumValues =
                 [
@@ -128,9 +129,11 @@ public sealed class InitialBindingEmitterTests
             [GenerationScopeConfiguration.Precision, topAbsScope]);
 
         GeneratedFile native = Assert.Single(result.Files, static file =>
-            file.RelativePath.EndsWith("OcctSharp.Generated.cpp", StringComparison.Ordinal));
+            file.RelativePath.EndsWith(".cpp", StringComparison.Ordinal)
+            && file.Content.Contains("occtsharp_generated_top_abs_static_compose_0", StringComparison.Ordinal));
         GeneratedFile managed = Assert.Single(result.Files, static file =>
-            file.RelativePath.EndsWith("ScalarRaw.Generated.cs", StringComparison.Ordinal));
+            file.RelativePath.EndsWith("ScalarRaw.Generated.cs", StringComparison.Ordinal)
+            && file.Content.Contains("TopAbsStaticCompose0", StringComparison.Ordinal));
         Assert.Contains("#include <TopAbs.hxx>", native.Content, StringComparison.Ordinal);
         Assert.Contains("occtsharp_generated_top_abs_static_compose_0", native.Content, StringComparison.Ordinal);
         Assert.Contains("static_cast<TopAbs_Orientation>(theFirst)", native.Content, StringComparison.Ordinal);
@@ -186,7 +189,7 @@ public sealed class InitialBindingEmitterTests
             ]);
 
         GeneratedFile native = Assert.Single(result.Files, static file =>
-            file.RelativePath.EndsWith("OcctSharp.Generated.cpp", StringComparison.Ordinal));
+            file.RelativePath.EndsWith("OcctSharp.Foundation.Values.Generated.cpp", StringComparison.Ordinal));
         Assert.Contains("occtsharp_generated_standard_static_get_allocator_type_0", native.Content, StringComparison.Ordinal);
         Assert.Contains("occtsharp_generated_standard_dump_static_json_key_length_0", native.Content, StringComparison.Ordinal);
     }
@@ -229,9 +232,9 @@ public sealed class InitialBindingEmitterTests
             ]);
 
         GeneratedFile native = Assert.Single(result.Files, static file =>
-            file.RelativePath.EndsWith("OcctSharp.Generated.cpp", StringComparison.Ordinal));
+            file.RelativePath.EndsWith("OcctSharp.Mesh.Values.Generated.cpp", StringComparison.Ordinal));
         GeneratedFile managed = Assert.Single(result.Files, static file =>
-            file.RelativePath.EndsWith("ScalarRaw.Generated.cs", StringComparison.Ordinal));
+            file.RelativePath.EndsWith("Mesh.ScalarRaw.Generated.cs", StringComparison.Ordinal));
         Assert.Contains("gp_Pnt(first.x, first.y, first.z)", native.Content, StringComparison.Ordinal);
         Assert.Contains("Point3dRaw first", managed.Content, StringComparison.Ordinal);
     }
@@ -269,9 +272,9 @@ public sealed class InitialBindingEmitterTests
             [GenerationScopeConfiguration.Precision, scope]);
 
         GeneratedFile native = Assert.Single(result.Files, static file =>
-            file.RelativePath.EndsWith("OcctSharp.Generated.cpp", StringComparison.Ordinal));
+            file.RelativePath.EndsWith("OcctSharp.Foundation.Values.Generated.cpp", StringComparison.Ordinal));
         GeneratedFile managed = Assert.Single(result.Files, static file =>
-            file.RelativePath.EndsWith("ScalarRaw.Generated.cs", StringComparison.Ordinal));
+            file.RelativePath.EndsWith("Foundation.ScalarRaw.Generated.cs", StringComparison.Ordinal));
         Assert.Contains("return Standard_ASSERT_DO_NOTHING();", native.Content, StringComparison.Ordinal);
         Assert.Contains("internal static partial void StandardAssertStatic", managed.Content, StringComparison.Ordinal);
     }

@@ -80,6 +80,24 @@ public sealed class OcctViewer : IDisposable
         NativeError.ThrowIfFailed(NativeMethods.PanViewer(Handle, deltaX, deltaY), "viewer_pan");
     }
 
+    /// <summary>Begins mouse-driven rotation at a client coordinate.</summary>
+    public void StartRotation(int x, int y, double zRotationThreshold = 0.4)
+    {
+        if (!double.IsFinite(zRotationThreshold) || zRotationThreshold < 0)
+            throw new ArgumentOutOfRangeException(nameof(zRotationThreshold));
+        EnsureThread();
+        NativeError.ThrowIfFailed(
+            NativeMethods.StartViewerRotation(Handle, x, y, zRotationThreshold),
+            "viewer_start_rotation");
+    }
+
+    /// <summary>Continues mouse-driven rotation from the last start/rotation coordinate.</summary>
+    public void Rotate(int x, int y)
+    {
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.RotateViewer(Handle, x, y), "viewer_rotate");
+    }
+
     /// <summary>Updates dynamic detection from client pixel coordinates.</summary>
     public bool MoveTo(int x, int y)
     {

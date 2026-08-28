@@ -74,6 +74,9 @@ The accepted boundaries are recorded in ADRs:
   manifest-verified Windows x64 runtime and MIT project license.
 - [ADR-0060](adr/0060-common-cad-api-product-batch.md): one product-scale Batch C that
   prioritizes common end-to-end CAD workflows and large cross-family implementation waves.
+- [ADR-0061](adr/0061-domain-layered-generated-output.md): module/layer-partitioned
+  generated source while retaining one managed assembly, one native DLL, and stable
+  public type full names.
 
 ## Components
 
@@ -89,8 +92,12 @@ ADR-0006. Regex and ad hoc header splitting are not valid primary parsers.
 ### Canonical binding model
 
 Normalizes declarations into stable generator concepts such as types, methods,
-parameters, inheritance, templates, ownership, availability, and skip reasons.
+parameters, inheritance, templates, ownership, availability, product module, and skip reasons.
 It is the shared input for every emitter and report.
+
+Binding-model schema 1.3 assigns every declaration one fail-closed product module.
+Foundation, Geometry, Modeling, Mesh, Documents, DataExchange, Xde, Visualization, and
+optional integration identities are stable generator facts rather than filesystem guesses.
 
 ### Transformation passes
 
@@ -150,10 +157,17 @@ selected `Geom`, `Geom2d`, `BRepMesh`, `Poly`, `ShapeAnalysis`, `ShapeFix`, and
 only concrete records with at least one independently supported value-copy constructor.
 Instance members may use verified scalar/enum/copied-point projections or nullable
 relationships to other selected generated shared-handle wrappers. Binding-model
-schema 1.2 carries Clang's abstract-record fact so abstract bases cannot reach native
+schema 1.3 carries Clang's abstract-record fact and product module so abstract bases
+cannot reach native
 construction. Each generated wrapper owns one retained intrusive handle behind a
 type-specific registry; no class layout, raw `Handle<T>`, or borrowed member crosses
 the ABI.
+
+Generated native files are partitioned below `generated/<ProductModule>/` by value,
+topology, and shared-handle shard. CMake recursively collects those translation units.
+Cross-module shared handles include their dependency module headers and share a Runtime
+helper contract, but all registries, allocators, and release functions still link into
+the single `OcctSharp.Native.dll`.
 
 ### Managed raw bindings
 
@@ -164,6 +178,11 @@ checks. Raw bindings are not necessarily the preferred public API.
 Generated raw bindings live in the internal `OcctSharp.Generated` namespace. Generated
 native exports use the `occtsharp_generated_` prefix. These sources and their ownership
 manifest are committed and must be changed by regeneration, not direct editing.
+
+Raw and friendly generated C# are physically partitioned below
+`Generated/<ProductModule>/`. Directory placement does not change namespaces: raw types
+remain internal `OcctSharp.Generated`, public generated wrappers remain `OcctSharp`, and
+all compile into the single `OcctSharp.dll`.
 
 Referenced native enums are emitted as public typed managed enums from discovered
 enumerators while their raw ABI remains validated `int32_t`. Qualified and unqualified
@@ -197,6 +216,10 @@ Generation produces machine-readable and human-readable reports for discovered,
 generated, skipped, manually wrapped, failed, and validated APIs. A canonical API
 manifest supports upgrade diffs between pinned OCCT baselines.
 
+Manifest schema 1.1 records product module, API layer, and output shard for every owned
+generated file. Coverage and diagnostics include the same module identity so source
+layout and declaration accounting cannot drift independently.
+
 ## Non-negotiable invariants
 
 1. Generated and manual source remain physically separate.
@@ -207,6 +230,9 @@ manifest supports upgrade diffs between pinned OCCT baselines.
 6. Every skipped API has a stable reason code and diagnostic context.
 7. Compile success is not reported as runtime or lifetime success.
 8. Friendly APIs may simplify usage but must preserve native semantics.
+9. Emitted declarations cannot be `Unassigned`; the target managed-project dependency
+   contract remains acyclic, while current intra-assembly cross-shard edges must be
+   closed before project/DLL splitting.
 
 ## Explicitly unresolved decisions
 

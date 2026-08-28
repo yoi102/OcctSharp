@@ -445,6 +445,66 @@
     {
       "stableId": "c:@S@AIS_InteractiveContext@F@SetColor#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#&1$@S@Quantity_Color#b#",
       "specialCaseId": "SC-036"
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Analyzer@F@Result#&1$@S@TopoDS_Shape#1",
+      "specialCaseId": "SC-037"
+    },
+    {
+      "stableId": "c:@S@BRepCheck_Result@F@Status#1",
+      "specialCaseId": "SC-037"
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@NbRootsForTransfer#",
+      "specialCaseId": "SC-037"
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@TransferRoots#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-037"
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@NbShapes#1",
+      "specialCaseId": "SC-037"
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@SystemLengthUnit#1",
+      "specialCaseId": "SC-037"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Area@F@Get#&1$@S@TDF_Label#&d#S",
+      "specialCaseId": "SC-038"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Area@F@Set#&1$@S@TDF_Label#d#S",
+      "specialCaseId": "SC-038"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Area@F@GetID#S",
+      "specialCaseId": "SC-038"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Volume@F@Get#&1$@S@TDF_Label#&d#S",
+      "specialCaseId": "SC-038"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Volume@F@Set#&1$@S@TDF_Label#d#S",
+      "specialCaseId": "SC-038"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Volume@F@GetID#S",
+      "specialCaseId": "SC-038"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Centroid@F@Get#&1$@S@TDF_Label#&$@S@gp_Pnt#S",
+      "specialCaseId": "SC-038"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Centroid@F@Set#&1$@S@TDF_Label#&1$@S@gp_Pnt#S",
+      "specialCaseId": "SC-038"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Centroid@F@GetID#S",
+      "specialCaseId": "SC-038"
     }
   ],
   "excludedBindings": [

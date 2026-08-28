@@ -39,6 +39,21 @@ public sealed class XdeLabel
     /// <summary>Gets an owning copy of this occurrence's location.</summary>
     public TopLocLocation Location => Document.GetLocation(Entry);
 
+    /// <summary>Gets or replaces copied XDE area, volume, and centroid validation attributes.</summary>
+    public XdeValidationProperties ValidationProperties
+    {
+        get => Document.GetValidationProperties(Entry);
+        set => Document.SetValidationProperties(Entry, value);
+    }
+
+    /// <summary>Computes area, volume, and centroid from this label's shape and stores them.</summary>
+    public XdeValidationProperties UpdateValidationPropertiesFromShape() =>
+        Document.UpdateValidationPropertiesFromShape(Entry);
+
+    /// <summary>Flattens direct or recursive component occurrences with composed world locations.</summary>
+    public IReadOnlyList<XdeOccurrence> GetOccurrences(bool recursive = true) =>
+        Document.GetOccurrences(Entry, recursive);
+
     /// <summary>Gets or sets the generic RGBA color assignment.</summary>
     public XdeColor? Color
     {

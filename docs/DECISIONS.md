@@ -67,6 +67,7 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0058](adr/0058-narrow-long-tail-dispositions-and-local-completion-gate.md) | Replace LT001-LT004 with narrow evidence and require all local implementation gates for Batch B completion | Accepted |
 | [ADR-0059](adr/0059-committed-windows-runtime-and-mit-license.md) | Commit the verified Windows x64 runtime and license OcctSharp project code under MIT | Accepted |
 | [ADR-0060](adr/0060-common-cad-api-product-batch.md) | Make Batch C one large common-CAD-API product batch instead of small per-class work | Accepted |
+| [ADR-0061](adr/0061-domain-layered-generated-output.md) | Partition generated output by product module and API layer without changing assembly, DLL, or public type identity | Accepted |
 
 ## Pending decisions
 

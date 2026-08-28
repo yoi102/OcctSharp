@@ -8,11 +8,6 @@ namespace OcctSharp.Generator.Emission;
 
 public static class InitialBindingEmitter
 {
-    private const string GeneratedNativeHeaderPath = "src/OcctSharp.Native/generated/OcctSharp.Generated.h";
-    private const string GeneratedNativeSourcePath = "src/OcctSharp.Native/generated/OcctSharp.Generated.cpp";
-    private const string GeneratedPointManagedPath = "src/OcctSharp/Generated/Point3dRaw.Generated.cs";
-    private const string GeneratedStaticManagedPath = "src/OcctSharp/Generated/ScalarRaw.Generated.cs";
-
     public static GeneratedBindingSet Emit(DiscoveryReport report)
         => Emit(report, [GenerationScopeConfiguration.Precision], [], [], []);
 
@@ -60,29 +55,63 @@ public static class InitialBindingEmitter
             declaration => IsPointCopyConstructor(declaration, typeMap));
         GeneratedStaticMethod[] staticMethods = SelectStaticMethods(eligibleModel, typeMap, generationScopes);
 
-        List<GeneratedFile> files =
-        [
-            new(GeneratedNativeHeaderPath, EmitNativeHeader(
-                pointConstructor,
-                pointDefaultConstructor,
-                pointCopyConstructor,
-                staticMethods)),
-            new(GeneratedNativeSourcePath, EmitNativeSource(
-                pointConstructor,
-                pointDefaultConstructor,
-                pointCopyConstructor,
-                staticMethods)),
-            new(GeneratedPointManagedPath, EmitPointManagedBinding(
-                pointConstructor,
-                pointDefaultConstructor,
-                pointCopyConstructor)),
-        ];
-        if (staticMethods.Length > 0)
+        List<GeneratedFile> files = [];
+        Dictionary<OcctProductModule, GeneratedStaticMethod[]> staticMethodsByModule = staticMethods
+            .GroupBy(static method => GetProductModule(method.Declaration))
+            .ToDictionary(
+                static group => group.Key,
+                static group => group.OrderBy(method => method.Declaration.StableId, StringComparer.Ordinal).ToArray());
+        if (!staticMethodsByModule.ContainsKey(OcctProductModule.Geometry))
         {
-            files.Add(new GeneratedFile(
-                GeneratedStaticManagedPath,
-                EmitStaticManagedBindings(staticMethods)));
+            staticMethodsByModule.Add(OcctProductModule.Geometry, []);
         }
+
+        foreach ((OcctProductModule module, GeneratedStaticMethod[] moduleMethods) in staticMethodsByModule
+            .OrderBy(static pair => pair.Key))
+        {
+            bool includePoint = module == OcctProductModule.Geometry;
+            string moduleName = module.ToString();
+            string nativeFileName = $"OcctSharp.{moduleName}.Values.Generated";
+            string nativeBase = $"src/OcctSharp.Native/generated/{moduleName}/{nativeFileName}";
+            files.Add(new GeneratedFile(
+                nativeBase + ".h",
+                EmitNativeHeader(
+                    pointConstructor,
+                    pointDefaultConstructor,
+                    pointCopyConstructor,
+                    moduleMethods,
+                    includePoint),
+                module,
+                GeneratedApiLayer.Raw,
+                "Values.NativeHeader"));
+            files.Add(new GeneratedFile(
+                nativeBase + ".cpp",
+                EmitNativeSource(
+                    pointConstructor,
+                    pointDefaultConstructor,
+                    pointCopyConstructor,
+                    moduleMethods,
+                    includePoint,
+                    nativeFileName),
+                module,
+                GeneratedApiLayer.Raw,
+                "Values.NativeSource"));
+            if (moduleMethods.Length > 0)
+            {
+                files.Add(new GeneratedFile(
+                    $"src/OcctSharp/Generated/{moduleName}/{moduleName}.ScalarRaw.Generated.cs",
+                    EmitStaticManagedBindings(moduleMethods),
+                    module,
+                    GeneratedApiLayer.Raw,
+                    "Values.ManagedRaw"));
+            }
+        }
+        files.Add(new GeneratedFile(
+            "src/OcctSharp/Generated/Geometry/Geometry.Point3dRaw.Generated.cs",
+            EmitPointManagedBinding(pointConstructor, pointDefaultConstructor, pointCopyConstructor),
+            OcctProductModule.Geometry,
+            GeneratedApiLayer.Raw,
+            "Values.Point3dRaw"));
 
         List<string> sourceStableIds = [pointConstructor.StableId];
         if (pointDefaultConstructor is not null)
@@ -151,6 +180,13 @@ public static class InitialBindingEmitter
             .ToArray();
     }
 
+    private static OcctProductModule GetProductModule(BindingDeclaration declaration) =>
+        declaration.ProductModule != OcctProductModule.Unassigned
+            ? declaration.ProductModule
+            : OcctProductModuleClassifier.ClassifyOrThrow(
+                declaration.SourcePackage,
+                declaration.SourceToolkit);
+
     private static GeneratedStaticMethod CreateStaticMethod(
         BindingDeclaration declaration,
         int overloadIndex,
@@ -182,46 +218,52 @@ public static class InitialBindingEmitter
         BindingDeclaration pointConstructor,
         BindingDeclaration? pointDefaultConstructor,
         BindingDeclaration? pointCopyConstructor,
-        IReadOnlyList<GeneratedStaticMethod> methods)
+        IReadOnlyList<GeneratedStaticMethod> methods,
+        bool includePoint)
     {
         StringBuilder builder = new();
         builder.AppendLine("// <auto-generated />");
-        AppendSourceComments(builder, GetPointSourceDeclarations(
-            pointConstructor,
-            pointDefaultConstructor,
-            pointCopyConstructor,
-            methods));
+        AppendSourceComments(builder, includePoint
+            ? GetPointSourceDeclarations(pointConstructor, pointDefaultConstructor, pointCopyConstructor, methods)
+            : methods.Select(static method => method.Declaration));
         builder.AppendLine("#pragma once");
         builder.AppendLine();
-        builder.AppendLine("#include \"../include/OcctSharp.Native.h\"");
+        builder.AppendLine("#include \"../../include/OcctSharp.Native.h\"");
+        if (!includePoint)
+        {
+            builder.AppendLine("#include \"../Geometry/OcctSharp.Geometry.Values.Generated.h\"");
+        }
         builder.AppendLine();
         builder.AppendLine("#ifdef __cplusplus");
         builder.AppendLine("extern \"C\" {");
         builder.AppendLine("#endif");
         builder.AppendLine();
-        builder.AppendLine("typedef struct OcctSharp_Point3d");
-        builder.AppendLine("{");
-        builder.AppendLine("  double x;");
-        builder.AppendLine("  double y;");
-        builder.AppendLine("  double z;");
-        builder.AppendLine("} OcctSharp_Point3d;");
-        builder.AppendLine();
-        builder.AppendLine("OCCTSHARP_API OcctSharp_Point3d OCCTSHARP_CALL occtsharp_generated_gp_pnt_create(");
-        builder.AppendLine("  double x,");
-        builder.AppendLine("  double y,");
-        builder.AppendLine("  double z);");
-
-        if (pointDefaultConstructor is not null)
+        if (includePoint)
         {
+            builder.AppendLine("typedef struct OcctSharp_Point3d");
+            builder.AppendLine("{");
+            builder.AppendLine("  double x;");
+            builder.AppendLine("  double y;");
+            builder.AppendLine("  double z;");
+            builder.AppendLine("} OcctSharp_Point3d;");
             builder.AppendLine();
-            builder.AppendLine("OCCTSHARP_API OcctSharp_Point3d OCCTSHARP_CALL occtsharp_generated_gp_pnt_default(void);");
-        }
+            builder.AppendLine("OCCTSHARP_API OcctSharp_Point3d OCCTSHARP_CALL occtsharp_generated_gp_pnt_create(");
+            builder.AppendLine("  double x,");
+            builder.AppendLine("  double y,");
+            builder.AppendLine("  double z);");
 
-        if (pointCopyConstructor is not null)
-        {
-            builder.AppendLine();
-            builder.AppendLine("OCCTSHARP_API OcctSharp_Point3d OCCTSHARP_CALL occtsharp_generated_gp_pnt_copy(");
-            builder.AppendLine("  OcctSharp_Point3d point);");
+            if (pointDefaultConstructor is not null)
+            {
+                builder.AppendLine();
+                builder.AppendLine("OCCTSHARP_API OcctSharp_Point3d OCCTSHARP_CALL occtsharp_generated_gp_pnt_default(void);");
+            }
+
+            if (pointCopyConstructor is not null)
+            {
+                builder.AppendLine();
+                builder.AppendLine("OCCTSHARP_API OcctSharp_Point3d OCCTSHARP_CALL occtsharp_generated_gp_pnt_copy(");
+                builder.AppendLine("  OcctSharp_Point3d point);");
+            }
         }
 
         foreach (GeneratedStaticMethod method in methods)
@@ -241,18 +283,23 @@ public static class InitialBindingEmitter
         BindingDeclaration pointConstructor,
         BindingDeclaration? pointDefaultConstructor,
         BindingDeclaration? pointCopyConstructor,
-        IReadOnlyList<GeneratedStaticMethod> methods)
+        IReadOnlyList<GeneratedStaticMethod> methods,
+        bool includePoint,
+        string nativeFileName)
     {
         StringBuilder builder = new();
         builder.AppendLine("// <auto-generated />");
-        AppendSourceComments(builder, GetPointSourceDeclarations(
-            pointConstructor,
-            pointDefaultConstructor,
-            pointCopyConstructor,
-            methods));
-        builder.AppendLine("#include \"OcctSharp.Generated.h\"");
+        AppendSourceComments(builder, includePoint
+            ? GetPointSourceDeclarations(pointConstructor, pointDefaultConstructor, pointCopyConstructor, methods)
+            : methods.Select(static method => method.Declaration));
+        builder.AppendLine("#include \"" + nativeFileName + ".h\"");
         builder.AppendLine();
-        builder.AppendLine("#include <gp_Pnt.hxx>");
+        if (includePoint || methods.Any(static method =>
+            method.ReturnProjection.RuleId == "TM005"
+            || method.Parameters.Any(static parameter => parameter.Projection.RuleId == "TM005")))
+        {
+            builder.AppendLine("#include <gp_Pnt.hxx>");
+        }
         foreach (string header in methods
             .Select(static method => method.Scope.Header)
             .Distinct(StringComparer.Ordinal)
@@ -261,39 +308,42 @@ public static class InitialBindingEmitter
             builder.AppendLine("#include <" + header + ">");
         }
 
-        builder.AppendLine();
-        builder.AppendLine("static_assert(sizeof(OcctSharp_Point3d) == 24);");
-        builder.AppendLine("static_assert(alignof(OcctSharp_Point3d) == 8);");
-        builder.AppendLine();
-        builder.AppendLine("OcctSharp_Point3d OCCTSHARP_CALL occtsharp_generated_gp_pnt_create(");
-        builder.AppendLine("  const double x,");
-        builder.AppendLine("  const double y,");
-        builder.AppendLine("  const double z)");
-        builder.AppendLine("{");
-        builder.AppendLine("  const gp_Pnt value(x, y, z);");
-        builder.AppendLine("  return {value.X(), value.Y(), value.Z()};");
-        builder.AppendLine("}");
-
-        if (pointDefaultConstructor is not null)
+        if (includePoint)
         {
             builder.AppendLine();
-            builder.AppendLine("OcctSharp_Point3d OCCTSHARP_CALL occtsharp_generated_gp_pnt_default(void)");
-            builder.AppendLine("{");
-            builder.AppendLine("  const gp_Pnt value;");
-            builder.AppendLine("  return {value.X(), value.Y(), value.Z()};");
-            builder.AppendLine("}");
-        }
-
-        if (pointCopyConstructor is not null)
-        {
+            builder.AppendLine("static_assert(sizeof(OcctSharp_Point3d) == 24);");
+            builder.AppendLine("static_assert(alignof(OcctSharp_Point3d) == 8);");
             builder.AppendLine();
-            builder.AppendLine("OcctSharp_Point3d OCCTSHARP_CALL occtsharp_generated_gp_pnt_copy(");
-            builder.AppendLine("  const OcctSharp_Point3d point)");
+            builder.AppendLine("OcctSharp_Point3d OCCTSHARP_CALL occtsharp_generated_gp_pnt_create(");
+            builder.AppendLine("  const double x,");
+            builder.AppendLine("  const double y,");
+            builder.AppendLine("  const double z)");
             builder.AppendLine("{");
-            builder.AppendLine("  const gp_Pnt source(point.x, point.y, point.z);");
-            builder.AppendLine("  const gp_Pnt value(source);");
+            builder.AppendLine("  const gp_Pnt value(x, y, z);");
             builder.AppendLine("  return {value.X(), value.Y(), value.Z()};");
             builder.AppendLine("}");
+
+            if (pointDefaultConstructor is not null)
+            {
+                builder.AppendLine();
+                builder.AppendLine("OcctSharp_Point3d OCCTSHARP_CALL occtsharp_generated_gp_pnt_default(void)");
+                builder.AppendLine("{");
+                builder.AppendLine("  const gp_Pnt value;");
+                builder.AppendLine("  return {value.X(), value.Y(), value.Z()};");
+                builder.AppendLine("}");
+            }
+
+            if (pointCopyConstructor is not null)
+            {
+                builder.AppendLine();
+                builder.AppendLine("OcctSharp_Point3d OCCTSHARP_CALL occtsharp_generated_gp_pnt_copy(");
+                builder.AppendLine("  const OcctSharp_Point3d point)");
+                builder.AppendLine("{");
+                builder.AppendLine("  const gp_Pnt source(point.x, point.y, point.z);");
+                builder.AppendLine("  const gp_Pnt value(source);");
+                builder.AppendLine("  return {value.X(), value.Y(), value.Z()};");
+                builder.AppendLine("}");
+            }
         }
 
         foreach (GeneratedStaticMethod method in methods)

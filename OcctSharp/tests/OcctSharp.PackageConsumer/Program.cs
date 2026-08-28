@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 42)
-    || runtime.BridgeVersion != "0.50.0"
+if (runtime.AbiVersion != new Version(1, 44)
+    || runtime.BridgeVersion != "0.52.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -402,6 +402,8 @@ try
     packagedViewer.SetProjection(ViewerProjection.Axonometric);
     packagedViewer.Zoom(1.05);
     packagedViewer.Pan(4, -2);
+    packagedViewer.StartRotation(128, 128);
+    packagedViewer.Rotate(132, 130);
     packagedViewer.FitAll();
     packagedViewer.Redraw();
     if (!packagedViewer.MoveTo(128, 128)
@@ -516,6 +518,13 @@ string exchangeDirectory = Path.Combine(Path.GetTempPath(), $"OcctSharp.PackageC
 Directory.CreateDirectory(exchangeDirectory);
 try
 {
+    string stepPath = ShapeExchange.WriteStep(box, Path.Combine(exchangeDirectory, "box.step"));
+    using StepReadResult stepResult = ShapeExchange.ReadStepWithReport(stepPath);
+    using ShapeRepairResult repairResult = stepResult.Shape.RepairWithReport();
+    if (stepResult.Report.ReadStatus != StepReadStatus.Done
+        || stepResult.Report.TransferredRootCount <= 0
+        || !repairResult.Before.IsValid || !repairResult.After.IsValid)
+        throw new InvalidOperationException("The packaged STEP diagnostic/repair workflow failed.");
     string brepPath = ShapeExchange.WriteBrep(box, Path.Combine(exchangeDirectory, "box.brep"));
     using Shape brepShape = ShapeExchange.ReadBrep(brepPath);
     if (!brepShape.GetTopologySummary().IsValid || brepShape.CreateDetailedMesh().TriangleCount == 0)
@@ -577,13 +586,30 @@ try
             new XdeColor(0.2, 0.4, 0.6),
             ["Package layer"],
             new XdeMaterial("Steel", "Package material", 7.85, "Density", "g/cm3")));
+        XdeValidationProperties validationProperties = part.UpdateValidationPropertiesFromShape();
+        if (!validationProperties.IsComplete || Math.Abs(validationProperties.Volume!.Value - 6000) > 1e-8)
+            throw new InvalidOperationException("The packaged XDE validation-property computation failed.");
         XdeLabel assembly = xde.AddAssembly("Package assembly");
         _ = xde.AddComponent(assembly, part, location);
         xdePartEntry = part.Entry;
         xdeAssemblyEntry = assembly.Entry;
         transaction.Commit();
+        IReadOnlyList<XdeOccurrence> occurrences = assembly.GetOccurrences();
+        try
+        {
+            XdeOccurrence occurrence = occurrences.Single();
+            using TopLocLocation worldLocation = occurrence.GetWorldLocation();
+            using GpTrsf worldTransform = worldLocation.ToTransform();
+            using Shape located = occurrence.GetLocatedShape();
+            if (Math.Abs(worldTransform.Value(1, 4) - 10) > 1e-8
+                || Math.Abs(located.GetBoundingBox().Minimum.X - 10) > 1e-6)
+                throw new InvalidOperationException("The packaged XDE occurrence traversal failed.");
+        }
+        finally { foreach (XdeOccurrence occurrence in occurrences) occurrence.Dispose(); }
         xde.Save(xdePath);
-        xde.WriteStep(xdeStepPath);
+        xde.WriteStep(xdeStepPath, new XdeStepWriteOptions(
+            ModelType: XdeStepModelType.AsIs,
+            WriteValidationProperties: true));
     }
 
     using (XdeDocument binaryXde = XdeDocument.Open(xdePath))
@@ -591,6 +617,7 @@ try
         XdeLabel part = binaryXde.GetLabel(xdePartEntry);
         if (part.Name != "Package part" || part.Color is null
             || !part.Layers.Contains("Package layer") || part.Material?.Name != "Steel"
+            || !part.ValidationProperties.IsComplete
             || !binaryXde.GetLabel(xdeAssemblyEntry).IsAssembly)
         {
             throw new InvalidOperationException("The packaged BinXCAF metadata round-trip failed.");
@@ -617,11 +644,13 @@ try
         }
     }
 
-    using XdeDocument stepXde = XdeDocument.ReadStep(xdeStepPath);
+    using XdeDocument stepXde = XdeDocument.ReadStep(xdeStepPath, new XdeStepReadOptions(
+        ReadValidationProperties: true));
     XdeLabel stepAssembly = stepXde.GetFreeShapes().Single();
     XdeLabel stepPart = stepAssembly.GetComponents().Single().ReferredShape;
     if (!stepAssembly.IsAssembly || stepPart.Name != "Package part" || stepPart.Color is null
-        || !stepPart.Layers.Contains("Package layer") || stepPart.Material?.Name != "Steel")
+        || !stepPart.Layers.Contains("Package layer") || stepPart.Material?.Name != "Steel"
+        || !stepPart.ValidationProperties.IsComplete)
     {
         throw new InvalidOperationException("The packaged STEPCAF metadata round-trip failed.");
     }

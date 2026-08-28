@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [string]$OcctRoot,
-    [string]$PackageVersion = '0.1.0-alpha.51',
+    [string]$PackageVersion = '0.1.0-alpha.53',
     [string]$ApiBaselineVersion = '0.1.0-alpha.38'
 )
 
@@ -63,6 +63,8 @@ $manualCount = [int](@($inventory.finalClassification.declarationStates |
 $declarationTotal = [int]$inventory.finalClassification.declarationTotal
 $headerTotal = [int]$inventory.finalClassification.headerTotal
 $nativeDllCount = @(Get-ChildItem -LiteralPath (Join-Path $workspaceRoot 'artifacts\native\Release') -File -Filter '*.dll').Count
+$generatedManifest = Get-Content -LiteralPath (Join-Path $workspaceRoot 'generated\manifest.json') -Raw -Encoding UTF8 | ConvertFrom-Json
+$generatedFileCount = @($generatedManifest.files).Count
 
 & (Join-Path $PSScriptRoot 'generate-release-metadata.ps1') -PackageVersion $PackageVersion
 
@@ -76,7 +78,7 @@ $projectLicensePresent = (Test-Path -LiteralPath (Join-Path $repositoryRoot 'LIC
 $gates = @(
     [ordered]@{ id = 'local-release-debug'; state = 'PASS'; evidence = 'Release and Debug build/test completed in this run.' },
     [ordered]@{ id = 'bundled-runtime'; state = 'PASS'; evidence = 'Committed Windows x64 runtime manifest, 62 DLL hashes, and all included license/notice hashes verified.' },
-    [ordered]@{ id = 'generated-freshness'; state = 'PASS'; evidence = '13 manifest-owned files current.' },
+    [ordered]@{ id = 'generated-freshness'; state = 'PASS'; evidence = "$generatedFileCount manifest-owned files current." },
     [ordered]@{ id = 'clean-regeneration'; state = 'PASS'; evidence = 'Fresh source copy build and byte comparison completed.' },
     [ordered]@{ id = 'package-consumer'; state = 'PASS'; evidence = "$PackageVersion clean restore/publish/runtime with $nativeDllCount DLLs, $emittedCount generated declarations, IGES/session infrastructure, prior geometry/modeling/exchange/XDE APIs, and composable XDE STEP import." },
     [ordered]@{ id = 'api-compatibility'; state = 'PASS'; evidence = 'Compared with the alpha.38 606-signature baseline; additive changes are allowed and removals are blocked.' },

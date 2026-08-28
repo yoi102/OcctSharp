@@ -179,6 +179,17 @@ summaries, detailed UV/normal/face-mapped meshes, XDE part metadata convenience,
 viewer appearance/camera/selection controls. The committed Windows x64 runtime and
 manifest advance with the source so a fresh clone cannot load the alpha.50 bridge.
 
+The second Batch C import-diagnostics and repair wave is additive ABI 1.43/bridge 0.51.0
+and advances the package to `0.1.0-alpha.52`. It adds typed STEP read reports, copied
+BRepCheck issue snapshots, owning ShapeFix results with before/after validation, and
+thread-affine V3d mouse rotation. No existing managed or native API is removed.
+
+The third Batch C XDE property/occurrence/exchange-options wave is additive ABI 1.44/
+bridge 0.52.0 and advances the package to `0.1.0-alpha.53`. It adds optional XCAF area,
+volume, and centroid snapshots, recursive occurrence/world-location results, independent
+located shapes, and explicit STEPCAF metadata/model-type switches. Existing no-option
+STEPCAF calls retain their all-metadata defaults.
+
 ## Upgrade classification
 
 Alpha.50 uses the unchanged alpha.49 generated surface: 16,353 emitted and 61 accepted

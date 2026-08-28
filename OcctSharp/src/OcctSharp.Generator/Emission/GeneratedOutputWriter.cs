@@ -47,13 +47,16 @@ public static class GeneratedOutputWriter
             }
 
             GeneratedManifest manifest = new(
-                "1.0",
+                "1.1",
                 bindingSet.OcctVersion,
-                "1.2",
+                "1.3",
                 bindingSet.SourceStableIds.Order(StringComparer.Ordinal).ToArray(),
                 files.Select(file => new GeneratedManifestFile(
                         file.RelativePath,
-                        ComputeSha256(file.Content)))
+                        ComputeSha256(file.Content),
+                        file.ProductModule.ToString(),
+                        file.ApiLayer.ToString(),
+                        file.OutputShard))
                     .ToArray());
             string manifestContent = JsonSerializer.Serialize(
                 manifest,
@@ -124,6 +127,13 @@ public static class GeneratedOutputWriter
             if (!file.Content.EndsWith('\n'))
             {
                 throw new InvalidDataException($"Generated file '{file.RelativePath}' has no final newline.");
+            }
+
+            if (file.ProductModule == Model.OcctProductModule.Unassigned
+                || string.IsNullOrWhiteSpace(file.OutputShard))
+            {
+                throw new InvalidDataException(
+                    $"Generated file '{file.RelativePath}' has no stable module or output-shard assignment.");
             }
         }
     }
