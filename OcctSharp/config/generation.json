@@ -505,6 +505,74 @@
     {
       "stableId": "c:@S@XCAFDoc_Centroid@F@GetID#S",
       "specialCaseId": "SC-038"
+    },
+    {
+      "stableId": "c:@S@Adaptor3d_Curve@F@D2#d#&$@S@gp_Pnt#&$@S@gp_Vec#S2_#1",
+      "specialCaseId": "SC-039"
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@CurveOnSurface#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#&d#S4_#*b#S",
+      "specialCaseId": "SC-039"
+    },
+    {
+      "stableId": "c:@S@Geom2d_Curve@F@Value#d#1",
+      "specialCaseId": "SC-039"
+    },
+    {
+      "stableId": "c:@S@Geom2d_Curve@F@D1#d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#1",
+      "specialCaseId": "SC-039"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#",
+      "specialCaseId": "SC-039"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@BRepBuilderAPI_MakeWire#",
+      "specialCaseId": "SC-039"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@Add#&1$@S@TopoDS_Edge#",
+      "specialCaseId": "SC-039"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@Wire#",
+      "specialCaseId": "SC-039"
+    },
+    {
+      "stableId": "c:@S@BRepTools_ReShape@F@Replace#&1$@S@TopoDS_Shape#S0_#",
+      "specialCaseId": "SC-039"
+    },
+    {
+      "stableId": "c:@S@BRepTools_ReShape@F@Remove#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-039"
+    },
+    {
+      "stableId": "c:@S@BRepTools_ReShape@F@Apply#&1$@S@TopoDS_Shape#$@E@TopAbs_ShapeEnum#",
+      "specialCaseId": "SC-039"
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@FileUnits#&$@S@NCollection_Sequence>#$@S@TCollection_AsciiString#S0_#S0_#",
+      "specialCaseId": "SC-039"
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@SetSystemLengthUnit#d#",
+      "specialCaseId": "SC-039"
+    },
+    {
+      "stableId": "c:@S@STEPControl_Reader@F@TransferRoot#I#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-039"
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@ClearShapes#",
+      "specialCaseId": "SC-039"
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@OneShape#1",
+      "specialCaseId": "SC-039"
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@SelectedShape#1",
+      "specialCaseId": "SC-039"
     }
   ],
   "excludedBindings": [

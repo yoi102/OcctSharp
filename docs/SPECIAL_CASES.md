@@ -855,3 +855,46 @@ rules or design:
 - Removal criteria: Replace the exception only after generated document-attribute and
   traversal descriptors preserve the same copied/parent-bound/owning contracts, option
   validation, deterministic stable-ID accounting, and end-to-end evidence.
+
+## SC-039: Final Batch C selective import, topology edit, and viewer interaction closure
+
+- Status: Accepted and validated for the completed final Batch C dependency closure.
+- Scope: Seventeen newly direct OCCT 8.0.1 declarations from `Adaptor3d`, `BRep_Tool`,
+  `Geom2d`, `BRepBuilderAPI`, `BRepTools_ReShape`, `STEPControl`/`XSControl`, and
+  `AIS_InteractiveContext`. Already emitted trim-surface, AIS activation/selection-mode,
+  and existing reader/adaptor declarations are reused and are not counted again.
+- Reason: Adaptors, 2D curves, builders, reshapers, reader work sessions, transfer state,
+  and AIS selection owners are call-, session-, or viewer-owned native objects. Exposing
+  their C++ layouts or borrowed references would violate the existing ownership rules.
+  Copied value snapshots and explicit owning/parent-bound facades close the common CAD
+  workflow without weakening the ABI.
+- Native/ABI/managed behavior: ABI 1.45 adds copied 3D curve derivative, 2D pcurve,
+  surface derivative, and STEP reader metadata records; owning trim/wire/reshape results;
+  an opaque STEP reader session with unit-copy and selective-root transfer operations;
+  per-presentation topology selection modes; owning selected-topology snapshots; and a
+  managed mouse, wheel, and semantic-key input controller. Bridge version is 0.53.0 and
+  package version is `0.1.0-alpha.54`.
+- Ownership: Adaptors, curves, builders, and reshapers die inside each native call.
+  Geometry results are caller-owned value copies; trim, wire, replace/remove, transfer,
+  and selected topology results are independent registered owning `Shape` values. A
+  `StepReadSession` owns one reader until disposal, while every transferred shape survives
+  session disposal. Viewer presentations and input remain parent-bound and thread-affine;
+  selected shape copies survive viewer and source-shape disposal.
+- Coverage accounting: Configuration schema 1.8 lists exactly 17 SC-039 stable IDs.
+  Every ID was resolved from the complete inventory, was `Blocked` before reconciliation,
+  and has no emitted/manual overlap. Previously reconciled reader unit/root declarations
+  and emitted AIS operations are reused without inflating the manual denominator.
+- Validation: Focused tests cover derivatives, pcurves, trim bounds, wire input,
+  replace/remove membership, bidirectional adjacency, STEP units/root selection/target
+  unit/disposal, real-HWND face selection, selected-shape ownership, input thread and
+  disposal behavior, and a real STEP import-edit-export-viewer workflow. Release and
+  Debug builds, Generator 91/91, Runtime 114/114, dependency profiles 6/6, 83-file
+  freshness/byte-identical regeneration, clean alpha.54 package, inventory, provenance,
+  API compatibility, bundled-runtime, and local release gates pass.
+- Upgrade impact: Recheck adaptor derivative parameter domains, pcurve availability and
+  orientation, trim parameter preservation, `BRepTools_ReShape` containment semantics,
+  STEP unit strings and repeated selective transfer, AIS selection mode indices, selected
+  owner topology, and V3d mouse conventions on every OCCT upgrade.
+- Removal criteria: Replace these manual declarations only after generated descriptors
+  preserve the same copied/session-owning/parent-thread-bound contracts and pass the same
+  real-file, real-window, failure, disposal, package, and inventory evidence.

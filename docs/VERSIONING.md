@@ -40,7 +40,7 @@ The managed SDK should be able to query and report:
 
 Version mismatch diagnostics must show both expected and actual values.
 
-The current workspace reports native ABI 1.15 and native bridge 0.16.0. ABI 1.4 adds the
+The additive history below starts with the early ABI 1.4-1.15 milestones. ABI 1.4 adds the
 generated `Precision`, `TopAbs`, `Standard`, `TopLoc`, and `gp` value-copy exports plus
 the `gp_Pnt` default/copy constructors over ABI 1.3's coordinate constructor. ABI 1.5
 adds the invalid-handle status and live shape-handle registry; the compatibility claim
@@ -190,13 +190,20 @@ volume, and centroid snapshots, recursive occurrence/world-location results, ind
 located shapes, and explicit STEPCAF metadata/model-type switches. Existing no-option
 STEPCAF calls retain their all-metadata defaults.
 
+The final Batch C selective-import/topology-edit/viewer-input wave is additive ABI 1.45/
+bridge 0.53.0 and advances the package to `0.1.0-alpha.54`. It adds copied edge/surface
+derivatives and pcurves, owning trim/wire/reshape results, owning selective STEP sessions
+and transfer results, bidirectional topology adjacency, per-presentation subshape
+selection, owning selected topology snapshots, and parent-bound application input. No
+existing managed or native API is removed; Batch C closes at this finite checkpoint.
+
 ## Upgrade classification
 
-Alpha.50 uses the unchanged alpha.49 generated surface: 16,353 emitted and 61 accepted
-manual declarations. The
-observed full inventory remains separate: 116,272 classified declarations, zero
-supported-unselected, and 50,514 narrow blocked dispositions. Package verification is
-pinned to .NET SDK 10.0.400 by the inner workspace `global.json`.
+Alpha.54 retains the 16,353-declaration generated surface and reconciles 102 accepted
+manual stable IDs through SC-039. The observed full inventory remains separate: 116,272
+classified declarations, zero supported-unselected, and 50,473 narrow blocked
+dispositions. Package verification is pinned to .NET SDK 10.0.400 by the inner workspace
+`global.json`.
 
 An OCCT upgrade report must classify:
 

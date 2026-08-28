@@ -171,6 +171,11 @@ workspace `artifacts/generator-reports/` directory:
 - `diagnostics.json` (schema 1.0) records every declaration in stable-ID order with its
   native signature, source location, package/toolkit, support state, emitted flag, and
   a stable disposition code.
+- `dependency-closure.json` (schema 1.0) resolves every emitted return, parameter, base,
+  enum, handle, point, and topology projection to a product module. It records direct
+  and transitive observed edges, target-graph compatibility, strongly connected groups,
+  and stable-ID evidence. An unresolved emitted target (`SD001`) fails generation;
+  an out-of-contract edge (`SD002`) blocks managed-project split eligibility.
 
 The initial disposition codes are `EM001` for emitted, `EL000` for eligible but not
 emitted, `EL001` for unsupported declaration kind, `EL002` for an instance receiver,

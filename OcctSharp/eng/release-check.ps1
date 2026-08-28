@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [string]$OcctRoot,
-    [string]$PackageVersion = '0.1.0-alpha.53',
+    [string]$PackageVersion = '0.1.0-alpha.54',
     [string]$ApiBaselineVersion = '0.1.0-alpha.38'
 )
 
@@ -65,6 +65,18 @@ $headerTotal = [int]$inventory.finalClassification.headerTotal
 $nativeDllCount = @(Get-ChildItem -LiteralPath (Join-Path $workspaceRoot 'artifacts\native\Release') -File -Filter '*.dll').Count
 $generatedManifest = Get-Content -LiteralPath (Join-Path $workspaceRoot 'generated\manifest.json') -Raw -Encoding UTF8 | ConvertFrom-Json
 $generatedFileCount = @($generatedManifest.files).Count
+$dependencyClosurePath = Join-Path $workspaceRoot 'artifacts\generator-reports\dependency-closure.json'
+if (-not (Test-Path -LiteralPath $dependencyClosurePath -PathType Leaf)) {
+    throw 'Generated shard dependency-closure report is missing.'
+}
+$dependencyClosure = Get-Content -LiteralPath $dependencyClosurePath -Raw -Encoding UTF8 | ConvertFrom-Json
+if ($dependencyClosure.isComplete -ne $true -or
+    $dependencyClosure.managedProjectSplitReady -ne $true -or
+    @($dependencyClosure.cyclicGroups).Count -ne 0 -or
+    @($dependencyClosure.issues).Count -ne 0) {
+    throw 'Generated shard dependency closure is incomplete, cyclic, or outside the accepted target graph.'
+}
+$dependencyEdgeCount = @($dependencyClosure.directDependencies).Count
 
 & (Join-Path $PSScriptRoot 'generate-release-metadata.ps1') -PackageVersion $PackageVersion
 
@@ -79,8 +91,9 @@ $gates = @(
     [ordered]@{ id = 'local-release-debug'; state = 'PASS'; evidence = 'Release and Debug build/test completed in this run.' },
     [ordered]@{ id = 'bundled-runtime'; state = 'PASS'; evidence = 'Committed Windows x64 runtime manifest, 62 DLL hashes, and all included license/notice hashes verified.' },
     [ordered]@{ id = 'generated-freshness'; state = 'PASS'; evidence = "$generatedFileCount manifest-owned files current." },
+    [ordered]@{ id = 'generated-shard-dependency-closure'; state = 'PASS'; evidence = "$dependencyEdgeCount observed cross-shard edges are fully resolved, target-graph compatible, and acyclic; managed generated shards are split-eligible while native DLL splitting remains deferred." },
     [ordered]@{ id = 'clean-regeneration'; state = 'PASS'; evidence = 'Fresh source copy build and byte comparison completed.' },
-    [ordered]@{ id = 'package-consumer'; state = 'PASS'; evidence = "$PackageVersion clean restore/publish/runtime with $nativeDllCount DLLs, $emittedCount generated declarations, IGES/session infrastructure, prior geometry/modeling/exchange/XDE APIs, and composable XDE STEP import." },
+    [ordered]@{ id = 'package-consumer'; state = 'PASS'; evidence = "$PackageVersion clean restore/publish/runtime with $nativeDllCount DLLs, $emittedCount generated declarations, prior geometry/modeling/exchange/XDE APIs, and the final selective STEP import/topology edit/export/viewer workflow." },
     [ordered]@{ id = 'api-compatibility'; state = 'PASS'; evidence = 'Compared with the alpha.38 606-signature baseline; additive changes are allowed and removals are blocked.' },
     [ordered]@{ id = 'full-classification'; state = 'PASS'; evidence = "$declarationTotal declarations and $headerTotal headers classified; zero pending/HD099." },
     [ordered]@{ id = 'bindable-emission-completeness'; state = if ($remainingBindableCount -eq 0) { 'PASS' } else { 'BLOCKED' }; evidence = "$remainingBindableCount declarations remain SupportedUnselected; $emittedCount generated and $manualCount accepted manual stable IDs are reconciled." },
@@ -97,6 +110,7 @@ $localBatchGateIds = @(
     'local-release-debug',
     'bundled-runtime',
     'generated-freshness',
+    'generated-shard-dependency-closure',
     'clean-regeneration',
     'package-consumer',
     'api-compatibility',

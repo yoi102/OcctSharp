@@ -8,12 +8,17 @@ public static class OcctProductModuleGraph
             [OcctProductModule.Runtime] = [],
             [OcctProductModule.Foundation] = [OcctProductModule.Runtime],
             [OcctProductModule.Geometry] = [OcctProductModule.Foundation],
-            [OcctProductModule.Modeling] = [OcctProductModule.Geometry],
-            [OcctProductModule.Mesh] = [OcctProductModule.Modeling],
-            [OcctProductModule.Documents] = [OcctProductModule.Modeling],
-            [OcctProductModule.DataExchange] = [OcctProductModule.Modeling, OcctProductModule.Mesh],
-            [OcctProductModule.Xde] = [OcctProductModule.Documents, OcctProductModule.DataExchange],
-            [OcctProductModule.Visualization] = [OcctProductModule.Modeling, OcctProductModule.Mesh],
+            [OcctProductModule.MeshData] = [OcctProductModule.Geometry],
+            [OcctProductModule.Modeling] = [OcctProductModule.Geometry, OcctProductModule.MeshData],
+            [OcctProductModule.Mesh] = [OcctProductModule.Modeling, OcctProductModule.MeshData],
+            [OcctProductModule.Documents] = [OcctProductModule.Modeling, OcctProductModule.MeshData],
+            [OcctProductModule.Visualization] =
+                [OcctProductModule.Modeling, OcctProductModule.Mesh, OcctProductModule.Documents],
+            [OcctProductModule.DataExchange] =
+                [OcctProductModule.Modeling, OcctProductModule.MeshData, OcctProductModule.Mesh,
+                    OcctProductModule.Documents, OcctProductModule.Visualization],
+            [OcctProductModule.Xde] =
+                [OcctProductModule.Documents, OcctProductModule.DataExchange, OcctProductModule.Visualization],
             [OcctProductModule.IVtk] = [OcctProductModule.Visualization],
             [OcctProductModule.OpenGles] = [OcctProductModule.Visualization],
             [OcctProductModule.Draw] = [OcctProductModule.Xde, OcctProductModule.Visualization],

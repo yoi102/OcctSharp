@@ -103,20 +103,27 @@ try {
 
     $coverageReport = Join-Path $workspaceRoot 'artifacts\generator-reports\coverage.json'
     $diagnosticsReport = Join-Path $workspaceRoot 'artifacts\generator-reports\diagnostics.json'
-    if (-not (Test-Path -LiteralPath $coverageReport) -or -not (Test-Path -LiteralPath $diagnosticsReport)) {
-        throw 'Binding generation did not produce the required coverage and diagnostics reports.'
+    $dependencyClosureReport = Join-Path $workspaceRoot 'artifacts\generator-reports\dependency-closure.json'
+    if (-not (Test-Path -LiteralPath $coverageReport) -or
+        -not (Test-Path -LiteralPath $diagnosticsReport) -or
+        -not (Test-Path -LiteralPath $dependencyClosureReport)) {
+        throw 'Binding generation did not produce the required coverage, diagnostics, and dependency-closure reports.'
     }
 
     $firstCoverageHash = (Get-FileHash -LiteralPath $coverageReport -Algorithm SHA256).Hash
     $firstDiagnosticsHash = (Get-FileHash -LiteralPath $diagnosticsReport -Algorithm SHA256).Hash
+    $firstDependencyClosureHash = (Get-FileHash -LiteralPath $dependencyClosureReport -Algorithm SHA256).Hash
 
     & dotnet run --project .\src\OcctSharp.Generator\OcctSharp.Generator.csproj --no-build --configuration $Configuration -- generate --occt-root $resolvedOcctRoot --config .\config\generation.json --output-root .
     if ($LASTEXITCODE -ne 0) { throw "Second binding generation failed with exit code $LASTEXITCODE." }
 
     $secondCoverageHash = (Get-FileHash -LiteralPath $coverageReport -Algorithm SHA256).Hash
     $secondDiagnosticsHash = (Get-FileHash -LiteralPath $diagnosticsReport -Algorithm SHA256).Hash
-    if ($firstCoverageHash -ne $secondCoverageHash -or $firstDiagnosticsHash -ne $secondDiagnosticsHash) {
-        throw 'Generation coverage or diagnostics reports are not deterministic.'
+    $secondDependencyClosureHash = (Get-FileHash -LiteralPath $dependencyClosureReport -Algorithm SHA256).Hash
+    if ($firstCoverageHash -ne $secondCoverageHash -or
+        $firstDiagnosticsHash -ne $secondDiagnosticsHash -or
+        $firstDependencyClosureHash -ne $secondDependencyClosureHash) {
+        throw 'Generation coverage, diagnostics, or dependency-closure reports are not deterministic.'
     }
 
     Write-Host "Configuring native bridge with OCCT at '$resolvedOcctRoot'."
@@ -169,7 +176,7 @@ try {
 
     & .\eng\audit-dependency-profiles.ps1 -OcctRoot $resolvedOcctRoot
 
-    Write-Host "Build completed with .NET SDK $sdkVersion. Model SHA256: $firstHash. OCCT discovery SHA256: $firstDiscoveryHash. Coverage SHA256: $firstCoverageHash. Diagnostics SHA256: $firstDiagnosticsHash"
+    Write-Host "Build completed with .NET SDK $sdkVersion. Model SHA256: $firstHash. OCCT discovery SHA256: $firstDiscoveryHash. Coverage SHA256: $firstCoverageHash. Diagnostics SHA256: $firstDiagnosticsHash. Dependency closure SHA256: $firstDependencyClosureHash"
 }
 finally {
     Pop-Location

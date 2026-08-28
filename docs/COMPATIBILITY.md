@@ -7,7 +7,7 @@ reported as supported.
 
 | OcctSharp | Generator | Native ABI | OCCT | Platform | Compiler | .NET | Status |
 |---|---|---|---|---|---|---|---|
-| 0.1.0-alpha.53 workspace | ClangSharp 21.1.8.4 | 1.44 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
+| 0.1.0-alpha.54 workspace | ClangSharp 21.1.8.4 | 1.45 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
 
 Validated in both Debug and Release: native and managed build, ABI/runtime identity,
 OCCT box creation, topology traversal, error/disposal behavior, STEP geometry
@@ -141,6 +141,15 @@ Runtime tests cover BRepGProp-derived XCAF properties, nullable attribute mutati
 clearing, nested occurrence/world-location traversal, independent located shapes, and
 STEPCAF metadata/model-type options. Clean package and release evidence are recorded in
 `STATUS.md`.
+
+The alpha.54 workspace advances to ABI 1.45/bridge 0.53.0 and closes Batch C. Release
+and Debug builds pass with Generator 91/91, Runtime 114/114, and dependency profiles
+6/6. Tests cover copied edge/surface derivatives and pcurves, owning trim/wire/reshape
+results, bidirectional adjacency, owning STEP sessions with file units/selective roots/
+target units, real-HWND whole/subshape selection with owning selected topology, application
+input forwarding, and a real STEP import-edit-export-re-read-viewer workflow. The clean
+consumer executes the final workflow with all 62 DLLs; 83 generated files are fresh and
+byte-identical after clean regeneration.
 
 ## Planned validation dimensions
 

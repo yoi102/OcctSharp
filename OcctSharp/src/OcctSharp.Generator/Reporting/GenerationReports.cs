@@ -10,7 +10,8 @@ namespace OcctSharp.Generator.Reporting;
 
 public sealed record GenerationReportSet(
     GenerationCoverageReport Coverage,
-    GenerationDiagnosticsReport Diagnostics);
+    GenerationDiagnosticsReport Diagnostics,
+    GeneratedDependencyClosureReport DependencyClosure);
 
 public sealed record GenerationCoverageReport(
     string SchemaVersion,
@@ -68,6 +69,7 @@ public static class GenerationReportWriter
 {
     public const string CoverageRelativePath = "artifacts/generator-reports/coverage.json";
     public const string DiagnosticsRelativePath = "artifacts/generator-reports/diagnostics.json";
+    public const string DependencyClosureRelativePath = "artifacts/generator-reports/dependency-closure.json";
 
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
@@ -94,6 +96,17 @@ public static class GenerationReportWriter
                 + string.Join(", ", missingIds));
         }
 
+        GeneratedDependencyClosureReport dependencyClosure = GeneratedDependencyClosureAnalyzer.Create(
+            discovery.OcctVersion,
+            discovery.SchemaVersion,
+            discovery.Model,
+            bindingSet);
+        if (!dependencyClosure.IsComplete)
+        {
+            throw new InvalidDataException(
+                $"Generated shard dependency closure has {dependencyClosure.Issues.Count(static issue => issue.Code == "SD001")} unresolved emitted signature references.");
+        }
+
         return new GenerationReportSet(
             new GenerationCoverageReport(
                 "1.1",
@@ -106,7 +119,8 @@ public static class GenerationReportWriter
                 "1.0",
                 discovery.OcctVersion,
                 discovery.SchemaVersion,
-                BuildDiagnostics(discovery.Model, emittedIds)));
+                BuildDiagnostics(discovery.Model, emittedIds)),
+            dependencyClosure);
     }
 
     public static void Write(string outputRoot, GenerationReportSet reports)
@@ -126,6 +140,7 @@ public static class GenerationReportWriter
         {
             WriteJson(Path.Combine(stagingRoot, "coverage.json"), reports.Coverage);
             WriteJson(Path.Combine(stagingRoot, "diagnostics.json"), reports.Diagnostics);
+            WriteJson(Path.Combine(stagingRoot, "dependency-closure.json"), reports.DependencyClosure);
 
             ReplaceFromStaging(
                 Path.Combine(stagingRoot, "coverage.json"),
@@ -133,6 +148,9 @@ public static class GenerationReportWriter
             ReplaceFromStaging(
                 Path.Combine(stagingRoot, "diagnostics.json"),
                 Path.Combine(fullOutputRoot, ToPlatformPath(DiagnosticsRelativePath)));
+            ReplaceFromStaging(
+                Path.Combine(stagingRoot, "dependency-closure.json"),
+                Path.Combine(fullOutputRoot, ToPlatformPath(DependencyClosureRelativePath)));
         }
         finally
         {

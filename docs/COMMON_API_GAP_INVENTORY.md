@@ -3,9 +3,9 @@
 This is the stable capability denominator and completion record for Batch C implementation
 waves. It measures usable workflows rather than isolated OCCT declarations.
 
-Checkpoint status: **alpha.51 first wave, alpha.52 second wave, and alpha.53 third wave
-complete at their local checkpoints**. These are large waves inside Batch C, not a
-claim that all Batch C common workflows are complete.
+Completion status: **Batch C is complete at the alpha.54 local implementation
+checkpoint**. Alpha.51, alpha.52, alpha.53, and the final alpha.54 closure are coherent
+cross-family waves inside one Batch C product outcome, not independent numbered batches.
 
 ## First locked cross-family dependency closure
 
@@ -103,28 +103,77 @@ The denominator is 8/8 capabilities. Nine direct XCAF attribute declarations are
 reconciled by SC-038; existing `BRepGProp`, location, assembly, and STEPCAF dependencies
 are reused without counting them again.
 
+## Final locked Batch C dependency closure
+
+The final wave is one selective-import-edit-inspect-interact product slice spanning
+`STEPControl`/`XSControl`, `BRepAdaptor`/`BRep_Tool`/`Geom2d`, `BRepBuilderAPI`/
+`BRepTools_ReShape`/`TopExp`, and `AIS`/`V3d`:
+
+```text
+open one STEP reader session and inspect file units/transfer roots
+  -> choose roots and an explicit target system length unit
+  -> evaluate 3D curve/surface derivatives and edge-on-face 2D pcurves
+  -> trim bounded edges/faces without leaking borrowed geometry
+  -> construct wires and edit a copied topology graph by replace/remove
+  -> navigate both directions of copied topology relationships
+  -> display and activate whole-shape or subshape selection modes
+  -> receive independently owned selected topology snapshots
+  -> forward application mouse, wheel, and semantic keyboard input
+  -> validate, export, and re-read the edited result
+```
+
+| Family | Stable capability denominator | Before wave | Checkpoint result |
+| --- | --- | --- | --- |
+| BRepAdaptor/Geom | Copied point, first derivative, and second derivative at an edge parameter | Unit tangent only | PASS: `EvaluateEdgeDerivatives` |
+| BRepAdaptor/Geom | Copied U/V derivatives and oriented normal at bounded face parameters | Point/normal only | PASS: `EvaluateFaceDerivatives` |
+| BRep_Tool/Geom2d | Edge-on-face pcurve bounds plus copied UV point/tangent evaluation | Missing | PASS: `GetPcurveSnapshot`/`EvaluatePcurve` |
+| Geom/BRepBuilderAPI | Independently owned edge trimmed to a finite parameter interval | Missing | PASS: `TrimEdge` |
+| Geom/BRepBuilderAPI | Independently owned rectangular face trimmed to finite UV bounds | Missing | PASS: `TrimFace` |
+| BRepBuilderAPI | Owning wire construction from copied/borrowed edge inputs | Polygon-only | PASS: `ShapeFactory.CreateWire` |
+| BRepTools_ReShape | Replace or remove a contained subshape and return an independent result | Missing | PASS: `ReplaceSubshape`/`RemoveSubshape` |
+| TopExp | Navigate copied item-to-ancestor and ancestor-to-item relationships | Forward indices only | PASS: `TopologyAdjacencyMap.GetAncestorIndices`/`GetItemIndices` |
+| STEPControl/XSControl | Owning reader session with read status, root count, effective unit, and file-unit names | One-shot summary | PASS: `StepReadSession.Open`/`Info` |
+| STEPControl/XSControl | Selective one-root and multi-root transfer with independent shape owners | Transfer all roots only | PASS: `TransferRoot`/`TransferRoots` |
+| STEPControl | Explicit finite target system length unit before transfer | Read-only system unit | PASS: `targetSystemLengthUnit` |
+| AIS | Activate whole-object or one common topology selection kind per presentation | Whole-object only | PASS: `ViewerPresentation.SetSelectionKind` |
+| AIS/TopoDS | Selected presentation plus independently owned selected subshape snapshots | Presentation IDs only | PASS: `OcctViewer.GetSelectedItems` |
+| V3d/AIS | Parent-bound mouse press/move/release, wheel, and semantic keyboard forwarding | Rotation primitives only | PASS: `ViewerInputController` |
+| Integration | Selective STEP import through geometry/topology edit, export, and interactive subshape selection | Missing | PASS: runtime and clean alpha.54 package workflow |
+
+All 15 capabilities belong to one final Batch C checkpoint and all 15 pass. Focused
+failure/disposal/ownership tests and the full Release/Debug, deterministic regeneration,
+clean-package, real-file, real-HWND, inventory, provenance, and release-gate chain pass.
+The denominator remains one product checkpoint rather than numbered C batches or
+per-class completion claims.
+
 ## Checkpoint evidence
 
-- Release and Debug native/managed builds: PASS, 0 warnings and 0 errors.
-- Generator tests: PASS, 62/62 in Release and Debug.
-- Runtime/lifetime/integration tests: PASS, 108/108 in Release and Debug.
-- Generated freshness and clean source regeneration: PASS, 13/13 files current and
+- Release and Debug native/managed builds: PASS, 0 errors.
+- Generator tests: PASS, 91/91 in Release and Debug.
+- Runtime/lifetime/integration tests: PASS, 114/114 in Release and Debug.
+- Dependency profiles: PASS, 6/6 in Release and Debug.
+- Generated freshness and clean source regeneration: PASS, 83/83 files current and
   byte-identical.
-- Clean NuGet consumer: PASS with alpha.53, ABI 1.44, bridge 0.52.0, OCCT 8.0.1, all
-  62 application-local DLLs, and the nested XDE validation-property/occurrence/STEP-
-  options workflow.
+- Generated dependency closure: PASS, 27 direct edges, 0 unresolved references, 0
+  target-graph violations, and 0 cycles.
+- Clean NuGet consumer: PASS with alpha.54, ABI 1.45, bridge 0.53.0, OCCT 8.0.1, all
+  62 application-local DLLs, and the final selective-import/edit/export/viewer workflow.
 - Full classification: PASS, 116,272/116,272 declarations and 7,090/7,090 headers have
-  final dispositions; 16,353 Emitted, 85 Manual, 0 SupportedUnselected, 49,344 Skipped,
-  50,490 Blocked, 0 pending, and 0 HD099. Inventory SHA256 is
-  `37A31B92034E1132AA46293BB42A50F4A9D88E3AEC10D98046E9A598F0F8676F`.
-- API compatibility: PASS, 36,883 additions and 0 removals against alpha.38, with no
+  final dispositions; 16,353 Emitted, 102 Manual, 0 SupportedUnselected, 49,344 Skipped,
+  50,473 Blocked, 0 pending, and 0 HD099. Inventory SHA256 is
+  `B885C13B4037AF79065143B204F715F85C533AB186337466D4DE1B0B25048770`.
+- API compatibility: PASS, 37,018 additions and 0 removals against alpha.38, with no
   breaking change.
-- Local release gate: PASS (`batchImplementationComplete: true`). Hosted full release,
-  signing, and NuGet publication remain `NOT RUN` and do not block this local checkpoint.
+- Local release gate: PASS (`batchImplementationComplete: true`). The committed native
+  bridge is 14,920,192 bytes with SHA256
+  `57593BC8B66870DE0373BFBDEFF47B1731C20DF6066EFF22764254EB416E54AA`.
+  Hosted CI execution, signing, and NuGet publication remain `NOT RUN`, so
+  `publicReleaseReady` is false without keeping Batch C active.
 
-## Explicit non-goals for this wave
+## Batch C exit audit
 
-This wave does not claim all of Batch C complete. It does not add low-frequency schema
-entities, custom rendering pipelines, advanced selection filters, or every OCCT mesh
-attribute. Those remain in the Batch C denominator and are prioritized after this
-coherent checkpoint.
+Batch C is complete for its locked common-CAD workflow denominator. Advanced selection
+filters, custom rendering pipelines, low-frequency schema entities, optional integrations,
+and exhaustive mesh attributes are explicitly outside Batch C. They may become later
+product work only after a new finite denominator and ownership/dependency closure are
+accepted; they do not keep C active and are not silently counted as unfinished C work.

@@ -4,6 +4,9 @@
 - Date: 2026-08-28
 - Scope: Canonical module identity, generated file layout, and staged physical modularity
 
+ADR-0062 refines the target graph with `MeshData`, closes all emitted signature edges,
+and records the decision to retain one managed project and one native DLL for now.
+
 ## Context
 
 The generated surface reached 16,353 stable binding IDs while native and managed output

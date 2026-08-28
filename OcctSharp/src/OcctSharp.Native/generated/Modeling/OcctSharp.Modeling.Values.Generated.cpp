@@ -30,7 +30,6 @@
 // Source: c:@S@IntTools_Tools@F@ComputeIntRange#d#d#d#S
 // Source: c:@S@IntTools_Tools@F@IntermediatePoint#d#d#S
 // Source: c:@S@Intf@F@Contain#&1$@S@gp_Pnt#S0_#S0_#S0_#S
-// Source: c:@S@Law_BSpline@F@MaxDegree#S
 // Source: c:@S@ShapeAlgo@F@Init#S
 // Source: c:@S@ShapeAnalysis@F@AdjustByPeriod#d#d#d#S
 // Source: c:@S@ShapeAnalysis@F@AdjustToPeriod#d#d#d#S
@@ -76,7 +75,6 @@
 #include <ChFi3d.hxx>
 #include <IntTools_Tools.hxx>
 #include <Intf.hxx>
-#include <Law_BSpline.hxx>
 #include <ShapeAlgo.hxx>
 #include <ShapeAnalysis.hxx>
 #include <ShapeExtend.hxx>
@@ -276,11 +274,6 @@ int32_t OCCTSHARP_CALL occtsharp_generated_intf_contain_static_contain_0(
   const OcctSharp_Point3d ThePnt)
 {
   return Intf::Contain(gp_Pnt(P1.x, P1.y, P1.z), gp_Pnt(P2.x, P2.y, P2.z), gp_Pnt(P3.x, P3.y, P3.z), gp_Pnt(ThePnt.x, ThePnt.y, ThePnt.z)) ? 1 : 0;
-}
-
-int32_t OCCTSHARP_CALL occtsharp_generated_law_bspline_max_degree_static_max_degree_0(void)
-{
-  return Law_BSpline::MaxDegree();
 }
 
 void OCCTSHARP_CALL occtsharp_generated_shape_algo_init_static_init_0(void)

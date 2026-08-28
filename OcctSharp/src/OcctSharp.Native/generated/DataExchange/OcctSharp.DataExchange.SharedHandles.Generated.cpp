@@ -6147,8 +6147,8 @@
 // Source: c:@S@XSControl_WorkSession@F@XSControl_WorkSession#
 #include "OcctSharp.DataExchange.SharedHandles.Generated.h"
 #include "../Foundation/OcctSharp.Foundation.SharedHandles.Generated.h"
+#include "../MeshData/OcctSharp.MeshData.SharedHandles.Generated.h"
 #include "../Modeling/OcctSharp.Modeling.SharedHandles.Generated.h"
-#include "../Mesh/OcctSharp.Mesh.SharedHandles.Generated.h"
 #include "../Documents/OcctSharp.Documents.SharedHandles.Generated.h"
 #include "../Runtime/OcctSharp.Runtime.SharedSupport.Generated.hxx"
 #include "../../include/OcctSharp.Native.Internal.hxx"

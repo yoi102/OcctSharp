@@ -325,25 +325,6 @@
 // Source: c:@S@Expr_UnaryMinus@F@IsLinear#1
 // Source: c:@S@Expr_UnaryMinus@F@NDerivative#&1$@N@opencascade@S@handle>#$@S@Expr_NamedUnknown#I#1
 // Source: c:@S@Expr_UnaryMinus@F@ShallowSimplified#1
-// Source: c:@S@FEmTool_Curve@F@Degree#I#1
-// Source: c:@S@FEmTool_Curve@F@Dimension#1
-// Source: c:@S@FEmTool_Curve@F@NbElements#1
-// Source: c:@S@FEmTool_Curve@F@SetDegree#I#I#
-// Source: c:@S@FEmTool_ElementaryCriterion@F@Set#d#d#
-// Source: c:@S@FEmTool_LinearFlexion@F@FEmTool_LinearFlexion#I#$@E@GeomAbs_Shape#
-// Source: c:@S@FEmTool_LinearFlexion@F@Value#
-// Source: c:@S@FEmTool_LinearJerk@F@FEmTool_LinearJerk#I#$@E@GeomAbs_Shape#
-// Source: c:@S@FEmTool_LinearJerk@F@Value#
-// Source: c:@S@FEmTool_LinearTension@F@FEmTool_LinearTension#I#$@E@GeomAbs_Shape#
-// Source: c:@S@FEmTool_LinearTension@F@Value#
-// Source: c:@S@FEmTool_ProfileMatrix@F@ColNumber#1
-// Source: c:@S@FEmTool_ProfileMatrix@F@Decompose#
-// Source: c:@S@FEmTool_ProfileMatrix@F@Init#d#
-// Source: c:@S@FEmTool_ProfileMatrix@F@IsInProfile#I#I#1
-// Source: c:@S@FEmTool_ProfileMatrix@F@OutM#1
-// Source: c:@S@FEmTool_ProfileMatrix@F@OutS#1
-// Source: c:@S@FEmTool_ProfileMatrix@F@Prepare#
-// Source: c:@S@FEmTool_ProfileMatrix@F@RowNumber#1
 // Source: c:@S@Message_Alert@F@Merge#&1$@N@opencascade@S@handle>#$@S@Message_Alert#
 // Source: c:@S@Message_Alert@F@SupportsMerge#1
 // Source: c:@S@Message_AlertExtended@F@CompositeAlerts#b#
@@ -693,20 +674,6 @@ typedef struct OcctSharp_ExprUnaryExpressionHandle OcctSharp_ExprUnaryExpression
 typedef struct OcctSharp_ExprUnaryFunctionHandle OcctSharp_ExprUnaryFunctionHandle;
 
 typedef struct OcctSharp_ExprUnaryMinusHandle OcctSharp_ExprUnaryMinusHandle;
-
-typedef struct OcctSharp_FEmToolCurveHandle OcctSharp_FEmToolCurveHandle;
-
-typedef struct OcctSharp_FEmToolElementaryCriterionHandle OcctSharp_FEmToolElementaryCriterionHandle;
-
-typedef struct OcctSharp_FEmToolLinearFlexionHandle OcctSharp_FEmToolLinearFlexionHandle;
-
-typedef struct OcctSharp_FEmToolLinearJerkHandle OcctSharp_FEmToolLinearJerkHandle;
-
-typedef struct OcctSharp_FEmToolLinearTensionHandle OcctSharp_FEmToolLinearTensionHandle;
-
-typedef struct OcctSharp_FEmToolProfileMatrixHandle OcctSharp_FEmToolProfileMatrixHandle;
-
-typedef struct OcctSharp_FEmToolSparseMatrixHandle OcctSharp_FEmToolSparseMatrixHandle;
 
 typedef struct OcctSharp_MessageAlertHandle OcctSharp_MessageAlertHandle;
 
@@ -3291,221 +3258,6 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_expr_unary_min
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_expr_unary_minus_release(OcctSharp_ExprUnaryMinusHandle* handle);
 
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_method_degree_0(
-  const OcctSharp_FEmToolCurveHandle* handle,
-  int32_t indexOfElement,
-  int32_t* out_value);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_method_dimension_0(
-  const OcctSharp_FEmToolCurveHandle* handle,
-  int32_t* out_value);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_method_nb_elements_0(
-  const OcctSharp_FEmToolCurveHandle* handle,
-  int32_t* out_value);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_method_set_degree_0(
-  const OcctSharp_FEmToolCurveHandle* handle,
-  int32_t indexOfElement,
-  int32_t degree);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_clone(
-  const OcctSharp_FEmToolCurveHandle* source,
-  OcctSharp_FEmToolCurveHandle** out_handle);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_get_ref_count(
-  const OcctSharp_FEmToolCurveHandle* handle,
-  int32_t* out_ref_count);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_get_type_name(
-  const OcctSharp_FEmToolCurveHandle* handle,
-  const char** out_type_name);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_is_kind(
-  const OcctSharp_FEmToolCurveHandle* handle,
-  const char* type_name,
-  int32_t* out_is_kind);
-
-OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_release(OcctSharp_FEmToolCurveHandle* handle);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_method_set_0(
-  const OcctSharp_FEmToolElementaryCriterionHandle* handle,
-  double firstKnot,
-  double lastKnot);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_clone(
-  const OcctSharp_FEmToolElementaryCriterionHandle* source,
-  OcctSharp_FEmToolElementaryCriterionHandle** out_handle);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_get_ref_count(
-  const OcctSharp_FEmToolElementaryCriterionHandle* handle,
-  int32_t* out_ref_count);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_get_type_name(
-  const OcctSharp_FEmToolElementaryCriterionHandle* handle,
-  const char** out_type_name);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_is_kind(
-  const OcctSharp_FEmToolElementaryCriterionHandle* handle,
-  const char* type_name,
-  int32_t* out_is_kind);
-
-OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_release(OcctSharp_FEmToolElementaryCriterionHandle* handle);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_create_0(
-  int32_t workDegree,
-  int32_t constraintOrder,
-  OcctSharp_FEmToolLinearFlexionHandle** out_handle);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_method_value_0(
-  const OcctSharp_FEmToolLinearFlexionHandle* handle,
-  double* out_value);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_clone(
-  const OcctSharp_FEmToolLinearFlexionHandle* source,
-  OcctSharp_FEmToolLinearFlexionHandle** out_handle);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_get_ref_count(
-  const OcctSharp_FEmToolLinearFlexionHandle* handle,
-  int32_t* out_ref_count);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_get_type_name(
-  const OcctSharp_FEmToolLinearFlexionHandle* handle,
-  const char** out_type_name);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_is_kind(
-  const OcctSharp_FEmToolLinearFlexionHandle* handle,
-  const char* type_name,
-  int32_t* out_is_kind);
-
-OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_release(OcctSharp_FEmToolLinearFlexionHandle* handle);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_create_0(
-  int32_t workDegree,
-  int32_t constraintOrder,
-  OcctSharp_FEmToolLinearJerkHandle** out_handle);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_method_value_0(
-  const OcctSharp_FEmToolLinearJerkHandle* handle,
-  double* out_value);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_clone(
-  const OcctSharp_FEmToolLinearJerkHandle* source,
-  OcctSharp_FEmToolLinearJerkHandle** out_handle);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_get_ref_count(
-  const OcctSharp_FEmToolLinearJerkHandle* handle,
-  int32_t* out_ref_count);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_get_type_name(
-  const OcctSharp_FEmToolLinearJerkHandle* handle,
-  const char** out_type_name);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_is_kind(
-  const OcctSharp_FEmToolLinearJerkHandle* handle,
-  const char* type_name,
-  int32_t* out_is_kind);
-
-OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_release(OcctSharp_FEmToolLinearJerkHandle* handle);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_create_0(
-  int32_t workDegree,
-  int32_t constraintOrder,
-  OcctSharp_FEmToolLinearTensionHandle** out_handle);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_method_value_0(
-  const OcctSharp_FEmToolLinearTensionHandle* handle,
-  double* out_value);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_clone(
-  const OcctSharp_FEmToolLinearTensionHandle* source,
-  OcctSharp_FEmToolLinearTensionHandle** out_handle);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_get_ref_count(
-  const OcctSharp_FEmToolLinearTensionHandle* handle,
-  int32_t* out_ref_count);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_get_type_name(
-  const OcctSharp_FEmToolLinearTensionHandle* handle,
-  const char** out_type_name);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_is_kind(
-  const OcctSharp_FEmToolLinearTensionHandle* handle,
-  const char* type_name,
-  int32_t* out_is_kind);
-
-OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_release(OcctSharp_FEmToolLinearTensionHandle* handle);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_col_number_0(
-  const OcctSharp_FEmToolProfileMatrixHandle* handle,
-  int32_t* out_value);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_decompose_0(
-  const OcctSharp_FEmToolProfileMatrixHandle* handle,
-  int32_t* out_value);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_init_0(
-  const OcctSharp_FEmToolProfileMatrixHandle* handle,
-  double value);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_is_in_profile_0(
-  const OcctSharp_FEmToolProfileMatrixHandle* handle,
-  int32_t i,
-  int32_t j,
-  int32_t* out_value);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_out_m_0(
-  const OcctSharp_FEmToolProfileMatrixHandle* handle);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_out_s_0(
-  const OcctSharp_FEmToolProfileMatrixHandle* handle);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_prepare_0(
-  const OcctSharp_FEmToolProfileMatrixHandle* handle,
-  int32_t* out_value);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_row_number_0(
-  const OcctSharp_FEmToolProfileMatrixHandle* handle,
-  int32_t* out_value);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_clone(
-  const OcctSharp_FEmToolProfileMatrixHandle* source,
-  OcctSharp_FEmToolProfileMatrixHandle** out_handle);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_get_ref_count(
-  const OcctSharp_FEmToolProfileMatrixHandle* handle,
-  int32_t* out_ref_count);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_get_type_name(
-  const OcctSharp_FEmToolProfileMatrixHandle* handle,
-  const char** out_type_name);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_is_kind(
-  const OcctSharp_FEmToolProfileMatrixHandle* handle,
-  const char* type_name,
-  int32_t* out_is_kind);
-
-OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_release(OcctSharp_FEmToolProfileMatrixHandle* handle);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_sparse_matrix_clone(
-  const OcctSharp_FEmToolSparseMatrixHandle* source,
-  OcctSharp_FEmToolSparseMatrixHandle** out_handle);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_sparse_matrix_get_ref_count(
-  const OcctSharp_FEmToolSparseMatrixHandle* handle,
-  int32_t* out_ref_count);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_sparse_matrix_get_type_name(
-  const OcctSharp_FEmToolSparseMatrixHandle* handle,
-  const char** out_type_name);
-
-OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_sparse_matrix_is_kind(
-  const OcctSharp_FEmToolSparseMatrixHandle* handle,
-  const char* type_name,
-  int32_t* out_is_kind);
-
-OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_fem_tool_sparse_matrix_release(OcctSharp_FEmToolSparseMatrixHandle* handle);
-
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_message_alert_method_merge_0(
   const OcctSharp_MessageAlertHandle* handle,
   const OcctSharp_MessageAlertHandle* theTarget,
@@ -5390,13 +5142,6 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_units_units_system_release
 #include <Expr_UnaryExpression.hxx>
 #include <Expr_UnaryFunction.hxx>
 #include <Expr_UnaryMinus.hxx>
-#include <FEmTool_Curve.hxx>
-#include <FEmTool_ElementaryCriterion.hxx>
-#include <FEmTool_LinearFlexion.hxx>
-#include <FEmTool_LinearJerk.hxx>
-#include <FEmTool_LinearTension.hxx>
-#include <FEmTool_ProfileMatrix.hxx>
-#include <FEmTool_SparseMatrix.hxx>
 #include <Message_Alert.hxx>
 #include <Message_AlertExtended.hxx>
 #include <Message_Algorithm.hxx>
@@ -5783,48 +5528,6 @@ struct OcctSharp_ExprUnaryMinusHandle
 {
   explicit OcctSharp_ExprUnaryMinusHandle(opencascade::handle<Expr_UnaryMinus> value) : Value(std::move(value)) {}
   opencascade::handle<Expr_UnaryMinus> Value;
-};
-
-struct OcctSharp_FEmToolCurveHandle
-{
-  explicit OcctSharp_FEmToolCurveHandle(opencascade::handle<FEmTool_Curve> value) : Value(std::move(value)) {}
-  opencascade::handle<FEmTool_Curve> Value;
-};
-
-struct OcctSharp_FEmToolElementaryCriterionHandle
-{
-  explicit OcctSharp_FEmToolElementaryCriterionHandle(opencascade::handle<FEmTool_ElementaryCriterion> value) : Value(std::move(value)) {}
-  opencascade::handle<FEmTool_ElementaryCriterion> Value;
-};
-
-struct OcctSharp_FEmToolLinearFlexionHandle
-{
-  explicit OcctSharp_FEmToolLinearFlexionHandle(opencascade::handle<FEmTool_LinearFlexion> value) : Value(std::move(value)) {}
-  opencascade::handle<FEmTool_LinearFlexion> Value;
-};
-
-struct OcctSharp_FEmToolLinearJerkHandle
-{
-  explicit OcctSharp_FEmToolLinearJerkHandle(opencascade::handle<FEmTool_LinearJerk> value) : Value(std::move(value)) {}
-  opencascade::handle<FEmTool_LinearJerk> Value;
-};
-
-struct OcctSharp_FEmToolLinearTensionHandle
-{
-  explicit OcctSharp_FEmToolLinearTensionHandle(opencascade::handle<FEmTool_LinearTension> value) : Value(std::move(value)) {}
-  opencascade::handle<FEmTool_LinearTension> Value;
-};
-
-struct OcctSharp_FEmToolProfileMatrixHandle
-{
-  explicit OcctSharp_FEmToolProfileMatrixHandle(opencascade::handle<FEmTool_ProfileMatrix> value) : Value(std::move(value)) {}
-  opencascade::handle<FEmTool_ProfileMatrix> Value;
-};
-
-struct OcctSharp_FEmToolSparseMatrixHandle
-{
-  explicit OcctSharp_FEmToolSparseMatrixHandle(opencascade::handle<FEmTool_SparseMatrix> value) : Value(std::move(value)) {}
-  opencascade::handle<FEmTool_SparseMatrix> Value;
 };
 
 struct OcctSharp_MessageAlertHandle

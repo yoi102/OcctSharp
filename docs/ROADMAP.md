@@ -6,13 +6,18 @@ evidence; creating files or generating a large method count is not sufficient.
 The retired B00–B20 capability milestones and future package boundaries are documented
 in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the completed
 product-scale batch `B`; none is a separate current batch or commit boundary.
-Batch B is complete. ADR-0060 opens Batch `C` as the active common-CAD-API product batch.
+Batch B and Batch C are complete for their accepted local implementation scopes.
+ADR-0063 closes C at alpha.54; hosted CI, signing, and NuGet publication remain separate
+release-readiness work rather than unfinished Batch C implementation.
 
-## Current priority: Batch C common CAD workflows
+## Current priority: preserve the completed Batch C boundary
 
-The active roadmap is one large product outcome: make the routine CAD path usable from
-.NET without unmanaged escape hatches. Work advances model/inspect, build/modify/deliver,
-and present/interact coverage together. These are lanes inside C, not phases or batches.
+Batch C's routine CAD path is locally complete: .NET can import/build, inspect and edit,
+validate/measure, mesh, preserve common document metadata, export, display, and select
+without an undocumented unmanaged escape hatch in the locked denominator. The next API
+expansion must start from a new finite product denominator and ADR; it must not silently
+reopen C for advanced filters, custom rendering, optional integrations, cold schema, or
+exhaustive mesh attributes.
 
 Priority order inside each large wave:
 
@@ -33,20 +38,31 @@ wave rather than per-class or numbered tasks.
 The third large wave is complete at the alpha.53 local checkpoint. It closes BRepGProp
 measurement, XCAF validation-property attributes, recursive XDE occurrence/world-
 location traversal, and explicit STEPCAF read/write options as one dependency-closed
-workflow. The following C wave must again select a complete high-frequency slice from
-remaining geometry evaluation/editing, topology relationships, richer exchange behavior,
-and application input.
+workflow.
+
+The final alpha.54 wave closes all 15 locked capabilities across geometry derivatives,
+pcurves, edge/face trim, wire construction, replace/remove topology editing, bidirectional
+adjacency, selective STEP sessions and units, subshape selection, owning selection
+snapshots, application input, and one real STEP edit/export/re-read/viewer workflow.
+Release/Debug, 83-file deterministic regeneration, clean package, inventory, provenance,
+and release gates pass. Batch C is therefore complete rather than left active by
+unbounded low-frequency API wishes.
 
 ADR-0061's generated-output architecture wave is also complete locally: canonical
 declarations and generated files now carry stable Foundation, Geometry, Modeling, Mesh,
 Documents, DataExchange, Xde, Visualization, and optional-module identities, with Raw,
-SafeManaged, and Runtime layers. This is infrastructure for the next large API wave, not
-a fourth common-workflow checkpoint and not a managed-project/native-DLL split.
-Retain the same large-wave validation cadence. See [the complete migration plan](MIGRATION_PLAN.md)
-for the Batch C contract.
+SafeManaged, and Runtime layers. It remains source architecture, not a managed-project/
+native-DLL split.
 
-The phase record below is retained as Batch B history and architecture context; it is not
-the active execution sequence for C.
+ADR-0062 completes the follow-on dependency prerequisite. Poly data now has a separate
+MeshData layer; all 16,353 emitted declarations resolve into 27 target-compatible,
+acyclic observed cross-shard edges. The generated managed graph is eligible for a future
+project migration, but physical splitting is deferred: managed assembly identity/manual
+facades and native cross-DLL registry/creator-release semantics still need separate ADRs.
+Completed Batch C therefore retains one managed assembly, one native DLL, and one package.
+
+The phase record below is retained as history and architecture context; it is not an
+active execution sequence.
 
 ## Phase D0: Documentation and decisions
 
@@ -232,8 +248,6 @@ The former B00-B20 plan is the completed product-scale migration batch `B`. Foun
 generated sharing, modeling, classification, and release engineering are historical
 capability milestones inside B, not active batches.
 
-Batch C now prioritizes the common workflow matrix defined by ADR-0060. Numbered or
-dotted fragments, per-class batches, and small completion percentages are not used.
-Focused checks may run during implementation, but full Release/Debug/package/inventory
-evidence is amortized at a coherent large-wave checkpoint rather than repeated after
-each method.
+Batch C completed the common workflow matrix defined by ADR-0060 and ADR-0063. Numbered
+or dotted fragments, per-class batches, and small completion percentages were not used.
+Any future product batch must keep the same coherent workflow and complete-gate cadence.

@@ -54,6 +54,27 @@ public sealed class TopologyAdjacencyMap : IDisposable
         return ancestorIndices.AsMemory(start, offsets[itemIndex + 1] - start);
     }
 
+    /// <summary>Returns copied item indices associated with one ancestor index.</summary>
+    public IReadOnlyList<int> GetItemIndices(int ancestorIndex)
+    {
+        ObjectDisposedException.ThrowIf(disposed, this);
+        ArgumentOutOfRangeException.ThrowIfNegative(ancestorIndex);
+        ArgumentOutOfRangeException.ThrowIfGreaterThanOrEqual(ancestorIndex, ancestors.Length);
+        List<int> result = [];
+        for (int itemIndex = 0; itemIndex < items.Length; ++itemIndex)
+        {
+            for (int relation = offsets[itemIndex]; relation < offsets[itemIndex + 1]; ++relation)
+            {
+                if (ancestorIndices[relation] == ancestorIndex)
+                {
+                    result.Add(itemIndex);
+                    break;
+                }
+            }
+        }
+        return result;
+    }
+
     /// <summary>Releases every copied topology owner. Disposal is idempotent.</summary>
     public void Dispose()
     {

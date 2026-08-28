@@ -323,3 +323,23 @@ partially created location owners if traversal fails or detects an active-assemb
 STEPCAF readers, writers, work sessions, metadata tools, and transfer state remain native-
 local. Read results own their XDE document; write operations borrow the document only for
 the call. Metadata switches and STEP model type cross as validated scalar values.
+
+### Final Batch C selective reader, topology editing, and viewer input
+
+Edge/surface adaptors, `Geom2d_Curve`, trimmed geometry, BRep builders, and
+`BRepTools_ReShape` remain native-local. Derivative and pcurve data cross only as copied
+scalars and points. Trim, wire, replace, and remove operations allocate independent
+registered `Shape` owners and retain no builder, reshaper, input wrapper, or borrowed
+geometry object.
+
+`StepReadSession` owns one registry-validated `STEPControl_Reader` wrapper through a
+`SafeHandle`. Unit names are copied as UTF-8 bytes into managed immutable collections.
+Each selective transfer clears only the reader's transient result list and returns a new
+registered `Shape` owner. Transferred shapes do not retain the session and remain valid
+after session disposal; disposed sessions reject further transfer or unit access.
+
+`ViewerInputController` is parent-bound to one `OcctViewer` and owns no native resource.
+All input methods reach the viewer's existing owner-thread check. Presentation selection
+mode remains parent-bound. `GetSelectedItems` copies each selected `TopoDS_Shape` into a
+new registered owner paired with its managed presentation; the copied shape survives the
+source shape and viewer, while disposing the snapshot never removes the presentation.

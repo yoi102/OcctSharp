@@ -12,9 +12,13 @@ public sealed class OcctViewer : IDisposable
     {
         Handle = handle;
         _ownerThreadId = Environment.CurrentManagedThreadId;
+        Input = new ViewerInputController(this);
     }
 
     internal ViewerHandle Handle { get; }
+
+    /// <summary>Gets the parent-bound application input adapter for this viewer.</summary>
+    public ViewerInputController Input { get; }
 
     /// <summary>Creates a viewer for a non-zero HWND on the calling UI thread.</summary>
     public static OcctViewer Create(nint windowHandle)
@@ -157,6 +161,55 @@ public sealed class OcctViewer : IDisposable
         return selected;
     }
 
+    /// <summary>Returns selected presentations paired with independently owned topology copies.</summary>
+    public unsafe IReadOnlyList<ViewerSelectionItem> GetSelectedItems()
+    {
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.GetViewerSelectedCount(Handle, out int count), "viewer_selected_count");
+        if (count == 0) return [];
+
+        long[] ids = new long[count];
+        nint[] nativeShapes = new nint[count];
+        fixed (long* idPointer = ids)
+        fixed (nint* shapePointer = nativeShapes)
+        {
+            NativeError.ThrowIfFailed(
+                NativeMethods.SnapshotViewerSelectedTopology(
+                    Handle, idPointer, shapePointer, count, out int written),
+                "viewer_selected_topology_snapshot");
+            if (written != count)
+            {
+                for (int index = 0; index < written; ++index) NativeMethods.ReleaseShape(nativeShapes[index]);
+                throw new OcctException(
+                    NativeStatus.UnknownException.ToString(),
+                    "The viewer selected-topology count changed during enumeration.");
+            }
+        }
+
+        List<ViewerSelectionItem> result = new(count);
+        int created = 0;
+        try
+        {
+            for (; created < count; ++created)
+            {
+                if (!_presentations.TryGetValue(ids[created], out ViewerPresentation? presentation)
+                    || presentation.IsRemoved)
+                    throw new OcctException(
+                        NativeStatus.UnknownException.ToString(),
+                        "A selected presentation is outside the managed viewer registry.");
+                Shape shape = ShapeFactory.FromNativeHandle(nativeShapes[created], "viewer_selected_topology_snapshot");
+                result.Add(new ViewerSelectionItem(presentation, shape));
+            }
+            return result;
+        }
+        catch
+        {
+            foreach (ViewerSelectionItem item in result) item.Dispose();
+            for (int index = created; index < count; ++index) NativeMethods.ReleaseShape(nativeShapes[index]);
+            throw;
+        }
+    }
+
     internal void SetVisible(ViewerPresentation presentation, bool visible)
     {
         EnsurePresentation(presentation);
@@ -191,6 +244,19 @@ public sealed class OcctViewer : IDisposable
         NativeError.ThrowIfFailed(
             NativeMethods.SetViewerPresentationDisplayMode(Handle, presentation.Id, (int)displayMode),
             "viewer_set_presentation_display_mode");
+    }
+
+    internal void SetSelectionKind(ViewerPresentation presentation, ShapeKind? kind)
+    {
+        if (kind is ShapeKind value && value is < ShapeKind.Compound or > ShapeKind.Vertex)
+            throw new ArgumentOutOfRangeException(
+                nameof(kind),
+                "Viewer subshape selection supports Compound through Vertex; use null for whole-object selection.");
+        EnsurePresentation(presentation);
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerPresentationSelectionKind(
+                Handle, presentation.Id, kind is null ? -1 : (int)kind.Value),
+            "viewer_set_presentation_selection_kind");
     }
 
     internal void Remove(ViewerPresentation presentation)

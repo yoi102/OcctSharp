@@ -9,9 +9,9 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Architecture](ARCHITECTURE.md) — system boundaries and component ownership.
 - [Repository layout](REPOSITORY_LAYOUT.md) — physical separation of documentation
   and code-related files.
-- [Roadmap](ROADMAP.md) — active Batch C common-workflow priority and historical phases.
-- [Complete migration plan](MIGRATION_PLAN.md) — Batch C common API matrix, large-wave
-  rules, module/package boundaries, metrics, and product-scale gates.
+- [Roadmap](ROADMAP.md) — completed Batch C boundary, next-decision rules, and historical phases.
+- [Complete migration plan](MIGRATION_PLAN.md) — completed Batch C common API matrix,
+  large-wave rules, module/package boundaries, metrics, and product-scale gates.
 - [AI migration loop prompt](AI_MIGRATION_LOOP_PROMPT.md) — reusable re-entrant prompt
   for executing the largest coherent common-workflow wave instead of per-class tasks.
 - [Status](STATUS.md) — current phase, blockers, and last verified results.
@@ -24,6 +24,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   C++/CLI, and platform-adapter availability and package boundaries.
 - [Full inventory classification](FULL_INVENTORY_CLASSIFICATION.md) — complete declaration
   and header dispositions, reason codes, and complete-versus-generated metrics.
+- [Alpha.54 release notes](RELEASE_NOTES_0.1.0_ALPHA_54.md) — final Batch C selective
+  STEP session, geometry/topology edit, viewer selection/input, and local completion evidence.
 - [Alpha.53 release notes](RELEASE_NOTES_0.1.0_ALPHA_53.md) — XCAF validation
   properties, recursive XDE occurrences, and explicit STEPCAF options.
 - [Alpha.52 release notes](RELEASE_NOTES_0.1.0_ALPHA_52.md) — STEP import diagnostics,
@@ -65,6 +67,9 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 
 - [Generation pipeline](GENERATION_PIPELINE.md) — reproducible input, model,
   generation, diff, and validation flow.
+- [Generated shard dependency closure](adr/0062-generated-shard-dependency-closure.md)
+  — resolved cross-shard graph evidence and the decision to defer physical managed-project
+  and native-DLL splitting.
 - [Native ABI](NATIVE_ABI.md) — C ABI boundary rules.
 - [Ownership](OWNERSHIP.md) — lifetime and resource ownership rules.
 - [Type mapping](TYPE_MAPPING.md) — native-to-managed mapping policy.

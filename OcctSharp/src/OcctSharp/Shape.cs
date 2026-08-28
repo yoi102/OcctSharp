@@ -165,6 +165,51 @@ public partial class Shape : IDisposable
             ToPoint(result.Tangent));
     }
 
+    /// <summary>Evaluates copied first and second 3D derivatives at an edge parameter.</summary>
+    public CurveDerivativeEvaluation EvaluateEdgeDerivatives(double parameter)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.EvaluateEdgeDerivatives(handle, parameter, out CurveDerivativeEvaluationRaw result),
+            "shape_edge_evaluate_derivatives");
+        return new CurveDerivativeEvaluation(
+            result.Parameter,
+            ToPoint(result.Point),
+            ToPoint(result.FirstDerivative),
+            ToPoint(result.SecondDerivative));
+    }
+
+    /// <summary>Copies the bounded 2D pcurve for this edge on a supplied owning face.</summary>
+    public PcurveSnapshot GetPcurveSnapshot(Shape face)
+    {
+        ArgumentNullException.ThrowIfNull(face);
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        ObjectDisposedException.ThrowIf(face.handle.IsClosed, face);
+        NativeError.ThrowIfFailed(
+            NativeMethods.GetEdgePcurveSnapshot(handle, face.handle, out PcurveSnapshotRaw result),
+            "shape_edge_pcurve_snapshot");
+        return new PcurveSnapshot(
+            result.FirstParameter,
+            result.LastParameter,
+            new GpPoint2d(result.StartPoint.X, result.StartPoint.Y),
+            new GpPoint2d(result.EndPoint.X, result.EndPoint.Y));
+    }
+
+    /// <summary>Evaluates a copied UV point and unit tangent on this edge's pcurve for a face.</summary>
+    public PcurveEvaluation EvaluatePcurve(Shape face, double parameter)
+    {
+        ArgumentNullException.ThrowIfNull(face);
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        ObjectDisposedException.ThrowIf(face.handle.IsClosed, face);
+        NativeError.ThrowIfFailed(
+            NativeMethods.EvaluateEdgePcurve(handle, face.handle, parameter, out PcurveEvaluationRaw result),
+            "shape_edge_pcurve_evaluate");
+        return new PcurveEvaluation(
+            result.Parameter,
+            new GpPoint2d(result.Point.X, result.Point.Y),
+            new GpPoint2d(result.Tangent.X, result.Tangent.Y));
+    }
+
     /// <summary>Computes the finite length of an edge over its complete parameter range.</summary>
     public double GetEdgeLength()
     {
@@ -183,6 +228,16 @@ public partial class Shape : IDisposable
         return new CurveProjection(result.Parameter, ToPoint(result.Point), result.Distance, result.SolutionCount);
     }
 
+    /// <summary>Returns an independent edge restricted to a finite subinterval of its curve.</summary>
+    public Shape TrimEdge(double firstParameter, double lastParameter)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.TrimEdge(handle, firstParameter, lastParameter, out nint result),
+            "shape_edge_trim");
+        return ShapeFactory.FromNativeHandle(result, "shape_edge_trim");
+    }
+
     /// <summary>Evaluates a copied point and oriented unit normal at bounded face parameters.</summary>
     public SurfaceEvaluation EvaluateFace(double uParameter, double vParameter)
     {
@@ -194,6 +249,23 @@ public partial class Shape : IDisposable
             result.UParameter,
             result.VParameter,
             ToPoint(result.Point),
+            ToPoint(result.Normal));
+    }
+
+    /// <summary>Evaluates copied U/V derivatives and the oriented unit normal on a face.</summary>
+    public SurfaceDerivativeEvaluation EvaluateFaceDerivatives(double uParameter, double vParameter)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.EvaluateFaceDerivatives(
+                handle, uParameter, vParameter, out SurfaceDerivativeEvaluationRaw result),
+            "shape_face_evaluate_derivatives");
+        return new SurfaceDerivativeEvaluation(
+            result.UParameter,
+            result.VParameter,
+            ToPoint(result.Point),
+            ToPoint(result.UDerivative),
+            ToPoint(result.VDerivative),
             ToPoint(result.Normal));
     }
 
@@ -211,6 +283,28 @@ public partial class Shape : IDisposable
             ToPoint(result.Point),
             result.Distance,
             result.SolutionCount);
+    }
+
+    /// <summary>Returns an independent rectangular face restricted to finite UV bounds.</summary>
+    public Shape TrimFace(
+        double firstUParameter,
+        double lastUParameter,
+        double firstVParameter,
+        double lastVParameter,
+        double tolerance = 1e-7)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.TrimFace(
+                handle,
+                firstUParameter,
+                lastUParameter,
+                firstVParameter,
+                lastVParameter,
+                tolerance,
+                out nint result),
+            "shape_face_trim");
+        return ShapeFactory.FromNativeHandle(result, "shape_face_trim");
     }
 
     /// <summary>
@@ -280,6 +374,32 @@ public partial class Shape : IDisposable
             for (int index = createdAncestors; index < ancestorCount; ++index) NativeMethods.ReleaseShape(nativeAncestors[index]);
             throw;
         }
+    }
+
+    /// <summary>Returns an independent topology graph with one contained subshape replaced.</summary>
+    public Shape ReplaceSubshape(Shape target, Shape replacement)
+    {
+        ArgumentNullException.ThrowIfNull(target);
+        ArgumentNullException.ThrowIfNull(replacement);
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        ObjectDisposedException.ThrowIf(target.handle.IsClosed, target);
+        ObjectDisposedException.ThrowIf(replacement.handle.IsClosed, replacement);
+        NativeError.ThrowIfFailed(
+            NativeMethods.ReplaceSubshape(handle, target.handle, replacement.handle, out nint result),
+            "shape_replace_subshape");
+        return ShapeFactory.FromNativeHandle(result, "shape_replace_subshape");
+    }
+
+    /// <summary>Returns an independent topology graph with one contained subshape removed.</summary>
+    public Shape RemoveSubshape(Shape target)
+    {
+        ArgumentNullException.ThrowIfNull(target);
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        ObjectDisposedException.ThrowIf(target.handle.IsClosed, target);
+        NativeError.ThrowIfFailed(
+            NativeMethods.RemoveSubshape(handle, target.handle, out nint result),
+            "shape_remove_subshape");
+        return ShapeFactory.FromNativeHandle(result, "shape_remove_subshape");
     }
 
     /// <summary>Creates an owned shape with the supplied rigid transform applied.</summary>

@@ -20,6 +20,7 @@
 // Source: c:@E@Quantity_TypeOfColor
 // Source: c:@E@Resource_FormatType
 // Source: c:@E@Standard_JsonKey
+// Source: c:@E@TopAbs_Orientation
 // Source: c:@E@UnitsAPI_SystemUnits
 // Source: c:@E@UnitsMethods_LengthUnit
 // Source: c:@E@math_Status
@@ -1755,6 +1756,19 @@ public enum StandardJsonKey
     Standard_JsonKey_SeparatorKeyToValue = 6,
     /// <summary>OCCT value Standard_JsonKey_SeparatorValueToValue.</summary>
     Standard_JsonKey_SeparatorValueToValue = 7
+}
+
+/// <summary>Generated value projection for OCCT TopAbs_Orientation.</summary>
+public enum TopAbsOrientation
+{
+    /// <summary>OCCT value TopAbs_FORWARD.</summary>
+    TopAbs_FORWARD = 0,
+    /// <summary>OCCT value TopAbs_REVERSED.</summary>
+    TopAbs_REVERSED = 1,
+    /// <summary>OCCT value TopAbs_INTERNAL.</summary>
+    TopAbs_INTERNAL = 2,
+    /// <summary>OCCT value TopAbs_EXTERNAL.</summary>
+    TopAbs_EXTERNAL = 3
 }
 
 /// <summary>Generated value projection for OCCT UnitsAPI_SystemUnits.</summary>

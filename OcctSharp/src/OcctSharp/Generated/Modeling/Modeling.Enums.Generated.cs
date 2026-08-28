@@ -62,7 +62,6 @@
 // Source: c:@E@LocalAnalysis_StatusErrorType
 // Source: c:@E@ShapeExtend_Parametrisation
 // Source: c:@E@ShapeExtend_Status
-// Source: c:@E@TopAbs_Orientation
 // Source: c:@E@TopAbs_ShapeEnum
 // Source: c:@E@TopAbs_State
 // Source: c:@E@TopOpeBRepBuild_LoopEnum
@@ -1228,19 +1227,6 @@ public enum ShapeExtendStatus
     ShapeExtend_FAIL8 = 17,
     /// <summary>OCCT value ShapeExtend_FAIL.</summary>
     ShapeExtend_FAIL = 18
-}
-
-/// <summary>Generated value projection for OCCT TopAbs_Orientation.</summary>
-public enum TopAbsOrientation
-{
-    /// <summary>OCCT value TopAbs_FORWARD.</summary>
-    TopAbs_FORWARD = 0,
-    /// <summary>OCCT value TopAbs_REVERSED.</summary>
-    TopAbs_REVERSED = 1,
-    /// <summary>OCCT value TopAbs_INTERNAL.</summary>
-    TopAbs_INTERNAL = 2,
-    /// <summary>OCCT value TopAbs_EXTERNAL.</summary>
-    TopAbs_EXTERNAL = 3
 }
 
 /// <summary>Generated value projection for OCCT TopAbs_ShapeEnum.</summary>

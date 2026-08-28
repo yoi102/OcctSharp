@@ -12,6 +12,7 @@
 // Source: c:@S@Geom_BSplineSurface@F@MaxDegree#S
 // Source: c:@S@Geom_BezierCurve@F@MaxDegree#S
 // Source: c:@S@Geom_BezierSurface@F@MaxDegree#S
+// Source: c:@S@Law_BSpline@F@MaxDegree#S
 // Source: c:@S@PLib@F@Bin#I#I#S
 // Source: c:@S@PLib@F@ConstraintOrder#I#S
 // Source: c:@S@PLib@F@NivConstr#$@E@GeomAbs_Shape#S
@@ -75,6 +76,10 @@ internal static partial class GeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geom_bezier_surface_static_max_degree_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial int GeomBezierSurfaceStaticMaxDegree0();
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_max_degree_static_max_degree_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial int LawBSplineStaticMaxDegree0();
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_plib_static_bin_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

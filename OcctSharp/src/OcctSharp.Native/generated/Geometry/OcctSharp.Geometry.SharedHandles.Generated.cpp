@@ -389,6 +389,25 @@
 // Source: c:@S@Extrema_ExtPRevS@F@NbExt#1
 // Source: c:@S@Extrema_ExtPRevS@F@Perform#&1$@S@gp_Pnt#
 // Source: c:@S@Extrema_ExtPRevS@F@SquareDistance#I#1
+// Source: c:@S@FEmTool_Curve@F@Degree#I#1
+// Source: c:@S@FEmTool_Curve@F@Dimension#1
+// Source: c:@S@FEmTool_Curve@F@NbElements#1
+// Source: c:@S@FEmTool_Curve@F@SetDegree#I#I#
+// Source: c:@S@FEmTool_ElementaryCriterion@F@Set#d#d#
+// Source: c:@S@FEmTool_LinearFlexion@F@FEmTool_LinearFlexion#I#$@E@GeomAbs_Shape#
+// Source: c:@S@FEmTool_LinearFlexion@F@Value#
+// Source: c:@S@FEmTool_LinearJerk@F@FEmTool_LinearJerk#I#$@E@GeomAbs_Shape#
+// Source: c:@S@FEmTool_LinearJerk@F@Value#
+// Source: c:@S@FEmTool_LinearTension@F@FEmTool_LinearTension#I#$@E@GeomAbs_Shape#
+// Source: c:@S@FEmTool_LinearTension@F@Value#
+// Source: c:@S@FEmTool_ProfileMatrix@F@ColNumber#1
+// Source: c:@S@FEmTool_ProfileMatrix@F@Decompose#
+// Source: c:@S@FEmTool_ProfileMatrix@F@Init#d#
+// Source: c:@S@FEmTool_ProfileMatrix@F@IsInProfile#I#I#1
+// Source: c:@S@FEmTool_ProfileMatrix@F@OutM#1
+// Source: c:@S@FEmTool_ProfileMatrix@F@OutS#1
+// Source: c:@S@FEmTool_ProfileMatrix@F@Prepare#
+// Source: c:@S@FEmTool_ProfileMatrix@F@RowNumber#1
 // Source: c:@S@GccInt_BCirc@F@ArcType#1
 // Source: c:@S@GccInt_BElips@F@ArcType#1
 // Source: c:@S@GccInt_BHyper@F@ArcType#1
@@ -1846,6 +1865,79 @@
 // Source: c:@S@Geom_VectorWithMagnitude@F@SquareMagnitude#1
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtract#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtracted#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
+// Source: c:@S@Law_BSpFunc@F@Continuity#1
+// Source: c:@S@Law_BSpFunc@F@Curve#1
+// Source: c:@S@Law_BSpFunc@F@Law_BSpFunc#
+// Source: c:@S@Law_BSpFunc@F@Law_BSpFunc#&1$@N@opencascade@S@handle>#$@S@Law_BSpline#d#d#
+// Source: c:@S@Law_BSpFunc@F@NbIntervals#$@E@GeomAbs_Shape#1
+// Source: c:@S@Law_BSpFunc@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Law_BSpline#
+// Source: c:@S@Law_BSpFunc@F@Trim#d#d#d#1
+// Source: c:@S@Law_BSpFunc@F@Value#d#
+// Source: c:@S@Law_BSpline@F@Continuity#1
+// Source: c:@S@Law_BSpline@F@Copy#1
+// Source: c:@S@Law_BSpline@F@DN#d#I#1
+// Source: c:@S@Law_BSpline@F@Degree#1
+// Source: c:@S@Law_BSpline@F@EndPoint#1
+// Source: c:@S@Law_BSpline@F@FirstParameter#1
+// Source: c:@S@Law_BSpline@F@FirstUKnotIndex#1
+// Source: c:@S@Law_BSpline@F@IncreaseDegree#I#
+// Source: c:@S@Law_BSpline@F@IncreaseMultiplicity#I#I#
+// Source: c:@S@Law_BSpline@F@IncreaseMultiplicity#I#I#I#
+// Source: c:@S@Law_BSpline@F@IncrementMultiplicity#I#I#I#
+// Source: c:@S@Law_BSpline@F@InsertKnot#d#I#d#b#
+// Source: c:@S@Law_BSpline@F@IsCN#I#1
+// Source: c:@S@Law_BSpline@F@IsClosed#1
+// Source: c:@S@Law_BSpline@F@IsPeriodic#1
+// Source: c:@S@Law_BSpline@F@IsRational#1
+// Source: c:@S@Law_BSpline@F@Knot#I#1
+// Source: c:@S@Law_BSpline@F@KnotDistribution#1
+// Source: c:@S@Law_BSpline@F@LastParameter#1
+// Source: c:@S@Law_BSpline@F@LastUKnotIndex#1
+// Source: c:@S@Law_BSpline@F@LocalDN#d#I#I#I#1
+// Source: c:@S@Law_BSpline@F@LocalValue#d#I#I#1
+// Source: c:@S@Law_BSpline@F@Multiplicity#I#1
+// Source: c:@S@Law_BSpline@F@NbKnots#1
+// Source: c:@S@Law_BSpline@F@NbPoles#1
+// Source: c:@S@Law_BSpline@F@Pole#I#1
+// Source: c:@S@Law_BSpline@F@RemoveKnot#I#I#d#
+// Source: c:@S@Law_BSpline@F@Reverse#
+// Source: c:@S@Law_BSpline@F@ReversedParameter#d#1
+// Source: c:@S@Law_BSpline@F@Segment#d#d#
+// Source: c:@S@Law_BSpline@F@SetKnot#I#d#
+// Source: c:@S@Law_BSpline@F@SetKnot#I#d#I#
+// Source: c:@S@Law_BSpline@F@SetNotPeriodic#
+// Source: c:@S@Law_BSpline@F@SetOrigin#I#
+// Source: c:@S@Law_BSpline@F@SetPeriodic#
+// Source: c:@S@Law_BSpline@F@SetPole#I#d#
+// Source: c:@S@Law_BSpline@F@SetPole#I#d#d#
+// Source: c:@S@Law_BSpline@F@SetWeight#I#d#
+// Source: c:@S@Law_BSpline@F@StartPoint#1
+// Source: c:@S@Law_BSpline@F@Value#d#1
+// Source: c:@S@Law_BSpline@F@Weight#I#1
+// Source: c:@S@Law_Composite@F@Continuity#1
+// Source: c:@S@Law_Composite@F@IsPeriodic#1
+// Source: c:@S@Law_Composite@F@Law_Composite#
+// Source: c:@S@Law_Composite@F@Law_Composite#d#d#d#
+// Source: c:@S@Law_Composite@F@NbIntervals#$@E@GeomAbs_Shape#1
+// Source: c:@S@Law_Composite@F@SetPeriodic#
+// Source: c:@S@Law_Composite@F@Trim#d#d#d#1
+// Source: c:@S@Law_Composite@F@Value#d#
+// Source: c:@S@Law_Constant@F@Continuity#1
+// Source: c:@S@Law_Constant@F@Law_Constant#
+// Source: c:@S@Law_Constant@F@NbIntervals#$@E@GeomAbs_Shape#1
+// Source: c:@S@Law_Constant@F@Set#d#d#d#
+// Source: c:@S@Law_Constant@F@Trim#d#d#d#1
+// Source: c:@S@Law_Constant@F@Value#d#
+// Source: c:@S@Law_Interpol@F@Law_Interpol#
+// Source: c:@S@Law_Linear@F@Continuity#1
+// Source: c:@S@Law_Linear@F@Law_Linear#
+// Source: c:@S@Law_Linear@F@NbIntervals#$@E@GeomAbs_Shape#1
+// Source: c:@S@Law_Linear@F@Set#d#d#d#d#
+// Source: c:@S@Law_Linear@F@Trim#d#d#d#1
+// Source: c:@S@Law_Linear@F@Value#d#
+// Source: c:@S@Law_S@F@Law_S#
+// Source: c:@S@Law_S@F@Set#d#d#d#d#
+// Source: c:@S@Law_S@F@Set#d#d#d#d#d#d#
 // Source: c:@S@MAT2d_Circuit@F@Connexion#I#1
 // Source: c:@S@MAT2d_Circuit@F@ConnexionOn#I#1
 // Source: c:@S@MAT2d_Circuit@F@LineLength#I#1
@@ -2152,8 +2244,6 @@
 // Source: c:@S@ProjLib_ProjectedCurve@F@ShallowCopy#1
 // Source: c:@S@ProjLib_ProjectedCurve@F@Trim#d#d#d#1
 #include "OcctSharp.Geometry.SharedHandles.Generated.h"
-#include "../Foundation/OcctSharp.Foundation.SharedHandles.Generated.h"
-#include "../Modeling/OcctSharp.Modeling.SharedHandles.Generated.h"
 #include "../Runtime/OcctSharp.Runtime.SharedSupport.Generated.hxx"
 #include "../../include/OcctSharp.Native.Internal.hxx"
 #include <RWGltf_GltfPrimArrayData.hxx>
@@ -2184,6 +2274,12 @@
 #include <Extrema_ExtPExtS.hxx>
 #include <Extrema_ExtPRevS.hxx>
 #include <FEmTool_Curve.hxx>
+#include <FEmTool_ElementaryCriterion.hxx>
+#include <FEmTool_LinearFlexion.hxx>
+#include <FEmTool_LinearJerk.hxx>
+#include <FEmTool_LinearTension.hxx>
+#include <FEmTool_ProfileMatrix.hxx>
+#include <FEmTool_SparseMatrix.hxx>
 #include <GccInt_BCirc.hxx>
 #include <GccInt_BElips.hxx>
 #include <GccInt_BHyper.hxx>
@@ -2308,8 +2404,14 @@
 #include <Geom_Vector.hxx>
 #include <Geom_VectorWithMagnitude.hxx>
 #include <GeometryTest_DrawableQualifiedCurve2d.hxx>
+#include <Law_BSpFunc.hxx>
 #include <Law_BSpline.hxx>
+#include <Law_Composite.hxx>
+#include <Law_Constant.hxx>
 #include <Law_Function.hxx>
+#include <Law_Interpol.hxx>
+#include <Law_Linear.hxx>
+#include <Law_S.hxx>
 #include <MAT2d_Circuit.hxx>
 #include <MAT2d_Connexion.hxx>
 #include <MAT_Arc.hxx>
@@ -2399,6 +2501,18 @@ OcctSharp_ExtremaExtPRevSHandle* AllocateExtremaExtPRevS(opencascade::handle<Ext
 const OcctSharp_ExtremaExtPRevSHandle* ValidateExtremaExtPRevS(const OcctSharp_ExtremaExtPRevSHandle* handle);
 OcctSharp_FEmToolCurveHandle* AllocateFEmToolCurve(opencascade::handle<FEmTool_Curve> value);
 const OcctSharp_FEmToolCurveHandle* ValidateFEmToolCurve(const OcctSharp_FEmToolCurveHandle* handle);
+OcctSharp_FEmToolElementaryCriterionHandle* AllocateFEmToolElementaryCriterion(opencascade::handle<FEmTool_ElementaryCriterion> value);
+const OcctSharp_FEmToolElementaryCriterionHandle* ValidateFEmToolElementaryCriterion(const OcctSharp_FEmToolElementaryCriterionHandle* handle);
+OcctSharp_FEmToolLinearFlexionHandle* AllocateFEmToolLinearFlexion(opencascade::handle<FEmTool_LinearFlexion> value);
+const OcctSharp_FEmToolLinearFlexionHandle* ValidateFEmToolLinearFlexion(const OcctSharp_FEmToolLinearFlexionHandle* handle);
+OcctSharp_FEmToolLinearJerkHandle* AllocateFEmToolLinearJerk(opencascade::handle<FEmTool_LinearJerk> value);
+const OcctSharp_FEmToolLinearJerkHandle* ValidateFEmToolLinearJerk(const OcctSharp_FEmToolLinearJerkHandle* handle);
+OcctSharp_FEmToolLinearTensionHandle* AllocateFEmToolLinearTension(opencascade::handle<FEmTool_LinearTension> value);
+const OcctSharp_FEmToolLinearTensionHandle* ValidateFEmToolLinearTension(const OcctSharp_FEmToolLinearTensionHandle* handle);
+OcctSharp_FEmToolProfileMatrixHandle* AllocateFEmToolProfileMatrix(opencascade::handle<FEmTool_ProfileMatrix> value);
+const OcctSharp_FEmToolProfileMatrixHandle* ValidateFEmToolProfileMatrix(const OcctSharp_FEmToolProfileMatrixHandle* handle);
+OcctSharp_FEmToolSparseMatrixHandle* AllocateFEmToolSparseMatrix(opencascade::handle<FEmTool_SparseMatrix> value);
+const OcctSharp_FEmToolSparseMatrixHandle* ValidateFEmToolSparseMatrix(const OcctSharp_FEmToolSparseMatrixHandle* handle);
 OcctSharp_GccIntBCircHandle* AllocateGccIntBCirc(opencascade::handle<GccInt_BCirc> value);
 const OcctSharp_GccIntBCircHandle* ValidateGccIntBCirc(const OcctSharp_GccIntBCircHandle* handle);
 OcctSharp_GccIntBElipsHandle* AllocateGccIntBElips(opencascade::handle<GccInt_BElips> value);
@@ -2647,10 +2761,22 @@ OcctSharp_GeomVectorWithMagnitudeHandle* AllocateGeomVectorWithMagnitude(opencas
 const OcctSharp_GeomVectorWithMagnitudeHandle* ValidateGeomVectorWithMagnitude(const OcctSharp_GeomVectorWithMagnitudeHandle* handle);
 OcctSharp_GeometryTestDrawableQualifiedCurve2dHandle* AllocateGeometryTestDrawableQualifiedCurve2d(opencascade::handle<GeometryTest_DrawableQualifiedCurve2d> value);
 const OcctSharp_GeometryTestDrawableQualifiedCurve2dHandle* ValidateGeometryTestDrawableQualifiedCurve2d(const OcctSharp_GeometryTestDrawableQualifiedCurve2dHandle* handle);
+OcctSharp_LawBSpFuncHandle* AllocateLawBSpFunc(opencascade::handle<Law_BSpFunc> value);
+const OcctSharp_LawBSpFuncHandle* ValidateLawBSpFunc(const OcctSharp_LawBSpFuncHandle* handle);
 OcctSharp_LawBSplineHandle* AllocateLawBSpline(opencascade::handle<Law_BSpline> value);
 const OcctSharp_LawBSplineHandle* ValidateLawBSpline(const OcctSharp_LawBSplineHandle* handle);
+OcctSharp_LawCompositeHandle* AllocateLawComposite(opencascade::handle<Law_Composite> value);
+const OcctSharp_LawCompositeHandle* ValidateLawComposite(const OcctSharp_LawCompositeHandle* handle);
+OcctSharp_LawConstantHandle* AllocateLawConstant(opencascade::handle<Law_Constant> value);
+const OcctSharp_LawConstantHandle* ValidateLawConstant(const OcctSharp_LawConstantHandle* handle);
 OcctSharp_LawFunctionHandle* AllocateLawFunction(opencascade::handle<Law_Function> value);
 const OcctSharp_LawFunctionHandle* ValidateLawFunction(const OcctSharp_LawFunctionHandle* handle);
+OcctSharp_LawInterpolHandle* AllocateLawInterpol(opencascade::handle<Law_Interpol> value);
+const OcctSharp_LawInterpolHandle* ValidateLawInterpol(const OcctSharp_LawInterpolHandle* handle);
+OcctSharp_LawLinearHandle* AllocateLawLinear(opencascade::handle<Law_Linear> value);
+const OcctSharp_LawLinearHandle* ValidateLawLinear(const OcctSharp_LawLinearHandle* handle);
+OcctSharp_LawSHandle* AllocateLawS(opencascade::handle<Law_S> value);
+const OcctSharp_LawSHandle* ValidateLawS(const OcctSharp_LawSHandle* handle);
 OcctSharp_MAT2dCircuitHandle* AllocateMAT2dCircuit(opencascade::handle<MAT2d_Circuit> value);
 const OcctSharp_MAT2dCircuitHandle* ValidateMAT2dCircuit(const OcctSharp_MAT2dCircuitHandle* handle);
 OcctSharp_MAT2dConnexionHandle* AllocateMAT2dConnexion(opencascade::handle<MAT2d_Connexion> value);
@@ -3491,6 +3617,216 @@ const OcctSharp_ExtremaExtPRevSHandle* ValidateExtremaExtPRevS(const OcctSharp_E
   if (handle == nullptr) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated shared handle is null.");
   std::lock_guard<std::mutex> lock(ExtremaExtPRevSMutex);
   if (!LiveExtremaExtPRevSHandles.contains(handle)) throw GeneratedOperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The generated shared handle is invalid or already released.");
+  if (handle->Value.IsNull()) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated OCCT shared value is null.");
+  return handle;
+}
+}
+
+namespace
+{
+std::mutex FEmToolCurveMutex;
+std::unordered_set<const OcctSharp_FEmToolCurveHandle*> LiveFEmToolCurveHandles;
+}
+
+namespace OcctSharpGenerated
+{
+OcctSharp_FEmToolCurveHandle* AllocateFEmToolCurve(opencascade::handle<FEmTool_Curve> value)
+{
+  OcctSharp_FEmToolCurveHandle* handle = new OcctSharp_FEmToolCurveHandle(std::move(value));
+  try
+  {
+    std::lock_guard<std::mutex> lock(FEmToolCurveMutex);
+    LiveFEmToolCurveHandles.insert(handle);
+    return handle;
+  }
+  catch (...) { delete handle; throw; }
+}
+
+const OcctSharp_FEmToolCurveHandle* ValidateFEmToolCurve(const OcctSharp_FEmToolCurveHandle* handle)
+{
+  if (handle == nullptr) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated shared handle is null.");
+  std::lock_guard<std::mutex> lock(FEmToolCurveMutex);
+  if (!LiveFEmToolCurveHandles.contains(handle)) throw GeneratedOperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The generated shared handle is invalid or already released.");
+  if (handle->Value.IsNull()) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated OCCT shared value is null.");
+  return handle;
+}
+}
+
+namespace
+{
+std::mutex FEmToolElementaryCriterionMutex;
+std::unordered_set<const OcctSharp_FEmToolElementaryCriterionHandle*> LiveFEmToolElementaryCriterionHandles;
+}
+
+namespace OcctSharpGenerated
+{
+OcctSharp_FEmToolElementaryCriterionHandle* AllocateFEmToolElementaryCriterion(opencascade::handle<FEmTool_ElementaryCriterion> value)
+{
+  OcctSharp_FEmToolElementaryCriterionHandle* handle = new OcctSharp_FEmToolElementaryCriterionHandle(std::move(value));
+  try
+  {
+    std::lock_guard<std::mutex> lock(FEmToolElementaryCriterionMutex);
+    LiveFEmToolElementaryCriterionHandles.insert(handle);
+    return handle;
+  }
+  catch (...) { delete handle; throw; }
+}
+
+const OcctSharp_FEmToolElementaryCriterionHandle* ValidateFEmToolElementaryCriterion(const OcctSharp_FEmToolElementaryCriterionHandle* handle)
+{
+  if (handle == nullptr) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated shared handle is null.");
+  std::lock_guard<std::mutex> lock(FEmToolElementaryCriterionMutex);
+  if (!LiveFEmToolElementaryCriterionHandles.contains(handle)) throw GeneratedOperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The generated shared handle is invalid or already released.");
+  if (handle->Value.IsNull()) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated OCCT shared value is null.");
+  return handle;
+}
+}
+
+namespace
+{
+std::mutex FEmToolLinearFlexionMutex;
+std::unordered_set<const OcctSharp_FEmToolLinearFlexionHandle*> LiveFEmToolLinearFlexionHandles;
+}
+
+namespace OcctSharpGenerated
+{
+OcctSharp_FEmToolLinearFlexionHandle* AllocateFEmToolLinearFlexion(opencascade::handle<FEmTool_LinearFlexion> value)
+{
+  OcctSharp_FEmToolLinearFlexionHandle* handle = new OcctSharp_FEmToolLinearFlexionHandle(std::move(value));
+  try
+  {
+    std::lock_guard<std::mutex> lock(FEmToolLinearFlexionMutex);
+    LiveFEmToolLinearFlexionHandles.insert(handle);
+    return handle;
+  }
+  catch (...) { delete handle; throw; }
+}
+
+const OcctSharp_FEmToolLinearFlexionHandle* ValidateFEmToolLinearFlexion(const OcctSharp_FEmToolLinearFlexionHandle* handle)
+{
+  if (handle == nullptr) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated shared handle is null.");
+  std::lock_guard<std::mutex> lock(FEmToolLinearFlexionMutex);
+  if (!LiveFEmToolLinearFlexionHandles.contains(handle)) throw GeneratedOperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The generated shared handle is invalid or already released.");
+  if (handle->Value.IsNull()) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated OCCT shared value is null.");
+  return handle;
+}
+}
+
+namespace
+{
+std::mutex FEmToolLinearJerkMutex;
+std::unordered_set<const OcctSharp_FEmToolLinearJerkHandle*> LiveFEmToolLinearJerkHandles;
+}
+
+namespace OcctSharpGenerated
+{
+OcctSharp_FEmToolLinearJerkHandle* AllocateFEmToolLinearJerk(opencascade::handle<FEmTool_LinearJerk> value)
+{
+  OcctSharp_FEmToolLinearJerkHandle* handle = new OcctSharp_FEmToolLinearJerkHandle(std::move(value));
+  try
+  {
+    std::lock_guard<std::mutex> lock(FEmToolLinearJerkMutex);
+    LiveFEmToolLinearJerkHandles.insert(handle);
+    return handle;
+  }
+  catch (...) { delete handle; throw; }
+}
+
+const OcctSharp_FEmToolLinearJerkHandle* ValidateFEmToolLinearJerk(const OcctSharp_FEmToolLinearJerkHandle* handle)
+{
+  if (handle == nullptr) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated shared handle is null.");
+  std::lock_guard<std::mutex> lock(FEmToolLinearJerkMutex);
+  if (!LiveFEmToolLinearJerkHandles.contains(handle)) throw GeneratedOperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The generated shared handle is invalid or already released.");
+  if (handle->Value.IsNull()) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated OCCT shared value is null.");
+  return handle;
+}
+}
+
+namespace
+{
+std::mutex FEmToolLinearTensionMutex;
+std::unordered_set<const OcctSharp_FEmToolLinearTensionHandle*> LiveFEmToolLinearTensionHandles;
+}
+
+namespace OcctSharpGenerated
+{
+OcctSharp_FEmToolLinearTensionHandle* AllocateFEmToolLinearTension(opencascade::handle<FEmTool_LinearTension> value)
+{
+  OcctSharp_FEmToolLinearTensionHandle* handle = new OcctSharp_FEmToolLinearTensionHandle(std::move(value));
+  try
+  {
+    std::lock_guard<std::mutex> lock(FEmToolLinearTensionMutex);
+    LiveFEmToolLinearTensionHandles.insert(handle);
+    return handle;
+  }
+  catch (...) { delete handle; throw; }
+}
+
+const OcctSharp_FEmToolLinearTensionHandle* ValidateFEmToolLinearTension(const OcctSharp_FEmToolLinearTensionHandle* handle)
+{
+  if (handle == nullptr) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated shared handle is null.");
+  std::lock_guard<std::mutex> lock(FEmToolLinearTensionMutex);
+  if (!LiveFEmToolLinearTensionHandles.contains(handle)) throw GeneratedOperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The generated shared handle is invalid or already released.");
+  if (handle->Value.IsNull()) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated OCCT shared value is null.");
+  return handle;
+}
+}
+
+namespace
+{
+std::mutex FEmToolProfileMatrixMutex;
+std::unordered_set<const OcctSharp_FEmToolProfileMatrixHandle*> LiveFEmToolProfileMatrixHandles;
+}
+
+namespace OcctSharpGenerated
+{
+OcctSharp_FEmToolProfileMatrixHandle* AllocateFEmToolProfileMatrix(opencascade::handle<FEmTool_ProfileMatrix> value)
+{
+  OcctSharp_FEmToolProfileMatrixHandle* handle = new OcctSharp_FEmToolProfileMatrixHandle(std::move(value));
+  try
+  {
+    std::lock_guard<std::mutex> lock(FEmToolProfileMatrixMutex);
+    LiveFEmToolProfileMatrixHandles.insert(handle);
+    return handle;
+  }
+  catch (...) { delete handle; throw; }
+}
+
+const OcctSharp_FEmToolProfileMatrixHandle* ValidateFEmToolProfileMatrix(const OcctSharp_FEmToolProfileMatrixHandle* handle)
+{
+  if (handle == nullptr) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated shared handle is null.");
+  std::lock_guard<std::mutex> lock(FEmToolProfileMatrixMutex);
+  if (!LiveFEmToolProfileMatrixHandles.contains(handle)) throw GeneratedOperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The generated shared handle is invalid or already released.");
+  if (handle->Value.IsNull()) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated OCCT shared value is null.");
+  return handle;
+}
+}
+
+namespace
+{
+std::mutex FEmToolSparseMatrixMutex;
+std::unordered_set<const OcctSharp_FEmToolSparseMatrixHandle*> LiveFEmToolSparseMatrixHandles;
+}
+
+namespace OcctSharpGenerated
+{
+OcctSharp_FEmToolSparseMatrixHandle* AllocateFEmToolSparseMatrix(opencascade::handle<FEmTool_SparseMatrix> value)
+{
+  OcctSharp_FEmToolSparseMatrixHandle* handle = new OcctSharp_FEmToolSparseMatrixHandle(std::move(value));
+  try
+  {
+    std::lock_guard<std::mutex> lock(FEmToolSparseMatrixMutex);
+    LiveFEmToolSparseMatrixHandles.insert(handle);
+    return handle;
+  }
+  catch (...) { delete handle; throw; }
+}
+
+const OcctSharp_FEmToolSparseMatrixHandle* ValidateFEmToolSparseMatrix(const OcctSharp_FEmToolSparseMatrixHandle* handle)
+{
+  if (handle == nullptr) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated shared handle is null.");
+  std::lock_guard<std::mutex> lock(FEmToolSparseMatrixMutex);
+  if (!LiveFEmToolSparseMatrixHandles.contains(handle)) throw GeneratedOperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The generated shared handle is invalid or already released.");
   if (handle->Value.IsNull()) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated OCCT shared value is null.");
   return handle;
 }
@@ -7211,6 +7547,246 @@ const OcctSharp_GeometryTestDrawableQualifiedCurve2dHandle* ValidateGeometryTest
   if (handle == nullptr) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated shared handle is null.");
   std::lock_guard<std::mutex> lock(GeometryTestDrawableQualifiedCurve2dMutex);
   if (!LiveGeometryTestDrawableQualifiedCurve2dHandles.contains(handle)) throw GeneratedOperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The generated shared handle is invalid or already released.");
+  if (handle->Value.IsNull()) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated OCCT shared value is null.");
+  return handle;
+}
+}
+
+namespace
+{
+std::mutex LawBSpFuncMutex;
+std::unordered_set<const OcctSharp_LawBSpFuncHandle*> LiveLawBSpFuncHandles;
+}
+
+namespace OcctSharpGenerated
+{
+OcctSharp_LawBSpFuncHandle* AllocateLawBSpFunc(opencascade::handle<Law_BSpFunc> value)
+{
+  OcctSharp_LawBSpFuncHandle* handle = new OcctSharp_LawBSpFuncHandle(std::move(value));
+  try
+  {
+    std::lock_guard<std::mutex> lock(LawBSpFuncMutex);
+    LiveLawBSpFuncHandles.insert(handle);
+    return handle;
+  }
+  catch (...) { delete handle; throw; }
+}
+
+const OcctSharp_LawBSpFuncHandle* ValidateLawBSpFunc(const OcctSharp_LawBSpFuncHandle* handle)
+{
+  if (handle == nullptr) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated shared handle is null.");
+  std::lock_guard<std::mutex> lock(LawBSpFuncMutex);
+  if (!LiveLawBSpFuncHandles.contains(handle)) throw GeneratedOperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The generated shared handle is invalid or already released.");
+  if (handle->Value.IsNull()) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated OCCT shared value is null.");
+  return handle;
+}
+}
+
+namespace
+{
+std::mutex LawBSplineMutex;
+std::unordered_set<const OcctSharp_LawBSplineHandle*> LiveLawBSplineHandles;
+}
+
+namespace OcctSharpGenerated
+{
+OcctSharp_LawBSplineHandle* AllocateLawBSpline(opencascade::handle<Law_BSpline> value)
+{
+  OcctSharp_LawBSplineHandle* handle = new OcctSharp_LawBSplineHandle(std::move(value));
+  try
+  {
+    std::lock_guard<std::mutex> lock(LawBSplineMutex);
+    LiveLawBSplineHandles.insert(handle);
+    return handle;
+  }
+  catch (...) { delete handle; throw; }
+}
+
+const OcctSharp_LawBSplineHandle* ValidateLawBSpline(const OcctSharp_LawBSplineHandle* handle)
+{
+  if (handle == nullptr) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated shared handle is null.");
+  std::lock_guard<std::mutex> lock(LawBSplineMutex);
+  if (!LiveLawBSplineHandles.contains(handle)) throw GeneratedOperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The generated shared handle is invalid or already released.");
+  if (handle->Value.IsNull()) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated OCCT shared value is null.");
+  return handle;
+}
+}
+
+namespace
+{
+std::mutex LawCompositeMutex;
+std::unordered_set<const OcctSharp_LawCompositeHandle*> LiveLawCompositeHandles;
+}
+
+namespace OcctSharpGenerated
+{
+OcctSharp_LawCompositeHandle* AllocateLawComposite(opencascade::handle<Law_Composite> value)
+{
+  OcctSharp_LawCompositeHandle* handle = new OcctSharp_LawCompositeHandle(std::move(value));
+  try
+  {
+    std::lock_guard<std::mutex> lock(LawCompositeMutex);
+    LiveLawCompositeHandles.insert(handle);
+    return handle;
+  }
+  catch (...) { delete handle; throw; }
+}
+
+const OcctSharp_LawCompositeHandle* ValidateLawComposite(const OcctSharp_LawCompositeHandle* handle)
+{
+  if (handle == nullptr) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated shared handle is null.");
+  std::lock_guard<std::mutex> lock(LawCompositeMutex);
+  if (!LiveLawCompositeHandles.contains(handle)) throw GeneratedOperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The generated shared handle is invalid or already released.");
+  if (handle->Value.IsNull()) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated OCCT shared value is null.");
+  return handle;
+}
+}
+
+namespace
+{
+std::mutex LawConstantMutex;
+std::unordered_set<const OcctSharp_LawConstantHandle*> LiveLawConstantHandles;
+}
+
+namespace OcctSharpGenerated
+{
+OcctSharp_LawConstantHandle* AllocateLawConstant(opencascade::handle<Law_Constant> value)
+{
+  OcctSharp_LawConstantHandle* handle = new OcctSharp_LawConstantHandle(std::move(value));
+  try
+  {
+    std::lock_guard<std::mutex> lock(LawConstantMutex);
+    LiveLawConstantHandles.insert(handle);
+    return handle;
+  }
+  catch (...) { delete handle; throw; }
+}
+
+const OcctSharp_LawConstantHandle* ValidateLawConstant(const OcctSharp_LawConstantHandle* handle)
+{
+  if (handle == nullptr) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated shared handle is null.");
+  std::lock_guard<std::mutex> lock(LawConstantMutex);
+  if (!LiveLawConstantHandles.contains(handle)) throw GeneratedOperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The generated shared handle is invalid or already released.");
+  if (handle->Value.IsNull()) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated OCCT shared value is null.");
+  return handle;
+}
+}
+
+namespace
+{
+std::mutex LawFunctionMutex;
+std::unordered_set<const OcctSharp_LawFunctionHandle*> LiveLawFunctionHandles;
+}
+
+namespace OcctSharpGenerated
+{
+OcctSharp_LawFunctionHandle* AllocateLawFunction(opencascade::handle<Law_Function> value)
+{
+  OcctSharp_LawFunctionHandle* handle = new OcctSharp_LawFunctionHandle(std::move(value));
+  try
+  {
+    std::lock_guard<std::mutex> lock(LawFunctionMutex);
+    LiveLawFunctionHandles.insert(handle);
+    return handle;
+  }
+  catch (...) { delete handle; throw; }
+}
+
+const OcctSharp_LawFunctionHandle* ValidateLawFunction(const OcctSharp_LawFunctionHandle* handle)
+{
+  if (handle == nullptr) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated shared handle is null.");
+  std::lock_guard<std::mutex> lock(LawFunctionMutex);
+  if (!LiveLawFunctionHandles.contains(handle)) throw GeneratedOperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The generated shared handle is invalid or already released.");
+  if (handle->Value.IsNull()) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated OCCT shared value is null.");
+  return handle;
+}
+}
+
+namespace
+{
+std::mutex LawInterpolMutex;
+std::unordered_set<const OcctSharp_LawInterpolHandle*> LiveLawInterpolHandles;
+}
+
+namespace OcctSharpGenerated
+{
+OcctSharp_LawInterpolHandle* AllocateLawInterpol(opencascade::handle<Law_Interpol> value)
+{
+  OcctSharp_LawInterpolHandle* handle = new OcctSharp_LawInterpolHandle(std::move(value));
+  try
+  {
+    std::lock_guard<std::mutex> lock(LawInterpolMutex);
+    LiveLawInterpolHandles.insert(handle);
+    return handle;
+  }
+  catch (...) { delete handle; throw; }
+}
+
+const OcctSharp_LawInterpolHandle* ValidateLawInterpol(const OcctSharp_LawInterpolHandle* handle)
+{
+  if (handle == nullptr) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated shared handle is null.");
+  std::lock_guard<std::mutex> lock(LawInterpolMutex);
+  if (!LiveLawInterpolHandles.contains(handle)) throw GeneratedOperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The generated shared handle is invalid or already released.");
+  if (handle->Value.IsNull()) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated OCCT shared value is null.");
+  return handle;
+}
+}
+
+namespace
+{
+std::mutex LawLinearMutex;
+std::unordered_set<const OcctSharp_LawLinearHandle*> LiveLawLinearHandles;
+}
+
+namespace OcctSharpGenerated
+{
+OcctSharp_LawLinearHandle* AllocateLawLinear(opencascade::handle<Law_Linear> value)
+{
+  OcctSharp_LawLinearHandle* handle = new OcctSharp_LawLinearHandle(std::move(value));
+  try
+  {
+    std::lock_guard<std::mutex> lock(LawLinearMutex);
+    LiveLawLinearHandles.insert(handle);
+    return handle;
+  }
+  catch (...) { delete handle; throw; }
+}
+
+const OcctSharp_LawLinearHandle* ValidateLawLinear(const OcctSharp_LawLinearHandle* handle)
+{
+  if (handle == nullptr) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated shared handle is null.");
+  std::lock_guard<std::mutex> lock(LawLinearMutex);
+  if (!LiveLawLinearHandles.contains(handle)) throw GeneratedOperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The generated shared handle is invalid or already released.");
+  if (handle->Value.IsNull()) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated OCCT shared value is null.");
+  return handle;
+}
+}
+
+namespace
+{
+std::mutex LawSMutex;
+std::unordered_set<const OcctSharp_LawSHandle*> LiveLawSHandles;
+}
+
+namespace OcctSharpGenerated
+{
+OcctSharp_LawSHandle* AllocateLawS(opencascade::handle<Law_S> value)
+{
+  OcctSharp_LawSHandle* handle = new OcctSharp_LawSHandle(std::move(value));
+  try
+  {
+    std::lock_guard<std::mutex> lock(LawSMutex);
+    LiveLawSHandles.insert(handle);
+    return handle;
+  }
+  catch (...) { delete handle; throw; }
+}
+
+const OcctSharp_LawSHandle* ValidateLawS(const OcctSharp_LawSHandle* handle)
+{
+  if (handle == nullptr) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated shared handle is null.");
+  std::lock_guard<std::mutex> lock(LawSMutex);
+  if (!LiveLawSHandles.contains(handle)) throw GeneratedOperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The generated shared handle is invalid or already released.");
   if (handle->Value.IsNull()) throw GeneratedOperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The generated OCCT shared value is null.");
   return handle;
 }
@@ -13968,6 +14544,555 @@ void OCCTSHARP_CALL occtsharp_generated_extrema_ext_prev_s_release(OcctSharp_Ext
   if (handle == nullptr) return;
   bool removed = false;
   { std::lock_guard<std::mutex> lock(ExtremaExtPRevSMutex); removed = LiveExtremaExtPRevSHandles.erase(handle) != 0; }
+  if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_method_degree_0(
+  const OcctSharp_FEmToolCurveHandle* handle,
+  int32_t indexOfElement,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateFEmToolCurve(handle)->Value->Degree(indexOfElement);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_method_dimension_0(
+  const OcctSharp_FEmToolCurveHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateFEmToolCurve(handle)->Value->Dimension();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_method_nb_elements_0(
+  const OcctSharp_FEmToolCurveHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateFEmToolCurve(handle)->Value->NbElements();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_method_set_degree_0(
+  const OcctSharp_FEmToolCurveHandle* handle,
+  int32_t indexOfElement,
+  int32_t degree)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateFEmToolCurve(handle)->Value->SetDegree(indexOfElement, degree);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_clone(
+  const OcctSharp_FEmToolCurveHandle* source,
+  OcctSharp_FEmToolCurveHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&] { const OcctSharp_FEmToolCurveHandle* value = ValidateFEmToolCurve(source); *out_handle = AllocateFEmToolCurve(value->Value); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_get_ref_count(
+  const OcctSharp_FEmToolCurveHandle* handle,
+  int32_t* out_ref_count)
+{
+  if (out_ref_count == nullptr) { OcctSharp_Internal_SetLastError("The output reference-count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_ref_count = 0;
+  return GeneratedGuard([&] { *out_ref_count = ValidateFEmToolCurve(handle)->Value->GetRefCount(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_get_type_name(
+  const OcctSharp_FEmToolCurveHandle* handle,
+  const char** out_type_name)
+{
+  if (out_type_name == nullptr) { OcctSharp_Internal_SetLastError("The output type-name pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_type_name = nullptr;
+  return GeneratedGuard([&] { *out_type_name = ValidateFEmToolCurve(handle)->Value->DynamicType()->Name(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_is_kind(
+  const OcctSharp_FEmToolCurveHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind)
+{
+  if (type_name == nullptr || type_name[0] == '\0') { OcctSharp_Internal_SetLastError("The generated shared type name is null or empty."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (out_is_kind == nullptr) { OcctSharp_Internal_SetLastError("The output kind-state pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_is_kind = 0;
+  return GeneratedGuard([&] { *out_is_kind = ValidateFEmToolCurve(handle)->Value->IsKind(type_name) ? 1 : 0; });
+}
+
+void OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_release(OcctSharp_FEmToolCurveHandle* handle)
+{
+  if (handle == nullptr) return;
+  bool removed = false;
+  { std::lock_guard<std::mutex> lock(FEmToolCurveMutex); removed = LiveFEmToolCurveHandles.erase(handle) != 0; }
+  if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_method_set_0(
+  const OcctSharp_FEmToolElementaryCriterionHandle* handle,
+  double firstKnot,
+  double lastKnot)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateFEmToolElementaryCriterion(handle)->Value->Set(firstKnot, lastKnot);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_clone(
+  const OcctSharp_FEmToolElementaryCriterionHandle* source,
+  OcctSharp_FEmToolElementaryCriterionHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&] { const OcctSharp_FEmToolElementaryCriterionHandle* value = ValidateFEmToolElementaryCriterion(source); *out_handle = AllocateFEmToolElementaryCriterion(value->Value); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_get_ref_count(
+  const OcctSharp_FEmToolElementaryCriterionHandle* handle,
+  int32_t* out_ref_count)
+{
+  if (out_ref_count == nullptr) { OcctSharp_Internal_SetLastError("The output reference-count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_ref_count = 0;
+  return GeneratedGuard([&] { *out_ref_count = ValidateFEmToolElementaryCriterion(handle)->Value->GetRefCount(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_get_type_name(
+  const OcctSharp_FEmToolElementaryCriterionHandle* handle,
+  const char** out_type_name)
+{
+  if (out_type_name == nullptr) { OcctSharp_Internal_SetLastError("The output type-name pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_type_name = nullptr;
+  return GeneratedGuard([&] { *out_type_name = ValidateFEmToolElementaryCriterion(handle)->Value->DynamicType()->Name(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_is_kind(
+  const OcctSharp_FEmToolElementaryCriterionHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind)
+{
+  if (type_name == nullptr || type_name[0] == '\0') { OcctSharp_Internal_SetLastError("The generated shared type name is null or empty."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (out_is_kind == nullptr) { OcctSharp_Internal_SetLastError("The output kind-state pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_is_kind = 0;
+  return GeneratedGuard([&] { *out_is_kind = ValidateFEmToolElementaryCriterion(handle)->Value->IsKind(type_name) ? 1 : 0; });
+}
+
+void OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_release(OcctSharp_FEmToolElementaryCriterionHandle* handle)
+{
+  if (handle == nullptr) return;
+  bool removed = false;
+  { std::lock_guard<std::mutex> lock(FEmToolElementaryCriterionMutex); removed = LiveFEmToolElementaryCriterionHandles.erase(handle) != 0; }
+  if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_create_0(
+  int32_t workDegree,
+  int32_t constraintOrder,
+  OcctSharp_FEmToolLinearFlexionHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<FEmTool_LinearFlexion> createdHandle = new FEmTool_LinearFlexion(workDegree, static_cast<const GeomAbs_Shape>(constraintOrder));
+    *out_handle = AllocateFEmToolLinearFlexion(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_method_value_0(
+  const OcctSharp_FEmToolLinearFlexionHandle* handle,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateFEmToolLinearFlexion(handle)->Value->Value();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_clone(
+  const OcctSharp_FEmToolLinearFlexionHandle* source,
+  OcctSharp_FEmToolLinearFlexionHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&] { const OcctSharp_FEmToolLinearFlexionHandle* value = ValidateFEmToolLinearFlexion(source); *out_handle = AllocateFEmToolLinearFlexion(value->Value); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_get_ref_count(
+  const OcctSharp_FEmToolLinearFlexionHandle* handle,
+  int32_t* out_ref_count)
+{
+  if (out_ref_count == nullptr) { OcctSharp_Internal_SetLastError("The output reference-count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_ref_count = 0;
+  return GeneratedGuard([&] { *out_ref_count = ValidateFEmToolLinearFlexion(handle)->Value->GetRefCount(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_get_type_name(
+  const OcctSharp_FEmToolLinearFlexionHandle* handle,
+  const char** out_type_name)
+{
+  if (out_type_name == nullptr) { OcctSharp_Internal_SetLastError("The output type-name pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_type_name = nullptr;
+  return GeneratedGuard([&] { *out_type_name = ValidateFEmToolLinearFlexion(handle)->Value->DynamicType()->Name(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_is_kind(
+  const OcctSharp_FEmToolLinearFlexionHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind)
+{
+  if (type_name == nullptr || type_name[0] == '\0') { OcctSharp_Internal_SetLastError("The generated shared type name is null or empty."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (out_is_kind == nullptr) { OcctSharp_Internal_SetLastError("The output kind-state pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_is_kind = 0;
+  return GeneratedGuard([&] { *out_is_kind = ValidateFEmToolLinearFlexion(handle)->Value->IsKind(type_name) ? 1 : 0; });
+}
+
+void OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_release(OcctSharp_FEmToolLinearFlexionHandle* handle)
+{
+  if (handle == nullptr) return;
+  bool removed = false;
+  { std::lock_guard<std::mutex> lock(FEmToolLinearFlexionMutex); removed = LiveFEmToolLinearFlexionHandles.erase(handle) != 0; }
+  if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_create_0(
+  int32_t workDegree,
+  int32_t constraintOrder,
+  OcctSharp_FEmToolLinearJerkHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<FEmTool_LinearJerk> createdHandle = new FEmTool_LinearJerk(workDegree, static_cast<const GeomAbs_Shape>(constraintOrder));
+    *out_handle = AllocateFEmToolLinearJerk(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_method_value_0(
+  const OcctSharp_FEmToolLinearJerkHandle* handle,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateFEmToolLinearJerk(handle)->Value->Value();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_clone(
+  const OcctSharp_FEmToolLinearJerkHandle* source,
+  OcctSharp_FEmToolLinearJerkHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&] { const OcctSharp_FEmToolLinearJerkHandle* value = ValidateFEmToolLinearJerk(source); *out_handle = AllocateFEmToolLinearJerk(value->Value); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_get_ref_count(
+  const OcctSharp_FEmToolLinearJerkHandle* handle,
+  int32_t* out_ref_count)
+{
+  if (out_ref_count == nullptr) { OcctSharp_Internal_SetLastError("The output reference-count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_ref_count = 0;
+  return GeneratedGuard([&] { *out_ref_count = ValidateFEmToolLinearJerk(handle)->Value->GetRefCount(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_get_type_name(
+  const OcctSharp_FEmToolLinearJerkHandle* handle,
+  const char** out_type_name)
+{
+  if (out_type_name == nullptr) { OcctSharp_Internal_SetLastError("The output type-name pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_type_name = nullptr;
+  return GeneratedGuard([&] { *out_type_name = ValidateFEmToolLinearJerk(handle)->Value->DynamicType()->Name(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_is_kind(
+  const OcctSharp_FEmToolLinearJerkHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind)
+{
+  if (type_name == nullptr || type_name[0] == '\0') { OcctSharp_Internal_SetLastError("The generated shared type name is null or empty."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (out_is_kind == nullptr) { OcctSharp_Internal_SetLastError("The output kind-state pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_is_kind = 0;
+  return GeneratedGuard([&] { *out_is_kind = ValidateFEmToolLinearJerk(handle)->Value->IsKind(type_name) ? 1 : 0; });
+}
+
+void OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_release(OcctSharp_FEmToolLinearJerkHandle* handle)
+{
+  if (handle == nullptr) return;
+  bool removed = false;
+  { std::lock_guard<std::mutex> lock(FEmToolLinearJerkMutex); removed = LiveFEmToolLinearJerkHandles.erase(handle) != 0; }
+  if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_create_0(
+  int32_t workDegree,
+  int32_t constraintOrder,
+  OcctSharp_FEmToolLinearTensionHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<FEmTool_LinearTension> createdHandle = new FEmTool_LinearTension(workDegree, static_cast<const GeomAbs_Shape>(constraintOrder));
+    *out_handle = AllocateFEmToolLinearTension(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_method_value_0(
+  const OcctSharp_FEmToolLinearTensionHandle* handle,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateFEmToolLinearTension(handle)->Value->Value();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_clone(
+  const OcctSharp_FEmToolLinearTensionHandle* source,
+  OcctSharp_FEmToolLinearTensionHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&] { const OcctSharp_FEmToolLinearTensionHandle* value = ValidateFEmToolLinearTension(source); *out_handle = AllocateFEmToolLinearTension(value->Value); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_get_ref_count(
+  const OcctSharp_FEmToolLinearTensionHandle* handle,
+  int32_t* out_ref_count)
+{
+  if (out_ref_count == nullptr) { OcctSharp_Internal_SetLastError("The output reference-count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_ref_count = 0;
+  return GeneratedGuard([&] { *out_ref_count = ValidateFEmToolLinearTension(handle)->Value->GetRefCount(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_get_type_name(
+  const OcctSharp_FEmToolLinearTensionHandle* handle,
+  const char** out_type_name)
+{
+  if (out_type_name == nullptr) { OcctSharp_Internal_SetLastError("The output type-name pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_type_name = nullptr;
+  return GeneratedGuard([&] { *out_type_name = ValidateFEmToolLinearTension(handle)->Value->DynamicType()->Name(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_is_kind(
+  const OcctSharp_FEmToolLinearTensionHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind)
+{
+  if (type_name == nullptr || type_name[0] == '\0') { OcctSharp_Internal_SetLastError("The generated shared type name is null or empty."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (out_is_kind == nullptr) { OcctSharp_Internal_SetLastError("The output kind-state pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_is_kind = 0;
+  return GeneratedGuard([&] { *out_is_kind = ValidateFEmToolLinearTension(handle)->Value->IsKind(type_name) ? 1 : 0; });
+}
+
+void OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_release(OcctSharp_FEmToolLinearTensionHandle* handle)
+{
+  if (handle == nullptr) return;
+  bool removed = false;
+  { std::lock_guard<std::mutex> lock(FEmToolLinearTensionMutex); removed = LiveFEmToolLinearTensionHandles.erase(handle) != 0; }
+  if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_col_number_0(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateFEmToolProfileMatrix(handle)->Value->ColNumber();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_decompose_0(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateFEmToolProfileMatrix(handle)->Value->Decompose() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_init_0(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle,
+  double value)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateFEmToolProfileMatrix(handle)->Value->Init(value);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_is_in_profile_0(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle,
+  int32_t i,
+  int32_t j,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateFEmToolProfileMatrix(handle)->Value->IsInProfile(i, j) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_out_m_0(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateFEmToolProfileMatrix(handle)->Value->OutM();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_out_s_0(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateFEmToolProfileMatrix(handle)->Value->OutS();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_prepare_0(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateFEmToolProfileMatrix(handle)->Value->Prepare() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_row_number_0(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateFEmToolProfileMatrix(handle)->Value->RowNumber();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_clone(
+  const OcctSharp_FEmToolProfileMatrixHandle* source,
+  OcctSharp_FEmToolProfileMatrixHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&] { const OcctSharp_FEmToolProfileMatrixHandle* value = ValidateFEmToolProfileMatrix(source); *out_handle = AllocateFEmToolProfileMatrix(value->Value); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_get_ref_count(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle,
+  int32_t* out_ref_count)
+{
+  if (out_ref_count == nullptr) { OcctSharp_Internal_SetLastError("The output reference-count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_ref_count = 0;
+  return GeneratedGuard([&] { *out_ref_count = ValidateFEmToolProfileMatrix(handle)->Value->GetRefCount(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_get_type_name(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle,
+  const char** out_type_name)
+{
+  if (out_type_name == nullptr) { OcctSharp_Internal_SetLastError("The output type-name pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_type_name = nullptr;
+  return GeneratedGuard([&] { *out_type_name = ValidateFEmToolProfileMatrix(handle)->Value->DynamicType()->Name(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_is_kind(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind)
+{
+  if (type_name == nullptr || type_name[0] == '\0') { OcctSharp_Internal_SetLastError("The generated shared type name is null or empty."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (out_is_kind == nullptr) { OcctSharp_Internal_SetLastError("The output kind-state pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_is_kind = 0;
+  return GeneratedGuard([&] { *out_is_kind = ValidateFEmToolProfileMatrix(handle)->Value->IsKind(type_name) ? 1 : 0; });
+}
+
+void OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_release(OcctSharp_FEmToolProfileMatrixHandle* handle)
+{
+  if (handle == nullptr) return;
+  bool removed = false;
+  { std::lock_guard<std::mutex> lock(FEmToolProfileMatrixMutex); removed = LiveFEmToolProfileMatrixHandles.erase(handle) != 0; }
+  if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_sparse_matrix_clone(
+  const OcctSharp_FEmToolSparseMatrixHandle* source,
+  OcctSharp_FEmToolSparseMatrixHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&] { const OcctSharp_FEmToolSparseMatrixHandle* value = ValidateFEmToolSparseMatrix(source); *out_handle = AllocateFEmToolSparseMatrix(value->Value); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_sparse_matrix_get_ref_count(
+  const OcctSharp_FEmToolSparseMatrixHandle* handle,
+  int32_t* out_ref_count)
+{
+  if (out_ref_count == nullptr) { OcctSharp_Internal_SetLastError("The output reference-count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_ref_count = 0;
+  return GeneratedGuard([&] { *out_ref_count = ValidateFEmToolSparseMatrix(handle)->Value->GetRefCount(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_sparse_matrix_get_type_name(
+  const OcctSharp_FEmToolSparseMatrixHandle* handle,
+  const char** out_type_name)
+{
+  if (out_type_name == nullptr) { OcctSharp_Internal_SetLastError("The output type-name pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_type_name = nullptr;
+  return GeneratedGuard([&] { *out_type_name = ValidateFEmToolSparseMatrix(handle)->Value->DynamicType()->Name(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_sparse_matrix_is_kind(
+  const OcctSharp_FEmToolSparseMatrixHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind)
+{
+  if (type_name == nullptr || type_name[0] == '\0') { OcctSharp_Internal_SetLastError("The generated shared type name is null or empty."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (out_is_kind == nullptr) { OcctSharp_Internal_SetLastError("The output kind-state pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_is_kind = 0;
+  return GeneratedGuard([&] { *out_is_kind = ValidateFEmToolSparseMatrix(handle)->Value->IsKind(type_name) ? 1 : 0; });
+}
+
+void OCCTSHARP_CALL occtsharp_generated_fem_tool_sparse_matrix_release(OcctSharp_FEmToolSparseMatrixHandle* handle)
+{
+  if (handle == nullptr) return;
+  bool removed = false;
+  { std::lock_guard<std::mutex> lock(FEmToolSparseMatrixMutex); removed = LiveFEmToolSparseMatrixHandles.erase(handle) != 0; }
   if (removed) delete handle;
 }
 
@@ -37432,6 +38557,1284 @@ void OCCTSHARP_CALL occtsharp_generated_geometry_test_drawable_qualified_curve2d
   if (handle == nullptr) return;
   bool removed = false;
   { std::lock_guard<std::mutex> lock(GeometryTestDrawableQualifiedCurve2dMutex); removed = LiveGeometryTestDrawableQualifiedCurve2dHandles.erase(handle) != 0; }
+  if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_create_0(
+  OcctSharp_LawBSpFuncHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Law_BSpFunc> createdHandle = new Law_BSpFunc();
+    *out_handle = AllocateLawBSpFunc(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_create_1(
+  const OcctSharp_LawBSplineHandle* c,
+  double first,
+  double last,
+  OcctSharp_LawBSpFuncHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Law_BSpFunc> createdHandle = new Law_BSpFunc((c == nullptr ? opencascade::handle<Law_BSpline>() : ValidateLawBSpline(c)->Value), first, last);
+    *out_handle = AllocateLawBSpFunc(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_method_continuity_0(
+  const OcctSharp_LawBSpFuncHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<int32_t>(ValidateLawBSpFunc(handle)->Value->Continuity());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_method_curve_0(
+  const OcctSharp_LawBSpFuncHandle* handle,
+  OcctSharp_LawBSplineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Law_BSpline> returnedHandle = ValidateLawBSpFunc(handle)->Value->Curve();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateLawBSpline(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_method_nb_intervals_0(
+  const OcctSharp_LawBSpFuncHandle* handle,
+  int32_t s,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpFunc(handle)->Value->NbIntervals(static_cast<const GeomAbs_Shape>(s));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_method_set_curve_0(
+  const OcctSharp_LawBSpFuncHandle* handle,
+  const OcctSharp_LawBSplineHandle* c)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawBSpFunc(handle)->Value->SetCurve((c == nullptr ? opencascade::handle<Law_BSpline>() : ValidateLawBSpline(c)->Value));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_method_trim_0(
+  const OcctSharp_LawBSpFuncHandle* handle,
+  double pFirst,
+  double pLast,
+  double tol,
+  OcctSharp_LawFunctionHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Law_Function> returnedHandle = ValidateLawBSpFunc(handle)->Value->Trim(pFirst, pLast, tol);
+    if (!returnedHandle.IsNull()) *out_handle = AllocateLawFunction(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_method_value_0(
+  const OcctSharp_LawBSpFuncHandle* handle,
+  double x,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpFunc(handle)->Value->Value(x);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_clone(
+  const OcctSharp_LawBSpFuncHandle* source,
+  OcctSharp_LawBSpFuncHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&] { const OcctSharp_LawBSpFuncHandle* value = ValidateLawBSpFunc(source); *out_handle = AllocateLawBSpFunc(value->Value); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_get_ref_count(
+  const OcctSharp_LawBSpFuncHandle* handle,
+  int32_t* out_ref_count)
+{
+  if (out_ref_count == nullptr) { OcctSharp_Internal_SetLastError("The output reference-count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_ref_count = 0;
+  return GeneratedGuard([&] { *out_ref_count = ValidateLawBSpFunc(handle)->Value->GetRefCount(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_get_type_name(
+  const OcctSharp_LawBSpFuncHandle* handle,
+  const char** out_type_name)
+{
+  if (out_type_name == nullptr) { OcctSharp_Internal_SetLastError("The output type-name pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_type_name = nullptr;
+  return GeneratedGuard([&] { *out_type_name = ValidateLawBSpFunc(handle)->Value->DynamicType()->Name(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_is_kind(
+  const OcctSharp_LawBSpFuncHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind)
+{
+  if (type_name == nullptr || type_name[0] == '\0') { OcctSharp_Internal_SetLastError("The generated shared type name is null or empty."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (out_is_kind == nullptr) { OcctSharp_Internal_SetLastError("The output kind-state pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_is_kind = 0;
+  return GeneratedGuard([&] { *out_is_kind = ValidateLawBSpFunc(handle)->Value->IsKind(type_name) ? 1 : 0; });
+}
+
+void OCCTSHARP_CALL occtsharp_generated_law_bsp_func_release(OcctSharp_LawBSpFuncHandle* handle)
+{
+  if (handle == nullptr) return;
+  bool removed = false;
+  { std::lock_guard<std::mutex> lock(LawBSpFuncMutex); removed = LiveLawBSpFuncHandles.erase(handle) != 0; }
+  if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_continuity_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<int32_t>(ValidateLawBSpline(handle)->Value->Continuity());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_copy_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  OcctSharp_LawBSplineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Law_BSpline> returnedHandle = ValidateLawBSpline(handle)->Value->Copy();
+    if (!returnedHandle.IsNull()) *out_handle = AllocateLawBSpline(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_degree_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->Degree();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_dn_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double u,
+  int32_t n,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->DN(u, n);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_end_point_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->EndPoint();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_first_parameter_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->FirstParameter();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_first_uknot_index_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->FirstUKnotIndex();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_increase_degree_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t degree)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawBSpline(handle)->Value->IncreaseDegree(degree);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_increase_multiplicity_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  int32_t m)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawBSpline(handle)->Value->IncreaseMultiplicity(index, m);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_increase_multiplicity_1(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t i1,
+  int32_t i2,
+  int32_t m)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawBSpline(handle)->Value->IncreaseMultiplicity(i1, i2, m);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_increment_multiplicity_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t i1,
+  int32_t i2,
+  int32_t m)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawBSpline(handle)->Value->IncrementMultiplicity(i1, i2, m);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_insert_knot_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double u,
+  int32_t m,
+  double parametricTolerance,
+  int32_t add)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawBSpline(handle)->Value->InsertKnot(u, m, parametricTolerance, (add != 0));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_is_closed_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->IsClosed() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_is_cn_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t n,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->IsCN(n) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_is_periodic_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->IsPeriodic() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_is_rational_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->IsRational() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_knot_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->Knot(index);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_knot_distribution_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<int32_t>(ValidateLawBSpline(handle)->Value->KnotDistribution());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_last_parameter_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->LastParameter();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_last_uknot_index_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->LastUKnotIndex();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_local_dn_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double u,
+  int32_t fromK1,
+  int32_t toK2,
+  int32_t n,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->LocalDN(u, fromK1, toK2, n);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_local_value_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double u,
+  int32_t fromK1,
+  int32_t toK2,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->LocalValue(u, fromK1, toK2);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_multiplicity_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->Multiplicity(index);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_nb_knots_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->NbKnots();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_nb_poles_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->NbPoles();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_pole_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->Pole(index);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_remove_knot_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  int32_t m,
+  double tolerance,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->RemoveKnot(index, m, tolerance) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_reverse_0(
+  const OcctSharp_LawBSplineHandle* handle)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawBSpline(handle)->Value->Reverse();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_reversed_parameter_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double u,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->ReversedParameter(u);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_segment_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double u1,
+  double u2)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawBSpline(handle)->Value->Segment(u1, u2);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_set_knot_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  double k)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawBSpline(handle)->Value->SetKnot(index, k);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_set_knot_1(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  double k,
+  int32_t m)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawBSpline(handle)->Value->SetKnot(index, k, m);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_set_not_periodic_0(
+  const OcctSharp_LawBSplineHandle* handle)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawBSpline(handle)->Value->SetNotPeriodic();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_set_origin_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawBSpline(handle)->Value->SetOrigin(index);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_set_periodic_0(
+  const OcctSharp_LawBSplineHandle* handle)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawBSpline(handle)->Value->SetPeriodic();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_set_pole_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  double p)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawBSpline(handle)->Value->SetPole(index, p);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_set_pole_1(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  double p,
+  double weight)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawBSpline(handle)->Value->SetPole(index, p, weight);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_set_weight_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  double weight)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawBSpline(handle)->Value->SetWeight(index, weight);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_start_point_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->StartPoint();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_value_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double u,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->Value(u);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_weight_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawBSpline(handle)->Value->Weight(index);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_clone(
+  const OcctSharp_LawBSplineHandle* source,
+  OcctSharp_LawBSplineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&] { const OcctSharp_LawBSplineHandle* value = ValidateLawBSpline(source); *out_handle = AllocateLawBSpline(value->Value); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_get_ref_count(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_ref_count)
+{
+  if (out_ref_count == nullptr) { OcctSharp_Internal_SetLastError("The output reference-count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_ref_count = 0;
+  return GeneratedGuard([&] { *out_ref_count = ValidateLawBSpline(handle)->Value->GetRefCount(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_get_type_name(
+  const OcctSharp_LawBSplineHandle* handle,
+  const char** out_type_name)
+{
+  if (out_type_name == nullptr) { OcctSharp_Internal_SetLastError("The output type-name pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_type_name = nullptr;
+  return GeneratedGuard([&] { *out_type_name = ValidateLawBSpline(handle)->Value->DynamicType()->Name(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_is_kind(
+  const OcctSharp_LawBSplineHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind)
+{
+  if (type_name == nullptr || type_name[0] == '\0') { OcctSharp_Internal_SetLastError("The generated shared type name is null or empty."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (out_is_kind == nullptr) { OcctSharp_Internal_SetLastError("The output kind-state pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_is_kind = 0;
+  return GeneratedGuard([&] { *out_is_kind = ValidateLawBSpline(handle)->Value->IsKind(type_name) ? 1 : 0; });
+}
+
+void OCCTSHARP_CALL occtsharp_generated_law_bspline_release(OcctSharp_LawBSplineHandle* handle)
+{
+  if (handle == nullptr) return;
+  bool removed = false;
+  { std::lock_guard<std::mutex> lock(LawBSplineMutex); removed = LiveLawBSplineHandles.erase(handle) != 0; }
+  if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_create_0(
+  OcctSharp_LawCompositeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Law_Composite> createdHandle = new Law_Composite();
+    *out_handle = AllocateLawComposite(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_create_1(
+  double first,
+  double last,
+  double tol,
+  OcctSharp_LawCompositeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Law_Composite> createdHandle = new Law_Composite(first, last, tol);
+    *out_handle = AllocateLawComposite(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_method_continuity_0(
+  const OcctSharp_LawCompositeHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<int32_t>(ValidateLawComposite(handle)->Value->Continuity());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_method_is_periodic_0(
+  const OcctSharp_LawCompositeHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawComposite(handle)->Value->IsPeriodic() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_method_nb_intervals_0(
+  const OcctSharp_LawCompositeHandle* handle,
+  int32_t s,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawComposite(handle)->Value->NbIntervals(static_cast<const GeomAbs_Shape>(s));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_method_set_periodic_0(
+  const OcctSharp_LawCompositeHandle* handle)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawComposite(handle)->Value->SetPeriodic();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_method_trim_0(
+  const OcctSharp_LawCompositeHandle* handle,
+  double pFirst,
+  double pLast,
+  double tol,
+  OcctSharp_LawFunctionHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Law_Function> returnedHandle = ValidateLawComposite(handle)->Value->Trim(pFirst, pLast, tol);
+    if (!returnedHandle.IsNull()) *out_handle = AllocateLawFunction(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_method_value_0(
+  const OcctSharp_LawCompositeHandle* handle,
+  double x,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawComposite(handle)->Value->Value(x);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_clone(
+  const OcctSharp_LawCompositeHandle* source,
+  OcctSharp_LawCompositeHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&] { const OcctSharp_LawCompositeHandle* value = ValidateLawComposite(source); *out_handle = AllocateLawComposite(value->Value); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_get_ref_count(
+  const OcctSharp_LawCompositeHandle* handle,
+  int32_t* out_ref_count)
+{
+  if (out_ref_count == nullptr) { OcctSharp_Internal_SetLastError("The output reference-count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_ref_count = 0;
+  return GeneratedGuard([&] { *out_ref_count = ValidateLawComposite(handle)->Value->GetRefCount(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_get_type_name(
+  const OcctSharp_LawCompositeHandle* handle,
+  const char** out_type_name)
+{
+  if (out_type_name == nullptr) { OcctSharp_Internal_SetLastError("The output type-name pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_type_name = nullptr;
+  return GeneratedGuard([&] { *out_type_name = ValidateLawComposite(handle)->Value->DynamicType()->Name(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_is_kind(
+  const OcctSharp_LawCompositeHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind)
+{
+  if (type_name == nullptr || type_name[0] == '\0') { OcctSharp_Internal_SetLastError("The generated shared type name is null or empty."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (out_is_kind == nullptr) { OcctSharp_Internal_SetLastError("The output kind-state pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_is_kind = 0;
+  return GeneratedGuard([&] { *out_is_kind = ValidateLawComposite(handle)->Value->IsKind(type_name) ? 1 : 0; });
+}
+
+void OCCTSHARP_CALL occtsharp_generated_law_composite_release(OcctSharp_LawCompositeHandle* handle)
+{
+  if (handle == nullptr) return;
+  bool removed = false;
+  { std::lock_guard<std::mutex> lock(LawCompositeMutex); removed = LiveLawCompositeHandles.erase(handle) != 0; }
+  if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_create_0(
+  OcctSharp_LawConstantHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Law_Constant> createdHandle = new Law_Constant();
+    *out_handle = AllocateLawConstant(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_method_continuity_0(
+  const OcctSharp_LawConstantHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<int32_t>(ValidateLawConstant(handle)->Value->Continuity());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_method_nb_intervals_0(
+  const OcctSharp_LawConstantHandle* handle,
+  int32_t s,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawConstant(handle)->Value->NbIntervals(static_cast<const GeomAbs_Shape>(s));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_method_set_0(
+  const OcctSharp_LawConstantHandle* handle,
+  double radius,
+  double pFirst,
+  double pLast)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawConstant(handle)->Value->Set(radius, pFirst, pLast);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_method_trim_0(
+  const OcctSharp_LawConstantHandle* handle,
+  double pFirst,
+  double pLast,
+  double tol,
+  OcctSharp_LawFunctionHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Law_Function> returnedHandle = ValidateLawConstant(handle)->Value->Trim(pFirst, pLast, tol);
+    if (!returnedHandle.IsNull()) *out_handle = AllocateLawFunction(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_method_value_0(
+  const OcctSharp_LawConstantHandle* handle,
+  double x,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawConstant(handle)->Value->Value(x);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_clone(
+  const OcctSharp_LawConstantHandle* source,
+  OcctSharp_LawConstantHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&] { const OcctSharp_LawConstantHandle* value = ValidateLawConstant(source); *out_handle = AllocateLawConstant(value->Value); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_get_ref_count(
+  const OcctSharp_LawConstantHandle* handle,
+  int32_t* out_ref_count)
+{
+  if (out_ref_count == nullptr) { OcctSharp_Internal_SetLastError("The output reference-count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_ref_count = 0;
+  return GeneratedGuard([&] { *out_ref_count = ValidateLawConstant(handle)->Value->GetRefCount(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_get_type_name(
+  const OcctSharp_LawConstantHandle* handle,
+  const char** out_type_name)
+{
+  if (out_type_name == nullptr) { OcctSharp_Internal_SetLastError("The output type-name pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_type_name = nullptr;
+  return GeneratedGuard([&] { *out_type_name = ValidateLawConstant(handle)->Value->DynamicType()->Name(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_is_kind(
+  const OcctSharp_LawConstantHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind)
+{
+  if (type_name == nullptr || type_name[0] == '\0') { OcctSharp_Internal_SetLastError("The generated shared type name is null or empty."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (out_is_kind == nullptr) { OcctSharp_Internal_SetLastError("The output kind-state pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_is_kind = 0;
+  return GeneratedGuard([&] { *out_is_kind = ValidateLawConstant(handle)->Value->IsKind(type_name) ? 1 : 0; });
+}
+
+void OCCTSHARP_CALL occtsharp_generated_law_constant_release(OcctSharp_LawConstantHandle* handle)
+{
+  if (handle == nullptr) return;
+  bool removed = false;
+  { std::lock_guard<std::mutex> lock(LawConstantMutex); removed = LiveLawConstantHandles.erase(handle) != 0; }
+  if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_function_clone(
+  const OcctSharp_LawFunctionHandle* source,
+  OcctSharp_LawFunctionHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&] { const OcctSharp_LawFunctionHandle* value = ValidateLawFunction(source); *out_handle = AllocateLawFunction(value->Value); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_function_get_ref_count(
+  const OcctSharp_LawFunctionHandle* handle,
+  int32_t* out_ref_count)
+{
+  if (out_ref_count == nullptr) { OcctSharp_Internal_SetLastError("The output reference-count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_ref_count = 0;
+  return GeneratedGuard([&] { *out_ref_count = ValidateLawFunction(handle)->Value->GetRefCount(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_function_get_type_name(
+  const OcctSharp_LawFunctionHandle* handle,
+  const char** out_type_name)
+{
+  if (out_type_name == nullptr) { OcctSharp_Internal_SetLastError("The output type-name pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_type_name = nullptr;
+  return GeneratedGuard([&] { *out_type_name = ValidateLawFunction(handle)->Value->DynamicType()->Name(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_function_is_kind(
+  const OcctSharp_LawFunctionHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind)
+{
+  if (type_name == nullptr || type_name[0] == '\0') { OcctSharp_Internal_SetLastError("The generated shared type name is null or empty."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (out_is_kind == nullptr) { OcctSharp_Internal_SetLastError("The output kind-state pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_is_kind = 0;
+  return GeneratedGuard([&] { *out_is_kind = ValidateLawFunction(handle)->Value->IsKind(type_name) ? 1 : 0; });
+}
+
+void OCCTSHARP_CALL occtsharp_generated_law_function_release(OcctSharp_LawFunctionHandle* handle)
+{
+  if (handle == nullptr) return;
+  bool removed = false;
+  { std::lock_guard<std::mutex> lock(LawFunctionMutex); removed = LiveLawFunctionHandles.erase(handle) != 0; }
+  if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_interpol_create_0(
+  OcctSharp_LawInterpolHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Law_Interpol> createdHandle = new Law_Interpol();
+    *out_handle = AllocateLawInterpol(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_interpol_clone(
+  const OcctSharp_LawInterpolHandle* source,
+  OcctSharp_LawInterpolHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&] { const OcctSharp_LawInterpolHandle* value = ValidateLawInterpol(source); *out_handle = AllocateLawInterpol(value->Value); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_interpol_get_ref_count(
+  const OcctSharp_LawInterpolHandle* handle,
+  int32_t* out_ref_count)
+{
+  if (out_ref_count == nullptr) { OcctSharp_Internal_SetLastError("The output reference-count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_ref_count = 0;
+  return GeneratedGuard([&] { *out_ref_count = ValidateLawInterpol(handle)->Value->GetRefCount(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_interpol_get_type_name(
+  const OcctSharp_LawInterpolHandle* handle,
+  const char** out_type_name)
+{
+  if (out_type_name == nullptr) { OcctSharp_Internal_SetLastError("The output type-name pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_type_name = nullptr;
+  return GeneratedGuard([&] { *out_type_name = ValidateLawInterpol(handle)->Value->DynamicType()->Name(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_interpol_is_kind(
+  const OcctSharp_LawInterpolHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind)
+{
+  if (type_name == nullptr || type_name[0] == '\0') { OcctSharp_Internal_SetLastError("The generated shared type name is null or empty."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (out_is_kind == nullptr) { OcctSharp_Internal_SetLastError("The output kind-state pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_is_kind = 0;
+  return GeneratedGuard([&] { *out_is_kind = ValidateLawInterpol(handle)->Value->IsKind(type_name) ? 1 : 0; });
+}
+
+void OCCTSHARP_CALL occtsharp_generated_law_interpol_release(OcctSharp_LawInterpolHandle* handle)
+{
+  if (handle == nullptr) return;
+  bool removed = false;
+  { std::lock_guard<std::mutex> lock(LawInterpolMutex); removed = LiveLawInterpolHandles.erase(handle) != 0; }
+  if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_create_0(
+  OcctSharp_LawLinearHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Law_Linear> createdHandle = new Law_Linear();
+    *out_handle = AllocateLawLinear(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_method_continuity_0(
+  const OcctSharp_LawLinearHandle* handle,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<int32_t>(ValidateLawLinear(handle)->Value->Continuity());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_method_nb_intervals_0(
+  const OcctSharp_LawLinearHandle* handle,
+  int32_t s,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawLinear(handle)->Value->NbIntervals(static_cast<const GeomAbs_Shape>(s));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_method_set_0(
+  const OcctSharp_LawLinearHandle* handle,
+  double pdeb,
+  double valdeb,
+  double pfin,
+  double valfin)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawLinear(handle)->Value->Set(pdeb, valdeb, pfin, valfin);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_method_trim_0(
+  const OcctSharp_LawLinearHandle* handle,
+  double pFirst,
+  double pLast,
+  double tol,
+  OcctSharp_LawFunctionHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Law_Function> returnedHandle = ValidateLawLinear(handle)->Value->Trim(pFirst, pLast, tol);
+    if (!returnedHandle.IsNull()) *out_handle = AllocateLawFunction(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_method_value_0(
+  const OcctSharp_LawLinearHandle* handle,
+  double x,
+  double* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateLawLinear(handle)->Value->Value(x);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_clone(
+  const OcctSharp_LawLinearHandle* source,
+  OcctSharp_LawLinearHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&] { const OcctSharp_LawLinearHandle* value = ValidateLawLinear(source); *out_handle = AllocateLawLinear(value->Value); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_get_ref_count(
+  const OcctSharp_LawLinearHandle* handle,
+  int32_t* out_ref_count)
+{
+  if (out_ref_count == nullptr) { OcctSharp_Internal_SetLastError("The output reference-count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_ref_count = 0;
+  return GeneratedGuard([&] { *out_ref_count = ValidateLawLinear(handle)->Value->GetRefCount(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_get_type_name(
+  const OcctSharp_LawLinearHandle* handle,
+  const char** out_type_name)
+{
+  if (out_type_name == nullptr) { OcctSharp_Internal_SetLastError("The output type-name pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_type_name = nullptr;
+  return GeneratedGuard([&] { *out_type_name = ValidateLawLinear(handle)->Value->DynamicType()->Name(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_is_kind(
+  const OcctSharp_LawLinearHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind)
+{
+  if (type_name == nullptr || type_name[0] == '\0') { OcctSharp_Internal_SetLastError("The generated shared type name is null or empty."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (out_is_kind == nullptr) { OcctSharp_Internal_SetLastError("The output kind-state pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_is_kind = 0;
+  return GeneratedGuard([&] { *out_is_kind = ValidateLawLinear(handle)->Value->IsKind(type_name) ? 1 : 0; });
+}
+
+void OCCTSHARP_CALL occtsharp_generated_law_linear_release(OcctSharp_LawLinearHandle* handle)
+{
+  if (handle == nullptr) return;
+  bool removed = false;
+  { std::lock_guard<std::mutex> lock(LawLinearMutex); removed = LiveLawLinearHandles.erase(handle) != 0; }
+  if (removed) delete handle;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_s_create_0(
+  OcctSharp_LawSHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Law_S> createdHandle = new Law_S();
+    *out_handle = AllocateLawS(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_s_method_set_0(
+  const OcctSharp_LawSHandle* handle,
+  double pdeb,
+  double valdeb,
+  double pfin,
+  double valfin)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawS(handle)->Value->Set(pdeb, valdeb, pfin, valfin);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_s_method_set_1(
+  const OcctSharp_LawSHandle* handle,
+  double pdeb,
+  double valdeb,
+  double ddeb,
+  double pfin,
+  double valfin,
+  double dfin)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateLawS(handle)->Value->Set(pdeb, valdeb, ddeb, pfin, valfin, dfin);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_s_clone(
+  const OcctSharp_LawSHandle* source,
+  OcctSharp_LawSHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&] { const OcctSharp_LawSHandle* value = ValidateLawS(source); *out_handle = AllocateLawS(value->Value); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_s_get_ref_count(
+  const OcctSharp_LawSHandle* handle,
+  int32_t* out_ref_count)
+{
+  if (out_ref_count == nullptr) { OcctSharp_Internal_SetLastError("The output reference-count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_ref_count = 0;
+  return GeneratedGuard([&] { *out_ref_count = ValidateLawS(handle)->Value->GetRefCount(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_s_get_type_name(
+  const OcctSharp_LawSHandle* handle,
+  const char** out_type_name)
+{
+  if (out_type_name == nullptr) { OcctSharp_Internal_SetLastError("The output type-name pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_type_name = nullptr;
+  return GeneratedGuard([&] { *out_type_name = ValidateLawS(handle)->Value->DynamicType()->Name(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_s_is_kind(
+  const OcctSharp_LawSHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind)
+{
+  if (type_name == nullptr || type_name[0] == '\0') { OcctSharp_Internal_SetLastError("The generated shared type name is null or empty."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  if (out_is_kind == nullptr) { OcctSharp_Internal_SetLastError("The output kind-state pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_is_kind = 0;
+  return GeneratedGuard([&] { *out_is_kind = ValidateLawS(handle)->Value->IsKind(type_name) ? 1 : 0; });
+}
+
+void OCCTSHARP_CALL occtsharp_generated_law_s_release(OcctSharp_LawSHandle* handle)
+{
+  if (handle == nullptr) return;
+  bool removed = false;
+  { std::lock_guard<std::mutex> lock(LawSMutex); removed = LiveLawSHandles.erase(handle) != 0; }
   if (removed) delete handle;
 }
 

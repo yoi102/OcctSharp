@@ -42,12 +42,13 @@ files are organized by module immediately, even while they compile into the same
 | `OcctSharp.Runtime` | ABI identity, loader, errors, safe handles, common ownership contracts | None |
 | `OcctSharp.Foundation` | Standard, NCollection, TCollection, Message, math, OS/process foundations | Runtime |
 | `OcctSharp.Geometry` | gp, Geom/Geom2d, adaptors, approximation, extrema, properties | Foundation |
-| `OcctSharp.Modeling` | TopAbs/TopLoc/TopoDS, BRep, algorithms, construction, healing | Geometry |
-| `OcctSharp.Mesh` | Poly, triangulation, meshing, bulk buffers | Modeling |
-| `OcctSharp.Documents` | OCAF/TDF/TData/TDocStd, persistence, binary/XML document drivers | Modeling |
-| `OcctSharp.DataExchange` | STEP, IGES, STL, OBJ, PLY, GLTF, VRML and exchange infrastructure | Modeling, Mesh |
-| `OcctSharp.Xde` | XCAF, STEPCAF metadata, assemblies, and XDE persistence adapters | Documents, DataExchange |
-| `OcctSharp.Visualization` | Graphic3d, Prs3d, AIS, SelectMgr, V3d and window integration | Modeling, Mesh |
+| `OcctSharp.MeshData` | Poly triangulations/polygons and copied mesh-data contracts | Geometry |
+| `OcctSharp.Modeling` | TopAbs/TopLoc/TopoDS, BRep, algorithms, construction, healing | Geometry, MeshData |
+| `OcctSharp.Mesh` | BRepMesh/IMesh/XBRepMesh algorithms and bulk meshing workflows | Modeling, MeshData |
+| `OcctSharp.Documents` | OCAF/TDF/TData/TDocStd, persistence, binary/XML document drivers | Modeling, MeshData |
+| `OcctSharp.Visualization` | Graphic3d, Prs3d, AIS, SelectMgr, V3d and window integration | Modeling, Mesh, Documents |
+| `OcctSharp.DataExchange` | STEP, IGES, STL, OBJ, PLY, GLTF, VRML and exchange infrastructure | Modeling, MeshData, Mesh, Documents, Visualization |
+| `OcctSharp.Xde` | XCAF, STEPCAF metadata, assemblies, and XDE persistence adapters | Documents, DataExchange, Visualization |
 | `OcctSharp.IVtk` | Optional VTK integration | Visualization plus external VTK assets |
 | `OcctSharp.OpenGles` | Optional OpenGL ES backend | Visualization plus GLES/EGL assets |
 | `OcctSharp.Draw` | Optional Draw/test harnesses | Xde, Visualization |
@@ -65,20 +66,27 @@ Native assets later move to RID-specific packages such as
 `OcctSharp.Native.win-x64`. Native code remains one bridge until a central cross-module
 handle registry and creator-owned release contract prove that module bridge DLLs are safe.
 
+ADR-0062 completes the generated-signature prerequisite: all 27 observed cross-shard
+edges are resolved, compatible with this graph, and acyclic. It does not perform the
+physical split. Managed projects still need public assembly-identity/type-forwarding and
+manual-facade migration evidence; native DLLs still need cross-DLL registry, allocator,
+and creator-routed release evidence. Until those separate decisions are accepted, the
+current single assembly/DLL/package layout remains authoritative.
+
 ## Product-scale migration batches
 
 Batch B is complete. The former B00-B20 and dotted Bxx.y labels are retired planning
 labels, not current batches or commit boundaries.
 Repository/toolchain, generator, ownership, foundation, modeling, mesh, exchange, XDE,
 visualization, long-tail generation, upgrade, and release engineering all belong to B.
-ADR-0060 opens the next product-scale batch, `C`, for common CAD API expansion. It uses
-whole-product workflow scope comparable to B; numbered or dotted batch fragments remain
-forbidden.
+ADR-0060 opened product-scale batch `C` for common CAD API expansion and ADR-0063 closes
+it at alpha.54. It used whole-product workflow scope comparable to B; numbered or dotted
+batch fragments remain forbidden.
 
 | Batch | Status | Completed evidence | Remaining exit conditions |
 |---|---|---|---|
 | B | Complete (local implementation) | Reproducible .NET 10/native foundation; deterministic generation; safe value, shared, topology, document, metadata, exchange, modeling, mesh, and visualization profiles; 16,353 emitted plus 61 manual stable IDs; zero supported-unselected/LT001-LT004; complete observed classification; Release/Debug/runtime, 13-file freshness, byte-identical clean regeneration, 62-DLL package consumer, compatibility, provenance/SBOM/checksum, and local release gates passing | None inside Batch B. Signing credentials and NuGet publication remain independent release-readiness gates |
-| C — Common CAD API Expansion | Active; three large waves complete locally | ADR-0060 fixes the priority; alpha.51 validates topology/BREP/mesh/XDE/viewer editing, alpha.52 validates STEP reporting/BRepCheck/ShapeFix/V3d rotation, and alpha.53 validates BRepGProp/XCAF properties/XDE occurrences/STEPCAF options through the complete local gate chain | Continue closing the remaining high-frequency model/inspect, build/modify/deliver, and present/interact workflow contract; pass focused evidence per family and one complete validation chain per large wave |
+| C — Common CAD API Expansion | Complete (local implementation) | Alpha.51 validates topology/BREP/mesh/XDE/viewer editing; alpha.52 validates STEP reporting/BRepCheck/ShapeFix/V3d rotation; alpha.53 validates BRepGProp/XCAF properties/XDE occurrences/STEPCAF options; alpha.54 closes the final 15-capability geometry/topology/selective-STEP/viewer-input workflow. Release/Debug, Generator 91/91, Runtime 114/114, 83-file deterministic regeneration, 62-DLL clean consumer, inventory, dependency closure, API compatibility, provenance, and local release gates pass | None inside Batch C. Hosted CI execution, signing, and NuGet publication remain independent release-readiness gates; advanced filters, custom rendering, optional integrations, cold schema, and exhaustive mesh attributes require a new product denominator |
 
 Current B completion is not represented by counting retired planning labels. Engineering
 progress, selected binding coverage, full-profile coverage, inventory completeness,
@@ -88,11 +96,11 @@ package release-ready. New implementation progress is reported against C, never 
 reopening B or inventing B-derived labels.
 
 The 16,353 emitted plus 61 accepted manual stable IDs are Batch B's baseline binding
-coverage, not evidence that Batch C's workflows are complete. The first three Batch C
-waves add twenty-four accepted manual stable IDs and lock their capability denominators in
-`COMMON_API_GAP_INVENTORY.md`; every declared capability in a completed denominator is
-runtime/package validated. Remaining Batch C workflow coverage is still open and is not
-inferred from declaration counts.
+coverage. Batch C adds 41 accepted manual stable IDs across SC-036 through SC-039 and
+locks every capability denominator in `COMMON_API_GAP_INVENTORY.md`; every declared
+capability is runtime/package validated. The resulting alpha.54 inventory has 16,353
+emitted plus 102 manual stable IDs. Completion follows the finite workflow and validation
+contract, not declaration counts alone.
 
 ### Completed capability milestones inside B
 
@@ -135,7 +143,7 @@ may be implemented and validated separately, but they do not create another batc
 Every material wave records source packages/toolkits, stable IDs, tests, package impact,
 coverage change, and the next large workstream before work continues.
 
-## Batch C: Common CAD API Expansion
+## Batch C: Common CAD API Expansion — complete
 
 ### Product outcome
 
@@ -204,7 +212,7 @@ and existing generated/friendly dependencies. Release and Debug, runtime/lifetim
 real-HWND, clean regeneration, clean package consumer, API compatibility, inventory,
 runtime manifest, SBOM/provenance/checksum, and local release gates pass. The exact
 capability denominator and evidence are recorded in `COMMON_API_GAP_INVENTORY.md`.
-This checkpoint does not mark the whole Batch C exit contract complete.
+This checkpoint alone did not mark the whole Batch C exit contract complete.
 
 ### Second large implementation wave — import diagnostics and repair
 
@@ -224,6 +232,24 @@ world placement and independent located shapes, then control STEP metadata and m
 representation on write/read. Alpha.53 uses nine audited SC-038 stable IDs and existing
 owning/property/location infrastructure. Its exact 8-capability denominator and complete
 local checkpoint evidence are recorded in `COMMON_API_GAP_INVENTORY.md`.
+
+### Final large implementation wave — selective STEP, topology edit, and viewer input
+
+The final C wave closes the remaining finite high-frequency chain across `BRepAdaptor`,
+`BRep_Tool`/`Geom2d`, `BRepBuilderAPI`, `BRepTools_ReShape`, `TopExp`,
+`STEPControl`/`XSControl`, and `AIS`/`V3d`. It adds copied edge/surface derivatives and
+pcurves; owning edge/face trim, wire, replace, and remove results; bidirectional copied
+adjacency; owning STEP reader sessions with unit metadata and selective root transfer;
+whole/subshape selection modes; owning selected topology snapshots; and parent-bound
+mouse, wheel, and semantic keyboard forwarding.
+
+Alpha.54 uses 17 audited SC-039 stable IDs and existing generated/friendly dependencies.
+Its 15/15 capability denominator passes focused ownership/failure/disposal checks and one
+real STEP import/edit/export/re-read/real-HWND viewer workflow. The complete local chain
+passes Release and Debug builds, Generator 91/91, Runtime 114/114, dependency profiles
+6/6, 83/83 freshness and byte-identical regeneration, the 62-DLL clean consumer, API
+compatibility, complete classification, dependency closure, provenance, and release
+gates. This closes Batch C.
 
 ### Large-wave execution rules
 
@@ -245,16 +271,20 @@ local checkpoint evidence are recorded in `COMMON_API_GAP_INVENTORY.md`.
 
 ### Batch C exit criteria
 
-- Every declared common workflow above has an intentional public/raw boundary and no
+- [x] Every declared common workflow above has an intentional public/raw boundary and no
   routine step requires an undocumented native escape hatch.
-- Every selected common family is emitted or accepted manual with an explicit ownership,
+- [x] Every selected common family is emitted or accepted manual with an explicit ownership,
   error, lifetime, threading, and data-transfer contract.
-- End-to-end tests cover create/import, inspect, edit, validate/measure, mesh, metadata,
+- [x] End-to-end tests cover create/import, inspect, edit, validate/measure, mesh, metadata,
   export, display, and selection with representative real CAD files.
-- Release and Debug, deterministic regeneration, clean package consumer, API compatibility,
+- [x] Release and Debug, deterministic regeneration, clean package consumer, API compatibility,
   runtime manifest, inventory accounting, provenance, and documentation gates pass.
-- Remaining blocked/cold APIs keep narrow dispositions but do not hide an unfinished
+- [x] Remaining blocked/cold APIs keep narrow dispositions but do not hide an unfinished
   high-frequency workflow.
+
+Advanced selection filters, custom rendering pipelines, low-frequency schema entities,
+optional integrations, and exhaustive mesh attributes are outside the accepted Batch C
+denominator. They require a future product decision and do not keep C active.
 
 ## Generated output partitioning
 
@@ -268,14 +298,15 @@ src/OcctSharp/Generated/<Module>/
 The manifest remains the only owner of generated paths. Moving a generated file between
 modules is a generator change followed by regeneration, never a manual source move.
 
-ADR-0061 implements this source partition now. Binding-model schema 1.3 and manifest
-schema 1.1 carry stable module/layer/shard identities; Release generation currently
-produces 78 manifest-owned files for 16,353 stable IDs. They still compile into one
+ADR-0061 implements this source partition and ADR-0062 closes its semantic dependencies.
+Binding-model schema 1.3 and manifest schema 1.1 carry stable module/layer/shard
+identities; Release generation currently produces 83 manifest-owned files for 16,353
+stable IDs, including the separate MeshData shard. They still compile into one
 managed assembly and one native DLL, and public `OcctSharp` type full names do not move.
 Project/package/native-DLL splitting remains gated by the triggers above and needs a
-separate compatibility and ownership decision. Current generated signatures retain
-some cross-shard build edges in both directions; these are legal inside the single
-assembly/DLL but must be inventoried and closed or lifted before physical project splits.
+separate compatibility and ownership decision. `dependency-closure.json` proves zero
+unresolved targets, zero graph violations, and zero cyclic groups for the generated
+surface; manual facade and binary-identity migration remain outside that claim.
 
 ## Dependency profiles
 
@@ -290,9 +321,11 @@ The same header may be available in several profiles. Coverage is always reporte
 the profile name; profile exclusions require stable reasons and do not disappear from the
 global catalog.
 
-## Required evidence for C and each large work wave
+## Required evidence used for C and each large work wave
 
 - Deterministic discovery, generated source, coverage, and diagnostics.
+- Deterministic generated-shard dependency closure with zero unresolved signature target,
+  target-graph violation, or cyclic group.
 - No unclassified declaration inside the selected common workflow closure.
 - Native and managed Debug/Release builds.
 - Focused ABI, runtime, ownership, failure, and disposal tests.
@@ -306,5 +339,8 @@ global catalog.
 2. ADR-0059 resolves the MIT project license and bundled third-party notice layout;
    keep those files and the runtime manifest current for every distribution change.
 3. Package signing, credentials, and NuGet publication require explicit authorization.
-4. C is one common-API product batch. Its coverage lanes and large waves are not batches,
-   version numbers, completion percentages, or permission to stop after a partial lane.
+4. C is one completed common-API product batch. Its coverage lanes and large waves are
+   not batches, version numbers, or reusable permission to reopen a partial lane.
+5. Any later API expansion starts with a new finite denominator; advanced filters,
+   custom rendering, optional integrations, cold schema, and exhaustive mesh attributes
+   are not retroactive Batch C obligations.

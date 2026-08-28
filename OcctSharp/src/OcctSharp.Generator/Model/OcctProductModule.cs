@@ -6,6 +6,7 @@ public enum OcctProductModule
     Runtime,
     Foundation,
     Geometry,
+    MeshData,
     Modeling,
     Mesh,
     Documents,

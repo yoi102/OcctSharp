@@ -69,6 +69,29 @@ public readonly record struct FaceSurfaceSnapshot(
 /// <summary>A copied point and unit tangent evaluated on an edge curve.</summary>
 public readonly record struct CurveEvaluation(double Parameter, GpPoint Point, GpPoint Tangent);
 
+/// <summary>A copied point plus first and second 3D derivatives evaluated on an edge.</summary>
+public readonly record struct CurveDerivativeEvaluation(
+    double Parameter,
+    GpPoint Point,
+    GpPoint FirstDerivative,
+    GpPoint SecondDerivative);
+
+/// <summary>A copied two-dimensional point or vector in a face UV parameter space.</summary>
+public readonly record struct GpPoint2d(double X, double Y);
+
+/// <summary>Copied bounds and endpoints for an edge pcurve on a specific face.</summary>
+public readonly record struct PcurveSnapshot(
+    double FirstParameter,
+    double LastParameter,
+    GpPoint2d StartPoint,
+    GpPoint2d EndPoint);
+
+/// <summary>A copied UV point and unit tangent evaluated on an edge pcurve.</summary>
+public readonly record struct PcurveEvaluation(
+    double Parameter,
+    GpPoint2d Point,
+    GpPoint2d Tangent);
+
 /// <summary>The nearest copied point projection on an edge curve.</summary>
 public readonly record struct CurveProjection(
     double Parameter,
@@ -81,6 +104,15 @@ public readonly record struct SurfaceEvaluation(
     double UParameter,
     double VParameter,
     GpPoint Point,
+    GpPoint Normal);
+
+/// <summary>A copied surface point, U/V derivatives, and oriented unit normal.</summary>
+public readonly record struct SurfaceDerivativeEvaluation(
+    double UParameter,
+    double VParameter,
+    GpPoint Point,
+    GpPoint UDerivative,
+    GpPoint VDerivative,
     GpPoint Normal);
 
 /// <summary>The nearest copied point projection on a bounded face surface.</summary>

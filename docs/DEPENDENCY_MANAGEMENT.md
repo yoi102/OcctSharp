@@ -70,7 +70,7 @@ NuGet consumers should not manually locate OCCT runtime libraries. Published pac
 must either carry the complete allowed native dependency closure for a RID or declare
 an explicit supported external-runtime contract. ADR-0008 selects one self-contained
 package for the initial Windows x64-only matrix. Its transitive build asset copies the
-bridge and 44 dependent runtime DLLs into the application's `occt` directory.
+complete 62-DLL bridge/OCCT/third-party closure into the application's `occt` directory.
 
 Runtime packaging validation must inspect actual binary dependencies, not only the
 presence of the OcctSharp native bridge.
@@ -90,6 +90,6 @@ technical redistribution evidence.
 - Keep every non-OCCT component version/license recorded; where supplied metadata is
   unavailable (currently jemalloc), disclose that fact instead of inventing a version.
 
-The alpha.53 repository records 62 native files, including the ABI 1.44 bridge, in both the
+The alpha.54 repository records 62 native files, including the ABI 1.45 bridge, in both the
 committed runtime manifest and generated release evidence. This does not by itself grant
 signing credentials or NuGet publication authorization.

@@ -1,13 +1,67 @@
 # Current Status
 
-- Last updated: 2026-08-28
-- Current phase: Batch B is complete; Batch C common-CAD-API expansion is active with three large cross-family API checkpoints plus the ADR-0061 generated-domain partition complete locally
+- Last updated: 2026-08-29
+- Current phase: Batch B and Batch C are complete for their accepted local implementation scopes; alpha.54 closes the final Batch C cross-family dependency closure while retaining the ADR-0061/ADR-0062 logical shard architecture
 - Batch B engineering progress: 100% for the accepted local implementation scope (not a claim that every OCCT declaration is a managed API or that public release is ready)
-- Batch C implementation progress: locked wave denominators are 14/14, 7/7, and 8/8 capabilities validated; Batch C as a whole remains active because later high-frequency workflows are outside these checkpoints
-- Complete-migration batch progress: B is complete; C has three completed large-wave checkpoints and remains active; retired B00-B20 and forbidden numbered C labels are not counted as batches
-- Accepted surface: 16,353 generated manifest IDs plus 85 accepted manual stable IDs; Release and Debug native/managed builds, Generator 84/84, Runtime 108/108, discovery/report determinism, and dependency profiles 6/6 pass
-- Last complete full inventory: 116,272/116,272 declarations and 7,090/7,090 headers have final dispositions; `Emitted` 16,353, `Manual` 85, `SupportedUnselected` 0, `Skipped` 49,344, `Blocked` 50,490, pending 0, HD099 0
-- Overall state: alpha.53 remains the current API/ABI/package identity. ADR-0061 now partitions all generated output by stable product module and Raw/SafeManaged/Runtime layer without changing public type full names, the single managed assembly, or the single native DLL. The complete local Release/Debug/freshness/clean regeneration/package/API/inventory/release chain passes; hosted full release, signing, and NuGet publication remain `NOT RUN`
+- Batch C implementation progress: 100% of the finite local implementation denominator; locked wave denominators are 14/14, 7/7, 8/8, and final 15/15 capabilities validated
+- Complete-migration batch progress: B and C are complete locally; retired B00-B20 and forbidden numbered C labels are not counted as batches
+- Accepted surface: 16,353 generated manifest IDs plus 102 accepted manual stable IDs; Release and Debug native/managed builds, Generator 91/91, Runtime 114/114, discovery/report determinism, generated dependency closure, and dependency profiles 6/6 pass
+- Last complete full inventory: 116,272/116,272 declarations and 7,090/7,090 headers have final dispositions; `Emitted` 16,353, `Manual` 102, `SupportedUnselected` 0, `Skipped` 49,344, `Blocked` 50,473, pending 0, HD099 0
+- Overall state: alpha.54 is the current API/ABI/package identity with ABI 1.45 and bridge 0.53.0. ADR-0061 partitions generated output by stable product module and Raw/SafeManaged/Runtime layer; ADR-0062 proves the generated dependency graph is fully resolved, target-graph compatible, and acyclic. Physical managed-project and native-DLL splitting remain deliberately deferred, so public type full names, the single managed assembly, and the single native DLL remain unchanged. The complete local Release/Debug/freshness/clean regeneration/package/API/inventory/release chain passes; `publicReleaseReady` remains false only because hosted CI execution, signing, and NuGet publication are `NOT RUN`
+
+### Alpha.54 final Batch C selective-import, topology-edit, and viewer-input closure
+
+- The locked final denominator is 15/15 across edge first/second derivatives, face U/V
+  derivatives and oriented normals, edge-on-face pcurves, edge/face trim, wire building,
+  replace/remove topology edits, bidirectional adjacency, owning STEP reader sessions,
+  file units and selective root transfer, explicit target units, whole/subshape selection,
+  owning selected topology snapshots, application input, and one end-to-end integration.
+- ADR-0063 fixes the ownership boundary and SC-039 reconciles exactly 17 newly direct
+  OCCT 8.0.1 stable IDs. Call-local adaptor/builder/reshape state never crosses the ABI;
+  returned topology and selected subshapes are independent owning copies; STEP sessions
+  own their reader; viewer presentations and input remain parent-bound and thread-affine.
+- Package identity is `0.1.0-alpha.54`, native ABI is 1.45, and bridge implementation is
+  0.53.0. The committed `OcctSharp.Native.dll` is 14,920,192 bytes with SHA256
+  `57593BC8B66870DE0373BFBDEFF47B1731C20DF6066EFF22764254EB416E54AA`.
+- The full `release-check.ps1 -PackageVersion 0.1.0-alpha.54` run passes Release and
+  Debug builds with 0 errors, Generator 91/91, Runtime 114/114, dependency profiles 6/6,
+  83/83 generated freshness, and 83/83 byte-identical clean regeneration. The committed
+  runtime matches the Release build byte-for-byte.
+- The clean alpha.54 package consumer restores, publishes, and executes the final Batch C
+  workflow with all 62 DLLs. API comparison against alpha.38 is additive at 37,018
+  additions, 0 removals, and no breaking changes.
+- Complete classification passes at 116,272/116,272 declarations and 7,090/7,090 headers:
+  16,353 emitted, 102 manual, 49,344 skipped, 50,473 blocked, and zero supported-
+  unselected/pending/HD099. Generated dependency closure has 27 direct edges, zero
+  unresolved references, zero graph violations, and zero cycles.
+- `batchImplementationComplete` is true and Batch C is closed. Advanced filters, custom
+  rendering, optional integrations, low-frequency schema, and exhaustive mesh attributes
+  are out of scope rather than unfinished C work. `publicReleaseReady` is false because
+  hosted CI execution, signing, and NuGet publication were not run.
+
+### ADR-0062 generated cross-shard dependency-closure checkpoint
+
+- The generator now resolves emitted return, parameter, base, enum, `Handle<T>`,
+  `gp_Pnt`, and `TopoDS_Shape` references against the complete emitted model. `SD001`
+  blocks unresolved emitted types and `SD002` blocks dependencies outside the accepted
+  target graph before generated source can be accepted.
+- The deterministic closure report covers all 16,353 emitted declarations and 83
+  generated files. Its 27 observed direct cross-shard edges have zero unresolved
+  references, zero target-graph violations, and zero cyclic groups; SHA256 is
+  `A1635978C80B75D4D85507E9D5A4C0DB614B9ADD1557F97D53A3B697BDB36F30`.
+- `MeshData` now owns the `Poly` data contracts, `FEmTool` and `Law` are classified as
+  Geometry, and `TopAbs_Orientation` is a Foundation value contract. The accepted graph
+  also records the real Documents, DataExchange, Visualization, and Xde directions.
+- The generated managed graph is split-eligible, but physical managed-project splitting
+  is deferred until assembly-qualified identity, type forwarding, facade ownership, and
+  package compatibility have a separate accepted design. Native-DLL splitting is not
+  eligible until creator-owned registries, allocators, validation, and release routing
+  work across DLL boundaries. This checkpoint keeps one `OcctSharp.dll`, one
+  `OcctSharp.Native.dll`, and one package.
+- Release and Debug builds pass with 0 warnings/errors; Generator 91/91, Runtime
+  108/108, and dependency profiles 6/6 pass in both. Freshness and clean regeneration
+  verify 83/83 files, the clean alpha.53 package consumer passes with 62 DLLs, and the
+  complete local release check records the dependency-closure gate as `PASS`.
 
 ### ADR-0061 generated domain/layer partition checkpoint
 
@@ -15,24 +69,24 @@
   Modeling, Mesh, Documents, DataExchange, Xde, Visualization, IVtk, OpenGles, Draw,
   or Runtime. The classifier is fail-closed for emitted packages, and tests lock the
   target acyclic managed-project graph plus representative package identities.
-- Manifest schema 1.1 owns 78 generated files and records `productModule`, `apiLayer`,
-  and `outputShard` for each. The distribution is 58 Raw, 19 SafeManaged, and one
-  Runtime file across ten emitted product modules; obsolete centralized generated
+- Manifest schema 1.1 now owns 83 generated files and records `productModule`, `apiLayer`,
+  and `outputShard` for each. The distribution is 61 Raw, 21 SafeManaged, and one
+  Runtime file across 12 manifest modules; obsolete centralized generated
   paths are removed by normal manifest stale cleanup.
 - Native shared-handle registries and allocators remain creator-owned inside one
   `OcctSharp.Native.dll`; managed public types retain the `OcctSharp` namespace and
   compile into one `OcctSharp.dll`. No ownership rule, ABI name/version, package ID,
   or public type full name moved.
-- Current intra-assembly generated signatures still have audited cross-shard edges,
-  including Geometry/Modeling and Modeling/Mesh relationships. This checkpoint does
-  not claim those edges are project-ready; closing or lifting them is a prerequisite
-  for the later managed-project/native-DLL split.
+- ADR-0062 supersedes this checkpoint's previously open dependency audit: all current
+  generated cross-shard references are now resolved and acyclic. That graph result is
+  necessary but deliberately not sufficient authority for a physical assembly or DLL
+  split.
 - The largest generated file is now the 9.09 MiB DataExchange native shard, down from
   the former 15-19 MiB centralized translation-unit range. Native CMake recursively
   collects the product-module sources.
-- Release and Debug builds pass with 0 warnings/errors; Generator 84/84, Runtime
+- Release and Debug builds pass with 0 warnings/errors; Generator 91/91, Runtime
   108/108, and dependency profiles 6/6 pass in both. Generated freshness and clean
-  source regeneration verify 78/78 byte-identical files. The clean alpha.53 package
+  source regeneration verify 83/83 byte-identical files. The clean alpha.53 package
   consumer passes with the synchronized 62-DLL runtime.
 - API comparison with alpha.38 remains additive at 36,883 additions, 0 removals, and
   no breaking change. Full inventory remains 116,272/116,272 declarations and
@@ -247,14 +301,13 @@
 
 ## Current focus
 
-Batch C remains active under ADR-0060 after three complete local large-wave checkpoints.
-Alpha.53 closed BRepGProp measurement, XCAF validation attributes, recursive XDE
-occurrence/world-location traversal, and explicit STEPCAF read/write options. The next
-focus is a new dependency-closed high-frequency workflow across remaining geometry
-evaluation/editing, topology relationships, richer exchange behavior, and application input. It
-must again cross connected families and finish an end-to-end outcome rather than
-becoming a declaration-count or per-class wave. Batch B evidence stays closed and is
-not reused as Batch C progress.
+Batch C is closed under ADR-0060 and ADR-0063 after four complete local large-wave
+checkpoints. Alpha.54 finishes the remaining locked geometry evaluation/editing,
+topology relationship, selective STEP session/unit, subshape selection, and application-
+input workflow as one dependency closure. ADR-0062 keeps the generated cross-shard graph
+closed without physically splitting the managed or native deliverables. The immediate
+focus is preserving this alpha.54 evidence boundary; another API expansion requires a
+new finite product denominator rather than silently reopening C.
 
 ### Shared-handle dependency-closure hardening
 
@@ -903,24 +956,22 @@ not reused as Batch C progress.
 - Generator input: the schema 1.8 selected Windows-core closure in
   `config/generation.json`, resolved against the pinned OCCT 8.0.1 headers.
 - Discovery output: 116,263 unique normalized declarations, including 16,353 emitted
-  and 85 reconciled manual stable IDs.
+  and 102 reconciled manual stable IDs.
 - Runtime workflow: create/transform/compound shapes; count faces; STEP round-trip;
   STL/IGES output; geometry and XDE STEP assembly; detailed mesh and validation reports;
   ShapeFix repair comparison; XCAF validation properties, nested occurrence/world
-  placement, STEPCAF options; viewer appearance, selection, camera, and mouse rotation;
-  validate errors, ownership, threading, and disposal.
+  placement, STEPCAF options; derivatives/pcurves/trim/wire/reshape/adjacency; selective
+  STEP sessions and units; viewer appearance, whole/subshape selection, owning selected
+  topology, camera and application input; validate errors, ownership, threading, and
+  disposal.
 
 ## Current gaps and deferred work
 
-- The first three Batch C gap denominators are established and all 14/14, 7/7, and 8/8
-  declared capabilities pass. This does not cover every remaining routine workflow in
-  `MIGRATION_PLAN.md`.
-- Remaining common gaps include broader Geom/Geom2d evaluation and trimming, topology
-  editing and relationship queries, richer multi-root/unit/session exchange behavior,
-  and application input beyond the completed mouse rotation path.
-- Additional collections, borrowed/parent-bound views, and generator/type-map/ownership
-  rules are pulled into C when they unlock several common workflow families; they are not
-  scheduled as isolated micro-batches.
+- All Batch C gap denominators pass: 14/14, 7/7, 8/8, and final 15/15. Batch C is complete
+  for this finite routine CAD workflow contract.
+- Advanced selection filters, custom rendering pipelines, optional integrations,
+  low-frequency schema entities, exhaustive mesh attributes, and unrelated long-tail
+  APIs are outside Batch C. They require a new finite product denominator.
 - Hosted full release execution, signing, credentials, and NuGet publication remain
   separate release-readiness work and require explicit authorization.
 - Automated OCCT source builds on a clean machine remain deferred; the committed,
@@ -928,14 +979,11 @@ not reused as Batch C progress.
 
 ## Next tasks
 
-1. Lock the next dependency-closed common workflow across multiple remaining high-value
-   families, including its end-to-end runtime outcome and stable capability denominator.
-2. Prefer one generator/type-map/ownership generalization when it safely unlocks several
-   of those families; keep borrowed native state behind copied or parent-bound contracts.
-3. Implement and validate that next workflow as one coherent wave, then run the same
-   complete Release/Debug/regeneration/package/inventory/release chain at its checkpoint.
-4. Keep cold/optional declarations classified without allowing them to displace routine
-   CAD workflows; keep signing and publication outside implementation authority.
+1. Preserve the alpha.54 ABI/package/runtime hashes and complete local release evidence.
+2. If publication is authorized later, run hosted release, signing, and NuGet publication
+   as release-readiness work without reopening Batch C.
+3. If more API coverage is requested, first accept a new finite cross-family product
+   denominator and ownership/dependency closure; do not relabel cold/optional work as C.
 
 ## Do not change without an ADR
 
@@ -956,22 +1004,22 @@ not reused as Batch C progress.
 | Release native build | PASS | `eng/build.ps1 -Configuration Release` |
 | Release managed build | PASS | 5 projects, 0 warnings, 0 errors |
 | Debug native/managed build | PASS | 5 projects, 0 warnings, 0 errors |
-| Generator unit tests | PASS | ADR-0061 Release and Debug `eng/build.ps1`: 84/84 |
-| Runtime/lifetime tests | PASS | Alpha.53 Release and Debug builds: 108/108 |
+| Generator unit tests | PASS | ADR-0062 Release and Debug `eng/build.ps1`: 91/91 |
+| Runtime/lifetime tests | PASS | Alpha.54 Release and Debug builds: 114/114 |
 | Controlled semantic Clang parse | PASS | Record, method, constructor, and enum discovery |
-| OCCT semantic discovery | PASS | Selected model: 116,263 declarations; 85 configured manual stable IDs reconciled |
+| OCCT semantic discovery | PASS | Selected model: 116,263 declarations; 102 configured manual stable IDs reconciled |
 | Full OCCT header catalog | PASS | 7,090 entry headers: 7,084 `.hxx`, 6 `.h`, 407 filename-derived packages |
 | Full OCCT semantic inventory | BLOCKED | 7,058/7,090 headers semantically scanned; 32 named dependency/artifact failures retain stable dispositions |
-| Full-inventory classification | PASS | 16,353 emitted, 85 manual, 0 supported-unselected, 49,344 skipped, 50,490 blocked; 116,272/116,272 declarations and 7,090/7,090 headers classified; SHA256 `37A31B92034E1132AA46293BB42A50F4A9D88E3AEC10D98046E9A598F0F8676F` |
+| Full-inventory classification | PASS | 16,353 emitted, 102 manual, 0 supported-unselected, 49,344 skipped, 50,473 blocked; 116,272/116,272 declarations and 7,090/7,090 headers classified; SHA256 `B885C13B4037AF79065143B204F715F85C533AB186337466D4DE1B0B25048770` |
 | Discovery determinism | PASS | Two-run SHA256 `AEBC995234573E793D33A79188DB51C49D2282FC147C1201F8C9D2CC80D2893F` |
 | Model determinism | PASS | Two runs SHA256 `5C0FAF4B37C0D5A56ADCB11A0729C6FB5BCF79D5789EAA4356465CB354D0C064` |
-| Documentation navigation | PASS | Current planning edit: 103 tracked/untracked Markdown source files checked for local targets |
+| Documentation navigation | PASS | Alpha.54 closeout: 110 tracked/untracked Markdown source files checked for local targets |
 | Structured canonical model compile | PASS | Generator Release build, 0 warnings and 0 errors |
 | Structured canonical model tests | PASS | 3 generator tests; signature, qualifier, inheritance, template/handle facts |
 | Structured OCCT fact inventory | PASS | Binding-model schema 1.3 retains abstract-record facts and fail-closed product-module identity in the selected semantic model |
 | Source package/toolkit identity | PASS | 22,879 of 22,879 declarations classified in the selected scope |
 | Support classification tests | PASS | 2 tests; rule order, stable codes, complete/sorted summary |
-| Selected-scope support summary | PASS | Current alpha.53 surface has 16,353 emitted plus 85 accepted manual stable IDs and zero supported-unselected declarations |
+| Selected-scope support summary | PASS | Current alpha.54 surface has 16,353 emitted plus 102 accepted manual stable IDs and zero supported-unselected declarations |
 | Simple binding eligibility | PASS | Value-copy constructors/static methods promoted; instance/pointer/unknown-lifetime cases remain pending |
 | Coverage and diagnostics reports | PASS | 116,263 declarations; all states and stable disposition codes reported |
 | Report determinism | PASS | Coverage SHA256 `DB4261B92C9F0E4B30FED2992945D6086C3E62D6B1B414238CE0015129055834`; diagnostics SHA256 `36411F4EBC22A1FEDE4586963D4A01A5F0EA27FCC75E738D665A1CBF87BECA52` |
@@ -985,50 +1033,51 @@ not reused as Batch C progress.
 | B05.2 opaque `TopLoc_Location` bridge | PASS | Debug/Release runtime tests cover identity, composition, clone, inverse, conversion, and absolute/relative shape placement |
 | B05 complete opaque `gp` value family | PASS | Debug/Release runtime tests cover `GpVec`, `GpDir`, `GpAx1`, `GpMat`, validation, conversion, and disposal; B05 is reported as one coarse batch |
 | Common modeling APIs | PASS | Release/Debug cover cone/torus, extrusion/revolution, all/single-edge fillet/chamfer, offset, section, finite bounds, validity/count, failures, layouts, and source independence |
-| Current geometry/topology/XDE APIs | PASS | Release/Debug and the clean package consumer cover curve/surface evaluation and projection, adjacency, loft/pipe/sewing, wedge/thick solid, Boolean history, composable STEP import, XCAF validation properties, recursive occurrences/world placement, and STEPCAF options |
+| Current geometry/topology/XDE APIs | PASS | Release/Debug and the clean package consumer cover curve/surface derivatives/projection, pcurves, trim/wire/reshape, bidirectional adjacency, loft/pipe/sewing, wedge/thick solid, Boolean history, selective STEP sessions/units, composable XDE import, validation properties, recursive occurrences/world placement, and STEPCAF options |
 | B06 string/sequence/array/vector/map wave | PASS | Debug/Release runtime tests (40) cover UTF-8/UTF-16 conversion, finite mutation, lower-bound translation, map lookup/bind/unbind, ordered keys, clone ownership, one-shot snapshots, empty collections, stale disposal, and early-exit enumeration |
 | Generated staging and stale cleanup | PASS | Generator tests cover deterministic module/layer output, manifest-owned stale removal, and acyclic dependency direction |
-| Generated source freshness | PASS | ADR-0061 release check verified all 78 manifest-owned files and byte-identical clean regeneration |
+| Generated cross-shard dependency closure | PASS | 16,353 declarations and 83 files; 27 direct edges, 0 unresolved references, 0 target-graph violations, 0 cyclic groups; SHA256 `A1635978C80B75D4D85507E9D5A4C0DB614B9ADD1557F97D53A3B697BDB36F30` |
+| Generated source freshness | PASS | Alpha.54 release check verified all 83 manifest-owned files and byte-identical clean regeneration |
 | Generated value ABI layout | PASS | Native 24-byte/8-byte assertions and managed 24-byte runtime assertion |
 | STEP geometry round-trip | PASS | Generated box and transformed two-box compound round-tripped with 6 and 12 faces |
 | STL/IGES file output | PASS | Binary STL and BRep-mode IGES created and checked non-empty |
 | Real STEP assembly sample | PASS | 7 inputs, 701 faces, 2,412,254-byte output |
-| Interactive console samples | PASS (scoped) | Seven-workflow menu compiles; non-window alpha.53 property/occurrence/STEP-options workflow has runtime/package evidence; interactive Viewer UI launch NOT RUN, while its HWND rotation path is runtime/package tested |
+| Interactive console samples | PASS (scoped) | Seven-workflow menu compiles; alpha.54 final non-interactive workflow has runtime/package evidence; interactive Viewer UI launch NOT RUN, while its real-HWND selection/input path is runtime/package tested |
 | B17 HWND visualization core | PASS | Release/Debug real HWND display, source-independent AIS shape, appearance/display mode, standard projections, zoom/pan/rotation, thread rejection, detection, replace/add/remove/toggle/clear selection, snapshot, and removal |
 | B18 optional dependency profiles | PASS | Release/Debug build audit classifies 6/6 profiles; IVtk/VTK and EGL/GLES blockers are named; core package unchanged |
-| Native runtime dependency closure | PASS | 62 DLLs in committed alpha.53 ABI 1.44 runtime; complete Release rebuild is byte-identical and loads from `occt` |
+| Native runtime dependency closure | PASS | 62 DLLs in committed alpha.54 ABI 1.45 runtime; complete Release rebuild is byte-identical and loads from `occt` |
 | XDE two-box assembly | PASS | One XDE assembly root, two occurrences, and 12-face STEP round-trip |
 | STEPCAF/XDE metadata | PASS (scoped) | Existing seven-input metadata workflow plus alpha.53 area/volume/centroid attributes, nested occurrence placement, metadata filters, and BinXCAF/STEPCAF round trips |
 | XDE native runtime libraries | PASS | `TKXCAF`, `TKCAF`, `TKLCAF`, and `TKCDF` present in Debug and Release runtime directories |
 | Checked shared-handle cast | PASS | Release/Debug `TryCastDerived` and `CastDerived`: retained success, wrong/null rejection, and `InvalidCastException` |
-| NuGet package contents | PASS | `0.1.0-alpha.53`; managed/XML/docs, MIT metadata/license, 62 native DLLs, and 11 bundled notice/license files |
+| NuGet package contents | PASS | `0.1.0-alpha.54`; managed/XML/docs, MIT metadata/license, 62 native DLLs, and 11 bundled notice/license files |
 | Package output layout | PASS | Published executable has `occt/` closure and no root `OcctSharp.Native.dll` |
-| Packaging/clean consumer | PASS | Local alpha.53 package plus clean SDK 10.0.400 NuGet restore/publish/runtime, ABI 1.44/bridge 0.52.0, 62 DLLs, 16,353 generated declarations, XCAF property/occurrence/STEP-options workflow, and all prior profiles |
+| Packaging/clean consumer | PASS | Local alpha.54 package plus clean SDK 10.0.400 NuGet restore/publish/runtime, ABI 1.45/bridge 0.53.0, 62 DLLs, 16,353 generated declarations, final selective-import/edit/export/viewer workflow, and all prior profiles |
 | Fresh-clone Sample bundled runtime | PASS | New clone without local settings/OCCT environment passed manifest, Release/Debug `--smoke`, exact 62-DLL output, box creation, and package creation |
 | Git whitespace checks | PASS | `git diff --check` and `git diff --cached --check` |
 | CI configuration | PASS | Generator tests, clone-only bundled-runtime Release/Debug smoke, and immutable URL/SHA full Windows release-check jobs configured |
 | Hosted CI execution | PASS (clone/runtime); full release NOT RUN | GitHub run 33064559589: generator-tests and bundled-runtime manifest/Release/Debug smoke succeeded at commit c8a38c2; SDK-dependent full-windows was conditionally skipped because artifact variables are not configured |
-| API compatibility | PASS | Alpha.38 606-signature baseline comparison: 36,883 additions, zero removals, non-breaking |
-| Release engineering | PASS (alpha.53 + ADR-0061 local) | Complete local release check passes, including 78-file freshness, committed-runtime hash/build identity, byte-identical clean source regeneration, package consumer, API compatibility, inventory, SBOM/provenance/checksums; `batchImplementationComplete` is true |
+| API compatibility | PASS | Alpha.38 606-signature baseline comparison: 37,018 additions, zero removals, non-breaking |
+| Release engineering | PASS (alpha.54 local) | Complete local release check passes, including generated dependency closure, 83-file freshness, committed-runtime hash/build identity, byte-identical clean source regeneration, package consumer, API compatibility, inventory, SBOM/provenance/checksums; `batchImplementationComplete` is true |
 | Public release readiness | BLOCKED | MIT and bundled notices PASS; hosted release execution, signing, and NuGet publication are NOT RUN |
 
 ## Migration loop state
 
 ```text
-LOOP_STATE: CONTINUE
-CURRENT_BATCH: C
-CURRENT_WORKSTREAM: GENERATED PRODUCT-MODULE AND API-LAYER PARTITION COMPLETE
-COMPLETED_THIS_TURN: Implemented fail-closed module identity, dependency graph, 78-file Raw/SafeManaged/Runtime output, cross-translation-unit native helpers, recursive native source collection, ADR-0061, and full local validation without changing public type identity
-NEXT_WORKSTREAM: Lock and implement the next multi-family high-frequency common workflow
-NEXT_ACTION: Inventory remaining geometry evaluation/editing, topology relationship, richer exchange, and application-input gaps and select one dependency-closed end-to-end slice before implementation
-ENGINEERING_PROGRESS: B 100% COMPLETE; C THREE LARGE WAVES COMPLETE, BATCH C CONTINUES
-BATCH_PROGRESS: C IN PROGRESS WITH THREE COMPLETE LOCAL CHECKPOINTS (not a whole-Batch-C completion claim)
+LOOP_STATE: COMPLETE
+CURRENT_BATCH: NONE; B AND C COMPLETE FOR ACCEPTED LOCAL IMPLEMENTATION SCOPES
+CURRENT_WORKSTREAM: ALPHA.54 FINAL BATCH C CLOSURE COMPLETE; PHYSICAL SPLIT DEFERRED
+COMPLETED_THIS_TURN: Closed the 15-capability selective STEP, geometry/topology edit, subshape selection, and viewer-input dependency closure; completed full local validation without splitting the managed assembly or native DLL
+NEXT_WORKSTREAM: REQUIRES A NEW USER-AUTHORIZED PRODUCT DENOMINATOR OR SEPARATE PUBLICATION AUTHORITY
+NEXT_ACTION: PRESERVE ALPHA.54 EVIDENCE; DO NOT REOPEN BATCH C FOR UNBOUNDED LONG-TAIL WORK
+ENGINEERING_PROGRESS: B 100% COMPLETE; C 100% COMPLETE FOR LOCKED LOCAL IMPLEMENTATION DENOMINATORS
+BATCH_PROGRESS: C COMPLETE WITH FOUR COMPLETE LOCAL CHECKPOINTS
 B_BASELINE_BINDING_COVERAGE: 16414/16414 generated plus accepted manual stable IDs (100%)
-C_COMMON_WORKFLOW_COVERAGE: FIRST-WAVE 14/14, SECOND-WAVE 7/7, AND THIRD-WAVE 8/8 DENOMINATORS VALIDATED (100% EACH); REMAINING BATCH C DENOMINATOR OPEN
-FULL_PROFILE_ACCOUNTING: 116272/116272 declarations classified; 50490 have narrow blocked dispositions and are not claimed as managed APIs
+C_COMMON_WORKFLOW_COVERAGE: FIRST-WAVE 14/14, SECOND-WAVE 7/7, THIRD-WAVE 8/8, AND FINAL-WAVE 15/15 DENOMINATORS VALIDATED (100% EACH)
+FULL_PROFILE_ACCOUNTING: 116272/116272 declarations classified; 50473 have narrow blocked dispositions and are not claimed as managed APIs
 INVENTORY_COMPLETENESS: 7058/7090 headers semantically scanned (99.5487%); 116272/116272 discovered declarations and 7090/7090 catalogued headers classified
-LAST_VALIDATION: Alpha.53 plus ADR-0061 Release/Debug build PASS; Generator 84/84 and Runtime 108/108 PASS in both; 78-file freshness and clean regeneration PASS; clean package consumer and API compatibility PASS; inventory/release gate PASS
-BLOCKER: NONE FOR THE FIRST THREE BATCH C LARGE-WAVE CHECKPOINTS; HOSTED FULL RELEASE, SIGNING, AND NUGET PUBLICATION NOT RUN
+LAST_VALIDATION: Alpha.54 Release/Debug build PASS; Generator 91/91, Runtime 114/114, and dependency profiles 6/6 PASS; 83-file freshness and clean regeneration PASS; dependency closure 27 edges/0 issues/0 cycles PASS; clean 62-DLL package consumer and API compatibility PASS; inventory/provenance/release gate PASS
+BLOCKER: NONE FOR BATCH C LOCAL IMPLEMENTATION; HOSTED CI EXECUTION, SIGNING, AND NUGET PUBLICATION NOT RUN
 ```
 
 ## Known risks

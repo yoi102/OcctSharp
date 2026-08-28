@@ -12,6 +12,7 @@
 // Source: c:@S@Geom_BSplineSurface@F@MaxDegree#S
 // Source: c:@S@Geom_BezierCurve@F@MaxDegree#S
 // Source: c:@S@Geom_BezierSurface@F@MaxDegree#S
+// Source: c:@S@Law_BSpline@F@MaxDegree#S
 // Source: c:@S@PLib@F@Bin#I#I#S
 // Source: c:@S@PLib@F@ConstraintOrder#I#S
 // Source: c:@S@PLib@F@NivConstr#$@E@GeomAbs_Shape#S
@@ -33,6 +34,7 @@
 #include <Geom_BSplineSurface.hxx>
 #include <Geom_BezierCurve.hxx>
 #include <Geom_BezierSurface.hxx>
+#include <Law_BSpline.hxx>
 #include <PLib.hxx>
 #include <gp.hxx>
 
@@ -140,6 +142,11 @@ int32_t OCCTSHARP_CALL occtsharp_generated_geom_bezier_curve_static_max_degree_0
 int32_t OCCTSHARP_CALL occtsharp_generated_geom_bezier_surface_static_max_degree_0(void)
 {
   return Geom_BezierSurface::MaxDegree();
+}
+
+int32_t OCCTSHARP_CALL occtsharp_generated_law_bspline_max_degree_static_max_degree_0(void)
+{
+  return Law_BSpline::MaxDegree();
 }
 
 double OCCTSHARP_CALL occtsharp_generated_plib_static_bin_0(

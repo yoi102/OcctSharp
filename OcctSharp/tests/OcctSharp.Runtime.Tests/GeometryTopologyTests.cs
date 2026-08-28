@@ -88,6 +88,90 @@ public sealed class GeometryTopologyTests
     }
 
     [Fact]
+    public void CurveSurfaceAndPcurveDerivativesAreCopiedValues()
+    {
+        using Shape line = ShapeFactory.CreateEdge(GpPoint.Origin, new GpPoint(10, 0, 0));
+        CurveDerivativeEvaluation curve = line.EvaluateEdgeDerivatives(4);
+        Assert.Equal(new GpPoint(4, 0, 0), curve.Point);
+        Assert.Equal(new GpPoint(1, 0, 0), curve.FirstDerivative);
+        Assert.Equal(GpPoint.Origin, curve.SecondDerivative);
+
+        using Shape box = ShapeFactory.CreateBox(4, 5, 6);
+        Shape[] faces = box.GetFaces();
+        Shape[] edges = faces[0].GetSubShapes(ShapeKind.Edge);
+        try
+        {
+            FaceSurfaceSnapshot bounds = faces[0].GetFaceSurfaceSnapshot();
+            double u = (bounds.FirstUParameter + bounds.LastUParameter) / 2;
+            double v = (bounds.FirstVParameter + bounds.LastVParameter) / 2;
+            SurfaceDerivativeEvaluation surface = faces[0].EvaluateFaceDerivatives(u, v);
+            Assert.Equal(1, VectorMagnitude(surface.Normal), 10);
+            Assert.True(VectorMagnitude(surface.UDerivative) > 0);
+            Assert.True(VectorMagnitude(surface.VDerivative) > 0);
+
+            PcurveSnapshot pcurve = edges[0].GetPcurveSnapshot(faces[0]);
+            double parameter = (pcurve.FirstParameter + pcurve.LastParameter) / 2;
+            PcurveEvaluation evaluation = edges[0].EvaluatePcurve(faces[0], parameter);
+            Assert.Equal(parameter, evaluation.Parameter, 10);
+            Assert.Equal(1, Math.Sqrt(
+                evaluation.Tangent.X * evaluation.Tangent.X
+                + evaluation.Tangent.Y * evaluation.Tangent.Y), 10);
+
+            faces[0].Dispose();
+            edges[0].Dispose();
+            Assert.True(double.IsFinite(surface.Point.X));
+            Assert.True(double.IsFinite(evaluation.Point.X));
+        }
+        finally
+        {
+            foreach (Shape edge in edges) edge.Dispose();
+            foreach (Shape face in faces) face.Dispose();
+        }
+    }
+
+    [Fact]
+    public void EdgeFaceTrimmingAndWireConstructionReturnIndependentOwners()
+    {
+        Shape first = ShapeFactory.CreateEdge(GpPoint.Origin, new GpPoint(10, 0, 0));
+        Shape second = ShapeFactory.CreateEdge(new GpPoint(10, 0, 0), new GpPoint(10, 5, 0));
+        using Shape trimmedEdge = first.TrimEdge(2, 8);
+        using Shape wire = ShapeFactory.CreateWire([first, second]);
+        Assert.Equal(6, trimmedEdge.GetEdgeLength(), 10);
+        Assert.Equal(ShapeKind.Wire, wire.Kind);
+        Assert.Equal(2, wire.CountSubShapes(ShapeKind.Edge));
+
+        using Shape box = ShapeFactory.CreateBox(4, 5, 6);
+        Shape[] faces = box.GetFaces();
+        Shape trimmedFace;
+        try
+        {
+            FaceSurfaceSnapshot bounds = faces[0].GetFaceSurfaceSnapshot();
+            double uPadding = (bounds.LastUParameter - bounds.FirstUParameter) / 4;
+            double vPadding = (bounds.LastVParameter - bounds.FirstVParameter) / 4;
+            trimmedFace = faces[0].TrimFace(
+                bounds.FirstUParameter + uPadding,
+                bounds.LastUParameter - uPadding,
+                bounds.FirstVParameter + vPadding,
+                bounds.LastVParameter - vPadding);
+        }
+        finally
+        {
+            foreach (Shape face in faces) face.Dispose();
+        }
+
+        using (trimmedFace)
+        {
+            first.Dispose();
+            second.Dispose();
+            box.Dispose();
+            Assert.Equal(ShapeKind.Edge, trimmedEdge.Kind);
+            Assert.Equal(ShapeKind.Wire, wire.Kind);
+            Assert.Equal(ShapeKind.Face, trimmedFace.Kind);
+            Assert.True(trimmedFace.IsValid);
+        }
+    }
+
+    [Fact]
     public void TopologyAdjacencyCopiesUniqueEdgeToFaceRelations()
     {
         using Shape box = ShapeFactory.CreateBox(4, 5, 6);
@@ -109,6 +193,47 @@ public sealed class GeometryTopologyTests
         box.Dispose();
         Assert.All(map.Items, item => Assert.Equal(ShapeKind.Edge, item.Kind));
         Assert.All(map.Ancestors, ancestor => Assert.Equal(ShapeKind.Face, ancestor.Kind));
+    }
+
+    [Fact]
+    public void ReverseAdjacencyAndTopologyReshapePreserveIndependentResults()
+    {
+        using Shape box = ShapeFactory.CreateBox(4, 5, 6);
+        using TopologyAdjacencyMap map = box.GetTopologyAdjacency(ShapeKind.Edge, ShapeKind.Face);
+        for (int faceIndex = 0; faceIndex < map.Ancestors.Count; ++faceIndex)
+        {
+            IReadOnlyList<int> edgeIndices = map.GetItemIndices(faceIndex);
+            Assert.Equal(4, edgeIndices.Count);
+            Assert.All(edgeIndices, edgeIndex =>
+                Assert.Contains(faceIndex, map.GetAncestorIndices(edgeIndex).ToArray()));
+        }
+
+        using Shape translatedBase = ShapeFactory.CreateBox(4, 5, 6);
+        using Shape translated = translatedBase.Transformed(
+            ShapeTransform.CreateTranslationAndRotationZ(8, 0, 0, 0));
+        Shape compound = ShapeFactory.CreateCompound([box, translated]);
+        Shape[] solids = compound.GetSubShapes(ShapeKind.Solid);
+        using Shape replacement = ShapeFactory.CreateBox(2, 2, 2);
+        Shape replaced = compound.ReplaceSubshape(solids[0], replacement);
+        Shape removed = compound.RemoveSubshape(solids[1]);
+        try
+        {
+            Assert.Equal(2, replaced.CountSubShapes(ShapeKind.Solid));
+            Assert.Equal(1, removed.CountSubShapes(ShapeKind.Solid));
+
+            compound.Dispose();
+            foreach (Shape solid in solids) solid.Dispose();
+            replacement.Dispose();
+            Assert.Equal(2, replaced.CountSubShapes(ShapeKind.Solid));
+            Assert.Equal(1, removed.CountSubShapes(ShapeKind.Solid));
+        }
+        finally
+        {
+            compound.Dispose();
+            foreach (Shape solid in solids) solid.Dispose();
+            replaced.Dispose();
+            removed.Dispose();
+        }
     }
 
     [Fact]
@@ -224,8 +349,16 @@ public sealed class GeometryTopologyTests
         Assert.Throws<InvalidCastException>(() => box.GetEdgeLength());
         Assert.Throws<InvalidCastException>(() => edge.EvaluateFace(0, 0));
         Assert.Throws<ArgumentException>(() => edge.EvaluateEdge(2));
+        Assert.Throws<ArgumentException>(() => edge.EvaluateEdgeDerivatives(double.PositiveInfinity));
+        Assert.Throws<ArgumentException>(() => edge.TrimEdge(0.75, 0.25));
+        Assert.Throws<InvalidCastException>(() => box.TrimEdge(0, 1));
         Assert.Throws<ArgumentOutOfRangeException>(() => edge.ProjectPointOnEdge(new GpPoint(double.NaN, 0, 0)));
         Assert.Throws<ArgumentException>(() => box.GetTopologyAdjacency(ShapeKind.Face, ShapeKind.Edge));
+        Assert.Throws<ArgumentException>(() => ShapeFactory.CreateWire([]));
+        Assert.Throws<InvalidCastException>(() => ShapeFactory.CreateWire([box]));
+        using Shape unrelated = ShapeFactory.CreateEdge(new GpPoint(4, 0, 0), new GpPoint(5, 0, 0));
+        Assert.Throws<ArgumentException>(() => box.ReplaceSubshape(unrelated, edge));
+        Assert.Throws<ArgumentException>(() => box.RemoveSubshape(unrelated));
         Assert.Throws<ArgumentException>(() => box.MakeThickSolid([], -0.1));
         Assert.Throws<InvalidCastException>(() => box.MakeThickSolid([edge], -0.1));
 
@@ -243,8 +376,12 @@ public sealed class GeometryTopologyTests
     public void GeometryValueAbiLayoutsAreStable()
     {
         Assert.Equal(56, Marshal.SizeOf<CurveEvaluationRaw>());
+        Assert.Equal(80, Marshal.SizeOf<CurveDerivativeEvaluationRaw>());
+        Assert.Equal(48, Marshal.SizeOf<PcurveSnapshotRaw>());
+        Assert.Equal(40, Marshal.SizeOf<PcurveEvaluationRaw>());
         Assert.Equal(48, Marshal.SizeOf<CurveProjectionRaw>());
         Assert.Equal(64, Marshal.SizeOf<SurfaceEvaluationRaw>());
+        Assert.Equal(112, Marshal.SizeOf<SurfaceDerivativeEvaluationRaw>());
         Assert.Equal(56, Marshal.SizeOf<SurfaceProjectionRaw>());
         Assert.Equal(48, Marshal.SizeOf<BooleanHistorySummaryRaw>());
         Assert.Equal(8, Marshal.OffsetOf<CurveEvaluationRaw>(nameof(CurveEvaluationRaw.Point)).ToInt32());

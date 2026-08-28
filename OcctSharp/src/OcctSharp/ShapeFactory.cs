@@ -210,6 +210,46 @@ public static class ShapeFactory
         }
     }
 
+    /// <summary>Connects one or more owning edge inputs into an independently owned wire.</summary>
+    public static unsafe Shape CreateWire(IReadOnlyList<Shape> edges)
+    {
+        ArgumentNullException.ThrowIfNull(edges);
+        if (edges.Count == 0) throw new ArgumentException("A wire requires at least one edge.", nameof(edges));
+        return WithBorrowedShapeHandles(edges, (pointers, count) =>
+        {
+            NativeError.ThrowIfFailed(
+                NativeMethods.CreateWire(pointers, count, out nint nativeShape),
+                "shape_create_wire");
+            return FromNativeHandle(nativeShape, "shape_create_wire");
+        });
+    }
+
+    /// <summary>Adds copied topology values to a new independently owned compound.</summary>
+    public static Shape CreateCompound(IReadOnlyList<Shape> shapes)
+    {
+        ArgumentNullException.ThrowIfNull(shapes);
+        if (shapes.Count == 0) throw new ArgumentException("A compound requires at least one shape.", nameof(shapes));
+        NativeError.ThrowIfFailed(NativeMethods.CreateCompound(out nint nativeCompound), "shape_create_compound");
+        Shape compound = FromNativeHandle(nativeCompound, "shape_create_compound");
+        try
+        {
+            foreach (Shape shape in shapes)
+            {
+                if (shape is null) throw new ArgumentException("A shape collection contains null.", nameof(shapes));
+                ObjectDisposedException.ThrowIf(shape.Handle.IsClosed, shape);
+                NativeError.ThrowIfFailed(
+                    NativeMethods.AddToCompound(compound.Handle, shape.Handle),
+                    "compound_add");
+            }
+            return compound;
+        }
+        catch
+        {
+            compound.Dispose();
+            throw;
+        }
+    }
+
     /// <summary>Creates an owning planar face from a closed planar wire.</summary>
     public static Shape CreatePlanarFace(Shape wire)
     {

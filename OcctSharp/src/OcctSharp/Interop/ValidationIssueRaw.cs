@@ -18,3 +18,14 @@ internal readonly struct StepReadReportRaw
     internal readonly int ReadStatus;
     internal readonly double SystemLengthUnit;
 }
+
+[StructLayout(LayoutKind.Sequential)]
+internal readonly struct StepReaderInfoRaw
+{
+    internal readonly int CandidateRootCount;
+    internal readonly int ReadStatus;
+    internal readonly double SystemLengthUnit;
+    internal readonly int LengthUnitCount;
+    internal readonly int AngleUnitCount;
+    internal readonly int SolidAngleUnitCount;
+}

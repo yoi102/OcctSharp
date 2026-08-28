@@ -14,7 +14,8 @@ public static class OcctProductModuleClassifier
             "QADraw", "QABugs", "SWDRAW", "ViewerTest", "XDEDRAW", "XSDRAW",
         ]),
         (OcctProductModule.Xde, ["BinMXCAF", "BinXCAF", "DEXCAF", "STEPCAF", "XCAF", "XmlMXCAF", "XmlXCAF"]),
-        (OcctProductModule.Mesh, ["BRepMesh", "IMesh", "Poly", "XBRepMesh"]),
+        (OcctProductModule.Mesh, ["BRepMesh", "IMesh", "XBRepMesh"]),
+        (OcctProductModule.MeshData, ["Poly"]),
         (OcctProductModule.Documents,
         [
             "AppStd", "BinDrivers", "BinLDrivers", "BinMData", "BinMDF", "BinMDocStd", "BinMFunction",
@@ -36,20 +37,20 @@ public static class OcctProductModuleClassifier
         ]),
         (OcctProductModule.Foundation,
         [
-            "BVH", "Expr", "FEmTool", "FlexLexer", "Math", "Message", "NCollection", "OSD", "Plugin", "Precision",
+            "BVH", "Expr", "FlexLexer", "Math", "Message", "NCollection", "OSD", "Plugin", "Precision",
             "Quantity", "Resource", "Standard", "StdFail", "TColStd", "TCollection", "UTL", "Units", "math",
         ]),
         (OcctProductModule.Geometry,
         [
             "Adaptor", "AdvApp2Var", "AdvApprox", "AppBlend", "AppCont", "AppDef", "AppParCurves", "Approx",
             "Bisector", "BiTgte", "Bnd", "BSplCLib", "BSplSLib", "Convert", "CPnts", "CSLib", "ElCLib", "ElSLib",
-            "Extrema", "FairCurve", "GC", "Gcc", "gce", "GCPnts", "Geom", "gp", "GProp", "Hatch", "Hermit",
-            "LProp", "MAT", "NLPlate", "Plate", "PLib", "ProjLib",
+            "Extrema", "FairCurve", "FEmTool", "GC", "Gcc", "gce", "GCPnts", "Geom", "gp", "GProp", "Hatch", "Hermit",
+            "Law", "LProp", "MAT", "NLPlate", "Plate", "PLib", "ProjLib",
         ]),
         (OcctProductModule.Modeling,
         [
             "Blend", "BOP", "BRep", "ChFi", "Contap", "Draft", "FilletSurf", "Helix", "HLR", "Int", "Intrv",
-            "Law", "LocalAnalysis", "LocOpe", "Shape", "Sweep", "Top", "TopOpe",
+            "LocalAnalysis", "LocOpe", "Shape", "Sweep", "Top", "TopOpe",
         ]),
     ];
 
@@ -75,6 +76,22 @@ public static class OcctProductModuleClassifier
             ? module
             : throw new InvalidDataException(
                 $"OCCT source package '{sourcePackage}' in toolkit '{sourceToolkit ?? "(unknown)"}' has no product-module assignment.");
+    }
+
+    public static OcctProductModule ClassifyDeclaration(
+        string sourcePackage,
+        string nativeName,
+        string? sourceToolkit = null)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(nativeName);
+        if (string.Equals(sourcePackage, "TopAbs", StringComparison.Ordinal)
+            && (string.Equals(nativeName, "TopAbs_Orientation", StringComparison.Ordinal)
+                || nativeName.StartsWith("TopAbs_Orientation::", StringComparison.Ordinal)))
+        {
+            return OcctProductModule.Foundation;
+        }
+
+        return Classify(sourcePackage, sourceToolkit);
     }
 
     private static OcctProductModule ClassifyToolkit(string? toolkit) => toolkit switch

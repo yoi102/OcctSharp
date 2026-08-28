@@ -389,6 +389,25 @@
 // Source: c:@S@Extrema_ExtPRevS@F@NbExt#1
 // Source: c:@S@Extrema_ExtPRevS@F@Perform#&1$@S@gp_Pnt#
 // Source: c:@S@Extrema_ExtPRevS@F@SquareDistance#I#1
+// Source: c:@S@FEmTool_Curve@F@Degree#I#1
+// Source: c:@S@FEmTool_Curve@F@Dimension#1
+// Source: c:@S@FEmTool_Curve@F@NbElements#1
+// Source: c:@S@FEmTool_Curve@F@SetDegree#I#I#
+// Source: c:@S@FEmTool_ElementaryCriterion@F@Set#d#d#
+// Source: c:@S@FEmTool_LinearFlexion@F@FEmTool_LinearFlexion#I#$@E@GeomAbs_Shape#
+// Source: c:@S@FEmTool_LinearFlexion@F@Value#
+// Source: c:@S@FEmTool_LinearJerk@F@FEmTool_LinearJerk#I#$@E@GeomAbs_Shape#
+// Source: c:@S@FEmTool_LinearJerk@F@Value#
+// Source: c:@S@FEmTool_LinearTension@F@FEmTool_LinearTension#I#$@E@GeomAbs_Shape#
+// Source: c:@S@FEmTool_LinearTension@F@Value#
+// Source: c:@S@FEmTool_ProfileMatrix@F@ColNumber#1
+// Source: c:@S@FEmTool_ProfileMatrix@F@Decompose#
+// Source: c:@S@FEmTool_ProfileMatrix@F@Init#d#
+// Source: c:@S@FEmTool_ProfileMatrix@F@IsInProfile#I#I#1
+// Source: c:@S@FEmTool_ProfileMatrix@F@OutM#1
+// Source: c:@S@FEmTool_ProfileMatrix@F@OutS#1
+// Source: c:@S@FEmTool_ProfileMatrix@F@Prepare#
+// Source: c:@S@FEmTool_ProfileMatrix@F@RowNumber#1
 // Source: c:@S@GccInt_BCirc@F@ArcType#1
 // Source: c:@S@GccInt_BElips@F@ArcType#1
 // Source: c:@S@GccInt_BHyper@F@ArcType#1
@@ -1846,6 +1865,79 @@
 // Source: c:@S@Geom_VectorWithMagnitude@F@SquareMagnitude#1
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtract#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtracted#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
+// Source: c:@S@Law_BSpFunc@F@Continuity#1
+// Source: c:@S@Law_BSpFunc@F@Curve#1
+// Source: c:@S@Law_BSpFunc@F@Law_BSpFunc#
+// Source: c:@S@Law_BSpFunc@F@Law_BSpFunc#&1$@N@opencascade@S@handle>#$@S@Law_BSpline#d#d#
+// Source: c:@S@Law_BSpFunc@F@NbIntervals#$@E@GeomAbs_Shape#1
+// Source: c:@S@Law_BSpFunc@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Law_BSpline#
+// Source: c:@S@Law_BSpFunc@F@Trim#d#d#d#1
+// Source: c:@S@Law_BSpFunc@F@Value#d#
+// Source: c:@S@Law_BSpline@F@Continuity#1
+// Source: c:@S@Law_BSpline@F@Copy#1
+// Source: c:@S@Law_BSpline@F@DN#d#I#1
+// Source: c:@S@Law_BSpline@F@Degree#1
+// Source: c:@S@Law_BSpline@F@EndPoint#1
+// Source: c:@S@Law_BSpline@F@FirstParameter#1
+// Source: c:@S@Law_BSpline@F@FirstUKnotIndex#1
+// Source: c:@S@Law_BSpline@F@IncreaseDegree#I#
+// Source: c:@S@Law_BSpline@F@IncreaseMultiplicity#I#I#
+// Source: c:@S@Law_BSpline@F@IncreaseMultiplicity#I#I#I#
+// Source: c:@S@Law_BSpline@F@IncrementMultiplicity#I#I#I#
+// Source: c:@S@Law_BSpline@F@InsertKnot#d#I#d#b#
+// Source: c:@S@Law_BSpline@F@IsCN#I#1
+// Source: c:@S@Law_BSpline@F@IsClosed#1
+// Source: c:@S@Law_BSpline@F@IsPeriodic#1
+// Source: c:@S@Law_BSpline@F@IsRational#1
+// Source: c:@S@Law_BSpline@F@Knot#I#1
+// Source: c:@S@Law_BSpline@F@KnotDistribution#1
+// Source: c:@S@Law_BSpline@F@LastParameter#1
+// Source: c:@S@Law_BSpline@F@LastUKnotIndex#1
+// Source: c:@S@Law_BSpline@F@LocalDN#d#I#I#I#1
+// Source: c:@S@Law_BSpline@F@LocalValue#d#I#I#1
+// Source: c:@S@Law_BSpline@F@Multiplicity#I#1
+// Source: c:@S@Law_BSpline@F@NbKnots#1
+// Source: c:@S@Law_BSpline@F@NbPoles#1
+// Source: c:@S@Law_BSpline@F@Pole#I#1
+// Source: c:@S@Law_BSpline@F@RemoveKnot#I#I#d#
+// Source: c:@S@Law_BSpline@F@Reverse#
+// Source: c:@S@Law_BSpline@F@ReversedParameter#d#1
+// Source: c:@S@Law_BSpline@F@Segment#d#d#
+// Source: c:@S@Law_BSpline@F@SetKnot#I#d#
+// Source: c:@S@Law_BSpline@F@SetKnot#I#d#I#
+// Source: c:@S@Law_BSpline@F@SetNotPeriodic#
+// Source: c:@S@Law_BSpline@F@SetOrigin#I#
+// Source: c:@S@Law_BSpline@F@SetPeriodic#
+// Source: c:@S@Law_BSpline@F@SetPole#I#d#
+// Source: c:@S@Law_BSpline@F@SetPole#I#d#d#
+// Source: c:@S@Law_BSpline@F@SetWeight#I#d#
+// Source: c:@S@Law_BSpline@F@StartPoint#1
+// Source: c:@S@Law_BSpline@F@Value#d#1
+// Source: c:@S@Law_BSpline@F@Weight#I#1
+// Source: c:@S@Law_Composite@F@Continuity#1
+// Source: c:@S@Law_Composite@F@IsPeriodic#1
+// Source: c:@S@Law_Composite@F@Law_Composite#
+// Source: c:@S@Law_Composite@F@Law_Composite#d#d#d#
+// Source: c:@S@Law_Composite@F@NbIntervals#$@E@GeomAbs_Shape#1
+// Source: c:@S@Law_Composite@F@SetPeriodic#
+// Source: c:@S@Law_Composite@F@Trim#d#d#d#1
+// Source: c:@S@Law_Composite@F@Value#d#
+// Source: c:@S@Law_Constant@F@Continuity#1
+// Source: c:@S@Law_Constant@F@Law_Constant#
+// Source: c:@S@Law_Constant@F@NbIntervals#$@E@GeomAbs_Shape#1
+// Source: c:@S@Law_Constant@F@Set#d#d#d#
+// Source: c:@S@Law_Constant@F@Trim#d#d#d#1
+// Source: c:@S@Law_Constant@F@Value#d#
+// Source: c:@S@Law_Interpol@F@Law_Interpol#
+// Source: c:@S@Law_Linear@F@Continuity#1
+// Source: c:@S@Law_Linear@F@Law_Linear#
+// Source: c:@S@Law_Linear@F@NbIntervals#$@E@GeomAbs_Shape#1
+// Source: c:@S@Law_Linear@F@Set#d#d#d#d#
+// Source: c:@S@Law_Linear@F@Trim#d#d#d#1
+// Source: c:@S@Law_Linear@F@Value#d#
+// Source: c:@S@Law_S@F@Law_S#
+// Source: c:@S@Law_S@F@Set#d#d#d#d#
+// Source: c:@S@Law_S@F@Set#d#d#d#d#d#d#
 // Source: c:@S@MAT2d_Circuit@F@Connexion#I#1
 // Source: c:@S@MAT2d_Circuit@F@ConnexionOn#I#1
 // Source: c:@S@MAT2d_Circuit@F@LineLength#I#1
@@ -2213,6 +2305,18 @@ typedef struct OcctSharp_ExtremaExtPRevSHandle OcctSharp_ExtremaExtPRevSHandle;
 
 typedef struct OcctSharp_FEmToolCurveHandle OcctSharp_FEmToolCurveHandle;
 
+typedef struct OcctSharp_FEmToolElementaryCriterionHandle OcctSharp_FEmToolElementaryCriterionHandle;
+
+typedef struct OcctSharp_FEmToolLinearFlexionHandle OcctSharp_FEmToolLinearFlexionHandle;
+
+typedef struct OcctSharp_FEmToolLinearJerkHandle OcctSharp_FEmToolLinearJerkHandle;
+
+typedef struct OcctSharp_FEmToolLinearTensionHandle OcctSharp_FEmToolLinearTensionHandle;
+
+typedef struct OcctSharp_FEmToolProfileMatrixHandle OcctSharp_FEmToolProfileMatrixHandle;
+
+typedef struct OcctSharp_FEmToolSparseMatrixHandle OcctSharp_FEmToolSparseMatrixHandle;
+
 typedef struct OcctSharp_GccIntBCircHandle OcctSharp_GccIntBCircHandle;
 
 typedef struct OcctSharp_GccIntBElipsHandle OcctSharp_GccIntBElipsHandle;
@@ -2461,9 +2565,21 @@ typedef struct OcctSharp_GeomVectorWithMagnitudeHandle OcctSharp_GeomVectorWithM
 
 typedef struct OcctSharp_GeometryTestDrawableQualifiedCurve2dHandle OcctSharp_GeometryTestDrawableQualifiedCurve2dHandle;
 
+typedef struct OcctSharp_LawBSpFuncHandle OcctSharp_LawBSpFuncHandle;
+
 typedef struct OcctSharp_LawBSplineHandle OcctSharp_LawBSplineHandle;
 
+typedef struct OcctSharp_LawCompositeHandle OcctSharp_LawCompositeHandle;
+
+typedef struct OcctSharp_LawConstantHandle OcctSharp_LawConstantHandle;
+
 typedef struct OcctSharp_LawFunctionHandle OcctSharp_LawFunctionHandle;
+
+typedef struct OcctSharp_LawInterpolHandle OcctSharp_LawInterpolHandle;
+
+typedef struct OcctSharp_LawLinearHandle OcctSharp_LawLinearHandle;
+
+typedef struct OcctSharp_LawSHandle OcctSharp_LawSHandle;
 
 typedef struct OcctSharp_MAT2dCircuitHandle OcctSharp_MAT2dCircuitHandle;
 
@@ -4734,6 +4850,221 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_extrema_ext_pr
   int32_t* out_is_kind);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_extrema_ext_prev_s_release(OcctSharp_ExtremaExtPRevSHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_method_degree_0(
+  const OcctSharp_FEmToolCurveHandle* handle,
+  int32_t indexOfElement,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_method_dimension_0(
+  const OcctSharp_FEmToolCurveHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_method_nb_elements_0(
+  const OcctSharp_FEmToolCurveHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_method_set_degree_0(
+  const OcctSharp_FEmToolCurveHandle* handle,
+  int32_t indexOfElement,
+  int32_t degree);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_clone(
+  const OcctSharp_FEmToolCurveHandle* source,
+  OcctSharp_FEmToolCurveHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_get_ref_count(
+  const OcctSharp_FEmToolCurveHandle* handle,
+  int32_t* out_ref_count);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_get_type_name(
+  const OcctSharp_FEmToolCurveHandle* handle,
+  const char** out_type_name);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_is_kind(
+  const OcctSharp_FEmToolCurveHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind);
+
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_fem_tool_curve_release(OcctSharp_FEmToolCurveHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_method_set_0(
+  const OcctSharp_FEmToolElementaryCriterionHandle* handle,
+  double firstKnot,
+  double lastKnot);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_clone(
+  const OcctSharp_FEmToolElementaryCriterionHandle* source,
+  OcctSharp_FEmToolElementaryCriterionHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_get_ref_count(
+  const OcctSharp_FEmToolElementaryCriterionHandle* handle,
+  int32_t* out_ref_count);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_get_type_name(
+  const OcctSharp_FEmToolElementaryCriterionHandle* handle,
+  const char** out_type_name);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_is_kind(
+  const OcctSharp_FEmToolElementaryCriterionHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind);
+
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_fem_tool_elementary_criterion_release(OcctSharp_FEmToolElementaryCriterionHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_create_0(
+  int32_t workDegree,
+  int32_t constraintOrder,
+  OcctSharp_FEmToolLinearFlexionHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_method_value_0(
+  const OcctSharp_FEmToolLinearFlexionHandle* handle,
+  double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_clone(
+  const OcctSharp_FEmToolLinearFlexionHandle* source,
+  OcctSharp_FEmToolLinearFlexionHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_get_ref_count(
+  const OcctSharp_FEmToolLinearFlexionHandle* handle,
+  int32_t* out_ref_count);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_get_type_name(
+  const OcctSharp_FEmToolLinearFlexionHandle* handle,
+  const char** out_type_name);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_is_kind(
+  const OcctSharp_FEmToolLinearFlexionHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind);
+
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_flexion_release(OcctSharp_FEmToolLinearFlexionHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_create_0(
+  int32_t workDegree,
+  int32_t constraintOrder,
+  OcctSharp_FEmToolLinearJerkHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_method_value_0(
+  const OcctSharp_FEmToolLinearJerkHandle* handle,
+  double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_clone(
+  const OcctSharp_FEmToolLinearJerkHandle* source,
+  OcctSharp_FEmToolLinearJerkHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_get_ref_count(
+  const OcctSharp_FEmToolLinearJerkHandle* handle,
+  int32_t* out_ref_count);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_get_type_name(
+  const OcctSharp_FEmToolLinearJerkHandle* handle,
+  const char** out_type_name);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_is_kind(
+  const OcctSharp_FEmToolLinearJerkHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind);
+
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_jerk_release(OcctSharp_FEmToolLinearJerkHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_create_0(
+  int32_t workDegree,
+  int32_t constraintOrder,
+  OcctSharp_FEmToolLinearTensionHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_method_value_0(
+  const OcctSharp_FEmToolLinearTensionHandle* handle,
+  double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_clone(
+  const OcctSharp_FEmToolLinearTensionHandle* source,
+  OcctSharp_FEmToolLinearTensionHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_get_ref_count(
+  const OcctSharp_FEmToolLinearTensionHandle* handle,
+  int32_t* out_ref_count);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_get_type_name(
+  const OcctSharp_FEmToolLinearTensionHandle* handle,
+  const char** out_type_name);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_is_kind(
+  const OcctSharp_FEmToolLinearTensionHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind);
+
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_fem_tool_linear_tension_release(OcctSharp_FEmToolLinearTensionHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_col_number_0(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_decompose_0(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_init_0(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle,
+  double value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_is_in_profile_0(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle,
+  int32_t i,
+  int32_t j,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_out_m_0(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_out_s_0(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_prepare_0(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_method_row_number_0(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_clone(
+  const OcctSharp_FEmToolProfileMatrixHandle* source,
+  OcctSharp_FEmToolProfileMatrixHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_get_ref_count(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle,
+  int32_t* out_ref_count);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_get_type_name(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle,
+  const char** out_type_name);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_is_kind(
+  const OcctSharp_FEmToolProfileMatrixHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind);
+
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_fem_tool_profile_matrix_release(OcctSharp_FEmToolProfileMatrixHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_sparse_matrix_clone(
+  const OcctSharp_FEmToolSparseMatrixHandle* source,
+  OcctSharp_FEmToolSparseMatrixHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_sparse_matrix_get_ref_count(
+  const OcctSharp_FEmToolSparseMatrixHandle* handle,
+  int32_t* out_ref_count);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_sparse_matrix_get_type_name(
+  const OcctSharp_FEmToolSparseMatrixHandle* handle,
+  const char** out_type_name);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_fem_tool_sparse_matrix_is_kind(
+  const OcctSharp_FEmToolSparseMatrixHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind);
+
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_fem_tool_sparse_matrix_release(OcctSharp_FEmToolSparseMatrixHandle* handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gcc_int_bcirc_method_arc_type_0(
   const OcctSharp_GccIntBCircHandle* handle,
@@ -13469,6 +13800,512 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_geometry_test_
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_geometry_test_drawable_qualified_curve2d_release(OcctSharp_GeometryTestDrawableQualifiedCurve2dHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_create_0(
+  OcctSharp_LawBSpFuncHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_create_1(
+  const OcctSharp_LawBSplineHandle* c,
+  double first,
+  double last,
+  OcctSharp_LawBSpFuncHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_method_continuity_0(
+  const OcctSharp_LawBSpFuncHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_method_curve_0(
+  const OcctSharp_LawBSpFuncHandle* handle,
+  OcctSharp_LawBSplineHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_method_nb_intervals_0(
+  const OcctSharp_LawBSpFuncHandle* handle,
+  int32_t s,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_method_set_curve_0(
+  const OcctSharp_LawBSpFuncHandle* handle,
+  const OcctSharp_LawBSplineHandle* c);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_method_trim_0(
+  const OcctSharp_LawBSpFuncHandle* handle,
+  double pFirst,
+  double pLast,
+  double tol,
+  OcctSharp_LawFunctionHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_method_value_0(
+  const OcctSharp_LawBSpFuncHandle* handle,
+  double x,
+  double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_clone(
+  const OcctSharp_LawBSpFuncHandle* source,
+  OcctSharp_LawBSpFuncHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_get_ref_count(
+  const OcctSharp_LawBSpFuncHandle* handle,
+  int32_t* out_ref_count);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_get_type_name(
+  const OcctSharp_LawBSpFuncHandle* handle,
+  const char** out_type_name);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bsp_func_is_kind(
+  const OcctSharp_LawBSpFuncHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind);
+
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_law_bsp_func_release(OcctSharp_LawBSpFuncHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_continuity_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_copy_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  OcctSharp_LawBSplineHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_degree_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_dn_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double u,
+  int32_t n,
+  double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_end_point_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_first_parameter_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_first_uknot_index_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_increase_degree_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t degree);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_increase_multiplicity_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  int32_t m);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_increase_multiplicity_1(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t i1,
+  int32_t i2,
+  int32_t m);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_increment_multiplicity_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t i1,
+  int32_t i2,
+  int32_t m);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_insert_knot_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double u,
+  int32_t m,
+  double parametricTolerance,
+  int32_t add);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_is_closed_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_is_cn_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t n,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_is_periodic_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_is_rational_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_knot_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_knot_distribution_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_last_parameter_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_last_uknot_index_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_local_dn_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double u,
+  int32_t fromK1,
+  int32_t toK2,
+  int32_t n,
+  double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_local_value_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double u,
+  int32_t fromK1,
+  int32_t toK2,
+  double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_multiplicity_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_nb_knots_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_nb_poles_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_pole_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_remove_knot_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  int32_t m,
+  double tolerance,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_reverse_0(
+  const OcctSharp_LawBSplineHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_reversed_parameter_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double u,
+  double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_segment_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double u1,
+  double u2);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_set_knot_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  double k);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_set_knot_1(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  double k,
+  int32_t m);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_set_not_periodic_0(
+  const OcctSharp_LawBSplineHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_set_origin_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_set_periodic_0(
+  const OcctSharp_LawBSplineHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_set_pole_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  double p);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_set_pole_1(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  double p,
+  double weight);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_set_weight_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  double weight);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_start_point_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_value_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  double u,
+  double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_method_weight_0(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t index,
+  double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_clone(
+  const OcctSharp_LawBSplineHandle* source,
+  OcctSharp_LawBSplineHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_get_ref_count(
+  const OcctSharp_LawBSplineHandle* handle,
+  int32_t* out_ref_count);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_get_type_name(
+  const OcctSharp_LawBSplineHandle* handle,
+  const char** out_type_name);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_bspline_is_kind(
+  const OcctSharp_LawBSplineHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind);
+
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_law_bspline_release(OcctSharp_LawBSplineHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_create_0(
+  OcctSharp_LawCompositeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_create_1(
+  double first,
+  double last,
+  double tol,
+  OcctSharp_LawCompositeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_method_continuity_0(
+  const OcctSharp_LawCompositeHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_method_is_periodic_0(
+  const OcctSharp_LawCompositeHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_method_nb_intervals_0(
+  const OcctSharp_LawCompositeHandle* handle,
+  int32_t s,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_method_set_periodic_0(
+  const OcctSharp_LawCompositeHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_method_trim_0(
+  const OcctSharp_LawCompositeHandle* handle,
+  double pFirst,
+  double pLast,
+  double tol,
+  OcctSharp_LawFunctionHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_method_value_0(
+  const OcctSharp_LawCompositeHandle* handle,
+  double x,
+  double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_clone(
+  const OcctSharp_LawCompositeHandle* source,
+  OcctSharp_LawCompositeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_get_ref_count(
+  const OcctSharp_LawCompositeHandle* handle,
+  int32_t* out_ref_count);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_get_type_name(
+  const OcctSharp_LawCompositeHandle* handle,
+  const char** out_type_name);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_composite_is_kind(
+  const OcctSharp_LawCompositeHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind);
+
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_law_composite_release(OcctSharp_LawCompositeHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_create_0(
+  OcctSharp_LawConstantHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_method_continuity_0(
+  const OcctSharp_LawConstantHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_method_nb_intervals_0(
+  const OcctSharp_LawConstantHandle* handle,
+  int32_t s,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_method_set_0(
+  const OcctSharp_LawConstantHandle* handle,
+  double radius,
+  double pFirst,
+  double pLast);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_method_trim_0(
+  const OcctSharp_LawConstantHandle* handle,
+  double pFirst,
+  double pLast,
+  double tol,
+  OcctSharp_LawFunctionHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_method_value_0(
+  const OcctSharp_LawConstantHandle* handle,
+  double x,
+  double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_clone(
+  const OcctSharp_LawConstantHandle* source,
+  OcctSharp_LawConstantHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_get_ref_count(
+  const OcctSharp_LawConstantHandle* handle,
+  int32_t* out_ref_count);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_get_type_name(
+  const OcctSharp_LawConstantHandle* handle,
+  const char** out_type_name);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_constant_is_kind(
+  const OcctSharp_LawConstantHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind);
+
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_law_constant_release(OcctSharp_LawConstantHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_function_clone(
+  const OcctSharp_LawFunctionHandle* source,
+  OcctSharp_LawFunctionHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_function_get_ref_count(
+  const OcctSharp_LawFunctionHandle* handle,
+  int32_t* out_ref_count);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_function_get_type_name(
+  const OcctSharp_LawFunctionHandle* handle,
+  const char** out_type_name);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_function_is_kind(
+  const OcctSharp_LawFunctionHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind);
+
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_law_function_release(OcctSharp_LawFunctionHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_interpol_create_0(
+  OcctSharp_LawInterpolHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_interpol_clone(
+  const OcctSharp_LawInterpolHandle* source,
+  OcctSharp_LawInterpolHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_interpol_get_ref_count(
+  const OcctSharp_LawInterpolHandle* handle,
+  int32_t* out_ref_count);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_interpol_get_type_name(
+  const OcctSharp_LawInterpolHandle* handle,
+  const char** out_type_name);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_interpol_is_kind(
+  const OcctSharp_LawInterpolHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind);
+
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_law_interpol_release(OcctSharp_LawInterpolHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_create_0(
+  OcctSharp_LawLinearHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_method_continuity_0(
+  const OcctSharp_LawLinearHandle* handle,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_method_nb_intervals_0(
+  const OcctSharp_LawLinearHandle* handle,
+  int32_t s,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_method_set_0(
+  const OcctSharp_LawLinearHandle* handle,
+  double pdeb,
+  double valdeb,
+  double pfin,
+  double valfin);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_method_trim_0(
+  const OcctSharp_LawLinearHandle* handle,
+  double pFirst,
+  double pLast,
+  double tol,
+  OcctSharp_LawFunctionHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_method_value_0(
+  const OcctSharp_LawLinearHandle* handle,
+  double x,
+  double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_clone(
+  const OcctSharp_LawLinearHandle* source,
+  OcctSharp_LawLinearHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_get_ref_count(
+  const OcctSharp_LawLinearHandle* handle,
+  int32_t* out_ref_count);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_get_type_name(
+  const OcctSharp_LawLinearHandle* handle,
+  const char** out_type_name);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_linear_is_kind(
+  const OcctSharp_LawLinearHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind);
+
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_law_linear_release(OcctSharp_LawLinearHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_s_create_0(
+  OcctSharp_LawSHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_s_method_set_0(
+  const OcctSharp_LawSHandle* handle,
+  double pdeb,
+  double valdeb,
+  double pfin,
+  double valfin);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_s_method_set_1(
+  const OcctSharp_LawSHandle* handle,
+  double pdeb,
+  double valdeb,
+  double ddeb,
+  double pfin,
+  double valfin,
+  double dfin);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_s_clone(
+  const OcctSharp_LawSHandle* source,
+  OcctSharp_LawSHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_s_get_ref_count(
+  const OcctSharp_LawSHandle* handle,
+  int32_t* out_ref_count);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_s_get_type_name(
+  const OcctSharp_LawSHandle* handle,
+  const char** out_type_name);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_law_s_is_kind(
+  const OcctSharp_LawSHandle* handle,
+  const char* type_name,
+  int32_t* out_is_kind);
+
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_law_s_release(OcctSharp_LawSHandle* handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mat2d_circuit_create_0(
   int32_t aJoinType,
   int32_t isOpenResult,
@@ -15219,6 +16056,13 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_proj_lib_projected_curve_r
 #include <Bisector_Curve.hxx>
 #include <Extrema_ExtPExtS.hxx>
 #include <Extrema_ExtPRevS.hxx>
+#include <FEmTool_Curve.hxx>
+#include <FEmTool_ElementaryCriterion.hxx>
+#include <FEmTool_LinearFlexion.hxx>
+#include <FEmTool_LinearJerk.hxx>
+#include <FEmTool_LinearTension.hxx>
+#include <FEmTool_ProfileMatrix.hxx>
+#include <FEmTool_SparseMatrix.hxx>
 #include <GccInt_BCirc.hxx>
 #include <GccInt_BElips.hxx>
 #include <GccInt_BHyper.hxx>
@@ -15343,6 +16187,14 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_proj_lib_projected_curve_r
 #include <Geom_Vector.hxx>
 #include <Geom_VectorWithMagnitude.hxx>
 #include <GeometryTest_DrawableQualifiedCurve2d.hxx>
+#include <Law_BSpFunc.hxx>
+#include <Law_BSpline.hxx>
+#include <Law_Composite.hxx>
+#include <Law_Constant.hxx>
+#include <Law_Function.hxx>
+#include <Law_Interpol.hxx>
+#include <Law_Linear.hxx>
+#include <Law_S.hxx>
 #include <MAT2d_Circuit.hxx>
 #include <MAT2d_Connexion.hxx>
 #include <MAT_Arc.hxx>
@@ -15523,6 +16375,48 @@ struct OcctSharp_ExtremaExtPRevSHandle
 {
   explicit OcctSharp_ExtremaExtPRevSHandle(opencascade::handle<Extrema_ExtPRevS> value) : Value(std::move(value)) {}
   opencascade::handle<Extrema_ExtPRevS> Value;
+};
+
+struct OcctSharp_FEmToolCurveHandle
+{
+  explicit OcctSharp_FEmToolCurveHandle(opencascade::handle<FEmTool_Curve> value) : Value(std::move(value)) {}
+  opencascade::handle<FEmTool_Curve> Value;
+};
+
+struct OcctSharp_FEmToolElementaryCriterionHandle
+{
+  explicit OcctSharp_FEmToolElementaryCriterionHandle(opencascade::handle<FEmTool_ElementaryCriterion> value) : Value(std::move(value)) {}
+  opencascade::handle<FEmTool_ElementaryCriterion> Value;
+};
+
+struct OcctSharp_FEmToolLinearFlexionHandle
+{
+  explicit OcctSharp_FEmToolLinearFlexionHandle(opencascade::handle<FEmTool_LinearFlexion> value) : Value(std::move(value)) {}
+  opencascade::handle<FEmTool_LinearFlexion> Value;
+};
+
+struct OcctSharp_FEmToolLinearJerkHandle
+{
+  explicit OcctSharp_FEmToolLinearJerkHandle(opencascade::handle<FEmTool_LinearJerk> value) : Value(std::move(value)) {}
+  opencascade::handle<FEmTool_LinearJerk> Value;
+};
+
+struct OcctSharp_FEmToolLinearTensionHandle
+{
+  explicit OcctSharp_FEmToolLinearTensionHandle(opencascade::handle<FEmTool_LinearTension> value) : Value(std::move(value)) {}
+  opencascade::handle<FEmTool_LinearTension> Value;
+};
+
+struct OcctSharp_FEmToolProfileMatrixHandle
+{
+  explicit OcctSharp_FEmToolProfileMatrixHandle(opencascade::handle<FEmTool_ProfileMatrix> value) : Value(std::move(value)) {}
+  opencascade::handle<FEmTool_ProfileMatrix> Value;
+};
+
+struct OcctSharp_FEmToolSparseMatrixHandle
+{
+  explicit OcctSharp_FEmToolSparseMatrixHandle(opencascade::handle<FEmTool_SparseMatrix> value) : Value(std::move(value)) {}
+  opencascade::handle<FEmTool_SparseMatrix> Value;
 };
 
 struct OcctSharp_GccIntBCircHandle
@@ -16267,6 +17161,54 @@ struct OcctSharp_GeometryTestDrawableQualifiedCurve2dHandle
 {
   explicit OcctSharp_GeometryTestDrawableQualifiedCurve2dHandle(opencascade::handle<GeometryTest_DrawableQualifiedCurve2d> value) : Value(std::move(value)) {}
   opencascade::handle<GeometryTest_DrawableQualifiedCurve2d> Value;
+};
+
+struct OcctSharp_LawBSpFuncHandle
+{
+  explicit OcctSharp_LawBSpFuncHandle(opencascade::handle<Law_BSpFunc> value) : Value(std::move(value)) {}
+  opencascade::handle<Law_BSpFunc> Value;
+};
+
+struct OcctSharp_LawBSplineHandle
+{
+  explicit OcctSharp_LawBSplineHandle(opencascade::handle<Law_BSpline> value) : Value(std::move(value)) {}
+  opencascade::handle<Law_BSpline> Value;
+};
+
+struct OcctSharp_LawCompositeHandle
+{
+  explicit OcctSharp_LawCompositeHandle(opencascade::handle<Law_Composite> value) : Value(std::move(value)) {}
+  opencascade::handle<Law_Composite> Value;
+};
+
+struct OcctSharp_LawConstantHandle
+{
+  explicit OcctSharp_LawConstantHandle(opencascade::handle<Law_Constant> value) : Value(std::move(value)) {}
+  opencascade::handle<Law_Constant> Value;
+};
+
+struct OcctSharp_LawFunctionHandle
+{
+  explicit OcctSharp_LawFunctionHandle(opencascade::handle<Law_Function> value) : Value(std::move(value)) {}
+  opencascade::handle<Law_Function> Value;
+};
+
+struct OcctSharp_LawInterpolHandle
+{
+  explicit OcctSharp_LawInterpolHandle(opencascade::handle<Law_Interpol> value) : Value(std::move(value)) {}
+  opencascade::handle<Law_Interpol> Value;
+};
+
+struct OcctSharp_LawLinearHandle
+{
+  explicit OcctSharp_LawLinearHandle(opencascade::handle<Law_Linear> value) : Value(std::move(value)) {}
+  opencascade::handle<Law_Linear> Value;
+};
+
+struct OcctSharp_LawSHandle
+{
+  explicit OcctSharp_LawSHandle(opencascade::handle<Law_S> value) : Value(std::move(value)) {}
+  opencascade::handle<Law_S> Value;
 };
 
 struct OcctSharp_MAT2dCircuitHandle

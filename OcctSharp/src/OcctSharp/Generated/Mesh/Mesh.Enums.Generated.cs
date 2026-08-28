@@ -3,8 +3,6 @@
 // Source: c:@E@IMeshData_Status
 // Source: c:@E@IMeshTools_MeshAlgoType
 // Source: c:@S@BRepMesh_GeomTool@E@IntFlag
-// Source: c:@S@Poly_MakeLoops@E@LinkFlag
-// Source: c:@S@Poly_MakeLoops@E@ResultCode
 
 namespace OcctSharp;
 
@@ -78,30 +76,4 @@ public enum BRepMeshGeomToolIntFlag
     Glued = 4,
     /// <summary>OCCT value Same.</summary>
     Same = 5
-}
-
-/// <summary>Generated value projection for OCCT Poly_MakeLoops::LinkFlag.</summary>
-public enum PolyMakeLoopsLinkFlag
-{
-    /// <summary>OCCT value LF_None.</summary>
-    LF_None = 0,
-    /// <summary>OCCT value LF_Fwd.</summary>
-    LF_Fwd = 1,
-    /// <summary>OCCT value LF_Rev.</summary>
-    LF_Rev = 2,
-    /// <summary>OCCT value LF_Both.</summary>
-    LF_Both = 3,
-    /// <summary>OCCT value LF_Reversed.</summary>
-    LF_Reversed = 4
-}
-
-/// <summary>Generated value projection for OCCT Poly_MakeLoops::ResultCode.</summary>
-public enum PolyMakeLoopsResultCode
-{
-    /// <summary>OCCT value RC_LoopsDone.</summary>
-    RC_LoopsDone = 1,
-    /// <summary>OCCT value RC_HangingLinks.</summary>
-    RC_HangingLinks = 2,
-    /// <summary>OCCT value RC_Failure.</summary>
-    RC_Failure = 4
 }

@@ -1346,7 +1346,7 @@
 // Source: c:@S@XmlTObjDrivers_XYZDriver@F@XmlTObjDrivers_XYZDriver#&1$@N@opencascade@S@handle>#$@S@Message_Messenger#
 #include "OcctSharp.Documents.SharedHandles.Generated.h"
 #include "../Foundation/OcctSharp.Foundation.SharedHandles.Generated.h"
-#include "../Mesh/OcctSharp.Mesh.SharedHandles.Generated.h"
+#include "../MeshData/OcctSharp.MeshData.SharedHandles.Generated.h"
 #include "../Runtime/OcctSharp.Runtime.SharedSupport.Generated.hxx"
 #include "../../include/OcctSharp.Native.Internal.hxx"
 #include <RWGltf_GltfPrimArrayData.hxx>

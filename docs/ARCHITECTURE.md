@@ -77,6 +77,12 @@ The accepted boundaries are recorded in ADRs:
 - [ADR-0061](adr/0061-domain-layered-generated-output.md): module/layer-partitioned
   generated source while retaining one managed assembly, one native DLL, and stable
   public type full names.
+- [ADR-0062](adr/0062-generated-shard-dependency-closure.md): semantic closure of every
+  emitted cross-shard signature, the MeshData layer, and the evidence-based decision to
+  defer physical managed/native splitting.
+- [ADR-0063](adr/0063-final-batch-c-selective-session-topology-viewer-closure.md): final
+  Batch C selective STEP session, owning topology edit/selection, and parent-bound input
+  ownership boundary.
 
 ## Components
 
@@ -96,8 +102,11 @@ parameters, inheritance, templates, ownership, availability, product module, and
 It is the shared input for every emitter and report.
 
 Binding-model schema 1.3 assigns every declaration one fail-closed product module.
-Foundation, Geometry, Modeling, Mesh, Documents, DataExchange, Xde, Visualization, and
+Foundation, Geometry, MeshData, Modeling, Mesh, Documents, DataExchange, Xde, Visualization, and
 optional integration identities are stable generator facts rather than filesystem guesses.
+`MeshData` owns Poly triangulation/polygon data below Modeling; Mesh owns meshing
+algorithms above Modeling. `TopAbs_Orientation` is intentionally lifted into the
+Foundation value contract so geometry adaptors do not acquire a reverse Modeling edge.
 
 ### Transformation passes
 
@@ -128,6 +137,16 @@ The B17 Windows visualization profile owns the complete display-driver/viewer/co
 view/window graph in one native wrapper bound to an application-owned HWND. AIS objects
 remain native and are addressed by parent-scoped IDs; selection is copied as IDs. The
 application forwards window/input events on the creating thread, with no reverse callback.
+
+The final Batch C boundary extends that model without exposing borrowed OCCT state.
+Edge/surface derivatives and pcurves cross as copied values; trim, wire, reshape, STEP
+transfer, and selected topology cross as independent registered owning shapes. A
+`StepReadSession` owns one native reader until disposal and transferred shapes survive it.
+Viewer subshape modes, selected topology snapshots, and mouse/wheel/semantic-key input
+remain presentation- or viewer-parent-bound and creating-thread-affine. Alpha.54 closes
+the finite common-workflow denominator; advanced filters, custom rendering, optional
+integrations, cold schema, and exhaustive mesh attributes are outside this architecture
+milestone rather than implicit unfinished work.
 
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native
@@ -168,6 +187,12 @@ topology, and shared-handle shard. CMake recursively collects those translation 
 Cross-module shared handles include their dependency module headers and share a Runtime
 helper contract, but all registries, allocators, and release functions still link into
 the single `OcctSharp.Native.dll`.
+
+The semantic dependency-closure pass resolves every emitted signature projection before
+output replacement. The accepted 16,353-declaration graph has 27 observed cross-shard
+edges, all compatible with the target graph, and no strongly connected group. This makes
+the generated managed shards eligible for later project migration; it does not authorize
+native DLL splitting or change current deliverables.
 
 ### Managed raw bindings
 
@@ -219,6 +244,8 @@ manifest supports upgrade diffs between pinned OCCT baselines.
 Manifest schema 1.1 records product module, API layer, and output shard for every owned
 generated file. Coverage and diagnostics include the same module identity so source
 layout and declaration accounting cannot drift independently.
+`dependency-closure.json` separately records normalized direct/transitive signature
+edges, target-graph violations, strongly connected groups, and source stable-ID evidence.
 
 ## Non-negotiable invariants
 
@@ -230,9 +257,10 @@ layout and declaration accounting cannot drift independently.
 6. Every skipped API has a stable reason code and diagnostic context.
 7. Compile success is not reported as runtime or lifetime success.
 8. Friendly APIs may simplify usage but must preserve native semantics.
-9. Emitted declarations cannot be `Unassigned`; the target managed-project dependency
-   contract remains acyclic, while current intra-assembly cross-shard edges must be
-   closed before project/DLL splitting.
+9. Emitted declarations cannot be `Unassigned` or retain an unresolved signature target;
+   the generated managed dependency graph must remain target-compatible and acyclic.
+10. Physical managed splitting still requires an assembly-identity/manual-facade migration;
+    native DLL splitting additionally requires cross-DLL registry and creator-release evidence.
 
 ## Explicitly unresolved decisions
 

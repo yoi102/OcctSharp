@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 44)
-    || runtime.BridgeVersion != "0.52.0"
+if (runtime.AbiVersion != new Version(1, 45)
+    || runtime.BridgeVersion != "0.53.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -406,11 +406,24 @@ try
     packagedViewer.Rotate(132, 130);
     packagedViewer.FitAll();
     packagedViewer.Redraw();
-    if (!packagedViewer.MoveTo(128, 128)
-        || !packagedViewer.SelectAt(128, 128).Contains(packagedPresentation))
+    packagedPresentation.SetSelectionKind(ShapeKind.Face);
+    if (!packagedViewer.Input.PointerMoved(128, 128))
     {
-        throw new InvalidOperationException("The packaged viewer did not produce the expected selection snapshot.");
+        throw new InvalidOperationException("The packaged viewer did not detect the displayed shape.");
     }
+    packagedViewer.Input.PointerPressed(ViewerPointerButton.Left, 128, 128);
+    if (!packagedViewer.Input.PointerReleased(ViewerPointerButton.Left, 128, 128).Contains(packagedPresentation))
+        throw new InvalidOperationException("The packaged viewer input controller did not select the presentation.");
+    IReadOnlyList<ViewerSelectionItem> packagedSelectedItems = packagedViewer.GetSelectedItems();
+    try
+    {
+        if (packagedSelectedItems.Count != 1 || packagedSelectedItems[0].Shape.Kind != ShapeKind.Face)
+            throw new InvalidOperationException("The packaged viewer did not return an owning face-selection snapshot.");
+    }
+    finally { foreach (ViewerSelectionItem item in packagedSelectedItems) item.Dispose(); }
+    packagedViewer.Input.MouseWheel(120, 128, 128);
+    if (!packagedViewer.Input.KeyDown(ViewerInputKey.Axonometric))
+        throw new InvalidOperationException("The packaged semantic viewer keyboard command was not handled.");
     packagedViewer.ClearSelection();
     if (packagedViewer.GetSelection().Count != 0
         || !packagedViewer.SelectAt(128, 128, ViewerSelectionMode.Add).Contains(packagedPresentation)
@@ -518,6 +531,97 @@ string exchangeDirectory = Path.Combine(Path.GetTempPath(), $"OcctSharp.PackageC
 Directory.CreateDirectory(exchangeDirectory);
 try
 {
+    using Shape derivativeEdge = ShapeFactory.CreateEdge(GpPoint.Origin, new GpPoint(10, 0, 0));
+    CurveDerivativeEvaluation derivative = derivativeEdge.EvaluateEdgeDerivatives(4);
+    using Shape trimmedEdge = derivativeEdge.TrimEdge(2, 8);
+    using Shape connectedEdge = ShapeFactory.CreateEdge(new GpPoint(10, 0, 0), new GpPoint(10, 5, 0));
+    using Shape connectedWire = ShapeFactory.CreateWire([derivativeEdge, connectedEdge]);
+    if (derivative.Point != new GpPoint(4, 0, 0)
+        || derivative.FirstDerivative != new GpPoint(1, 0, 0)
+        || derivative.SecondDerivative != GpPoint.Origin
+        || Math.Abs(trimmedEdge.GetEdgeLength() - 6) > 1e-10
+        || connectedWire.Kind != ShapeKind.Wire)
+    {
+        throw new InvalidOperationException("The packaged derivative/trim/wire workflow failed.");
+    }
+
+    Shape[] packageFaces = box.GetFaces();
+    Shape[] packageFaceEdges = packageFaces[0].GetSubShapes(ShapeKind.Edge);
+    try
+    {
+        FaceSurfaceSnapshot bounds = packageFaces[0].GetFaceSurfaceSnapshot();
+        double u = (bounds.FirstUParameter + bounds.LastUParameter) / 2;
+        double v = (bounds.FirstVParameter + bounds.LastVParameter) / 2;
+        SurfaceDerivativeEvaluation surface = packageFaces[0].EvaluateFaceDerivatives(u, v);
+        PcurveSnapshot pcurve = packageFaceEdges[0].GetPcurveSnapshot(packageFaces[0]);
+        PcurveEvaluation pcurveValue = packageFaceEdges[0].EvaluatePcurve(
+            packageFaces[0], (pcurve.FirstParameter + pcurve.LastParameter) / 2);
+        using Shape trimmedFace = packageFaces[0].TrimFace(
+            bounds.FirstUParameter + (bounds.LastUParameter - bounds.FirstUParameter) / 4,
+            bounds.LastUParameter - (bounds.LastUParameter - bounds.FirstUParameter) / 4,
+            bounds.FirstVParameter + (bounds.LastVParameter - bounds.FirstVParameter) / 4,
+            bounds.LastVParameter - (bounds.LastVParameter - bounds.FirstVParameter) / 4);
+        if (trimmedFace.Kind != ShapeKind.Face || !trimmedFace.IsValid
+            || !double.IsFinite(surface.Normal.X) || !double.IsFinite(pcurveValue.Point.X))
+            throw new InvalidOperationException("The packaged face derivative/pcurve/trim workflow failed.");
+    }
+    finally
+    {
+        foreach (Shape edge in packageFaceEdges) edge.Dispose();
+        foreach (Shape face in packageFaces) face.Dispose();
+    }
+
+    using (TopologyAdjacencyMap adjacency = box.GetTopologyAdjacency(ShapeKind.Edge, ShapeKind.Face))
+    {
+        if (adjacency.GetItemIndices(0).Count != 4)
+            throw new InvalidOperationException("The packaged reverse topology adjacency failed.");
+    }
+
+    using Shape secondBoxSource = ShapeFactory.CreateBox(10, 20, 30);
+    using Shape secondBox = secondBoxSource.Transformed(
+        ShapeTransform.CreateTranslationAndRotationZ(40, 0, 0, 0));
+    using Shape editSource = ShapeFactory.CreateCompound([box, secondBox]);
+    Shape[] editSolids = editSource.GetSubShapes(ShapeKind.Solid);
+    using Shape replacementSolid = ShapeFactory.CreateBox(2, 3, 4);
+    try
+    {
+        using Shape replaced = editSource.ReplaceSubshape(editSolids[0], replacementSolid);
+        using Shape removed = editSource.RemoveSubshape(editSolids[1]);
+        if (replaced.CountSubShapes(ShapeKind.Solid) != 2
+            || removed.CountSubShapes(ShapeKind.Solid) != 1)
+            throw new InvalidOperationException("The packaged replace/remove topology workflow failed.");
+    }
+    finally { foreach (Shape solid in editSolids) solid.Dispose(); }
+
+    string selectiveInputPath = ShapeExchange.WriteStep(
+        editSource, Path.Combine(exchangeDirectory, "selective-input.step"));
+    Shape selectivelyImported;
+    using (StepReadSession session = StepReadSession.Open(selectiveInputPath, 1.0))
+    {
+        if (session.Info.ReadStatus != StepReadStatus.Done
+            || session.Info.CandidateRootCount <= 0
+            || session.Info.FileUnits.Length.Count == 0)
+            throw new InvalidOperationException("The packaged STEP session metadata failed.");
+        selectivelyImported = session.TransferRoot(0);
+    }
+    using (selectivelyImported)
+    {
+        Shape[] importedSolids = selectivelyImported.GetSubShapes(ShapeKind.Solid);
+        if (importedSolids.Length < 2)
+            throw new InvalidOperationException("The packaged selective STEP transfer lost solid roots.");
+        Shape editedImport;
+        try { editedImport = selectivelyImported.RemoveSubshape(importedSolids[1]); }
+        finally { foreach (Shape solid in importedSolids) solid.Dispose(); }
+        using (editedImport)
+        {
+            string editedStepPath = ShapeExchange.WriteStep(
+                editedImport, Path.Combine(exchangeDirectory, "selective-edited.step"));
+            using Shape editedRoundTrip = ShapeExchange.ReadStep(editedStepPath);
+            if (!editedRoundTrip.IsValid || editedRoundTrip.CountSubShapes(ShapeKind.Solid) != 1)
+                throw new InvalidOperationException("The packaged selective STEP edit/export workflow failed.");
+        }
+    }
+
     string stepPath = ShapeExchange.WriteStep(box, Path.Combine(exchangeDirectory, "box.step"));
     using StepReadResult stepResult = ShapeExchange.ReadStepWithReport(stepPath);
     using ShapeRepairResult repairResult = stepResult.Shape.RepairWithReport();

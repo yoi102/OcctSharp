@@ -57,6 +57,13 @@ public sealed class GenerationReportWriterTests
         Assert.Equal(
             first.Diagnostics.Declarations.Select(static item => item.StableId),
             second.Diagnostics.Declarations.Select(static item => item.StableId));
+        Assert.Equal(first.DependencyClosure.IsComplete, second.DependencyClosure.IsComplete);
+        Assert.Equal(
+            first.DependencyClosure.DirectDependencies,
+            second.DependencyClosure.DirectDependencies);
+        Assert.Equal(
+            first.DependencyClosure.Issues,
+            second.DependencyClosure.Issues);
         Assert.Equal(5, first.Coverage.Totals.Total);
         Assert.Equal(1, first.Coverage.Totals.Pending);
         Assert.Equal(1, first.Coverage.Totals.Skipped);
@@ -94,13 +101,16 @@ public sealed class GenerationReportWriterTests
             GenerationReportWriter.Write(root, reports);
             string coveragePath = Path.Combine(root, "artifacts", "generator-reports", "coverage.json");
             string diagnosticsPath = Path.Combine(root, "artifacts", "generator-reports", "diagnostics.json");
+            string dependencyClosurePath = Path.Combine(root, "artifacts", "generator-reports", "dependency-closure.json");
             string firstCoverage = File.ReadAllText(coveragePath);
             string firstDiagnostics = File.ReadAllText(diagnosticsPath);
+            string firstDependencyClosure = File.ReadAllText(dependencyClosurePath);
 
             GenerationReportWriter.Write(root, reports);
 
             Assert.Equal(firstCoverage, File.ReadAllText(coveragePath));
             Assert.Equal(firstDiagnostics, File.ReadAllText(diagnosticsPath));
+            Assert.Equal(firstDependencyClosure, File.ReadAllText(dependencyClosurePath));
         }
         finally
         {
@@ -119,6 +129,7 @@ public sealed class GenerationReportWriterTests
         {
             SourcePackage = package,
             SourceToolkit = toolkit,
+            ProductModule = OcctProductModule.Foundation,
         };
     }
 

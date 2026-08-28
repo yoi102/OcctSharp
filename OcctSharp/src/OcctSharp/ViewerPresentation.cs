@@ -28,6 +28,11 @@ public sealed class ViewerPresentation : IDisposable
     /// <summary>Sets wireframe or shaded display for this presentation.</summary>
     public void SetDisplayMode(ViewerDisplayMode displayMode) => Viewer.SetDisplayMode(this, displayMode);
 
+    /// <summary>
+    /// Activates whole-object selection when null, or one topology-kind selection mode.
+    /// </summary>
+    public void SetSelectionKind(ShapeKind? kind) => Viewer.SetSelectionKind(this, kind);
+
     /// <summary>Removes the presentation from its parent viewer.</summary>
     public void Dispose() => Viewer.Remove(this);
 

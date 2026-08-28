@@ -31,6 +31,39 @@ internal readonly struct CurveEvaluationRaw
 }
 
 [StructLayout(LayoutKind.Sequential)]
+internal readonly struct CurveDerivativeEvaluationRaw
+{
+    internal readonly double Parameter;
+    internal readonly XyzRaw Point;
+    internal readonly XyzRaw FirstDerivative;
+    internal readonly XyzRaw SecondDerivative;
+}
+
+[StructLayout(LayoutKind.Sequential)]
+internal readonly struct XyRaw
+{
+    internal readonly double X;
+    internal readonly double Y;
+}
+
+[StructLayout(LayoutKind.Sequential)]
+internal readonly struct PcurveSnapshotRaw
+{
+    internal readonly double FirstParameter;
+    internal readonly double LastParameter;
+    internal readonly XyRaw StartPoint;
+    internal readonly XyRaw EndPoint;
+}
+
+[StructLayout(LayoutKind.Sequential)]
+internal readonly struct PcurveEvaluationRaw
+{
+    internal readonly double Parameter;
+    internal readonly XyRaw Point;
+    internal readonly XyRaw Tangent;
+}
+
+[StructLayout(LayoutKind.Sequential)]
 internal readonly struct CurveProjectionRaw
 {
     internal readonly double Parameter;
@@ -45,6 +78,17 @@ internal readonly struct SurfaceEvaluationRaw
     internal readonly double UParameter;
     internal readonly double VParameter;
     internal readonly XyzRaw Point;
+    internal readonly XyzRaw Normal;
+}
+
+[StructLayout(LayoutKind.Sequential)]
+internal readonly struct SurfaceDerivativeEvaluationRaw
+{
+    internal readonly double UParameter;
+    internal readonly double VParameter;
+    internal readonly XyzRaw Point;
+    internal readonly XyzRaw UDerivative;
+    internal readonly XyzRaw VDerivative;
     internal readonly XyzRaw Normal;
 }
 

@@ -6,9 +6,11 @@
 #include <BRepBuilderAPI_MakeEdge.hxx>
 #include <BRepBuilderAPI_MakeFace.hxx>
 #include <BRepBuilderAPI_MakePolygon.hxx>
+#include <BRepBuilderAPI_MakeWire.hxx>
 #include <BRepBuilderAPI_Sewing.hxx>
 #include <BRep_Tool.hxx>
 #include <BRepTools.hxx>
+#include <BRepTools_ReShape.hxx>
 #include <BRepMesh_IncrementalMesh.hxx>
 #include <BRepPrimAPI_MakeBox.hxx>
 #include <BRepPrimAPI_MakeSphere.hxx>
@@ -44,7 +46,10 @@
 #include <GeomAPI_ProjectPointOnSurf.hxx>
 #include <Geom_BezierCurve.hxx>
 #include <Geom_Curve.hxx>
+#include <Geom_RectangularTrimmedSurface.hxx>
+#include <Geom_TrimmedCurve.hxx>
 #include <Geom_Surface.hxx>
+#include <Geom2d_Curve.hxx>
 #include <AIS_InteractiveContext.hxx>
 #include <AIS_SelectionScheme.hxx>
 #include <AIS_Shape.hxx>
@@ -183,8 +188,13 @@ static_assert(alignof(OcctSharp_FaceSurfaceSnapshot) == 8);
 static_assert(offsetof(OcctSharp_FaceSurfaceSnapshot, surface_type) == 0);
 static_assert(offsetof(OcctSharp_FaceSurfaceSnapshot, first_u_parameter) == 8);
 static_assert(sizeof(OcctSharp_CurveEvaluation) == 56);
+static_assert(sizeof(OcctSharp_CurveDerivativeEvaluation) == 80);
+static_assert(sizeof(OcctSharp_Xy) == 16);
+static_assert(sizeof(OcctSharp_PcurveSnapshot) == 48);
+static_assert(sizeof(OcctSharp_PcurveEvaluation) == 40);
 static_assert(sizeof(OcctSharp_CurveProjection) == 48);
 static_assert(sizeof(OcctSharp_SurfaceEvaluation) == 64);
+static_assert(sizeof(OcctSharp_SurfaceDerivativeEvaluation) == 112);
 static_assert(sizeof(OcctSharp_SurfaceProjection) == 56);
 static_assert(sizeof(OcctSharp_BooleanHistorySummary) == 48);
 static_assert(offsetof(OcctSharp_CurveEvaluation, point) == 8);
@@ -216,6 +226,8 @@ static_assert(sizeof(OcctSharp_DetailedMeshTriangle) == 20);
 static_assert(sizeof(OcctSharp_ValidationIssue) == 8);
 static_assert(sizeof(OcctSharp_StepReadReport) == 24);
 static_assert(offsetof(OcctSharp_StepReadReport, system_length_unit) == 16);
+static_assert(sizeof(OcctSharp_StepReaderInfo) == 32);
+static_assert(offsetof(OcctSharp_StepReaderInfo, system_length_unit) == 8);
 static_assert(alignof(OcctSharp_ShapeDistanceResult) == 8);
 static_assert(offsetof(OcctSharp_ShapeDistanceResult, distance) == 0);
 static_assert(offsetof(OcctSharp_ShapeDistanceResult, point_on_first) == 8);
@@ -301,10 +313,19 @@ struct OcctSharp_ViewerHandle
   std::thread::id OwnerThread;
 };
 
+struct OcctSharp_StepReaderHandle
+{
+  STEPControl_Reader Reader;
+  IFSelect_ReturnStatus ReadStatus = IFSelect_RetVoid;
+  std::vector<std::string> LengthUnits;
+  std::vector<std::string> AngleUnits;
+  std::vector<std::string> SolidAngleUnits;
+};
+
 namespace
 {
-constexpr uint32_t AbiVersion = 0x0001002CU;
-constexpr const char* BridgeVersion = "0.52.0";
+constexpr uint32_t AbiVersion = 0x0001002DU;
+constexpr const char* BridgeVersion = "0.53.0";
 thread_local std::string LastError;
 std::mutex LiveShapesMutex;
 std::unordered_set<const OcctSharp_ShapeHandle*> LiveShapes;
@@ -325,6 +346,7 @@ std::unordered_set<const OcctSharp_IntIndexedMapHandle*> LiveIntIndexedMaps;
 std::unordered_set<const OcctSharp_GPropsHandle*> LiveGProps;
 std::unordered_set<const OcctSharp_OcafDocumentHandle*> LiveOcafDocuments;
 std::unordered_set<const OcctSharp_ViewerHandle*> LiveViewers;
+std::unordered_set<const OcctSharp_StepReaderHandle*> LiveStepReaders;
 
 class OperationFailure final : public std::runtime_error
 {
@@ -659,6 +681,13 @@ void ValidateShape(const OcctSharp_ShapeHandle* shape)
   {
     throw OperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The shape handle is invalid or already released.");
   }
+}
+
+void ValidateStepReader(const OcctSharp_StepReaderHandle* reader)
+{
+  if (reader == nullptr) throw OperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The STEP reader handle is null.");
+  if (!IsLiveValue(reader, LiveStepReaders))
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_HANDLE, "The STEP reader handle is invalid or already released.");
 }
 
 void ValidateUsableShape(const OcctSharp_ShapeHandle* shape)
@@ -1649,6 +1678,87 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_edge_evaluate(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_edge_evaluate_derivatives(
+  const OcctSharp_ShapeHandle* edge, const double parameter,
+  OcctSharp_CurveDerivativeEvaluation* out_result)
+{
+  if (out_result == nullptr) { SetLastError("The curve derivative output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_result = {};
+  if (!std::isfinite(parameter)) { SetLastError("The curve parameter must be finite."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateUsableShape(edge);
+    if (edge->Value.ShapeType() != TopAbs_EDGE)
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Curve derivative evaluation requires an edge shape.");
+    const BRepAdaptor_Curve curve(TopoDS::Edge(edge->Value));
+    if (parameter < curve.FirstParameter() || parameter > curve.LastParameter())
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The curve parameter is outside the edge range.");
+    gp_Pnt point;
+    gp_Vec first_derivative;
+    gp_Vec second_derivative;
+    curve.D2(parameter, point, first_derivative, second_derivative);
+    *out_result = { parameter,
+      { point.X(), point.Y(), point.Z() },
+      { first_derivative.X(), first_derivative.Y(), first_derivative.Z() },
+      { second_derivative.X(), second_derivative.Y(), second_derivative.Z() } };
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_edge_pcurve_snapshot(
+  const OcctSharp_ShapeHandle* edge, const OcctSharp_ShapeHandle* face,
+  OcctSharp_PcurveSnapshot* out_result)
+{
+  if (out_result == nullptr) { SetLastError("The pcurve snapshot output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_result = {};
+  return Guard([&]
+  {
+    ValidateUsableShape(edge);
+    ValidateUsableShape(face);
+    if (edge->Value.ShapeType() != TopAbs_EDGE || face->Value.ShapeType() != TopAbs_FACE)
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "A pcurve snapshot requires an edge and a face.");
+    double first = 0.0;
+    double last = 0.0;
+    const opencascade::handle<Geom2d_Curve> curve = BRep_Tool::CurveOnSurface(
+      TopoDS::Edge(edge->Value), TopoDS::Face(face->Value), first, last);
+    if (curve.IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The edge has no pcurve on the supplied face.");
+    const gp_Pnt2d start = curve->Value(first);
+    const gp_Pnt2d end = curve->Value(last);
+    *out_result = { first, last, { start.X(), start.Y() }, { end.X(), end.Y() } };
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_edge_pcurve_evaluate(
+  const OcctSharp_ShapeHandle* edge, const OcctSharp_ShapeHandle* face, const double parameter,
+  OcctSharp_PcurveEvaluation* out_result)
+{
+  if (out_result == nullptr) { SetLastError("The pcurve evaluation output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_result = {};
+  if (!std::isfinite(parameter)) { SetLastError("The pcurve parameter must be finite."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateUsableShape(edge);
+    ValidateUsableShape(face);
+    if (edge->Value.ShapeType() != TopAbs_EDGE || face->Value.ShapeType() != TopAbs_FACE)
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Pcurve evaluation requires an edge and a face.");
+    double first = 0.0;
+    double last = 0.0;
+    const opencascade::handle<Geom2d_Curve> curve = BRep_Tool::CurveOnSurface(
+      TopoDS::Edge(edge->Value), TopoDS::Face(face->Value), first, last);
+    if (curve.IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The edge has no pcurve on the supplied face.");
+    if (parameter < first || parameter > last)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The pcurve parameter is outside the edge-on-face range.");
+    gp_Pnt2d point;
+    gp_Vec2d derivative;
+    curve->D1(parameter, point, derivative);
+    if (derivative.SquareMagnitude() <= 0.0)
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The pcurve has no defined tangent at the requested parameter.");
+    derivative.Normalize();
+    *out_result = { parameter, { point.X(), point.Y() }, { derivative.X(), derivative.Y() } };
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_edge_length(
   const OcctSharp_ShapeHandle* edge, double* out_length)
 {
@@ -1725,6 +1835,40 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_face_evaluate(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_face_evaluate_derivatives(
+  const OcctSharp_ShapeHandle* face, const double u_parameter, const double v_parameter,
+  OcctSharp_SurfaceDerivativeEvaluation* out_result)
+{
+  if (out_result == nullptr) { SetLastError("The surface derivative output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_result = {};
+  if (!std::isfinite(u_parameter) || !std::isfinite(v_parameter))
+  { SetLastError("Surface parameters must be finite."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateUsableShape(face);
+    if (face->Value.ShapeType() != TopAbs_FACE)
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Surface derivative evaluation requires a face shape.");
+    const BRepAdaptor_Surface surface(TopoDS::Face(face->Value), true);
+    if (u_parameter < surface.FirstUParameter() || u_parameter > surface.LastUParameter()
+        || v_parameter < surface.FirstVParameter() || v_parameter > surface.LastVParameter())
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The UV parameters are outside the face range.");
+    gp_Pnt point;
+    gp_Vec derivative_u;
+    gp_Vec derivative_v;
+    surface.D1(u_parameter, v_parameter, point, derivative_u, derivative_v);
+    gp_Vec normal = derivative_u.Crossed(derivative_v);
+    if (normal.SquareMagnitude() <= 0.0)
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The face has no defined normal at the requested parameters.");
+    normal.Normalize();
+    if (face->Value.Orientation() == TopAbs_REVERSED) normal.Reverse();
+    *out_result = { u_parameter, v_parameter,
+      { point.X(), point.Y(), point.Z() },
+      { derivative_u.X(), derivative_u.Y(), derivative_u.Z() },
+      { derivative_v.X(), derivative_v.Y(), derivative_v.Z() },
+      { normal.X(), normal.Y(), normal.Z() } };
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_face_project_point(
   const OcctSharp_ShapeHandle* face, const OcctSharp_Xyz point, const double tolerance,
   OcctSharp_SurfaceProjection* out_result)
@@ -1758,6 +1902,74 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_face_project_point(
     projection.LowerDistanceParameters(u, v);
     const gp_Pnt nearest = projection.NearestPoint();
     *out_result = { u, v, { nearest.X(), nearest.Y(), nearest.Z() }, projection.LowerDistance(), count };
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_edge_trim(
+  const OcctSharp_ShapeHandle* edge, const double first_parameter, const double last_parameter,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The trimmed edge output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (!std::isfinite(first_parameter) || !std::isfinite(last_parameter) || first_parameter >= last_parameter)
+  { SetLastError("Trimmed edge parameters must be finite and strictly increasing."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateUsableShape(edge);
+    if (edge->Value.ShapeType() != TopAbs_EDGE)
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Edge trimming requires an edge shape.");
+    double source_first = 0.0;
+    double source_last = 0.0;
+    const opencascade::handle<Geom_Curve> curve = BRep_Tool::Curve(TopoDS::Edge(edge->Value), source_first, source_last);
+    if (curve.IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The edge has no 3D curve to trim.");
+    if (first_parameter < source_first || last_parameter > source_last)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The requested trim interval is outside the edge range.");
+    const opencascade::handle<Geom_TrimmedCurve> trimmed = new Geom_TrimmedCurve(curve, first_parameter, last_parameter);
+    BRepBuilderAPI_MakeEdge builder(trimmed);
+    if (!builder.IsDone())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT could not build the trimmed edge.");
+    TopoDS_Edge result = builder.Edge();
+    if (edge->Value.Orientation() == TopAbs_REVERSED) result.Reverse();
+    *out_shape = AllocateShape(std::move(result));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_face_trim(
+  const OcctSharp_ShapeHandle* face,
+  const double first_u_parameter, const double last_u_parameter,
+  const double first_v_parameter, const double last_v_parameter,
+  const double tolerance, OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The trimmed face output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (!std::isfinite(first_u_parameter) || !std::isfinite(last_u_parameter)
+      || !std::isfinite(first_v_parameter) || !std::isfinite(last_v_parameter)
+      || first_u_parameter >= last_u_parameter || first_v_parameter >= last_v_parameter
+      || !std::isfinite(tolerance) || tolerance <= 0.0)
+  { SetLastError("Trimmed face bounds must be finite and increasing, and tolerance must be positive."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateUsableShape(face);
+    if (face->Value.ShapeType() != TopAbs_FACE)
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Face trimming requires a face shape.");
+    const TopoDS_Face topology_face = TopoDS::Face(face->Value);
+    const BRepAdaptor_Surface bounds(topology_face, true);
+    if (first_u_parameter < bounds.FirstUParameter() || last_u_parameter > bounds.LastUParameter()
+        || first_v_parameter < bounds.FirstVParameter() || last_v_parameter > bounds.LastVParameter())
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The requested UV trim rectangle is outside the face range.");
+    const opencascade::handle<Geom_Surface> surface = BRep_Tool::Surface(topology_face);
+    if (surface.IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The face has no surface to trim.");
+    const opencascade::handle<Geom_RectangularTrimmedSurface> trimmed =
+      new Geom_RectangularTrimmedSurface(
+        surface, first_u_parameter, last_u_parameter, first_v_parameter, last_v_parameter, true, true);
+    BRepBuilderAPI_MakeFace builder(trimmed, tolerance);
+    if (!builder.IsDone())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT could not build the trimmed face.");
+    TopoDS_Face result = builder.Face();
+    if (face->Value.Orientation() == TopAbs_REVERSED) result.Reverse();
+    *out_shape = AllocateShape(std::move(result));
   });
 }
 
@@ -2113,6 +2325,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_polygon_wire(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_wire(
+  const OcctSharp_ShapeHandle* const* edges, const int32_t count,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The wire output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  if (count <= 0 || edges == nullptr)
+  { SetLastError("Wire construction requires at least one edge handle."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    BRepBuilderAPI_MakeWire builder;
+    for (int32_t index = 0; index < count; ++index)
+    {
+      ValidateUsableShape(edges[index]);
+      if (edges[index]->Value.ShapeType() != TopAbs_EDGE)
+        throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Wire construction accepts edge shapes only.");
+      builder.Add(TopoDS::Edge(edges[index]->Value));
+    }
+    if (!builder.IsDone())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT could not connect the supplied edges into a wire.");
+    *out_shape = AllocateShape(builder.Wire());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_planar_face(
   const OcctSharp_ShapeHandle* wire, OcctSharp_ShapeHandle** out_shape)
 {
@@ -2351,6 +2587,64 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_topology_adjacency_snapshot(
       for (int32_t index = 0; index < ancestor_written; ++index) occtsharp_shape_release(out_ancestors[index]);
       throw;
     }
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_replace_subshape(
+  const OcctSharp_ShapeHandle* shape, const OcctSharp_ShapeHandle* target,
+  const OcctSharp_ShapeHandle* replacement, OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The reshaped output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    ValidateUsableShape(target);
+    ValidateUsableShape(replacement);
+    bool contains = shape->Value.IsSame(target->Value);
+    if (!contains)
+    {
+      for (TopExp_Explorer explorer(shape->Value, target->Value.ShapeType()); explorer.More(); explorer.Next())
+      {
+        if (explorer.Current().IsSame(target->Value)) { contains = true; break; }
+      }
+    }
+    if (!contains)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The replacement target is not contained in the source topology.");
+    BRepTools_ReShape reshaper;
+    reshaper.Replace(target->Value, replacement->Value);
+    TopoDS_Shape result = reshaper.Apply(shape->Value);
+    if (result.IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT produced a null replacement result.");
+    *out_shape = AllocateShape(std::move(result));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_remove_subshape(
+  const OcctSharp_ShapeHandle* shape, const OcctSharp_ShapeHandle* target,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The reshaped output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    ValidateUsableShape(target);
+    if (shape->Value.IsSame(target->Value))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The root shape cannot be removed from itself.");
+    bool contains = false;
+    for (TopExp_Explorer explorer(shape->Value, target->Value.ShapeType()); explorer.More(); explorer.Next())
+    {
+      if (explorer.Current().IsSame(target->Value)) { contains = true; break; }
+    }
+    if (!contains)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The removal target is not contained in the source topology.");
+    BRepTools_ReShape reshaper;
+    reshaper.Remove(target->Value);
+    TopoDS_Shape result = reshaper.Apply(shape->Value);
+    if (result.IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT produced a null removal result.");
+    *out_shape = AllocateShape(std::move(result));
   });
 }
 
@@ -3116,6 +3410,124 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_step_report(
       throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The STEP transfer produced a null shape.");
     *out_shape = AllocateShape(std::move(shape));
   });
+}
+
+const std::vector<std::string>& StepReaderUnitList(
+  const OcctSharp_StepReaderHandle* reader, const int32_t unit_kind)
+{
+  switch (unit_kind)
+  {
+    case 0: return reader->LengthUnits;
+    case 1: return reader->AngleUnits;
+    case 2: return reader->SolidAngleUnits;
+    default: throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The STEP unit kind is outside the supported range.");
+  }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_step_reader_open(
+  const char* file_path, const double target_system_length_unit,
+  OcctSharp_StepReaderHandle** out_reader, OcctSharp_StepReaderInfo* out_info)
+{
+  if (out_reader == nullptr || out_info == nullptr)
+  { SetLastError("The STEP reader output pointers must not be null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_reader = nullptr;
+  *out_info = {};
+  if (!std::isfinite(target_system_length_unit) || target_system_length_unit < 0.0)
+  { SetLastError("The target system length unit must be zero or a positive finite value."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidatePath(file_path);
+    std::unique_ptr<OcctSharp_StepReaderHandle> reader(new OcctSharp_StepReaderHandle());
+    reader->ReadStatus = reader->Reader.ReadFile(file_path);
+    if (reader->ReadStatus != IFSelect_RetDone)
+      throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not open the STEP reader session.");
+    if (target_system_length_unit > 0.0)
+      reader->Reader.SetSystemLengthUnit(target_system_length_unit);
+
+    NCollection_Sequence<TCollection_AsciiString> length_units;
+    NCollection_Sequence<TCollection_AsciiString> angle_units;
+    NCollection_Sequence<TCollection_AsciiString> solid_angle_units;
+    reader->Reader.FileUnits(length_units, angle_units, solid_angle_units);
+    for (NCollection_Sequence<TCollection_AsciiString>::Iterator iterator(length_units); iterator.More(); iterator.Next())
+      reader->LengthUnits.emplace_back(iterator.Value().ToCString());
+    for (NCollection_Sequence<TCollection_AsciiString>::Iterator iterator(angle_units); iterator.More(); iterator.Next())
+      reader->AngleUnits.emplace_back(iterator.Value().ToCString());
+    for (NCollection_Sequence<TCollection_AsciiString>::Iterator iterator(solid_angle_units); iterator.More(); iterator.Next())
+      reader->SolidAngleUnits.emplace_back(iterator.Value().ToCString());
+
+    *out_info = {
+      reader->Reader.NbRootsForTransfer(),
+      static_cast<int32_t>(reader->ReadStatus),
+      reader->Reader.SystemLengthUnit(),
+      static_cast<int32_t>(reader->LengthUnits.size()),
+      static_cast<int32_t>(reader->AngleUnits.size()),
+      static_cast<int32_t>(reader->SolidAngleUnits.size()) };
+    *out_reader = AllocateValue(reader.release(), LiveStepReaders);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_step_reader_unit_utf8_length(
+  const OcctSharp_StepReaderHandle* reader, const int32_t unit_kind, const int32_t unit_index,
+  int32_t* out_length)
+{
+  if (out_length == nullptr) { SetLastError("The STEP unit length output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_length = 0;
+  return Guard([&]
+  {
+    ValidateStepReader(reader);
+    const std::vector<std::string>& units = StepReaderUnitList(reader, unit_kind);
+    if (unit_index < 0 || unit_index >= static_cast<int32_t>(units.size()))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The STEP unit index is outside the available range.");
+    if (units[unit_index].size() > static_cast<size_t>(std::numeric_limits<int32_t>::max()))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The STEP unit name exceeds the supported buffer size.");
+    *out_length = static_cast<int32_t>(units[unit_index].size());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_step_reader_unit_to_utf8(
+  const OcctSharp_StepReaderHandle* reader, const int32_t unit_kind, const int32_t unit_index,
+  char* buffer, const int32_t capacity, int32_t* out_written)
+{
+  if (out_written == nullptr) { SetLastError("The STEP unit written output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_written = 0;
+  return Guard([&]
+  {
+    ValidateStepReader(reader);
+    const std::vector<std::string>& units = StepReaderUnitList(reader, unit_kind);
+    if (unit_index < 0 || unit_index >= static_cast<int32_t>(units.size()))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The STEP unit index is outside the available range.");
+    const int32_t required = static_cast<int32_t>(units[unit_index].size());
+    ValidateOutputBuffer(buffer, capacity, required);
+    if (required > 0) std::memcpy(buffer, units[unit_index].data(), required);
+    *out_written = required;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_step_reader_transfer_root(
+  OcctSharp_StepReaderHandle* reader, const int32_t root_index,
+  OcctSharp_ShapeHandle** out_shape)
+{
+  if (out_shape == nullptr) { SetLastError("The STEP root output shape pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_shape = nullptr;
+  return Guard([&]
+  {
+    ValidateStepReader(reader);
+    const int32_t root_count = reader->Reader.NbRootsForTransfer();
+    if (root_index < 0 || root_index >= root_count)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The zero-based STEP root index is outside the candidate range.");
+    reader->Reader.ClearShapes();
+    if (!reader->Reader.TransferRoot(root_index + 1))
+      throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not transfer the selected STEP root.");
+    TopoDS_Shape shape = reader->Reader.OneShape();
+    if (shape.IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "The selected STEP root produced a null shape.");
+    *out_shape = AllocateShape(std::move(shape));
+  });
+}
+
+void OCCTSHARP_CALL occtsharp_step_reader_release(OcctSharp_StepReaderHandle* reader)
+{
+  if (reader != nullptr && UnregisterValue(reader, LiveStepReaders)) delete reader;
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_stl(
@@ -5768,6 +6180,23 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_display_mode(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_selection_kind(
+  OcctSharp_ViewerHandle* viewer, const int64_t presentation_id, const int32_t shape_kind)
+{
+  if (shape_kind < -1 || shape_kind > 7)
+  { SetLastError("Viewer selection kind must be whole-object or a TopAbs kind from Compound through Vertex."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const opencascade::handle<AIS_Shape> presentation = FindPresentation(viewer, presentation_id);
+    viewer->Context->Deactivate(presentation);
+    const int mode = shape_kind < 0
+      ? 0
+      : AIS_Shape::SelectionMode(static_cast<TopAbs_ShapeEnum>(shape_kind));
+    viewer->Context->Activate(presentation, mode, true);
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_remove_presentation(
   OcctSharp_ViewerHandle* viewer,
   const int64_t presentation_id)
@@ -5984,6 +6413,54 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_selected_snapshot(
     }
     for (size_t index = 0; index < ids.size(); ++index) presentation_ids[index] = ids[index];
     *written = static_cast<int32_t>(ids.size());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_selected_topology_snapshot(
+  OcctSharp_ViewerHandle* viewer, int64_t* presentation_ids,
+  OcctSharp_ShapeHandle** shapes, const int32_t capacity, int32_t* written)
+{
+  if (written == nullptr)
+  { SetLastError("The viewer selected-topology count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *written = 0;
+  if (capacity < 0 || (capacity > 0 && (presentation_ids == nullptr || shapes == nullptr)))
+  { SetLastError("The viewer selected-topology buffers or capacity are invalid."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const int32_t required = viewer->Context->NbSelected();
+    if (capacity < required)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The viewer selected-topology buffers are too small.");
+    int32_t index = 0;
+    try
+    {
+      for (viewer->Context->InitSelected(); viewer->Context->MoreSelected(); viewer->Context->NextSelected())
+      {
+        const opencascade::handle<AIS_InteractiveObject> selected = viewer->Context->SelectedInteractive();
+        int64_t presentation_id = 0;
+        for (const auto& presentation : viewer->Presentations)
+        {
+          if (presentation.second == selected) { presentation_id = presentation.first; break; }
+        }
+        if (presentation_id == 0)
+          throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "A selected AIS object is outside the managed presentation registry.");
+        if (!viewer->Context->HasSelectedShape())
+          throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The selected AIS owner does not expose topology.");
+        TopoDS_Shape selected_shape = viewer->Context->SelectedShape();
+        if (selected_shape.IsNull())
+          throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT returned a null selected topology shape.");
+        presentation_ids[index] = presentation_id;
+        shapes[index] = AllocateShape(std::move(selected_shape));
+        ++index;
+      }
+      *written = index;
+    }
+    catch (...)
+    {
+      for (int32_t cleanup = 0; cleanup < index; ++cleanup) occtsharp_shape_release(shapes[cleanup]);
+      *written = 0;
+      throw;
+    }
   });
 }
 

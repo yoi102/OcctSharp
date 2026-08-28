@@ -316,7 +316,12 @@ public sealed class ClangAstDiscovery
             NativeSignature = CreateNativeSignature(qualifiedName, function),
             SourcePackage = sourcePackage,
             SourceToolkit = sourceToolkit,
-            ProductModule = OcctProductModuleClassifier.Classify(sourcePackage, sourceToolkit),
+            ProductModule = string.IsNullOrWhiteSpace(sourcePackage)
+                ? OcctProductModule.Unassigned
+                : OcctProductModuleClassifier.ClassifyDeclaration(
+                    sourcePackage,
+                    qualifiedName,
+                    sourceToolkit),
             Access = MapAccess(factDeclaration.Access),
             ReturnType = function is null || factDeclaration is CXXConstructorDecl
                 ? null

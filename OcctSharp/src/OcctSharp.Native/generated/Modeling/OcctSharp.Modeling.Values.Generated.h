@@ -30,7 +30,6 @@
 // Source: c:@S@IntTools_Tools@F@ComputeIntRange#d#d#d#S
 // Source: c:@S@IntTools_Tools@F@IntermediatePoint#d#d#S
 // Source: c:@S@Intf@F@Contain#&1$@S@gp_Pnt#S0_#S0_#S0_#S
-// Source: c:@S@Law_BSpline@F@MaxDegree#S
 // Source: c:@S@ShapeAlgo@F@Init#S
 // Source: c:@S@ShapeAnalysis@F@AdjustByPeriod#d#d#d#S
 // Source: c:@S@ShapeAnalysis@F@AdjustToPeriod#d#d#d#S
@@ -160,8 +159,6 @@ OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_intf_contain_static_con
   OcctSharp_Point3d P2,
   OcctSharp_Point3d P3,
   OcctSharp_Point3d ThePnt);
-
-OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_law_bspline_max_degree_static_max_degree_0(void);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_shape_algo_init_static_init_0(void);
 

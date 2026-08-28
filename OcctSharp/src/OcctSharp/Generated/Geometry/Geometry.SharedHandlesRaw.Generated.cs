@@ -389,6 +389,25 @@
 // Source: c:@S@Extrema_ExtPRevS@F@NbExt#1
 // Source: c:@S@Extrema_ExtPRevS@F@Perform#&1$@S@gp_Pnt#
 // Source: c:@S@Extrema_ExtPRevS@F@SquareDistance#I#1
+// Source: c:@S@FEmTool_Curve@F@Degree#I#1
+// Source: c:@S@FEmTool_Curve@F@Dimension#1
+// Source: c:@S@FEmTool_Curve@F@NbElements#1
+// Source: c:@S@FEmTool_Curve@F@SetDegree#I#I#
+// Source: c:@S@FEmTool_ElementaryCriterion@F@Set#d#d#
+// Source: c:@S@FEmTool_LinearFlexion@F@FEmTool_LinearFlexion#I#$@E@GeomAbs_Shape#
+// Source: c:@S@FEmTool_LinearFlexion@F@Value#
+// Source: c:@S@FEmTool_LinearJerk@F@FEmTool_LinearJerk#I#$@E@GeomAbs_Shape#
+// Source: c:@S@FEmTool_LinearJerk@F@Value#
+// Source: c:@S@FEmTool_LinearTension@F@FEmTool_LinearTension#I#$@E@GeomAbs_Shape#
+// Source: c:@S@FEmTool_LinearTension@F@Value#
+// Source: c:@S@FEmTool_ProfileMatrix@F@ColNumber#1
+// Source: c:@S@FEmTool_ProfileMatrix@F@Decompose#
+// Source: c:@S@FEmTool_ProfileMatrix@F@Init#d#
+// Source: c:@S@FEmTool_ProfileMatrix@F@IsInProfile#I#I#1
+// Source: c:@S@FEmTool_ProfileMatrix@F@OutM#1
+// Source: c:@S@FEmTool_ProfileMatrix@F@OutS#1
+// Source: c:@S@FEmTool_ProfileMatrix@F@Prepare#
+// Source: c:@S@FEmTool_ProfileMatrix@F@RowNumber#1
 // Source: c:@S@GccInt_BCirc@F@ArcType#1
 // Source: c:@S@GccInt_BElips@F@ArcType#1
 // Source: c:@S@GccInt_BHyper@F@ArcType#1
@@ -1846,6 +1865,79 @@
 // Source: c:@S@Geom_VectorWithMagnitude@F@SquareMagnitude#1
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtract#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#
 // Source: c:@S@Geom_VectorWithMagnitude@F@Subtracted#&1$@N@opencascade@S@handle>#$@S@Geom_Vector#1
+// Source: c:@S@Law_BSpFunc@F@Continuity#1
+// Source: c:@S@Law_BSpFunc@F@Curve#1
+// Source: c:@S@Law_BSpFunc@F@Law_BSpFunc#
+// Source: c:@S@Law_BSpFunc@F@Law_BSpFunc#&1$@N@opencascade@S@handle>#$@S@Law_BSpline#d#d#
+// Source: c:@S@Law_BSpFunc@F@NbIntervals#$@E@GeomAbs_Shape#1
+// Source: c:@S@Law_BSpFunc@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Law_BSpline#
+// Source: c:@S@Law_BSpFunc@F@Trim#d#d#d#1
+// Source: c:@S@Law_BSpFunc@F@Value#d#
+// Source: c:@S@Law_BSpline@F@Continuity#1
+// Source: c:@S@Law_BSpline@F@Copy#1
+// Source: c:@S@Law_BSpline@F@DN#d#I#1
+// Source: c:@S@Law_BSpline@F@Degree#1
+// Source: c:@S@Law_BSpline@F@EndPoint#1
+// Source: c:@S@Law_BSpline@F@FirstParameter#1
+// Source: c:@S@Law_BSpline@F@FirstUKnotIndex#1
+// Source: c:@S@Law_BSpline@F@IncreaseDegree#I#
+// Source: c:@S@Law_BSpline@F@IncreaseMultiplicity#I#I#
+// Source: c:@S@Law_BSpline@F@IncreaseMultiplicity#I#I#I#
+// Source: c:@S@Law_BSpline@F@IncrementMultiplicity#I#I#I#
+// Source: c:@S@Law_BSpline@F@InsertKnot#d#I#d#b#
+// Source: c:@S@Law_BSpline@F@IsCN#I#1
+// Source: c:@S@Law_BSpline@F@IsClosed#1
+// Source: c:@S@Law_BSpline@F@IsPeriodic#1
+// Source: c:@S@Law_BSpline@F@IsRational#1
+// Source: c:@S@Law_BSpline@F@Knot#I#1
+// Source: c:@S@Law_BSpline@F@KnotDistribution#1
+// Source: c:@S@Law_BSpline@F@LastParameter#1
+// Source: c:@S@Law_BSpline@F@LastUKnotIndex#1
+// Source: c:@S@Law_BSpline@F@LocalDN#d#I#I#I#1
+// Source: c:@S@Law_BSpline@F@LocalValue#d#I#I#1
+// Source: c:@S@Law_BSpline@F@Multiplicity#I#1
+// Source: c:@S@Law_BSpline@F@NbKnots#1
+// Source: c:@S@Law_BSpline@F@NbPoles#1
+// Source: c:@S@Law_BSpline@F@Pole#I#1
+// Source: c:@S@Law_BSpline@F@RemoveKnot#I#I#d#
+// Source: c:@S@Law_BSpline@F@Reverse#
+// Source: c:@S@Law_BSpline@F@ReversedParameter#d#1
+// Source: c:@S@Law_BSpline@F@Segment#d#d#
+// Source: c:@S@Law_BSpline@F@SetKnot#I#d#
+// Source: c:@S@Law_BSpline@F@SetKnot#I#d#I#
+// Source: c:@S@Law_BSpline@F@SetNotPeriodic#
+// Source: c:@S@Law_BSpline@F@SetOrigin#I#
+// Source: c:@S@Law_BSpline@F@SetPeriodic#
+// Source: c:@S@Law_BSpline@F@SetPole#I#d#
+// Source: c:@S@Law_BSpline@F@SetPole#I#d#d#
+// Source: c:@S@Law_BSpline@F@SetWeight#I#d#
+// Source: c:@S@Law_BSpline@F@StartPoint#1
+// Source: c:@S@Law_BSpline@F@Value#d#1
+// Source: c:@S@Law_BSpline@F@Weight#I#1
+// Source: c:@S@Law_Composite@F@Continuity#1
+// Source: c:@S@Law_Composite@F@IsPeriodic#1
+// Source: c:@S@Law_Composite@F@Law_Composite#
+// Source: c:@S@Law_Composite@F@Law_Composite#d#d#d#
+// Source: c:@S@Law_Composite@F@NbIntervals#$@E@GeomAbs_Shape#1
+// Source: c:@S@Law_Composite@F@SetPeriodic#
+// Source: c:@S@Law_Composite@F@Trim#d#d#d#1
+// Source: c:@S@Law_Composite@F@Value#d#
+// Source: c:@S@Law_Constant@F@Continuity#1
+// Source: c:@S@Law_Constant@F@Law_Constant#
+// Source: c:@S@Law_Constant@F@NbIntervals#$@E@GeomAbs_Shape#1
+// Source: c:@S@Law_Constant@F@Set#d#d#d#
+// Source: c:@S@Law_Constant@F@Trim#d#d#d#1
+// Source: c:@S@Law_Constant@F@Value#d#
+// Source: c:@S@Law_Interpol@F@Law_Interpol#
+// Source: c:@S@Law_Linear@F@Continuity#1
+// Source: c:@S@Law_Linear@F@Law_Linear#
+// Source: c:@S@Law_Linear@F@NbIntervals#$@E@GeomAbs_Shape#1
+// Source: c:@S@Law_Linear@F@Set#d#d#d#d#
+// Source: c:@S@Law_Linear@F@Trim#d#d#d#1
+// Source: c:@S@Law_Linear@F@Value#d#
+// Source: c:@S@Law_S@F@Law_S#
+// Source: c:@S@Law_S@F@Set#d#d#d#d#
+// Source: c:@S@Law_S@F@Set#d#d#d#d#d#d#
 // Source: c:@S@MAT2d_Circuit@F@Connexion#I#1
 // Source: c:@S@MAT2d_Circuit@F@ConnexionOn#I#1
 // Source: c:@S@MAT2d_Circuit@F@LineLength#I#1
@@ -2338,6 +2430,55 @@ internal sealed class ExtremaExtPRevSHandle : SafeHandleZeroOrMinusOneIsInvalid
     internal ExtremaExtPRevSHandle() : base(true) { }
     internal ExtremaExtPRevSHandle(nint handle) : base(true) => SetHandle(handle);
     protected override bool ReleaseHandle() { GeneratedNativeMethods.ExtremaExtPRevSRelease(handle); return true; }
+}
+
+internal sealed class FEmToolCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
+{
+    internal FEmToolCurveHandle() : base(true) { }
+    internal FEmToolCurveHandle(nint handle) : base(true) => SetHandle(handle);
+    protected override bool ReleaseHandle() { GeneratedNativeMethods.FEmToolCurveRelease(handle); return true; }
+}
+
+internal sealed class FEmToolElementaryCriterionHandle : SafeHandleZeroOrMinusOneIsInvalid
+{
+    internal FEmToolElementaryCriterionHandle() : base(true) { }
+    internal FEmToolElementaryCriterionHandle(nint handle) : base(true) => SetHandle(handle);
+    protected override bool ReleaseHandle() { GeneratedNativeMethods.FEmToolElementaryCriterionRelease(handle); return true; }
+}
+
+internal sealed class FEmToolLinearFlexionHandle : SafeHandleZeroOrMinusOneIsInvalid
+{
+    internal FEmToolLinearFlexionHandle() : base(true) { }
+    internal FEmToolLinearFlexionHandle(nint handle) : base(true) => SetHandle(handle);
+    protected override bool ReleaseHandle() { GeneratedNativeMethods.FEmToolLinearFlexionRelease(handle); return true; }
+}
+
+internal sealed class FEmToolLinearJerkHandle : SafeHandleZeroOrMinusOneIsInvalid
+{
+    internal FEmToolLinearJerkHandle() : base(true) { }
+    internal FEmToolLinearJerkHandle(nint handle) : base(true) => SetHandle(handle);
+    protected override bool ReleaseHandle() { GeneratedNativeMethods.FEmToolLinearJerkRelease(handle); return true; }
+}
+
+internal sealed class FEmToolLinearTensionHandle : SafeHandleZeroOrMinusOneIsInvalid
+{
+    internal FEmToolLinearTensionHandle() : base(true) { }
+    internal FEmToolLinearTensionHandle(nint handle) : base(true) => SetHandle(handle);
+    protected override bool ReleaseHandle() { GeneratedNativeMethods.FEmToolLinearTensionRelease(handle); return true; }
+}
+
+internal sealed class FEmToolProfileMatrixHandle : SafeHandleZeroOrMinusOneIsInvalid
+{
+    internal FEmToolProfileMatrixHandle() : base(true) { }
+    internal FEmToolProfileMatrixHandle(nint handle) : base(true) => SetHandle(handle);
+    protected override bool ReleaseHandle() { GeneratedNativeMethods.FEmToolProfileMatrixRelease(handle); return true; }
+}
+
+internal sealed class FEmToolSparseMatrixHandle : SafeHandleZeroOrMinusOneIsInvalid
+{
+    internal FEmToolSparseMatrixHandle() : base(true) { }
+    internal FEmToolSparseMatrixHandle(nint handle) : base(true) => SetHandle(handle);
+    protected override bool ReleaseHandle() { GeneratedNativeMethods.FEmToolSparseMatrixRelease(handle); return true; }
 }
 
 internal sealed class GccIntBCircHandle : SafeHandleZeroOrMinusOneIsInvalid
@@ -3206,6 +3347,62 @@ internal sealed class GeometryTestDrawableQualifiedCurve2dHandle : SafeHandleZer
     internal GeometryTestDrawableQualifiedCurve2dHandle() : base(true) { }
     internal GeometryTestDrawableQualifiedCurve2dHandle(nint handle) : base(true) => SetHandle(handle);
     protected override bool ReleaseHandle() { GeneratedNativeMethods.GeometryTestDrawableQualifiedCurve2dRelease(handle); return true; }
+}
+
+internal sealed class LawBSpFuncHandle : SafeHandleZeroOrMinusOneIsInvalid
+{
+    internal LawBSpFuncHandle() : base(true) { }
+    internal LawBSpFuncHandle(nint handle) : base(true) => SetHandle(handle);
+    protected override bool ReleaseHandle() { GeneratedNativeMethods.LawBSpFuncRelease(handle); return true; }
+}
+
+internal sealed class LawBSplineHandle : SafeHandleZeroOrMinusOneIsInvalid
+{
+    internal LawBSplineHandle() : base(true) { }
+    internal LawBSplineHandle(nint handle) : base(true) => SetHandle(handle);
+    protected override bool ReleaseHandle() { GeneratedNativeMethods.LawBSplineRelease(handle); return true; }
+}
+
+internal sealed class LawCompositeHandle : SafeHandleZeroOrMinusOneIsInvalid
+{
+    internal LawCompositeHandle() : base(true) { }
+    internal LawCompositeHandle(nint handle) : base(true) => SetHandle(handle);
+    protected override bool ReleaseHandle() { GeneratedNativeMethods.LawCompositeRelease(handle); return true; }
+}
+
+internal sealed class LawConstantHandle : SafeHandleZeroOrMinusOneIsInvalid
+{
+    internal LawConstantHandle() : base(true) { }
+    internal LawConstantHandle(nint handle) : base(true) => SetHandle(handle);
+    protected override bool ReleaseHandle() { GeneratedNativeMethods.LawConstantRelease(handle); return true; }
+}
+
+internal sealed class LawFunctionHandle : SafeHandleZeroOrMinusOneIsInvalid
+{
+    internal LawFunctionHandle() : base(true) { }
+    internal LawFunctionHandle(nint handle) : base(true) => SetHandle(handle);
+    protected override bool ReleaseHandle() { GeneratedNativeMethods.LawFunctionRelease(handle); return true; }
+}
+
+internal sealed class LawInterpolHandle : SafeHandleZeroOrMinusOneIsInvalid
+{
+    internal LawInterpolHandle() : base(true) { }
+    internal LawInterpolHandle(nint handle) : base(true) => SetHandle(handle);
+    protected override bool ReleaseHandle() { GeneratedNativeMethods.LawInterpolRelease(handle); return true; }
+}
+
+internal sealed class LawLinearHandle : SafeHandleZeroOrMinusOneIsInvalid
+{
+    internal LawLinearHandle() : base(true) { }
+    internal LawLinearHandle(nint handle) : base(true) => SetHandle(handle);
+    protected override bool ReleaseHandle() { GeneratedNativeMethods.LawLinearRelease(handle); return true; }
+}
+
+internal sealed class LawSHandle : SafeHandleZeroOrMinusOneIsInvalid
+{
+    internal LawSHandle() : base(true) { }
+    internal LawSHandle(nint handle) : base(true) => SetHandle(handle);
+    protected override bool ReleaseHandle() { GeneratedNativeMethods.LawSRelease(handle); return true; }
 }
 
 internal sealed class MAT2dCircuitHandle : SafeHandleZeroOrMinusOneIsInvalid
@@ -5432,6 +5629,215 @@ internal static partial class GeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_extrema_ext_prev_s_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void ExtremaExtPRevSRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_curve_method_degree_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolCurveMethodDegree0(FEmToolCurveHandle handle, int indexOfElement, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_curve_method_dimension_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolCurveMethodDimension0(FEmToolCurveHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_curve_method_nb_elements_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolCurveMethodNbElements0(FEmToolCurveHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_curve_method_set_degree_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolCurveMethodSetDegree0(FEmToolCurveHandle handle, int indexOfElement, int degree);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_curve_clone")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolCurveClone(FEmToolCurveHandle source, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_curve_get_ref_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolCurveGetReferenceCount(FEmToolCurveHandle handle, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_curve_get_type_name")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolCurveGetTypeName(FEmToolCurveHandle handle, out nint value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_curve_is_kind", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolCurveIsKind(FEmToolCurveHandle handle, string typeName, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_curve_release")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial void FEmToolCurveRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_elementary_criterion_method_set_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolElementaryCriterionMethodSet0(FEmToolElementaryCriterionHandle handle, double firstKnot, double lastKnot);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_elementary_criterion_clone")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolElementaryCriterionClone(FEmToolElementaryCriterionHandle source, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_elementary_criterion_get_ref_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolElementaryCriterionGetReferenceCount(FEmToolElementaryCriterionHandle handle, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_elementary_criterion_get_type_name")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolElementaryCriterionGetTypeName(FEmToolElementaryCriterionHandle handle, out nint value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_elementary_criterion_is_kind", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolElementaryCriterionIsKind(FEmToolElementaryCriterionHandle handle, string typeName, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_elementary_criterion_release")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial void FEmToolElementaryCriterionRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_flexion_create_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearFlexionCreate0(int workDegree, int constraintOrder, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_flexion_method_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearFlexionMethodValue0(FEmToolLinearFlexionHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_flexion_clone")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearFlexionClone(FEmToolLinearFlexionHandle source, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_flexion_get_ref_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearFlexionGetReferenceCount(FEmToolLinearFlexionHandle handle, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_flexion_get_type_name")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearFlexionGetTypeName(FEmToolLinearFlexionHandle handle, out nint value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_flexion_is_kind", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearFlexionIsKind(FEmToolLinearFlexionHandle handle, string typeName, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_flexion_release")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial void FEmToolLinearFlexionRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_jerk_create_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearJerkCreate0(int workDegree, int constraintOrder, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_jerk_method_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearJerkMethodValue0(FEmToolLinearJerkHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_jerk_clone")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearJerkClone(FEmToolLinearJerkHandle source, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_jerk_get_ref_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearJerkGetReferenceCount(FEmToolLinearJerkHandle handle, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_jerk_get_type_name")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearJerkGetTypeName(FEmToolLinearJerkHandle handle, out nint value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_jerk_is_kind", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearJerkIsKind(FEmToolLinearJerkHandle handle, string typeName, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_jerk_release")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial void FEmToolLinearJerkRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_tension_create_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearTensionCreate0(int workDegree, int constraintOrder, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_tension_method_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearTensionMethodValue0(FEmToolLinearTensionHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_tension_clone")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearTensionClone(FEmToolLinearTensionHandle source, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_tension_get_ref_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearTensionGetReferenceCount(FEmToolLinearTensionHandle handle, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_tension_get_type_name")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearTensionGetTypeName(FEmToolLinearTensionHandle handle, out nint value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_tension_is_kind", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolLinearTensionIsKind(FEmToolLinearTensionHandle handle, string typeName, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_linear_tension_release")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial void FEmToolLinearTensionRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_profile_matrix_method_col_number_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolProfileMatrixMethodColNumber0(FEmToolProfileMatrixHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_profile_matrix_method_decompose_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolProfileMatrixMethodDecompose0(FEmToolProfileMatrixHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_profile_matrix_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolProfileMatrixMethodInit0(FEmToolProfileMatrixHandle handle, double value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_profile_matrix_method_is_in_profile_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolProfileMatrixMethodIsInProfile0(FEmToolProfileMatrixHandle handle, int i, int j, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_profile_matrix_method_out_m_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolProfileMatrixMethodOutM0(FEmToolProfileMatrixHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_profile_matrix_method_out_s_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolProfileMatrixMethodOutS0(FEmToolProfileMatrixHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_profile_matrix_method_prepare_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolProfileMatrixMethodPrepare0(FEmToolProfileMatrixHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_profile_matrix_method_row_number_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolProfileMatrixMethodRowNumber0(FEmToolProfileMatrixHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_profile_matrix_clone")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolProfileMatrixClone(FEmToolProfileMatrixHandle source, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_profile_matrix_get_ref_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolProfileMatrixGetReferenceCount(FEmToolProfileMatrixHandle handle, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_profile_matrix_get_type_name")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolProfileMatrixGetTypeName(FEmToolProfileMatrixHandle handle, out nint value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_profile_matrix_is_kind", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolProfileMatrixIsKind(FEmToolProfileMatrixHandle handle, string typeName, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_profile_matrix_release")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial void FEmToolProfileMatrixRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_sparse_matrix_clone")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolSparseMatrixClone(FEmToolSparseMatrixHandle source, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_sparse_matrix_get_ref_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolSparseMatrixGetReferenceCount(FEmToolSparseMatrixHandle handle, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_sparse_matrix_get_type_name")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolSparseMatrixGetTypeName(FEmToolSparseMatrixHandle handle, out nint value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_sparse_matrix_is_kind", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus FEmToolSparseMatrixIsKind(FEmToolSparseMatrixHandle handle, string typeName, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_fem_tool_sparse_matrix_release")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial void FEmToolSparseMatrixRelease(nint handle);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcc_int_bcirc_method_arc_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -13616,6 +14022,450 @@ internal static partial class GeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_geometry_test_drawable_qualified_curve2d_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void GeometryTestDrawableQualifiedCurve2dRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bsp_func_create_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSpFuncCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bsp_func_create_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSpFuncCreate1(nint c, double first, double last, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bsp_func_method_continuity_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSpFuncMethodContinuity0(LawBSpFuncHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bsp_func_method_curve_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSpFuncMethodCurve0(LawBSpFuncHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bsp_func_method_nb_intervals_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSpFuncMethodNbIntervals0(LawBSpFuncHandle handle, int s, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bsp_func_method_set_curve_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSpFuncMethodSetCurve0(LawBSpFuncHandle handle, nint c);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bsp_func_method_trim_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSpFuncMethodTrim0(LawBSpFuncHandle handle, double pFirst, double pLast, double tol, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bsp_func_method_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSpFuncMethodValue0(LawBSpFuncHandle handle, double x, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bsp_func_clone")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSpFuncClone(LawBSpFuncHandle source, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bsp_func_get_ref_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSpFuncGetReferenceCount(LawBSpFuncHandle handle, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bsp_func_get_type_name")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSpFuncGetTypeName(LawBSpFuncHandle handle, out nint value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bsp_func_is_kind", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSpFuncIsKind(LawBSpFuncHandle handle, string typeName, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bsp_func_release")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial void LawBSpFuncRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_continuity_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodContinuity0(LawBSplineHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_copy_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodCopy0(LawBSplineHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_degree_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodDegree0(LawBSplineHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_dn_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodDN0(LawBSplineHandle handle, double u, int n, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_end_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodEndPoint0(LawBSplineHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_first_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodFirstParameter0(LawBSplineHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_first_uknot_index_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodFirstUKnotIndex0(LawBSplineHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_increase_degree_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodIncreaseDegree0(LawBSplineHandle handle, int degree);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_increase_multiplicity_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodIncreaseMultiplicity0(LawBSplineHandle handle, int index, int m);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_increase_multiplicity_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodIncreaseMultiplicity1(LawBSplineHandle handle, int i1, int i2, int m);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_increment_multiplicity_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodIncrementMultiplicity0(LawBSplineHandle handle, int i1, int i2, int m);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_insert_knot_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodInsertKnot0(LawBSplineHandle handle, double u, int m, double parametricTolerance, int add);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_is_closed_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodIsClosed0(LawBSplineHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_is_cn_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodIsCN0(LawBSplineHandle handle, int n, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_is_periodic_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodIsPeriodic0(LawBSplineHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_is_rational_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodIsRational0(LawBSplineHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_knot_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodKnot0(LawBSplineHandle handle, int index, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_knot_distribution_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodKnotDistribution0(LawBSplineHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_last_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodLastParameter0(LawBSplineHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_last_uknot_index_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodLastUKnotIndex0(LawBSplineHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_local_dn_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodLocalDN0(LawBSplineHandle handle, double u, int fromK1, int toK2, int n, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_local_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodLocalValue0(LawBSplineHandle handle, double u, int fromK1, int toK2, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_multiplicity_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodMultiplicity0(LawBSplineHandle handle, int index, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_nb_knots_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodNbKnots0(LawBSplineHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_nb_poles_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodNbPoles0(LawBSplineHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_pole_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodPole0(LawBSplineHandle handle, int index, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_remove_knot_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodRemoveKnot0(LawBSplineHandle handle, int index, int m, double tolerance, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_reverse_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodReverse0(LawBSplineHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_reversed_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodReversedParameter0(LawBSplineHandle handle, double u, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_segment_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodSegment0(LawBSplineHandle handle, double u1, double u2);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_set_knot_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodSetKnot0(LawBSplineHandle handle, int index, double k);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_set_knot_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodSetKnot1(LawBSplineHandle handle, int index, double k, int m);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_set_not_periodic_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodSetNotPeriodic0(LawBSplineHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_set_origin_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodSetOrigin0(LawBSplineHandle handle, int index);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_set_periodic_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodSetPeriodic0(LawBSplineHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_set_pole_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodSetPole0(LawBSplineHandle handle, int index, double p);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_set_pole_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodSetPole1(LawBSplineHandle handle, int index, double p, double weight);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_set_weight_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodSetWeight0(LawBSplineHandle handle, int index, double weight);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_start_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodStartPoint0(LawBSplineHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodValue0(LawBSplineHandle handle, double u, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_method_weight_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineMethodWeight0(LawBSplineHandle handle, int index, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_clone")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineClone(LawBSplineHandle source, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_get_ref_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineGetReferenceCount(LawBSplineHandle handle, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_get_type_name")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineGetTypeName(LawBSplineHandle handle, out nint value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_is_kind", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawBSplineIsKind(LawBSplineHandle handle, string typeName, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_bspline_release")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial void LawBSplineRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_composite_create_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawCompositeCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_composite_create_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawCompositeCreate1(double first, double last, double tol, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_composite_method_continuity_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawCompositeMethodContinuity0(LawCompositeHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_composite_method_is_periodic_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawCompositeMethodIsPeriodic0(LawCompositeHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_composite_method_nb_intervals_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawCompositeMethodNbIntervals0(LawCompositeHandle handle, int s, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_composite_method_set_periodic_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawCompositeMethodSetPeriodic0(LawCompositeHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_composite_method_trim_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawCompositeMethodTrim0(LawCompositeHandle handle, double pFirst, double pLast, double tol, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_composite_method_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawCompositeMethodValue0(LawCompositeHandle handle, double x, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_composite_clone")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawCompositeClone(LawCompositeHandle source, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_composite_get_ref_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawCompositeGetReferenceCount(LawCompositeHandle handle, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_composite_get_type_name")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawCompositeGetTypeName(LawCompositeHandle handle, out nint value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_composite_is_kind", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawCompositeIsKind(LawCompositeHandle handle, string typeName, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_composite_release")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial void LawCompositeRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_constant_create_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawConstantCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_constant_method_continuity_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawConstantMethodContinuity0(LawConstantHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_constant_method_nb_intervals_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawConstantMethodNbIntervals0(LawConstantHandle handle, int s, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_constant_method_set_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawConstantMethodSet0(LawConstantHandle handle, double radius, double pFirst, double pLast);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_constant_method_trim_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawConstantMethodTrim0(LawConstantHandle handle, double pFirst, double pLast, double tol, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_constant_method_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawConstantMethodValue0(LawConstantHandle handle, double x, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_constant_clone")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawConstantClone(LawConstantHandle source, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_constant_get_ref_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawConstantGetReferenceCount(LawConstantHandle handle, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_constant_get_type_name")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawConstantGetTypeName(LawConstantHandle handle, out nint value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_constant_is_kind", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawConstantIsKind(LawConstantHandle handle, string typeName, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_constant_release")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial void LawConstantRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_function_clone")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawFunctionClone(LawFunctionHandle source, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_function_get_ref_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawFunctionGetReferenceCount(LawFunctionHandle handle, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_function_get_type_name")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawFunctionGetTypeName(LawFunctionHandle handle, out nint value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_function_is_kind", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawFunctionIsKind(LawFunctionHandle handle, string typeName, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_function_release")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial void LawFunctionRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_interpol_create_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawInterpolCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_interpol_clone")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawInterpolClone(LawInterpolHandle source, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_interpol_get_ref_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawInterpolGetReferenceCount(LawInterpolHandle handle, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_interpol_get_type_name")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawInterpolGetTypeName(LawInterpolHandle handle, out nint value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_interpol_is_kind", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawInterpolIsKind(LawInterpolHandle handle, string typeName, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_interpol_release")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial void LawInterpolRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_linear_create_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawLinearCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_linear_method_continuity_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawLinearMethodContinuity0(LawLinearHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_linear_method_nb_intervals_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawLinearMethodNbIntervals0(LawLinearHandle handle, int s, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_linear_method_set_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawLinearMethodSet0(LawLinearHandle handle, double pdeb, double valdeb, double pfin, double valfin);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_linear_method_trim_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawLinearMethodTrim0(LawLinearHandle handle, double pFirst, double pLast, double tol, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_linear_method_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawLinearMethodValue0(LawLinearHandle handle, double x, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_linear_clone")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawLinearClone(LawLinearHandle source, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_linear_get_ref_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawLinearGetReferenceCount(LawLinearHandle handle, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_linear_get_type_name")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawLinearGetTypeName(LawLinearHandle handle, out nint value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_linear_is_kind", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawLinearIsKind(LawLinearHandle handle, string typeName, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_linear_release")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial void LawLinearRelease(nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_s_create_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawSCreate0(out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_s_method_set_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawSMethodSet0(LawSHandle handle, double pdeb, double valdeb, double pfin, double valfin);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_s_method_set_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawSMethodSet1(LawSHandle handle, double pdeb, double valdeb, double ddeb, double pfin, double valfin, double dfin);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_s_clone")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawSClone(LawSHandle source, out nint handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_s_get_ref_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawSGetReferenceCount(LawSHandle handle, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_s_get_type_name")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawSGetTypeName(LawSHandle handle, out nint value);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_s_is_kind", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus LawSIsKind(LawSHandle handle, string typeName, out int value);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_law_s_release")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial void LawSRelease(nint handle);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_mat2d_circuit_create_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

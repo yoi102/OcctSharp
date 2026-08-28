@@ -191,7 +191,7 @@ static async Task<int> RunGenerationAsync(string occtRoot, string configPath, st
         Console.WriteLine(
             $"Generated {manifest.Files.Count} files from {manifest.SourceStableIds.Count} binding into '{Path.GetFullPath(outputRoot)}'.");
         Console.WriteLine(
-            $"Wrote generation coverage and diagnostics for {reports.Coverage.Totals.Total} declarations.");
+            $"Wrote generation coverage, diagnostics, and shard dependency closure for {reports.Coverage.Totals.Total} declarations; managed project split ready: {reports.DependencyClosure.ManagedProjectSplitReady}.");
         return 0;
     }
     catch (Exception error)

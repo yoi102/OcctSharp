@@ -467,8 +467,16 @@ ABI 1.44 is the alpha.53 XDE validation-property, occurrence, and STEP-options b
 It adds a fixed 56-byte optional area/volume/centroid record plus XDE label read/set and
 option-bearing STEPCAF document read/write exports. XCAF attributes and tools, component
 sequences/references, and STEPCAF state remain document- or call-local. Occurrence world
-locations and located shapes use the existing opaque owning contracts. The current native
-ABI is 1.44 and the bridge implementation version is 0.52.0.
+locations and located shapes use the existing opaque owning contracts.
+
+ABI 1.45 is the alpha.54 final Batch C boundary. It adds copied curve derivative, pcurve,
+surface derivative, and STEP reader metadata records; owning edge/face trim, wire,
+replace/remove, selective transfer, and selected-topology results; an opaque owning STEP
+reader session; per-presentation whole/subshape selection modes; and thread-affine viewer
+input operations. Adaptors, 2D curves, builders, reshapers, transfer state, and AIS owners
+remain native-local. Session transfers and selected topology are independent registered
+shape owners; viewer presentation/input relationships remain parent-bound. The current
+native ABI is 1.45 and the bridge implementation version is 0.53.0.
 
 ## Verification
 
