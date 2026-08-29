@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 45)
-    || runtime.BridgeVersion != "0.53.0"
+if (runtime.AbiVersion != new Version(1, 46)
+    || runtime.BridgeVersion != "0.54.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -758,6 +758,99 @@ try
     {
         throw new InvalidOperationException("The packaged STEPCAF metadata round-trip failed.");
     }
+
+    nint reviewWindow = PackageWindowMethods.CreateWindowEx(
+        0, "STATIC", "OcctSharp Batch D package review", 0x80000000u,
+        -32000, -32000, 256, 256, 0, 0, 0, 0);
+    if (reviewWindow == 0) throw new InvalidOperationException("The Batch D package review HWND could not be created.");
+    try
+    {
+        _ = PackageWindowMethods.ShowWindow(reviewWindow, 4);
+        _ = PackageWindowMethods.UpdateWindow(reviewWindow);
+        using OcctViewer reviewViewer = OcctViewer.Create(reviewWindow);
+        IReadOnlyList<XdeOccurrence> reviewOccurrences = stepAssembly.GetOccurrences();
+        try
+        {
+            XdeOccurrence occurrence = reviewOccurrences.Single();
+            GpPoint occurrenceCenter;
+            using (Shape locatedOccurrence = occurrence.GetLocatedShape())
+            {
+                BoundingBox3d locatedBounds = locatedOccurrence.GetBoundingBox();
+                occurrenceCenter = new GpPoint(
+                    (locatedBounds.Minimum.X + locatedBounds.Maximum.X) * 0.5,
+                    (locatedBounds.Minimum.Y + locatedBounds.Maximum.Y) * 0.5,
+                    (locatedBounds.Minimum.Z + locatedBounds.Maximum.Z) * 0.5);
+            }
+            ViewerPresentation reviewPresentation = reviewViewer.Display(occurrence);
+            string occurrenceEntry = occurrence.OccurrenceLabel.Entry;
+            if (reviewPresentation.SourceIdentity?.OccurrenceEntry != occurrenceEntry)
+                throw new InvalidOperationException("The packaged viewer did not copy XDE occurrence identity.");
+            occurrence.Dispose();
+
+            reviewPresentation.SetSelectionKind(ShapeKind.Face);
+            reviewViewer.SetPixelTolerance(4);
+            reviewViewer.FitAll();
+            reviewViewer.Redraw();
+            ViewerPixelPoint centerPixel = reviewViewer.WorldToScreen(occurrenceCenter);
+            if (!reviewViewer.MoveTo(centerPixel.X, centerPixel.Y))
+                throw new InvalidOperationException("The packaged Batch D viewer did not detect the occurrence.");
+            using ViewerDetectionItem detectedItem = reviewViewer.GetDetectedItem()
+                ?? throw new InvalidOperationException("The packaged Batch D viewer did not return owning detected topology.");
+            if (detectedItem.SourceIdentity?.OccurrenceEntry != occurrenceEntry)
+                throw new InvalidOperationException("The packaged detected topology lost XDE identity.");
+            reviewPresentation.SetSubshapeColor(detectedItem.Shape, new ViewerColor(0.8, 0.2, 0.1));
+            reviewPresentation.SetSubshapeTransparency(detectedItem.Shape, 0.2);
+            reviewPresentation.SetSubshapeWidth(detectedItem.Shape, 2);
+            reviewPresentation.ClearSubshapeOverrides(detectedItem.Shape);
+
+            reviewPresentation.SetSelectionKind(null);
+            if (reviewViewer.SelectRectangle(0, 0, 255, 255).Count == 0
+                || reviewViewer.SelectPolygon([
+                    new GpPoint2d(0, 0), new GpPoint2d(255, 0),
+                    new GpPoint2d(255, 255), new GpPoint2d(0, 255)]).Count == 0)
+                throw new InvalidOperationException("The packaged Batch D area-selection workflow failed.");
+            if (reviewViewer.GetSelectionBounds() is null || !reviewViewer.FitSelected())
+                throw new InvalidOperationException("The packaged Batch D selection fit workflow failed.");
+            reviewViewer.IsolateSelected();
+            if (!reviewViewer.RestoreIsolation())
+                throw new InvalidOperationException("The packaged Batch D isolate workflow failed.");
+
+            ViewerCameraState reviewCamera = reviewViewer.GetCamera();
+            reviewViewer.SetCamera(reviewCamera);
+            GpPoint centerWorld = reviewViewer.ScreenToWorld(128, 128);
+            ViewerPixelPoint projectedCenter = reviewViewer.WorldToScreen(centerWorld);
+            ViewerPickRay reviewRay = reviewViewer.GetPickRay(128, 128);
+            double rayMagnitude = Math.Sqrt(
+                reviewRay.Direction.X * reviewRay.Direction.X
+                + reviewRay.Direction.Y * reviewRay.Direction.Y
+                + reviewRay.Direction.Z * reviewRay.Direction.Z);
+            if (Math.Abs(projectedCenter.X - 128) > 1 || Math.Abs(projectedCenter.Y - 128) > 1
+                || Math.Abs(rayMagnitude - 1) > 1e-6)
+                throw new InvalidOperationException("The packaged Batch D camera conversion workflow failed.");
+
+            reviewViewer.ZoomWindow(24, 24, 232, 232);
+            reviewViewer.SetBackgroundColor(new ViewerColor(0.04, 0.06, 0.1));
+            using (ViewerClipPlane clip = reviewViewer.CreateClipPlane(new ViewerPlaneEquation(1, 0, 0, -5)))
+            {
+                clip.Update(new ViewerPlaneEquation(0, 1, 0, -10));
+                clip.SetEnabled(false);
+                clip.SetEnabled(true);
+            }
+            reviewViewer.SetComputedHiddenLine(true);
+            reviewViewer.SetComputedHiddenLine(false);
+            reviewViewer.ShowTrihedron(ViewerTrihedronPosition.RightLower, scale: 0.08);
+            reviewViewer.HideTrihedron();
+            string reviewImage = reviewViewer.SaveScreenshot(
+                Path.Combine(exchangeDirectory, "package-batch-d-review.png"), overwrite: true);
+            if (!File.Exists(reviewImage) || new FileInfo(reviewImage).Length == 0)
+                throw new InvalidOperationException("The packaged Batch D screenshot workflow failed.");
+        }
+        finally
+        {
+            foreach (XdeOccurrence occurrence in reviewOccurrences) occurrence.Dispose();
+        }
+    }
+    finally { _ = PackageWindowMethods.DestroyWindow(reviewWindow); }
 }
 finally
 {

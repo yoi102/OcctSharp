@@ -83,6 +83,14 @@ The accepted boundaries are recorded in ADRs:
 - [ADR-0063](adr/0063-final-batch-c-selective-session-topology-viewer-closure.md): final
   Batch C selective STEP session, owning topology edit/selection, and parent-bound input
   ownership boundary.
+- [ADR-0064](adr/0064-production-cad-viewport-review-batch.md): one finite Batch D
+  production viewport/model-review closure with copied XDE identity and topology,
+  parent-bound filters/clip planes, camera values, and durable screenshot evidence.
+- [ADR-0065](adr/0065-occt-aligned-nuget-preview-version.md): OCCT-aligned NuGet numeric
+  versions with an independent OcctSharp preview counter.
+- [ADR-0066](adr/0066-engineering-inspection-measurement-pmi-batch.md): one finite Batch E
+  engineering-inspection, exact-measurement, and PMI/AP242 closure with explicit
+  ownership, mutation, round-trip, visualization, and screenshot gates.
 
 ## Components
 
@@ -147,6 +155,30 @@ remain presentation- or viewer-parent-bound and creating-thread-affine. Alpha.54
 the finite common-workflow denominator; advanced filters, custom rendering, optional
 integrations, cold schema, and exhaustive mesh attributes are outside this architecture
 milestone rather than implicit unfinished work.
+
+Batch D extends only the existing friendly visualization owner graph. `OcctViewer`
+continues to own the interactive context, view, AIS presentations, built-in selection
+filters, and clip planes on its creating thread. XDE occurrence paths/entries, camera
+state, coordinate conversions, bounds, colors, and plane equations cross as copied
+managed values. Detected and selected topology crosses as an independent registered
+owning `Shape`; OCCT's borrowed detected shape never escapes. Presentations, filters,
+and clip planes remain parent-bound IDs. Screenshot output is a durable file operation;
+no `Image_PixMap`, pixel pointer, callback, or custom rendering pipeline crosses the ABI.
+The accepted 24-capability denominator is complete at alpha.55. Its runtime and clean
+package paths both execute the real STEP/XDE-to-real-HWND review-to-screenshot workflow;
+the complete Release/Debug, ownership, inventory, compatibility, provenance, and local
+release gate chain passes together.
+
+Batch E preserves the same physical and ownership architecture while adding a new product
+closure. Call-local BRepExtrema/adaptor/property algorithms do not escape the native ABI;
+exact solutions, parameters, classifications, scalar measurements, matrices, units, and
+PMI graph records cross as copied managed values. Topology supports cross only as
+independent owning `Shape` copies. XCAF dimension/tolerance/datum labels remain bound to
+their owning document by stable entries, and mutations are document-owned transactions.
+STEPCAF/AP242 sessions own native reader/writer state only for the call or explicit
+session lifetime. Viewer annotations and saved-view presentation resources remain
+creating-thread-affine and viewer-parent-bound; screenshots remain durable file results.
+Preparation is complete at 0/24 and no Batch E implementation validation is claimed.
 
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native

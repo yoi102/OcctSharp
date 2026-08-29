@@ -898,3 +898,46 @@ rules or design:
 - Removal criteria: Replace these manual declarations only after generated descriptors
   preserve the same copied/session-owning/parent-thread-bound contracts and pass the same
   real-file, real-window, failure, disposal, package, and inventory evidence.
+
+## SC-040: Batch D production viewport and model-review closure
+
+- Status: Accepted and implemented for the complete 24-capability Batch D closure.
+- Scope: Eighteen newly direct OCCT 8.0.1 declarations covering colored subshape
+  overrides, exact detected topology, rectangle/polygon selection, copied selection
+  bounds, clip-plane construction/update, camera and coordinate copies, pick-ray
+  conversion, and durable view dumping. Existing emitted `ClearCustomAspects`, pixel
+  tolerance, filter, fit-selected, window-fit, background, computed-mode, trihedron,
+  and clip-plane enable/view-membership operations are reused without double counting.
+- Reason: AIS selection owners and detected topology are borrowed; presentation aspects,
+  filters, clip planes, cameras, and the view are parent-owned native state. Passing
+  these native objects independently across the ABI would violate viewer/thread
+  ownership. Fixed value copies, registered owning `Shape` results, caller-owned point
+  arrays, parent-bound IDs, and a durable file result close the workflow safely.
+- Native/ABI/managed behavior: ABI 1.46 extends the one `OcctViewer` owner graph with
+  `AIS_ColoredShape`, a built-in filter, and viewer-owned clip-plane registries. Bridge
+  0.54.0 and package `0.1.0-alpha.55` expose copied XDE identity, exact detected topology,
+  area selection, filters, selection fit/isolate, subshape review overrides, copied
+  camera/coordinate/ray state, window zoom/background/clipping/hidden-line/trihedron,
+  and screenshot output as one API closure.
+- Ownership: XDE occurrence path/entries, bounds, camera, coordinates, colors, and plane
+  equations are managed copies. Detected and selected topology are independent registered
+  shape owners. Presentations and clip planes remain viewer-parent-bound; filters and all
+  AIS/V3d/Graphic3d handles remain native and creating-thread-affine. Screenshot staging
+  uses an ASCII native path, then managed file movement preserves Windows Unicode output
+  paths without exposing image storage.
+- Coverage accounting: Configuration schema 1.8 lists exactly 18 SC-040 stable IDs.
+  Every listed declaration was blocked before reconciliation and has no overlap with the
+  generated manifest or earlier manual coverage. Emitted roots are reused without
+  inflating the manual denominator.
+- Validation: The complete Batch D runtime test uses an XDE occurrence and real HWND to
+  cover all 24 capabilities, lifetime, invalid inputs, removal, parent mismatch, Unicode
+  screenshot output, and thread rejection. The clean package consumer repeats the real
+  STEP/XDE-to-screenshot review workflow. Final Release/Debug, regeneration, inventory,
+  runtime-manifest, and release-gate evidence is recorded in `STATUS.md`.
+- Upgrade impact: Recheck AIS area-selection inclusion rules, detected-owner topology,
+  filter interaction with selection modes, colored-aspect membership, V3d camera/ray
+  conventions, clip-plane equation orientation, trihedron enum values, image codecs,
+  and narrow-path behavior on every OCCT upgrade.
+- Removal criteria: Replace this exception only after generated ownership descriptors
+  can bind into the same viewer registry and preserve the copied/owning/parent-bound/file
+  contracts with the same real-window, real-file, package, and lifetime evidence.

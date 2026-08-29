@@ -90,6 +90,6 @@ technical redistribution evidence.
 - Keep every non-OCCT component version/license recorded; where supplied metadata is
   unavailable (currently jemalloc), disclose that fact instead of inventing a version.
 
-The alpha.54 repository records 62 native files, including the ABI 1.45 bridge, in both the
+The alpha.55 repository records 62 native files, including the ABI 1.46 bridge, in both the
 committed runtime manifest and generated release evidence. This does not by itself grant
 signing credentials or NuGet publication authorization.

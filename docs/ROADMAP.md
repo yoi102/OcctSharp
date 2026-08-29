@@ -6,18 +6,41 @@ evidence; creating files or generating a large method count is not sufficient.
 The retired B00–B20 capability milestones and future package boundaries are documented
 in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the completed
 product-scale batch `B`; none is a separate current batch or commit boundary.
-Batch B and Batch C are complete for their accepted local implementation scopes.
-ADR-0063 closes C at alpha.54; hosted CI, signing, and NuGet publication remain separate
-release-readiness work rather than unfinished Batch C implementation.
+Batch B, Batch C, and Batch D are complete for their accepted local implementation
+scopes. ADR-0063 closes C at alpha.54 and ADR-0064 closes D at alpha.55. ADR-0066 has
+locked Batch E as one 24-capability engineering-inspection, exact-measurement, and
+PMI/AP242 wave; implementation is 0/24. Hosted CI,
+signing, and NuGet publication remain separate release-readiness work rather than
+unfinished batch implementation.
 
-## Current priority: preserve the completed Batch C boundary
+## Current priority: Batch E engineering inspection, measurement, and PMI/AP242
 
 Batch C's routine CAD path is locally complete: .NET can import/build, inspect and edit,
 validate/measure, mesh, preserve common document metadata, export, display, and select
-without an undocumented unmanaged escape hatch in the locked denominator. The next API
-expansion must start from a new finite product denominator and ADR; it must not silently
-reopen C for advanced filters, custom rendering, optional integrations, cold schema, or
-exhaustive mesh attributes.
+without an undocumented unmanaged escape hatch in the locked denominator. ADR-0064
+defines Batch D with one finite 24-capability denominator for production-grade viewport
+review. Its completed inventory and evidence record is
+[the Batch D viewport gap inventory](BATCH_D_VIEWPORT_GAP_INVENTORY.md).
+
+Batch D crosses STEP/XDE occurrence identity, TopoDS/BRep owning topology, AIS/SelectMgr
+detection and area selection, colored subshape presentation, V3d camera/coordinate state,
+Graphic3d clipping, and screenshot evidence. It is one large implementation wave: no
+selection-only, camera-only, clipping-only, screenshot-only, numbered, or dotted D
+checkpoint may be called complete. Alpha.55 completes all 24/24 capabilities together.
+Release and Debug builds, Generator 91/91, Runtime 115/115, dependency profiles 6/6,
+real STEP/XDE plus real-HWND integration, clean 62-DLL package consumption, generated
+freshness and clean regeneration, inventory, API compatibility, provenance, and the
+local release check pass.
+
+ADR-0066 and [the Batch E inspection/PMI gap inventory](BATCH_E_INSPECTION_PMI_GAP_INVENTORY.md)
+now lock the next product batch as one 24-capability dependency closure. It crosses
+BRepExtrema/BRepAdaptor/BRepGProp/TopoDS exact inspection, model/display units,
+XCAFDoc/XCAFDimTolObjects semantic dimensions, tolerances, datums and reference graphs,
+transactional PMI mutation, STEPCAF/AP242 GDT and saved views, PrsDim/AIS annotations,
+V3d/Graphic3d presentation, and screenshot evidence. Preparation is complete;
+implementation and every Batch E compile/runtime/package gate are `NOT RUN` (0/24).
+Measurement-only, dimension-only, tolerance-only, datum-only, AP242-only, saved-view-only,
+or viewer-annotation-only fragments are not completion checkpoints.
 
 Priority order inside each large wave:
 
@@ -60,6 +83,8 @@ acyclic observed cross-shard edges. The generated managed graph is eligible for 
 project migration, but physical splitting is deferred: managed assembly identity/manual
 facades and native cross-DLL registry/creator-release semantics still need separate ADRs.
 Completed Batch C therefore retains one managed assembly, one native DLL, and one package.
+Completed Batch D retains the same physical boundary; it does not authorize the deferred
+split. Batch E preparation preserves that boundary as well.
 
 The phase record below is retained as history and architecture context; it is not an
 active execution sequence.
@@ -248,6 +273,8 @@ The former B00-B20 plan is the completed product-scale migration batch `B`. Foun
 generated sharing, modeling, classification, and release engineering are historical
 capability milestones inside B, not active batches.
 
-Batch C completed the common workflow matrix defined by ADR-0060 and ADR-0063. Numbered
-or dotted fragments, per-class batches, and small completion percentages were not used.
-Any future product batch must keep the same coherent workflow and complete-gate cadence.
+Batch C completed the common workflow matrix defined by ADR-0060 and ADR-0063. Batch D
+completed the production viewport/model-review matrix defined by ADR-0064. Batch E is
+prepared under ADR-0066 with an immutable 24-capability inspection/PMI denominator and
+0/24 implemented. Numbered or dotted fragments, per-class batches, and small completion
+percentages are not used.

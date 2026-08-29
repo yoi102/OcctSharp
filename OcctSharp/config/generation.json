@@ -573,6 +573,78 @@
     {
       "stableId": "c:@S@AIS_InteractiveContext@F@SelectedShape#1",
       "specialCaseId": "SC-039"
+    },
+    {
+      "stableId": "c:@S@AIS_ColoredShape@F@SetCustomColor#&1$@S@TopoDS_Shape#&1$@S@Quantity_Color#",
+      "specialCaseId": "SC-040"
+    },
+    {
+      "stableId": "c:@S@AIS_ColoredShape@F@SetCustomTransparency#&1$@S@TopoDS_Shape#d#",
+      "specialCaseId": "SC-040"
+    },
+    {
+      "stableId": "c:@S@AIS_ColoredShape@F@SetCustomWidth#&1$@S@TopoDS_Shape#d#",
+      "specialCaseId": "SC-040"
+    },
+    {
+      "stableId": "c:@S@AIS_ColoredShape@F@UnsetCustomAspects#&1$@S@TopoDS_Shape#b#",
+      "specialCaseId": "SC-040"
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@DetectedShape#1",
+      "specialCaseId": "SC-040"
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@SelectRectangle#&1$@S@NCollection_Vec2>#I#S0_#&1$@N@opencascade@S@handle>#$@S@V3d_View#$@E@AIS_SelectionScheme#",
+      "specialCaseId": "SC-040"
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@SelectPolygon#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#&1$@N@opencascade@S@handle>#$@S@V3d_View#$@E@AIS_SelectionScheme#",
+      "specialCaseId": "SC-040"
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@BoundingBoxOfSelection#&1$@N@opencascade@S@handle>#$@S@V3d_View#1",
+      "specialCaseId": "SC-040"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ClipPlane@F@Graphic3d_ClipPlane#&1$@S@gp_Pln#",
+      "specialCaseId": "SC-040"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ClipPlane@F@SetEquation#&1$@S@gp_Pln#",
+      "specialCaseId": "SC-040"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Convert#I#I#&d#S0_#S0_#1",
+      "specialCaseId": "SC-040"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Convert#d#d#d#&I#S0_#1",
+      "specialCaseId": "SC-040"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@ConvertWithProj#I#I#&d#S0_#S0_#S0_#S0_#S0_#1",
+      "specialCaseId": "SC-040"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@At#&d#S0_#S0_#1",
+      "specialCaseId": "SC-040"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Eye#&d#S0_#S0_#1",
+      "specialCaseId": "SC-040"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Proj#&d#S0_#S0_#1",
+      "specialCaseId": "SC-040"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Up#&d#S0_#S0_#1",
+      "specialCaseId": "SC-040"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Dump#*1C#&1$@E@Graphic3d_BufferType#",
+      "specialCaseId": "SC-040"
     }
   ],
   "excludedBindings": [

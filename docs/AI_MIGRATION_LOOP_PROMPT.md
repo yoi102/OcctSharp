@@ -11,6 +11,11 @@ The loop does not mean blindly generating declarations. Every large wave must pr
 native semantics, ownership, ABI safety, deterministic regeneration, and truthful
 validation evidence.
 
+Current repository note: Batch D is complete at alpha.55 with 24/24 capabilities and
+the full local gate passing. ADR-0066 has prepared Batch E with one immutable
+24-capability engineering-inspection, exact-measurement, and PMI/AP242 denominator.
+Batch E implementation is 0/24 and all of its implementation gates are `NOT RUN`.
+
 ## How to use
 
 1. Start the AI in the outer repository root.
@@ -32,6 +37,9 @@ ready for its declared release scope.
 
 This prompt is re-entrant. Never assume the previous conversation is accurate or
 complete. Recover facts from the repository and current tool output on every invocation.
+If `STATUS.md` records Batch D 24/24 complete, preserve that evidence and continue only
+the accepted Batch E denominator. Do not add unrelated APIs under D or split E into
+smaller family waves.
 
 ============================================================
 1. FIXED OBJECTIVE AND BASELINE
@@ -56,10 +64,12 @@ every catalogued public declaration has a stable generated, manual, unavailable,
 unsupported, or blocked disposition with evidence. It does not mean unsafe automatic
 emission or a misleading raw declaration count.
 
-The active product batch is `C`, Common CAD API Expansion. Prioritize APIs used together
-for routine CAD model creation/import, geometry/topology inspection, modeling edits,
-validation/measurement, mesh, metadata, export, display, and selection. Batch B is closed
-historical evidence. Do not reopen it or replace C with small per-class tasks.
+The active product batch is `E`, Engineering Inspection, Exact Measurement, and PMI/AP242.
+Implement the locked 24-capability dependency closure across BRepExtrema/BRepAdaptor/
+BRepGProp/TopoDS, model/display units, XCAFDoc/XCAFDimTolObjects semantic PMI and reference
+graphs, transactional mutation, STEPCAF/AP242 GDT and saved views, PrsDim/AIS annotations,
+V3d/Graphic3d presentation, and screenshot evidence. Batches B, C, and D are closed
+historical evidence. Do not reopen them or replace E with small per-class tasks.
 
 ============================================================
 2. SOURCE-OF-TRUTH ORDER
@@ -102,8 +112,9 @@ At the beginning of every invocation:
    current versions, coverage reports, and latest validation evidence.
 4. Treat all existing changes as user-owned unless their origin is proven. Preserve and
    work around unrelated changes. Never reset or discard them.
-5. Recover the current large common-workflow wave inside product batch C.
-   STATUS.md is the checkpoint; verify it against code and reports.
+5. Recover the current 24-capability inspection/measurement/PMI/AP242 wave inside product
+   batch E. STATUS.md and `BATCH_E_INSPECTION_PMI_GAP_INVENTORY.md` are the checkpoint;
+   verify them against code and reports.
 6. If an earlier large wave is partially implemented, finish or safely repair it before
    selecting new scope.
 7. Detect stale claims: a generated count is not compile evidence; compile evidence is
@@ -125,25 +136,27 @@ RECOVER
 - Restore current facts using section 3.
 
 SELECT
-- Batch B is complete historical evidence. Continue the single product-scale common API
-  batch `C`; never reopen B or create `C01`, `C.1`, per-class, or per-method batches.
-- Select the largest coherent implementation wave inside C. Normally cross at least
-  three connected API families and finish one end-to-end common CAD workflow. Combine
-  geometry/topology query, modeling, mesh/exchange/XDE, and visualization work when they
-  are dependencies of the same user outcome.
+- Batches B, C, and D are complete historical evidence. Continue the single product-scale
+  inspection/measurement/PMI/AP242 batch `E`; never reopen B/C/D or create `E01`, `E.1`, per-class, or
+  per-method batches.
+- Batch E has one locked 24-capability implementation wave. Complete that entire
+  cross-family workflow; do not select a smaller measurement-only, dimension-only,
+  tolerance-only, datum-only, AP242-only, saved-view-only, annotation-only, or
+  screenshot-only checkpoint. The implementation must finish the real
+  AP242-to-inspection-to-viewer-annotation-to-screenshot user outcome.
 - Prefer broad common-use workflow coverage and generalized parser/model/type-map/
   ownership/emitter rules before low-value entities or one-off wrappers.
 - Fold overloads, enums, options, statuses, diagnostics, disposal, failure paths, bulk
   transfer, and friendly convenience into the owning family; do not schedule them as
   later micro-work merely to make the current scope smaller.
-- Different lifetime categories, optional dependencies, or independently failing gates
-  may use separate workstreams, but those workstreams are not batches and receive no
-  C-derived identifier or completion percentage.
+- Different lifetime categories or independently failing gates may use focused checks,
+  but those checks are not batches and receive no E-derived identifier or partial
+  completion claim.
 - Do not let IVtk, Draw/test, C++/CLI, OpenGL ES, platform backends, deprecated APIs, or
-  allocator/compiler infrastructure displace safe Windows-core common workflow work.
+  allocator/compiler infrastructure displace the locked Windows-core inspection/PMI workflow.
 
 CONTRACT
-- Before editing, state `CURRENT_BATCH: C`, the active large workflow, connected API
+- Before editing, state `CURRENT_BATCH: E`, the locked 24-capability workflow, connected API
   families, end-to-end user outcome, packages, toolkits, entry headers,
   declarations or declaration family, dependencies, intended public API, ownership
   categories, ABI impact, package impact, required tests, and exit criteria.
@@ -221,7 +234,7 @@ On failure:
   ABI, runtime, lifetime, integration, packaging, dependency, or documentation.
 - Fix the owning layer, regenerate if applicable, and rerun the failed layer plus any
   invalidated downstream layers.
-- Do not bypass a failing safety check to make C appear complete.
+- Do not bypass a failing safety check to make E appear complete.
 
 RECONCILE
 - Read actual generated reports after validation.
@@ -232,7 +245,8 @@ RECONCILE
   4. full-profile binding coverage, only when the denominator is complete;
   5. validation coverage;
   6. engineering roadmap estimate;
-  7. Batch C common-workflow completion against its explicit exit gates.
+  7. Batch E inspection/measurement/PMI/AP242 completion against its explicit
+     24-capability exit gates.
 - Never use the 116,214 partial declaration count as a complete full-OCCT denominator.
 - Reconcile totals: pending + skipped + supported + manual must follow the report schema,
   and emitted declarations must match manifest stable IDs and documented output counts.
@@ -242,7 +256,7 @@ RECONCILE
 DOCUMENT
 - Update docs/STATUS.md after every material large-wave checkpoint, not after trivial
   per-method edits.
-- Update MIGRATION_PLAN.md C status, active common workflow, and immediate execution order.
+- Update MIGRATION_PLAN.md E status, active inspection/PMI workflow, and immediate execution order.
 - Update ROADMAP.md only when phase outcomes or ordering change. Update topic documents
   only when their facts or contracts change; do not mechanically repeat the same batch
   summary across unrelated documents.
@@ -260,12 +274,12 @@ HANDOFF
 - Stage intended files only if that matches the existing workflow; never commit or push
   without explicit user authorization.
 - Give a concise, evidence-backed report in Chinese containing:
-  1. completed large-workflow outcomes inside C and concrete API/semantic outcomes;
+  1. completed large-workflow outcomes inside E and concrete API/semantic outcomes;
   2. files/rules/ADRs materially changed;
   3. exact validation results and NOT RUN/BLOCKED items;
   4. all progress percentages with denominators;
   5. remaining risks or blockers;
-  6. next large common workflow inside C and its first concrete action;
+  6. next action inside the single Batch E wave;
   7. the machine-readable loop footer defined in section 8.
 
 ============================================================
@@ -276,11 +290,14 @@ HANDOFF
 - Incompatible ABI changes require an ABI major decision and migration evidence.
 - Update native bridge, runtime expectations, tests, package scripts, consumer project,
   package version, and documents together.
-- Do not assume the managed package version equals the OCCT version.
+- Under ADR-0065, use `<OCCT major>.<minor>.<patch>-preview.<OcctSharp preview number>`
+  for NuGet while keeping managed assembly, generator, native ABI, bridge, schema, and
+  OCCT build identities independent. The current package line begins at `8.0.1-preview.1`.
 - Keep the current single package and flat application-local occt/ directory until an
   ADR-0015 split trigger is actually met.
-- Planned managed packages are Runtime, Foundation, Modeling, Mesh, DataExchange, Xde,
-  Visualization, optional IVtk, and the OcctSharp meta-package.
+- Planned managed packages are Runtime, Foundation, Geometry, MeshData, Modeling, Mesh,
+  Documents, DataExchange, Xde, Visualization, optional IVtk, and the OcctSharp
+  meta-package.
 - Planned native packages are RID-specific and must not duplicate native files in the
   final application output.
 - A local package is not authorized for public publication. Publication additionally
@@ -307,11 +324,11 @@ Never:
 - add machine-specific absolute paths to committed configuration or generated files;
 - bundle unlicensed fixtures or dependencies;
 - publish, commit, push, or create releases without explicit authority;
-- mark C complete while a declared common workflow or exit criterion is FAIL, NOT RUN,
+- mark E complete while a declared inspection/PMI capability or exit criterion is FAIL, NOT RUN,
   compile-only, or silently omitted;
-- create C01, C.1, per-class/per-method batches, or reuse historical B00-B20/Bxx.y as
+- create E01, E.1, per-class/per-method batches, or reuse historical B00-B20/Bxx.y as
   a current batch;
-- stop a large C wave after only one coverage lane or a handful of easy wrappers passes.
+- stop the Batch E wave after only one family or a handful of easy wrappers passes.
 
 Prefer fail-closed behavior: pending with a stable diagnostic is better than an unsafe
 binding that appears complete.
@@ -321,9 +338,9 @@ binding that appears complete.
 ============================================================
 
 Use LOOP_STATE=CONTINUE when:
-- a safe next large common-workflow wave exists;
+- safe work remains inside the locked Batch E wave;
 - tests failed but the failure is locally actionable;
-- batch C needs another large implementation wave;
+- Batch E's locked 24-capability wave is not complete;
 - one optional profile is blocked but useful core-profile work remains.
 
 Use LOOP_STATE=BLOCKED only when:
@@ -346,15 +363,17 @@ merely builds or a report with pending declarations is not complete.
 End every invocation with exactly one footer in this shape:
 
 LOOP_STATE: CONTINUE | BLOCKED | COMPLETE
-CURRENT_BATCH: C
-CURRENT_WORKSTREAM: short unnumbered common workflow description
+CURRENT_BATCH: E
+CURRENT_WORKSTREAM: one 24-capability inspection/measurement/PMI/AP242 closure
 COMPLETED_THIS_TURN: short factual description
 NEXT_WORKSTREAM: short unnumbered description or NONE
 NEXT_ACTION: one concrete first action
 ENGINEERING_PROGRESS: nn%
-BATCH_PROGRESS: C IN PROGRESS | C COMPLETE (100%)
+BATCH_PROGRESS: E PREPARED; IMPLEMENTATION NOT STARTED | E IN PROGRESS | E COMPLETE (100%)
 B_BASELINE_BINDING_COVERAGE: emitted plus accepted manual/bindable (nn.nnnn%)
-C_COMMON_WORKFLOW_COVERAGE: validated declared workflows/declared workflows (nn.nnnn%) or NOT ESTABLISHED
+C_COMMON_WORKFLOW_COVERAGE: completed immutable Batch C denominators
+D_VIEWPORT_REVIEW_COVERAGE: validated capabilities/24 (nn.nnnn%)
+E_INSPECTION_PMI_COVERAGE: validated capabilities/24 (nn.nnnn%)
 FULL_PROFILE_COVERAGE: value or NOT ESTABLISHED
 INVENTORY_COMPLETENESS: scanned/catalogued for named profile (nn.nnnn%)
 LAST_VALIDATION: exact command summary
@@ -367,20 +386,20 @@ as an estimate in the human report.
 9. COMPLETE-MIGRATION GATES
 ============================================================
 
-LOOP_STATE=COMPLETE requires all of the following for Batch C and each profile used by
-its declared common-workflow contract:
+LOOP_STATE=COMPLETE requires all of the following for Batch E and each profile used by
+its declared inspection/measurement/PMI/AP242 contract:
 
-- Batch B remains complete and Batch C's model/inspect, build/modify/deliver, and
-  present/interact workflow contract is complete.
-- No declared common workflow requires an undocumented unmanaged escape hatch.
+- Batches B, C, and D remain complete and immutable, and all 24 Batch E capabilities are
+  implemented and validated together.
+- No declared Batch E inspection/PMI capability requires an undocumented unmanaged escape hatch.
 - Each completed large wave crosses connected API families and has end-to-end runtime,
   ownership, failure, integration, and representative real-file evidence.
 - The global header/declaration inventory remains stably classified for the profile;
   known unavailable or cold declarations retain narrow evidence-backed dispositions.
-- Every declaration inside the declared common-workflow closure has a stable disposition
+- Every declaration inside the declared Batch E dependency closure has a stable disposition
   and owner.
 - Every bindable declaration required by that closure is generated or an accepted
-  documented manual binding. C does not have to absorb unrelated cold or optional APIs.
+  documented manual binding. E does not have to absorb unrelated cold or optional APIs.
 - No safety-critical unknown ownership/type/ABI projection remains.
 - Generated source and reports are deterministic and freshness verification passes.
 - Required Release/Debug native and managed builds pass.
@@ -399,9 +418,10 @@ its declared common-workflow contract:
 If publication authorization is the only missing item, report migration engineering as
 complete but keep public publication BLOCKED; do not upload anything.
 
-Begin now with RECOVER. Then perform the largest coherent safe common-workflow wave that can be
-fully validated in this invocation. Do not stop after merely writing a plan when local,
-authorized implementation work can proceed.
+Begin now with RECOVER. Then continue the entire locked Batch E inspection/PMI wave as
+far as safely possible in this invocation. Do not stop after merely writing a plan when
+local, authorized implementation work can proceed, and do not publish a partial family
+as a completed Batch E checkpoint.
 ```
 
 ## Poller behavior

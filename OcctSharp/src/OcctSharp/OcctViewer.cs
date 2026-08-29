@@ -7,6 +7,8 @@ public sealed class OcctViewer : IDisposable
 {
     private readonly int _ownerThreadId;
     private readonly Dictionary<long, ViewerPresentation> _presentations = [];
+    private readonly Dictionary<long, ViewerClipPlane> _clipPlanes = [];
+    private Dictionary<long, bool>? _isolationVisibility;
 
     private OcctViewer(ViewerHandle handle)
     {
@@ -33,10 +35,32 @@ public sealed class OcctViewer : IDisposable
     public ViewerPresentation Display(Shape shape)
     {
         ArgumentNullException.ThrowIfNull(shape);
+        return DisplayCore(shape, null);
+    }
+
+    /// <summary>Displays a located XDE occurrence with copied identity independent of the document.</summary>
+    public ViewerPresentation Display(XdeOccurrence occurrence)
+    {
+        ArgumentNullException.ThrowIfNull(occurrence);
+        ViewerSourceIdentity identity = new(
+            occurrence.Path,
+            occurrence.OccurrenceLabel.Entry,
+            occurrence.ReferredLabel.Entry);
+        using Shape locatedShape = occurrence.GetLocatedShape();
+        return DisplayCore(locatedShape, identity);
+    }
+
+    private ViewerPresentation DisplayCore(Shape shape, ViewerSourceIdentity? identity)
+    {
         EnsureThread();
         NativeError.ThrowIfFailed(NativeMethods.DisplayViewerShape(Handle, shape.Handle, out long id), "viewer_display_shape");
-        ViewerPresentation presentation = new(this, id);
+        ViewerPresentation presentation = new(this, id, identity);
         _presentations.Add(id, presentation);
+        if (_isolationVisibility is not null)
+        {
+            _isolationVisibility[id] = true;
+            SetVisible(presentation, false);
+        }
         return presentation;
     }
 
@@ -210,12 +234,299 @@ public sealed class OcctViewer : IDisposable
         }
     }
 
+    /// <summary>Copies the current exact detected whole shape or subshape into an owning result.</summary>
+    public ViewerDetectionItem? GetDetectedItem()
+    {
+        EnsureThread();
+        NativeError.ThrowIfFailed(
+            NativeMethods.SnapshotViewerDetectedTopology(Handle, out long id, out nint nativeShape),
+            "viewer_detected_topology_snapshot");
+        if (nativeShape == 0) return null;
+        try
+        {
+            if (!_presentations.TryGetValue(id, out ViewerPresentation? presentation) || presentation.IsRemoved)
+                throw new OcctException(
+                    NativeStatus.UnknownException.ToString(),
+                    "The detected presentation is outside the managed viewer registry.");
+            Shape shape = ShapeFactory.FromNativeHandle(nativeShape, "viewer_detected_topology_snapshot");
+            nativeShape = 0;
+            return new ViewerDetectionItem(presentation, shape);
+        }
+        finally
+        {
+            if (nativeShape != 0) NativeMethods.ReleaseShape(nativeShape);
+        }
+    }
+
+    /// <summary>Selects within a client-pixel rectangle using the requested selection scheme.</summary>
+    public IReadOnlyList<ViewerPresentation> SelectRectangle(
+        int x1, int y1, int x2, int y2, ViewerSelectionMode mode = ViewerSelectionMode.Replace)
+    {
+        if (!Enum.IsDefined(mode)) throw new ArgumentOutOfRangeException(nameof(mode));
+        if (x1 == x2 || y1 == y2) throw new ArgumentException("Selection rectangle must have non-zero area.");
+        EnsureThread();
+        NativeError.ThrowIfFailed(
+            NativeMethods.SelectViewerRectangle(Handle, x1, y1, x2, y2, (int)mode, out _),
+            "viewer_select_rectangle");
+        return GetSelection();
+    }
+
+    /// <summary>Selects within a client-pixel polygon using the requested selection scheme.</summary>
+    public unsafe IReadOnlyList<ViewerPresentation> SelectPolygon(
+        IReadOnlyList<GpPoint2d> points, ViewerSelectionMode mode = ViewerSelectionMode.Replace)
+    {
+        ArgumentNullException.ThrowIfNull(points);
+        if (!Enum.IsDefined(mode)) throw new ArgumentOutOfRangeException(nameof(mode));
+        if (points.Count is < 3 or > 4096)
+            throw new ArgumentOutOfRangeException(nameof(points), "Selection polygon requires 3 through 4096 points.");
+        XyRaw[] raw = new XyRaw[points.Count];
+        for (int index = 0; index < raw.Length; ++index)
+        {
+            GpPoint2d point = points[index];
+            if (!double.IsFinite(point.X) || !double.IsFinite(point.Y))
+                throw new ArgumentOutOfRangeException(nameof(points), "Selection polygon coordinates must be finite.");
+            raw[index] = new XyRaw(point.X, point.Y);
+        }
+        EnsureThread();
+        fixed (XyRaw* pointer = raw)
+        {
+            NativeError.ThrowIfFailed(
+                NativeMethods.SelectViewerPolygon(Handle, pointer, raw.Length, (int)mode, out _),
+                "viewer_select_polygon");
+        }
+        return GetSelection();
+    }
+
+    /// <summary>Sets the context-wide pixel detection tolerance from 0 through 100.</summary>
+    public void SetPixelTolerance(int tolerance)
+    {
+        if (tolerance is < 0 or > 100) throw new ArgumentOutOfRangeException(nameof(tolerance));
+        EnsureThread();
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerPixelTolerance(Handle, tolerance), "viewer_set_pixel_tolerance");
+    }
+
+    /// <summary>Replaces the current built-in filter with one topology-kind filter.</summary>
+    public void SetShapeFilter(ShapeKind kind)
+    {
+        if (kind is < ShapeKind.Compound or > ShapeKind.Vertex)
+            throw new ArgumentOutOfRangeException(nameof(kind));
+        EnsureThread();
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerShapeFilter(Handle, (int)kind), "viewer_set_shape_filter");
+    }
+
+    /// <summary>Clears every viewer-owned built-in selection filter.</summary>
+    public void ClearFilters()
+    {
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.ClearViewerFilters(Handle), "viewer_clear_filters");
+    }
+
+    /// <summary>Returns copied selection bounds, or null when selection is empty.</summary>
+    public BoundingBox3d? GetSelectionBounds()
+    {
+        EnsureThread();
+        NativeError.ThrowIfFailed(
+            NativeMethods.GetViewerSelectionBounds(Handle, out int hasBounds, out BoundingBoxRaw bounds),
+            "viewer_selection_bounds");
+        return hasBounds == 0
+            ? null
+            : new BoundingBox3d(
+                new GpPoint(bounds.MinX, bounds.MinY, bounds.MinZ),
+                new GpPoint(bounds.MaxX, bounds.MaxY, bounds.MaxZ));
+    }
+
+    /// <summary>Fits selected geometry and returns false when selection is empty.</summary>
+    public bool FitSelected(double margin = 0.01)
+    {
+        if (!double.IsFinite(margin) || margin is < 0 or >= 1)
+            throw new ArgumentOutOfRangeException(nameof(margin));
+        EnsureThread();
+        NativeError.ThrowIfFailed(
+            NativeMethods.FitSelectedViewer(Handle, margin, out int fitted), "viewer_fit_selected");
+        return fitted != 0;
+    }
+
+    /// <summary>Shows only selected presentations while retaining a reversible visibility snapshot.</summary>
+    public void IsolateSelected()
+    {
+        EnsureThread();
+        IReadOnlyList<ViewerPresentation> selected = GetSelection();
+        if (selected.Count == 0) throw new InvalidOperationException("Cannot isolate an empty selection.");
+        if (_isolationVisibility is not null) RestoreIsolation();
+        HashSet<long> selectedIds = [.. selected.Select(item => item.Id)];
+        _isolationVisibility = _presentations.ToDictionary(pair => pair.Key, pair => pair.Value.IsVisible);
+        foreach (ViewerPresentation presentation in _presentations.Values)
+            SetVisible(presentation, selectedIds.Contains(presentation.Id));
+    }
+
+    /// <summary>Restores the visibility state captured by <see cref="IsolateSelected"/>.</summary>
+    public bool RestoreIsolation()
+    {
+        EnsureThread();
+        if (_isolationVisibility is null) return false;
+        Dictionary<long, bool> snapshot = _isolationVisibility;
+        _isolationVisibility = null;
+        foreach ((long id, bool visible) in snapshot)
+            if (_presentations.TryGetValue(id, out ViewerPresentation? presentation) && !presentation.IsRemoved)
+                SetVisible(presentation, visible);
+        return true;
+    }
+
+    /// <summary>Returns one finite copied camera snapshot.</summary>
+    public ViewerCameraState GetCamera()
+    {
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.GetViewerCamera(Handle, out ViewerCameraRaw raw), "viewer_get_camera");
+        return new ViewerCameraState(
+            ToPoint(raw.Eye), ToPoint(raw.Target), ToXyz(raw.Up), ToXyz(raw.Projection));
+    }
+
+    /// <summary>Validates and atomically restores one camera snapshot.</summary>
+    public void SetCamera(ViewerCameraState camera)
+    {
+        ValidateFinite(camera.Eye, nameof(camera));
+        ValidateFinite(camera.Target, nameof(camera));
+        ValidateFinite(camera.Up, nameof(camera));
+        ValidateFinite(camera.Projection, nameof(camera));
+        ViewerCameraRaw raw = new(
+            ToRaw(camera.Eye), ToRaw(camera.Target), ToRaw(camera.Up), ToRaw(camera.Projection));
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.SetViewerCamera(Handle, in raw), "viewer_set_camera");
+    }
+
+    /// <summary>Converts one client pixel to a world point on the current view plane.</summary>
+    public GpPoint ScreenToWorld(int x, int y)
+    {
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.ViewerScreenToWorld(Handle, x, y, out XyzRaw raw), "viewer_screen_to_world");
+        return ToPoint(raw);
+    }
+
+    /// <summary>Projects one finite world point into client pixels.</summary>
+    public ViewerPixelPoint WorldToScreen(GpPoint point)
+    {
+        ValidateFinite(point, nameof(point));
+        XyzRaw raw = ToRaw(point);
+        EnsureThread();
+        NativeError.ThrowIfFailed(
+            NativeMethods.ViewerWorldToScreen(Handle, in raw, out int x, out int y), "viewer_world_to_screen");
+        return new ViewerPixelPoint(x, y);
+    }
+
+    /// <summary>Produces a normalized world-space pick ray for one client pixel.</summary>
+    public ViewerPickRay GetPickRay(int x, int y)
+    {
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.GetViewerPickRay(Handle, x, y, out ViewerPickRayRaw raw), "viewer_pick_ray");
+        return new ViewerPickRay(ToPoint(raw.Origin), ToXyz(raw.Direction));
+    }
+
+    /// <summary>Zooms to a normalized non-degenerate client rectangle.</summary>
+    public void ZoomWindow(int x1, int y1, int x2, int y2)
+    {
+        if (x1 == x2 || y1 == y2) throw new ArgumentException("Zoom rectangle must have non-zero area.");
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.WindowFitViewer(Handle, x1, y1, x2, y2), "viewer_window_fit");
+    }
+
+    /// <summary>Sets the view's linear RGB background and redraws.</summary>
+    public void SetBackgroundColor(ViewerColor color)
+    {
+        color.Validate();
+        EnsureThread();
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerBackgroundColor(Handle, color.Red, color.Green, color.Blue),
+            "viewer_set_background_color");
+    }
+
+    /// <summary>Creates an enabled parent-bound clipping plane.</summary>
+    public ViewerClipPlane CreateClipPlane(ViewerPlaneEquation equation)
+    {
+        equation.Validate();
+        EnsureThread();
+        NativeError.ThrowIfFailed(
+            NativeMethods.CreateViewerClipPlane(
+                Handle, equation.A, equation.B, equation.C, equation.D, out long id),
+            "viewer_create_clip_plane");
+        ViewerClipPlane plane = new(this, id, equation);
+        _clipPlanes.Add(id, plane);
+        return plane;
+    }
+
+    /// <summary>Enables or disables computed hidden-line review mode.</summary>
+    public void SetComputedHiddenLine(bool enabled)
+    {
+        EnsureThread();
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerComputedMode(Handle, enabled ? 1 : 0), "viewer_set_computed_mode");
+    }
+
+    /// <summary>Shows and configures the standard orientation trihedron.</summary>
+    public void ShowTrihedron(
+        ViewerTrihedronPosition position = ViewerTrihedronPosition.LeftLower,
+        ViewerColor? color = null,
+        double scale = 0.08)
+    {
+        if (!Enum.IsDefined(position)) throw new ArgumentOutOfRangeException(nameof(position));
+        if (!double.IsFinite(scale) || scale is <= 0 or > 1) throw new ArgumentOutOfRangeException(nameof(scale));
+        ViewerColor actualColor = color ?? new ViewerColor(1, 1, 1);
+        actualColor.Validate();
+        EnsureThread();
+        NativeError.ThrowIfFailed(
+            NativeMethods.ShowViewerTrihedron(
+                Handle, (int)position, actualColor.Red, actualColor.Green, actualColor.Blue, scale),
+            "viewer_show_trihedron");
+    }
+
+    /// <summary>Hides the standard orientation trihedron.</summary>
+    public void HideTrihedron()
+    {
+        EnsureThread();
+        NativeError.ThrowIfFailed(NativeMethods.HideViewerTrihedron(Handle), "viewer_hide_trihedron");
+    }
+
+    /// <summary>Writes a selected viewer buffer to a durable path and returns its full path.</summary>
+    public string SaveScreenshot(
+        string filePath,
+        ViewerScreenshotBuffer buffer = ViewerScreenshotBuffer.Rgb,
+        bool overwrite = false)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(filePath);
+        if (!Enum.IsDefined(buffer)) throw new ArgumentOutOfRangeException(nameof(buffer));
+        string fullPath = Path.GetFullPath(filePath);
+        string extension = Path.GetExtension(fullPath).ToLowerInvariant();
+        if (extension is not (".png" or ".bmp" or ".jpg" or ".jpeg"))
+            throw new ArgumentException("Screenshot path must use PNG, BMP, JPG, or JPEG.", nameof(filePath));
+        string? directory = Path.GetDirectoryName(fullPath);
+        if (string.IsNullOrEmpty(directory)) throw new ArgumentException("Screenshot path has no directory.", nameof(filePath));
+        Directory.CreateDirectory(directory);
+        if (!overwrite && File.Exists(fullPath)) throw new IOException($"Screenshot already exists: '{fullPath}'.");
+
+        EnsureThread();
+        string stagingPath = CreateScreenshotStagingPath(extension);
+        try
+        {
+            NativeError.ThrowIfFailed(NativeMethods.DumpViewer(Handle, stagingPath, (int)buffer), "viewer_dump");
+            if (!File.Exists(stagingPath) || new FileInfo(stagingPath).Length == 0)
+                throw new IOException("OCCT did not produce a non-empty screenshot.");
+            File.Move(stagingPath, fullPath, overwrite);
+            return fullPath;
+        }
+        finally
+        {
+            if (File.Exists(stagingPath)) File.Delete(stagingPath);
+        }
+    }
+
     internal void SetVisible(ViewerPresentation presentation, bool visible)
     {
         EnsurePresentation(presentation);
         NativeError.ThrowIfFailed(
             NativeMethods.SetViewerPresentationVisible(Handle, presentation.Id, visible ? 1 : 0),
             "viewer_set_presentation_visible");
+        presentation.MarkVisible(visible);
     }
 
     internal void SetColor(ViewerPresentation presentation, ViewerColor color)
@@ -259,12 +570,95 @@ public sealed class OcctViewer : IDisposable
             "viewer_set_presentation_selection_kind");
     }
 
+    internal void SetSubshapeColor(ViewerPresentation presentation, Shape subshape, ViewerColor color)
+    {
+        ArgumentNullException.ThrowIfNull(subshape);
+        color.Validate();
+        EnsurePresentation(presentation);
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerSubshapeColor(
+                Handle, presentation.Id, subshape.Handle, color.Red, color.Green, color.Blue),
+            "viewer_set_subshape_color");
+    }
+
+    internal void SetSubshapeTransparency(
+        ViewerPresentation presentation, Shape subshape, double transparency)
+    {
+        ArgumentNullException.ThrowIfNull(subshape);
+        if (!double.IsFinite(transparency) || transparency is < 0 or > 1)
+            throw new ArgumentOutOfRangeException(nameof(transparency));
+        EnsurePresentation(presentation);
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerSubshapeTransparency(
+                Handle, presentation.Id, subshape.Handle, transparency),
+            "viewer_set_subshape_transparency");
+    }
+
+    internal void SetSubshapeWidth(ViewerPresentation presentation, Shape subshape, double width)
+    {
+        ArgumentNullException.ThrowIfNull(subshape);
+        if (!double.IsFinite(width) || width is <= 0 or > 1000)
+            throw new ArgumentOutOfRangeException(nameof(width));
+        EnsurePresentation(presentation);
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerSubshapeWidth(Handle, presentation.Id, subshape.Handle, width),
+            "viewer_set_subshape_width");
+    }
+
+    internal void ClearSubshapeOverrides(ViewerPresentation presentation, Shape subshape)
+    {
+        ArgumentNullException.ThrowIfNull(subshape);
+        EnsurePresentation(presentation);
+        NativeError.ThrowIfFailed(
+            NativeMethods.ClearViewerSubshapeOverrides(Handle, presentation.Id, subshape.Handle),
+            "viewer_clear_subshape_overrides");
+    }
+
+    internal void ClearAllSubshapeOverrides(ViewerPresentation presentation)
+    {
+        EnsurePresentation(presentation);
+        NativeError.ThrowIfFailed(
+            NativeMethods.ClearAllViewerSubshapeOverrides(Handle, presentation.Id),
+            "viewer_clear_all_subshape_overrides");
+    }
+
+    internal void UpdateClipPlane(ViewerClipPlane plane, ViewerPlaneEquation equation)
+    {
+        equation.Validate();
+        EnsureClipPlane(plane);
+        NativeError.ThrowIfFailed(
+            NativeMethods.UpdateViewerClipPlane(
+                Handle, plane.Id, equation.A, equation.B, equation.C, equation.D),
+            "viewer_update_clip_plane");
+        plane.MarkUpdated(equation);
+    }
+
+    internal void SetClipPlaneEnabled(ViewerClipPlane plane, bool enabled)
+    {
+        EnsureClipPlane(plane);
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerClipPlaneEnabled(Handle, plane.Id, enabled ? 1 : 0),
+            "viewer_set_clip_plane_enabled");
+        plane.MarkEnabled(enabled);
+    }
+
+    internal void RemoveClipPlane(ViewerClipPlane plane)
+    {
+        if (plane.IsRemoved) return;
+        EnsureClipPlane(plane);
+        NativeError.ThrowIfFailed(
+            NativeMethods.RemoveViewerClipPlane(Handle, plane.Id), "viewer_remove_clip_plane");
+        _clipPlanes.Remove(plane.Id);
+        plane.MarkRemoved();
+    }
+
     internal void Remove(ViewerPresentation presentation)
     {
         if (presentation.IsRemoved) return;
         EnsurePresentation(presentation);
         NativeError.ThrowIfFailed(NativeMethods.RemoveViewerPresentation(Handle, presentation.Id), "viewer_remove_presentation");
         _presentations.Remove(presentation.Id);
+        _isolationVisibility?.Remove(presentation.Id);
         presentation.MarkRemoved();
     }
 
@@ -276,7 +670,10 @@ public sealed class OcctViewer : IDisposable
         if (IsDisposed) return;
         EnsureThread();
         foreach (ViewerPresentation presentation in _presentations.Values) presentation.MarkRemoved();
+        foreach (ViewerClipPlane plane in _clipPlanes.Values) plane.MarkRemoved();
         _presentations.Clear();
+        _clipPlanes.Clear();
+        _isolationVisibility = null;
         Handle.Dispose();
     }
 
@@ -289,6 +686,44 @@ public sealed class OcctViewer : IDisposable
             throw new ArgumentException("The presentation belongs to another viewer.", nameof(presentation));
         }
         ObjectDisposedException.ThrowIf(presentation.IsRemoved, presentation);
+    }
+
+    private void EnsureClipPlane(ViewerClipPlane plane)
+    {
+        ArgumentNullException.ThrowIfNull(plane);
+        EnsureThread();
+        if (!ReferenceEquals(plane.Viewer, this))
+            throw new ArgumentException("The clip plane belongs to another viewer.", nameof(plane));
+        ObjectDisposedException.ThrowIf(plane.IsRemoved, plane);
+    }
+
+    private static GpPoint ToPoint(XyzRaw value) => new(value.X, value.Y, value.Z);
+    private static GpXyz ToXyz(XyzRaw value) => new(value.X, value.Y, value.Z);
+    private static XyzRaw ToRaw(GpPoint value) => new(value.X, value.Y, value.Z);
+    private static XyzRaw ToRaw(GpXyz value) => new(value.X, value.Y, value.Z);
+
+    private static void ValidateFinite(GpPoint value, string parameterName)
+    {
+        if (!double.IsFinite(value.X) || !double.IsFinite(value.Y) || !double.IsFinite(value.Z))
+            throw new ArgumentOutOfRangeException(parameterName, "Point coordinates must be finite.");
+    }
+
+    private static void ValidateFinite(GpXyz value, string parameterName)
+    {
+        if (!double.IsFinite(value.X) || !double.IsFinite(value.Y) || !double.IsFinite(value.Z))
+            throw new ArgumentOutOfRangeException(parameterName, "Vector coordinates must be finite.");
+    }
+
+    private static string CreateScreenshotStagingPath(string extension)
+    {
+        string systemTemp = Path.Combine(
+            Path.GetPathRoot(Environment.SystemDirectory) ?? "C:\\", "Windows", "Temp");
+        foreach (string candidate in new[] { Path.GetTempPath(), systemTemp, AppContext.BaseDirectory })
+        {
+            if (!Directory.Exists(candidate) || candidate.Any(character => character > 127)) continue;
+            return Path.Combine(candidate, $"occtsharp-{Guid.NewGuid():N}{extension}");
+        }
+        throw new IOException("No writable ASCII staging directory is available for the OCCT screenshot bridge.");
     }
 
     private void EnsureThread()

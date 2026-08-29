@@ -1227,6 +1227,134 @@ internal static partial class NativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus GetViewerSelectedCount(ViewerHandle viewer, out int count);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_detected_topology_snapshot")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SnapshotViewerDetectedTopology(
+        ViewerHandle viewer, out long presentationId, out nint shape);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_select_rectangle")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SelectViewerRectangle(
+        ViewerHandle viewer, int minX, int minY, int maxX, int maxY, int selectionMode, out int selectedCount);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_select_polygon")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus SelectViewerPolygon(
+        ViewerHandle viewer, XyRaw* points, int pointCount, int selectionMode, out int selectedCount);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_pixel_tolerance")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerPixelTolerance(ViewerHandle viewer, int tolerance);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_shape_filter")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerShapeFilter(ViewerHandle viewer, int shapeKind);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_clear_filters")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ClearViewerFilters(ViewerHandle viewer);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_selection_bounds")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetViewerSelectionBounds(
+        ViewerHandle viewer, out int hasBounds, out BoundingBoxRaw bounds);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_fit_selected")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus FitSelectedViewer(ViewerHandle viewer, double margin, out int fitted);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_subshape_color")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerSubshapeColor(
+        ViewerHandle viewer, long presentationId, ShapeHandle subshape, double red, double green, double blue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_subshape_transparency")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerSubshapeTransparency(
+        ViewerHandle viewer, long presentationId, ShapeHandle subshape, double transparency);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_subshape_width")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerSubshapeWidth(
+        ViewerHandle viewer, long presentationId, ShapeHandle subshape, double width);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_clear_subshape_overrides")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ClearViewerSubshapeOverrides(
+        ViewerHandle viewer, long presentationId, ShapeHandle subshape);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_clear_all_subshape_overrides")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ClearAllViewerSubshapeOverrides(ViewerHandle viewer, long presentationId);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_get_camera")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetViewerCamera(ViewerHandle viewer, out ViewerCameraRaw camera);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_camera")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerCamera(ViewerHandle viewer, in ViewerCameraRaw camera);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_screen_to_world")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ViewerScreenToWorld(ViewerHandle viewer, int x, int y, out XyzRaw point);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_world_to_screen")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ViewerWorldToScreen(
+        ViewerHandle viewer, in XyzRaw point, out int x, out int y);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_pick_ray")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetViewerPickRay(
+        ViewerHandle viewer, int x, int y, out ViewerPickRayRaw ray);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_window_fit")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus WindowFitViewer(
+        ViewerHandle viewer, int minX, int minY, int maxX, int maxY);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_background_color")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerBackgroundColor(
+        ViewerHandle viewer, double red, double green, double blue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_create_clip_plane")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus CreateViewerClipPlane(
+        ViewerHandle viewer, double a, double b, double c, double d, out long clipPlaneId);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_update_clip_plane")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus UpdateViewerClipPlane(
+        ViewerHandle viewer, long clipPlaneId, double a, double b, double c, double d);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_clip_plane_enabled")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerClipPlaneEnabled(
+        ViewerHandle viewer, long clipPlaneId, int enabled);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_remove_clip_plane")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus RemoveViewerClipPlane(ViewerHandle viewer, long clipPlaneId);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_computed_mode")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerComputedMode(ViewerHandle viewer, int enabled);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_show_trihedron")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ShowViewerTrihedron(
+        ViewerHandle viewer, int position, double red, double green, double blue, double scale);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_hide_trihedron")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus HideViewerTrihedron(ViewerHandle viewer);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_dump", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus DumpViewer(ViewerHandle viewer, string filePath, int bufferType);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_release")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void ReleaseViewer(nint viewer);

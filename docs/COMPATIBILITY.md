@@ -7,7 +7,7 @@ reported as supported.
 
 | OcctSharp | Generator | Native ABI | OCCT | Platform | Compiler | .NET | Status |
 |---|---|---|---|---|---|---|---|
-| 0.1.0-alpha.54 workspace | ClangSharp 21.1.8.4 | 1.45 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
+| 8.0.1-preview.1 workspace | ClangSharp 21.1.8.4 | 1.46 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
 
 Validated in both Debug and Release: native and managed build, ABI/runtime identity,
 OCCT box creation, topology traversal, error/disposal behavior, STEP geometry
@@ -150,6 +150,22 @@ target units, real-HWND whole/subshape selection with owning selected topology, 
 input forwarding, and a real STEP import-edit-export-re-read-viewer workflow. The clean
 consumer executes the final workflow with all 62 DLLs; 83 generated files are fresh and
 byte-identical after clean regeneration.
+
+The alpha.55 workspace advances to ABI 1.46/bridge 0.54.0 and closes Batch D. Release
+and Debug builds pass with Generator 91/91, Runtime 115/115, and dependency profiles
+6/6. A real STEP/XDE assembly flows through copied viewer identity, exact owning picks,
+rectangle/polygon selection, filters, reversible isolate, per-subshape review styles,
+camera and coordinate state, clipping/review aids, and Unicode screenshot output on a
+real HWND. The clean consumer executes the same complete workflow with all 62 DLLs;
+83 generated files remain fresh and byte-identical after clean regeneration.
+
+The `8.0.1-preview.1` workspace changes only NuGet and informational package identity
+under ADR-0065. Managed assembly identity remains `0.1.0.0`; ABI 1.46, bridge 0.54.0,
+OCCT 8.0.1, generated surface, and the 62-DLL runtime closure are unchanged. Direct
+nupkg inspection, clean restore/publish/runtime, Release/Debug, Generator 91/91, Runtime
+115/115, dependency profiles 6/6, clean regeneration, API/inventory, provenance, and the
+complete Preview.1 local release check pass. Batch E is prepared at 0/24 and contributes
+no compatibility claim yet.
 
 ## Planned validation dimensions
 

@@ -1,21 +1,35 @@
 # Known Issues
 
-## KI-026: Full-selection 16,017-binding wave is not yet compile-accepted
+## KI-027: Batch E engineering inspection and PMI closure is not implemented
 
-- Status: Open; batch B exit blocker.
-- The generated manifest contains 16,017 IDs from a 116,190-declaration selection, but
-  the last accepted Release wave remains 6,555 bindings.
-- The first native compile exposed collisions between static and shared exports,
-  constructor and instance `Create` exports, normalized case variants, and invalid
-  ordinary allocation of `BRepMeshData_Curve`.
-- Generator fixes reserve `_static_` and `_method_` namespaces, assign ordinals across
-  normalized member groups, disambiguate duplicate managed signatures, and implement
-  allocator-retaining placement construction. Generator 53/53 passes.
-- Full regeneration and native compilation are still `NOT RUN` after those fixes; more
-  compile or link gaps may appear. Do not report the 16,017 IDs as accepted coverage.
-- The next compile reached the RWGltf family and exposed an incomplete template element
-  in an OCCT artifact header. The generator now emits the exact completion header through
-  `generatedPreambleHeaders`; the full retry is pending.
+- Status: Open; prepared at 0/24 under ADR-0066.
+- Severity: Product gap
+- Area: BRepExtrema/BRepGProp, XCAFDimTolObjects, STEPCAF/AP242, PrsDim/AIS
+- Problem: The current alpha.55 implementation baseline does not yet provide the complete
+  24-capability exact-inspection, measurement, semantic PMI/reference graph, transactional
+  mutation, AP242 GDT/saved-view, viewer-annotation, and screenshot workflow.
+- Current mitigation: `BATCH_E_INSPECTION_PMI_GAP_INVENTORY.md` locks one dependency and
+  ownership closure and a 14-root/990-candidate audit. No partial family is claimed as a
+  completed batch.
+- Planned resolution: Implement and validate all 24 capabilities as one Batch E wave in
+  repository runtime and a clean package consumer. All Batch E implementation gates are
+  currently `NOT RUN`.
+
+## KI-026: Full-selection 16,017-binding wave was not compile-accepted
+
+- Status: Resolved in the alpha.49 through alpha.55 evidence chain.
+- The original 16,017-ID intermediate selection exposed static/instance naming
+  collisions, normalized overload collisions, placement-allocation requirements, missing
+  template completion headers, and native toolkit-link gaps.
+- Resolution: generalized operation namespaces/ordinals, allocator-retaining placement
+  construction, configured completion headers, toolkit closure, and narrow long-tail
+  dispositions were implemented in the generator and regenerated. The accepted surface
+  is now 16,353 emitted stable IDs plus 120 accepted manual stable IDs.
+- Evidence: alpha.55 Release and Debug native/managed builds pass; Generator 91/91,
+  Runtime 115/115, dependency profiles 6/6, 83-file freshness and byte-identical clean
+  regeneration, dependency closure, clean package consumer, inventory, API compatibility,
+  provenance, and complete local release gates pass. The obsolete 16,017 intermediate
+  count is not current coverage.
 
 Issues remain in this document after resolution, with their status and resolution
 evidence updated.
@@ -93,25 +107,26 @@ evidence updated.
   so an ordinary clone can run the Sample without acquiring an SDK. Generator/native
   rebuilds still require the pinned local or immutable ADR-0051 SDK input.
 
-## KI-008: Generator emitter coverage remains narrow
+## KI-008: Generated surface remains selective rather than full OCCT coverage
 
 - Status: Open
 - Severity: High
 - Area: Generator
-- Problem: Deterministic native/managed emission now owns 775 stable IDs across
-  value-copy scopes, nine generated Geom/Geom2d types, 129 generated StepBasic shared
-  types, 61 generated mesh/Poly/analysis/healing types, typed enums, base topology
-  values, and checked typed topology casts. Schema 1.6
-  additionally reconciles 61 audited modeling declarations as Manual, but accepted binding
-  coverage is only 836/16,633 (5.0262%) of the expanded selected dependency closure and
-  is not full OCCT coverage. The
-  validated shape and exchange bridges remain manual.
+- Problem: Deterministic native/managed generation now owns 16,353 stable IDs and the
+  accepted friendly/manual layer reconciles 120 additional stable IDs. This is a broad,
+  validated selected surface, not full OCCT API coverage. The complete classification
+  still contains 49,344 skipped and 50,455 narrowly blocked declarations, while 32 of
+  7,090 entry headers cannot be semantically scanned with the supplied optional/artifact
+  inputs. A single generated/total percentage would therefore mix different denominators
+  and overstate support.
 - Current mitigation: `TM001`–`TM007`, explicit generated/manual scopes, support diagnostics,
   manifest-aware inventory, and compile/runtime/lifetime tests prevent unknown ownership
   cases from being emitted merely to increase counts.
-- Planned resolution: Expand coherent generated package scopes after each required
-  value/shared/topology/borrowed lifetime rule is proven, then replace manual raw
-  functions only when generated equivalents have equal evidence.
+- Planned resolution: Expand only newly accepted finite product dependency closures;
+  generalize value/shared/topology/borrowed lifetime rules where safe, and replace manual
+  raw functions only when generated equivalents have equal compile/runtime/lifetime/
+  package evidence. Continue reporting inventory, classification, binding, and validation
+  denominators separately.
 
 ## KI-009: Windows non-ASCII exchange paths are not validated
 

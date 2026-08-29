@@ -22,17 +22,18 @@ The plan keeps four percentages separate:
 
 Roadmap progress is an engineering estimate and is never substituted for these metrics.
 
-The current execution priority is not maximum raw OCCT coverage. Under ADR-0060 it is
-the largest safe expansion of APIs used together by ordinary CAD applications. Cold or
-optional declarations remain classified, but they do not pre-empt common modeling,
-query, mesh, exchange/XDE, and viewing workflows.
+The current execution priority is not maximum raw OCCT coverage. ADR-0066 selects one
+24-capability engineering-inspection, exact-measurement, and PMI/AP242 outcome across
+BRepExtrema/BRepAdaptor/BRepGProp/TopoDS, XCAFDoc/XCAFDimTolObjects, STEPCAF/AP242,
+PrsDim/AIS, V3d/Graphic3d, and screenshot evidence. Cold or optional declarations remain
+classified, but they do not pre-empt that finite product workflow.
 
 ## Product and project structure
 
 ### Current structure
 
 Keep one managed project, one native bridge, one NuGet package, and one application-local
-`occt` runtime directory through the active Batch C common-workflow expansion. Generated
+`occt` runtime directory through the active Batch E inspection/PMI wave. Generated
 files are organized by module immediately, even while they compile into the same assembly.
 
 ### Planned managed projects and packages
@@ -81,19 +82,23 @@ Repository/toolchain, generator, ownership, foundation, modeling, mesh, exchange
 visualization, long-tail generation, upgrade, and release engineering all belong to B.
 ADR-0060 opened product-scale batch `C` for common CAD API expansion and ADR-0063 closes
 it at alpha.54. It used whole-product workflow scope comparable to B; numbered or dotted
-batch fragments remain forbidden.
+batch fragments remain forbidden. ADR-0064 closes product-scale batch `D` with the same
+large-wave rule and a finite production viewport/model-review denominator. ADR-0066 opens
+Batch `E` as one finite 24-capability inspection/measurement/PMI/AP242 denominator.
 
 | Batch | Status | Completed evidence | Remaining exit conditions |
 |---|---|---|---|
 | B | Complete (local implementation) | Reproducible .NET 10/native foundation; deterministic generation; safe value, shared, topology, document, metadata, exchange, modeling, mesh, and visualization profiles; 16,353 emitted plus 61 manual stable IDs; zero supported-unselected/LT001-LT004; complete observed classification; Release/Debug/runtime, 13-file freshness, byte-identical clean regeneration, 62-DLL package consumer, compatibility, provenance/SBOM/checksum, and local release gates passing | None inside Batch B. Signing credentials and NuGet publication remain independent release-readiness gates |
 | C — Common CAD API Expansion | Complete (local implementation) | Alpha.51 validates topology/BREP/mesh/XDE/viewer editing; alpha.52 validates STEP reporting/BRepCheck/ShapeFix/V3d rotation; alpha.53 validates BRepGProp/XCAF properties/XDE occurrences/STEPCAF options; alpha.54 closes the final 15-capability geometry/topology/selective-STEP/viewer-input workflow. Release/Debug, Generator 91/91, Runtime 114/114, 83-file deterministic regeneration, 62-DLL clean consumer, inventory, dependency closure, API compatibility, provenance, and local release gates pass | None inside Batch C. Hosted CI execution, signing, and NuGet publication remain independent release-readiness gates; advanced filters, custom rendering, optional integrations, cold schema, and exhaustive mesh attributes require a new product denominator |
+| D — Production CAD Viewport and Model Review | Complete (24/24, local implementation) | Alpha.55 implements the entire ADR-0064 denominator with copied XDE identity, owning detected/selected topology, area selection/filtering, subshape review styling, camera/conversions, clipping/review aids, and screenshot output. Release/Debug, Generator 91/91, Runtime 115/115, real STEP/XDE plus real-HWND, clean 62-DLL package, regeneration, inventory, compatibility, provenance, and local release gates pass | None inside Batch D. A future product batch requires a separately locked finite denominator; hosted release, signing, and NuGet publication remain independent release-readiness gates |
+| E — Engineering Inspection, Exact Measurement, and PMI/AP242 | Prepared (0/24 implemented) | ADR-0066 and `BATCH_E_INSPECTION_PMI_GAP_INVENTORY.md` lock all 24 capabilities, connected families, ownership categories, non-goals, a 14-root/990-declaration implementation audit, real AP242-to-inspection-to-screenshot outcome, and whole-wave exit gates | Implement the entire 24-capability closure as one wave; compile, runtime/lifetime/transaction, real AP242, real-HWND annotation/screenshot, clean-package, and full local release gates are `NOT RUN` |
 
 Current B completion is not represented by counting retired planning labels. Engineering
 progress, selected binding coverage, full-profile coverage, inventory completeness,
 validation coverage, and publication readiness are reported independently. B is 100%
 because every local exit condition above now has evidence; this does not make the public
-package release-ready. New implementation progress is reported against C, never by
-reopening B or inventing B-derived labels.
+package release-ready. New implementation progress is reported against E, never by
+reopening B/C/D or inventing numbered or dotted E labels.
 
 The 16,353 emitted plus 61 accepted manual stable IDs are Batch B's baseline binding
 coverage. Batch C adds 41 accepted manual stable IDs across SC-036 through SC-039 and
@@ -286,6 +291,77 @@ Advanced selection filters, custom rendering pipelines, low-frequency schema ent
 optional integrations, and exhaustive mesh attributes are outside the accepted Batch C
 denominator. They require a future product decision and do not keep C active.
 
+## Batch D: Production CAD Viewport and Model Review — complete
+
+### Product outcome and denominator
+
+Batch D turns the alpha.54 viewer core into a production review workflow. One real
+STEP/XDE assembly must flow through copied occurrence/presentation identity, exact owning
+detection, point/rectangle/polygon selection, built-in filters, selection bounds/fit/
+isolate, per-subshape review styles, camera snapshot/restore, screen/world/pick-ray
+conversion, window zoom, background, clip plane, computed hidden-line mode, trihedron,
+and durable screenshot evidence.
+
+The complete 24-capability matrix, baseline gaps, decision-driving stable IDs, ownership
+closure, and tests are locked in `BATCH_D_VIEWPORT_GAP_INVENTORY.md`. The inventory's 52
+candidate OCCT overloads are implementation evidence, not the product denominator.
+
+### Execution rules
+
+- Implement the whole closure as one large wave. No `D01`, `D.1`, selection-only,
+  camera-only, clipping-only, screenshot-only, per-class, or per-method checkpoint is a
+  completed batch.
+- Preserve the existing viewer owner thread and HWND contract. Presentations, filters,
+  and clip planes are parent-bound; detection/selection topology is copied into an owning
+  `Shape`; XDE identity and camera/coordinate data are copied values.
+- Reuse generated declarations when their registries and lifetimes fit. Reconcile only
+  direct manual OCCT declarations actually used, with exact stable IDs and no overlap.
+- Keep one managed assembly, one native DLL, one package, stable public type full names,
+  and the ADR-0061/ADR-0062 generated shard graph.
+- Keep IVtk/VTK, OpenGL ES, Draw/test, callbacks, arbitrary managed filters, custom
+  rendering/shaders, exhaustive mesh attributes, cold schema, and physical splitting out
+  of this batch.
+
+### Batch D exit criteria
+
+- [x] All 24 declared capabilities have intentional friendly/raw boundaries with no
+  undocumented unmanaged escape hatch.
+- [x] Every direct declaration is emitted or accepted manual with explicit ownership,
+  error, lifetime, threading, and data-transfer semantics.
+- [x] Focused runtime tests cover validation, parent mismatch, removal/disposal,
+  cross-thread calls, source lifetime independence, owning detected/selected topology,
+  filter/override reset, camera degeneracy, coordinate conversion, clip planes, and file
+  errors.
+- [x] A real STEP/XDE assembly and real HWND complete the entire review-to-screenshot
+  workflow in repository runtime and a clean 62-DLL package consumer.
+- [x] Release/Debug, generator/runtime tests, generated freshness, byte-identical clean
+  regeneration, dependency closure, package, API compatibility, inventory, runtime
+  manifest, SBOM/provenance/checksums, documentation, and local release gates pass.
+
+Current state: alpha.55 completes 24/24 capabilities (100%). SC-040 reconciles the 18
+newly direct blocked stable IDs, Runtime 115/115 passes in Release and Debug, and the real
+STEP/XDE plus real-HWND workflow passes both in repository runtime and the clean 62-DLL
+package consumer. Generated freshness, byte-identical clean regeneration, dependency
+closure, API compatibility, complete classification, runtime hashes, SBOM/provenance/
+checksums, and the full local release check pass together.
+
+## Batch E: Engineering Inspection, Exact Measurement, and PMI/AP242 — prepared
+
+ADR-0066 and `BATCH_E_INSPECTION_PMI_GAP_INVENTORY.md` lock one 24-capability product
+outcome spanning exact distance/contact/interference inspection, length/area/volume/
+centroid/inertia and angle/radius/diameter measurement, unit semantics, semantic
+dimensions/tolerances/datums and their complete reference graph, transactional mutation,
+AP242 GDT and saved-view round trips, viewer-owned annotations, and durable screenshot
+evidence. The focused 14-root audit classifies 990 candidate declarations as 142 emitted,
+2 manual, 604 blocked, and 242 skipped; these counts guide implementation and are not the
+product denominator.
+
+Preparation is complete at 0/24. No Batch E API, ABI, runtime, package, AP242, viewer, or
+screenshot implementation gate has run. The implementation must land as one cross-family
+wave; family-only or numbered/dotted checkpoints are forbidden. It retains the single
+managed assembly, native DLL, NuGet package, application-local runtime, public type names,
+and ADR-0061/ADR-0062 generated dependency graph.
+
 ## Generated output partitioning
 
 Generated paths use module directories before project splitting:
@@ -321,7 +397,7 @@ The same header may be available in several profiles. Coverage is always reporte
 the profile name; profile exclusions require stable reasons and do not disappear from the
 global catalog.
 
-## Required evidence used for C and each large work wave
+## Required evidence used for D and each large work wave
 
 - Deterministic discovery, generated source, coverage, and diagnostics.
 - Deterministic generated-shard dependency closure with zero unresolved signature target,
@@ -333,14 +409,16 @@ global catalog.
 - Clean NuGet consumer whenever public/runtime assets change.
 - Updated `STATUS.md` and this plan; only factually affected topic documents and ADRs.
 
-## Batch C execution boundary
+## Active product-batch execution boundary
 
-1. Keep completed Batch B evidence immutable and report new implementation against C.
+1. Keep completed Batch B/C/D evidence immutable and report new implementation against E.
 2. ADR-0059 resolves the MIT project license and bundled third-party notice layout;
    keep those files and the runtime manifest current for every distribution change.
 3. Package signing, credentials, and NuGet publication require explicit authorization.
-4. C is one completed common-API product batch. Its coverage lanes and large waves are
-   not batches, version numbers, or reusable permission to reopen a partial lane.
-5. Any later API expansion starts with a new finite denominator; advanced filters,
-   custom rendering, optional integrations, cold schema, and exhaustive mesh attributes
-   are not retroactive Batch C obligations.
+4. C is one completed common-API product batch and remains immutable evidence.
+5. E is the active single 24-capability inspection/measurement/PMI/AP242 wave. Its
+   connected families are not batches, version numbers, or permission to publish partial
+   completion claims.
+6. Exact inspection, semantic PMI/reference graphs, transactional mutation, AP242 GDT/
+   saved views, viewer annotations, and screenshots are in E; arbitrary callbacks, custom
+   rendering, optional integrations, cold schema, and physical splitting remain outside it.

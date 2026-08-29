@@ -42,6 +42,7 @@ internal readonly struct CurveDerivativeEvaluationRaw
 [StructLayout(LayoutKind.Sequential)]
 internal readonly struct XyRaw
 {
+    internal XyRaw(double x, double y) { X = x; Y = y; }
     internal readonly double X;
     internal readonly double Y;
 }

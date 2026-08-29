@@ -11,6 +11,90 @@ public readonly record struct ViewerColor(double Red, double Green, double Blue)
     }
 }
 
+/// <summary>Copied XDE identity attached to a viewer presentation.</summary>
+public sealed record ViewerSourceIdentity
+{
+    /// <summary>Creates an identity independent from its source XDE document.</summary>
+    public ViewerSourceIdentity(
+        IEnumerable<string> occurrencePath,
+        string occurrenceEntry,
+        string referredEntry)
+    {
+        ArgumentNullException.ThrowIfNull(occurrencePath);
+        ArgumentException.ThrowIfNullOrWhiteSpace(occurrenceEntry);
+        ArgumentException.ThrowIfNullOrWhiteSpace(referredEntry);
+        OccurrencePath = Array.AsReadOnly([.. occurrencePath]);
+        OccurrenceEntry = occurrenceEntry;
+        ReferredEntry = referredEntry;
+    }
+
+    /// <summary>Gets the copied root-to-leaf occurrence-entry path.</summary>
+    public IReadOnlyList<string> OccurrencePath { get; }
+    /// <summary>Gets the copied occurrence label entry.</summary>
+    public string OccurrenceEntry { get; }
+    /// <summary>Gets the copied referred-definition label entry.</summary>
+    public string ReferredEntry { get; }
+}
+
+/// <summary>One immutable copied camera state.</summary>
+public readonly record struct ViewerCameraState(
+    GpPoint Eye,
+    GpPoint Target,
+    GpXyz Up,
+    GpXyz Projection);
+
+/// <summary>A world-space ray produced from one client pixel.</summary>
+public readonly record struct ViewerPickRay(GpPoint Origin, GpXyz Direction);
+
+/// <summary>Integer client-pixel coordinates.</summary>
+public readonly record struct ViewerPixelPoint(int X, int Y);
+
+/// <summary>Cartesian clip-plane equation A*X + B*Y + C*Z + D = 0.</summary>
+public readonly record struct ViewerPlaneEquation(double A, double B, double C, double D)
+{
+    internal void Validate()
+    {
+        if (!double.IsFinite(A) || !double.IsFinite(B) || !double.IsFinite(C) || !double.IsFinite(D)
+            || A * A + B * B + C * C <= 1e-24)
+            throw new ArgumentOutOfRangeException(nameof(ViewerPlaneEquation),
+                "Plane coefficients must be finite and the normal must be non-zero.");
+    }
+}
+
+/// <summary>Viewer buffer written by a screenshot operation.</summary>
+public enum ViewerScreenshotBuffer
+{
+    /// <summary>RGB color without alpha.</summary>
+    Rgb = 0,
+    /// <summary>RGBA color.</summary>
+    Rgba = 1,
+    /// <summary>Depth buffer.</summary>
+    Depth = 2
+}
+
+/// <summary>Standard orientation-trihedron placement.</summary>
+public enum ViewerTrihedronPosition
+{
+    /// <summary>View center.</summary>
+    Center = 0,
+    /// <summary>Top center.</summary>
+    Top = 1,
+    /// <summary>Bottom center.</summary>
+    Bottom = 2,
+    /// <summary>Left center.</summary>
+    Left = 4,
+    /// <summary>Upper-left corner.</summary>
+    LeftUpper = 5,
+    /// <summary>Lower-left corner.</summary>
+    LeftLower = 6,
+    /// <summary>Right center.</summary>
+    Right = 8,
+    /// <summary>Upper-right corner.</summary>
+    RightUpper = 9,
+    /// <summary>Lower-right corner.</summary>
+    RightLower = 10
+}
+
 /// <summary>Common AIS shape presentation modes.</summary>
 public enum ViewerDisplayMode
 {

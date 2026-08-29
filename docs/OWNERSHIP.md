@@ -343,3 +343,27 @@ All input methods reach the viewer's existing owner-thread check. Presentation s
 mode remains parent-bound. `GetSelectedItems` copies each selected `TopoDS_Shape` into a
 new registered owner paired with its managed presentation; the copied shape survives the
 source shape and viewer, while disposing the snapshot never removes the presentation.
+
+### Batch D viewport review boundary
+
+ADR-0064 extends the same parent-bound visualization category without adding standalone
+AIS/V3d/Graphic3d ownership. `OcctViewer` owns colored presentations, a built-in filter
+handles, and clip planes on its creating thread. Presentation, filter, and clip-plane
+references remain parent-bound IDs. XDE occurrence paths/entries and camera/coordinate/
+plane/color values are copied. Detected and selected OCCT topology is copied into a new
+registered owning `Shape` before detection state can change. Screenshot output returns a
+durable file result and no native image object. Alpha.55 runtime and clean-package tests
+exercise this boundary through a real STEP/XDE assembly and real HWND.
+
+### Batch E inspection and PMI boundary
+
+ADR-0066 retains native-local exact-inspection algorithms and document/viewer ownership.
+BRepExtrema/adaptor/property builders and transient solution iterators do not escape the
+ABI. Measurements, solution parameters, classifications, unit values, inertia matrices,
+PMI graph records, camera/view data, and display properties cross as copied values;
+topology supports cross as independent owning `Shape` copies. Dimension, tolerance,
+datum, and target labels are stable-entry children of their owning XCAF document, and
+mutation occurs inside document-owned transactions with commit/abort behavior. AP242
+reader/writer state is call-local or session-owned. PrsDim/AIS annotations and saved-view
+presentation resources are viewer-parent-bound and creating-thread-affine. This boundary
+is prepared but unimplemented at 0/24; runtime and package evidence are `NOT RUN`.

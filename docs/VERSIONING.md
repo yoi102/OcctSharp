@@ -14,18 +14,25 @@ into one ambiguous version string.
 | Configuration schema version | Compatibility of generator configuration files |
 | OCCT version/build ID | Exact upstream native API and ABI input |
 
-## Proposed policy
+## Accepted policy
 
-- Use semantic versioning for released OcctSharp packages and generator tooling.
+- Under ADR-0065, NuGet package versions align their numeric core with the supported
+  OCCT version: `<OCCT major>.<minor>.<patch>-preview.<OcctSharp preview number>`.
+- The current line begins at `8.0.1-preview.1`. Increment the preview counter for an
+  OcctSharp package-visible change while the OCCT baseline remains 8.0.1. Reserve the
+  stable `8.0.1` package version for public-release readiness.
+- A later OCCT baseline changes the three-part numeric core and restarts the preview
+  counter only through an explicit release decision.
 - Increment the native ABI major version for incompatible ABI changes.
 - Increment the native ABI minor version for compatible additive changes only after
   compatibility tests establish that property.
 - Treat changes to ownership, disposal, error behavior, or public managed signatures
   as compatibility-significant even if native export names remain unchanged.
 - Record the exact OCCT build identity in package metadata and runtime diagnostics.
-- Do not force the OcctSharp package version to equal the OCCT version.
-
-This policy is proposed until package layout and release ADRs are accepted.
+- Keep package, managed assembly, generator, native ABI, bridge, binding-model schema,
+  configuration schema, and OCCT build identities independent. In particular, the
+  Preview.1 managed assembly identity remains `0.1.0.0`, native ABI remains 1.46, and
+  bridge implementation remains 0.54.0.
 
 ## Runtime identity
 
@@ -197,11 +204,24 @@ and transfer results, bidirectional topology adjacency, per-presentation subshap
 selection, owning selected topology snapshots, and parent-bound application input. No
 existing managed or native API is removed; Batch C closes at this finite checkpoint.
 
+The Batch D production viewport/model-review wave is additive ABI 1.46/bridge 0.54.0
+and advances the package to `0.1.0-alpha.55`. It adds copied occurrence identity and
+camera/coordinate values, owning detected topology, area selection and built-in filters,
+colored subshape review overrides, parent-bound clip planes, standard review aids, and
+durable screenshots. No existing managed or native API is removed.
+
+ADR-0065 rebases the package identity after alpha.55 to `8.0.1-preview.1` so the NuGet
+numeric core names the supported OCCT 8.0.1 baseline and the preview suffix independently
+tracks OcctSharp package-visible changes. This transition does not change the managed
+assembly identity (`0.1.0.0`), native ABI (1.46), bridge implementation (0.54.0), generated
+surface, runtime closure, or completed Batch D implementation. ADR-0066 prepares Batch E
+at 0/24; Preview.1 does not claim Batch E implementation.
+
 ## Upgrade classification
 
-Alpha.54 retains the 16,353-declaration generated surface and reconciles 102 accepted
-manual stable IDs through SC-039. The observed full inventory remains separate: 116,272
-classified declarations, zero supported-unselected, and 50,473 narrow blocked
+Preview.1 inherits alpha.55's 16,353-declaration generated surface and 120 accepted
+manual stable IDs through SC-040. The observed full inventory remains separate: 116,272
+classified declarations, zero supported-unselected, and 50,455 narrow blocked
 dispositions. Package verification is pinned to .NET SDK 10.0.400 by the inner workspace
 `global.json`.
 

@@ -70,6 +70,9 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0061](adr/0061-domain-layered-generated-output.md) | Partition generated output by product module and API layer without changing assembly, DLL, or public type identity | Accepted |
 | [ADR-0062](adr/0062-generated-shard-dependency-closure.md) | Close every emitted cross-shard signature edge, add MeshData, and defer physical project/DLL splitting behind compatibility and cross-DLL ownership work | Accepted |
 | [ADR-0063](adr/0063-final-batch-c-selective-session-topology-viewer-closure.md) | Close Batch C with selective STEP sessions, owning topology edits, copied selected subshapes, and parent-bound application input | Accepted |
+| [ADR-0064](adr/0064-production-cad-viewport-review-batch.md) | Open Batch D as one 24-capability production CAD viewport/model-review wave with copied identity/topology and parent-bound filters/clip planes | Accepted |
+| [ADR-0065](adr/0065-occt-aligned-nuget-preview-version.md) | Align NuGet numeric versions with OCCT and retain an independent OcctSharp preview counter | Accepted |
+| [ADR-0066](adr/0066-engineering-inspection-measurement-pmi-batch.md) | Open Batch E as one 24-capability engineering inspection, exact measurement, and PMI/AP242 wave | Accepted |
 
 ## Pending decisions
 

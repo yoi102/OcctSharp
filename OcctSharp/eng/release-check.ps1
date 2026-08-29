@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [string]$OcctRoot,
-    [string]$PackageVersion = '0.1.0-alpha.54',
+    [string]$PackageVersion = '8.0.1-preview.1',
     [string]$ApiBaselineVersion = '0.1.0-alpha.38'
 )
 
@@ -93,7 +93,7 @@ $gates = @(
     [ordered]@{ id = 'generated-freshness'; state = 'PASS'; evidence = "$generatedFileCount manifest-owned files current." },
     [ordered]@{ id = 'generated-shard-dependency-closure'; state = 'PASS'; evidence = "$dependencyEdgeCount observed cross-shard edges are fully resolved, target-graph compatible, and acyclic; managed generated shards are split-eligible while native DLL splitting remains deferred." },
     [ordered]@{ id = 'clean-regeneration'; state = 'PASS'; evidence = 'Fresh source copy build and byte comparison completed.' },
-    [ordered]@{ id = 'package-consumer'; state = 'PASS'; evidence = "$PackageVersion clean restore/publish/runtime with $nativeDllCount DLLs, $emittedCount generated declarations, prior geometry/modeling/exchange/XDE APIs, and the final selective STEP import/topology edit/export/viewer workflow." },
+    [ordered]@{ id = 'package-consumer'; state = 'PASS'; evidence = "$PackageVersion clean restore/publish/runtime with $nativeDllCount DLLs, $emittedCount generated declarations, prior geometry/modeling/exchange/XDE APIs, and the complete 24-capability real STEP/XDE viewport-review-to-screenshot workflow." },
     [ordered]@{ id = 'api-compatibility'; state = 'PASS'; evidence = 'Compared with the alpha.38 606-signature baseline; additive changes are allowed and removals are blocked.' },
     [ordered]@{ id = 'full-classification'; state = 'PASS'; evidence = "$declarationTotal declarations and $headerTotal headers classified; zero pending/HD099." },
     [ordered]@{ id = 'bindable-emission-completeness'; state = if ($remainingBindableCount -eq 0) { 'PASS' } else { 'BLOCKED' }; evidence = "$remainingBindableCount declarations remain SupportedUnselected; $emittedCount generated and $manualCount accepted manual stable IDs are reconciled." },

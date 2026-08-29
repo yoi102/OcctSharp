@@ -130,6 +130,18 @@ typedef struct OcctSharp_Xyz
   double y;
   double z;
 } OcctSharp_Xyz;
+typedef struct OcctSharp_ViewerCamera
+{
+  OcctSharp_Xyz eye;
+  OcctSharp_Xyz target;
+  OcctSharp_Xyz up;
+  OcctSharp_Xyz projection;
+} OcctSharp_ViewerCamera;
+typedef struct OcctSharp_ViewerPickRay
+{
+  OcctSharp_Xyz origin;
+  OcctSharp_Xyz direction;
+} OcctSharp_ViewerPickRay;
 typedef struct OcctSharp_Line
 {
   OcctSharp_Xyz origin;
@@ -1209,6 +1221,133 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_selected_topology
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_selected_count(
   OcctSharp_ViewerHandle* viewer,
   int32_t* count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_detected_topology_snapshot(
+  OcctSharp_ViewerHandle* viewer,
+  int64_t* presentation_id,
+  OcctSharp_ShapeHandle** shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_select_rectangle(
+  OcctSharp_ViewerHandle* viewer,
+  int32_t min_x,
+  int32_t min_y,
+  int32_t max_x,
+  int32_t max_y,
+  int32_t selection_mode,
+  int32_t* selected_count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_select_polygon(
+  OcctSharp_ViewerHandle* viewer,
+  const OcctSharp_Xy* points,
+  int32_t point_count,
+  int32_t selection_mode,
+  int32_t* selected_count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_pixel_tolerance(
+  OcctSharp_ViewerHandle* viewer,
+  int32_t tolerance);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_shape_filter(
+  OcctSharp_ViewerHandle* viewer,
+  int32_t shape_kind);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_clear_filters(
+  OcctSharp_ViewerHandle* viewer);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_selection_bounds(
+  OcctSharp_ViewerHandle* viewer,
+  int32_t* has_bounds,
+  OcctSharp_BoundingBox* bounds);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_fit_selected(
+  OcctSharp_ViewerHandle* viewer,
+  double margin,
+  int32_t* fitted);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_subshape_color(
+  OcctSharp_ViewerHandle* viewer,
+  int64_t presentation_id,
+  const OcctSharp_ShapeHandle* subshape,
+  double red,
+  double green,
+  double blue);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_subshape_transparency(
+  OcctSharp_ViewerHandle* viewer,
+  int64_t presentation_id,
+  const OcctSharp_ShapeHandle* subshape,
+  double transparency);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_subshape_width(
+  OcctSharp_ViewerHandle* viewer,
+  int64_t presentation_id,
+  const OcctSharp_ShapeHandle* subshape,
+  double width);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_clear_subshape_overrides(
+  OcctSharp_ViewerHandle* viewer,
+  int64_t presentation_id,
+  const OcctSharp_ShapeHandle* subshape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_clear_all_subshape_overrides(
+  OcctSharp_ViewerHandle* viewer,
+  int64_t presentation_id);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_get_camera(
+  OcctSharp_ViewerHandle* viewer,
+  OcctSharp_ViewerCamera* camera);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_camera(
+  OcctSharp_ViewerHandle* viewer,
+  const OcctSharp_ViewerCamera* camera);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_screen_to_world(
+  OcctSharp_ViewerHandle* viewer,
+  int32_t x,
+  int32_t y,
+  OcctSharp_Xyz* point);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_world_to_screen(
+  OcctSharp_ViewerHandle* viewer,
+  const OcctSharp_Xyz* point,
+  int32_t* x,
+  int32_t* y);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_pick_ray(
+  OcctSharp_ViewerHandle* viewer,
+  int32_t x,
+  int32_t y,
+  OcctSharp_ViewerPickRay* ray);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_window_fit(
+  OcctSharp_ViewerHandle* viewer,
+  int32_t min_x,
+  int32_t min_y,
+  int32_t max_x,
+  int32_t max_y);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_background_color(
+  OcctSharp_ViewerHandle* viewer,
+  double red,
+  double green,
+  double blue);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_create_clip_plane(
+  OcctSharp_ViewerHandle* viewer,
+  double a,
+  double b,
+  double c,
+  double d,
+  int64_t* clip_plane_id);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_update_clip_plane(
+  OcctSharp_ViewerHandle* viewer,
+  int64_t clip_plane_id,
+  double a,
+  double b,
+  double c,
+  double d);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_clip_plane_enabled(
+  OcctSharp_ViewerHandle* viewer,
+  int64_t clip_plane_id,
+  int32_t enabled);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_remove_clip_plane(
+  OcctSharp_ViewerHandle* viewer,
+  int64_t clip_plane_id);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_computed_mode(
+  OcctSharp_ViewerHandle* viewer,
+  int32_t enabled);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_show_trihedron(
+  OcctSharp_ViewerHandle* viewer,
+  int32_t position,
+  double red,
+  double green,
+  double blue,
+  double scale);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_hide_trihedron(
+  OcctSharp_ViewerHandle* viewer);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_dump(
+  OcctSharp_ViewerHandle* viewer,
+  const char* file_path,
+  int32_t buffer_type);
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_viewer_release(OcctSharp_ViewerHandle* viewer);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_shape_release(OcctSharp_ShapeHandle* shape);

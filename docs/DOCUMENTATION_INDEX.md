@@ -9,9 +9,16 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Architecture](ARCHITECTURE.md) — system boundaries and component ownership.
 - [Repository layout](REPOSITORY_LAYOUT.md) — physical separation of documentation
   and code-related files.
-- [Roadmap](ROADMAP.md) — completed Batch C boundary, next-decision rules, and historical phases.
-- [Complete migration plan](MIGRATION_PLAN.md) — completed Batch C common API matrix,
-  large-wave rules, module/package boundaries, metrics, and product-scale gates.
+- [Roadmap](ROADMAP.md) — completed Batch D outcome, prepared Batch E wave, and historical phases.
+- [Complete migration plan](MIGRATION_PLAN.md) — completed Batch D and Batch C matrices,
+  prepared Batch E denominator, large-wave rules, module/package boundaries, metrics,
+  and product-scale gates.
+- [Batch D viewport gap inventory](BATCH_D_VIEWPORT_GAP_INVENTORY.md) — locked
+  24-capability production viewport/model-review denominator, OCCT root audit, ownership
+  closure, non-goals, and validation gates.
+- [Batch E inspection and PMI gap inventory](BATCH_E_INSPECTION_PMI_GAP_INVENTORY.md)
+  — locked 24-capability engineering-inspection, measurement, PMI/AP242, annotation,
+  saved-view, and screenshot denominator at 0/24 implementation.
 - [AI migration loop prompt](AI_MIGRATION_LOOP_PROMPT.md) — reusable re-entrant prompt
   for executing the largest coherent common-workflow wave instead of per-class tasks.
 - [Status](STATUS.md) — current phase, blockers, and last verified results.
@@ -24,6 +31,10 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   C++/CLI, and platform-adapter availability and package boundaries.
 - [Full inventory classification](FULL_INVENTORY_CLASSIFICATION.md) — complete declaration
   and header dispositions, reason codes, and complete-versus-generated metrics.
+- [Preview.1 release notes](RELEASE_NOTES_8.0.1_PREVIEW_1.md) — OCCT-aligned NuGet
+  version transition, inherited Batch D evidence, and Batch E preparation boundary.
+- [Alpha.55 release notes](RELEASE_NOTES_0.1.0_ALPHA_55.md) — complete Batch D
+  production viewport/model-review workflow and local completion evidence.
 - [Alpha.54 release notes](RELEASE_NOTES_0.1.0_ALPHA_54.md) — final Batch C selective
   STEP session, geometry/topology edit, viewer selection/input, and local completion evidence.
 - [Alpha.53 release notes](RELEASE_NOTES_0.1.0_ALPHA_53.md) — XCAF validation
@@ -70,6 +81,13 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Generated shard dependency closure](adr/0062-generated-shard-dependency-closure.md)
   — resolved cross-shard graph evidence and the decision to defer physical managed-project
   and native-DLL splitting.
+- [Batch D production viewport decision](adr/0064-production-cad-viewport-review-batch.md)
+  — copied occurrence/detection state, parent-bound viewer resources, one large wave,
+  and durable screenshot evidence.
+- [OCCT-aligned preview version decision](adr/0065-occt-aligned-nuget-preview-version.md)
+  — package numeric core, preview counter, and independent assembly/ABI identities.
+- [Batch E inspection/PMI decision](adr/0066-engineering-inspection-measurement-pmi-batch.md)
+  — one large cross-family engineering-inspection, measurement, PMI/AP242 wave.
 - [Native ABI](NATIVE_ABI.md) — C ABI boundary rules.
 - [Ownership](OWNERSHIP.md) — lifetime and resource ownership rules.
 - [Type mapping](TYPE_MAPPING.md) — native-to-managed mapping policy.

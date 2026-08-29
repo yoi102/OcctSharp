@@ -7,6 +7,10 @@ Completion status: **Batch C is complete at the alpha.54 local implementation
 checkpoint**. Alpha.51, alpha.52, alpha.53, and the final alpha.54 closure are coherent
 cross-family waves inside one Batch C product outcome, not independent numbered batches.
 
+This file remains the immutable Batch C denominator. The next product batch is defined
+separately in [the Batch D production viewport gap inventory](BATCH_D_VIEWPORT_GAP_INVENTORY.md);
+its preparation and future progress must not rewrite Batch C results.
+
 ## First locked cross-family dependency closure
 
 The wave is one dependency-closed product slice spanning `TopExp`/`BRep_Tool`/

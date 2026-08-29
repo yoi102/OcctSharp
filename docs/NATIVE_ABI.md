@@ -476,7 +476,15 @@ reader session; per-presentation whole/subshape selection modes; and thread-affi
 input operations. Adaptors, 2D curves, builders, reshapers, transfer state, and AIS owners
 remain native-local. Session transfers and selected topology are independent registered
 shape owners; viewer presentation/input relationships remain parent-bound. The current
-native ABI is 1.45 and the bridge implementation version is 0.53.0.
+native ABI at the alpha.54 boundary was 1.45 and the bridge implementation was 0.53.0.
+
+ABI 1.46 is the alpha.55 Batch D production viewport/model-review boundary. It adds
+fixed 96-byte camera and 48-byte pick-ray records, caller-owned polygon inputs, owning
+detected topology, copied selection bounds, colored subshape override operations,
+context filter and fit operations, parent-bound clip-plane IDs, camera/coordinate/window
+operations, standard review aids, and durable screenshot output. AIS/V3d/Graphic3d
+objects remain inside the single thread-affine viewer owner graph. The current native
+ABI is 1.46 and the bridge implementation version is 0.54.0.
 
 ## Verification
 

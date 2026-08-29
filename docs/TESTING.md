@@ -129,6 +129,36 @@ creating-thread enforcement, mouse detection/selection, copied selection IDs, an
 invalidation. Package validation must load TKOpenGl from `occt`; compiling an interactive
 sample alone is not runtime evidence that the user closed or visually inspected it.
 
+A production viewport/model-review profile additionally requires copied XDE occurrence
+identity, exact owning detected and selected topology, point/rectangle/polygon selection
+schemes, built-in filter replacement/reset, reversible isolate, selection bounds and fit,
+per-subshape style/reset, complete camera snapshot/restore validation, screen/world and
+pick-ray numerics, window zoom, parent-bound clip-plane lifecycle, hidden-line/trihedron
+state, and a non-empty screenshot with path/failure behavior. One real STEP/XDE assembly
+must execute the complete workflow on a real HWND in Release and Debug and from a clean
+package consumer. Interactive sample compilation or manual visual inspection alone is
+not this evidence.
+
+Alpha.55 satisfies this profile as one complete Batch D run. `BatchDCompletionTests`
+passes inside the 115/115 Release and Debug runtime suites and uses a real STEP/XDE file
+plus real HWND. The clean alpha.55 package consumer repeats the complete review-to-
+screenshot workflow with the application-local 62-DLL closure. Both paths cover copied
+identity and owning topology after source disposal, parent/viewer/thread rejection,
+selection/filter/isolate/style reset, camera and coordinate numerics, clip-plane/review
+state, and non-empty Unicode-path screenshot output. The full local release check also
+passes Generator 91/91, dependency profiles 6/6, freshness, byte-identical clean
+regeneration, inventory, API compatibility, runtime hashes, SBOM/provenance/checksums,
+and Git whitespace validation.
+
+An engineering-inspection/PMI profile additionally requires all 24 ADR-0066 capabilities
+to run together: exact extrema solutions and topology supports, interference/contact
+classification, length/area/volume/centroid/inertia and angle/radius/diameter numerics,
+unit behavior, semantic dimension/tolerance/datum reference graphs, transactional
+mutation and rollback, AP242 GDT plus saved-view import/export, viewer-owned annotation
+lifecycle, and a durable screenshot. The same real AP242-to-inspection-to-annotation-to-
+screenshot workflow must pass in Release and Debug and from a clean package consumer.
+Batch E preparation is 0/24; every such implementation gate is currently `NOT RUN`.
+
 A repository-native bootstrap change additionally requires a recoverable missing-bridge
 simulation: remove or rename only the expected configuration's bridge, run the ordinary
 Sample build, verify native-only CMake recreation and the current 62-DLL output `occt/` closure,

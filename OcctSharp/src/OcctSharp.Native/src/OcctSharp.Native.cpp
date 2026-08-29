@@ -52,8 +52,10 @@
 #include <Geom2d_Curve.hxx>
 #include <AIS_InteractiveContext.hxx>
 #include <AIS_SelectionScheme.hxx>
-#include <AIS_Shape.hxx>
+#include <AIS_ColoredShape.hxx>
 #include <Aspect_DisplayConnection.hxx>
+#include <Aspect_TypeOfTriedronPosition.hxx>
+#include <Bnd_Box.hxx>
 #include <BinDrivers.hxx>
 #include <BinXCAFDrivers.hxx>
 #include <DEGLTF_Provider.hxx>
@@ -77,6 +79,9 @@
 #include <NCollection_List.hxx>
 #include <NCollection_Sequence.hxx>
 #include <OpenGl_GraphicDriver.hxx>
+#include <Graphic3d_BufferType.hxx>
+#include <Graphic3d_Camera.hxx>
+#include <Graphic3d_ClipPlane.hxx>
 #include <STEPControl_Reader.hxx>
 #include <STEPControl_StepModelType.hxx>
 #include <STEPControl_Writer.hxx>
@@ -90,6 +95,8 @@
 #include <Standard_Type.hxx>
 #include <Standard_Version.hxx>
 #include <Standard_Transient.hxx>
+#include <StdSelect_ShapeTypeFilter.hxx>
+#include <SelectMgr_Filter.hxx>
 #include <StlAPI_Writer.hxx>
 #include <StlAPI_Reader.hxx>
 #include <TCollection_ExtendedString.hxx>
@@ -126,6 +133,7 @@
 #include <XCAFDoc.hxx>
 #include <V3d_View.hxx>
 #include <V3d_TypeOfOrientation.hxx>
+#include <V3d_TypeOfVisualization.hxx>
 #include <V3d_Viewer.hxx>
 #include <WNT_Window.hxx>
 #include <gp_Ax1.hxx>
@@ -173,6 +181,8 @@ static_assert(sizeof(OcctSharp_StepAssemblyInput) == 64);
 static_assert(alignof(OcctSharp_StepAssemblyInput) == 8);
 static_assert(sizeof(OcctSharp_Xyz) == 24);
 static_assert(alignof(OcctSharp_Xyz) == 8);
+static_assert(sizeof(OcctSharp_ViewerCamera) == 96);
+static_assert(sizeof(OcctSharp_ViewerPickRay) == 48);
 static_assert(sizeof(OcctSharp_Line) == 48);
 static_assert(sizeof(OcctSharp_Circle) == 56);
 static_assert(sizeof(OcctSharp_Ax2) == 96);
@@ -308,8 +318,11 @@ struct OcctSharp_ViewerHandle
   opencascade::handle<AIS_InteractiveContext> Context;
   opencascade::handle<V3d_View> View;
   opencascade::handle<WNT_Window> Window;
-  std::unordered_map<int64_t, opencascade::handle<AIS_Shape>> Presentations;
+  std::unordered_map<int64_t, opencascade::handle<AIS_ColoredShape>> Presentations;
+  std::unordered_map<int64_t, opencascade::handle<Graphic3d_ClipPlane>> ClipPlanes;
+  opencascade::handle<SelectMgr_Filter> ActiveFilter;
   int64_t NextPresentationId = 1;
+  int64_t NextClipPlaneId = 1;
   std::thread::id OwnerThread;
 };
 
@@ -324,8 +337,8 @@ struct OcctSharp_StepReaderHandle
 
 namespace
 {
-constexpr uint32_t AbiVersion = 0x0001002DU;
-constexpr const char* BridgeVersion = "0.53.0";
+constexpr uint32_t AbiVersion = 0x0001002EU;
+constexpr const char* BridgeVersion = "0.54.0";
 thread_local std::string LastError;
 std::mutex LiveShapesMutex;
 std::unordered_set<const OcctSharp_ShapeHandle*> LiveShapes;
@@ -6015,7 +6028,7 @@ void ValidateViewerThread(const OcctSharp_ViewerHandle* viewer)
   }
 }
 
-opencascade::handle<AIS_Shape> FindPresentation(
+opencascade::handle<AIS_ColoredShape> FindPresentation(
   const OcctSharp_ViewerHandle* viewer,
   const int64_t presentationId)
 {
@@ -6025,6 +6038,91 @@ opencascade::handle<AIS_Shape> FindPresentation(
     throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The viewer presentation ID does not exist.");
   }
   return iterator->second;
+}
+
+int64_t FindPresentationId(
+  const OcctSharp_ViewerHandle* viewer,
+  const opencascade::handle<AIS_InteractiveObject>& presentation)
+{
+  for (const auto& candidate : viewer->Presentations)
+  {
+    if (candidate.second == presentation) return candidate.first;
+  }
+  throw OperationFailure(
+    OCCTSHARP_STATUS_OCCT_FAILURE,
+    "The detected AIS object is outside the managed presentation registry.");
+}
+
+opencascade::handle<Graphic3d_ClipPlane> FindClipPlane(
+  const OcctSharp_ViewerHandle* viewer,
+  const int64_t clipPlaneId)
+{
+  const auto iterator = viewer->ClipPlanes.find(clipPlaneId);
+  if (iterator == viewer->ClipPlanes.end())
+  {
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The viewer clip-plane ID does not exist.");
+  }
+  return iterator->second;
+}
+
+bool IsFinite(const OcctSharp_Xyz& value)
+{
+  return std::isfinite(value.x) && std::isfinite(value.y) && std::isfinite(value.z);
+}
+
+void ValidateColor(const double red, const double green, const double blue)
+{
+  if (!std::isfinite(red) || !std::isfinite(green) || !std::isfinite(blue)
+      || red < 0.0 || red > 1.0 || green < 0.0 || green > 1.0 || blue < 0.0 || blue > 1.0)
+  {
+    throw OperationFailure(
+      OCCTSHARP_STATUS_INVALID_ARGUMENT,
+      "Viewer RGB components must be finite values in the inclusive range 0 to 1.");
+  }
+}
+
+void ValidateSubshape(
+  const opencascade::handle<AIS_ColoredShape>& presentation,
+  const OcctSharp_ShapeHandle* subshape)
+{
+  ValidateUsableShape(subshape);
+  const TopoDS_Shape root = presentation->Shape();
+  bool contains = root.IsSame(subshape->Value);
+  if (!contains)
+  {
+    for (TopExp_Explorer explorer(root, subshape->Value.ShapeType()); explorer.More(); explorer.Next())
+    {
+      if (explorer.Current().IsSame(subshape->Value))
+      {
+        contains = true;
+        break;
+      }
+    }
+  }
+  if (!contains)
+  {
+    throw OperationFailure(
+      OCCTSHARP_STATUS_INVALID_ARGUMENT,
+      "The supplied topology is not a member of the presentation shape.");
+  }
+}
+
+Aspect_TypeOfTriedronPosition ToTrihedronPosition(const int32_t position)
+{
+  switch (position)
+  {
+    case 0: return Aspect_TOTP_CENTER;
+    case 1: return Aspect_TOTP_TOP;
+    case 2: return Aspect_TOTP_BOTTOM;
+    case 4: return Aspect_TOTP_LEFT;
+    case 5: return Aspect_TOTP_LEFT_UPPER;
+    case 6: return Aspect_TOTP_LEFT_LOWER;
+    case 8: return Aspect_TOTP_RIGHT;
+    case 9: return Aspect_TOTP_RIGHT_UPPER;
+    case 10: return Aspect_TOTP_RIGHT_LOWER;
+    default:
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The trihedron position is invalid.");
+  }
 }
 
 V3d_TypeOfOrientation ToViewerProjection(const int32_t projection)
@@ -6101,7 +6199,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_display_shape(
   {
     ValidateViewerThread(viewer);
     ValidateUsableShape(shape);
-    opencascade::handle<AIS_Shape> presentation = new AIS_Shape(shape->Value);
+    opencascade::handle<AIS_ColoredShape> presentation = new AIS_ColoredShape(shape->Value);
     const int64_t id = viewer->NextPresentationId++;
     viewer->Presentations.emplace(id, presentation);
     viewer->Context->Display(presentation, false);
@@ -6117,7 +6215,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_visible(
   return Guard([&]
   {
     ValidateViewerThread(viewer);
-    const opencascade::handle<AIS_Shape> presentation = FindPresentation(viewer, presentation_id);
+    const opencascade::handle<AIS_ColoredShape> presentation = FindPresentation(viewer, presentation_id);
     if (visible != 0) viewer->Context->Display(presentation, false);
     else viewer->Context->Erase(presentation, false);
   });
@@ -6139,7 +6237,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_color(
   return Guard([&]
   {
     ValidateViewerThread(viewer);
-    const opencascade::handle<AIS_Shape> presentation = FindPresentation(viewer, presentation_id);
+    const opencascade::handle<AIS_ColoredShape> presentation = FindPresentation(viewer, presentation_id);
     viewer->Context->SetColor(presentation, Quantity_Color(red, green, blue, Quantity_TOC_RGB), false);
   });
 }
@@ -6157,7 +6255,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_transparency(
   return Guard([&]
   {
     ValidateViewerThread(viewer);
-    const opencascade::handle<AIS_Shape> presentation = FindPresentation(viewer, presentation_id);
+    const opencascade::handle<AIS_ColoredShape> presentation = FindPresentation(viewer, presentation_id);
     viewer->Context->SetTransparency(presentation, transparency, false);
   });
 }
@@ -6175,7 +6273,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_display_mode(
   return Guard([&]
   {
     ValidateViewerThread(viewer);
-    const opencascade::handle<AIS_Shape> presentation = FindPresentation(viewer, presentation_id);
+    const opencascade::handle<AIS_ColoredShape> presentation = FindPresentation(viewer, presentation_id);
     viewer->Context->SetDisplayMode(presentation, display_mode, false);
   });
 }
@@ -6188,7 +6286,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_selection_kind
   return Guard([&]
   {
     ValidateViewerThread(viewer);
-    const opencascade::handle<AIS_Shape> presentation = FindPresentation(viewer, presentation_id);
+    const opencascade::handle<AIS_ColoredShape> presentation = FindPresentation(viewer, presentation_id);
     viewer->Context->Deactivate(presentation);
     const int mode = shape_kind < 0
       ? 0
@@ -6204,7 +6302,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_remove_presentation(
   return Guard([&]
   {
     ValidateViewerThread(viewer);
-    const opencascade::handle<AIS_Shape> presentation = FindPresentation(viewer, presentation_id);
+    const opencascade::handle<AIS_ColoredShape> presentation = FindPresentation(viewer, presentation_id);
     viewer->Context->Remove(presentation, false);
     viewer->Presentations.erase(presentation_id);
   });
@@ -6481,11 +6579,456 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_selected_count(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_detected_topology_snapshot(
+  OcctSharp_ViewerHandle* viewer, int64_t* presentation_id, OcctSharp_ShapeHandle** shape)
+{
+  if (presentation_id == nullptr || shape == nullptr)
+  { SetLastError("The viewer detected-topology output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *presentation_id = 0;
+  *shape = nullptr;
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    if (!viewer->Context->HasDetected() || !viewer->Context->HasDetectedShape()) return;
+    const TopoDS_Shape detected = viewer->Context->DetectedShape();
+    if (detected.IsNull()) return;
+    *presentation_id = FindPresentationId(viewer, viewer->Context->DetectedInteractive());
+    *shape = AllocateShape(detected);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_select_rectangle(
+  OcctSharp_ViewerHandle* viewer, const int32_t min_x, const int32_t min_y,
+  const int32_t max_x, const int32_t max_y, const int32_t selection_mode,
+  int32_t* selected_count)
+{
+  if (selected_count == nullptr)
+  { SetLastError("The viewer selected-count output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *selected_count = 0;
+  if (min_x == max_x || min_y == max_y)
+  { SetLastError("A viewer selection rectangle must have non-zero width and height."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->Context->SelectRectangle(
+      NCollection_Vec2<int>(std::min(min_x, max_x), std::min(min_y, max_y)),
+      NCollection_Vec2<int>(std::max(min_x, max_x), std::max(min_y, max_y)),
+      viewer->View, ToSelectionScheme(selection_mode));
+    *selected_count = viewer->Context->NbSelected();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_select_polygon(
+  OcctSharp_ViewerHandle* viewer, const OcctSharp_Xy* points, const int32_t point_count,
+  const int32_t selection_mode, int32_t* selected_count)
+{
+  if (selected_count == nullptr)
+  { SetLastError("The viewer selected-count output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *selected_count = 0;
+  if (points == nullptr || point_count < 3 || point_count > 4096)
+  { SetLastError("A viewer selection polygon must contain between 3 and 4096 points."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  for (int32_t index = 0; index < point_count; ++index)
+  {
+    if (!std::isfinite(points[index].x) || !std::isfinite(points[index].y))
+    { SetLastError("Viewer selection polygon coordinates must be finite."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    NCollection_Array1<gp_Pnt2d> polyline(1, point_count);
+    for (int32_t index = 0; index < point_count; ++index)
+      polyline.SetValue(index + 1, gp_Pnt2d(points[index].x, points[index].y));
+    viewer->Context->SelectPolygon(polyline, viewer->View, ToSelectionScheme(selection_mode));
+    *selected_count = viewer->Context->NbSelected();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_pixel_tolerance(
+  OcctSharp_ViewerHandle* viewer, const int32_t tolerance)
+{
+  if (tolerance < 0 || tolerance > 100)
+  { SetLastError("Viewer pixel tolerance must be from 0 through 100."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->Context->SetPixelTolerance(tolerance);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_shape_filter(
+  OcctSharp_ViewerHandle* viewer, const int32_t shape_kind)
+{
+  if (shape_kind < 0 || shape_kind > 7)
+  { SetLastError("Viewer shape filters support TopAbs kinds from Compound through Vertex."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->Context->RemoveFilters();
+    viewer->ActiveFilter = new StdSelect_ShapeTypeFilter(static_cast<TopAbs_ShapeEnum>(shape_kind));
+    viewer->Context->AddFilter(viewer->ActiveFilter);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_clear_filters(OcctSharp_ViewerHandle* viewer)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->Context->RemoveFilters();
+    viewer->ActiveFilter.Nullify();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_selection_bounds(
+  OcctSharp_ViewerHandle* viewer, int32_t* has_bounds, OcctSharp_BoundingBox* bounds)
+{
+  if (has_bounds == nullptr || bounds == nullptr)
+  { SetLastError("The viewer selection-bounds output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *has_bounds = 0;
+  *bounds = {};
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const Bnd_Box box = viewer->Context->BoundingBoxOfSelection(viewer->View);
+    if (box.IsVoid()) return;
+    box.Get(bounds->min_x, bounds->min_y, bounds->min_z,
+            bounds->max_x, bounds->max_y, bounds->max_z);
+    *has_bounds = 1;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_fit_selected(
+  OcctSharp_ViewerHandle* viewer, const double margin, int32_t* fitted)
+{
+  if (fitted == nullptr)
+  { SetLastError("The viewer fit-selected output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *fitted = 0;
+  if (!std::isfinite(margin) || margin < 0.0 || margin >= 1.0)
+  { SetLastError("Viewer fit-selected margin must be finite and in the range 0 to less than 1."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    if (viewer->Context->NbSelected() == 0) return;
+    viewer->Context->FitSelected(viewer->View, margin, true);
+    *fitted = 1;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_subshape_color(
+  OcctSharp_ViewerHandle* viewer, const int64_t presentation_id,
+  const OcctSharp_ShapeHandle* subshape, const double red, const double green, const double blue)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    ValidateColor(red, green, blue);
+    const auto presentation = FindPresentation(viewer, presentation_id);
+    ValidateSubshape(presentation, subshape);
+    presentation->SetCustomColor(subshape->Value, Quantity_Color(red, green, blue, Quantity_TOC_RGB));
+    viewer->Context->Redisplay(presentation, false);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_subshape_transparency(
+  OcctSharp_ViewerHandle* viewer, const int64_t presentation_id,
+  const OcctSharp_ShapeHandle* subshape, const double transparency)
+{
+  if (!std::isfinite(transparency) || transparency < 0.0 || transparency > 1.0)
+  { SetLastError("Viewer subshape transparency must be from 0 through 1."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const auto presentation = FindPresentation(viewer, presentation_id);
+    ValidateSubshape(presentation, subshape);
+    presentation->SetCustomTransparency(subshape->Value, transparency);
+    viewer->Context->Redisplay(presentation, false);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_subshape_width(
+  OcctSharp_ViewerHandle* viewer, const int64_t presentation_id,
+  const OcctSharp_ShapeHandle* subshape, const double width)
+{
+  if (!std::isfinite(width) || width <= 0.0 || width > 1000.0)
+  { SetLastError("Viewer subshape width must be finite, positive, and no greater than 1000."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const auto presentation = FindPresentation(viewer, presentation_id);
+    ValidateSubshape(presentation, subshape);
+    presentation->SetCustomWidth(subshape->Value, width);
+    viewer->Context->Redisplay(presentation, false);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_clear_subshape_overrides(
+  OcctSharp_ViewerHandle* viewer, const int64_t presentation_id,
+  const OcctSharp_ShapeHandle* subshape)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const auto presentation = FindPresentation(viewer, presentation_id);
+    ValidateSubshape(presentation, subshape);
+    presentation->UnsetCustomAspects(subshape->Value, true);
+    viewer->Context->Redisplay(presentation, false);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_clear_all_subshape_overrides(
+  OcctSharp_ViewerHandle* viewer, const int64_t presentation_id)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const auto presentation = FindPresentation(viewer, presentation_id);
+    presentation->ClearCustomAspects();
+    viewer->Context->Redisplay(presentation, false);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_get_camera(
+  OcctSharp_ViewerHandle* viewer, OcctSharp_ViewerCamera* camera)
+{
+  if (camera == nullptr)
+  { SetLastError("The viewer camera output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *camera = {};
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->View->Eye(camera->eye.x, camera->eye.y, camera->eye.z);
+    viewer->View->At(camera->target.x, camera->target.y, camera->target.z);
+    viewer->View->Up(camera->up.x, camera->up.y, camera->up.z);
+    viewer->View->Proj(camera->projection.x, camera->projection.y, camera->projection.z);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_camera(
+  OcctSharp_ViewerHandle* viewer, const OcctSharp_ViewerCamera* camera)
+{
+  if (camera == nullptr || !IsFinite(camera->eye) || !IsFinite(camera->target)
+      || !IsFinite(camera->up) || !IsFinite(camera->projection))
+  { SetLastError("Viewer camera values must be non-null and finite."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const gp_Vec eye_to_target(
+      gp_Pnt(camera->eye.x, camera->eye.y, camera->eye.z),
+      gp_Pnt(camera->target.x, camera->target.y, camera->target.z));
+    const gp_Vec projection(camera->projection.x, camera->projection.y, camera->projection.z);
+    const gp_Vec up(camera->up.x, camera->up.y, camera->up.z);
+    if (eye_to_target.SquareMagnitude() <= 1.0e-24 || projection.SquareMagnitude() <= 1.0e-24
+        || up.SquareMagnitude() <= 1.0e-24)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Viewer camera directions must be non-zero.");
+    const gp_Dir direction(eye_to_target);
+    const gp_Dir supplied_projection(projection);
+    const gp_Dir supplied_up(up);
+    if (std::abs(direction.Dot(supplied_projection)) < 0.999999)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Viewer camera projection must agree with eye-to-target direction.");
+    if (std::abs(direction.Dot(supplied_up)) > 0.999999)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Viewer camera up direction cannot be parallel to its projection.");
+    opencascade::handle<Graphic3d_Camera> updated = new Graphic3d_Camera();
+    updated->Copy(viewer->View->Camera());
+    updated->SetEyeAndCenter(
+      gp_Pnt(camera->eye.x, camera->eye.y, camera->eye.z),
+      gp_Pnt(camera->target.x, camera->target.y, camera->target.z));
+    updated->SetUp(supplied_up);
+    viewer->View->SetCamera(updated);
+    viewer->View->Redraw();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_screen_to_world(
+  OcctSharp_ViewerHandle* viewer, const int32_t x, const int32_t y, OcctSharp_Xyz* point)
+{
+  if (point == nullptr)
+  { SetLastError("The screen-to-world output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *point = {};
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->View->Convert(x, y, point->x, point->y, point->z);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_world_to_screen(
+  OcctSharp_ViewerHandle* viewer, const OcctSharp_Xyz* point, int32_t* x, int32_t* y)
+{
+  if (point == nullptr || x == nullptr || y == nullptr || !IsFinite(*point))
+  { SetLastError("World-to-screen inputs and outputs must be non-null and finite."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *x = 0; *y = 0;
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->View->Convert(point->x, point->y, point->z, *x, *y);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_pick_ray(
+  OcctSharp_ViewerHandle* viewer, const int32_t x, const int32_t y, OcctSharp_ViewerPickRay* ray)
+{
+  if (ray == nullptr)
+  { SetLastError("The viewer pick-ray output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *ray = {};
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->View->ConvertWithProj(x, y, ray->origin.x, ray->origin.y, ray->origin.z,
+                                  ray->direction.x, ray->direction.y, ray->direction.z);
+    const gp_Dir direction(ray->direction.x, ray->direction.y, ray->direction.z);
+    ray->direction = { direction.X(), direction.Y(), direction.Z() };
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_window_fit(
+  OcctSharp_ViewerHandle* viewer, const int32_t min_x, const int32_t min_y,
+  const int32_t max_x, const int32_t max_y)
+{
+  if (min_x == max_x || min_y == max_y)
+  { SetLastError("A viewer zoom rectangle must have non-zero width and height."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->View->WindowFit(std::min(min_x, max_x), std::min(min_y, max_y),
+                            std::max(min_x, max_x), std::max(min_y, max_y));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_background_color(
+  OcctSharp_ViewerHandle* viewer, const double red, const double green, const double blue)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    ValidateColor(red, green, blue);
+    viewer->View->SetBackgroundColor(Quantity_TOC_RGB, red, green, blue);
+    viewer->View->Redraw();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_create_clip_plane(
+  OcctSharp_ViewerHandle* viewer, const double a, const double b, const double c, const double d,
+  int64_t* clip_plane_id)
+{
+  if (clip_plane_id == nullptr)
+  { SetLastError("The clip-plane ID output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *clip_plane_id = 0;
+  if (!std::isfinite(a) || !std::isfinite(b) || !std::isfinite(c) || !std::isfinite(d)
+      || a * a + b * b + c * c <= 1.0e-24)
+  { SetLastError("A clip plane requires finite coefficients and a non-zero normal."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const auto plane = new Graphic3d_ClipPlane(gp_Pln(a, b, c, d));
+    const int64_t id = viewer->NextClipPlaneId++;
+    viewer->ClipPlanes.emplace(id, plane);
+    viewer->View->AddClipPlane(plane);
+    *clip_plane_id = id;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_update_clip_plane(
+  OcctSharp_ViewerHandle* viewer, const int64_t clip_plane_id,
+  const double a, const double b, const double c, const double d)
+{
+  if (!std::isfinite(a) || !std::isfinite(b) || !std::isfinite(c) || !std::isfinite(d)
+      || a * a + b * b + c * c <= 1.0e-24)
+  { SetLastError("A clip plane requires finite coefficients and a non-zero normal."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    FindClipPlane(viewer, clip_plane_id)->SetEquation(gp_Pln(a, b, c, d));
+    viewer->View->Redraw();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_clip_plane_enabled(
+  OcctSharp_ViewerHandle* viewer, const int64_t clip_plane_id, const int32_t enabled)
+{
+  if (enabled != 0 && enabled != 1)
+  { SetLastError("Clip-plane enabled state must be Boolean."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    FindClipPlane(viewer, clip_plane_id)->SetOn(enabled != 0);
+    viewer->View->Redraw();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_remove_clip_plane(
+  OcctSharp_ViewerHandle* viewer, const int64_t clip_plane_id)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const auto plane = FindClipPlane(viewer, clip_plane_id);
+    viewer->View->RemoveClipPlane(plane);
+    viewer->ClipPlanes.erase(clip_plane_id);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_computed_mode(
+  OcctSharp_ViewerHandle* viewer, const int32_t enabled)
+{
+  if (enabled != 0 && enabled != 1)
+  { SetLastError("Viewer computed-mode state must be Boolean."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->View->SetComputedMode(enabled != 0);
+    viewer->View->Redraw();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_show_trihedron(
+  OcctSharp_ViewerHandle* viewer, const int32_t position,
+  const double red, const double green, const double blue, const double scale)
+{
+  if (!std::isfinite(scale) || scale <= 0.0 || scale > 1.0)
+  { SetLastError("Viewer trihedron scale must be finite, positive, and no greater than 1."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    ValidateColor(red, green, blue);
+    viewer->View->TriedronDisplay(ToTrihedronPosition(position),
+      Quantity_Color(red, green, blue, Quantity_TOC_RGB), scale, V3d_WIREFRAME);
+    viewer->View->Redraw();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_hide_trihedron(OcctSharp_ViewerHandle* viewer)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    viewer->View->TriedronErase();
+    viewer->View->Redraw();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_dump(
+  OcctSharp_ViewerHandle* viewer, const char* file_path, const int32_t buffer_type)
+{
+  if (file_path == nullptr || file_path[0] == '\0' || buffer_type < 0 || buffer_type > 2)
+  { SetLastError("Viewer screenshot path or buffer type is invalid."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    if (!viewer->View->Dump(file_path, static_cast<Graphic3d_BufferType>(buffer_type)))
+      throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT failed to write the viewer screenshot.");
+  });
+}
+
 void OCCTSHARP_CALL occtsharp_viewer_release(OcctSharp_ViewerHandle* viewer)
 {
   if (viewer != nullptr && UnregisterValue(viewer, LiveViewers))
   {
+    if (!viewer->Context.IsNull()) viewer->Context->RemoveFilters();
+    if (!viewer->View.IsNull())
+      for (const auto& plane : viewer->ClipPlanes) viewer->View->RemoveClipPlane(plane.second);
     if (!viewer->Context.IsNull()) viewer->Context->RemoveAll(false);
+    viewer->ActiveFilter.Nullify();
+    viewer->ClipPlanes.clear();
     viewer->Presentations.clear();
     viewer->View.Nullify();
     viewer->Context.Nullify();

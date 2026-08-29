@@ -2,7 +2,7 @@
 
 ## Current package
 
-The current experimental package is `OcctSharp` `0.1.0-alpha.54` for .NET 10 and
+The current experimental package is `OcctSharp` `8.0.1-preview.1` for .NET 10 and
 Windows x64. It contains:
 
 - `lib/net10.0/OcctSharp.dll` and XML documentation.
@@ -75,14 +75,17 @@ derivatives and pcurves, edge/face trim, edge-wire construction, topology replac
 bidirectional adjacency, owning STEP sessions with unit metadata and selective root
 transfer, whole/subshape selection, owning selected topology, mouse/wheel/semantic-key
 input, and the final real STEP edit/export/re-read/viewer workflow. The current
-application-local closure contains 62 DLLs.
+application-local closure contains 62 DLLs. Alpha.55 additionally runs the complete
+24-capability STEP/XDE-to-real-HWND-to-screenshot review workflow, including copied
+identity, owning detection, area selection/filtering, isolate/fit, subshape overrides,
+camera conversions, clipping, review aids, and durable image output.
 
 ## Consumer use
 
 Once a package source contains the package, an application uses the normal command:
 
 ```powershell
-dotnet add package OcctSharp --version 0.1.0-alpha.54
+dotnet add package OcctSharp --version 8.0.1-preview.1
 ```
 
 The application must run as a Windows x64 process on the current compatibility matrix.
@@ -104,10 +107,13 @@ completed release tooling do not override a `BLOCKED` or `NOT RUN` publication g
 
 ## Planned package split
 
-Alpha.54 package verification runs from the inner `OcctSharp/` workspace, where
-`global.json` selects SDK 10.0.400. The clean consumer restored, published, and ran
-with ABI 1.45, bridge 0.53.0, and 62 native DLLs under `occt`. Signing, hosted release
-execution, and publication authorization remain separate gates.
+Preview.1 package verification runs from the inner `OcctSharp/` workspace, where
+`global.json` selects SDK 10.0.400. Direct nupkg inspection confirms package identity
+`OcctSharp`/`8.0.1-preview.1`, managed assembly/file identity `0.1.0.0`, exact
+informational version `8.0.1-preview.1`, ABI 1.46, bridge 0.54.0, and 62 native DLLs under
+`occt`. The clean consumer restores, publishes, and runs, and the complete Preview.1
+local release check passes. Signing, hosted release execution, and publication
+authorization remain separate `NOT RUN` gates.
 
 ADR-0015 keeps one package during the topology/modeling foundation, then introduces
 Runtime, Foundation, Modeling, Mesh, DataExchange, Xde, Visualization, and optional IVtk
