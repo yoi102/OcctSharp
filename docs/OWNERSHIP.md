@@ -365,5 +365,9 @@ topology supports cross as independent owning `Shape` copies. Dimension, toleran
 datum, and target labels are stable-entry children of their owning XCAF document, and
 mutation occurs inside document-owned transactions with commit/abort behavior. AP242
 reader/writer state is call-local or session-owned. PrsDim/AIS annotations and saved-view
-presentation resources are viewer-parent-bound and creating-thread-affine. This boundary
-is prepared but unimplemented at 0/24; runtime and package evidence are `NOT RUN`.
+presentation resources are viewer-parent-bound and creating-thread-affine. Dimension,
+tolerance, and datum snapshots own copied text/value arrays and independent registered
+presentation/target topology; disposal of source topology cannot invalidate them.
+Tolerance-datum replacement removes the old graph even when the replacement set is
+empty. Preview.2 validates this complete boundary in Release/Debug repository runtime
+and the clean 62-DLL package consumer.

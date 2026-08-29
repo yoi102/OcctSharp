@@ -65,6 +65,7 @@
 #include <DEPLY_Provider.hxx>
 #include <DEVRML_ConfigurationNode.hxx>
 #include <DEVRML_Provider.hxx>
+#include <DESTEP_Parameters.hxx>
 #include <GProp_GProps.hxx>
 #include <GProp_PrincipalProps.hxx>
 #include <IFSelect_ReturnStatus.hxx>
@@ -102,6 +103,7 @@
 #include <TCollection_ExtendedString.hxx>
 #include <TCollection_AsciiString.hxx>
 #include <TDataStd_Name.hxx>
+#include <TDataStd_RealArray.hxx>
 #include <TDataStd_TreeNode.hxx>
 #include <TDF_TagSource.hxx>
 #include <TDF_Tool.hxx>
@@ -117,10 +119,22 @@
 #include <TopoDS_Shape.hxx>
 #include <Poly_Triangulation.hxx>
 #include <Poly_Triangle.hxx>
+#include <PrsDim_AngleDimension.hxx>
+#include <PrsDim_DiameterDimension.hxx>
+#include <PrsDim_Dimension.hxx>
+#include <PrsDim_LengthDimension.hxx>
+#include <PrsDim_RadiusDimension.hxx>
 #include <Quantity_ColorRGBA.hxx>
 #include <Quantity_Color.hxx>
 #include <TCollection_HAsciiString.hxx>
 #include <XCAFDoc_ColorTool.hxx>
+#include <XCAFDoc_ClippingPlaneTool.hxx>
+#include <XCAFDoc_Datum.hxx>
+#include <XCAFDoc_Dimension.hxx>
+#include <XCAFDoc_DimTolTool.hxx>
+#include <XCAFDoc_GeomTolerance.hxx>
+#include <XCAFDoc_View.hxx>
+#include <XCAFDoc_ViewTool.hxx>
 #include <XCAFDoc_Area.hxx>
 #include <XCAFDoc_Centroid.hxx>
 #include <XCAFDoc_DocumentTool.hxx>
@@ -131,6 +145,11 @@
 #include <XCAFDoc_Volume.hxx>
 #include <XCAFDoc_VisMaterial.hxx>
 #include <XCAFDoc.hxx>
+#include <XCAFDoc_GraphNode.hxx>
+#include <XCAFDimTolObjects_DatumObject.hxx>
+#include <XCAFDimTolObjects_DimensionObject.hxx>
+#include <XCAFDimTolObjects_GeomToleranceObject.hxx>
+#include <XCAFView_Object.hxx>
 #include <V3d_View.hxx>
 #include <V3d_TypeOfOrientation.hxx>
 #include <V3d_TypeOfVisualization.hxx>
@@ -319,9 +338,11 @@ struct OcctSharp_ViewerHandle
   opencascade::handle<V3d_View> View;
   opencascade::handle<WNT_Window> Window;
   std::unordered_map<int64_t, opencascade::handle<AIS_ColoredShape>> Presentations;
+  std::unordered_map<int64_t, opencascade::handle<PrsDim_Dimension>> Dimensions;
   std::unordered_map<int64_t, opencascade::handle<Graphic3d_ClipPlane>> ClipPlanes;
   opencascade::handle<SelectMgr_Filter> ActiveFilter;
   int64_t NextPresentationId = 1;
+  int64_t NextDimensionId = 1;
   int64_t NextClipPlaneId = 1;
   std::thread::id OwnerThread;
 };
@@ -337,8 +358,8 @@ struct OcctSharp_StepReaderHandle
 
 namespace
 {
-constexpr uint32_t AbiVersion = 0x0001002EU;
-constexpr const char* BridgeVersion = "0.54.0";
+constexpr uint32_t AbiVersion = 0x0001002FU;
+constexpr const char* BridgeVersion = "0.55.0";
 thread_local std::string LastError;
 std::mutex LiveShapesMutex;
 std::unordered_set<const OcctSharp_ShapeHandle*> LiveShapes;
@@ -1114,6 +1135,7 @@ void InitializeXdeTools(const occ::handle<TDocStd_Document>& document)
   XCAFDoc_DocumentTool::MaterialTool(main);
   XCAFDoc_DocumentTool::VisMaterialTool(main);
   XCAFDoc_DocumentTool::ViewTool(main);
+  XCAFDoc_DocumentTool::ClippingPlaneTool(main);
 }
 
 void ConfigureXdeReader(
@@ -1122,7 +1144,9 @@ void ConfigureXdeReader(
   const bool read_colors = true,
   const bool read_layers = true,
   const bool read_validation_properties = true,
-  const bool read_materials = true)
+  const bool read_materials = true,
+  const bool read_gdt = true,
+  const bool read_views = true)
 {
   reader.SetColorMode(read_colors);
   reader.SetNameMode(read_names);
@@ -1131,9 +1155,9 @@ void ConfigureXdeReader(
   reader.SetMetaMode(true);
   reader.SetProductMetaMode(true);
   reader.SetSHUOMode(true);
-  reader.SetGDTMode(true);
+  reader.SetGDTMode(read_gdt);
   reader.SetMatMode(read_materials);
-  reader.SetViewMode(true);
+  reader.SetViewMode(read_views);
 }
 
 void ConfigureXdeWriter(
@@ -1142,7 +1166,8 @@ void ConfigureXdeWriter(
   const bool write_colors = true,
   const bool write_layers = true,
   const bool write_validation_properties = true,
-  const bool write_materials = true)
+  const bool write_materials = true,
+  const bool write_gdt = true)
 {
   writer.SetColorMode(write_colors);
   writer.SetNameMode(write_names);
@@ -1150,7 +1175,7 @@ void ConfigureXdeWriter(
   writer.SetPropsMode(write_validation_properties);
   writer.SetMetadataMode(true);
   writer.SetSHUOMode(true);
-  writer.SetDimTolMode(true);
+  writer.SetDimTolMode(write_gdt);
   writer.SetMaterialMode(write_materials);
   writer.SetVisualMaterialMode(true);
 }
@@ -3112,6 +3137,262 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_distance(
       { point2.X(), point2.Y(), point2.Z() },
       operation.NbSolution()
     };
+  });
+}
+
+namespace
+{
+BRepExtrema_DistShapeShape ComputeExactDistance(
+  const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second)
+{
+  ValidateUsableShape(first);
+  ValidateUsableShape(second);
+  BRepExtrema_DistShapeShape operation(first->Value, second->Value);
+  if (!operation.IsDone() || operation.NbSolution() <= 0)
+    throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT exact distance did not produce a solution.");
+  return operation;
+}
+
+OcctSharp_Xyz CopyPoint(const gp_Pnt& point)
+{
+  return { point.X(), point.Y(), point.Z() };
+}
+
+void CopyInertia(const gp_Mat& matrix, OcctSharp_InspectionProperties& properties)
+{
+  properties.i11 = matrix.Value(1, 1);
+  properties.i12 = matrix.Value(1, 2);
+  properties.i13 = matrix.Value(1, 3);
+  properties.i21 = matrix.Value(2, 1);
+  properties.i22 = matrix.Value(2, 2);
+  properties.i23 = matrix.Value(2, 3);
+  properties.i31 = matrix.Value(3, 1);
+  properties.i32 = matrix.Value(3, 2);
+  properties.i33 = matrix.Value(3, 3);
+}
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_exact_distance_count(
+  const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second, int32_t* count)
+{
+  if (count == nullptr) { SetLastError("The exact-distance count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *count = 0;
+  return Guard([&]
+  {
+    const BRepExtrema_DistShapeShape operation = ComputeExactDistance(first, second);
+    *count = operation.NbSolution();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_exact_distance_solution(
+  const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second,
+  const int32_t index, OcctSharp_ExtremaSolution* solution)
+{
+  if (solution == nullptr) { SetLastError("The exact-distance solution pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *solution = {};
+  return Guard([&]
+  {
+    const BRepExtrema_DistShapeShape operation = ComputeExactDistance(first, second);
+    if (index < 1 || index > operation.NbSolution())
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The exact-distance solution index is outside the valid 1-based range.");
+
+    const BRepExtrema_SupportType firstKind = operation.SupportTypeShape1(index);
+    const BRepExtrema_SupportType secondKind = operation.SupportTypeShape2(index);
+    OcctSharp_ShapeHandle* firstSupport = nullptr;
+    OcctSharp_ShapeHandle* secondSupport = nullptr;
+    try
+    {
+      firstSupport = AllocateShape(operation.SupportOnShape1(index));
+      secondSupport = AllocateShape(operation.SupportOnShape2(index));
+      solution->distance = operation.Value();
+      solution->point_on_first = CopyPoint(operation.PointOnShape1(index));
+      solution->point_on_second = CopyPoint(operation.PointOnShape2(index));
+      solution->first_support_kind = static_cast<int32_t>(firstKind);
+      solution->second_support_kind = static_cast<int32_t>(secondKind);
+      solution->is_inner_solution = operation.InnerSolution() ? 1 : 0;
+      if (firstKind == BRepExtrema_IsOnEdge)
+      {
+        operation.ParOnEdgeS1(index, solution->first_edge_parameter);
+        solution->has_first_edge_parameter = 1;
+      }
+      else if (firstKind == BRepExtrema_IsInFace)
+      {
+        operation.ParOnFaceS1(index, solution->first_face_u, solution->first_face_v);
+        solution->has_first_face_parameters = 1;
+      }
+      if (secondKind == BRepExtrema_IsOnEdge)
+      {
+        operation.ParOnEdgeS2(index, solution->second_edge_parameter);
+        solution->has_second_edge_parameter = 1;
+      }
+      else if (secondKind == BRepExtrema_IsInFace)
+      {
+        operation.ParOnFaceS2(index, solution->second_face_u, solution->second_face_v);
+        solution->has_second_face_parameters = 1;
+      }
+      solution->first_support = firstSupport;
+      solution->second_support = secondSupport;
+      firstSupport = nullptr;
+      secondSupport = nullptr;
+    }
+    catch (...)
+    {
+      if (firstSupport != nullptr) occtsharp_shape_release(firstSupport);
+      if (secondSupport != nullptr) occtsharp_shape_release(secondSupport);
+      throw;
+    }
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_pair_classify(
+  const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second,
+  const double tolerance, int32_t* classification, double* distance,
+  double* overlap_volume, OcctSharp_ShapeHandle** overlap_shape)
+{
+  if (classification == nullptr || distance == nullptr || overlap_volume == nullptr || overlap_shape == nullptr)
+  { SetLastError("A shape-pair classification output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *classification = 0; *distance = 0.0; *overlap_volume = 0.0; *overlap_shape = nullptr;
+  if (!std::isfinite(tolerance) || tolerance < 0.0)
+  { SetLastError("Shape-pair tolerance must be finite and non-negative."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    const BRepExtrema_DistShapeShape extrema = ComputeExactDistance(first, second);
+    *distance = extrema.Value();
+    if (*distance > tolerance) { *classification = 0; return; }
+
+    BRepAlgoAPI_Common common(first->Value, second->Value);
+    common.Build();
+    if (!common.IsDone())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT could not compute the pair overlap.");
+    const TopoDS_Shape overlap = common.Shape();
+    if (!overlap.IsNull())
+    {
+      GProp_GProps overlapProps;
+      BRepGProp::VolumeProperties(overlap, overlapProps, true);
+      *overlap_volume = std::abs(overlapProps.Mass());
+    }
+    const double volumeTolerance = std::max(tolerance * tolerance * tolerance, 1.0e-18);
+    if (*overlap_volume <= volumeTolerance) { *classification = 1; return; }
+
+    GProp_GProps firstProps;
+    GProp_GProps secondProps;
+    BRepGProp::VolumeProperties(first->Value, firstProps, true);
+    BRepGProp::VolumeProperties(second->Value, secondProps, true);
+    const double smallerVolume = std::min(std::abs(firstProps.Mass()), std::abs(secondProps.Mass()));
+    const double containmentTolerance = std::max(volumeTolerance, smallerVolume * 1.0e-9);
+    *classification = smallerVolume > volumeTolerance
+      && std::abs(*overlap_volume - smallerVolume) <= containmentTolerance ? 2 : 3;
+    *overlap_shape = AllocateShape(overlap);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_inspection_properties(
+  const OcctSharp_ShapeHandle* shape, const int32_t property_kind,
+  OcctSharp_InspectionProperties* properties)
+{
+  if (properties == nullptr) { SetLastError("The inspection-properties output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *properties = {};
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    const TopAbs_ShapeEnum kind = shape->Value.ShapeType();
+    GProp_GProps result;
+    switch (property_kind)
+    {
+      case 0:
+        if (kind != TopAbs_EDGE && kind != TopAbs_WIRE)
+          throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Length inspection requires an edge or wire.");
+        BRepGProp::LinearProperties(shape->Value, result);
+        break;
+      case 1:
+        if (kind != TopAbs_FACE && kind != TopAbs_SHELL)
+          throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Area inspection requires a face or shell.");
+        BRepGProp::SurfaceProperties(shape->Value, result);
+        break;
+      case 2:
+        if (kind != TopAbs_SOLID && kind != TopAbs_COMPSOLID && kind != TopAbs_COMPOUND)
+          throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Volume inspection requires a solid, compsolid, or compound.");
+        BRepGProp::VolumeProperties(shape->Value, result, true);
+        break;
+      default:
+        throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The inspection property kind is outside the supported range.");
+    }
+    properties->mass = result.Mass();
+    properties->center = CopyPoint(result.CentreOfMass());
+    CopyInertia(result.MatrixOfInertia(), *properties);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_angle(
+  const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second, double* radians)
+{
+  if (radians == nullptr) { SetLastError("The shape-angle output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *radians = 0.0;
+  return Guard([&]
+  {
+    ValidateUsableShape(first); ValidateUsableShape(second);
+    if (first->Value.ShapeType() == TopAbs_EDGE && second->Value.ShapeType() == TopAbs_EDGE)
+    {
+      BRepAdaptor_Curve firstCurve(TopoDS::Edge(first->Value));
+      BRepAdaptor_Curve secondCurve(TopoDS::Edge(second->Value));
+      if (firstCurve.GetType() != GeomAbs_Line || secondCurve.GetType() != GeomAbs_Line)
+        throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Edge angle inspection requires two linear edges.");
+      *radians = firstCurve.Line().Direction().Angle(secondCurve.Line().Direction());
+      return;
+    }
+    if (first->Value.ShapeType() == TopAbs_FACE && second->Value.ShapeType() == TopAbs_FACE)
+    {
+      BRepAdaptor_Surface firstSurface(TopoDS::Face(first->Value), true);
+      BRepAdaptor_Surface secondSurface(TopoDS::Face(second->Value), true);
+      if (firstSurface.GetType() != GeomAbs_Plane || secondSurface.GetType() != GeomAbs_Plane)
+        throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Face angle inspection requires two planar faces.");
+      gp_Dir firstNormal = firstSurface.Plane().Axis().Direction();
+      gp_Dir secondNormal = secondSurface.Plane().Axis().Direction();
+      if (first->Value.Orientation() == TopAbs_REVERSED) firstNormal.Reverse();
+      if (second->Value.Orientation() == TopAbs_REVERSED) secondNormal.Reverse();
+      *radians = firstNormal.Angle(secondNormal);
+      return;
+    }
+    throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Angle inspection requires two linear edges or two planar faces.");
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_radial_measurement(
+  const OcctSharp_ShapeHandle* shape, OcctSharp_RadialMeasurement* measurement)
+{
+  if (measurement == nullptr) { SetLastError("The radial-measurement output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *measurement = {};
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    if (shape->Value.ShapeType() == TopAbs_EDGE)
+    {
+      BRepAdaptor_Curve curve(TopoDS::Edge(shape->Value));
+      if (curve.GetType() != GeomAbs_Circle)
+        throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Edge radial inspection requires circular geometry.");
+      measurement->geometry_kind = 0;
+      measurement->radius = curve.Circle().Radius();
+    }
+    else if (shape->Value.ShapeType() == TopAbs_FACE)
+    {
+      BRepAdaptor_Surface surface(TopoDS::Face(shape->Value), true);
+      if (surface.GetType() == GeomAbs_Cylinder)
+      {
+        measurement->geometry_kind = 1;
+        measurement->radius = surface.Cylinder().Radius();
+      }
+      else if (surface.GetType() == GeomAbs_Cone)
+      {
+        measurement->geometry_kind = 2;
+        measurement->radius = surface.Cone().RefRadius();
+        measurement->semi_angle = surface.Cone().SemiAngle();
+      }
+      else
+        throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Face radial inspection requires cylindrical or conical geometry.");
+    }
+    else
+      throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Radial inspection requires an edge or face.");
+    measurement->diameter = measurement->radius * 2.0;
   });
 }
 
@@ -5417,7 +5698,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step(
   const char* file_path, OcctSharp_OcafDocumentHandle** out_document)
 {
   return occtsharp_xde_document_read_step_options(
-    file_path, 1, 1, 1, 1, 1, out_document);
+    file_path, 1, 1, 1, 1, 1, 1, 1, out_document);
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step_options(
@@ -5427,6 +5708,8 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step_options(
   const int32_t read_layers,
   const int32_t read_validation_properties,
   const int32_t read_materials,
+  const int32_t read_gdt,
+  const int32_t read_views,
   OcctSharp_OcafDocumentHandle** out_document)
 {
   if (out_document == nullptr)
@@ -5439,7 +5722,8 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step_options(
   {
     const auto is_flag = [](const int32_t value) { return value == 0 || value == 1; };
     if (!is_flag(read_names) || !is_flag(read_colors) || !is_flag(read_layers)
-        || !is_flag(read_validation_properties) || !is_flag(read_materials))
+        || !is_flag(read_validation_properties) || !is_flag(read_materials)
+        || !is_flag(read_gdt) || !is_flag(read_views))
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "An XDE STEP read option is not Boolean.");
     ValidatePath(file_path);
     OcctSharp_OcafDocumentHandle* result = CreateOwnedXdeDocument();
@@ -5452,7 +5736,9 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step_options(
         read_colors != 0,
         read_layers != 0,
         read_validation_properties != 0,
-        read_materials != 0);
+        read_materials != 0,
+        read_gdt != 0,
+        read_views != 0);
       if (reader.ReadFile(file_path) != IFSelect_RetDone || !reader.Transfer(result->Document))
       {
         throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not transfer STEP into the XDE document.");
@@ -5471,18 +5757,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step(
   const OcctSharp_OcafDocumentHandle* document, const char* file_path)
 {
   return occtsharp_xde_document_write_step_options(
-    document, file_path, 0, 1, 1, 1, 1, 1);
+    document, file_path, 0, 4, 1, 1, 1, 1, 1, 1);
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step_options(
   const OcctSharp_OcafDocumentHandle* document,
   const char* file_path,
   const int32_t model_type,
+  const int32_t schema,
   const int32_t write_names,
   const int32_t write_colors,
   const int32_t write_layers,
   const int32_t write_validation_properties,
-  const int32_t write_materials)
+  const int32_t write_materials,
+  const int32_t write_gdt)
 {
   return Guard([&]
   {
@@ -5490,8 +5778,12 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step_options(
     if (model_type < static_cast<int32_t>(STEPControl_AsIs)
         || model_type > static_cast<int32_t>(STEPControl_Hybrid))
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The STEP model type is outside the supported range.");
+    if (schema < static_cast<int32_t>(DESTEP_Parameters::WriteMode_StepSchema_AP214CD)
+        || schema > static_cast<int32_t>(DESTEP_Parameters::WriteMode_StepSchema_AP242DIS))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The STEP schema is outside the supported range.");
     if (!is_flag(write_names) || !is_flag(write_colors) || !is_flag(write_layers)
-        || !is_flag(write_validation_properties) || !is_flag(write_materials))
+        || !is_flag(write_validation_properties) || !is_flag(write_materials)
+        || !is_flag(write_gdt))
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "An XDE STEP write option is not Boolean.");
     ValidateOcafDocument(document);
     ValidatePath(file_path);
@@ -5506,12 +5798,1005 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step_options(
       write_colors != 0,
       write_layers != 0,
       write_validation_properties != 0,
-      write_materials != 0);
-    if (!writer.Transfer(document->Document, static_cast<STEPControl_StepModelType>(model_type))
-        || writer.Write(file_path) != IFSelect_RetDone)
+      write_materials != 0,
+      write_gdt != 0);
+    DESTEP_Parameters parameters;
+    parameters.InitFromStatic();
+    parameters.WriteSchema = static_cast<DESTEP_Parameters::WriteMode_StepSchema>(schema);
+    if (!writer.Transfer(document->Document, parameters, static_cast<STEPControl_StepModelType>(model_type)))
     {
-      throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not write the XDE STEP document.");
+      throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not transfer the XDE document to STEP.");
     }
+    const IFSelect_ReturnStatus writeStatus = writer.Write(file_path);
+    if (writeStatus != IFSelect_RetDone)
+    {
+      const std::string message =
+        "OCCT wrote the XDE STEP document with non-success status "
+        + std::to_string(static_cast<int>(writeStatus)) + ".";
+      throw OperationFailure(
+        OCCTSHARP_STATUS_FILE_IO_ERROR,
+        message.c_str());
+    }
+  });
+}
+
+namespace
+{
+opencascade::handle<XCAFDoc_DimTolTool> GetDimTolTool(const OcctSharp_OcafDocumentHandle* document)
+{
+  ValidateOcafDocument(document);
+  return XCAFDoc_DocumentTool::DimTolTool(document->Document->Main());
+}
+
+opencascade::handle<XCAFDoc_ViewTool> GetViewTool(const OcctSharp_OcafDocumentHandle* document)
+{
+  ValidateOcafDocument(document);
+  return XCAFDoc_DocumentTool::ViewTool(document->Document->Main());
+}
+
+opencascade::handle<XCAFDoc_ClippingPlaneTool> GetClippingPlaneTool(const OcctSharp_OcafDocumentHandle* document)
+{
+  ValidateOcafDocument(document);
+  return XCAFDoc_DocumentTool::ClippingPlaneTool(document->Document->Main());
+}
+
+opencascade::handle<TCollection_HAsciiString> MakePmiString(const char* value)
+{
+  return new TCollection_HAsciiString(value == nullptr ? "" : value);
+}
+
+std::string CopyPmiString(const opencascade::handle<TCollection_HAsciiString>& value)
+{
+  return value.IsNull() ? std::string() : std::string(value->ToCString());
+}
+
+void ValidateSavedView(const OcctSharp_SavedView& data)
+{
+  const auto finite_xyz = [](const OcctSharp_Xyz& value)
+  {
+    return std::isfinite(value.x) && std::isfinite(value.y) && std::isfinite(value.z);
+  };
+  const auto square_magnitude = [](const OcctSharp_Xyz& value)
+  {
+    return value.x * value.x + value.y * value.y + value.z * value.z;
+  };
+  if (data.projection_type < static_cast<int32_t>(XCAFView_ProjectionType_NoCamera)
+      || data.projection_type > static_cast<int32_t>(XCAFView_ProjectionType_Central)
+      || !finite_xyz(data.projection_point) || !finite_xyz(data.view_direction)
+      || !finite_xyz(data.up_direction) || square_magnitude(data.view_direction) <= 1.0e-24
+      || square_magnitude(data.up_direction) <= 1.0e-24
+      || !std::isfinite(data.zoom_factor) || data.zoom_factor <= 0.0
+      || !std::isfinite(data.window_horizontal_size) || data.window_horizontal_size <= 0.0
+      || !std::isfinite(data.window_vertical_size) || data.window_vertical_size <= 0.0
+      || !std::isfinite(data.front_clipping_distance)
+      || !std::isfinite(data.back_clipping_distance))
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Saved-view values are invalid or non-finite.");
+  const gp_Dir view(data.view_direction.x, data.view_direction.y, data.view_direction.z);
+  const gp_Dir up(data.up_direction.x, data.up_direction.y, data.up_direction.z);
+  if (std::abs(view.Dot(up)) > 0.999999)
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Saved-view up and view directions cannot be parallel.");
+}
+
+void SetSavedViewObject(
+  const TDF_Label& label, const OcctSharp_SavedView& data,
+  const char* name, const char* clippingExpression)
+{
+  ValidateSavedView(data);
+  auto object = new XCAFView_Object();
+  object->SetName(MakePmiString(name));
+  object->SetType(static_cast<XCAFView_ProjectionType>(data.projection_type));
+  object->SetProjectionPoint(gp_Pnt(data.projection_point.x, data.projection_point.y, data.projection_point.z));
+  object->SetViewDirection(gp_Dir(data.view_direction.x, data.view_direction.y, data.view_direction.z));
+  object->SetUpDirection(gp_Dir(data.up_direction.x, data.up_direction.y, data.up_direction.z));
+  object->SetZoomFactor(data.zoom_factor);
+  object->SetWindowHorizontalSize(data.window_horizontal_size);
+  object->SetWindowVerticalSize(data.window_vertical_size);
+  object->SetClippingExpression(MakePmiString(clippingExpression));
+  if (data.has_front_clipping) object->SetFrontPlaneDistance(data.front_clipping_distance);
+  else object->UnsetFrontPlaneClipping();
+  if (data.has_back_clipping) object->SetBackPlaneDistance(data.back_clipping_distance);
+  else object->UnsetBackPlaneClipping();
+  object->SetViewVolumeSidesClipping(data.has_view_volume_sides_clipping != 0);
+  XCAFDoc_View::Set(label)->SetObject(object);
+}
+
+NCollection_Sequence<TDF_Label> AddSavedViewPlanes(
+  const OcctSharp_OcafDocumentHandle* document,
+  const OcctSharp_PlaneEquation* planes, const int32_t planeCount)
+{
+  if (planeCount < 0 || (planeCount > 0 && planes == nullptr))
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The saved-view clipping-plane array is invalid.");
+  NCollection_Sequence<TDF_Label> labels;
+  const auto tool = GetClippingPlaneTool(document);
+  for (int32_t index = 0; index < planeCount; ++index)
+  {
+    const auto& plane = planes[index];
+    if (!std::isfinite(plane.a) || !std::isfinite(plane.b)
+        || !std::isfinite(plane.c) || !std::isfinite(plane.d))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Saved-view clipping-plane values must be finite.");
+    labels.Append(tool->AddClippingPlane(
+      gp_Pln(plane.a, plane.b, plane.c, plane.d),
+      new TCollection_HAsciiString("OcctSharp saved view"), plane.capping != 0));
+  }
+  return labels;
+}
+
+void RemoveUnreferencedPlanes(
+  const OcctSharp_OcafDocumentHandle* document,
+  const NCollection_Sequence<TDF_Label>& labels)
+{
+  const auto tool = GetClippingPlaneTool(document);
+  for (NCollection_Sequence<TDF_Label>::Iterator iterator(labels); iterator.More(); iterator.Next())
+    tool->RemoveClippingPlane(iterator.Value());
+}
+
+gp_Pnt ToPoint(const OcctSharp_Xyz& value) { return gp_Pnt(value.x, value.y, value.z); }
+gp_Dir ToDirection(const OcctSharp_Xyz& value) { return gp_Dir(value.x, value.y, value.z); }
+gp_Ax2 ToAxis(const OcctSharp_Ax2& value)
+{
+  return gp_Ax2(ToPoint(value.origin), ToDirection(value.direction), ToDirection(value.x_direction));
+}
+gp_Pln ToPlane(const OcctSharp_Plane& value) { return gp_Pln(ToPoint(value.origin), ToDirection(value.normal)); }
+
+OcctSharp_Ax2 CopyAxis(const gp_Ax2& value)
+{
+  return {
+    CopyPoint(value.Location()),
+    { value.XDirection().X(), value.XDirection().Y(), value.XDirection().Z() },
+    { value.YDirection().X(), value.YDirection().Y(), value.YDirection().Z() },
+    { value.Direction().X(), value.Direction().Y(), value.Direction().Z() }
+  };
+}
+
+OcctSharp_Plane CopyPlane(const gp_Pln& value)
+{
+  return {
+    CopyPoint(value.Location()),
+    { value.Axis().Direction().X(), value.Axis().Direction().Y(), value.Axis().Direction().Z() }
+  };
+}
+
+std::vector<std::string> SplitEntries(const char* entries)
+{
+  std::vector<std::string> result;
+  if (entries == nullptr || entries[0] == '\0') return result;
+  std::string value(entries);
+  size_t start = 0;
+  while (start <= value.size())
+  {
+    const size_t end = value.find('\n', start);
+    const std::string item = value.substr(start, end == std::string::npos ? std::string::npos : end - start);
+    if (!item.empty()) result.push_back(item);
+    if (end == std::string::npos) break;
+    start = end + 1;
+  }
+  return result;
+}
+
+NCollection_Sequence<TDF_Label> ResolveEntries(
+  const OcctSharp_OcafDocumentHandle* document, const char* entries)
+{
+  NCollection_Sequence<TDF_Label> result;
+  for (const std::string& entry : SplitEntries(entries)) result.Append(ResolveOcafLabel(document, entry.c_str()));
+  return result;
+}
+
+std::vector<TDF_Label> PmiLabels(const OcctSharp_OcafDocumentHandle* document, const int32_t kind)
+{
+  NCollection_Sequence<TDF_Label> labels;
+  if (kind == 0) GetDimTolTool(document)->GetDimensionLabels(labels);
+  else if (kind == 1) GetDimTolTool(document)->GetGeomToleranceLabels(labels);
+  else if (kind == 2) GetDimTolTool(document)->GetDatumLabels(labels);
+  else if (kind == 3) GetViewTool(document)->GetViewLabels(labels);
+  else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The PMI item kind is outside the supported range.");
+  std::vector<TDF_Label> result;
+  result.reserve(static_cast<size_t>(labels.Size()));
+  for (NCollection_Sequence<TDF_Label>::Iterator iterator(labels); iterator.More(); iterator.Next())
+    result.push_back(iterator.Value());
+  return result;
+}
+
+opencascade::handle<XCAFDimTolObjects_DimensionObject> GetDimensionObject(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry)
+{
+  opencascade::handle<XCAFDoc_Dimension> attribute;
+  const TDF_Label label = ResolveOcafLabel(document, entry);
+  if (!label.FindAttribute(XCAFDoc_Dimension::GetID(), attribute))
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a semantic dimension.");
+  const auto object = attribute->GetObject();
+  if (object.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The semantic dimension has no value object.");
+  return object;
+}
+
+opencascade::handle<XCAFDimTolObjects_GeomToleranceObject> GetToleranceObject(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry)
+{
+  opencascade::handle<XCAFDoc_GeomTolerance> attribute;
+  const TDF_Label label = ResolveOcafLabel(document, entry);
+  if (!label.FindAttribute(XCAFDoc_GeomTolerance::GetID(), attribute))
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a geometric tolerance.");
+  const auto object = attribute->GetObject();
+  if (object.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The geometric tolerance has no value object.");
+  return object;
+}
+
+opencascade::handle<XCAFDimTolObjects_DatumObject> GetDatumObject(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry)
+{
+  opencascade::handle<XCAFDoc_Datum> attribute;
+  const TDF_Label label = ResolveOcafLabel(document, entry);
+  if (!label.FindAttribute(XCAFDoc_Datum::GetID(), attribute))
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a datum.");
+  const auto object = attribute->GetObject();
+  if (object.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The datum has no value object.");
+  opencascade::handle<TDataStd_RealArray> point;
+  if (label.FindChild(17, false).FindAttribute(TDataStd_RealArray::GetID(), point)
+      && point->Length() == 3)
+  {
+    const int32_t lower = point->Lower();
+    object->SetPoint(gp_Pnt(point->Value(lower), point->Value(lower + 1), point->Value(lower + 2)));
+  }
+  return object;
+}
+
+opencascade::handle<XCAFView_Object> GetSavedViewObject(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry)
+{
+  opencascade::handle<XCAFDoc_View> attribute;
+  const TDF_Label label = ResolveOcafLabel(document, entry);
+  if (!label.FindAttribute(XCAFDoc_View::GetID(), attribute))
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a saved view.");
+  const auto object = attribute->GetObject();
+  if (object.IsNull()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The saved view has no value object.");
+  return object;
+}
+
+void ValidateArray(const void* values, const int32_t count, const char* message)
+{
+  if (count < 0 || (count > 0 && values == nullptr))
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, message);
+}
+
+void SetDimensionObject(
+  const TDF_Label& label, const OcctSharp_PmiDimension& data,
+  const double* values, const int32_t valueCount,
+  const int32_t* modifiers, const int32_t modifierCount,
+  const char* semanticName, const char* presentationName,
+  const char* description, const char* descriptionName)
+{
+  ValidateArray(values, valueCount, "The dimension value array is invalid.");
+  ValidateArray(modifiers, modifierCount, "The dimension modifier array is invalid.");
+  if (valueCount <= 0) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "A semantic dimension requires at least one value.");
+  auto object = new XCAFDimTolObjects_DimensionObject();
+  object->SetType(static_cast<XCAFDimTolObjects_DimensionType>(data.type));
+  auto valueArray = new NCollection_HArray1<double>(1, valueCount);
+  for (int32_t index = 0; index < valueCount; ++index)
+  {
+    if (!std::isfinite(values[index])) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Dimension values must be finite.");
+    valueArray->SetValue(index + 1, values[index]);
+  }
+  object->SetValues(valueArray);
+  if (data.has_qualifier) object->SetQualifier(static_cast<XCAFDimTolObjects_DimensionQualifier>(data.qualifier));
+  if (data.has_angular_qualifier) object->SetAngularQualifier(static_cast<XCAFDimTolObjects_AngularQualifier>(data.angular_qualifier));
+  if (data.has_class_of_tolerance)
+    object->SetClassOfTolerance(data.is_hole != 0,
+      static_cast<XCAFDimTolObjects_DimensionFormVariance>(data.form_variance),
+      static_cast<XCAFDimTolObjects_DimensionGrade>(data.grade));
+  object->SetNbOfDecimalPlaces(data.left_decimal_places, data.right_decimal_places);
+  NCollection_Sequence<XCAFDimTolObjects_DimensionModif> modifierValues;
+  for (int32_t index = 0; index < modifierCount; ++index)
+    modifierValues.Append(static_cast<XCAFDimTolObjects_DimensionModif>(modifiers[index]));
+  object->SetModifiers(modifierValues);
+  if (data.has_direction) object->SetDirection(ToDirection(data.direction));
+  if (data.has_plane) object->SetPlane(ToAxis(data.plane));
+  if (data.has_first_point) object->SetPoint(ToPoint(data.first_point));
+  if (data.has_second_point) object->SetPoint2(ToPoint(data.second_point));
+  if (data.has_text_point) object->SetPointTextAttach(ToPoint(data.text_point));
+  object->SetSemanticName(MakePmiString(semanticName));
+  object->SetPresentation(TopoDS_Shape(), MakePmiString(presentationName));
+  if ((description != nullptr && description[0] != '\0') || (descriptionName != nullptr && descriptionName[0] != '\0'))
+    object->AddDescription(MakePmiString(description), MakePmiString(descriptionName));
+  XCAFDoc_Dimension::Set(label)->SetObject(object);
+}
+
+void SetToleranceObject(
+  const TDF_Label& label, const OcctSharp_PmiTolerance& data,
+  const int32_t* modifiers, const int32_t modifierCount,
+  const char* semanticName, const char* presentationName)
+{
+  ValidateArray(modifiers, modifierCount, "The tolerance modifier array is invalid.");
+  if (!std::isfinite(data.value) || !std::isfinite(data.zone_modifier_value) || !std::isfinite(data.maximum_value_modifier))
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Tolerance values must be finite.");
+  auto object = new XCAFDimTolObjects_GeomToleranceObject();
+  object->SetType(static_cast<XCAFDimTolObjects_GeomToleranceType>(data.type));
+  object->SetTypeOfValue(static_cast<XCAFDimTolObjects_GeomToleranceTypeValue>(data.type_of_value));
+  object->SetValue(data.value);
+  object->SetMaterialRequirementModifier(static_cast<XCAFDimTolObjects_GeomToleranceMatReqModif>(data.material_requirement));
+  object->SetZoneModifier(static_cast<XCAFDimTolObjects_GeomToleranceZoneModif>(data.zone_modifier));
+  object->SetValueOfZoneModifier(data.zone_modifier_value);
+  object->SetMaxValueModifier(data.maximum_value_modifier);
+  NCollection_Sequence<XCAFDimTolObjects_GeomToleranceModif> modifierValues;
+  for (int32_t index = 0; index < modifierCount; ++index)
+    modifierValues.Append(static_cast<XCAFDimTolObjects_GeomToleranceModif>(modifiers[index]));
+  object->SetModifiers(modifierValues);
+  if (data.has_axis) object->SetAxis(ToAxis(data.axis));
+  if (data.has_plane) object->SetPlane(ToAxis(data.plane));
+  if (data.has_point) object->SetPoint(ToPoint(data.point));
+  if (data.has_text_point) object->SetPointTextAttach(ToPoint(data.text_point));
+  if (data.affected_plane_type != 0)
+    object->SetAffectedPlane(ToPlane(data.affected_plane),
+      static_cast<XCAFDimTolObjects_ToleranceZoneAffectedPlane>(data.affected_plane_type));
+  object->SetSemanticName(MakePmiString(semanticName));
+  object->SetPresentation(TopoDS_Shape(), MakePmiString(presentationName));
+  XCAFDoc_GeomTolerance::Set(label)->SetObject(object);
+}
+
+void SetDatumObject(
+  const TDF_Label& label, const OcctSharp_PmiDatum& data,
+  const int32_t* modifiers, const int32_t modifierCount,
+  const char* name, const char* description, const char* identification,
+  const char* semanticName, const char* presentationName)
+{
+  ValidateArray(modifiers, modifierCount, "The datum modifier array is invalid.");
+  auto object = new XCAFDimTolObjects_DatumObject();
+  object->SetName(MakePmiString(name));
+  object->SetSemanticName(MakePmiString(semanticName));
+  object->SetPosition(data.position);
+  object->IsDatumTarget(data.is_datum_target != 0);
+  object->SetDatumTargetType(static_cast<XCAFDimTolObjects_DatumTargetType>(data.target_type));
+  object->SetDatumTargetLength(data.target_length);
+  object->SetDatumTargetWidth(data.target_width);
+  object->SetDatumTargetNumber(data.target_number);
+  NCollection_Sequence<XCAFDimTolObjects_DatumSingleModif> modifierValues;
+  for (int32_t index = 0; index < modifierCount; ++index)
+    modifierValues.Append(static_cast<XCAFDimTolObjects_DatumSingleModif>(modifiers[index]));
+  object->SetModifiers(modifierValues);
+  if (data.has_modifier_with_value)
+    object->SetModifierWithValue(static_cast<XCAFDimTolObjects_DatumModifWithValue>(data.modifier_with_value), data.modifier_value);
+  if (data.has_target_axis) object->SetDatumTargetAxis(ToAxis(data.target_axis));
+  if (data.has_plane) object->SetPlane(ToAxis(data.plane));
+  if (data.has_point) object->SetPoint(ToPoint(data.point));
+  if (data.has_text_point) object->SetPointTextAttach(ToPoint(data.text_point));
+  object->SetPresentation(TopoDS_Shape(), MakePmiString(presentationName));
+  auto attribute = XCAFDoc_Datum::Set(label, MakePmiString(name), MakePmiString(description), MakePmiString(identification));
+  attribute->SetObject(object);
+}
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_count(
+  const OcctSharp_OcafDocumentHandle* document, const int32_t kind, int32_t* count)
+{
+  if (count == nullptr) { SetLastError("The PMI count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *count = 0;
+  return Guard([&] { *count = static_cast<int32_t>(PmiLabels(document, kind).size()); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_entry(
+  const OcctSharp_OcafDocumentHandle* document, const int32_t kind, const int32_t index,
+  char* buffer, const int32_t capacity, int32_t* written)
+{
+  return Guard([&]
+  {
+    const std::vector<TDF_Label> labels = PmiLabels(document, kind);
+    if (index < 1 || index > static_cast<int32_t>(labels.size()))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The PMI index is outside the valid 1-based range.");
+    CopyLabelEntry(labels[static_cast<size_t>(index - 1)], buffer, capacity, written);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_dimension_create(
+  OcctSharp_OcafDocumentHandle* document, const OcctSharp_PmiDimension* data,
+  const double* values, const int32_t valueCount, const int32_t* modifiers, const int32_t modifierCount,
+  const char* semanticName, const char* presentationName,
+  const char* description, const char* descriptionName,
+  char* buffer, const int32_t capacity, int32_t* written)
+{
+  if (data == nullptr) { SetLastError("The dimension data pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateOcafDocument(document); RequireOpenOcafCommand(document);
+    const TDF_Label label = GetDimTolTool(document)->AddDimension();
+    SetDimensionObject(label, *data, values, valueCount, modifiers, modifierCount,
+      semanticName, presentationName, description, descriptionName);
+    CopyLabelEntry(label, buffer, capacity, written);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_dimension_update(
+  OcctSharp_OcafDocumentHandle* document, const char* entry, const OcctSharp_PmiDimension* data,
+  const double* values, const int32_t valueCount, const int32_t* modifiers, const int32_t modifierCount,
+  const char* semanticName, const char* presentationName,
+  const char* description, const char* descriptionName)
+{
+  if (data == nullptr) { SetLastError("The dimension data pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateOcafDocument(document); RequireOpenOcafCommand(document);
+    const TDF_Label label = ResolveOcafLabel(document, entry);
+    if (!GetDimTolTool(document)->IsDimension(label))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a semantic dimension.");
+    const auto previous = GetDimensionObject(document, entry);
+    SetDimensionObject(label, *data, values, valueCount, modifiers, modifierCount,
+      semanticName, presentationName, description, descriptionName);
+    const auto updated = GetDimensionObject(document, entry);
+    updated->SetPath(previous->GetPath());
+    updated->SetPresentation(previous->GetPresentation(), previous->GetPresentationName());
+    XCAFDoc_Dimension::Set(label)->SetObject(updated);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_tolerance_create(
+  OcctSharp_OcafDocumentHandle* document, const OcctSharp_PmiTolerance* data,
+  const int32_t* modifiers, const int32_t modifierCount,
+  const char* semanticName, const char* presentationName,
+  char* buffer, const int32_t capacity, int32_t* written)
+{
+  if (data == nullptr) { SetLastError("The tolerance data pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateOcafDocument(document); RequireOpenOcafCommand(document);
+    const TDF_Label label = GetDimTolTool(document)->AddGeomTolerance();
+    SetToleranceObject(label, *data, modifiers, modifierCount, semanticName, presentationName);
+    CopyLabelEntry(label, buffer, capacity, written);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_tolerance_update(
+  OcctSharp_OcafDocumentHandle* document, const char* entry, const OcctSharp_PmiTolerance* data,
+  const int32_t* modifiers, const int32_t modifierCount,
+  const char* semanticName, const char* presentationName)
+{
+  if (data == nullptr) { SetLastError("The tolerance data pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateOcafDocument(document); RequireOpenOcafCommand(document);
+    const TDF_Label label = ResolveOcafLabel(document, entry);
+    if (!GetDimTolTool(document)->IsGeomTolerance(label))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a geometric tolerance.");
+    const auto previous = GetToleranceObject(document, entry);
+    SetToleranceObject(label, *data, modifiers, modifierCount, semanticName, presentationName);
+    const auto updated = GetToleranceObject(document, entry);
+    updated->SetPresentation(previous->GetPresentation(), previous->GetPresentationName());
+    XCAFDoc_GeomTolerance::Set(label)->SetObject(updated);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_datum_create(
+  OcctSharp_OcafDocumentHandle* document, const OcctSharp_PmiDatum* data,
+  const int32_t* modifiers, const int32_t modifierCount,
+  const char* name, const char* description, const char* identification,
+  const char* semanticName, const char* presentationName,
+  char* buffer, const int32_t capacity, int32_t* written)
+{
+  if (data == nullptr) { SetLastError("The datum data pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateOcafDocument(document); RequireOpenOcafCommand(document);
+    const TDF_Label label = GetDimTolTool(document)->AddDatum();
+    SetDatumObject(label, *data, modifiers, modifierCount, name, description, identification, semanticName, presentationName);
+    CopyLabelEntry(label, buffer, capacity, written);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_datum_update(
+  OcctSharp_OcafDocumentHandle* document, const char* entry, const OcctSharp_PmiDatum* data,
+  const int32_t* modifiers, const int32_t modifierCount,
+  const char* name, const char* description, const char* identification,
+  const char* semanticName, const char* presentationName)
+{
+  if (data == nullptr) { SetLastError("The datum data pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateOcafDocument(document); RequireOpenOcafCommand(document);
+    const TDF_Label label = ResolveOcafLabel(document, entry);
+    if (!GetDimTolTool(document)->IsDatum(label))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a datum.");
+    const auto previous = GetDatumObject(document, entry);
+    SetDatumObject(label, *data, modifiers, modifierCount, name, description, identification, semanticName, presentationName);
+    const auto updated = GetDatumObject(document, entry);
+    updated->SetDatumTarget(previous->GetDatumTarget());
+    updated->SetPresentation(previous->GetPresentation(), previous->GetPresentationName());
+    XCAFDoc_Datum::Set(label)->SetObject(updated);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_dimension_get(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry,
+  OcctSharp_PmiDimension* data, int32_t* valueCount, int32_t* modifierCount)
+{
+  if (data == nullptr || valueCount == nullptr || modifierCount == nullptr)
+  { SetLastError("A dimension snapshot output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *data = {}; *valueCount = 0; *modifierCount = 0;
+  return Guard([&]
+  {
+    const auto object = GetDimensionObject(document, entry);
+    data->type = static_cast<int32_t>(object->GetType());
+    data->has_qualifier = object->HasQualifier() ? 1 : 0;
+    if (data->has_qualifier) data->qualifier = static_cast<int32_t>(object->GetQualifier());
+    data->has_angular_qualifier = object->HasAngularQualifier() ? 1 : 0;
+    if (data->has_angular_qualifier) data->angular_qualifier = static_cast<int32_t>(object->GetAngularQualifier());
+    bool isHole = false;
+    XCAFDimTolObjects_DimensionFormVariance variance;
+    XCAFDimTolObjects_DimensionGrade grade;
+    data->has_class_of_tolerance = object->GetClassOfTolerance(isHole, variance, grade) ? 1 : 0;
+    data->is_hole = isHole ? 1 : 0;
+    data->form_variance = static_cast<int32_t>(variance);
+    data->grade = static_cast<int32_t>(grade);
+    object->GetNbOfDecimalPlaces(data->left_decimal_places, data->right_decimal_places);
+    gp_Dir direction;
+    data->has_direction = object->GetDirection(direction) ? 1 : 0;
+    if (data->has_direction) data->direction = { direction.X(), direction.Y(), direction.Z() };
+    data->has_plane = object->HasPlane() ? 1 : 0;
+    if (data->has_plane) data->plane = CopyAxis(object->GetPlane());
+    data->has_first_point = object->HasPoint() ? 1 : 0;
+    if (data->has_first_point) data->first_point = CopyPoint(object->GetPoint());
+    data->has_second_point = object->HasPoint2() ? 1 : 0;
+    if (data->has_second_point) data->second_point = CopyPoint(object->GetPoint2());
+    data->has_text_point = 1;
+    data->text_point = CopyPoint(object->GetPointTextAttach());
+    const auto values = object->GetValues();
+    *valueCount = values.IsNull() ? 0 : values->Length();
+    *modifierCount = object->GetModifiers().Size();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_tolerance_get(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry,
+  OcctSharp_PmiTolerance* data, int32_t* modifierCount)
+{
+  if (data == nullptr || modifierCount == nullptr)
+  { SetLastError("A tolerance snapshot output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *data = {}; *modifierCount = 0;
+  return Guard([&]
+  {
+    const auto object = GetToleranceObject(document, entry);
+    data->type = static_cast<int32_t>(object->GetType());
+    data->type_of_value = static_cast<int32_t>(object->GetTypeOfValue());
+    data->value = object->GetValue();
+    data->material_requirement = static_cast<int32_t>(object->GetMaterialRequirementModifier());
+    data->zone_modifier = static_cast<int32_t>(object->GetZoneModifier());
+    data->zone_modifier_value = object->GetValueOfZoneModifier();
+    data->maximum_value_modifier = object->GetMaxValueModifier();
+    data->has_axis = object->HasAxis() ? 1 : 0;
+    if (data->has_axis) data->axis = CopyAxis(object->GetAxis());
+    data->has_plane = object->HasPlane() ? 1 : 0;
+    if (data->has_plane) data->plane = CopyAxis(object->GetPlane());
+    data->has_point = object->HasPoint() ? 1 : 0;
+    if (data->has_point) data->point = CopyPoint(object->GetPoint());
+    data->has_text_point = object->HasPointText() ? 1 : 0;
+    if (data->has_text_point) data->text_point = CopyPoint(object->GetPointTextAttach());
+    data->affected_plane_type = static_cast<int32_t>(object->GetAffectedPlaneType());
+    if (object->HasAffectedPlane()) data->affected_plane = CopyPlane(object->GetAffectedPlane());
+    *modifierCount = object->GetModifiers().Size();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_datum_get(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry,
+  OcctSharp_PmiDatum* data, int32_t* modifierCount)
+{
+  if (data == nullptr || modifierCount == nullptr)
+  { SetLastError("A datum snapshot output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *data = {}; *modifierCount = 0;
+  return Guard([&]
+  {
+    const auto object = GetDatumObject(document, entry);
+    data->position = object->GetPosition();
+    data->is_datum_target = object->IsDatumTarget() ? 1 : 0;
+    data->target_type = static_cast<int32_t>(object->GetDatumTargetType());
+    data->target_length = object->GetDatumTargetLength();
+    data->target_width = object->GetDatumTargetWidth();
+    data->target_number = object->GetDatumTargetNumber();
+    data->has_target_axis = object->HasDatumTargetParams() ? 1 : 0;
+    if (data->has_target_axis) data->target_axis = CopyAxis(object->GetDatumTargetAxis());
+    data->has_plane = object->HasPlane() ? 1 : 0;
+    if (data->has_plane) data->plane = CopyAxis(object->GetPlane());
+    data->has_point = object->HasPoint() ? 1 : 0;
+    if (data->has_point) data->point = CopyPoint(object->GetPoint());
+    data->has_text_point = object->HasPointText() ? 1 : 0;
+    if (data->has_text_point) data->text_point = CopyPoint(object->GetPointTextAttach());
+    XCAFDimTolObjects_DatumModifWithValue modifier;
+    double modifierValue = 0.0;
+    object->GetModifierWithValue(modifier, modifierValue);
+    data->modifier_with_value = static_cast<int32_t>(modifier);
+    data->modifier_value = modifierValue;
+    data->has_modifier_with_value = std::abs(modifierValue) > 0.0 ? 1 : 0;
+    *modifierCount = object->GetModifiers().Size();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_numeric_item(
+  const OcctSharp_OcafDocumentHandle* document, const int32_t kind, const char* entry,
+  const int32_t field, const int32_t index, double* realValue, int32_t* integerValue)
+{
+  if (realValue == nullptr || integerValue == nullptr)
+  { SetLastError("A PMI numeric-item output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *realValue = 0.0; *integerValue = 0;
+  return Guard([&]
+  {
+    if (index < 1) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "PMI numeric item indices are 1-based.");
+    if (kind == 0 && field == 0)
+    {
+      const auto values = GetDimensionObject(document, entry)->GetValues();
+      if (values.IsNull() || index > values->Length()) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Dimension value index is out of range.");
+      *realValue = values->Value(index); return;
+    }
+    if (kind == 0 && field == 1)
+    {
+      const auto values = GetDimensionObject(document, entry)->GetModifiers();
+      if (index > values.Size()) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Dimension modifier index is out of range.");
+      *integerValue = static_cast<int32_t>(values.Value(index)); return;
+    }
+    if (kind == 1 && field == 0)
+    {
+      const auto values = GetToleranceObject(document, entry)->GetModifiers();
+      if (index > values.Size()) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Tolerance modifier index is out of range.");
+      *integerValue = static_cast<int32_t>(values.Value(index)); return;
+    }
+    if (kind == 2 && field == 0)
+    {
+      const auto values = GetDatumObject(document, entry)->GetModifiers();
+      if (index > values.Size()) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Datum modifier index is out of range.");
+      *integerValue = static_cast<int32_t>(values.Value(index)); return;
+    }
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The PMI numeric field is unsupported.");
+  });
+}
+
+namespace
+{
+std::string PmiText(const OcctSharp_OcafDocumentHandle* document, const int32_t kind, const char* entry, const int32_t field)
+{
+  if (kind == 0)
+  {
+    const auto object = GetDimensionObject(document, entry);
+    if (field == 0) return CopyPmiString(object->GetSemanticName());
+    if (field == 1) return CopyPmiString(object->GetPresentationName());
+    if (field == 2) return object->HasDescriptions() ? CopyPmiString(object->GetDescription(0)) : std::string();
+    if (field == 3) return object->HasDescriptions() ? CopyPmiString(object->GetDescriptionName(0)) : std::string();
+  }
+  else if (kind == 1)
+  {
+    const auto object = GetToleranceObject(document, entry);
+    if (field == 0) return CopyPmiString(object->GetSemanticName());
+    if (field == 1) return CopyPmiString(object->GetPresentationName());
+  }
+  else if (kind == 2)
+  {
+    opencascade::handle<XCAFDoc_Datum> attribute;
+    ResolveOcafLabel(document, entry).FindAttribute(XCAFDoc_Datum::GetID(), attribute);
+    const auto object = GetDatumObject(document, entry);
+    if (field == 0) return CopyPmiString(attribute->GetName());
+    if (field == 1) return CopyPmiString(attribute->GetDescription());
+    if (field == 2) return CopyPmiString(attribute->GetIdentification());
+    if (field == 3) return CopyPmiString(object->GetSemanticName());
+    if (field == 4) return CopyPmiString(object->GetPresentationName());
+  }
+  else if (kind == 3)
+  {
+    const auto object = GetSavedViewObject(document, entry);
+    if (field == 0) return CopyPmiString(object->Name());
+    if (field == 1) return CopyPmiString(object->ClippingExpression());
+  }
+  throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The PMI text field is unsupported.");
+}
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_text_utf8_length(
+  const OcctSharp_OcafDocumentHandle* document, const int32_t kind, const char* entry,
+  const int32_t field, int32_t* length)
+{
+  if (length == nullptr) { SetLastError("The PMI text-length pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *length = 0;
+  return Guard([&] { *length = static_cast<int32_t>(PmiText(document, kind, entry, field).size()); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_text_to_utf8(
+  const OcctSharp_OcafDocumentHandle* document, const int32_t kind, const char* entry,
+  const int32_t field, char* buffer, const int32_t capacity, int32_t* written)
+{
+  return Guard([&] { CopyUtf8Result(PmiText(document, kind, entry, field), buffer, capacity, written); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_set_aux_shape(
+  OcctSharp_OcafDocumentHandle* document, const int32_t kind, const char* entry,
+  const int32_t role, const OcctSharp_ShapeHandle* shape, const char* name)
+{
+  return Guard([&]
+  {
+    ValidateOcafDocument(document); RequireOpenOcafCommand(document); ValidateUsableShape(shape);
+    if (kind == 0)
+    {
+      const auto object = GetDimensionObject(document, entry);
+      if (role == 0) object->SetPath(TopoDS::Edge(shape->Value));
+      else if (role == 1) object->SetPresentation(shape->Value, MakePmiString(name));
+      else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The dimension shape role is unsupported.");
+      XCAFDoc_Dimension::Set(ResolveOcafLabel(document, entry))->SetObject(object);
+    }
+    else if (kind == 1 && role == 1)
+    {
+      const auto object = GetToleranceObject(document, entry);
+      object->SetPresentation(shape->Value, MakePmiString(name));
+      XCAFDoc_GeomTolerance::Set(ResolveOcafLabel(document, entry))->SetObject(object);
+    }
+    else if (kind == 2)
+    {
+      const auto object = GetDatumObject(document, entry);
+      if (role == 0) object->SetDatumTarget(shape->Value);
+      else if (role == 1) object->SetPresentation(shape->Value, MakePmiString(name));
+      else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The datum shape role is unsupported.");
+      XCAFDoc_Datum::Set(ResolveOcafLabel(document, entry))->SetObject(object);
+    }
+    else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The PMI shape role is unsupported.");
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_clear_aux_shape(
+  OcctSharp_OcafDocumentHandle* document, const int32_t kind, const char* entry, const int32_t role)
+{
+  return Guard([&]
+  {
+    ValidateOcafDocument(document); RequireOpenOcafCommand(document);
+    if (kind == 0)
+    {
+      const auto object = GetDimensionObject(document, entry);
+      if (role == 0) object->SetPath(TopoDS_Edge());
+      else object->SetPresentation(TopoDS_Shape(), object->GetPresentationName());
+      XCAFDoc_Dimension::Set(ResolveOcafLabel(document, entry))->SetObject(object);
+    }
+    else if (kind == 1)
+    {
+      const auto object = GetToleranceObject(document, entry);
+      object->SetPresentation(TopoDS_Shape(), object->GetPresentationName());
+      XCAFDoc_GeomTolerance::Set(ResolveOcafLabel(document, entry))->SetObject(object);
+    }
+    else if (kind == 2)
+    {
+      const auto object = GetDatumObject(document, entry);
+      if (role == 0) object->SetDatumTarget(TopoDS_Shape());
+      else object->SetPresentation(TopoDS_Shape(), object->GetPresentationName());
+      XCAFDoc_Datum::Set(ResolveOcafLabel(document, entry))->SetObject(object);
+    }
+    else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The PMI shape role is unsupported.");
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_get_aux_shape(
+  const OcctSharp_OcafDocumentHandle* document, const int32_t kind, const char* entry,
+  const int32_t role, int32_t* hasShape, OcctSharp_ShapeHandle** shape)
+{
+  if (hasShape == nullptr || shape == nullptr) { SetLastError("A PMI shape output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *hasShape = 0; *shape = nullptr;
+  return Guard([&]
+  {
+    TopoDS_Shape value;
+    if (kind == 0) value = role == 0 ? GetDimensionObject(document, entry)->GetPath() : GetDimensionObject(document, entry)->GetPresentation();
+    else if (kind == 1) value = GetToleranceObject(document, entry)->GetPresentation();
+    else if (kind == 2) value = role == 0 ? GetDatumObject(document, entry)->GetDatumTarget() : GetDatumObject(document, entry)->GetPresentation();
+    else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The PMI shape role is unsupported.");
+    if (!value.IsNull()) { *hasShape = 1; *shape = AllocateShape(value); }
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_set_references(
+  OcctSharp_OcafDocumentHandle* document, const int32_t kind, const char* entry,
+  const char* firstEntries, const char* secondEntries)
+{
+  return Guard([&]
+  {
+    ValidateOcafDocument(document); RequireOpenOcafCommand(document);
+    const TDF_Label item = ResolveOcafLabel(document, entry);
+    const NCollection_Sequence<TDF_Label> first = ResolveEntries(document, firstEntries);
+    const NCollection_Sequence<TDF_Label> second = ResolveEntries(document, secondEntries);
+    if (kind == 0) GetDimTolTool(document)->SetDimension(first, second, item);
+    else if (kind == 1) GetDimTolTool(document)->SetGeomTolerance(first, item);
+    else if (kind == 2) GetDimTolTool(document)->SetDatum(first, item);
+    else if (kind == 3)
+    {
+      opencascade::handle<XCAFDoc_GraphNode> toleranceNode;
+      if (item.FindAttribute(XCAFDoc::DatumTolRefGUID(), toleranceNode))
+      {
+        while (toleranceNode->NbChildren() > 0)
+          toleranceNode->UnSetChild(1);
+      }
+      item.ForgetAttribute(XCAFDoc::DatumTolRefGUID());
+      for (NCollection_Sequence<TDF_Label>::Iterator iterator(first); iterator.More(); iterator.Next())
+        GetDimTolTool(document)->SetDatumToGeomTol(iterator.Value(), item);
+    }
+    else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The PMI reference kind is unsupported.");
+  });
+}
+
+namespace
+{
+NCollection_Sequence<TDF_Label> ReferenceLabels(
+  const OcctSharp_OcafDocumentHandle* document, const int32_t relation, const char* entry)
+{
+  NCollection_Sequence<TDF_Label> first;
+  NCollection_Sequence<TDF_Label> second;
+  const TDF_Label label = ResolveOcafLabel(document, entry);
+  if (relation == 0 || relation == 1 || relation == 2 || relation == 4)
+  {
+    XCAFDoc_DimTolTool::GetRefShapeLabel(label, first, second);
+    if (relation == 1) return second;
+    return first;
+  }
+  if (relation == 3) XCAFDoc_DimTolTool::GetDatumOfTolerLabels(label, first);
+  else if (relation == 5) GetDimTolTool(document)->GetTolerOfDatumLabels(label, first);
+  else if (relation == 6)
+  {
+    const auto viewTool = GetViewTool(document);
+    if (!viewTool->IsView(label))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a saved view.");
+    viewTool->GetRefShapeLabel(label, first);
+  }
+  else if (relation == 7)
+  {
+    const auto viewTool = GetViewTool(document);
+    if (!viewTool->IsView(label))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a saved view.");
+    viewTool->GetRefGDTLabel(label, first);
+  }
+  else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The PMI reference relation is unsupported.");
+  return first;
+}
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_reference_count(
+  const OcctSharp_OcafDocumentHandle* document, const int32_t relation, const char* entry, int32_t* count)
+{
+  if (count == nullptr) { SetLastError("The PMI reference count pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *count = 0;
+  return Guard([&] { *count = ReferenceLabels(document, relation, entry).Size(); });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_reference_entry(
+  const OcctSharp_OcafDocumentHandle* document, const int32_t relation, const char* entry,
+  const int32_t index, char* buffer, const int32_t capacity, int32_t* written)
+{
+  return Guard([&]
+  {
+    const NCollection_Sequence<TDF_Label> labels = ReferenceLabels(document, relation, entry);
+    if (index < 1 || index > labels.Size()) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The PMI reference index is out of range.");
+    CopyLabelEntry(labels.Value(index), buffer, capacity, written);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_remove(
+  OcctSharp_OcafDocumentHandle* document, const int32_t kind, const char* entry)
+{
+  return Guard([&]
+  {
+    ValidateOcafDocument(document); RequireOpenOcafCommand(document);
+    const TDF_Label label = ResolveOcafLabel(document, entry);
+    const bool valid = kind == 0 ? GetDimTolTool(document)->IsDimension(label)
+      : kind == 1 ? GetDimTolTool(document)->IsGeomTolerance(label)
+      : kind == 2 ? GetDimTolTool(document)->IsDatum(label) : false;
+    if (!valid) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not the requested PMI kind.");
+    label.ForgetAllAttributes(true);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_saved_view_create(
+  OcctSharp_OcafDocumentHandle* document, const OcctSharp_SavedView* data,
+  const char* name, const char* clipping_expression,
+  const char* shape_entries, const char* pmi_entries,
+  const OcctSharp_PlaneEquation* planes, const int32_t plane_count,
+  char* buffer, const int32_t capacity, int32_t* written)
+{
+  if (data == nullptr)
+  { SetLastError("The saved-view data pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateOcafDocument(document); RequireOpenOcafCommand(document);
+    const auto viewTool = GetViewTool(document);
+    const TDF_Label label = viewTool->AddView();
+    SetSavedViewObject(label, *data, name, clipping_expression);
+    const NCollection_Sequence<TDF_Label> shapes = ResolveEntries(document, shape_entries);
+    const NCollection_Sequence<TDF_Label> pmi = ResolveEntries(document, pmi_entries);
+    const NCollection_Sequence<TDF_Label> clippingPlanes = AddSavedViewPlanes(document, planes, plane_count);
+    viewTool->SetView(shapes, pmi, clippingPlanes, label);
+    CopyLabelEntry(label, buffer, capacity, written);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_saved_view_update(
+  OcctSharp_OcafDocumentHandle* document, const char* entry, const OcctSharp_SavedView* data,
+  const char* name, const char* clipping_expression,
+  const char* shape_entries, const char* pmi_entries,
+  const OcctSharp_PlaneEquation* planes, const int32_t plane_count)
+{
+  if (data == nullptr)
+  { SetLastError("The saved-view data pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  return Guard([&]
+  {
+    ValidateOcafDocument(document); RequireOpenOcafCommand(document);
+    const auto viewTool = GetViewTool(document);
+    const TDF_Label label = ResolveOcafLabel(document, entry);
+    if (!viewTool->IsView(label))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a saved view.");
+    NCollection_Sequence<TDF_Label> previousPlanes;
+    viewTool->GetRefClippingPlaneLabel(label, previousPlanes);
+    SetSavedViewObject(label, *data, name, clipping_expression);
+    const NCollection_Sequence<TDF_Label> shapes = ResolveEntries(document, shape_entries);
+    const NCollection_Sequence<TDF_Label> pmi = ResolveEntries(document, pmi_entries);
+    const NCollection_Sequence<TDF_Label> clippingPlanes = AddSavedViewPlanes(document, planes, plane_count);
+    viewTool->SetView(shapes, pmi, clippingPlanes, label);
+    RemoveUnreferencedPlanes(document, previousPlanes);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_saved_view_get(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry,
+  OcctSharp_SavedView* data, int32_t* plane_count)
+{
+  if (data == nullptr || plane_count == nullptr)
+  { SetLastError("A saved-view snapshot output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *data = {}; *plane_count = 0;
+  return Guard([&]
+  {
+    const auto object = GetSavedViewObject(document, entry);
+    data->projection_type = static_cast<int32_t>(object->Type());
+    data->projection_point = CopyPoint(object->ProjectionPoint());
+    const gp_Dir viewDirection = object->ViewDirection();
+    data->view_direction = { viewDirection.X(), viewDirection.Y(), viewDirection.Z() };
+    const gp_Dir upDirection = object->UpDirection();
+    data->up_direction = { upDirection.X(), upDirection.Y(), upDirection.Z() };
+    data->zoom_factor = object->ZoomFactor();
+    data->window_horizontal_size = object->WindowHorizontalSize();
+    data->window_vertical_size = object->WindowVerticalSize();
+    data->has_front_clipping = object->HasFrontPlaneClipping() ? 1 : 0;
+    if (data->has_front_clipping) data->front_clipping_distance = object->FrontPlaneDistance();
+    data->has_back_clipping = object->HasBackPlaneClipping() ? 1 : 0;
+    if (data->has_back_clipping) data->back_clipping_distance = object->BackPlaneDistance();
+    data->has_view_volume_sides_clipping = object->HasViewVolumeSidesClipping() ? 1 : 0;
+    NCollection_Sequence<TDF_Label> clippingPlanes;
+    const auto viewTool = GetViewTool(document);
+    const TDF_Label label = ResolveOcafLabel(document, entry);
+    if (!viewTool->IsView(label))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a saved view.");
+    viewTool->GetRefClippingPlaneLabel(label, clippingPlanes);
+    *plane_count = clippingPlanes.Size();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_saved_view_plane(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry,
+  const int32_t index, OcctSharp_PlaneEquation* plane)
+{
+  if (plane == nullptr)
+  { SetLastError("The saved-view plane output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *plane = {};
+  return Guard([&]
+  {
+    NCollection_Sequence<TDF_Label> clippingPlanes;
+    if (!GetViewTool(document)->GetRefClippingPlaneLabel(ResolveOcafLabel(document, entry), clippingPlanes)
+        || index < 1 || index > clippingPlanes.Size())
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The saved-view clipping-plane index is outside the valid 1-based range.");
+    gp_Pln value;
+    opencascade::handle<TCollection_HAsciiString> nameValue;
+    bool capping = false;
+    if (!GetClippingPlaneTool(document)->GetClippingPlane(clippingPlanes.Value(index), value, nameValue, capping))
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "The saved-view clipping plane could not be read.");
+    value.Coefficients(plane->a, plane->b, plane->c, plane->d);
+    plane->capping = capping ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_saved_view_remove(
+  OcctSharp_OcafDocumentHandle* document, const char* entry)
+{
+  return Guard([&]
+  {
+    ValidateOcafDocument(document); RequireOpenOcafCommand(document);
+    const auto viewTool = GetViewTool(document);
+    const TDF_Label label = ResolveOcafLabel(document, entry);
+    if (!viewTool->IsView(label))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label is not a saved view.");
+    NCollection_Sequence<TDF_Label> clippingPlanes;
+    viewTool->GetRefClippingPlaneLabel(label, clippingPlanes);
+    viewTool->RemoveView(label);
+    RemoveUnreferencedPlanes(document, clippingPlanes);
   });
 }
 
@@ -6065,6 +7350,44 @@ opencascade::handle<Graphic3d_ClipPlane> FindClipPlane(
   return iterator->second;
 }
 
+opencascade::handle<PrsDim_Dimension> FindDimension(
+  const OcctSharp_ViewerHandle* viewer,
+  const int64_t dimensionId)
+{
+  const auto iterator = viewer->Dimensions.find(dimensionId);
+  if (iterator == viewer->Dimensions.end())
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The viewer dimension ID does not exist.");
+  return iterator->second;
+}
+
+void ConfigureDimension(
+  const opencascade::handle<PrsDim_Dimension>& dimension,
+  const char* modelUnits,
+  const char* displayUnits,
+  const int32_t hasCustomValue,
+  const double customValue,
+  const double flyout,
+  const double red,
+  const double green,
+  const double blue,
+  const double lineWidth)
+{
+  if ((hasCustomValue != 0 && hasCustomValue != 1) || !std::isfinite(customValue)
+      || !std::isfinite(flyout) || !std::isfinite(lineWidth) || lineWidth <= 0.0)
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Viewer dimension style values are invalid.");
+  if (!std::isfinite(red) || !std::isfinite(green) || !std::isfinite(blue)
+      || red < 0.0 || red > 1.0 || green < 0.0 || green > 1.0 || blue < 0.0 || blue > 1.0)
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Viewer dimension RGB values are invalid.");
+  dimension->SetModelUnits(TCollection_AsciiString(modelUnits == nullptr ? "" : modelUnits));
+  dimension->SetDisplayUnits(TCollection_AsciiString(displayUnits == nullptr ? "" : displayUnits));
+  if (hasCustomValue != 0) dimension->SetCustomValue(customValue);
+  else dimension->SetComputedValue();
+  dimension->SetFlyout(flyout);
+  dimension->SetColor(Quantity_Color(red, green, blue, Quantity_TOC_RGB));
+  dimension->SetWidth(lineWidth);
+  dimension->SetToUpdate();
+}
+
 bool IsFinite(const OcctSharp_Xyz& value)
 {
   return std::isfinite(value.x) && std::isfinite(value.y) && std::isfinite(value.z);
@@ -6204,6 +7527,128 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_display_shape(
     viewer->Presentations.emplace(id, presentation);
     viewer->Context->Display(presentation, false);
     *presentation_id = id;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_dimension_create(
+  OcctSharp_ViewerHandle* viewer,
+  const int32_t kind,
+  const OcctSharp_ShapeHandle* shape,
+  const OcctSharp_Xyz* points,
+  const int32_t point_count,
+  const OcctSharp_PlaneEquation* plane,
+  const char* model_units,
+  const char* display_units,
+  const int32_t has_custom_value,
+  const double custom_value,
+  const double flyout,
+  const double red,
+  const double green,
+  const double blue,
+  const double line_width,
+  int64_t* dimension_id)
+{
+  if (dimension_id == nullptr)
+  { SetLastError("The viewer dimension ID output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *dimension_id = 0;
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    opencascade::handle<PrsDim_Dimension> dimension;
+    if (kind == 0)
+    {
+      if (points == nullptr || point_count != 2 || plane == nullptr
+          || !IsFinite(points[0]) || !IsFinite(points[1]))
+        throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "A length dimension requires two finite points and one plane.");
+      dimension = new PrsDim_LengthDimension(
+        gp_Pnt(points[0].x, points[0].y, points[0].z),
+        gp_Pnt(points[1].x, points[1].y, points[1].z),
+        gp_Pln(plane->a, plane->b, plane->c, plane->d));
+    }
+    else if (kind == 1)
+    {
+      if (points == nullptr || point_count != 3
+          || !IsFinite(points[0]) || !IsFinite(points[1]) || !IsFinite(points[2]))
+        throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "An angle dimension requires three finite points.");
+      dimension = new PrsDim_AngleDimension(
+        gp_Pnt(points[0].x, points[0].y, points[0].z),
+        gp_Pnt(points[1].x, points[1].y, points[1].z),
+        gp_Pnt(points[2].x, points[2].y, points[2].z));
+    }
+    else if (kind == 2 || kind == 3)
+    {
+      ValidateUsableShape(shape);
+      dimension = kind == 2
+        ? opencascade::handle<PrsDim_Dimension>(new PrsDim_RadiusDimension(shape->Value))
+        : opencascade::handle<PrsDim_Dimension>(new PrsDim_DiameterDimension(shape->Value));
+    }
+    else throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The viewer dimension kind is unsupported.");
+    ConfigureDimension(dimension, model_units, display_units, has_custom_value, custom_value,
+      flyout, red, green, blue, line_width);
+    const int64_t id = viewer->NextDimensionId++;
+    viewer->Dimensions.emplace(id, dimension);
+    viewer->Context->Display(dimension, false);
+    *dimension_id = id;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_dimension_update_style(
+  OcctSharp_ViewerHandle* viewer,
+  const int64_t dimension_id,
+  const char* model_units,
+  const char* display_units,
+  const int32_t has_custom_value,
+  const double custom_value,
+  const double flyout,
+  const double red,
+  const double green,
+  const double blue,
+  const double line_width)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const auto dimension = FindDimension(viewer, dimension_id);
+    ConfigureDimension(dimension, model_units, display_units, has_custom_value, custom_value,
+      flyout, red, green, blue, line_width);
+    viewer->Context->Redisplay(dimension, false);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_dimension_set_visible(
+  OcctSharp_ViewerHandle* viewer, const int64_t dimension_id, const int32_t visible)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const auto dimension = FindDimension(viewer, dimension_id);
+    if (visible != 0) viewer->Context->Display(dimension, false);
+    else viewer->Context->Erase(dimension, false);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_dimension_set_selected(
+  OcctSharp_ViewerHandle* viewer, const int64_t dimension_id, const int32_t selected)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const auto dimension = FindDimension(viewer, dimension_id);
+    const bool isSelected = viewer->Context->IsSelected(dimension);
+    if (selected != 0 && !isSelected) viewer->Context->SetSelected(dimension, false);
+    else if (selected == 0 && isSelected) viewer->Context->AddOrRemoveSelected(dimension, false);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_dimension_remove(
+  OcctSharp_ViewerHandle* viewer, const int64_t dimension_id)
+{
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    const auto dimension = FindDimension(viewer, dimension_id);
+    viewer->Context->Remove(dimension, false);
+    viewer->Dimensions.erase(dimension_id);
   });
 }
 
@@ -7030,6 +8475,7 @@ void OCCTSHARP_CALL occtsharp_viewer_release(OcctSharp_ViewerHandle* viewer)
     viewer->ActiveFilter.Nullify();
     viewer->ClipPlanes.clear();
     viewer->Presentations.clear();
+    viewer->Dimensions.clear();
     viewer->View.Nullify();
     viewer->Context.Nullify();
     viewer->Viewer.Nullify();

@@ -313,6 +313,143 @@ typedef struct OcctSharp_ShapeDistanceResult
   int32_t solution_count;
 } OcctSharp_ShapeDistanceResult;
 
+typedef struct OcctSharp_ExtremaSolution
+{
+  double distance;
+  OcctSharp_Xyz point_on_first;
+  OcctSharp_Xyz point_on_second;
+  int32_t first_support_kind;
+  int32_t second_support_kind;
+  int32_t has_first_edge_parameter;
+  double first_edge_parameter;
+  int32_t has_second_edge_parameter;
+  double second_edge_parameter;
+  int32_t has_first_face_parameters;
+  double first_face_u;
+  double first_face_v;
+  int32_t has_second_face_parameters;
+  double second_face_u;
+  double second_face_v;
+  int32_t is_inner_solution;
+  OcctSharp_ShapeHandle* first_support;
+  OcctSharp_ShapeHandle* second_support;
+} OcctSharp_ExtremaSolution;
+
+typedef struct OcctSharp_InspectionProperties
+{
+  double mass;
+  OcctSharp_Xyz center;
+  double i11;
+  double i12;
+  double i13;
+  double i21;
+  double i22;
+  double i23;
+  double i31;
+  double i32;
+  double i33;
+} OcctSharp_InspectionProperties;
+
+typedef struct OcctSharp_RadialMeasurement
+{
+  int32_t geometry_kind;
+  double radius;
+  double diameter;
+  double semi_angle;
+} OcctSharp_RadialMeasurement;
+
+typedef struct OcctSharp_PmiDimension
+{
+  int32_t type;
+  int32_t has_qualifier;
+  int32_t qualifier;
+  int32_t has_angular_qualifier;
+  int32_t angular_qualifier;
+  int32_t has_class_of_tolerance;
+  int32_t is_hole;
+  int32_t form_variance;
+  int32_t grade;
+  int32_t left_decimal_places;
+  int32_t right_decimal_places;
+  int32_t has_direction;
+  OcctSharp_Xyz direction;
+  int32_t has_plane;
+  OcctSharp_Ax2 plane;
+  int32_t has_first_point;
+  OcctSharp_Xyz first_point;
+  int32_t has_second_point;
+  OcctSharp_Xyz second_point;
+  int32_t has_text_point;
+  OcctSharp_Xyz text_point;
+} OcctSharp_PmiDimension;
+
+typedef struct OcctSharp_PmiTolerance
+{
+  int32_t type;
+  int32_t type_of_value;
+  double value;
+  int32_t material_requirement;
+  int32_t zone_modifier;
+  double zone_modifier_value;
+  double maximum_value_modifier;
+  int32_t has_axis;
+  OcctSharp_Ax2 axis;
+  int32_t has_plane;
+  OcctSharp_Ax2 plane;
+  int32_t has_point;
+  OcctSharp_Xyz point;
+  int32_t has_text_point;
+  OcctSharp_Xyz text_point;
+  int32_t affected_plane_type;
+  OcctSharp_Plane affected_plane;
+} OcctSharp_PmiTolerance;
+
+typedef struct OcctSharp_PmiDatum
+{
+  int32_t position;
+  int32_t is_datum_target;
+  int32_t target_type;
+  double target_length;
+  double target_width;
+  int32_t target_number;
+  int32_t has_target_axis;
+  OcctSharp_Ax2 target_axis;
+  int32_t has_plane;
+  OcctSharp_Ax2 plane;
+  int32_t has_point;
+  OcctSharp_Xyz point;
+  int32_t has_text_point;
+  OcctSharp_Xyz text_point;
+  int32_t has_modifier_with_value;
+  int32_t modifier_with_value;
+  double modifier_value;
+} OcctSharp_PmiDatum;
+
+typedef struct OcctSharp_SavedView
+{
+  int32_t projection_type;
+  OcctSharp_Xyz projection_point;
+  OcctSharp_Xyz view_direction;
+  OcctSharp_Xyz up_direction;
+  double zoom_factor;
+  double window_horizontal_size;
+  double window_vertical_size;
+  int32_t has_front_clipping;
+  double front_clipping_distance;
+  int32_t has_back_clipping;
+  double back_clipping_distance;
+  int32_t has_view_volume_sides_clipping;
+} OcctSharp_SavedView;
+
+typedef struct OcctSharp_PlaneEquation
+{
+  double a;
+  double b;
+  double c;
+  double d;
+  int32_t capping;
+} OcctSharp_PlaneEquation;
+
 typedef struct OcctSharp_BoundingBox
 {
   double min_x;
@@ -570,6 +707,24 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_boolean_with_histo
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_distance(
   const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second,
   OcctSharp_ShapeDistanceResult* out_result);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_exact_distance_count(
+  const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second,
+  int32_t* count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_exact_distance_solution(
+  const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second,
+  int32_t index, OcctSharp_ExtremaSolution* solution);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_pair_classify(
+  const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second,
+  double tolerance, int32_t* classification, double* distance,
+  double* overlap_volume, OcctSharp_ShapeHandle** overlap_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_inspection_properties(
+  const OcctSharp_ShapeHandle* shape, int32_t property_kind,
+  OcctSharp_InspectionProperties* properties);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_angle(
+  const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second,
+  double* radians);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_radial_measurement(
+  const OcctSharp_ShapeHandle* shape, OcctSharp_RadialMeasurement* measurement);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_fix(
   const OcctSharp_ShapeHandle* shape,
   OcctSharp_ShapeHandle** out_shape);
@@ -1003,6 +1158,8 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step_o
   int32_t read_layers,
   int32_t read_validation_properties,
   int32_t read_materials,
+  int32_t read_gdt,
+  int32_t read_views,
   OcctSharp_OcafDocumentHandle** out_document);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step(
   const OcctSharp_OcafDocumentHandle* document, const char* file_path);
@@ -1010,11 +1167,105 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step_
   const OcctSharp_OcafDocumentHandle* document,
   const char* file_path,
   int32_t model_type,
+  int32_t schema,
   int32_t write_names,
   int32_t write_colors,
   int32_t write_layers,
   int32_t write_validation_properties,
-  int32_t write_materials);
+  int32_t write_materials,
+  int32_t write_gdt);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_count(
+  const OcctSharp_OcafDocumentHandle* document, int32_t kind, int32_t* count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_entry(
+  const OcctSharp_OcafDocumentHandle* document, int32_t kind, int32_t index,
+  char* buffer, int32_t capacity, int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_dimension_create(
+  OcctSharp_OcafDocumentHandle* document, const OcctSharp_PmiDimension* data,
+  const double* values, int32_t value_count, const int32_t* modifiers, int32_t modifier_count,
+  const char* semantic_name, const char* presentation_name,
+  const char* description, const char* description_name,
+  char* buffer, int32_t capacity, int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_dimension_update(
+  OcctSharp_OcafDocumentHandle* document, const char* entry, const OcctSharp_PmiDimension* data,
+  const double* values, int32_t value_count, const int32_t* modifiers, int32_t modifier_count,
+  const char* semantic_name, const char* presentation_name,
+  const char* description, const char* description_name);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_dimension_get(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry, OcctSharp_PmiDimension* data,
+  int32_t* value_count, int32_t* modifier_count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_tolerance_create(
+  OcctSharp_OcafDocumentHandle* document, const OcctSharp_PmiTolerance* data,
+  const int32_t* modifiers, int32_t modifier_count,
+  const char* semantic_name, const char* presentation_name,
+  char* buffer, int32_t capacity, int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_tolerance_update(
+  OcctSharp_OcafDocumentHandle* document, const char* entry, const OcctSharp_PmiTolerance* data,
+  const int32_t* modifiers, int32_t modifier_count,
+  const char* semantic_name, const char* presentation_name);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_tolerance_get(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry, OcctSharp_PmiTolerance* data,
+  int32_t* modifier_count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_datum_create(
+  OcctSharp_OcafDocumentHandle* document, const OcctSharp_PmiDatum* data,
+  const int32_t* modifiers, int32_t modifier_count,
+  const char* name, const char* description, const char* identification,
+  const char* semantic_name, const char* presentation_name,
+  char* buffer, int32_t capacity, int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_datum_update(
+  OcctSharp_OcafDocumentHandle* document, const char* entry, const OcctSharp_PmiDatum* data,
+  const int32_t* modifiers, int32_t modifier_count,
+  const char* name, const char* description, const char* identification,
+  const char* semantic_name, const char* presentation_name);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_datum_get(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry, OcctSharp_PmiDatum* data,
+  int32_t* modifier_count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_numeric_item(
+  const OcctSharp_OcafDocumentHandle* document, int32_t kind, const char* entry,
+  int32_t field, int32_t index, double* real_value, int32_t* integer_value);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_text_utf8_length(
+  const OcctSharp_OcafDocumentHandle* document, int32_t kind, const char* entry,
+  int32_t field, int32_t* length);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_text_to_utf8(
+  const OcctSharp_OcafDocumentHandle* document, int32_t kind, const char* entry,
+  int32_t field, char* buffer, int32_t capacity, int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_set_aux_shape(
+  OcctSharp_OcafDocumentHandle* document, int32_t kind, const char* entry,
+  int32_t role, const OcctSharp_ShapeHandle* shape, const char* name);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_clear_aux_shape(
+  OcctSharp_OcafDocumentHandle* document, int32_t kind, const char* entry, int32_t role);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_get_aux_shape(
+  const OcctSharp_OcafDocumentHandle* document, int32_t kind, const char* entry,
+  int32_t role, int32_t* has_shape, OcctSharp_ShapeHandle** shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_set_references(
+  OcctSharp_OcafDocumentHandle* document, int32_t kind, const char* entry,
+  const char* first_entries, const char* second_entries);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_reference_count(
+  const OcctSharp_OcafDocumentHandle* document, int32_t relation,
+  const char* entry, int32_t* count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_reference_entry(
+  const OcctSharp_OcafDocumentHandle* document, int32_t relation,
+  const char* entry, int32_t index, char* buffer, int32_t capacity, int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_pmi_remove(
+  OcctSharp_OcafDocumentHandle* document, int32_t kind, const char* entry);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_saved_view_create(
+  OcctSharp_OcafDocumentHandle* document, const OcctSharp_SavedView* data,
+  const char* name, const char* clipping_expression,
+  const char* shape_entries, const char* pmi_entries,
+  const OcctSharp_PlaneEquation* planes, int32_t plane_count,
+  char* buffer, int32_t capacity, int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_saved_view_update(
+  OcctSharp_OcafDocumentHandle* document, const char* entry, const OcctSharp_SavedView* data,
+  const char* name, const char* clipping_expression,
+  const char* shape_entries, const char* pmi_entries,
+  const OcctSharp_PlaneEquation* planes, int32_t plane_count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_saved_view_get(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry,
+  OcctSharp_SavedView* data, int32_t* plane_count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_saved_view_plane(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry,
+  int32_t index, OcctSharp_PlaneEquation* plane);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_saved_view_remove(
+  OcctSharp_OcafDocumentHandle* document, const char* entry);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_add_shape(
   OcctSharp_OcafDocumentHandle* document,
   const OcctSharp_ShapeHandle* shape,
@@ -1144,6 +1395,41 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_display_shape(
   OcctSharp_ViewerHandle* viewer,
   const OcctSharp_ShapeHandle* shape,
   int64_t* presentation_id);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_dimension_create(
+  OcctSharp_ViewerHandle* viewer,
+  int32_t kind,
+  const OcctSharp_ShapeHandle* shape,
+  const OcctSharp_Xyz* points,
+  int32_t point_count,
+  const OcctSharp_PlaneEquation* plane,
+  const char* model_units,
+  const char* display_units,
+  int32_t has_custom_value,
+  double custom_value,
+  double flyout,
+  double red,
+  double green,
+  double blue,
+  double line_width,
+  int64_t* dimension_id);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_dimension_update_style(
+  OcctSharp_ViewerHandle* viewer,
+  int64_t dimension_id,
+  const char* model_units,
+  const char* display_units,
+  int32_t has_custom_value,
+  double custom_value,
+  double flyout,
+  double red,
+  double green,
+  double blue,
+  double line_width);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_dimension_set_visible(
+  OcctSharp_ViewerHandle* viewer, int64_t dimension_id, int32_t visible);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_dimension_set_selected(
+  OcctSharp_ViewerHandle* viewer, int64_t dimension_id, int32_t selected);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_dimension_remove(
+  OcctSharp_ViewerHandle* viewer, int64_t dimension_id);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_visible(
   OcctSharp_ViewerHandle* viewer,
   int64_t presentation_id,

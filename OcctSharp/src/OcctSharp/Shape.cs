@@ -725,6 +725,127 @@ public partial class Shape : IDisposable
             result.SolutionCount);
     }
 
+    /// <summary>Copies every equivalent exact minimum-distance solution and its owning supports.</summary>
+    public ExactDistanceResult InspectDistanceTo(Shape other, InspectionUnits? units = null)
+    {
+        ArgumentNullException.ThrowIfNull(other);
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        ObjectDisposedException.ThrowIf(other.handle.IsClosed, other);
+        NativeError.ThrowIfFailed(
+            NativeMethods.GetExactDistanceCount(handle, other.handle, out int count),
+            "shape_exact_distance_count");
+        List<ShapeDistanceSolution> solutions = new(count);
+        try
+        {
+            for (int index = 0; index < count; ++index)
+            {
+                NativeError.ThrowIfFailed(
+                    NativeMethods.GetExactDistanceSolution(handle, other.handle, index + 1, out ExtremaSolutionRaw raw),
+                    "shape_exact_distance_solution");
+                Shape? firstSupport = null;
+                Shape? secondSupport = null;
+                try
+                {
+                    firstSupport = ShapeFactory.FromNativeHandle(raw.FirstSupport, "shape_exact_distance_first_support");
+                    secondSupport = ShapeFactory.FromNativeHandle(raw.SecondSupport, "shape_exact_distance_second_support");
+                    solutions.Add(new ShapeDistanceSolution(
+                        raw.Distance,
+                        new(raw.PointOnFirst.X, raw.PointOnFirst.Y, raw.PointOnFirst.Z),
+                        new(raw.PointOnSecond.X, raw.PointOnSecond.Y, raw.PointOnSecond.Z),
+                        (InspectionSupportKind)raw.FirstSupportKind,
+                        (InspectionSupportKind)raw.SecondSupportKind,
+                        firstSupport,
+                        secondSupport,
+                        raw.HasFirstEdgeParameter != 0 ? raw.FirstEdgeParameter : null,
+                        raw.HasSecondEdgeParameter != 0 ? raw.SecondEdgeParameter : null,
+                        raw.HasFirstFaceParameters != 0 ? (raw.FirstFaceU, raw.FirstFaceV) : null,
+                        raw.HasSecondFaceParameters != 0 ? (raw.SecondFaceU, raw.SecondFaceV) : null,
+                        raw.IsInnerSolution != 0));
+                    firstSupport = null;
+                    secondSupport = null;
+                }
+                finally
+                {
+                    firstSupport?.Dispose();
+                    secondSupport?.Dispose();
+                }
+            }
+            return new ExactDistanceResult(solutions, units ?? new InspectionUnits());
+        }
+        catch
+        {
+            foreach (ShapeDistanceSolution solution in solutions) solution.Dispose();
+            throw;
+        }
+    }
+
+    /// <summary>Classifies pair separation, contact, containment, or volumetric interference.</summary>
+    public ShapePairInspection InspectPair(
+        Shape other,
+        double tolerance = 1e-7,
+        InspectionUnits? units = null)
+    {
+        ArgumentNullException.ThrowIfNull(other);
+        if (!double.IsFinite(tolerance) || tolerance < 0) throw new ArgumentOutOfRangeException(nameof(tolerance));
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        ObjectDisposedException.ThrowIf(other.handle.IsClosed, other);
+        NativeError.ThrowIfFailed(
+            NativeMethods.ClassifyShapePair(
+                handle, other.handle, tolerance,
+                out int classification, out double distance, out double overlapVolume, out nint overlapShape),
+            "shape_pair_classify");
+        Shape? overlap = overlapShape == 0 ? null : ShapeFactory.FromNativeHandle(overlapShape, "shape_pair_overlap");
+        return new ShapePairInspection(
+            (ShapePairClassification)classification,
+            distance,
+            overlapVolume,
+            overlap,
+            units ?? new InspectionUnits());
+    }
+
+    /// <summary>Copies length, area, or volume properties with centroid and inertia.</summary>
+    public ShapeInspectionProperties InspectProperties(
+        InspectionPropertyKind kind,
+        InspectionUnits? units = null)
+    {
+        if (!Enum.IsDefined(kind)) throw new ArgumentOutOfRangeException(nameof(kind));
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.GetInspectionProperties(handle, (int)kind, out InspectionPropertiesRaw raw),
+            "shape_inspection_properties");
+        return new ShapeInspectionProperties(
+            kind,
+            raw.Mass,
+            new(raw.Center.X, raw.Center.Y, raw.Center.Z),
+            new(raw.I11, raw.I12, raw.I13, raw.I21, raw.I22, raw.I23, raw.I31, raw.I32, raw.I33),
+            units ?? new InspectionUnits());
+    }
+
+    /// <summary>Measures the angle between two linear edges or two planar faces.</summary>
+    public ShapeAngleMeasurement InspectAngleTo(Shape other, InspectionUnits? units = null)
+    {
+        ArgumentNullException.ThrowIfNull(other);
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        ObjectDisposedException.ThrowIf(other.handle.IsClosed, other);
+        NativeError.ThrowIfFailed(NativeMethods.GetShapeAngle(handle, other.handle, out double radians), "shape_angle");
+        return new ShapeAngleMeasurement(radians, units ?? new InspectionUnits());
+    }
+
+    /// <summary>Measures circular, cylindrical, or conical radius information.</summary>
+    public ShapeRadialMeasurement InspectRadius(InspectionUnits? units = null)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.GetRadialMeasurement(handle, out RadialMeasurementRaw raw),
+            "shape_radial_measurement");
+        return new ShapeRadialMeasurement(
+            (RadialGeometryKind)raw.GeometryKind,
+            raw.Radius,
+            raw.Diameter,
+            raw.SemiAngle,
+            units ?? new InspectionUnits());
+    }
+
     /// <summary>Runs OCCT's safe ShapeFix_Shape pass and returns an owned result.</summary>
     public Shape Fixed()
     {

@@ -54,3 +54,11 @@ identity stays `0.1.0.0` for compatibility; package and informational versions c
 - ADR-0008: initial package/runtime layout.
 - ADR-0049: release evidence and publication gates.
 - ADR-0059: committed runtime and MIT license.
+
+## Current application
+
+Preview.1 remains the historical first package under this policy. Batch E is the next
+package-visible additive change, so the current package is `8.0.1-preview.2` while the
+OCCT baseline remains 8.0.1 and managed assembly/file identity remains `0.1.0.0`.
+Preview.2 independently advances the additive native ABI to 1.47 and bridge
+implementation to 0.55.0; those identities do not derive from the package number.

@@ -645,6 +645,414 @@
     {
       "stableId": "c:@S@V3d_View@F@Dump#*1C#&1$@E@Graphic3d_BufferType#",
       "specialCaseId": "SC-040"
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_DistShapeShape@F@InnerSolution#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_DistShapeShape@F@ParOnEdgeS1#I#&d#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_DistShapeShape@F@ParOnEdgeS2#I#&d#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_DistShapeShape@F@ParOnFaceS1#I#&d#S0_#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_DistShapeShape@F@ParOnFaceS2#I#&d#S0_#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_DistShapeShape@F@SupportOnShape1#I#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_DistShapeShape@F@SupportOnShape2#I#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_DistShapeShape@F@SupportTypeShape1#I#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@BRepExtrema_DistShapeShape@F@SupportTypeShape2#I#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@DESTEP_Parameters@F@InitFromStatic#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@PrsDim_DiameterDimension@F@PrsDim_DiameterDimension#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@PrsDim_Dimension@F@SetDisplayUnits#&1$@S@TCollection_AsciiString#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@PrsDim_Dimension@F@SetModelUnits#&1$@S@TCollection_AsciiString#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@PrsDim_LengthDimension@F@PrsDim_LengthDimension#&1$@S@gp_Pnt#S0_#&1$@S@gp_Pln#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@PrsDim_RadiusDimension@F@PrsDim_RadiusDimension#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@STEPCAFControl_Writer@F@Transfer#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@DESTEP_Parameters#$@E@STEPControl_StepModelType#*1C#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@FindAttribute#&1$@S@Standard_GUID#&$@N@opencascade@S@handle>#$@S@TDF_Attribute#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@FindChild#I#b#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@ForgetAttribute#&1$@S@Standard_GUID#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@GetID#S",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DatumObject@F@GetDatumTarget#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DatumObject@F@GetDatumTargetAxis#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DatumObject@F@GetModifiers#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DatumObject@F@GetModifierWithValue#&$@E@XCAFDimTolObjects_DatumModifWithValue#&d#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DatumObject@F@GetPlane#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DatumObject@F@GetPoint#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DatumObject@F@GetPointTextAttach#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DatumObject@F@GetPresentation#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DatumObject@F@SetDatumTarget#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DatumObject@F@SetDatumTargetAxis#&1$@S@gp_Ax2#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DatumObject@F@SetModifiers#&1$@S@NCollection_Sequence>#$@E@XCAFDimTolObjects_DatumSingleModif#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DatumObject@F@SetPlane#&1$@S@gp_Ax2#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DatumObject@F@SetPresentation#&1$@S@TopoDS_Shape#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DimensionObject@F@GetClassOfTolerance#&b#&$@E@XCAFDimTolObjects_DimensionFormVariance#&$@E@XCAFDimTolObjects_DimensionGrade#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DimensionObject@F@GetDirection#&$@S@gp_Dir#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DimensionObject@F@GetModifiers#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DimensionObject@F@GetNbOfDecimalPlaces#&I#S0_#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DimensionObject@F@GetPath#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DimensionObject@F@GetPlane#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DimensionObject@F@GetPointTextAttach#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DimensionObject@F@GetPresentation#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DimensionObject@F@GetValues#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DimensionObject@F@SetDirection#&1$@S@gp_Dir#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DimensionObject@F@SetModifiers#&1$@S@NCollection_Sequence>#$@E@XCAFDimTolObjects_DimensionModif#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DimensionObject@F@SetPath#&1$@S@TopoDS_Edge#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DimensionObject@F@SetPlane#&1$@S@gp_Ax2#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DimensionObject@F@SetPresentation#&1$@S@TopoDS_Shape#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_DimensionObject@F@SetValues#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_GeomToleranceObject@F@GetAffectedPlane#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_GeomToleranceObject@F@GetAxis#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_GeomToleranceObject@F@GetModifiers#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_GeomToleranceObject@F@GetPlane#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_GeomToleranceObject@F@GetPoint#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_GeomToleranceObject@F@GetPointTextAttach#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_GeomToleranceObject@F@GetPresentation#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_GeomToleranceObject@F@SetAffectedPlane#&1$@S@gp_Pln#$@E@XCAFDimTolObjects_ToleranceZoneAffectedPlane#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_GeomToleranceObject@F@SetAxis#&1$@S@gp_Ax2#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_GeomToleranceObject@F@SetModifiers#&1$@S@NCollection_Sequence>#$@E@XCAFDimTolObjects_GeomToleranceModif#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_GeomToleranceObject@F@SetPlane#&1$@S@gp_Ax2#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDimTolObjects_GeomToleranceObject@F@SetPresentation#&1$@S@TopoDS_Shape#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc@F@DatumTolRefGUID#S",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ClippingPlaneTool@F@AddClippingPlane#&1$@S@gp_Pln#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#b#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ClippingPlaneTool@F@GetClippingPlane#&1$@S@TDF_Label#&$@S@gp_Pln#&$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#&b#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ClippingPlaneTool@F@RemoveClippingPlane#&1$@S@TDF_Label#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Datum@F@GetID#S",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Datum@F@Set#&1$@S@TDF_Label#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#S2_#S2_#S",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Datum@F@Set#&1$@S@TDF_Label#S",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Dimension@F@GetID#S",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Dimension@F@Set#&1$@S@TDF_Label#S",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@AddDatum#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@AddDimension#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@AddGeomTolerance#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@GetDatumLabels#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@GetDatumOfTolerLabels#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#S",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@GetDimensionLabels#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@GetGeomToleranceLabels#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@GetRefShapeLabel#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#S2_#S",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@GetTolerOfDatumLabels#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@IsDatum#&1$@S@TDF_Label#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@IsDimension#&1$@S@TDF_Label#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@IsGeomTolerance#&1$@S@TDF_Label#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@SetDatum#&1$@S@NCollection_Sequence>#$@S@TDF_Label#&1S2_#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@SetDatumToGeomTol#&1$@S@TDF_Label#S0_#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@SetDimension#&1$@S@NCollection_Sequence>#$@S@TDF_Label#S0_#&1S2_#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DimTolTool@F@SetGeomTolerance#&1$@S@NCollection_Sequence>#$@S@TDF_Label#&1S2_#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@ClippingPlaneTool#&1$@S@TDF_Label#S",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_GeomTolerance@F@GetID#S",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_GeomTolerance@F@Set#&1$@S@TDF_Label#S",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_View@F@GetID#S",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_View@F@Set#&1$@S@TDF_Label#S",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@AddView#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@GetRefClippingPlaneLabel#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@GetRefGDTLabel#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@GetRefShapeLabel#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@GetViewLabels#&$@S@NCollection_Sequence>#$@S@TDF_Label#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@IsView#&1$@S@TDF_Label#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@RemoveView#&1$@S@TDF_Label#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ViewTool@F@SetView#&1$@S@NCollection_Sequence>#$@S@TDF_Label#S0_#S0_#&1S2_#1",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFView_Object@F@SetUpDirection#&1$@S@gp_Dir#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFView_Object@F@SetViewDirection#&1$@S@gp_Dir#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFView_Object@F@UpDirection#",
+      "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@XCAFView_Object@F@ViewDirection#",
+      "specialCaseId": "SC-041"
     }
   ],
   "excludedBindings": [

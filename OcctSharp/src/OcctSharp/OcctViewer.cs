@@ -8,6 +8,8 @@ public sealed class OcctViewer : IDisposable
     private readonly int _ownerThreadId;
     private readonly Dictionary<long, ViewerPresentation> _presentations = [];
     private readonly Dictionary<long, ViewerClipPlane> _clipPlanes = [];
+    private readonly Dictionary<long, ViewerDimension> _dimensions = [];
+    private readonly List<ViewerClipPlane> _savedViewClipPlanes = [];
     private Dictionary<long, bool>? _isolationVisibility;
 
     private OcctViewer(ViewerHandle handle)
@@ -62,6 +64,64 @@ public sealed class OcctViewer : IDisposable
             SetVisible(presentation, false);
         }
         return presentation;
+    }
+
+    /// <summary>Displays a viewer-owned linear dimension between two copied points.</summary>
+    public ViewerDimension DisplayLengthDimension(
+        GpPoint first, GpPoint second, ViewerPlaneEquation plane,
+        ViewerDimensionStyle? style = null) =>
+        CreateDimension(ViewerDimensionKind.Length, null, [first, second], plane, style ?? new());
+
+    /// <summary>Displays a viewer-owned angular dimension formed by first, center, and third points.</summary>
+    public ViewerDimension DisplayAngleDimension(
+        GpPoint first, GpPoint center, GpPoint third,
+        ViewerDimensionStyle? style = null) =>
+        CreateDimension(ViewerDimensionKind.Angle, null, [first, center, third], default, style ?? new());
+
+    /// <summary>Displays a viewer-owned radial dimension for circular or revolved topology.</summary>
+    public ViewerDimension DisplayRadiusDimension(Shape shape, ViewerDimensionStyle? style = null) =>
+        CreateDimension(ViewerDimensionKind.Radius, shape, [], default, style ?? new());
+
+    /// <summary>Displays a viewer-owned diameter dimension for circular or revolved topology.</summary>
+    public ViewerDimension DisplayDiameterDimension(Shape shape, ViewerDimensionStyle? style = null) =>
+        CreateDimension(ViewerDimensionKind.Diameter, shape, [], default, style ?? new());
+
+    private unsafe ViewerDimension CreateDimension(
+        ViewerDimensionKind kind,
+        Shape? shape,
+        GpPoint[] points,
+        ViewerPlaneEquation plane,
+        ViewerDimensionStyle style)
+    {
+        if (!Enum.IsDefined(kind)) throw new ArgumentOutOfRangeException(nameof(kind));
+        if (kind is ViewerDimensionKind.Radius or ViewerDimensionKind.Diameter)
+            ArgumentNullException.ThrowIfNull(shape);
+        else foreach (GpPoint point in points) ValidateFinite(point, nameof(points));
+        if (kind == ViewerDimensionKind.Length) plane.Validate();
+        style.Validate();
+        XyzRaw[] rawPoints = points.Select(ToRaw).ToArray();
+        PlaneEquationRaw rawPlane = new(plane.A, plane.B, plane.C, plane.D, 0);
+        string modelUnits = kind == ViewerDimensionKind.Angle ? style.Units.ModelAngleUnit : style.Units.ModelLengthUnit;
+        string displayUnits = kind == ViewerDimensionKind.Angle ? style.Units.DisplayAngleUnit : style.Units.DisplayLengthUnit;
+        EnsureThread();
+        bool shapeAddedRef = false;
+        try
+        {
+            shape?.Handle.DangerousAddRef(ref shapeAddedRef);
+            fixed (XyzRaw* pointPointer = rawPoints)
+            {
+                NativeError.ThrowIfFailed(NativeMethods.CreateViewerDimension(
+                    Handle, (int)kind, shape?.Handle.DangerousGetHandle() ?? 0,
+                    pointPointer, rawPoints.Length, in rawPlane, modelUnits, displayUnits,
+                    style.CustomValue.HasValue ? 1 : 0, style.CustomValue.GetValueOrDefault(), style.Flyout,
+                    style.Color.Red, style.Color.Green, style.Color.Blue, style.LineWidth, out long id),
+                    "viewer_dimension_create");
+                ViewerDimension dimension = new(this, id, kind, style);
+                _dimensions.Add(id, dimension);
+                return dimension;
+            }
+        }
+        finally { if (shapeAddedRef) shape!.Handle.DangerousRelease(); }
     }
 
     /// <summary>Fits all displayed presentations and redraws the view.</summary>
@@ -396,6 +456,33 @@ public sealed class OcctViewer : IDisposable
         NativeError.ThrowIfFailed(NativeMethods.SetViewerCamera(Handle, in raw), "viewer_set_camera");
     }
 
+    /// <summary>Applies copied camera, visibility, and clipping values from one saved model view.</summary>
+    public void ApplySavedView(XdeSavedViewSnapshot snapshot)
+    {
+        ArgumentNullException.ThrowIfNull(snapshot);
+        XdeSavedViewDefinition definition = snapshot.Definition;
+        GpPoint eye = definition.ProjectionPoint;
+        GpPoint target = new(
+            eye.X + definition.ViewDirection.X,
+            eye.Y + definition.ViewDirection.Y,
+            eye.Z + definition.ViewDirection.Z);
+        SetCamera(new ViewerCameraState(eye, target, definition.UpDirection, definition.ViewDirection));
+
+        HashSet<string> visible = snapshot.VisibleShapeEntries.ToHashSet(StringComparer.Ordinal);
+        foreach (ViewerPresentation presentation in _presentations.Values)
+        {
+            if (presentation.IsRemoved || presentation.SourceIdentity is not ViewerSourceIdentity identity) continue;
+            SetVisible(presentation,
+                visible.Contains(identity.OccurrenceEntry) || visible.Contains(identity.ReferredEntry));
+        }
+
+        foreach (ViewerClipPlane plane in _savedViewClipPlanes.ToArray()) plane.Dispose();
+        _savedViewClipPlanes.Clear();
+        foreach (ViewerPlaneEquation equation in definition.ClippingPlanes)
+            _savedViewClipPlanes.Add(CreateClipPlane(equation));
+        Redraw();
+    }
+
     /// <summary>Converts one client pixel to a world point on the current view plane.</summary>
     public GpPoint ScreenToWorld(int x, int y)
     {
@@ -527,6 +614,50 @@ public sealed class OcctViewer : IDisposable
             NativeMethods.SetViewerPresentationVisible(Handle, presentation.Id, visible ? 1 : 0),
             "viewer_set_presentation_visible");
         presentation.MarkVisible(visible);
+    }
+
+    internal void UpdateDimensionStyle(ViewerDimension dimension, ViewerDimensionStyle style)
+    {
+        EnsureDimension(dimension);
+        style.Validate();
+        string modelUnits = dimension.Kind == ViewerDimensionKind.Angle
+            ? style.Units.ModelAngleUnit : style.Units.ModelLengthUnit;
+        string displayUnits = dimension.Kind == ViewerDimensionKind.Angle
+            ? style.Units.DisplayAngleUnit : style.Units.DisplayLengthUnit;
+        NativeError.ThrowIfFailed(NativeMethods.UpdateViewerDimensionStyle(
+            Handle, dimension.Id, modelUnits, displayUnits,
+            style.CustomValue.HasValue ? 1 : 0, style.CustomValue.GetValueOrDefault(), style.Flyout,
+            style.Color.Red, style.Color.Green, style.Color.Blue, style.LineWidth),
+            "viewer_dimension_update_style");
+        dimension.MarkStyle(style);
+    }
+
+    internal void SetDimensionVisible(ViewerDimension dimension, bool visible)
+    {
+        EnsureDimension(dimension);
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerDimensionVisible(Handle, dimension.Id, visible ? 1 : 0),
+            "viewer_dimension_set_visible");
+        dimension.MarkVisible(visible);
+    }
+
+    internal void SetDimensionSelected(ViewerDimension dimension, bool selected)
+    {
+        EnsureDimension(dimension);
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerDimensionSelected(Handle, dimension.Id, selected ? 1 : 0),
+            "viewer_dimension_set_selected");
+    }
+
+    internal void RemoveDimension(ViewerDimension dimension)
+    {
+        ArgumentNullException.ThrowIfNull(dimension);
+        if (dimension.IsRemoved) return;
+        EnsureDimension(dimension);
+        NativeError.ThrowIfFailed(
+            NativeMethods.RemoveViewerDimension(Handle, dimension.Id), "viewer_dimension_remove");
+        _dimensions.Remove(dimension.Id);
+        dimension.MarkRemoved();
     }
 
     internal void SetColor(ViewerPresentation presentation, ViewerColor color)
@@ -671,8 +802,11 @@ public sealed class OcctViewer : IDisposable
         EnsureThread();
         foreach (ViewerPresentation presentation in _presentations.Values) presentation.MarkRemoved();
         foreach (ViewerClipPlane plane in _clipPlanes.Values) plane.MarkRemoved();
+        foreach (ViewerDimension dimension in _dimensions.Values) dimension.MarkRemoved();
         _presentations.Clear();
         _clipPlanes.Clear();
+        _dimensions.Clear();
+        _savedViewClipPlanes.Clear();
         _isolationVisibility = null;
         Handle.Dispose();
     }
@@ -695,6 +829,15 @@ public sealed class OcctViewer : IDisposable
         if (!ReferenceEquals(plane.Viewer, this))
             throw new ArgumentException("The clip plane belongs to another viewer.", nameof(plane));
         ObjectDisposedException.ThrowIf(plane.IsRemoved, plane);
+    }
+
+    private void EnsureDimension(ViewerDimension dimension)
+    {
+        ArgumentNullException.ThrowIfNull(dimension);
+        EnsureThread();
+        if (!ReferenceEquals(dimension.Viewer, this))
+            throw new ArgumentException("The viewer dimension belongs to another viewer.", nameof(dimension));
+        ObjectDisposedException.ThrowIf(dimension.IsRemoved || !_dimensions.ContainsKey(dimension.Id), dimension);
     }
 
     private static GpPoint ToPoint(XyzRaw value) => new(value.X, value.Y, value.Z);

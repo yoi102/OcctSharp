@@ -157,7 +157,12 @@ unit behavior, semantic dimension/tolerance/datum reference graphs, transactiona
 mutation and rollback, AP242 GDT plus saved-view import/export, viewer-owned annotation
 lifecycle, and a durable screenshot. The same real AP242-to-inspection-to-annotation-to-
 screenshot workflow must pass in Release and Debug and from a clean package consumer.
-Batch E preparation is 0/24; every such implementation gate is currently `NOT RUN`.
+Preview.2 satisfies this profile as one complete Batch E run. Four focused completion
+tests cover exact measurement, transactions and persistence, complete PMI snapshots and
+reference graphs, invalid/cross-document/disposal guards, saved views, four viewer-owned
+dimension kinds, a real HWND, and screenshot output. The full Release and Debug suites
+pass Generator 91/91 and Runtime 119/119; the clean 62-DLL package consumer repeats the
+AP242/BinXCAF/annotation workflow, and the complete local release check passes.
 
 A repository-native bootstrap change additionally requires a recoverable missing-bridge
 simulation: remove or rename only the expected configuration's bridge, run the ordinary

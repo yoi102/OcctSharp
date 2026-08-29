@@ -941,3 +941,49 @@ rules or design:
 - Removal criteria: Replace this exception only after generated ownership descriptors
   can bind into the same viewer registry and preserve the copied/owning/parent-bound/file
   contracts with the same real-window, real-file, package, and lifetime evidence.
+
+## SC-041: Batch E engineering inspection, PMI, saved-view, and annotation closure
+
+- Status: Accepted and implemented for the complete 24-capability Batch E closure.
+- Scope: Exactly 102 newly direct blocked OCCT 8.0.1 stable IDs covering complete
+  `BRepExtrema_DistShapeShape` solutions and support metadata, call-local property/adaptor
+  measurement, XCAF DimTol/View enumeration and reference graphs, PMI/saved-view
+  mutation, STEPCAF GDT/view switches and AP242 model selection, parent-bound PrsDim/AIS
+  construction and update, TDF graph replacement, and datum-point persistence access.
+- Reason: Solver iterators, BRep adaptors/property accumulators, TDF label containers,
+  XCAF reference graphs, STEPCAF sessions, and PrsDim/AIS objects cannot cross the C ABI
+  safely. The workflow requires copied records, independent owning topology, stable
+  document entries, transaction enforcement, and viewer-parent-bound IDs.
+- Native/ABI/managed behavior: ABI 1.47/bridge 0.55.0/package `8.0.1-preview.2` add exact
+  inspection snapshots, explicit units, dimension/tolerance/datum/saved-view APIs,
+  AP242 GDT/view options, and four viewer-owned dimension kinds. No generated output is
+  hand-edited and no TDF/XCAF/PrsDim native object escapes its owner.
+- Ownership: Measurement scalars, matrices, parameters, PMI fields, strings, arrays,
+  camera/view data, and clipping equations are copied. Support, overlap, presentation,
+  and Area datum-target topology are independent registered shape owners. PMI and saved
+  view identities are stable entries parent-bound to one `XdeDocument`; annotations are
+  parent-bound to one creating-thread-affine `OcctViewer`.
+- OCCT 8.0.1 compatibility corrections: tolerance reference replacement explicitly
+  removes every old `DatumTolRefGUID` child and attribute before attaching the replacement,
+  including an empty set. `XCAFDoc_Datum::GetObject()` reads datum-point X from the wrong
+  location array in OCCT 8.0.1, so the bridge reconstructs X/Y/Z from the persisted tag-17
+  `TDataStd_RealArray`. Dimension descriptions are read from zero-based dynamic-array
+  index 0. Non-Area datum targets reject owning target topology before native mutation.
+- Coverage accounting: Configuration schema 1.8 lists exactly 102 SC-041 stable IDs.
+  Every ID is present in the full inventory, previously blocked, absent from the generated
+  manifest, and disjoint from SC-032 through SC-040. Accepted manual coverage is 222.
+- Validation: Four focused completion tests cover numeric solutions, complete snapshots,
+  reference replace/detach/reverse lookup, transaction commit/abort/remove invalidation,
+  persistence, invalid/cross-document/disposal guards, saved views, four annotation kinds,
+  a real HWND, and screenshot output. Release/Debug pass Generator 91/91 and Runtime
+  119/119; the clean 62-DLL package repeats the AP242 inspection workflow; full inventory,
+  regeneration, compatibility, hashes, provenance, and the local release gate pass.
+- Upgrade impact: Recheck OCCT's tolerance-datum graph semantics, datum point persistence,
+  zero-based description storage, saved-view references, AP242 GDT/view flags, extrema
+  support parameter conventions, PrsDim selection ownership, and target-type topology
+  rules on every OCCT upgrade. Remove the datum reconstruction correction if upstream
+  fixes `XCAFDoc_Datum::GetObject()` and the regression fixture proves equivalent values.
+- Removal criteria: Replace these manual declarations only after generated ownership and
+  container projections preserve the same copied/owning/document-parent/viewer-parent
+  contracts and pass the same transaction, real-file, real-window, package, and lifetime
+  evidence.

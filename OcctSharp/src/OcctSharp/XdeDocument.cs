@@ -4,7 +4,7 @@ using OcctSharp.Interop;
 namespace OcctSharp;
 
 /// <summary>Owns an XDE document with parent-bound shape labels and copied metadata.</summary>
-public sealed class XdeDocument : IDisposable
+public sealed partial class XdeDocument : IDisposable
 {
     private const int EntryCapacity = 1024;
 
@@ -39,6 +39,8 @@ public sealed class XdeDocument : IDisposable
                 options.ReadLayers ? 1 : 0,
                 options.ReadValidationProperties ? 1 : 0,
                 options.ReadMaterials ? 1 : 0,
+                options.ReadGdt ? 1 : 0,
+                options.ReadSavedViews ? 1 : 0,
                 out document),
             "xde_document_read_step_options");
     }
@@ -180,17 +182,21 @@ public sealed class XdeDocument : IDisposable
         ArgumentNullException.ThrowIfNull(options);
         if (!Enum.IsDefined(options.ModelType))
             throw new ArgumentOutOfRangeException(nameof(options), "The STEP model type is not defined.");
+        if (!Enum.IsDefined(options.Schema))
+            throw new ArgumentOutOfRangeException(nameof(options), "The STEP schema is not defined.");
         return WriteFile(
             filePath,
             (document, path) => NativeMethods.WriteStepXdeDocumentWithOptions(
                 document,
                 path,
                 (int)options.ModelType,
+                (int)options.Schema,
                 options.WriteNames ? 1 : 0,
                 options.WriteColors ? 1 : 0,
                 options.WriteLayers ? 1 : 0,
                 options.WriteValidationProperties ? 1 : 0,
-                options.WriteMaterials ? 1 : 0),
+                options.WriteMaterials ? 1 : 0,
+                options.WriteGdt ? 1 : 0),
             "xde_document_write_step_options");
     }
 

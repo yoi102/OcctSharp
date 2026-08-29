@@ -483,8 +483,17 @@ fixed 96-byte camera and 48-byte pick-ray records, caller-owned polygon inputs, 
 detected topology, copied selection bounds, colored subshape override operations,
 context filter and fit operations, parent-bound clip-plane IDs, camera/coordinate/window
 operations, standard review aids, and durable screenshot output. AIS/V3d/Graphic3d
-objects remain inside the single thread-affine viewer owner graph. The current native
-ABI is 1.46 and the bridge implementation version is 0.54.0.
+objects remain inside the single thread-affine viewer owner graph. The native ABI at
+that historical boundary was 1.46 and the bridge implementation version was 0.54.0.
+
+ABI 1.47 is the Preview.2 Batch E engineering-inspection/PMI boundary. It adds fixed
+copied exact-distance/support/property/unit records, independent owning support and
+presentation topology, document-parent-bound dimension/tolerance/datum/saved-view
+operations, explicit STEPCAF GDT/view/AP242 options, and viewer-parent-bound length,
+angle, radius, and diameter dimensions. Solver/adaptor/property/STEPCAF state remains
+native-local; TDF/XCAF labels and graphs remain document-owned; PrsDim/AIS state remains
+inside the creating-thread-affine viewer. The current native ABI is 1.47 and the bridge
+implementation version is 0.55.0.
 
 ## Verification
 

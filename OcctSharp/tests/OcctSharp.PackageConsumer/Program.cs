@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 46)
-    || runtime.BridgeVersion != "0.54.0"
+if (runtime.AbiVersion != new Version(1, 47)
+    || runtime.BridgeVersion != "0.55.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -851,6 +851,122 @@ try
         }
     }
     finally { _ = PackageWindowMethods.DestroyWindow(reviewWindow); }
+
+    using Shape batchETranslatedSource = ShapeFactory.CreateBox(10, 20, 30);
+    using Shape batchETranslated = batchETranslatedSource.Transformed(
+        ShapeTransform.CreateTranslationAndRotationZ(15, 0, 0, 0));
+    using ExactDistanceResult batchEDistance = box.InspectDistanceTo(
+        batchETranslated, new InspectionUnits("mm", "in", "rad", "deg", 4));
+    using ShapePairInspection batchEPair = box.InspectPair(batchETranslated);
+    if (Math.Abs(batchEDistance.Distance - 5) > 1e-8
+        || batchEDistance.Solutions.Count == 0
+        || batchEPair.Classification != ShapePairClassification.Separated
+        || Math.Abs(box.InspectProperties(InspectionPropertyKind.Volume).Mass - 6000) > 1e-6)
+        throw new InvalidOperationException("The packaged Batch E exact-inspection workflow failed.");
+
+    string batchEXbf = Path.Combine(exchangeDirectory, "package-batch-e.xbf");
+    string batchEStep = Path.Combine(exchangeDirectory, "package-batch-e-ap242.step");
+    using XdeDocument batchEDocument = XdeDocument.Create();
+    XdeSavedView batchESavedView;
+    using (XdeTransaction transaction = batchEDocument.BeginTransaction())
+    {
+        XdeLabel part = batchEDocument.AddShape(box, "Package inspection part");
+        XdeDatum datum = batchEDocument.CreateDatum(new XdeDatumDefinition
+        {
+            Name = "A",
+            Identification = "A",
+            SemanticName = "Primary datum",
+            Position = 1
+        }, [part]);
+        XdeDimension dimension = batchEDocument.CreateDimension(new XdeDimensionDefinition(
+            XCAFDimTolObjectsDimensionType.XCAFDimTolObjects_DimensionType_Location_LinearDistance,
+            [10.0])
+        {
+            SemanticName = "Overall length",
+            FirstPoint = GpPoint.Origin,
+            SecondPoint = new GpPoint(10, 0, 0),
+            TextPosition = new GpPoint(5, -3, 0)
+        }, [part], [part]);
+        XdeGeomTolerance tolerance = batchEDocument.CreateGeometricTolerance(
+            new XdeGeomToleranceDefinition
+            {
+                Type = XCAFDimTolObjectsGeomToleranceType.XCAFDimTolObjects_GeomToleranceType_Flatness,
+                Value = 0.1,
+                SemanticName = "Flatness"
+            }, [part], [datum]);
+        batchESavedView = batchEDocument.CreateSavedView(new XdeSavedViewDefinition
+        {
+            Name = "Package inspection view",
+            ProjectionType = XCAFViewProjectionType.XCAFView_ProjectionType_Parallel,
+            ProjectionPoint = new GpPoint(30, 30, 30),
+            ViewDirection = new GpXyz(-1, -1, -1),
+            UpDirection = new GpXyz(0, 0, 1),
+            ClippingPlanes = [new ViewerPlaneEquation(1, 0, 0, -8)]
+        }, [part], [dimension, tolerance, datum]);
+        if (!transaction.Commit())
+            throw new InvalidOperationException("The packaged Batch E transaction did not commit.");
+    }
+    batchEDocument.Save(batchEXbf);
+    batchEDocument.WriteStep(batchEStep, new XdeStepWriteOptions(
+        WriteGdt: true, Schema: XdeStepSchema.Ap242));
+    using (XdeDocument reopenedBatchE = XdeDocument.Open(batchEXbf))
+    {
+        if (reopenedBatchE.GetDimensions().Length != 1
+            || reopenedBatchE.GetGeometricTolerances().Length != 1
+            || reopenedBatchE.GetDatums().Length != 1
+            || reopenedBatchE.GetSavedViews().Length != 1)
+            throw new InvalidOperationException("The packaged Batch E binary persistence workflow failed.");
+    }
+    using (XdeDocument importedBatchE = XdeDocument.ReadStep(batchEStep,
+        new XdeStepReadOptions(ReadGdt: true, ReadSavedViews: true)))
+    {
+        if (importedBatchE.GetDimensions().Length != 1
+            || importedBatchE.GetGeometricTolerances().Length != 1
+            || importedBatchE.GetDatums().Length != 1)
+            throw new InvalidOperationException("The packaged Batch E AP242 reimport workflow failed.");
+    }
+
+    nint batchEWindow = PackageWindowMethods.CreateWindowEx(
+        0, "STATIC", "OcctSharp Batch E package inspection", 0x80000000u,
+        -32000, -32000, 320, 320, 0, 0, 0, 0);
+    if (batchEWindow == 0)
+        throw new InvalidOperationException("The Batch E package inspection HWND could not be created.");
+    try
+    {
+        _ = PackageWindowMethods.ShowWindow(batchEWindow, 4);
+        _ = PackageWindowMethods.UpdateWindow(batchEWindow);
+        using OcctViewer batchEViewer = OcctViewer.Create(batchEWindow);
+        using ViewerPresentation batchEPresentation = batchEViewer.Display(box);
+        using Shape batchECircle = ShapeFactory.CreateCircleEdge(
+            new GpPoint(5, 5, 12), new GpPoint(0, 0, 1), 3);
+        ViewerDimensionStyle batchEStyle = new()
+        {
+            Units = new InspectionUnits("mm", "mm", "rad", "deg", 2),
+            Color = new ViewerColor(1, 0.8, 0.1),
+            Flyout = 6,
+            LineWidth = 2
+        };
+        using ViewerDimension batchELength = batchEViewer.DisplayLengthDimension(
+            GpPoint.Origin, new GpPoint(10, 0, 0), new ViewerPlaneEquation(0, 0, 1, 0), batchEStyle);
+        using ViewerDimension batchEAngle = batchEViewer.DisplayAngleDimension(
+            new GpPoint(10, 0, 0), GpPoint.Origin, new GpPoint(0, 10, 0), batchEStyle);
+        using ViewerDimension batchERadius = batchEViewer.DisplayRadiusDimension(batchECircle, batchEStyle);
+        using ViewerDimension batchEDiameter = batchEViewer.DisplayDiameterDimension(batchECircle, batchEStyle);
+        batchELength.Hide();
+        batchELength.Show();
+        batchEAngle.UpdateStyle(batchEStyle with { CustomValue = 45 });
+        batchEAngle.UpdateStyle(batchEStyle with { CustomValue = null });
+        batchERadius.SetSelected();
+        batchERadius.SetSelected(false);
+        batchESavedView.ApplyTo(batchEViewer);
+        batchEViewer.FitAll();
+        batchEViewer.Redraw();
+        string batchEImage = batchEViewer.SaveScreenshot(
+            Path.Combine(exchangeDirectory, "package-batch-e-inspection.png"), overwrite: true);
+        if (!File.Exists(batchEImage) || new FileInfo(batchEImage).Length == 0)
+            throw new InvalidOperationException("The packaged Batch E inspection screenshot workflow failed.");
+    }
+    finally { _ = PackageWindowMethods.DestroyWindow(batchEWindow); }
 }
 finally
 {

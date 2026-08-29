@@ -382,6 +382,31 @@ internal static partial class NativeMethods
         ShapeHandle first,
         ShapeHandle second,
         out ShapeDistanceResultRaw result);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_exact_distance_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetExactDistanceCount(
+        ShapeHandle first, ShapeHandle second, out int count);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_exact_distance_solution")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetExactDistanceSolution(
+        ShapeHandle first, ShapeHandle second, int index, out ExtremaSolutionRaw solution);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_pair_classify")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ClassifyShapePair(
+        ShapeHandle first, ShapeHandle second, double tolerance,
+        out int classification, out double distance, out double overlapVolume, out nint overlapShape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_inspection_properties")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetInspectionProperties(
+        ShapeHandle shape, int propertyKind, out InspectionPropertiesRaw properties);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_angle")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetShapeAngle(
+        ShapeHandle first, ShapeHandle second, out double radians);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_radial_measurement")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetRadialMeasurement(
+        ShapeHandle shape, out RadialMeasurementRaw measurement);
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_shape_fix")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus FixShape(ShapeHandle shape, out nint fixedShape);
@@ -1017,6 +1042,8 @@ internal static partial class NativeMethods
         int readLayers,
         int readValidationProperties,
         int readMaterials,
+        int readGdt,
+        int readViews,
         out nint document);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_write_step", StringMarshalling = StringMarshalling.Utf8)]
@@ -1029,11 +1056,119 @@ internal static partial class NativeMethods
         OcafDocumentHandle document,
         string filePath,
         int modelType,
+        int schema,
         int writeNames,
         int writeColors,
         int writeLayers,
         int writeValidationProperties,
-        int writeMaterials);
+        int writeMaterials,
+        int writeGdt);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_count")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdePmiCount(OcafDocumentHandle document, int kind, out int count);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_entry")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdePmiEntry(OcafDocumentHandle document, int kind, int index, nint buffer, int capacity, out int written);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_dimension_create", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus CreateXdeDimension(
+        OcafDocumentHandle document, in PmiDimensionRaw data, double* values, int valueCount,
+        int* modifiers, int modifierCount, string semanticName, string presentationName,
+        string description, string descriptionName, nint buffer, int capacity, out int written);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_dimension_update", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus UpdateXdeDimension(
+        OcafDocumentHandle document, string entry, in PmiDimensionRaw data, double* values, int valueCount,
+        int* modifiers, int modifierCount, string semanticName, string presentationName,
+        string description, string descriptionName);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_dimension_get", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeDimension(
+        OcafDocumentHandle document, string entry, out PmiDimensionRaw data, out int valueCount, out int modifierCount);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_tolerance_create", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus CreateXdeTolerance(
+        OcafDocumentHandle document, in PmiToleranceRaw data, int* modifiers, int modifierCount,
+        string semanticName, string presentationName, nint buffer, int capacity, out int written);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_tolerance_update", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus UpdateXdeTolerance(
+        OcafDocumentHandle document, string entry, in PmiToleranceRaw data, int* modifiers, int modifierCount,
+        string semanticName, string presentationName);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_tolerance_get", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeTolerance(
+        OcafDocumentHandle document, string entry, out PmiToleranceRaw data, out int modifierCount);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_datum_create", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus CreateXdeDatum(
+        OcafDocumentHandle document, in PmiDatumRaw data, int* modifiers, int modifierCount,
+        string name, string description, string identification, string semanticName, string presentationName,
+        nint buffer, int capacity, out int written);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_datum_update", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus UpdateXdeDatum(
+        OcafDocumentHandle document, string entry, in PmiDatumRaw data, int* modifiers, int modifierCount,
+        string name, string description, string identification, string semanticName, string presentationName);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_datum_get", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeDatum(
+        OcafDocumentHandle document, string entry, out PmiDatumRaw data, out int modifierCount);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_numeric_item", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdePmiNumericItem(
+        OcafDocumentHandle document, int kind, string entry, int field, int index,
+        out double realValue, out int integerValue);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_text_utf8_length", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdePmiTextLength(OcafDocumentHandle document, int kind, string entry, int field, out int length);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_text_to_utf8", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdePmiText(OcafDocumentHandle document, int kind, string entry, int field, nint buffer, int capacity, out int written);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_set_aux_shape", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetXdePmiAuxShape(OcafDocumentHandle document, int kind, string entry, int role, ShapeHandle shape, string name);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_clear_aux_shape", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ClearXdePmiAuxShape(OcafDocumentHandle document, int kind, string entry, int role);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_get_aux_shape", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdePmiAuxShape(OcafDocumentHandle document, int kind, string entry, int role, out int hasShape, out nint shape);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_set_references", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetXdePmiReferences(OcafDocumentHandle document, int kind, string entry, string firstEntries, string secondEntries);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_reference_count", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdePmiReferenceCount(OcafDocumentHandle document, int relation, string entry, out int count);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_reference_entry", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdePmiReferenceEntry(OcafDocumentHandle document, int relation, string entry, int index, nint buffer, int capacity, out int written);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_pmi_remove", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus RemoveXdePmi(OcafDocumentHandle document, int kind, string entry);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_saved_view_create", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus CreateXdeSavedView(
+        OcafDocumentHandle document, in SavedViewRaw data, string name, string clippingExpression,
+        string shapeEntries, string pmiEntries, PlaneEquationRaw* planes, int planeCount,
+        nint buffer, int capacity, out int written);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_saved_view_update", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus UpdateXdeSavedView(
+        OcafDocumentHandle document, string entry, in SavedViewRaw data, string name, string clippingExpression,
+        string shapeEntries, string pmiEntries, PlaneEquationRaw* planes, int planeCount);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_saved_view_get", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeSavedView(
+        OcafDocumentHandle document, string entry, out SavedViewRaw data, out int planeCount);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_saved_view_plane", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdeSavedViewPlane(
+        OcafDocumentHandle document, string entry, int index, out PlaneEquationRaw plane);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_saved_view_remove", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus RemoveXdeSavedView(OcafDocumentHandle document, string entry);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_add_shape")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -1140,6 +1275,28 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_display_shape")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus DisplayViewerShape(ViewerHandle viewer, ShapeHandle shape, out long presentationId);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_dimension_create", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus CreateViewerDimension(
+        ViewerHandle viewer, int kind, nint shape, XyzRaw* points, int pointCount, in PlaneEquationRaw plane,
+        string modelUnits, string displayUnits, int hasCustomValue, double customValue, double flyout,
+        double red, double green, double blue, double lineWidth, out long dimensionId);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_dimension_update_style", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus UpdateViewerDimensionStyle(
+        ViewerHandle viewer, long dimensionId, string modelUnits, string displayUnits,
+        int hasCustomValue, double customValue, double flyout,
+        double red, double green, double blue, double lineWidth);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_dimension_set_visible")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerDimensionVisible(ViewerHandle viewer, long dimensionId, int visible);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_dimension_set_selected")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerDimensionSelected(ViewerHandle viewer, long dimensionId, int selected);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_dimension_remove")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus RemoveViewerDimension(ViewerHandle viewer, long dimensionId);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_set_presentation_visible")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

@@ -9,16 +9,16 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Architecture](ARCHITECTURE.md) — system boundaries and component ownership.
 - [Repository layout](REPOSITORY_LAYOUT.md) — physical separation of documentation
   and code-related files.
-- [Roadmap](ROADMAP.md) — completed Batch D outcome, prepared Batch E wave, and historical phases.
-- [Complete migration plan](MIGRATION_PLAN.md) — completed Batch D and Batch C matrices,
-  prepared Batch E denominator, large-wave rules, module/package boundaries, metrics,
+- [Roadmap](ROADMAP.md) — completed Batch D/Batch E outcomes and historical phases.
+- [Complete migration plan](MIGRATION_PLAN.md) — completed Batch C, Batch D, and Batch E
+  matrices, large-wave rules, module/package boundaries, metrics,
   and product-scale gates.
 - [Batch D viewport gap inventory](BATCH_D_VIEWPORT_GAP_INVENTORY.md) — locked
   24-capability production viewport/model-review denominator, OCCT root audit, ownership
   closure, non-goals, and validation gates.
 - [Batch E inspection and PMI gap inventory](BATCH_E_INSPECTION_PMI_GAP_INVENTORY.md)
   — locked 24-capability engineering-inspection, measurement, PMI/AP242, annotation,
-  saved-view, and screenshot denominator at 0/24 implementation.
+  saved-view, and screenshot denominator completed at 24/24.
 - [AI migration loop prompt](AI_MIGRATION_LOOP_PROMPT.md) — reusable re-entrant prompt
   for executing the largest coherent common-workflow wave instead of per-class tasks.
 - [Status](STATUS.md) — current phase, blockers, and last verified results.
@@ -31,6 +31,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   C++/CLI, and platform-adapter availability and package boundaries.
 - [Full inventory classification](FULL_INVENTORY_CLASSIFICATION.md) — complete declaration
   and header dispositions, reason codes, and complete-versus-generated metrics.
+- [Preview.2 release notes](RELEASE_NOTES_8.0.1_PREVIEW_2.md) — complete Batch E exact
+  inspection, PMI/AP242, saved-view, viewer-annotation, and local release evidence.
 - [Preview.1 release notes](RELEASE_NOTES_8.0.1_PREVIEW_1.md) — OCCT-aligned NuGet
   version transition, inherited Batch D evidence, and Batch E preparation boundary.
 - [Alpha.55 release notes](RELEASE_NOTES_0.1.0_ALPHA_55.md) — complete Batch D

@@ -7,7 +7,7 @@ reported as supported.
 
 | OcctSharp | Generator | Native ABI | OCCT | Platform | Compiler | .NET | Status |
 |---|---|---|---|---|---|---|---|
-| 8.0.1-preview.1 workspace | ClangSharp 21.1.8.4 | 1.46 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
+| 8.0.1-preview.2 workspace | ClangSharp 21.1.8.4 | 1.47 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
 
 Validated in both Debug and Release: native and managed build, ABI/runtime identity,
 OCCT box creation, topology traversal, error/disposal behavior, STEP geometry
@@ -166,6 +166,14 @@ nupkg inspection, clean restore/publish/runtime, Release/Debug, Generator 91/91,
 115/115, dependency profiles 6/6, clean regeneration, API/inventory, provenance, and the
 complete Preview.1 local release check pass. Batch E is prepared at 0/24 and contributes
 no compatibility claim yet.
+
+The `8.0.1-preview.2` workspace advances to ABI 1.47/bridge 0.55.0 and completes Batch
+E. Release and Debug pass Generator 91/91, Runtime 119/119, and dependency profiles 6/6.
+Exact inspection, complete semantic PMI/reference mutation, BinXCAF and explicit AP242
+GDT/view round trips, saved views, four viewer-owned dimension kinds, and real-HWND
+screenshot output pass. The clean consumer executes the complete workflow with the
+application-local 62-DLL closure; 83 generated files are fresh and byte-identical after
+clean regeneration. The additive API diff is 37,490 additions and zero removals.
 
 ## Planned validation dimensions
 

@@ -11,10 +11,10 @@ The loop does not mean blindly generating declarations. Every large wave must pr
 native semantics, ownership, ABI safety, deterministic regeneration, and truthful
 validation evidence.
 
-Current repository note: Batch D is complete at alpha.55 with 24/24 capabilities and
-the full local gate passing. ADR-0066 has prepared Batch E with one immutable
-24-capability engineering-inspection, exact-measurement, and PMI/AP242 denominator.
-Batch E implementation is 0/24 and all of its implementation gates are `NOT RUN`.
+Current repository note: Batch D is complete at alpha.55 and Batch E is complete in
+Preview.2 with 24/24 capabilities and the full local gate passing. A future product batch
+must first lock a new finite cross-family denominator, dependency/ownership closure,
+non-goals, and whole-wave validation gates; completed E evidence must remain immutable.
 
 ## How to use
 
@@ -37,9 +37,9 @@ ready for its declared release scope.
 
 This prompt is re-entrant. Never assume the previous conversation is accurate or
 complete. Recover facts from the repository and current tool output on every invocation.
-If `STATUS.md` records Batch D 24/24 complete, preserve that evidence and continue only
-the accepted Batch E denominator. Do not add unrelated APIs under D or split E into
-smaller family waves.
+If `STATUS.md` records Batch E 24/24 complete, preserve that evidence. Do not add unrelated
+APIs under D or E; prepare the next accepted finite product denominator before implementing
+another large cross-family wave.
 
 ============================================================
 1. FIXED OBJECTIVE AND BASELINE
@@ -279,7 +279,7 @@ HANDOFF
   3. exact validation results and NOT RUN/BLOCKED items;
   4. all progress percentages with denominators;
   5. remaining risks or blockers;
-  6. next action inside the single Batch E wave;
+  6. next action inside the active locked product wave, or preparation of the next wave;
   7. the machine-readable loop footer defined in section 8.
 
 ============================================================
@@ -292,7 +292,7 @@ HANDOFF
   package version, and documents together.
 - Under ADR-0065, use `<OCCT major>.<minor>.<patch>-preview.<OcctSharp preview number>`
   for NuGet while keeping managed assembly, generator, native ABI, bridge, schema, and
-  OCCT build identities independent. The current package line begins at `8.0.1-preview.1`.
+  OCCT build identities independent. The current package is `8.0.1-preview.2`.
 - Keep the current single package and flat application-local occt/ directory until an
   ADR-0015 split trigger is actually met.
 - Planned managed packages are Runtime, Foundation, Geometry, MeshData, Modeling, Mesh,
@@ -418,10 +418,10 @@ its declared inspection/measurement/PMI/AP242 contract:
 If publication authorization is the only missing item, report migration engineering as
 complete but keep public publication BLOCKED; do not upload anything.
 
-Begin now with RECOVER. Then continue the entire locked Batch E inspection/PMI wave as
-far as safely possible in this invocation. Do not stop after merely writing a plan when
-local, authorized implementation work can proceed, and do not publish a partial family
-as a completed Batch E checkpoint.
+Begin now with RECOVER. If Batch E is already complete, verify its immutable evidence and
+prepare the next complete cross-family denominator before implementation. Do not stop
+after merely writing a plan when local, authorized implementation work can proceed, and
+do not publish a partial family as a completed product checkpoint.
 ```
 
 ## Poller behavior

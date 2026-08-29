@@ -178,7 +178,11 @@ their owning document by stable entries, and mutations are document-owned transa
 STEPCAF/AP242 sessions own native reader/writer state only for the call or explicit
 session lifetime. Viewer annotations and saved-view presentation resources remain
 creating-thread-affine and viewer-parent-bound; screenshots remain durable file results.
-Preparation is complete at 0/24 and no Batch E implementation validation is claimed.
+Preview.2 completes all 24 capabilities through this boundary. Release and Debug,
+transaction/lifetime guards, real AP242/BinXCAF persistence, real-HWND saved-view and
+viewer-dimension behavior, clean-package execution, inventory, compatibility,
+provenance, and the complete local release gate pass without changing the single
+assembly/native-DLL/package topology.
 
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native

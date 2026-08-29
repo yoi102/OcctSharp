@@ -1,11 +1,11 @@
 # Batch E engineering inspection, measurement, and PMI gap inventory
 
-This document locks the product denominator and cross-family dependency closure for
-Batch E before implementation. It measures one engineering-inspection workflow rather
-than isolated OCCT classes or method counts.
+This document records the locked product denominator, cross-family dependency closure,
+implementation, and completion evidence for Batch E. It measures one engineering-
+inspection workflow rather than isolated OCCT classes or method counts.
 
-Preparation status: **COMPLETE**. Implementation status: **0/24 capabilities; NOT
-STARTED**. No Batch E API, ABI, runtime, package, or test result is claimed here.
+Preparation status: **COMPLETE**. Implementation status: **24/24 capabilities (100%);
+COMPLETE**. Preview.2, ABI 1.47, and bridge 0.55.0 pass the complete local gate.
 
 ## Product outcome
 
@@ -86,8 +86,36 @@ not own the friendly viewer graph.
 The generated `XCAFDimTolObjects` scalar/enum methods are useful implementation inputs,
 but they do not by themselves provide document traversal, copied container snapshots,
 reference topology, transaction semantics, or viewer ownership. Direct declarations
-actually used by the friendly bridge must be reconciled by one Batch E special case with
-exact stable IDs; audited but unused candidates remain in their existing disposition.
+actually used by the friendly bridge are reconciled by SC-041 with exact stable IDs;
+audited but unused candidates remain in their existing disposition.
+
+Implementation reconciles exactly 102 direct blocked OCCT 8.0.1 stable IDs under
+SC-041. The complete inventory therefore records 16,353 emitted declarations, 222
+accepted manual stable IDs, 49,344 skipped declarations, 50,353 narrowly blocked
+declarations, and zero supported-unselected/pending/HD099 declarations.
+
+## Completed implementation evidence
+
+- `Shape` exposes every exact-distance solution with copied points, support kinds,
+  optional edge/face parameters, inner-solution state, and independent owning support
+  topology. Pair classification covers separated, touching, contained, and interfering
+  shapes with optional owning overlap topology.
+- Inspection snapshots cover edge/wire length, face/shell area and centroid,
+  solid/compound volume, mass, centroid and inertia, linear-edge/planar-face angles,
+  circular/cylindrical/conical radius and diameter, and explicit `InspectionUnits`.
+- `XdeDocument` owns stable-entry dimension, tolerance, datum, target, and saved-view
+  identities. Complete copied snapshots, bidirectional reference graphs, transactional
+  create/update/replace/detach/remove, rollback, cross-document guards, and removal
+  invalidation are implemented without exposing TDF or XCAF containers.
+- GDT and saved-view STEPCAF switches plus explicit AP242 schema selection round-trip
+  authored inspection documents. Saved views copy and apply camera, visibility, PMI
+  references, and clipping state through the live document/viewer boundary.
+- `OcctViewer` owns parent-bound length, angle, radius, and diameter dimensions with
+  style/update/show/hide/select/remove operations on the creating thread. The repository
+  tests and clean package consumer exercise a real HWND and durable screenshot.
+- The bridge corrects OCCT 8.0.1 datum-point X reconstruction from the persisted point
+  array and explicitly replaces/removes the tolerance-datum graph when detaching links;
+  both are documented in SC-041 and covered by focused regression tests.
 
 ## Cross-family dependency closure
 
@@ -132,7 +160,7 @@ must execute from the clean package and application-local 62-DLL runtime.
 
 ## Validation and completion gates
 
-Batch E reaches 24/24 only when all of these pass together:
+Batch E reached 24/24 when all of these passed together:
 
 - exact stable-ID reconciliation for every direct manual declaration;
 - Release and Debug native/managed builds and generator/runtime tests;
@@ -145,16 +173,19 @@ Batch E reaches 24/24 only when all of these pass together:
 - additive API compatibility, complete inventory classification, runtime hashes,
   SBOM/provenance/checksums, documentation, and the complete local release check.
 
-Preparation ran no Batch E implementation gate:
-
 | Check | Result |
 |---|---|
-| API/ABI implementation | NOT RUN |
-| Native/managed compile after Batch E changes | NOT RUN |
-| Batch E runtime/lifetime/transaction tests | NOT RUN |
-| Real AP242/XDE plus real-HWND integration | NOT RUN |
-| Clean package consumer for Batch E | NOT RUN |
-| Full local release check after Batch E implementation | NOT RUN |
+| API/ABI implementation | PASS — package 8.0.1-preview.2, ABI 1.47, bridge 0.55.0 |
+| Native/managed compile after Batch E changes | PASS — Release and Debug, 0 warnings/errors |
+| Batch E runtime/lifetime/transaction tests | PASS — focused 4/4; full Runtime 119/119 in Release and Debug |
+| Real AP242/XDE plus real-HWND integration | PASS — authored AP242, BinXCAF persistence, saved view, four viewer dimensions, non-empty screenshot |
+| Clean package consumer for Batch E | PASS — clean restore/publish/runtime with the application-local 62-DLL closure |
+| Full local release check after Batch E implementation | PASS — `eng/release-check.ps1 -PackageVersion 8.0.1-preview.2` |
+
+The final inventory classifies 116,272/116,272 declarations and 7,090/7,090 headers;
+7,058 headers are semantically scanned and the 32 named parse failures retain stable
+header dispositions. Its SHA256 is
+`2C8DE4940EAB609C5B24BCE45B50A473BF4120004DD337247E0172C0D1CAC3B1`.
 
 ## Explicit non-goals
 

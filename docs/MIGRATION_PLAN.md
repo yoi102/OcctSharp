@@ -91,13 +91,14 @@ Batch `E` as one finite 24-capability inspection/measurement/PMI/AP242 denominat
 | B | Complete (local implementation) | Reproducible .NET 10/native foundation; deterministic generation; safe value, shared, topology, document, metadata, exchange, modeling, mesh, and visualization profiles; 16,353 emitted plus 61 manual stable IDs; zero supported-unselected/LT001-LT004; complete observed classification; Release/Debug/runtime, 13-file freshness, byte-identical clean regeneration, 62-DLL package consumer, compatibility, provenance/SBOM/checksum, and local release gates passing | None inside Batch B. Signing credentials and NuGet publication remain independent release-readiness gates |
 | C — Common CAD API Expansion | Complete (local implementation) | Alpha.51 validates topology/BREP/mesh/XDE/viewer editing; alpha.52 validates STEP reporting/BRepCheck/ShapeFix/V3d rotation; alpha.53 validates BRepGProp/XCAF properties/XDE occurrences/STEPCAF options; alpha.54 closes the final 15-capability geometry/topology/selective-STEP/viewer-input workflow. Release/Debug, Generator 91/91, Runtime 114/114, 83-file deterministic regeneration, 62-DLL clean consumer, inventory, dependency closure, API compatibility, provenance, and local release gates pass | None inside Batch C. Hosted CI execution, signing, and NuGet publication remain independent release-readiness gates; advanced filters, custom rendering, optional integrations, cold schema, and exhaustive mesh attributes require a new product denominator |
 | D — Production CAD Viewport and Model Review | Complete (24/24, local implementation) | Alpha.55 implements the entire ADR-0064 denominator with copied XDE identity, owning detected/selected topology, area selection/filtering, subshape review styling, camera/conversions, clipping/review aids, and screenshot output. Release/Debug, Generator 91/91, Runtime 115/115, real STEP/XDE plus real-HWND, clean 62-DLL package, regeneration, inventory, compatibility, provenance, and local release gates pass | None inside Batch D. A future product batch requires a separately locked finite denominator; hosted release, signing, and NuGet publication remain independent release-readiness gates |
-| E — Engineering Inspection, Exact Measurement, and PMI/AP242 | Prepared (0/24 implemented) | ADR-0066 and `BATCH_E_INSPECTION_PMI_GAP_INVENTORY.md` lock all 24 capabilities, connected families, ownership categories, non-goals, a 14-root/990-declaration implementation audit, real AP242-to-inspection-to-screenshot outcome, and whole-wave exit gates | Implement the entire 24-capability closure as one wave; compile, runtime/lifetime/transaction, real AP242, real-HWND annotation/screenshot, clean-package, and full local release gates are `NOT RUN` |
+| E — Engineering Inspection, Exact Measurement, and PMI/AP242 | Complete (24/24, local implementation) | Preview.2 implements the entire ADR-0066 denominator: exact solution/support and engineering measurements, explicit units, complete dimension/tolerance/datum/saved-view snapshots and reference mutation, AP242/BinXCAF persistence, four viewer-owned dimension kinds, and screenshot output. Release/Debug, Generator 91/91, Runtime 119/119, focused 4/4, real AP242 plus real-HWND, clean 62-DLL package, regeneration, inventory, compatibility, provenance, and local release gates pass | None inside Batch E. The next product batch requires a separately locked finite denominator; hosted release, signing, and NuGet publication remain independent release-readiness gates |
 
 Current B completion is not represented by counting retired planning labels. Engineering
 progress, selected binding coverage, full-profile coverage, inventory completeness,
-validation coverage, and publication readiness are reported independently. B is 100%
-because every local exit condition above now has evidence; this does not make the public
-package release-ready. New implementation progress is reported against E, never by
+validation coverage, and publication readiness are reported independently. B through E
+are 100% for their accepted local denominators because every local exit condition above
+has evidence; this does not make the public package release-ready. New implementation
+progress requires another locked product denominator and is never reported by
 reopening B/C/D or inventing numbered or dotted E labels.
 
 The 16,353 emitted plus 61 accepted manual stable IDs are Batch B's baseline binding
@@ -345,7 +346,7 @@ package consumer. Generated freshness, byte-identical clean regeneration, depend
 closure, API compatibility, complete classification, runtime hashes, SBOM/provenance/
 checksums, and the full local release check pass together.
 
-## Batch E: Engineering Inspection, Exact Measurement, and PMI/AP242 — prepared
+## Batch E: Engineering Inspection, Exact Measurement, and PMI/AP242 — complete
 
 ADR-0066 and `BATCH_E_INSPECTION_PMI_GAP_INVENTORY.md` lock one 24-capability product
 outcome spanning exact distance/contact/interference inspection, length/area/volume/
@@ -356,11 +357,13 @@ evidence. The focused 14-root audit classifies 990 candidate declarations as 142
 2 manual, 604 blocked, and 242 skipped; these counts guide implementation and are not the
 product denominator.
 
-Preparation is complete at 0/24. No Batch E API, ABI, runtime, package, AP242, viewer, or
-screenshot implementation gate has run. The implementation must land as one cross-family
-wave; family-only or numbered/dotted checkpoints are forbidden. It retains the single
-managed assembly, native DLL, NuGet package, application-local runtime, public type names,
-and ADR-0061/ADR-0062 generated dependency graph.
+Preview.2 completes 24/24 as one cross-family wave; no family-only or numbered/dotted
+checkpoint was used. Exact inspection, complete PMI snapshots/reference mutation,
+AP242/BinXCAF persistence, saved views, viewer-owned dimensions, and screenshot evidence
+pass in Release/Debug repository runtime and the clean 62-DLL package consumer. SC-041
+reconciles 102 direct blocked stable IDs, and the complete local release gate passes while
+retaining the single managed assembly, native DLL, NuGet package, application-local
+runtime, public type names, and ADR-0061/ADR-0062 generated dependency graph.
 
 ## Generated output partitioning
 

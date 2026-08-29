@@ -6,14 +6,14 @@ evidence; creating files or generating a large method count is not sufficient.
 The retired B00–B20 capability milestones and future package boundaries are documented
 in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the completed
 product-scale batch `B`; none is a separate current batch or commit boundary.
-Batch B, Batch C, and Batch D are complete for their accepted local implementation
-scopes. ADR-0063 closes C at alpha.54 and ADR-0064 closes D at alpha.55. ADR-0066 has
-locked Batch E as one 24-capability engineering-inspection, exact-measurement, and
-PMI/AP242 wave; implementation is 0/24. Hosted CI,
+Batch B, Batch C, Batch D, and Batch E are complete for their accepted local
+implementation scopes. ADR-0063 closes C at alpha.54, ADR-0064 closes D at alpha.55,
+and ADR-0066 closes E in Preview.2 as one 24-capability engineering-inspection,
+exact-measurement, and PMI/AP242 wave. Hosted CI,
 signing, and NuGet publication remain separate release-readiness work rather than
 unfinished batch implementation.
 
-## Current priority: Batch E engineering inspection, measurement, and PMI/AP242
+## Current priority: next complete cross-family product batch preparation
 
 Batch C's routine CAD path is locally complete: .NET can import/build, inspect and edit,
 validate/measure, mesh, preserve common document metadata, export, display, and select
@@ -33,12 +33,13 @@ freshness and clean regeneration, inventory, API compatibility, provenance, and 
 local release check pass.
 
 ADR-0066 and [the Batch E inspection/PMI gap inventory](BATCH_E_INSPECTION_PMI_GAP_INVENTORY.md)
-now lock the next product batch as one 24-capability dependency closure. It crosses
+close one 24-capability dependency closure. It crosses
 BRepExtrema/BRepAdaptor/BRepGProp/TopoDS exact inspection, model/display units,
 XCAFDoc/XCAFDimTolObjects semantic dimensions, tolerances, datums and reference graphs,
 transactional PMI mutation, STEPCAF/AP242 GDT and saved views, PrsDim/AIS annotations,
-V3d/Graphic3d presentation, and screenshot evidence. Preparation is complete;
-implementation and every Batch E compile/runtime/package gate are `NOT RUN` (0/24).
+V3d/Graphic3d presentation, and screenshot evidence. Preview.2 completes all 24/24;
+Release/Debug, Runtime 119/119, AP242/BinXCAF, real HWND/screenshot, clean 62-DLL
+package, inventory, compatibility, provenance, and the local release gate pass together.
 Measurement-only, dimension-only, tolerance-only, datum-only, AP242-only, saved-view-only,
 or viewer-annotation-only fragments are not completion checkpoints.
 
@@ -274,7 +275,7 @@ generated sharing, modeling, classification, and release engineering are histori
 capability milestones inside B, not active batches.
 
 Batch C completed the common workflow matrix defined by ADR-0060 and ADR-0063. Batch D
-completed the production viewport/model-review matrix defined by ADR-0064. Batch E is
-prepared under ADR-0066 with an immutable 24-capability inspection/PMI denominator and
-0/24 implemented. Numbered or dotted fragments, per-class batches, and small completion
+completed the production viewport/model-review matrix defined by ADR-0064. Batch E
+completed the immutable 24-capability inspection/PMI denominator defined by ADR-0066 in
+Preview.2. Numbered or dotted fragments, per-class batches, and small completion
 percentages are not used.

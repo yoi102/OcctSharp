@@ -18,7 +18,8 @@ into one ambiguous version string.
 
 - Under ADR-0065, NuGet package versions align their numeric core with the supported
   OCCT version: `<OCCT major>.<minor>.<patch>-preview.<OcctSharp preview number>`.
-- The current line begins at `8.0.1-preview.1`. Increment the preview counter for an
+- The current line began at `8.0.1-preview.1`; the current package is
+  `8.0.1-preview.2`. Increment the preview counter for an
   OcctSharp package-visible change while the OCCT baseline remains 8.0.1. Reserve the
   stable `8.0.1` package version for public-release readiness.
 - A later OCCT baseline changes the three-part numeric core and restarts the preview
@@ -31,8 +32,8 @@ into one ambiguous version string.
 - Record the exact OCCT build identity in package metadata and runtime diagnostics.
 - Keep package, managed assembly, generator, native ABI, bridge, binding-model schema,
   configuration schema, and OCCT build identities independent. In particular, the
-  Preview.1 managed assembly identity remains `0.1.0.0`, native ABI remains 1.46, and
-  bridge implementation remains 0.54.0.
+  Preview.2 managed assembly identity remains `0.1.0.0`; native ABI is 1.47 and bridge
+  implementation is 0.55.0.
 
 ## Runtime identity
 
@@ -217,6 +218,11 @@ assembly identity (`0.1.0.0`), native ABI (1.46), bridge implementation (0.54.0)
 surface, runtime closure, or completed Batch D implementation. ADR-0066 prepares Batch E
 at 0/24; Preview.1 does not claim Batch E implementation.
 
+Preview.2 advances the package-visible OcctSharp counter for the complete additive Batch
+E wave. It retains managed assembly/file identity `0.1.0.0`, advances the additive native
+ABI to 1.47 and bridge implementation to 0.55.0, and removes no public signature. API
+comparison against the alpha.38 baseline reports 37,490 additions and zero removals.
+
 ## Upgrade classification
 
 Preview.1 inherits alpha.55's 16,353-declaration generated surface and 120 accepted
@@ -224,6 +230,11 @@ manual stable IDs through SC-040. The observed full inventory remains separate: 
 classified declarations, zero supported-unselected, and 50,455 narrow blocked
 dispositions. Package verification is pinned to .NET SDK 10.0.400 by the inner workspace
 `global.json`.
+
+Preview.2 retains the 16,353 generated surface and adds 102 SC-041 manual stable IDs,
+for 222 accepted manual IDs total. The current full inventory has 116,272 classified
+declarations, zero supported-unselected, 49,344 skipped, and 50,353 narrowly blocked
+dispositions. Package verification remains pinned to SDK 10.0.400.
 
 An OCCT upgrade report must classify:
 

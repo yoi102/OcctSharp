@@ -1,19 +1,19 @@
 # Known Issues
 
-## KI-027: Batch E engineering inspection and PMI closure is not implemented
+## KI-027: Batch E engineering inspection and PMI closure was not implemented
 
-- Status: Open; prepared at 0/24 under ADR-0066.
+- Status: Resolved in Preview.2 at 24/24 under ADR-0066.
 - Severity: Product gap
 - Area: BRepExtrema/BRepGProp, XCAFDimTolObjects, STEPCAF/AP242, PrsDim/AIS
-- Problem: The current alpha.55 implementation baseline does not yet provide the complete
+- Original problem: The alpha.55 implementation baseline did not provide the complete
   24-capability exact-inspection, measurement, semantic PMI/reference graph, transactional
   mutation, AP242 GDT/saved-view, viewer-annotation, and screenshot workflow.
-- Current mitigation: `BATCH_E_INSPECTION_PMI_GAP_INVENTORY.md` locks one dependency and
-  ownership closure and a 14-root/990-candidate audit. No partial family is claimed as a
-  completed batch.
-- Planned resolution: Implement and validate all 24 capabilities as one Batch E wave in
-  repository runtime and a clean package consumer. All Batch E implementation gates are
-  currently `NOT RUN`.
+- Resolution: Preview.2 implements and validates all 24 capabilities as one Batch E wave.
+  Exact inspection, complete PMI/reference mutation, AP242/BinXCAF persistence, saved
+  views, four viewer-owned annotation kinds, and real-HWND screenshot output pass in
+  Release/Debug repository runtime and the clean 62-DLL package consumer. SC-041 records
+  102 direct stable IDs; Generator 91/91, Runtime 119/119, full inventory, compatibility,
+  regeneration, runtime identity, provenance, and the local release check pass.
 
 ## KI-026: Full-selection 16,017-binding wave was not compile-accepted
 
@@ -24,7 +24,7 @@
 - Resolution: generalized operation namespaces/ordinals, allocator-retaining placement
   construction, configured completion headers, toolkit closure, and narrow long-tail
   dispositions were implemented in the generator and regenerated. The accepted surface
-  is now 16,353 emitted stable IDs plus 120 accepted manual stable IDs.
+  is now 16,353 emitted stable IDs plus 222 accepted manual stable IDs.
 - Evidence: alpha.55 Release and Debug native/managed builds pass; Generator 91/91,
   Runtime 115/115, dependency profiles 6/6, 83-file freshness and byte-identical clean
   regeneration, dependency closure, clean package consumer, inventory, API compatibility,
@@ -113,9 +113,9 @@ evidence updated.
 - Severity: High
 - Area: Generator
 - Problem: Deterministic native/managed generation now owns 16,353 stable IDs and the
-  accepted friendly/manual layer reconciles 120 additional stable IDs. This is a broad,
+  accepted friendly/manual layer reconciles 222 additional stable IDs. This is a broad,
   validated selected surface, not full OCCT API coverage. The complete classification
-  still contains 49,344 skipped and 50,455 narrowly blocked declarations, while 32 of
+  still contains 49,344 skipped and 50,353 narrowly blocked declarations, while 32 of
   7,090 entry headers cannot be semantically scanned with the supplied optional/artifact
   inputs. A single generated/total percentage would therefore mix different denominators
   and overstate support.

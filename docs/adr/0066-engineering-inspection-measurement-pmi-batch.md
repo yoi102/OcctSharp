@@ -75,3 +75,19 @@ gates. No Batch E implementation validation is claimed by this preparation ADR.
 - ADR-0063: owning selected topology and application input.
 - ADR-0064: copied review identity, clipping, and screenshot evidence.
 - ADR-0065: OCCT-aligned NuGet preview versioning.
+
+## Completion outcome
+
+Preview.2 completes all 24 capabilities as one cross-family wave. ABI 1.47/bridge 0.55.0
+implements copied exact-inspection results and owning supports, complete document-bound
+PMI and saved-view snapshots/reference mutation, explicit AP242 GDT/view exchange, and
+viewer-parent-bound length/angle/radius/diameter annotations. SC-041 reconciles exactly
+102 direct blocked OCCT 8.0.1 stable IDs.
+
+Release and Debug native/managed builds pass with Generator 91/91 and Runtime 119/119.
+Four focused Batch E tests pass. The authored AP242/BinXCAF and real-HWND screenshot
+workflow passes in repository runtime and the clean 62-DLL Preview.2 package consumer;
+freshness, byte-identical clean regeneration, API compatibility, full inventory,
+runtime hashes, SBOM/provenance/checksums, and the complete local release check pass.
+Hosted release execution, signing, and NuGet publication remain separate `NOT RUN`
+release-readiness gates and do not reopen Batch E.
