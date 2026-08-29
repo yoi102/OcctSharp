@@ -19,6 +19,9 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Batch E inspection and PMI gap inventory](BATCH_E_INSPECTION_PMI_GAP_INVENTORY.md)
   — locked 24-capability engineering-inspection, measurement, PMI/AP242, annotation,
   saved-view, and screenshot denominator completed at 24/24.
+- [Batch F freeform authoring gap inventory](BATCH_F_FREEFORM_AUTHORING_GAP_INVENTORY.md)
+  — locked 24-capability Bezier/B-spline definition, surface/profile topology authoring,
+  STEP/XDE, and viewer-evidence denominator at 0/24 implementation.
 - [AI migration loop prompt](AI_MIGRATION_LOOP_PROMPT.md) — reusable re-entrant prompt
   for executing the largest coherent common-workflow wave instead of per-class tasks.
 - [Status](STATUS.md) — current phase, blockers, and last verified results.
@@ -90,6 +93,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   — package numeric core, preview counter, and independent assembly/ABI identities.
 - [Batch E inspection/PMI decision](adr/0066-engineering-inspection-measurement-pmi-batch.md)
   — one large cross-family engineering-inspection, measurement, PMI/AP242 wave.
+- [Batch F freeform authoring decision](adr/0067-freeform-curve-surface-authoring-batch.md)
+  — one large cross-family curve/surface definition-to-profile-to-solid wave.
 - [Native ABI](NATIVE_ABI.md) — C ABI boundary rules.
 - [Ownership](OWNERSHIP.md) — lifetime and resource ownership rules.
 - [Type mapping](TYPE_MAPPING.md) — native-to-managed mapping policy.

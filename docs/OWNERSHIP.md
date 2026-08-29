@@ -371,3 +371,19 @@ presentation/target topology; disposal of source topology cannot invalidate them
 Tolerance-datum replacement removes the old graph even when the replacement set is
 empty. Preview.2 validates this complete boundary in Release/Debug repository runtime
 and the clean 62-DLL package consumer.
+
+### Batch F freeform authoring boundary
+
+ADR-0067 treats every curve/surface definition as immutable copied managed data. Pole,
+weight, knot, multiplicity, degree, tangent, parameter, and rectangular point-grid inputs
+are validated and copied before native execution. No `TColgp`, `TColStd`, `NCollection`,
+native array, pole reference, or generated mutable `Geom` handle is the friendly API's
+authoritative definition state.
+
+Interpolation, approximation, projection, extrema, intersection, filling, offset, split,
+loft, pipe-shell, analysis, and repair objects are call-local. Copied multi-solution and
+diagnostic records have no release path. Every returned edge, wire, face, shell, split
+piece, repaired result, and solid is an independent registered owning `Shape`; disposing
+any input cannot invalidate it. STEP/XDE labels and AIS/viewer resources retain their
+existing parent-bound categories. This boundary is prepared but unimplemented at 0/24;
+runtime and package evidence are `NOT RUN`.

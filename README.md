@@ -46,8 +46,9 @@ See [the documentation index](docs/DOCUMENTATION_INDEX.md),
 
 - Batch B, Batch C, Batch D, and Batch E are locally complete. Batch D closes production
   viewport/model review; Batch E closes one 24-capability exact-inspection, semantic
-  PMI/AP242, saved-view, viewer-annotation, and screenshot workflow. Generated/API
-  coverage and public publication authority remain separate facts.
+  PMI/AP242, saved-view, viewer-annotation, and screenshot workflow. Batch F freeform
+  curve/surface and profile-to-solid authoring is prepared at 0/24 under ADR-0067.
+  Generated/API coverage and public publication authority remain separate facts.
 - Managed target is .NET 10; the validated baseline is Windows x64 and OCCT 8.0.1.
 - ClangSharp semantic discovery, deterministic generation, native C ABI, friendly managed
   owners/values, geometry and metadata exchange, OCAF/XDE, and Windows HWND visualization

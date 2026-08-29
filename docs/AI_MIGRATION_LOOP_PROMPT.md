@@ -12,9 +12,10 @@ native semantics, ownership, ABI safety, deterministic regeneration, and truthfu
 validation evidence.
 
 Current repository note: Batch D is complete at alpha.55 and Batch E is complete in
-Preview.2 with 24/24 capabilities and the full local gate passing. A future product batch
-must first lock a new finite cross-family denominator, dependency/ownership closure,
-non-goals, and whole-wave validation gates; completed E evidence must remain immutable.
+Preview.2 with 24/24 capabilities and the full local gate passing. ADR-0067 has prepared
+Batch F with one immutable 24-capability freeform curve/surface and profile-to-solid
+authoring denominator. Batch F implementation is 0/24 and all implementation gates are
+`NOT RUN`; completed E evidence remains immutable.
 
 ## How to use
 
@@ -37,9 +38,9 @@ ready for its declared release scope.
 
 This prompt is re-entrant. Never assume the previous conversation is accurate or
 complete. Recover facts from the repository and current tool output on every invocation.
-If `STATUS.md` records Batch E 24/24 complete, preserve that evidence. Do not add unrelated
-APIs under D or E; prepare the next accepted finite product denominator before implementing
-another large cross-family wave.
+If `STATUS.md` records Batch E 24/24 complete, preserve that evidence and continue only
+the accepted Batch F denominator. Do not add unrelated APIs under D/E or split F into
+smaller family waves.
 
 ============================================================
 1. FIXED OBJECTIVE AND BASELINE
@@ -64,12 +65,12 @@ every catalogued public declaration has a stable generated, manual, unavailable,
 unsupported, or blocked disposition with evidence. It does not mean unsafe automatic
 emission or a misleading raw declaration count.
 
-The active product batch is `E`, Engineering Inspection, Exact Measurement, and PMI/AP242.
-Implement the locked 24-capability dependency closure across BRepExtrema/BRepAdaptor/
-BRepGProp/TopoDS, model/display units, XCAFDoc/XCAFDimTolObjects semantic PMI and reference
-graphs, transactional mutation, STEPCAF/AP242 GDT and saved views, PrsDim/AIS annotations,
-V3d/Graphic3d presentation, and screenshot evidence. Batches B, C, and D are closed
-historical evidence. Do not reopen them or replace E with small per-class tasks.
+The active product batch is `F`, Freeform Curve, Surface, and Profile-to-Solid Authoring.
+Implement the locked 24-capability dependency closure across Geom/Geom2d, GeomAPI/
+Geom2dAPI, BRepBuilderAPI/BRepOffsetAPI/BRepFill, BRepAlgoAPI/BRepFeat, ShapeAnalysis/
+ShapeFix, TopoDS, STEPCAF/XDE, AIS/V3d, mesh, and screenshot evidence. Batches B through
+E are closed historical evidence. Do not reopen them or replace F with small per-class
+tasks.
 
 ============================================================
 2. SOURCE-OF-TRUTH ORDER
@@ -112,8 +113,8 @@ At the beginning of every invocation:
    current versions, coverage reports, and latest validation evidence.
 4. Treat all existing changes as user-owned unless their origin is proven. Preserve and
    work around unrelated changes. Never reset or discard them.
-5. Recover the current 24-capability inspection/measurement/PMI/AP242 wave inside product
-   batch E. STATUS.md and `BATCH_E_INSPECTION_PMI_GAP_INVENTORY.md` are the checkpoint;
+5. Recover the current 24-capability freeform authoring wave inside product batch F.
+   STATUS.md and `BATCH_F_FREEFORM_AUTHORING_GAP_INVENTORY.md` are the checkpoint;
    verify them against code and reports.
 6. If an earlier large wave is partially implemented, finish or safely repair it before
    selecting new scope.
@@ -136,27 +137,27 @@ RECOVER
 - Restore current facts using section 3.
 
 SELECT
-- Batches B, C, and D are complete historical evidence. Continue the single product-scale
-  inspection/measurement/PMI/AP242 batch `E`; never reopen B/C/D or create `E01`, `E.1`, per-class, or
+- Batches B through E are complete historical evidence. Continue the single product-scale
+  freeform authoring batch `F`; never reopen B/C/D/E or create `F01`, `F.1`, per-class, or
   per-method batches.
-- Batch E has one locked 24-capability implementation wave. Complete that entire
-  cross-family workflow; do not select a smaller measurement-only, dimension-only,
-  tolerance-only, datum-only, AP242-only, saved-view-only, annotation-only, or
-  screenshot-only checkpoint. The implementation must finish the real
-  AP242-to-inspection-to-viewer-annotation-to-screenshot user outcome.
+- Batch F has one locked 24-capability implementation wave. Complete that entire
+  cross-family workflow; do not select a smaller curve-only, surface-only, profile-only,
+  offset/fill/split-only, loft/sweep-only, repair-only, STEP/XDE-only, viewer-only, or
+  screenshot-only checkpoint. The implementation must finish the real copied-definition-
+  to-owning-topology-to-STEP/XDE-to-viewer-screenshot user outcome.
 - Prefer broad common-use workflow coverage and generalized parser/model/type-map/
   ownership/emitter rules before low-value entities or one-off wrappers.
 - Fold overloads, enums, options, statuses, diagnostics, disposal, failure paths, bulk
   transfer, and friendly convenience into the owning family; do not schedule them as
   later micro-work merely to make the current scope smaller.
 - Different lifetime categories or independently failing gates may use focused checks,
-  but those checks are not batches and receive no E-derived identifier or partial
+  but those checks are not batches and receive no F-derived identifier or partial
   completion claim.
 - Do not let IVtk, Draw/test, C++/CLI, OpenGL ES, platform backends, deprecated APIs, or
-  allocator/compiler infrastructure displace the locked Windows-core inspection/PMI workflow.
+  allocator/compiler infrastructure displace the locked Windows-core freeform workflow.
 
 CONTRACT
-- Before editing, state `CURRENT_BATCH: E`, the locked 24-capability workflow, connected API
+- Before editing, state `CURRENT_BATCH: F`, the locked 24-capability workflow, connected API
   families, end-to-end user outcome, packages, toolkits, entry headers,
   declarations or declaration family, dependencies, intended public API, ownership
   categories, ABI impact, package impact, required tests, and exit criteria.
@@ -234,7 +235,7 @@ On failure:
   ABI, runtime, lifetime, integration, packaging, dependency, or documentation.
 - Fix the owning layer, regenerate if applicable, and rerun the failed layer plus any
   invalidated downstream layers.
-- Do not bypass a failing safety check to make E appear complete.
+- Do not bypass a failing safety check to make F appear complete.
 
 RECONCILE
 - Read actual generated reports after validation.
@@ -245,7 +246,7 @@ RECONCILE
   4. full-profile binding coverage, only when the denominator is complete;
   5. validation coverage;
   6. engineering roadmap estimate;
-  7. Batch E inspection/measurement/PMI/AP242 completion against its explicit
+  7. Batch F freeform authoring completion against its explicit
      24-capability exit gates.
 - Never use the 116,214 partial declaration count as a complete full-OCCT denominator.
 - Reconcile totals: pending + skipped + supported + manual must follow the report schema,
@@ -256,7 +257,7 @@ RECONCILE
 DOCUMENT
 - Update docs/STATUS.md after every material large-wave checkpoint, not after trivial
   per-method edits.
-- Update MIGRATION_PLAN.md E status, active inspection/PMI workflow, and immediate execution order.
+- Update MIGRATION_PLAN.md F status, active freeform workflow, and immediate execution order.
 - Update ROADMAP.md only when phase outcomes or ordering change. Update topic documents
   only when their facts or contracts change; do not mechanically repeat the same batch
   summary across unrelated documents.
@@ -324,11 +325,11 @@ Never:
 - add machine-specific absolute paths to committed configuration or generated files;
 - bundle unlicensed fixtures or dependencies;
 - publish, commit, push, or create releases without explicit authority;
-- mark E complete while a declared inspection/PMI capability or exit criterion is FAIL, NOT RUN,
+- mark F complete while a declared freeform capability or exit criterion is FAIL, NOT RUN,
   compile-only, or silently omitted;
-- create E01, E.1, per-class/per-method batches, or reuse historical B00-B20/Bxx.y as
+- create F01, F.1, per-class/per-method batches, or reuse historical B00-B20/Bxx.y as
   a current batch;
-- stop the Batch E wave after only one family or a handful of easy wrappers passes.
+- stop the Batch F wave after only one family or a handful of easy wrappers passes.
 
 Prefer fail-closed behavior: pending with a stable diagnostic is better than an unsafe
 binding that appears complete.
@@ -338,9 +339,9 @@ binding that appears complete.
 ============================================================
 
 Use LOOP_STATE=CONTINUE when:
-- safe work remains inside the locked Batch E wave;
+- safe work remains inside the locked Batch F wave;
 - tests failed but the failure is locally actionable;
-- Batch E's locked 24-capability wave is not complete;
+- Batch F's locked 24-capability wave is not complete;
 - one optional profile is blocked but useful core-profile work remains.
 
 Use LOOP_STATE=BLOCKED only when:
@@ -363,17 +364,18 @@ merely builds or a report with pending declarations is not complete.
 End every invocation with exactly one footer in this shape:
 
 LOOP_STATE: CONTINUE | BLOCKED | COMPLETE
-CURRENT_BATCH: E
-CURRENT_WORKSTREAM: one 24-capability inspection/measurement/PMI/AP242 closure
+CURRENT_BATCH: F
+CURRENT_WORKSTREAM: one 24-capability freeform definition/edit/topology/exchange/viewer closure
 COMPLETED_THIS_TURN: short factual description
 NEXT_WORKSTREAM: short unnumbered description or NONE
 NEXT_ACTION: one concrete first action
 ENGINEERING_PROGRESS: nn%
-BATCH_PROGRESS: E PREPARED; IMPLEMENTATION NOT STARTED | E IN PROGRESS | E COMPLETE (100%)
+BATCH_PROGRESS: F PREPARED; IMPLEMENTATION NOT STARTED | F IN PROGRESS | F COMPLETE (100%)
 B_BASELINE_BINDING_COVERAGE: emitted plus accepted manual/bindable (nn.nnnn%)
 C_COMMON_WORKFLOW_COVERAGE: completed immutable Batch C denominators
 D_VIEWPORT_REVIEW_COVERAGE: validated capabilities/24 (nn.nnnn%)
 E_INSPECTION_PMI_COVERAGE: validated capabilities/24 (nn.nnnn%)
+F_FREEFORM_AUTHORING_COVERAGE: validated capabilities/24 (nn.nnnn%)
 FULL_PROFILE_COVERAGE: value or NOT ESTABLISHED
 INVENTORY_COMPLETENESS: scanned/catalogued for named profile (nn.nnnn%)
 LAST_VALIDATION: exact command summary
@@ -386,20 +388,20 @@ as an estimate in the human report.
 9. COMPLETE-MIGRATION GATES
 ============================================================
 
-LOOP_STATE=COMPLETE requires all of the following for Batch E and each profile used by
-its declared inspection/measurement/PMI/AP242 contract:
+LOOP_STATE=COMPLETE requires all of the following for Batch F and each profile used by
+its declared freeform authoring contract:
 
-- Batches B, C, and D remain complete and immutable, and all 24 Batch E capabilities are
+- Batches B through E remain complete and immutable, and all 24 Batch F capabilities are
   implemented and validated together.
-- No declared Batch E inspection/PMI capability requires an undocumented unmanaged escape hatch.
+- No declared Batch F freeform capability requires an undocumented unmanaged escape hatch.
 - Each completed large wave crosses connected API families and has end-to-end runtime,
   ownership, failure, integration, and representative real-file evidence.
 - The global header/declaration inventory remains stably classified for the profile;
   known unavailable or cold declarations retain narrow evidence-backed dispositions.
-- Every declaration inside the declared Batch E dependency closure has a stable disposition
+- Every declaration inside the declared Batch F dependency closure has a stable disposition
   and owner.
 - Every bindable declaration required by that closure is generated or an accepted
-  documented manual binding. E does not have to absorb unrelated cold or optional APIs.
+  documented manual binding. F does not have to absorb unrelated cold or optional APIs.
 - No safety-critical unknown ownership/type/ABI projection remains.
 - Generated source and reports are deterministic and freshness verification passes.
 - Required Release/Debug native and managed builds pass.
@@ -418,10 +420,10 @@ its declared inspection/measurement/PMI/AP242 contract:
 If publication authorization is the only missing item, report migration engineering as
 complete but keep public publication BLOCKED; do not upload anything.
 
-Begin now with RECOVER. If Batch E is already complete, verify its immutable evidence and
-prepare the next complete cross-family denominator before implementation. Do not stop
-after merely writing a plan when local, authorized implementation work can proceed, and
-do not publish a partial family as a completed product checkpoint.
+Begin now with RECOVER. Then continue the entire locked Batch F freeform authoring wave as
+far as safely possible in this invocation. Do not stop after merely writing a plan when
+local, authorized implementation work can proceed, and do not publish a partial family
+as a completed Batch F checkpoint.
 ```
 
 ## Poller behavior

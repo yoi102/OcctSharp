@@ -1,5 +1,19 @@
 # Known Issues
 
+## KI-028: Batch F freeform curve/surface authoring closure is not implemented
+
+- Status: Open; prepared at 0/24 under ADR-0067.
+- Severity: Product gap
+- Area: Geom/GeomAPI, BRepBuilderAPI/BRepOffsetAPI/BRepFill, split/repair, STEP/XDE
+- Problem: Preview.2 has basic Bezier/interpolate/loft/pipe/sew entry points but does not
+  provide the complete rational definition, immutable edit, freeform surface/profile,
+  offset/fill/split/controlled-sweep, repair, exchange, and viewer-evidence workflow.
+- Current mitigation: `BATCH_F_FREEFORM_AUTHORING_GAP_INVENTORY.md` locks one dependency
+  and ownership closure plus a 24-root/1,122-candidate audit. Existing basic APIs remain
+  usable and no curve-only/surface-only fragment is claimed as completed Batch F.
+- Planned resolution: Implement and validate all 24 capabilities as one wave in repository
+  runtime and a clean package consumer. All Batch F implementation gates are `NOT RUN`.
+
 ## KI-027: Batch E engineering inspection and PMI closure was not implemented
 
 - Status: Resolved in Preview.2 at 24/24 under ADR-0066.

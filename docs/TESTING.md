@@ -164,6 +164,18 @@ dimension kinds, a real HWND, and screenshot output. The full Release and Debug 
 pass Generator 91/91 and Runtime 119/119; the clean 62-DLL package consumer repeats the
 AP242/BinXCAF/annotation workflow, and the complete local release check passes.
 
+A freeform-authoring profile additionally requires all 24 ADR-0067 capabilities to run
+together: rational Bezier/B-spline curve/surface definitions, copied arrays and immutable
+edits, interpolation/approximation numerics, projection/extrema/intersection solutions,
+planar profile construction/offset, surface trim/rule/fill/offset, owning split groups,
+controlled loft/pipe shell, freeform analysis/repair, STEP/XDE definition/topology
+retention, and real-HWND selection/measurement/mesh/screenshot evidence. Invalid array
+shape, non-finite values, knot/multiplicity/degree mismatch, non-positive weights,
+wrong-kind/disposed topology, algorithm failure, and source-disposal paths are mandatory.
+The same design-to-STEP/XDE-to-viewer workflow must pass in Release and Debug and from a
+clean package consumer. Batch F preparation is 0/24; every implementation gate is
+currently `NOT RUN`.
+
 A repository-native bootstrap change additionally requires a recoverable missing-bridge
 simulation: remove or rename only the expected configuration's bridge, run the ordinary
 Sample build, verify native-only CMake recreation and the current 62-DLL output `occt/` closure,

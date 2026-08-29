@@ -1,15 +1,16 @@
 # Current Status
 
 - Last updated: 2026-08-29
-- Current phase: Batch B, Batch C, Batch D, and Batch E are complete for their accepted local implementation scopes; the next complete cross-family product batch requires a locked denominator and dependency closure before implementation
+- Current phase: Batch B, Batch C, Batch D, and Batch E are complete for their accepted local implementation scopes; Batch F freeform curve/surface and profile-to-solid authoring is prepared as one locked 24-capability wave at 0/24 implementation
 - Batch B engineering progress: 100% for the accepted local implementation scope (not a claim that every OCCT declaration is a managed API or that public release is ready)
 - Batch C implementation progress: 100% of the finite local implementation denominator; locked wave denominators are 14/14, 7/7, 8/8, and final 15/15 capabilities validated
 - Batch D implementation progress: 24/24 capabilities (100%); ADR-0064's one large cross-family wave passes all implementation, compile, runtime, real-HWND, clean-package, inventory, and local release gates
 - Batch E implementation progress: 24/24 capabilities (100%); ADR-0066's one large cross-family wave passes implementation, compile, runtime/lifetime/transaction, AP242/BinXCAF, real-HWND, clean-package, inventory, and local release gates
-- Complete-migration batch progress: B, C, D, and E are complete locally; retired B00-B20 and forbidden numbered/dotted C/D/E labels are not counted as batches
+- Batch F implementation progress: 0/24 capabilities (0%); ADR-0067 and the focused gap inventory lock the complete cross-family dependency/ownership closure, but all implementation/runtime/package gates are `NOT RUN`
+- Complete-migration batch progress: B, C, D, and E are complete locally; F preparation is complete but implementation has not started; retired B00-B20 and forbidden numbered/dotted C/D/E/F labels are not counted as batches
 - Accepted surface: 16,353 generated manifest IDs plus 222 accepted manual stable IDs; Release and Debug native/managed builds, Generator 91/91, Runtime 119/119, discovery/report determinism, generated dependency closure, and dependency profiles 6/6 pass
 - Last complete full inventory: 116,272/116,272 declarations and 7,090/7,090 headers have final dispositions; `Emitted` 16,353, `Manual` 222, `SupportedUnselected` 0, `Skipped` 49,344, `Blocked` 50,353, pending 0, HD099 0; SHA256 `2C8DE4940EAB609C5B24BCE45B50A473BF4120004DD337247E0172C0D1CAC3B1`
-- Overall state: package identity is `8.0.1-preview.2` under ADR-0065 while managed assembly identity remains `0.1.0.0`, native ABI is 1.47, and bridge implementation is 0.55.0. Batch D completes production viewport/model review and Batch E completes engineering inspection/PMI/AP242 while ADR-0061/ADR-0062 keep the generated graph resolved and acyclic. Physical managed-project and native-DLL splitting remain deliberately deferred, so public type full names, the single managed assembly, and the single native DLL remain unchanged. The complete Preview.2 local Release/Debug/freshness/clean-regeneration/package/API/inventory/release chain passes. `publicReleaseReady` remains false because hosted release execution, signing, and NuGet publication are `NOT RUN`
+- Overall state: package identity is `8.0.1-preview.2` under ADR-0065 while managed assembly identity remains `0.1.0.0`, native ABI is 1.47, and bridge implementation is 0.55.0. Batch D completes production viewport/model review and Batch E completes engineering inspection/PMI/AP242 while ADR-0061/ADR-0062 keep the generated graph resolved and acyclic. Batch F is prepared at 0/24 and makes no implementation claim. Physical managed-project and native-DLL splitting remain deliberately deferred, so public type full names, the single managed assembly, and the single native DLL remain unchanged. The complete Preview.2 local Release/Debug/freshness/clean-regeneration/package/API/inventory/release chain passes. `publicReleaseReady` remains false because hosted release execution, signing, and NuGet publication are `NOT RUN`
 
 ### Preview.2 Batch E engineering inspection and PMI completion
 
@@ -34,6 +35,24 @@
 - API comparison against alpha.38 is additive at 37,490 additions and zero removals.
   Inventory, 83-file freshness/clean regeneration, runtime hashes, SBOM, provenance,
   checksums, Git whitespace, and the complete Preview.2 local release check pass.
+
+### Batch F freeform authoring preparation
+
+- ADR-0067 and `BATCH_F_FREEFORM_AUTHORING_GAP_INVENTORY.md` lock one 24-capability
+  Batch F across rational Bezier/B-spline curve/surface definitions, interpolation and
+  approximation, immutable edits, profiles, offsets, filling, splitting, controlled
+  loft/pipe-shell, repair, STEP/XDE, viewer selection/measurement/mesh, and screenshots.
+- The focused audit covers exactly 24 decision-driving roots and 1,122 candidate
+  declarations: 215 emitted, 23 manual, 598 blocked, and 286 skipped. It guides
+  implementation and does not replace the immutable 24-row product denominator.
+- Definitions and diagnostics will cross as immutable copied records; point/pole/weight/
+  knot/multiplicity/grid inputs are copied and validated; algorithm state remains
+  native-local; every topology result is independently owning. XDE and viewer ownership
+  categories remain unchanged.
+- Preparation changes no code/package/runtime identity. Batch F implementation,
+  Release/Debug compile after its changes, definition/lifetime tests, real STEP/XDE plus
+  real-HWND integration, clean package consumer, and full local release check are all
+  `NOT RUN`.
 
 ### Preview.1 version transition and Batch E preparation (historical)
 
@@ -394,8 +413,9 @@ input workflow as one dependency closure. ADR-0062 keeps the generated cross-sha
 closed without physically splitting the managed or native deliverables. ADR-0064 records
 the single 24-capability Batch D viewport/review closure, complete at alpha.55. ADR-0066
 records the separate 24-capability Batch E engineering-inspection/measurement/PMI/AP242
-dependency closure, completed at 24/24 in Preview.2. The next implementation batch must
-first lock another finite cross-family product denominator and full dependency closure.
+dependency closure, completed at 24/24 in Preview.2. ADR-0067 now locks Batch F's separate
+24-capability freeform curve/surface and profile-to-solid authoring dependency closure.
+Preparation is complete at 0/24; implementation has not started.
 
 ### Shared-handle dependency-closure hardening
 
@@ -1067,6 +1087,9 @@ first lock another finite cross-family product denominator and full dependency c
 - Batch E is complete at 24/24. Exact measurement, semantic PMI/reference graphs,
   transactional mutation, AP242/BinXCAF/saved views, four viewer annotation kinds, and
   screenshot gates pass together in repository runtime and the clean package consumer.
+- Batch F is prepared at 0/24. Its complete definition/edit, interpolation/approximation,
+  profile/offset/fill/split/loft/pipe-shell/repair, STEP/XDE, viewer evidence, and clean-
+  package gates are all `NOT RUN`; no curve-only or surface-only progress is counted.
 - Custom rendering pipelines, arbitrary callbacks, optional integrations, low-frequency
   schema entities, exhaustive mesh attributes, and unrelated long-tail APIs remain out of
   scope for D.
@@ -1077,9 +1100,8 @@ first lock another finite cross-family product denominator and full dependency c
 
 ## Next tasks
 
-1. Prepare the next finite common-product API gap inventory and lock its complete cross-
-   family dependency/ownership closure before implementation; do not reopen Batch D/E or
-   publish family-only checkpoints.
+1. Implement the entire locked 24-capability Batch F freeform authoring dependency closure
+   as one wave; do not reopen Batch D/E or publish curve/surface/family-only checkpoints.
 2. Preserve the one managed assembly/one native DLL boundary until a separate ADR closes
    assembly identity, type forwarding, facade migration, and cross-DLL ownership.
 3. If publication is authorized later, run hosted release, signing, and NuGet publication
@@ -1146,6 +1168,7 @@ first lock another finite cross-family product denominator and full dependency c
 | B17 HWND visualization core | PASS | Release/Debug real HWND display, source-independent AIS shape, appearance/display mode, standard projections, zoom/pan/rotation, thread rejection, detection, replace/add/remove/toggle/clear selection, snapshot, and removal |
 | Batch D production viewport/model review | PASS | 24/24 through real STEP/XDE and real HWND: copied occurrence identity, owning detected/selected topology, rectangle/polygon selection, filters, bounds/fit/isolate, subshape styles/reset, camera/conversions/ray, zoom/background, clip planes, hidden-line, trihedron, and Unicode screenshot; repository runtime and clean package both pass |
 | Batch E inspection/measurement/PMI/AP242 | PASS | 24/24; focused 4/4 and full Release/Debug Runtime 119/119 cover exact inspection, complete PMI/reference graphs and transactions, AP242/BinXCAF, saved views, four viewer dimensions, real HWND/screenshot, and clean-package execution |
+| Batch F freeform curve/surface/profile authoring | NOT RUN | Preparation is complete at 0/24; all implementation, definition/edit, runtime/lifetime, real STEP/XDE, real-HWND selection/measurement/mesh/screenshot, and clean-package gates remain unexecuted |
 | B18 optional dependency profiles | PASS | Release/Debug build audit classifies 6/6 profiles; IVtk/VTK and EGL/GLES blockers are named; core package unchanged |
 | Native runtime dependency closure | PASS | 62 DLLs in committed Preview.2 ABI 1.47/bridge 0.55.0 runtime; complete Release rebuild is byte-identical and loads from `occt`; bridge SHA256 `4A5B67B886146E704E5A31F25CDB87C75CC351EB496854D77F0435D0142B22B1` |
 | XDE two-box assembly | PASS | One XDE assembly root, two occurrences, and 12-face STEP round-trip |
@@ -1166,22 +1189,23 @@ first lock another finite cross-family product denominator and full dependency c
 ## Migration loop state
 
 ```text
-LOOP_STATE: COMPLETE
-CURRENT_BATCH: E — ENGINEERING INSPECTION, EXACT MEASUREMENT, AND PMI/AP242
-CURRENT_WORKSTREAM: ONE 24-CAPABILITY INSPECTION/MEASUREMENT/PMI/AP242 CLOSURE
-COMPLETED_THIS_TURN: IMPLEMENTED AND VALIDATED THE COMPLETE BATCH E PRODUCT, DEPENDENCY, OWNERSHIP, RUNTIME, PACKAGE, INVENTORY, AND LOCAL RELEASE CLOSURE
-NEXT_WORKSTREAM: PREPARE THE NEXT FINITE CROSS-FAMILY PRODUCT BATCH
-NEXT_ACTION: AUDIT COMMON API GAPS AND LOCK THE NEXT COMPLETE DEPENDENCY/OWNERSHIP CLOSURE BEFORE IMPLEMENTATION
-ENGINEERING_PROGRESS: B 100% COMPLETE; C 100% COMPLETE; D 24/24 COMPLETE (100%); E 24/24 COMPLETE (100%)
-BATCH_PROGRESS: E COMPLETE; ALL LOCAL IMPLEMENTATION GATES PASS
+LOOP_STATE: CONTINUE
+CURRENT_BATCH: F — FREEFORM CURVE, SURFACE, AND PROFILE-TO-SOLID AUTHORING
+CURRENT_WORKSTREAM: ONE 24-CAPABILITY FREEFORM DEFINITION/EDIT/TOPOLOGY/EXCHANGE/VIEWER CLOSURE
+COMPLETED_THIS_TURN: LOCKED THE BATCH F PRODUCT DENOMINATOR, DEPENDENCY/OWNERSHIP CLOSURE, 24-ROOT AUDIT, NON-GOALS, AND WHOLE-WAVE EXIT GATES
+NEXT_WORKSTREAM: IMPLEMENT THE COMPLETE 24-CAPABILITY BATCH F WAVE
+NEXT_ACTION: IMPLEMENT THE LOCKED COPIED-DEFINITION THROUGH OWNING-TOPOLOGY/STEP-XDE/VIEWER-SCREENSHOT CLOSURE WITHOUT FAMILY CHECKPOINTS
+ENGINEERING_PROGRESS: B 100% COMPLETE; C 100% COMPLETE; D 24/24 COMPLETE (100%); E 24/24 COMPLETE (100%); F 0/24 IMPLEMENTED (0%)
+BATCH_PROGRESS: F PREPARED; IMPLEMENTATION NOT STARTED
 B_BASELINE_BINDING_COVERAGE: 16414/16414 generated plus accepted manual stable IDs (100%)
 C_COMMON_WORKFLOW_COVERAGE: FIRST-WAVE 14/14, SECOND-WAVE 7/7, THIRD-WAVE 8/8, AND FINAL-WAVE 15/15 DENOMINATORS VALIDATED (100% EACH)
 D_VIEWPORT_REVIEW_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
 E_INSPECTION_PMI_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
+F_FREEFORM_AUTHORING_COVERAGE: 0/24 IMPLEMENTED AND VALIDATED (0%)
 FULL_PROFILE_ACCOUNTING: 116272/116272 declarations classified; 50353 have narrow blocked dispositions and are not claimed as managed APIs
 INVENTORY_COMPLETENESS: 7058/7090 headers semantically scanned (99.5487%); 116272/116272 discovered declarations and 7090/7090 catalogued headers classified
-LAST_VALIDATION: Preview.2 complete local release check PASS; Release/Debug, Generator 91/91, Runtime 119/119, dependency profiles 6/6, AP242/BinXCAF plus real-HWND Batch E, clean 62-DLL package, regeneration, API, inventory, provenance, and checksums PASS
-BLOCKER: NONE FOR LOCAL BATCH E IMPLEMENTATION; HOSTED RELEASE EXECUTION, SIGNING, AND NUGET PUBLICATION REMAIN SEPARATE AND NOT RUN
+LAST_VALIDATION: Preview.2 complete local release check PASS; Release/Debug, Generator 91/91, Runtime 119/119, dependency profiles 6/6, AP242/BinXCAF plus real-HWND Batch E, clean 62-DLL package, regeneration, API, inventory, provenance, and checksums PASS; all Batch F implementation gates NOT RUN
+BLOCKER: NONE FOR BATCH F IMPLEMENTATION; HOSTED RELEASE EXECUTION, SIGNING, AND NUGET PUBLICATION REMAIN SEPARATE AND NOT RUN
 ```
 
 ## Known risks

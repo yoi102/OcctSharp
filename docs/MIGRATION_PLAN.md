@@ -83,8 +83,10 @@ visualization, long-tail generation, upgrade, and release engineering all belong
 ADR-0060 opened product-scale batch `C` for common CAD API expansion and ADR-0063 closes
 it at alpha.54. It used whole-product workflow scope comparable to B; numbered or dotted
 batch fragments remain forbidden. ADR-0064 closes product-scale batch `D` with the same
-large-wave rule and a finite production viewport/model-review denominator. ADR-0066 opens
-Batch `E` as one finite 24-capability inspection/measurement/PMI/AP242 denominator.
+  large-wave rule and a finite production viewport/model-review denominator. ADR-0066
+  closes Batch `E` as one finite 24-capability inspection/measurement/PMI/AP242
+  denominator. ADR-0067 opens Batch `F` as one finite 24-capability freeform curve/
+  surface and profile-to-solid authoring denominator.
 
 | Batch | Status | Completed evidence | Remaining exit conditions |
 |---|---|---|---|
@@ -92,14 +94,15 @@ Batch `E` as one finite 24-capability inspection/measurement/PMI/AP242 denominat
 | C — Common CAD API Expansion | Complete (local implementation) | Alpha.51 validates topology/BREP/mesh/XDE/viewer editing; alpha.52 validates STEP reporting/BRepCheck/ShapeFix/V3d rotation; alpha.53 validates BRepGProp/XCAF properties/XDE occurrences/STEPCAF options; alpha.54 closes the final 15-capability geometry/topology/selective-STEP/viewer-input workflow. Release/Debug, Generator 91/91, Runtime 114/114, 83-file deterministic regeneration, 62-DLL clean consumer, inventory, dependency closure, API compatibility, provenance, and local release gates pass | None inside Batch C. Hosted CI execution, signing, and NuGet publication remain independent release-readiness gates; advanced filters, custom rendering, optional integrations, cold schema, and exhaustive mesh attributes require a new product denominator |
 | D — Production CAD Viewport and Model Review | Complete (24/24, local implementation) | Alpha.55 implements the entire ADR-0064 denominator with copied XDE identity, owning detected/selected topology, area selection/filtering, subshape review styling, camera/conversions, clipping/review aids, and screenshot output. Release/Debug, Generator 91/91, Runtime 115/115, real STEP/XDE plus real-HWND, clean 62-DLL package, regeneration, inventory, compatibility, provenance, and local release gates pass | None inside Batch D. A future product batch requires a separately locked finite denominator; hosted release, signing, and NuGet publication remain independent release-readiness gates |
 | E — Engineering Inspection, Exact Measurement, and PMI/AP242 | Complete (24/24, local implementation) | Preview.2 implements the entire ADR-0066 denominator: exact solution/support and engineering measurements, explicit units, complete dimension/tolerance/datum/saved-view snapshots and reference mutation, AP242/BinXCAF persistence, four viewer-owned dimension kinds, and screenshot output. Release/Debug, Generator 91/91, Runtime 119/119, focused 4/4, real AP242 plus real-HWND, clean 62-DLL package, regeneration, inventory, compatibility, provenance, and local release gates pass | None inside Batch E. The next product batch requires a separately locked finite denominator; hosted release, signing, and NuGet publication remain independent release-readiness gates |
+| F — Freeform Curve, Surface, and Profile-to-Solid Authoring | Prepared (0/24 implemented) | ADR-0067 and `BATCH_F_FREEFORM_AUTHORING_GAP_INVENTORY.md` lock all 24 capabilities, copied-definition/native-local-algorithm/owning-topology categories, non-goals, a 24-root/1,122-declaration audit, real design-to-STEP/XDE-to-viewer outcome, and whole-wave exit gates | Implement the entire 24-capability closure as one wave; definition/edit, compile, runtime/lifetime, real STEP/XDE, real-HWND selection/measurement/mesh/screenshot, clean-package, and full local release gates are `NOT RUN` |
 
 Current B completion is not represented by counting retired planning labels. Engineering
 progress, selected binding coverage, full-profile coverage, inventory completeness,
 validation coverage, and publication readiness are reported independently. B through E
 are 100% for their accepted local denominators because every local exit condition above
 has evidence; this does not make the public package release-ready. New implementation
-progress requires another locked product denominator and is never reported by
-reopening B/C/D or inventing numbered or dotted E labels.
+progress is reported against F and is never reported by reopening B/C/D/E or inventing
+numbered or dotted F labels.
 
 The 16,353 emitted plus 61 accepted manual stable IDs are Batch B's baseline binding
 coverage. Batch C adds 41 accepted manual stable IDs across SC-036 through SC-039 and
@@ -364,6 +367,23 @@ pass in Release/Debug repository runtime and the clean 62-DLL package consumer. 
 reconciles 102 direct blocked stable IDs, and the complete local release gate passes while
 retaining the single managed assembly, native DLL, NuGet package, application-local
 runtime, public type names, and ADR-0061/ADR-0062 generated dependency graph.
+
+## Batch F: Freeform Curve, Surface, and Profile-to-Solid Authoring — prepared
+
+ADR-0067 and `BATCH_F_FREEFORM_AUTHORING_GAP_INVENTORY.md` lock one 24-capability product
+outcome spanning rational Bezier/B-spline definitions and immutable edits, interpolation/
+approximation/extrema/intersection, planar profiles and offsets, freeform surface creation/
+trimming/filling/offset, topology splitting, controlled loft/pipe-shell behavior, copied
+repair diagnostics, STEP/XDE retention, and real-HWND selection/measurement/mesh/
+screenshot evidence. The exact 24-root audit classifies 1,122 candidate declarations as
+215 emitted, 23 manual, 598 blocked, and 286 skipped; these counts guide implementation
+and are not the product denominator.
+
+Preparation is complete at 0/24. No Batch F API, ABI, runtime, package, STEP/XDE,
+viewer, or screenshot implementation gate has run. The implementation must land as one
+cross-family wave; curve/surface/profile/topology family checkpoints are forbidden. It
+retains the single managed assembly, native DLL, NuGet package, application-local runtime,
+public type names, and ADR-0061/ADR-0062 generated dependency graph.
 
 ## Generated output partitioning
 

@@ -91,6 +91,9 @@ The accepted boundaries are recorded in ADRs:
 - [ADR-0066](adr/0066-engineering-inspection-measurement-pmi-batch.md): one finite Batch E
   engineering-inspection, exact-measurement, and PMI/AP242 closure with explicit
   ownership, mutation, round-trip, visualization, and screenshot gates.
+- [ADR-0067](adr/0067-freeform-curve-surface-authoring-batch.md): one finite Batch F
+  freeform curve/surface definition, profile-to-solid topology, exchange, repair, and
+  viewer-evidence closure with copied definitions and owning results.
 
 ## Components
 
@@ -183,6 +186,16 @@ transaction/lifetime guards, real AP242/BinXCAF persistence, real-HWND saved-vie
 viewer-dimension behavior, clean-package execution, inventory, compatibility,
 provenance, and the complete local release gate pass without changing the single
 assembly/native-DLL/package topology.
+
+Batch F preserves the same physical architecture while opening a freeform authoring
+closure. Public Bezier/B-spline definitions, edit results, interpolation/approximation
+options, and diagnostics are immutable managed records with copied arrays. GeomAPI,
+Geom2dAPI, BRepBuilderAPI/BRepOffsetAPI/BRepFill/BRepAlgoAPI/BRepFeat, ShapeAnalysis,
+and ShapeFix objects remain native-local. Edges, wires, faces, shells, split pieces,
+repaired shapes, and solids cross only as independent registered owners. XDE labels and
+viewer presentations reuse their document-parent and creating-thread-affine viewer-parent
+categories. Preparation is complete at 0/24 and no Batch F implementation validation is
+claimed.
 
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native

@@ -73,6 +73,7 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0064](adr/0064-production-cad-viewport-review-batch.md) | Open Batch D as one 24-capability production CAD viewport/model-review wave with copied identity/topology and parent-bound filters/clip planes | Accepted |
 | [ADR-0065](adr/0065-occt-aligned-nuget-preview-version.md) | Align NuGet numeric versions with OCCT and retain an independent OcctSharp preview counter | Accepted |
 | [ADR-0066](adr/0066-engineering-inspection-measurement-pmi-batch.md) | Define and close Batch E as one 24-capability engineering inspection, exact measurement, and PMI/AP242 wave | Accepted |
+| [ADR-0067](adr/0067-freeform-curve-surface-authoring-batch.md) | Open Batch F as one 24-capability freeform curve, surface, and profile-to-solid authoring wave | Accepted |
 
 ## Pending decisions
 
