@@ -1,7 +1,7 @@
 # Current Status
 
 - Last updated: 2026-08-31
-- Current phase: Batch B through Batch K are complete locally; preparation of the next complete cross-family wave is next
+- Current phase: Batch B through Batch K are complete locally; Batch L digital mock-up interference/clearance preparation is complete and implementation is 0/24
 - Batch B engineering progress: 100% for the accepted local implementation scope (not a claim that every OCCT declaration is a managed API or that public release is ready)
 - Batch C implementation progress: 100% of the finite local implementation denominator; locked wave denominators are 14/14, 7/7, 8/8, and final 15/15 capabilities validated
 - Batch D implementation progress: 24/24 capabilities (100%); ADR-0064's one large cross-family wave passes all implementation, compile, runtime, real-HWND, clean-package, inventory, and local release gates
@@ -12,10 +12,24 @@
 - Batch I implementation progress: 24/24 capabilities (100%); ADR-0070's indivisible OCAF/XDE attribute/graph/history/undo-redo/persistence wave passes every local gate
 - Batch J implementation progress: 24/24 capabilities (100%); ADR-0071's selected-feature/robust-Boolean/copied-history/recovery wave passes every local gate
 - Batch K implementation progress: 24/24 capabilities (100%); ADR-0072's assembly-authoring/BOM/reference/metadata/review wave passes implementation, compile, runtime/lifetime/transaction, STEP/XDE, real-HWND, clean-package, inventory, and local release gates
-- Complete-migration batch progress: B, C, D, E, F, G, H, I, J, and K are complete locally; retired B00-B20 and forbidden numbered/dotted C/D/E/F/G/H/I/J/K labels are not counted as batches
+- Batch L implementation progress: 0/24 capabilities (0%); ADR-0073 and the 24-root/1,351-declaration audit lock one occurrence-aware interference/clearance/containment/review wave before implementation
+- Complete-migration batch progress: B, C, D, E, F, G, H, I, J, and K are complete locally; L is prepared; retired B00-B20 and forbidden numbered/dotted batch labels are not counted as batches
 - Accepted surface: 16,353 generated manifest IDs plus 524 accepted manual stable IDs; Release and Debug native/managed builds, Generator 91/91, Runtime 143/143, discovery/report determinism, generated dependency closure, and dependency profiles 6/6 pass
 - Last complete full inventory: 116,272/116,272 declarations and 7,090/7,090 headers have final dispositions; `Emitted` 16,353, `Manual` 524, `SupportedUnselected` 0, `Skipped` 49,344, `Blocked` 50,051, pending 0, HD099 0; SHA256 `11BF0C50B56EBCF54F776366EB68BDDB93CACD5209DA9CBE93472FDD437A402B`
 - Overall state: package identity is the validated `8.0.1-preview.8` under ADR-0065 while managed assembly identity remains `0.1.0.0`, native ABI is 1.53, and bridge implementation is 0.61.0. ADR-0061/ADR-0062 keep the generated graph resolved and acyclic; physical managed-project and native-DLL splitting remain deliberately deferred. The complete Preview.8 local chain passes. `publicReleaseReady` remains false only because hosted release execution, signing, and NuGet publication are `NOT RUN`
+
+### Batch L digital mock-up interference and clearance preparation
+
+- ADR-0073 and `BATCH_L_DIGITAL_MOCKUP_INTERFERENCE_GAP_INVENTORY.md` lock all 24
+  capabilities as one indivisible wave across occurrence expansion, AABB/OBB, broad-phase
+  filtering, exact distance/contact/penetration/containment, pair matrices, diagnostics,
+  owning issue topology, incremental rerun, STEP/XDE, viewer, lifetime, and clean package.
+- The Preview.8 audit covers exactly 24 roots and 1,351 candidates: 656 blocked, 194
+  emitted, 51 manual, and 450 skipped. Only directly used blocked declarations may be
+  reconciled through SC-048; the audit will not be bulk-marked manual.
+- Implementation, Preview.9/ABI 1.54/bridge 0.62.0/schema 1.12 changes, focused tests,
+  STEP/XDE/HWND evidence, clean-package execution, regeneration, inventory reconciliation,
+  and Preview.9 release gates are all `NOT RUN` for Batch L.
 
 ### Preview.8 Batch K assembly authoring, BOM, and occurrence completion
 
@@ -1346,13 +1360,13 @@ Preview.3 completes all 24/24 together with the full local release gate passing.
 
 ```text
 LOOP_STATE: ACTIVE
-CURRENT_BATCH: NEXT WAVE PREPARATION
-CURRENT_WORKSTREAM: DISCOVER AND LOCK THE NEXT COMPLETE CROSS-FAMILY PRODUCT CLOSURE
-COMPLETED_THIS_TURN: BATCH K 24/24 IMPLEMENTED AND VALIDATED THROUGH THE COMPLETE PREVIEW.8 LOCAL RELEASE GATE
-NEXT_WORKSTREAM: ONE COMPLETE LARGE-WAVE GAP AUDIT AND DEPENDENCY CLOSURE
-NEXT_ACTION: AUDIT THE REMAINING COMMON API GAPS, CHOOSE A COHERENT PRODUCT OUTCOME, AND FREEZE ITS FULL DENOMINATOR BEFORE IMPLEMENTATION
-ENGINEERING_PROGRESS: B 100% COMPLETE; C 100% COMPLETE; D 24/24 COMPLETE (100%); E 24/24 COMPLETE (100%); F 24/24 COMPLETE (100%); G 24/24 COMPLETE (100%); H 24/24 COMPLETE (100%); I 24/24 COMPLETE (100%); J 24/24 COMPLETE (100%); K 24/24 COMPLETE (100%)
-BATCH_PROGRESS: K PREPARATION AND IMPLEMENTATION COMPLETE; 24/24 (100%)
+CURRENT_BATCH: L — DIGITAL MOCK-UP INTERFERENCE AND CLEARANCE
+CURRENT_WORKSTREAM: ONE LOCKED 24-CAPABILITY OCCURRENCE-AWARE ANALYSIS CLOSURE
+COMPLETED_THIS_TURN: PREPARED AND FROZE ALL 24 BATCH L CAPABILITIES WITH A 24-ROOT/1351-DECLARATION AUDIT
+NEXT_WORKSTREAM: IMPLEMENT THE COMPLETE BATCH L WAVE WITHOUT FAMILY CHECKPOINTS
+NEXT_ACTION: IMPLEMENT BOUNDS, BROAD/EXACT PHASE, PAIR CLASSIFICATION/REPORTS, STEP-XDE TRACEABILITY, VIEWER, AND PACKAGE EVIDENCE, THEN RUN ALL GATES
+ENGINEERING_PROGRESS: B 100% COMPLETE; C 100% COMPLETE; D 24/24 COMPLETE (100%); E 24/24 COMPLETE (100%); F 24/24 COMPLETE (100%); G 24/24 COMPLETE (100%); H 24/24 COMPLETE (100%); I 24/24 COMPLETE (100%); J 24/24 COMPLETE (100%); K 24/24 COMPLETE (100%); L PREPARED (0/24)
+BATCH_PROGRESS: L PREPARATION COMPLETE; IMPLEMENTATION 0/24 (0%)
 B_BASELINE_BINDING_COVERAGE: 16414/16414 generated plus accepted manual stable IDs (100%)
 C_COMMON_WORKFLOW_COVERAGE: FIRST-WAVE 14/14, SECOND-WAVE 7/7, THIRD-WAVE 8/8, AND FINAL-WAVE 15/15 DENOMINATORS VALIDATED (100% EACH)
 D_VIEWPORT_REVIEW_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
@@ -1363,10 +1377,11 @@ H_ADVANCED_MESH_SCENE_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
 I_DOCUMENT_HISTORY_PERSISTENCE_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
 J_FEATURE_MODELING_HISTORY_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
 K_ASSEMBLY_AUTHORING_BOM_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
+L_INTERFERENCE_CLEARANCE_COVERAGE: 0/24 IMPLEMENTED; FULL DENOMINATOR AND DEPENDENCY CLOSURE LOCKED
 FULL_PROFILE_ACCOUNTING: 116272/116272 declarations classified; 50051 have narrow blocked dispositions and are not claimed as managed APIs
 INVENTORY_COMPLETENESS: 7058/7090 headers semantically scanned (99.5487%); 116272/116272 discovered declarations and 7090/7090 catalogued headers classified
 LAST_VALIDATION: Preview.8 complete local release check PASS; Release/Debug, Generator 91/91, Runtime 143/143, dependency profiles 6/6, assembly/BOM/reference/metadata/history plus STEP/XDE/HWND Batch K, clean 62-DLL package, regeneration, additive API, inventory, provenance, and checksums PASS
-BLOCKER: NONE; PREPARATION OF THE NEXT COMPLETE LARGE WAVE IS NEXT
+BLOCKER: NONE; COMPLETE BATCH L IMPLEMENTATION WAVE IS NEXT
 ```
 
 ## Known risks

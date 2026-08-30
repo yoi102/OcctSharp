@@ -9,7 +9,7 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Architecture](ARCHITECTURE.md) — system boundaries and component ownership.
 - [Repository layout](REPOSITORY_LAYOUT.md) — physical separation of documentation
   and code-related files.
-- [Roadmap](ROADMAP.md) — completed Batch B-K outcomes and the next preparation boundary.
+- [Roadmap](ROADMAP.md) — completed Batch B-K outcomes and active Batch L boundary.
 - [Complete migration plan](MIGRATION_PLAN.md) — completed Batch C, Batch D, and Batch E
   matrices, large-wave rules, module/package boundaries, metrics,
   and product-scale gates.
@@ -37,6 +37,9 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Batch K assembly authoring and BOM gap inventory](BATCH_K_ASSEMBLY_AUTHORING_BOM_GAP_INVENTORY.md)
   — completed 24-capability assembly editing, product-structure graph, BOM, reference,
   effective-metadata, STEP/XDE, viewer, and clean-package denominator.
+- [Batch L digital mock-up interference gap inventory](BATCH_L_DIGITAL_MOCKUP_INTERFERENCE_GAP_INVENTORY.md)
+  — prepared 24-capability bounds, broad/exact-phase, clearance/contact/penetration,
+  containment, STEP/XDE, viewer, and clean-package denominator.
 - [AI migration loop prompt](AI_MIGRATION_LOOP_PROMPT.md) — reusable re-entrant prompt
   for executing the largest coherent common-workflow wave instead of per-class tasks.
 - [Status](STATUS.md) — current phase, blockers, and last verified results.

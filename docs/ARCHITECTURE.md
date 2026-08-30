@@ -109,6 +109,9 @@ The accepted boundaries are recorded in ADRs:
 - [ADR-0072](adr/0072-assembly-authoring-bom-occurrence-batch.md): one finite Batch K
   assembly-authoring, product-structure, BOM, reference, effective-metadata, exchange,
   and viewer closure with parent-bound labels and copied snapshots.
+- [ADR-0073](adr/0073-digital-mockup-interference-clearance-batch.md): one finite Batch L
+  occurrence-aware bounds, broad/exact-phase interference, clearance, containment,
+  traceability, exchange, and viewer closure with copied reports and owning issue topology.
 
 ## Components
 
@@ -257,6 +260,12 @@ rollback-safe. Preview.8 completes all 24 capabilities through focused 4/4,
 Release/Debug 143/143, real STEP/XDE and HWND review, source/document disposal, exact
 SC-047 inventory reconciliation, and the clean 62-DLL consumer. The physical topology
 remains one managed assembly, one native DLL, and one package.
+
+Batch L retains the same physical and ownership topology. Bounds/spatial indexes,
+extrema/classifier/BOP/IntTools state, explorers, maps, and progress objects remain
+call-local. Pair classifications, witnesses, diagnostics, timings, and occurrence
+traceability are copied; issue topology is independently owning. XDE and viewer objects
+retain their established document/thread parent boundaries.
 
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native

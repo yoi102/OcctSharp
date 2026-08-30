@@ -6,7 +6,8 @@ evidence; creating files or generating a large method count is not sufficient.
 The retired B00–B20 capability milestones and future package boundaries are documented
 in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the completed
 product-scale batch `B`; none is a separate current batch or commit boundary.
-Batch B through Batch K are complete for their accepted local implementation scopes.
+Batch B through Batch K are complete for their accepted local implementation scopes;
+Batch L preparation is complete and implementation is 0/24.
 ADR-0063 closes C at alpha.54, ADR-0064 closes D at alpha.55,
 and ADR-0066 closes E in Preview.2 as one 24-capability engineering-inspection,
 exact-measurement, and PMI/AP242 wave. ADR-0067 closes F in Preview.3 as one 24-capability
@@ -22,6 +23,15 @@ graph/BOM, reference, effective-metadata, rollup, history, and review wave. Host
 signing, and NuGet publication remain separate
 release-readiness work rather than
 unfinished batch implementation.
+
+## Active priority: Batch L digital mock-up interference and clearance
+
+ADR-0073 and [the Batch L gap inventory](BATCH_L_DIGITAL_MOCKUP_INTERFERENCE_GAP_INVENTORY.md)
+freeze one 24-capability occurrence-aware analysis closure across Bnd/BVH,
+BRepExtrema/BRepClass3d/BOP/IntTools, XDE/STEP, owning topology, and AIS review. The exact
+Preview.8 root audit covers 1,351 declarations: 656 blocked, 194 emitted, 51 manual, and
+450 skipped. Preparation is complete and implementation is 0/24; only directly used
+blocked declarations may be reconciled through SC-048.
 
 ## Completed priority: Batch K assembly authoring, BOM, and occurrence workflows
 
