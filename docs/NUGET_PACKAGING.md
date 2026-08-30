@@ -2,7 +2,7 @@
 
 ## Current package
 
-The current experimental package is `OcctSharp` `8.0.1-preview.7` for .NET 10 and
+The current experimental package is `OcctSharp` `8.0.1-preview.8` for .NET 10 and
 Windows x64. It contains:
 
 - `lib/net10.0/OcctSharp.dll` and XML documentation.
@@ -85,7 +85,7 @@ camera conversions, clipping, review aids, and durable image output.
 Once a package source contains the package, an application uses the normal command:
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.7
+dotnet add package OcctSharp --version 8.0.1-preview.8
 ```
 
 The application must run as a Windows x64 process on the current compatibility matrix.
@@ -107,13 +107,13 @@ completed release tooling do not override a `BLOCKED` or `NOT RUN` publication g
 
 ## Planned package split
 
-Preview.7 package verification runs from the inner `OcctSharp/` workspace, where
+Preview.8 package verification runs from the inner `OcctSharp/` workspace, where
 `global.json` selects SDK 10.0.400. Direct nupkg inspection confirms package identity
-`OcctSharp`/`8.0.1-preview.7`, managed assembly/file identity `0.1.0.0`, exact
-informational version `8.0.1-preview.7`, ABI 1.52, bridge 0.60.0, and 62 native DLLs under
-`occt`. The clean consumer restores, publishes, and runs the inherited Batch D-I paths
-plus Batch J selected/variable features, robust Boolean options/preflight/recovery,
-copied history, STEP/XDE, real HWND screenshots, and source-disposal workflow. Signing,
+`OcctSharp`/`8.0.1-preview.8`, managed assembly/file identity `0.1.0.0`, exact
+informational version `8.0.1-preview.8`, ABI 1.53, bridge 0.61.0, and 62 native DLLs under
+`occt`. The clean consumer restores, publishes, and runs the inherited Batch D-J paths
+plus Batch K assembly edits, occurrence paths, graph/BOM, references, effective metadata,
+rollups, history, STEP/XDE, real HWND screenshots, and source-disposal workflow. Signing,
 hosted release execution, and publication
 authorization remain separate `NOT RUN` gates.
 

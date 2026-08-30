@@ -6,7 +6,7 @@ evidence; creating files or generating a large method count is not sufficient.
 The retired B00–B20 capability milestones and future package boundaries are documented
 in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the completed
 product-scale batch `B`; none is a separate current batch or commit boundary.
-Batch B through Batch J are complete for their accepted local implementation scopes.
+Batch B through Batch K are complete for their accepted local implementation scopes.
 ADR-0063 closes C at alpha.54, ADR-0064 closes D at alpha.55,
 and ADR-0066 closes E in Preview.2 as one 24-capability engineering-inspection,
 exact-measurement, and PMI/AP242 wave. ADR-0067 closes F in Preview.3 as one 24-capability
@@ -16,21 +16,27 @@ ADR-0069 closes H in Preview.5 as one 24-capability advanced-mesh, scene, materi
 LOD, and interchange wave. ADR-0070 closes I in Preview.6 as one 24-capability document-
 state, dependency-graph, history, undo/redo, savepoint, and persistence wave.
 ADR-0071 closes J in Preview.7 as one 24-capability advanced feature-modeling, robust-
-Boolean, copied-history, recovery, STEP/XDE, viewer, lifetime, and clean-package wave. Hosted CI,
+Boolean, copied-history, recovery, STEP/XDE, viewer, lifetime, and clean-package wave.
+ADR-0072 closes K in Preview.8 as one 24-capability assembly-authoring, occurrence,
+graph/BOM, reference, effective-metadata, rollup, history, and review wave. Hosted CI,
 signing, and NuGet publication remain separate
 release-readiness work rather than
 unfinished batch implementation.
 
-## Active priority: Batch K assembly authoring, BOM, and occurrence workflows
+## Completed priority: Batch K assembly authoring, BOM, and occurrence workflows
 
 ADR-0072 and [the Batch K assembly-authoring gap inventory](BATCH_K_ASSEMBLY_AUTHORING_BOM_GAP_INVENTORY.md)
-freeze one 24-capability dependency closure before implementation. It crosses XCAFDoc
+freezes one 24-capability dependency closure. It crosses XCAFDoc
 product-structure editing, TDF stable entries and transactions, STEPCAF/STEP structure,
 TopLoc/TopoDS owning results, BRepGProp rollups, XCAFPrs occurrence paths, and AIS review.
 
 The focused Preview.7 root audit covers 1,228 declarations: 610 blocked, 292 emitted, 34
-manual, and 292 skipped. Preparation is complete and implementation is 0/24. SC-047 will
-reconcile only directly used blocked stable IDs. Editing-only, BOM-only, metadata-only,
+manual, and 292 skipped. Preparation and implementation are complete at 24/24 in
+Preview.8. SC-047 reconciles exactly 24 directly used blocked stable IDs; the other 586
+blocked audit candidates remain blocked. Release/Debug, Runtime 143/143, focused 4/4,
+real STEP/XDE and HWND, source/document lifetime, the clean 62-DLL package consumer,
+clean regeneration, inventory, compatibility, and the complete local release gate pass.
+Editing-only, BOM-only, metadata-only,
 reference-only, exchange-only, viewer-only, numbered, or dotted fragments cannot be
 reported as Batch K completion.
 

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.10",
+  "schemaVersion": "1.11",
   "occtVersion": "8.0.1",
   "scope": "foundation-prototype",
   "headers": [
@@ -2149,6 +2149,102 @@
     {
       "stableId": "c:@S@BOPAlgo_Options@F@SetRunParallel#b#",
       "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@Set#&1$@S@TDF_Label#&1$@S@Standard_GUID#I#I#b#S",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@SetValue#I#&1$@S@TCollection_ExtendedString#",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@TDataStd_ExtStringArray@F@Value#I#1",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemId@F@IsNull#1",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemId@F@ToString#1",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemId@F@XCAFDoc_AssemblyItemId#&1$@S@TCollection_AsciiString#",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemRef@F@Get#&1$@S@TDF_Label#S",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemRef@F@GetItem#1",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemRef@F@Set#&1$@S@TDF_Label#&1$@S@XCAFDoc_AssemblyItemId#I#S",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_AssemblyItemRef@F@Set#&1$@S@TDF_Label#&1$@S@XCAFDoc_AssemblyItemId#S",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Editor@F@CloneMetaData#&1$@S@TDF_Label#S0_#*$@S@NCollection_DataMap>#$@N@opencascade@S@handle>#$@S@XCAFDoc_VisMaterial#S4_#$@S@NCollection_DefaultHasher>#S4_#b#b#b#b#b#S",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_Editor@F@CloneShapeLabel#&1$@S@TDF_Label#&1$@N@opencascade@S@handle>#$@S@XCAFDoc_ShapeTool#S2_#&$@S@NCollection_DataMap>#S1_#S1_#$@S@NCollection_DefaultHasher>#S1_#S",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetExternRefs#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#S",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetSHUONextUsage#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#S",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetSHUOUpperUsage#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#S",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetUsers#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#b#S",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsComponent#&1$@S@TDF_Label#S",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsReference#&1$@S@TDF_Label#S",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@RemoveComponent#&1$@S@TDF_Label#1",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@RemoveShape#&1$@S@TDF_Label#b#1",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@SetExternRefs#&1$@S@TDF_Label#&1$@S@NCollection_Sequence>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#1",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@SetLocation#&1$@S@TDF_Label#&1$@S@TopLoc_Location#&S1_#",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@SetShape#&1$@S@TDF_Label#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-047"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@SetSHUO#&1$@S@NCollection_Sequence>#$@S@TDF_Label#&$@N@opencascade@S@handle>#$@S@XCAFDoc_GraphNode#1",
+      "specialCaseId": "SC-047"
     },
     {
       "stableId": "c:@S@BRepAlgoAPI_Algo@F@Shape#",

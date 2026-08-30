@@ -7,7 +7,7 @@ reported as supported.
 
 | OcctSharp | Generator | Native ABI | OCCT | Platform | Compiler | .NET | Status |
 |---|---|---|---|---|---|---|---|
-| 8.0.1-preview.7 workspace | ClangSharp 21.1.8.4 | 1.52 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
+| 8.0.1-preview.8 workspace | ClangSharp 21.1.8.4 | 1.53 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
 
 Validated in both Debug and Release: native and managed build, ABI/runtime identity,
 OCCT box creation, topology traversal, error/disposal behavior, STEP geometry
@@ -196,6 +196,12 @@ clean 62-DLL package consumer validate selected/variable/planar features, robust
 options and preflight, bounded recovery, copied modified/generated/deleted history,
 STEP/XDE, real HWND screenshots, and source-disposal lifetime. API comparison against
 alpha.38 is additive at 38,232 additions and zero removals.
+
+The `8.0.1-preview.8` workspace advances to ABI 1.53/bridge 0.61.0 and completes Batch K.
+Release and Debug pass Generator 91/91 and Runtime 143/143; focused Batch K 4/4 and the
+clean 62-DLL package consumer validate assembly editing, occurrence paths, graph/BOM,
+references, effective metadata, rollups, history rollback, STEP/XDE, real HWND
+screenshots, and source/document-disposal lifetime.
 
 ## Planned validation dimensions
 

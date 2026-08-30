@@ -234,18 +234,18 @@ fixed-order SHA256 checksums, and Git whitespace validation.
 
 The root CI workflow has a dependency-free generator job and a complete Windows job that
 runs this same entry point after acquiring an archive from configured immutable URL and
-SHA256 variables. The `8.0.1-preview.7` local release check covers Release/Debug,
-Generator 91/91, Runtime 139/139, the inherited real STEP/XDE plus real-HWND Batch D-I
-workflows, and the complete Batch J feature/Boolean/preflight/recovery/copied-history workflow,
+SHA256 variables. The `8.0.1-preview.8` local release check covers Release/Debug,
+Generator 91/91, Runtime 143/143, the inherited real STEP/XDE plus real-HWND Batch D-J
+workflows, and the complete Batch K assembly/BOM/reference/metadata/history workflow,
 the clean 62-DLL package consumer, deterministic generation/regeneration, inventory, API
 compatibility, runtime hashes, SBOM/provenance/checksums, and Git whitespace. MIT project
 licensing and bundled third-party notices pass. Hosted full release execution, package
-signing, and NuGet publication are `NOT RUN`; therefore local Batch J implementation is
+signing, and NuGet publication are `NOT RUN`; therefore local Batch K implementation is
 complete while public release readiness remains false.
 
 ```powershell
 cd OcctSharp
-.\eng\release-check.ps1 -PackageVersion 8.0.1-preview.7
+.\eng\release-check.ps1 -PackageVersion 8.0.1-preview.8
 ```
 
 Release evidence is written below `OcctSharp/artifacts/release/`: `api-diff.json`,

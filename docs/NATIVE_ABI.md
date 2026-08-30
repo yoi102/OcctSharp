@@ -517,8 +517,15 @@ BinOcaf/XmlOcaf/BinXCAF/XmlXCAF persistence. That bridge implementation is 0.59.
 ABI 1.52 is the Preview.7 Batch J advanced-feature/history/recovery boundary. It adds one
 short-lived feature-result owner, copied options/diagnostics/request indices, independently
 owning result and history topology, selected and planar finishing, draft/local features,
-multi-shape BOP/defeaturing/cells, preflight, and bounded recovery. The current bridge
+multi-shape BOP/defeaturing/cells, preflight, and bounded recovery. That bridge
 implementation is 0.60.0.
+
+ABI 1.53 is the Preview.8 Batch K assembly-authoring/BOM/occurrence boundary. It adds
+document-bound definition replacement, relocation, removal, subtree clone, reverse-use,
+external and assembly-item references, and SHUO operations. XCAF/TDF tools, maps,
+sequences, and attributes remain native-local; managed graph/BOM/diagnostic/reference
+results are copied, resolved topology is independently owned, and viewer presentations
+retain their viewer/thread parent. The bridge implementation is 0.61.0.
 
 ## Verification
 

@@ -1320,3 +1320,59 @@ rules or design:
 - Removal criteria: Replace this exception only after generated algorithm-local,
   option-copy, diagnostic-copy, history-copy, and owning-topology descriptors preserve
   the same failure, recovery, lifetime, and end-to-end package evidence.
+
+## SC-047: Batch K assembly authoring, BOM, occurrence, and reference closure
+
+- Status: Accepted and implemented for the complete 24-capability Batch K closure;
+  final all-gates validation is recorded in `STATUS.md`.
+- Scope: Exactly 24 newly direct blocked OCCT 8.0.1 stable IDs. The 610 blocked
+  declarations in the preparation audit were not bulk-marked manual; 586 retain their
+  prior dispositions.
+- Reason: XCAF shape tools, editors, assembly-item references, SHUO sequences, label maps,
+  and external-reference attributes are document-local mutable state. They cannot cross
+  the C ABI as editable labels, iterators, maps, or C++ handles.
+- Native/ABI/managed behavior: ABI 1.53, bridge 0.61.0, package `8.0.1-preview.8`, and
+  schema 1.11 add definition replacement, relocation/relink/removal/reparenting, subtree
+  clone, path and reverse-use queries, copied graph/BOM/diagnostics, item/external
+  references, SHUO, effective metadata, physical rollups, and occurrence presentations.
+  External path/URI values use the standard XCAF call plus a transaction-aware OCAF
+  extended-string array with dedicated GUID for ordinary definition/occurrence labels.
+- Ownership: Managed labels remain document-bound stable entries. Structure, BOM,
+  diagnostics, references, and metadata cross as copied records. Resolved topology and
+  locations are independently owned. Viewer presentations remain viewer/thread-bound.
+- Coverage accounting: The schema 1.11 configuration lists these exact unique IDs:
+
+  1. `c:@S@TDataStd_ExtStringArray@F@Set#&1$@S@TDF_Label#&1$@S@Standard_GUID#I#I#b#S`
+  2. `c:@S@TDataStd_ExtStringArray@F@SetValue#I#&1$@S@TCollection_ExtendedString#`
+  3. `c:@S@TDataStd_ExtStringArray@F@Value#I#1`
+  4. `c:@S@XCAFDoc_AssemblyItemId@F@IsNull#1`
+  5. `c:@S@XCAFDoc_AssemblyItemId@F@ToString#1`
+  6. `c:@S@XCAFDoc_AssemblyItemId@F@XCAFDoc_AssemblyItemId#&1$@S@TCollection_AsciiString#`
+  7. `c:@S@XCAFDoc_AssemblyItemRef@F@Get#&1$@S@TDF_Label#S`
+  8. `c:@S@XCAFDoc_AssemblyItemRef@F@GetItem#1`
+  9. `c:@S@XCAFDoc_AssemblyItemRef@F@Set#&1$@S@TDF_Label#&1$@S@XCAFDoc_AssemblyItemId#I#S`
+  10. `c:@S@XCAFDoc_AssemblyItemRef@F@Set#&1$@S@TDF_Label#&1$@S@XCAFDoc_AssemblyItemId#S`
+  11. `c:@S@XCAFDoc_Editor@F@CloneMetaData#&1$@S@TDF_Label#S0_#*$@S@NCollection_DataMap>#$@N@opencascade@S@handle>#$@S@XCAFDoc_VisMaterial#S4_#$@S@NCollection_DefaultHasher>#S4_#b#b#b#b#b#S`
+  12. `c:@S@XCAFDoc_Editor@F@CloneShapeLabel#&1$@S@TDF_Label#&1$@N@opencascade@S@handle>#$@S@XCAFDoc_ShapeTool#S2_#&$@S@NCollection_DataMap>#S1_#S1_#$@S@NCollection_DefaultHasher>#S1_#S`
+  13. `c:@S@XCAFDoc_ShapeTool@F@GetExternRefs#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#S`
+  14. `c:@S@XCAFDoc_ShapeTool@F@GetSHUONextUsage#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#S`
+  15. `c:@S@XCAFDoc_ShapeTool@F@GetSHUOUpperUsage#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#S`
+  16. `c:@S@XCAFDoc_ShapeTool@F@GetUsers#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#b#S`
+  17. `c:@S@XCAFDoc_ShapeTool@F@IsComponent#&1$@S@TDF_Label#S`
+  18. `c:@S@XCAFDoc_ShapeTool@F@IsReference#&1$@S@TDF_Label#S`
+  19. `c:@S@XCAFDoc_ShapeTool@F@RemoveComponent#&1$@S@TDF_Label#1`
+  20. `c:@S@XCAFDoc_ShapeTool@F@RemoveShape#&1$@S@TDF_Label#b#1`
+  21. `c:@S@XCAFDoc_ShapeTool@F@SetExternRefs#&1$@S@TDF_Label#&1$@S@NCollection_Sequence>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#1`
+  22. `c:@S@XCAFDoc_ShapeTool@F@SetLocation#&1$@S@TDF_Label#&1$@S@TopLoc_Location#&S1_#`
+  23. `c:@S@XCAFDoc_ShapeTool@F@SetShape#&1$@S@TDF_Label#&1$@S@TopoDS_Shape#`
+  24. `c:@S@XCAFDoc_ShapeTool@F@SetSHUO#&1$@S@NCollection_Sequence>#$@S@TDF_Label#&$@N@opencascade@S@handle>#$@S@XCAFDoc_GraphNode#1`
+
+- Validation: Focused Batch K 4/4 covers the full denominator, including named edits,
+  undo/redo/abort, source/document disposal, real STEP/XDE, and real-HWND screenshots.
+  The clean package repeats the same assembly/BOM/reference/history/review closure.
+- Upgrade impact: Recheck generated occurrence names, label-map clone behavior, SHUO
+  ordering, assembly-item path formatting, external-reference persistence, SetLocation
+  replacement-label semantics, UpdateAssemblies behavior, and all 24 exact IDs.
+- Removal criteria: Replace this exception only after generated document-local XCAF
+  operations can preserve the same copied snapshots, transaction rules, ownership, and
+  end-to-end package evidence.

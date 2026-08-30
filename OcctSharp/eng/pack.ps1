@@ -2,7 +2,7 @@
 param(
     [string]$OcctRoot,
 
-    [string]$PackageVersion = '8.0.1-preview.7',
+    [string]$PackageVersion = '8.0.1-preview.8',
 
     [switch]$SkipBuild
 )

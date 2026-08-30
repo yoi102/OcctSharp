@@ -1,6 +1,6 @@
 # ADR-0072: Implement assembly authoring, BOM, and occurrence workflows as Batch K
 
-- Status: Accepted for implementation
+- Status: Accepted and implemented
 - Date: 2026-08-30
 - Scope: Batch K product denominator, dependency closure, ownership, and validation
 
@@ -25,9 +25,9 @@ copied immutable structure/BOM/diagnostic records plus independently owning topo
 All structural mutation is named-transaction-bound and rollback-safe.
 
 The batch retains one `OcctSharp.dll`, one `OcctSharp.Native.dll`, one NuGet package,
-stable public type full names, and the accepted generated shard graph. Implementation
-targets Preview.8, native ABI 1.53, bridge 0.61.0, and configuration schema 1.11; these
-identities are targets, not current validated artifacts during preparation.
+stable public type full names, and the accepted generated shard graph. The completed
+implementation uses Preview.8, native ABI 1.53, bridge 0.61.0, and configuration schema
+1.11.
 
 ## Locked non-goals
 
@@ -38,11 +38,11 @@ GitHub work.
 
 ## Consequences
 
-- Preparation freezes all 24 capabilities before implementation starts.
+- Preparation froze all 24 capabilities before implementation started.
 - Editing, BOM, references, metadata, properties, exchange, viewer, and package evidence
   are not separate completion checkpoints.
-- SC-047 will record only newly direct blocked declarations actually used by the final
-  implementation; the 610 blocked audit candidates are not bulk-marked manual.
+- SC-047 records exactly 24 newly direct blocked declarations used by the final
+  implementation; the other 586 blocked audit candidates were not bulk-marked manual.
 - Prior Batch B-J evidence and Preview.7 artifacts remain immutable.
 
 ## Validation required
@@ -53,7 +53,8 @@ Release/Debug, generator/runtime suites, regeneration, compatibility, inventory,
 manifest, SBOM/provenance/checksums, and the complete Preview.8 local release gate must
 pass together before Batch K is complete.
 
-All implementation validation is `NOT RUN` at this preparation checkpoint.
+All implementation validation passed at the local Preview.8 completion checkpoint;
+publication, signing, and hosted release execution remain separate and `NOT RUN`.
 
 ## Related decisions
 

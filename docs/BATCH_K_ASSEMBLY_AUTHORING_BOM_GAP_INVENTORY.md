@@ -4,7 +4,7 @@ This document locks the product denominator and complete cross-family dependency
 for Batch K before implementation. It measures one editable product-structure workflow,
 not individual XCAFDoc, TDF, STEPCAFControl, TopLoc, BRepGProp, or AIS class counts.
 
-Preparation status: **COMPLETE**. Implementation status: **NOT STARTED (0/24)**. The
+Preparation status: **COMPLETE**. Implementation status: **COMPLETE (24/24)**. The
 denominator below is immutable for Batch K.
 
 ## Product outcome
@@ -108,9 +108,13 @@ freshness, byte-identical regeneration, API compatibility, full inventory, runti
 hashes, SBOM/provenance/checksums, documentation, and the complete Preview.8 local release
 check all pass together.
 
-All Batch K implementation and validation gates are currently `NOT RUN`. The only
-completed evidence is the finite 24-capability denominator and the 24-root/1,228-
-declaration Preview.7 baseline audit above.
+SC-047 reconciles exactly 24 directly used blocked declarations; the remaining 586
+blocked audit candidates retain their prior dispositions. Release and Debug pass with
+0 warnings/errors, Generator 91/91, Runtime 143/143, focused Batch K 4/4, and dependency
+profiles 6/6. The 62-DLL Preview.8 clean consumer completes assembly edits, graph/BOM,
+references, effective metadata, rollups, history, STEP/XDE, real-HWND review, screenshot,
+and lifetime checks. Final inventory, regeneration, compatibility, provenance, checksums,
+and the complete local release gate are recorded in `STATUS.md`.
 
 ## Explicit non-goals
 

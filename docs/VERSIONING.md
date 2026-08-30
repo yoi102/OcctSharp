@@ -19,7 +19,7 @@ into one ambiguous version string.
 - Under ADR-0065, NuGet package versions align their numeric core with the supported
   OCCT version: `<OCCT major>.<minor>.<patch>-preview.<OcctSharp preview number>`.
 - The current line began at `8.0.1-preview.1`; the current package is
-  `8.0.1-preview.7`. Increment the preview counter for an
+  `8.0.1-preview.8`. Increment the preview counter for an
   OcctSharp package-visible change while the OCCT baseline remains 8.0.1. Reserve the
   stable `8.0.1` package version for public-release readiness.
 - A later OCCT baseline changes the three-part numeric core and restarts the preview
@@ -32,8 +32,8 @@ into one ambiguous version string.
 - Record the exact OCCT build identity in package metadata and runtime diagnostics.
 - Keep package, managed assembly, generator, native ABI, bridge, binding-model schema,
   configuration schema, and OCCT build identities independent. In particular, the
-  Preview.7 managed assembly identity remains `0.1.0.0`; native ABI is 1.52 and bridge
-  implementation is 0.60.0.
+  Preview.8 managed assembly identity remains `0.1.0.0`; native ABI is 1.53 and bridge
+  implementation is 0.61.0.
 
 ## Runtime identity
 
@@ -252,6 +252,11 @@ to 0.59.0, and adds 54 exact SC-045 manual stable IDs without removing generated
 Preview.7 completes the additive Batch J wave. It retains managed assembly/file identity
 `0.1.0.0`, advances the additive native ABI to 1.52 and bridge implementation to 0.60.0,
 and adds 73 exact SC-046 manual stable IDs without removing generated APIs.
+
+Preview.8 completes the additive Batch K wave. It retains managed assembly/file identity
+`0.1.0.0`, advances the additive native ABI to 1.53 and bridge implementation to 0.61.0,
+uses configuration schema 1.11, and adds exactly 24 SC-047 manual stable IDs without
+removing generated APIs.
 
 An OCCT upgrade report must classify:
 

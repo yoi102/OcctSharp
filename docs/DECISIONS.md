@@ -78,7 +78,7 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0069](adr/0069-advanced-mesh-scene-material-interchange-batch.md) | Define and close Batch H as one 24-capability advanced-mesh, scene, material, LOD, and interchange wave | Accepted |
 | [ADR-0070](adr/0070-document-state-attribute-graph-history-persistence-batch.md) | Define Batch I as one 24-capability OCAF/XDE document-state, attribute-graph, history, and persistence wave | Accepted for implementation |
 | [ADR-0071](adr/0071-advanced-feature-modeling-history-recovery-batch.md) | Define Batch J as one 24-capability advanced feature-modeling, robust-Boolean, copied-history, and recovery wave | Accepted and implemented |
-| [ADR-0072](adr/0072-assembly-authoring-bom-occurrence-batch.md) | Define Batch K as one 24-capability assembly-authoring, BOM, reference, occurrence-metadata, and review wave | Accepted for implementation |
+| [ADR-0072](adr/0072-assembly-authoring-bom-occurrence-batch.md) | Define Batch K as one 24-capability assembly-authoring, BOM, reference, occurrence-metadata, and review wave | Accepted and implemented |
 
 ## Pending decisions
 

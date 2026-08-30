@@ -448,7 +448,7 @@ boundary is complete at Preview.7. Focused, Release/Debug, clean-source, and cle
 tests validate copied request association, independent result/history owners, recovery,
 STEP/XDE, and real-HWND behavior across the full 24/24 closure.
 
-### Prepared Batch K assembly authoring, BOM, and occurrence boundary
+### Batch K assembly authoring, BOM, and occurrence boundary
 
 ADR-0072 keeps XCAFDoc shape/assembly/metadata tools, TDF labels, attributes and
 iterators, XCAFPrs document exploration, assembly graphs, and STEP/STEPCAF sessions
@@ -461,5 +461,6 @@ used/path/reference/metadata/diagnostic snapshots retain no native label, iterat
 attribute, graph, or tool. Located and referenced topology crosses only as independent
 registered owning `Shape` values; locations are independent opaque owners. External
 references are copied metadata and do not authorize implicit I/O. Viewer resources
-remain viewer-parent-bound and creating-thread-affine. This boundary is prepared only;
-Batch K runtime/lifetime/package validation is `NOT RUN`.
+remain viewer-parent-bound and creating-thread-affine. Preview.8 focused 4/4,
+Release/Debug 143/143, STEP/XDE, real-HWND, source/document-disposal, and clean-package
+tests validate this complete 24/24 boundary.

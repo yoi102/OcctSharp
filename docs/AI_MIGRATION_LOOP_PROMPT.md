@@ -294,7 +294,7 @@ HANDOFF
   package version, and documents together.
 - Under ADR-0065, use `<OCCT major>.<minor>.<patch>-preview.<OcctSharp preview number>`
   for NuGet while keeping managed assembly, generator, native ABI, bridge, schema, and
-  OCCT build identities independent. The current package is `8.0.1-preview.7`.
+  OCCT build identities independent. The current package is `8.0.1-preview.8`.
 - Keep the current single package and flat application-local occt/ directory until an
   ADR-0015 split trigger is actually met.
 - Planned managed packages are Runtime, Foundation, Geometry, MeshData, Modeling, Mesh,

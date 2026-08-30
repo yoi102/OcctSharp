@@ -248,14 +248,15 @@ their established parent/thread rules. Preview.7 completes all 24/24 capabilitie
 Release/Debug, copied history/lifetime, real STEP/XDE and HWND, clean regeneration, and
 the clean 62-DLL package consumer without changing the physical deliverable topology.
 
-Batch K is prepared on the same owned-document and parent-bound stable-entry boundary.
+Batch K uses the same owned-document and parent-bound stable-entry boundary.
 XCAFDoc tools, TDF labels/iterators, assembly graphs, STEP/STEPCAF sessions, and document
 explorers remain native-local. Managed structure, BOM, where-used, reference, effective-
 metadata, diagnostics, and rollup results are immutable copies; located topology is an
 independent registered owner. Structural mutation is named-transaction-bound and
-rollback-safe. Preview.8 implementation must validate all 24 capabilities before this
-prepared boundary can be called complete; no assembly/BOM API or ABI identity has changed
-at the preparation checkpoint.
+rollback-safe. Preview.8 completes all 24 capabilities through focused 4/4,
+Release/Debug 143/143, real STEP/XDE and HWND review, source/document disposal, exact
+SC-047 inventory reconciliation, and the clean 62-DLL consumer. The physical topology
+remains one managed assembly, one native DLL, and one package.
 
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native

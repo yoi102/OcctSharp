@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 52)
-    || runtime.BridgeVersion != "0.60.0"
+if (runtime.AbiVersion != new Version(1, 53)
+    || runtime.BridgeVersion != "0.61.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -1425,6 +1425,132 @@ try
         {
             _ = PackageWindowMethods.DestroyWindow(batchJWindow);
         }
+    }
+
+    string batchKStep = Path.Combine(exchangeDirectory, "package-batch-k-assembly.step");
+    using Shape batchKPartShape = ShapeFactory.CreateBox(4, 5, 6);
+    using Shape batchKAlternativeShape = ShapeFactory.CreateCylinder(2, 7);
+    using Shape batchKReplacementShape = ShapeFactory.CreateBox(8, 9, 10);
+    using XdeDocument batchKDocument = XdeDocument.Create();
+    batchKDocument.UndoLimit = 16;
+    XdeLabel batchKPart;
+    XdeLabel batchKAlternative;
+    XdeLabel batchKRoot;
+    XdeLabel batchKNestedOccurrence;
+    XdeLabel batchKSubassemblyOccurrence;
+    XdeLabel batchKDirectOccurrence;
+    using (XdeTransaction transaction = batchKDocument.BeginTransaction("Package Batch K assembly"))
+    {
+        batchKPart = batchKDocument.AddShape(batchKPartShape, "Package Shared Part");
+        batchKPart.Color = new XdeColor(0.2, 0.55, 0.85, 1);
+        batchKPart.SetLayer("Package Mechanical");
+        batchKPart.Material = new XdeMaterial("Package Steel", "Batch K", 2, "Density", "u/mm3");
+        batchKAlternative = batchKDocument.AddShape(batchKAlternativeShape, "Package Alternative");
+        XdeLabel nested = batchKDocument.AddAssembly("Package Nested Assembly");
+        using (GpTrsf nestedPartTransform = GpTrsf.Create(2, 3, 4))
+        using (TopLocLocation nestedPartLocation = TopLocLocation.FromTransform(nestedPartTransform))
+            batchKNestedOccurrence = batchKDocument.AddComponent(nested, batchKPart, nestedPartLocation);
+        batchKRoot = batchKDocument.AddAssembly("Package Root Assembly");
+        using (GpTrsf nestedTransform = GpTrsf.Create(10, 0, 0))
+        using (TopLocLocation nestedLocation = TopLocLocation.FromTransform(nestedTransform))
+            batchKSubassemblyOccurrence = batchKDocument.AddComponent(batchKRoot, nested, nestedLocation);
+        using (GpTrsf directTransform = GpTrsf.Create(30, 0, 0))
+        using (TopLocLocation directLocation = TopLocLocation.FromTransform(directTransform))
+            batchKDirectOccurrence = batchKDocument.AddComponent(batchKRoot, batchKPart, directLocation);
+        batchKDocument.SetOccurrenceMetadata(batchKDirectOccurrence, new AssemblyEffectiveMetadata(
+            "Package Override", new XdeColor(0.8, 0.2, 0.1, 1), ["Package Override Layer"],
+            new XdeMaterial("Package Dense Steel", "Occurrence", 3, "Density", "u/mm3"), null));
+        batchKDocument.SetExternalReferences(batchKDirectOccurrence,
+            ["parts/package-shared.step", "urn:occtsharp:package-batch-k"]);
+        _ = batchKDocument.SetAssemblyItemReference(
+            batchKRoot, [batchKSubassemblyOccurrence.Entry, batchKNestedOccurrence.Entry]);
+        _ = batchKDocument.CreateShuo([batchKSubassemblyOccurrence, batchKNestedOccurrence]);
+        if (!transaction.Commit())
+            throw new InvalidOperationException("The packaged Batch K initial transaction failed.");
+    }
+
+    using (AssemblyOccurrenceResolution resolution = batchKDocument.ResolveOccurrencePath(
+               batchKRoot, [batchKSubassemblyOccurrence.Entry, batchKNestedOccurrence.Entry]))
+    {
+        AssemblyStructureSnapshot graph = batchKDocument.CreateAssemblyStructureSnapshot(batchKRoot);
+        AssemblyBomReport structured = batchKDocument.CreateBom(batchKRoot);
+        AssemblyBomReport flattened = batchKDocument.CreateBom(batchKRoot, flattened: true);
+        AssemblyPropertyRollup rollup = batchKDocument.GetAssemblyPropertyRollup(batchKRoot);
+        AssemblyEffectiveMetadata effective = batchKDocument.GetEffectiveMetadata(batchKDirectOccurrence);
+        AssemblyItemReference? itemReference = batchKDocument.GetAssemblyItemReference(batchKRoot);
+        if (!resolution.LocatedShape.IsValid || graph.Nodes.Count != 6 || graph.Links.Count != 6
+            || graph.Diagnostics.Count != 1 || structured.Items.Count != 3 || flattened.Items.Count != 2
+            || flattened.Items.Single(item => item.DefinitionEntry == batchKPart.Entry).Quantity != 2
+            || batchKDocument.GetWhereUsed(batchKPart).Count != 2 || rollup.OccurrenceCount != 2
+            || Math.Abs(rollup.Mass - 600) > 1e-8 || effective.Name != "Package Override"
+            || effective.Material?.Name != "Package Dense Steel"
+            || itemReference is null || itemReference.Path.Count != 2
+            || batchKDocument.GetExternalReferences(batchKDirectOccurrence).Count != 2)
+            throw new InvalidOperationException("The packaged Batch K graph/BOM/reference/metadata/rollup workflow failed.");
+    }
+
+    string batchKCloneEntry;
+    string batchKMovedEntry;
+    using (XdeTransaction transaction = batchKDocument.BeginTransaction("Package Batch K structural edit"))
+    {
+        XdeLabel batchKClone = batchKDocument.CloneSubtree(batchKRoot, "Package Independent Clone");
+        batchKCloneEntry = batchKClone.Entry;
+        using GpTrsf relocatedTransform = GpTrsf.Create(11, 12, 13);
+        using TopLocLocation relocatedLocation = TopLocLocation.FromTransform(relocatedTransform);
+        XdeLabel relocated = batchKDocument.RelocateOccurrence(batchKDirectOccurrence, relocatedLocation);
+        XdeLabel relinked = batchKDocument.ReplaceOccurrence(relocated, batchKAlternative);
+        XdeLabel moved = batchKDocument.ReparentOccurrence(relinked, batchKClone);
+        batchKMovedEntry = moved.Entry;
+        batchKDocument.UpdateDefinitionShape(batchKAlternative, batchKReplacementShape);
+        if (!transaction.Commit())
+            throw new InvalidOperationException("The packaged Batch K structural transaction failed.");
+    }
+    if (batchKRoot.GetComponents().Count != 1
+        || batchKDocument.GetLabel(batchKCloneEntry).GetComponents().Count != 3
+        || batchKDocument.UndoHistory[0].Name != "Package Batch K structural edit"
+        || !batchKDocument.Undo() || !batchKDocument.Redo())
+        throw new InvalidOperationException("The packaged Batch K edit/undo/redo workflow failed.");
+    using (XdeTransaction aborted = batchKDocument.BeginTransaction("Package Batch K abort"))
+    {
+        batchKDocument.RemoveOccurrence(batchKDocument.GetLabel(batchKMovedEntry));
+        aborted.Abort();
+    }
+    if (batchKDocument.GetLabel(batchKCloneEntry).GetComponents().Count != 3)
+        throw new InvalidOperationException("The packaged Batch K aborted edit was not rolled back.");
+
+    batchKDocument.WriteStep(batchKStep);
+    using XdeDocument batchKImported = XdeDocument.ReadStep(batchKStep);
+    XdeLabel batchKImportedRoot = batchKImported.GetFreeShapes().Single(label => label.Name == "Package Root Assembly");
+    nint batchKWindow = PackageWindowMethods.CreateWindowEx(
+        0, "STATIC", "OcctSharp Batch K package assembly", 0x80000000u,
+        -32000, -32000, 320, 320, 0, 0, 0, 0);
+    if (batchKWindow == 0)
+        throw new InvalidOperationException("The Batch K package HWND could not be created.");
+    try
+    {
+        _ = PackageWindowMethods.ShowWindow(batchKWindow, 4);
+        _ = PackageWindowMethods.UpdateWindow(batchKWindow);
+        using OcctViewer batchKViewer = OcctViewer.Create(batchKWindow);
+        IReadOnlyList<AssemblyViewerPresentation> batchKPresentations =
+            batchKImported.DisplayAssembly(batchKImportedRoot, batchKViewer);
+        try
+        {
+            batchKViewer.FitAll();
+            batchKViewer.Redraw();
+            string batchKImage = batchKViewer.SaveScreenshot(
+                Path.Combine(exchangeDirectory, "package-batch-k-assembly.png"), overwrite: true);
+            if (batchKPresentations.Count == 0 || !File.Exists(batchKImage)
+                || new FileInfo(batchKImage).Length == 0)
+                throw new InvalidOperationException("The packaged Batch K STEP/HWND occurrence review failed.");
+        }
+        finally
+        {
+            foreach (AssemblyViewerPresentation presentation in batchKPresentations) presentation.Dispose();
+        }
+    }
+    finally
+    {
+        _ = PackageWindowMethods.DestroyWindow(batchKWindow);
     }
 }
 finally

@@ -1662,6 +1662,100 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_get_location(
   const OcctSharp_OcafDocumentHandle* document,
   const char* entry,
   OcctSharp_LocationHandle** out_location);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_shape(
+  OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  const OcctSharp_ShapeHandle* shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_location(
+  OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  const OcctSharp_LocationHandle* location,
+  char* result_entry_buffer,
+  int32_t result_entry_capacity,
+  int32_t* result_entry_written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_remove_component(
+  OcctSharp_OcafDocumentHandle* document, const char* entry);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_remove_shape(
+  OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  int32_t remove_completely,
+  int32_t* removed);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_user_count(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  int32_t recursive,
+  int32_t* count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_user_entry(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  int32_t recursive,
+  int32_t index,
+  char* buffer,
+  int32_t capacity,
+  int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_clone_subtree(
+  OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  char* result_entry_buffer,
+  int32_t result_entry_capacity,
+  int32_t* result_entry_written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_external_references(
+  OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  const char* const* references,
+  int32_t count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_external_reference_count(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t* count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_external_reference_utf8_length(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  int32_t index,
+  int32_t* length);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_external_reference_to_utf8(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  int32_t index,
+  char* buffer,
+  int32_t capacity,
+  int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_assembly_item_reference(
+  OcctSharp_OcafDocumentHandle* document,
+  const char* holder_entry,
+  const char* item_path,
+  int32_t subshape_index);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_assembly_item_reference_info(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* holder_entry,
+  int32_t* has_reference,
+  int32_t* is_orphan,
+  int32_t* subshape_index,
+  int32_t* path_length);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_assembly_item_reference_path(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* holder_entry,
+  char* buffer,
+  int32_t capacity,
+  int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_shuo_create(
+  OcctSharp_OcafDocumentHandle* document,
+  const char* const* occurrence_entries,
+  int32_t count,
+  char* result_entry_buffer,
+  int32_t result_entry_capacity,
+  int32_t* result_entry_written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_shuo_link_count(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* shuo_entry,
+  int32_t upper,
+  int32_t* count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_shuo_link_entry(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* shuo_entry,
+  int32_t upper,
+  int32_t index,
+  char* buffer,
+  int32_t capacity,
+  int32_t* written);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_free_shape_count(
   const OcctSharp_OcafDocumentHandle* document, int32_t* count);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_free_shape_entry(
