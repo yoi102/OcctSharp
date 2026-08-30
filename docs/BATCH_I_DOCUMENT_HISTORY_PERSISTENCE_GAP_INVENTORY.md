@@ -4,8 +4,8 @@ This document locks the product denominator and complete cross-family dependency
 for Batch I before implementation. It measures one document-centric editing workflow,
 not individual TDF, TDataStd, TDocStd, TNaming, persistence-driver, or XDE class counts.
 
-Preparation status: **COMPLETE**. Implementation status: **NOT STARTED (0/24)**. The
-denominator below is immutable for Batch I.
+Preparation status: **COMPLETE**. Implementation status: **COMPLETE (24/24)**. The
+denominator below remains the immutable Batch I completion contract.
 
 ## Product outcome
 
@@ -75,8 +75,8 @@ The Preview.5 final inventory was queried for exactly 24 decision-driving roots:
 | `Skipped` | 165 | Destructors, metadata, protected helpers, and unsafe declarations remain excluded |
 | **Total** | **676** | Deduplicated audit candidates; product completion remains the 24 rows above |
 
-Only newly direct blocked overloads used by the implementation will be reconciled under
-SC-045. This audit will not be bulk-marked manual.
+SC-045 reconciles exactly 54 newly direct blocked overloads used by the implementation.
+The audit is not bulk-marked manual.
 
 ## Cross-family dependency closure
 
@@ -103,6 +103,13 @@ persistence formats, undo/redo/lifetime behavior, the clean 62-DLL package consu
 generated freshness, byte-identical regeneration, API compatibility, full inventory,
 runtime hashes, SBOM/provenance/checksums, documentation, and the complete Preview.6
 local release check all pass together.
+
+The Preview.6 implementation passes Release and Debug with zero warnings/errors,
+Generator 91/91, Runtime 135/135, focused Batch I 4/4, dependency profiles 6/6, all
+four persistence formats, STEP/XDE, source disposal, and the clean 62-DLL package
+consumer. Generated freshness, byte-identical clean regeneration, additive API
+compatibility, complete inventory, runtime hashes, SBOM/provenance/checksums, Git
+whitespace, and the complete Preview.6 local release check also pass.
 
 ## Explicit non-goals
 

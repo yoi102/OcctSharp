@@ -1,7 +1,7 @@
 # Current Status
 
 - Last updated: 2026-08-30
-- Current phase: Batch B through Batch H are complete locally; Batch I preparation and its full document-state/attribute-graph/history/persistence dependency closure are locked, with implementation at 0/24
+- Current phase: Batch B through Batch I are complete locally; Batch I closes the full document-state/attribute-graph/history/persistence dependency closure at 24/24
 - Batch B engineering progress: 100% for the accepted local implementation scope (not a claim that every OCCT declaration is a managed API or that public release is ready)
 - Batch C implementation progress: 100% of the finite local implementation denominator; locked wave denominators are 14/14, 7/7, 8/8, and final 15/15 capabilities validated
 - Batch D implementation progress: 24/24 capabilities (100%); ADR-0064's one large cross-family wave passes all implementation, compile, runtime, real-HWND, clean-package, inventory, and local release gates
@@ -9,27 +9,39 @@
 - Batch F implementation progress: 24/24 capabilities (100%); ADR-0067's one cross-family definition/edit/topology/exchange/viewer wave passes compile, runtime/lifetime, real STEP/XDE, real-HWND, clean-package, inventory, and local release gates
 - Batch G implementation progress: 24/24 capabilities (100%); ADR-0068's one cross-family exact/polygonal HLR, section, copied-polyline, SVG, standard-view, exchange, and viewer wave passes every local gate
 - Batch H implementation progress: 24/24 capabilities (100%); ADR-0069's one grouped-mesh/material/LOD/copied-scene/interchange/viewer wave passes every local gate
-- Batch I implementation progress: 0/24 capabilities; ADR-0070 and the 24-root/676-declaration audit freeze one indivisible OCAF/XDE attribute/graph/history/undo-redo/persistence wave before code changes
-- Complete-migration batch progress: B, C, D, E, F, G, and H are complete locally; Batch I is prepared at 0/24; retired B00-B20 and forbidden numbered/dotted C/D/E/F/G/H/I labels are not counted as batches
-- Accepted surface: 16,353 generated manifest IDs plus 373 accepted manual stable IDs; Release and Debug native/managed builds, Generator 91/91, Runtime 131/131, discovery/report determinism, generated dependency closure, and dependency profiles 6/6 pass
-- Last complete full inventory: 116,272/116,272 declarations and 7,090/7,090 headers have final dispositions; `Emitted` 16,353, `Manual` 373, `SupportedUnselected` 0, `Skipped` 49,344, `Blocked` 50,202, pending 0, HD099 0; SHA256 `75BD35320CA769AA54FEE0B09F17A15A1560352B0CDACEA6BEEFBDD8494AD695`
-- Overall state: package identity remains the validated `8.0.1-preview.5` under ADR-0065 while managed assembly identity remains `0.1.0.0`, native ABI is 1.50, and bridge implementation is 0.58.0. Batch I targets Preview.6/ABI 1.51/bridge 0.59.0 only when its complete wave is implemented. ADR-0061/ADR-0062 keep the generated graph resolved and acyclic; physical managed-project and native-DLL splitting remain deliberately deferred. The complete Preview.5 local chain passes, while all Batch I compile/runtime/persistence/package gates are `NOT RUN`. `publicReleaseReady` remains false because hosted release execution, signing, and NuGet publication are `NOT RUN`
+- Batch I implementation progress: 24/24 capabilities (100%); ADR-0070's indivisible OCAF/XDE attribute/graph/history/undo-redo/persistence wave passes every local gate
+- Complete-migration batch progress: B, C, D, E, F, G, H, and I are complete locally; retired B00-B20 and forbidden numbered/dotted C/D/E/F/G/H/I labels are not counted as batches
+- Accepted surface: 16,353 generated manifest IDs plus 427 accepted manual stable IDs; Release and Debug native/managed builds, Generator 91/91, Runtime 135/135, discovery/report determinism, generated dependency closure, and dependency profiles 6/6 pass
+- Last complete full inventory: 116,272/116,272 declarations and 7,090/7,090 headers have final dispositions; `Emitted` 16,353, `Manual` 427, `SupportedUnselected` 0, `Skipped` 49,344, `Blocked` 50,148, pending 0, HD099 0; SHA256 `D8C4F6C1CC1F2AD378F5722DEB507E5F1C6E4AE62E153F07F6A5C65464307A64`
+- Overall state: package identity is the validated `8.0.1-preview.6` under ADR-0065 while managed assembly identity remains `0.1.0.0`, native ABI is 1.51, and bridge implementation is 0.59.0. ADR-0061/ADR-0062 keep the generated graph resolved and acyclic; physical managed-project and native-DLL splitting remain deliberately deferred. The complete Preview.6 local chain passes. `publicReleaseReady` remains false only because hosted release execution, signing, and NuGet publication are `NOT RUN`
 
-### Batch I document state, attribute graph, history, and persistence preparation
+### Preview.6 Batch I document state, attribute graph, history, and persistence completion
 
-- ADR-0070 and `BATCH_I_DOCUMENT_HISTORY_PERSISTENCE_GAP_INVENTORY.md` lock all 24
+- ADR-0070 and `BATCH_I_DOCUMENT_HISTORY_PERSISTENCE_GAP_INVENTORY.md` close all 24
   capabilities as one wave across copied label/attribute state, reference/dependency
   graphs, named commands, undo/redo history, dirty/savepoint state, four OCAF/XCAF
   persistence formats, STEP/XDE, lifetime, and clean-package evidence.
-- The Preview.5 inventory audit covers exactly 24 roots and 676 candidates: 219 emitted,
-  four manual, 288 blocked, and 165 skipped. Only directly used blocked declarations may
-  be reconciled through SC-045 during implementation; the audit is not bulk-marked manual.
+- The focused audit covers exactly 24 roots and 676 candidates: 219 emitted, four manual,
+  288 blocked, and 165 skipped. SC-045 reconciles exactly 54 directly used blocked stable
+  IDs without bulk-marking the root audit manual.
 - The ownership closure preserves owned documents, parent-bound stable entries, copied
   snapshots/graphs, and independent owning topology. No TDF iterator, attribute handle,
   delta, undo/redo list, or persistence driver crosses the ABI.
-- Target identities are Preview.6, native ABI 1.51, and bridge 0.59.0. Batch I focused
-  tests, Release/Debug, binary/XML/STEP round trips, package consumer, regeneration,
-  inventory, compatibility, provenance, hashes, and the local release check are `NOT RUN`.
+- Release and Debug build with zero warnings/errors; Generator 91/91, Runtime 135/135,
+  focused Batch I 4/4, and dependency profiles 6/6 pass. Repository runtime and the clean
+  62-DLL package consumer execute typed state, graph/history/undo-redo/savepoint, all four
+  OCAF/XCAF formats, STEP/XDE, and source-disposal workflows.
+- All 83 generated files are fresh and byte-identical after clean regeneration. The
+  generated dependency graph has 16,353 declarations, 27 resolved edges, zero violations,
+  and zero cycles. Full inventory closes 116,272 declarations and 7,090 headers.
+- The committed bridge is 15,216,128 bytes with SHA256
+  `F8C7825FC770963068ADAE008FDAD95EC2C3155A2DAADA2CD3245DAFEAC76E00` and is byte-
+  identical to the complete Release rebuild. The nupkg SHA256 is
+  `3502A1F36C1D4F44805A5AF9173F7DED46405300ED0D29E1B7D11A60ECEB70AD`.
+- API comparison against alpha.38 is additive at 38,128 additions and zero removals.
+  Inventory SHA256 is `D8C4F6C1CC1F2AD378F5722DEB507E5F1C6E4AE62E153F07F6A5C65464307A64`;
+  SBOM, provenance, checksums, Git whitespace, and the complete Preview.6 local release
+  check pass.
 
 ### Preview.5 Batch H advanced mesh and scene completion
 
@@ -1137,10 +1149,10 @@ Preview.3 completes all 24/24 together with the full local release gate passing.
 
 - Managed: .NET 10, Windows x64.
 - Native: VS 2026/MSVC 19.51 consuming OCCT 8.0.1 VC14 x64 binaries.
-- Generator input: the schema 1.8 selected Windows-core closure in
+- Generator input: the schema 1.9 selected Windows-core closure in
   `config/generation.json`, resolved against the pinned OCCT 8.0.1 headers.
 - Discovery output: 116,263 unique normalized declarations, including 16,353 emitted
-  and 316 reconciled manual stable IDs.
+  and 427 reconciled manual stable IDs.
 - Runtime workflow: create/transform/compound shapes; count faces; STEP round-trip;
   STL/IGES output; geometry and XDE STEP assembly; detailed mesh and validation reports;
   ShapeFix repair comparison; XCAF validation properties, nested occurrence/world
@@ -1153,7 +1165,10 @@ Preview.3 completes all 24/24 together with the full local release gate passing.
   viewer-owned dimension kinds, and screenshots; Batch F copied Bezier/B-spline curve/
   surface definitions and immutable edits, interpolation/approximation, profiles,
   offsets/fills/splits, controlled loft/pipe, sew/heal, STEP/XDE, mesh/measurement,
-  real-HWND selection, and screenshots; validate errors, ownership, threading, and disposal.
+  real-HWND selection, and screenshots; Batch G technical drawing/SVG; Batch H grouped
+  mesh/LOD/material/scene interchange; Batch I copied typed document state, dependency
+  graphs, named history, undo/redo/savepoints, BinOcaf/XmlOcaf/BinXCAF/XmlXCAF, STEP/XDE,
+  and source disposal; validate errors, ownership, threading, and disposal.
 
 ## Current gaps and deferred work
 
@@ -1168,6 +1183,9 @@ Preview.3 completes all 24/24 together with the full local release gate passing.
 - Batch F is complete at 24/24. Definition/edit, interpolation/approximation, profile/
   offset/fill/split/loft/pipe-shell/repair, STEP/XDE, viewer evidence, and clean-package
   gates pass together; no curve-only or surface-only fragment was counted as completion.
+- Batch G, H, and I are complete at 24/24 each. Their technical-drawing, advanced-mesh/
+  scene, and document-state/history/persistence gates pass in repository runtime and the
+  clean package consumer without family fragments being counted as completion.
 - Custom rendering pipelines, arbitrary callbacks, optional integrations, low-frequency
   schema entities, exhaustive mesh attributes, and unrelated long-tail APIs remain out of
   scope for D.
@@ -1203,24 +1221,24 @@ Preview.3 completes all 24/24 together with the full local release gate passing.
 | Release managed build | PASS | 5 projects, 0 warnings, 0 errors |
 | Debug native/managed build | PASS | 5 projects, 0 warnings, 0 errors |
 | Generator unit tests | PASS | ADR-0062 Release and Debug `eng/build.ps1`: 91/91 |
-| Runtime/lifetime tests | PASS | Preview.5 Release and Debug builds: 131/131; native integration tests serialize real-HWND fixtures |
+| Runtime/lifetime tests | PASS | Preview.6 Release and Debug builds: 135/135; native integration tests serialize real-HWND fixtures |
 | Controlled semantic Clang parse | PASS | Record, method, constructor, and enum discovery |
-| OCCT semantic discovery | PASS | Selected model: 116,263 declarations; 373 configured manual stable IDs reconciled |
+| OCCT semantic discovery | PASS | Selected model: 116,263 declarations; 427 configured manual stable IDs reconciled |
 | Full OCCT header catalog | PASS | 7,090 entry headers: 7,084 `.hxx`, 6 `.h`, 407 filename-derived packages |
 | Full OCCT semantic inventory | BLOCKED | 7,058/7,090 headers semantically scanned; 32 named dependency/artifact failures retain stable dispositions |
-| Full-inventory classification | PASS | 16,353 emitted, 373 manual, 0 supported-unselected, 49,344 skipped, 50,202 blocked; 116,272/116,272 declarations and 7,090/7,090 headers classified; current report SHA256 `75BD35320CA769AA54FEE0B09F17A15A1560352B0CDACEA6BEEFBDD8494AD695` |
-| Discovery determinism | PASS | Two-run SHA256 `64269502BF0149CD70864775260111DAE537BB00D6B957B5E91A03D23A351968` |
+| Full-inventory classification | PASS | 16,353 emitted, 427 manual, 0 supported-unselected, 49,344 skipped, 50,148 blocked; 116,272/116,272 declarations and 7,090/7,090 headers classified; current report SHA256 `D8C4F6C1CC1F2AD378F5722DEB507E5F1C6E4AE62E153F07F6A5C65464307A64` |
+| Discovery determinism | PASS | Two-run SHA256 `0CF7A5EA9C25963555BB716083D875F6485A118F62EC760A68CA3CA51095EE88` |
 | Model determinism | PASS | Two runs SHA256 `B4C30059AE03D16D78F032ADACD3FCD0BF674D3BE8F203FD924523EE611F9DA1` |
-| Documentation navigation | PASS | Preview.5 closeout: 124 Markdown source files checked; zero broken local targets |
+| Documentation navigation | PASS | Preview.6 closeout: 130 tracked/untracked source Markdown files checked; zero broken local targets |
 | Structured canonical model compile | PASS | Generator Release build, 0 warnings and 0 errors |
 | Structured canonical model tests | PASS | 3 generator tests; signature, qualifier, inheritance, template/handle facts |
 | Structured OCCT fact inventory | PASS | Binding-model schema 1.3 retains abstract-record facts and fail-closed product-module identity in the selected semantic model |
 | Source package/toolkit identity | PASS | 22,879 of 22,879 declarations classified in the selected scope |
 | Support classification tests | PASS | 2 tests; rule order, stable codes, complete/sorted summary |
-| Selected-scope support summary | PASS | Current Preview.5 surface has 16,353 emitted plus 373 accepted manual stable IDs and zero supported-unselected declarations |
+| Selected-scope support summary | PASS | Current Preview.6 surface has 16,353 emitted plus 427 accepted manual stable IDs and zero supported-unselected declarations |
 | Simple binding eligibility | PASS | Value-copy constructors/static methods promoted; instance/pointer/unknown-lifetime cases remain pending |
 | Coverage and diagnostics reports | PASS | 116,263 declarations; all states and stable disposition codes reported |
-| Report determinism | PASS | Coverage SHA256 `BBB6398F1CA73BBDBD471369FF122F6A46540421D328AEDC589FC154200C987B`; diagnostics SHA256 `934A453623CB9224948113ADECD8203064C6066CF10E5EC1D669F0DC990ACD89` |
+| Report determinism | PASS | Coverage SHA256 `6D0133641414B1B7BFD8A7370EF1FB98C20CBFDE05FB339D10082178A08D38B3`; diagnostics SHA256 `733808E899D0D92DA604A528F57A009AFC433297F7A904226800D829E15321E5` |
 | Initial TypeMap tests | PASS | 9 tests; `TM001`–`TM007`, const-reference/top-level const input, unsafe pointer/reference rejection |
 | Native TypeMap compile fixture | PASS | OCCT scalar and enum width assertions in Release native build |
 | Configured generation scopes | PASS | Schema 1.6 adds 18 validated SC-032 manual stable IDs to the existing generated scopes |
@@ -1235,7 +1253,7 @@ Preview.3 completes all 24/24 together with the full local release gate passing.
 | B06 string/sequence/array/vector/map wave | PASS | Debug/Release runtime tests (40) cover UTF-8/UTF-16 conversion, finite mutation, lower-bound translation, map lookup/bind/unbind, ordered keys, clone ownership, one-shot snapshots, empty collections, stale disposal, and early-exit enumeration |
 | Generated staging and stale cleanup | PASS | Generator tests cover deterministic module/layer output, manifest-owned stale removal, and acyclic dependency direction |
 | Generated cross-shard dependency closure | PASS | 16,353 declarations and 83 files; 27 direct edges, 0 unresolved references, 0 target-graph violations, 0 cyclic groups; SHA256 `A1635978C80B75D4D85507E9D5A4C0DB614B9ADD1557F97D53A3B697BDB36F30` |
-| Generated source freshness | PASS | Preview.5 release check verified all 83 manifest-owned files and byte-identical clean regeneration |
+| Generated source freshness | PASS | Preview.6 release check verified all 83 manifest-owned files and byte-identical clean regeneration |
 | Generated value ABI layout | PASS | Native 24-byte/8-byte assertions and managed 24-byte runtime assertion |
 | STEP geometry round-trip | PASS | Generated box and transformed two-box compound round-tripped with 6 and 12 faces |
 | STL/IGES file output | PASS | Binary STL and BRep-mode IGES created and checked non-empty |
@@ -1247,21 +1265,22 @@ Preview.3 completes all 24/24 together with the full local release gate passing.
 | Batch F freeform curve/surface/profile authoring | PASS | 24/24; focused 4/4 and full Release/Debug Runtime 123/123 cover copied definitions, immutable edits, interpolation/approximation, profiles/offsets/fills/splits, controlled loft/pipe, sew/heal, real STEP/XDE, mesh/measurement, real HWND selection/screenshot, and clean-package execution |
 | Batch G technical drawing/HLR/section/vector output | PASS | 24/24; focused 4/4 and full Release/Debug Runtime 127/127 cover exact/polygonal HLR, ten owning layers, sections, copied polylines, layered SVG, standard views, real STEP/XDE, real HWND screenshot, and clean-package execution |
 | Batch H advanced mesh/scene/material/LOD/interchange | PASS | 24/24; focused 4/4 and full Release/Debug Runtime 131/131 cover grouped attributes/statistics/diagnostics, independent LODs, PBR/physical metadata, nested/shared scene snapshots, glTF/GLB/OBJ read/write, PLY/VRML write, real STEP/XDE, real HWND screenshot, and clean-package execution |
+| Batch I document state/graph/history/persistence | PASS | 24/24; focused 4/4 and full Release/Debug Runtime 135/135 cover copied typed state, dependency/reverse/SCC diagnostics, named commands, undo/redo/branching/savepoints, BinOcaf/XmlOcaf/BinXCAF/XmlXCAF, STEP/XDE, owning topology, source disposal, and clean-package execution |
 | B18 optional dependency profiles | PASS | Release/Debug build audit classifies 6/6 profiles; IVtk/VTK and EGL/GLES blockers are named; core package unchanged |
-| Native runtime dependency closure | PASS | 62 DLLs in committed Preview.5 ABI 1.50/bridge 0.58.0 runtime; complete Release rebuild is byte-identical and loads from `occt`; bridge SHA256 `26432903E96CA6AA981078596ADEE3A5866AE94DD93E71354E54D2638208A1BB` |
+| Native runtime dependency closure | PASS | 62 DLLs in committed Preview.6 ABI 1.51/bridge 0.59.0 runtime; complete Release rebuild is byte-identical and loads from `occt`; bridge SHA256 `F8C7825FC770963068ADAE008FDAD95EC2C3155A2DAADA2CD3245DAFEAC76E00` |
 | XDE two-box assembly | PASS | One XDE assembly root, two occurrences, and 12-face STEP round-trip |
 | STEPCAF/XDE metadata | PASS (scoped) | Existing seven-input metadata workflow plus alpha.53 area/volume/centroid attributes, nested occurrence placement, metadata filters, and BinXCAF/STEPCAF round trips |
 | XDE native runtime libraries | PASS | `TKXCAF`, `TKCAF`, `TKLCAF`, and `TKCDF` present in Debug and Release runtime directories |
 | Checked shared-handle cast | PASS | Release/Debug `TryCastDerived` and `CastDerived`: retained success, wrong/null rejection, and `InvalidCastException` |
-| NuGet package contents | PASS (Preview.5) | `8.0.1-preview.5`; managed/XML/docs, MIT metadata/license, 62 native DLLs, and 11 bundled notice/license files; package/assembly/informational identities inspected; nupkg SHA256 `C84EA10C3F222A2C7FE0B67AAA1DBC17FAEE029F5597C86BB4E38177BEA283C2` |
+| NuGet package contents | PASS (Preview.6) | `8.0.1-preview.6`; managed/XML/docs, MIT metadata/license, 62 native DLLs, and 11 bundled notice/license files; package/assembly/informational identities inspected; final nupkg SHA256 is recorded in `artifacts/release/checksums.sha256` |
 | Package output layout | PASS | Published executable has `occt/` closure and no root `OcctSharp.Native.dll` |
-| Packaging/clean consumer | PASS (Preview.5) | Clean SDK 10.0.400 restore/publish/runtime passes the complete Batch D/E/F/G/H workflow with package 8.0.1-preview.5, ABI 1.50/bridge 0.58.0, OCCT 8.0.1, and 62 DLLs |
+| Packaging/clean consumer | PASS (Preview.6) | Clean SDK 10.0.400 restore/publish/runtime passes the complete Batch D/E/F/G/H/I workflow with package 8.0.1-preview.6, ABI 1.51/bridge 0.59.0, OCCT 8.0.1, and 62 DLLs |
 | Fresh-clone Sample bundled runtime | PASS | New clone without local settings/OCCT environment passed manifest, Release/Debug `--smoke`, exact 62-DLL output, box creation, and package creation |
 | Git whitespace checks | PASS | `git diff --check` and `git diff --cached --check` |
 | CI configuration | PASS | Generator tests, clone-only bundled-runtime Release/Debug smoke, and immutable URL/SHA full Windows release-check jobs configured |
 | Hosted CI execution | PASS (clone/runtime); full release NOT RUN | GitHub run 33064559589: generator-tests and bundled-runtime manifest/Release/Debug smoke succeeded at commit c8a38c2; SDK-dependent full-windows was conditionally skipped because artifact variables are not configured |
-| API compatibility | PASS | Alpha.38 606-signature baseline comparison: 37,904 additions, zero removals, non-breaking |
-| Release engineering | PASS (Preview.5 local) | Complete local release check passes Release/Debug, Generator 91/91, Runtime 131/131, dependency profiles 6/6, 83-file freshness/clean regeneration, 62-DLL complete Batch H consumer, API/inventory/SBOM/provenance/checksums, and Git whitespace |
+| API compatibility | PASS | Alpha.38 606-signature baseline comparison: 38,128 additions, zero removals, non-breaking |
+| Release engineering | PASS (Preview.6 local) | Complete local release check passes Release/Debug, Generator 91/91, Runtime 135/135, dependency profiles 6/6, 83-file freshness/clean regeneration, 62-DLL complete Batch I consumer, API/inventory/SBOM/provenance/checksums, and Git whitespace |
 | Public release readiness | BLOCKED | MIT and bundled notices PASS; hosted release execution, signing, and NuGet publication are NOT RUN |
 
 ## Migration loop state
@@ -1269,12 +1288,12 @@ Preview.3 completes all 24/24 together with the full local release gate passing.
 ```text
 LOOP_STATE: COMPLETE
 CURRENT_BATCH: I — DOCUMENT STATE, ATTRIBUTE GRAPH, HISTORY, AND PERSISTENCE
-CURRENT_WORKSTREAM: ONE LOCKED 24-CAPABILITY OCAF/XDE ATTRIBUTE/GRAPH/HISTORY/PERSISTENCE CLOSURE
-COMPLETED_THIS_TURN: PREPARED AND FROZE ALL 24 BATCH I CAPABILITIES WITH A 24-ROOT/676-DECLARATION AUDIT
-NEXT_WORKSTREAM: IMPLEMENT THE COMPLETE BATCH I WAVE WITHOUT FAMILY CHECKPOINTS
-NEXT_ACTION: IMPLEMENT COPIED DOCUMENT STATE/GRAPH/HISTORY, UNDO/REDO, SAVEPOINTS, AND FOUR-FORMAT PERSISTENCE, THEN RUN ALL GATES
-ENGINEERING_PROGRESS: B 100% COMPLETE; C 100% COMPLETE; D 24/24 COMPLETE (100%); E 24/24 COMPLETE (100%); F 24/24 COMPLETE (100%); G 24/24 COMPLETE (100%); H 24/24 COMPLETE (100%)
-BATCH_PROGRESS: I PREPARATION COMPLETE; IMPLEMENTATION 0/24 (0%)
+CURRENT_WORKSTREAM: COMPLETE 24-CAPABILITY OCAF/XDE ATTRIBUTE/GRAPH/HISTORY/PERSISTENCE CLOSURE
+COMPLETED_THIS_TURN: IMPLEMENTED AND VALIDATED ALL 24 BATCH I CAPABILITIES AS ONE WAVE
+NEXT_WORKSTREAM: NO PREPARED MIGRATION BATCH; PRESERVE THE VALIDATED BOUNDARIES UNTIL A NEW PRODUCT DENOMINATOR IS AUTHORIZED
+NEXT_ACTION: NONE FOR BATCH I; HOSTED EXECUTION, SIGNING, AND PUBLICATION REMAIN SEPARATE AUTHORIZATION-BOUND WORK
+ENGINEERING_PROGRESS: B 100% COMPLETE; C 100% COMPLETE; D 24/24 COMPLETE (100%); E 24/24 COMPLETE (100%); F 24/24 COMPLETE (100%); G 24/24 COMPLETE (100%); H 24/24 COMPLETE (100%); I 24/24 COMPLETE (100%)
+BATCH_PROGRESS: I PREPARATION AND IMPLEMENTATION COMPLETE; 24/24 (100%)
 B_BASELINE_BINDING_COVERAGE: 16414/16414 generated plus accepted manual stable IDs (100%)
 C_COMMON_WORKFLOW_COVERAGE: FIRST-WAVE 14/14, SECOND-WAVE 7/7, THIRD-WAVE 8/8, AND FINAL-WAVE 15/15 DENOMINATORS VALIDATED (100% EACH)
 D_VIEWPORT_REVIEW_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
@@ -1282,10 +1301,10 @@ E_INSPECTION_PMI_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
 F_FREEFORM_AUTHORING_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
 G_TECHNICAL_DRAWING_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
 H_ADVANCED_MESH_SCENE_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
-I_DOCUMENT_HISTORY_PERSISTENCE_COVERAGE: 0/24 IMPLEMENTED; FULL DENOMINATOR AND DEPENDENCY CLOSURE LOCKED
-FULL_PROFILE_ACCOUNTING: 116272/116272 declarations classified; 50202 have narrow blocked dispositions and are not claimed as managed APIs
+I_DOCUMENT_HISTORY_PERSISTENCE_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
+FULL_PROFILE_ACCOUNTING: 116272/116272 declarations classified; 50148 have narrow blocked dispositions and are not claimed as managed APIs
 INVENTORY_COMPLETENESS: 7058/7090 headers semantically scanned (99.5487%); 116272/116272 discovered declarations and 7090/7090 catalogued headers classified
-LAST_VALIDATION: Preview.5 complete local release check PASS; Release/Debug, Generator 91/91, Runtime 131/131, dependency profiles 6/6, real STEP/XDE plus real-HWND Batch H, clean 62-DLL package, regeneration, additive API, inventory, provenance, and checksums PASS
+LAST_VALIDATION: Preview.6 complete local release check PASS; Release/Debug, Generator 91/91, Runtime 135/135, dependency profiles 6/6, four-format OCAF/XCAF plus STEP/XDE Batch I, clean 62-DLL package, regeneration, additive API, inventory, provenance, and checksums PASS
 BLOCKER: NONE FOR MIGRATION ENGINEERING; HOSTED RELEASE EXECUTION, SIGNING, AND NUGET PUBLICATION REMAIN SEPARATE AND NOT RUN
 ```
 

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.8",
+  "schemaVersion": "1.9",
   "occtVersion": "8.0.1",
   "scope": "foundation-prototype",
   "headers": [
@@ -1657,6 +1657,222 @@
     {
       "stableId": "c:@S@XCAFDoc_DocumentTool@F@VisMaterialTool#&1$@S@TDF_Label#S",
       "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@XmlDrivers@F@DefineFormat#&1$@N@opencascade@S@handle>#$@S@TDocStd_Application#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@XmlXCAFDrivers@F@DefineFormat#&1$@N@opencascade@S@handle>#$@S@TDocStd_Application#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDocStd_Application@F@SaveAs#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@TCollection_ExtendedString#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@ChangeStorageFormat#&1$@S@TCollection_ExtendedString#",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@GetUndos#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDocStd_Document@F@GetRedos#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@Tag#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@Depth#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@IsRoot#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@Father#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@IsNull#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_ChildIterator@F@TDF_ChildIterator#&1$@S@TDF_Label#b#",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_ChildIterator@F@More#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_ChildIterator@F@Next#",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_ChildIterator@F@Value#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_AttributeIterator@F@TDF_AttributeIterator#&1$@S@TDF_Label#b#",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_AttributeIterator@F@More#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_AttributeIterator@F@Next#",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_AttributeIterator@F@Value#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_Attribute@F@DynamicType#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_Attribute@F@Label#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@Standard_GUID@F@ToCString#*C#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_Name@F@GetID#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_Name@F@Set#&1$@S@TDF_Label#&1$@S@TCollection_ExtendedString#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_GenericExtString@F@Get#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_Comment@F@GetID#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_Comment@F@Set#&1$@S@TDF_Label#&1$@S@TCollection_ExtendedString#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_AsciiString@F@Get#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_AsciiString@F@GetID#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_AsciiString@F@Set#&1$@S@TDF_Label#&1$@S@TCollection_AsciiString#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_Integer@F@GetID#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_Integer@F@Set#&1$@S@TDF_Label#I#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_Real@F@GetID#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_Real@F@Set#&1$@S@TDF_Label#d#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@GetID#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_IntegerArray@F@Set#&1$@S@TDF_Label#I#I#b#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_RealArray@F@Set#&1$@S@TDF_Label#I#I#b#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_Reference@F@Get#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_Reference@F@GetID#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_Reference@F@Set#&1$@S@TDF_Label#S0_#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@GetID#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@Set#&1$@S@TDF_Label#I#I#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@SetValue#I#&1$@S@TDF_Label#",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_ReferenceArray@F@Value#I#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_TreeNode@F@GetDefaultTreeID#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDataStd_TreeNode@F@Set#&1$@S@TDF_Label#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TNaming_NamedShape@F@GetID#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TNaming_Tool@F@GetShape#&1$@N@opencascade@S@handle>#$@S@TNaming_NamedShape#S",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TNaming_Builder@F@TNaming_Builder#&1$@S@TDF_Label#",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TNaming_Builder@F@Generated#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_Delta@F@AttributeDeltas#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_Delta@F@Name#1",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_Delta@F@SetName#&1$@S@TCollection_ExtendedString#",
+      "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@TDF_AttributeDelta@F@Label#1",
+      "specialCaseId": "SC-045"
     }
   ],
   "excludedBindings": [

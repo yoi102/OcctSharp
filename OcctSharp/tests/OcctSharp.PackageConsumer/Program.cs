@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 50)
-    || runtime.BridgeVersion != "0.58.0"
+if (runtime.AbiVersion != new Version(1, 51)
+    || runtime.BridgeVersion != "0.59.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -1260,6 +1260,89 @@ try
             throw new InvalidOperationException("The packaged Batch H real-HWND scene screenshot failed.");
     }
     finally { _ = PackageWindowMethods.DestroyWindow(batchHWindow); }
+
+    string batchIGenericBin = Path.Combine(exchangeDirectory, "package-batch-i-generic.cbf");
+    string batchIGenericXml = Path.Combine(exchangeDirectory, "package-batch-i-generic.xml");
+    using (OcafDocument batchIGeneric = OcafDocument.Create())
+    {
+        batchIGeneric.UndoLimit = -1;
+        using (OcafTransaction transaction = batchIGeneric.BeginTransaction("Package Batch I generic state"))
+        {
+            OcafLabel label = batchIGeneric.RootLabel.AddChild();
+            label.Name = "Package 文档";
+            label.Comment = "Copied state";
+            label.IntegerValue = 801;
+            label.SetRealArray(-1, [1.5, 3.0]);
+            label.Reference = batchIGeneric.RootLabel;
+            if (!transaction.Commit())
+                throw new InvalidOperationException("The packaged Batch I generic command did not create history.");
+        }
+        if (batchIGeneric.UndoHistory.Single().Name != "Package Batch I generic state"
+            || !batchIGeneric.CreateDependencyGraph().Edges.Any(static edge =>
+                edge.Kind == DocumentDependencyEdgeKind.DirectReference))
+            throw new InvalidOperationException("The packaged Batch I generic snapshot/graph/history workflow failed.");
+        batchIGeneric.MarkSaved();
+        if (!batchIGeneric.Undo() || !batchIGeneric.IsChanged || !batchIGeneric.Redo() || batchIGeneric.IsChanged)
+            throw new InvalidOperationException("The packaged Batch I undo/redo/savepoint workflow failed.");
+        batchIGeneric.Save(batchIGenericBin, DocumentStorageFormat.BinOcaf);
+        batchIGeneric.Save(batchIGenericXml, DocumentStorageFormat.XmlOcaf);
+    }
+    using (OcafDocument batchIGenericBinary = OcafDocument.Open(batchIGenericBin))
+    using (OcafDocument batchIGenericXmlReloaded = OcafDocument.Open(batchIGenericXml))
+    using (DocumentSnapshot batchIGenericBinarySnapshot = batchIGenericBinary.CreateSnapshot())
+    using (DocumentSnapshot batchIGenericXmlSnapshot = batchIGenericXmlReloaded.CreateSnapshot())
+    {
+        bool binaryHasState = batchIGenericBinarySnapshot.Labels.Any(static label => label.Attributes.Any(static attribute =>
+            attribute.Kind == DocumentAttributeKind.IntegralValue && attribute.IntegerValue == 801));
+        bool xmlHasState = batchIGenericXmlSnapshot.Labels.Any(static label => label.Attributes.Any(static attribute =>
+            attribute.Kind == DocumentAttributeKind.IntegralValue && attribute.IntegerValue == 801));
+        if (batchIGenericBinary.IsChanged || batchIGenericXmlReloaded.IsChanged || !binaryHasState || !xmlHasState)
+            throw new InvalidOperationException("The packaged Batch I BinOcaf/XmlOcaf round trip failed.");
+    }
+
+    string batchIXdeBin = Path.Combine(exchangeDirectory, "package-batch-i-scene.xbf");
+    string batchIXdeXml = Path.Combine(exchangeDirectory, "package-batch-i-scene.xml");
+    string batchIOutputStep = Path.Combine(exchangeDirectory, "package-batch-i-output.step");
+    Shape batchIOwningCopy;
+    using (XdeDocument batchIDocument = XdeDocument.ReadStep(batchFStep))
+    {
+        XdeLabel imported = batchIDocument.GetFreeShapes().Single();
+        using (XdeTransaction transaction = batchIDocument.BeginTransaction("Package Batch I STEP mutation"))
+        {
+            imported.Name = "Package Batch I Imported Root";
+            imported.Comment = "Persistent history";
+            imported.Reference = imported;
+            if (!transaction.Commit())
+                throw new InvalidOperationException("The packaged Batch I STEP mutation did not create history.");
+        }
+        DocumentDependencyGraph batchIGraph = batchIDocument.CreateDependencyGraph();
+        if (batchIDocument.UndoHistory.Single().Name != "Package Batch I STEP mutation"
+            || batchIGraph.IsAcyclic
+            || !batchIGraph.GetOutgoing(imported.Entry).Any(static edge =>
+                edge.Kind == DocumentDependencyEdgeKind.DirectReference))
+            throw new InvalidOperationException("The packaged Batch I graph/history diagnostics failed.");
+        batchIOwningCopy = imported.Shape;
+        batchIDocument.Save(batchIXdeBin, DocumentStorageFormat.BinXcaf);
+        batchIDocument.Save(batchIXdeXml, DocumentStorageFormat.XmlXcaf);
+    }
+    using (batchIOwningCopy)
+    using (XdeDocument batchIBinaryReloaded = XdeDocument.Open(batchIXdeBin))
+    using (XdeDocument batchIReloaded = XdeDocument.Open(batchIXdeXml))
+    {
+        XdeLabel binaryImported = batchIBinaryReloaded.GetFreeShapes().Single();
+        XdeLabel imported = batchIReloaded.GetFreeShapes().Single();
+        using Shape binaryShape = binaryImported.Shape;
+        batchIReloaded.WriteStep(batchIOutputStep);
+        if (batchIOwningCopy.Kind != ShapeKind.Solid
+            || binaryShape.Kind != ShapeKind.Solid
+            || binaryImported.Name != "Package Batch I Imported Root"
+            || binaryImported.Comment != "Persistent history"
+            || imported.Name != "Package Batch I Imported Root"
+            || imported.Comment != "Persistent history"
+            || !File.Exists(batchIOutputStep)
+            || new FileInfo(batchIOutputStep).Length == 0)
+            throw new InvalidOperationException("The packaged Batch I persistence/source-disposal/STEP export failed.");
+    }
 }
 finally
 {

@@ -1330,6 +1330,99 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_ocaf_label_name_to_utf8(
   char* buffer,
   int32_t capacity,
   int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_save_format(
+  OcctSharp_OcafDocumentHandle* document, const char* file_path, int32_t xde, int32_t xml);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_label_info(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry,
+  int32_t* tag, int32_t* depth, int32_t* is_root, int32_t* has_parent,
+  char* parent_buffer, int32_t parent_capacity, int32_t* parent_written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_child_entry(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t index,
+  char* buffer, int32_t capacity, int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_attribute_count(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t* count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_attribute_info(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t index,
+  int32_t* kind, char* id_buffer, int32_t id_capacity, int32_t* id_written,
+  char* type_buffer, int32_t type_capacity, int32_t* type_written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_text_info(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t kind,
+  int32_t* has_value, int32_t* length);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_text_copy(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t kind,
+  char* buffer, int32_t capacity, int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_text_set(
+  OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t kind,
+  const char* utf8, int32_t length);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_scalar_get(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t kind,
+  int32_t* has_value, int32_t* integer_value, double* real_value);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_scalar_set(
+  OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t kind,
+  int32_t integer_value, double real_value);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_attribute_remove(
+  OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t kind);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_array_info(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t kind,
+  int32_t* has_value, int32_t* lower, int32_t* count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_integer_array_copy(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry,
+  int32_t* values, int32_t capacity, int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_real_array_copy(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry,
+  double* values, int32_t capacity, int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_integer_array_set(
+  OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t lower,
+  const int32_t* values, int32_t count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_real_array_set(
+  OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t lower,
+  const double* values, int32_t count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_reference_info(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t array,
+  int32_t* has_value, int32_t* count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_reference_entry(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t array,
+  int32_t index, char* buffer, int32_t capacity, int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_reference_set(
+  OcctSharp_OcafDocumentHandle* document, const char* entry, const char* target_entry);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_reference_array_set(
+  OcctSharp_OcafDocumentHandle* document, const char* entry,
+  const char* const* target_entries, int32_t count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_tree_info(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry,
+  int32_t* has_node, int32_t* has_parent, int32_t* child_count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_tree_entry(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry, int32_t parent,
+  int32_t index, char* buffer, int32_t capacity, int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_tree_reparent(
+  OcctSharp_OcafDocumentHandle* document, const char* entry, const char* parent_entry);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_tree_detach(
+  OcctSharp_OcafDocumentHandle* document, const char* entry);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_named_shape_get(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry,
+  int32_t* has_shape, OcctSharp_ShapeHandle** shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_named_shape_set(
+  OcctSharp_OcafDocumentHandle* document, const char* entry,
+  const OcctSharp_ShapeHandle* shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_commit_named_command(
+  OcctSharp_OcafDocumentHandle* document, const char* utf8, int32_t length, int32_t* changed);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_history_state(
+  const OcctSharp_OcafDocumentHandle* document, int32_t* undo_limit,
+  int32_t* undo_count, int32_t* redo_count, int32_t* is_changed);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_history_set_limit(
+  OcctSharp_OcafDocumentHandle* document, int32_t undo_limit);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_history_action(
+  OcctSharp_OcafDocumentHandle* document, int32_t action, int32_t* changed);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_history_entry_info(
+  const OcctSharp_OcafDocumentHandle* document, int32_t redo, int32_t index,
+  int32_t* begin_time, int32_t* end_time, int32_t* delta_count,
+  int32_t* label_count, int32_t* name_length);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_history_entry_name(
+  const OcctSharp_OcafDocumentHandle* document, int32_t redo, int32_t index,
+  char* buffer, int32_t capacity, int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_document_history_entry_label(
+  const OcctSharp_OcafDocumentHandle* document, int32_t redo, int32_t index,
+  int32_t label_index, char* buffer, int32_t capacity, int32_t* written);
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_ocaf_document_release(
   OcctSharp_OcafDocumentHandle* document);
 

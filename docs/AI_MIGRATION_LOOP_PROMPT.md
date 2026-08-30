@@ -11,10 +11,10 @@ The loop does not mean blindly generating declarations. Every large wave must pr
 native semantics, ownership, ABI safety, deterministic regeneration, and truthful
 validation evidence.
 
-Current repository note: Batches B through F are complete for their accepted local
-implementation scopes. Preview.3 closes Batch F's immutable 24-capability freeform
-curve/surface and profile-to-solid authoring denominator with the full local release gate
-passing. Hosted release execution, signing, and NuGet publication remain separate
+Current repository note: Batches B through I are complete for their accepted local
+implementation scopes. Preview.6 closes Batch I's immutable 24-capability document-state,
+dependency-graph, history, undo/redo, savepoint, and persistence denominator with the full
+local release gate passing. Hosted release execution, signing, and NuGet publication remain separate
 `NOT RUN` publication-readiness gates.
 
 ## How to use
@@ -137,7 +137,7 @@ RECOVER
 - Restore current facts using section 3.
 
 SELECT
-- Batches B through F are complete historical evidence when current repository gates
+- Batches B through I are complete historical evidence when current repository gates
   confirm Preview.3. Never reopen B/C/D/E/F or create `F01`, `F.1`, per-class, or
   per-method batches merely to continue the loop.
 - If F is not yet complete in a recovered older checkout, it has one locked 24-capability
@@ -294,7 +294,7 @@ HANDOFF
   package version, and documents together.
 - Under ADR-0065, use `<OCCT major>.<minor>.<patch>-preview.<OcctSharp preview number>`
   for NuGet while keeping managed assembly, generator, native ABI, bridge, schema, and
-  OCCT build identities independent. The current package is `8.0.1-preview.2`.
+  OCCT build identities independent. The current package is `8.0.1-preview.6`.
 - Keep the current single package and flat application-local occt/ directory until an
   ADR-0015 split trigger is actually met.
 - Planned managed packages are Runtime, Foundation, Geometry, MeshData, Modeling, Mesh,

@@ -229,7 +229,9 @@ TDataStd/TNaming attributes, TDF deltas, TDocStd command lists, and binary/XML/S
 drivers remain native-local. Managed attribute, reference, history, document, and
 dependency-graph snapshots are copied and retain no document state; optional topology
 is an independent owning `Shape`. Undo/redo and dirty/savepoint mutation stay bound to
-one owned document. Implementation and validation remain open for Preview.6.
+one owned document. Preview.6 completes all 24/24 capabilities through Release/Debug,
+real four-format OCAF/XCAF persistence, STEP/XDE, lifetime tests, and the clean 62-DLL
+package consumer without changing the one-assembly, one-native-DLL, one-package topology.
 
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native

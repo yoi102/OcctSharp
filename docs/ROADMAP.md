@@ -6,30 +6,35 @@ evidence; creating files or generating a large method count is not sufficient.
 The retired B00–B20 capability milestones and future package boundaries are documented
 in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the completed
 product-scale batch `B`; none is a separate current batch or commit boundary.
-Batch B through Batch H are complete for their accepted local implementation scopes,
-and Batch I is locked for implementation. ADR-0063 closes C at alpha.54, ADR-0064 closes D at alpha.55,
+Batch B through Batch I are complete for their accepted local implementation scopes.
+ADR-0063 closes C at alpha.54, ADR-0064 closes D at alpha.55,
 and ADR-0066 closes E in Preview.2 as one 24-capability engineering-inspection,
 exact-measurement, and PMI/AP242 wave. ADR-0067 closes F in Preview.3 as one 24-capability
 freeform curve/surface and profile-to-solid authoring wave. ADR-0068 closes G in Preview.4
 as one 24-capability technical-drawing, hidden-line, section, and vector-output wave.
 ADR-0069 closes H in Preview.5 as one 24-capability advanced-mesh, scene, material,
-LOD, and interchange wave. Hosted CI, signing, and NuGet publication remain separate
+LOD, and interchange wave. ADR-0070 closes I in Preview.6 as one 24-capability document-
+state, dependency-graph, history, undo/redo, savepoint, and persistence wave. Hosted CI,
+signing, and NuGet publication remain separate
 release-readiness work rather than
 unfinished batch implementation.
 
-## Active priority: Batch I document state, attribute graph, history, and persistence
+## Completed priority: Batch I document state, attribute graph, history, and persistence
 
 ADR-0070 and [the Batch I document history and persistence gap inventory](BATCH_I_DOCUMENT_HISTORY_PERSISTENCE_GAP_INVENTORY.md)
-freeze one 24-capability dependency closure before implementation. It crosses stable TDF
+freezes one 24-capability dependency closure. It crosses stable TDF
 label/attribute traversal, typed TDataStd values and arrays, references and tree nodes,
 TNaming topology, copied dependency graphs, named TDocStd commands, undo/redo history,
 dirty/savepoint state, BinOcaf/XmlOcaf/BinXCAF/XmlXCAF, STEP/XDE, lifetime, and clean
 package evidence.
 
 The focused Preview.5 root audit covers 676 declarations: 288 blocked, 219 emitted, four
-manual, and 165 skipped. Preparation is complete and implementation is 0/24. Attribute-
-only, graph-only, undo-only, persistence-only, XDE-only, numbered, or dotted fragments
-cannot be reported as Batch I completion.
+manual, and 165 skipped. Preparation and implementation are complete at 24/24 in
+Preview.6. SC-045 reconciles exactly 54 directly used blocked stable IDs. Release/Debug,
+Runtime 135/135, focused 4/4, four-format OCAF/XCAF and STEP/XDE persistence, lifetime,
+the clean 62-DLL package consumer, clean regeneration, inventory, compatibility, and the
+complete local release gate pass. Attribute-only, graph-only, undo-only,
+persistence-only, XDE-only, numbered, or dotted fragments were not completion points.
 
 ## Completed priority: Batch H advanced mesh, scene, material, LOD, and interchange
 
@@ -336,5 +341,7 @@ Preview.2. Batch F completes the immutable 24-capability freeform authoring deno
 under ADR-0067 in Preview.3. Batch G completes the immutable 24-capability technical-
 drawing denominator under ADR-0068 in Preview.4. Batch H completes the immutable
 24-capability advanced-mesh/scene/material/LOD/interchange denominator under ADR-0069
-in Preview.5. Numbered or dotted fragments, per-class batches, and small
+in Preview.5. Batch I completes the immutable 24-capability document-state/attribute-
+graph/history/persistence denominator under ADR-0070 in Preview.6. Numbered or dotted
+fragments, per-class batches, and small
 completion percentages were not used.

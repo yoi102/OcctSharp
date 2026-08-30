@@ -1,6 +1,6 @@
 # ADR-0070: Implement document state, attribute graphs, history, and persistence as Batch I
 
-- Status: Accepted for implementation
+- Status: Accepted and completed
 - Date: 2026-08-30
 - Scope: Batch I product denominator, dependency closure, ownership, and validation
 
@@ -52,6 +52,15 @@ XmlOcaf, BinXCAF, XmlXCAF, and STEP/XDE round trips, the clean-package workflow,
 Release/Debug, generator/runtime suites, regeneration, compatibility, inventory, runtime
 manifest, SBOM/provenance/checksums, and the complete Preview.6 local release gate must
 pass together before Batch I is complete.
+
+The implementation closes all 24 capabilities in Preview.6 through the copied snapshot,
+managed graph, document-owned history, four-format persistence, and owning-topology
+boundaries above. Release and Debug pass with zero warnings/errors; Generator 91/91,
+Runtime 135/135, focused Batch I 4/4, dependency profiles 6/6, and the clean 62-DLL
+package consumer, 83-file clean regeneration, additive API compatibility, complete
+inventory, runtime hashes, SBOM/provenance/checksums, Git whitespace, and the complete
+local release check pass. Hosted execution, signing, publication, and GitHub work remain
+outside I.
 
 ## Related decisions
 

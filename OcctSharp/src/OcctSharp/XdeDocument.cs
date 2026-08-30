@@ -12,6 +12,45 @@ public sealed partial class XdeDocument : IDisposable
 
     internal OcafDocumentHandle Handle { get; }
 
+    /// <summary>Gets whether an XDE/OCAF command is currently open.</summary>
+    public bool HasOpenTransaction
+    {
+        get
+        {
+            ThrowIfDisposed();
+            NativeError.ThrowIfFailed(NativeMethods.HasOpenOcafCommand(Handle, out int open), "xde_document_has_open_command");
+            return open != 0;
+        }
+    }
+
+    /// <summary>Gets a copied view of the current undo, redo, and dirty state.</summary>
+    public DocumentHistoryState HistoryState
+    {
+        get { ThrowIfDisposed(); return DocumentStateApi.GetHistoryState(Handle); }
+    }
+
+    /// <summary>Gets or sets the bounded undo depth; -1 means unlimited and zero disables history.</summary>
+    public int UndoLimit
+    {
+        get => HistoryState.UndoLimit;
+        set { ThrowIfDisposed(); DocumentStateApi.SetUndoLimit(Handle, value); }
+    }
+
+    /// <summary>Gets whether the document differs from its current savepoint.</summary>
+    public bool IsChanged => HistoryState.IsChanged;
+
+    /// <summary>Gets copied undo-history entries without exposing native deltas.</summary>
+    public IReadOnlyList<DocumentHistoryEntry> UndoHistory
+    {
+        get { ThrowIfDisposed(); return DocumentStateApi.GetHistory(Handle, false); }
+    }
+
+    /// <summary>Gets copied redo-history entries without exposing native deltas.</summary>
+    public IReadOnlyList<DocumentHistoryEntry> RedoHistory
+    {
+        get { ThrowIfDisposed(); return DocumentStateApi.GetHistory(Handle, true); }
+    }
+
     /// <summary>Creates an empty binary-persistable XDE document.</summary>
     public static XdeDocument Create()
     {
@@ -50,7 +89,16 @@ public sealed partial class XdeDocument : IDisposable
     {
         ThrowIfDisposed();
         NativeError.ThrowIfFailed(NativeMethods.BeginOcafCommand(Handle), "xde_document_begin_command");
-        return new XdeTransaction(this);
+        return new XdeTransaction(this, null);
+    }
+
+    /// <summary>Begins an explicitly named XDE/OCAF command.</summary>
+    public XdeTransaction BeginTransaction(string name)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(name);
+        ThrowIfDisposed();
+        NativeError.ThrowIfFailed(NativeMethods.BeginOcafCommand(Handle), "xde_document_begin_command");
+        return new XdeTransaction(this, name);
     }
 
     /// <summary>
@@ -172,6 +220,57 @@ public sealed partial class XdeDocument : IDisposable
 
     /// <summary>Saves this document as BinXCAF.</summary>
     public string Save(string filePath) => WriteFile(filePath, NativeMethods.SaveOcafDocument, "xde_document_save");
+
+    /// <summary>Saves this XDE document as BinXCAF or XmlXCAF.</summary>
+    public string Save(string filePath, DocumentStorageFormat format)
+    {
+        ThrowIfDisposed();
+        if (format is not (DocumentStorageFormat.BinXcaf or DocumentStorageFormat.XmlXcaf))
+            throw new ArgumentOutOfRangeException(nameof(format), "An XDE document requires BinXCAF or XmlXCAF.");
+        return DocumentStateApi.Save(Handle, filePath, format);
+    }
+
+    /// <summary>Copies the complete XDE label/attribute table, including owning named topology.</summary>
+    public DocumentSnapshot CreateSnapshot()
+    {
+        ThrowIfDisposed();
+        return DocumentStateApi.Snapshot(Handle);
+    }
+
+    /// <summary>Builds a copied graph including TDF references, tree nodes, and XDE occurrences.</summary>
+    public DocumentDependencyGraph CreateDependencyGraph()
+    {
+        using DocumentSnapshot snapshot = CreateSnapshot();
+        List<DocumentDependencyEdge> occurrences = [];
+        foreach (DocumentLabelSnapshot label in snapshot.Labels)
+        {
+            if (!IsAssembly(label.Entry)) continue;
+            XdeLabel[] components = GetComponents(label.Entry);
+            for (int index = 0; index < components.Length; ++index)
+            {
+                XdeLabel component = components[index];
+                occurrences.Add(new(label.Entry, component.Entry, DocumentDependencyEdgeKind.XdeOccurrence, index));
+                occurrences.Add(new(component.Entry, GetReferredLabel(component.Entry).Entry,
+                    DocumentDependencyEdgeKind.XdeOccurrence));
+            }
+        }
+        return DocumentStateApi.BuildGraph(snapshot, occurrences);
+    }
+
+    /// <summary>Undoes one committed command and reports whether state changed.</summary>
+    public bool Undo() { ThrowIfDisposed(); return DocumentStateApi.Undo(Handle); }
+
+    /// <summary>Redoes one undone command and reports whether state changed.</summary>
+    public bool Redo() { ThrowIfDisposed(); return DocumentStateApi.Redo(Handle); }
+
+    /// <summary>Clears all undo entries.</summary>
+    public void ClearUndoHistory() { ThrowIfDisposed(); DocumentStateApi.ClearUndos(Handle); }
+
+    /// <summary>Clears all redo entries.</summary>
+    public void ClearRedoHistory() { ThrowIfDisposed(); DocumentStateApi.ClearRedos(Handle); }
+
+    /// <summary>Marks the current document time as the clean savepoint.</summary>
+    public void MarkSaved() { ThrowIfDisposed(); DocumentStateApi.MarkSaved(Handle); }
 
     /// <summary>Writes this document through STEPCAF with metadata enabled.</summary>
     public string WriteStep(string filePath) => WriteFile(filePath, NativeMethods.WriteStepXdeDocument, "xde_document_write_step");
@@ -412,12 +511,35 @@ public sealed partial class XdeDocument : IDisposable
         return new XdeMaterial(Field(0), Field(1), density, Field(2), Field(3));
     }
 
-    internal bool CommitTransaction()
+    internal bool CommitTransaction(string? name)
     {
         ThrowIfDisposed();
+        if (name is not null) return DocumentStateApi.CommitNamedCommand(Handle, name);
         NativeError.ThrowIfFailed(NativeMethods.CommitOcafCommand(Handle, out int changed), "xde_document_commit_command");
         return changed != 0;
     }
+
+    internal DocumentLabelSnapshot SnapshotLabel(string entry) { ThrowIfDisposed(); return DocumentStateApi.SnapshotLabel(Handle, entry); }
+    internal string? GetDocumentText(string entry, DocumentAttributeKind kind) { ThrowIfDisposed(); return DocumentStateApi.GetText(Handle, entry, kind); }
+    internal void SetDocumentText(string entry, DocumentAttributeKind kind, string value) { ThrowIfDisposed(); DocumentStateApi.SetText(Handle, entry, kind, value); }
+    internal int? GetInteger(string entry) { ThrowIfDisposed(); return DocumentStateApi.GetInteger(Handle, entry); }
+    internal void SetInteger(string entry, int value) { ThrowIfDisposed(); DocumentStateApi.SetInteger(Handle, entry, value); }
+    internal double? GetReal(string entry) { ThrowIfDisposed(); return DocumentStateApi.GetReal(Handle, entry); }
+    internal void SetReal(string entry, double value) { ThrowIfDisposed(); DocumentStateApi.SetReal(Handle, entry, value); }
+    internal DocumentIntegerArray? GetIntegerArray(string entry) { ThrowIfDisposed(); return DocumentStateApi.GetIntegerArray(Handle, entry); }
+    internal void SetIntegerArray(string entry, int lower, IReadOnlyList<int> values) { ThrowIfDisposed(); DocumentStateApi.SetIntegerArray(Handle, entry, lower, values); }
+    internal DocumentRealArray? GetRealArray(string entry) { ThrowIfDisposed(); return DocumentStateApi.GetRealArray(Handle, entry); }
+    internal void SetRealArray(string entry, int lower, IReadOnlyList<double> values) { ThrowIfDisposed(); DocumentStateApi.SetRealArray(Handle, entry, lower, values); }
+    internal string? GetReference(string entry) { ThrowIfDisposed(); return DocumentStateApi.GetReference(Handle, entry); }
+    internal void SetReference(string entry, string target) { ThrowIfDisposed(); DocumentStateApi.SetReference(Handle, entry, target); }
+    internal IReadOnlyList<string> GetReferenceArray(string entry) { ThrowIfDisposed(); return DocumentStateApi.GetReferenceArray(Handle, entry); }
+    internal void SetReferenceArray(string entry, IReadOnlyList<string> targets) { ThrowIfDisposed(); DocumentStateApi.SetReferenceArray(Handle, entry, targets); }
+    internal DocumentTreeSnapshot? GetTree(string entry) { ThrowIfDisposed(); return DocumentStateApi.GetTree(Handle, entry); }
+    internal void ReparentTree(string entry, string parent) { ThrowIfDisposed(); DocumentStateApi.ReparentTree(Handle, entry, parent); }
+    internal void DetachTree(string entry) { ThrowIfDisposed(); DocumentStateApi.DetachTree(Handle, entry); }
+    internal Shape? GetNamedShape(string entry) { ThrowIfDisposed(); return DocumentStateApi.GetNamedShape(Handle, entry); }
+    internal void SetNamedShape(string entry, Shape shape) { ThrowIfDisposed(); DocumentStateApi.SetNamedShape(Handle, entry, shape); }
+    internal void RemoveAttribute(string entry, DocumentAttributeKind kind) { ThrowIfDisposed(); DocumentStateApi.RemoveAttribute(Handle, entry, kind); }
 
     internal void AbortTransaction()
     {

@@ -63,9 +63,9 @@ the OCCT baseline remained 8.0.1 and managed assembly/file identity remained `0.
 Preview.2 independently advanced the additive native ABI to 1.47 and bridge
 implementation to 0.55.0; those identities did not derive from the package number.
 
-Batch F is the next package-visible additive change, so the current package is
-`8.0.1-preview.3`; managed assembly/file identity remains `0.1.0.0`, while native ABI
-independently advances to 1.48 and bridge implementation to 0.56.0.
+Batch F was the next package-visible additive change, producing `8.0.1-preview.3`;
+managed assembly/file identity remained `0.1.0.0`, while native ABI independently
+advanced to 1.48 and bridge implementation to 0.56.0.
 
 Batch G is the following package-visible additive change, producing
 `8.0.1-preview.4`; managed assembly/file identity remains `0.1.0.0`, while native ABI
@@ -74,3 +74,7 @@ independently advances to 1.49 and bridge implementation to 0.57.0.
 Batch H is the next package-visible additive change, producing `8.0.1-preview.5`;
 managed assembly/file identity remains `0.1.0.0`, while native ABI independently
 advances to 1.50 and bridge implementation to 0.58.0.
+
+Batch I is the following package-visible additive change, producing `8.0.1-preview.6`;
+managed assembly/file identity remains `0.1.0.0`, while native ABI independently
+advances to 1.51 and bridge implementation to 0.59.0.

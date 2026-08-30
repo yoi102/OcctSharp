@@ -307,7 +307,7 @@ static JsonSerializerOptions CreateJsonOptions()
 }
 
 static bool IsSupportedConfigurationSchema(string schemaVersion) =>
-    schemaVersion is "1.1" or "1.2" or "1.3" or "1.4" or "1.5" or "1.6" or "1.7" or "1.8";
+    schemaVersion is "1.1" or "1.2" or "1.3" or "1.4" or "1.5" or "1.6" or "1.7" or "1.8" or "1.9";
 
 static DiscoveryReport ApplyManualBindings(
     DiscoveryReport report,

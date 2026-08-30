@@ -498,7 +498,21 @@ ABI 1.48 is the Preview.3 Batch F freeform-authoring boundary. It adds copied cu
 surface definition arrays, copied multi-solution and diagnostics records, and native-local
 entry points for interpolation/approximation, projection/extrema/intersection, planar
 profiles and offsets, freeform face edits/fill/offset, splitting, controlled loft/pipe,
-and repair. The current native ABI is 1.48 and bridge implementation version is 0.56.0.
+and repair. The native ABI at that historical boundary was 1.48 and bridge implementation
+version was 0.56.0.
+
+ABI 1.49 is the Preview.4 Batch G technical-drawing boundary. It adds native-local exact
+and polygonal HLR/section operations, independent owning layer topology, copied polyline
+buffers, and managed SVG composition without exposing algorithm or iterator state.
+
+ABI 1.50 is the Preview.5 Batch H advanced-mesh/scene boundary. It adds configurable
+independent meshing, copied grouped mesh/LOD/material/scene values, and call-local
+glTF/GLB/OBJ/PLY/VRML providers while retaining document-parent XDE mutation.
+
+ABI 1.51 is the Preview.6 Batch I document-state/history/persistence boundary. It adds
+copied label/attribute/reference/tree/named-shape snapshots, document-owned named command
+history and undo/redo/savepoints, managed dependency-graph inputs, and call-local
+BinOcaf/XmlOcaf/BinXCAF/XmlXCAF persistence. The current bridge implementation is 0.59.0.
 
 ## Verification
 

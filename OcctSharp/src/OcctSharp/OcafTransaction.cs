@@ -4,15 +4,20 @@ namespace OcctSharp;
 public sealed class OcafTransaction : IDisposable
 {
     private OcafDocument? _document;
+    private readonly string? _name;
 
-    internal OcafTransaction(OcafDocument document) => _document = document;
+    internal OcafTransaction(OcafDocument document, string? name)
+    {
+        _document = document;
+        _name = name;
+    }
 
     /// <summary>Commits the transaction and reports whether an undo delta was created.</summary>
     public bool Commit()
     {
         OcafDocument document = _document
             ?? throw new ObjectDisposedException(nameof(OcafTransaction));
-        bool changed = document.CommitTransaction();
+        bool changed = document.CommitTransaction(_name);
         _document = null;
         return changed;
     }
@@ -37,7 +42,7 @@ public sealed class OcafTransaction : IDisposable
 
         try
         {
-            document.AbortTransaction();
+            if (document.HasOpenTransaction) document.AbortTransaction();
         }
         catch (ObjectDisposedException)
         {

@@ -267,7 +267,7 @@ and destination disposal invalidates them. No source-document relationship survi
 
 ### Generated placement-allocator shared objects
 
-Types explicitly listed in configuration schema 1.8 under
+Types explicitly listed in the current configuration schema under
 `placementAllocatorNativeTypes` are still O004 intrusive shared objects, but their native
 wrapper owns an additional allocator retention. The allocator field is declared before
 the OCCT object handle so C++ destroys the object first and releases the retained
@@ -429,5 +429,5 @@ Undo, redo, history trimming, dirty state, and savepoint mutation are operations
 live owned document and are rejected while a command is open. Copied history entries are
 diagnostic data, not executable delta owners. Managed dependency graphs are built from
 copied stable-entry edges and retain no document or label. Binary/XML/STEP calls borrow
-the document only for the call. This boundary is locked for Batch I; implementation and
-validation are `NOT RUN`.
+the document only for the call. Preview.6 validates this boundary in Release and Debug,
+the focused four-format/STEP-XDE/source-disposal tests, and the clean package consumer.

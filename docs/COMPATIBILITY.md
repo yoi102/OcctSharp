@@ -7,7 +7,7 @@ reported as supported.
 
 | OcctSharp | Generator | Native ABI | OCCT | Platform | Compiler | .NET | Status |
 |---|---|---|---|---|---|---|---|
-| 8.0.1-preview.3 workspace | ClangSharp 21.1.8.4 | 1.48 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
+| 8.0.1-preview.6 workspace | ClangSharp 21.1.8.4 | 1.51 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
 
 Validated in both Debug and Release: native and managed build, ABI/runtime identity,
 OCCT box creation, topology traversal, error/disposal behavior, STEP geometry
@@ -179,6 +179,16 @@ The `8.0.1-preview.3` workspace advances to ABI 1.48/bridge 0.56.0 and completes
 F. Release and Debug pass Generator 91/91, Runtime 123/123, and dependency profiles 6/6;
 the clean 62-DLL package repeats the complete freeform authoring workflow. The additive
 API diff against alpha.38 is 37,636 additions and zero removals.
+
+The `8.0.1-preview.4` and `8.0.1-preview.5` workspaces complete Batch G technical drawing
+and Batch H advanced mesh/scene interchange at ABI 1.49/bridge 0.57.0 and ABI 1.50/
+bridge 0.58.0 respectively. Their complete evidence remains in their release notes.
+
+The `8.0.1-preview.6` workspace advances to ABI 1.51/bridge 0.59.0 and completes Batch I.
+Release and Debug pass Generator 91/91 and Runtime 135/135; focused Batch I 4/4 and the
+clean 62-DLL package consumer validate copied typed state, dependency graphs, named
+history, undo/redo/savepoints, all four OCAF/XCAF persistence formats, STEP/XDE, and
+source-disposal ownership.
 
 ## Planned validation dimensions
 

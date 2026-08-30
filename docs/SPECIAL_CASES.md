@@ -1106,3 +1106,101 @@ rules or design:
 - Removal criteria: Replace this exception only after generated ownership descriptors
   preserve the same copied scene/mesh/material values, native-local algorithms/providers,
   document-parent mutations, durable-file behavior, and end-to-end package evidence.
+
+## SC-045: Batch I document state, history, and persistence closure
+
+- Status: Accepted and implemented for the complete 24-capability Batch I closure;
+  final all-gates validation is recorded in `STATUS.md`.
+- Scope: Exactly 54 newly direct blocked OCCT 8.0.1 stable IDs covering XML driver
+  registration, storage-format selection/save, copied label and attribute traversal,
+  text/scalar/bounded-array/reference/tree attributes, owning TNaming topology, and
+  copied undo/redo delta metadata. Existing binary-driver registration, document open,
+  command/undo primitives, XDE/STEP, and previously reconciled declarations are reused
+  without double counting.
+- Reason: TDF labels, iterators, attribute handles, delta lists, OCAF drivers, and
+  TDataStd/TNaming objects are borrowed, document-owned, mutable, or call-local. None may
+  cross the C ABI as a layout or independently usable handle. The bridge keeps them
+  native-local and returns stable entries, copied records/arrays/graphs/history, durable
+  files, or an independent registered owning `Shape`.
+- Native/ABI/managed behavior: ABI 1.51, bridge 0.59.0, package
+  `8.0.1-preview.6`, and configuration schema 1.9 add typed document snapshots,
+  reference/tree/XDE occurrence dependency graphs, named commands, bounded/zero/
+  unlimited history, undo/redo/branch clearing, savepoints, and BinOcaf/XmlOcaf/
+  BinXCAF/XmlXCAF persistence. Managed `-1` unlimited history maps to native `INT_MAX`.
+- Ownership: Documents own all native application/data/attribute/history/driver state.
+  Labels remain parent-bound stable entries. Snapshot strings, GUIDs, type names,
+  scalars, arrays, edges, SCCs, history metadata, and changed-label entries are managed
+  copies. Named topology is an independent owning shape and survives source-document
+  disposal.
+- Coverage accounting: The schema 1.9 configuration lists the following exact 54 IDs;
+  all are unique and were `Blocked` before reconciliation. The 676-declaration Batch I
+  root audit is not bulk-marked manual.
+
+  1. `c:@S@XmlDrivers@F@DefineFormat#&1$@N@opencascade@S@handle>#$@S@TDocStd_Application#S`
+  2. `c:@S@XmlXCAFDrivers@F@DefineFormat#&1$@N@opencascade@S@handle>#$@S@TDocStd_Application#S`
+  3. `c:@S@TDocStd_Application@F@SaveAs#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@TCollection_ExtendedString#&1$@S@Message_ProgressRange#`
+  4. `c:@S@TDocStd_Document@F@ChangeStorageFormat#&1$@S@TCollection_ExtendedString#`
+  5. `c:@S@TDocStd_Document@F@GetUndos#1`
+  6. `c:@S@TDocStd_Document@F@GetRedos#1`
+  7. `c:@S@TDF_Label@F@Tag#1`
+  8. `c:@S@TDF_Label@F@Depth#1`
+  9. `c:@S@TDF_Label@F@IsRoot#1`
+  10. `c:@S@TDF_Label@F@Father#1`
+  11. `c:@S@TDF_Label@F@IsNull#1`
+  12. `c:@S@TDF_ChildIterator@F@TDF_ChildIterator#&1$@S@TDF_Label#b#`
+  13. `c:@S@TDF_ChildIterator@F@More#1`
+  14. `c:@S@TDF_ChildIterator@F@Next#`
+  15. `c:@S@TDF_ChildIterator@F@Value#1`
+  16. `c:@S@TDF_AttributeIterator@F@TDF_AttributeIterator#&1$@S@TDF_Label#b#`
+  17. `c:@S@TDF_AttributeIterator@F@More#1`
+  18. `c:@S@TDF_AttributeIterator@F@Next#`
+  19. `c:@S@TDF_AttributeIterator@F@Value#1`
+  20. `c:@S@TDF_Attribute@F@DynamicType#1`
+  21. `c:@S@TDF_Attribute@F@Label#1`
+  22. `c:@S@Standard_GUID@F@ToCString#*C#1`
+  23. `c:@S@TDataStd_Name@F@GetID#S`
+  24. `c:@S@TDataStd_Name@F@Set#&1$@S@TDF_Label#&1$@S@TCollection_ExtendedString#S`
+  25. `c:@S@TDataStd_GenericExtString@F@Get#1`
+  26. `c:@S@TDataStd_Comment@F@GetID#S`
+  27. `c:@S@TDataStd_Comment@F@Set#&1$@S@TDF_Label#&1$@S@TCollection_ExtendedString#S`
+  28. `c:@S@TDataStd_AsciiString@F@Get#1`
+  29. `c:@S@TDataStd_AsciiString@F@GetID#S`
+  30. `c:@S@TDataStd_AsciiString@F@Set#&1$@S@TDF_Label#&1$@S@TCollection_AsciiString#S`
+  31. `c:@S@TDataStd_Integer@F@GetID#S`
+  32. `c:@S@TDataStd_Integer@F@Set#&1$@S@TDF_Label#I#S`
+  33. `c:@S@TDataStd_Real@F@GetID#S`
+  34. `c:@S@TDataStd_Real@F@Set#&1$@S@TDF_Label#d#S`
+  35. `c:@S@TDataStd_IntegerArray@F@GetID#S`
+  36. `c:@S@TDataStd_IntegerArray@F@Set#&1$@S@TDF_Label#I#I#b#S`
+  37. `c:@S@TDataStd_RealArray@F@Set#&1$@S@TDF_Label#I#I#b#S`
+  38. `c:@S@TDF_Reference@F@Get#1`
+  39. `c:@S@TDF_Reference@F@GetID#S`
+  40. `c:@S@TDF_Reference@F@Set#&1$@S@TDF_Label#S0_#S`
+  41. `c:@S@TDataStd_ReferenceArray@F@GetID#S`
+  42. `c:@S@TDataStd_ReferenceArray@F@Set#&1$@S@TDF_Label#I#I#S`
+  43. `c:@S@TDataStd_ReferenceArray@F@SetValue#I#&1$@S@TDF_Label#`
+  44. `c:@S@TDataStd_ReferenceArray@F@Value#I#1`
+  45. `c:@S@TDataStd_TreeNode@F@GetDefaultTreeID#S`
+  46. `c:@S@TDataStd_TreeNode@F@Set#&1$@S@TDF_Label#S`
+  47. `c:@S@TNaming_NamedShape@F@GetID#S`
+  48. `c:@S@TNaming_Tool@F@GetShape#&1$@N@opencascade@S@handle>#$@S@TNaming_NamedShape#S`
+  49. `c:@S@TNaming_Builder@F@TNaming_Builder#&1$@S@TDF_Label#`
+  50. `c:@S@TNaming_Builder@F@Generated#&1$@S@TopoDS_Shape#`
+  51. `c:@S@TDF_Delta@F@AttributeDeltas#1`
+  52. `c:@S@TDF_Delta@F@Name#1`
+  53. `c:@S@TDF_Delta@F@SetName#&1$@S@TCollection_ExtendedString#`
+  54. `c:@S@TDF_AttributeDelta@F@Label#1`
+
+- Validation: The focused Batch I suite covers label identity/traversal, typed values,
+  abort rollback, owning topology, graph/SCC diagnostics, history/undo/redo/branching,
+  savepoints, all four persistence formats, XDE occurrence edges, STEP/XDE, and source
+  disposal. The clean package repeats the four-format and STEP/XDE workflow. Exact final
+  Release/Debug, generator/runtime, inventory, regeneration, package, and release-check
+  results are reported only after those gates run.
+- Upgrade impact: Recheck driver format names, TDocStd time/savepoint semantics, delta
+  ordering/names, iterator order, attribute GUIDs, array logical bounds, tree reparenting,
+  TNaming copy semantics, unlimited-history mapping, and every exact stable ID on each
+  OCCT/compiler upgrade.
+- Removal criteria: Replace this exception only after generated document-owned,
+  iterator-snapshot, copied-delta, bounded-array, reference-graph, persistence-driver,
+  and owning-topology descriptors preserve the same lifetime and end-to-end evidence.

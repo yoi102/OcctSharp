@@ -225,7 +225,7 @@ returns `3` after writing its report when one or more headers could not be scann
 
 ## Full-selection generated symbol namespaces
 
-Configuration schema 1.8 reserves distinct native entry-point segments for each
+Configuration schema 1.9 retains distinct native entry-point segments for each
 generated operation category. Static value-copy functions use
 `occtsharp_generated_<scope>_static_<member>_<ordinal>`, while generated shared instance
 methods use `occtsharp_generated_<type>_method_<member>_<ordinal>`. Shared constructors

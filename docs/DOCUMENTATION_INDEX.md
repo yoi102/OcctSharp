@@ -9,7 +9,7 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Architecture](ARCHITECTURE.md) — system boundaries and component ownership.
 - [Repository layout](REPOSITORY_LAYOUT.md) — physical separation of documentation
   and code-related files.
-- [Roadmap](ROADMAP.md) — completed Batch B-H outcomes, active Batch I, and historical phases.
+- [Roadmap](ROADMAP.md) — completed Batch B-I outcomes and historical phases.
 - [Complete migration plan](MIGRATION_PLAN.md) — completed Batch C, Batch D, and Batch E
   matrices, large-wave rules, module/package boundaries, metrics,
   and product-scale gates.
@@ -29,7 +29,7 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   — completed 24-capability grouped-mesh, material, LOD, XDE-scene, interchange, and
   real-HWND denominator.
 - [Batch I document history and persistence gap inventory](BATCH_I_DOCUMENT_HISTORY_PERSISTENCE_GAP_INVENTORY.md)
-  — locked 24-capability OCAF/XDE attribute, dependency-graph, undo/redo, savepoint,
+  — completed 24-capability OCAF/XDE attribute, dependency-graph, undo/redo, savepoint,
   binary/XML persistence, and STEP integration denominator.
 - [AI migration loop prompt](AI_MIGRATION_LOOP_PROMPT.md) — reusable re-entrant prompt
   for executing the largest coherent common-workflow wave instead of per-class tasks.
@@ -43,6 +43,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   C++/CLI, and platform-adapter availability and package boundaries.
 - [Full inventory classification](FULL_INVENTORY_CLASSIFICATION.md) — complete declaration
   and header dispositions, reason codes, and complete-versus-generated metrics.
+- [Preview.6 release notes](RELEASE_NOTES_8.0.1_PREVIEW_6.md) — complete Batch I copied
+  document state, graphs, history, four-format persistence, STEP/XDE, and local evidence.
 - [Preview.5 release notes](RELEASE_NOTES_8.0.1_PREVIEW_5.md) — complete Batch H advanced
   mesh, PBR material, LOD, copied scene, mesh interchange, real-HWND, and local evidence.
 - [Preview.4 release notes](RELEASE_NOTES_8.0.1_PREVIEW_4.md) — complete Batch G technical
@@ -114,6 +116,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   — one large cross-family hidden-line/section/vector-output wave.
 - [Batch H advanced mesh and scene decision](adr/0069-advanced-mesh-scene-material-interchange-batch.md)
   — one large cross-family mesh/material/LOD/scene/interchange wave.
+- [Batch I document state and persistence decision](adr/0070-document-state-attribute-graph-history-persistence-batch.md)
+  — one large cross-family OCAF/XDE attribute/graph/history/persistence wave.
 - [Native ABI](NATIVE_ABI.md) — C ABI boundary rules.
 - [Ownership](OWNERSHIP.md) — lifetime and resource ownership rules.
 - [Type mapping](TYPE_MAPPING.md) — native-to-managed mapping policy.
