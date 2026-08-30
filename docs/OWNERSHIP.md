@@ -385,5 +385,5 @@ loft, pipe-shell, analysis, and repair objects are call-local. Copied multi-solu
 diagnostic records have no release path. Every returned edge, wire, face, shell, split
 piece, repaired result, and solid is an independent registered owning `Shape`; disposing
 any input cannot invalidate it. STEP/XDE labels and AIS/viewer resources retain their
-existing parent-bound categories. This boundary is prepared but unimplemented at 0/24;
-runtime and package evidence are `NOT RUN`.
+existing parent-bound categories. Preview.3 validates this complete 24/24 boundary in
+Release/Debug repository runtime and the clean 62-DLL package consumer.

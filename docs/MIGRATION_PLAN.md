@@ -22,18 +22,17 @@ The plan keeps four percentages separate:
 
 Roadmap progress is an engineering estimate and is never substituted for these metrics.
 
-The current execution priority is not maximum raw OCCT coverage. ADR-0066 selects one
-24-capability engineering-inspection, exact-measurement, and PMI/AP242 outcome across
-BRepExtrema/BRepAdaptor/BRepGProp/TopoDS, XCAFDoc/XCAFDimTolObjects, STEPCAF/AP242,
-PrsDim/AIS, V3d/Graphic3d, and screenshot evidence. Cold or optional declarations remain
-classified, but they do not pre-empt that finite product workflow.
+The completed execution priority was not maximum raw OCCT coverage. ADR-0066 closed one
+24-capability engineering-inspection/PMI outcome and ADR-0067 closed one 24-capability
+freeform-authoring outcome. Cold or optional declarations remain classified separately;
+no new active product batch is implied by their existence.
 
 ## Product and project structure
 
 ### Current structure
 
 Keep one managed project, one native bridge, one NuGet package, and one application-local
-`occt` runtime directory through the active Batch E inspection/PMI wave. Generated
+`occt` runtime directory after the completed Batch F wave. Generated
 files are organized by module immediately, even while they compile into the same assembly.
 
 ### Planned managed projects and packages
@@ -93,16 +92,16 @@ batch fragments remain forbidden. ADR-0064 closes product-scale batch `D` with t
 | B | Complete (local implementation) | Reproducible .NET 10/native foundation; deterministic generation; safe value, shared, topology, document, metadata, exchange, modeling, mesh, and visualization profiles; 16,353 emitted plus 61 manual stable IDs; zero supported-unselected/LT001-LT004; complete observed classification; Release/Debug/runtime, 13-file freshness, byte-identical clean regeneration, 62-DLL package consumer, compatibility, provenance/SBOM/checksum, and local release gates passing | None inside Batch B. Signing credentials and NuGet publication remain independent release-readiness gates |
 | C — Common CAD API Expansion | Complete (local implementation) | Alpha.51 validates topology/BREP/mesh/XDE/viewer editing; alpha.52 validates STEP reporting/BRepCheck/ShapeFix/V3d rotation; alpha.53 validates BRepGProp/XCAF properties/XDE occurrences/STEPCAF options; alpha.54 closes the final 15-capability geometry/topology/selective-STEP/viewer-input workflow. Release/Debug, Generator 91/91, Runtime 114/114, 83-file deterministic regeneration, 62-DLL clean consumer, inventory, dependency closure, API compatibility, provenance, and local release gates pass | None inside Batch C. Hosted CI execution, signing, and NuGet publication remain independent release-readiness gates; advanced filters, custom rendering, optional integrations, cold schema, and exhaustive mesh attributes require a new product denominator |
 | D — Production CAD Viewport and Model Review | Complete (24/24, local implementation) | Alpha.55 implements the entire ADR-0064 denominator with copied XDE identity, owning detected/selected topology, area selection/filtering, subshape review styling, camera/conversions, clipping/review aids, and screenshot output. Release/Debug, Generator 91/91, Runtime 115/115, real STEP/XDE plus real-HWND, clean 62-DLL package, regeneration, inventory, compatibility, provenance, and local release gates pass | None inside Batch D. A future product batch requires a separately locked finite denominator; hosted release, signing, and NuGet publication remain independent release-readiness gates |
-| E — Engineering Inspection, Exact Measurement, and PMI/AP242 | Complete (24/24, local implementation) | Preview.2 implements the entire ADR-0066 denominator: exact solution/support and engineering measurements, explicit units, complete dimension/tolerance/datum/saved-view snapshots and reference mutation, AP242/BinXCAF persistence, four viewer-owned dimension kinds, and screenshot output. Release/Debug, Generator 91/91, Runtime 119/119, focused 4/4, real AP242 plus real-HWND, clean 62-DLL package, regeneration, inventory, compatibility, provenance, and local release gates pass | None inside Batch E. The next product batch requires a separately locked finite denominator; hosted release, signing, and NuGet publication remain independent release-readiness gates |
-| F — Freeform Curve, Surface, and Profile-to-Solid Authoring | Prepared (0/24 implemented) | ADR-0067 and `BATCH_F_FREEFORM_AUTHORING_GAP_INVENTORY.md` lock all 24 capabilities, copied-definition/native-local-algorithm/owning-topology categories, non-goals, a 24-root/1,122-declaration audit, real design-to-STEP/XDE-to-viewer outcome, and whole-wave exit gates | Implement the entire 24-capability closure as one wave; definition/edit, compile, runtime/lifetime, real STEP/XDE, real-HWND selection/measurement/mesh/screenshot, clean-package, and full local release gates are `NOT RUN` |
+| E — Engineering Inspection, Exact Measurement, and PMI/AP242 | Complete (24/24, local implementation) | Preview.2 implements the entire ADR-0066 denominator: exact solution/support and engineering measurements, explicit units, complete dimension/tolerance/datum/saved-view snapshots and reference mutation, AP242/BinXCAF persistence, four viewer-owned dimension kinds, and screenshot output. Release/Debug, Generator 91/91, Runtime 119/119, focused 4/4, real AP242 plus real-HWND, clean 62-DLL package, regeneration, inventory, compatibility, provenance, and local release gates pass | None inside Batch E. Batch F was separately locked and completed; hosted release, signing, and NuGet publication remain independent release-readiness gates |
+| F — Freeform Curve, Surface, and Profile-to-Solid Authoring | Complete (24/24, local implementation) | Preview.3 implements the entire ADR-0067 denominator with copied rational definitions, immutable edits, interpolation/approximation, projection/extrema/intersection, profiles/offset/fill/split, controlled loft/pipe, sew/heal, real STEP/XDE, mesh/measurement, real-HWND selection, and screenshot output. Release/Debug, Generator 91/91, Runtime 123/123, focused 4/4, clean 62-DLL package, regeneration, inventory, additive compatibility, provenance, and local release gates pass | None inside Batch F. Hosted release execution, signing, and NuGet publication remain independent release-readiness gates |
 
 Current B completion is not represented by counting retired planning labels. Engineering
 progress, selected binding coverage, full-profile coverage, inventory completeness,
-validation coverage, and publication readiness are reported independently. B through E
+validation coverage, and publication readiness are reported independently. B through F
 are 100% for their accepted local denominators because every local exit condition above
-has evidence; this does not make the public package release-ready. New implementation
-progress is reported against F and is never reported by reopening B/C/D/E or inventing
-numbered or dotted F labels.
+has evidence; this does not make the public package release-ready. Future implementation
+requires a separately accepted product denominator and is never reported by reopening
+B/C/D/E/F or inventing numbered or dotted labels.
 
 The 16,353 emitted plus 61 accepted manual stable IDs are Batch B's baseline binding
 coverage. Batch C adds 41 accepted manual stable IDs across SC-036 through SC-039 and
@@ -368,7 +367,7 @@ reconciles 102 direct blocked stable IDs, and the complete local release gate pa
 retaining the single managed assembly, native DLL, NuGet package, application-local
 runtime, public type names, and ADR-0061/ADR-0062 generated dependency graph.
 
-## Batch F: Freeform Curve, Surface, and Profile-to-Solid Authoring — prepared
+## Batch F: Freeform Curve, Surface, and Profile-to-Solid Authoring — complete
 
 ADR-0067 and `BATCH_F_FREEFORM_AUTHORING_GAP_INVENTORY.md` lock one 24-capability product
 outcome spanning rational Bezier/B-spline definitions and immutable edits, interpolation/
@@ -379,9 +378,9 @@ screenshot evidence. The exact 24-root audit classifies 1,122 candidate declarat
 215 emitted, 23 manual, 598 blocked, and 286 skipped; these counts guide implementation
 and are not the product denominator.
 
-Preparation is complete at 0/24. No Batch F API, ABI, runtime, package, STEP/XDE,
-viewer, or screenshot implementation gate has run. The implementation must land as one
-cross-family wave; curve/surface/profile/topology family checkpoints are forbidden. It
+Preview.3 completes 24/24 in one cross-family implementation wave. Release and Debug,
+focused definition/edit/lifetime/algorithm tests, real STEP/XDE plus HWND selection and
+screenshot, SC-042 exact accounting, and the clean 62-DLL package consumer pass. It
 retains the single managed assembly, native DLL, NuGet package, application-local runtime,
 public type names, and ADR-0061/ADR-0062 generated dependency graph.
 
@@ -432,16 +431,14 @@ global catalog.
 - Clean NuGet consumer whenever public/runtime assets change.
 - Updated `STATUS.md` and this plan; only factually affected topic documents and ADRs.
 
-## Active product-batch execution boundary
+## Completed product-batch execution boundary
 
-1. Keep completed Batch B/C/D evidence immutable and report new implementation against E.
+1. Keep completed Batch B/C/D/E/F evidence immutable; no product batch is currently active.
 2. ADR-0059 resolves the MIT project license and bundled third-party notice layout;
    keep those files and the runtime manifest current for every distribution change.
 3. Package signing, credentials, and NuGet publication require explicit authorization.
-4. C is one completed common-API product batch and remains immutable evidence.
-5. E is the active single 24-capability inspection/measurement/PMI/AP242 wave. Its
-   connected families are not batches, version numbers, or permission to publish partial
-   completion claims.
-6. Exact inspection, semantic PMI/reference graphs, transactional mutation, AP242 GDT/
-   saved views, viewer annotations, and screenshots are in E; arbitrary callbacks, custom
-   rendering, optional integrations, cold schema, and physical splitting remain outside it.
+4. C, D, E, and F are completed product batches and remain immutable evidence.
+5. A future implementation wave requires a separately accepted finite product denominator;
+   connected families are not automatically batches or permission for partial completion.
+6. Arbitrary callbacks, custom rendering, optional integrations, cold schema, and physical
+   splitting remain outside the completed Batch F denominator.

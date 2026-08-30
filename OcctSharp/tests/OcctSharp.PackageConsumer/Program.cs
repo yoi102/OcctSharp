@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 47)
-    || runtime.BridgeVersion != "0.55.0"
+if (runtime.AbiVersion != new Version(1, 48)
+    || runtime.BridgeVersion != "0.56.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -967,6 +967,188 @@ try
             throw new InvalidOperationException("The packaged Batch E inspection screenshot workflow failed.");
     }
     finally { _ = PackageWindowMethods.DestroyWindow(batchEWindow); }
+
+    FreeformCurveDefinition batchFBezierDefinition = FreeformCurveDefinition.Bezier(
+        [new(0, 0, 0), new(3, 6, 0), new(7, -4, 0), new(10, 0, 0)],
+        [1, 0.65, 0.8, 1]);
+    FreeformCurveDefinition batchFSplineDefinition = FreeformCurveDefinition.BSpline(
+        [new(0, 4, 2), new(3, 8, 2), new(7, 0, 2), new(10, 4, 2)],
+        [0, 1], [4, 4], 3, weights: [1, 0.75, 0.75, 1]);
+    using Shape batchFBezier = FreeformAuthoring.CreateCurve(batchFBezierDefinition);
+    using Shape batchFSpline = FreeformAuthoring.CreateCurve(batchFSplineDefinition);
+    using Shape batchFInterpolated = FreeformAuthoring.InterpolateCurve(
+        [new(0, 0, 4), new(3, 2, 4), new(7, -2, 4), new(10, 0, 4)],
+        new GpXyz(1, 0, 0), new GpXyz(1, 0, 0));
+    using Shape batchFPeriodic = FreeformAuthoring.InterpolateCurve(
+        [new(0, 0, 6), new(5, 0, 6), new(5, 5, 6), new(0, 5, 6)], periodic: true);
+    using Shape batchFApproximated = FreeformAuthoring.ApproximateCurve(
+        [new(0, 0, 8), new(2, 1, 8), new(4, -1, 8), new(6, 2, 8), new(8, 0, 8)]);
+    FreeformCurveDefinition batchFBezierSnapshot = FreeformAuthoring.GetCurveDefinition(batchFBezier);
+    FreeformCurveDefinition batchFSplineSnapshot = FreeformAuthoring.GetCurveDefinition(batchFSpline);
+    using Shape batchFElevatedCurve = FreeformAuthoring.ElevateCurveDegree(batchFBezier, 5);
+    using Shape batchFReversedCurve = FreeformAuthoring.ReverseCurve(batchFSpline);
+    using Shape batchFSegmentedCurve = FreeformAuthoring.SegmentCurve(batchFBezier, new ParameterRange(0.2, 0.8));
+    IReadOnlyList<Shape> batchFCurvePieces = FreeformAuthoring.SplitCurve(batchFBezier, [0.25, 0.6]);
+    try
+    {
+        if (!batchFBezierSnapshot.IsRational || batchFSplineSnapshot.Degree != 3
+            || !FreeformAuthoring.GetCurveDefinition(batchFPeriodic).Periodic
+            || FreeformAuthoring.GetCurveDefinition(batchFInterpolated).Kind != FreeformGeometryKind.BSpline
+            || FreeformAuthoring.GetCurveDefinition(batchFApproximated).Kind != FreeformGeometryKind.BSpline
+            || FreeformAuthoring.GetCurveDefinition(batchFElevatedCurve).Degree != 5
+            || FreeformAuthoring.GetCurveDefinition(batchFReversedCurve).Poles[0] != batchFSplineSnapshot.Poles[^1]
+            || batchFCurvePieces.Count != 3
+            || FreeformAuthoring.ProjectPoint(batchFBezier, new GpPoint(5, 3, 0)).Count == 0
+            || FreeformAuthoring.CurveExtrema(batchFBezier, batchFSpline).Count == 0)
+            throw new InvalidOperationException("The packaged Batch F curve definition/edit/solution closure failed.");
+    }
+    finally { foreach (Shape piece in batchFCurvePieces) piece.Dispose(); }
+
+    GpPoint[] batchFBezierGrid =
+    [
+        new(0, 0, 0), new(0, 4, 0), new(0, 8, 0),
+        new(4, 0, 0), new(4, 4, 3), new(4, 8, 0),
+        new(8, 0, 0), new(8, 4, 0), new(8, 8, 0)
+    ];
+    using Shape batchFBezierFace = FreeformAuthoring.CreateSurfaceFace(
+        FreeformSurfaceDefinition.Bezier(3, 3, batchFBezierGrid,
+            [1, 0.8, 1, 0.9, 0.6, 0.9, 1, 0.8, 1]));
+    GpPoint[] batchFSplineGrid =
+    [
+        new(0, 0, 12), new(0, 3, 13), new(0, 6, 12), new(0, 9, 11),
+        new(3, 0, 13), new(3, 3, 15), new(3, 6, 13), new(3, 9, 12),
+        new(6, 0, 12), new(6, 3, 14), new(6, 6, 12), new(6, 9, 11),
+        new(9, 0, 11), new(9, 3, 12), new(9, 6, 11), new(9, 9, 10)
+    ];
+    using Shape batchFSplineFace = FreeformAuthoring.CreateSurfaceFace(
+        FreeformSurfaceDefinition.BSpline(4, 4, batchFSplineGrid,
+            [0, 1], [4, 4], [0, 1], [4, 4], 3, 3,
+            weights: [1, 1, 1, 1, 1, 0.8, 0.8, 1, 1, 0.8, 0.8, 1, 1, 1, 1, 1]));
+    IReadOnlyList<IReadOnlyList<GpPoint>> batchFFitGrid =
+    [
+        [new(0, 0, 0), new(0, 3, 1), new(0, 6, 0), new(0, 9, -1)],
+        [new(3, 0, 1), new(3, 3, 3), new(3, 6, 1), new(3, 9, 0)],
+        [new(6, 0, 0), new(6, 3, 2), new(6, 6, 0), new(6, 9, -1)],
+        [new(9, 0, -1), new(9, 3, 0), new(9, 6, -1), new(9, 9, -2)]
+    ];
+    using Shape batchFInterpolatedSurface = FreeformAuthoring.InterpolateSurface(batchFFitGrid);
+    using Shape batchFApproximatedSurface = FreeformAuthoring.ApproximateSurface(batchFFitGrid);
+    using Shape batchFElevatedSurface = FreeformAuthoring.ElevateSurfaceDegree(batchFBezierFace, 4, 4);
+    using Shape batchFReversedU = FreeformAuthoring.ReverseSurfaceU(batchFBezierFace);
+    using Shape batchFReversedV = FreeformAuthoring.ReverseSurfaceV(batchFBezierFace);
+    using Shape batchFTrimmedSurface = FreeformAuthoring.TrimSurface(
+        batchFBezierFace, new SurfaceParameterBounds(0.15, 0.85, 0.2, 0.8));
+    if (!FreeformAuthoring.GetSurfaceDefinition(batchFBezierFace).IsRational
+        || FreeformAuthoring.GetSurfaceDefinition(batchFSplineFace).UDegree != 3
+        || FreeformAuthoring.GetSurfaceDefinition(batchFInterpolatedSurface).Kind != FreeformGeometryKind.BSpline
+        || FreeformAuthoring.GetSurfaceDefinition(batchFApproximatedSurface).Kind != FreeformGeometryKind.BSpline
+        || FreeformAuthoring.GetSurfaceDefinition(batchFElevatedSurface).UDegree != 4
+        || batchFReversedU.Kind != ShapeKind.Face || batchFReversedV.Kind != ShapeKind.Face
+        || batchFTrimmedSurface.Kind != ShapeKind.Face)
+        throw new InvalidOperationException("The packaged Batch F surface definition/edit/fitting closure failed.");
+
+    using Shape batchFLowerEdge = FreeformAuthoring.CreateCurve(FreeformCurveDefinition.Bezier(
+        [new(0, 0, 0), new(4, 2, 0), new(8, 0, 0)]));
+    using Shape batchFUpperEdge = FreeformAuthoring.CreateCurve(FreeformCurveDefinition.Bezier(
+        [new(0, 0, 4), new(4, -2, 5), new(8, 0, 4)]));
+    using Shape batchFRuledFace = FreeformAuthoring.CreateRuledFace(batchFLowerEdge, batchFUpperEdge);
+    using Shape batchFCrossing = ShapeFactory.CreateEdge(new GpPoint(-5, 0, 0), new GpPoint(5, 0, 0));
+    using Shape batchFIntersectionPlane = FreeformAuthoring.CreateSurfaceFace(FreeformSurfaceDefinition.Bezier(2, 2,
+        [new(0, -10, -10), new(0, -10, 10), new(0, 10, -10), new(0, 10, 10)]));
+    if (FreeformAuthoring.IntersectCurveWithFace(batchFCrossing, batchFIntersectionPlane).Count != 1
+        || batchFRuledFace.Kind != ShapeKind.Face)
+        throw new InvalidOperationException("The packaged Batch F ruled/intersection closure failed.");
+
+    Shape[] batchFBoundary =
+    [
+        ShapeFactory.CreateEdge(new(0, 0, 0), new(10, 0, 0)),
+        ShapeFactory.CreateEdge(new(10, 0, 0), new(10, 10, 1)),
+        ShapeFactory.CreateEdge(new(10, 10, 1), new(0, 10, 0)),
+        ShapeFactory.CreateEdge(new(0, 10, 0), new(0, 0, 0))
+    ];
+    try
+    {
+        using FreeformShapeResult batchFFilled = FreeformAuthoring.FillBoundary(
+            batchFBoundary, [new GpPoint(5, 5, 2)], FreeformContinuity.C0);
+        using FreeformShapeResult batchFOffsetFace = FreeformAuthoring.OffsetFaceOrShell(batchFFilled.Shape, 0.5);
+        if (batchFFilled.Shape.Kind != ShapeKind.Face || batchFFilled.Diagnostics.G0Error < 0
+            || !batchFOffsetFace.Shape.IsValid)
+            throw new InvalidOperationException("The packaged Batch F fill/freeform-offset closure failed.");
+    }
+    finally { foreach (Shape edge in batchFBoundary) edge.Dispose(); }
+
+    GpPoint[] batchFProfilePoints = [new(-2, -2, 0), new(2, -2, 0), new(2, 2, 0), new(-2, 2, 0)];
+    using Shape batchFLowerProfile = FreeformAuthoring.CreateLocatedPlanarProfile(
+        batchFProfilePoints, new GpPoint(0, 0, 0), new GpXyz(0, 0, 1), new GpXyz(1, 0, 0));
+    using Shape batchFUpperProfile = FreeformAuthoring.CreateLocatedPlanarProfile(
+        batchFProfilePoints, new GpPoint(0, 0, 8), new GpXyz(0, 0, 1), new GpXyz(1, 0, 0), interpolate: true);
+    using Shape batchFPlanarOffset = FreeformAuthoring.OffsetPlanarWire(batchFLowerProfile, 1.0, join: PlanarOffsetJoin.Arc);
+    using FreeformShapeResult batchFSmoothLoft = FreeformAuthoring.CreateLoft(
+        [batchFLowerProfile, batchFUpperProfile], makeSolid: true, smoothing: true);
+    using FreeformShapeResult batchFRuledLoft = FreeformAuthoring.CreateLoft(
+        [batchFLowerProfile, batchFUpperProfile], makeSolid: true, ruled: true, smoothing: false);
+    using Shape batchFSpineEdge = ShapeFactory.CreateEdge(new GpPoint(0, 0, 0), new GpPoint(0, 0, 12));
+    using Shape batchFSpine = ShapeFactory.CreateWire([batchFSpineEdge]);
+    using FreeformShapeResult batchFPipe = FreeformAuthoring.CreatePipeShell(
+        batchFSpine, [batchFLowerProfile], makeSolid: true, transition: PipeTransition.Transformed,
+        maximumDegree: 8, maximumSegments: 24);
+    using Shape batchFSplitBox = ShapeFactory.CreateBox(10, 10, 10);
+    using Shape batchFSplitTool = FreeformAuthoring.CreateSurfaceFace(FreeformSurfaceDefinition.Bezier(2, 2,
+        [new(-1, -1, 5), new(-1, 11, 5), new(11, -1, 5), new(11, 11, 5)]));
+    using FreeformShapeResult batchFSplit = FreeformAuthoring.SplitTopology([batchFSplitBox], [batchFSplitTool]);
+    using FreeformShapeResult batchFHealed = FreeformAuthoring.Heal(batchFSplit.Shape);
+    Shape[] batchFLoftFaces = batchFSmoothLoft.Shape.GetSubShapes(ShapeKind.Face);
+    try
+    {
+        using FreeformShapeResult batchFSewn = FreeformAuthoring.SewHealValidate(batchFLoftFaces);
+        if (batchFPlanarOffset.CountSubShapes(ShapeKind.Edge) < 4
+            || !batchFSmoothLoft.Diagnostics.IsValid || !batchFRuledLoft.Diagnostics.IsValid
+            || !batchFPipe.Diagnostics.IsValid || batchFSplit.Diagnostics.ResultCount < 2
+            || batchFSplit.Diagnostics.ModifiedCount == 0 || !batchFHealed.Diagnostics.IsValid
+            || !batchFSewn.Diagnostics.IsValid)
+            throw new InvalidOperationException("The packaged Batch F profile/split/loft/pipe/heal closure failed.");
+    }
+    finally { foreach (Shape face in batchFLoftFaces) face.Dispose(); }
+
+    string batchFStep = Path.Combine(exchangeDirectory, "package-batch-f-freeform.step");
+    using (XdeDocument batchFDocument = XdeDocument.Create())
+    {
+        using XdeTransaction transaction = batchFDocument.BeginTransaction();
+        XdeLabel label = batchFDocument.AddShape(batchFSmoothLoft.Shape, "Package Batch F Freeform Loft");
+        label.Color = new XdeColor(0.18, 0.55, 0.86, 1.0);
+        if (!transaction.Commit()) throw new InvalidOperationException("The packaged Batch F XDE transaction failed.");
+        batchFDocument.WriteStep(batchFStep);
+    }
+    using XdeDocument batchFImportedDocument = XdeDocument.ReadStep(batchFStep);
+    XdeLabel batchFImportedLabel = batchFImportedDocument.GetFreeShapes().Single();
+    using Shape batchFImportedShape = batchFImportedLabel.Shape;
+    DetailedMeshSnapshot batchFMesh = batchFImportedShape.CreateDetailedMesh(0.25, 0.5);
+    ShapeInspectionProperties batchFMass = batchFImportedShape.InspectProperties(InspectionPropertyKind.Volume);
+    if (!batchFImportedShape.IsValid || batchFImportedShape.CountSubShapes(ShapeKind.Face) < 3
+        || batchFMesh.Vertices.Count == 0 || batchFMesh.Triangles.Count == 0 || batchFMass.Mass <= 0)
+        throw new InvalidOperationException("The packaged Batch F STEP/XDE/mesh/measurement workflow failed.");
+
+    nint batchFWindow = PackageWindowMethods.CreateWindowEx(
+        0, "STATIC", "OcctSharp Batch F package freeform", 0x80000000u,
+        -32000, -32000, 320, 320, 0, 0, 0, 0);
+    if (batchFWindow == 0) throw new InvalidOperationException("The Batch F package HWND could not be created.");
+    try
+    {
+        _ = PackageWindowMethods.ShowWindow(batchFWindow, 4);
+        _ = PackageWindowMethods.UpdateWindow(batchFWindow);
+        using OcctViewer batchFViewer = OcctViewer.Create(batchFWindow);
+        using ViewerPresentation batchFPresentation = batchFViewer.Display(batchFImportedShape);
+        batchFPresentation.SetSelectionKind(ShapeKind.Face);
+        batchFViewer.FitAll();
+        batchFViewer.Redraw();
+        if (batchFViewer.SelectRectangle(0, 0, 319, 319).Count == 0)
+            throw new InvalidOperationException("The packaged Batch F real-HWND selection workflow failed.");
+        string batchFImage = batchFViewer.SaveScreenshot(
+            Path.Combine(exchangeDirectory, "package-batch-f-freeform.png"), overwrite: true);
+        if (!File.Exists(batchFImage) || new FileInfo(batchFImage).Length == 0)
+            throw new InvalidOperationException("The packaged Batch F screenshot workflow failed.");
+    }
+    finally { _ = PackageWindowMethods.DestroyWindow(batchFWindow); }
 }
 finally
 {

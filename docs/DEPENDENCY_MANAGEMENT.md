@@ -90,6 +90,6 @@ technical redistribution evidence.
 - Keep every non-OCCT component version/license recorded; where supplied metadata is
   unavailable (currently jemalloc), disclose that fact instead of inventing a version.
 
-The Preview.2 repository records 62 native files, including the ABI 1.47/bridge 0.55.0
+The Preview.3 repository records 62 native files, including the ABI 1.48/bridge 0.56.0
 binary, in both the committed runtime manifest and generated release evidence. This does
 not by itself grant signing credentials or NuGet publication authorization.

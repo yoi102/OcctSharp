@@ -492,8 +492,13 @@ presentation topology, document-parent-bound dimension/tolerance/datum/saved-vie
 operations, explicit STEPCAF GDT/view/AP242 options, and viewer-parent-bound length,
 angle, radius, and diameter dimensions. Solver/adaptor/property/STEPCAF state remains
 native-local; TDF/XCAF labels and graphs remain document-owned; PrsDim/AIS state remains
-inside the creating-thread-affine viewer. The current native ABI is 1.47 and the bridge
-implementation version is 0.55.0.
+inside the creating-thread-affine viewer.
+
+ABI 1.48 is the Preview.3 Batch F freeform-authoring boundary. It adds copied curve and
+surface definition arrays, copied multi-solution and diagnostics records, and native-local
+entry points for interpolation/approximation, projection/extrema/intersection, planar
+profiles and offsets, freeform face edits/fill/offset, splitting, controlled loft/pipe,
+and repair. The current native ABI is 1.48 and bridge implementation version is 0.56.0.
 
 ## Verification
 

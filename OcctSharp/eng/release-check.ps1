@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [string]$OcctRoot,
-    [string]$PackageVersion = '8.0.1-preview.2',
+    [string]$PackageVersion = '8.0.1-preview.3',
     [string]$ApiBaselineVersion = '0.1.0-alpha.38'
 )
 
@@ -93,7 +93,7 @@ $gates = @(
     [ordered]@{ id = 'generated-freshness'; state = 'PASS'; evidence = "$generatedFileCount manifest-owned files current." },
     [ordered]@{ id = 'generated-shard-dependency-closure'; state = 'PASS'; evidence = "$dependencyEdgeCount observed cross-shard edges are fully resolved, target-graph compatible, and acyclic; managed generated shards are split-eligible while native DLL splitting remains deferred." },
     [ordered]@{ id = 'clean-regeneration'; state = 'PASS'; evidence = 'Fresh source copy build and byte comparison completed.' },
-    [ordered]@{ id = 'package-consumer'; state = 'PASS'; evidence = "$PackageVersion clean restore/publish/runtime with $nativeDllCount DLLs, $emittedCount generated declarations, the inherited complete Batch D real STEP/XDE viewport-review-to-screenshot workflow, and the complete Batch E exact-inspection/PMI/AP242/saved-view/viewer-annotation-to-screenshot workflow." },
+    [ordered]@{ id = 'package-consumer'; state = 'PASS'; evidence = "$PackageVersion clean restore/publish/runtime with $nativeDllCount DLLs, $emittedCount generated declarations, the inherited complete Batch D/E workflows, and the complete Batch F copied freeform definition/edit/profile/fill/split/loft/pipe/heal-to-STEP/XDE/mesh/measurement/real-HWND-selection/screenshot workflow." },
     [ordered]@{ id = 'api-compatibility'; state = 'PASS'; evidence = 'Compared with the alpha.38 606-signature baseline; additive changes are allowed and removals are blocked.' },
     [ordered]@{ id = 'full-classification'; state = 'PASS'; evidence = "$declarationTotal declarations and $headerTotal headers classified; zero pending/HD099." },
     [ordered]@{ id = 'bindable-emission-completeness'; state = if ($remainingBindableCount -eq 0) { 'PASS' } else { 'BLOCKED' }; evidence = "$remainingBindableCount declarations remain SupportedUnselected; $emittedCount generated and $manualCount accepted manual stable IDs are reconciled." },

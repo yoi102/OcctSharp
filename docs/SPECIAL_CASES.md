@@ -987,3 +987,45 @@ rules or design:
   container projections preserve the same copied/owning/document-parent/viewer-parent
   contracts and pass the same transaction, real-file, real-window, package, and lifetime
   evidence.
+
+## SC-042: Batch F freeform authoring and profile-to-solid closure
+
+- Status: Accepted and fully validated for the complete 24-capability Batch F implementation.
+- Scope: Exactly 94 newly direct blocked OCCT 8.0.1 stable IDs covering copied rational
+  Bezier/B-spline curve and surface definitions, interpolation and approximation,
+  projection/extrema/intersection, arbitrary-surface face construction, planar offset,
+  ruled and constrained fill surfaces, non-destructive splitting with copied history
+  counts, controlled pipe-shell and loft options, and face/shell/shape healing. Existing
+  emitted edit operations and previously reconciled edge/wire/loft/STEP/XDE/viewer
+  declarations are reused without double counting.
+- Reason: OCCT pole, weight, knot, multiplicity, grid, extrema, intersection, fill,
+  splitter, sweep, loft, and repair objects expose mutable arrays, internal iterators,
+  transient handles, builder histories, or call-local algorithm state. Moving those
+  layouts across the C ABI would violate the accepted ownership model. The bridge keeps
+  them native-local and transfers only copied records/arrays or independent registered
+  owning topology.
+- Native/ABI/managed behavior: Batch F adds batched curve/surface definition records,
+  copied multi-solution and diagnostics records, and friendly immutable definition/edit
+  APIs that compose through the existing owning `Shape`, STEP/XDE, mesh, measurement,
+  selection, and screenshot workflows. No generated output or OCCT container storage is
+  hand-edited or exposed.
+- Ownership: Every managed point, pole, weight, knot, multiplicity, tangent, parameter,
+  solution, and diagnostic value is copied. Native algorithms and OCCT arrays die inside
+  the call. Edges, wires, faces, split products, lofts, pipe shells, and repaired results
+  are independent registered owners; document labels and viewer presentations keep their
+  existing parent and creating-thread rules.
+- Coverage accounting: Configuration schema 1.8 lists exactly 94 SC-042 stable IDs.
+  Each ID was `Blocked` in the Preview.2 full inventory and is selected by the exact
+  overload used by the native implementation; the 1,122-declaration Batch F root audit
+  is not bulk-marked manual.
+- Validation: Release and Debug native/managed builds, Generator 91/91, Runtime 123/123,
+  four focused Batch F tests, clean regeneration, full inventory reconciliation, clean
+  Preview.3 package consumption, runtime hashes, provenance, checksums, and the complete
+  local release check pass.
+- Upgrade impact: Recheck periodic multiplicity/pole relationships, Bezier/B-spline
+  degree limits, copy constructors, parameter orientation, solution ordering, fill
+  continuity errors, split history, pipe transition enums, loft compatibility, ShapeFix
+  result access, and every exact stable ID on each OCCT/compiler upgrade.
+- Removal criteria: Replace this exception only after generated array, algorithm,
+  topology-history, and repair ownership descriptors preserve the same immutable copied
+  definitions, owning results, diagnostics, and end-to-end package evidence.

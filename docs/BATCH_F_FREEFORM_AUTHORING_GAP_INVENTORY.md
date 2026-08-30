@@ -4,9 +4,10 @@ This document locks the product denominator and cross-family dependency closure 
 Batch F before implementation. It measures one freeform CAD-authoring workflow rather
 than isolated OCCT classes, individual algorithms, or method counts.
 
-Preparation status: **COMPLETE**. Implementation status: **0/24 capabilities; NOT
-STARTED**. Preview.2 remains the completed Batch E baseline; no Batch F API, ABI,
-runtime, package, or test result is claimed here.
+Preparation and implementation status: **COMPLETE — 24/24 capabilities (100%)**.
+Preview.3 closes the entire dependency closure in one wave with native ABI 1.48,
+bridge 0.56.0, four focused repository-runtime tests, and the same complete workflow
+from the clean 62-DLL package consumer.
 
 ## Product outcome
 
@@ -133,16 +134,17 @@ Batch F reaches 24/24 only when all of these pass together:
   API compatibility, full inventory, runtime hashes, SBOM/provenance/checksums,
   documentation, and the complete local release check.
 
-Preparation ran no Batch F implementation gate:
+Batch F validation evidence:
 
 | Check | Result |
 |---|---|
-| API/ABI implementation | NOT RUN |
-| Native/managed compile after Batch F changes | NOT RUN |
-| Batch F runtime/lifetime/definition tests | NOT RUN |
-| Real STEP/XDE plus real-HWND integration | NOT RUN |
-| Clean package consumer for Batch F | NOT RUN |
-| Full local release check after Batch F implementation | NOT RUN |
+| API/ABI implementation | PASS — package 8.0.1-preview.3, ABI 1.48, bridge 0.56.0 |
+| Native/managed compile after Batch F changes | PASS — Release and Debug, 0 warnings/errors |
+| Batch F runtime/lifetime/definition tests | PASS — focused 4/4; full Runtime 123/123 in Release and Debug |
+| Exact SC-042 stable-ID reconciliation | PASS — 94 directly used blocked IDs, no generated/manual overlap |
+| Real STEP/XDE plus real-HWND integration | PASS — freeform loft round trip, mesh, volume, face selection, screenshot |
+| Clean package consumer for Batch F | PASS — 62 application-local DLLs and complete authored workflow |
+| Full local release check after Batch F implementation | PASS — Release/Debug, package, regeneration, additive API, full inventory, SBOM/provenance/checksums, and Git whitespace |
 
 ## Explicit non-goals
 

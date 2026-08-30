@@ -130,6 +130,58 @@ typedef struct OcctSharp_Xyz
   double y;
   double z;
 } OcctSharp_Xyz;
+typedef struct OcctSharp_FreeformCurveInfo
+{
+  int32_t kind;
+  int32_t degree;
+  int32_t periodic;
+  int32_t rational;
+  int32_t pole_count;
+  int32_t knot_count;
+  double first_parameter;
+  double last_parameter;
+} OcctSharp_FreeformCurveInfo;
+typedef struct OcctSharp_FreeformSurfaceInfo
+{
+  int32_t kind;
+  int32_t u_degree;
+  int32_t v_degree;
+  int32_t u_periodic;
+  int32_t v_periodic;
+  int32_t rational;
+  int32_t u_pole_count;
+  int32_t v_pole_count;
+  int32_t u_knot_count;
+  int32_t v_knot_count;
+  double first_u;
+  double last_u;
+  double first_v;
+  double last_v;
+} OcctSharp_FreeformSurfaceInfo;
+typedef struct OcctSharp_FreeformSolution
+{
+  OcctSharp_Xyz first_point;
+  OcctSharp_Xyz second_point;
+  double first_parameter;
+  double second_parameter;
+  double third_parameter;
+  double distance;
+} OcctSharp_FreeformSolution;
+typedef struct OcctSharp_FreeformDiagnostics
+{
+  int32_t status;
+  int32_t input_count;
+  int32_t result_count;
+  int32_t modified_count;
+  int32_t generated_count;
+  int32_t deleted_count;
+  int32_t is_valid;
+  int32_t is_closed;
+  double g0_error;
+  double g1_error;
+  double g2_error;
+  double approximation_error;
+} OcctSharp_FreeformDiagnostics;
 typedef struct OcctSharp_ViewerCamera
 {
   OcctSharp_Xyz eye;
@@ -619,6 +671,99 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_wire(
   OcctSharp_ShapeHandle** out_shape);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_create_planar_face(
   const OcctSharp_ShapeHandle* wire, OcctSharp_ShapeHandle** out_shape);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_curve_create(
+  int32_t kind, const OcctSharp_Xyz* poles, const double* weights, int32_t pole_count,
+  const double* knots, const int32_t* multiplicities, int32_t knot_count,
+  int32_t degree, int32_t periodic, OcctSharp_ShapeHandle** out_edge);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_curve_interpolate(
+  const OcctSharp_Xyz* points, int32_t point_count, const OcctSharp_Xyz* endpoint_tangents,
+  int32_t tangent_count, int32_t periodic, double tolerance, OcctSharp_ShapeHandle** out_edge);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_curve_approximate(
+  const OcctSharp_Xyz* points, int32_t point_count, int32_t minimum_degree,
+  int32_t maximum_degree, int32_t continuity, double tolerance, OcctSharp_ShapeHandle** out_edge);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_curve_info(
+  const OcctSharp_ShapeHandle* edge, OcctSharp_FreeformCurveInfo* out_info);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_curve_copy_definition(
+  const OcctSharp_ShapeHandle* edge, OcctSharp_Xyz* poles, int32_t pole_capacity,
+  double* weights, int32_t weight_capacity, double* knots, int32_t knot_capacity,
+  int32_t* multiplicities, int32_t multiplicity_capacity);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_curve_edit(
+  const OcctSharp_ShapeHandle* edge, int32_t operation, int32_t degree,
+  double first_parameter, double last_parameter, OcctSharp_ShapeHandle** out_edge);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_curve_split(
+  const OcctSharp_ShapeHandle* edge, const double* parameters, int32_t parameter_count,
+  OcctSharp_ShapeHandle** out_edges, int32_t capacity, int32_t* out_written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_curve_project_count(
+  const OcctSharp_ShapeHandle* edge, OcctSharp_Xyz point, int32_t* out_count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_curve_project_copy(
+  const OcctSharp_ShapeHandle* edge, OcctSharp_Xyz point,
+  OcctSharp_FreeformSolution* solutions, int32_t capacity, int32_t* out_written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_curve_extrema_count(
+  const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second, int32_t* out_count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_curve_extrema_copy(
+  const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second,
+  OcctSharp_FreeformSolution* solutions, int32_t capacity, int32_t* out_written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_curve_face_intersection_count(
+  const OcctSharp_ShapeHandle* edge, const OcctSharp_ShapeHandle* face, int32_t* out_count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_curve_face_intersection_copy(
+  const OcctSharp_ShapeHandle* edge, const OcctSharp_ShapeHandle* face,
+  OcctSharp_FreeformSolution* solutions, int32_t capacity, int32_t* out_written);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_planar_profile(
+  const OcctSharp_Xyz* points, int32_t point_count, OcctSharp_Xyz origin,
+  OcctSharp_Xyz normal, OcctSharp_Xyz x_direction, int32_t interpolate,
+  double tolerance, OcctSharp_ShapeHandle** out_wire);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_planar_offset(
+  const OcctSharp_ShapeHandle* wire, double distance, double altitude,
+  int32_t join_type, OcctSharp_ShapeHandle** out_shape);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_surface_create(
+  int32_t kind, const OcctSharp_Xyz* poles, const double* weights,
+  int32_t u_pole_count, int32_t v_pole_count,
+  const double* u_knots, const int32_t* u_multiplicities, int32_t u_knot_count,
+  const double* v_knots, const int32_t* v_multiplicities, int32_t v_knot_count,
+  int32_t u_degree, int32_t v_degree, int32_t u_periodic, int32_t v_periodic,
+  const double* bounds, double tolerance, OcctSharp_ShapeHandle** out_face);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_surface_approximate(
+  const OcctSharp_Xyz* points, int32_t u_count, int32_t v_count,
+  int32_t minimum_degree, int32_t maximum_degree, int32_t continuity,
+  double tolerance, OcctSharp_ShapeHandle** out_face);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_surface_info(
+  const OcctSharp_ShapeHandle* face, OcctSharp_FreeformSurfaceInfo* out_info);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_surface_copy_definition(
+  const OcctSharp_ShapeHandle* face, OcctSharp_Xyz* poles, int32_t pole_capacity,
+  double* weights, int32_t weight_capacity,
+  double* u_knots, int32_t u_knot_capacity, int32_t* u_multiplicities, int32_t u_multiplicity_capacity,
+  double* v_knots, int32_t v_knot_capacity, int32_t* v_multiplicities, int32_t v_multiplicity_capacity);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_surface_edit(
+  const OcctSharp_ShapeHandle* face, int32_t operation, int32_t u_degree, int32_t v_degree,
+  const double* bounds, double tolerance, OcctSharp_ShapeHandle** out_face);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_ruled_face(
+  const OcctSharp_ShapeHandle* first_edge, const OcctSharp_ShapeHandle* second_edge,
+  OcctSharp_ShapeHandle** out_face);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_fill(
+  const OcctSharp_ShapeHandle* const* edges, int32_t edge_count,
+  const OcctSharp_Xyz* points, int32_t point_count, int32_t continuity,
+  double tolerance, OcctSharp_FreeformDiagnostics* out_diagnostics,
+  OcctSharp_ShapeHandle** out_face);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_split(
+  const OcctSharp_ShapeHandle* const* objects, int32_t object_count,
+  const OcctSharp_ShapeHandle* const* tools, int32_t tool_count,
+  OcctSharp_FreeformDiagnostics* out_diagnostics, OcctSharp_ShapeHandle** out_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_pipe_shell(
+  const OcctSharp_ShapeHandle* spine, const OcctSharp_ShapeHandle* const* profiles,
+  int32_t profile_count, int32_t make_solid, int32_t frenet, int32_t transition_mode,
+  double tolerance, int32_t maximum_degree, int32_t maximum_segments,
+  OcctSharp_FreeformDiagnostics* out_diagnostics, OcctSharp_ShapeHandle** out_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_loft(
+  const OcctSharp_ShapeHandle* const* sections, int32_t section_count,
+  int32_t make_solid, int32_t ruled, int32_t smoothing, int32_t continuity,
+  int32_t maximum_degree, double tolerance, OcctSharp_FreeformDiagnostics* out_diagnostics,
+  OcctSharp_ShapeHandle** out_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_heal(
+  const OcctSharp_ShapeHandle* shape, double tolerance,
+  OcctSharp_FreeformDiagnostics* out_diagnostics, OcctSharp_ShapeHandle** out_shape);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_get_face_count(
   const OcctSharp_ShapeHandle* shape,

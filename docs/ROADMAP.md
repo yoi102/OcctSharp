@@ -6,15 +6,15 @@ evidence; creating files or generating a large method count is not sufficient.
 The retired B00–B20 capability milestones and future package boundaries are documented
 in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the completed
 product-scale batch `B`; none is a separate current batch or commit boundary.
-Batch B, Batch C, Batch D, and Batch E are complete for their accepted local
+Batch B, Batch C, Batch D, Batch E, and Batch F are complete for their accepted local
 implementation scopes. ADR-0063 closes C at alpha.54, ADR-0064 closes D at alpha.55,
 and ADR-0066 closes E in Preview.2 as one 24-capability engineering-inspection,
-exact-measurement, and PMI/AP242 wave. ADR-0067 prepares F as one 24-capability freeform
-curve/surface and profile-to-solid authoring wave at 0/24. Hosted CI,
+exact-measurement, and PMI/AP242 wave. ADR-0067 closes F in Preview.3 as one 24-capability
+freeform curve/surface and profile-to-solid authoring wave. Hosted CI,
 signing, and NuGet publication remain separate release-readiness work rather than
 unfinished batch implementation.
 
-## Current priority: Batch F freeform curve, surface, and profile-to-solid authoring
+## Completed priority: Batch F freeform curve, surface, and profile-to-solid authoring
 
 Batch C's routine CAD path is locally complete: .NET can import/build, inspect and edit,
 validate/measure, mesh, preserve common document metadata, export, display, and select
@@ -45,14 +45,15 @@ Measurement-only, dimension-only, tolerance-only, datum-only, AP242-only, saved-
 or viewer-annotation-only fragments are not completion checkpoints.
 
 ADR-0067 and [the Batch F freeform authoring gap inventory](BATCH_F_FREEFORM_AUTHORING_GAP_INVENTORY.md)
-lock the next product batch as one 24-capability dependency closure. It crosses rational
+define the final completed product batch as one 24-capability dependency closure. It crosses rational
 Bezier/B-spline curve/surface definitions, GeomAPI interpolation/approximation/extrema/
 intersection, planar profiles, BRepBuilderAPI topology, BRepOffsetAPI offset/loft/pipe-
 shell, BRepFill filling, BRepAlgoAPI/BRepFeat splitting, ShapeAnalysis/ShapeFix repair,
-STEP/XDE, AIS selection/measurement, mesh, and screenshot evidence. Preparation is
-complete; implementation and every Batch F compile/runtime/package gate are `NOT RUN`
-(0/24). Curve-only, surface-only, profile-only, fill/split-only, loft/sweep-only, or
-viewer-only fragments are not completion checkpoints.
+STEP/XDE, AIS selection/measurement, mesh, and screenshot evidence. Preview.3 completes
+all 24/24 together: Release/Debug, Runtime 123/123, SC-042 exact accounting, real
+STEP/XDE and real HWND, and the clean 62-DLL package workflow pass. Curve-only,
+surface-only, profile-only, fill/split-only, loft/sweep-only, or viewer-only fragments
+were not used as completion checkpoints.
 
 Priority order inside each large wave:
 
@@ -95,8 +96,8 @@ acyclic observed cross-shard edges. The generated managed graph is eligible for 
 project migration, but physical splitting is deferred: managed assembly identity/manual
 facades and native cross-DLL registry/creator-release semantics still need separate ADRs.
 Completed Batch C therefore retains one managed assembly, one native DLL, and one package.
-Completed Batch D and Batch E retain the same physical boundary; neither authorizes the
-deferred split. Batch F preparation preserves that boundary as well.
+Completed Batch D, Batch E, and Batch F retain the same physical boundary; none authorizes
+the deferred split.
 
 The phase record below is retained as history and architecture context; it is not an
 active execution sequence.
@@ -288,6 +289,6 @@ capability milestones inside B, not active batches.
 Batch C completed the common workflow matrix defined by ADR-0060 and ADR-0063. Batch D
 completed the production viewport/model-review matrix defined by ADR-0064. Batch E
 completed the immutable 24-capability inspection/PMI denominator defined by ADR-0066 in
-Preview.2. Batch F is prepared under ADR-0067 with an immutable 24-capability freeform
-authoring denominator and 0/24 implemented. Numbered or dotted fragments, per-class
-batches, and small completion percentages are not used.
+Preview.2. Batch F completes the immutable 24-capability freeform authoring denominator
+under ADR-0067 in Preview.3. Numbered or dotted fragments, per-class batches, and small
+completion percentages were not used.

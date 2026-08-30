@@ -2,7 +2,7 @@
 
 ## Current package
 
-The current experimental package is `OcctSharp` `8.0.1-preview.2` for .NET 10 and
+The current experimental package is `OcctSharp` `8.0.1-preview.3` for .NET 10 and
 Windows x64. It contains:
 
 - `lib/net10.0/OcctSharp.dll` and XML documentation.
@@ -85,7 +85,7 @@ camera conversions, clipping, review aids, and durable image output.
 Once a package source contains the package, an application uses the normal command:
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.2
+dotnet add package OcctSharp --version 8.0.1-preview.3
 ```
 
 The application must run as a Windows x64 process on the current compatibility matrix.
@@ -107,13 +107,14 @@ completed release tooling do not override a `BLOCKED` or `NOT RUN` publication g
 
 ## Planned package split
 
-Preview.2 package verification runs from the inner `OcctSharp/` workspace, where
+Preview.3 package verification runs from the inner `OcctSharp/` workspace, where
 `global.json` selects SDK 10.0.400. Direct nupkg inspection confirms package identity
-`OcctSharp`/`8.0.1-preview.2`, managed assembly/file identity `0.1.0.0`, exact
-informational version `8.0.1-preview.2`, ABI 1.47, bridge 0.55.0, and 62 native DLLs under
-`occt`. The clean consumer restores, publishes, and runs the complete Batch E inspection,
-PMI/AP242, saved-view, viewer-annotation, and screenshot workflow; the complete Preview.2
-local release check passes. Signing, hosted release execution, and publication
+`OcctSharp`/`8.0.1-preview.3`, managed assembly/file identity `0.1.0.0`, exact
+informational version `8.0.1-preview.3`, ABI 1.48, bridge 0.56.0, and 62 native DLLs under
+`occt`. The clean consumer restores, publishes, and runs the inherited Batch D/E paths
+plus the complete Batch F freeform definition/edit/profile/fill/split/loft/pipe/heal,
+STEP/XDE, mesh/measurement, real-HWND selection, and screenshot workflow. Signing,
+hosted release execution, and publication
 authorization remain separate `NOT RUN` gates.
 
 ADR-0015 keeps one package during the topology/modeling foundation, then introduces

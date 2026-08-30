@@ -2,7 +2,7 @@
 
 - Status: Accepted
 - Date: 2026-08-29
-- Scope: Batch F product denominator, dependency closure, and ownership boundaries
+- Scope: Batch F product denominator, dependency closure, ownership boundaries, and completion evidence
 
 ## Context
 
@@ -42,8 +42,9 @@ Ownership follows existing categories:
   friendly immutable authoring contract.
 
 The batch retains one managed assembly, one native DLL, one NuGet package, stable public
-type full names, and the accepted generated shard dependency graph. Preparation does not
-change Preview.2, ABI 1.47, bridge 0.55.0, or the committed runtime.
+type full names, and the accepted generated shard dependency graph. Implementation
+advances the package to Preview.3, the additive native ABI to 1.48, and the bridge to
+0.56.0 without changing those physical or ownership boundaries.
 
 ## Locked non-goals
 
@@ -55,20 +56,24 @@ splitting.
 ## Consequences
 
 - Batch F preparation is complete at 0/24 before implementation starts.
+- Batch F implementation is complete at 24/24 in Preview.3 as one wave; no family
+  fragment was published as a completion checkpoint.
 - Existing basic Bezier/interpolate/loft/pipe/sew APIs are inherited baseline inputs, not
   proof of complete definition/edit/topology/exchange workflow support.
-- Direct blocked declarations used by implementation require exact SC-042 registration;
-  the entire 1,122-declaration root audit cannot be marked manual.
+- SC-042 reconciles exactly 94 directly used blocked declaration stable IDs; the entire
+  1,122-declaration root audit remains guidance and was not marked manual.
 - Batch E and Preview.2 evidence remain immutable and cannot be revised by F progress.
 
 ## Validation required
 
-The complete matrix in the inventory is required: definition and array validation,
+The complete matrix in the inventory was required: definition and array validation,
 analytic numerics, immutable edit/source disposal, multi-result ownership, failure
 diagnostics, real STEP/XDE type/topology retention, real-HWND selection/measurement/mesh/
 screenshot behavior, clean package execution, Release/Debug, generation, inventory,
-compatibility, provenance, and local release gates. No Batch F implementation validation
-is claimed by this preparation ADR.
+compatibility, provenance, and local release gates. Preview.3 passes the implementation,
+Release/Debug, Generator 91/91, Runtime 123/123, real STEP/XDE plus real-HWND, and clean
+62-DLL package-consumer portions. The final release record also passes inventory,
+additive compatibility, provenance, checksum, and Git-whitespace gates.
 
 ## Related decisions
 

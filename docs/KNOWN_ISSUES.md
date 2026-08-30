@@ -1,18 +1,17 @@
 # Known Issues
 
-## KI-028: Batch F freeform curve/surface authoring closure is not implemented
+## KI-028: Batch F freeform curve/surface authoring closure was not implemented
 
-- Status: Open; prepared at 0/24 under ADR-0067.
+- Status: Resolved in Preview.3 at 24/24 under ADR-0067.
 - Severity: Product gap
 - Area: Geom/GeomAPI, BRepBuilderAPI/BRepOffsetAPI/BRepFill, split/repair, STEP/XDE
 - Problem: Preview.2 has basic Bezier/interpolate/loft/pipe/sew entry points but does not
   provide the complete rational definition, immutable edit, freeform surface/profile,
   offset/fill/split/controlled-sweep, repair, exchange, and viewer-evidence workflow.
-- Current mitigation: `BATCH_F_FREEFORM_AUTHORING_GAP_INVENTORY.md` locks one dependency
-  and ownership closure plus a 24-root/1,122-candidate audit. Existing basic APIs remain
-  usable and no curve-only/surface-only fragment is claimed as completed Batch F.
-- Planned resolution: Implement and validate all 24 capabilities as one wave in repository
-  runtime and a clean package consumer. All Batch F implementation gates are `NOT RUN`.
+- Resolution: `BATCH_F_FREEFORM_AUTHORING_GAP_INVENTORY.md` locks one dependency and
+  ownership closure plus a 24-root/1,122-candidate audit. All 24 capabilities were
+  implemented as one wave, 94 direct blocked declarations were reconciled by SC-042,
+  and Release/Debug repository runtime plus the clean 62-DLL package consumer pass.
 
 ## KI-027: Batch E engineering inspection and PMI closure was not implemented
 
@@ -38,7 +37,7 @@
 - Resolution: generalized operation namespaces/ordinals, allocator-retaining placement
   construction, configured completion headers, toolkit closure, and narrow long-tail
   dispositions were implemented in the generator and regenerated. The accepted surface
-  is now 16,353 emitted stable IDs plus 222 accepted manual stable IDs.
+  is now 16,353 emitted stable IDs plus 316 accepted manual stable IDs.
 - Evidence: alpha.55 Release and Debug native/managed builds pass; Generator 91/91,
   Runtime 115/115, dependency profiles 6/6, 83-file freshness and byte-identical clean
   regeneration, dependency closure, clean package consumer, inventory, API compatibility,
@@ -127,9 +126,9 @@ evidence updated.
 - Severity: High
 - Area: Generator
 - Problem: Deterministic native/managed generation now owns 16,353 stable IDs and the
-  accepted friendly/manual layer reconciles 222 additional stable IDs. This is a broad,
+  accepted friendly/manual layer reconciles 316 additional stable IDs. This is a broad,
   validated selected surface, not full OCCT API coverage. The complete classification
-  still contains 49,344 skipped and 50,353 narrowly blocked declarations, while 32 of
+  still contains 49,344 skipped and 50,259 narrowly blocked declarations, while 32 of
   7,090 entry headers cannot be semantically scanned with the supplied optional/artifact
   inputs. A single generated/total percentage would therefore mix different denominators
   and overstate support.

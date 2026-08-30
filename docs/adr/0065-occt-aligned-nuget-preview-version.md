@@ -57,8 +57,12 @@ identity stays `0.1.0.0` for compatibility; package and informational versions c
 
 ## Current application
 
-Preview.1 remains the historical first package under this policy. Batch E is the next
-package-visible additive change, so the current package is `8.0.1-preview.2` while the
-OCCT baseline remains 8.0.1 and managed assembly/file identity remains `0.1.0.0`.
-Preview.2 independently advances the additive native ABI to 1.47 and bridge
-implementation to 0.55.0; those identities do not derive from the package number.
+Preview.1 remains the historical first package under this policy. Batch E was the next
+package-visible additive change, producing historical package `8.0.1-preview.2` while
+the OCCT baseline remained 8.0.1 and managed assembly/file identity remained `0.1.0.0`.
+Preview.2 independently advanced the additive native ABI to 1.47 and bridge
+implementation to 0.55.0; those identities did not derive from the package number.
+
+Batch F is the next package-visible additive change, so the current package is
+`8.0.1-preview.3`; managed assembly/file identity remains `0.1.0.0`, while native ABI
+independently advances to 1.48 and bridge implementation to 0.56.0.

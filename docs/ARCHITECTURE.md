@@ -187,15 +187,16 @@ viewer-dimension behavior, clean-package execution, inventory, compatibility,
 provenance, and the complete local release gate pass without changing the single
 assembly/native-DLL/package topology.
 
-Batch F preserves the same physical architecture while opening a freeform authoring
+Batch F preserves the same physical architecture while completing a freeform authoring
 closure. Public Bezier/B-spline definitions, edit results, interpolation/approximation
 options, and diagnostics are immutable managed records with copied arrays. GeomAPI,
 Geom2dAPI, BRepBuilderAPI/BRepOffsetAPI/BRepFill/BRepAlgoAPI/BRepFeat, ShapeAnalysis,
 and ShapeFix objects remain native-local. Edges, wires, faces, shells, split pieces,
 repaired shapes, and solids cross only as independent registered owners. XDE labels and
 viewer presentations reuse their document-parent and creating-thread-affine viewer-parent
-categories. Preparation is complete at 0/24 and no Batch F implementation validation is
-claimed.
+categories. Preview.3 validates all 24/24 capabilities through Release/Debug repository
+runtime and the clean 62-DLL package consumer without changing the one managed assembly,
+one native DLL, or one NuGet package boundary.
 
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native

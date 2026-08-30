@@ -1053,6 +1053,382 @@
     {
       "stableId": "c:@S@XCAFView_Object@F@ViewDirection#",
       "specialCaseId": "SC-041"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@SetArguments#&1$@S@NCollection_List>#$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@SetNonDestructive#b#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Splitter@F@BRepAlgoAPI_Splitter#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Splitter@F@Build#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Splitter@F@SetTools#&1$@S@NCollection_List>#$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Command@F@IsDone#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeShape@F@Shape#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeShape@F@Modified#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeShape@F@Generated#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeShape@F@IsDeleted#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#b#d#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#d#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@Face#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeFace@F@IsDone#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepFill@F@Face#&1$@S@TopoDS_Edge#S0_#S",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepFill_Filling@F@BRepFill_Filling#I#I#I#b#d#d#d#d#I#I#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepFill_Filling@F@Add#&1$@S@TopoDS_Edge#$@E@GeomAbs_Shape#b#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepFill_Filling@F@Add#&1$@S@gp_Pnt#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepFill_Filling@F@Build#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepFill_Filling@F@Face#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepFill_Filling@F@G0Error#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepFill_Filling@F@G1Error#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepFill_Filling@F@G2Error#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepFill_Filling@F@IsDone#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@BRepOffsetAPI_MakeOffset#&1$@S@TopoDS_Wire#$@E@GeomAbs_JoinType#b#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeOffset@F@Perform#d#d#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@BRepOffsetAPI_MakePipeShell#&1$@S@TopoDS_Wire#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@Add#&1$@S@TopoDS_Shape#b#b#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@Build#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@ErrorOnSurface#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@GetStatus#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@IsReady#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@MakeSolid#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetForceApproxC1#b#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetMaxDegree#I#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetMaxSegments#I#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetMode#b#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetTolerance#d#d#d#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakePipeShell@F@SetTransitionMode#$@E@BRepBuilderAPI_TransitionMode#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@GetStatus#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@SetContinuity#$@E@GeomAbs_Shape#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@SetMaxDegree#I#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@SetMutableInput#b#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_ThruSections@F@SetSmoothing#b#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@Geom_BezierCurve@F@Geom_BezierCurve#&1$@S@Geom_BezierCurve#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@Geom_BezierCurve@F@Geom_BezierCurve#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@Geom_BezierCurve@F@Pole#I#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Geom_BSplineCurve#&1$@S@Geom_BSplineCurve#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Geom_BSplineCurve#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#&1$@S@NCollection_Array1>#I#I#b#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Geom_BSplineCurve#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#S3_#&1$@S@NCollection_Array1>#I#I#b#b#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@Pole#I#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@Geom_BezierSurface#&1$@S@Geom_BezierSurface#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@Geom_BezierSurface#&1$@S@NCollection_Array2>#$@S@gp_Pnt#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@Geom_BezierSurface#&1$@S@NCollection_Array2>#$@S@gp_Pnt#&1$@S@NCollection_Array2>#d#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@Geom_BezierSurface@F@Pole#I#I#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@Geom_BSplineSurface#&1$@S@Geom_BSplineSurface#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@Geom_BSplineSurface#&1$@S@NCollection_Array2>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#S3_#&1$@S@NCollection_Array1>#I#S5_#I#I#b#b#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@Geom_BSplineSurface#&1$@S@NCollection_Array2>#$@S@gp_Pnt#&1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S5_#&1$@S@NCollection_Array1>#I#S7_#I#I#b#b#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineSurface@F@Pole#I#I#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_Interpolate@F@GeomAPI_Interpolate#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#b#d#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_Interpolate@F@Load#&1$@S@gp_Vec#S0_#b#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_Interpolate@F@IsDone#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSpline@F@GeomAPI_PointsToBSpline#&1$@S@NCollection_Array1>#$@S@gp_Pnt#I#I#$@E@GeomAbs_Shape#d#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSpline@F@Curve#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSpline@F@IsDone#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@GeomAPI_ProjectPointOnCurve#&1$@S@gp_Pnt#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@Distance#I#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@Parameter#I#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ProjectPointOnCurve@F@Point#I#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ExtremaCurveCurve@F@GeomAPI_ExtremaCurveCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#S0_#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ExtremaCurveCurve@F@Distance#I#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ExtremaCurveCurve@F@NbExtrema#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ExtremaCurveCurve@F@Parameters#I#&d#S0_#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_ExtremaCurveCurve@F@Points#I#&$@S@gp_Pnt#S0_#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_IntCS@F@GeomAPI_IntCS#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_IntCS@F@IsDone#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_IntCS@F@NbPoints#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_IntCS@F@Parameters#I#&d#S0_#S0_#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_IntCS@F@Point#I#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@GeomAPI_PointsToBSplineSurface#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@Init#&1$@S@NCollection_Array2>#$@S@gp_Pnt#I#I#$@E@GeomAbs_Shape#d#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@Interpolate#&1$@S@NCollection_Array2>#$@S@gp_Pnt#b#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@IsDone#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@GeomAPI_PointsToBSplineSurface@F@Surface#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@ShapeFix_Face#&1$@S@TopoDS_Face#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@Perform#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@Result#1",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Shell@F@ShapeFix_Shell#&1$@S@TopoDS_Shell#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Shell@F@Perform#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Shell@F@Shape#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Shape@F@ShapeFix_Shape#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Shape@F@Perform#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Shape@F@Shape#1",
+      "specialCaseId": "SC-042"
     }
   ],
   "excludedBindings": [

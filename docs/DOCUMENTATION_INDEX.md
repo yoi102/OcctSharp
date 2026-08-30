@@ -20,8 +20,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   — locked 24-capability engineering-inspection, measurement, PMI/AP242, annotation,
   saved-view, and screenshot denominator completed at 24/24.
 - [Batch F freeform authoring gap inventory](BATCH_F_FREEFORM_AUTHORING_GAP_INVENTORY.md)
-  — locked 24-capability Bezier/B-spline definition, surface/profile topology authoring,
-  STEP/XDE, and viewer-evidence denominator at 0/24 implementation.
+  — completed 24-capability Bezier/B-spline definition, surface/profile topology authoring,
+  STEP/XDE, and viewer-evidence denominator.
 - [AI migration loop prompt](AI_MIGRATION_LOOP_PROMPT.md) — reusable re-entrant prompt
   for executing the largest coherent common-workflow wave instead of per-class tasks.
 - [Status](STATUS.md) — current phase, blockers, and last verified results.
@@ -34,6 +34,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   C++/CLI, and platform-adapter availability and package boundaries.
 - [Full inventory classification](FULL_INVENTORY_CLASSIFICATION.md) — complete declaration
   and header dispositions, reason codes, and complete-versus-generated metrics.
+- [Preview.3 release notes](RELEASE_NOTES_8.0.1_PREVIEW_3.md) — complete Batch F freeform
+  curve/surface, profile-to-solid, STEP/XDE, real-HWND, and local release evidence.
 - [Preview.2 release notes](RELEASE_NOTES_8.0.1_PREVIEW_2.md) — complete Batch E exact
   inspection, PMI/AP242, saved-view, viewer-annotation, and local release evidence.
 - [Preview.1 release notes](RELEASE_NOTES_8.0.1_PREVIEW_1.md) — OCCT-aligned NuGet

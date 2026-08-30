@@ -19,7 +19,7 @@ later layer passed.
 | Packaging test | Fresh consumer can restore and load dependencies | Every API is correct |
 
 The package test restores only the newly built local `OcctSharp` package,
-publishes a Windows x64 console consumer, verifies that all 45 current native DLLs are below
+publishes a Windows x64 console consumer, verifies that all 62 current native DLLs are below
 the output `occt` directory, and runs runtime identity, modeling, and exchange calls. A local clean
 consumer pass is not a public-release license, provenance, signing, or CI pass.
 
@@ -172,9 +172,10 @@ controlled loft/pipe shell, freeform analysis/repair, STEP/XDE definition/topolo
 retention, and real-HWND selection/measurement/mesh/screenshot evidence. Invalid array
 shape, non-finite values, knot/multiplicity/degree mismatch, non-positive weights,
 wrong-kind/disposed topology, algorithm failure, and source-disposal paths are mandatory.
-The same design-to-STEP/XDE-to-viewer workflow must pass in Release and Debug and from a
-clean package consumer. Batch F preparation is 0/24; every implementation gate is
-currently `NOT RUN`.
+The same design-to-STEP/XDE-to-viewer workflow passes in Release and Debug and from a
+clean package consumer. Batch F is 24/24: four focused tests and full Runtime 123/123
+cover copied definitions, immutable edits, algorithms, ownership/failure behavior,
+STEP/XDE, mesh/measurement, real-HWND face selection, and screenshot output.
 
 A repository-native bootstrap change additionally requires a recoverable missing-bridge
 simulation: remove or rename only the expected configuration's bridge, run the ordinary

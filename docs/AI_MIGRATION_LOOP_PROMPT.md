@@ -11,11 +11,11 @@ The loop does not mean blindly generating declarations. Every large wave must pr
 native semantics, ownership, ABI safety, deterministic regeneration, and truthful
 validation evidence.
 
-Current repository note: Batch D is complete at alpha.55 and Batch E is complete in
-Preview.2 with 24/24 capabilities and the full local gate passing. ADR-0067 has prepared
-Batch F with one immutable 24-capability freeform curve/surface and profile-to-solid
-authoring denominator. Batch F implementation is 0/24 and all implementation gates are
-`NOT RUN`; completed E evidence remains immutable.
+Current repository note: Batches B through F are complete for their accepted local
+implementation scopes. Preview.3 closes Batch F's immutable 24-capability freeform
+curve/surface and profile-to-solid authoring denominator with the full local release gate
+passing. Hosted release execution, signing, and NuGet publication remain separate
+`NOT RUN` publication-readiness gates.
 
 ## How to use
 
@@ -38,9 +38,9 @@ ready for its declared release scope.
 
 This prompt is re-entrant. Never assume the previous conversation is accurate or
 complete. Recover facts from the repository and current tool output on every invocation.
-If `STATUS.md` records Batch E 24/24 complete, preserve that evidence and continue only
-the accepted Batch F denominator. Do not add unrelated APIs under D/E or split F into
-smaller family waves.
+If `STATUS.md` records Batch F 24/24 complete and the final local gates still pass,
+preserve that evidence, emit `LOOP_STATE: COMPLETE`, and do not invent another migration
+batch. Do not add unrelated APIs under D/E/F or split historical F into smaller family waves.
 
 ============================================================
 1. FIXED OBJECTIVE AND BASELINE
@@ -137,10 +137,11 @@ RECOVER
 - Restore current facts using section 3.
 
 SELECT
-- Batches B through E are complete historical evidence. Continue the single product-scale
-  freeform authoring batch `F`; never reopen B/C/D/E or create `F01`, `F.1`, per-class, or
-  per-method batches.
-- Batch F has one locked 24-capability implementation wave. Complete that entire
+- Batches B through F are complete historical evidence when current repository gates
+  confirm Preview.3. Never reopen B/C/D/E/F or create `F01`, `F.1`, per-class, or
+  per-method batches merely to continue the loop.
+- If F is not yet complete in a recovered older checkout, it has one locked 24-capability
+  implementation wave. Complete that entire
   cross-family workflow; do not select a smaller curve-only, surface-only, profile-only,
   offset/fill/split-only, loft/sweep-only, repair-only, STEP/XDE-only, viewer-only, or
   screenshot-only checkpoint. The implementation must finish the real copied-definition-
@@ -339,7 +340,7 @@ binding that appears complete.
 ============================================================
 
 Use LOOP_STATE=CONTINUE when:
-- safe work remains inside the locked Batch F wave;
+- safe work remains inside the locked Batch F wave in an older incomplete checkout;
 - tests failed but the failure is locally actionable;
 - Batch F's locked 24-capability wave is not complete;
 - one optional profile is blocked but useful core-profile work remains.
@@ -420,10 +421,11 @@ its declared freeform authoring contract:
 If publication authorization is the only missing item, report migration engineering as
 complete but keep public publication BLOCKED; do not upload anything.
 
-Begin now with RECOVER. Then continue the entire locked Batch F freeform authoring wave as
-far as safely possible in this invocation. Do not stop after merely writing a plan when
-local, authorized implementation work can proceed, and do not publish a partial family
-as a completed Batch F checkpoint.
+Begin now with RECOVER. If Preview.3 Batch F and every local completion gate already pass,
+preserve the evidence and return `LOOP_STATE: COMPLETE`; do not manufacture a next batch.
+In an older incomplete checkout, continue the entire locked Batch F freeform authoring
+wave as far as safely possible in this invocation. Do not publish a partial family as a
+completed Batch F checkpoint.
 ```
 
 ## Poller behavior
