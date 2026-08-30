@@ -76,6 +76,7 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0067](adr/0067-freeform-curve-surface-authoring-batch.md) | Define and close Batch F as one 24-capability freeform curve, surface, and profile-to-solid authoring wave | Accepted |
 | [ADR-0068](adr/0068-technical-drawing-hidden-line-vector-output-batch.md) | Define and close Batch G as one 24-capability technical-drawing, hidden-line, section, and vector-output wave | Accepted |
 | [ADR-0069](adr/0069-advanced-mesh-scene-material-interchange-batch.md) | Define and close Batch H as one 24-capability advanced-mesh, scene, material, LOD, and interchange wave | Accepted |
+| [ADR-0070](adr/0070-document-state-attribute-graph-history-persistence-batch.md) | Define Batch I as one 24-capability OCAF/XDE document-state, attribute-graph, history, and persistence wave | Accepted for implementation |
 
 ## Pending decisions
 

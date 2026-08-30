@@ -1,7 +1,7 @@
 # Current Status
 
 - Last updated: 2026-08-30
-- Current phase: Batch B through Batch H are complete locally; the next product batch must first freeze a finite cross-family dependency closure before implementation
+- Current phase: Batch B through Batch H are complete locally; Batch I preparation and its full document-state/attribute-graph/history/persistence dependency closure are locked, with implementation at 0/24
 - Batch B engineering progress: 100% for the accepted local implementation scope (not a claim that every OCCT declaration is a managed API or that public release is ready)
 - Batch C implementation progress: 100% of the finite local implementation denominator; locked wave denominators are 14/14, 7/7, 8/8, and final 15/15 capabilities validated
 - Batch D implementation progress: 24/24 capabilities (100%); ADR-0064's one large cross-family wave passes all implementation, compile, runtime, real-HWND, clean-package, inventory, and local release gates
@@ -9,10 +9,27 @@
 - Batch F implementation progress: 24/24 capabilities (100%); ADR-0067's one cross-family definition/edit/topology/exchange/viewer wave passes compile, runtime/lifetime, real STEP/XDE, real-HWND, clean-package, inventory, and local release gates
 - Batch G implementation progress: 24/24 capabilities (100%); ADR-0068's one cross-family exact/polygonal HLR, section, copied-polyline, SVG, standard-view, exchange, and viewer wave passes every local gate
 - Batch H implementation progress: 24/24 capabilities (100%); ADR-0069's one grouped-mesh/material/LOD/copied-scene/interchange/viewer wave passes every local gate
-- Complete-migration batch progress: B, C, D, E, F, G, and H are complete locally; retired B00-B20 and forbidden numbered/dotted C/D/E/F/G/H labels are not counted as batches
+- Batch I implementation progress: 0/24 capabilities; ADR-0070 and the 24-root/676-declaration audit freeze one indivisible OCAF/XDE attribute/graph/history/undo-redo/persistence wave before code changes
+- Complete-migration batch progress: B, C, D, E, F, G, and H are complete locally; Batch I is prepared at 0/24; retired B00-B20 and forbidden numbered/dotted C/D/E/F/G/H/I labels are not counted as batches
 - Accepted surface: 16,353 generated manifest IDs plus 373 accepted manual stable IDs; Release and Debug native/managed builds, Generator 91/91, Runtime 131/131, discovery/report determinism, generated dependency closure, and dependency profiles 6/6 pass
 - Last complete full inventory: 116,272/116,272 declarations and 7,090/7,090 headers have final dispositions; `Emitted` 16,353, `Manual` 373, `SupportedUnselected` 0, `Skipped` 49,344, `Blocked` 50,202, pending 0, HD099 0; SHA256 `75BD35320CA769AA54FEE0B09F17A15A1560352B0CDACEA6BEEFBDD8494AD695`
-- Overall state: package identity is `8.0.1-preview.5` under ADR-0065 while managed assembly identity remains `0.1.0.0`, native ABI is 1.50, and bridge implementation is 0.58.0. Batch D completes production viewport/model review, Batch E engineering inspection/PMI/AP242, Batch F freeform authoring, Batch G technical drawing, and Batch H advanced mesh/scene interchange while ADR-0061/ADR-0062 keep the generated graph resolved and acyclic. Physical managed-project and native-DLL splitting remain deliberately deferred, so public type full names, the single managed assembly, and the single native DLL remain unchanged. The complete Preview.5 local Release/Debug/freshness/clean-regeneration/package/API/inventory/release chain passes. `publicReleaseReady` remains false because hosted release execution, signing, and NuGet publication are `NOT RUN`
+- Overall state: package identity remains the validated `8.0.1-preview.5` under ADR-0065 while managed assembly identity remains `0.1.0.0`, native ABI is 1.50, and bridge implementation is 0.58.0. Batch I targets Preview.6/ABI 1.51/bridge 0.59.0 only when its complete wave is implemented. ADR-0061/ADR-0062 keep the generated graph resolved and acyclic; physical managed-project and native-DLL splitting remain deliberately deferred. The complete Preview.5 local chain passes, while all Batch I compile/runtime/persistence/package gates are `NOT RUN`. `publicReleaseReady` remains false because hosted release execution, signing, and NuGet publication are `NOT RUN`
+
+### Batch I document state, attribute graph, history, and persistence preparation
+
+- ADR-0070 and `BATCH_I_DOCUMENT_HISTORY_PERSISTENCE_GAP_INVENTORY.md` lock all 24
+  capabilities as one wave across copied label/attribute state, reference/dependency
+  graphs, named commands, undo/redo history, dirty/savepoint state, four OCAF/XCAF
+  persistence formats, STEP/XDE, lifetime, and clean-package evidence.
+- The Preview.5 inventory audit covers exactly 24 roots and 676 candidates: 219 emitted,
+  four manual, 288 blocked, and 165 skipped. Only directly used blocked declarations may
+  be reconciled through SC-045 during implementation; the audit is not bulk-marked manual.
+- The ownership closure preserves owned documents, parent-bound stable entries, copied
+  snapshots/graphs, and independent owning topology. No TDF iterator, attribute handle,
+  delta, undo/redo list, or persistence driver crosses the ABI.
+- Target identities are Preview.6, native ABI 1.51, and bridge 0.59.0. Batch I focused
+  tests, Release/Debug, binary/XML/STEP round trips, package consumer, regeneration,
+  inventory, compatibility, provenance, hashes, and the local release check are `NOT RUN`.
 
 ### Preview.5 Batch H advanced mesh and scene completion
 
@@ -1251,13 +1268,13 @@ Preview.3 completes all 24/24 together with the full local release gate passing.
 
 ```text
 LOOP_STATE: COMPLETE
-CURRENT_BATCH: H — ADVANCED MESH, SCENE, MATERIAL, LOD, AND INTERCHANGE COMPLETE
-CURRENT_WORKSTREAM: NEXT PRODUCT BATCH REQUIRES A NEW FINITE CROSS-FAMILY DEPENDENCY CLOSURE
-COMPLETED_THIS_TURN: COMPLETED AND VALIDATED ALL 24 BATCH H CAPABILITIES AS ONE WAVE
-NEXT_WORKSTREAM: PREPARE THE NEXT COMPLETE PRODUCT BATCH BEFORE IMPLEMENTATION
-NEXT_ACTION: FREEZE THE NEXT 24-CAPABILITY PRODUCT DENOMINATOR, OWNERSHIP, AUDIT, AND GATES
+CURRENT_BATCH: I — DOCUMENT STATE, ATTRIBUTE GRAPH, HISTORY, AND PERSISTENCE
+CURRENT_WORKSTREAM: ONE LOCKED 24-CAPABILITY OCAF/XDE ATTRIBUTE/GRAPH/HISTORY/PERSISTENCE CLOSURE
+COMPLETED_THIS_TURN: PREPARED AND FROZE ALL 24 BATCH I CAPABILITIES WITH A 24-ROOT/676-DECLARATION AUDIT
+NEXT_WORKSTREAM: IMPLEMENT THE COMPLETE BATCH I WAVE WITHOUT FAMILY CHECKPOINTS
+NEXT_ACTION: IMPLEMENT COPIED DOCUMENT STATE/GRAPH/HISTORY, UNDO/REDO, SAVEPOINTS, AND FOUR-FORMAT PERSISTENCE, THEN RUN ALL GATES
 ENGINEERING_PROGRESS: B 100% COMPLETE; C 100% COMPLETE; D 24/24 COMPLETE (100%); E 24/24 COMPLETE (100%); F 24/24 COMPLETE (100%); G 24/24 COMPLETE (100%); H 24/24 COMPLETE (100%)
-BATCH_PROGRESS: H PREPARATION AND IMPLEMENTATION COMPLETE; 24/24 (100%)
+BATCH_PROGRESS: I PREPARATION COMPLETE; IMPLEMENTATION 0/24 (0%)
 B_BASELINE_BINDING_COVERAGE: 16414/16414 generated plus accepted manual stable IDs (100%)
 C_COMMON_WORKFLOW_COVERAGE: FIRST-WAVE 14/14, SECOND-WAVE 7/7, THIRD-WAVE 8/8, AND FINAL-WAVE 15/15 DENOMINATORS VALIDATED (100% EACH)
 D_VIEWPORT_REVIEW_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
@@ -1265,6 +1282,7 @@ E_INSPECTION_PMI_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
 F_FREEFORM_AUTHORING_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
 G_TECHNICAL_DRAWING_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
 H_ADVANCED_MESH_SCENE_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
+I_DOCUMENT_HISTORY_PERSISTENCE_COVERAGE: 0/24 IMPLEMENTED; FULL DENOMINATOR AND DEPENDENCY CLOSURE LOCKED
 FULL_PROFILE_ACCOUNTING: 116272/116272 declarations classified; 50202 have narrow blocked dispositions and are not claimed as managed APIs
 INVENTORY_COMPLETENESS: 7058/7090 headers semantically scanned (99.5487%); 116272/116272 discovered declarations and 7090/7090 catalogued headers classified
 LAST_VALIDATION: Preview.5 complete local release check PASS; Release/Debug, Generator 91/91, Runtime 131/131, dependency profiles 6/6, real STEP/XDE plus real-HWND Batch H, clean 62-DLL package, regeneration, additive API, inventory, provenance, and checksums PASS

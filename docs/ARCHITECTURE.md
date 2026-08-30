@@ -100,6 +100,9 @@ The accepted boundaries are recorded in ADRs:
 - [ADR-0069](adr/0069-advanced-mesh-scene-material-interchange-batch.md): one finite
   Batch H grouped-mesh, material, LOD, XDE scene/instance, and mesh-interchange closure
   with native-local providers and copied snapshots.
+- [ADR-0070](adr/0070-document-state-attribute-graph-history-persistence-batch.md): one
+  finite Batch I OCAF/XDE label-attribute, dependency-graph, undo/redo, savepoint, and
+  binary/XML/STEP persistence closure with copied snapshots.
 
 ## Components
 
@@ -220,6 +223,13 @@ copied values. XDE labels remain document-parent-bound while complete scene snap
 managed-owned and survive document disposal. Preview.5 completes all 24/24 capabilities
 through Release/Debug repository runtime, a clean source rebuild, and the clean 62-DLL
 package consumer without changing the one-assembly, one-native-DLL, one-package topology.
+
+Batch I retains the same owned-document and stable-entry boundary. TDF iterators,
+TDataStd/TNaming attributes, TDF deltas, TDocStd command lists, and binary/XML/STEP
+drivers remain native-local. Managed attribute, reference, history, document, and
+dependency-graph snapshots are copied and retain no document state; optional topology
+is an independent owning `Shape`. Undo/redo and dirty/savepoint mutation stay bound to
+one owned document. Implementation and validation remain open for Preview.6.
 
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native

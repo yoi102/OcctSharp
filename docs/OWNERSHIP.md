@@ -415,3 +415,19 @@ does not replace source triangulation. XDE mesh exporters triangulate document r
 place only for durable provider output; no triangulation owner crosses the ABI. Focused,
 Release/Debug, clean-source, and clean-package real-HWND tests validate disposal and
 thread behavior across the full 24/24 closure.
+
+### Batch I document state, history, and persistence boundary
+
+ADR-0070 extends the existing `OcafDocument`/`XdeDocument` owning wrapper and stable-entry
+label contract without introducing borrowed attribute or delta wrappers. TDF child and
+attribute iterators, TDataStd/TNaming handles, reference collections, tree nodes, TDF
+deltas, TDocStd undo/redo lists, and persistence drivers remain native-local. Attribute,
+reference, history, and document snapshots cross as copied values; optional named
+topology is copied into an independent registered owning `Shape`.
+
+Undo, redo, history trimming, dirty state, and savepoint mutation are operations on one
+live owned document and are rejected while a command is open. Copied history entries are
+diagnostic data, not executable delta owners. Managed dependency graphs are built from
+copied stable-entry edges and retain no document or label. Binary/XML/STEP calls borrow
+the document only for the call. This boundary is locked for Batch I; implementation and
+validation are `NOT RUN`.
