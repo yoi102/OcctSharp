@@ -18,7 +18,8 @@ Open Batch L as the one indivisible 24-capability wave in
 algorithms and containers call-local, copy scalar/diagnostic/traceability results, return
 issue topology as independent owners, and preserve existing XDE/viewer parent boundaries.
 
-Implementation will target Preview.9, ABI 1.54, bridge 0.62.0, and schema 1.12. No
+Preparation reserves Preview.9 package identity while retaining ABI 1.53, bridge 0.61.0,
+and schema 1.11. Implementation targets ABI 1.54, bridge 0.62.0, and schema 1.12. No
 family-only or numbered checkpoint is Batch L completion. All local gates must pass
 together before the ADR becomes implemented.
 

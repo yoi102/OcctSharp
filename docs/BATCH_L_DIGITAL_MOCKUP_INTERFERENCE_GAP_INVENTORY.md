@@ -88,8 +88,9 @@ SC-048. The audit is not bulk-marked manual.
   values. XDE labels remain parent-bound stable entries; locations remain owning values.
 - Viewer presentations remain viewer/thread-parent-bound. The one managed assembly, one
   native DLL, one package, public full names, and generated shard graph remain unchanged.
-- Batch L targets Preview.9, native ABI 1.54, bridge 0.62.0, and schema 1.12 only after
-  implementation; Preview.8 remains the validated preparation baseline.
+- Batch L reserves package identity Preview.9 during preparation. Native ABI 1.54,
+  bridge 0.62.0, and schema 1.12 remain implementation changes; Preview.8 remains the
+  last complete implementation/release baseline.
 
 ## Validation gates
 

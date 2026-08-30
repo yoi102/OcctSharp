@@ -16,7 +16,7 @@
 - Complete-migration batch progress: B, C, D, E, F, G, H, I, J, and K are complete locally; L is prepared; retired B00-B20 and forbidden numbered/dotted batch labels are not counted as batches
 - Accepted surface: 16,353 generated manifest IDs plus 524 accepted manual stable IDs; Release and Debug native/managed builds, Generator 91/91, Runtime 143/143, discovery/report determinism, generated dependency closure, and dependency profiles 6/6 pass
 - Last complete full inventory: 116,272/116,272 declarations and 7,090/7,090 headers have final dispositions; `Emitted` 16,353, `Manual` 524, `SupportedUnselected` 0, `Skipped` 49,344, `Blocked` 50,051, pending 0, HD099 0; SHA256 `11BF0C50B56EBCF54F776366EB68BDDB93CACD5209DA9CBE93472FDD437A402B`
-- Overall state: package identity is the validated `8.0.1-preview.8` under ADR-0065 while managed assembly identity remains `0.1.0.0`, native ABI is 1.53, and bridge implementation is 0.61.0. ADR-0061/ADR-0062 keep the generated graph resolved and acyclic; physical managed-project and native-DLL splitting remain deliberately deferred. The complete Preview.8 local chain passes. `publicReleaseReady` remains false only because hosted release execution, signing, and NuGet publication are `NOT RUN`
+- Overall state: Batch L preparation reserves package identity `8.0.1-preview.9` under ADR-0065 while managed assembly identity remains `0.1.0.0`, native ABI remains 1.53, bridge remains 0.61.0, and schema remains 1.11 until implementation. ADR-0061/ADR-0062 keep the generated graph resolved and acyclic; physical managed-project and native-DLL splitting remain deliberately deferred. Preview.8 remains the last complete local release chain. `publicReleaseReady` remains false because Batch L implementation plus hosted release execution, signing, and NuGet publication are `NOT RUN`
 
 ### Batch L digital mock-up interference and clearance preparation
 
@@ -27,7 +27,7 @@
 - The Preview.8 audit covers exactly 24 roots and 1,351 candidates: 656 blocked, 194
   emitted, 51 manual, and 450 skipped. Only directly used blocked declarations may be
   reconciled through SC-048; the audit will not be bulk-marked manual.
-- Implementation, Preview.9/ABI 1.54/bridge 0.62.0/schema 1.12 changes, focused tests,
+- Implementation, ABI 1.54/bridge 0.62.0/schema 1.12 changes, focused tests,
   STEP/XDE/HWND evidence, clean-package execution, regeneration, inventory reconciliation,
   and Preview.9 release gates are all `NOT RUN` for Batch L.
 
@@ -1340,14 +1340,14 @@ Preview.3 completes all 24/24 together with the full local release gate passing.
 | Batch J advanced feature modeling/history/recovery | PASS | 24/24; focused 4/4 and full Release/Debug Runtime 139/139 cover selected/variable/planar finishing, draft, boss/pocket/hole, additive/subtractive revolve and pipe, split, defeaturing, cells, four batch Boolean modes, robust options, preflight/recovery, copied history/deletion, STEP/XDE, real HWND screenshots, source disposal, and clean-package execution |
 | Batch K assembly authoring/BOM/occurrence | PASS | 24/24; focused 4/4 and full Release/Debug Runtime 143/143 cover definition/occurrence edits, where-used, paths, graph/BOM/diagnostics, external/item references, SHUO/effective metadata, rollups, named transactions, STEP/XDE, real HWND screenshot, source/document disposal, and clean-package execution |
 | B18 optional dependency profiles | PASS | Release/Debug build audit classifies 6/6 profiles; IVtk/VTK and EGL/GLES blockers are named; core package unchanged |
-| Native runtime dependency closure | PASS | 62 DLLs in committed Preview.8 ABI 1.53/bridge 0.61.0 runtime; complete Release rebuild is byte-identical and loads from `occt`; bridge SHA256 `2585B9CA96E7022914F6759F5E9CA863AC4D4140D8CB65DD049F8B3558619D2E` |
+| Native runtime dependency closure | PASS | 62 DLLs in committed Preview.9-preparation manifest with unchanged ABI 1.53/bridge 0.61.0; the complete Release rebuild is byte-identical and loads from `occt`; bridge SHA256 `2585B9CA96E7022914F6759F5E9CA863AC4D4140D8CB65DD049F8B3558619D2E` |
 | XDE two-box assembly | PASS | One XDE assembly root, two occurrences, and 12-face STEP round-trip |
 | STEPCAF/XDE metadata | PASS (scoped) | Existing seven-input metadata workflow plus alpha.53 area/volume/centroid attributes, nested occurrence placement, metadata filters, and BinXCAF/STEPCAF round trips |
 | XDE native runtime libraries | PASS | `TKXCAF`, `TKCAF`, `TKLCAF`, and `TKCDF` present in Debug and Release runtime directories |
 | Checked shared-handle cast | PASS | Release/Debug `TryCastDerived` and `CastDerived`: retained success, wrong/null rejection, and `InvalidCastException` |
-| NuGet package contents | PASS (Preview.8) | `8.0.1-preview.8`; managed/XML/docs, MIT metadata/license, 62 native DLLs, and 11 bundled notice/license files; package/assembly/informational identities inspected; final nupkg SHA256 `F0BD9E01691AA8242E58DFBB0C5FA5E43A077CC9D7050DCB1245D56FE4065898` matches `artifacts/release/checksums.sha256` |
+| NuGet package contents | PASS (Preview.9 preparation) | `8.0.1-preview.9`; managed/XML/docs, MIT metadata/license, 62 native DLLs, and 11 bundled notice/license files; package/assembly/informational identities inspected; 40,952,685-byte nupkg SHA256 `B33DDF2D190ABB463A3C926387B05D73F2A0DD9461D4449D4BE4D64886A57FC4` |
 | Package output layout | PASS | Published executable has `occt/` closure and no root `OcctSharp.Native.dll` |
-| Packaging/clean consumer | PASS (Preview.8) | Clean SDK 10.0.400 restore/publish/runtime passes the complete Batch D/E/F/G/H/I/J/K workflow with package 8.0.1-preview.8, ABI 1.53/bridge 0.61.0, OCCT 8.0.1, and 62 DLLs |
+| Packaging/clean consumer | PASS (Preview.9 preparation) | Clean SDK 10.0.400 restore/publish/runtime passes the complete inherited Batch D/E/F/G/H/I/J/K workflow with package 8.0.1-preview.9, ABI 1.53/bridge 0.61.0, OCCT 8.0.1, and 62 DLLs; Batch L remains 0/24 |
 | Fresh-clone Sample bundled runtime | PASS | New clone without local settings/OCCT environment passed manifest, Release/Debug `--smoke`, exact 62-DLL output, box creation, and package creation |
 | Git whitespace checks | PASS | `git diff --check` and `git diff --cached --check` |
 | CI configuration | PASS | Generator tests, clone-only bundled-runtime Release/Debug smoke, and immutable URL/SHA full Windows release-check jobs configured |
@@ -1381,6 +1381,7 @@ L_INTERFERENCE_CLEARANCE_COVERAGE: 0/24 IMPLEMENTED; FULL DENOMINATOR AND DEPEND
 FULL_PROFILE_ACCOUNTING: 116272/116272 declarations classified; 50051 have narrow blocked dispositions and are not claimed as managed APIs
 INVENTORY_COMPLETENESS: 7058/7090 headers semantically scanned (99.5487%); 116272/116272 discovered declarations and 7090/7090 catalogued headers classified
 LAST_VALIDATION: Preview.8 complete local release check PASS; Release/Debug, Generator 91/91, Runtime 143/143, dependency profiles 6/6, assembly/BOM/reference/metadata/history plus STEP/XDE/HWND Batch K, clean 62-DLL package, regeneration, additive API, inventory, provenance, and checksums PASS
+L_PREPARATION_VALIDATION: Preview.9 package/clean-consumer PASS; Generator 91/91, Runtime 143/143, dependency profiles 6/6, 62 DLLs, ABI 1.53, bridge 0.61.0; Batch L implementation gates NOT RUN
 BLOCKER: NONE; COMPLETE BATCH L IMPLEMENTATION WAVE IS NEXT
 ```
 

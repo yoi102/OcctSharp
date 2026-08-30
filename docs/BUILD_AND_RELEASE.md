@@ -245,7 +245,7 @@ complete while public release readiness remains false.
 
 ```powershell
 cd OcctSharp
-.\eng\release-check.ps1 -PackageVersion 8.0.1-preview.8
+.\eng\release-check.ps1 -PackageVersion 8.0.1-preview.9
 ```
 
 Release evidence is written below `OcctSharp/artifacts/release/`: `api-diff.json`,

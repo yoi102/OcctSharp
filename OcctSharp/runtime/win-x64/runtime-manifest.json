@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "platform": "windows",
   "architecture": "x64",
-  "packageVersion": "8.0.1-preview.8",
+  "packageVersion": "8.0.1-preview.9",
   "occtVersion": "8.0.1",
   "nativeAbi": "1.53",
   "bridgeVersion": "0.61.0",

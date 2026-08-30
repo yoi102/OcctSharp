@@ -7,6 +7,7 @@ reported as supported.
 
 | OcctSharp | Generator | Native ABI | OCCT | Platform | Compiler | .NET | Status |
 |---|---|---|---|---|---|---|---|
+| 8.0.1-preview.9 preparation | ClangSharp 21.1.8.4 | 1.53 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental; Batch L 0/24 |
 | 8.0.1-preview.8 workspace | ClangSharp 21.1.8.4 | 1.53 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
 
 Validated in both Debug and Release: native and managed build, ABI/runtime identity,
