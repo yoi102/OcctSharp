@@ -1429,6 +1429,138 @@
     {
       "stableId": "c:@S@ShapeFix_Shape@F@Shape#1",
       "specialCaseId": "SC-042"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@Approximation#b#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@BRepAlgoAPI_Section#&1$@S@TopoDS_Shape#&1$@S@gp_Pln#b#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRAlgo_Projector@F@HLRAlgo_Projector#&1$@S@gp_Ax2#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRAlgo_Projector@F@HLRAlgo_Projector#&1$@S@gp_Ax2#d#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_Algo@F@Add#&1$@S@TopoDS_Shape#I#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_HLRToShape@F@HCompound#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_HLRToShape@F@HLRBRep_HLRToShape#&1$@N@opencascade@S@handle>#$@S@HLRBRep_Algo#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_HLRToShape@F@IsoLineHCompound#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_HLRToShape@F@IsoLineVCompound#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_HLRToShape@F@OutLineHCompound#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_HLRToShape@F@OutLineVCompound#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_HLRToShape@F@Rg1LineHCompound#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_HLRToShape@F@Rg1LineVCompound#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_HLRToShape@F@RgNLineHCompound#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_HLRToShape@F@RgNLineVCompound#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_HLRToShape@F@VCompound#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_InternalAlgo@F@Projector#&1$@S@HLRAlgo_Projector#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_PolyAlgo@F@Load#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_PolyAlgo@F@Projector#&1$@S@HLRAlgo_Projector#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_PolyHLRToShape@F@HCompound#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_PolyHLRToShape@F@HLRBRep_PolyHLRToShape#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_PolyHLRToShape@F@OutLineHCompound#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_PolyHLRToShape@F@OutLineVCompound#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_PolyHLRToShape@F@Rg1LineHCompound#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_PolyHLRToShape@F@Rg1LineVCompound#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_PolyHLRToShape@F@RgNLineHCompound#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_PolyHLRToShape@F@RgNLineVCompound#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_PolyHLRToShape@F@Update#&1$@N@opencascade@S@handle>#$@S@HLRBRep_PolyAlgo#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@HLRBRep_PolyHLRToShape@F@VCompound#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@TopExp_Explorer@F@Current#1",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@TopExp_Explorer@F@More#1",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@TopExp_Explorer@F@Next#",
+      "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@TopExp_Explorer@F@TopExp_Explorer#&1$@S@TopoDS_Shape#$@E@TopAbs_ShapeEnum#S2_#",
+      "specialCaseId": "SC-043"
     }
   ],
   "excludedBindings": [

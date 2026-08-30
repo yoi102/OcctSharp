@@ -1029,3 +1029,40 @@ rules or design:
 - Removal criteria: Replace this exception only after generated array, algorithm,
   topology-history, and repair ownership descriptors preserve the same immutable copied
   definitions, owning results, diagnostics, and end-to-end package evidence.
+
+## SC-043: Batch G hidden-line, section, and copied vector-drawing closure
+
+- Status: Accepted and fully validated for the complete 24-capability Batch G implementation.
+- Scope: Exactly 33 newly direct blocked OCCT 8.0.1 stable IDs covering orthographic and
+  perspective `HLRAlgo_Projector` construction, exact/polygonal HLR loading and projector
+  assignment, visible/hidden sharp/smooth/sewn/outline/isoparameter extraction, planar
+  section construction, and the topology-explorer calls used for copied polylines.
+  Existing emitted HLR update/hide methods and previously reconciled BRepAdaptor,
+  BRepMesh, section-build, STEP/XDE, and viewer declarations are reused without double
+  counting.
+- Reason: HLR algorithms and extractors retain large mutable shape/edge/face graphs;
+  section builders retain Boolean state; topology explorers and curve adaptors return
+  borrowed references. None can cross the stable C ABI safely.
+- Native/ABI/managed behavior: All algorithms and iterators die inside a bridge call.
+  Ten category layers and section topology are new registered owning shapes. Projected
+  points cross through a count/copy protocol with explicit capacities, offsets, counts,
+  and closed flags; SVG composition is managed-only.
+- Ownership: Inputs are borrowed only during one validated call. Every layer and section
+  is independent of its inputs and siblings. Polyline arrays and SVG text/files are
+  caller-owned copies. Document labels and viewer resources keep their existing parent
+  and thread rules.
+- Coverage accounting: Configuration schema 1.8 lists exactly 33 SC-043 stable IDs.
+  Each was `Blocked` in the Preview.3 inventory and names the exact overload used; the
+  full 1,069-declaration audit is not bulk-marked manual.
+- Validation: Focused Batch G 4/4 tests cover exact/polygonal/perspective projection, all
+  ten layers, source disposal, section, copied polylines, standard views, SVG, STEP/XDE,
+  and real HWND. Release and Debug build with zero warnings/errors; Generator 91/91,
+  Runtime 127/127, dependency profiles 6/6, clean regeneration, full inventory, clean
+  Preview.4 package consumption, runtime hashes, provenance, checksums, and the complete
+  local release check pass.
+- Upgrade impact: Recheck HLR projector axis/focus conventions, category extraction,
+  polygonal triangulation requirements, section approximation, projected curve ranges,
+  explorer behavior, and every exact stable ID on OCCT/compiler upgrades.
+- Removal criteria: Replace this exception only after generated algorithm-local,
+  owning-result, iterator-snapshot, and polyline-buffer descriptors preserve the same
+  result and lifetime contracts.

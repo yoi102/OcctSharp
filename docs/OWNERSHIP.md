@@ -387,3 +387,16 @@ piece, repaired result, and solid is an independent registered owning `Shape`; d
 any input cannot invalidate it. STEP/XDE labels and AIS/viewer resources retain their
 existing parent-bound categories. Preview.3 validates this complete 24/24 boundary in
 Release/Debug repository runtime and the clean 62-DLL package consumer.
+
+### Batch G technical drawing boundary
+
+ADR-0068 keeps `HLRAlgo_Projector`, exact/polygonal `HLRBRep` algorithms and extractors,
+`BRepAlgoAPI_Section`, `TopExp_Explorer`, and `BRepAdaptor_Curve` call-local. Projector,
+plane, sampling, and SVG options cross as copied values. Each visible/hidden
+sharp/smooth/sewn/outline/isoparameter layer and each section is an independent
+registered owning `Shape`. Projected polyline points, offsets, counts, and closed flags
+are copied into caller-owned arrays. No HLR graph, iterator, curve/adaptor, borrowed
+topology, or native vector container crosses the ABI. STEP/XDE and viewer resources keep
+their document-parent and creating-thread-affine viewer-parent categories. Preview.4
+validates this complete 24/24 boundary in Release/Debug repository runtime and the clean
+62-DLL package consumer.

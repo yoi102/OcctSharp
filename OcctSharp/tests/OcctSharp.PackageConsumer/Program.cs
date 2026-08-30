@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 48)
-    || runtime.BridgeVersion != "0.56.0"
+if (runtime.AbiVersion != new Version(1, 49)
+    || runtime.BridgeVersion != "0.57.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -1149,6 +1149,44 @@ try
             throw new InvalidOperationException("The packaged Batch F screenshot workflow failed.");
     }
     finally { _ = PackageWindowMethods.DestroyWindow(batchFWindow); }
+
+    using Shape batchGSection = TechnicalDrawing.CreateSection(
+        batchFImportedShape, GpPlane.Create(new GpXyz(0, 0, 4), new GpXyz(0, 0, 1)));
+    using DrawingView batchGExact = TechnicalDrawing.CreateView(
+        batchFImportedShape, DrawingProjection.Isometric,
+        new DrawingOptions { Algorithm = DrawingAlgorithm.Exact, IsoparameterCount = 1, SamplesPerCurve = 16 });
+    using DrawingView batchGPolygonal = TechnicalDrawing.CreateView(
+        batchFImportedShape,
+        new DrawingProjection(new GpXyz(30, -50, 25), new GpXyz(-30, 50, -20), new GpXyz(0, 0, 1), true, 60),
+        new DrawingOptions { Algorithm = DrawingAlgorithm.Polygonal, Deflection = 0.25, SamplesPerCurve = 12 });
+    using StandardDrawingViews batchGViews = TechnicalDrawing.CreateStandardViews([batchFImportedShape]);
+    IReadOnlyList<DrawingPolyline> batchGVisible = TechnicalDrawing.CopyPolylines(
+        batchGExact.GetLayer(DrawingEdgeCategory.Sharp, DrawingVisibility.Visible).Shape);
+    string batchGSvg = Path.Combine(exchangeDirectory, "package-batch-g-drawing.svg");
+    batchGExact.SaveSvg(batchGSvg, new SvgDrawingOptions { Width = 800, Height = 600 });
+    if (batchGVisible.Count == 0 || batchGSection.CountSubShapes(ShapeKind.Edge) == 0
+        || batchGPolygonal.Layers.Count != 10 || batchGViews.All.Count != 4
+        || !File.Exists(batchGSvg) || new FileInfo(batchGSvg).Length <= 100)
+        throw new InvalidOperationException("The packaged Batch G HLR/section/vector drawing workflow failed.");
+
+    nint batchGWindow = PackageWindowMethods.CreateWindowEx(
+        0, "STATIC", "OcctSharp Batch G package drawing", 0x80000000u,
+        -32000, -32000, 320, 320, 0, 0, 0, 0);
+    if (batchGWindow == 0) throw new InvalidOperationException("The Batch G package HWND could not be created.");
+    try
+    {
+        _ = PackageWindowMethods.ShowWindow(batchGWindow, 4);
+        _ = PackageWindowMethods.UpdateWindow(batchGWindow);
+        using OcctViewer batchGViewer = OcctViewer.Create(batchGWindow);
+        using ViewerPresentation batchGPresentation = batchGViewer.Display(
+            batchGExact.GetLayer(DrawingEdgeCategory.Sharp, DrawingVisibility.Visible).Shape);
+        batchGViewer.FitAll(); batchGViewer.Redraw();
+        string batchGImage = batchGViewer.SaveScreenshot(
+            Path.Combine(exchangeDirectory, "package-batch-g-drawing.png"), overwrite: true);
+        if (!File.Exists(batchGImage) || new FileInfo(batchGImage).Length == 0)
+            throw new InvalidOperationException("The packaged Batch G real-HWND drawing screenshot failed.");
+    }
+    finally { _ = PackageWindowMethods.DestroyWindow(batchGWindow); }
 }
 finally
 {

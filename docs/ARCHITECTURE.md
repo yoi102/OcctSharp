@@ -94,6 +94,9 @@ The accepted boundaries are recorded in ADRs:
 - [ADR-0067](adr/0067-freeform-curve-surface-authoring-batch.md): one finite Batch F
   freeform curve/surface definition, profile-to-solid topology, exchange, repair, and
   viewer-evidence closure with copied definitions and owning results.
+- [ADR-0068](adr/0068-technical-drawing-hidden-line-vector-output-batch.md): one finite
+  Batch G technical-drawing closure with native-local exact/polygonal HLR, owning
+  category/section topology, copied polylines, and managed SVG output.
 
 ## Components
 
@@ -197,6 +200,15 @@ viewer presentations reuse their document-parent and creating-thread-affine view
 categories. Preview.3 validates all 24/24 capabilities through Release/Debug repository
 runtime and the clean 62-DLL package consumer without changing the one managed assembly,
 one native DLL, or one NuGet package boundary.
+
+Batch G keeps HLRAlgo/HLRBRep/BRepAlgoAPI/TopExp/BRepAdaptor state native-local. Ten
+visible/hidden drawing layers and section results cross as independently registered
+owning shapes. Projected edge boundaries cross only through caller-owned count/copy
+polyline buffers; SVG fitting, styles, serialization, and files are managed-owned.
+STEP/XDE labels and real-HWND presentations retain their existing parent/thread rules.
+Preview.4 validates all 24/24 capabilities through Release/Debug repository runtime and
+the clean 62-DLL package consumer. The one managed assembly, one native DLL, and one
+package topology remains unchanged.
 
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native

@@ -182,6 +182,20 @@ typedef struct OcctSharp_FreeformDiagnostics
   double g2_error;
   double approximation_error;
 } OcctSharp_FreeformDiagnostics;
+typedef struct OcctSharp_DrawingProjection
+{
+  OcctSharp_Xyz origin;
+  OcctSharp_Xyz view_direction;
+  OcctSharp_Xyz up_direction;
+  int32_t perspective;
+  double focus;
+} OcctSharp_DrawingProjection;
+typedef struct OcctSharp_DrawingPolyline
+{
+  int32_t point_offset;
+  int32_t point_count;
+  int32_t closed;
+} OcctSharp_DrawingPolyline;
 typedef struct OcctSharp_ViewerCamera
 {
   OcctSharp_Xyz eye;
@@ -764,6 +778,22 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_loft(
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_freeform_heal(
   const OcctSharp_ShapeHandle* shape, double tolerance,
   OcctSharp_FreeformDiagnostics* out_diagnostics, OcctSharp_ShapeHandle** out_shape);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_drawing_compute(
+  const OcctSharp_ShapeHandle* const* shapes, int32_t shape_count,
+  OcctSharp_DrawingProjection projection, int32_t exact, int32_t iso_count,
+  double deflection, OcctSharp_ShapeHandle** out_layers, int32_t layer_capacity);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_drawing_section(
+  const OcctSharp_ShapeHandle* shape, OcctSharp_Xyz plane_origin,
+  OcctSharp_Xyz plane_normal, int32_t approximate, OcctSharp_ShapeHandle** out_section);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_drawing_polyline_count(
+  const OcctSharp_ShapeHandle* shape, int32_t samples_per_curve,
+  int32_t* out_polyline_count, int32_t* out_point_count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_drawing_polyline_copy(
+  const OcctSharp_ShapeHandle* shape, int32_t samples_per_curve,
+  OcctSharp_DrawingPolyline* polylines, int32_t polyline_capacity,
+  OcctSharp_Xyz* points, int32_t point_capacity,
+  int32_t* out_polylines_written, int32_t* out_points_written);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_get_face_count(
   const OcctSharp_ShapeHandle* shape,

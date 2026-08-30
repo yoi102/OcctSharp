@@ -22,6 +22,9 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Batch F freeform authoring gap inventory](BATCH_F_FREEFORM_AUTHORING_GAP_INVENTORY.md)
   — completed 24-capability Bezier/B-spline definition, surface/profile topology authoring,
   STEP/XDE, and viewer-evidence denominator.
+- [Batch G technical drawing gap inventory](BATCH_G_TECHNICAL_DRAWING_GAP_INVENTORY.md)
+  — completed 24-capability exact/polygonal HLR, section, copied-polyline, layered-SVG,
+  standard-view, STEP/XDE, and real-HWND denominator.
 - [AI migration loop prompt](AI_MIGRATION_LOOP_PROMPT.md) — reusable re-entrant prompt
   for executing the largest coherent common-workflow wave instead of per-class tasks.
 - [Status](STATUS.md) — current phase, blockers, and last verified results.
@@ -34,6 +37,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   C++/CLI, and platform-adapter availability and package boundaries.
 - [Full inventory classification](FULL_INVENTORY_CLASSIFICATION.md) — complete declaration
   and header dispositions, reason codes, and complete-versus-generated metrics.
+- [Preview.4 release notes](RELEASE_NOTES_8.0.1_PREVIEW_4.md) — complete Batch G technical
+  drawing, HLR, section, SVG, standard-view, real-HWND, and local release evidence.
 - [Preview.3 release notes](RELEASE_NOTES_8.0.1_PREVIEW_3.md) — complete Batch F freeform
   curve/surface, profile-to-solid, STEP/XDE, real-HWND, and local release evidence.
 - [Preview.2 release notes](RELEASE_NOTES_8.0.1_PREVIEW_2.md) — complete Batch E exact
@@ -97,6 +102,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   — one large cross-family engineering-inspection, measurement, PMI/AP242 wave.
 - [Batch F freeform authoring decision](adr/0067-freeform-curve-surface-authoring-batch.md)
   — one large cross-family curve/surface definition-to-profile-to-solid wave.
+- [Batch G technical drawing decision](adr/0068-technical-drawing-hidden-line-vector-output-batch.md)
+  — one large cross-family hidden-line/section/vector-output wave.
 - [Native ABI](NATIVE_ABI.md) — C ABI boundary rules.
 - [Ownership](OWNERSHIP.md) — lifetime and resource ownership rules.
 - [Type mapping](TYPE_MAPPING.md) — native-to-managed mapping policy.
