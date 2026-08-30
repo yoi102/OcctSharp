@@ -1204,3 +1204,119 @@ rules or design:
 - Removal criteria: Replace this exception only after generated document-owned,
   iterator-snapshot, copied-delta, bounded-array, reference-graph, persistence-driver,
   and owning-topology descriptors preserve the same lifetime and end-to-end evidence.
+
+## SC-046: Batch J feature modeling, robust Boolean, history, and recovery closure
+
+- Status: Accepted and implemented for the complete 24-capability Batch J closure;
+  final all-gates validation is recorded in `STATUS.md`.
+- Scope: Exactly 73 newly direct blocked OCCT 8.0.1 stable IDs covering selected and
+  variable edge finishing, planar finishing, draft, cylindrical tools, defeaturing,
+  Boolean cells and multi-shape operations, robust BOP options, argument preflight,
+  copied modified/generated/deleted history, and same-domain result recovery. Existing
+  primitive/profile/sweep builders, basic Boolean declarations, STEP/XDE, and viewer
+  declarations are reused without double counting.
+- Reason: Fillet/chamfer/draft/defeaturing/BOP builders, contour maps, progress state,
+  alerts, argument lists, and history maps are call-local mutable algorithm state. The
+  bridge accepts owning input wrappers for one call and exposes only copied diagnostics,
+  copied request indices, and independent registered owning result/history topology.
+- Native/ABI/managed behavior: ABI 1.52, bridge 0.60.0, package
+  `8.0.1-preview.7`, and configuration schema 1.10 add selected/variable fillet,
+  symmetric/two-distance chamfer, planar finishing, draft, boss/pocket/hole,
+  additive/subtractive revolve and pipe, split, defeaturing, cell selection, four batch
+  Boolean modes, preflight, robust options, bounded repair/unification, and copied
+  operation diagnostics/history.
+- Ownership: No builder, map, list, alert, progress object, or borrowed topology crosses
+  the ABI. Successful results and every modified/generated history item are independent
+  owning shapes. Deleted topology crosses as copied request indices. Recovery heals only
+  native-local copies, retries at most once, and never replaces the caller's wrappers.
+- Coverage accounting: The schema 1.10 configuration lists the following exact 73 IDs;
+  all are unique and were `Blocked` before reconciliation. The 706-declaration Batch J
+  root audit is not bulk-marked manual.
+
+  1. `c:@S@BRepFilletAPI_MakeFillet@F@Add#d#d#&1$@S@TopoDS_Edge#`
+  2. `c:@S@BRepFilletAPI_MakeFillet@F@Generated#&1$@S@TopoDS_Shape#`
+  3. `c:@S@BRepFilletAPI_MakeFillet@F@IsDeleted#&1$@S@TopoDS_Shape#`
+  4. `c:@S@BRepFilletAPI_MakeFillet@F@Modified#&1$@S@TopoDS_Shape#`
+  5. `c:@S@BRepFilletAPI_MakeChamfer@F@Add#d#d#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#`
+  6. `c:@S@BRepFilletAPI_MakeChamfer@F@Generated#&1$@S@TopoDS_Shape#`
+  7. `c:@S@BRepFilletAPI_MakeChamfer@F@IsDeleted#&1$@S@TopoDS_Shape#`
+  8. `c:@S@BRepFilletAPI_MakeChamfer@F@Modified#&1$@S@TopoDS_Shape#`
+  9. `c:@S@BRepFilletAPI_MakeFillet2d@F@BRepFilletAPI_MakeFillet2d#&1$@S@TopoDS_Face#`
+  10. `c:@S@BRepFilletAPI_MakeFillet2d@F@AddFillet#&1$@S@TopoDS_Vertex#d#`
+  11. `c:@S@BRepFilletAPI_MakeFillet2d@F@AddChamfer#&1$@S@TopoDS_Edge#S0_#d#d#`
+  12. `c:@S@BRepFilletAPI_MakeFillet2d@F@Build#&1$@S@Message_ProgressRange#`
+  13. `c:@S@BRepFilletAPI_MakeFillet2d@F@Modified#&1$@S@TopoDS_Shape#`
+  14. `c:@S@BRepOffsetAPI_DraftAngle@F@BRepOffsetAPI_DraftAngle#&1$@S@TopoDS_Shape#`
+  15. `c:@S@BRepOffsetAPI_DraftAngle@F@Add#&1$@S@TopoDS_Face#&1$@S@gp_Dir#d#&1$@S@gp_Pln#b#`
+  16. `c:@S@BRepOffsetAPI_DraftAngle@F@AddDone#1`
+  17. `c:@S@BRepOffsetAPI_DraftAngle@F@Build#&1$@S@Message_ProgressRange#`
+  18. `c:@S@BRepOffsetAPI_DraftAngle@F@Generated#&1$@S@TopoDS_Shape#`
+  19. `c:@S@BRepOffsetAPI_DraftAngle@F@Modified#&1$@S@TopoDS_Shape#`
+  20. `c:@S@BRepPrimAPI_MakeCylinder@F@BRepPrimAPI_MakeCylinder#&1$@S@gp_Ax2#d#d#`
+  21. `c:@S@ShapeUpgrade_UnifySameDomain@F@ShapeUpgrade_UnifySameDomain#&1$@S@TopoDS_Shape#b#b#b#`
+  22. `c:@S@ShapeUpgrade_UnifySameDomain@F@Shape#1`
+  23. `c:@S@BRepAlgoAPI_Defeaturing@F@BRepAlgoAPI_Defeaturing#`
+  24. `c:@S@BRepAlgoAPI_Defeaturing@F@AddFaceToRemove#&1$@S@TopoDS_Shape#`
+  25. `c:@S@BRepAlgoAPI_Defeaturing@F@Build#&1$@S@Message_ProgressRange#`
+  26. `c:@S@BRepAlgoAPI_Defeaturing@F@Generated#&1$@S@TopoDS_Shape#`
+  27. `c:@S@BRepAlgoAPI_Defeaturing@F@IsDeleted#&1$@S@TopoDS_Shape#`
+  28. `c:@S@BRepAlgoAPI_Defeaturing@F@Modified#&1$@S@TopoDS_Shape#`
+  29. `c:@S@BRepAlgoAPI_Defeaturing@F@SetShape#&1$@S@TopoDS_Shape#`
+  30. `c:@S@BRepAlgoAPI_Defeaturing@F@SetToFillHistory#b#`
+  31. `c:@S@BOPAlgo_CellsBuilder@F@BOPAlgo_CellsBuilder#`
+  32. `c:@S@BOPAlgo_CellsBuilder@F@AddAllToResult#I#b#`
+  33. `c:@S@BOPAlgo_CellsBuilder@F@AddToResult#&1$@S@NCollection_List>#$@S@TopoDS_Shape#S0_#I#b#`
+  34. `c:@S@BOPAlgo_CellsBuilder@F@RemoveInternalBoundaries#`
+  35. `c:@S@BRepAlgoAPI_Fuse@F@BRepAlgoAPI_Fuse#`
+  36. `c:@S@BRepAlgoAPI_Fuse@F@BRepAlgoAPI_Fuse#&1$@S@TopoDS_Shape#S0_#&1$@S@Message_ProgressRange#`
+  37. `c:@S@BRepAlgoAPI_Cut@F@BRepAlgoAPI_Cut#`
+  38. `c:@S@BRepAlgoAPI_Cut@F@BRepAlgoAPI_Cut#&1$@S@TopoDS_Shape#S0_#&1$@S@Message_ProgressRange#`
+  39. `c:@S@BRepAlgoAPI_Common@F@BRepAlgoAPI_Common#`
+  40. `c:@S@BRepAlgoAPI_Section@F@BRepAlgoAPI_Section#`
+  41. `c:@S@BOPAlgo_ArgumentAnalyzer@F@BOPAlgo_ArgumentAnalyzer#`
+  42. `c:@S@BOPAlgo_ArgumentAnalyzer@F@ArgumentTypeMode#`
+  43. `c:@S@BOPAlgo_ArgumentAnalyzer@F@ContinuityMode#`
+  44. `c:@S@BOPAlgo_ArgumentAnalyzer@F@CurveOnSurfaceMode#`
+  45. `c:@S@BOPAlgo_ArgumentAnalyzer@F@GetCheckResult#1`
+  46. `c:@S@BOPAlgo_ArgumentAnalyzer@F@HasFaulty#1`
+  47. `c:@S@BOPAlgo_ArgumentAnalyzer@F@MergeEdgeMode#`
+  48. `c:@S@BOPAlgo_ArgumentAnalyzer@F@MergeVertexMode#`
+  49. `c:@S@BOPAlgo_ArgumentAnalyzer@F@OperationType#`
+  50. `c:@S@BOPAlgo_ArgumentAnalyzer@F@Perform#&1$@S@Message_ProgressRange#`
+  51. `c:@S@BOPAlgo_ArgumentAnalyzer@F@RebuildFaceMode#`
+  52. `c:@S@BOPAlgo_ArgumentAnalyzer@F@SelfInterMode#`
+  53. `c:@S@BOPAlgo_ArgumentAnalyzer@F@SetShape1#&1$@S@TopoDS_Shape#`
+  54. `c:@S@BOPAlgo_ArgumentAnalyzer@F@SetShape2#&1$@S@TopoDS_Shape#`
+  55. `c:@S@BOPAlgo_ArgumentAnalyzer@F@SmallEdgeMode#`
+  56. `c:@S@BOPAlgo_ArgumentAnalyzer@F@StopOnFirstFaulty#`
+  57. `c:@S@BOPAlgo_ArgumentAnalyzer@F@TangentMode#`
+  58. `c:@S@BOPAlgo_Builder@F@Perform#&1$@S@Message_ProgressRange#`
+  59. `c:@S@BOPAlgo_Builder@F@SetArguments#&1$@S@NCollection_List>#$@S@TopoDS_Shape#`
+  60. `c:@S@BOPAlgo_Builder@F@SetGlue#$@E@BOPAlgo_GlueEnum#`
+  61. `c:@S@BOPAlgo_Builder@F@SetNonDestructive#b#`
+  62. `c:@S@BOPAlgo_BuilderShape@F@Generated#&1$@S@TopoDS_Shape#`
+  63. `c:@S@BOPAlgo_BuilderShape@F@IsDeleted#&1$@S@TopoDS_Shape#`
+  64. `c:@S@BOPAlgo_BuilderShape@F@Modified#&1$@S@TopoDS_Shape#`
+  65. `c:@S@BOPAlgo_BuilderShape@F@Shape#1`
+  66. `c:@S@BOPAlgo_Options@F@HasErrors#1`
+  67. `c:@S@BOPAlgo_Options@F@HasWarnings#1`
+  68. `c:@S@BOPAlgo_Options@F@SetFuzzyValue#d#`
+  69. `c:@S@BOPAlgo_Options@F@SetRunParallel#b#`
+  70. `c:@S@BRepAlgoAPI_Algo@F@Shape#`
+  71. `c:@S@BRepAlgoAPI_BooleanOperation@F@Build#&1$@S@Message_ProgressRange#`
+  72. `c:@S@BRepAlgoAPI_BooleanOperation@F@SetTools#&1$@S@NCollection_List>#$@S@TopoDS_Shape#`
+  73. `c:@S@BRepAlgoAPI_BuilderAlgo@F@SetGlue#$@E@BOPAlgo_GlueEnum#`
+
+- Validation: The focused Batch J suite covers all selected/variable/planar/draft/local-
+  feature modes, four Boolean modes, multi-tool split, defeaturing, cells, robust options,
+  deliberately bad preflight, bounded repair, copied history/deletion, source disposal,
+  real STEP/XDE, and real HWND screenshot evidence. The clean package repeats the robust
+  feature/history/recovery/STEP-XDE/HWND chain. Exact Release/Debug, full inventory,
+  regeneration, package, and release-check results are reported only after those gates run.
+- Upgrade impact: Recheck contour/edge ordering, two-distance support-face validation,
+  planar history-map behavior, draft neutral-plane conventions, BOP glue/fuzzy semantics,
+  cell material selection, defeaturing deletion history, analyzer mode defaults, recovery
+  results, and all 73 exact stable IDs on each OCCT/compiler upgrade.
+- Removal criteria: Replace this exception only after generated algorithm-local,
+  option-copy, diagnostic-copy, history-copy, and owning-topology descriptors preserve
+  the same failure, recovery, lifetime, and end-to-end package evidence.

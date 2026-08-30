@@ -9,7 +9,7 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Architecture](ARCHITECTURE.md) — system boundaries and component ownership.
 - [Repository layout](REPOSITORY_LAYOUT.md) — physical separation of documentation
   and code-related files.
-- [Roadmap](ROADMAP.md) — completed Batch B-I outcomes, active Batch J, and historical phases.
+- [Roadmap](ROADMAP.md) — completed Batch B-J outcomes and the next closure audit.
 - [Complete migration plan](MIGRATION_PLAN.md) — completed Batch C, Batch D, and Batch E
   matrices, large-wave rules, module/package boundaries, metrics,
   and product-scale gates.
@@ -32,7 +32,7 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   — completed 24-capability OCAF/XDE attribute, dependency-graph, undo/redo, savepoint,
   binary/XML persistence, and STEP integration denominator.
 - [Batch J feature modeling and history gap inventory](BATCH_J_FEATURE_MODELING_HISTORY_GAP_INVENTORY.md)
-  — locked 24-capability selected feature, robust Boolean, copied history, recovery,
+  — completed 24-capability selected feature, robust Boolean, copied history, recovery,
   STEP/XDE, viewer, and clean-package denominator.
 - [AI migration loop prompt](AI_MIGRATION_LOOP_PROMPT.md) — reusable re-entrant prompt
   for executing the largest coherent common-workflow wave instead of per-class tasks.
@@ -46,6 +46,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   C++/CLI, and platform-adapter availability and package boundaries.
 - [Full inventory classification](FULL_INVENTORY_CLASSIFICATION.md) — complete declaration
   and header dispositions, reason codes, and complete-versus-generated metrics.
+- [Preview.7 release notes](RELEASE_NOTES_8.0.1_PREVIEW_7.md) — complete Batch J selected
+  features, robust Boolean, copied history, recovery, STEP/XDE, real-HWND, and local evidence.
 - [Preview.6 release notes](RELEASE_NOTES_8.0.1_PREVIEW_6.md) — complete Batch I copied
   document state, graphs, history, four-format persistence, STEP/XDE, and local evidence.
 - [Preview.5 release notes](RELEASE_NOTES_8.0.1_PREVIEW_5.md) — complete Batch H advanced

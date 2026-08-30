@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.9",
+  "schemaVersion": "1.10",
   "occtVersion": "8.0.1",
   "scope": "foundation-prototype",
   "headers": [
@@ -1873,6 +1873,298 @@
     {
       "stableId": "c:@S@TDF_AttributeDelta@F@Label#1",
       "specialCaseId": "SC-045"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Add#d#d#&1$@S@TopoDS_Edge#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Generated#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@IsDeleted#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Modified#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@Add#d#d#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@Generated#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@IsDeleted#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@Modified#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet2d@F@BRepFilletAPI_MakeFillet2d#&1$@S@TopoDS_Face#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet2d@F@AddFillet#&1$@S@TopoDS_Vertex#d#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet2d@F@AddChamfer#&1$@S@TopoDS_Edge#S0_#d#d#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet2d@F@Build#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet2d@F@Modified#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@BRepOffsetAPI_DraftAngle#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@Add#&1$@S@TopoDS_Face#&1$@S@gp_Dir#d#&1$@S@gp_Pln#b#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@AddDone#1",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@Build#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@Generated#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@Modified#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepPrimAPI_MakeCylinder@F@BRepPrimAPI_MakeCylinder#&1$@S@gp_Ax2#d#d#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_UnifySameDomain@F@ShapeUpgrade_UnifySameDomain#&1$@S@TopoDS_Shape#b#b#b#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_UnifySameDomain@F@Shape#1",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Defeaturing@F@BRepAlgoAPI_Defeaturing#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Defeaturing@F@AddFaceToRemove#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Defeaturing@F@Build#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Defeaturing@F@Generated#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Defeaturing@F@IsDeleted#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Defeaturing@F@Modified#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Defeaturing@F@SetShape#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Defeaturing@F@SetToFillHistory#b#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_CellsBuilder@F@BOPAlgo_CellsBuilder#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_CellsBuilder@F@AddAllToResult#I#b#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_CellsBuilder@F@AddToResult#&1$@S@NCollection_List>#$@S@TopoDS_Shape#S0_#I#b#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_CellsBuilder@F@RemoveInternalBoundaries#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Fuse@F@BRepAlgoAPI_Fuse#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Fuse@F@BRepAlgoAPI_Fuse#&1$@S@TopoDS_Shape#S0_#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Cut@F@BRepAlgoAPI_Cut#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Cut@F@BRepAlgoAPI_Cut#&1$@S@TopoDS_Shape#S0_#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Common@F@BRepAlgoAPI_Common#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Section@F@BRepAlgoAPI_Section#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ArgumentAnalyzer@F@BOPAlgo_ArgumentAnalyzer#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ArgumentAnalyzer@F@ArgumentTypeMode#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ArgumentAnalyzer@F@ContinuityMode#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ArgumentAnalyzer@F@CurveOnSurfaceMode#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ArgumentAnalyzer@F@GetCheckResult#1",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ArgumentAnalyzer@F@HasFaulty#1",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ArgumentAnalyzer@F@MergeEdgeMode#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ArgumentAnalyzer@F@MergeVertexMode#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ArgumentAnalyzer@F@OperationType#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ArgumentAnalyzer@F@Perform#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ArgumentAnalyzer@F@RebuildFaceMode#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ArgumentAnalyzer@F@SelfInterMode#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ArgumentAnalyzer@F@SetShape1#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ArgumentAnalyzer@F@SetShape2#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ArgumentAnalyzer@F@SmallEdgeMode#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ArgumentAnalyzer@F@StopOnFirstFaulty#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_ArgumentAnalyzer@F@TangentMode#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Builder@F@Perform#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Builder@F@SetArguments#&1$@S@NCollection_List>#$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Builder@F@SetGlue#$@E@BOPAlgo_GlueEnum#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Builder@F@SetNonDestructive#b#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_BuilderShape@F@Generated#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_BuilderShape@F@IsDeleted#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_BuilderShape@F@Modified#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_BuilderShape@F@Shape#1",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@HasErrors#1",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@HasWarnings#1",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@SetFuzzyValue#d#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BOPAlgo_Options@F@SetRunParallel#b#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_Algo@F@Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BooleanOperation@F@Build#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BooleanOperation@F@SetTools#&1$@S@NCollection_List>#$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@SetGlue#$@E@BOPAlgo_GlueEnum#",
+      "specialCaseId": "SC-046"
     }
   ],
   "excludedBindings": [

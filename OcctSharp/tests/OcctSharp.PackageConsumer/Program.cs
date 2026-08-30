@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 51)
-    || runtime.BridgeVersion != "0.59.0"
+if (runtime.AbiVersion != new Version(1, 52)
+    || runtime.BridgeVersion != "0.60.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -1342,6 +1342,89 @@ try
             || !File.Exists(batchIOutputStep)
             || new FileInfo(batchIOutputStep).Length == 0)
             throw new InvalidOperationException("The packaged Batch I persistence/source-disposal/STEP export failed.");
+    }
+
+    FeatureModelingOptions batchJOptions = new()
+    {
+        FuzzyTolerance = 1e-7,
+        RunParallel = true,
+        NonDestructive = true,
+        RepairInputs = true,
+        UnifyResult = true
+    };
+    using Shape batchJSource = ShapeFactory.CreateBox(24, 18, 12);
+    Shape[] batchJEdges = batchJSource.GetSubShapes(ShapeKind.Edge);
+    FeatureOperationResult batchJFillet;
+    try
+    {
+        batchJFillet = FeatureModeling.VariableFillet(
+            batchJSource, [batchJEdges[0]], 0.5, 1.25, batchJOptions);
+    }
+    finally
+    {
+        foreach (Shape edge in batchJEdges) edge.Dispose();
+    }
+    using (batchJFillet)
+    using (Shape batchJToolBase = ShapeFactory.CreateBox(8, 8, 16))
+    using (Shape batchJTool = batchJToolBase.Transformed(ShapeTransform.CreateTranslation(10, 5, 0)))
+    using (FeatureOperationResult batchJPreflight = FeatureModeling.Preflight(
+        batchJFillet.RequireShape(), batchJTool, FeatureBooleanOperation.Fuse))
+    using (FeatureOperationResult batchJFused = FeatureModeling.Boolean(
+        FeatureBooleanOperation.Fuse, [batchJFillet.RequireShape()], [batchJTool], batchJOptions))
+    using (FeatureOperationResult batchJHoled = FeatureModeling.CutHole(
+        batchJFused.RequireShape(), new GpXyz(6, 9, 20), new GpXyz(0, 0, -1),
+        2.0, 30, throughAll: true, batchJOptions))
+    {
+        if (!batchJFillet.Diagnostics.Succeeded || batchJFillet.History.Count == 0
+            || !batchJPreflight.Diagnostics.Succeeded || !batchJFused.Diagnostics.Succeeded
+            || batchJFused.History.Count == 0 || !batchJHoled.Diagnostics.Succeeded
+            || !batchJHoled.RequireShape().IsValid)
+            throw new InvalidOperationException("The packaged Batch J feature/options/preflight/history workflow failed.");
+
+        batchJSource.Dispose();
+        if (!batchJFillet.RequireShape().IsValid
+            || batchJFillet.History.Any(static item => !item.Shape.IsValid))
+            throw new InvalidOperationException("The packaged Batch J owning result/history lifetime failed.");
+
+        string batchJStep = Path.Combine(exchangeDirectory, "package-batch-j-feature.step");
+        using (XdeDocument batchJDocument = XdeDocument.Create())
+        {
+            using XdeTransaction transaction = batchJDocument.BeginTransaction("Package Batch J feature");
+            XdeLabel label = batchJDocument.AddShape(batchJHoled.RequireShape(), "Package Batch J Feature");
+            label.Color = new XdeColor(0.28, 0.62, 0.88, 1.0);
+            if (!transaction.Commit())
+                throw new InvalidOperationException("The packaged Batch J XDE transaction failed.");
+            batchJDocument.WriteStep(batchJStep);
+        }
+        using XdeDocument batchJImported = XdeDocument.ReadStep(batchJStep);
+        using Shape batchJImportedShape = batchJImported.GetFreeShapes().Single().Shape;
+        if (!batchJImportedShape.IsValid)
+            throw new InvalidOperationException("The packaged Batch J STEP/XDE round trip failed.");
+
+        nint batchJWindow = PackageWindowMethods.CreateWindowEx(
+            0, "STATIC", "OcctSharp Batch J package feature", 0x80000000u,
+            -32000, -32000, 320, 320, 0, 0, 0, 0);
+        if (batchJWindow == 0)
+            throw new InvalidOperationException("The Batch J package HWND could not be created.");
+        try
+        {
+            _ = PackageWindowMethods.ShowWindow(batchJWindow, 4);
+            _ = PackageWindowMethods.UpdateWindow(batchJWindow);
+            using OcctViewer batchJViewer = OcctViewer.Create(batchJWindow);
+            using ViewerPresentation batchJPresentation = batchJViewer.Display(batchJImportedShape);
+            foreach (FeatureHistoryItem item in batchJFillet.Generated.Take(2))
+                using (batchJViewer.Display(item.Shape)) { }
+            batchJViewer.FitAll();
+            batchJViewer.Redraw();
+            string batchJImage = batchJViewer.SaveScreenshot(
+                Path.Combine(exchangeDirectory, "package-batch-j-feature.png"), overwrite: true);
+            if (!File.Exists(batchJImage) || new FileInfo(batchJImage).Length == 0)
+                throw new InvalidOperationException("The packaged Batch J real-HWND screenshot failed.");
+        }
+        finally
+        {
+            _ = PackageWindowMethods.DestroyWindow(batchJWindow);
+        }
     }
 }
 finally

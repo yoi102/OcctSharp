@@ -1,6 +1,6 @@
 # ADR-0071: Implement advanced feature modeling, history, and recovery as Batch J
 
-- Status: Accepted for implementation
+- Status: Accepted and implemented
 - Date: 2026-08-30
 - Scope: Batch J product denominator, dependency closure, ownership, and validation
 
@@ -50,6 +50,10 @@ real-HWND presentation and screenshot, the clean-package workflow, Release/Debug
 generator/runtime suites, regeneration, compatibility, inventory, runtime manifest,
 SBOM/provenance/checksums, and the complete Preview.7 local release gate must pass
 together before Batch J is complete.
+
+The complete Preview.7 local gate now passes with all 24 capabilities, exact SC-046
+accounting, Release/Debug, focused and full runtime tests, real STEP/XDE and HWND,
+clean-package execution, regeneration, compatibility, inventory, and release metadata.
 
 ## Related decisions
 

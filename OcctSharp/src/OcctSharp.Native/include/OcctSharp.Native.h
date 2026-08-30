@@ -50,6 +50,37 @@ typedef struct OcctSharp_GPropsHandle OcctSharp_GPropsHandle;
 typedef struct OcctSharp_OcafDocumentHandle OcctSharp_OcafDocumentHandle;
 typedef struct OcctSharp_ViewerHandle OcctSharp_ViewerHandle;
 typedef struct OcctSharp_StepReaderHandle OcctSharp_StepReaderHandle;
+typedef struct OcctSharp_FeatureResultHandle OcctSharp_FeatureResultHandle;
+
+typedef struct OcctSharp_FeatureOptions
+{
+  double fuzzy_tolerance;
+  int32_t run_parallel;
+  int32_t non_destructive;
+  int32_t glue_mode;
+  int32_t repair_inputs;
+  int32_t unify_result;
+} OcctSharp_FeatureOptions;
+
+typedef struct OcctSharp_FeatureResultInfo
+{
+  int32_t operation;
+  int32_t succeeded;
+  int32_t recovered;
+  int32_t error_count;
+  int32_t warning_count;
+  int32_t faulty_shape_count;
+  int32_t modified_count;
+  int32_t generated_count;
+  int32_t deleted_count;
+  int32_t result_is_valid;
+} OcctSharp_FeatureResultInfo;
+
+typedef struct OcctSharp_FeatureHistoryInfo
+{
+  int32_t source_index;
+  int32_t kind;
+} OcctSharp_FeatureHistoryInfo;
 
 typedef struct OcctSharp_MeshVertex
 {
@@ -879,6 +910,28 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_boolean_with_histo
   const OcctSharp_ShapeHandle* left, const OcctSharp_ShapeHandle* right,
   int32_t operation, int32_t tracked_kind,
   OcctSharp_ShapeHandle** out_shape, OcctSharp_BooleanHistorySummary* out_history);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_feature_execute(
+  int32_t operation,
+  const OcctSharp_ShapeHandle* const* shapes, int32_t shape_count,
+  int32_t primary_count, int32_t secondary_count,
+  const double* parameters, int32_t parameter_count,
+  const OcctSharp_Xyz* vectors, int32_t vector_count,
+  OcctSharp_FeatureOptions options,
+  OcctSharp_FeatureResultHandle** out_result);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_feature_result_info(
+  const OcctSharp_FeatureResultHandle* result, OcctSharp_FeatureResultInfo* out_info);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_feature_result_shape(
+  const OcctSharp_FeatureResultHandle* result, OcctSharp_ShapeHandle** out_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_feature_result_history(
+  const OcctSharp_FeatureResultHandle* result, int32_t index,
+  OcctSharp_FeatureHistoryInfo* out_info, OcctSharp_ShapeHandle** out_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_feature_result_deleted(
+  const OcctSharp_FeatureResultHandle* result, int32_t index, int32_t* out_source_index);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_feature_result_message(
+  const OcctSharp_FeatureResultHandle* result, char* buffer, int32_t capacity,
+  int32_t* out_written);
+OCCTSHARP_API void OCCTSHARP_CALL occtsharp_feature_result_release(
+  OcctSharp_FeatureResultHandle* result);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_distance(
   const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second,
   OcctSharp_ShapeDistanceResult* out_result);

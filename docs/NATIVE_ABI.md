@@ -512,7 +512,13 @@ glTF/GLB/OBJ/PLY/VRML providers while retaining document-parent XDE mutation.
 ABI 1.51 is the Preview.6 Batch I document-state/history/persistence boundary. It adds
 copied label/attribute/reference/tree/named-shape snapshots, document-owned named command
 history and undo/redo/savepoints, managed dependency-graph inputs, and call-local
-BinOcaf/XmlOcaf/BinXCAF/XmlXCAF persistence. The current bridge implementation is 0.59.0.
+BinOcaf/XmlOcaf/BinXCAF/XmlXCAF persistence. That bridge implementation is 0.59.0.
+
+ABI 1.52 is the Preview.7 Batch J advanced-feature/history/recovery boundary. It adds one
+short-lived feature-result owner, copied options/diagnostics/request indices, independently
+owning result and history topology, selected and planar finishing, draft/local features,
+multi-shape BOP/defeaturing/cells, preflight, and bounded recovery. The current bridge
+implementation is 0.60.0.
 
 ## Verification
 

@@ -444,4 +444,6 @@ indices. Options, diagnostics, and stage messages are copied values.
 Recovery validates and may create native-local healed/simplified copies before one retry;
 it never mutates or replaces the managed input wrappers. XDE stable entries remain
 document-parent-bound and viewer IDs remain viewer-parent-bound and thread-affine. This
-boundary is locked for Batch J; implementation and validation are `NOT RUN`.
+boundary is complete at Preview.7. Focused, Release/Debug, clean-source, and clean-package
+tests validate copied request association, independent result/history owners, recovery,
+STEP/XDE, and real-HWND behavior across the full 24/24 closure.

@@ -66,7 +66,7 @@ machine-readable report.
 
 The manifest-aware BatchSize=128 report is
 `OcctSharp/artifacts/generator-reports/full-inventory.json`, SHA256
-`D8C4F6C1CC1F2AD378F5722DEB507E5F1C6E4AE62E153F07F6A5C65464307A64`.
+`64A64AF69FB7C67A617CEA5223965452654452E395F10DC836F551D53DAA9961`.
 
 ## Interpretation
 

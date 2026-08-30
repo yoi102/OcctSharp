@@ -241,8 +241,9 @@ draft, local-feature, BOP, defeaturing, analysis, and recovery algorithms remain
 local. Inputs and selections are borrowed only for a call; result, modified, and generated
 topology crosses as independent registered owners. Deleted state, options, diagnostics,
 and request associations cross as copied values. XDE labels and viewer presentations keep
-their established parent/thread rules. Implementation and validation remain open for
-Preview.7.
+their established parent/thread rules. Preview.7 completes all 24/24 capabilities through
+Release/Debug, copied history/lifetime, real STEP/XDE and HWND, clean regeneration, and
+the clean 62-DLL package consumer without changing the physical deliverable topology.
 
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native

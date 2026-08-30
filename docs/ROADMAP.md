@@ -6,8 +6,7 @@ evidence; creating files or generating a large method count is not sufficient.
 The retired B00–B20 capability milestones and future package boundaries are documented
 in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the completed
 product-scale batch `B`; none is a separate current batch or commit boundary.
-Batch B through Batch I are complete for their accepted local implementation scopes,
-and Batch J is locked for implementation.
+Batch B through Batch J are complete for their accepted local implementation scopes.
 ADR-0063 closes C at alpha.54, ADR-0064 closes D at alpha.55,
 and ADR-0066 closes E in Preview.2 as one 24-capability engineering-inspection,
 exact-measurement, and PMI/AP242 wave. ADR-0067 closes F in Preview.3 as one 24-capability
@@ -15,22 +14,35 @@ freeform curve/surface and profile-to-solid authoring wave. ADR-0068 closes G in
 as one 24-capability technical-drawing, hidden-line, section, and vector-output wave.
 ADR-0069 closes H in Preview.5 as one 24-capability advanced-mesh, scene, material,
 LOD, and interchange wave. ADR-0070 closes I in Preview.6 as one 24-capability document-
-state, dependency-graph, history, undo/redo, savepoint, and persistence wave. Hosted CI,
+state, dependency-graph, history, undo/redo, savepoint, and persistence wave.
+ADR-0071 closes J in Preview.7 as one 24-capability advanced feature-modeling, robust-
+Boolean, copied-history, recovery, STEP/XDE, viewer, lifetime, and clean-package wave. Hosted CI,
 signing, and NuGet publication remain separate
 release-readiness work rather than
 unfinished batch implementation.
 
-## Active priority: Batch J advanced feature modeling, history, and recovery
+## Active priority: audit the next high-value cross-family closure
+
+Batch J is closed. The next wave must begin with a fresh, finite product denominator and
+an exact inventory audit of directly used blocked declarations. It must select a coherent
+user workflow across multiple OCCT families rather than mechanically migrating the
+remaining 50,075 narrow blocked declarations or reopening completed B-J work.
+
+## Completed priority: Batch J advanced feature modeling, history, and recovery
 
 ADR-0071 and [the Batch J feature modeling gap inventory](BATCH_J_FEATURE_MODELING_HISTORY_GAP_INVENTORY.md)
-freeze one 24-capability dependency closure before implementation. It crosses selected
+freezes one 24-capability dependency closure. It crosses selected
 and variable fillets and chamfers, planar edits, draft, bosses, pockets, holes, revolved
 and swept local features, split/defeaturing/cell and batch Boolean work, robust options,
 preflight, copied diagnostics and history, recovery, STEP/XDE, viewer, lifetime, and the
 clean package workflow.
 
 The focused Preview.6 root audit covers 706 declarations: 374 blocked, 16 emitted, 16
-manual, and 300 skipped. Preparation is complete and implementation is 0/24. Feature-
+manual, and 300 skipped. Preparation and implementation are complete at 24/24 in
+Preview.7. SC-046 reconciles exactly 73 directly used blocked stable IDs. Release/Debug,
+Runtime 139/139, focused 4/4, real STEP/XDE and HWND, copied history/lifetime, the clean
+62-DLL package consumer, clean regeneration, inventory, compatibility, and the complete
+local release gate pass. Feature-
 only, Boolean-only, history-only, recovery-only, numbered, or dotted fragments cannot be
 reported as Batch J completion.
 
@@ -358,5 +370,7 @@ drawing denominator under ADR-0068 in Preview.4. Batch H completes the immutable
 24-capability advanced-mesh/scene/material/LOD/interchange denominator under ADR-0069
 in Preview.5. Batch I completes the immutable 24-capability document-state/attribute-
 graph/history/persistence denominator under ADR-0070 in Preview.6. Numbered or dotted
-fragments, per-class batches, and small
-completion percentages were not used.
+fragments, per-class batches, and small completion percentages were not used. Batch J
+completes the immutable 24-capability feature-modeling/robust-Boolean/copied-history/
+recovery denominator under ADR-0071 in Preview.7. The next product wave starts only
+after a new cross-family denominator and dependency closure are audited and frozen.

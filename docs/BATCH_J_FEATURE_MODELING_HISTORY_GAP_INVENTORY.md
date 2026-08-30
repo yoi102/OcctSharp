@@ -5,7 +5,7 @@ for Batch J before implementation. It measures one editable feature-modeling wor
 not individual BRepFilletAPI, BRepOffsetAPI, BRepFeat, BOPAlgo, BRepTools, ShapeUpgrade,
 or BRepCheck class counts.
 
-Preparation status: **COMPLETE**. Implementation status: **NOT STARTED (0/24)**. The
+Preparation status: **COMPLETE**. Implementation status: **COMPLETE (24/24)**. The
 denominator below is immutable for Batch J.
 
 ## Product outcome
@@ -103,6 +103,14 @@ result, and history lifetime tests, the clean 62-DLL package consumer, generated
 freshness, byte-identical regeneration, API compatibility, full inventory, runtime
 hashes, SBOM/provenance/checksums, documentation, and the complete Preview.7 local
 release check all pass together.
+
+All gates above pass locally. SC-046 reconciles exactly 73 directly used blocked stable
+IDs. Release and Debug pass Generator 91/91, Runtime 139/139, focused Batch J 4/4, and
+dependency profiles 6/6. The repository and clean 62-DLL package consumer execute the
+complete feature/options/preflight/recovery/copied-history/STEP-XDE/real-HWND workflow.
+All 83 generated files are fresh and byte-identical after clean regeneration. The final
+inventory classifies 116,272/116,272 declarations and 7,090/7,090 headers with zero
+pending, and API comparison against alpha.38 has 38,232 additions and zero removals.
 
 ## Explicit non-goals
 
