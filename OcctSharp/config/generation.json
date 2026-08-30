@@ -1561,6 +1561,102 @@
     {
       "stableId": "c:@S@TopExp_Explorer@F@TopExp_Explorer#&1$@S@TopoDS_Shape#$@E@TopAbs_ShapeEnum#S2_#",
       "specialCaseId": "SC-043"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Copy@F@BRepBuilderAPI_Copy#&1$@S@TopoDS_Shape#b#b#",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@BRepMesh_IncrementalMesh@F@BRepMesh_IncrementalMesh#&1$@S@TopoDS_Shape#&1$@S@IMeshTools_Parameters#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@BRepMesh_IncrementalMesh@F@BRepMesh_IncrementalMesh#&1$@S@TopoDS_Shape#d#b#d#b#",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangle@F@Get#&I#S0_#S0_#1",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@DEGLTF_Provider@F@Read#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@DEGLTF_Provider@F@Write#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@DEOBJ_Provider@F@Read#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@DEOBJ_Provider@F@Write#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@DEPLY_Provider@F@Write#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@DEVRML_Provider@F@Write#&1$@S@TCollection_AsciiString#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@Quantity_ColorRGBA@F@Quantity_ColorRGBA#f#f#f#f#",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@Quantity_ColorRGBA@F@GetRGB#1",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@Quantity_ColorRGBA@F@Alpha#1",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialPBR@F@XCAFDoc_VisMaterialPBR#",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@SetPbrMaterial#&1$@S@XCAFDoc_VisMaterialPBR#",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@SetAlphaMode#$@E@Graphic3d_AlphaMode#f#",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@PbrMaterial#1",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@ConvertToPbrMaterial#",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterial@F@AlphaCutOff#1",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@AddMaterial#&1$@N@opencascade@S@handle>#$@S@XCAFDoc_VisMaterial#&1$@S@TCollection_AsciiString#1",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@SetShapeMaterial#&1$@S@TDF_Label#S0_#1",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@GetShapeMaterial#&1$@S@TDF_Label#S",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_VisMaterialTool@F@GetShapeMaterial#&1$@S@TDF_Label#&S1_#S",
+      "specialCaseId": "SC-044"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_DocumentTool@F@VisMaterialTool#&1$@S@TDF_Label#S",
+      "specialCaseId": "SC-044"
     }
   ],
   "excludedBindings": [

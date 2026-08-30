@@ -76,4 +76,11 @@ public sealed class XdeLabel
         get => Document.GetMaterial(Entry);
         set => Document.SetMaterial(Entry, value ?? throw new ArgumentNullException(nameof(value)));
     }
+
+    /// <summary>Gets or sets the copied metallic-roughness visualization material.</summary>
+    public XdeVisualMaterial? VisualMaterial
+    {
+        get => Document.GetVisualMaterial(Entry);
+        set => Document.SetVisualMaterial(Entry, value ?? throw new ArgumentNullException(nameof(value)));
+    }
 }

@@ -26,7 +26,7 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   — completed 24-capability exact/polygonal HLR, section, copied-polyline, layered-SVG,
   standard-view, STEP/XDE, and real-HWND denominator.
 - [Batch H advanced mesh and scene gap inventory](BATCH_H_ADVANCED_MESH_SCENE_GAP_INVENTORY.md)
-  — locked 24-capability grouped-mesh, material, LOD, XDE-scene, interchange, and
+  — completed 24-capability grouped-mesh, material, LOD, XDE-scene, interchange, and
   real-HWND denominator.
 - [AI migration loop prompt](AI_MIGRATION_LOOP_PROMPT.md) — reusable re-entrant prompt
   for executing the largest coherent common-workflow wave instead of per-class tasks.
@@ -40,6 +40,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   C++/CLI, and platform-adapter availability and package boundaries.
 - [Full inventory classification](FULL_INVENTORY_CLASSIFICATION.md) — complete declaration
   and header dispositions, reason codes, and complete-versus-generated metrics.
+- [Preview.5 release notes](RELEASE_NOTES_8.0.1_PREVIEW_5.md) — complete Batch H advanced
+  mesh, PBR material, LOD, copied scene, mesh interchange, real-HWND, and local evidence.
 - [Preview.4 release notes](RELEASE_NOTES_8.0.1_PREVIEW_4.md) — complete Batch G technical
   drawing, HLR, section, SVG, standard-view, real-HWND, and local release evidence.
 - [Preview.3 release notes](RELEASE_NOTES_8.0.1_PREVIEW_3.md) — complete Batch F freeform

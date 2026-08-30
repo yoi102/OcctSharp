@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 49)
-    || runtime.BridgeVersion != "0.57.0"
+if (runtime.AbiVersion != new Version(1, 50)
+    || runtime.BridgeVersion != "0.58.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -1187,6 +1187,79 @@ try
             throw new InvalidOperationException("The packaged Batch G real-HWND drawing screenshot failed.");
     }
     finally { _ = PackageWindowMethods.DestroyWindow(batchGWindow); }
+
+    AdvancedMeshSnapshot batchHMesh = AdvancedMesh.Create(
+        batchFImportedShape,
+        new AdvancedMeshOptions { LinearDeflection = 0.12, AngularDeflection = 0.35 });
+    AdvancedMeshLodSet batchHLods = AdvancedMesh.CreateLods(batchFImportedShape, [0.08, 0.3, 1.0]);
+    if (batchHMesh.Groups.Count == 0 || batchHMesh.Statistics.TriangleCount == 0
+        || batchHMesh.Diagnostics.ConnectedComponentCount == 0 || batchHLods.Levels.Count != 3
+        || batchHLods.Levels[0].Mesh.Statistics.TriangleCount < batchHLods.Levels[2].Mesh.Statistics.TriangleCount)
+        throw new InvalidOperationException("The packaged Batch H grouped mesh/statistics/diagnostics/LOD workflow failed.");
+
+    MeshScene batchHScene;
+    string batchHGltf = Path.Combine(exchangeDirectory, "package-batch-h-scene.gltf");
+    string batchHGlb = Path.Combine(exchangeDirectory, "package-batch-h-scene.glb");
+    string batchHObj = Path.Combine(exchangeDirectory, "package-batch-h-scene.obj");
+    string batchHPly = Path.Combine(exchangeDirectory, "package-batch-h-scene.ply");
+    string batchHVrml = Path.Combine(exchangeDirectory, "package-batch-h-scene.wrl");
+    using (XdeDocument batchHDocument = XdeDocument.Create())
+    {
+        using (XdeTransaction transaction = batchHDocument.BeginTransaction())
+        {
+            XdeLabel part = batchHDocument.AddShape(batchFImportedShape, "Package Batch H Shared Part");
+            part.Color = new XdeColor(0.12, 0.55, 0.78, 1);
+            part.SetLayer("Package Mesh Scene");
+            part.Material = new XdeMaterial("Aluminum", "Package Batch H", 2.7, "Density", "g/cm3");
+            part.VisualMaterial = new XdeVisualMaterial(
+                "Package Batch H PBR", new XdeColor(0.12, 0.55, 0.78, 1),
+                0.5, 0.25, GpXyz.Origin);
+            XdeLabel assembly = batchHDocument.AddAssembly("Package Batch H Assembly");
+            using (TopLocLocation identity = TopLocLocation.Identity)
+                _ = batchHDocument.AddComponent(assembly, part, identity);
+            using (GpTrsf transform = GpTrsf.Create(25, 0, 0))
+            using (TopLocLocation batchHLocation = TopLocLocation.FromTransform(transform))
+                _ = batchHDocument.AddComponent(assembly, part, batchHLocation);
+            if (!transaction.Commit())
+                throw new InvalidOperationException("The packaged Batch H XDE transaction failed.");
+        }
+
+        batchHScene = MeshScene.FromXdeDocument(batchHDocument);
+        batchHDocument.WriteGltf(batchHGltf);
+        batchHDocument.WriteGltf(batchHGlb);
+        batchHDocument.WriteObj(batchHObj);
+        batchHDocument.WritePly(batchHPly);
+        batchHDocument.WriteVrml(batchHVrml);
+    }
+    if (batchHScene.Definitions.Count != 1 || batchHScene.InstanceCount != 2
+        || batchHScene.Nodes.Count != 3 || batchHScene.TotalTriangleCount == 0
+        || batchHScene.Nodes.Count(node => node.VisualMaterial is not null) != 2)
+        throw new InvalidOperationException("The packaged Batch H copied hierarchy/material/shared-instance scene failed.");
+    foreach (string path in new[] { batchHGltf, batchHGlb, batchHObj, batchHPly, batchHVrml })
+        if (!File.Exists(path) || new FileInfo(path).Length == 0)
+            throw new InvalidOperationException($"The packaged Batch H interchange output is empty: '{path}'.");
+    if (MeshScene.ReadGltf(batchHGltf).TotalTriangleCount == 0
+        || MeshScene.ReadGltf(batchHGlb).TotalTriangleCount == 0
+        || MeshScene.ReadObj(batchHObj).TotalTriangleCount == 0)
+        throw new InvalidOperationException("The packaged Batch H glTF/GLB/OBJ read-back workflow failed.");
+
+    nint batchHWindow = PackageWindowMethods.CreateWindowEx(
+        0, "STATIC", "OcctSharp Batch H package scene", 0x80000000u,
+        -32000, -32000, 320, 320, 0, 0, 0, 0);
+    if (batchHWindow == 0) throw new InvalidOperationException("The Batch H package HWND could not be created.");
+    try
+    {
+        _ = PackageWindowMethods.ShowWindow(batchHWindow, 4);
+        _ = PackageWindowMethods.UpdateWindow(batchHWindow);
+        using OcctViewer batchHViewer = OcctViewer.Create(batchHWindow);
+        using ViewerPresentation batchHPresentation = batchHViewer.Display(batchFImportedShape);
+        batchHViewer.FitAll(); batchHViewer.Redraw();
+        string batchHImage = batchHViewer.SaveScreenshot(
+            Path.Combine(exchangeDirectory, "package-batch-h-scene.png"), overwrite: true);
+        if (!File.Exists(batchHImage) || new FileInfo(batchHImage).Length == 0)
+            throw new InvalidOperationException("The packaged Batch H real-HWND scene screenshot failed.");
+    }
+    finally { _ = PackageWindowMethods.DestroyWindow(batchHWindow); }
 }
 finally
 {

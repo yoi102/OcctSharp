@@ -1,6 +1,6 @@
 # ADR-0069: Implement advanced mesh, scene, material, LOD, and interchange as Batch H
 
-- Status: Accepted for implementation
+- Status: Accepted and completed
 - Date: 2026-08-30
 - Scope: Batch H product denominator, dependency closure, ownership, and validation
 
@@ -48,6 +48,13 @@ Focused mesh/group/statistics/diagnostic/LOD/scene/material/interchange/lifetime
 real STEP/XDE plus real HWND, the clean-package workflow, Release/Debug, generator/runtime
 suites, regeneration, compatibility, inventory, runtime manifest, SBOM/provenance/
 checksums, and the complete local release gate must pass together before H is complete.
+
+This chain passed for Preview.5: Release and Debug build with zero warnings/errors;
+Generator 91/91, Runtime 131/131, focused Batch H 4/4, dependency profiles 6/6, 83-file
+freshness and byte-identical clean regeneration, exact SC-044 accounting, the complete
+inventory, additive API comparison, runtime hashes, the clean 62-DLL package consumer,
+SBOM/provenance/checksums, and the complete local release gate. Hosted execution,
+signing, publication, and GitHub work remain outside the batch.
 
 ## Related decisions
 

@@ -4,8 +4,8 @@ This document locks the product denominator and complete cross-family dependency
 for Batch H before implementation. It measures one mesh-scene interchange workflow, not
 individual Poly, RWMesh, RWGltf, RWObj, XCAF, or viewer class counts.
 
-Preparation status: **COMPLETE**. Implementation status: **NOT STARTED (0/24)**. The
-denominator below is immutable for Batch H.
+Preparation status: **COMPLETE**. Implementation status: **COMPLETE (24/24)**. The
+denominator below remains immutable for Batch H.
 
 ## Product outcome
 
@@ -76,8 +76,8 @@ The Preview.4 final inventory was queried for exactly 24 decision-driving roots:
 | `Skipped` | 226 | Destructors, metadata, protected helpers, and unsafe declarations remain excluded |
 | **Total** | **840** | Deduplicated audit candidates; product completion remains the 24 rows above |
 
-Only newly direct blocked overloads used by the implementation will be reconciled under
-SC-044. This audit will not be bulk-marked manual.
+SC-044 reconciles exactly 24 newly direct blocked overloads used by the implementation.
+This audit was not bulk-marked manual.
 
 ## Cross-family dependency closure
 
@@ -100,6 +100,18 @@ Debug builds, Generator and Runtime suites, real STEP/XDE and real-HWND executio
 clean 62-DLL package consumer, generated freshness, byte-identical regeneration, API
 compatibility, full inventory, runtime hashes, SBOM/provenance/checksums, documentation,
 and the complete Preview.5 local release check all pass together.
+
+All gates passed for Preview.5. Release and Debug build with zero warnings/errors;
+Generator 91/91, Runtime 131/131, focused Batch H 4/4, and dependency profiles 6/6 pass.
+Repository runtime and the clean 62-DLL package consumer execute grouped mesh attributes,
+statistics, diagnostics, LODs, PBR/physical metadata, nested/shared scene instances,
+glTF/GLB/OBJ read/write, PLY/VRML write, STEP/XDE, and a real-HWND screenshot. All 83
+generated files are current and byte-identical after clean regeneration; the 27-edge
+generated dependency graph remains resolved and acyclic. Full inventory closes 116,272
+declarations and 7,090 headers with 16,353 emitted, 373 manual, 49,344 skipped, 50,202
+blocked, and zero supported-unselected/pending/HD099. API comparison is additive at
+37,904 additions and zero removals. Runtime hashes, SBOM, provenance, checksums, Git
+whitespace, and the complete local release check pass.
 
 ## Explicit non-goals
 

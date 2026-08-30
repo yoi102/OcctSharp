@@ -6,16 +6,18 @@ evidence; creating files or generating a large method count is not sufficient.
 The retired B00–B20 capability milestones and future package boundaries are documented
 in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the completed
 product-scale batch `B`; none is a separate current batch or commit boundary.
-Batch B through Batch G are complete for their accepted local
+Batch B through Batch H are complete for their accepted local
 implementation scopes. ADR-0063 closes C at alpha.54, ADR-0064 closes D at alpha.55,
 and ADR-0066 closes E in Preview.2 as one 24-capability engineering-inspection,
 exact-measurement, and PMI/AP242 wave. ADR-0067 closes F in Preview.3 as one 24-capability
 freeform curve/surface and profile-to-solid authoring wave. ADR-0068 closes G in Preview.4
 as one 24-capability technical-drawing, hidden-line, section, and vector-output wave. Hosted CI,
-signing, and NuGet publication remain separate release-readiness work rather than
+ADR-0069 closes H in Preview.5 as one 24-capability advanced-mesh, scene, material,
+LOD, and interchange wave. Hosted CI, signing, and NuGet publication remain separate
+release-readiness work rather than
 unfinished batch implementation.
 
-## Active priority: Batch H advanced mesh, scene, material, LOD, and interchange
+## Completed priority: Batch H advanced mesh, scene, material, LOD, and interchange
 
 ADR-0069 and [the Batch H advanced mesh and scene gap inventory](BATCH_H_ADVANCED_MESH_SCENE_GAP_INVENTORY.md)
 freeze one 24-capability dependency closure before implementation. It crosses BRepMesh/
@@ -24,7 +26,10 @@ multiple LODs, XCAF color/physical/PBR materials, copied XDE hierarchy/instances
 transforms, RWGltf glTF/GLB, RWObj, RWPly, VRML, AIS, and clean package evidence.
 
 The focused root audit covers 840 declarations: 450 blocked, 154 emitted, 10 manual, and
-226 skipped. Preparation is complete and implementation is 0/24. Mesh-only, material-
+226 skipped. Preparation and implementation are complete at 24/24 in Preview.5. SC-044
+reconciles exactly 24 direct blocked stable IDs. Release/Debug, Runtime 131/131, focused
+4/4, real STEP/XDE and HWND, clean package, regeneration, inventory, compatibility, and
+local release gates pass. Mesh-only, material-
 only, LOD-only, scene-only, format-only, numbered, or dotted fragments cannot be reported
 as Batch H completion. IVtk/VTK is an optional external-dependency profile and is not a
 required Batch H capability.
@@ -120,7 +125,7 @@ acyclic observed cross-shard edges. The generated managed graph is eligible for 
 project migration, but physical splitting is deferred: managed assembly identity/manual
 facades and native cross-DLL registry/creator-release semantics still need separate ADRs.
 Completed Batch C therefore retains one managed assembly, one native DLL, and one package.
-Completed Batch D, Batch E, Batch F, and Batch G retain the same physical boundary; none authorizes
+Completed Batch D, Batch E, Batch F, Batch G, and Batch H retain the same physical boundary; none authorizes
 the deferred split.
 
 The phase record below is retained as history and architecture context; it is not an
@@ -315,5 +320,7 @@ completed the production viewport/model-review matrix defined by ADR-0064. Batch
 completed the immutable 24-capability inspection/PMI denominator defined by ADR-0066 in
 Preview.2. Batch F completes the immutable 24-capability freeform authoring denominator
 under ADR-0067 in Preview.3. Batch G completes the immutable 24-capability technical-
-drawing denominator under ADR-0068 in Preview.4. Numbered or dotted fragments, per-class batches, and small
+drawing denominator under ADR-0068 in Preview.4. Batch H completes the immutable
+24-capability advanced-mesh/scene/material/LOD/interchange denominator under ADR-0069
+in Preview.5. Numbered or dotted fragments, per-class batches, and small
 completion percentages were not used.

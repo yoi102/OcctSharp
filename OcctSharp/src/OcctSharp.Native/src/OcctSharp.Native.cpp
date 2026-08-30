@@ -2,6 +2,7 @@
 #include "OcctSharp.Native.Internal.hxx"
 
 #include <BRep_Builder.hxx>
+#include <BRepBuilderAPI_Copy.hxx>
 #include <BRepBuilderAPI_Transform.hxx>
 #include <BRepBuilderAPI_MakeEdge.hxx>
 #include <BRepBuilderAPI_MakeFace.hxx>
@@ -15,6 +16,7 @@
 #include <BRepTools.hxx>
 #include <BRepTools_ReShape.hxx>
 #include <BRepMesh_IncrementalMesh.hxx>
+#include <IMeshTools_Parameters.hxx>
 #include <BRepPrimAPI_MakeBox.hxx>
 #include <BRepPrimAPI_MakeSphere.hxx>
 #include <BRepPrimAPI_MakeCylinder.hxx>
@@ -166,6 +168,8 @@
 #include <XCAFDoc_ShapeTool.hxx>
 #include <XCAFDoc_Volume.hxx>
 #include <XCAFDoc_VisMaterial.hxx>
+#include <XCAFDoc_VisMaterialTool.hxx>
+#include <XCAFDoc_VisMaterialPBR.hxx>
 #include <XCAFDoc.hxx>
 #include <XCAFDoc_GraphNode.hxx>
 #include <XCAFDimTolObjects_DatumObject.hxx>
@@ -383,8 +387,8 @@ struct OcctSharp_StepReaderHandle
 
 namespace
 {
-constexpr uint32_t AbiVersion = 0x00010031U;
-constexpr const char* BridgeVersion = "0.57.0";
+constexpr uint32_t AbiVersion = 0x00010032U;
+constexpr const char* BridgeVersion = "0.58.0";
 thread_local std::string LastError;
 std::mutex LiveShapesMutex;
 std::unordered_set<const OcctSharp_ShapeHandle*> LiveShapes;
@@ -1146,6 +1150,95 @@ DetailedMeshData BuildDetailedMesh(
       int32_t vertexC = base + node3 - 1;
       if (isReversed) std::swap(vertexB, vertexC);
       data.Triangles.push_back({ vertexA, vertexB, vertexC, faceIndex, isReversed ? 1 : 0 });
+    }
+  }
+  return data;
+}
+
+DetailedMeshData BuildAdvancedMesh(
+  const OcctSharp_ShapeHandle* shape,
+  const double linear_deflection,
+  const double angular_deflection,
+  const double minimum_size,
+  const bool relative,
+  const bool parallel,
+  const bool internal_vertices,
+  const bool control_surface_deflection)
+{
+  ValidateUsableShape(shape);
+  ValidateMeshParameters(linear_deflection, angular_deflection);
+  if (!std::isfinite(minimum_size) || minimum_size < 0.0)
+    throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The advanced-mesh minimum size must be finite and non-negative.");
+
+  BRepBuilderAPI_Copy copier(shape->Value, true, false);
+  const TopoDS_Shape working_shape = copier.Shape();
+  if (working_shape.IsNull())
+    throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT could not copy the shape for independent advanced meshing.");
+
+  IMeshTools_Parameters parameters;
+  parameters.Deflection = linear_deflection;
+  parameters.Angle = angular_deflection;
+  parameters.MinSize = minimum_size > 0.0 ? minimum_size : -1.0;
+  parameters.Relative = relative;
+  parameters.InParallel = parallel;
+  parameters.InternalVerticesMode = internal_vertices;
+  parameters.ControlSurfaceDeflection = control_surface_deflection;
+  parameters.AllowQualityDecrease = true;
+  BRepMesh_IncrementalMesh mesher(working_shape, parameters);
+  if (!mesher.IsDone())
+    throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT advanced meshing did not complete.");
+
+  DetailedMeshData data;
+  for (TopExp_Explorer explorer(working_shape, TopAbs_FACE); explorer.More(); explorer.Next())
+  {
+    if (data.FaceCount == std::numeric_limits<int32_t>::max())
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The face count exceeds the 32-bit ABI.");
+    const int32_t face_index = data.FaceCount++;
+    const TopoDS_Face face = TopoDS::Face(explorer.Current());
+    TopLoc_Location location;
+    opencascade::handle<Poly_Triangulation> triangulation = BRep_Tool::Triangulation(face, location);
+    if (triangulation.IsNull()) continue;
+    if (!triangulation->HasNormals()) triangulation->ComputeNormals();
+
+    const size_t base_value = data.Vertices.size();
+    if (base_value + static_cast<size_t>(triangulation->NbNodes())
+        > static_cast<size_t>(std::numeric_limits<int32_t>::max()))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The advanced mesh exceeds the 32-bit ABI.");
+    const int32_t base = static_cast<int32_t>(base_value);
+    const gp_Trsf location_transform = location.Transformation();
+    const bool is_reversed = face.Orientation() == TopAbs_REVERSED;
+    const bool has_uv = triangulation->HasUVNodes();
+    for (int32_t node_index = 1; node_index <= triangulation->NbNodes(); ++node_index)
+    {
+      gp_Pnt point = triangulation->Node(node_index);
+      point.Transform(location_transform);
+      gp_Dir normal = triangulation->Normal(node_index);
+      normal.Transform(location_transform);
+      if (is_reversed) normal.Reverse();
+      double u = 0.0;
+      double v = 0.0;
+      if (has_uv)
+      {
+        const gp_Pnt2d uv = triangulation->UVNode(node_index);
+        u = uv.X();
+        v = uv.Y();
+      }
+      data.Vertices.push_back({
+        point.X(), point.Y(), point.Z(), normal.X(), normal.Y(), normal.Z(),
+        u, v, has_uv ? 1 : 0 });
+    }
+
+    for (int32_t triangle_index = 1; triangle_index <= triangulation->NbTriangles(); ++triangle_index)
+    {
+      int node1 = 0;
+      int node2 = 0;
+      int node3 = 0;
+      triangulation->Triangle(triangle_index).Get(node1, node2, node3);
+      int32_t vertex_a = base + node1 - 1;
+      int32_t vertex_b = base + node2 - 1;
+      int32_t vertex_c = base + node3 - 1;
+      if (is_reversed) std::swap(vertex_b, vertex_c);
+      data.Triangles.push_back({ vertex_a, vertex_b, vertex_c, face_index, is_reversed ? 1 : 0 });
     }
   }
   return data;
@@ -4653,6 +4746,79 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_detailed_mesh_snapshot(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_advanced_mesh_count(
+  const OcctSharp_ShapeHandle* shape,
+  const double linear_deflection, const double angular_deflection, const double minimum_size,
+  const int32_t relative, const int32_t parallel, const int32_t internal_vertices,
+  const int32_t control_surface_deflection,
+  int32_t* out_vertex_count, int32_t* out_triangle_count, int32_t* out_face_count)
+{
+  if (out_vertex_count == nullptr || out_triangle_count == nullptr || out_face_count == nullptr)
+  {
+    SetLastError("An advanced-mesh count output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_vertex_count = 0;
+  *out_triangle_count = 0;
+  *out_face_count = 0;
+  return Guard([&]
+  {
+    DetailedMeshData data = BuildAdvancedMesh(
+      shape, linear_deflection, angular_deflection, minimum_size,
+      relative != 0, parallel != 0, internal_vertices != 0,
+      control_surface_deflection != 0);
+    if (data.Vertices.size() > static_cast<size_t>(std::numeric_limits<int32_t>::max())
+        || data.Triangles.size() > static_cast<size_t>(std::numeric_limits<int32_t>::max()))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The advanced mesh exceeds the 32-bit ABI.");
+    *out_vertex_count = static_cast<int32_t>(data.Vertices.size());
+    *out_triangle_count = static_cast<int32_t>(data.Triangles.size());
+    *out_face_count = data.FaceCount;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_advanced_mesh_snapshot(
+  const OcctSharp_ShapeHandle* shape,
+  const double linear_deflection, const double angular_deflection, const double minimum_size,
+  const int32_t relative, const int32_t parallel, const int32_t internal_vertices,
+  const int32_t control_surface_deflection,
+  OcctSharp_DetailedMeshVertex* vertices, const int32_t vertex_capacity,
+  int32_t* out_vertex_count,
+  OcctSharp_DetailedMeshTriangle* triangles, const int32_t triangle_capacity,
+  int32_t* out_triangle_count, int32_t* out_face_count)
+{
+  if (out_vertex_count == nullptr || out_triangle_count == nullptr || out_face_count == nullptr)
+  {
+    SetLastError("An advanced-mesh snapshot count output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_vertex_count = 0;
+  *out_triangle_count = 0;
+  *out_face_count = 0;
+  if (vertex_capacity < 0 || triangle_capacity < 0
+      || (vertex_capacity > 0 && vertices == nullptr)
+      || (triangle_capacity > 0 && triangles == nullptr))
+  {
+    SetLastError("The advanced-mesh snapshot capacity or output buffer is invalid.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  return Guard([&]
+  {
+    DetailedMeshData data = BuildAdvancedMesh(
+      shape, linear_deflection, angular_deflection, minimum_size,
+      relative != 0, parallel != 0, internal_vertices != 0,
+      control_surface_deflection != 0);
+    *out_vertex_count = static_cast<int32_t>(data.Vertices.size());
+    *out_triangle_count = static_cast<int32_t>(data.Triangles.size());
+    *out_face_count = data.FaceCount;
+    if (vertex_capacity < *out_vertex_count || triangle_capacity < *out_triangle_count)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The advanced-mesh snapshot buffer is too small.");
+    if (*out_vertex_count > 0)
+      std::memcpy(vertices, data.Vertices.data(), data.Vertices.size() * sizeof(OcctSharp_DetailedMeshVertex));
+    if (*out_triangle_count > 0)
+      std::memcpy(triangles, data.Triangles.data(), data.Triangles.size() * sizeof(OcctSharp_DetailedMeshTriangle));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_brep(
   const char* file_path,
   OcctSharp_ShapeHandle** out_shape)
@@ -6768,6 +6934,54 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step(
     file_path, 1, 1, 1, 1, 1, 1, 1, out_document);
 }
 
+template <typename TProvider>
+OcctSharp_Status ReadXdeMeshDocument(
+  const char* file_path,
+  OcctSharp_OcafDocumentHandle** out_document,
+  TProvider& provider,
+  const char* failure_message)
+{
+  if (out_document == nullptr)
+  {
+    SetLastError("The output mesh-scene XDE document pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_document = nullptr;
+  return Guard([&]
+  {
+    ValidatePath(file_path);
+    OcctSharp_OcafDocumentHandle* result = CreateOwnedXdeDocument();
+    try
+    {
+      if (!provider.Read(TCollection_AsciiString(file_path), result->Document))
+        throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, failure_message);
+      GetXdeShapeTool(result)->UpdateAssemblies();
+      *out_document = result;
+    }
+    catch (...)
+    {
+      occtsharp_ocaf_document_release(result);
+      throw;
+    }
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_gltf(
+  const char* file_path, OcctSharp_OcafDocumentHandle** out_document)
+{
+  occ::handle<DEGLTF_ConfigurationNode> node = new DEGLTF_ConfigurationNode();
+  DEGLTF_Provider provider(node);
+  return ReadXdeMeshDocument(file_path, out_document, provider, "OCCT could not transfer glTF/GLB into an XDE scene.");
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_obj(
+  const char* file_path, OcctSharp_OcafDocumentHandle** out_document)
+{
+  occ::handle<DEOBJ_ConfigurationNode> node = new DEOBJ_ConfigurationNode();
+  DEOBJ_Provider provider(node);
+  return ReadXdeMeshDocument(file_path, out_document, provider, "OCCT could not transfer OBJ into an XDE scene.");
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step_options(
   const char* file_path,
   const int32_t read_names,
@@ -6885,6 +7099,67 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step_options(
         message.c_str());
     }
   });
+}
+
+template <typename TProvider>
+OcctSharp_Status WriteXdeMeshDocument(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* file_path,
+  TProvider& provider,
+  const char* failure_message)
+{
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    ValidatePath(file_path);
+    if (document->Document->HasOpenCommand())
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE transaction must be closed before mesh-scene export.");
+    NCollection_Sequence<TDF_Label> roots;
+    const opencascade::handle<XCAFDoc_ShapeTool> shapeTool = GetXdeShapeTool(document);
+    shapeTool->GetFreeShapes(roots);
+    for (int32_t index = 1; index <= roots.Length(); ++index)
+    {
+      const TopoDS_Shape shape = shapeTool->GetShape(roots.Value(index));
+      if (shape.IsNull()) continue;
+      BRepMesh_IncrementalMesh mesher(shape, 0.1, false, 0.5, true);
+      if (!mesher.IsDone())
+        throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not triangulate an XDE scene root for mesh export.");
+    }
+    if (!provider.Write(TCollection_AsciiString(file_path), document->Document))
+      throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, failure_message);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_gltf(
+  const OcctSharp_OcafDocumentHandle* document, const char* file_path)
+{
+  occ::handle<DEGLTF_ConfigurationNode> node = new DEGLTF_ConfigurationNode();
+  DEGLTF_Provider provider(node);
+  return WriteXdeMeshDocument(document, file_path, provider, "OCCT glTF/GLB scene export failed.");
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_obj(
+  const OcctSharp_OcafDocumentHandle* document, const char* file_path)
+{
+  occ::handle<DEOBJ_ConfigurationNode> node = new DEOBJ_ConfigurationNode();
+  DEOBJ_Provider provider(node);
+  return WriteXdeMeshDocument(document, file_path, provider, "OCCT OBJ scene export failed.");
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_ply(
+  const OcctSharp_OcafDocumentHandle* document, const char* file_path)
+{
+  occ::handle<DEPLY_ConfigurationNode> node = new DEPLY_ConfigurationNode();
+  DEPLY_Provider provider(node);
+  return WriteXdeMeshDocument(document, file_path, provider, "OCCT PLY scene export failed.");
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_vrml(
+  const OcctSharp_OcafDocumentHandle* document, const char* file_path)
+{
+  occ::handle<DEVRML_ConfigurationNode> node = new DEVRML_ConfigurationNode();
+  DEVRML_Provider provider(node);
+  return WriteXdeMeshDocument(document, file_path, provider, "OCCT VRML scene export failed.");
 }
 
 namespace
@@ -8289,6 +8564,148 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_material_field_to_utf8(
   return Guard([&]
   {
     CopyUtf8Result(MaterialFieldUtf8(ResolveOcafLabel(document, entry), field), buffer, capacity, written);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_visual_material(
+  OcctSharp_OcafDocumentHandle* document, const char* entry,
+  const char* name, const int32_t name_length,
+  const double red, const double green, const double blue, const double alpha,
+  const double metallic, const double roughness,
+  const double emissive_red, const double emissive_green, const double emissive_blue,
+  const double refraction_index, const int32_t alpha_mode, const double alpha_cutoff)
+{
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    RequireOpenOcafCommand(document);
+    ValidateUtf8Input(name, name_length);
+    const double values[] = {
+      red, green, blue, alpha, metallic, roughness,
+      emissive_red, emissive_green, emissive_blue, refraction_index, alpha_cutoff };
+    for (const double value : values)
+      if (!std::isfinite(value))
+        throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "A visual-material value is not finite.");
+    const auto in_unit = [](const double value) { return value >= 0.0 && value <= 1.0; };
+    if (!in_unit(red) || !in_unit(green) || !in_unit(blue) || !in_unit(alpha)
+        || !in_unit(metallic) || !in_unit(roughness)
+        || !in_unit(emissive_red) || !in_unit(emissive_green) || !in_unit(emissive_blue)
+        || !in_unit(alpha_cutoff))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Visual-material colors, factors, and cutoff must be in [0,1].");
+    if (refraction_index < 1.0 || refraction_index > 3.0)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "Visual-material refraction index must be in [1,3].");
+    if (alpha_mode < static_cast<int32_t>(Graphic3d_AlphaMode_BlendAuto)
+        || alpha_mode > static_cast<int32_t>(Graphic3d_AlphaMode_MaskBlend))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The visual-material alpha mode is invalid.");
+
+    occ::handle<XCAFDoc_VisMaterial> material = new XCAFDoc_VisMaterial();
+    XCAFDoc_VisMaterialPBR pbr;
+    pbr.BaseColor = Quantity_ColorRGBA(
+      static_cast<float>(red), static_cast<float>(green),
+      static_cast<float>(blue), static_cast<float>(alpha));
+    pbr.Metallic = static_cast<float>(metallic);
+    pbr.Roughness = static_cast<float>(roughness);
+    pbr.EmissiveFactor = NCollection_Vec3<float>(
+      static_cast<float>(emissive_red), static_cast<float>(emissive_green),
+      static_cast<float>(emissive_blue));
+    pbr.RefractionIndex = static_cast<float>(refraction_index);
+    material->SetPbrMaterial(pbr);
+    material->SetAlphaMode(
+      static_cast<Graphic3d_AlphaMode>(alpha_mode), static_cast<float>(alpha_cutoff));
+    const TCollection_AsciiString material_name = MakeAsciiString(name, name_length);
+    material->SetRawName(new TCollection_HAsciiString(material_name));
+    const occ::handle<XCAFDoc_VisMaterialTool> tool =
+      XCAFDoc_DocumentTool::VisMaterialTool(document->Document->Main());
+    const TDF_Label material_label = tool->AddMaterial(material, material_name);
+    tool->SetShapeMaterial(ResolveOcafLabel(document, entry), material_label);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_visual_material_info(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry,
+  int32_t* has_material,
+  double* red, double* green, double* blue, double* alpha,
+  double* metallic, double* roughness,
+  double* emissive_red, double* emissive_green, double* emissive_blue,
+  double* refraction_index, int32_t* alpha_mode, double* alpha_cutoff)
+{
+  if (has_material == nullptr || red == nullptr || green == nullptr || blue == nullptr
+      || alpha == nullptr || metallic == nullptr || roughness == nullptr
+      || emissive_red == nullptr || emissive_green == nullptr || emissive_blue == nullptr
+      || refraction_index == nullptr || alpha_mode == nullptr || alpha_cutoff == nullptr)
+  {
+    SetLastError("A visual-material output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *has_material = 0;
+  *red = *green = *blue = *alpha = 0.0;
+  *metallic = *roughness = 0.0;
+  *emissive_red = *emissive_green = *emissive_blue = 0.0;
+  *refraction_index = 0.0;
+  *alpha_mode = 0;
+  *alpha_cutoff = 0.0;
+  return Guard([&]
+  {
+    const occ::handle<XCAFDoc_VisMaterial> material =
+      XCAFDoc_VisMaterialTool::GetShapeMaterial(ResolveOcafLabel(document, entry));
+    if (material.IsNull()) return;
+    XCAFDoc_VisMaterialPBR pbr = material->HasPbrMaterial()
+      ? material->PbrMaterial() : material->ConvertToPbrMaterial();
+    if (!pbr.IsDefined) return;
+    const Quantity_ColorRGBA base = pbr.BaseColor;
+    *has_material = 1;
+    *red = base.GetRGB().Red();
+    *green = base.GetRGB().Green();
+    *blue = base.GetRGB().Blue();
+    *alpha = base.Alpha();
+    *metallic = pbr.Metallic;
+    *roughness = pbr.Roughness;
+    *emissive_red = pbr.EmissiveFactor.r();
+    *emissive_green = pbr.EmissiveFactor.g();
+    *emissive_blue = pbr.EmissiveFactor.b();
+    *refraction_index = pbr.RefractionIndex;
+    *alpha_mode = static_cast<int32_t>(material->AlphaMode());
+    *alpha_cutoff = material->AlphaCutOff();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_visual_material_name_utf8_length(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry,
+  int32_t* has_material, int32_t* length)
+{
+  if (has_material == nullptr || length == nullptr)
+  {
+    SetLastError("A visual-material name output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *has_material = 0;
+  *length = 0;
+  return Guard([&]
+  {
+    TDF_Label material_label;
+    if (!XCAFDoc_VisMaterialTool::GetShapeMaterial(
+          ResolveOcafLabel(document, entry), material_label)) return;
+    *has_material = 1;
+    opencascade::handle<TDataStd_Name> name_attribute;
+    if (material_label.FindAttribute(TDataStd_Name::GetID(), name_attribute))
+      *length = name_attribute->Get().LengthOfCString();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_visual_material_name_to_utf8(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry,
+  char* buffer, const int32_t capacity, int32_t* written)
+{
+  return Guard([&]
+  {
+    TDF_Label material_label;
+    if (!XCAFDoc_VisMaterialTool::GetShapeMaterial(
+          ResolveOcafLabel(document, entry), material_label))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE label has no visual material.");
+    opencascade::handle<TDataStd_Name> name_attribute;
+    const std::string name = material_label.FindAttribute(TDataStd_Name::GetID(), name_attribute)
+      ? ExtendedToUtf8(name_attribute->Get()) : std::string();
+    CopyUtf8Result(name, buffer, capacity, written);
   });
 }
 

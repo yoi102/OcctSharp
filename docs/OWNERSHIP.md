@@ -410,4 +410,8 @@ scene nodes, transforms, colors, and material properties cross only as copied va
 caller-owned arrays. XDE labels remain document-parent-bound; a copied `MeshScene`
 retains no native document, label, triangulation, iterator, provider, or texture. Shared
 definitions are managed-owned and instances contain copied transforms. This boundary is
-locked for Batch H; implementation and validation are `NOT RUN`.
+complete at Preview.5. Advanced meshing first copies the source shape, so LOD construction
+does not replace source triangulation. XDE mesh exporters triangulate document roots in
+place only for durable provider output; no triangulation owner crosses the ABI. Focused,
+Release/Debug, clean-source, and clean-package real-HWND tests validate disposal and
+thread behavior across the full 24/24 closure.

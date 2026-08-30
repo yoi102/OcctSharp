@@ -70,3 +70,7 @@ independently advances to 1.48 and bridge implementation to 0.56.0.
 Batch G is the following package-visible additive change, producing
 `8.0.1-preview.4`; managed assembly/file identity remains `0.1.0.0`, while native ABI
 independently advances to 1.49 and bridge implementation to 0.57.0.
+
+Batch H is the next package-visible additive change, producing `8.0.1-preview.5`;
+managed assembly/file identity remains `0.1.0.0`, while native ABI independently
+advances to 1.50 and bridge implementation to 0.58.0.

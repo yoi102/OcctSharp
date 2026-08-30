@@ -1066,3 +1066,43 @@ rules or design:
 - Removal criteria: Replace this exception only after generated algorithm-local,
   owning-result, iterator-snapshot, and polyline-buffer descriptors preserve the same
   result and lifetime contracts.
+
+## SC-044: Batch H advanced mesh, PBR scene, LOD, and interchange closure
+
+- Status: Accepted and implemented for the complete 24-capability Batch H closure.
+- Scope: Exactly 24 newly direct blocked OCCT 8.0.1 stable IDs covering independent
+  shape copying, advanced BRepMesh construction, copied triangle indices, document-aware
+  glTF/GLB and OBJ read/write, PLY and VRML write, RGBA construction/access, and XDE
+  metallic-roughness material construction, assignment, and lookup. Emitted Poly node,
+  normal, UV, provider/configuration constructors, existing XDE shape traversal, and
+  previously reconciled ownership declarations are reused without double counting.
+- Reason: Meshing algorithms, Poly arrays, provider sessions, XDE material tools, labels,
+  and native material attributes contain mutable, borrowed, document-owned, or call-local
+  state. They cannot cross the C ABI as layouts or independently usable handles. The
+  bridge retains them for one call and returns only copied buffers, records, owning
+  topology, stable entries, or durable files.
+- Native/ABI/managed behavior: ABI 1.50, bridge 0.58.0, and package
+  `8.0.1-preview.5` add configurable independent advanced triangulation, immutable mesh
+  statistics/diagnostics and LODs, copied PBR/physical/color metadata, deduplicated scene
+  definitions, hierarchy/instance transforms, and document-aware glTF/GLB/OBJ/PLY/VRML.
+  Mesh exporters triangulate XDE roots before provider transfer so authored BRep documents
+  cannot silently produce geometry-free files.
+- Ownership: Every mesh position, normal, UV, index, group, bound, diagnostic, transform,
+  material, path, layer, LOD, definition, and node is a managed copy. Advanced meshing
+  operates on an independent native shape copy. Scene snapshots retain no document,
+  label, triangulation, provider, iterator, material tool, or native collection and remain
+  usable after source disposal.
+- Coverage accounting: Configuration schema 1.8 lists exactly 24 SC-044 stable IDs.
+  Each ID was `Blocked` in the Preview.4 full inventory and names the exact overload used;
+  the 840-declaration Batch H root audit is not bulk-marked manual.
+- Validation: Four focused tests cover grouped attributes/statistics/diagnostics/LOD,
+  source disposal, PBR/physical/color/layer snapshots, nested transforms and shared
+  definitions, glTF/GLB/OBJ read-back, PLY/VRML output, STEP/XDE, a real HWND, and a
+  non-empty screenshot. The clean package consumer repeats the complete workflow.
+- Upgrade impact: Recheck BRepMesh parameter defaults, triangulation orientation and
+  normal transforms, UV availability, XDE material float precision, alpha-mode values,
+  provider unit/sidecar conventions, assembly transform order, and all 24 stable IDs on
+  each OCCT/compiler upgrade.
+- Removal criteria: Replace this exception only after generated ownership descriptors
+  preserve the same copied scene/mesh/material values, native-local algorithms/providers,
+  document-parent mutations, durable-file behavior, and end-to-end package evidence.

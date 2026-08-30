@@ -217,7 +217,9 @@ Batch H preserves this physical topology. BRepMesh/Poly, XCAFPrs/material tools,
 RWMesh/RWGltf/RWObj/RWPly/VRML providers remain native-local. Positions, normals, UVs,
 indices, groups, diagnostics, transforms, material values, LODs, and scene nodes cross as
 copied values. XDE labels remain document-parent-bound while complete scene snapshots are
-managed-owned and survive document disposal. Implementation and validation remain open.
+managed-owned and survive document disposal. Preview.5 completes all 24/24 capabilities
+through Release/Debug repository runtime, a clean source rebuild, and the clean 62-DLL
+package consumer without changing the one-assembly, one-native-DLL, one-package topology.
 
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native

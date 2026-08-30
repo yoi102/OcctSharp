@@ -940,6 +940,21 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_detailed_mesh_snap
   int32_t triangle_capacity,
   int32_t* out_triangle_count,
   int32_t* out_face_count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_advanced_mesh_count(
+  const OcctSharp_ShapeHandle* shape,
+  double linear_deflection, double angular_deflection, double minimum_size,
+  int32_t relative, int32_t parallel, int32_t internal_vertices,
+  int32_t control_surface_deflection,
+  int32_t* out_vertex_count, int32_t* out_triangle_count, int32_t* out_face_count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_advanced_mesh_snapshot(
+  const OcctSharp_ShapeHandle* shape,
+  double linear_deflection, double angular_deflection, double minimum_size,
+  int32_t relative, int32_t parallel, int32_t internal_vertices,
+  int32_t control_surface_deflection,
+  OcctSharp_DetailedMeshVertex* vertices, int32_t vertex_capacity,
+  int32_t* out_vertex_count,
+  OcctSharp_DetailedMeshTriangle* triangles, int32_t triangle_capacity,
+  int32_t* out_triangle_count, int32_t* out_face_count);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_read_brep(
   const char* file_path,
@@ -1326,6 +1341,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_open(
   const char* file_path, OcctSharp_OcafDocumentHandle** out_document);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step(
   const char* file_path, OcctSharp_OcafDocumentHandle** out_document);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_gltf(
+  const char* file_path, OcctSharp_OcafDocumentHandle** out_document);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_obj(
+  const char* file_path, OcctSharp_OcafDocumentHandle** out_document);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step_options(
   const char* file_path,
   int32_t read_names,
@@ -1337,6 +1356,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step_o
   int32_t read_views,
   OcctSharp_OcafDocumentHandle** out_document);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step(
+  const OcctSharp_OcafDocumentHandle* document, const char* file_path);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_gltf(
+  const OcctSharp_OcafDocumentHandle* document, const char* file_path);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_obj(
+  const OcctSharp_OcafDocumentHandle* document, const char* file_path);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_ply(
+  const OcctSharp_OcafDocumentHandle* document, const char* file_path);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_vrml(
   const OcctSharp_OcafDocumentHandle* document, const char* file_path);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step_options(
   const OcctSharp_OcafDocumentHandle* document,
@@ -1555,6 +1582,26 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_material_field
   char* buffer,
   int32_t capacity,
   int32_t* written);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_visual_material(
+  OcctSharp_OcafDocumentHandle* document, const char* entry,
+  const char* name, int32_t name_length,
+  double red, double green, double blue, double alpha,
+  double metallic, double roughness,
+  double emissive_red, double emissive_green, double emissive_blue,
+  double refraction_index, int32_t alpha_mode, double alpha_cutoff);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_visual_material_info(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry,
+  int32_t* has_material,
+  double* red, double* green, double* blue, double* alpha,
+  double* metallic, double* roughness,
+  double* emissive_red, double* emissive_green, double* emissive_blue,
+  double* refraction_index, int32_t* alpha_mode, double* alpha_cutoff);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_visual_material_name_utf8_length(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry,
+  int32_t* has_material, int32_t* length);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_visual_material_name_to_utf8(
+  const OcctSharp_OcafDocumentHandle* document, const char* entry,
+  char* buffer, int32_t capacity, int32_t* written);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_validation_properties(
   const OcctSharp_OcafDocumentHandle* document,
   const char* entry,
