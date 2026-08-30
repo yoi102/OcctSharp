@@ -106,6 +106,9 @@ The accepted boundaries are recorded in ADRs:
 - [ADR-0071](adr/0071-advanced-feature-modeling-history-recovery-batch.md): one finite
   Batch J selected-feature, robust-Boolean, copied-history, recovery, exchange, and
   viewer closure with native-local algorithms and owning topology results.
+- [ADR-0072](adr/0072-assembly-authoring-bom-occurrence-batch.md): one finite Batch K
+  assembly-authoring, product-structure, BOM, reference, effective-metadata, exchange,
+  and viewer closure with parent-bound labels and copied snapshots.
 
 ## Components
 
@@ -244,6 +247,15 @@ and request associations cross as copied values. XDE labels and viewer presentat
 their established parent/thread rules. Preview.7 completes all 24/24 capabilities through
 Release/Debug, copied history/lifetime, real STEP/XDE and HWND, clean regeneration, and
 the clean 62-DLL package consumer without changing the physical deliverable topology.
+
+Batch K is prepared on the same owned-document and parent-bound stable-entry boundary.
+XCAFDoc tools, TDF labels/iterators, assembly graphs, STEP/STEPCAF sessions, and document
+explorers remain native-local. Managed structure, BOM, where-used, reference, effective-
+metadata, diagnostics, and rollup results are immutable copies; located topology is an
+independent registered owner. Structural mutation is named-transaction-bound and
+rollback-safe. Preview.8 implementation must validate all 24 capabilities before this
+prepared boundary can be called complete; no assembly/BOM API or ABI identity has changed
+at the preparation checkpoint.
 
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native

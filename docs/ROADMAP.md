@@ -21,12 +21,18 @@ signing, and NuGet publication remain separate
 release-readiness work rather than
 unfinished batch implementation.
 
-## Active priority: audit the next high-value cross-family closure
+## Active priority: Batch K assembly authoring, BOM, and occurrence workflows
 
-Batch J is closed. The next wave must begin with a fresh, finite product denominator and
-an exact inventory audit of directly used blocked declarations. It must select a coherent
-user workflow across multiple OCCT families rather than mechanically migrating the
-remaining 50,075 narrow blocked declarations or reopening completed B-J work.
+ADR-0072 and [the Batch K assembly-authoring gap inventory](BATCH_K_ASSEMBLY_AUTHORING_BOM_GAP_INVENTORY.md)
+freeze one 24-capability dependency closure before implementation. It crosses XCAFDoc
+product-structure editing, TDF stable entries and transactions, STEPCAF/STEP structure,
+TopLoc/TopoDS owning results, BRepGProp rollups, XCAFPrs occurrence paths, and AIS review.
+
+The focused Preview.7 root audit covers 1,228 declarations: 610 blocked, 292 emitted, 34
+manual, and 292 skipped. Preparation is complete and implementation is 0/24. SC-047 will
+reconcile only directly used blocked stable IDs. Editing-only, BOM-only, metadata-only,
+reference-only, exchange-only, viewer-only, numbered, or dotted fragments cannot be
+reported as Batch K completion.
 
 ## Completed priority: Batch J advanced feature modeling, history, and recovery
 

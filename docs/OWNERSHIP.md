@@ -447,3 +447,19 @@ document-parent-bound and viewer IDs remain viewer-parent-bound and thread-affin
 boundary is complete at Preview.7. Focused, Release/Debug, clean-source, and clean-package
 tests validate copied request association, independent result/history owners, recovery,
 STEP/XDE, and real-HWND behavior across the full 24/24 closure.
+
+### Prepared Batch K assembly authoring, BOM, and occurrence boundary
+
+ADR-0072 keeps XCAFDoc shape/assembly/metadata tools, TDF labels, attributes and
+iterators, XCAFPrs document exploration, assembly graphs, and STEP/STEPCAF sessions
+inside the owned document or one native call. Managed `XdeLabel` and occurrence values
+continue to address stable entries and cannot outlive or detach from their document.
+
+Structure edits require one named document transaction. Relocation, relinking, removal,
+cloning, and reparenting must commit or roll back as a unit. Copied assembly/BOM/where-
+used/path/reference/metadata/diagnostic snapshots retain no native label, iterator,
+attribute, graph, or tool. Located and referenced topology crosses only as independent
+registered owning `Shape` values; locations are independent opaque owners. External
+references are copied metadata and do not authorize implicit I/O. Viewer resources
+remain viewer-parent-bound and creating-thread-affine. This boundary is prepared only;
+Batch K runtime/lifetime/package validation is `NOT RUN`.
