@@ -431,3 +431,17 @@ diagnostic data, not executable delta owners. Managed dependency graphs are buil
 copied stable-entry edges and retain no document or label. Binary/XML/STEP calls borrow
 the document only for the call. Preview.6 validates this boundary in Release and Debug,
 the focused four-format/STEP-XDE/source-disposal tests, and the clean package consumer.
+
+### Batch J advanced feature modeling, history, and recovery boundary
+
+ADR-0071 keeps BRepFilletAPI, BRepOffsetAPI, BRepFeat, BOPAlgo, BRepTools history,
+ShapeUpgrade, BRepCheck, progress, maps, contours, alerts, and iterators native-local.
+Input shapes and explicitly selected edges/faces/profiles/spines are borrowed for one
+call only. Successful result, modified, and generated topology is copied into independent
+registered owning `Shape` values; deletion and source association cross as copied request
+indices. Options, diagnostics, and stage messages are copied values.
+
+Recovery validates and may create native-local healed/simplified copies before one retry;
+it never mutates or replaces the managed input wrappers. XDE stable entries remain
+document-parent-bound and viewer IDs remain viewer-parent-bound and thread-affine. This
+boundary is locked for Batch J; implementation and validation are `NOT RUN`.

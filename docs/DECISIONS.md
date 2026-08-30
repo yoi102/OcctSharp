@@ -77,6 +77,7 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0068](adr/0068-technical-drawing-hidden-line-vector-output-batch.md) | Define and close Batch G as one 24-capability technical-drawing, hidden-line, section, and vector-output wave | Accepted |
 | [ADR-0069](adr/0069-advanced-mesh-scene-material-interchange-batch.md) | Define and close Batch H as one 24-capability advanced-mesh, scene, material, LOD, and interchange wave | Accepted |
 | [ADR-0070](adr/0070-document-state-attribute-graph-history-persistence-batch.md) | Define Batch I as one 24-capability OCAF/XDE document-state, attribute-graph, history, and persistence wave | Accepted for implementation |
+| [ADR-0071](adr/0071-advanced-feature-modeling-history-recovery-batch.md) | Define Batch J as one 24-capability advanced feature-modeling, robust-Boolean, copied-history, and recovery wave | Accepted for implementation |
 
 ## Pending decisions
 

@@ -6,7 +6,8 @@ evidence; creating files or generating a large method count is not sufficient.
 The retired B00–B20 capability milestones and future package boundaries are documented
 in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the completed
 product-scale batch `B`; none is a separate current batch or commit boundary.
-Batch B through Batch I are complete for their accepted local implementation scopes.
+Batch B through Batch I are complete for their accepted local implementation scopes,
+and Batch J is locked for implementation.
 ADR-0063 closes C at alpha.54, ADR-0064 closes D at alpha.55,
 and ADR-0066 closes E in Preview.2 as one 24-capability engineering-inspection,
 exact-measurement, and PMI/AP242 wave. ADR-0067 closes F in Preview.3 as one 24-capability
@@ -18,6 +19,20 @@ state, dependency-graph, history, undo/redo, savepoint, and persistence wave. Ho
 signing, and NuGet publication remain separate
 release-readiness work rather than
 unfinished batch implementation.
+
+## Active priority: Batch J advanced feature modeling, history, and recovery
+
+ADR-0071 and [the Batch J feature modeling gap inventory](BATCH_J_FEATURE_MODELING_HISTORY_GAP_INVENTORY.md)
+freeze one 24-capability dependency closure before implementation. It crosses selected
+and variable fillets and chamfers, planar edits, draft, bosses, pockets, holes, revolved
+and swept local features, split/defeaturing/cell and batch Boolean work, robust options,
+preflight, copied diagnostics and history, recovery, STEP/XDE, viewer, lifetime, and the
+clean package workflow.
+
+The focused Preview.6 root audit covers 706 declarations: 374 blocked, 16 emitted, 16
+manual, and 300 skipped. Preparation is complete and implementation is 0/24. Feature-
+only, Boolean-only, history-only, recovery-only, numbered, or dotted fragments cannot be
+reported as Batch J completion.
 
 ## Completed priority: Batch I document state, attribute graph, history, and persistence
 

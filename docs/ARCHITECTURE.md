@@ -103,6 +103,9 @@ The accepted boundaries are recorded in ADRs:
 - [ADR-0070](adr/0070-document-state-attribute-graph-history-persistence-batch.md): one
   finite Batch I OCAF/XDE label-attribute, dependency-graph, undo/redo, savepoint, and
   binary/XML/STEP persistence closure with copied snapshots.
+- [ADR-0071](adr/0071-advanced-feature-modeling-history-recovery-batch.md): one finite
+  Batch J selected-feature, robust-Boolean, copied-history, recovery, exchange, and
+  viewer closure with native-local algorithms and owning topology results.
 
 ## Components
 
@@ -232,6 +235,14 @@ is an independent owning `Shape`. Undo/redo and dirty/savepoint mutation stay bo
 one owned document. Preview.6 completes all 24/24 capabilities through Release/Debug,
 real four-format OCAF/XCAF persistence, STEP/XDE, lifetime tests, and the clean 62-DLL
 package consumer without changing the one-assembly, one-native-DLL, one-package topology.
+
+Batch J retains the same physical topology and owning-shape boundary. Fillet, chamfer,
+draft, local-feature, BOP, defeaturing, analysis, and recovery algorithms remain native-
+local. Inputs and selections are borrowed only for a call; result, modified, and generated
+topology crosses as independent registered owners. Deleted state, options, diagnostics,
+and request associations cross as copied values. XDE labels and viewer presentations keep
+their established parent/thread rules. Implementation and validation remain open for
+Preview.7.
 
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native
