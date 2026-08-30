@@ -1,13 +1,14 @@
 # Current Status
 
 - Last updated: 2026-08-30
-- Current phase: Batch B through Batch G are complete for their accepted local implementation scopes; Batch G closes its locked technical-drawing/HLR/section/vector-output wave at 24/24
+- Current phase: Batch B through Batch G are complete locally; Batch H preparation and its full advanced-mesh/scene/material/LOD/interchange dependency closure are locked, with implementation at 0/24
 - Batch B engineering progress: 100% for the accepted local implementation scope (not a claim that every OCCT declaration is a managed API or that public release is ready)
 - Batch C implementation progress: 100% of the finite local implementation denominator; locked wave denominators are 14/14, 7/7, 8/8, and final 15/15 capabilities validated
 - Batch D implementation progress: 24/24 capabilities (100%); ADR-0064's one large cross-family wave passes all implementation, compile, runtime, real-HWND, clean-package, inventory, and local release gates
 - Batch E implementation progress: 24/24 capabilities (100%); ADR-0066's one large cross-family wave passes implementation, compile, runtime/lifetime/transaction, AP242/BinXCAF, real-HWND, clean-package, inventory, and local release gates
 - Batch F implementation progress: 24/24 capabilities (100%); ADR-0067's one cross-family definition/edit/topology/exchange/viewer wave passes compile, runtime/lifetime, real STEP/XDE, real-HWND, clean-package, inventory, and local release gates
 - Batch G implementation progress: 24/24 capabilities (100%); ADR-0068's one cross-family exact/polygonal HLR, section, copied-polyline, SVG, standard-view, exchange, and viewer wave passes every local gate
+- Batch H implementation progress: 0/24 capabilities; ADR-0069 and the 24-root/840-declaration audit freeze one indivisible advanced-mesh/scene/material/LOD/interchange wave before code changes
 - Complete-migration batch progress: B, C, D, E, F, and G are complete locally; retired B00-B20 and forbidden numbered/dotted C/D/E/F/G labels are not counted as batches
 - Accepted surface: 16,353 generated manifest IDs plus 349 accepted manual stable IDs; Release and Debug native/managed builds, Generator 91/91, Runtime 127/127, discovery/report determinism, generated dependency closure, and dependency profiles 6/6 pass
 - Last complete full inventory: 116,272/116,272 declarations and 7,090/7,090 headers have final dispositions; `Emitted` 16,353, `Manual` 349, `SupportedUnselected` 0, `Skipped` 49,344, `Blocked` 50,226, pending 0, HD099 0; SHA256 `78BDED2909920DD037D99608604E85EBC87BDD5FD144FAAC247C88D69DE1A318`
@@ -1224,19 +1225,20 @@ Preview.3 completes all 24/24 together with the full local release gate passing.
 
 ```text
 LOOP_STATE: COMPLETE
-CURRENT_BATCH: G — TECHNICAL DRAWING, HIDDEN-LINE, SECTION, AND VECTOR OUTPUT
-CURRENT_WORKSTREAM: ONE 24-CAPABILITY HLR/SECTION/POLYLINE/SVG/EXCHANGE/VIEWER CLOSURE
-COMPLETED_THIS_TURN: COMPLETED AND VALIDATED ALL 24 BATCH G CAPABILITIES AS ONE CROSS-FAMILY WAVE IN PREVIEW.4
-NEXT_WORKSTREAM: PREPARE AND FREEZE ONE COMPLETE 24-CAPABILITY BATCH H ADVANCED-MESH/SCENE/INTERCHANGE CLOSURE
-NEXT_ACTION: AUDIT BATCH H ROOTS, LOCK OWNERSHIP AND DEPENDENCY CLOSURE, THEN IMPLEMENT THE WHOLE WAVE
+CURRENT_BATCH: H — ADVANCED MESH, SCENE, MATERIAL, LOD, AND INTERCHANGE
+CURRENT_WORKSTREAM: ONE LOCKED 24-CAPABILITY MESH/MATERIAL/LOD/SCENE/INTERCHANGE CLOSURE
+COMPLETED_THIS_TURN: PREPARED AND FROZE ALL 24 BATCH H CAPABILITIES WITH A 24-ROOT/840-DECLARATION AUDIT
+NEXT_WORKSTREAM: IMPLEMENT THE COMPLETE BATCH H WAVE WITHOUT FAMILY CHECKPOINTS
+NEXT_ACTION: IMPLEMENT COPIED ADVANCED MESH/SCENE/PBR/LOD AND DOCUMENT-AWARE INTERCHANGE, THEN RUN ALL GATES
 ENGINEERING_PROGRESS: B 100% COMPLETE; C 100% COMPLETE; D 24/24 COMPLETE (100%); E 24/24 COMPLETE (100%); F 24/24 COMPLETE (100%); G 24/24 COMPLETE (100%)
-BATCH_PROGRESS: G COMPLETE (100%)
+BATCH_PROGRESS: H PREPARATION COMPLETE; IMPLEMENTATION 0/24 (0%)
 B_BASELINE_BINDING_COVERAGE: 16414/16414 generated plus accepted manual stable IDs (100%)
 C_COMMON_WORKFLOW_COVERAGE: FIRST-WAVE 14/14, SECOND-WAVE 7/7, THIRD-WAVE 8/8, AND FINAL-WAVE 15/15 DENOMINATORS VALIDATED (100% EACH)
 D_VIEWPORT_REVIEW_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
 E_INSPECTION_PMI_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
 F_FREEFORM_AUTHORING_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
 G_TECHNICAL_DRAWING_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
+H_ADVANCED_MESH_SCENE_COVERAGE: 0/24 IMPLEMENTED; FULL DENOMINATOR AND DEPENDENCY CLOSURE LOCKED
 FULL_PROFILE_ACCOUNTING: 116272/116272 declarations classified; 50226 have narrow blocked dispositions and are not claimed as managed APIs
 INVENTORY_COMPLETENESS: 7058/7090 headers semantically scanned (99.5487%); 116272/116272 discovered declarations and 7090/7090 catalogued headers classified
 LAST_VALIDATION: Preview.4 complete local release check PASS; Release/Debug, Generator 91/91, Runtime 127/127, dependency profiles 6/6, real STEP/XDE plus real-HWND Batch G, clean 62-DLL package, regeneration, additive API, inventory, provenance, and checksums PASS

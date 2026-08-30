@@ -400,3 +400,14 @@ topology, or native vector container crosses the ABI. STEP/XDE and viewer resour
 their document-parent and creating-thread-affine viewer-parent categories. Preview.4
 validates this complete 24/24 boundary in Release/Debug repository runtime and the clean
 62-DLL package consumer.
+
+### Batch H advanced mesh and scene boundary
+
+ADR-0069 keeps BRepMesh algorithms, Poly triangulations/arrays, XCAFPrs explorers,
+XCAF visual-material attributes/tools, and all mesh-exchange providers call-local.
+Advanced mesh vertices, normals, UVs, indices, groups, statistics, diagnostics, LODs,
+scene nodes, transforms, colors, and material properties cross only as copied values and
+caller-owned arrays. XDE labels remain document-parent-bound; a copied `MeshScene`
+retains no native document, label, triangulation, iterator, provider, or texture. Shared
+definitions are managed-owned and instances contain copied transforms. This boundary is
+locked for Batch H; implementation and validation are `NOT RUN`.

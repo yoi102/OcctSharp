@@ -97,6 +97,9 @@ The accepted boundaries are recorded in ADRs:
 - [ADR-0068](adr/0068-technical-drawing-hidden-line-vector-output-batch.md): one finite
   Batch G technical-drawing closure with native-local exact/polygonal HLR, owning
   category/section topology, copied polylines, and managed SVG output.
+- [ADR-0069](adr/0069-advanced-mesh-scene-material-interchange-batch.md): one finite
+  Batch H grouped-mesh, material, LOD, XDE scene/instance, and mesh-interchange closure
+  with native-local providers and copied snapshots.
 
 ## Components
 
@@ -209,6 +212,12 @@ STEP/XDE labels and real-HWND presentations retain their existing parent/thread 
 Preview.4 validates all 24/24 capabilities through Release/Debug repository runtime and
 the clean 62-DLL package consumer. The one managed assembly, one native DLL, and one
 package topology remains unchanged.
+
+Batch H preserves this physical topology. BRepMesh/Poly, XCAFPrs/material tools, and
+RWMesh/RWGltf/RWObj/RWPly/VRML providers remain native-local. Positions, normals, UVs,
+indices, groups, diagnostics, transforms, material values, LODs, and scene nodes cross as
+copied values. XDE labels remain document-parent-bound while complete scene snapshots are
+managed-owned and survive document disposal. Implementation and validation remain open.
 
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native

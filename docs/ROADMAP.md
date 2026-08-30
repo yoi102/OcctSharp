@@ -15,6 +15,20 @@ as one 24-capability technical-drawing, hidden-line, section, and vector-output 
 signing, and NuGet publication remain separate release-readiness work rather than
 unfinished batch implementation.
 
+## Active priority: Batch H advanced mesh, scene, material, LOD, and interchange
+
+ADR-0069 and [the Batch H advanced mesh and scene gap inventory](BATCH_H_ADVANCED_MESH_SCENE_GAP_INVENTORY.md)
+freeze one 24-capability dependency closure before implementation. It crosses BRepMesh/
+Poly grouped triangulations, normals/UVs/orientation, mesh statistics and diagnostics,
+multiple LODs, XCAF color/physical/PBR materials, copied XDE hierarchy/instances/
+transforms, RWGltf glTF/GLB, RWObj, RWPly, VRML, AIS, and clean package evidence.
+
+The focused root audit covers 840 declarations: 450 blocked, 154 emitted, 10 manual, and
+226 skipped. Preparation is complete and implementation is 0/24. Mesh-only, material-
+only, LOD-only, scene-only, format-only, numbered, or dotted fragments cannot be reported
+as Batch H completion. IVtk/VTK is an optional external-dependency profile and is not a
+required Batch H capability.
+
 ## Completed priority: Batch G technical drawing, hidden-line, section, and vector output
 
 Batch C's routine CAD path is locally complete: .NET can import/build, inspect and edit,

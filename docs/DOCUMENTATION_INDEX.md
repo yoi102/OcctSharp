@@ -25,6 +25,9 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Batch G technical drawing gap inventory](BATCH_G_TECHNICAL_DRAWING_GAP_INVENTORY.md)
   — completed 24-capability exact/polygonal HLR, section, copied-polyline, layered-SVG,
   standard-view, STEP/XDE, and real-HWND denominator.
+- [Batch H advanced mesh and scene gap inventory](BATCH_H_ADVANCED_MESH_SCENE_GAP_INVENTORY.md)
+  — locked 24-capability grouped-mesh, material, LOD, XDE-scene, interchange, and
+  real-HWND denominator.
 - [AI migration loop prompt](AI_MIGRATION_LOOP_PROMPT.md) — reusable re-entrant prompt
   for executing the largest coherent common-workflow wave instead of per-class tasks.
 - [Status](STATUS.md) — current phase, blockers, and last verified results.
@@ -104,6 +107,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   — one large cross-family curve/surface definition-to-profile-to-solid wave.
 - [Batch G technical drawing decision](adr/0068-technical-drawing-hidden-line-vector-output-batch.md)
   — one large cross-family hidden-line/section/vector-output wave.
+- [Batch H advanced mesh and scene decision](adr/0069-advanced-mesh-scene-material-interchange-batch.md)
+  — one large cross-family mesh/material/LOD/scene/interchange wave.
 - [Native ABI](NATIVE_ABI.md) — C ABI boundary rules.
 - [Ownership](OWNERSHIP.md) — lifetime and resource ownership rules.
 - [Type mapping](TYPE_MAPPING.md) — native-to-managed mapping policy.
