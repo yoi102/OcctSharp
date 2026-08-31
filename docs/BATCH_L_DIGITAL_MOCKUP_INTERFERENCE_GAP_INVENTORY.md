@@ -1,11 +1,11 @@
 # Batch L digital mock-up interference and clearance gap inventory
 
-This document locks the product denominator and complete cross-family dependency closure
-for Batch L before implementation. It measures one occurrence-aware digital mock-up
+This document records the locked product denominator, complete cross-family dependency
+closure, and final evidence for Batch L. It measures one occurrence-aware digital mock-up
 validation workflow, not individual Bnd, BVH, BRepExtrema, BRepClass3d, BOP, XDE, or AIS
 class counts.
 
-Preparation status: **COMPLETE**. Implementation status: **NOT STARTED (0/24)**. The
+Preparation status: **COMPLETE**. Implementation status: **COMPLETE (24/24)**. The
 denominator below is immutable for Batch L.
 
 ## Product outcome
@@ -88,9 +88,8 @@ SC-048. The audit is not bulk-marked manual.
   values. XDE labels remain parent-bound stable entries; locations remain owning values.
 - Viewer presentations remain viewer/thread-parent-bound. The one managed assembly, one
   native DLL, one package, public full names, and generated shard graph remain unchanged.
-- Batch L reserves package identity Preview.9 during preparation. Native ABI 1.54,
-  bridge 0.62.0, and schema 1.12 remain implementation changes; Preview.8 remains the
-  last complete implementation/release baseline.
+- Preview.9 uses native ABI 1.54, bridge 0.62.0, and schema 1.12. One managed assembly,
+  one native DLL, one package, and the public/generated shard identities remain unchanged.
 
 ## Validation gates
 
@@ -100,8 +99,16 @@ STEP/XDE plus real-HWND evidence, the clean 62-DLL consumer, freshness, byte-ide
 regeneration, compatibility, inventory, runtime hashes, SBOM/provenance/checksums,
 documentation, and the complete Preview.9 local release check pass together.
 
-All Batch L implementation and validation gates are currently `NOT RUN`. Only the finite
-24-capability denominator and 24-root/1,351-declaration Preview.8 audit are complete.
+SC-048 reconciles exactly ten directly used blocked declarations; the other 646 blocked
+audit candidates retain their previous dispositions. Focused Batch L 4/4 explicitly
+covers independent adjacent filtering and face/face, edge/edge, and face/edge groups.
+Release and Debug pass with zero code warnings/errors, Generator 91/91, Runtime 147/147,
+and dependency profiles 6/6. The 62-DLL Preview.9 clean consumer repeats occurrence
+expansion, AABB/OBB, broad/exact phase, all pair states, aggregation, incremental rerun,
+STEP/XDE, real-HWND review, screenshot, and source-disposal behavior. Inventory,
+compatibility, freshness, clean regeneration, SBOM/provenance/checksums, and the complete
+local release gate pass. Batch L is complete at 24/24; hosted release, signing, and NuGet
+publication remain separate `NOT RUN` work.
 
 ## Explicit non-goals
 

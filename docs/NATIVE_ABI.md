@@ -527,6 +527,13 @@ sequences, and attributes remain native-local; managed graph/BOM/diagnostic/refe
 results are copied, resolved topology is independently owned, and viewer presentations
 retain their viewer/thread parent. The bridge implementation is 0.61.0.
 
+ABI 1.54 is the Preview.9 Batch L digital mock-up interference/clearance boundary. It
+adds a fixed copied `Bnd_OBB` projection, a caller-owned candidate-pair buffer produced
+by a native-local sweep, and synchronous pair classification with finite confusion/fuzzy
+tolerances, parallel and non-destructive options, copied distance/volume state, and an
+independently registered owning issue shape. Bnd/BVH, extrema, classifier, Boolean, map,
+and progress state remains native-local. The bridge implementation is 0.62.0.
+
 ## Verification
 
 Alpha.48 verification confirms the existing ABI contract for all 162 IGES public

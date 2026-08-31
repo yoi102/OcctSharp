@@ -1,6 +1,6 @@
 # ADR-0073: Implement digital mock-up interference and clearance as Batch L
 
-- Status: Accepted for implementation
+- Status: Accepted and implemented
 - Date: 2026-08-31
 - Scope: Batch L product denominator, dependency closure, ownership, and validation
 
@@ -18,8 +18,8 @@ Open Batch L as the one indivisible 24-capability wave in
 algorithms and containers call-local, copy scalar/diagnostic/traceability results, return
 issue topology as independent owners, and preserve existing XDE/viewer parent boundaries.
 
-Preparation reserves Preview.9 package identity while retaining ABI 1.53, bridge 0.61.0,
-and schema 1.11. Implementation targets ABI 1.54, bridge 0.62.0, and schema 1.12. No
+Preparation reserved Preview.9 package identity while retaining ABI 1.53, bridge 0.61.0,
+and schema 1.11. The completed implementation uses ABI 1.54, bridge 0.62.0, and schema 1.12. No
 family-only or numbered checkpoint is Batch L completion. All local gates must pass
 together before the ADR becomes implemented.
 
@@ -30,3 +30,11 @@ together before the ADR becomes implemented.
 - Only direct blocked declarations actually used may enter SC-048.
 - One managed assembly, one native DLL, one package, and the current shard graph remain.
 - Hosted release, signing, publication, and GitHub work stay outside this batch.
+
+## Implementation evidence
+
+SC-048 reconciles exactly ten directly used `Bnd_OBB`/`BRepBndLib::AddOBB`
+declarations. Focused Batch L 4/4, Release and Debug Runtime 147/147, Generator 91/91,
+dependency profiles 6/6, real STEP/XDE, real HWND, clean 62-DLL package consumption,
+inventory, compatibility, regeneration, and local Preview.9 release gates pass together.
+Hosted release execution, signing, and NuGet publication remain `NOT RUN`.

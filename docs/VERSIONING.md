@@ -32,8 +32,8 @@ into one ambiguous version string.
 - Record the exact OCCT build identity in package metadata and runtime diagnostics.
 - Keep package, managed assembly, generator, native ABI, bridge, binding-model schema,
   configuration schema, and OCCT build identities independent. In particular, the
-  Preview.9 preparation managed assembly identity remains `0.1.0.0`; native ABI is 1.53 and bridge
-  implementation is 0.61.0.
+  Preview.9 managed assembly identity remains `0.1.0.0`; native ABI is 1.54 and bridge
+  implementation is 0.62.0.
 
 ## Runtime identity
 
@@ -258,9 +258,11 @@ Preview.8 completes the additive Batch K wave. It retains managed assembly/file 
 uses configuration schema 1.11, and adds exactly 24 SC-047 manual stable IDs without
 removing generated APIs.
 
-Preview.9 is reserved for the Batch L wave and advances the NuGet/informational identity
-during preparation while retaining Preview.8's ABI 1.53, bridge 0.61.0, and schema 1.11.
-Batch L implementation may advance those independent identities only with its full gates.
+Preview.9 completes the additive Batch L wave. It retains managed assembly/file identity
+`0.1.0.0`, advances the additive native ABI to 1.54 and bridge implementation to 0.62.0,
+uses configuration schema 1.12, and adds exactly ten SC-048 manual stable IDs without
+removing generated APIs. The final inventory records 16,353 emitted, 534 manual, 49,344
+skipped, 50,041 narrowly blocked, and zero supported-unselected/pending declarations.
 
 An OCCT upgrade report must classify:
 

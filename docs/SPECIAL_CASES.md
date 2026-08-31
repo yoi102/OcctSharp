@@ -1376,3 +1376,50 @@ rules or design:
 - Removal criteria: Replace this exception only after generated document-local XCAF
   operations can preserve the same copied snapshots, transaction rules, ownership, and
   end-to-end package evidence.
+
+## SC-048: Batch L oriented bounds and digital mock-up analysis closure
+
+- Status: Accepted and implemented for the complete 24-capability Batch L closure;
+  final all-gates validation is recorded in `STATUS.md`.
+- Scope: Exactly ten newly direct blocked OCCT 8.0.1 stable IDs. The 656 blocked
+  declarations in the preparation audit were not bulk-marked manual; 646 retain their
+  prior dispositions.
+- Reason: `Bnd_OBB` is a native value with OCCT vector/point members and
+  `BRepBndLib::AddOBB` mutates an output reference. Exposing either C++ layout or that
+  output reference would violate the fixed C ABI and copied-value ownership rules.
+- Native/ABI/managed behavior: ABI 1.54, bridge 0.62.0, package
+  `8.0.1-preview.9`, and schema 1.12 copy center, orthonormal axes, and half sizes into
+  `OrientedBoundingBox3d`. The same wave keeps broad-phase sweeps, exact distance,
+  classifiers, Boolean intersection, maps, and progress state native-local while the
+  managed layer owns stable pair IDs, filtering, aggregation, diagnostics, incremental
+  reuse, XDE occurrence expansion, and viewer review composition.
+- Ownership: Shape inputs are borrowed only for synchronous calls. Bounds, witnesses,
+  pair states, occurrence traceability, timings, and diagnostics are copied. Issue and
+  support topology is independently owning; viewer presentations remain viewer/thread-
+  parent-bound.
+- Coverage accounting: The schema 1.12 configuration lists these exact unique IDs:
+
+  1. `c:@S@BRepBndLib@F@AddOBB#&1$@S@TopoDS_Shape#&$@S@Bnd_OBB#b#b#b#S`
+  2. `c:@S@Bnd_OBB@F@Bnd_OBB#`
+  3. `c:@S@Bnd_OBB@F@Center#1`
+  4. `c:@S@Bnd_OBB@F@IsVoid#1`
+  5. `c:@S@Bnd_OBB@F@XDirection#1`
+  6. `c:@S@Bnd_OBB@F@XHSize#1`
+  7. `c:@S@Bnd_OBB@F@YDirection#1`
+  8. `c:@S@Bnd_OBB@F@YHSize#1`
+  9. `c:@S@Bnd_OBB@F@ZDirection#1`
+  10. `c:@S@Bnd_OBB@F@ZHSize#1`
+
+- Validation: Focused Batch L 4/4 covers transformed OBBs, independent same-definition/
+  adjacent/explicit filters, sparse broad phase, distance witnesses, clearance/contact/
+  penetration/containment/coincident states, face/face, edge/edge, and face/edge groups,
+  invalid-shape self-checks, deterministic serial/parallel and early-exit policies,
+  complete matrices, aggregation, independently cloned incremental results, real
+  STEP/XDE, real HWND screenshots, and source/document disposal. The clean package
+  repeats the complete workflow.
+- Upgrade impact: Recheck OBB axis/half-size conventions, triangulation fallback,
+  broad-phase ordering, fuzzy/non-destructive Boolean behavior, support-kind mapping,
+  containment classification, and all ten exact IDs on each OCCT/compiler upgrade.
+- Removal criteria: Replace this exception only after generated output-reference value
+  projection can preserve the same copied layout, failure behavior, ownership, and
+  end-to-end package evidence.

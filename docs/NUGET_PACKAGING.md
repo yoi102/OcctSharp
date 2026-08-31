@@ -79,6 +79,10 @@ application-local closure contains 62 DLLs. Alpha.55 additionally runs the compl
 24-capability STEP/XDE-to-real-HWND-to-screenshot review workflow, including copied
 identity, owning detection, area selection/filtering, isolate/fit, subshape overrides,
 camera conversions, clipping, review aids, and durable image output.
+Preview.9 additionally runs the complete Batch L world-located XDE occurrence, copied
+AABB/OBB, native-local broad/exact phase, filtering, clearance/contact/penetration/
+containment, pair-matrix, diagnostics, incremental, real-HWND review, screenshot, and
+source-disposal workflow.
 
 ## Consumer use
 
@@ -107,20 +111,18 @@ completed release tooling do not override a `BLOCKED` or `NOT RUN` publication g
 
 ## Planned package split
 
-Preview.9 preparation package verification runs from the inner `OcctSharp/` workspace, where
+Preview.9 package verification runs from the inner `OcctSharp/` workspace, where
 `global.json` selects SDK 10.0.400. Direct nupkg inspection confirms package identity
 `OcctSharp`/`8.0.1-preview.9`, managed assembly/file identity `0.1.0.0`, exact
-informational version `8.0.1-preview.9`, ABI 1.53, bridge 0.61.0, and 62 native DLLs under
-`occt`. The clean consumer restores, publishes, and runs the inherited Batch D-J paths
-plus Batch K assembly edits, occurrence paths, graph/BOM, references, effective metadata,
-rollups, history, STEP/XDE, real HWND screenshots, and source-disposal workflow. Signing,
-hosted release execution, and publication
-authorization remain separate `NOT RUN` gates.
+informational version `8.0.1-preview.9`, ABI 1.54, bridge 0.62.0, and 62 native DLLs under
+`occt`. The clean consumer restores, publishes, and runs the inherited Batch D-K paths
+plus Batch L occurrence expansion, bounds, broad/exact analysis, filters, complete pair
+classification/reporting, incremental reuse, STEP/XDE traceability, real HWND review,
+screenshot, and source-disposal workflow. Signing, hosted release execution, and
+publication authorization remain separate `NOT RUN` gates.
 
-The preparation nupkg is 40,952,685 bytes with SHA256
-`B33DDF2D190ABB463A3C926387B05D73F2A0DD9461D4449D4BE4D64886A57FC4`.
-This package verification does not claim Batch L implementation or replace Preview.8's
-complete release-check evidence.
+The final nupkg is 40,991,912 bytes with SHA256
+`A0337295813488D2084B48194763DE23836B16A873E07EE86E7641AD0BEF1FDC`.
 
 ADR-0015 keeps one package during the topology/modeling foundation, then introduces
 Runtime, Foundation, Modeling, Mesh, DataExchange, Xde, Visualization, and optional IVtk

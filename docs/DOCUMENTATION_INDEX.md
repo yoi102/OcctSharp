@@ -9,7 +9,7 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Architecture](ARCHITECTURE.md) — system boundaries and component ownership.
 - [Repository layout](REPOSITORY_LAYOUT.md) — physical separation of documentation
   and code-related files.
-- [Roadmap](ROADMAP.md) — completed Batch B-K outcomes and active Batch L boundary.
+- [Roadmap](ROADMAP.md) — completed Batch B-L outcomes and future-wave boundary.
 - [Complete migration plan](MIGRATION_PLAN.md) — completed Batch C, Batch D, and Batch E
   matrices, large-wave rules, module/package boundaries, metrics,
   and product-scale gates.
@@ -38,7 +38,7 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   — completed 24-capability assembly editing, product-structure graph, BOM, reference,
   effective-metadata, STEP/XDE, viewer, and clean-package denominator.
 - [Batch L digital mock-up interference gap inventory](BATCH_L_DIGITAL_MOCKUP_INTERFERENCE_GAP_INVENTORY.md)
-  — prepared 24-capability bounds, broad/exact-phase, clearance/contact/penetration,
+  — completed 24-capability bounds, broad/exact-phase, clearance/contact/penetration,
   containment, STEP/XDE, viewer, and clean-package denominator.
 - [AI migration loop prompt](AI_MIGRATION_LOOP_PROMPT.md) — reusable re-entrant prompt
   for executing the largest coherent common-workflow wave instead of per-class tasks.
@@ -52,6 +52,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   C++/CLI, and platform-adapter availability and package boundaries.
 - [Full inventory classification](FULL_INVENTORY_CLASSIFICATION.md) — complete declaration
   and header dispositions, reason codes, and complete-versus-generated metrics.
+- [Preview.9 release notes](RELEASE_NOTES_8.0.1_PREVIEW_9.md) — complete Batch L digital
+  mock-up bounds, interference, clearance, incremental, STEP/XDE, review, and local evidence.
 - [Preview.8 release notes](RELEASE_NOTES_8.0.1_PREVIEW_8.md) — complete Batch K assembly
   editing, occurrence paths, graph/BOM, references, metadata, history, and local evidence.
 - [Preview.7 release notes](RELEASE_NOTES_8.0.1_PREVIEW_7.md) — complete Batch J selected

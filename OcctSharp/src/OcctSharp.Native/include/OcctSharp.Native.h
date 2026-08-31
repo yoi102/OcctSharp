@@ -557,6 +557,17 @@ typedef struct OcctSharp_BoundingBox
   double max_z;
 } OcctSharp_BoundingBox;
 
+typedef struct OcctSharp_OrientedBoundingBox
+{
+  OcctSharp_Xyz center;
+  OcctSharp_Xyz x_direction;
+  OcctSharp_Xyz y_direction;
+  OcctSharp_Xyz z_direction;
+  double half_size_x;
+  double half_size_y;
+  double half_size_z;
+} OcctSharp_OrientedBoundingBox;
+
 typedef struct OcctSharp_StepAssemblyInput
 {
   const char* file_path;
@@ -886,6 +897,12 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_section(
   OcctSharp_ShapeHandle** out_shape);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_bounding_box(
   const OcctSharp_ShapeHandle* shape, OcctSharp_BoundingBox* out_bounds);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_oriented_bounding_box(
+  const OcctSharp_ShapeHandle* shape, OcctSharp_OrientedBoundingBox* out_bounds);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_digital_mockup_candidate_pairs(
+  const OcctSharp_ShapeHandle* const* shapes, int32_t shape_count, double expansion,
+  int32_t* pairs, int32_t pair_capacity, int32_t* out_pair_count,
+  int32_t* out_axis_comparison_count);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_is_valid(
   const OcctSharp_ShapeHandle* shape, int32_t* out_is_valid);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_topology_summary(
@@ -945,6 +962,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_pair_classify(
   const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second,
   double tolerance, int32_t* classification, double* distance,
   double* overlap_volume, OcctSharp_ShapeHandle** overlap_shape);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_digital_mockup_pair_analyze(
+  const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second,
+  double confusion_tolerance, double fuzzy_tolerance, int32_t run_parallel,
+  int32_t non_destructive, int32_t* classification, double* distance,
+  double* overlap_volume, OcctSharp_ShapeHandle** issue_shape);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_inspection_properties(
   const OcctSharp_ShapeHandle* shape, int32_t property_kind,
   OcctSharp_InspectionProperties* properties);

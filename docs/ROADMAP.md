@@ -6,8 +6,7 @@ evidence; creating files or generating a large method count is not sufficient.
 The retired B00–B20 capability milestones and future package boundaries are documented
 in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the completed
 product-scale batch `B`; none is a separate current batch or commit boundary.
-Batch B through Batch K are complete for their accepted local implementation scopes;
-Batch L preparation is complete and implementation is 0/24.
+Batch B through Batch L are complete for their accepted local implementation scopes.
 ADR-0063 closes C at alpha.54, ADR-0064 closes D at alpha.55,
 and ADR-0066 closes E in Preview.2 as one 24-capability engineering-inspection,
 exact-measurement, and PMI/AP242 wave. ADR-0067 closes F in Preview.3 as one 24-capability
@@ -19,19 +18,25 @@ state, dependency-graph, history, undo/redo, savepoint, and persistence wave.
 ADR-0071 closes J in Preview.7 as one 24-capability advanced feature-modeling, robust-
 Boolean, copied-history, recovery, STEP/XDE, viewer, lifetime, and clean-package wave.
 ADR-0072 closes K in Preview.8 as one 24-capability assembly-authoring, occurrence,
-graph/BOM, reference, effective-metadata, rollup, history, and review wave. Hosted CI,
+graph/BOM, reference, effective-metadata, rollup, history, and review wave. ADR-0073
+closes L in Preview.9 as one 24-capability occurrence-aware bounds, broad/exact-phase,
+interference, clearance, containment, traceability, incremental, and review wave. Hosted CI,
 signing, and NuGet publication remain separate
 release-readiness work rather than
 unfinished batch implementation.
 
-## Active priority: Batch L digital mock-up interference and clearance
+## Completed priority: Batch L digital mock-up interference and clearance
 
 ADR-0073 and [the Batch L gap inventory](BATCH_L_DIGITAL_MOCKUP_INTERFERENCE_GAP_INVENTORY.md)
 freeze one 24-capability occurrence-aware analysis closure across Bnd/BVH,
 BRepExtrema/BRepClass3d/BOP/IntTools, XDE/STEP, owning topology, and AIS review. The exact
 Preview.8 root audit covers 1,351 declarations: 656 blocked, 194 emitted, 51 manual, and
-450 skipped. Preparation is complete and implementation is 0/24; only directly used
-blocked declarations may be reconciled through SC-048.
+450 skipped. Preparation and implementation are complete at 24/24. SC-048 reconciles
+exactly ten directly used blocked declarations; the other 646 blocked audit candidates
+remain blocked. Release/Debug, Runtime 147/147, focused 4/4, real STEP/XDE and HWND,
+copied/owning lifetime, the clean 62-DLL package consumer, clean regeneration, inventory,
+compatibility, and the complete local release gate pass. Bounds-only, distance-only,
+clash-only, XDE-only, viewer-only, numbered, or dotted fragments were not completion points.
 
 ## Completed priority: Batch K assembly authoring, BOM, and occurrence workflows
 
@@ -396,3 +401,5 @@ fragments, per-class batches, and small completion percentages were not used. Ba
 completes the immutable 24-capability feature-modeling/robust-Boolean/copied-history/
 recovery denominator under ADR-0071 in Preview.7. The next product wave starts only
 after a new cross-family denominator and dependency closure are audited and frozen.
+Batch K and Batch L likewise complete their immutable 24-capability assembly-authoring
+and digital-mock-up denominators in Preview.8 and Preview.9.

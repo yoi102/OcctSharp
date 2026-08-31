@@ -17,7 +17,7 @@ a blocked declaration is not a package API.
 | Final declaration/header pending | 0 / 0 |
 | Unowned header fallback `HD099` | 0 |
 | Generated manifest stable IDs | 16,353 |
-| Accepted manual stable IDs | 524 |
+| Accepted manual stable IDs | 534 |
 | `SupportedUnselected` | 0 |
 | Broad `LT001`-`LT004` reasons | 0 |
 
@@ -26,10 +26,10 @@ The successful declarations have these final dispositions:
 | State | Count | Meaning |
 |---|---:|---|
 | `Emitted` | 16,353 | The generated manifest owns the declaration stable ID (`EM001`) |
-| `Manual` | 524 | Schema 1.11 links the stable ID to accepted manual behavior through SC-032/SC-033 and subsequent product-wave special cases through SC-047 (`MN001`) |
+| `Manual` | 534 | Schema 1.12 links the stable ID to accepted manual behavior through SC-032/SC-033 and subsequent product-wave special cases through SC-048 (`MN001`) |
 | `SupportedUnselected` | 0 | No declaration accepted by the active safe generator rules remains outside the manifest |
 | `Skipped` | 49,344 | Non-public/language-level exclusions or narrow accepted non-callable declarations |
-| `Blocked` | 50,051 | Public declarations with a specific unresolved ABI, export, type, or ownership boundary |
+| `Blocked` | 50,041 | Public declarations with a specific unresolved ABI, export, type, or ownership boundary |
 | `Pending` | 0 | No unowned declaration disposition remains |
 
 The former broad LT001-LT004 buckets are eliminated. Narrow blocker counts are:
@@ -66,7 +66,7 @@ machine-readable report.
 
 The manifest-aware BatchSize=128 report is
 `OcctSharp/artifacts/generator-reports/full-inventory.json`, SHA256
-`11BF0C50B56EBCF54F776366EB68BDDB93CACD5209DA9CBE93472FDD437A402B`.
+`24A3DA5344C9EE7CE9B9EF571DFC7F20F77720A0ABA1B08192391DBDD7BA1EDC`.
 
 ## Interpretation
 

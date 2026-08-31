@@ -7,7 +7,7 @@ reported as supported.
 
 | OcctSharp | Generator | Native ABI | OCCT | Platform | Compiler | .NET | Status |
 |---|---|---|---|---|---|---|---|
-| 8.0.1-preview.9 preparation | ClangSharp 21.1.8.4 | 1.53 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental; Batch L 0/24 |
+| 8.0.1-preview.9 workspace | ClangSharp 21.1.8.4 | 1.54 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
 | 8.0.1-preview.8 workspace | ClangSharp 21.1.8.4 | 1.53 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
 
 Validated in both Debug and Release: native and managed build, ABI/runtime identity,
@@ -203,6 +203,15 @@ Release and Debug pass Generator 91/91 and Runtime 143/143; focused Batch K 4/4 
 clean 62-DLL package consumer validate assembly editing, occurrence paths, graph/BOM,
 references, effective metadata, rollups, history rollback, STEP/XDE, real HWND
 screenshots, and source/document-disposal lifetime.
+
+The `8.0.1-preview.9` workspace advances to ABI 1.54/bridge 0.62.0 and completes Batch L.
+Release and Debug pass Generator 91/91 and Runtime 147/147; focused Batch L 4/4 and the
+clean 62-DLL package consumer validate world-located XDE occurrences, copied AABB/OBB,
+native-local broad/exact phase, independent same-definition/adjacent/explicit filtering,
+clearance/contact/penetration/containment/coincident classifications, copied witnesses
+and interference groups, complete pair matrices, aggregation, diagnostics, self-checks,
+incremental rerun, owning issue topology, real STEP/XDE, real HWND screenshots, and
+source/document-disposal lifetime.
 
 ## Planned validation dimensions
 

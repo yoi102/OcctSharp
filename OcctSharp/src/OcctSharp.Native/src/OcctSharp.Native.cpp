@@ -81,6 +81,7 @@
 #include <Aspect_DisplayConnection.hxx>
 #include <Aspect_TypeOfTriedronPosition.hxx>
 #include <Bnd_Box.hxx>
+#include <Bnd_OBB.hxx>
 #include <BinDrivers.hxx>
 #include <BinXCAFDrivers.hxx>
 #include <XmlDrivers.hxx>
@@ -429,8 +430,8 @@ struct OcctSharp_FeatureResultHandle
 
 namespace
 {
-constexpr uint32_t AbiVersion = 0x00010035U;
-constexpr const char* BridgeVersion = "0.61.0";
+constexpr uint32_t AbiVersion = 0x00010036U;
+constexpr const char* BridgeVersion = "0.62.0";
 thread_local std::string LastError;
 std::mutex LiveShapesMutex;
 std::unordered_set<const OcctSharp_ShapeHandle*> LiveShapes;
@@ -4160,6 +4161,110 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_bounding_box(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_oriented_bounding_box(
+  const OcctSharp_ShapeHandle* shape, OcctSharp_OrientedBoundingBox* out_bounds)
+{
+  if (out_bounds == nullptr)
+  {
+    SetLastError("The oriented-bounding-box output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_bounds = {};
+  return Guard([&]
+  {
+    ValidateUsableShape(shape);
+    Bnd_OBB box;
+    BRepBndLib::AddOBB(shape->Value, box, true, true, false);
+    if (box.IsVoid())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT did not produce finite oriented shape bounds.");
+    const gp_Pnt center = box.Center();
+    const gp_Dir xDirection = box.XDirection();
+    const gp_Dir yDirection = box.YDirection();
+    const gp_Dir zDirection = box.ZDirection();
+    out_bounds->center = {center.X(), center.Y(), center.Z()};
+    out_bounds->x_direction = {xDirection.X(), xDirection.Y(), xDirection.Z()};
+    out_bounds->y_direction = {yDirection.X(), yDirection.Y(), yDirection.Z()};
+    out_bounds->z_direction = {zDirection.X(), zDirection.Y(), zDirection.Z()};
+    out_bounds->half_size_x = box.XHSize();
+    out_bounds->half_size_y = box.YHSize();
+    out_bounds->half_size_z = box.ZHSize();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_digital_mockup_candidate_pairs(
+  const OcctSharp_ShapeHandle* const* shapes, const int32_t shape_count,
+  const double expansion, int32_t* pairs, const int32_t pair_capacity,
+  int32_t* out_pair_count, int32_t* out_axis_comparison_count)
+{
+  if (out_pair_count == nullptr || out_axis_comparison_count == nullptr)
+  {
+    SetLastError("A digital mock-up candidate output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_pair_count = 0;
+  *out_axis_comparison_count = 0;
+  if (shape_count < 0 || pair_capacity < 0 || !std::isfinite(expansion) || expansion < 0.0
+      || (shape_count > 0 && shapes == nullptr) || (pair_capacity > 0 && pairs == nullptr))
+  {
+    SetLastError("Digital mock-up candidate arguments are invalid.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  return Guard([&]
+  {
+    struct IndexedBounds
+    {
+      int32_t Index;
+      double MinX, MinY, MinZ, MaxX, MaxY, MaxZ;
+    };
+    std::vector<IndexedBounds> bounds;
+    bounds.reserve(static_cast<size_t>(shape_count));
+    for (int32_t index = 0; index < shape_count; ++index)
+    {
+      ValidateUsableShape(shapes[index]);
+      Bnd_Box box;
+      BRepBndLib::AddOptimal(shapes[index]->Value, box, false, true);
+      if (box.IsVoid() || box.IsOpen())
+        throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT did not produce finite candidate bounds.");
+      IndexedBounds item{};
+      item.Index = index;
+      box.Get(item.MinX, item.MinY, item.MinZ, item.MaxX, item.MaxY, item.MaxZ);
+      bounds.push_back(item);
+    }
+    std::sort(bounds.begin(), bounds.end(), [](const IndexedBounds& left, const IndexedBounds& right)
+    {
+      if (left.MinX != right.MinX) return left.MinX < right.MinX;
+      return left.Index < right.Index;
+    });
+    int32_t pairCount = 0;
+    int32_t comparisons = 0;
+    for (size_t firstIndex = 0; firstIndex < bounds.size(); ++firstIndex)
+    {
+      const IndexedBounds& first = bounds[firstIndex];
+      for (size_t secondIndex = firstIndex + 1; secondIndex < bounds.size(); ++secondIndex)
+      {
+        const IndexedBounds& second = bounds[secondIndex];
+        ++comparisons;
+        if (second.MinX > first.MaxX + expansion) break;
+        if (second.MinY > first.MaxY + expansion || first.MinY > second.MaxY + expansion
+            || second.MinZ > first.MaxZ + expansion || first.MinZ > second.MaxZ + expansion)
+          continue;
+        if (pairCount < pair_capacity)
+        {
+          const int32_t low = std::min(first.Index, second.Index);
+          const int32_t high = std::max(first.Index, second.Index);
+          pairs[pairCount * 2] = low;
+          pairs[pairCount * 2 + 1] = high;
+        }
+        ++pairCount;
+      }
+    }
+    *out_pair_count = pairCount;
+    *out_axis_comparison_count = comparisons;
+    if (pair_capacity != 0 && pair_capacity < pairCount)
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The digital mock-up candidate buffer is too small.");
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_is_valid(
   const OcctSharp_ShapeHandle* shape, int32_t* out_is_valid)
 {
@@ -5054,6 +5159,97 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_pair_classify(
     *classification = smallerVolume > volumeTolerance
       && std::abs(*overlap_volume - smallerVolume) <= containmentTolerance ? 2 : 3;
     *overlap_shape = AllocateShape(overlap);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_digital_mockup_pair_analyze(
+  const OcctSharp_ShapeHandle* first, const OcctSharp_ShapeHandle* second,
+  const double confusion_tolerance, const double fuzzy_tolerance,
+  const int32_t run_parallel, const int32_t non_destructive,
+  int32_t* classification, double* distance, double* overlap_volume,
+  OcctSharp_ShapeHandle** issue_shape)
+{
+  if (classification == nullptr || distance == nullptr || overlap_volume == nullptr || issue_shape == nullptr)
+  {
+    SetLastError("A digital mock-up pair-analysis output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *classification = 0;
+  *distance = 0.0;
+  *overlap_volume = 0.0;
+  *issue_shape = nullptr;
+  if (!std::isfinite(confusion_tolerance) || confusion_tolerance < 0.0
+      || !std::isfinite(fuzzy_tolerance) || fuzzy_tolerance < 0.0)
+  {
+    SetLastError("Digital mock-up tolerances must be finite and non-negative.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  return Guard([&]
+  {
+    ValidateUsableShape(first);
+    ValidateUsableShape(second);
+    const BRepExtrema_DistShapeShape extrema = ComputeExactDistance(first, second);
+    *distance = extrema.Value();
+    const double contactTolerance = std::max(confusion_tolerance, fuzzy_tolerance);
+    if (*distance > contactTolerance)
+    {
+      *classification = 0;
+      return;
+    }
+
+    NCollection_List<TopoDS_Shape> arguments;
+    NCollection_List<TopoDS_Shape> tools;
+    arguments.Append(first->Value);
+    tools.Append(second->Value);
+    BRepAlgoAPI_Common common;
+    common.SetArguments(arguments);
+    common.SetTools(tools);
+    common.SetFuzzyValue(fuzzy_tolerance);
+    common.SetRunParallel(run_parallel != 0);
+    common.SetNonDestructive(non_destructive != 0);
+    common.Build();
+    if (!common.IsDone())
+      throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT could not compute the digital mock-up pair overlap.");
+    const TopoDS_Shape overlap = common.Shape();
+    if (!overlap.IsNull())
+    {
+      GProp_GProps overlapProps;
+      BRepGProp::VolumeProperties(overlap, overlapProps, true);
+      *overlap_volume = std::abs(overlapProps.Mass());
+    }
+    const double effectiveTolerance = std::max(confusion_tolerance, fuzzy_tolerance);
+    const double volumeTolerance = std::max(
+      effectiveTolerance * effectiveTolerance * effectiveTolerance, 1.0e-18);
+    if (*overlap_volume <= volumeTolerance)
+    {
+      *classification = 1;
+      BRepAlgoAPI_Section section(first->Value, second->Value, false);
+      section.SetFuzzyValue(fuzzy_tolerance);
+      section.SetRunParallel(run_parallel != 0);
+      section.SetNonDestructive(non_destructive != 0);
+      section.Build();
+      if (section.IsDone() && !section.Shape().IsNull())
+        *issue_shape = AllocateShape(section.Shape());
+      return;
+    }
+
+    GProp_GProps firstProps;
+    GProp_GProps secondProps;
+    BRepGProp::VolumeProperties(first->Value, firstProps, true);
+    BRepGProp::VolumeProperties(second->Value, secondProps, true);
+    const double firstVolume = std::abs(firstProps.Mass());
+    const double secondVolume = std::abs(secondProps.Mass());
+    const double firstTolerance = std::max(volumeTolerance, firstVolume * 1.0e-9);
+    const double secondTolerance = std::max(volumeTolerance, secondVolume * 1.0e-9);
+    const bool containsFirst = firstVolume > volumeTolerance
+      && std::abs(*overlap_volume - firstVolume) <= firstTolerance;
+    const bool containsSecond = secondVolume > volumeTolerance
+      && std::abs(*overlap_volume - secondVolume) <= secondTolerance;
+    *classification = containsFirst && containsSecond ? 4
+      : containsFirst ? 2
+      : containsSecond ? 3
+      : 5;
+    *issue_shape = AllocateShape(overlap);
   });
 }
 

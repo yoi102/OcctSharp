@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 53)
-    || runtime.BridgeVersion != "0.61.0"
+if (runtime.AbiVersion != new Version(1, 54)
+    || runtime.BridgeVersion != "0.62.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -1552,6 +1552,86 @@ try
     {
         _ = PackageWindowMethods.DestroyWindow(batchKWindow);
     }
+
+    string batchLStep = Path.Combine(exchangeDirectory, "package-batch-l-dmu.step");
+    DigitalMockupReport batchLReport;
+    using (Shape batchLPartShape = ShapeFactory.CreateBox(8, 4, 3))
+    using (XdeDocument batchLDocument = XdeDocument.Create())
+    {
+        using XdeTransaction transaction = batchLDocument.BeginTransaction("Package Batch L DMU");
+        XdeLabel part = batchLDocument.AddShape(batchLPartShape, "Package DMU Part");
+        XdeLabel root = batchLDocument.AddAssembly("Package DMU Root");
+        using GpTrsf firstTransform = GpTrsf.Create(0, 0, 0);
+        using GpTrsf secondTransform = GpTrsf.Create(6, 0, 0);
+        using TopLocLocation firstLocation = TopLocLocation.FromTransform(firstTransform);
+        using TopLocLocation secondLocation = TopLocLocation.FromTransform(secondTransform);
+        batchLDocument.AddComponent(root, part, firstLocation);
+        batchLDocument.AddComponent(root, part, secondLocation);
+        if (!transaction.Commit())
+            throw new InvalidOperationException("The packaged Batch L XDE transaction failed.");
+        batchLReport = DigitalMockupAnalyzer.AnalyzeAssembly(root, new DigitalMockupPolicy
+        {
+            Clearance = 0.5,
+            RunParallel = true,
+            NonDestructive = true,
+            ExactDistanceForAllPairs = true
+        });
+        batchLDocument.WriteStep(batchLStep);
+    }
+    using (batchLReport)
+    {
+        DigitalMockupPairResult pair = batchLReport.Pairs.Single();
+        if (batchLReport.Items.Count != 2 || batchLReport.Summary.ExactPairCount != 1
+            || pair.State != DigitalMockupPairState.Interfering || pair.OverlapVolume <= 0
+            || pair.IssueTopology is null || !pair.IssueTopology.IsValid
+            || batchLReport.Items.Any(item => item.OrientedBounds is null || item.OccurrencePath.Count == 0))
+            throw new InvalidOperationException("The packaged Batch L bounds/pair-matrix/penetration/ownership workflow failed.");
+
+        using XdeDocument batchLImported = XdeDocument.ReadStep(batchLStep);
+        using DigitalMockupReport batchLReread = DigitalMockupAnalyzer.AnalyzeAssembly(
+            batchLImported.GetFreeShapes().Single(),
+            new DigitalMockupPolicy { ExactDistanceForAllPairs = true });
+        if (batchLReread.Items.Count != 2 || batchLReread.Pairs.Count != 1)
+            throw new InvalidOperationException("The packaged Batch L STEP/XDE traceability workflow failed.");
+
+        nint batchLWindow = PackageWindowMethods.CreateWindowEx(
+            0, "STATIC", "OcctSharp Batch L package DMU", 0x80000000u,
+            -32000, -32000, 320, 320, 0, 0, 0, 0);
+        if (batchLWindow == 0)
+            throw new InvalidOperationException("The Batch L package HWND could not be created.");
+        try
+        {
+            _ = PackageWindowMethods.ShowWindow(batchLWindow, 4);
+            _ = PackageWindowMethods.UpdateWindow(batchLWindow);
+            using OcctViewer batchLViewer = OcctViewer.Create(batchLWindow);
+            using DigitalMockupReviewSession review = DigitalMockupReviewSession.Display(batchLReport, batchLViewer);
+            DigitalMockupPairId issue = review.IssueIds.Single();
+            review.EnableSelection(issue, ShapeKind.Face);
+            review.Isolate([issue]);
+            string image = review.SaveKeyedScreenshot(
+                Path.Combine(exchangeDirectory, "package-batch-l-dmu.png"), [issue], overwrite: true);
+            if (!File.Exists(image) || new FileInfo(image).Length == 0)
+                throw new InvalidOperationException("The packaged Batch L real-HWND issue review failed.");
+        }
+        finally { _ = PackageWindowMethods.DestroyWindow(batchLWindow); }
+    }
+
+    using Shape batchLIncrementalFirst = ShapeFactory.CreateBox(3, 3, 3);
+    using Shape batchLIncrementalBase = ShapeFactory.CreateBox(3, 3, 3);
+    using Shape batchLIncrementalOld = batchLIncrementalBase.Transformed(ShapeTransform.CreateTranslation(5, 0, 0));
+    using Shape batchLIncrementalFarBase = ShapeFactory.CreateBox(1, 1, 1);
+    using Shape batchLIncrementalFar = batchLIncrementalFarBase.Transformed(ShapeTransform.CreateTranslation(50, 0, 0));
+    using DigitalMockupReport batchLBaseline = DigitalMockupAnalyzer.Analyze(
+        [new("A", batchLIncrementalFirst), new("B", batchLIncrementalOld), new("C", batchLIncrementalFar)],
+        new DigitalMockupPolicy { ExactDistanceForAllPairs = true });
+    using Shape batchLIncrementalNew = batchLIncrementalBase.Transformed(ShapeTransform.CreateTranslation(2, 0, 0));
+    using DigitalMockupReport batchLIncremental = DigitalMockupAnalyzer.AnalyzeIncremental(
+        batchLBaseline,
+        [new("A", batchLIncrementalFirst), new("B", batchLIncrementalNew), new("C", batchLIncrementalFar)],
+        ["B"]);
+    if (batchLIncremental.Summary.ReusedPairCount != 1
+        || batchLIncremental.PairById[new DigitalMockupPairId("A", "B")].State != DigitalMockupPairState.Interfering)
+        throw new InvalidOperationException("The packaged Batch L stable-ID incremental workflow failed.");
 }
 finally
 {

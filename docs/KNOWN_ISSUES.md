@@ -126,9 +126,9 @@ evidence updated.
 - Severity: High
 - Area: Generator
 - Problem: Deterministic native/managed generation now owns 16,353 stable IDs and the
-  accepted friendly/manual layer reconciles 524 additional stable IDs. This is a broad,
+  accepted friendly/manual layer reconciles 534 additional stable IDs. This is a broad,
   validated selected surface, not full OCCT API coverage. The complete classification
-  still contains 49,344 skipped and 50,051 narrowly blocked declarations, while 32 of
+  still contains 49,344 skipped and 50,041 narrowly blocked declarations, while 32 of
   7,090 entry headers cannot be semantically scanned with the supplied optional/artifact
   inputs. A single generated/total percentage would therefore mix different denominators
   and overstate support.

@@ -234,13 +234,13 @@ fixed-order SHA256 checksums, and Git whitespace validation.
 
 The root CI workflow has a dependency-free generator job and a complete Windows job that
 runs this same entry point after acquiring an archive from configured immutable URL and
-SHA256 variables. The `8.0.1-preview.8` local release check covers Release/Debug,
-Generator 91/91, Runtime 143/143, the inherited real STEP/XDE plus real-HWND Batch D-J
-workflows, and the complete Batch K assembly/BOM/reference/metadata/history workflow,
+SHA256 variables. The `8.0.1-preview.9` local release check covers Release/Debug,
+Generator 91/91, Runtime 147/147, the inherited real STEP/XDE plus real-HWND Batch D-K
+workflows, and the complete Batch L occurrence/bounds/interference/clearance/incremental/review workflow,
 the clean 62-DLL package consumer, deterministic generation/regeneration, inventory, API
 compatibility, runtime hashes, SBOM/provenance/checksums, and Git whitespace. MIT project
 licensing and bundled third-party notices pass. Hosted full release execution, package
-signing, and NuGet publication are `NOT RUN`; therefore local Batch K implementation is
+signing, and NuGet publication are `NOT RUN`; therefore local Batch L implementation is
 complete while public release readiness remains false.
 
 ```powershell

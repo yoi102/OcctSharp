@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.11",
+  "schemaVersion": "1.12",
   "occtVersion": "8.0.1",
   "scope": "foundation-prototype",
   "headers": [
@@ -2261,6 +2261,46 @@
     {
       "stableId": "c:@S@BRepAlgoAPI_BuilderAlgo@F@SetGlue#$@E@BOPAlgo_GlueEnum#",
       "specialCaseId": "SC-046"
+    },
+    {
+      "stableId": "c:@S@BRepBndLib@F@AddOBB#&1$@S@TopoDS_Shape#&$@S@Bnd_OBB#b#b#b#S",
+      "specialCaseId": "SC-048"
+    },
+    {
+      "stableId": "c:@S@Bnd_OBB@F@Bnd_OBB#",
+      "specialCaseId": "SC-048"
+    },
+    {
+      "stableId": "c:@S@Bnd_OBB@F@Center#1",
+      "specialCaseId": "SC-048"
+    },
+    {
+      "stableId": "c:@S@Bnd_OBB@F@IsVoid#1",
+      "specialCaseId": "SC-048"
+    },
+    {
+      "stableId": "c:@S@Bnd_OBB@F@XDirection#1",
+      "specialCaseId": "SC-048"
+    },
+    {
+      "stableId": "c:@S@Bnd_OBB@F@XHSize#1",
+      "specialCaseId": "SC-048"
+    },
+    {
+      "stableId": "c:@S@Bnd_OBB@F@YDirection#1",
+      "specialCaseId": "SC-048"
+    },
+    {
+      "stableId": "c:@S@Bnd_OBB@F@YHSize#1",
+      "specialCaseId": "SC-048"
+    },
+    {
+      "stableId": "c:@S@Bnd_OBB@F@ZDirection#1",
+      "specialCaseId": "SC-048"
+    },
+    {
+      "stableId": "c:@S@Bnd_OBB@F@ZHSize#1",
+      "specialCaseId": "SC-048"
     }
   ],
   "excludedBindings": [

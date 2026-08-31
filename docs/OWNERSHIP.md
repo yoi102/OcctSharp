@@ -464,3 +464,17 @@ references are copied metadata and do not authorize implicit I/O. Viewer resourc
 remain viewer-parent-bound and creating-thread-affine. Preview.8 focused 4/4,
 Release/Debug 143/143, STEP/XDE, real-HWND, source/document-disposal, and clean-package
 tests validate this complete 24/24 boundary.
+
+### Batch L digital mock-up interference and clearance boundary
+
+ADR-0073 keeps Bnd/BVH indexing, BRepExtrema distance state, BRepClass3d classifiers,
+BRepAlgoAPI/BOP/IntTools algorithms, explorers, maps, and progress objects inside one
+synchronous native call. Input `Shape` values are borrowed only while the call executes.
+Pair IDs, AABB/OBB values, witnesses, classifications, occurrence paths, diagnostics,
+timings, counts, and aggregation records cross as copied managed values. Exact support,
+contact, and overlap topology crosses only as independent registered owning `Shape`
+values. Incremental analysis clones reused owning results and never aliases a prior
+report. XDE labels remain document-parent-bound; viewer presentations remain session/
+viewer-parent-bound and creating-thread-affine. Preview.9 focused 4/4, Release/Debug
+147/147, real STEP/XDE, real HWND, source/document disposal, and clean-package tests
+validate this complete 24/24 boundary.

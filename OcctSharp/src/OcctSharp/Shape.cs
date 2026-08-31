@@ -566,6 +566,23 @@ public partial class Shape : IDisposable
             new GpPoint(bounds.MaxX, bounds.MaxY, bounds.MaxZ));
     }
 
+    /// <summary>Copies finite optimal oriented bounds from OCCT.</summary>
+    public OrientedBoundingBox3d GetOrientedBoundingBox()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        NativeError.ThrowIfFailed(
+            NativeMethods.GetOrientedBoundingBox(handle, out OrientedBoundingBoxRaw bounds),
+            "shape_oriented_bounding_box");
+        return new OrientedBoundingBox3d(
+            new GpPoint(bounds.Center.X, bounds.Center.Y, bounds.Center.Z),
+            new GpXyz(bounds.XDirection.X, bounds.XDirection.Y, bounds.XDirection.Z),
+            new GpXyz(bounds.YDirection.X, bounds.YDirection.Y, bounds.YDirection.Z),
+            new GpXyz(bounds.ZDirection.X, bounds.ZDirection.Y, bounds.ZDirection.Z),
+            bounds.HalfSizeX,
+            bounds.HalfSizeY,
+            bounds.HalfSizeZ);
+    }
+
     /// <summary>Gets whether OCCT reports the complete topology as valid.</summary>
     public bool IsValid
     {

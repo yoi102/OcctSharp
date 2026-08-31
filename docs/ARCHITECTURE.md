@@ -265,7 +265,11 @@ Batch L retains the same physical and ownership topology. Bounds/spatial indexes
 extrema/classifier/BOP/IntTools state, explorers, maps, and progress objects remain
 call-local. Pair classifications, witnesses, diagnostics, timings, and occurrence
 traceability are copied; issue topology is independently owning. XDE and viewer objects
-retain their established document/thread parent boundaries.
+retain their established document/thread parent boundaries. Preview.9 completes all 24
+capabilities through focused 4/4, Release/Debug Runtime 147/147, exact SC-048 accounting,
+real STEP/XDE and HWND review, source/document disposal, and the clean 62-DLL consumer.
+Stable order-independent pair IDs, copied reports, and independently cloned incremental
+results retain no algorithm, spatial-index, document, or input-shape lifetime.
 
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native
