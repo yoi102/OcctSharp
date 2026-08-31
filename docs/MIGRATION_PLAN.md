@@ -29,13 +29,10 @@ no new active product batch is implied by their existence.
 
 ## Product and project structure
 
-### Current structure
+### Current managed projects and packages
 
-Keep one managed project, one native bridge, one NuGet package, and one application-local
-`occt` runtime directory after the completed Batch F wave. Generated
-files are organized by module immediately, even while they compile into the same assembly.
-
-### Planned managed projects and packages
+ADR-0074 physically splits the managed implementation and packages while retaining one
+native bridge and one application-local `occt` runtime directory.
 
 | Project/package | OCCT responsibility | Dependency direction |
 |---|---|---|
@@ -52,26 +49,27 @@ files are organized by module immediately, even while they compile into the same
 | `OcctSharp.IVtk` | Optional VTK integration | Visualization plus external VTK assets |
 | `OcctSharp.OpenGles` | Optional OpenGL ES backend | Visualization plus GLES/EGL assets |
 | `OcctSharp.Draw` | Optional Draw/test harnesses | Xde, Visualization |
-| `OcctSharp` | Meta-package and convenience facade | All stable non-optional packages |
+| `OcctSharp` | Compatibility entry, cross-family facade, and meta-package | All modules needed to preserve the former single-assembly surface |
 
-The first package split occurs only after common runtime types can move without public
-API duplication and at least one of these triggers is met:
+The first package split was authorized after common runtime types could move without
+public API duplication and these triggers were met:
 
 - a generated module exceeds 5,000 public members or materially slows normal builds;
 - an optional external dependency such as VTK must remain absent for core consumers;
 - the second RID requires a separate native asset package;
 - independent module versioning or release validation becomes necessary.
 
-Native assets later move to RID-specific packages such as
-`OcctSharp.Native.win-x64`. Native code remains one bridge until a central cross-module
-handle registry and creator-owned release contract prove that module bridge DLLs are safe.
+Native assets now live only in `OcctSharp.Native.win-x64`. `OcctSharp.Runtime` depends
+on it and higher managed packages receive it transitively. Native code remains one bridge
+until a central cross-module handle registry and creator-owned release contract prove that
+module bridge DLLs are safe.
 
-ADR-0062 completes the generated-signature prerequisite: all 27 observed cross-shard
-edges are resolved, compatible with this graph, and acyclic. It does not perform the
-physical split. Managed projects still need public assembly-identity/type-forwarding and
-manual-facade migration evidence; native DLLs still need cross-DLL registry, allocator,
-and creator-routed release evidence. Until those separate decisions are accepted, the
-current single assembly/DLL/package layout remains authoritative.
+ADR-0062 completed the generated-signature prerequisite: all 27 observed cross-shard
+edges are resolved, compatible with this graph, and acyclic. ADR-0074 closes managed
+assembly identity, deterministic type forwarding, manual `Shape`/facade ownership,
+per-assembly native resolution, package dependencies, and direct-module compatibility.
+Native DLLs still need cross-DLL registry, allocator, validation, and creator-routed
+release evidence; one native DLL remains authoritative.
 
 ## Product-scale migration batches
 
@@ -386,7 +384,7 @@ public type names, and ADR-0061/ADR-0062 generated dependency graph.
 
 ## Generated output partitioning
 
-Generated paths use module directories before project splitting:
+Generated paths retain module directories as the source of physical project ownership:
 
 ```text
 src/OcctSharp.Native/generated/<Module>/
@@ -396,15 +394,15 @@ src/OcctSharp/Generated/<Module>/
 The manifest remains the only owner of generated paths. Moving a generated file between
 modules is a generator change followed by regeneration, never a manual source move.
 
-ADR-0061 implements this source partition and ADR-0062 closes its semantic dependencies.
-Binding-model schema 1.3 and manifest schema 1.1 carry stable module/layer/shard
-identities; Release generation currently produces 83 manifest-owned files for 16,353
-stable IDs, including the separate MeshData shard. They still compile into one
-managed assembly and one native DLL, and public `OcctSharp` type full names do not move.
-Project/package/native-DLL splitting remains gated by the triggers above and needs a
-separate compatibility and ownership decision. `dependency-closure.json` proves zero
+ADR-0061 implements this source partition, ADR-0062 closes its semantic dependencies,
+and ADR-0074 maps the shards to managed projects/packages. Binding-model schema 1.3 and
+manifest schema 1.1 carry stable module/layer/shard identities; Release generation
+currently produces 94 manifest-owned files for 16,353 stable IDs, including one
+module-local managed runtime source per emitted module. Public namespaces remain
+`OcctSharp`; moved public types are forwarded from the compatibility facade. Native
+generated sources still link into one DLL. `dependency-closure.json` proves zero
 unresolved targets, zero graph violations, and zero cyclic groups for the generated
-surface; manual facade and binary-identity migration remain outside that claim.
+surface, and facade API validation separately proves zero aggregate removals.
 
 ## Dependency profiles
 
@@ -440,5 +438,6 @@ global catalog.
 4. C, D, E, and F are completed product batches and remain immutable evidence.
 5. A future implementation wave requires a separately accepted finite product denominator;
    connected families are not automatically batches or permission for partial completion.
-6. Arbitrary callbacks, custom rendering, optional integrations, cold schema, and physical
-   splitting remain outside the completed Batch F denominator.
+6. Arbitrary callbacks, custom rendering, optional integrations, and cold schema remain
+   outside the completed Batch F denominator. Managed physical splitting is independently
+   completed by ADR-0074; native physical splitting remains out of scope.

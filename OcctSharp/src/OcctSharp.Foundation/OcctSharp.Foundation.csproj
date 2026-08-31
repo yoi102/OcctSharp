@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\OcctSharp.Module.props" />
+  <PropertyGroup><Description>OCCT foundation bindings for OcctSharp.</Description></PropertyGroup>
+  <ItemGroup><Compile Include="..\OcctSharp\Generated\Foundation\**\*.cs" Link="Generated\%(RecursiveDir)%(Filename)%(Extension)" /></ItemGroup>
+  <ItemGroup><ProjectReference Include="..\OcctSharp.Runtime\OcctSharp.Runtime.csproj" /></ItemGroup>
+</Project>

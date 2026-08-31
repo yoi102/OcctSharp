@@ -58,7 +58,7 @@ using System.Runtime.InteropServices;
 
 namespace OcctSharp.Generated;
 
-internal static partial class GeneratedNativeMethods
+internal static partial class ModelingGeneratedNativeMethods
 {
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bopalgo_make_periodic_to_direction_id_static_to_direction_id_0")]

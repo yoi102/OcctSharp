@@ -8,21 +8,21 @@ internal static class NativeLibraryResolver
     private const string NativeLibraryName = "OcctSharp.Native";
     private const string NativeDirectoryName = "occt";
     private static readonly object RegistrationGate = new();
-    private static bool _registered;
+    private static readonly HashSet<Assembly> RegisteredAssemblies = [];
 
-    internal static void EnsureRegistered()
+    internal static void EnsureRegistered(Assembly assembly)
     {
+        ArgumentNullException.ThrowIfNull(assembly);
         lock (RegistrationGate)
         {
-            if (_registered)
+            if (!RegisteredAssemblies.Add(assembly))
             {
                 return;
             }
 
             NativeLibrary.SetDllImportResolver(
-                typeof(NativeLibraryResolver).Assembly,
+                assembly,
                 Resolve);
-            _registered = true;
         }
     }
 

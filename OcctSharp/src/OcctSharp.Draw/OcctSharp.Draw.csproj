@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\OcctSharp.Module.props" />
+  <PropertyGroup><Description>Optional OCCT Draw and test-harness binding surface for OcctSharp.</Description></PropertyGroup>
+  <ItemGroup><Compile Include="..\OcctSharp\Generated\Draw\**\*.cs" Link="Generated\%(RecursiveDir)%(Filename)%(Extension)" /></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OcctSharp.Runtime\OcctSharp.Runtime.csproj" />
+    <ProjectReference Include="..\OcctSharp.Xde\OcctSharp.Xde.csproj" />
+    <ProjectReference Include="..\OcctSharp.Visualization\OcctSharp.Visualization.csproj" />
+  </ItemGroup>
+</Project>

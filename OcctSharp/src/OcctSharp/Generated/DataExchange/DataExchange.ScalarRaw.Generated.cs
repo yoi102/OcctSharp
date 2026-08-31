@@ -49,7 +49,7 @@ using System.Runtime.InteropServices;
 
 namespace OcctSharp.Generated;
 
-internal static partial class GeneratedNativeMethods
+internal static partial class DataExchangeGeneratedNativeMethods
 {
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ifselect_functions_init_static_init_0")]

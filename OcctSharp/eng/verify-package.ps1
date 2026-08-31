@@ -2,7 +2,7 @@
 param(
     [string]$OcctRoot,
 
-    [string]$PackageVersion = '8.0.1-preview.9',
+    [string]$PackageVersion = '8.0.1-preview.10',
 
     [switch]$SkipBuild
 )
@@ -14,10 +14,12 @@ $workspaceRoot = Split-Path -Parent $PSScriptRoot
 Push-Location -LiteralPath $workspaceRoot
 try {
 $consumerProject = Join-Path $workspaceRoot 'tests\OcctSharp.PackageConsumer\OcctSharp.PackageConsumer.csproj'
+$moduleConsumerProject = Join-Path $workspaceRoot 'tests\OcctSharp.ModuleConsumer\OcctSharp.ModuleConsumer.csproj'
 $packageDirectory = Join-Path $workspaceRoot 'artifacts\packages'
 $consumerRoot = Join-Path $workspaceRoot 'artifacts\package-consumer'
 $packageCache = Join-Path $consumerRoot 'packages'
 $publishDirectory = Join-Path $consumerRoot 'publish'
+$modulePublishDirectory = Join-Path $consumerRoot 'module-publish'
 
 & (Join-Path $PSScriptRoot 'pack.ps1') `
     -OcctRoot $OcctRoot `
@@ -26,6 +28,36 @@ $publishDirectory = Join-Path $consumerRoot 'publish'
 if ($LASTEXITCODE -ne 0) {
     throw "Package creation failed with exit code $LASTEXITCODE."
 }
+
+$packageIds = @(
+    'OcctSharp.Native.win-x64', 'OcctSharp.Runtime', 'OcctSharp.Foundation',
+    'OcctSharp.Geometry', 'OcctSharp.MeshData', 'OcctSharp.Modeling',
+    'OcctSharp.Mesh', 'OcctSharp.Documents', 'OcctSharp.Visualization',
+    'OcctSharp.DataExchange', 'OcctSharp.Xde', 'OcctSharp.IVtk',
+    'OcctSharp.Draw', 'OcctSharp'
+)
+$expectedNativeCount = @(Get-ChildItem -LiteralPath (Join-Path $workspaceRoot 'runtime\win-x64\occt') -File -Filter '*.dll').Count
+foreach ($packageId in $packageIds) {
+    $packagePath = Join-Path $packageDirectory "$packageId.$PackageVersion.nupkg"
+    $archive = [IO.Compression.ZipFile]::OpenRead($packagePath)
+    try {
+        $packagedNativeCount = @($archive.Entries | Where-Object {
+            $_.FullName -like 'buildTransitive/win-x64/occt/*.dll'
+        }).Count
+        if ($packageId -eq 'OcctSharp.Native.win-x64') {
+            if ($packagedNativeCount -ne $expectedNativeCount) {
+                throw "The shared native package contains $packagedNativeCount DLLs; expected $expectedNativeCount."
+            }
+        }
+        elseif ($packagedNativeCount -ne 0) {
+            throw "Managed package '$packageId' duplicates $packagedNativeCount native runtime DLLs."
+        }
+    }
+    finally {
+        $archive.Dispose()
+    }
+}
+Write-Host "Package asset audit verified one $expectedNativeCount-DLL native package and zero native duplication in 13 managed packages."
 
 if (Test-Path -LiteralPath $consumerRoot) {
     $resolvedConsumerRoot = (Resolve-Path -LiteralPath $consumerRoot).Path
@@ -90,6 +122,41 @@ if (Test-Path -LiteralPath (Join-Path $publishDirectory 'OcctSharp.Native.dll'))
 }
 
 Write-Host "Clean package consumer verified $($nativeFiles.Count) DLLs under '$nativeDirectory'."
+
+& dotnet restore $moduleConsumerProject `
+    --configfile $nugetConfig `
+    --packages $packageCache `
+    "-p:OcctSharpPackageVersion=$PackageVersion"
+if ($LASTEXITCODE -ne 0) {
+    throw "Direct module consumer restore failed with exit code $LASTEXITCODE."
+}
+
+& dotnet publish $moduleConsumerProject `
+    --configuration Release `
+    --no-restore `
+    --output $modulePublishDirectory `
+    "-p:PackageVersion=$PackageVersion"
+if ($LASTEXITCODE -ne 0) {
+    throw "Direct module consumer publish failed with exit code $LASTEXITCODE."
+}
+
+$moduleConsumerExecutable = Join-Path $modulePublishDirectory 'OcctSharp.ModuleConsumer.exe'
+if (-not (Test-Path -LiteralPath $moduleConsumerExecutable)) {
+    throw "Direct module consumer executable was not created: '$moduleConsumerExecutable'."
+}
+
+& $moduleConsumerExecutable
+if ($LASTEXITCODE -ne 0) {
+    throw "Direct module consumer failed with exit code $LASTEXITCODE."
+}
+
+$moduleNativeDirectory = Join-Path $modulePublishDirectory 'occt'
+$moduleNativeFiles = @(Get-ChildItem -LiteralPath $moduleNativeDirectory -File -Filter '*.dll')
+if ($moduleNativeFiles.Count -ne $nativeFiles.Count) {
+    throw "Direct module consumer received $($moduleNativeFiles.Count) native DLLs; expected $($nativeFiles.Count)."
+}
+
+Write-Host "Direct module package consumer verified $($moduleNativeFiles.Count) shared native DLLs without the facade package."
 }
 finally {
     Pop-Location

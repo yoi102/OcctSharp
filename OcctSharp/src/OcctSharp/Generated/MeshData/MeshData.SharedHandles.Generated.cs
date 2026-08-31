@@ -111,7 +111,7 @@ public sealed class PolyCoherentTriangulation : IDisposable
     public PolyCoherentTriangulation(NCollectionBaseAllocator? theAlloc)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyCoherentTriangulationCreate0(theAlloc is null ? nint.Zero : theAlloc.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyCoherentTriangulationCreate0(theAlloc is null ? nint.Zero : theAlloc.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "PolyCoherentTriangulationCreate0");
     }
 
@@ -119,7 +119,7 @@ public sealed class PolyCoherentTriangulation : IDisposable
     public PolyCoherentTriangulation(PolyTriangulation? theTriangulation, NCollectionBaseAllocator? theAlloc)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyCoherentTriangulationCreate1(theTriangulation is null ? nint.Zero : theTriangulation.NativeHandle.DangerousGetHandle(), theAlloc is null ? nint.Zero : theAlloc.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyCoherentTriangulationCreate1(theTriangulation is null ? nint.Zero : theTriangulation.NativeHandle.DangerousGetHandle(), theAlloc is null ? nint.Zero : theAlloc.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "PolyCoherentTriangulationCreate1");
     }
 
@@ -127,14 +127,14 @@ public sealed class PolyCoherentTriangulation : IDisposable
     public void ClearLinks()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyCoherentTriangulationMethodClearLinks0(handle), "occtsharp_generated_poly_coherent_triangulation_method_clear_links_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyCoherentTriangulationMethodClearLinks0(handle), "occtsharp_generated_poly_coherent_triangulation_method_clear_links_0");
     }
 
     /// <summary>Invokes OCCT Poly_CoherentTriangulation::Clone.</summary>
     public PolyCoherentTriangulation? OcctClone(NCollectionBaseAllocator? theAlloc)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyCoherentTriangulationMethodOcctClone0(handle, theAlloc is null ? nint.Zero : theAlloc.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_poly_coherent_triangulation_method_clone_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyCoherentTriangulationMethodOcctClone0(handle, theAlloc is null ? nint.Zero : theAlloc.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_poly_coherent_triangulation_method_clone_0");
         return global::OcctSharp.PolyCoherentTriangulation.FromNative(handleValue, "occtsharp_generated_poly_coherent_triangulation_method_clone_0");
     }
 
@@ -142,7 +142,7 @@ public sealed class PolyCoherentTriangulation : IDisposable
     public int ComputeLinks()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyCoherentTriangulationMethodComputeLinks0(handle, out int resultValue), "occtsharp_generated_poly_coherent_triangulation_method_compute_links_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyCoherentTriangulationMethodComputeLinks0(handle, out int resultValue), "occtsharp_generated_poly_coherent_triangulation_method_compute_links_0");
         return resultValue;
     }
 
@@ -150,7 +150,7 @@ public sealed class PolyCoherentTriangulation : IDisposable
     public double Deflection()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyCoherentTriangulationMethodDeflection0(handle, out double resultValue), "occtsharp_generated_poly_coherent_triangulation_method_deflection_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyCoherentTriangulationMethodDeflection0(handle, out double resultValue), "occtsharp_generated_poly_coherent_triangulation_method_deflection_0");
         return resultValue;
     }
 
@@ -158,7 +158,7 @@ public sealed class PolyCoherentTriangulation : IDisposable
     public PolyTriangulation? GetTriangulation()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyCoherentTriangulationMethodGetTriangulation0(handle, out nint handleValue), "occtsharp_generated_poly_coherent_triangulation_method_get_triangulation_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyCoherentTriangulationMethodGetTriangulation0(handle, out nint handleValue), "occtsharp_generated_poly_coherent_triangulation_method_get_triangulation_0");
         return global::OcctSharp.PolyTriangulation.FromNative(handleValue, "occtsharp_generated_poly_coherent_triangulation_method_get_triangulation_0");
     }
 
@@ -166,7 +166,7 @@ public sealed class PolyCoherentTriangulation : IDisposable
     public int MaxNode()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyCoherentTriangulationMethodMaxNode0(handle, out int resultValue), "occtsharp_generated_poly_coherent_triangulation_method_max_node_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyCoherentTriangulationMethodMaxNode0(handle, out int resultValue), "occtsharp_generated_poly_coherent_triangulation_method_max_node_0");
         return resultValue;
     }
 
@@ -174,7 +174,7 @@ public sealed class PolyCoherentTriangulation : IDisposable
     public int MaxTriangle()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyCoherentTriangulationMethodMaxTriangle0(handle, out int resultValue), "occtsharp_generated_poly_coherent_triangulation_method_max_triangle_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyCoherentTriangulationMethodMaxTriangle0(handle, out int resultValue), "occtsharp_generated_poly_coherent_triangulation_method_max_triangle_0");
         return resultValue;
     }
 
@@ -182,7 +182,7 @@ public sealed class PolyCoherentTriangulation : IDisposable
     public int NLinks()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyCoherentTriangulationMethodNLinks0(handle, out int resultValue), "occtsharp_generated_poly_coherent_triangulation_method_nlinks_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyCoherentTriangulationMethodNLinks0(handle, out int resultValue), "occtsharp_generated_poly_coherent_triangulation_method_nlinks_0");
         return resultValue;
     }
 
@@ -190,7 +190,7 @@ public sealed class PolyCoherentTriangulation : IDisposable
     public int NNodes()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyCoherentTriangulationMethodNNodes0(handle, out int resultValue), "occtsharp_generated_poly_coherent_triangulation_method_nnodes_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyCoherentTriangulationMethodNNodes0(handle, out int resultValue), "occtsharp_generated_poly_coherent_triangulation_method_nnodes_0");
         return resultValue;
     }
 
@@ -198,7 +198,7 @@ public sealed class PolyCoherentTriangulation : IDisposable
     public int NTriangles()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyCoherentTriangulationMethodNTriangles0(handle, out int resultValue), "occtsharp_generated_poly_coherent_triangulation_method_ntriangles_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyCoherentTriangulationMethodNTriangles0(handle, out int resultValue), "occtsharp_generated_poly_coherent_triangulation_method_ntriangles_0");
         return resultValue;
     }
 
@@ -206,7 +206,7 @@ public sealed class PolyCoherentTriangulation : IDisposable
     public void SetDeflection(double theDefl)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyCoherentTriangulationMethodSetDeflection0(handle, theDefl), "occtsharp_generated_poly_coherent_triangulation_method_set_deflection_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyCoherentTriangulationMethodSetDeflection0(handle, theDefl), "occtsharp_generated_poly_coherent_triangulation_method_set_deflection_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -215,7 +215,7 @@ public sealed class PolyCoherentTriangulation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyCoherentTriangulationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyCoherentTriangulationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -226,7 +226,7 @@ public sealed class PolyCoherentTriangulation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyCoherentTriangulationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyCoherentTriangulationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -236,7 +236,7 @@ public sealed class PolyCoherentTriangulation : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyCoherentTriangulationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyCoherentTriangulationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -244,7 +244,7 @@ public sealed class PolyCoherentTriangulation : IDisposable
     public PolyCoherentTriangulation Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyCoherentTriangulationClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyCoherentTriangulationClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new PolyCoherentTriangulation(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -281,7 +281,7 @@ public sealed class PolyMergeNodesTool : IDisposable
     public PolyMergeNodesTool(double theSmoothAngle, double theMergeTolerance, int theNbFacets)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolCreate0(theSmoothAngle, theMergeTolerance, theNbFacets, out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolCreate0(theSmoothAngle, theMergeTolerance, theNbFacets, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "PolyMergeNodesToolCreate0");
     }
 
@@ -289,7 +289,7 @@ public sealed class PolyMergeNodesTool : IDisposable
     public int ElementNodeIndex(int theIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodElementNodeIndex0(handle, theIndex, out int resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_element_node_index_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodElementNodeIndex0(handle, theIndex, out int resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_element_node_index_0");
         return resultValue;
     }
 
@@ -297,7 +297,7 @@ public sealed class PolyMergeNodesTool : IDisposable
     public double MergeAngle()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodMergeAngle0(handle, out double resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_merge_angle_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodMergeAngle0(handle, out double resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_merge_angle_0");
         return resultValue;
     }
 
@@ -305,7 +305,7 @@ public sealed class PolyMergeNodesTool : IDisposable
     public double MergeTolerance()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodMergeTolerance0(handle, out double resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_merge_tolerance_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodMergeTolerance0(handle, out double resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_merge_tolerance_0");
         return resultValue;
     }
 
@@ -313,7 +313,7 @@ public sealed class PolyMergeNodesTool : IDisposable
     public int NbDegenerativeElems()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodNbDegenerativeElems0(handle, out int resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_nb_degenerative_elems_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodNbDegenerativeElems0(handle, out int resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_nb_degenerative_elems_0");
         return resultValue;
     }
 
@@ -321,7 +321,7 @@ public sealed class PolyMergeNodesTool : IDisposable
     public int NbElements()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodNbElements0(handle, out int resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_nb_elements_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodNbElements0(handle, out int resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_nb_elements_0");
         return resultValue;
     }
 
@@ -329,7 +329,7 @@ public sealed class PolyMergeNodesTool : IDisposable
     public int NbMergedElems()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodNbMergedElems0(handle, out int resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_nb_merged_elems_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodNbMergedElems0(handle, out int resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_nb_merged_elems_0");
         return resultValue;
     }
 
@@ -337,7 +337,7 @@ public sealed class PolyMergeNodesTool : IDisposable
     public int NbNodes()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodNbNodes0(handle, out int resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_nb_nodes_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodNbNodes0(handle, out int resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_nb_nodes_0");
         return resultValue;
     }
 
@@ -345,28 +345,28 @@ public sealed class PolyMergeNodesTool : IDisposable
     public void PushLastElement(int theNbNodes)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodPushLastElement0(handle, theNbNodes), "occtsharp_generated_poly_merge_nodes_tool_method_push_last_element_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodPushLastElement0(handle, theNbNodes), "occtsharp_generated_poly_merge_nodes_tool_method_push_last_element_0");
     }
 
     /// <summary>Invokes OCCT Poly_MergeNodesTool::PushLastQuad.</summary>
     public void PushLastQuad()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodPushLastQuad0(handle), "occtsharp_generated_poly_merge_nodes_tool_method_push_last_quad_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodPushLastQuad0(handle), "occtsharp_generated_poly_merge_nodes_tool_method_push_last_quad_0");
     }
 
     /// <summary>Invokes OCCT Poly_MergeNodesTool::PushLastTriangle.</summary>
     public void PushLastTriangle()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodPushLastTriangle0(handle), "occtsharp_generated_poly_merge_nodes_tool_method_push_last_triangle_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodPushLastTriangle0(handle), "occtsharp_generated_poly_merge_nodes_tool_method_push_last_triangle_0");
     }
 
     /// <summary>Invokes OCCT Poly_MergeNodesTool::Result.</summary>
     public PolyTriangulation? Result()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodResult0(handle, out nint handleValue), "occtsharp_generated_poly_merge_nodes_tool_method_result_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodResult0(handle, out nint handleValue), "occtsharp_generated_poly_merge_nodes_tool_method_result_0");
         return global::OcctSharp.PolyTriangulation.FromNative(handleValue, "occtsharp_generated_poly_merge_nodes_tool_method_result_0");
     }
 
@@ -374,49 +374,49 @@ public sealed class PolyMergeNodesTool : IDisposable
     public void SetDropDegenerative(bool theToDrop)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodSetDropDegenerative0(handle, theToDrop ? 1 : 0), "occtsharp_generated_poly_merge_nodes_tool_method_set_drop_degenerative_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodSetDropDegenerative0(handle, theToDrop ? 1 : 0), "occtsharp_generated_poly_merge_nodes_tool_method_set_drop_degenerative_0");
     }
 
     /// <summary>Invokes OCCT Poly_MergeNodesTool::SetMergeAngle.</summary>
     public void SetMergeAngle(double theAngleRad)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodSetMergeAngle0(handle, theAngleRad), "occtsharp_generated_poly_merge_nodes_tool_method_set_merge_angle_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodSetMergeAngle0(handle, theAngleRad), "occtsharp_generated_poly_merge_nodes_tool_method_set_merge_angle_0");
     }
 
     /// <summary>Invokes OCCT Poly_MergeNodesTool::SetMergeElems.</summary>
     public void SetMergeElems(bool theToMerge)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodSetMergeElems0(handle, theToMerge ? 1 : 0), "occtsharp_generated_poly_merge_nodes_tool_method_set_merge_elems_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodSetMergeElems0(handle, theToMerge ? 1 : 0), "occtsharp_generated_poly_merge_nodes_tool_method_set_merge_elems_0");
     }
 
     /// <summary>Invokes OCCT Poly_MergeNodesTool::SetMergeOpposite.</summary>
     public void SetMergeOpposite(bool theToMerge)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodSetMergeOpposite0(handle, theToMerge ? 1 : 0), "occtsharp_generated_poly_merge_nodes_tool_method_set_merge_opposite_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodSetMergeOpposite0(handle, theToMerge ? 1 : 0), "occtsharp_generated_poly_merge_nodes_tool_method_set_merge_opposite_0");
     }
 
     /// <summary>Invokes OCCT Poly_MergeNodesTool::SetMergeTolerance.</summary>
     public void SetMergeTolerance(double theTolerance)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodSetMergeTolerance0(handle, theTolerance), "occtsharp_generated_poly_merge_nodes_tool_method_set_merge_tolerance_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodSetMergeTolerance0(handle, theTolerance), "occtsharp_generated_poly_merge_nodes_tool_method_set_merge_tolerance_0");
     }
 
     /// <summary>Invokes OCCT Poly_MergeNodesTool::SetUnitFactor.</summary>
     public void SetUnitFactor(double theUnitFactor)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodSetUnitFactor0(handle, theUnitFactor), "occtsharp_generated_poly_merge_nodes_tool_method_set_unit_factor_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodSetUnitFactor0(handle, theUnitFactor), "occtsharp_generated_poly_merge_nodes_tool_method_set_unit_factor_0");
     }
 
     /// <summary>Invokes OCCT Poly_MergeNodesTool::ToDropDegenerative.</summary>
     public bool ToDropDegenerative()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodToDropDegenerative0(handle, out int resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_to_drop_degenerative_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodToDropDegenerative0(handle, out int resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_to_drop_degenerative_0");
         return resultValue != 0;
     }
 
@@ -424,7 +424,7 @@ public sealed class PolyMergeNodesTool : IDisposable
     public bool ToMergeElems()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodToMergeElems0(handle, out int resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_to_merge_elems_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodToMergeElems0(handle, out int resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_to_merge_elems_0");
         return resultValue != 0;
     }
 
@@ -432,7 +432,7 @@ public sealed class PolyMergeNodesTool : IDisposable
     public bool ToMergeOpposite()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolMethodToMergeOpposite0(handle, out int resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_to_merge_opposite_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolMethodToMergeOpposite0(handle, out int resultValue), "occtsharp_generated_poly_merge_nodes_tool_method_to_merge_opposite_0");
         return resultValue != 0;
     }
 
@@ -442,7 +442,7 @@ public sealed class PolyMergeNodesTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -453,7 +453,7 @@ public sealed class PolyMergeNodesTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -463,7 +463,7 @@ public sealed class PolyMergeNodesTool : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -471,7 +471,7 @@ public sealed class PolyMergeNodesTool : IDisposable
     public PolyMergeNodesTool Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyMergeNodesToolClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyMergeNodesToolClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new PolyMergeNodesTool(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -508,7 +508,7 @@ public sealed class PolyPolygon2D : IDisposable
     public PolyPolygon2D(int theNbNodes)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygon2DCreate0(theNbNodes, out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygon2DCreate0(theNbNodes, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "PolyPolygon2DCreate0");
     }
 
@@ -516,7 +516,7 @@ public sealed class PolyPolygon2D : IDisposable
     public PolyPolygon2D? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygon2DMethodCopy0(handle, out nint handleValue), "occtsharp_generated_poly_polygon2_d_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygon2DMethodCopy0(handle, out nint handleValue), "occtsharp_generated_poly_polygon2_d_method_copy_0");
         return global::OcctSharp.PolyPolygon2D.FromNative(handleValue, "occtsharp_generated_poly_polygon2_d_method_copy_0");
     }
 
@@ -524,7 +524,7 @@ public sealed class PolyPolygon2D : IDisposable
     public double Deflection()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygon2DMethodDeflection0(handle, out double resultValue), "occtsharp_generated_poly_polygon2_d_method_deflection_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygon2DMethodDeflection0(handle, out double resultValue), "occtsharp_generated_poly_polygon2_d_method_deflection_0");
         return resultValue;
     }
 
@@ -532,14 +532,14 @@ public sealed class PolyPolygon2D : IDisposable
     public void Deflection(double theDefl)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygon2DMethodDeflection1(handle, theDefl), "occtsharp_generated_poly_polygon2_d_method_deflection_1");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygon2DMethodDeflection1(handle, theDefl), "occtsharp_generated_poly_polygon2_d_method_deflection_1");
     }
 
     /// <summary>Invokes OCCT Poly_Polygon2D::NbNodes.</summary>
     public int NbNodes()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygon2DMethodNbNodes0(handle, out int resultValue), "occtsharp_generated_poly_polygon2_d_method_nb_nodes_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygon2DMethodNbNodes0(handle, out int resultValue), "occtsharp_generated_poly_polygon2_d_method_nb_nodes_0");
         return resultValue;
     }
 
@@ -549,7 +549,7 @@ public sealed class PolyPolygon2D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygon2DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygon2DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -560,7 +560,7 @@ public sealed class PolyPolygon2D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygon2DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygon2DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -570,7 +570,7 @@ public sealed class PolyPolygon2D : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygon2DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygon2DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -578,7 +578,7 @@ public sealed class PolyPolygon2D : IDisposable
     public PolyPolygon2D Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygon2DClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygon2DClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new PolyPolygon2D(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -615,7 +615,7 @@ public sealed class PolyPolygon3D : IDisposable
     public PolyPolygon3D(int theNbNodes, bool theHasParams)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygon3DCreate0(theNbNodes, theHasParams ? 1 : 0, out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygon3DCreate0(theNbNodes, theHasParams ? 1 : 0, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "PolyPolygon3DCreate0");
     }
 
@@ -623,7 +623,7 @@ public sealed class PolyPolygon3D : IDisposable
     public PolyPolygon3D? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygon3DMethodCopy0(handle, out nint handleValue), "occtsharp_generated_poly_polygon3_d_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygon3DMethodCopy0(handle, out nint handleValue), "occtsharp_generated_poly_polygon3_d_method_copy_0");
         return global::OcctSharp.PolyPolygon3D.FromNative(handleValue, "occtsharp_generated_poly_polygon3_d_method_copy_0");
     }
 
@@ -631,7 +631,7 @@ public sealed class PolyPolygon3D : IDisposable
     public double Deflection()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygon3DMethodDeflection0(handle, out double resultValue), "occtsharp_generated_poly_polygon3_d_method_deflection_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygon3DMethodDeflection0(handle, out double resultValue), "occtsharp_generated_poly_polygon3_d_method_deflection_0");
         return resultValue;
     }
 
@@ -639,14 +639,14 @@ public sealed class PolyPolygon3D : IDisposable
     public void Deflection(double theDefl)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygon3DMethodDeflection1(handle, theDefl), "occtsharp_generated_poly_polygon3_d_method_deflection_1");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygon3DMethodDeflection1(handle, theDefl), "occtsharp_generated_poly_polygon3_d_method_deflection_1");
     }
 
     /// <summary>Invokes OCCT Poly_Polygon3D::HasParameters.</summary>
     public bool HasParameters()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygon3DMethodHasParameters0(handle, out int resultValue), "occtsharp_generated_poly_polygon3_d_method_has_parameters_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygon3DMethodHasParameters0(handle, out int resultValue), "occtsharp_generated_poly_polygon3_d_method_has_parameters_0");
         return resultValue != 0;
     }
 
@@ -654,7 +654,7 @@ public sealed class PolyPolygon3D : IDisposable
     public int NbNodes()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygon3DMethodNbNodes0(handle, out int resultValue), "occtsharp_generated_poly_polygon3_d_method_nb_nodes_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygon3DMethodNbNodes0(handle, out int resultValue), "occtsharp_generated_poly_polygon3_d_method_nb_nodes_0");
         return resultValue;
     }
 
@@ -664,7 +664,7 @@ public sealed class PolyPolygon3D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygon3DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygon3DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -675,7 +675,7 @@ public sealed class PolyPolygon3D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygon3DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygon3DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -685,7 +685,7 @@ public sealed class PolyPolygon3D : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygon3DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygon3DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -693,7 +693,7 @@ public sealed class PolyPolygon3D : IDisposable
     public PolyPolygon3D Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygon3DClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygon3DClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new PolyPolygon3D(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -730,7 +730,7 @@ public sealed class PolyPolygonOnTriangulation : IDisposable
     public PolyPolygonOnTriangulation(int theNbNodes, bool theHasParams)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygonOnTriangulationCreate0(theNbNodes, theHasParams ? 1 : 0, out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygonOnTriangulationCreate0(theNbNodes, theHasParams ? 1 : 0, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "PolyPolygonOnTriangulationCreate0");
     }
 
@@ -738,7 +738,7 @@ public sealed class PolyPolygonOnTriangulation : IDisposable
     public PolyPolygonOnTriangulation? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygonOnTriangulationMethodCopy0(handle, out nint handleValue), "occtsharp_generated_poly_polygon_on_triangulation_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygonOnTriangulationMethodCopy0(handle, out nint handleValue), "occtsharp_generated_poly_polygon_on_triangulation_method_copy_0");
         return global::OcctSharp.PolyPolygonOnTriangulation.FromNative(handleValue, "occtsharp_generated_poly_polygon_on_triangulation_method_copy_0");
     }
 
@@ -746,7 +746,7 @@ public sealed class PolyPolygonOnTriangulation : IDisposable
     public double Deflection()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygonOnTriangulationMethodDeflection0(handle, out double resultValue), "occtsharp_generated_poly_polygon_on_triangulation_method_deflection_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygonOnTriangulationMethodDeflection0(handle, out double resultValue), "occtsharp_generated_poly_polygon_on_triangulation_method_deflection_0");
         return resultValue;
     }
 
@@ -754,14 +754,14 @@ public sealed class PolyPolygonOnTriangulation : IDisposable
     public void Deflection(double theDefl)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygonOnTriangulationMethodDeflection1(handle, theDefl), "occtsharp_generated_poly_polygon_on_triangulation_method_deflection_1");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygonOnTriangulationMethodDeflection1(handle, theDefl), "occtsharp_generated_poly_polygon_on_triangulation_method_deflection_1");
     }
 
     /// <summary>Invokes OCCT Poly_PolygonOnTriangulation::HasParameters.</summary>
     public bool HasParameters()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygonOnTriangulationMethodHasParameters0(handle, out int resultValue), "occtsharp_generated_poly_polygon_on_triangulation_method_has_parameters_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygonOnTriangulationMethodHasParameters0(handle, out int resultValue), "occtsharp_generated_poly_polygon_on_triangulation_method_has_parameters_0");
         return resultValue != 0;
     }
 
@@ -769,7 +769,7 @@ public sealed class PolyPolygonOnTriangulation : IDisposable
     public int NbNodes()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygonOnTriangulationMethodNbNodes0(handle, out int resultValue), "occtsharp_generated_poly_polygon_on_triangulation_method_nb_nodes_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygonOnTriangulationMethodNbNodes0(handle, out int resultValue), "occtsharp_generated_poly_polygon_on_triangulation_method_nb_nodes_0");
         return resultValue;
     }
 
@@ -777,7 +777,7 @@ public sealed class PolyPolygonOnTriangulation : IDisposable
     public int Node(int theIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygonOnTriangulationMethodNode0(handle, theIndex, out int resultValue), "occtsharp_generated_poly_polygon_on_triangulation_method_node_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygonOnTriangulationMethodNode0(handle, theIndex, out int resultValue), "occtsharp_generated_poly_polygon_on_triangulation_method_node_0");
         return resultValue;
     }
 
@@ -785,7 +785,7 @@ public sealed class PolyPolygonOnTriangulation : IDisposable
     public double Parameter(int theIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygonOnTriangulationMethodParameter0(handle, theIndex, out double resultValue), "occtsharp_generated_poly_polygon_on_triangulation_method_parameter_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygonOnTriangulationMethodParameter0(handle, theIndex, out double resultValue), "occtsharp_generated_poly_polygon_on_triangulation_method_parameter_0");
         return resultValue;
     }
 
@@ -793,14 +793,14 @@ public sealed class PolyPolygonOnTriangulation : IDisposable
     public void SetNode(int theIndex, int theNode)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygonOnTriangulationMethodSetNode0(handle, theIndex, theNode), "occtsharp_generated_poly_polygon_on_triangulation_method_set_node_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygonOnTriangulationMethodSetNode0(handle, theIndex, theNode), "occtsharp_generated_poly_polygon_on_triangulation_method_set_node_0");
     }
 
     /// <summary>Invokes OCCT Poly_PolygonOnTriangulation::SetParameter.</summary>
     public void SetParameter(int theIndex, double theValue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygonOnTriangulationMethodSetParameter0(handle, theIndex, theValue), "occtsharp_generated_poly_polygon_on_triangulation_method_set_parameter_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygonOnTriangulationMethodSetParameter0(handle, theIndex, theValue), "occtsharp_generated_poly_polygon_on_triangulation_method_set_parameter_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -809,7 +809,7 @@ public sealed class PolyPolygonOnTriangulation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygonOnTriangulationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygonOnTriangulationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -820,7 +820,7 @@ public sealed class PolyPolygonOnTriangulation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygonOnTriangulationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygonOnTriangulationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -830,7 +830,7 @@ public sealed class PolyPolygonOnTriangulation : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygonOnTriangulationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygonOnTriangulationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -838,7 +838,7 @@ public sealed class PolyPolygonOnTriangulation : IDisposable
     public PolyPolygonOnTriangulation Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyPolygonOnTriangulationClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyPolygonOnTriangulationClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new PolyPolygonOnTriangulation(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -875,7 +875,7 @@ public sealed class PolyTriangulation : IDisposable
     public PolyTriangulation()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "PolyTriangulationCreate0");
     }
 
@@ -883,7 +883,7 @@ public sealed class PolyTriangulation : IDisposable
     public PolyTriangulation(int theNbNodes, int theNbTriangles, bool theHasUVNodes, bool theHasNormals)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationCreate1(theNbNodes, theNbTriangles, theHasUVNodes ? 1 : 0, theHasNormals ? 1 : 0, out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationCreate1(theNbNodes, theNbTriangles, theHasUVNodes ? 1 : 0, theHasNormals ? 1 : 0, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "PolyTriangulationCreate1");
     }
 
@@ -891,7 +891,7 @@ public sealed class PolyTriangulation : IDisposable
     public PolyTriangulation(PolyTriangulation? theTriangulation)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationCreate2(theTriangulation is null ? nint.Zero : theTriangulation.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationCreate2(theTriangulation is null ? nint.Zero : theTriangulation.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "PolyTriangulationCreate2");
     }
 
@@ -899,35 +899,35 @@ public sealed class PolyTriangulation : IDisposable
     public void AddNormals()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodAddNormals0(handle), "occtsharp_generated_poly_triangulation_method_add_normals_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodAddNormals0(handle), "occtsharp_generated_poly_triangulation_method_add_normals_0");
     }
 
     /// <summary>Invokes OCCT Poly_Triangulation::AddUVNodes.</summary>
     public void AddUVNodes()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodAddUVNodes0(handle), "occtsharp_generated_poly_triangulation_method_add_uvnodes_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodAddUVNodes0(handle), "occtsharp_generated_poly_triangulation_method_add_uvnodes_0");
     }
 
     /// <summary>Invokes OCCT Poly_Triangulation::Clear.</summary>
     public void Clear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodClear0(handle), "occtsharp_generated_poly_triangulation_method_clear_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodClear0(handle), "occtsharp_generated_poly_triangulation_method_clear_0");
     }
 
     /// <summary>Invokes OCCT Poly_Triangulation::ComputeNormals.</summary>
     public void ComputeNormals()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodComputeNormals0(handle), "occtsharp_generated_poly_triangulation_method_compute_normals_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodComputeNormals0(handle), "occtsharp_generated_poly_triangulation_method_compute_normals_0");
     }
 
     /// <summary>Invokes OCCT Poly_Triangulation::Copy.</summary>
     public PolyTriangulation? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodCopy0(handle, out nint handleValue), "occtsharp_generated_poly_triangulation_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodCopy0(handle, out nint handleValue), "occtsharp_generated_poly_triangulation_method_copy_0");
         return global::OcctSharp.PolyTriangulation.FromNative(handleValue, "occtsharp_generated_poly_triangulation_method_copy_0");
     }
 
@@ -935,7 +935,7 @@ public sealed class PolyTriangulation : IDisposable
     public double Deflection()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodDeflection0(handle, out double resultValue), "occtsharp_generated_poly_triangulation_method_deflection_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodDeflection0(handle, out double resultValue), "occtsharp_generated_poly_triangulation_method_deflection_0");
         return resultValue;
     }
 
@@ -943,14 +943,14 @@ public sealed class PolyTriangulation : IDisposable
     public void Deflection(double theDeflection)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodDeflection1(handle, theDeflection), "occtsharp_generated_poly_triangulation_method_deflection_1");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodDeflection1(handle, theDeflection), "occtsharp_generated_poly_triangulation_method_deflection_1");
     }
 
     /// <summary>Invokes OCCT Poly_Triangulation::DetachedLoadDeferredData.</summary>
     public PolyTriangulation? DetachedLoadDeferredData(OSDFileSystem? theFileSystem)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodDetachedLoadDeferredData0(handle, theFileSystem is null ? nint.Zero : theFileSystem.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_poly_triangulation_method_detached_load_deferred_data_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodDetachedLoadDeferredData0(handle, theFileSystem is null ? nint.Zero : theFileSystem.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_poly_triangulation_method_detached_load_deferred_data_0");
         return global::OcctSharp.PolyTriangulation.FromNative(handleValue, "occtsharp_generated_poly_triangulation_method_detached_load_deferred_data_0");
     }
 
@@ -958,7 +958,7 @@ public sealed class PolyTriangulation : IDisposable
     public bool HasCachedMinMax()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodHasCachedMinMax0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_has_cached_min_max_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodHasCachedMinMax0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_has_cached_min_max_0");
         return resultValue != 0;
     }
 
@@ -966,7 +966,7 @@ public sealed class PolyTriangulation : IDisposable
     public bool HasDeferredData()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodHasDeferredData0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_has_deferred_data_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodHasDeferredData0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_has_deferred_data_0");
         return resultValue != 0;
     }
 
@@ -974,7 +974,7 @@ public sealed class PolyTriangulation : IDisposable
     public bool HasGeometry()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodHasGeometry0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_has_geometry_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodHasGeometry0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_has_geometry_0");
         return resultValue != 0;
     }
 
@@ -982,7 +982,7 @@ public sealed class PolyTriangulation : IDisposable
     public bool HasNormals()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodHasNormals0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_has_normals_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodHasNormals0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_has_normals_0");
         return resultValue != 0;
     }
 
@@ -990,7 +990,7 @@ public sealed class PolyTriangulation : IDisposable
     public bool HasUVNodes()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodHasUVNodes0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_has_uvnodes_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodHasUVNodes0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_has_uvnodes_0");
         return resultValue != 0;
     }
 
@@ -998,7 +998,7 @@ public sealed class PolyTriangulation : IDisposable
     public bool IsDoublePrecision()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodIsDoublePrecision0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_is_double_precision_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodIsDoublePrecision0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_is_double_precision_0");
         return resultValue != 0;
     }
 
@@ -1006,7 +1006,7 @@ public sealed class PolyTriangulation : IDisposable
     public bool LoadDeferredData(OSDFileSystem? theFileSystem)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodLoadDeferredData0(handle, theFileSystem is null ? nint.Zero : theFileSystem.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_poly_triangulation_method_load_deferred_data_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodLoadDeferredData0(handle, theFileSystem is null ? nint.Zero : theFileSystem.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_poly_triangulation_method_load_deferred_data_0");
         return resultValue != 0;
     }
 
@@ -1014,7 +1014,7 @@ public sealed class PolyTriangulation : IDisposable
     public int NbDeferredNodes()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodNbDeferredNodes0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_nb_deferred_nodes_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodNbDeferredNodes0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_nb_deferred_nodes_0");
         return resultValue;
     }
 
@@ -1022,7 +1022,7 @@ public sealed class PolyTriangulation : IDisposable
     public int NbDeferredTriangles()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodNbDeferredTriangles0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_nb_deferred_triangles_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodNbDeferredTriangles0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_nb_deferred_triangles_0");
         return resultValue;
     }
 
@@ -1030,7 +1030,7 @@ public sealed class PolyTriangulation : IDisposable
     public int NbNodes()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodNbNodes0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_nb_nodes_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodNbNodes0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_nb_nodes_0");
         return resultValue;
     }
 
@@ -1038,7 +1038,7 @@ public sealed class PolyTriangulation : IDisposable
     public int NbTriangles()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodNbTriangles0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_nb_triangles_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodNbTriangles0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_nb_triangles_0");
         return resultValue;
     }
 
@@ -1046,7 +1046,7 @@ public sealed class PolyTriangulation : IDisposable
     public Point3d Node(int theIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodNode0(handle, theIndex, out Point3dRaw resultValue), "occtsharp_generated_poly_triangulation_method_node_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodNode0(handle, theIndex, out Point3dRaw resultValue), "occtsharp_generated_poly_triangulation_method_node_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
@@ -1054,56 +1054,56 @@ public sealed class PolyTriangulation : IDisposable
     public void Parameters(PolyTriangulationParameters? theParams)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodParameters0(handle, theParams is null ? nint.Zero : theParams.NativeHandle.DangerousGetHandle()), "occtsharp_generated_poly_triangulation_method_parameters_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodParameters0(handle, theParams is null ? nint.Zero : theParams.NativeHandle.DangerousGetHandle()), "occtsharp_generated_poly_triangulation_method_parameters_0");
     }
 
     /// <summary>Invokes OCCT Poly_Triangulation::RemoveNormals.</summary>
     public void RemoveNormals()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodRemoveNormals0(handle), "occtsharp_generated_poly_triangulation_method_remove_normals_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodRemoveNormals0(handle), "occtsharp_generated_poly_triangulation_method_remove_normals_0");
     }
 
     /// <summary>Invokes OCCT Poly_Triangulation::RemoveUVNodes.</summary>
     public void RemoveUVNodes()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodRemoveUVNodes0(handle), "occtsharp_generated_poly_triangulation_method_remove_uvnodes_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodRemoveUVNodes0(handle), "occtsharp_generated_poly_triangulation_method_remove_uvnodes_0");
     }
 
     /// <summary>Invokes OCCT Poly_Triangulation::ResizeNodes.</summary>
     public void ResizeNodes(int theNbNodes, bool theToCopyOld)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodResizeNodes0(handle, theNbNodes, theToCopyOld ? 1 : 0), "occtsharp_generated_poly_triangulation_method_resize_nodes_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodResizeNodes0(handle, theNbNodes, theToCopyOld ? 1 : 0), "occtsharp_generated_poly_triangulation_method_resize_nodes_0");
     }
 
     /// <summary>Invokes OCCT Poly_Triangulation::ResizeTriangles.</summary>
     public void ResizeTriangles(int theNbTriangles, bool theToCopyOld)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodResizeTriangles0(handle, theNbTriangles, theToCopyOld ? 1 : 0), "occtsharp_generated_poly_triangulation_method_resize_triangles_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodResizeTriangles0(handle, theNbTriangles, theToCopyOld ? 1 : 0), "occtsharp_generated_poly_triangulation_method_resize_triangles_0");
     }
 
     /// <summary>Invokes OCCT Poly_Triangulation::SetDoublePrecision.</summary>
     public void SetDoublePrecision(bool theIsDouble)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodSetDoublePrecision0(handle, theIsDouble ? 1 : 0), "occtsharp_generated_poly_triangulation_method_set_double_precision_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodSetDoublePrecision0(handle, theIsDouble ? 1 : 0), "occtsharp_generated_poly_triangulation_method_set_double_precision_0");
     }
 
     /// <summary>Invokes OCCT Poly_Triangulation::SetNode.</summary>
     public void SetNode(int theIndex, Point3d thePnt)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodSetNode0(handle, theIndex, new Point3dRaw(thePnt.X, thePnt.Y, thePnt.Z)), "occtsharp_generated_poly_triangulation_method_set_node_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodSetNode0(handle, theIndex, new Point3dRaw(thePnt.X, thePnt.Y, thePnt.Z)), "occtsharp_generated_poly_triangulation_method_set_node_0");
     }
 
     /// <summary>Invokes OCCT Poly_Triangulation::UnloadDeferredData.</summary>
     public bool UnloadDeferredData()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodUnloadDeferredData0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_unload_deferred_data_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodUnloadDeferredData0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_method_unload_deferred_data_0");
         return resultValue != 0;
     }
 
@@ -1111,7 +1111,7 @@ public sealed class PolyTriangulation : IDisposable
     public void UpdateCachedMinMax()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationMethodUpdateCachedMinMax0(handle), "occtsharp_generated_poly_triangulation_method_update_cached_min_max_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodUpdateCachedMinMax0(handle), "occtsharp_generated_poly_triangulation_method_update_cached_min_max_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -1120,7 +1120,7 @@ public sealed class PolyTriangulation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1131,7 +1131,7 @@ public sealed class PolyTriangulation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1141,7 +1141,7 @@ public sealed class PolyTriangulation : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1149,7 +1149,7 @@ public sealed class PolyTriangulation : IDisposable
     public PolyTriangulation Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new PolyTriangulation(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1186,7 +1186,7 @@ public sealed class PolyTriangulationParameters : IDisposable
     public PolyTriangulationParameters(double theDeflection, double theAngle, double theMinSize)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationParametersCreate0(theDeflection, theAngle, theMinSize, out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationParametersCreate0(theDeflection, theAngle, theMinSize, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "PolyTriangulationParametersCreate0");
     }
 
@@ -1194,7 +1194,7 @@ public sealed class PolyTriangulationParameters : IDisposable
     public double Angle()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationParametersMethodAngle0(handle, out double resultValue), "occtsharp_generated_poly_triangulation_parameters_method_angle_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationParametersMethodAngle0(handle, out double resultValue), "occtsharp_generated_poly_triangulation_parameters_method_angle_0");
         return resultValue;
     }
 
@@ -1202,7 +1202,7 @@ public sealed class PolyTriangulationParameters : IDisposable
     public PolyTriangulationParameters? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationParametersMethodCopy0(handle, out nint handleValue), "occtsharp_generated_poly_triangulation_parameters_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationParametersMethodCopy0(handle, out nint handleValue), "occtsharp_generated_poly_triangulation_parameters_method_copy_0");
         return global::OcctSharp.PolyTriangulationParameters.FromNative(handleValue, "occtsharp_generated_poly_triangulation_parameters_method_copy_0");
     }
 
@@ -1210,7 +1210,7 @@ public sealed class PolyTriangulationParameters : IDisposable
     public double Deflection()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationParametersMethodDeflection0(handle, out double resultValue), "occtsharp_generated_poly_triangulation_parameters_method_deflection_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationParametersMethodDeflection0(handle, out double resultValue), "occtsharp_generated_poly_triangulation_parameters_method_deflection_0");
         return resultValue;
     }
 
@@ -1218,7 +1218,7 @@ public sealed class PolyTriangulationParameters : IDisposable
     public bool HasAngle()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationParametersMethodHasAngle0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_parameters_method_has_angle_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationParametersMethodHasAngle0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_parameters_method_has_angle_0");
         return resultValue != 0;
     }
 
@@ -1226,7 +1226,7 @@ public sealed class PolyTriangulationParameters : IDisposable
     public bool HasDeflection()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationParametersMethodHasDeflection0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_parameters_method_has_deflection_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationParametersMethodHasDeflection0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_parameters_method_has_deflection_0");
         return resultValue != 0;
     }
 
@@ -1234,7 +1234,7 @@ public sealed class PolyTriangulationParameters : IDisposable
     public bool HasMinSize()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationParametersMethodHasMinSize0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_parameters_method_has_min_size_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationParametersMethodHasMinSize0(handle, out int resultValue), "occtsharp_generated_poly_triangulation_parameters_method_has_min_size_0");
         return resultValue != 0;
     }
 
@@ -1242,7 +1242,7 @@ public sealed class PolyTriangulationParameters : IDisposable
     public double MinSize()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationParametersMethodMinSize0(handle, out double resultValue), "occtsharp_generated_poly_triangulation_parameters_method_min_size_0");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationParametersMethodMinSize0(handle, out double resultValue), "occtsharp_generated_poly_triangulation_parameters_method_min_size_0");
         return resultValue;
     }
 
@@ -1252,7 +1252,7 @@ public sealed class PolyTriangulationParameters : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationParametersGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationParametersGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1263,7 +1263,7 @@ public sealed class PolyTriangulationParameters : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationParametersGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationParametersGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1273,7 +1273,7 @@ public sealed class PolyTriangulationParameters : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationParametersIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationParametersIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1281,7 +1281,7 @@ public sealed class PolyTriangulationParameters : IDisposable
     public PolyTriangulationParameters Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.PolyTriangulationParametersClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationParametersClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new PolyTriangulationParameters(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 

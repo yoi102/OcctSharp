@@ -16653,22 +16653,29 @@
       "outputShard": "Enums.ManagedFriendly"
     },
     {
+      "relativePath": "src/OcctSharp/Generated/DataExchange/DataExchange.ModuleRuntime.Generated.cs",
+      "sha256": "02CEC9212A39DDA64B68739CE8A2123B24635AAB01F03671FC41C9A7F4AA1849",
+      "productModule": "DataExchange",
+      "apiLayer": "Runtime",
+      "outputShard": "Managed.ModuleRuntime"
+    },
+    {
       "relativePath": "src/OcctSharp/Generated/DataExchange/DataExchange.ScalarRaw.Generated.cs",
-      "sha256": "674C90DE951D5106D38F59B9BF00D907CB03C03A42AF0ACDAD8657BAA0FC2D42",
+      "sha256": "6B316F531CA5D199F5C1D95E7E1678337FB9B31AE592CA92B279808228444C1B",
       "productModule": "DataExchange",
       "apiLayer": "Raw",
       "outputShard": "Values.ManagedRaw"
     },
     {
       "relativePath": "src/OcctSharp/Generated/DataExchange/DataExchange.SharedHandles.Generated.cs",
-      "sha256": "FF72EF6B983B41A1C2947E69EA1DD3A7446BAD9A61AD65751CAD3E72D89681DD",
+      "sha256": "3B064282D362E4357FA78C04EACC9B8FEDAF1D453217D1ADEAF3F9CBB70702B1",
       "productModule": "DataExchange",
       "apiLayer": "SafeManaged",
       "outputShard": "SharedHandles.ManagedFriendly"
     },
     {
       "relativePath": "src/OcctSharp/Generated/DataExchange/DataExchange.SharedHandlesRaw.Generated.cs",
-      "sha256": "A689FCDE74674BC51C539FDC8AE4395604358C0C0BFAFBF21DA809054F630516",
+      "sha256": "B97C27164E5B4085234759BB08736637D2720B9767CFA63FD6ACEAA261089883",
       "productModule": "DataExchange",
       "apiLayer": "Raw",
       "outputShard": "SharedHandles.ManagedRaw"
@@ -16681,36 +16688,50 @@
       "outputShard": "Enums.ManagedFriendly"
     },
     {
+      "relativePath": "src/OcctSharp/Generated/Documents/Documents.ModuleRuntime.Generated.cs",
+      "sha256": "CB49BB69E6B115A2F497F50A73D6C2CFDACBC786C0749ED4F8BCEAFD583D2E57",
+      "productModule": "Documents",
+      "apiLayer": "Runtime",
+      "outputShard": "Managed.ModuleRuntime"
+    },
+    {
       "relativePath": "src/OcctSharp/Generated/Documents/Documents.ScalarRaw.Generated.cs",
-      "sha256": "81D20E049E485C7C4B14376E047E7874B624C0E1EA39D831342C38107F422739",
+      "sha256": "0D9461A02377A9296F9782A6A33934E35044B15021CA7CDE66CFDAAD0EBABA11",
       "productModule": "Documents",
       "apiLayer": "Raw",
       "outputShard": "Values.ManagedRaw"
     },
     {
       "relativePath": "src/OcctSharp/Generated/Documents/Documents.SharedHandles.Generated.cs",
-      "sha256": "551FED0C33FEB94513614546927074DCB6E8A88AC61A4A156DCC324E91DC9CA3",
+      "sha256": "3D2F0CBA26DE5A5728D9C0DBC14F8685E368F6F6A2016330F7E2788C82AD3744",
       "productModule": "Documents",
       "apiLayer": "SafeManaged",
       "outputShard": "SharedHandles.ManagedFriendly"
     },
     {
       "relativePath": "src/OcctSharp/Generated/Documents/Documents.SharedHandlesRaw.Generated.cs",
-      "sha256": "70B349EDB4464E9A133719A833D6D84E69648EDF73F2AC3609F9D207217C4A25",
+      "sha256": "C10CFD6A5B5092A5669EFEC05A2B2C355B455B9C84A8831A82F1810D2387EE4B",
       "productModule": "Documents",
       "apiLayer": "Raw",
       "outputShard": "SharedHandles.ManagedRaw"
     },
     {
+      "relativePath": "src/OcctSharp/Generated/Draw/Draw.ModuleRuntime.Generated.cs",
+      "sha256": "2CEE9175A331AD3D84A8DED79DD0B5737736CC3078D37757696EB87B4B342BCD",
+      "productModule": "Draw",
+      "apiLayer": "Runtime",
+      "outputShard": "Managed.ModuleRuntime"
+    },
+    {
       "relativePath": "src/OcctSharp/Generated/Draw/Draw.SharedHandles.Generated.cs",
-      "sha256": "390EC62333C4A7150AA165FE3EA2121E0C995DC5B8C7D7B9ABFB425C339D3131",
+      "sha256": "0CBC7BDC449AA9118B5A41289EF720B75D2FE15A75B8F9D766CB8780666F623A",
       "productModule": "Draw",
       "apiLayer": "SafeManaged",
       "outputShard": "SharedHandles.ManagedFriendly"
     },
     {
       "relativePath": "src/OcctSharp/Generated/Draw/Draw.SharedHandlesRaw.Generated.cs",
-      "sha256": "D7F52CD4AB48E24F1E851D11398D5FC467145D37C8FD9C221B00784B70E215A4",
+      "sha256": "B58914050826C9E887734CDD0487314EA1A83AA246571CE1A1C048911E6213B7",
       "productModule": "Draw",
       "apiLayer": "Raw",
       "outputShard": "SharedHandles.ManagedRaw"
@@ -16723,22 +16744,29 @@
       "outputShard": "Enums.ManagedFriendly"
     },
     {
+      "relativePath": "src/OcctSharp/Generated/Foundation/Foundation.ModuleRuntime.Generated.cs",
+      "sha256": "88DF5502E8C39DFFE73089ACD8F794330FAE6DBD6B90BB7E8EE685F242A62B72",
+      "productModule": "Foundation",
+      "apiLayer": "Runtime",
+      "outputShard": "Managed.ModuleRuntime"
+    },
+    {
       "relativePath": "src/OcctSharp/Generated/Foundation/Foundation.ScalarRaw.Generated.cs",
-      "sha256": "F7336212F832D546EE9A28FF673A909F12F5078557EF7D907CC7D82C893F28E0",
+      "sha256": "AB4BF15F1F1888978DFE48D893D6EA6C9D848FF1DB34A0CDD984F49E1DC59923",
       "productModule": "Foundation",
       "apiLayer": "Raw",
       "outputShard": "Values.ManagedRaw"
     },
     {
       "relativePath": "src/OcctSharp/Generated/Foundation/Foundation.SharedHandles.Generated.cs",
-      "sha256": "196924F4C334EFF28F625FE4E9FEDFFDF7C0C44AC684D5DC360F082BAA9BA705",
+      "sha256": "C344AF9E547A933363B88DDC7C102506818B4F07BCD5475F94142DEE781D1631",
       "productModule": "Foundation",
       "apiLayer": "SafeManaged",
       "outputShard": "SharedHandles.ManagedFriendly"
     },
     {
       "relativePath": "src/OcctSharp/Generated/Foundation/Foundation.SharedHandlesRaw.Generated.cs",
-      "sha256": "E3D811FD63DF4926C58EECBC6A5974A2C29FC865BBFA6FFCD79B31A392E3F849",
+      "sha256": "25622EE4362E5F03E01368277C45B197AA294005F50453AAABDE0B6040D62399",
       "productModule": "Foundation",
       "apiLayer": "Raw",
       "outputShard": "SharedHandles.ManagedRaw"
@@ -16751,43 +16779,57 @@
       "outputShard": "Enums.ManagedFriendly"
     },
     {
+      "relativePath": "src/OcctSharp/Generated/Geometry/Geometry.ModuleRuntime.Generated.cs",
+      "sha256": "33D6318B49FF2510570210C1FFC795116620CD3C7BE326DDEABAF83E6B60235A",
+      "productModule": "Geometry",
+      "apiLayer": "Runtime",
+      "outputShard": "Managed.ModuleRuntime"
+    },
+    {
       "relativePath": "src/OcctSharp/Generated/Geometry/Geometry.Point3dRaw.Generated.cs",
-      "sha256": "3927B206C42F46CA19CD090EBE281C5B6313A403AD93C7DBE27B5BF069B0E3DD",
+      "sha256": "60EAD9EB6082F04DF2FBFD350343E82DF195F295F51F4D082F87116D693FB9AF",
       "productModule": "Geometry",
       "apiLayer": "Raw",
       "outputShard": "Values.Point3dRaw"
     },
     {
       "relativePath": "src/OcctSharp/Generated/Geometry/Geometry.ScalarRaw.Generated.cs",
-      "sha256": "867D75CC2A4C15D53E577A2176E55A60CD96F95522491C71F3CFD1DE65542B58",
+      "sha256": "F552D05686B3A0884150C0DBC91A89AAF33D3B0C3F1F2E4101029DB5E58B9818",
       "productModule": "Geometry",
       "apiLayer": "Raw",
       "outputShard": "Values.ManagedRaw"
     },
     {
       "relativePath": "src/OcctSharp/Generated/Geometry/Geometry.SharedHandles.Generated.cs",
-      "sha256": "772ADDA284E8A096198ADA836652A536273F309E19BD7D033F29F0B34F11D842",
+      "sha256": "DD449B9F175E5634EEA153A14B3CABAF8FF893C9394BDE43FDB84B82E39A1836",
       "productModule": "Geometry",
       "apiLayer": "SafeManaged",
       "outputShard": "SharedHandles.ManagedFriendly"
     },
     {
       "relativePath": "src/OcctSharp/Generated/Geometry/Geometry.SharedHandlesRaw.Generated.cs",
-      "sha256": "6EC003369DC905EDBC5166DC30F70EC73E99462B5D244726CCE398D60261A750",
+      "sha256": "FFC50277AF5F9C736F10E048ADB13CF199C364588482A9012BD22FB1864B92B2",
       "productModule": "Geometry",
       "apiLayer": "Raw",
       "outputShard": "SharedHandles.ManagedRaw"
     },
     {
+      "relativePath": "src/OcctSharp/Generated/IVtk/IVtk.ModuleRuntime.Generated.cs",
+      "sha256": "689258A6F8E27480AC39E5FE4F61C888BCCB3C320B74D1C36DF8A65F1B148FA4",
+      "productModule": "IVtk",
+      "apiLayer": "Runtime",
+      "outputShard": "Managed.ModuleRuntime"
+    },
+    {
       "relativePath": "src/OcctSharp/Generated/IVtk/IVtk.SharedHandles.Generated.cs",
-      "sha256": "0B1C6C4BF8CABC7CBA78906F423F14443FED0E5CC5EFCC65909499AB6FA7CF2E",
+      "sha256": "ADE4094142D3BB0AFD61A2C9614F428E90ADE3BD53DA8BABFB922E3E99B58EA4",
       "productModule": "IVtk",
       "apiLayer": "SafeManaged",
       "outputShard": "SharedHandles.ManagedFriendly"
     },
     {
       "relativePath": "src/OcctSharp/Generated/IVtk/IVtk.SharedHandlesRaw.Generated.cs",
-      "sha256": "604C40A15C124D68F5695332DF1DD5730C17CC82657934E3ED9ED579B01651C6",
+      "sha256": "71E28B705606F452C3D389E655D8550CBA08577E5BE6045A43472794EE6CA666",
       "productModule": "IVtk",
       "apiLayer": "Raw",
       "outputShard": "SharedHandles.ManagedRaw"
@@ -16800,22 +16842,29 @@
       "outputShard": "Enums.ManagedFriendly"
     },
     {
+      "relativePath": "src/OcctSharp/Generated/Mesh/Mesh.ModuleRuntime.Generated.cs",
+      "sha256": "2576DE1F704F957443206FAF0E32BB8E2416609ADA69B354229E89709BB5CB6B",
+      "productModule": "Mesh",
+      "apiLayer": "Runtime",
+      "outputShard": "Managed.ModuleRuntime"
+    },
+    {
       "relativePath": "src/OcctSharp/Generated/Mesh/Mesh.ScalarRaw.Generated.cs",
-      "sha256": "C00DA19A90FDD014776707D7265064B590FC99F99C0199BA9EDD74E9A57BB33A",
+      "sha256": "7D9D30C0EF85DA7F5EDA64120FE328935586746C4AF8D9010F5150F19E9340B8",
       "productModule": "Mesh",
       "apiLayer": "Raw",
       "outputShard": "Values.ManagedRaw"
     },
     {
       "relativePath": "src/OcctSharp/Generated/Mesh/Mesh.SharedHandles.Generated.cs",
-      "sha256": "0F825C7A4A1CC3294DE50F167E5432601F3BB3B93D6C3D54D8A0E22293E17DAE",
+      "sha256": "C3A26973D228F92B111B3AF1E17CEDAEE66E51F2DC43FE7756D601ADECA859FE",
       "productModule": "Mesh",
       "apiLayer": "SafeManaged",
       "outputShard": "SharedHandles.ManagedFriendly"
     },
     {
       "relativePath": "src/OcctSharp/Generated/Mesh/Mesh.SharedHandlesRaw.Generated.cs",
-      "sha256": "3F20617A66EADAF3DC49384DA1F04F4DF9D0E4DB12EECF0BB019D59E05DD90B2",
+      "sha256": "C0D4229F8A97EE51B41FD0D4B6EF875A4DC661871A67F179AE54C9F5DB20BC03",
       "productModule": "Mesh",
       "apiLayer": "Raw",
       "outputShard": "SharedHandles.ManagedRaw"
@@ -16828,15 +16877,22 @@
       "outputShard": "Enums.ManagedFriendly"
     },
     {
+      "relativePath": "src/OcctSharp/Generated/MeshData/MeshData.ModuleRuntime.Generated.cs",
+      "sha256": "C53446C68E8B0BAF555EFC3FB43B31BF8C203A50CAA69AA849277064AFA29092",
+      "productModule": "MeshData",
+      "apiLayer": "Runtime",
+      "outputShard": "Managed.ModuleRuntime"
+    },
+    {
       "relativePath": "src/OcctSharp/Generated/MeshData/MeshData.SharedHandles.Generated.cs",
-      "sha256": "5B3468F77713FFF422731BBD8657A78989B9A3935147556DD882B3D736CE838C",
+      "sha256": "99A02FB50145B09894474DE1CA2898B2C570DB032729880B5BB7066E5AB32109",
       "productModule": "MeshData",
       "apiLayer": "SafeManaged",
       "outputShard": "SharedHandles.ManagedFriendly"
     },
     {
       "relativePath": "src/OcctSharp/Generated/MeshData/MeshData.SharedHandlesRaw.Generated.cs",
-      "sha256": "D30498025CBF78F32C10B655B9A3DC5246F9C931A629C9D3A69B9F4939F68D43",
+      "sha256": "07A86B061285633403E700A5EF70EE11A8F9D4C98A0727E4A5265B08D6F8BC3C",
       "productModule": "MeshData",
       "apiLayer": "Raw",
       "outputShard": "SharedHandles.ManagedRaw"
@@ -16849,22 +16905,29 @@
       "outputShard": "Enums.ManagedFriendly"
     },
     {
+      "relativePath": "src/OcctSharp/Generated/Modeling/Modeling.ModuleRuntime.Generated.cs",
+      "sha256": "58711EEFA651EBF6AA5339819CE4A7DBD573EBADE37DD6B36DCEC4105D2B4607",
+      "productModule": "Modeling",
+      "apiLayer": "Runtime",
+      "outputShard": "Managed.ModuleRuntime"
+    },
+    {
       "relativePath": "src/OcctSharp/Generated/Modeling/Modeling.ScalarRaw.Generated.cs",
-      "sha256": "F64EDFADE43C691CF676CCF519D35F0623D2DA666303EAB196B793892E1FF14F",
+      "sha256": "0F1B30516D1DC72150EF3B4C04717B6D2C9F90999F795B70DF6C646F83E28826",
       "productModule": "Modeling",
       "apiLayer": "Raw",
       "outputShard": "Values.ManagedRaw"
     },
     {
       "relativePath": "src/OcctSharp/Generated/Modeling/Modeling.SharedHandles.Generated.cs",
-      "sha256": "5ADB13C82B6F04D11F1D06A38D5D2FE164FE9AFAF1C2836384F880BDDB6D46CA",
+      "sha256": "5745A6EA76D097897E11271AD30216F9156D7398A7635F205F0E809B12EC2E05",
       "productModule": "Modeling",
       "apiLayer": "SafeManaged",
       "outputShard": "SharedHandles.ManagedFriendly"
     },
     {
       "relativePath": "src/OcctSharp/Generated/Modeling/Modeling.SharedHandlesRaw.Generated.cs",
-      "sha256": "8C03A1CA988FE76CC46C6BB0E59451F5C05C5A2B6FCAEAB2C14CD4639BB11890",
+      "sha256": "5F46E88F46BCE0BBF5C3F7F836706D5643936D977E59B08C15CC687AFE9BEB86",
       "productModule": "Modeling",
       "apiLayer": "Raw",
       "outputShard": "SharedHandles.ManagedRaw"
@@ -16878,7 +16941,7 @@
     },
     {
       "relativePath": "src/OcctSharp/Generated/Modeling/Modeling.TopologyRaw.Generated.cs",
-      "sha256": "3A7F62F4D27631EA624F884B7324694773446CDCD6AD6BC44FDF260978745E38",
+      "sha256": "3A475257B178C4197F79CF1FBC3754C7EDD1B2069CF977F0F423AB20B7A6145D",
       "productModule": "Modeling",
       "apiLayer": "Raw",
       "outputShard": "Topology.ManagedRaw"
@@ -16891,22 +16954,29 @@
       "outputShard": "Enums.ManagedFriendly"
     },
     {
+      "relativePath": "src/OcctSharp/Generated/Visualization/Visualization.ModuleRuntime.Generated.cs",
+      "sha256": "389CC4F7633EB5FDDDF7D4EF15C969310890576DD7C5A2236F2E53E000A888B1",
+      "productModule": "Visualization",
+      "apiLayer": "Runtime",
+      "outputShard": "Managed.ModuleRuntime"
+    },
+    {
       "relativePath": "src/OcctSharp/Generated/Visualization/Visualization.ScalarRaw.Generated.cs",
-      "sha256": "3CC28EFF9293E482AB1951B5A5511E241C6BF291EB255FEEDD948E78E7ABF107",
+      "sha256": "467B138E94E5C78FFD82FB7B9B405FE05A81968535F29F4BD8BBA821A2C52AF5",
       "productModule": "Visualization",
       "apiLayer": "Raw",
       "outputShard": "Values.ManagedRaw"
     },
     {
       "relativePath": "src/OcctSharp/Generated/Visualization/Visualization.SharedHandles.Generated.cs",
-      "sha256": "2D19943CF64B57ABC5617F3BBDF4489B39A6F8BF95067F940B2613D2DA110712",
+      "sha256": "C13F24D7557D500A4CE8689F274FBE2FF5DAE95E66B8596428126D47C01C62A4",
       "productModule": "Visualization",
       "apiLayer": "SafeManaged",
       "outputShard": "SharedHandles.ManagedFriendly"
     },
     {
       "relativePath": "src/OcctSharp/Generated/Visualization/Visualization.SharedHandlesRaw.Generated.cs",
-      "sha256": "FD1D177CE3836F9DD0FACDEF429C1E9DF8155842021B3F8D22A3FB88DEFD7616",
+      "sha256": "7A900F12FC230D6F40B5BE9E2FE66BECEE6625438BAADD670016532377CB1025",
       "productModule": "Visualization",
       "apiLayer": "Raw",
       "outputShard": "SharedHandles.ManagedRaw"
@@ -16919,22 +16989,29 @@
       "outputShard": "Enums.ManagedFriendly"
     },
     {
+      "relativePath": "src/OcctSharp/Generated/Xde/Xde.ModuleRuntime.Generated.cs",
+      "sha256": "74832540EC2A67E37C765C383B211C55CBB00A0B7FCCCDD22ADD345AFBA1BA4B",
+      "productModule": "Xde",
+      "apiLayer": "Runtime",
+      "outputShard": "Managed.ModuleRuntime"
+    },
+    {
       "relativePath": "src/OcctSharp/Generated/Xde/Xde.ScalarRaw.Generated.cs",
-      "sha256": "9FC49B9A09B5AA3615ABA721C5E8A26037249F22A6458F061FFE750F1AEBDCBC",
+      "sha256": "00F7A28575714AD001898B0615A95F5AF8A7F440E7F6520DB2134E5350984B40",
       "productModule": "Xde",
       "apiLayer": "Raw",
       "outputShard": "Values.ManagedRaw"
     },
     {
       "relativePath": "src/OcctSharp/Generated/Xde/Xde.SharedHandles.Generated.cs",
-      "sha256": "6B9773A11EA93D605405EF159413377C04CC6D1007BC44E901E972D90834B1FE",
+      "sha256": "8D2FA20B0B098A40B378F640BC8A02EB9E1D648E970F2C8675B9BC0AFA9B5A09",
       "productModule": "Xde",
       "apiLayer": "SafeManaged",
       "outputShard": "SharedHandles.ManagedFriendly"
     },
     {
       "relativePath": "src/OcctSharp/Generated/Xde/Xde.SharedHandlesRaw.Generated.cs",
-      "sha256": "92B9065E2E11CB55132604EEC480E1A0D28C6BB010F7A93392255126F3D812C4",
+      "sha256": "507F33B73CB0AB15E202D261E4EA6E41A6C099126DBA6E65A9871C75B3BF65C8",
       "productModule": "Xde",
       "apiLayer": "Raw",
       "outputShard": "SharedHandles.ManagedRaw"

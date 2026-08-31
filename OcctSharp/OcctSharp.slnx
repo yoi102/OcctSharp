@@ -1,6 +1,19 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/OcctSharp/OcctSharp.csproj" />
+    <Project Path="src/OcctSharp.Runtime/OcctSharp.Runtime.csproj" />
+    <Project Path="src/OcctSharp.Foundation/OcctSharp.Foundation.csproj" />
+    <Project Path="src/OcctSharp.Geometry/OcctSharp.Geometry.csproj" />
+    <Project Path="src/OcctSharp.MeshData/OcctSharp.MeshData.csproj" />
+    <Project Path="src/OcctSharp.Modeling/OcctSharp.Modeling.csproj" />
+    <Project Path="src/OcctSharp.Mesh/OcctSharp.Mesh.csproj" />
+    <Project Path="src/OcctSharp.Documents/OcctSharp.Documents.csproj" />
+    <Project Path="src/OcctSharp.Visualization/OcctSharp.Visualization.csproj" />
+    <Project Path="src/OcctSharp.DataExchange/OcctSharp.DataExchange.csproj" />
+    <Project Path="src/OcctSharp.Xde/OcctSharp.Xde.csproj" />
+    <Project Path="src/OcctSharp.IVtk/OcctSharp.IVtk.csproj" />
+    <Project Path="src/OcctSharp.Draw/OcctSharp.Draw.csproj" />
+    <Project Path="src/OcctSharp.Native.win-x64/OcctSharp.Native.win-x64.csproj" />
     <Project Path="src/OcctSharp.Generator/OcctSharp.Generator.csproj" />
   </Folder>
   <Folder Name="/samples/">

@@ -34,6 +34,14 @@ Unknown ownership is a model validation error, not an implicit category.
 - **O011** — Runtime casts retain the correct shared ownership and dynamic type semantics.
 - **O012** — Callback state, if later supported, has explicit pinning, cancellation,
   reentrancy, and teardown rules.
+- **O013** — Managed assembly/package boundaries never change native creator ownership.
+  Every module resolves the same bridge, registry, allocator, validation, and release
+  family until a separately proven cross-DLL protocol exists.
+
+ADR-0074 moves managed type ownership without moving native ownership. `Shape`, its
+`ShapeHandle`, generated topology, and their release path share `OcctSharp.Modeling` on
+the managed side, but the actual allocation/registry/release implementation remains in
+the single `OcctSharp.Native.dll`. Other managed modules follow the same one-bridge rule.
 
 ## OCCT-specific baselines
 

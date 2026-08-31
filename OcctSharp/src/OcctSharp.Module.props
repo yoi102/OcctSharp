@@ -1,0 +1,41 @@
+<Project>
+  <PropertyGroup>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DisableRuntimeMarshalling>true</DisableRuntimeMarshalling>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Version>0.1.0</Version>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <FileVersion>0.1.0.0</FileVersion>
+    <PackageVersion>$(OcctSharpPackageVersion)</PackageVersion>
+    <InformationalVersion>$(PackageVersion)</InformationalVersion>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <Authors>OcctSharp contributors</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageTags>OCCT;OpenCASCADE;CAD</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IsPackable>true</IsPackable>
+    <OcctSharpModuleProject>true</OcctSharpModuleProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)..\..\README.md"
+          Pack="true"
+          PackagePath="\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="OcctSharp" />
+    <InternalsVisibleTo Include="OcctSharp.Runtime.Tests" />
+    <InternalsVisibleTo Include="OcctSharp.Foundation" />
+    <InternalsVisibleTo Include="OcctSharp.Geometry" />
+    <InternalsVisibleTo Include="OcctSharp.MeshData" />
+    <InternalsVisibleTo Include="OcctSharp.Modeling" />
+    <InternalsVisibleTo Include="OcctSharp.Mesh" />
+    <InternalsVisibleTo Include="OcctSharp.Documents" />
+    <InternalsVisibleTo Include="OcctSharp.Visualization" />
+    <InternalsVisibleTo Include="OcctSharp.DataExchange" />
+    <InternalsVisibleTo Include="OcctSharp.Xde" />
+    <InternalsVisibleTo Include="OcctSharp.IVtk" />
+    <InternalsVisibleTo Include="OcctSharp.Draw" />
+  </ItemGroup>
+</Project>

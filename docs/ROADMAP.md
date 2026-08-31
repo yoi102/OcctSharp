@@ -189,17 +189,15 @@ unbounded low-frequency API wishes.
 ADR-0061's generated-output architecture wave is also complete locally: canonical
 declarations and generated files now carry stable Foundation, Geometry, Modeling, Mesh,
 Documents, DataExchange, Xde, Visualization, and optional-module identities, with Raw,
-SafeManaged, and Runtime layers. It remains source architecture, not a managed-project/
-native-DLL split.
+SafeManaged, and Runtime layers.
 
 ADR-0062 completes the follow-on dependency prerequisite. Poly data now has a separate
 MeshData layer; all 16,353 emitted declarations resolve into 27 target-compatible,
-acyclic observed cross-shard edges. The generated managed graph is eligible for a future
-project migration, but physical splitting is deferred: managed assembly identity/manual
-facades and native cross-DLL registry/creator-release semantics still need separate ADRs.
-Completed Batch C therefore retains one managed assembly, one native DLL, and one package.
-Completed Batch D, Batch E, Batch F, Batch G, and Batch H retain the same physical boundary; none authorizes
-the deferred split.
+acyclic observed cross-shard edges. ADR-0074 independently completes the managed physical
+migration in Preview.10: module assemblies/packages, manual `Shape` ownership, facade
+ownership, deterministic type forwarding, one native runtime package, and direct-module
+consumption are closed. This does not rewrite any product-batch evidence. Native
+cross-DLL registry/creator-release semantics remain unproven, so one native DLL remains.
 
 The phase record below is retained as history and architecture context; it is not an
 active execution sequence.
@@ -376,9 +374,10 @@ callbacks and broad generated visualization declarations remain B19 long-tail sc
 
 Goal: publish validated NuGet packages for the declared compatibility matrix.
 
-Implemented evidence: one experimental package now carries the managed assembly and
-the complete Windows x64 native closure, copies it below the consumer's `occt` directory,
-and passes a clean restore/publish/runtime consumer. The release workstream also implements
+Implemented evidence: 13 managed packages now share one `OcctSharp.Native.win-x64`
+package carrying the complete Windows x64 native closure. The facade and direct Modeling
+package both copy it below the consumer's `occt` directory and pass clean restore/publish/
+runtime consumers. The release workstream also implements
 API baselines, clean-source regeneration, immutable-artifact CI configuration,
 SBOM/provenance/checksums, release notes, and explicit machine-readable gates. MIT,
 bundled notices, clone-only hosted CI, and the committed runtime pass. This does not

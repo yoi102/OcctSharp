@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\OcctSharp.Module.props" />
+  <PropertyGroup><Description>OCCT topology, BRep, construction, and modeling bindings for OcctSharp.</Description></PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\OcctSharp\Generated\Modeling\**\*.cs" Link="Generated\%(RecursiveDir)%(Filename)%(Extension)" />
+    <Compile Include="..\OcctSharp\Interop\**\*.cs" Exclude="..\OcctSharp\Interop\NativeError.cs;..\OcctSharp\Interop\NativeLibraryResolver.cs;..\OcctSharp\Interop\NativeStatus.cs" Link="Interop\%(RecursiveDir)%(Filename)%(Extension)" />
+    <Compile Include="..\OcctSharp\Shape.cs" Link="Shape.cs" />
+    <Compile Include="..\OcctSharp\ShapeFactory.cs" Link="ShapeFactory.cs" />
+    <Compile Include="..\OcctSharp\GeometrySnapshots.cs" Link="GeometrySnapshots.cs" />
+    <Compile Include="..\OcctSharp\TopologyAdjacencyMap.cs" Link="TopologyAdjacencyMap.cs" />
+    <Compile Include="..\OcctSharp\ShapeTransform.cs" Link="ShapeTransform.cs" />
+    <Compile Include="..\OcctSharp\GpTrsf.cs" Link="GpTrsf.cs" />
+    <Compile Include="..\OcctSharp\TopLocLocation.cs" Link="TopLocLocation.cs" />
+    <Compile Include="..\OcctSharp\GpVec.cs" Link="GpVec.cs" />
+    <Compile Include="..\OcctSharp\GpAx1.cs" Link="GpAx1.cs" />
+    <Compile Include="..\OcctSharp\GpXyz.cs" Link="GpXyz.cs" />
+    <Compile Include="..\OcctSharp\BoundingBox3d.cs" Link="BoundingBox3d.cs" />
+    <Compile Include="..\OcctSharp\OrientedBoundingBox3d.cs" Link="OrientedBoundingBox3d.cs" />
+    <Compile Include="..\OcctSharp\ShapeTopologySummary.cs" Link="ShapeTopologySummary.cs" />
+    <Compile Include="..\OcctSharp\ShapeValidationReport.cs" Link="ShapeValidationReport.cs" />
+    <Compile Include="..\OcctSharp\BooleanHistory.cs" Link="BooleanHistory.cs" />
+    <Compile Include="..\OcctSharp\ShapeDistanceResult.cs" Link="ShapeDistanceResult.cs" />
+    <Compile Include="..\OcctSharp\InspectionTypes.cs" Link="InspectionTypes.cs" />
+    <Compile Include="..\OcctSharp\MeshSnapshot.cs" Link="MeshSnapshot.cs" />
+    <Compile Include="..\OcctSharp\DetailedMeshSnapshot.cs" Link="DetailedMeshSnapshot.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OcctSharp.Runtime\OcctSharp.Runtime.csproj" />
+    <ProjectReference Include="..\OcctSharp.Foundation\OcctSharp.Foundation.csproj" />
+    <ProjectReference Include="..\OcctSharp.Geometry\OcctSharp.Geometry.csproj" />
+    <ProjectReference Include="..\OcctSharp.MeshData\OcctSharp.MeshData.csproj" />
+  </ItemGroup>
+</Project>

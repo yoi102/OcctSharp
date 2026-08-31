@@ -564,710 +564,710 @@ internal sealed class BVHBuildThreadHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BVHBuildThreadHandle() : base(true) { }
     internal BVHBuildThreadHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BVHBuildThreadRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.BVHBuildThreadRelease(handle); return true; }
 }
 
 internal sealed class BVHBuilderTransientHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BVHBuilderTransientHandle() : base(true) { }
     internal BVHBuilderTransientHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BVHBuilderTransientRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.BVHBuilderTransientRelease(handle); return true; }
 }
 
 internal sealed class BVHObjectTransientHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BVHObjectTransientHandle() : base(true) { }
     internal BVHObjectTransientHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BVHObjectTransientRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.BVHObjectTransientRelease(handle); return true; }
 }
 
 internal sealed class BVHPropertiesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BVHPropertiesHandle() : base(true) { }
     internal BVHPropertiesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BVHPropertiesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.BVHPropertiesRelease(handle); return true; }
 }
 
 internal sealed class BVHTreeBaseTransientHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BVHTreeBaseTransientHandle() : base(true) { }
     internal BVHTreeBaseTransientHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BVHTreeBaseTransientRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.BVHTreeBaseTransientRelease(handle); return true; }
 }
 
 internal sealed class ExprIntrpGenExpHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprIntrpGenExpHandle() : base(true) { }
     internal ExprIntrpGenExpHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprIntrpGenExpRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprIntrpGenExpRelease(handle); return true; }
 }
 
 internal sealed class ExprIntrpGenFctHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprIntrpGenFctHandle() : base(true) { }
     internal ExprIntrpGenFctHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprIntrpGenFctRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprIntrpGenFctRelease(handle); return true; }
 }
 
 internal sealed class ExprIntrpGenRelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprIntrpGenRelHandle() : base(true) { }
     internal ExprIntrpGenRelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprIntrpGenRelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprIntrpGenRelRelease(handle); return true; }
 }
 
 internal sealed class ExprIntrpGeneratorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprIntrpGeneratorHandle() : base(true) { }
     internal ExprIntrpGeneratorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprIntrpGeneratorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprIntrpGeneratorRelease(handle); return true; }
 }
 
 internal sealed class ExprAbsoluteHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprAbsoluteHandle() : base(true) { }
     internal ExprAbsoluteHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprAbsoluteRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprAbsoluteRelease(handle); return true; }
 }
 
 internal sealed class ExprArcCosineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprArcCosineHandle() : base(true) { }
     internal ExprArcCosineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprArcCosineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprArcCosineRelease(handle); return true; }
 }
 
 internal sealed class ExprArcSineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprArcSineHandle() : base(true) { }
     internal ExprArcSineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprArcSineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprArcSineRelease(handle); return true; }
 }
 
 internal sealed class ExprArcTangentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprArcTangentHandle() : base(true) { }
     internal ExprArcTangentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprArcTangentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprArcTangentRelease(handle); return true; }
 }
 
 internal sealed class ExprArgCoshHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprArgCoshHandle() : base(true) { }
     internal ExprArgCoshHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprArgCoshRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprArgCoshRelease(handle); return true; }
 }
 
 internal sealed class ExprArgSinhHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprArgSinhHandle() : base(true) { }
     internal ExprArgSinhHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprArgSinhRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprArgSinhRelease(handle); return true; }
 }
 
 internal sealed class ExprArgTanhHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprArgTanhHandle() : base(true) { }
     internal ExprArgTanhHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprArgTanhRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprArgTanhRelease(handle); return true; }
 }
 
 internal sealed class ExprBinaryExpressionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprBinaryExpressionHandle() : base(true) { }
     internal ExprBinaryExpressionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprBinaryExpressionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprBinaryExpressionRelease(handle); return true; }
 }
 
 internal sealed class ExprBinaryFunctionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprBinaryFunctionHandle() : base(true) { }
     internal ExprBinaryFunctionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprBinaryFunctionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprBinaryFunctionRelease(handle); return true; }
 }
 
 internal sealed class ExprCoshHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprCoshHandle() : base(true) { }
     internal ExprCoshHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprCoshRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprCoshRelease(handle); return true; }
 }
 
 internal sealed class ExprCosineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprCosineHandle() : base(true) { }
     internal ExprCosineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprCosineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprCosineRelease(handle); return true; }
 }
 
 internal sealed class ExprDifferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprDifferenceHandle() : base(true) { }
     internal ExprDifferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprDifferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprDifferenceRelease(handle); return true; }
 }
 
 internal sealed class ExprDifferentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprDifferentHandle() : base(true) { }
     internal ExprDifferentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprDifferentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprDifferentRelease(handle); return true; }
 }
 
 internal sealed class ExprDivisionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprDivisionHandle() : base(true) { }
     internal ExprDivisionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprDivisionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprDivisionRelease(handle); return true; }
 }
 
 internal sealed class ExprEqualHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprEqualHandle() : base(true) { }
     internal ExprEqualHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprEqualRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprEqualRelease(handle); return true; }
 }
 
 internal sealed class ExprExponentialHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprExponentialHandle() : base(true) { }
     internal ExprExponentialHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprExponentialRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprExponentialRelease(handle); return true; }
 }
 
 internal sealed class ExprExponentiateHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprExponentiateHandle() : base(true) { }
     internal ExprExponentiateHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprExponentiateRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprExponentiateRelease(handle); return true; }
 }
 
 internal sealed class ExprFunctionDerivativeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprFunctionDerivativeHandle() : base(true) { }
     internal ExprFunctionDerivativeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprFunctionDerivativeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprFunctionDerivativeRelease(handle); return true; }
 }
 
 internal sealed class ExprGeneralExpressionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprGeneralExpressionHandle() : base(true) { }
     internal ExprGeneralExpressionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprGeneralExpressionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprGeneralExpressionRelease(handle); return true; }
 }
 
 internal sealed class ExprGeneralFunctionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprGeneralFunctionHandle() : base(true) { }
     internal ExprGeneralFunctionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprGeneralFunctionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprGeneralFunctionRelease(handle); return true; }
 }
 
 internal sealed class ExprGeneralRelationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprGeneralRelationHandle() : base(true) { }
     internal ExprGeneralRelationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprGeneralRelationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprGeneralRelationRelease(handle); return true; }
 }
 
 internal sealed class ExprGreaterThanHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprGreaterThanHandle() : base(true) { }
     internal ExprGreaterThanHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprGreaterThanRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprGreaterThanRelease(handle); return true; }
 }
 
 internal sealed class ExprGreaterThanOrEqualHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprGreaterThanOrEqualHandle() : base(true) { }
     internal ExprGreaterThanOrEqualHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprGreaterThanOrEqualRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprGreaterThanOrEqualRelease(handle); return true; }
 }
 
 internal sealed class ExprLessThanHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprLessThanHandle() : base(true) { }
     internal ExprLessThanHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprLessThanRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprLessThanRelease(handle); return true; }
 }
 
 internal sealed class ExprLessThanOrEqualHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprLessThanOrEqualHandle() : base(true) { }
     internal ExprLessThanOrEqualHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprLessThanOrEqualRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprLessThanOrEqualRelease(handle); return true; }
 }
 
 internal sealed class ExprLogOf10Handle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprLogOf10Handle() : base(true) { }
     internal ExprLogOf10Handle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprLogOf10Release(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprLogOf10Release(handle); return true; }
 }
 
 internal sealed class ExprLogOfeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprLogOfeHandle() : base(true) { }
     internal ExprLogOfeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprLogOfeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprLogOfeRelease(handle); return true; }
 }
 
 internal sealed class ExprNamedConstantHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprNamedConstantHandle() : base(true) { }
     internal ExprNamedConstantHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprNamedConstantRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprNamedConstantRelease(handle); return true; }
 }
 
 internal sealed class ExprNamedExpressionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprNamedExpressionHandle() : base(true) { }
     internal ExprNamedExpressionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprNamedExpressionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprNamedExpressionRelease(handle); return true; }
 }
 
 internal sealed class ExprNamedFunctionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprNamedFunctionHandle() : base(true) { }
     internal ExprNamedFunctionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprNamedFunctionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprNamedFunctionRelease(handle); return true; }
 }
 
 internal sealed class ExprNamedUnknownHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprNamedUnknownHandle() : base(true) { }
     internal ExprNamedUnknownHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprNamedUnknownRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprNamedUnknownRelease(handle); return true; }
 }
 
 internal sealed class ExprNumericValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprNumericValueHandle() : base(true) { }
     internal ExprNumericValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprNumericValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprNumericValueRelease(handle); return true; }
 }
 
 internal sealed class ExprPolyExpressionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprPolyExpressionHandle() : base(true) { }
     internal ExprPolyExpressionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprPolyExpressionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprPolyExpressionRelease(handle); return true; }
 }
 
 internal sealed class ExprPolyFunctionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprPolyFunctionHandle() : base(true) { }
     internal ExprPolyFunctionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprPolyFunctionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprPolyFunctionRelease(handle); return true; }
 }
 
 internal sealed class ExprProductHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprProductHandle() : base(true) { }
     internal ExprProductHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprProductRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprProductRelease(handle); return true; }
 }
 
 internal sealed class ExprSignHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprSignHandle() : base(true) { }
     internal ExprSignHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprSignRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprSignRelease(handle); return true; }
 }
 
 internal sealed class ExprSineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprSineHandle() : base(true) { }
     internal ExprSineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprSineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprSineRelease(handle); return true; }
 }
 
 internal sealed class ExprSingleRelationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprSingleRelationHandle() : base(true) { }
     internal ExprSingleRelationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprSingleRelationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprSingleRelationRelease(handle); return true; }
 }
 
 internal sealed class ExprSinhHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprSinhHandle() : base(true) { }
     internal ExprSinhHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprSinhRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprSinhRelease(handle); return true; }
 }
 
 internal sealed class ExprSquareHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprSquareHandle() : base(true) { }
     internal ExprSquareHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprSquareRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprSquareRelease(handle); return true; }
 }
 
 internal sealed class ExprSquareRootHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprSquareRootHandle() : base(true) { }
     internal ExprSquareRootHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprSquareRootRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprSquareRootRelease(handle); return true; }
 }
 
 internal sealed class ExprSumHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprSumHandle() : base(true) { }
     internal ExprSumHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprSumRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprSumRelease(handle); return true; }
 }
 
 internal sealed class ExprSystemRelationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprSystemRelationHandle() : base(true) { }
     internal ExprSystemRelationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprSystemRelationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprSystemRelationRelease(handle); return true; }
 }
 
 internal sealed class ExprTangentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprTangentHandle() : base(true) { }
     internal ExprTangentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprTangentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprTangentRelease(handle); return true; }
 }
 
 internal sealed class ExprTanhHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprTanhHandle() : base(true) { }
     internal ExprTanhHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprTanhRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprTanhRelease(handle); return true; }
 }
 
 internal sealed class ExprUnaryExpressionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprUnaryExpressionHandle() : base(true) { }
     internal ExprUnaryExpressionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprUnaryExpressionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprUnaryExpressionRelease(handle); return true; }
 }
 
 internal sealed class ExprUnaryFunctionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprUnaryFunctionHandle() : base(true) { }
     internal ExprUnaryFunctionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprUnaryFunctionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprUnaryFunctionRelease(handle); return true; }
 }
 
 internal sealed class ExprUnaryMinusHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExprUnaryMinusHandle() : base(true) { }
     internal ExprUnaryMinusHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExprUnaryMinusRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ExprUnaryMinusRelease(handle); return true; }
 }
 
 internal sealed class MessageAlertHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MessageAlertHandle() : base(true) { }
     internal MessageAlertHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MessageAlertRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.MessageAlertRelease(handle); return true; }
 }
 
 internal sealed class MessageAlertExtendedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MessageAlertExtendedHandle() : base(true) { }
     internal MessageAlertExtendedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MessageAlertExtendedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.MessageAlertExtendedRelease(handle); return true; }
 }
 
 internal sealed class MessageAlgorithmHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MessageAlgorithmHandle() : base(true) { }
     internal MessageAlgorithmHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MessageAlgorithmRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.MessageAlgorithmRelease(handle); return true; }
 }
 
 internal sealed class MessageAttributeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MessageAttributeHandle() : base(true) { }
     internal MessageAttributeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MessageAttributeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.MessageAttributeRelease(handle); return true; }
 }
 
 internal sealed class MessageAttributeMeterHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MessageAttributeMeterHandle() : base(true) { }
     internal MessageAttributeMeterHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MessageAttributeMeterRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.MessageAttributeMeterRelease(handle); return true; }
 }
 
 internal sealed class MessageAttributeObjectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MessageAttributeObjectHandle() : base(true) { }
     internal MessageAttributeObjectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MessageAttributeObjectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.MessageAttributeObjectRelease(handle); return true; }
 }
 
 internal sealed class MessageAttributeStreamHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MessageAttributeStreamHandle() : base(true) { }
     internal MessageAttributeStreamHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MessageAttributeStreamRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.MessageAttributeStreamRelease(handle); return true; }
 }
 
 internal sealed class MessageCompositeAlertsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MessageCompositeAlertsHandle() : base(true) { }
     internal MessageCompositeAlertsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MessageCompositeAlertsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.MessageCompositeAlertsRelease(handle); return true; }
 }
 
 internal sealed class MessageMessengerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MessageMessengerHandle() : base(true) { }
     internal MessageMessengerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MessageMessengerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.MessageMessengerRelease(handle); return true; }
 }
 
 internal sealed class MessagePrinterHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MessagePrinterHandle() : base(true) { }
     internal MessagePrinterHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MessagePrinterRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.MessagePrinterRelease(handle); return true; }
 }
 
 internal sealed class MessagePrinterOStreamHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MessagePrinterOStreamHandle() : base(true) { }
     internal MessagePrinterOStreamHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MessagePrinterOStreamRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.MessagePrinterOStreamRelease(handle); return true; }
 }
 
 internal sealed class MessagePrinterSystemLogHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MessagePrinterSystemLogHandle() : base(true) { }
     internal MessagePrinterSystemLogHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MessagePrinterSystemLogRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.MessagePrinterSystemLogRelease(handle); return true; }
 }
 
 internal sealed class MessagePrinterToReportHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MessagePrinterToReportHandle() : base(true) { }
     internal MessagePrinterToReportHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MessagePrinterToReportRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.MessagePrinterToReportRelease(handle); return true; }
 }
 
 internal sealed class MessageProgressIndicatorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MessageProgressIndicatorHandle() : base(true) { }
     internal MessageProgressIndicatorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MessageProgressIndicatorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.MessageProgressIndicatorRelease(handle); return true; }
 }
 
 internal sealed class MessageReportHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MessageReportHandle() : base(true) { }
     internal MessageReportHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MessageReportRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.MessageReportRelease(handle); return true; }
 }
 
 internal sealed class NCollectionAccAllocatorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal NCollectionAccAllocatorHandle() : base(true) { }
     internal NCollectionAccAllocatorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.NCollectionAccAllocatorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.NCollectionAccAllocatorRelease(handle); return true; }
 }
 
 internal sealed class NCollectionAlignedAllocatorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal NCollectionAlignedAllocatorHandle() : base(true) { }
     internal NCollectionAlignedAllocatorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.NCollectionAlignedAllocatorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.NCollectionAlignedAllocatorRelease(handle); return true; }
 }
 
 internal sealed class NCollectionBaseAllocatorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal NCollectionBaseAllocatorHandle() : base(true) { }
     internal NCollectionBaseAllocatorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.NCollectionBaseAllocatorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.NCollectionBaseAllocatorRelease(handle); return true; }
 }
 
 internal sealed class NCollectionBufferHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal NCollectionBufferHandle() : base(true) { }
     internal NCollectionBufferHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.NCollectionBufferRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.NCollectionBufferRelease(handle); return true; }
 }
 
 internal sealed class NCollectionHeapAllocatorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal NCollectionHeapAllocatorHandle() : base(true) { }
     internal NCollectionHeapAllocatorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.NCollectionHeapAllocatorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.NCollectionHeapAllocatorRelease(handle); return true; }
 }
 
 internal sealed class NCollectionIncAllocatorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal NCollectionIncAllocatorHandle() : base(true) { }
     internal NCollectionIncAllocatorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.NCollectionIncAllocatorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.NCollectionIncAllocatorRelease(handle); return true; }
 }
 
 internal sealed class NCollectionWinHeapAllocatorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal NCollectionWinHeapAllocatorHandle() : base(true) { }
     internal NCollectionWinHeapAllocatorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.NCollectionWinHeapAllocatorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.NCollectionWinHeapAllocatorRelease(handle); return true; }
 }
 
 internal sealed class OSDCachedFileSystemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal OSDCachedFileSystemHandle() : base(true) { }
     internal OSDCachedFileSystemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.OSDCachedFileSystemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.OSDCachedFileSystemRelease(handle); return true; }
 }
 
 internal sealed class OSDFileSystemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal OSDFileSystemHandle() : base(true) { }
     internal OSDFileSystemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.OSDFileSystemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.OSDFileSystemRelease(handle); return true; }
 }
 
 internal sealed class OSDFileSystemSelectorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal OSDFileSystemSelectorHandle() : base(true) { }
     internal OSDFileSystemSelectorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.OSDFileSystemSelectorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.OSDFileSystemSelectorRelease(handle); return true; }
 }
 
 internal sealed class OSDLocalFileSystemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal OSDLocalFileSystemHandle() : base(true) { }
     internal OSDLocalFileSystemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.OSDLocalFileSystemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.OSDLocalFileSystemRelease(handle); return true; }
 }
 
 internal sealed class OSDThreadPoolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal OSDThreadPoolHandle() : base(true) { }
     internal OSDThreadPoolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.OSDThreadPoolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.OSDThreadPoolRelease(handle); return true; }
 }
 
 internal sealed class ResourceManagerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ResourceManagerHandle() : base(true) { }
     internal ResourceManagerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ResourceManagerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.ResourceManagerRelease(handle); return true; }
 }
 
 internal sealed class StandardPersistentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StandardPersistentHandle() : base(true) { }
     internal StandardPersistentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StandardPersistentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.StandardPersistentRelease(handle); return true; }
 }
 
 internal sealed class StandardTransientHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StandardTransientHandle() : base(true) { }
     internal StandardTransientHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StandardTransientRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.StandardTransientRelease(handle); return true; }
 }
 
 internal sealed class StandardTypeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StandardTypeHandle() : base(true) { }
     internal StandardTypeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StandardTypeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.StandardTypeRelease(handle); return true; }
 }
 
 internal sealed class TColStdHPackedMapOfIntegerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TColStdHPackedMapOfIntegerHandle() : base(true) { }
     internal TColStdHPackedMapOfIntegerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TColStdHPackedMapOfIntegerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.TColStdHPackedMapOfIntegerRelease(handle); return true; }
 }
 
 internal sealed class TCollectionHAsciiStringHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TCollectionHAsciiStringHandle() : base(true) { }
     internal TCollectionHAsciiStringHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TCollectionHAsciiStringRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.TCollectionHAsciiStringRelease(handle); return true; }
 }
 
 internal sealed class TCollectionHExtendedStringHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TCollectionHExtendedStringHandle() : base(true) { }
     internal TCollectionHExtendedStringHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TCollectionHExtendedStringRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.TCollectionHExtendedStringRelease(handle); return true; }
 }
 
 internal sealed class UnitsDimensionsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal UnitsDimensionsHandle() : base(true) { }
     internal UnitsDimensionsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.UnitsDimensionsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.UnitsDimensionsRelease(handle); return true; }
 }
 
 internal sealed class UnitsLexiconHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal UnitsLexiconHandle() : base(true) { }
     internal UnitsLexiconHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.UnitsLexiconRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.UnitsLexiconRelease(handle); return true; }
 }
 
 internal sealed class UnitsQuantityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal UnitsQuantityHandle() : base(true) { }
     internal UnitsQuantityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.UnitsQuantityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.UnitsQuantityRelease(handle); return true; }
 }
 
 internal sealed class UnitsShiftedTokenHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal UnitsShiftedTokenHandle() : base(true) { }
     internal UnitsShiftedTokenHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.UnitsShiftedTokenRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.UnitsShiftedTokenRelease(handle); return true; }
 }
 
 internal sealed class UnitsShiftedUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal UnitsShiftedUnitHandle() : base(true) { }
     internal UnitsShiftedUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.UnitsShiftedUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.UnitsShiftedUnitRelease(handle); return true; }
 }
 
 internal sealed class UnitsTokenHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal UnitsTokenHandle() : base(true) { }
     internal UnitsTokenHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.UnitsTokenRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.UnitsTokenRelease(handle); return true; }
 }
 
 internal sealed class UnitsUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal UnitsUnitHandle() : base(true) { }
     internal UnitsUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.UnitsUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.UnitsUnitRelease(handle); return true; }
 }
 
 internal sealed class UnitsUnitsDictionaryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal UnitsUnitsDictionaryHandle() : base(true) { }
     internal UnitsUnitsDictionaryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.UnitsUnitsDictionaryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.UnitsUnitsDictionaryRelease(handle); return true; }
 }
 
 internal sealed class UnitsUnitsLexiconHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal UnitsUnitsLexiconHandle() : base(true) { }
     internal UnitsUnitsLexiconHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.UnitsUnitsLexiconRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.UnitsUnitsLexiconRelease(handle); return true; }
 }
 
 internal sealed class UnitsUnitsSystemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal UnitsUnitsSystemHandle() : base(true) { }
     internal UnitsUnitsSystemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.UnitsUnitsSystemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { FoundationGeneratedNativeMethods.UnitsUnitsSystemRelease(handle); return true; }
 }
 
-internal static partial class GeneratedNativeMethods
+internal static partial class FoundationGeneratedNativeMethods
 {
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bvh_build_thread_method_run_0")]

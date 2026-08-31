@@ -2,7 +2,7 @@
 param(
     [string]$OcctRoot,
 
-    [string]$PackageVersion = '8.0.1-preview.9',
+    [string]$PackageVersion = '8.0.1-preview.10',
 
     [switch]$SkipBuild
 )
@@ -50,29 +50,58 @@ if ($nativeFiles.Count -eq 0) {
 New-Item -ItemType Directory -Path $packageDirectory -Force | Out-Null
 Push-Location $workspaceRoot
 try {
-    $packArguments = @(
-        'pack',
-        '.\src\OcctSharp\OcctSharp.csproj',
-        '--configuration', 'Release',
-        '--output', $packageDirectory,
-        "-p:PackageVersion=$PackageVersion",
-        "-p:OcctSharpNativeRuntimeDir=$nativeRuntimeDirectory"
+    $packProjects = @(
+        '.\src\OcctSharp.Native.win-x64\OcctSharp.Native.win-x64.csproj',
+        '.\src\OcctSharp.Runtime\OcctSharp.Runtime.csproj',
+        '.\src\OcctSharp.Foundation\OcctSharp.Foundation.csproj',
+        '.\src\OcctSharp.Geometry\OcctSharp.Geometry.csproj',
+        '.\src\OcctSharp.MeshData\OcctSharp.MeshData.csproj',
+        '.\src\OcctSharp.Modeling\OcctSharp.Modeling.csproj',
+        '.\src\OcctSharp.Mesh\OcctSharp.Mesh.csproj',
+        '.\src\OcctSharp.Documents\OcctSharp.Documents.csproj',
+        '.\src\OcctSharp.Visualization\OcctSharp.Visualization.csproj',
+        '.\src\OcctSharp.DataExchange\OcctSharp.DataExchange.csproj',
+        '.\src\OcctSharp.Xde\OcctSharp.Xde.csproj',
+        '.\src\OcctSharp.IVtk\OcctSharp.IVtk.csproj',
+        '.\src\OcctSharp.Draw\OcctSharp.Draw.csproj',
+        '.\src\OcctSharp\OcctSharp.csproj'
     )
-    if (-not $SkipBuild) {
-        $packArguments += @('--no-build', '--no-restore')
-    }
-    & dotnet @packArguments
-    if ($LASTEXITCODE -ne 0) {
-        throw "dotnet pack failed with exit code $LASTEXITCODE."
+
+    foreach ($packProject in $packProjects) {
+        $packArguments = @(
+            'pack',
+            $packProject,
+            '--configuration', 'Release',
+            '--output', $packageDirectory,
+            "-p:PackageVersion=$PackageVersion",
+            "-p:OcctSharpPackageVersion=$PackageVersion",
+            "-p:OcctSharpNativeRuntimeDir=$nativeRuntimeDirectory"
+        )
+        if (-not $SkipBuild) {
+            $packArguments += @('--no-build', '--no-restore')
+        }
+        & dotnet @packArguments
+        if ($LASTEXITCODE -ne 0) {
+            throw "dotnet pack failed for '$packProject' with exit code $LASTEXITCODE."
+        }
     }
 }
 finally {
     Pop-Location
 }
 
-$packagePath = Join-Path $packageDirectory "OcctSharp.$PackageVersion.nupkg"
-if (-not (Test-Path -LiteralPath $packagePath)) {
-    throw "Expected NuGet package was not created: '$packagePath'."
+$packageIds = @(
+    'OcctSharp.Native.win-x64', 'OcctSharp.Runtime', 'OcctSharp.Foundation',
+    'OcctSharp.Geometry', 'OcctSharp.MeshData', 'OcctSharp.Modeling',
+    'OcctSharp.Mesh', 'OcctSharp.Documents', 'OcctSharp.Visualization',
+    'OcctSharp.DataExchange', 'OcctSharp.Xde', 'OcctSharp.IVtk',
+    'OcctSharp.Draw', 'OcctSharp'
+)
+foreach ($packageId in $packageIds) {
+    $packagePath = Join-Path $packageDirectory "$packageId.$PackageVersion.nupkg"
+    if (-not (Test-Path -LiteralPath $packagePath)) {
+        throw "Expected NuGet package was not created: '$packagePath'."
+    }
 }
 
-Write-Host "Created '$packagePath' with $($nativeFiles.Count) native runtime DLLs."
+Write-Host "Created $($packageIds.Count) packages; the shared native package contains $($nativeFiles.Count) runtime DLLs."

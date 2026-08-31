@@ -10,24 +10,24 @@ internal sealed class IVtkOCCViewerSelectorHandle : SafeHandleZeroOrMinusOneIsIn
 {
     internal IVtkOCCViewerSelectorHandle() : base(true) { }
     internal IVtkOCCViewerSelectorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IVtkOCCViewerSelectorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { IVtkGeneratedNativeMethods.IVtkOCCViewerSelectorRelease(handle); return true; }
 }
 
 internal sealed class IVtkIViewHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IVtkIViewHandle() : base(true) { }
     internal IVtkIViewHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IVtkIViewRelease(handle); return true; }
+    protected override bool ReleaseHandle() { IVtkGeneratedNativeMethods.IVtkIViewRelease(handle); return true; }
 }
 
 internal sealed class IVtkInterfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IVtkInterfaceHandle() : base(true) { }
     internal IVtkInterfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IVtkInterfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { IVtkGeneratedNativeMethods.IVtkInterfaceRelease(handle); return true; }
 }
 
-internal static partial class GeneratedNativeMethods
+internal static partial class IVtkGeneratedNativeMethods
 {
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ivtk_occ_viewer_selector_clone")]

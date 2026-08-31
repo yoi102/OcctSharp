@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [string]$OcctRoot,
-    [string]$PackageVersion = '8.0.1-preview.9',
+    [string]$PackageVersion = '8.0.1-preview.10',
     [string]$ApiBaselineVersion = '0.1.0-alpha.38'
 )
 
@@ -91,9 +91,9 @@ $gates = @(
     [ordered]@{ id = 'local-release-debug'; state = 'PASS'; evidence = 'Release and Debug build/test completed in this run.' },
     [ordered]@{ id = 'bundled-runtime'; state = 'PASS'; evidence = 'Committed Windows x64 runtime manifest, 62 DLL hashes, and all included license/notice hashes verified.' },
     [ordered]@{ id = 'generated-freshness'; state = 'PASS'; evidence = "$generatedFileCount manifest-owned files current." },
-    [ordered]@{ id = 'generated-shard-dependency-closure'; state = 'PASS'; evidence = "$dependencyEdgeCount observed cross-shard edges are fully resolved, target-graph compatible, and acyclic; managed generated shards are split-eligible while native DLL splitting remains deferred." },
+    [ordered]@{ id = 'generated-shard-dependency-closure'; state = 'PASS'; evidence = "$dependencyEdgeCount observed cross-shard edges are fully resolved, target-graph compatible, and acyclic; managed shards are physically split while native DLL splitting remains deferred." },
     [ordered]@{ id = 'clean-regeneration'; state = 'PASS'; evidence = 'Fresh source copy build and byte comparison completed.' },
-    [ordered]@{ id = 'package-consumer'; state = 'PASS'; evidence = "$PackageVersion clean restore/publish/runtime with $nativeDllCount DLLs, $emittedCount generated declarations, inherited complete Batch D/E/F/G/H/I/J/K workflows, and the complete Batch L occurrence expansion, AABB/OBB, broad/exact-phase, clearance/contact/penetration/containment, pair-matrix, ownership, incremental, STEP/XDE, real-HWND review, screenshot, and source-disposal workflow." },
+    [ordered]@{ id = 'package-consumer'; state = 'PASS'; evidence = "$PackageVersion creates 14 packages with one $nativeDllCount-DLL native package and zero native duplication in 13 managed packages; the clean facade consumer runs the inherited Batch D-L workflows and the direct Modeling consumer creates topology without receiving OcctSharp.dll." },
     [ordered]@{ id = 'api-compatibility'; state = 'PASS'; evidence = 'Compared with the alpha.38 606-signature baseline; additive changes are allowed and removals are blocked.' },
     [ordered]@{ id = 'full-classification'; state = 'PASS'; evidence = "$declarationTotal declarations and $headerTotal headers classified; zero pending/HD099." },
     [ordered]@{ id = 'bindable-emission-completeness'; state = if ($remainingBindableCount -eq 0) { 'PASS' } else { 'BLOCKED' }; evidence = "$remainingBindableCount declarations remain SupportedUnselected; $emittedCount generated and $manualCount accepted manual stable IDs are reconciled." },

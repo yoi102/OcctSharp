@@ -16,7 +16,7 @@ using System.Runtime.InteropServices;
 
 namespace OcctSharp.Generated;
 
-internal static partial class GeneratedNativeMethods
+internal static partial class XdeGeneratedNativeMethods
 {
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_stepcafcontrol_controller_init_static_init_0")]

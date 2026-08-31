@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "dependencies": {
+    "net10.0": {
+      "occtsharp.foundation": {
+        "type": "Project",
+        "dependencies": {
+          "OcctSharp.Runtime": "[8.0.1-preview.10, )"
+        }
+      },
+      "occtsharp.geometry": {
+        "type": "Project",
+        "dependencies": {
+          "OcctSharp.Foundation": "[8.0.1-preview.10, )",
+          "OcctSharp.Runtime": "[8.0.1-preview.10, )"
+        }
+      },
+      "occtsharp.meshdata": {
+        "type": "Project",
+        "dependencies": {
+          "OcctSharp.Foundation": "[8.0.1-preview.10, )",
+          "OcctSharp.Geometry": "[8.0.1-preview.10, )",
+          "OcctSharp.Runtime": "[8.0.1-preview.10, )"
+        }
+      },
+      "occtsharp.native.win-x64": {
+        "type": "Project"
+      },
+      "occtsharp.runtime": {
+        "type": "Project",
+        "dependencies": {
+          "OcctSharp.Native.win-x64": "[8.0.1-preview.10, )"
+        }
+      }
+    },
+    "net10.0/win-x64": {}
+  }
+}

@@ -88,16 +88,18 @@ public static class SharedHandleBindingEmitter
                 "SharedHandles.NativeSource"));
             files.Add(new GeneratedFile(
                 managedBase + "Raw.Generated.cs",
-                EmitManagedRaw(moduleBindings, moduleDeclarations),
+                UseModuleNativeMethods(EmitManagedRaw(moduleBindings, moduleDeclarations), module),
                 module,
                 GeneratedApiLayer.Raw,
                 "SharedHandles.ManagedRaw"));
             files.Add(new GeneratedFile(
                 managedBase + ".Generated.cs",
-                EmitManagedFriendly(
-                    moduleBindings,
-                    moduleDeclarations,
-                    includePointValue: module == OcctProductModule.Geometry),
+                UseModuleNativeMethods(
+                    EmitManagedFriendly(
+                        moduleBindings,
+                        moduleDeclarations,
+                        includePointValue: module == OcctProductModule.Geometry),
+                    module),
                 module,
                 GeneratedApiLayer.SafeManaged,
                 "SharedHandles.ManagedFriendly"));
@@ -108,6 +110,12 @@ public static class SharedHandleBindingEmitter
             declarations.Select(static declaration => declaration.StableId).ToArray(),
             files.OrderBy(static file => file.RelativePath, StringComparer.Ordinal).ToArray());
     }
+
+    private static string UseModuleNativeMethods(string source, OcctProductModule module) =>
+        source.Replace(
+            "GeneratedNativeMethods",
+            module + "GeneratedNativeMethods",
+            StringComparison.Ordinal);
 
     private static BindingDeclaration[] GetDeclarations(IEnumerable<SharedTypeBinding> bindings) => bindings
         .SelectMany(static binding => binding.Constructors

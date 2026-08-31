@@ -9,20 +9,20 @@ public readonly record struct GpPoint(double X, double Y, double Z)
     public static GpPoint Create(double x, double y, double z)
     {
         ValidateFinite(x, nameof(x)); ValidateFinite(y, nameof(y)); ValidateFinite(z, nameof(z));
-        Point3dRaw raw = GeneratedNativeMethods.CreatePoint3d(x, y, z);
+        Point3dRaw raw = GeometryGeneratedNativeMethods.CreatePoint3d(x, y, z);
         return new GpPoint(raw.X, raw.Y, raw.Z);
     }
 
     /// <summary>Returns the generated OCCT default point value (the origin).</summary>
     public static GpPoint Origin
     {
-        get { Point3dRaw raw = GeneratedNativeMethods.CreatePoint3dDefault(); return new GpPoint(raw.X, raw.Y, raw.Z); }
+        get { Point3dRaw raw = GeometryGeneratedNativeMethods.CreatePoint3dDefault(); return new GpPoint(raw.X, raw.Y, raw.Z); }
     }
 
     /// <summary>Copies this value through the generated <c>gp_Pnt</c> copy constructor.</summary>
     public GpPoint Copy()
     {
-        Point3dRaw raw = GeneratedNativeMethods.CreatePoint3dCopy(new Point3dRaw(X, Y, Z));
+        Point3dRaw raw = GeometryGeneratedNativeMethods.CreatePoint3dCopy(new Point3dRaw(X, Y, Z));
         return new GpPoint(raw.X, raw.Y, raw.Z);
     }
 

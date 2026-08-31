@@ -46,7 +46,7 @@ using System.Runtime.InteropServices;
 
 namespace OcctSharp.Generated;
 
-internal static partial class GeneratedNativeMethods
+internal static partial class VisualizationGeneratedNativeMethods
 {
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ais_color_scale_hue_to_valid_range_static_hue_to_valid_range_0")]

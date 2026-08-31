@@ -105,52 +105,52 @@ internal sealed class PolyCoherentTriangulationHandle : SafeHandleZeroOrMinusOne
 {
     internal PolyCoherentTriangulationHandle() : base(true) { }
     internal PolyCoherentTriangulationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.PolyCoherentTriangulationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshDataGeneratedNativeMethods.PolyCoherentTriangulationRelease(handle); return true; }
 }
 
 internal sealed class PolyMergeNodesToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal PolyMergeNodesToolHandle() : base(true) { }
     internal PolyMergeNodesToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.PolyMergeNodesToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshDataGeneratedNativeMethods.PolyMergeNodesToolRelease(handle); return true; }
 }
 
 internal sealed class PolyPolygon2DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal PolyPolygon2DHandle() : base(true) { }
     internal PolyPolygon2DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.PolyPolygon2DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshDataGeneratedNativeMethods.PolyPolygon2DRelease(handle); return true; }
 }
 
 internal sealed class PolyPolygon3DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal PolyPolygon3DHandle() : base(true) { }
     internal PolyPolygon3DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.PolyPolygon3DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshDataGeneratedNativeMethods.PolyPolygon3DRelease(handle); return true; }
 }
 
 internal sealed class PolyPolygonOnTriangulationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal PolyPolygonOnTriangulationHandle() : base(true) { }
     internal PolyPolygonOnTriangulationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.PolyPolygonOnTriangulationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshDataGeneratedNativeMethods.PolyPolygonOnTriangulationRelease(handle); return true; }
 }
 
 internal sealed class PolyTriangulationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal PolyTriangulationHandle() : base(true) { }
     internal PolyTriangulationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.PolyTriangulationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshDataGeneratedNativeMethods.PolyTriangulationRelease(handle); return true; }
 }
 
 internal sealed class PolyTriangulationParametersHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal PolyTriangulationParametersHandle() : base(true) { }
     internal PolyTriangulationParametersHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.PolyTriangulationParametersRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshDataGeneratedNativeMethods.PolyTriangulationParametersRelease(handle); return true; }
 }
 
-internal static partial class GeneratedNativeMethods
+internal static partial class MeshDataGeneratedNativeMethods
 {
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_poly_coherent_triangulation_create_0")]

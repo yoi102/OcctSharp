@@ -94,7 +94,134 @@
         }
       },
       "occtsharp": {
+        "type": "Project",
+        "dependencies": {
+          "OcctSharp.DataExchange": "[8.0.1-preview.10, )",
+          "OcctSharp.Documents": "[8.0.1-preview.10, )",
+          "OcctSharp.Draw": "[8.0.1-preview.10, )",
+          "OcctSharp.Foundation": "[8.0.1-preview.10, )",
+          "OcctSharp.Geometry": "[8.0.1-preview.10, )",
+          "OcctSharp.IVtk": "[8.0.1-preview.10, )",
+          "OcctSharp.Mesh": "[8.0.1-preview.10, )",
+          "OcctSharp.MeshData": "[8.0.1-preview.10, )",
+          "OcctSharp.Modeling": "[8.0.1-preview.10, )",
+          "OcctSharp.Runtime": "[8.0.1-preview.10, )",
+          "OcctSharp.Visualization": "[8.0.1-preview.10, )",
+          "OcctSharp.Xde": "[8.0.1-preview.10, )"
+        }
+      },
+      "occtsharp.dataexchange": {
+        "type": "Project",
+        "dependencies": {
+          "OcctSharp.Documents": "[8.0.1-preview.10, )",
+          "OcctSharp.Foundation": "[8.0.1-preview.10, )",
+          "OcctSharp.Geometry": "[8.0.1-preview.10, )",
+          "OcctSharp.Mesh": "[8.0.1-preview.10, )",
+          "OcctSharp.MeshData": "[8.0.1-preview.10, )",
+          "OcctSharp.Modeling": "[8.0.1-preview.10, )",
+          "OcctSharp.Runtime": "[8.0.1-preview.10, )",
+          "OcctSharp.Visualization": "[8.0.1-preview.10, )"
+        }
+      },
+      "occtsharp.documents": {
+        "type": "Project",
+        "dependencies": {
+          "OcctSharp.Foundation": "[8.0.1-preview.10, )",
+          "OcctSharp.Geometry": "[8.0.1-preview.10, )",
+          "OcctSharp.MeshData": "[8.0.1-preview.10, )",
+          "OcctSharp.Modeling": "[8.0.1-preview.10, )",
+          "OcctSharp.Runtime": "[8.0.1-preview.10, )"
+        }
+      },
+      "occtsharp.draw": {
+        "type": "Project",
+        "dependencies": {
+          "OcctSharp.Runtime": "[8.0.1-preview.10, )",
+          "OcctSharp.Visualization": "[8.0.1-preview.10, )",
+          "OcctSharp.Xde": "[8.0.1-preview.10, )"
+        }
+      },
+      "occtsharp.foundation": {
+        "type": "Project",
+        "dependencies": {
+          "OcctSharp.Runtime": "[8.0.1-preview.10, )"
+        }
+      },
+      "occtsharp.geometry": {
+        "type": "Project",
+        "dependencies": {
+          "OcctSharp.Foundation": "[8.0.1-preview.10, )",
+          "OcctSharp.Runtime": "[8.0.1-preview.10, )"
+        }
+      },
+      "occtsharp.ivtk": {
+        "type": "Project",
+        "dependencies": {
+          "OcctSharp.Runtime": "[8.0.1-preview.10, )",
+          "OcctSharp.Visualization": "[8.0.1-preview.10, )"
+        }
+      },
+      "occtsharp.mesh": {
+        "type": "Project",
+        "dependencies": {
+          "OcctSharp.Foundation": "[8.0.1-preview.10, )",
+          "OcctSharp.Geometry": "[8.0.1-preview.10, )",
+          "OcctSharp.MeshData": "[8.0.1-preview.10, )",
+          "OcctSharp.Modeling": "[8.0.1-preview.10, )",
+          "OcctSharp.Runtime": "[8.0.1-preview.10, )"
+        }
+      },
+      "occtsharp.meshdata": {
+        "type": "Project",
+        "dependencies": {
+          "OcctSharp.Foundation": "[8.0.1-preview.10, )",
+          "OcctSharp.Geometry": "[8.0.1-preview.10, )",
+          "OcctSharp.Runtime": "[8.0.1-preview.10, )"
+        }
+      },
+      "occtsharp.modeling": {
+        "type": "Project",
+        "dependencies": {
+          "OcctSharp.Foundation": "[8.0.1-preview.10, )",
+          "OcctSharp.Geometry": "[8.0.1-preview.10, )",
+          "OcctSharp.MeshData": "[8.0.1-preview.10, )",
+          "OcctSharp.Runtime": "[8.0.1-preview.10, )"
+        }
+      },
+      "occtsharp.native.win-x64": {
         "type": "Project"
+      },
+      "occtsharp.runtime": {
+        "type": "Project",
+        "dependencies": {
+          "OcctSharp.Native.win-x64": "[8.0.1-preview.10, )"
+        }
+      },
+      "occtsharp.visualization": {
+        "type": "Project",
+        "dependencies": {
+          "OcctSharp.Documents": "[8.0.1-preview.10, )",
+          "OcctSharp.Foundation": "[8.0.1-preview.10, )",
+          "OcctSharp.Geometry": "[8.0.1-preview.10, )",
+          "OcctSharp.Mesh": "[8.0.1-preview.10, )",
+          "OcctSharp.MeshData": "[8.0.1-preview.10, )",
+          "OcctSharp.Modeling": "[8.0.1-preview.10, )",
+          "OcctSharp.Runtime": "[8.0.1-preview.10, )"
+        }
+      },
+      "occtsharp.xde": {
+        "type": "Project",
+        "dependencies": {
+          "OcctSharp.DataExchange": "[8.0.1-preview.10, )",
+          "OcctSharp.Documents": "[8.0.1-preview.10, )",
+          "OcctSharp.Foundation": "[8.0.1-preview.10, )",
+          "OcctSharp.Geometry": "[8.0.1-preview.10, )",
+          "OcctSharp.Mesh": "[8.0.1-preview.10, )",
+          "OcctSharp.MeshData": "[8.0.1-preview.10, )",
+          "OcctSharp.Modeling": "[8.0.1-preview.10, )",
+          "OcctSharp.Runtime": "[8.0.1-preview.10, )",
+          "OcctSharp.Visualization": "[8.0.1-preview.10, )"
+        }
       }
     },
     "net10.0/win-x64": {}

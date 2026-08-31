@@ -423,542 +423,542 @@ internal sealed class BinMXCAFDocAssemblyItemRefDriverHandle : SafeHandleZeroOrM
 {
     internal BinMXCAFDocAssemblyItemRefDriverHandle() : base(true) { }
     internal BinMXCAFDocAssemblyItemRefDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMXCAFDocAssemblyItemRefDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.BinMXCAFDocAssemblyItemRefDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMXCAFDocCentroidDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMXCAFDocCentroidDriverHandle() : base(true) { }
     internal BinMXCAFDocCentroidDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMXCAFDocCentroidDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.BinMXCAFDocCentroidDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMXCAFDocColorDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMXCAFDocColorDriverHandle() : base(true) { }
     internal BinMXCAFDocColorDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMXCAFDocColorDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.BinMXCAFDocColorDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMXCAFDocDatumDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMXCAFDocDatumDriverHandle() : base(true) { }
     internal BinMXCAFDocDatumDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMXCAFDocDatumDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.BinMXCAFDocDatumDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMXCAFDocDimTolDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMXCAFDocDimTolDriverHandle() : base(true) { }
     internal BinMXCAFDocDimTolDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMXCAFDocDimTolDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.BinMXCAFDocDimTolDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMXCAFDocGraphNodeDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMXCAFDocGraphNodeDriverHandle() : base(true) { }
     internal BinMXCAFDocGraphNodeDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMXCAFDocGraphNodeDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.BinMXCAFDocGraphNodeDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMXCAFDocLengthUnitDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMXCAFDocLengthUnitDriverHandle() : base(true) { }
     internal BinMXCAFDocLengthUnitDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMXCAFDocLengthUnitDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.BinMXCAFDocLengthUnitDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMXCAFDocLocationDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMXCAFDocLocationDriverHandle() : base(true) { }
     internal BinMXCAFDocLocationDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMXCAFDocLocationDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.BinMXCAFDocLocationDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMXCAFDocMaterialDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMXCAFDocMaterialDriverHandle() : base(true) { }
     internal BinMXCAFDocMaterialDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMXCAFDocMaterialDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.BinMXCAFDocMaterialDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMXCAFDocNoteBinDataDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMXCAFDocNoteBinDataDriverHandle() : base(true) { }
     internal BinMXCAFDocNoteBinDataDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMXCAFDocNoteBinDataDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.BinMXCAFDocNoteBinDataDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMXCAFDocNoteCommentDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMXCAFDocNoteCommentDriverHandle() : base(true) { }
     internal BinMXCAFDocNoteCommentDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMXCAFDocNoteCommentDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.BinMXCAFDocNoteCommentDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMXCAFDocNoteDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMXCAFDocNoteDriverHandle() : base(true) { }
     internal BinMXCAFDocNoteDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMXCAFDocNoteDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.BinMXCAFDocNoteDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMXCAFDocVisMaterialDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMXCAFDocVisMaterialDriverHandle() : base(true) { }
     internal BinMXCAFDocVisMaterialDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMXCAFDocVisMaterialDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.BinMXCAFDocVisMaterialDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMXCAFDocVisMaterialToolDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMXCAFDocVisMaterialToolDriverHandle() : base(true) { }
     internal BinMXCAFDocVisMaterialToolDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMXCAFDocVisMaterialToolDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.BinMXCAFDocVisMaterialToolDriverRelease(handle); return true; }
 }
 
 internal sealed class BinXCAFDriversDocumentRetrievalDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinXCAFDriversDocumentRetrievalDriverHandle() : base(true) { }
     internal BinXCAFDriversDocumentRetrievalDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinXCAFDriversDocumentRetrievalDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.BinXCAFDriversDocumentRetrievalDriverRelease(handle); return true; }
 }
 
 internal sealed class BinXCAFDriversDocumentStorageDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinXCAFDriversDocumentStorageDriverHandle() : base(true) { }
     internal BinXCAFDriversDocumentStorageDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinXCAFDriversDocumentStorageDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.BinXCAFDriversDocumentStorageDriverRelease(handle); return true; }
 }
 
 internal sealed class DEXCAFConfigurationNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DEXCAFConfigurationNodeHandle() : base(true) { }
     internal DEXCAFConfigurationNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DEXCAFConfigurationNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.DEXCAFConfigurationNodeRelease(handle); return true; }
 }
 
 internal sealed class DEXCAFProviderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DEXCAFProviderHandle() : base(true) { }
     internal DEXCAFProviderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DEXCAFProviderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.DEXCAFProviderRelease(handle); return true; }
 }
 
 internal sealed class STEPCAFControlActorWriteHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal STEPCAFControlActorWriteHandle() : base(true) { }
     internal STEPCAFControlActorWriteHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.STEPCAFControlActorWriteRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.STEPCAFControlActorWriteRelease(handle); return true; }
 }
 
 internal sealed class STEPCAFControlControllerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal STEPCAFControlControllerHandle() : base(true) { }
     internal STEPCAFControlControllerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.STEPCAFControlControllerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.STEPCAFControlControllerRelease(handle); return true; }
 }
 
 internal sealed class STEPCAFControlExternFileHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal STEPCAFControlExternFileHandle() : base(true) { }
     internal STEPCAFControlExternFileHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.STEPCAFControlExternFileRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.STEPCAFControlExternFileRelease(handle); return true; }
 }
 
 internal sealed class XCAFAppApplicationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFAppApplicationHandle() : base(true) { }
     internal XCAFAppApplicationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFAppApplicationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFAppApplicationRelease(handle); return true; }
 }
 
 internal sealed class XCAFDimTolObjectsDatumObjectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDimTolObjectsDatumObjectHandle() : base(true) { }
     internal XCAFDimTolObjectsDatumObjectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectRelease(handle); return true; }
 }
 
 internal sealed class XCAFDimTolObjectsDimensionObjectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDimTolObjectsDimensionObjectHandle() : base(true) { }
     internal XCAFDimTolObjectsDimensionObjectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectRelease(handle); return true; }
 }
 
 internal sealed class XCAFDimTolObjectsGeomToleranceObjectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDimTolObjectsGeomToleranceObjectHandle() : base(true) { }
     internal XCAFDimTolObjectsGeomToleranceObjectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocAreaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocAreaHandle() : base(true) { }
     internal XCAFDocAreaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocAreaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocAreaRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocAssemblyGraphHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocAssemblyGraphHandle() : base(true) { }
     internal XCAFDocAssemblyGraphHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocAssemblyGraphRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocAssemblyGraphRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocAssemblyItemRefHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocAssemblyItemRefHandle() : base(true) { }
     internal XCAFDocAssemblyItemRefHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocAssemblyItemRefRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocAssemblyItemRefRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocCentroidHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocCentroidHandle() : base(true) { }
     internal XCAFDocCentroidHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocCentroidRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocCentroidRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocClippingPlaneToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocClippingPlaneToolHandle() : base(true) { }
     internal XCAFDocClippingPlaneToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocClippingPlaneToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocClippingPlaneToolRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocColorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocColorHandle() : base(true) { }
     internal XCAFDocColorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocColorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocColorRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocColorToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocColorToolHandle() : base(true) { }
     internal XCAFDocColorToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocColorToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocColorToolRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocDatumHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocDatumHandle() : base(true) { }
     internal XCAFDocDatumHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocDatumRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocDatumRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocDimTolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocDimTolHandle() : base(true) { }
     internal XCAFDocDimTolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocDimTolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocDimTolRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocDimTolToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocDimTolToolHandle() : base(true) { }
     internal XCAFDocDimTolToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocDimTolToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocDimTolToolRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocDimensionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocDimensionHandle() : base(true) { }
     internal XCAFDocDimensionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocDimensionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocDimensionRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocDocumentToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocDocumentToolHandle() : base(true) { }
     internal XCAFDocDocumentToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocDocumentToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocDocumentToolRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocGeomToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocGeomToleranceHandle() : base(true) { }
     internal XCAFDocGeomToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocGeomToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocGeomToleranceRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocGraphNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocGraphNodeHandle() : base(true) { }
     internal XCAFDocGraphNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocGraphNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocGraphNodeRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocLayerToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocLayerToolHandle() : base(true) { }
     internal XCAFDocLayerToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocLayerToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocLayerToolRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocLengthUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocLengthUnitHandle() : base(true) { }
     internal XCAFDocLengthUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocLengthUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocLengthUnitRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocLocationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocLocationHandle() : base(true) { }
     internal XCAFDocLocationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocLocationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocLocationRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocMaterialHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocMaterialHandle() : base(true) { }
     internal XCAFDocMaterialHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocMaterialRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocMaterialRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocMaterialToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocMaterialToolHandle() : base(true) { }
     internal XCAFDocMaterialToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocMaterialToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocMaterialToolRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocNoteHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocNoteHandle() : base(true) { }
     internal XCAFDocNoteHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocNoteRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocNoteRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocNoteBalloonHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocNoteBalloonHandle() : base(true) { }
     internal XCAFDocNoteBalloonHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocNoteBalloonRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocNoteBalloonRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocNoteBinDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocNoteBinDataHandle() : base(true) { }
     internal XCAFDocNoteBinDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocNoteBinDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocNoteBinDataRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocNoteCommentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocNoteCommentHandle() : base(true) { }
     internal XCAFDocNoteCommentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocNoteCommentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocNoteCommentRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocNotesToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocNotesToolHandle() : base(true) { }
     internal XCAFDocNotesToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocNotesToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocNotesToolRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocShapeMapToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocShapeMapToolHandle() : base(true) { }
     internal XCAFDocShapeMapToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocShapeMapToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocShapeMapToolRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocShapeToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocShapeToolHandle() : base(true) { }
     internal XCAFDocShapeToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocShapeToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocShapeToolRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocViewHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocViewHandle() : base(true) { }
     internal XCAFDocViewHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocViewRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocViewRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocViewToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocViewToolHandle() : base(true) { }
     internal XCAFDocViewToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocViewToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocViewToolRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocVisMaterialHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocVisMaterialHandle() : base(true) { }
     internal XCAFDocVisMaterialHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocVisMaterialRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocVisMaterialRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocVisMaterialToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocVisMaterialToolHandle() : base(true) { }
     internal XCAFDocVisMaterialToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocVisMaterialToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocVisMaterialToolRelease(handle); return true; }
 }
 
 internal sealed class XCAFDocVolumeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFDocVolumeHandle() : base(true) { }
     internal XCAFDocVolumeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFDocVolumeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFDocVolumeRelease(handle); return true; }
 }
 
 internal sealed class XCAFNoteObjectsNoteObjectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFNoteObjectsNoteObjectHandle() : base(true) { }
     internal XCAFNoteObjectsNoteObjectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFNoteObjectsNoteObjectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFNoteObjectsNoteObjectRelease(handle); return true; }
 }
 
 internal sealed class XCAFPrsAISObjectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFPrsAISObjectHandle() : base(true) { }
     internal XCAFPrsAISObjectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFPrsAISObjectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFPrsAISObjectRelease(handle); return true; }
 }
 
 internal sealed class XCAFPrsDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFPrsDriverHandle() : base(true) { }
     internal XCAFPrsDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFPrsDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFPrsDriverRelease(handle); return true; }
 }
 
 internal sealed class XCAFPrsTextureHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFPrsTextureHandle() : base(true) { }
     internal XCAFPrsTextureHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFPrsTextureRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFPrsTextureRelease(handle); return true; }
 }
 
 internal sealed class XCAFViewObjectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XCAFViewObjectHandle() : base(true) { }
     internal XCAFViewObjectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XCAFViewObjectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XCAFViewObjectRelease(handle); return true; }
 }
 
 internal sealed class XmlMXCAFDocAssemblyItemRefDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMXCAFDocAssemblyItemRefDriverHandle() : base(true) { }
     internal XmlMXCAFDocAssemblyItemRefDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMXCAFDocAssemblyItemRefDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XmlMXCAFDocAssemblyItemRefDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMXCAFDocCentroidDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMXCAFDocCentroidDriverHandle() : base(true) { }
     internal XmlMXCAFDocCentroidDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMXCAFDocCentroidDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XmlMXCAFDocCentroidDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMXCAFDocColorDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMXCAFDocColorDriverHandle() : base(true) { }
     internal XmlMXCAFDocColorDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMXCAFDocColorDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XmlMXCAFDocColorDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMXCAFDocDatumDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMXCAFDocDatumDriverHandle() : base(true) { }
     internal XmlMXCAFDocDatumDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMXCAFDocDatumDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XmlMXCAFDocDatumDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMXCAFDocDimTolDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMXCAFDocDimTolDriverHandle() : base(true) { }
     internal XmlMXCAFDocDimTolDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMXCAFDocDimTolDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XmlMXCAFDocDimTolDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMXCAFDocGraphNodeDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMXCAFDocGraphNodeDriverHandle() : base(true) { }
     internal XmlMXCAFDocGraphNodeDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMXCAFDocGraphNodeDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XmlMXCAFDocGraphNodeDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMXCAFDocLengthUnitDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMXCAFDocLengthUnitDriverHandle() : base(true) { }
     internal XmlMXCAFDocLengthUnitDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMXCAFDocLengthUnitDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XmlMXCAFDocLengthUnitDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMXCAFDocLocationDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMXCAFDocLocationDriverHandle() : base(true) { }
     internal XmlMXCAFDocLocationDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMXCAFDocLocationDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XmlMXCAFDocLocationDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMXCAFDocMaterialDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMXCAFDocMaterialDriverHandle() : base(true) { }
     internal XmlMXCAFDocMaterialDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMXCAFDocMaterialDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XmlMXCAFDocMaterialDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMXCAFDocNoteBinDataDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMXCAFDocNoteBinDataDriverHandle() : base(true) { }
     internal XmlMXCAFDocNoteBinDataDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMXCAFDocNoteBinDataDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XmlMXCAFDocNoteBinDataDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMXCAFDocNoteCommentDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMXCAFDocNoteCommentDriverHandle() : base(true) { }
     internal XmlMXCAFDocNoteCommentDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMXCAFDocNoteCommentDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XmlMXCAFDocNoteCommentDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMXCAFDocNoteDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMXCAFDocNoteDriverHandle() : base(true) { }
     internal XmlMXCAFDocNoteDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMXCAFDocNoteDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XmlMXCAFDocNoteDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMXCAFDocVisMaterialDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMXCAFDocVisMaterialDriverHandle() : base(true) { }
     internal XmlMXCAFDocVisMaterialDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMXCAFDocVisMaterialDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XmlMXCAFDocVisMaterialDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMXCAFDocVisMaterialToolDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMXCAFDocVisMaterialToolDriverHandle() : base(true) { }
     internal XmlMXCAFDocVisMaterialToolDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMXCAFDocVisMaterialToolDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XmlMXCAFDocVisMaterialToolDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlXCAFDriversDocumentRetrievalDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlXCAFDriversDocumentRetrievalDriverHandle() : base(true) { }
     internal XmlXCAFDriversDocumentRetrievalDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlXCAFDriversDocumentRetrievalDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XmlXCAFDriversDocumentRetrievalDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlXCAFDriversDocumentStorageDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlXCAFDriversDocumentStorageDriverHandle() : base(true) { }
     internal XmlXCAFDriversDocumentStorageDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlXCAFDriversDocumentStorageDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { XdeGeneratedNativeMethods.XmlXCAFDriversDocumentStorageDriverRelease(handle); return true; }
 }
 
-internal static partial class GeneratedNativeMethods
+internal static partial class XdeGeneratedNativeMethods
 {
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bin_mxcafdoc_assembly_item_ref_driver_create_0")]

@@ -22,7 +22,7 @@ using System.Runtime.InteropServices;
 
 namespace OcctSharp.Generated;
 
-internal static partial class GeneratedNativeMethods
+internal static partial class GeometryGeneratedNativeMethods
 {
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adv_app2_var_sys_base_mnfndeb__static_mnfndeb__0")]

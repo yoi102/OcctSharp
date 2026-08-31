@@ -19,7 +19,7 @@ into one ambiguous version string.
 - Under ADR-0065, NuGet package versions align their numeric core with the supported
   OCCT version: `<OCCT major>.<minor>.<patch>-preview.<OcctSharp preview number>`.
 - The current line began at `8.0.1-preview.1`; the current package is
-  `8.0.1-preview.9`. Increment the preview counter for an
+  `8.0.1-preview.10`. Increment the preview counter for an
   OcctSharp package-visible change while the OCCT baseline remains 8.0.1. Reserve the
   stable `8.0.1` package version for public-release readiness.
 - A later OCCT baseline changes the three-part numeric core and restarts the preview
@@ -32,7 +32,7 @@ into one ambiguous version string.
 - Record the exact OCCT build identity in package metadata and runtime diagnostics.
 - Keep package, managed assembly, generator, native ABI, bridge, binding-model schema,
   configuration schema, and OCCT build identities independent. In particular, the
-  Preview.9 managed assembly identity remains `0.1.0.0`; native ABI is 1.54 and bridge
+  Preview.10 managed assembly identities remain `0.1.0.0`; native ABI is 1.54 and bridge
   implementation is 0.62.0.
 
 ## Runtime identity
@@ -263,6 +263,11 @@ Preview.9 completes the additive Batch L wave. It retains managed assembly/file 
 uses configuration schema 1.12, and adds exactly ten SC-048 manual stable IDs without
 removing generated APIs. The final inventory records 16,353 emitted, 534 manual, 49,344
 skipped, 50,041 narrowly blocked, and zero supported-unselected/pending declarations.
+
+Preview.10 physically splits the managed assemblies and packages without changing OCCT,
+native ABI, or bridge identity. All 14 packages use `8.0.1-preview.10`; every managed
+assembly/file identity remains `0.1.0.0`; native ABI remains 1.54 and bridge remains
+0.62.0. The former `OcctSharp` assembly forwards moved public types to their new owners.
 
 An OCCT upgrade report must classify:
 

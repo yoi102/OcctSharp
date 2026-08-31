@@ -526,7 +526,7 @@ public static class TopologyBindingEmitter
             {
                 private const string LibraryName = "OcctSharp.Native";
 
-                static TopologyNativeMethods() => NativeLibraryResolver.EnsureRegistered();
+                static TopologyNativeMethods() => NativeLibraryResolver.EnsureRegistered(typeof(TopologyNativeMethods).Assembly);
 
                 [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_topods_shape_clone")]
                 [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

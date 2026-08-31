@@ -112,6 +112,9 @@ The accepted boundaries are recorded in ADRs:
 - [ADR-0073](adr/0073-digital-mockup-interference-clearance-batch.md): one finite Batch L
   occurrence-aware bounds, broad/exact-phase interference, clearance, containment,
   traceability, exchange, and viewer closure with copied reports and owning issue topology.
+- [ADR-0074](adr/0074-physical-managed-modules-and-shared-native-package.md): physical
+  managed modules, deterministic type-forwarded compatibility facade, and one shared
+  native runtime package while retaining one native DLL.
 
 ## Components
 
@@ -142,6 +145,31 @@ Foundation value contract so geometry adaptors do not acquire a reverse Modeling
 Apply ordered, testable rules for naming, type mapping, ownership, overload conflicts,
 unsupported constructs, module scope, ABI projection, and manual exclusions. Passes
 must not depend on filesystem enumeration order.
+
+### Managed assemblies and facade
+
+ADR-0074 physically maps the closed generated product graph to Runtime, Foundation,
+Geometry, MeshData, Modeling, Mesh, Documents, Visualization, DataExchange, Xde, IVtk,
+and Draw assemblies. All public types keep the `OcctSharp` namespace; module names are
+assembly/package ownership, not namespace prefixes.
+
+Generated topology and the hand-written `Shape` partial implementation must share the
+Modeling assembly. Modeling also owns `ShapeFactory`, its direct safe DTOs, and the
+private interop closure needed by those APIs. Geometry owns the immutable `GpPoint`
+facade. Hand-written workflows that orchestrate several product modules remain in the
+`OcctSharp` facade rather than creating reverse module dependencies.
+
+`OcctSharp.dll` is both a compatibility entry and a cross-family facade. It references
+the full legacy surface and carries deterministic CLR type forwarders for types that
+moved to module assemblies. Direct module consumers intentionally use the new owning
+assembly identity and avoid the facade. IVtk and Draw remain optional for direct module
+consumers; the compatibility facade references them only because the former single
+assembly already exported those generated types.
+
+Every assembly containing P/Invoke declarations registers the native resolver for its
+own assembly. Generated native-method classes are module-unique to prevent internal type
+collisions. All modules still resolve the same `occt/OcctSharp.Native.dll`; managed
+modularity does not imply native allocation or registry modularity.
 
 ### Native bridge
 

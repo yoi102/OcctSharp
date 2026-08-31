@@ -213,6 +213,16 @@ and interference groups, complete pair matrices, aggregation, diagnostics, self-
 incremental rerun, owning issue topology, real STEP/XDE, real HWND screenshots, and
 source/document-disposal lifetime.
 
+The `8.0.1-preview.10` workspace retains ABI 1.54/bridge 0.62.0 and OCCT 8.0.1 while
+physically splitting the managed implementation under ADR-0074. Public namespaces remain
+`OcctSharp`; the compatibility facade forwards 3,233 moved exported types. Aggregate
+comparison against the preceding single assembly covers 39,301 signatures with zero
+additions and zero removals. The 14-package graph contains 13 managed packages with no
+native DLLs and one shared 62-DLL native package. The clean facade consumer repeats the
+Batch D-L workflows, while a direct Modeling-package consumer creates a six-face solid
+without receiving `OcctSharp.dll`. Native ABI, handle ownership, and the application-local
+`occt/` layout are unchanged.
+
 ## Planned validation dimensions
 
 - Operating system and version.

@@ -17,7 +17,7 @@ public static class OcctRuntime
 
     private static OcctRuntimeInfo LoadAndValidate()
     {
-        uint encodedAbiVersion = NativeMethods.GetAbiVersion();
+        uint encodedAbiVersion = RuntimeNativeMethods.GetAbiVersion();
         int abiMajor = (int)(encodedAbiVersion >> 16);
         int abiMinor = (int)(encodedAbiVersion & 0xFFFFU);
 
@@ -27,8 +27,8 @@ public static class OcctRuntime
                 $"OcctSharp native ABI {abiMajor}.{abiMinor} is incompatible with expected major version {ExpectedAbiMajor}.");
         }
 
-        string bridgeVersion = ReadUtf8(NativeMethods.GetBridgeVersion(), "native bridge version");
-        string occtVersion = ReadUtf8(NativeMethods.GetOcctVersion(), "OCCT version");
+        string bridgeVersion = ReadUtf8(RuntimeNativeMethods.GetBridgeVersion(), "native bridge version");
+        string occtVersion = ReadUtf8(RuntimeNativeMethods.GetOcctVersion(), "OCCT version");
         string managedVersion = typeof(OcctRuntime).Assembly
             .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?
             .InformationalVersion

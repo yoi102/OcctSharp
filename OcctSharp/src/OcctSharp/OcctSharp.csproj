@@ -2,12 +2,13 @@
   <PropertyGroup>
     <Description>.NET 10 bindings and friendly API for Open CASCADE Technology.</Description>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DisableRuntimeMarshalling>true</DisableRuntimeMarshalling>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>OcctSharp</PackageId>
     <Version>0.1.0</Version>
     <AssemblyVersion>0.1.0.0</AssemblyVersion>
     <FileVersion>0.1.0.0</FileVersion>
-    <PackageVersion>8.0.1-preview.9</PackageVersion>
+    <PackageVersion>$(OcctSharpPackageVersion)</PackageVersion>
     <InformationalVersion>$(PackageVersion)</InformationalVersion>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     <Authors>OcctSharp contributors</Authors>
@@ -19,23 +20,34 @@
     <IsPackable>true</IsPackable>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Generated\**\*.cs" />
+    <Compile Remove="OcctException.cs;OcctRuntime.cs;OcctRuntimeInfo.cs;GpPoint.cs" />
+    <Compile Remove="Interop\**\*.cs" />
+    <Compile Remove="Shape.cs;ShapeFactory.cs;GeometrySnapshots.cs;TopologyAdjacencyMap.cs;ShapeTransform.cs" />
+    <Compile Remove="GpTrsf.cs;TopLocLocation.cs;GpVec.cs;GpAx1.cs;GpXyz.cs" />
+    <Compile Remove="BoundingBox3d.cs;OrientedBoundingBox3d.cs;ShapeTopologySummary.cs;ShapeValidationReport.cs" />
+    <Compile Remove="BooleanHistory.cs;ShapeDistanceResult.cs;InspectionTypes.cs;MeshSnapshot.cs;DetailedMeshSnapshot.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OcctSharp.Runtime\OcctSharp.Runtime.csproj" />
+    <ProjectReference Include="..\OcctSharp.Foundation\OcctSharp.Foundation.csproj" />
+    <ProjectReference Include="..\OcctSharp.Geometry\OcctSharp.Geometry.csproj" />
+    <ProjectReference Include="..\OcctSharp.MeshData\OcctSharp.MeshData.csproj" />
+    <ProjectReference Include="..\OcctSharp.Modeling\OcctSharp.Modeling.csproj" />
+    <ProjectReference Include="..\OcctSharp.Mesh\OcctSharp.Mesh.csproj" />
+    <ProjectReference Include="..\OcctSharp.Documents\OcctSharp.Documents.csproj" />
+    <ProjectReference Include="..\OcctSharp.Visualization\OcctSharp.Visualization.csproj" />
+    <ProjectReference Include="..\OcctSharp.DataExchange\OcctSharp.DataExchange.csproj" />
+    <ProjectReference Include="..\OcctSharp.Xde\OcctSharp.Xde.csproj" />
+    <ProjectReference Include="..\OcctSharp.IVtk\OcctSharp.IVtk.csproj" />
+    <ProjectReference Include="..\OcctSharp.Draw\OcctSharp.Draw.csproj" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
     <None Include="..\..\..\LICENSE" Pack="true" PackagePath="\" />
     <None Include="..\..\..\docs\**\*.md"
           Exclude="..\..\..\docs\STATUS.md"
           Pack="true"
           PackagePath="docs\" />
-    <None Include="..\..\packaging\OcctSharp.targets"
-          Pack="true"
-          PackagePath="buildTransitive\OcctSharp.targets" />
-    <None Include="$(OcctSharpNativeRuntimeDir)\*.dll"
-          Pack="true"
-          PackagePath="buildTransitive\win-x64\occt\" />
-    <None Include="$(OcctSharpBundledRuntimeRoot)\licenses\**\*"
-          Pack="true"
-          PackagePath="licenses\%(RecursiveDir)" />
-    <None Include="$(OcctSharpBundledRuntimeRoot)\THIRD_PARTY_NOTICES.md"
-          Pack="true"
-          PackagePath="licenses\" />
   </ItemGroup>
 </Project>

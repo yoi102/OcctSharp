@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\OcctSharp.Module.props" />
+  <PropertyGroup><Description>OCCT XCAF, STEPCAF, assembly, and metadata bindings for OcctSharp.</Description></PropertyGroup>
+  <ItemGroup><Compile Include="..\OcctSharp\Generated\Xde\**\*.cs" Link="Generated\%(RecursiveDir)%(Filename)%(Extension)" /></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OcctSharp.Runtime\OcctSharp.Runtime.csproj" />
+    <ProjectReference Include="..\OcctSharp.Foundation\OcctSharp.Foundation.csproj" />
+    <ProjectReference Include="..\OcctSharp.Geometry\OcctSharp.Geometry.csproj" />
+    <ProjectReference Include="..\OcctSharp.MeshData\OcctSharp.MeshData.csproj" />
+    <ProjectReference Include="..\OcctSharp.Modeling\OcctSharp.Modeling.csproj" />
+    <ProjectReference Include="..\OcctSharp.Mesh\OcctSharp.Mesh.csproj" />
+    <ProjectReference Include="..\OcctSharp.Documents\OcctSharp.Documents.csproj" />
+    <ProjectReference Include="..\OcctSharp.Visualization\OcctSharp.Visualization.csproj" />
+    <ProjectReference Include="..\OcctSharp.DataExchange\OcctSharp.DataExchange.csproj" />
+  </ItemGroup>
+</Project>

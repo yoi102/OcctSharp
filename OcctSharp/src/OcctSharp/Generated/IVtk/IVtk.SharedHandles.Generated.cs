@@ -18,7 +18,7 @@ public sealed class IVtkOCCViewerSelector : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IVtkOCCViewerSelectorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(IVtkGeneratedNativeMethods.IVtkOCCViewerSelectorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -29,7 +29,7 @@ public sealed class IVtkOCCViewerSelector : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IVtkOCCViewerSelectorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(IVtkGeneratedNativeMethods.IVtkOCCViewerSelectorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -39,7 +39,7 @@ public sealed class IVtkOCCViewerSelector : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IVtkOCCViewerSelectorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(IVtkGeneratedNativeMethods.IVtkOCCViewerSelectorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -47,7 +47,7 @@ public sealed class IVtkOCCViewerSelector : IDisposable
     public IVtkOCCViewerSelector Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IVtkOCCViewerSelectorClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(IVtkGeneratedNativeMethods.IVtkOCCViewerSelectorClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IVtkOCCViewerSelector(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -86,7 +86,7 @@ public sealed class IVtkIView : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IVtkIViewGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(IVtkGeneratedNativeMethods.IVtkIViewGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -97,7 +97,7 @@ public sealed class IVtkIView : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IVtkIViewGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(IVtkGeneratedNativeMethods.IVtkIViewGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -107,7 +107,7 @@ public sealed class IVtkIView : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IVtkIViewIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(IVtkGeneratedNativeMethods.IVtkIViewIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -115,7 +115,7 @@ public sealed class IVtkIView : IDisposable
     public IVtkIView Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IVtkIViewClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(IVtkGeneratedNativeMethods.IVtkIViewClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IVtkIView(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -154,7 +154,7 @@ public sealed class IVtkInterface : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IVtkInterfaceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(IVtkGeneratedNativeMethods.IVtkInterfaceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -165,7 +165,7 @@ public sealed class IVtkInterface : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IVtkInterfaceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(IVtkGeneratedNativeMethods.IVtkInterfaceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -175,7 +175,7 @@ public sealed class IVtkInterface : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IVtkInterfaceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(IVtkGeneratedNativeMethods.IVtkInterfaceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -183,7 +183,7 @@ public sealed class IVtkInterface : IDisposable
     public IVtkInterface Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IVtkInterfaceClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(IVtkGeneratedNativeMethods.IVtkInterfaceClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IVtkInterface(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 

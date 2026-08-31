@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\OcctSharp.Module.props" />
+  <PropertyGroup><Description>OCCT geometry bindings for OcctSharp.</Description></PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\OcctSharp\Generated\Geometry\**\*.cs" Link="Generated\%(RecursiveDir)%(Filename)%(Extension)" />
+    <Compile Include="..\OcctSharp\GpPoint.cs" Link="GpPoint.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OcctSharp.Runtime\OcctSharp.Runtime.csproj" />
+    <ProjectReference Include="..\OcctSharp.Foundation\OcctSharp.Foundation.csproj" />
+  </ItemGroup>
+</Project>

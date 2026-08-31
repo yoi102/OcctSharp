@@ -115,381 +115,381 @@ internal sealed class BRepMeshDataCurveHandle : SafeHandleZeroOrMinusOneIsInvali
 {
     internal BRepMeshDataCurveHandle() : base(true) { }
     internal BRepMeshDataCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshDataCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshDataCurveRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshDataEdgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshDataEdgeHandle() : base(true) { }
     internal BRepMeshDataEdgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshDataEdgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshDataEdgeRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshDataFaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshDataFaceHandle() : base(true) { }
     internal BRepMeshDataFaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshDataFaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshDataFaceRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshDataModelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshDataModelHandle() : base(true) { }
     internal BRepMeshDataModelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshDataModelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshDataModelRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshDataPCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshDataPCurveHandle() : base(true) { }
     internal BRepMeshDataPCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshDataPCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshDataPCurveRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshDataWireHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshDataWireHandle() : base(true) { }
     internal BRepMeshDataWireHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshDataWireRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshDataWireRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshBaseMeshAlgoHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshBaseMeshAlgoHandle() : base(true) { }
     internal BRepMeshBaseMeshAlgoHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshBaseMeshAlgoRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshBaseMeshAlgoRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshClassifierHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshClassifierHandle() : base(true) { }
     internal BRepMeshClassifierHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshClassifierRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshClassifierRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshConstrainedBaseMeshAlgoHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshConstrainedBaseMeshAlgoHandle() : base(true) { }
     internal BRepMeshConstrainedBaseMeshAlgoHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshConstrainedBaseMeshAlgoRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshConstrainedBaseMeshAlgoRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshContextHandle() : base(true) { }
     internal BRepMeshContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshContextRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshCurveTessellatorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshCurveTessellatorHandle() : base(true) { }
     internal BRepMeshCurveTessellatorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshCurveTessellatorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshCurveTessellatorRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshCustomBaseMeshAlgoHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshCustomBaseMeshAlgoHandle() : base(true) { }
     internal BRepMeshCustomBaseMeshAlgoHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshCustomBaseMeshAlgoRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshCustomBaseMeshAlgoRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshDataStructureOfDelaunHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshDataStructureOfDelaunHandle() : base(true) { }
     internal BRepMeshDataStructureOfDelaunHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshDataStructureOfDelaunRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshDataStructureOfDelaunRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshDeflectionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshDeflectionHandle() : base(true) { }
     internal BRepMeshDeflectionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshDeflectionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshDeflectionRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshDelabellaBaseMeshAlgoHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshDelabellaBaseMeshAlgoHandle() : base(true) { }
     internal BRepMeshDelabellaBaseMeshAlgoHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshDelabellaBaseMeshAlgoRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshDelabellaBaseMeshAlgoRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshDelabellaMeshAlgoFactoryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshDelabellaMeshAlgoFactoryHandle() : base(true) { }
     internal BRepMeshDelabellaMeshAlgoFactoryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshDelabellaMeshAlgoFactoryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshDelabellaMeshAlgoFactoryRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshDelaunayBaseMeshAlgoHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshDelaunayBaseMeshAlgoHandle() : base(true) { }
     internal BRepMeshDelaunayBaseMeshAlgoHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshDelaunayBaseMeshAlgoRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshDelaunayBaseMeshAlgoRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshDiscretAlgoFactoryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshDiscretAlgoFactoryHandle() : base(true) { }
     internal BRepMeshDiscretAlgoFactoryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshDiscretAlgoFactoryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshDiscretAlgoFactoryRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshDiscretRootHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshDiscretRootHandle() : base(true) { }
     internal BRepMeshDiscretRootHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshDiscretRootRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshDiscretRootRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshEdgeDiscretHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshEdgeDiscretHandle() : base(true) { }
     internal BRepMeshEdgeDiscretHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshEdgeDiscretRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshEdgeDiscretRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshEdgeTessellationExtractorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshEdgeTessellationExtractorHandle() : base(true) { }
     internal BRepMeshEdgeTessellationExtractorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshEdgeTessellationExtractorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshEdgeTessellationExtractorRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshFaceCheckerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshFaceCheckerHandle() : base(true) { }
     internal BRepMeshFaceCheckerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshFaceCheckerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshFaceCheckerRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshFaceDiscretHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshFaceDiscretHandle() : base(true) { }
     internal BRepMeshFaceDiscretHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshFaceDiscretRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshFaceDiscretRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshIncrementalMeshHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshIncrementalMeshHandle() : base(true) { }
     internal BRepMeshIncrementalMeshHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshIncrementalMeshRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshIncrementalMeshRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshIncrementalMeshFactoryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshIncrementalMeshFactoryHandle() : base(true) { }
     internal BRepMeshIncrementalMeshFactoryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshIncrementalMeshFactoryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshIncrementalMeshFactoryRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshMeshAlgoFactoryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshMeshAlgoFactoryHandle() : base(true) { }
     internal BRepMeshMeshAlgoFactoryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshMeshAlgoFactoryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshMeshAlgoFactoryRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshMeshToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshMeshToolHandle() : base(true) { }
     internal BRepMeshMeshToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshMeshToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshMeshToolRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshModelBuilderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshModelBuilderHandle() : base(true) { }
     internal BRepMeshModelBuilderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshModelBuilderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshModelBuilderRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshModelHealerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshModelHealerHandle() : base(true) { }
     internal BRepMeshModelHealerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshModelHealerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshModelHealerRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshModelPostProcessorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshModelPostProcessorHandle() : base(true) { }
     internal BRepMeshModelPostProcessorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshModelPostProcessorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshModelPostProcessorRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshModelPreProcessorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshModelPreProcessorHandle() : base(true) { }
     internal BRepMeshModelPreProcessorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshModelPreProcessorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshModelPreProcessorRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshSelectorOfDataStructureOfDelaunHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshSelectorOfDataStructureOfDelaunHandle() : base(true) { }
     internal BRepMeshSelectorOfDataStructureOfDelaunHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshShapeToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshShapeToolHandle() : base(true) { }
     internal BRepMeshShapeToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshShapeToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshShapeToolRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshShapeVisitorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshShapeVisitorHandle() : base(true) { }
     internal BRepMeshShapeVisitorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshShapeVisitorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshShapeVisitorRelease(handle); return true; }
 }
 
 internal sealed class BRepMeshVertexToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepMeshVertexToolHandle() : base(true) { }
     internal BRepMeshVertexToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepMeshVertexToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.BRepMeshVertexToolRelease(handle); return true; }
 }
 
 internal sealed class IMeshDataCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IMeshDataCurveHandle() : base(true) { }
     internal IMeshDataCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IMeshDataCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.IMeshDataCurveRelease(handle); return true; }
 }
 
 internal sealed class IMeshDataEdgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IMeshDataEdgeHandle() : base(true) { }
     internal IMeshDataEdgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IMeshDataEdgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.IMeshDataEdgeRelease(handle); return true; }
 }
 
 internal sealed class IMeshDataFaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IMeshDataFaceHandle() : base(true) { }
     internal IMeshDataFaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IMeshDataFaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.IMeshDataFaceRelease(handle); return true; }
 }
 
 internal sealed class IMeshDataModelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IMeshDataModelHandle() : base(true) { }
     internal IMeshDataModelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IMeshDataModelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.IMeshDataModelRelease(handle); return true; }
 }
 
 internal sealed class IMeshDataPCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IMeshDataPCurveHandle() : base(true) { }
     internal IMeshDataPCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IMeshDataPCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.IMeshDataPCurveRelease(handle); return true; }
 }
 
 internal sealed class IMeshDataParametersListHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IMeshDataParametersListHandle() : base(true) { }
     internal IMeshDataParametersListHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IMeshDataParametersListRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.IMeshDataParametersListRelease(handle); return true; }
 }
 
 internal sealed class IMeshDataShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IMeshDataShapeHandle() : base(true) { }
     internal IMeshDataShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IMeshDataShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.IMeshDataShapeRelease(handle); return true; }
 }
 
 internal sealed class IMeshDataTessellatedShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IMeshDataTessellatedShapeHandle() : base(true) { }
     internal IMeshDataTessellatedShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IMeshDataTessellatedShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.IMeshDataTessellatedShapeRelease(handle); return true; }
 }
 
 internal sealed class IMeshDataWireHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IMeshDataWireHandle() : base(true) { }
     internal IMeshDataWireHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IMeshDataWireRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.IMeshDataWireRelease(handle); return true; }
 }
 
 internal sealed class IMeshToolsContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IMeshToolsContextHandle() : base(true) { }
     internal IMeshToolsContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IMeshToolsContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.IMeshToolsContextRelease(handle); return true; }
 }
 
 internal sealed class IMeshToolsCurveTessellatorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IMeshToolsCurveTessellatorHandle() : base(true) { }
     internal IMeshToolsCurveTessellatorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IMeshToolsCurveTessellatorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.IMeshToolsCurveTessellatorRelease(handle); return true; }
 }
 
 internal sealed class IMeshToolsMeshAlgoHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IMeshToolsMeshAlgoHandle() : base(true) { }
     internal IMeshToolsMeshAlgoHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IMeshToolsMeshAlgoRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.IMeshToolsMeshAlgoRelease(handle); return true; }
 }
 
 internal sealed class IMeshToolsMeshAlgoFactoryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IMeshToolsMeshAlgoFactoryHandle() : base(true) { }
     internal IMeshToolsMeshAlgoFactoryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IMeshToolsMeshAlgoFactoryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.IMeshToolsMeshAlgoFactoryRelease(handle); return true; }
 }
 
 internal sealed class IMeshToolsMeshBuilderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IMeshToolsMeshBuilderHandle() : base(true) { }
     internal IMeshToolsMeshBuilderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IMeshToolsMeshBuilderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.IMeshToolsMeshBuilderRelease(handle); return true; }
 }
 
 internal sealed class IMeshToolsModelAlgoHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IMeshToolsModelAlgoHandle() : base(true) { }
     internal IMeshToolsModelAlgoHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IMeshToolsModelAlgoRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.IMeshToolsModelAlgoRelease(handle); return true; }
 }
 
 internal sealed class IMeshToolsModelBuilderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IMeshToolsModelBuilderHandle() : base(true) { }
     internal IMeshToolsModelBuilderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IMeshToolsModelBuilderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.IMeshToolsModelBuilderRelease(handle); return true; }
 }
 
 internal sealed class IMeshToolsShapeExplorerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IMeshToolsShapeExplorerHandle() : base(true) { }
     internal IMeshToolsShapeExplorerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IMeshToolsShapeExplorerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.IMeshToolsShapeExplorerRelease(handle); return true; }
 }
 
 internal sealed class IMeshToolsShapeVisitorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IMeshToolsShapeVisitorHandle() : base(true) { }
     internal IMeshToolsShapeVisitorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IMeshToolsShapeVisitorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.IMeshToolsShapeVisitorRelease(handle); return true; }
 }
 
 internal sealed class XBRepMeshFactoryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XBRepMeshFactoryHandle() : base(true) { }
     internal XBRepMeshFactoryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XBRepMeshFactoryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { MeshGeneratedNativeMethods.XBRepMeshFactoryRelease(handle); return true; }
 }
 
-internal static partial class GeneratedNativeMethods
+internal static partial class MeshGeneratedNativeMethods
 {
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_mesh_data_curve_create_0")]

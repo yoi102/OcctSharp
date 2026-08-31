@@ -9,7 +9,7 @@ internal static partial class NativeMethods
 
     static NativeMethods()
     {
-        NativeLibraryResolver.EnsureRegistered();
+        NativeLibraryResolver.EnsureRegistered(typeof(NativeMethods).Assembly);
     }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_get_abi_version")]

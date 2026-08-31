@@ -1263,7 +1263,7 @@ public sealed class RuntimeTests
     [Fact]
     public void GeneratedPointConstructorCopiesCoordinatesAcrossAbi()
     {
-        Point3dRaw point = GeneratedNativeMethods.CreatePoint3d(1.25, -2.5, 9.75);
+        Point3dRaw point = GeometryGeneratedNativeMethods.CreatePoint3d(1.25, -2.5, 9.75);
 
         Assert.Equal(24, Marshal.SizeOf<Point3dRaw>());
         Assert.Equal(1.25, point.X);
@@ -1274,8 +1274,8 @@ public sealed class RuntimeTests
     [Fact]
     public void GeneratedPointDefaultAndCopyConstructorsPreserveValueCopySemantics()
     {
-        Point3dRaw defaultPoint = GeneratedNativeMethods.CreatePoint3dDefault();
-        Point3dRaw copiedPoint = GeneratedNativeMethods.CreatePoint3dCopy(
+        Point3dRaw defaultPoint = GeometryGeneratedNativeMethods.CreatePoint3dDefault();
+        Point3dRaw copiedPoint = GeometryGeneratedNativeMethods.CreatePoint3dCopy(
             new Point3dRaw(4.5, -6.25, 8.75));
 
         Assert.Equal(0.0, defaultPoint.X);
@@ -1289,22 +1289,22 @@ public sealed class RuntimeTests
     [Fact]
     public void GeneratedPrecisionStaticsExecuteThroughTheValueCopyAbi()
     {
-        double angular = GeneratedNativeMethods.PrecisionStaticAngular0();
-        double confusion = GeneratedNativeMethods.PrecisionStaticConfusion0();
-        double parameterizedApproximation = GeneratedNativeMethods.PrecisionStaticPApproximation1(100.0);
+        double angular = FoundationGeneratedNativeMethods.PrecisionStaticAngular0();
+        double confusion = FoundationGeneratedNativeMethods.PrecisionStaticConfusion0();
+        double parameterizedApproximation = FoundationGeneratedNativeMethods.PrecisionStaticPApproximation1(100.0);
 
         Assert.True(double.IsFinite(angular) && angular > 0.0);
         Assert.True(double.IsFinite(confusion) && confusion > 0.0);
         Assert.True(double.IsFinite(parameterizedApproximation) && parameterizedApproximation > 0.0);
-        Assert.Equal(1, GeneratedNativeMethods.PrecisionStaticIsInfinite0(double.PositiveInfinity));
-        Assert.Equal(0, GeneratedNativeMethods.PrecisionStaticIsInfinite0(1.0));
+        Assert.Equal(1, FoundationGeneratedNativeMethods.PrecisionStaticIsInfinite0(double.PositiveInfinity));
+        Assert.Equal(0, FoundationGeneratedNativeMethods.PrecisionStaticIsInfinite0(1.0));
     }
 
     [Fact]
     public void GeneratedTopAbsEnumStaticsExecuteThroughInt32Abi()
     {
-        int composed = GeneratedNativeMethods.TopAbsStaticCompose0(0, 0);
-        int reversed = GeneratedNativeMethods.TopAbsStaticReverse0(0);
+        int composed = ModelingGeneratedNativeMethods.TopAbsStaticCompose0(0, 0);
+        int reversed = ModelingGeneratedNativeMethods.TopAbsStaticReverse0(0);
 
         Assert.InRange(composed, 0, 3);
         Assert.InRange(reversed, 0, 3);
@@ -1313,11 +1313,11 @@ public sealed class RuntimeTests
     [Fact]
     public void GeneratedAdditionalScalarStaticsExecuteThroughValueCopyAbi()
     {
-        double resolution = GeneratedNativeMethods.GpStaticResolution0();
-        double scalePrecision = GeneratedNativeMethods.TopLocLocationStaticScalePrec0();
-        int allocatorType = GeneratedNativeMethods.StandardStaticGetAllocatorType0();
-        int stackTraceLength = GeneratedNativeMethods.StandardFailureStaticDefaultStackTraceLength0();
-        int jsonKeyLength = GeneratedNativeMethods.StandardDumpStaticJsonKeyLength0(0);
+        double resolution = GeometryGeneratedNativeMethods.GpStaticResolution0();
+        double scalePrecision = ModelingGeneratedNativeMethods.TopLocLocationStaticScalePrec0();
+        int allocatorType = FoundationGeneratedNativeMethods.StandardStaticGetAllocatorType0();
+        int stackTraceLength = FoundationGeneratedNativeMethods.StandardFailureStaticDefaultStackTraceLength0();
+        int jsonKeyLength = FoundationGeneratedNativeMethods.StandardDumpStaticJsonKeyLength0(0);
 
         Assert.True(double.IsFinite(resolution) && resolution > 0.0);
         Assert.True(double.IsFinite(scalePrecision) && scalePrecision > 0.0);

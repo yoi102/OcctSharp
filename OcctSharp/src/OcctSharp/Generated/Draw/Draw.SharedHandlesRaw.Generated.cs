@@ -10,500 +10,500 @@ internal sealed class DBRepDrawableShapeHandle : SafeHandleZeroOrMinusOneIsInval
 {
     internal DBRepDrawableShapeHandle() : base(true) { }
     internal DBRepDrawableShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DBRepDrawableShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DBRepDrawableShapeRelease(handle); return true; }
 }
 
 internal sealed class DBRepEdgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DBRepEdgeHandle() : base(true) { }
     internal DBRepEdgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DBRepEdgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DBRepEdgeRelease(handle); return true; }
 }
 
 internal sealed class DBRepFaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DBRepFaceHandle() : base(true) { }
     internal DBRepFaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DBRepFaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DBRepFaceRelease(handle); return true; }
 }
 
 internal sealed class DDFBrowserHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DDFBrowserHandle() : base(true) { }
     internal DDFBrowserHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DDFBrowserRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DDFBrowserRelease(handle); return true; }
 }
 
 internal sealed class DDFDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DDFDataHandle() : base(true) { }
     internal DDFDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DDFDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DDFDataRelease(handle); return true; }
 }
 
 internal sealed class DDFTransactionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DDFTransactionHandle() : base(true) { }
     internal DDFTransactionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DDFTransactionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DDFTransactionRelease(handle); return true; }
 }
 
 internal sealed class DDataStdDrawDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DDataStdDrawDriverHandle() : base(true) { }
     internal DDataStdDrawDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DDataStdDrawDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DDataStdDrawDriverRelease(handle); return true; }
 }
 
 internal sealed class DDataStdDrawPresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DDataStdDrawPresentationHandle() : base(true) { }
     internal DDataStdDrawPresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DDataStdDrawPresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DDataStdDrawPresentationRelease(handle); return true; }
 }
 
 internal sealed class DDataStdTreeBrowserHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DDataStdTreeBrowserHandle() : base(true) { }
     internal DDataStdTreeBrowserHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DDataStdTreeBrowserRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DDataStdTreeBrowserRelease(handle); return true; }
 }
 
 internal sealed class DDocStdDrawDocumentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DDocStdDrawDocumentHandle() : base(true) { }
     internal DDocStdDrawDocumentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DDocStdDrawDocumentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DDocStdDrawDocumentRelease(handle); return true; }
 }
 
 internal sealed class DNamingBooleanOperationDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DNamingBooleanOperationDriverHandle() : base(true) { }
     internal DNamingBooleanOperationDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DNamingBooleanOperationDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DNamingBooleanOperationDriverRelease(handle); return true; }
 }
 
 internal sealed class DNamingBoxDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DNamingBoxDriverHandle() : base(true) { }
     internal DNamingBoxDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DNamingBoxDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DNamingBoxDriverRelease(handle); return true; }
 }
 
 internal sealed class DNamingCylinderDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DNamingCylinderDriverHandle() : base(true) { }
     internal DNamingCylinderDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DNamingCylinderDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DNamingCylinderDriverRelease(handle); return true; }
 }
 
 internal sealed class DNamingFilletDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DNamingFilletDriverHandle() : base(true) { }
     internal DNamingFilletDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DNamingFilletDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DNamingFilletDriverRelease(handle); return true; }
 }
 
 internal sealed class DNamingLine3DDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DNamingLine3DDriverHandle() : base(true) { }
     internal DNamingLine3DDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DNamingLine3DDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DNamingLine3DDriverRelease(handle); return true; }
 }
 
 internal sealed class DNamingPointDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DNamingPointDriverHandle() : base(true) { }
     internal DNamingPointDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DNamingPointDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DNamingPointDriverRelease(handle); return true; }
 }
 
 internal sealed class DNamingPrismDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DNamingPrismDriverHandle() : base(true) { }
     internal DNamingPrismDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DNamingPrismDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DNamingPrismDriverRelease(handle); return true; }
 }
 
 internal sealed class DNamingRevolutionDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DNamingRevolutionDriverHandle() : base(true) { }
     internal DNamingRevolutionDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DNamingRevolutionDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DNamingRevolutionDriverRelease(handle); return true; }
 }
 
 internal sealed class DNamingSelectionDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DNamingSelectionDriverHandle() : base(true) { }
     internal DNamingSelectionDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DNamingSelectionDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DNamingSelectionDriverRelease(handle); return true; }
 }
 
 internal sealed class DNamingSphereDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DNamingSphereDriverHandle() : base(true) { }
     internal DNamingSphereDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DNamingSphereDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DNamingSphereDriverRelease(handle); return true; }
 }
 
 internal sealed class DNamingTransformationDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DNamingTransformationDriverHandle() : base(true) { }
     internal DNamingTransformationDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DNamingTransformationDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DNamingTransformationDriverRelease(handle); return true; }
 }
 
 internal sealed class DrawDimAngleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawDimAngleHandle() : base(true) { }
     internal DrawDimAngleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawDimAngleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawDimAngleRelease(handle); return true; }
 }
 
 internal sealed class DrawDimDimensionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawDimDimensionHandle() : base(true) { }
     internal DrawDimDimensionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawDimDimensionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawDimDimensionRelease(handle); return true; }
 }
 
 internal sealed class DrawDimDistanceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawDimDistanceHandle() : base(true) { }
     internal DrawDimDistanceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawDimDistanceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawDimDistanceRelease(handle); return true; }
 }
 
 internal sealed class DrawDimPlanarAngleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawDimPlanarAngleHandle() : base(true) { }
     internal DrawDimPlanarAngleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawDimPlanarAngleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawDimPlanarAngleRelease(handle); return true; }
 }
 
 internal sealed class DrawDimPlanarDiameterHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawDimPlanarDiameterHandle() : base(true) { }
     internal DrawDimPlanarDiameterHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawDimPlanarDiameterRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawDimPlanarDiameterRelease(handle); return true; }
 }
 
 internal sealed class DrawDimPlanarDimensionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawDimPlanarDimensionHandle() : base(true) { }
     internal DrawDimPlanarDimensionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawDimPlanarDimensionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawDimPlanarDimensionRelease(handle); return true; }
 }
 
 internal sealed class DrawDimPlanarDistanceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawDimPlanarDistanceHandle() : base(true) { }
     internal DrawDimPlanarDistanceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawDimPlanarDistanceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawDimPlanarDistanceRelease(handle); return true; }
 }
 
 internal sealed class DrawDimPlanarRadiusHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawDimPlanarRadiusHandle() : base(true) { }
     internal DrawDimPlanarRadiusHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawDimPlanarRadiusRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawDimPlanarRadiusRelease(handle); return true; }
 }
 
 internal sealed class DrawDimRadiusHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawDimRadiusHandle() : base(true) { }
     internal DrawDimRadiusHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawDimRadiusRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawDimRadiusRelease(handle); return true; }
 }
 
 internal sealed class DrawFairCurveBattenHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawFairCurveBattenHandle() : base(true) { }
     internal DrawFairCurveBattenHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawFairCurveBattenRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawFairCurveBattenRelease(handle); return true; }
 }
 
 internal sealed class DrawFairCurveMinimalVariationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawFairCurveMinimalVariationHandle() : base(true) { }
     internal DrawFairCurveMinimalVariationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawFairCurveMinimalVariationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawFairCurveMinimalVariationRelease(handle); return true; }
 }
 
 internal sealed class DrawTrSurfBSplineCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawTrSurfBSplineCurveHandle() : base(true) { }
     internal DrawTrSurfBSplineCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawTrSurfBSplineCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawTrSurfBSplineCurveRelease(handle); return true; }
 }
 
 internal sealed class DrawTrSurfBSplineCurve2dHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawTrSurfBSplineCurve2dHandle() : base(true) { }
     internal DrawTrSurfBSplineCurve2dHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawTrSurfBSplineCurve2dRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawTrSurfBSplineCurve2dRelease(handle); return true; }
 }
 
 internal sealed class DrawTrSurfBSplineSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawTrSurfBSplineSurfaceHandle() : base(true) { }
     internal DrawTrSurfBSplineSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawTrSurfBSplineSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawTrSurfBSplineSurfaceRelease(handle); return true; }
 }
 
 internal sealed class DrawTrSurfBezierCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawTrSurfBezierCurveHandle() : base(true) { }
     internal DrawTrSurfBezierCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawTrSurfBezierCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawTrSurfBezierCurveRelease(handle); return true; }
 }
 
 internal sealed class DrawTrSurfBezierCurve2dHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawTrSurfBezierCurve2dHandle() : base(true) { }
     internal DrawTrSurfBezierCurve2dHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawTrSurfBezierCurve2dRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawTrSurfBezierCurve2dRelease(handle); return true; }
 }
 
 internal sealed class DrawTrSurfBezierSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawTrSurfBezierSurfaceHandle() : base(true) { }
     internal DrawTrSurfBezierSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawTrSurfBezierSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawTrSurfBezierSurfaceRelease(handle); return true; }
 }
 
 internal sealed class DrawTrSurfCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawTrSurfCurveHandle() : base(true) { }
     internal DrawTrSurfCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawTrSurfCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawTrSurfCurveRelease(handle); return true; }
 }
 
 internal sealed class DrawTrSurfCurve2dHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawTrSurfCurve2dHandle() : base(true) { }
     internal DrawTrSurfCurve2dHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawTrSurfCurve2dRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawTrSurfCurve2dRelease(handle); return true; }
 }
 
 internal sealed class DrawTrSurfDrawableHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawTrSurfDrawableHandle() : base(true) { }
     internal DrawTrSurfDrawableHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawTrSurfDrawableRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawTrSurfDrawableRelease(handle); return true; }
 }
 
 internal sealed class DrawTrSurfPointHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawTrSurfPointHandle() : base(true) { }
     internal DrawTrSurfPointHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawTrSurfPointRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawTrSurfPointRelease(handle); return true; }
 }
 
 internal sealed class DrawTrSurfPolygon2DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawTrSurfPolygon2DHandle() : base(true) { }
     internal DrawTrSurfPolygon2DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawTrSurfPolygon2DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawTrSurfPolygon2DRelease(handle); return true; }
 }
 
 internal sealed class DrawTrSurfPolygon3DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawTrSurfPolygon3DHandle() : base(true) { }
     internal DrawTrSurfPolygon3DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawTrSurfPolygon3DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawTrSurfPolygon3DRelease(handle); return true; }
 }
 
 internal sealed class DrawTrSurfSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawTrSurfSurfaceHandle() : base(true) { }
     internal DrawTrSurfSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawTrSurfSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawTrSurfSurfaceRelease(handle); return true; }
 }
 
 internal sealed class DrawTrSurfTriangulationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawTrSurfTriangulationHandle() : base(true) { }
     internal DrawTrSurfTriangulationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawTrSurfTriangulationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawTrSurfTriangulationRelease(handle); return true; }
 }
 
 internal sealed class DrawTrSurfTriangulation2DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawTrSurfTriangulation2DHandle() : base(true) { }
     internal DrawTrSurfTriangulation2DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawTrSurfTriangulation2DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawTrSurfTriangulation2DRelease(handle); return true; }
 }
 
 internal sealed class DrawAxis2DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawAxis2DHandle() : base(true) { }
     internal DrawAxis2DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawAxis2DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawAxis2DRelease(handle); return true; }
 }
 
 internal sealed class DrawAxis3DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawAxis3DHandle() : base(true) { }
     internal DrawAxis3DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawAxis3DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawAxis3DRelease(handle); return true; }
 }
 
 internal sealed class DrawBoxHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawBoxHandle() : base(true) { }
     internal DrawBoxHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawBoxRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawBoxRelease(handle); return true; }
 }
 
 internal sealed class DrawChronometerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawChronometerHandle() : base(true) { }
     internal DrawChronometerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawChronometerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawChronometerRelease(handle); return true; }
 }
 
 internal sealed class DrawCircle2DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawCircle2DHandle() : base(true) { }
     internal DrawCircle2DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawCircle2DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawCircle2DRelease(handle); return true; }
 }
 
 internal sealed class DrawCircle3DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawCircle3DHandle() : base(true) { }
     internal DrawCircle3DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawCircle3DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawCircle3DRelease(handle); return true; }
 }
 
 internal sealed class DrawDrawable2DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawDrawable2DHandle() : base(true) { }
     internal DrawDrawable2DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawDrawable2DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawDrawable2DRelease(handle); return true; }
 }
 
 internal sealed class DrawDrawable3DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawDrawable3DHandle() : base(true) { }
     internal DrawDrawable3DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawDrawable3DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawDrawable3DRelease(handle); return true; }
 }
 
 internal sealed class DrawGridHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawGridHandle() : base(true) { }
     internal DrawGridHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawGridRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawGridRelease(handle); return true; }
 }
 
 internal sealed class DrawMarker2DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawMarker2DHandle() : base(true) { }
     internal DrawMarker2DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawMarker2DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawMarker2DRelease(handle); return true; }
 }
 
 internal sealed class DrawMarker3DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawMarker3DHandle() : base(true) { }
     internal DrawMarker3DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawMarker3DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawMarker3DRelease(handle); return true; }
 }
 
 internal sealed class DrawNumberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawNumberHandle() : base(true) { }
     internal DrawNumberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawNumberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawNumberRelease(handle); return true; }
 }
 
 internal sealed class DrawPrinterHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawPrinterHandle() : base(true) { }
     internal DrawPrinterHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawPrinterRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawPrinterRelease(handle); return true; }
 }
 
 internal sealed class DrawProgressIndicatorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawProgressIndicatorHandle() : base(true) { }
     internal DrawProgressIndicatorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawProgressIndicatorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawProgressIndicatorRelease(handle); return true; }
 }
 
 internal sealed class DrawSegment2DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawSegment2DHandle() : base(true) { }
     internal DrawSegment2DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawSegment2DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawSegment2DRelease(handle); return true; }
 }
 
 internal sealed class DrawSegment3DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawSegment3DHandle() : base(true) { }
     internal DrawSegment3DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawSegment3DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawSegment3DRelease(handle); return true; }
 }
 
 internal sealed class DrawText2DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawText2DHandle() : base(true) { }
     internal DrawText2DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawText2DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawText2DRelease(handle); return true; }
 }
 
 internal sealed class DrawText3DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DrawText3DHandle() : base(true) { }
     internal DrawText3DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DrawText3DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.DrawText3DRelease(handle); return true; }
 }
 
 internal sealed class ViewerTestEventManagerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ViewerTestEventManagerHandle() : base(true) { }
     internal ViewerTestEventManagerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ViewerTestEventManagerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.ViewerTestEventManagerRelease(handle); return true; }
 }
 
 internal sealed class ViewerTestV3dViewHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ViewerTestV3dViewHandle() : base(true) { }
     internal ViewerTestV3dViewHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ViewerTestV3dViewRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.ViewerTestV3dViewRelease(handle); return true; }
 }
 
 internal sealed class XSDRAWSTLDataSourceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XSDRAWSTLDataSourceHandle() : base(true) { }
     internal XSDRAWSTLDataSourceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XSDRAWSTLDataSourceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.XSDRAWSTLDataSourceRelease(handle); return true; }
 }
 
 internal sealed class XSDRAWSTLDataSource3DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XSDRAWSTLDataSource3DHandle() : base(true) { }
     internal XSDRAWSTLDataSource3DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XSDRAWSTLDataSource3DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.XSDRAWSTLDataSource3DRelease(handle); return true; }
 }
 
 internal sealed class XSDRAWSTLDrawableMeshHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XSDRAWSTLDrawableMeshHandle() : base(true) { }
     internal XSDRAWSTLDrawableMeshHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XSDRAWSTLDrawableMeshRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.XSDRAWSTLDrawableMeshRelease(handle); return true; }
 }
 
 internal sealed class XSDRAWVarsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XSDRAWVarsHandle() : base(true) { }
     internal XSDRAWVarsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XSDRAWVarsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DrawGeneratedNativeMethods.XSDRAWVarsRelease(handle); return true; }
 }
 
-internal static partial class GeneratedNativeMethods
+internal static partial class DrawGeneratedNativeMethods
 {
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_dbrep_drawable_shape_clone")]

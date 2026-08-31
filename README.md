@@ -44,30 +44,31 @@ See [the documentation index](docs/DOCUMENTATION_INDEX.md),
 
 ## Current state
 
-- Batch B through Batch F are locally complete. Batch D closes production
-  viewport/model review; Batch E closes one 24-capability exact-inspection, semantic
-  PMI/AP242, saved-view, viewer-annotation, and screenshot workflow. Batch F closes all
-  24/24 freeform curve/surface and profile-to-solid authoring capabilities under ADR-0067.
-  Generated/API coverage and public publication authority remain separate facts.
+- Batch B through Batch L are locally complete for their finite accepted denominators.
+  Preview.10 independently completes the ADR-0074 managed assembly/package split without
+  changing those product-batch claims. Generated/API coverage and public publication
+  authority remain separate facts.
 - Managed target is .NET 10; the validated baseline is Windows x64 and OCCT 8.0.1.
 - ClangSharp semantic discovery, deterministic generation, native C ABI, friendly managed
   owners/values, geometry and metadata exchange, OCAF/XDE, and Windows HWND visualization
   are implemented for their declared profiles.
 - Full inventory classifies 116,272 discovered declarations and all 7,090 catalogued
   headers with zero `SupportedUnselected`, zero broad LT001-LT004 reasons, and 16,353
-  generated plus 316 accepted manual stable IDs. Narrow blocked dispositions are not
+  generated plus 534 accepted manual stable IDs. Narrow blocked dispositions are not
   claimed as managed APIs.
 - The .NET 10 console sample contains seven separate workflows, including native BREP,
   topology/tolerance inspection, STEP diagnostics/repair, detailed mesh transfer, XDE
   validation properties/recursive occurrences, explicit STEPCAF options, and Viewer controls.
-- Package version `8.0.1-preview.3` carries the committed 62-DLL ABI 1.48 runtime and complete
-  license/notice layout below application-local `occt/` and `licenses/`.
+- Package version `8.0.1-preview.10` provides 12 managed modules, the `OcctSharp`
+  compatibility/facade package, and one `OcctSharp.Native.win-x64` package carrying the
+  committed 62-DLL ABI 1.54 runtime and notice/license layout below application-local
+  `occt/` and `licenses/`.
 - An ordinary clone runs the Sample directly from the SHA256-pinned committed runtime.
   The SDK/CMake bootstrap remains available only as an explicit contributor override.
 - The release pipeline records a 606-signature API baseline, clean regeneration,
   CycloneDX SBOM, provenance, checksums, release gates, and CI configuration.
 - Project code is MIT licensed. OCCT and third-party runtime terms are preserved beside
   the bundled DLLs; hosted CI, signing, and NuGet publication remain separate gates.
-- Architecture and behavior are recorded through ADR-0066 and SC-041. CMM devices,
-  automatic tolerance judgment, custom rendering, optional integrations, cold schema,
-  and physical managed/native deliverable splitting remain outside Batch E.
+- Architecture and behavior are recorded through ADR-0074. CMM devices, automatic
+  tolerance judgment, custom rendering, optional integration implementation, cold schema,
+  and physical native-DLL splitting remain outside the completed product denominators.

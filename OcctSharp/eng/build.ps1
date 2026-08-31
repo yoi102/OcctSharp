@@ -137,6 +137,9 @@ try {
     & dotnet build .\OcctSharp.slnx --no-restore --configuration $Configuration
     if ($LASTEXITCODE -ne 0) { throw "dotnet build failed with exit code $LASTEXITCODE." }
 
+    & .\eng\generate-type-forwarders.ps1 -Configuration $Configuration -Check -SkipBuild
+    if ($LASTEXITCODE -ne 0) { throw "Facade type-forwarder freshness failed with exit code $LASTEXITCODE." }
+
     $determinismDirectory = Join-Path $workspaceRoot 'artifacts\generator-determinism'
     New-Item -ItemType Directory -Path $determinismDirectory -Force | Out-Null
     $firstReport = Join-Path $determinismDirectory 'model-smoke-1.json'

@@ -6156,8949 +6156,8949 @@ internal sealed class APIHeaderSectionEditHeaderHandle : SafeHandleZeroOrMinusOn
 {
     internal APIHeaderSectionEditHeaderHandle() : base(true) { }
     internal APIHeaderSectionEditHeaderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.APIHeaderSectionEditHeaderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.APIHeaderSectionEditHeaderRelease(handle); return true; }
 }
 
 internal sealed class DEBREPConfigurationNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DEBREPConfigurationNodeHandle() : base(true) { }
     internal DEBREPConfigurationNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DEBREPConfigurationNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DEBREPConfigurationNodeRelease(handle); return true; }
 }
 
 internal sealed class DEBREPProviderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DEBREPProviderHandle() : base(true) { }
     internal DEBREPProviderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DEBREPProviderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DEBREPProviderRelease(handle); return true; }
 }
 
 internal sealed class DEGLTFConfigurationNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DEGLTFConfigurationNodeHandle() : base(true) { }
     internal DEGLTFConfigurationNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DEGLTFConfigurationNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DEGLTFConfigurationNodeRelease(handle); return true; }
 }
 
 internal sealed class DEGLTFProviderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DEGLTFProviderHandle() : base(true) { }
     internal DEGLTFProviderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DEGLTFProviderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DEGLTFProviderRelease(handle); return true; }
 }
 
 internal sealed class DEIGESConfigurationNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DEIGESConfigurationNodeHandle() : base(true) { }
     internal DEIGESConfigurationNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DEIGESConfigurationNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DEIGESConfigurationNodeRelease(handle); return true; }
 }
 
 internal sealed class DEIGESProviderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DEIGESProviderHandle() : base(true) { }
     internal DEIGESProviderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DEIGESProviderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DEIGESProviderRelease(handle); return true; }
 }
 
 internal sealed class DEOBJConfigurationNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DEOBJConfigurationNodeHandle() : base(true) { }
     internal DEOBJConfigurationNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DEOBJConfigurationNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DEOBJConfigurationNodeRelease(handle); return true; }
 }
 
 internal sealed class DEOBJProviderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DEOBJProviderHandle() : base(true) { }
     internal DEOBJProviderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DEOBJProviderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DEOBJProviderRelease(handle); return true; }
 }
 
 internal sealed class DEPLYConfigurationNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DEPLYConfigurationNodeHandle() : base(true) { }
     internal DEPLYConfigurationNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DEPLYConfigurationNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DEPLYConfigurationNodeRelease(handle); return true; }
 }
 
 internal sealed class DEPLYProviderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DEPLYProviderHandle() : base(true) { }
     internal DEPLYProviderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DEPLYProviderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DEPLYProviderRelease(handle); return true; }
 }
 
 internal sealed class DESTEPConfigurationNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DESTEPConfigurationNodeHandle() : base(true) { }
     internal DESTEPConfigurationNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DESTEPConfigurationNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DESTEPConfigurationNodeRelease(handle); return true; }
 }
 
 internal sealed class DESTEPProviderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DESTEPProviderHandle() : base(true) { }
     internal DESTEPProviderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DESTEPProviderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DESTEPProviderRelease(handle); return true; }
 }
 
 internal sealed class DESTLConfigurationNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DESTLConfigurationNodeHandle() : base(true) { }
     internal DESTLConfigurationNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DESTLConfigurationNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DESTLConfigurationNodeRelease(handle); return true; }
 }
 
 internal sealed class DESTLProviderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DESTLProviderHandle() : base(true) { }
     internal DESTLProviderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DESTLProviderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DESTLProviderRelease(handle); return true; }
 }
 
 internal sealed class DEVRMLConfigurationNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DEVRMLConfigurationNodeHandle() : base(true) { }
     internal DEVRMLConfigurationNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DEVRMLConfigurationNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DEVRMLConfigurationNodeRelease(handle); return true; }
 }
 
 internal sealed class DEVRMLProviderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DEVRMLProviderHandle() : base(true) { }
     internal DEVRMLProviderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DEVRMLProviderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DEVRMLProviderRelease(handle); return true; }
 }
 
 internal sealed class DEConfigurationContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DEConfigurationContextHandle() : base(true) { }
     internal DEConfigurationContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DEConfigurationContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DEConfigurationContextRelease(handle); return true; }
 }
 
 internal sealed class DEConfigurationNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DEConfigurationNodeHandle() : base(true) { }
     internal DEConfigurationNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DEConfigurationNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DEConfigurationNodeRelease(handle); return true; }
 }
 
 internal sealed class DEProviderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DEProviderHandle() : base(true) { }
     internal DEProviderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DEProviderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DEProviderRelease(handle); return true; }
 }
 
 internal sealed class DEShapeFixConfigurationNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DEShapeFixConfigurationNodeHandle() : base(true) { }
     internal DEShapeFixConfigurationNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DEShapeFixConfigurationNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DEShapeFixConfigurationNodeRelease(handle); return true; }
 }
 
 internal sealed class DEWrapperHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DEWrapperHandle() : base(true) { }
     internal DEWrapperHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DEWrapperRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.DEWrapperRelease(handle); return true; }
 }
 
 internal sealed class HeaderSectionFileDescriptionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HeaderSectionFileDescriptionHandle() : base(true) { }
     internal HeaderSectionFileDescriptionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HeaderSectionFileDescriptionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.HeaderSectionFileDescriptionRelease(handle); return true; }
 }
 
 internal sealed class HeaderSectionFileNameHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HeaderSectionFileNameHandle() : base(true) { }
     internal HeaderSectionFileNameHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HeaderSectionFileNameRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.HeaderSectionFileNameRelease(handle); return true; }
 }
 
 internal sealed class HeaderSectionFileSchemaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HeaderSectionFileSchemaHandle() : base(true) { }
     internal HeaderSectionFileSchemaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HeaderSectionFileSchemaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.HeaderSectionFileSchemaRelease(handle); return true; }
 }
 
 internal sealed class HeaderSectionProtocolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HeaderSectionProtocolHandle() : base(true) { }
     internal HeaderSectionProtocolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HeaderSectionProtocolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.HeaderSectionProtocolRelease(handle); return true; }
 }
 
 internal sealed class IFSelectActHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectActHandle() : base(true) { }
     internal IFSelectActHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectActRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectActRelease(handle); return true; }
 }
 
 internal sealed class IFSelectActivatorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectActivatorHandle() : base(true) { }
     internal IFSelectActivatorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectActivatorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectActivatorRelease(handle); return true; }
 }
 
 internal sealed class IFSelectAppliedModifiersHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectAppliedModifiersHandle() : base(true) { }
     internal IFSelectAppliedModifiersHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectAppliedModifiersRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectAppliedModifiersRelease(handle); return true; }
 }
 
 internal sealed class IFSelectBasicDumperHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectBasicDumperHandle() : base(true) { }
     internal IFSelectBasicDumperHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectBasicDumperRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectBasicDumperRelease(handle); return true; }
 }
 
 internal sealed class IFSelectCheckCounterHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectCheckCounterHandle() : base(true) { }
     internal IFSelectCheckCounterHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectCheckCounterRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectCheckCounterRelease(handle); return true; }
 }
 
 internal sealed class IFSelectDispGlobalHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectDispGlobalHandle() : base(true) { }
     internal IFSelectDispGlobalHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectDispGlobalRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectDispGlobalRelease(handle); return true; }
 }
 
 internal sealed class IFSelectDispPerCountHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectDispPerCountHandle() : base(true) { }
     internal IFSelectDispPerCountHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectDispPerCountRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectDispPerCountRelease(handle); return true; }
 }
 
 internal sealed class IFSelectDispPerFilesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectDispPerFilesHandle() : base(true) { }
     internal IFSelectDispPerFilesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectDispPerFilesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectDispPerFilesRelease(handle); return true; }
 }
 
 internal sealed class IFSelectDispPerOneHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectDispPerOneHandle() : base(true) { }
     internal IFSelectDispPerOneHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectDispPerOneRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectDispPerOneRelease(handle); return true; }
 }
 
 internal sealed class IFSelectDispPerSignatureHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectDispPerSignatureHandle() : base(true) { }
     internal IFSelectDispPerSignatureHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectDispPerSignatureRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectDispPerSignatureRelease(handle); return true; }
 }
 
 internal sealed class IFSelectDispatchHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectDispatchHandle() : base(true) { }
     internal IFSelectDispatchHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectDispatchRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectDispatchRelease(handle); return true; }
 }
 
 internal sealed class IFSelectEditFormHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectEditFormHandle() : base(true) { }
     internal IFSelectEditFormHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectEditFormRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectEditFormRelease(handle); return true; }
 }
 
 internal sealed class IFSelectEditorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectEditorHandle() : base(true) { }
     internal IFSelectEditorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectEditorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectEditorRelease(handle); return true; }
 }
 
 internal sealed class IFSelectGeneralModifierHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectGeneralModifierHandle() : base(true) { }
     internal IFSelectGeneralModifierHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectGeneralModifierRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectGeneralModifierRelease(handle); return true; }
 }
 
 internal sealed class IFSelectGraphCounterHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectGraphCounterHandle() : base(true) { }
     internal IFSelectGraphCounterHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectGraphCounterRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectGraphCounterRelease(handle); return true; }
 }
 
 internal sealed class IFSelectIntParamHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectIntParamHandle() : base(true) { }
     internal IFSelectIntParamHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectIntParamRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectIntParamRelease(handle); return true; }
 }
 
 internal sealed class IFSelectListEditorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectListEditorHandle() : base(true) { }
     internal IFSelectListEditorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectListEditorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectListEditorRelease(handle); return true; }
 }
 
 internal sealed class IFSelectModelCopierHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectModelCopierHandle() : base(true) { }
     internal IFSelectModelCopierHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectModelCopierRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectModelCopierRelease(handle); return true; }
 }
 
 internal sealed class IFSelectModifEditFormHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectModifEditFormHandle() : base(true) { }
     internal IFSelectModifEditFormHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectModifEditFormRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectModifEditFormRelease(handle); return true; }
 }
 
 internal sealed class IFSelectModifReorderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectModifReorderHandle() : base(true) { }
     internal IFSelectModifReorderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectModifReorderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectModifReorderRelease(handle); return true; }
 }
 
 internal sealed class IFSelectModifierHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectModifierHandle() : base(true) { }
     internal IFSelectModifierHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectModifierRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectModifierRelease(handle); return true; }
 }
 
 internal sealed class IFSelectPacketListHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectPacketListHandle() : base(true) { }
     internal IFSelectPacketListHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectPacketListRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectPacketListRelease(handle); return true; }
 }
 
 internal sealed class IFSelectParamEditorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectParamEditorHandle() : base(true) { }
     internal IFSelectParamEditorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectParamEditorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectParamEditorRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectAnyListHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectAnyListHandle() : base(true) { }
     internal IFSelectSelectAnyListHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectAnyListRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectAnyListRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectAnyTypeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectAnyTypeHandle() : base(true) { }
     internal IFSelectSelectAnyTypeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectAnyTypeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectAnyTypeRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectBaseHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectBaseHandle() : base(true) { }
     internal IFSelectSelectBaseHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectBaseRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectBaseRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectCombineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectCombineHandle() : base(true) { }
     internal IFSelectSelectCombineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectCombineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectCombineRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectControlHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectControlHandle() : base(true) { }
     internal IFSelectSelectControlHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectControlRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectControlRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectDeductHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectDeductHandle() : base(true) { }
     internal IFSelectSelectDeductHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectDeductRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectDeductRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectDiffHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectDiffHandle() : base(true) { }
     internal IFSelectSelectDiffHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectDiffRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectDiffRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectEntityNumberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectEntityNumberHandle() : base(true) { }
     internal IFSelectSelectEntityNumberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectEntityNumberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectEntityNumberRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectErrorEntitiesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectErrorEntitiesHandle() : base(true) { }
     internal IFSelectSelectErrorEntitiesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectErrorEntitiesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectErrorEntitiesRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectExploreHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectExploreHandle() : base(true) { }
     internal IFSelectSelectExploreHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectExploreRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectExploreRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectExtractHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectExtractHandle() : base(true) { }
     internal IFSelectSelectExtractHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectExtractRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectExtractRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectFlagHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectFlagHandle() : base(true) { }
     internal IFSelectSelectFlagHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectFlagRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectFlagRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectInListHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectInListHandle() : base(true) { }
     internal IFSelectSelectInListHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectInListRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectInListRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectIncorrectEntitiesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectIncorrectEntitiesHandle() : base(true) { }
     internal IFSelectSelectIncorrectEntitiesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectIncorrectEntitiesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectIncorrectEntitiesRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectIntersectionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectIntersectionHandle() : base(true) { }
     internal IFSelectSelectIntersectionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectIntersectionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectIntersectionRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectModelEntitiesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectModelEntitiesHandle() : base(true) { }
     internal IFSelectSelectModelEntitiesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectModelEntitiesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectModelEntitiesRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectModelRootsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectModelRootsHandle() : base(true) { }
     internal IFSelectSelectModelRootsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectModelRootsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectModelRootsRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectPointedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectPointedHandle() : base(true) { }
     internal IFSelectSelectPointedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectPointedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectPointedRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectRangeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectRangeHandle() : base(true) { }
     internal IFSelectSelectRangeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectRangeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectRangeRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectRootCompsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectRootCompsHandle() : base(true) { }
     internal IFSelectSelectRootCompsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectRootCompsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectRootCompsRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectRootsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectRootsHandle() : base(true) { }
     internal IFSelectSelectRootsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectRootsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectRootsRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectSentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectSentHandle() : base(true) { }
     internal IFSelectSelectSentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectSentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectSentRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectSharedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectSharedHandle() : base(true) { }
     internal IFSelectSelectSharedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectSharedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectSharedRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectSharingHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectSharingHandle() : base(true) { }
     internal IFSelectSelectSharingHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectSharingRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectSharingRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectSignatureHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectSignatureHandle() : base(true) { }
     internal IFSelectSelectSignatureHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectSignatureRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectSignatureRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectSignedSharedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectSignedSharedHandle() : base(true) { }
     internal IFSelectSelectSignedSharedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectSignedSharedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectSignedSharedRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectSignedSharingHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectSignedSharingHandle() : base(true) { }
     internal IFSelectSelectSignedSharingHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectSignedSharingRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectSignedSharingRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectSuiteHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectSuiteHandle() : base(true) { }
     internal IFSelectSelectSuiteHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectSuiteRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectSuiteRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectTypeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectTypeHandle() : base(true) { }
     internal IFSelectSelectTypeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectTypeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectTypeRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectUnionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectUnionHandle() : base(true) { }
     internal IFSelectSelectUnionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectUnionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectUnionRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectUnknownEntitiesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectUnknownEntitiesHandle() : base(true) { }
     internal IFSelectSelectUnknownEntitiesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectUnknownEntitiesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectUnknownEntitiesRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSelectionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSelectionHandle() : base(true) { }
     internal IFSelectSelectionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSelectionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSelectionRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSessionDumperHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSessionDumperHandle() : base(true) { }
     internal IFSelectSessionDumperHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSessionDumperRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSessionDumperRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSessionPilotHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSessionPilotHandle() : base(true) { }
     internal IFSelectSessionPilotHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSessionPilotRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSessionPilotRelease(handle); return true; }
 }
 
 internal sealed class IFSelectShareOutHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectShareOutHandle() : base(true) { }
     internal IFSelectShareOutHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectShareOutRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectShareOutRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSignAncestorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSignAncestorHandle() : base(true) { }
     internal IFSelectSignAncestorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSignAncestorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSignAncestorRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSignCategoryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSignCategoryHandle() : base(true) { }
     internal IFSelectSignCategoryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSignCategoryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSignCategoryRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSignCounterHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSignCounterHandle() : base(true) { }
     internal IFSelectSignCounterHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSignCounterRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSignCounterRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSignMultipleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSignMultipleHandle() : base(true) { }
     internal IFSelectSignMultipleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSignMultipleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSignMultipleRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSignTypeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSignTypeHandle() : base(true) { }
     internal IFSelectSignTypeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSignTypeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSignTypeRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSignValidityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSignValidityHandle() : base(true) { }
     internal IFSelectSignValidityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSignValidityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSignValidityRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSignatureHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSignatureHandle() : base(true) { }
     internal IFSelectSignatureHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSignatureRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSignatureRelease(handle); return true; }
 }
 
 internal sealed class IFSelectSignatureListHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectSignatureListHandle() : base(true) { }
     internal IFSelectSignatureListHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectSignatureListRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectSignatureListRelease(handle); return true; }
 }
 
 internal sealed class IFSelectTransformStandardHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectTransformStandardHandle() : base(true) { }
     internal IFSelectTransformStandardHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectTransformStandardRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectTransformStandardRelease(handle); return true; }
 }
 
 internal sealed class IFSelectTransformerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectTransformerHandle() : base(true) { }
     internal IFSelectTransformerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectTransformerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectTransformerRelease(handle); return true; }
 }
 
 internal sealed class IFSelectWorkLibraryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectWorkLibraryHandle() : base(true) { }
     internal IFSelectWorkLibraryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectWorkLibraryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectWorkLibraryRelease(handle); return true; }
 }
 
 internal sealed class IFSelectWorkSessionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IFSelectWorkSessionHandle() : base(true) { }
     internal IFSelectWorkSessionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IFSelectWorkSessionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IFSelectWorkSessionRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliDrilledHoleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliDrilledHoleHandle() : base(true) { }
     internal IGESAppliDrilledHoleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliDrilledHoleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliDrilledHoleRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliElementResultsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliElementResultsHandle() : base(true) { }
     internal IGESAppliElementResultsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliElementResultsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliElementResultsRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliFiniteElementHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliFiniteElementHandle() : base(true) { }
     internal IGESAppliFiniteElementHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliFiniteElementRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliFiniteElementRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliFlowHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliFlowHandle() : base(true) { }
     internal IGESAppliFlowHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliFlowRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliFlowRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliFlowLineSpecHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliFlowLineSpecHandle() : base(true) { }
     internal IGESAppliFlowLineSpecHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliFlowLineSpecRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliFlowLineSpecRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliGeneralModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliGeneralModuleHandle() : base(true) { }
     internal IGESAppliGeneralModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliGeneralModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliGeneralModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliLevelFunctionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliLevelFunctionHandle() : base(true) { }
     internal IGESAppliLevelFunctionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliLevelFunctionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliLevelFunctionRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliLevelToPWBLayerMapHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliLevelToPWBLayerMapHandle() : base(true) { }
     internal IGESAppliLevelToPWBLayerMapHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliLevelToPWBLayerMapRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliLevelToPWBLayerMapRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliLineWideningHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliLineWideningHandle() : base(true) { }
     internal IGESAppliLineWideningHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliLineWideningRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliLineWideningRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliNodalConstraintHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliNodalConstraintHandle() : base(true) { }
     internal IGESAppliNodalConstraintHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliNodalConstraintRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliNodalConstraintRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliNodalDisplAndRotHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliNodalDisplAndRotHandle() : base(true) { }
     internal IGESAppliNodalDisplAndRotHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliNodalDisplAndRotRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliNodalDisplAndRotRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliNodalResultsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliNodalResultsHandle() : base(true) { }
     internal IGESAppliNodalResultsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliNodalResultsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliNodalResultsRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliNodeHandle() : base(true) { }
     internal IGESAppliNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliNodeRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliPWBArtworkStackupHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliPWBArtworkStackupHandle() : base(true) { }
     internal IGESAppliPWBArtworkStackupHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliPWBArtworkStackupRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliPWBArtworkStackupRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliPWBDrilledHoleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliPWBDrilledHoleHandle() : base(true) { }
     internal IGESAppliPWBDrilledHoleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliPWBDrilledHoleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliPWBDrilledHoleRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliPartNumberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliPartNumberHandle() : base(true) { }
     internal IGESAppliPartNumberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliPartNumberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliPartNumberRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliPinNumberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliPinNumberHandle() : base(true) { }
     internal IGESAppliPinNumberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliPinNumberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliPinNumberRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliPipingFlowHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliPipingFlowHandle() : base(true) { }
     internal IGESAppliPipingFlowHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliPipingFlowRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliPipingFlowRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliProtocolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliProtocolHandle() : base(true) { }
     internal IGESAppliProtocolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliProtocolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliProtocolRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliReadWriteModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliReadWriteModuleHandle() : base(true) { }
     internal IGESAppliReadWriteModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliReadWriteModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliReadWriteModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliReferenceDesignatorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliReferenceDesignatorHandle() : base(true) { }
     internal IGESAppliReferenceDesignatorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliReferenceDesignatorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliReferenceDesignatorRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliRegionRestrictionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliRegionRestrictionHandle() : base(true) { }
     internal IGESAppliRegionRestrictionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliRegionRestrictionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliRegionRestrictionRelease(handle); return true; }
 }
 
 internal sealed class IGESAppliSpecificModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESAppliSpecificModuleHandle() : base(true) { }
     internal IGESAppliSpecificModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESAppliSpecificModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESAppliSpecificModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicAssocGroupTypeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicAssocGroupTypeHandle() : base(true) { }
     internal IGESBasicAssocGroupTypeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicAssocGroupTypeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicAssocGroupTypeRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicExternalRefFileHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicExternalRefFileHandle() : base(true) { }
     internal IGESBasicExternalRefFileHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicExternalRefFileRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicExternalRefFileRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicExternalRefFileIndexHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicExternalRefFileIndexHandle() : base(true) { }
     internal IGESBasicExternalRefFileIndexHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicExternalRefFileIndexRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicExternalRefFileIndexRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicExternalRefFileNameHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicExternalRefFileNameHandle() : base(true) { }
     internal IGESBasicExternalRefFileNameHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicExternalRefFileNameRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicExternalRefFileNameRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicExternalRefLibNameHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicExternalRefLibNameHandle() : base(true) { }
     internal IGESBasicExternalRefLibNameHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicExternalRefLibNameRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicExternalRefLibNameRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicExternalRefNameHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicExternalRefNameHandle() : base(true) { }
     internal IGESBasicExternalRefNameHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicExternalRefNameRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicExternalRefNameRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicExternalReferenceFileHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicExternalReferenceFileHandle() : base(true) { }
     internal IGESBasicExternalReferenceFileHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicExternalReferenceFileRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicExternalReferenceFileRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicGeneralModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicGeneralModuleHandle() : base(true) { }
     internal IGESBasicGeneralModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicGeneralModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicGeneralModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicGroupHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicGroupHandle() : base(true) { }
     internal IGESBasicGroupHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicGroupRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicGroupRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicGroupWithoutBackPHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicGroupWithoutBackPHandle() : base(true) { }
     internal IGESBasicGroupWithoutBackPHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicGroupWithoutBackPRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicGroupWithoutBackPRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicHArray1OfHArray1OfIGESEntityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicHArray1OfHArray1OfIGESEntityHandle() : base(true) { }
     internal IGESBasicHArray1OfHArray1OfIGESEntityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicHArray1OfHArray1OfIGESEntityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicHArray1OfHArray1OfIGESEntityRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicHArray1OfHArray1OfIntegerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicHArray1OfHArray1OfIntegerHandle() : base(true) { }
     internal IGESBasicHArray1OfHArray1OfIntegerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicHArray1OfHArray1OfIntegerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicHArray1OfHArray1OfIntegerRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicHArray1OfHArray1OfRealHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicHArray1OfHArray1OfRealHandle() : base(true) { }
     internal IGESBasicHArray1OfHArray1OfRealHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicHArray1OfHArray1OfRealRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicHArray1OfHArray1OfRealRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicHArray1OfHArray1OfXYHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicHArray1OfHArray1OfXYHandle() : base(true) { }
     internal IGESBasicHArray1OfHArray1OfXYHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicHArray1OfHArray1OfXYRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicHArray1OfHArray1OfXYRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicHArray1OfHArray1OfXYZHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicHArray1OfHArray1OfXYZHandle() : base(true) { }
     internal IGESBasicHArray1OfHArray1OfXYZHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicHArray1OfHArray1OfXYZRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicHArray1OfHArray1OfXYZRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicHierarchyHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicHierarchyHandle() : base(true) { }
     internal IGESBasicHierarchyHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicHierarchyRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicHierarchyRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicNameHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicNameHandle() : base(true) { }
     internal IGESBasicNameHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicNameRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicNameRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicOrderedGroupHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicOrderedGroupHandle() : base(true) { }
     internal IGESBasicOrderedGroupHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicOrderedGroupRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicOrderedGroupRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicOrderedGroupWithoutBackPHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicOrderedGroupWithoutBackPHandle() : base(true) { }
     internal IGESBasicOrderedGroupWithoutBackPHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicOrderedGroupWithoutBackPRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicOrderedGroupWithoutBackPRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicProtocolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicProtocolHandle() : base(true) { }
     internal IGESBasicProtocolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicProtocolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicProtocolRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicReadWriteModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicReadWriteModuleHandle() : base(true) { }
     internal IGESBasicReadWriteModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicReadWriteModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicReadWriteModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicSingleParentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicSingleParentHandle() : base(true) { }
     internal IGESBasicSingleParentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicSingleParentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicSingleParentRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicSingularSubfigureHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicSingularSubfigureHandle() : base(true) { }
     internal IGESBasicSingularSubfigureHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicSingularSubfigureRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicSingularSubfigureRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicSpecificModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicSpecificModuleHandle() : base(true) { }
     internal IGESBasicSpecificModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicSpecificModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicSpecificModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESBasicSubfigureDefHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESBasicSubfigureDefHandle() : base(true) { }
     internal IGESBasicSubfigureDefHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESBasicSubfigureDefRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESBasicSubfigureDefRelease(handle); return true; }
 }
 
 internal sealed class IGESControlActorWriteHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESControlActorWriteHandle() : base(true) { }
     internal IGESControlActorWriteHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESControlActorWriteRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESControlActorWriteRelease(handle); return true; }
 }
 
 internal sealed class IGESControlAlgoContainerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESControlAlgoContainerHandle() : base(true) { }
     internal IGESControlAlgoContainerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESControlAlgoContainerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESControlAlgoContainerRelease(handle); return true; }
 }
 
 internal sealed class IGESControlControllerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESControlControllerHandle() : base(true) { }
     internal IGESControlControllerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESControlControllerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESControlControllerRelease(handle); return true; }
 }
 
 internal sealed class IGESControlIGESBoundaryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESControlIGESBoundaryHandle() : base(true) { }
     internal IGESControlIGESBoundaryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESControlIGESBoundaryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESControlIGESBoundaryRelease(handle); return true; }
 }
 
 internal sealed class IGESControlToolContainerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESControlToolContainerHandle() : base(true) { }
     internal IGESControlToolContainerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESControlToolContainerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESControlToolContainerRelease(handle); return true; }
 }
 
 internal sealed class IGESDataColorEntityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataColorEntityHandle() : base(true) { }
     internal IGESDataColorEntityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataColorEntityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataColorEntityRelease(handle); return true; }
 }
 
 internal sealed class IGESDataDefaultGeneralHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataDefaultGeneralHandle() : base(true) { }
     internal IGESDataDefaultGeneralHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataDefaultGeneralRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataDefaultGeneralRelease(handle); return true; }
 }
 
 internal sealed class IGESDataDefaultSpecificHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataDefaultSpecificHandle() : base(true) { }
     internal IGESDataDefaultSpecificHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataDefaultSpecificRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataDefaultSpecificRelease(handle); return true; }
 }
 
 internal sealed class IGESDataFileProtocolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataFileProtocolHandle() : base(true) { }
     internal IGESDataFileProtocolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataFileProtocolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataFileProtocolRelease(handle); return true; }
 }
 
 internal sealed class IGESDataFileRecognizerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataFileRecognizerHandle() : base(true) { }
     internal IGESDataFileRecognizerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataFileRecognizerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataFileRecognizerRelease(handle); return true; }
 }
 
 internal sealed class IGESDataFreeFormatEntityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataFreeFormatEntityHandle() : base(true) { }
     internal IGESDataFreeFormatEntityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataFreeFormatEntityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataFreeFormatEntityRelease(handle); return true; }
 }
 
 internal sealed class IGESDataGeneralModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataGeneralModuleHandle() : base(true) { }
     internal IGESDataGeneralModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataGeneralModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataGeneralModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESDataGlobalNodeOfSpecificLibHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataGlobalNodeOfSpecificLibHandle() : base(true) { }
     internal IGESDataGlobalNodeOfSpecificLibHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataGlobalNodeOfSpecificLibRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataGlobalNodeOfSpecificLibRelease(handle); return true; }
 }
 
 internal sealed class IGESDataGlobalNodeOfWriterLibHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataGlobalNodeOfWriterLibHandle() : base(true) { }
     internal IGESDataGlobalNodeOfWriterLibHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataGlobalNodeOfWriterLibRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataGlobalNodeOfWriterLibRelease(handle); return true; }
 }
 
 internal sealed class IGESDataIGESEntityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataIGESEntityHandle() : base(true) { }
     internal IGESDataIGESEntityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataIGESEntityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataIGESEntityRelease(handle); return true; }
 }
 
 internal sealed class IGESDataIGESModelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataIGESModelHandle() : base(true) { }
     internal IGESDataIGESModelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataIGESModelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataIGESModelRelease(handle); return true; }
 }
 
 internal sealed class IGESDataIGESReaderDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataIGESReaderDataHandle() : base(true) { }
     internal IGESDataIGESReaderDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataIGESReaderDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataIGESReaderDataRelease(handle); return true; }
 }
 
 internal sealed class IGESDataLabelDisplayEntityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataLabelDisplayEntityHandle() : base(true) { }
     internal IGESDataLabelDisplayEntityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataLabelDisplayEntityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataLabelDisplayEntityRelease(handle); return true; }
 }
 
 internal sealed class IGESDataLevelListEntityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataLevelListEntityHandle() : base(true) { }
     internal IGESDataLevelListEntityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataLevelListEntityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataLevelListEntityRelease(handle); return true; }
 }
 
 internal sealed class IGESDataLineFontEntityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataLineFontEntityHandle() : base(true) { }
     internal IGESDataLineFontEntityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataLineFontEntityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataLineFontEntityRelease(handle); return true; }
 }
 
 internal sealed class IGESDataNameEntityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataNameEntityHandle() : base(true) { }
     internal IGESDataNameEntityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataNameEntityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataNameEntityRelease(handle); return true; }
 }
 
 internal sealed class IGESDataNodeOfSpecificLibHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataNodeOfSpecificLibHandle() : base(true) { }
     internal IGESDataNodeOfSpecificLibHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataNodeOfSpecificLibRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataNodeOfSpecificLibRelease(handle); return true; }
 }
 
 internal sealed class IGESDataNodeOfWriterLibHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataNodeOfWriterLibHandle() : base(true) { }
     internal IGESDataNodeOfWriterLibHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataNodeOfWriterLibRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataNodeOfWriterLibRelease(handle); return true; }
 }
 
 internal sealed class IGESDataProtocolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataProtocolHandle() : base(true) { }
     internal IGESDataProtocolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataProtocolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataProtocolRelease(handle); return true; }
 }
 
 internal sealed class IGESDataReadWriteModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataReadWriteModuleHandle() : base(true) { }
     internal IGESDataReadWriteModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataReadWriteModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataReadWriteModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESDataSingleParentEntityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataSingleParentEntityHandle() : base(true) { }
     internal IGESDataSingleParentEntityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataSingleParentEntityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataSingleParentEntityRelease(handle); return true; }
 }
 
 internal sealed class IGESDataSpecificModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataSpecificModuleHandle() : base(true) { }
     internal IGESDataSpecificModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataSpecificModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataSpecificModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESDataToolLocationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataToolLocationHandle() : base(true) { }
     internal IGESDataToolLocationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataToolLocationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataToolLocationRelease(handle); return true; }
 }
 
 internal sealed class IGESDataTransfEntityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataTransfEntityHandle() : base(true) { }
     internal IGESDataTransfEntityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataTransfEntityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataTransfEntityRelease(handle); return true; }
 }
 
 internal sealed class IGESDataUndefinedEntityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataUndefinedEntityHandle() : base(true) { }
     internal IGESDataUndefinedEntityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataUndefinedEntityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataUndefinedEntityRelease(handle); return true; }
 }
 
 internal sealed class IGESDataViewKindEntityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDataViewKindEntityHandle() : base(true) { }
     internal IGESDataViewKindEntityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDataViewKindEntityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDataViewKindEntityRelease(handle); return true; }
 }
 
 internal sealed class IGESDefsAssociativityDefHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDefsAssociativityDefHandle() : base(true) { }
     internal IGESDefsAssociativityDefHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDefsAssociativityDefRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDefsAssociativityDefRelease(handle); return true; }
 }
 
 internal sealed class IGESDefsAttributeDefHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDefsAttributeDefHandle() : base(true) { }
     internal IGESDefsAttributeDefHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDefsAttributeDefRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDefsAttributeDefRelease(handle); return true; }
 }
 
 internal sealed class IGESDefsAttributeTableHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDefsAttributeTableHandle() : base(true) { }
     internal IGESDefsAttributeTableHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDefsAttributeTableRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDefsAttributeTableRelease(handle); return true; }
 }
 
 internal sealed class IGESDefsGeneralModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDefsGeneralModuleHandle() : base(true) { }
     internal IGESDefsGeneralModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDefsGeneralModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDefsGeneralModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESDefsGenericDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDefsGenericDataHandle() : base(true) { }
     internal IGESDefsGenericDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDefsGenericDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDefsGenericDataRelease(handle); return true; }
 }
 
 internal sealed class IGESDefsHArray1OfHArray1OfTextDisplayTemplateHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDefsHArray1OfHArray1OfTextDisplayTemplateHandle() : base(true) { }
     internal IGESDefsHArray1OfHArray1OfTextDisplayTemplateHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDefsHArray1OfHArray1OfTextDisplayTemplateRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDefsHArray1OfHArray1OfTextDisplayTemplateRelease(handle); return true; }
 }
 
 internal sealed class IGESDefsMacroDefHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDefsMacroDefHandle() : base(true) { }
     internal IGESDefsMacroDefHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDefsMacroDefRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDefsMacroDefRelease(handle); return true; }
 }
 
 internal sealed class IGESDefsProtocolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDefsProtocolHandle() : base(true) { }
     internal IGESDefsProtocolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDefsProtocolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDefsProtocolRelease(handle); return true; }
 }
 
 internal sealed class IGESDefsReadWriteModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDefsReadWriteModuleHandle() : base(true) { }
     internal IGESDefsReadWriteModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDefsReadWriteModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDefsReadWriteModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESDefsSpecificModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDefsSpecificModuleHandle() : base(true) { }
     internal IGESDefsSpecificModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDefsSpecificModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDefsSpecificModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESDefsTabularDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDefsTabularDataHandle() : base(true) { }
     internal IGESDefsTabularDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDefsTabularDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDefsTabularDataRelease(handle); return true; }
 }
 
 internal sealed class IGESDefsUnitsDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDefsUnitsDataHandle() : base(true) { }
     internal IGESDefsUnitsDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDefsUnitsDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDefsUnitsDataRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenAngularDimensionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenAngularDimensionHandle() : base(true) { }
     internal IGESDimenAngularDimensionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenAngularDimensionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenAngularDimensionRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenBasicDimensionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenBasicDimensionHandle() : base(true) { }
     internal IGESDimenBasicDimensionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenBasicDimensionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenBasicDimensionRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenCenterLineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenCenterLineHandle() : base(true) { }
     internal IGESDimenCenterLineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenCenterLineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenCenterLineRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenCurveDimensionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenCurveDimensionHandle() : base(true) { }
     internal IGESDimenCurveDimensionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenCurveDimensionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenCurveDimensionRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenDiameterDimensionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenDiameterDimensionHandle() : base(true) { }
     internal IGESDimenDiameterDimensionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenDiameterDimensionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenDiameterDimensionRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenDimensionDisplayDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenDimensionDisplayDataHandle() : base(true) { }
     internal IGESDimenDimensionDisplayDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenDimensionDisplayDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenDimensionDisplayDataRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenDimensionToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenDimensionToleranceHandle() : base(true) { }
     internal IGESDimenDimensionToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenDimensionToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenDimensionToleranceRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenDimensionUnitsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenDimensionUnitsHandle() : base(true) { }
     internal IGESDimenDimensionUnitsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenDimensionUnitsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenDimensionUnitsRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenDimensionedGeometryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenDimensionedGeometryHandle() : base(true) { }
     internal IGESDimenDimensionedGeometryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenDimensionedGeometryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenDimensionedGeometryRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenFlagNoteHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenFlagNoteHandle() : base(true) { }
     internal IGESDimenFlagNoteHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenFlagNoteRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenFlagNoteRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenGeneralLabelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenGeneralLabelHandle() : base(true) { }
     internal IGESDimenGeneralLabelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenGeneralLabelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenGeneralLabelRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenGeneralModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenGeneralModuleHandle() : base(true) { }
     internal IGESDimenGeneralModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenGeneralModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenGeneralModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenGeneralNoteHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenGeneralNoteHandle() : base(true) { }
     internal IGESDimenGeneralNoteHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenGeneralNoteRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenGeneralNoteRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenGeneralSymbolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenGeneralSymbolHandle() : base(true) { }
     internal IGESDimenGeneralSymbolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenGeneralSymbolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenGeneralSymbolRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenLeaderArrowHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenLeaderArrowHandle() : base(true) { }
     internal IGESDimenLeaderArrowHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenLeaderArrowRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenLeaderArrowRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenLinearDimensionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenLinearDimensionHandle() : base(true) { }
     internal IGESDimenLinearDimensionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenLinearDimensionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenLinearDimensionRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenNewDimensionedGeometryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenNewDimensionedGeometryHandle() : base(true) { }
     internal IGESDimenNewDimensionedGeometryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenNewDimensionedGeometryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenNewDimensionedGeometryRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenNewGeneralNoteHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenNewGeneralNoteHandle() : base(true) { }
     internal IGESDimenNewGeneralNoteHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenNewGeneralNoteRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenNewGeneralNoteRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenOrdinateDimensionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenOrdinateDimensionHandle() : base(true) { }
     internal IGESDimenOrdinateDimensionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenOrdinateDimensionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenOrdinateDimensionRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenPointDimensionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenPointDimensionHandle() : base(true) { }
     internal IGESDimenPointDimensionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenPointDimensionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenPointDimensionRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenProtocolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenProtocolHandle() : base(true) { }
     internal IGESDimenProtocolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenProtocolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenProtocolRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenRadiusDimensionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenRadiusDimensionHandle() : base(true) { }
     internal IGESDimenRadiusDimensionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenRadiusDimensionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenRadiusDimensionRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenReadWriteModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenReadWriteModuleHandle() : base(true) { }
     internal IGESDimenReadWriteModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenReadWriteModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenReadWriteModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenSectionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenSectionHandle() : base(true) { }
     internal IGESDimenSectionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenSectionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenSectionRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenSectionedAreaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenSectionedAreaHandle() : base(true) { }
     internal IGESDimenSectionedAreaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenSectionedAreaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenSectionedAreaRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenSpecificModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenSpecificModuleHandle() : base(true) { }
     internal IGESDimenSpecificModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenSpecificModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenSpecificModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESDimenWitnessLineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDimenWitnessLineHandle() : base(true) { }
     internal IGESDimenWitnessLineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDimenWitnessLineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDimenWitnessLineRelease(handle); return true; }
 }
 
 internal sealed class IGESDrawCircArraySubfigureHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDrawCircArraySubfigureHandle() : base(true) { }
     internal IGESDrawCircArraySubfigureHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDrawCircArraySubfigureRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDrawCircArraySubfigureRelease(handle); return true; }
 }
 
 internal sealed class IGESDrawConnectPointHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDrawConnectPointHandle() : base(true) { }
     internal IGESDrawConnectPointHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDrawConnectPointRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDrawConnectPointRelease(handle); return true; }
 }
 
 internal sealed class IGESDrawDrawingHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDrawDrawingHandle() : base(true) { }
     internal IGESDrawDrawingHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDrawDrawingRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDrawDrawingRelease(handle); return true; }
 }
 
 internal sealed class IGESDrawDrawingWithRotationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDrawDrawingWithRotationHandle() : base(true) { }
     internal IGESDrawDrawingWithRotationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDrawDrawingWithRotationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDrawDrawingWithRotationRelease(handle); return true; }
 }
 
 internal sealed class IGESDrawGeneralModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDrawGeneralModuleHandle() : base(true) { }
     internal IGESDrawGeneralModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDrawGeneralModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDrawGeneralModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESDrawLabelDisplayHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDrawLabelDisplayHandle() : base(true) { }
     internal IGESDrawLabelDisplayHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDrawLabelDisplayRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDrawLabelDisplayRelease(handle); return true; }
 }
 
 internal sealed class IGESDrawNetworkSubfigureHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDrawNetworkSubfigureHandle() : base(true) { }
     internal IGESDrawNetworkSubfigureHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDrawNetworkSubfigureRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDrawNetworkSubfigureRelease(handle); return true; }
 }
 
 internal sealed class IGESDrawNetworkSubfigureDefHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDrawNetworkSubfigureDefHandle() : base(true) { }
     internal IGESDrawNetworkSubfigureDefHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDrawNetworkSubfigureDefRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDrawNetworkSubfigureDefRelease(handle); return true; }
 }
 
 internal sealed class IGESDrawPerspectiveViewHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDrawPerspectiveViewHandle() : base(true) { }
     internal IGESDrawPerspectiveViewHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDrawPerspectiveViewRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDrawPerspectiveViewRelease(handle); return true; }
 }
 
 internal sealed class IGESDrawPlanarHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDrawPlanarHandle() : base(true) { }
     internal IGESDrawPlanarHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDrawPlanarRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDrawPlanarRelease(handle); return true; }
 }
 
 internal sealed class IGESDrawProtocolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDrawProtocolHandle() : base(true) { }
     internal IGESDrawProtocolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDrawProtocolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDrawProtocolRelease(handle); return true; }
 }
 
 internal sealed class IGESDrawReadWriteModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDrawReadWriteModuleHandle() : base(true) { }
     internal IGESDrawReadWriteModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDrawReadWriteModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDrawReadWriteModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESDrawRectArraySubfigureHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDrawRectArraySubfigureHandle() : base(true) { }
     internal IGESDrawRectArraySubfigureHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDrawRectArraySubfigureRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDrawRectArraySubfigureRelease(handle); return true; }
 }
 
 internal sealed class IGESDrawSegmentedViewsVisibleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDrawSegmentedViewsVisibleHandle() : base(true) { }
     internal IGESDrawSegmentedViewsVisibleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDrawSegmentedViewsVisibleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDrawSegmentedViewsVisibleRelease(handle); return true; }
 }
 
 internal sealed class IGESDrawSpecificModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDrawSpecificModuleHandle() : base(true) { }
     internal IGESDrawSpecificModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDrawSpecificModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDrawSpecificModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESDrawViewHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDrawViewHandle() : base(true) { }
     internal IGESDrawViewHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDrawViewRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDrawViewRelease(handle); return true; }
 }
 
 internal sealed class IGESDrawViewsVisibleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDrawViewsVisibleHandle() : base(true) { }
     internal IGESDrawViewsVisibleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDrawViewsVisibleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDrawViewsVisibleRelease(handle); return true; }
 }
 
 internal sealed class IGESDrawViewsVisibleWithAttrHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESDrawViewsVisibleWithAttrHandle() : base(true) { }
     internal IGESDrawViewsVisibleWithAttrHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESDrawViewsVisibleWithAttrRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESDrawViewsVisibleWithAttrRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomBSplineCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomBSplineCurveHandle() : base(true) { }
     internal IGESGeomBSplineCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomBSplineCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomBSplineCurveRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomBSplineSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomBSplineSurfaceHandle() : base(true) { }
     internal IGESGeomBSplineSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomBSplineSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomBSplineSurfaceRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomBoundaryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomBoundaryHandle() : base(true) { }
     internal IGESGeomBoundaryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomBoundaryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomBoundaryRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomBoundedSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomBoundedSurfaceHandle() : base(true) { }
     internal IGESGeomBoundedSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomBoundedSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomBoundedSurfaceRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomCircularArcHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomCircularArcHandle() : base(true) { }
     internal IGESGeomCircularArcHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomCircularArcRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomCircularArcRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomCompositeCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomCompositeCurveHandle() : base(true) { }
     internal IGESGeomCompositeCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomCompositeCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomCompositeCurveRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomConicArcHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomConicArcHandle() : base(true) { }
     internal IGESGeomConicArcHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomConicArcRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomConicArcRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomCopiousDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomCopiousDataHandle() : base(true) { }
     internal IGESGeomCopiousDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomCopiousDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomCopiousDataRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomCurveOnSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomCurveOnSurfaceHandle() : base(true) { }
     internal IGESGeomCurveOnSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomCurveOnSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomCurveOnSurfaceRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomDirectionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomDirectionHandle() : base(true) { }
     internal IGESGeomDirectionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomDirectionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomDirectionRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomFlashHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomFlashHandle() : base(true) { }
     internal IGESGeomFlashHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomFlashRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomFlashRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomGeneralModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomGeneralModuleHandle() : base(true) { }
     internal IGESGeomGeneralModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomGeneralModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomGeneralModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomLineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomLineHandle() : base(true) { }
     internal IGESGeomLineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomLineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomLineRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomOffsetCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomOffsetCurveHandle() : base(true) { }
     internal IGESGeomOffsetCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomOffsetCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomOffsetCurveRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomOffsetSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomOffsetSurfaceHandle() : base(true) { }
     internal IGESGeomOffsetSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomOffsetSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomOffsetSurfaceRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomPlaneHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomPlaneHandle() : base(true) { }
     internal IGESGeomPlaneHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomPlaneRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomPlaneRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomPointHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomPointHandle() : base(true) { }
     internal IGESGeomPointHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomPointRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomPointRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomProtocolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomProtocolHandle() : base(true) { }
     internal IGESGeomProtocolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomProtocolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomProtocolRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomReadWriteModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomReadWriteModuleHandle() : base(true) { }
     internal IGESGeomReadWriteModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomReadWriteModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomReadWriteModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomRuledSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomRuledSurfaceHandle() : base(true) { }
     internal IGESGeomRuledSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomRuledSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomRuledSurfaceRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomSpecificModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomSpecificModuleHandle() : base(true) { }
     internal IGESGeomSpecificModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomSpecificModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomSpecificModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomSplineCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomSplineCurveHandle() : base(true) { }
     internal IGESGeomSplineCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomSplineCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomSplineCurveRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomSplineSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomSplineSurfaceHandle() : base(true) { }
     internal IGESGeomSplineSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomSplineSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomSplineSurfaceRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomSurfaceOfRevolutionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomSurfaceOfRevolutionHandle() : base(true) { }
     internal IGESGeomSurfaceOfRevolutionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomSurfaceOfRevolutionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomSurfaceOfRevolutionRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomTabulatedCylinderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomTabulatedCylinderHandle() : base(true) { }
     internal IGESGeomTabulatedCylinderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomTabulatedCylinderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomTabulatedCylinderRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomTransformationMatrixHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomTransformationMatrixHandle() : base(true) { }
     internal IGESGeomTransformationMatrixHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomTransformationMatrixRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomTransformationMatrixRelease(handle); return true; }
 }
 
 internal sealed class IGESGeomTrimmedSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGeomTrimmedSurfaceHandle() : base(true) { }
     internal IGESGeomTrimmedSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGeomTrimmedSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGeomTrimmedSurfaceRelease(handle); return true; }
 }
 
 internal sealed class IGESGraphColorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGraphColorHandle() : base(true) { }
     internal IGESGraphColorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGraphColorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGraphColorRelease(handle); return true; }
 }
 
 internal sealed class IGESGraphDefinitionLevelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGraphDefinitionLevelHandle() : base(true) { }
     internal IGESGraphDefinitionLevelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGraphDefinitionLevelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGraphDefinitionLevelRelease(handle); return true; }
 }
 
 internal sealed class IGESGraphDrawingSizeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGraphDrawingSizeHandle() : base(true) { }
     internal IGESGraphDrawingSizeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGraphDrawingSizeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGraphDrawingSizeRelease(handle); return true; }
 }
 
 internal sealed class IGESGraphDrawingUnitsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGraphDrawingUnitsHandle() : base(true) { }
     internal IGESGraphDrawingUnitsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGraphDrawingUnitsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGraphDrawingUnitsRelease(handle); return true; }
 }
 
 internal sealed class IGESGraphGeneralModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGraphGeneralModuleHandle() : base(true) { }
     internal IGESGraphGeneralModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGraphGeneralModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGraphGeneralModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESGraphHighLightHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGraphHighLightHandle() : base(true) { }
     internal IGESGraphHighLightHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGraphHighLightRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGraphHighLightRelease(handle); return true; }
 }
 
 internal sealed class IGESGraphIntercharacterSpacingHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGraphIntercharacterSpacingHandle() : base(true) { }
     internal IGESGraphIntercharacterSpacingHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGraphIntercharacterSpacingRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGraphIntercharacterSpacingRelease(handle); return true; }
 }
 
 internal sealed class IGESGraphLineFontDefPatternHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGraphLineFontDefPatternHandle() : base(true) { }
     internal IGESGraphLineFontDefPatternHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGraphLineFontDefPatternRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGraphLineFontDefPatternRelease(handle); return true; }
 }
 
 internal sealed class IGESGraphLineFontDefTemplateHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGraphLineFontDefTemplateHandle() : base(true) { }
     internal IGESGraphLineFontDefTemplateHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGraphLineFontDefTemplateRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGraphLineFontDefTemplateRelease(handle); return true; }
 }
 
 internal sealed class IGESGraphLineFontPredefinedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGraphLineFontPredefinedHandle() : base(true) { }
     internal IGESGraphLineFontPredefinedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGraphLineFontPredefinedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGraphLineFontPredefinedRelease(handle); return true; }
 }
 
 internal sealed class IGESGraphNominalSizeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGraphNominalSizeHandle() : base(true) { }
     internal IGESGraphNominalSizeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGraphNominalSizeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGraphNominalSizeRelease(handle); return true; }
 }
 
 internal sealed class IGESGraphPickHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGraphPickHandle() : base(true) { }
     internal IGESGraphPickHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGraphPickRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGraphPickRelease(handle); return true; }
 }
 
 internal sealed class IGESGraphProtocolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGraphProtocolHandle() : base(true) { }
     internal IGESGraphProtocolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGraphProtocolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGraphProtocolRelease(handle); return true; }
 }
 
 internal sealed class IGESGraphReadWriteModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGraphReadWriteModuleHandle() : base(true) { }
     internal IGESGraphReadWriteModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGraphReadWriteModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGraphReadWriteModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESGraphSpecificModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGraphSpecificModuleHandle() : base(true) { }
     internal IGESGraphSpecificModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGraphSpecificModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGraphSpecificModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESGraphTextDisplayTemplateHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGraphTextDisplayTemplateHandle() : base(true) { }
     internal IGESGraphTextDisplayTemplateHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGraphTextDisplayTemplateRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGraphTextDisplayTemplateRelease(handle); return true; }
 }
 
 internal sealed class IGESGraphTextFontDefHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGraphTextFontDefHandle() : base(true) { }
     internal IGESGraphTextFontDefHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGraphTextFontDefRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGraphTextFontDefRelease(handle); return true; }
 }
 
 internal sealed class IGESGraphUniformRectGridHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESGraphUniformRectGridHandle() : base(true) { }
     internal IGESGraphUniformRectGridHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESGraphUniformRectGridRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESGraphUniformRectGridRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectActivatorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectActivatorHandle() : base(true) { }
     internal IGESSelectActivatorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectActivatorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectActivatorRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectAddFileCommentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectAddFileCommentHandle() : base(true) { }
     internal IGESSelectAddFileCommentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectAddFileCommentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectAddFileCommentRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectAddGroupHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectAddGroupHandle() : base(true) { }
     internal IGESSelectAddGroupHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectAddGroupRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectAddGroupRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectAutoCorrectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectAutoCorrectHandle() : base(true) { }
     internal IGESSelectAutoCorrectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectAutoCorrectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectAutoCorrectRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectChangeLevelListHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectChangeLevelListHandle() : base(true) { }
     internal IGESSelectChangeLevelListHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectChangeLevelListRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectChangeLevelListRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectChangeLevelNumberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectChangeLevelNumberHandle() : base(true) { }
     internal IGESSelectChangeLevelNumberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectChangeLevelNumberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectChangeLevelNumberRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectComputeStatusHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectComputeStatusHandle() : base(true) { }
     internal IGESSelectComputeStatusHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectComputeStatusRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectComputeStatusRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectCounterOfLevelNumberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectCounterOfLevelNumberHandle() : base(true) { }
     internal IGESSelectCounterOfLevelNumberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectCounterOfLevelNumberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectCounterOfLevelNumberRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectDispPerDrawingHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectDispPerDrawingHandle() : base(true) { }
     internal IGESSelectDispPerDrawingHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectDispPerDrawingRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectDispPerDrawingRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectDispPerSingleViewHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectDispPerSingleViewHandle() : base(true) { }
     internal IGESSelectDispPerSingleViewHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectDispPerSingleViewRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectDispPerSingleViewRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectDumperHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectDumperHandle() : base(true) { }
     internal IGESSelectDumperHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectDumperRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectDumperRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectEditDirPartHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectEditDirPartHandle() : base(true) { }
     internal IGESSelectEditDirPartHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectEditDirPartRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectEditDirPartRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectEditHeaderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectEditHeaderHandle() : base(true) { }
     internal IGESSelectEditHeaderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectEditHeaderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectEditHeaderRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectFileModifierHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectFileModifierHandle() : base(true) { }
     internal IGESSelectFileModifierHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectFileModifierRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectFileModifierRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectFloatFormatHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectFloatFormatHandle() : base(true) { }
     internal IGESSelectFloatFormatHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectFloatFormatRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectFloatFormatRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectIGESNameHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectIGESNameHandle() : base(true) { }
     internal IGESSelectIGESNameHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectIGESNameRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectIGESNameRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectIGESTypeFormHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectIGESTypeFormHandle() : base(true) { }
     internal IGESSelectIGESTypeFormHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectIGESTypeFormRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectIGESTypeFormRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectModelModifierHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectModelModifierHandle() : base(true) { }
     internal IGESSelectModelModifierHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectModelModifierRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectModelModifierRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectRebuildDrawingsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectRebuildDrawingsHandle() : base(true) { }
     internal IGESSelectRebuildDrawingsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectRebuildDrawingsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectRebuildDrawingsRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectRebuildGroupsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectRebuildGroupsHandle() : base(true) { }
     internal IGESSelectRebuildGroupsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectRebuildGroupsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectRebuildGroupsRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectRemoveCurvesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectRemoveCurvesHandle() : base(true) { }
     internal IGESSelectRemoveCurvesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectRemoveCurvesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectRemoveCurvesRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectSelectBasicGeomHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSelectBasicGeomHandle() : base(true) { }
     internal IGESSelectSelectBasicGeomHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSelectBasicGeomRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSelectBasicGeomRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectSelectBypassGroupHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSelectBypassGroupHandle() : base(true) { }
     internal IGESSelectSelectBypassGroupHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSelectBypassGroupRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSelectBypassGroupRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectSelectBypassSubfigureHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSelectBypassSubfigureHandle() : base(true) { }
     internal IGESSelectSelectBypassSubfigureHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSelectBypassSubfigureRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSelectBypassSubfigureRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectSelectDrawingFromHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSelectDrawingFromHandle() : base(true) { }
     internal IGESSelectSelectDrawingFromHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSelectDrawingFromRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSelectDrawingFromRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectSelectFacesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSelectFacesHandle() : base(true) { }
     internal IGESSelectSelectFacesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSelectFacesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSelectFacesRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectSelectFromDrawingHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSelectFromDrawingHandle() : base(true) { }
     internal IGESSelectSelectFromDrawingHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSelectFromDrawingRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSelectFromDrawingRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectSelectFromSingleViewHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSelectFromSingleViewHandle() : base(true) { }
     internal IGESSelectSelectFromSingleViewHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSelectFromSingleViewRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSelectFromSingleViewRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectSelectLevelNumberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSelectLevelNumberHandle() : base(true) { }
     internal IGESSelectSelectLevelNumberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSelectLevelNumberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSelectLevelNumberRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectSelectNameHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSelectNameHandle() : base(true) { }
     internal IGESSelectSelectNameHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSelectNameRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSelectNameRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectSelectPCurvesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSelectPCurvesHandle() : base(true) { }
     internal IGESSelectSelectPCurvesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSelectPCurvesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSelectPCurvesRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectSelectSingleViewFromHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSelectSingleViewFromHandle() : base(true) { }
     internal IGESSelectSelectSingleViewFromHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSelectSingleViewFromRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSelectSingleViewFromRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectSelectSubordinateHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSelectSubordinateHandle() : base(true) { }
     internal IGESSelectSelectSubordinateHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSelectSubordinateRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSelectSubordinateRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectSelectVisibleStatusHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSelectVisibleStatusHandle() : base(true) { }
     internal IGESSelectSelectVisibleStatusHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSelectVisibleStatusRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSelectVisibleStatusRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectSetGlobalParameterHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSetGlobalParameterHandle() : base(true) { }
     internal IGESSelectSetGlobalParameterHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSetGlobalParameterRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSetGlobalParameterRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectSetLabelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSetLabelHandle() : base(true) { }
     internal IGESSelectSetLabelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSetLabelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSetLabelRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectSetVersion5Handle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSetVersion5Handle() : base(true) { }
     internal IGESSelectSetVersion5Handle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSetVersion5Release(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSetVersion5Release(handle); return true; }
 }
 
 internal sealed class IGESSelectSignColorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSignColorHandle() : base(true) { }
     internal IGESSelectSignColorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSignColorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSignColorRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectSignLevelNumberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSignLevelNumberHandle() : base(true) { }
     internal IGESSelectSignLevelNumberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSignLevelNumberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSignLevelNumberRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectSignStatusHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSignStatusHandle() : base(true) { }
     internal IGESSelectSignStatusHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSignStatusRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSignStatusRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectSplineToBSplineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectSplineToBSplineHandle() : base(true) { }
     internal IGESSelectSplineToBSplineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectSplineToBSplineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectSplineToBSplineRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectUpdateCreationDateHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectUpdateCreationDateHandle() : base(true) { }
     internal IGESSelectUpdateCreationDateHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectUpdateCreationDateRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectUpdateCreationDateRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectUpdateFileNameHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectUpdateFileNameHandle() : base(true) { }
     internal IGESSelectUpdateFileNameHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectUpdateFileNameRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectUpdateFileNameRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectUpdateLastChangeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectUpdateLastChangeHandle() : base(true) { }
     internal IGESSelectUpdateLastChangeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectUpdateLastChangeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectUpdateLastChangeRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectViewSorterHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectViewSorterHandle() : base(true) { }
     internal IGESSelectViewSorterHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectViewSorterRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectViewSorterRelease(handle); return true; }
 }
 
 internal sealed class IGESSelectWorkLibraryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSelectWorkLibraryHandle() : base(true) { }
     internal IGESSelectWorkLibraryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSelectWorkLibraryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSelectWorkLibraryRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidBlockHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidBlockHandle() : base(true) { }
     internal IGESSolidBlockHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidBlockRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidBlockRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidBooleanTreeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidBooleanTreeHandle() : base(true) { }
     internal IGESSolidBooleanTreeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidBooleanTreeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidBooleanTreeRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidConeFrustumHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidConeFrustumHandle() : base(true) { }
     internal IGESSolidConeFrustumHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidConeFrustumRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidConeFrustumRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidConicalSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidConicalSurfaceHandle() : base(true) { }
     internal IGESSolidConicalSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidConicalSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidConicalSurfaceRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidCylinderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidCylinderHandle() : base(true) { }
     internal IGESSolidCylinderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidCylinderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidCylinderRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidCylindricalSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidCylindricalSurfaceHandle() : base(true) { }
     internal IGESSolidCylindricalSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidCylindricalSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidCylindricalSurfaceRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidEdgeListHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidEdgeListHandle() : base(true) { }
     internal IGESSolidEdgeListHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidEdgeListRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidEdgeListRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidEllipsoidHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidEllipsoidHandle() : base(true) { }
     internal IGESSolidEllipsoidHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidEllipsoidRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidEllipsoidRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidFaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidFaceHandle() : base(true) { }
     internal IGESSolidFaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidFaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidFaceRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidGeneralModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidGeneralModuleHandle() : base(true) { }
     internal IGESSolidGeneralModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidGeneralModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidGeneralModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidLoopHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidLoopHandle() : base(true) { }
     internal IGESSolidLoopHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidLoopRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidLoopRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidManifoldSolidHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidManifoldSolidHandle() : base(true) { }
     internal IGESSolidManifoldSolidHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidManifoldSolidRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidManifoldSolidRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidPlaneSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidPlaneSurfaceHandle() : base(true) { }
     internal IGESSolidPlaneSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidPlaneSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidPlaneSurfaceRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidProtocolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidProtocolHandle() : base(true) { }
     internal IGESSolidProtocolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidProtocolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidProtocolRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidReadWriteModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidReadWriteModuleHandle() : base(true) { }
     internal IGESSolidReadWriteModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidReadWriteModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidReadWriteModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidRightAngularWedgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidRightAngularWedgeHandle() : base(true) { }
     internal IGESSolidRightAngularWedgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidRightAngularWedgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidRightAngularWedgeRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidSelectedComponentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidSelectedComponentHandle() : base(true) { }
     internal IGESSolidSelectedComponentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidSelectedComponentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidSelectedComponentRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidShellHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidShellHandle() : base(true) { }
     internal IGESSolidShellHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidShellRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidShellRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidSolidAssemblyHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidSolidAssemblyHandle() : base(true) { }
     internal IGESSolidSolidAssemblyHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidSolidAssemblyRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidSolidAssemblyRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidSolidInstanceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidSolidInstanceHandle() : base(true) { }
     internal IGESSolidSolidInstanceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidSolidInstanceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidSolidInstanceRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidSolidOfLinearExtrusionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidSolidOfLinearExtrusionHandle() : base(true) { }
     internal IGESSolidSolidOfLinearExtrusionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidSolidOfLinearExtrusionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidSolidOfLinearExtrusionRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidSolidOfRevolutionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidSolidOfRevolutionHandle() : base(true) { }
     internal IGESSolidSolidOfRevolutionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidSolidOfRevolutionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidSolidOfRevolutionRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidSpecificModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidSpecificModuleHandle() : base(true) { }
     internal IGESSolidSpecificModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidSpecificModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidSpecificModuleRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidSphereHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidSphereHandle() : base(true) { }
     internal IGESSolidSphereHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidSphereRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidSphereRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidSphericalSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidSphericalSurfaceHandle() : base(true) { }
     internal IGESSolidSphericalSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidSphericalSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidSphericalSurfaceRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidToroidalSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidToroidalSurfaceHandle() : base(true) { }
     internal IGESSolidToroidalSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidToroidalSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidToroidalSurfaceRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidTorusHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidTorusHandle() : base(true) { }
     internal IGESSolidTorusHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidTorusRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidTorusRelease(handle); return true; }
 }
 
 internal sealed class IGESSolidVertexListHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESSolidVertexListHandle() : base(true) { }
     internal IGESSolidVertexListHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESSolidVertexListRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESSolidVertexListRelease(handle); return true; }
 }
 
 internal sealed class IGESToBRepActorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESToBRepActorHandle() : base(true) { }
     internal IGESToBRepActorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESToBRepActorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESToBRepActorRelease(handle); return true; }
 }
 
 internal sealed class IGESToBRepAlgoContainerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESToBRepAlgoContainerHandle() : base(true) { }
     internal IGESToBRepAlgoContainerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESToBRepAlgoContainerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESToBRepAlgoContainerRelease(handle); return true; }
 }
 
 internal sealed class IGESToBRepIGESBoundaryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESToBRepIGESBoundaryHandle() : base(true) { }
     internal IGESToBRepIGESBoundaryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESToBRepIGESBoundaryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESToBRepIGESBoundaryRelease(handle); return true; }
 }
 
 internal sealed class IGESToBRepToolContainerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IGESToBRepToolContainerHandle() : base(true) { }
     internal IGESToBRepToolContainerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IGESToBRepToolContainerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.IGESToBRepToolContainerRelease(handle); return true; }
 }
 
 internal sealed class InterfaceCheckHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceCheckHandle() : base(true) { }
     internal InterfaceCheckHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceCheckRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceCheckRelease(handle); return true; }
 }
 
 internal sealed class InterfaceCopyControlHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceCopyControlHandle() : base(true) { }
     internal InterfaceCopyControlHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceCopyControlRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceCopyControlRelease(handle); return true; }
 }
 
 internal sealed class InterfaceCopyMapHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceCopyMapHandle() : base(true) { }
     internal InterfaceCopyMapHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceCopyMapRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceCopyMapRelease(handle); return true; }
 }
 
 internal sealed class InterfaceEntityClusterHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceEntityClusterHandle() : base(true) { }
     internal InterfaceEntityClusterHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceEntityClusterRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceEntityClusterRelease(handle); return true; }
 }
 
 internal sealed class InterfaceFileReaderDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceFileReaderDataHandle() : base(true) { }
     internal InterfaceFileReaderDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceFileReaderDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceFileReaderDataRelease(handle); return true; }
 }
 
 internal sealed class InterfaceGToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceGToolHandle() : base(true) { }
     internal InterfaceGToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceGToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceGToolRelease(handle); return true; }
 }
 
 internal sealed class InterfaceGeneralModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceGeneralModuleHandle() : base(true) { }
     internal InterfaceGeneralModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceGeneralModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceGeneralModuleRelease(handle); return true; }
 }
 
 internal sealed class InterfaceGlobalNodeOfGeneralLibHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceGlobalNodeOfGeneralLibHandle() : base(true) { }
     internal InterfaceGlobalNodeOfGeneralLibHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceGlobalNodeOfGeneralLibRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceGlobalNodeOfGeneralLibRelease(handle); return true; }
 }
 
 internal sealed class InterfaceGlobalNodeOfReaderLibHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceGlobalNodeOfReaderLibHandle() : base(true) { }
     internal InterfaceGlobalNodeOfReaderLibHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceGlobalNodeOfReaderLibRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceGlobalNodeOfReaderLibRelease(handle); return true; }
 }
 
 internal sealed class InterfaceHGraphHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceHGraphHandle() : base(true) { }
     internal InterfaceHGraphHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceHGraphRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceHGraphRelease(handle); return true; }
 }
 
 internal sealed class InterfaceIntValHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceIntValHandle() : base(true) { }
     internal InterfaceIntValHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceIntValRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceIntValRelease(handle); return true; }
 }
 
 internal sealed class InterfaceInterfaceModelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceInterfaceModelHandle() : base(true) { }
     internal InterfaceInterfaceModelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceInterfaceModelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceInterfaceModelRelease(handle); return true; }
 }
 
 internal sealed class InterfaceNodeOfGeneralLibHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceNodeOfGeneralLibHandle() : base(true) { }
     internal InterfaceNodeOfGeneralLibHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceNodeOfGeneralLibRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceNodeOfGeneralLibRelease(handle); return true; }
 }
 
 internal sealed class InterfaceNodeOfReaderLibHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceNodeOfReaderLibHandle() : base(true) { }
     internal InterfaceNodeOfReaderLibHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceNodeOfReaderLibRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceNodeOfReaderLibRelease(handle); return true; }
 }
 
 internal sealed class InterfaceParamListHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceParamListHandle() : base(true) { }
     internal InterfaceParamListHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceParamListRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceParamListRelease(handle); return true; }
 }
 
 internal sealed class InterfaceParamSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceParamSetHandle() : base(true) { }
     internal InterfaceParamSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceParamSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceParamSetRelease(handle); return true; }
 }
 
 internal sealed class InterfaceProtocolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceProtocolHandle() : base(true) { }
     internal InterfaceProtocolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceProtocolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceProtocolRelease(handle); return true; }
 }
 
 internal sealed class InterfaceReaderModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceReaderModuleHandle() : base(true) { }
     internal InterfaceReaderModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceReaderModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceReaderModuleRelease(handle); return true; }
 }
 
 internal sealed class InterfaceReportEntityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceReportEntityHandle() : base(true) { }
     internal InterfaceReportEntityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceReportEntityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceReportEntityRelease(handle); return true; }
 }
 
 internal sealed class InterfaceSignLabelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceSignLabelHandle() : base(true) { }
     internal InterfaceSignLabelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceSignLabelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceSignLabelRelease(handle); return true; }
 }
 
 internal sealed class InterfaceSignTypeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceSignTypeHandle() : base(true) { }
     internal InterfaceSignTypeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceSignTypeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceSignTypeRelease(handle); return true; }
 }
 
 internal sealed class InterfaceStaticHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceStaticHandle() : base(true) { }
     internal InterfaceStaticHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceStaticRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceStaticRelease(handle); return true; }
 }
 
 internal sealed class InterfaceTypedValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceTypedValueHandle() : base(true) { }
     internal InterfaceTypedValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceTypedValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceTypedValueRelease(handle); return true; }
 }
 
 internal sealed class InterfaceUndefinedContentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal InterfaceUndefinedContentHandle() : base(true) { }
     internal InterfaceUndefinedContentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.InterfaceUndefinedContentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.InterfaceUndefinedContentRelease(handle); return true; }
 }
 
 internal sealed class MoniToolCaseDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MoniToolCaseDataHandle() : base(true) { }
     internal MoniToolCaseDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MoniToolCaseDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.MoniToolCaseDataRelease(handle); return true; }
 }
 
 internal sealed class MoniToolElementHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MoniToolElementHandle() : base(true) { }
     internal MoniToolElementHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MoniToolElementRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.MoniToolElementRelease(handle); return true; }
 }
 
 internal sealed class MoniToolIntValHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MoniToolIntValHandle() : base(true) { }
     internal MoniToolIntValHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MoniToolIntValRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.MoniToolIntValRelease(handle); return true; }
 }
 
 internal sealed class MoniToolRealValHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MoniToolRealValHandle() : base(true) { }
     internal MoniToolRealValHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MoniToolRealValRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.MoniToolRealValRelease(handle); return true; }
 }
 
 internal sealed class MoniToolSignShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MoniToolSignShapeHandle() : base(true) { }
     internal MoniToolSignShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MoniToolSignShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.MoniToolSignShapeRelease(handle); return true; }
 }
 
 internal sealed class MoniToolSignTextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MoniToolSignTextHandle() : base(true) { }
     internal MoniToolSignTextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MoniToolSignTextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.MoniToolSignTextRelease(handle); return true; }
 }
 
 internal sealed class MoniToolTimerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MoniToolTimerHandle() : base(true) { }
     internal MoniToolTimerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MoniToolTimerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.MoniToolTimerRelease(handle); return true; }
 }
 
 internal sealed class MoniToolTransientElemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MoniToolTransientElemHandle() : base(true) { }
     internal MoniToolTransientElemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MoniToolTransientElemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.MoniToolTransientElemRelease(handle); return true; }
 }
 
 internal sealed class MoniToolTypedValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MoniToolTypedValueHandle() : base(true) { }
     internal MoniToolTypedValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MoniToolTypedValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.MoniToolTypedValueRelease(handle); return true; }
 }
 
 internal sealed class RWGltfCafReaderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWGltfCafReaderHandle() : base(true) { }
     internal RWGltfCafReaderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWGltfCafReaderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWGltfCafReaderRelease(handle); return true; }
 }
 
 internal sealed class RWGltfCafWriterHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWGltfCafWriterHandle() : base(true) { }
     internal RWGltfCafWriterHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWGltfCafWriterRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWGltfCafWriterRelease(handle); return true; }
 }
 
 internal sealed class RWGltfGltfFaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWGltfGltfFaceHandle() : base(true) { }
     internal RWGltfGltfFaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWGltfGltfFaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWGltfGltfFaceRelease(handle); return true; }
 }
 
 internal sealed class RWGltfGltfLatePrimitiveArrayHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWGltfGltfLatePrimitiveArrayHandle() : base(true) { }
     internal RWGltfGltfLatePrimitiveArrayHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWGltfGltfLatePrimitiveArrayRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWGltfGltfLatePrimitiveArrayRelease(handle); return true; }
 }
 
 internal sealed class RWGltfGltfMaterialMapHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWGltfGltfMaterialMapHandle() : base(true) { }
     internal RWGltfGltfMaterialMapHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWGltfGltfMaterialMapRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWGltfGltfMaterialMapRelease(handle); return true; }
 }
 
 internal sealed class RWGltfMaterialCommonHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWGltfMaterialCommonHandle() : base(true) { }
     internal RWGltfMaterialCommonHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWGltfMaterialCommonRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWGltfMaterialCommonRelease(handle); return true; }
 }
 
 internal sealed class RWGltfMaterialMetallicRoughnessHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWGltfMaterialMetallicRoughnessHandle() : base(true) { }
     internal RWGltfMaterialMetallicRoughnessHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWGltfMaterialMetallicRoughnessRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWGltfMaterialMetallicRoughnessRelease(handle); return true; }
 }
 
 internal sealed class RWGltfTriangulationReaderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWGltfTriangulationReaderHandle() : base(true) { }
     internal RWGltfTriangulationReaderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWGltfTriangulationReaderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWGltfTriangulationReaderRelease(handle); return true; }
 }
 
 internal sealed class RWHeaderSectionGeneralModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWHeaderSectionGeneralModuleHandle() : base(true) { }
     internal RWHeaderSectionGeneralModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWHeaderSectionGeneralModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWHeaderSectionGeneralModuleRelease(handle); return true; }
 }
 
 internal sealed class RWHeaderSectionReadWriteModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWHeaderSectionReadWriteModuleHandle() : base(true) { }
     internal RWHeaderSectionReadWriteModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWHeaderSectionReadWriteModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWHeaderSectionReadWriteModuleRelease(handle); return true; }
 }
 
 internal sealed class RWMeshCafReaderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWMeshCafReaderHandle() : base(true) { }
     internal RWMeshCafReaderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWMeshCafReaderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWMeshCafReaderRelease(handle); return true; }
 }
 
 internal sealed class RWMeshMaterialMapHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWMeshMaterialMapHandle() : base(true) { }
     internal RWMeshMaterialMapHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWMeshMaterialMapRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWMeshMaterialMapRelease(handle); return true; }
 }
 
 internal sealed class RWMeshTriangulationReaderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWMeshTriangulationReaderHandle() : base(true) { }
     internal RWMeshTriangulationReaderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWMeshTriangulationReaderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWMeshTriangulationReaderRelease(handle); return true; }
 }
 
 internal sealed class RWMeshTriangulationSourceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWMeshTriangulationSourceHandle() : base(true) { }
     internal RWMeshTriangulationSourceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWMeshTriangulationSourceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWMeshTriangulationSourceRelease(handle); return true; }
 }
 
 internal sealed class RWObjCafReaderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWObjCafReaderHandle() : base(true) { }
     internal RWObjCafReaderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWObjCafReaderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWObjCafReaderRelease(handle); return true; }
 }
 
 internal sealed class RWObjCafWriterHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWObjCafWriterHandle() : base(true) { }
     internal RWObjCafWriterHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWObjCafWriterRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWObjCafWriterRelease(handle); return true; }
 }
 
 internal sealed class RWObjObjMaterialMapHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWObjObjMaterialMapHandle() : base(true) { }
     internal RWObjObjMaterialMapHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWObjObjMaterialMapRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWObjObjMaterialMapRelease(handle); return true; }
 }
 
 internal sealed class RWObjReaderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWObjReaderHandle() : base(true) { }
     internal RWObjReaderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWObjReaderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWObjReaderRelease(handle); return true; }
 }
 
 internal sealed class RWObjTriangulationReaderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWObjTriangulationReaderHandle() : base(true) { }
     internal RWObjTriangulationReaderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWObjTriangulationReaderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWObjTriangulationReaderRelease(handle); return true; }
 }
 
 internal sealed class RWPlyCafWriterHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWPlyCafWriterHandle() : base(true) { }
     internal RWPlyCafWriterHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWPlyCafWriterRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWPlyCafWriterRelease(handle); return true; }
 }
 
 internal sealed class RWStlReaderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal RWStlReaderHandle() : base(true) { }
     internal RWStlReaderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.RWStlReaderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.RWStlReaderRelease(handle); return true; }
 }
 
 internal sealed class STEPControlActorReadHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal STEPControlActorReadHandle() : base(true) { }
     internal STEPControlActorReadHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.STEPControlActorReadRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.STEPControlActorReadRelease(handle); return true; }
 }
 
 internal sealed class STEPControlActorWriteHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal STEPControlActorWriteHandle() : base(true) { }
     internal STEPControlActorWriteHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.STEPControlActorWriteRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.STEPControlActorWriteRelease(handle); return true; }
 }
 
 internal sealed class STEPControlControllerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal STEPControlControllerHandle() : base(true) { }
     internal STEPControlControllerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.STEPControlControllerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.STEPControlControllerRelease(handle); return true; }
 }
 
 internal sealed class STEPEditEditContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal STEPEditEditContextHandle() : base(true) { }
     internal STEPEditEditContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.STEPEditEditContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.STEPEditEditContextRelease(handle); return true; }
 }
 
 internal sealed class STEPEditEditSDRHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal STEPEditEditSDRHandle() : base(true) { }
     internal STEPEditEditSDRHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.STEPEditEditSDRRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.STEPEditEditSDRRelease(handle); return true; }
 }
 
 internal sealed class STEPSelectionsAssemblyComponentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal STEPSelectionsAssemblyComponentHandle() : base(true) { }
     internal STEPSelectionsAssemblyComponentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.STEPSelectionsAssemblyComponentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.STEPSelectionsAssemblyComponentRelease(handle); return true; }
 }
 
 internal sealed class STEPSelectionsAssemblyLinkHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal STEPSelectionsAssemblyLinkHandle() : base(true) { }
     internal STEPSelectionsAssemblyLinkHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.STEPSelectionsAssemblyLinkRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.STEPSelectionsAssemblyLinkRelease(handle); return true; }
 }
 
 internal sealed class STEPSelectionsSelectAssemblyHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal STEPSelectionsSelectAssemblyHandle() : base(true) { }
     internal STEPSelectionsSelectAssemblyHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.STEPSelectionsSelectAssemblyRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.STEPSelectionsSelectAssemblyRelease(handle); return true; }
 }
 
 internal sealed class STEPSelectionsSelectDerivedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal STEPSelectionsSelectDerivedHandle() : base(true) { }
     internal STEPSelectionsSelectDerivedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.STEPSelectionsSelectDerivedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.STEPSelectionsSelectDerivedRelease(handle); return true; }
 }
 
 internal sealed class STEPSelectionsSelectFacesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal STEPSelectionsSelectFacesHandle() : base(true) { }
     internal STEPSelectionsSelectFacesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.STEPSelectionsSelectFacesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.STEPSelectionsSelectFacesRelease(handle); return true; }
 }
 
 internal sealed class STEPSelectionsSelectForTransferHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal STEPSelectionsSelectForTransferHandle() : base(true) { }
     internal STEPSelectionsSelectForTransferHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.STEPSelectionsSelectForTransferRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.STEPSelectionsSelectForTransferRelease(handle); return true; }
 }
 
 internal sealed class STEPSelectionsSelectGSCurvesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal STEPSelectionsSelectGSCurvesHandle() : base(true) { }
     internal STEPSelectionsSelectGSCurvesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.STEPSelectionsSelectGSCurvesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.STEPSelectionsSelectGSCurvesRelease(handle); return true; }
 }
 
 internal sealed class STEPSelectionsSelectInstancesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal STEPSelectionsSelectInstancesHandle() : base(true) { }
     internal STEPSelectionsSelectInstancesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.STEPSelectionsSelectInstancesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.STEPSelectionsSelectInstancesRelease(handle); return true; }
 }
 
 internal sealed class StepAP203CcDesignApprovalHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP203CcDesignApprovalHandle() : base(true) { }
     internal StepAP203CcDesignApprovalHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP203CcDesignApprovalRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP203CcDesignApprovalRelease(handle); return true; }
 }
 
 internal sealed class StepAP203CcDesignCertificationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP203CcDesignCertificationHandle() : base(true) { }
     internal StepAP203CcDesignCertificationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP203CcDesignCertificationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP203CcDesignCertificationRelease(handle); return true; }
 }
 
 internal sealed class StepAP203CcDesignContractHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP203CcDesignContractHandle() : base(true) { }
     internal StepAP203CcDesignContractHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP203CcDesignContractRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP203CcDesignContractRelease(handle); return true; }
 }
 
 internal sealed class StepAP203CcDesignDateAndTimeAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP203CcDesignDateAndTimeAssignmentHandle() : base(true) { }
     internal StepAP203CcDesignDateAndTimeAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP203CcDesignDateAndTimeAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP203CcDesignDateAndTimeAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP203CcDesignPersonAndOrganizationAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP203CcDesignPersonAndOrganizationAssignmentHandle() : base(true) { }
     internal StepAP203CcDesignPersonAndOrganizationAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP203CcDesignPersonAndOrganizationAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP203CcDesignPersonAndOrganizationAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP203CcDesignSecurityClassificationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP203CcDesignSecurityClassificationHandle() : base(true) { }
     internal StepAP203CcDesignSecurityClassificationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP203CcDesignSecurityClassificationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP203CcDesignSecurityClassificationRelease(handle); return true; }
 }
 
 internal sealed class StepAP203CcDesignSpecificationReferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP203CcDesignSpecificationReferenceHandle() : base(true) { }
     internal StepAP203CcDesignSpecificationReferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP203CcDesignSpecificationReferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP203CcDesignSpecificationReferenceRelease(handle); return true; }
 }
 
 internal sealed class StepAP203ChangeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP203ChangeHandle() : base(true) { }
     internal StepAP203ChangeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP203ChangeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP203ChangeRelease(handle); return true; }
 }
 
 internal sealed class StepAP203ChangeRequestHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP203ChangeRequestHandle() : base(true) { }
     internal StepAP203ChangeRequestHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP203ChangeRequestRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP203ChangeRequestRelease(handle); return true; }
 }
 
 internal sealed class StepAP203StartRequestHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP203StartRequestHandle() : base(true) { }
     internal StepAP203StartRequestHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP203StartRequestRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP203StartRequestRelease(handle); return true; }
 }
 
 internal sealed class StepAP203StartWorkHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP203StartWorkHandle() : base(true) { }
     internal StepAP203StartWorkHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP203StartWorkRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP203StartWorkRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AppliedApprovalAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AppliedApprovalAssignmentHandle() : base(true) { }
     internal StepAP214AppliedApprovalAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AppliedApprovalAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AppliedApprovalAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AppliedDateAndTimeAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AppliedDateAndTimeAssignmentHandle() : base(true) { }
     internal StepAP214AppliedDateAndTimeAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AppliedDateAndTimeAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AppliedDateAndTimeAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AppliedDateAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AppliedDateAssignmentHandle() : base(true) { }
     internal StepAP214AppliedDateAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AppliedDateAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AppliedDateAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AppliedDocumentReferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AppliedDocumentReferenceHandle() : base(true) { }
     internal StepAP214AppliedDocumentReferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AppliedDocumentReferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AppliedDocumentReferenceRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AppliedExternalIdentificationAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AppliedExternalIdentificationAssignmentHandle() : base(true) { }
     internal StepAP214AppliedExternalIdentificationAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AppliedExternalIdentificationAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AppliedExternalIdentificationAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AppliedGroupAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AppliedGroupAssignmentHandle() : base(true) { }
     internal StepAP214AppliedGroupAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AppliedGroupAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AppliedGroupAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AppliedOrganizationAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AppliedOrganizationAssignmentHandle() : base(true) { }
     internal StepAP214AppliedOrganizationAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AppliedOrganizationAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AppliedOrganizationAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AppliedPersonAndOrganizationAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AppliedPersonAndOrganizationAssignmentHandle() : base(true) { }
     internal StepAP214AppliedPersonAndOrganizationAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AppliedPersonAndOrganizationAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AppliedPersonAndOrganizationAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AppliedPresentedItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AppliedPresentedItemHandle() : base(true) { }
     internal StepAP214AppliedPresentedItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AppliedPresentedItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AppliedPresentedItemRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AppliedSecurityClassificationAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AppliedSecurityClassificationAssignmentHandle() : base(true) { }
     internal StepAP214AppliedSecurityClassificationAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AppliedSecurityClassificationAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AppliedSecurityClassificationAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AutoDesignActualDateAndTimeAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AutoDesignActualDateAndTimeAssignmentHandle() : base(true) { }
     internal StepAP214AutoDesignActualDateAndTimeAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AutoDesignActualDateAndTimeAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AutoDesignActualDateAndTimeAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AutoDesignActualDateAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AutoDesignActualDateAssignmentHandle() : base(true) { }
     internal StepAP214AutoDesignActualDateAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AutoDesignActualDateAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AutoDesignActualDateAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AutoDesignApprovalAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AutoDesignApprovalAssignmentHandle() : base(true) { }
     internal StepAP214AutoDesignApprovalAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AutoDesignApprovalAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AutoDesignApprovalAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AutoDesignDateAndPersonAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AutoDesignDateAndPersonAssignmentHandle() : base(true) { }
     internal StepAP214AutoDesignDateAndPersonAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AutoDesignDateAndPersonAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AutoDesignDateAndPersonAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AutoDesignDocumentReferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AutoDesignDocumentReferenceHandle() : base(true) { }
     internal StepAP214AutoDesignDocumentReferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AutoDesignDocumentReferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AutoDesignDocumentReferenceRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AutoDesignGroupAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AutoDesignGroupAssignmentHandle() : base(true) { }
     internal StepAP214AutoDesignGroupAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AutoDesignGroupAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AutoDesignGroupAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AutoDesignNominalDateAndTimeAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AutoDesignNominalDateAndTimeAssignmentHandle() : base(true) { }
     internal StepAP214AutoDesignNominalDateAndTimeAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AutoDesignNominalDateAndTimeAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AutoDesignNominalDateAndTimeAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AutoDesignNominalDateAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AutoDesignNominalDateAssignmentHandle() : base(true) { }
     internal StepAP214AutoDesignNominalDateAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AutoDesignNominalDateAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AutoDesignNominalDateAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AutoDesignOrganizationAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AutoDesignOrganizationAssignmentHandle() : base(true) { }
     internal StepAP214AutoDesignOrganizationAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AutoDesignOrganizationAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AutoDesignOrganizationAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AutoDesignPersonAndOrganizationAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AutoDesignPersonAndOrganizationAssignmentHandle() : base(true) { }
     internal StepAP214AutoDesignPersonAndOrganizationAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AutoDesignPersonAndOrganizationAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AutoDesignPersonAndOrganizationAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AutoDesignPresentedItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AutoDesignPresentedItemHandle() : base(true) { }
     internal StepAP214AutoDesignPresentedItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AutoDesignPresentedItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AutoDesignPresentedItemRelease(handle); return true; }
 }
 
 internal sealed class StepAP214AutoDesignSecurityClassificationAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214AutoDesignSecurityClassificationAssignmentHandle() : base(true) { }
     internal StepAP214AutoDesignSecurityClassificationAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214AutoDesignSecurityClassificationAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214AutoDesignSecurityClassificationAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepAP214ClassHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214ClassHandle() : base(true) { }
     internal StepAP214ClassHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214ClassRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214ClassRelease(handle); return true; }
 }
 
 internal sealed class StepAP214ExternallyDefinedClassHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214ExternallyDefinedClassHandle() : base(true) { }
     internal StepAP214ExternallyDefinedClassHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214ExternallyDefinedClassRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214ExternallyDefinedClassRelease(handle); return true; }
 }
 
 internal sealed class StepAP214ExternallyDefinedGeneralPropertyHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214ExternallyDefinedGeneralPropertyHandle() : base(true) { }
     internal StepAP214ExternallyDefinedGeneralPropertyHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214ExternallyDefinedGeneralPropertyRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214ExternallyDefinedGeneralPropertyRelease(handle); return true; }
 }
 
 internal sealed class StepAP214ProtocolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214ProtocolHandle() : base(true) { }
     internal StepAP214ProtocolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214ProtocolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214ProtocolRelease(handle); return true; }
 }
 
 internal sealed class StepAP214RepItemGroupHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP214RepItemGroupHandle() : base(true) { }
     internal StepAP214RepItemGroupHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP214RepItemGroupRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP214RepItemGroupRelease(handle); return true; }
 }
 
 internal sealed class StepAP242DraughtingModelItemAssociationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP242DraughtingModelItemAssociationHandle() : base(true) { }
     internal StepAP242DraughtingModelItemAssociationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP242DraughtingModelItemAssociationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP242DraughtingModelItemAssociationRelease(handle); return true; }
 }
 
 internal sealed class StepAP242GeometricItemSpecificUsageHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP242GeometricItemSpecificUsageHandle() : base(true) { }
     internal StepAP242GeometricItemSpecificUsageHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP242GeometricItemSpecificUsageRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP242GeometricItemSpecificUsageRelease(handle); return true; }
 }
 
 internal sealed class StepAP242IdAttributeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP242IdAttributeHandle() : base(true) { }
     internal StepAP242IdAttributeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP242IdAttributeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP242IdAttributeRelease(handle); return true; }
 }
 
 internal sealed class StepAP242ItemIdentifiedRepresentationUsageHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepAP242ItemIdentifiedRepresentationUsageHandle() : base(true) { }
     internal StepAP242ItemIdentifiedRepresentationUsageHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepAP242ItemIdentifiedRepresentationUsageRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepAP242ItemIdentifiedRepresentationUsageRelease(handle); return true; }
 }
 
 internal sealed class StepBasicActionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicActionHandle() : base(true) { }
     internal StepBasicActionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicActionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicActionRelease(handle); return true; }
 }
 
 internal sealed class StepBasicActionAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicActionAssignmentHandle() : base(true) { }
     internal StepBasicActionAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicActionAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicActionAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepBasicActionMethodHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicActionMethodHandle() : base(true) { }
     internal StepBasicActionMethodHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicActionMethodRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicActionMethodRelease(handle); return true; }
 }
 
 internal sealed class StepBasicActionRequestAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicActionRequestAssignmentHandle() : base(true) { }
     internal StepBasicActionRequestAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicActionRequestAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicActionRequestAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepBasicActionRequestSolutionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicActionRequestSolutionHandle() : base(true) { }
     internal StepBasicActionRequestSolutionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicActionRequestSolutionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicActionRequestSolutionRelease(handle); return true; }
 }
 
 internal sealed class StepBasicAddressHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicAddressHandle() : base(true) { }
     internal StepBasicAddressHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicAddressRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicAddressRelease(handle); return true; }
 }
 
 internal sealed class StepBasicApplicationContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicApplicationContextHandle() : base(true) { }
     internal StepBasicApplicationContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicApplicationContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicApplicationContextRelease(handle); return true; }
 }
 
 internal sealed class StepBasicApplicationContextElementHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicApplicationContextElementHandle() : base(true) { }
     internal StepBasicApplicationContextElementHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicApplicationContextElementRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicApplicationContextElementRelease(handle); return true; }
 }
 
 internal sealed class StepBasicApplicationProtocolDefinitionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicApplicationProtocolDefinitionHandle() : base(true) { }
     internal StepBasicApplicationProtocolDefinitionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicApplicationProtocolDefinitionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicApplicationProtocolDefinitionRelease(handle); return true; }
 }
 
 internal sealed class StepBasicApprovalHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicApprovalHandle() : base(true) { }
     internal StepBasicApprovalHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicApprovalRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicApprovalRelease(handle); return true; }
 }
 
 internal sealed class StepBasicApprovalAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicApprovalAssignmentHandle() : base(true) { }
     internal StepBasicApprovalAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicApprovalAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicApprovalAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepBasicApprovalDateTimeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicApprovalDateTimeHandle() : base(true) { }
     internal StepBasicApprovalDateTimeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicApprovalDateTimeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicApprovalDateTimeRelease(handle); return true; }
 }
 
 internal sealed class StepBasicApprovalPersonOrganizationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicApprovalPersonOrganizationHandle() : base(true) { }
     internal StepBasicApprovalPersonOrganizationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicApprovalPersonOrganizationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicApprovalPersonOrganizationRelease(handle); return true; }
 }
 
 internal sealed class StepBasicApprovalRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicApprovalRelationshipHandle() : base(true) { }
     internal StepBasicApprovalRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicApprovalRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicApprovalRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepBasicApprovalRoleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicApprovalRoleHandle() : base(true) { }
     internal StepBasicApprovalRoleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicApprovalRoleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicApprovalRoleRelease(handle); return true; }
 }
 
 internal sealed class StepBasicApprovalStatusHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicApprovalStatusHandle() : base(true) { }
     internal StepBasicApprovalStatusHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicApprovalStatusRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicApprovalStatusRelease(handle); return true; }
 }
 
 internal sealed class StepBasicAreaUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicAreaUnitHandle() : base(true) { }
     internal StepBasicAreaUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicAreaUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicAreaUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicCalendarDateHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicCalendarDateHandle() : base(true) { }
     internal StepBasicCalendarDateHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicCalendarDateRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicCalendarDateRelease(handle); return true; }
 }
 
 internal sealed class StepBasicCertificationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicCertificationHandle() : base(true) { }
     internal StepBasicCertificationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicCertificationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicCertificationRelease(handle); return true; }
 }
 
 internal sealed class StepBasicCertificationAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicCertificationAssignmentHandle() : base(true) { }
     internal StepBasicCertificationAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicCertificationAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicCertificationAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepBasicCertificationTypeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicCertificationTypeHandle() : base(true) { }
     internal StepBasicCertificationTypeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicCertificationTypeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicCertificationTypeRelease(handle); return true; }
 }
 
 internal sealed class StepBasicCharacterizedObjectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicCharacterizedObjectHandle() : base(true) { }
     internal StepBasicCharacterizedObjectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicCharacterizedObjectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicCharacterizedObjectRelease(handle); return true; }
 }
 
 internal sealed class StepBasicContractHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicContractHandle() : base(true) { }
     internal StepBasicContractHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicContractRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicContractRelease(handle); return true; }
 }
 
 internal sealed class StepBasicContractAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicContractAssignmentHandle() : base(true) { }
     internal StepBasicContractAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicContractAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicContractAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepBasicContractTypeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicContractTypeHandle() : base(true) { }
     internal StepBasicContractTypeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicContractTypeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicContractTypeRelease(handle); return true; }
 }
 
 internal sealed class StepBasicConversionBasedUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicConversionBasedUnitHandle() : base(true) { }
     internal StepBasicConversionBasedUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicConversionBasedUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicConversionBasedUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicConversionBasedUnitAndAreaUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicConversionBasedUnitAndAreaUnitHandle() : base(true) { }
     internal StepBasicConversionBasedUnitAndAreaUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicConversionBasedUnitAndAreaUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicConversionBasedUnitAndAreaUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicConversionBasedUnitAndLengthUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicConversionBasedUnitAndLengthUnitHandle() : base(true) { }
     internal StepBasicConversionBasedUnitAndLengthUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicConversionBasedUnitAndLengthUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicConversionBasedUnitAndLengthUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicConversionBasedUnitAndMassUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicConversionBasedUnitAndMassUnitHandle() : base(true) { }
     internal StepBasicConversionBasedUnitAndMassUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicConversionBasedUnitAndMassUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicConversionBasedUnitAndMassUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicConversionBasedUnitAndPlaneAngleUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicConversionBasedUnitAndPlaneAngleUnitHandle() : base(true) { }
     internal StepBasicConversionBasedUnitAndPlaneAngleUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicConversionBasedUnitAndPlaneAngleUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicConversionBasedUnitAndPlaneAngleUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicConversionBasedUnitAndRatioUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicConversionBasedUnitAndRatioUnitHandle() : base(true) { }
     internal StepBasicConversionBasedUnitAndRatioUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicConversionBasedUnitAndRatioUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicConversionBasedUnitAndRatioUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicConversionBasedUnitAndSolidAngleUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicConversionBasedUnitAndSolidAngleUnitHandle() : base(true) { }
     internal StepBasicConversionBasedUnitAndSolidAngleUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicConversionBasedUnitAndSolidAngleUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicConversionBasedUnitAndSolidAngleUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicConversionBasedUnitAndTimeUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicConversionBasedUnitAndTimeUnitHandle() : base(true) { }
     internal StepBasicConversionBasedUnitAndTimeUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicConversionBasedUnitAndTimeUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicConversionBasedUnitAndTimeUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicConversionBasedUnitAndVolumeUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicConversionBasedUnitAndVolumeUnitHandle() : base(true) { }
     internal StepBasicConversionBasedUnitAndVolumeUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicConversionBasedUnitAndVolumeUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicConversionBasedUnitAndVolumeUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicCoordinatedUniversalTimeOffsetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicCoordinatedUniversalTimeOffsetHandle() : base(true) { }
     internal StepBasicCoordinatedUniversalTimeOffsetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicCoordinatedUniversalTimeOffsetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicCoordinatedUniversalTimeOffsetRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDateHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDateHandle() : base(true) { }
     internal StepBasicDateHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDateRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDateRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDateAndTimeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDateAndTimeHandle() : base(true) { }
     internal StepBasicDateAndTimeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDateAndTimeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDateAndTimeRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDateAndTimeAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDateAndTimeAssignmentHandle() : base(true) { }
     internal StepBasicDateAndTimeAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDateAndTimeAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDateAndTimeAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDateAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDateAssignmentHandle() : base(true) { }
     internal StepBasicDateAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDateAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDateAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDateRoleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDateRoleHandle() : base(true) { }
     internal StepBasicDateRoleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDateRoleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDateRoleRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDateTimeRoleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDateTimeRoleHandle() : base(true) { }
     internal StepBasicDateTimeRoleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDateTimeRoleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDateTimeRoleRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDerivedUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDerivedUnitHandle() : base(true) { }
     internal StepBasicDerivedUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDerivedUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDerivedUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDerivedUnitElementHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDerivedUnitElementHandle() : base(true) { }
     internal StepBasicDerivedUnitElementHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDerivedUnitElementRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDerivedUnitElementRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDesignContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDesignContextHandle() : base(true) { }
     internal StepBasicDesignContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDesignContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDesignContextRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDigitalDocumentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDigitalDocumentHandle() : base(true) { }
     internal StepBasicDigitalDocumentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDigitalDocumentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDigitalDocumentRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDimensionalExponentsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDimensionalExponentsHandle() : base(true) { }
     internal StepBasicDimensionalExponentsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDimensionalExponentsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDimensionalExponentsRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDocumentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDocumentHandle() : base(true) { }
     internal StepBasicDocumentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDocumentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDocumentRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDocumentFileHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDocumentFileHandle() : base(true) { }
     internal StepBasicDocumentFileHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDocumentFileRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDocumentFileRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDocumentProductAssociationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDocumentProductAssociationHandle() : base(true) { }
     internal StepBasicDocumentProductAssociationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDocumentProductAssociationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDocumentProductAssociationRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDocumentProductEquivalenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDocumentProductEquivalenceHandle() : base(true) { }
     internal StepBasicDocumentProductEquivalenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDocumentProductEquivalenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDocumentProductEquivalenceRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDocumentReferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDocumentReferenceHandle() : base(true) { }
     internal StepBasicDocumentReferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDocumentReferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDocumentReferenceRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDocumentRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDocumentRelationshipHandle() : base(true) { }
     internal StepBasicDocumentRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDocumentRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDocumentRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDocumentRepresentationTypeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDocumentRepresentationTypeHandle() : base(true) { }
     internal StepBasicDocumentRepresentationTypeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDocumentRepresentationTypeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDocumentRepresentationTypeRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDocumentTypeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDocumentTypeHandle() : base(true) { }
     internal StepBasicDocumentTypeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDocumentTypeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDocumentTypeRelease(handle); return true; }
 }
 
 internal sealed class StepBasicDocumentUsageConstraintHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicDocumentUsageConstraintHandle() : base(true) { }
     internal StepBasicDocumentUsageConstraintHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicDocumentUsageConstraintRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicDocumentUsageConstraintRelease(handle); return true; }
 }
 
 internal sealed class StepBasicEffectivityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicEffectivityHandle() : base(true) { }
     internal StepBasicEffectivityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicEffectivityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicEffectivityRelease(handle); return true; }
 }
 
 internal sealed class StepBasicEffectivityAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicEffectivityAssignmentHandle() : base(true) { }
     internal StepBasicEffectivityAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicEffectivityAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicEffectivityAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepBasicEulerAnglesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicEulerAnglesHandle() : base(true) { }
     internal StepBasicEulerAnglesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicEulerAnglesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicEulerAnglesRelease(handle); return true; }
 }
 
 internal sealed class StepBasicExternalIdentificationAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicExternalIdentificationAssignmentHandle() : base(true) { }
     internal StepBasicExternalIdentificationAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicExternalIdentificationAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicExternalIdentificationAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepBasicExternalSourceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicExternalSourceHandle() : base(true) { }
     internal StepBasicExternalSourceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicExternalSourceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicExternalSourceRelease(handle); return true; }
 }
 
 internal sealed class StepBasicExternallyDefinedItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicExternallyDefinedItemHandle() : base(true) { }
     internal StepBasicExternallyDefinedItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicExternallyDefinedItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicExternallyDefinedItemRelease(handle); return true; }
 }
 
 internal sealed class StepBasicGeneralPropertyHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicGeneralPropertyHandle() : base(true) { }
     internal StepBasicGeneralPropertyHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicGeneralPropertyRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicGeneralPropertyRelease(handle); return true; }
 }
 
 internal sealed class StepBasicGeneralPropertyAssociationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicGeneralPropertyAssociationHandle() : base(true) { }
     internal StepBasicGeneralPropertyAssociationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicGeneralPropertyAssociationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicGeneralPropertyAssociationRelease(handle); return true; }
 }
 
 internal sealed class StepBasicGeneralPropertyRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicGeneralPropertyRelationshipHandle() : base(true) { }
     internal StepBasicGeneralPropertyRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicGeneralPropertyRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicGeneralPropertyRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepBasicGroupHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicGroupHandle() : base(true) { }
     internal StepBasicGroupHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicGroupRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicGroupRelease(handle); return true; }
 }
 
 internal sealed class StepBasicGroupAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicGroupAssignmentHandle() : base(true) { }
     internal StepBasicGroupAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicGroupAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicGroupAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepBasicGroupRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicGroupRelationshipHandle() : base(true) { }
     internal StepBasicGroupRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicGroupRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicGroupRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepBasicIdentificationAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicIdentificationAssignmentHandle() : base(true) { }
     internal StepBasicIdentificationAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicIdentificationAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicIdentificationAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepBasicIdentificationRoleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicIdentificationRoleHandle() : base(true) { }
     internal StepBasicIdentificationRoleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicIdentificationRoleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicIdentificationRoleRelease(handle); return true; }
 }
 
 internal sealed class StepBasicLengthMeasureWithUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicLengthMeasureWithUnitHandle() : base(true) { }
     internal StepBasicLengthMeasureWithUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicLengthMeasureWithUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicLengthMeasureWithUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicLengthUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicLengthUnitHandle() : base(true) { }
     internal StepBasicLengthUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicLengthUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicLengthUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicLocalTimeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicLocalTimeHandle() : base(true) { }
     internal StepBasicLocalTimeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicLocalTimeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicLocalTimeRelease(handle); return true; }
 }
 
 internal sealed class StepBasicMassMeasureWithUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicMassMeasureWithUnitHandle() : base(true) { }
     internal StepBasicMassMeasureWithUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicMassMeasureWithUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicMassMeasureWithUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicMassUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicMassUnitHandle() : base(true) { }
     internal StepBasicMassUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicMassUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicMassUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicMeasureValueMemberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicMeasureValueMemberHandle() : base(true) { }
     internal StepBasicMeasureValueMemberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicMeasureValueMemberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicMeasureValueMemberRelease(handle); return true; }
 }
 
 internal sealed class StepBasicMeasureWithUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicMeasureWithUnitHandle() : base(true) { }
     internal StepBasicMeasureWithUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicMeasureWithUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicMeasureWithUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicMechanicalContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicMechanicalContextHandle() : base(true) { }
     internal StepBasicMechanicalContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicMechanicalContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicMechanicalContextRelease(handle); return true; }
 }
 
 internal sealed class StepBasicNameAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicNameAssignmentHandle() : base(true) { }
     internal StepBasicNameAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicNameAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicNameAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepBasicNamedUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicNamedUnitHandle() : base(true) { }
     internal StepBasicNamedUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicNamedUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicNamedUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicObjectRoleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicObjectRoleHandle() : base(true) { }
     internal StepBasicObjectRoleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicObjectRoleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicObjectRoleRelease(handle); return true; }
 }
 
 internal sealed class StepBasicOrdinalDateHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicOrdinalDateHandle() : base(true) { }
     internal StepBasicOrdinalDateHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicOrdinalDateRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicOrdinalDateRelease(handle); return true; }
 }
 
 internal sealed class StepBasicOrganizationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicOrganizationHandle() : base(true) { }
     internal StepBasicOrganizationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicOrganizationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicOrganizationRelease(handle); return true; }
 }
 
 internal sealed class StepBasicOrganizationAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicOrganizationAssignmentHandle() : base(true) { }
     internal StepBasicOrganizationAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicOrganizationAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicOrganizationAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepBasicOrganizationRoleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicOrganizationRoleHandle() : base(true) { }
     internal StepBasicOrganizationRoleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicOrganizationRoleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicOrganizationRoleRelease(handle); return true; }
 }
 
 internal sealed class StepBasicOrganizationalAddressHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicOrganizationalAddressHandle() : base(true) { }
     internal StepBasicOrganizationalAddressHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicOrganizationalAddressRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicOrganizationalAddressRelease(handle); return true; }
 }
 
 internal sealed class StepBasicPersonHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicPersonHandle() : base(true) { }
     internal StepBasicPersonHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicPersonRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicPersonRelease(handle); return true; }
 }
 
 internal sealed class StepBasicPersonAndOrganizationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicPersonAndOrganizationHandle() : base(true) { }
     internal StepBasicPersonAndOrganizationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicPersonAndOrganizationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicPersonAndOrganizationRelease(handle); return true; }
 }
 
 internal sealed class StepBasicPersonAndOrganizationAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicPersonAndOrganizationAssignmentHandle() : base(true) { }
     internal StepBasicPersonAndOrganizationAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicPersonAndOrganizationAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicPersonAndOrganizationAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepBasicPersonAndOrganizationRoleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicPersonAndOrganizationRoleHandle() : base(true) { }
     internal StepBasicPersonAndOrganizationRoleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicPersonAndOrganizationRoleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicPersonAndOrganizationRoleRelease(handle); return true; }
 }
 
 internal sealed class StepBasicPersonalAddressHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicPersonalAddressHandle() : base(true) { }
     internal StepBasicPersonalAddressHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicPersonalAddressRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicPersonalAddressRelease(handle); return true; }
 }
 
 internal sealed class StepBasicPhysicallyModeledProductDefinitionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicPhysicallyModeledProductDefinitionHandle() : base(true) { }
     internal StepBasicPhysicallyModeledProductDefinitionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicPhysicallyModeledProductDefinitionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicPhysicallyModeledProductDefinitionRelease(handle); return true; }
 }
 
 internal sealed class StepBasicPlaneAngleMeasureWithUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicPlaneAngleMeasureWithUnitHandle() : base(true) { }
     internal StepBasicPlaneAngleMeasureWithUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicPlaneAngleMeasureWithUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicPlaneAngleMeasureWithUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicPlaneAngleUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicPlaneAngleUnitHandle() : base(true) { }
     internal StepBasicPlaneAngleUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicPlaneAngleUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicPlaneAngleUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicProductHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicProductHandle() : base(true) { }
     internal StepBasicProductHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicProductRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicProductRelease(handle); return true; }
 }
 
 internal sealed class StepBasicProductCategoryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicProductCategoryHandle() : base(true) { }
     internal StepBasicProductCategoryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicProductCategoryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicProductCategoryRelease(handle); return true; }
 }
 
 internal sealed class StepBasicProductCategoryRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicProductCategoryRelationshipHandle() : base(true) { }
     internal StepBasicProductCategoryRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicProductCategoryRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicProductCategoryRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepBasicProductConceptContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicProductConceptContextHandle() : base(true) { }
     internal StepBasicProductConceptContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicProductConceptContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicProductConceptContextRelease(handle); return true; }
 }
 
 internal sealed class StepBasicProductContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicProductContextHandle() : base(true) { }
     internal StepBasicProductContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicProductContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicProductContextRelease(handle); return true; }
 }
 
 internal sealed class StepBasicProductDefinitionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicProductDefinitionHandle() : base(true) { }
     internal StepBasicProductDefinitionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicProductDefinitionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicProductDefinitionRelease(handle); return true; }
 }
 
 internal sealed class StepBasicProductDefinitionContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicProductDefinitionContextHandle() : base(true) { }
     internal StepBasicProductDefinitionContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicProductDefinitionContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicProductDefinitionContextRelease(handle); return true; }
 }
 
 internal sealed class StepBasicProductDefinitionEffectivityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicProductDefinitionEffectivityHandle() : base(true) { }
     internal StepBasicProductDefinitionEffectivityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicProductDefinitionEffectivityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicProductDefinitionEffectivityRelease(handle); return true; }
 }
 
 internal sealed class StepBasicProductDefinitionFormationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicProductDefinitionFormationHandle() : base(true) { }
     internal StepBasicProductDefinitionFormationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicProductDefinitionFormationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicProductDefinitionFormationRelease(handle); return true; }
 }
 
 internal sealed class StepBasicProductDefinitionFormationRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicProductDefinitionFormationRelationshipHandle() : base(true) { }
     internal StepBasicProductDefinitionFormationRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicProductDefinitionFormationRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicProductDefinitionFormationRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepBasicProductDefinitionFormationWithSpecifiedSourceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicProductDefinitionFormationWithSpecifiedSourceHandle() : base(true) { }
     internal StepBasicProductDefinitionFormationWithSpecifiedSourceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicProductDefinitionFormationWithSpecifiedSourceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicProductDefinitionFormationWithSpecifiedSourceRelease(handle); return true; }
 }
 
 internal sealed class StepBasicProductDefinitionReferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicProductDefinitionReferenceHandle() : base(true) { }
     internal StepBasicProductDefinitionReferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicProductDefinitionReferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicProductDefinitionReferenceRelease(handle); return true; }
 }
 
 internal sealed class StepBasicProductDefinitionReferenceWithLocalRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicProductDefinitionReferenceWithLocalRepresentationHandle() : base(true) { }
     internal StepBasicProductDefinitionReferenceWithLocalRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicProductDefinitionReferenceWithLocalRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicProductDefinitionReferenceWithLocalRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepBasicProductDefinitionRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicProductDefinitionRelationshipHandle() : base(true) { }
     internal StepBasicProductDefinitionRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicProductDefinitionRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicProductDefinitionRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepBasicProductDefinitionWithAssociatedDocumentsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicProductDefinitionWithAssociatedDocumentsHandle() : base(true) { }
     internal StepBasicProductDefinitionWithAssociatedDocumentsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicProductDefinitionWithAssociatedDocumentsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicProductDefinitionWithAssociatedDocumentsRelease(handle); return true; }
 }
 
 internal sealed class StepBasicProductRelatedProductCategoryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicProductRelatedProductCategoryHandle() : base(true) { }
     internal StepBasicProductRelatedProductCategoryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicProductRelatedProductCategoryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicProductRelatedProductCategoryRelease(handle); return true; }
 }
 
 internal sealed class StepBasicProductTypeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicProductTypeHandle() : base(true) { }
     internal StepBasicProductTypeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicProductTypeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicProductTypeRelease(handle); return true; }
 }
 
 internal sealed class StepBasicRatioMeasureWithUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicRatioMeasureWithUnitHandle() : base(true) { }
     internal StepBasicRatioMeasureWithUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicRatioMeasureWithUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicRatioMeasureWithUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicRatioUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicRatioUnitHandle() : base(true) { }
     internal StepBasicRatioUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicRatioUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicRatioUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicRoleAssociationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicRoleAssociationHandle() : base(true) { }
     internal StepBasicRoleAssociationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicRoleAssociationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicRoleAssociationRelease(handle); return true; }
 }
 
 internal sealed class StepBasicSecurityClassificationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicSecurityClassificationHandle() : base(true) { }
     internal StepBasicSecurityClassificationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicSecurityClassificationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicSecurityClassificationRelease(handle); return true; }
 }
 
 internal sealed class StepBasicSecurityClassificationAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicSecurityClassificationAssignmentHandle() : base(true) { }
     internal StepBasicSecurityClassificationAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicSecurityClassificationAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicSecurityClassificationAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepBasicSecurityClassificationLevelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicSecurityClassificationLevelHandle() : base(true) { }
     internal StepBasicSecurityClassificationLevelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicSecurityClassificationLevelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicSecurityClassificationLevelRelease(handle); return true; }
 }
 
 internal sealed class StepBasicSiUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicSiUnitHandle() : base(true) { }
     internal StepBasicSiUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicSiUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicSiUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicSiUnitAndAreaUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicSiUnitAndAreaUnitHandle() : base(true) { }
     internal StepBasicSiUnitAndAreaUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicSiUnitAndAreaUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicSiUnitAndAreaUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicSiUnitAndLengthUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicSiUnitAndLengthUnitHandle() : base(true) { }
     internal StepBasicSiUnitAndLengthUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicSiUnitAndLengthUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicSiUnitAndLengthUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicSiUnitAndMassUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicSiUnitAndMassUnitHandle() : base(true) { }
     internal StepBasicSiUnitAndMassUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicSiUnitAndMassUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicSiUnitAndMassUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicSiUnitAndPlaneAngleUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicSiUnitAndPlaneAngleUnitHandle() : base(true) { }
     internal StepBasicSiUnitAndPlaneAngleUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicSiUnitAndPlaneAngleUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicSiUnitAndPlaneAngleUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicSiUnitAndRatioUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicSiUnitAndRatioUnitHandle() : base(true) { }
     internal StepBasicSiUnitAndRatioUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicSiUnitAndRatioUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicSiUnitAndRatioUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicSiUnitAndSolidAngleUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicSiUnitAndSolidAngleUnitHandle() : base(true) { }
     internal StepBasicSiUnitAndSolidAngleUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicSiUnitAndSolidAngleUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicSiUnitAndSolidAngleUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicSiUnitAndThermodynamicTemperatureUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicSiUnitAndThermodynamicTemperatureUnitHandle() : base(true) { }
     internal StepBasicSiUnitAndThermodynamicTemperatureUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicSiUnitAndThermodynamicTemperatureUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicSiUnitAndThermodynamicTemperatureUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicSiUnitAndTimeUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicSiUnitAndTimeUnitHandle() : base(true) { }
     internal StepBasicSiUnitAndTimeUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicSiUnitAndTimeUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicSiUnitAndTimeUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicSiUnitAndVolumeUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicSiUnitAndVolumeUnitHandle() : base(true) { }
     internal StepBasicSiUnitAndVolumeUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicSiUnitAndVolumeUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicSiUnitAndVolumeUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicSizeMemberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicSizeMemberHandle() : base(true) { }
     internal StepBasicSizeMemberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicSizeMemberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicSizeMemberRelease(handle); return true; }
 }
 
 internal sealed class StepBasicSolidAngleMeasureWithUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicSolidAngleMeasureWithUnitHandle() : base(true) { }
     internal StepBasicSolidAngleMeasureWithUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicSolidAngleMeasureWithUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicSolidAngleMeasureWithUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicSolidAngleUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicSolidAngleUnitHandle() : base(true) { }
     internal StepBasicSolidAngleUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicSolidAngleUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicSolidAngleUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicThermodynamicTemperatureUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicThermodynamicTemperatureUnitHandle() : base(true) { }
     internal StepBasicThermodynamicTemperatureUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicThermodynamicTemperatureUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicThermodynamicTemperatureUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicTimeMeasureWithUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicTimeMeasureWithUnitHandle() : base(true) { }
     internal StepBasicTimeMeasureWithUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicTimeMeasureWithUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicTimeMeasureWithUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicTimeUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicTimeUnitHandle() : base(true) { }
     internal StepBasicTimeUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicTimeUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicTimeUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicUncertaintyMeasureWithUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicUncertaintyMeasureWithUnitHandle() : base(true) { }
     internal StepBasicUncertaintyMeasureWithUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicUncertaintyMeasureWithUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicUncertaintyMeasureWithUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicVersionedActionRequestHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicVersionedActionRequestHandle() : base(true) { }
     internal StepBasicVersionedActionRequestHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicVersionedActionRequestRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicVersionedActionRequestRelease(handle); return true; }
 }
 
 internal sealed class StepBasicVolumeUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicVolumeUnitHandle() : base(true) { }
     internal StepBasicVolumeUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicVolumeUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicVolumeUnitRelease(handle); return true; }
 }
 
 internal sealed class StepBasicWeekOfYearAndDayDateHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepBasicWeekOfYearAndDayDateHandle() : base(true) { }
     internal StepBasicWeekOfYearAndDayDateHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepBasicWeekOfYearAndDayDateRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepBasicWeekOfYearAndDayDateRelease(handle); return true; }
 }
 
 internal sealed class StepDataDefaultGeneralHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataDefaultGeneralHandle() : base(true) { }
     internal StepDataDefaultGeneralHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataDefaultGeneralRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataDefaultGeneralRelease(handle); return true; }
 }
 
 internal sealed class StepDataDescribedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataDescribedHandle() : base(true) { }
     internal StepDataDescribedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataDescribedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataDescribedRelease(handle); return true; }
 }
 
 internal sealed class StepDataECDescrHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataECDescrHandle() : base(true) { }
     internal StepDataECDescrHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataECDescrRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataECDescrRelease(handle); return true; }
 }
 
 internal sealed class StepDataEDescrHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataEDescrHandle() : base(true) { }
     internal StepDataEDescrHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataEDescrRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataEDescrRelease(handle); return true; }
 }
 
 internal sealed class StepDataESDescrHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataESDescrHandle() : base(true) { }
     internal StepDataESDescrHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataESDescrRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataESDescrRelease(handle); return true; }
 }
 
 internal sealed class StepDataFileProtocolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataFileProtocolHandle() : base(true) { }
     internal StepDataFileProtocolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataFileProtocolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataFileProtocolRelease(handle); return true; }
 }
 
 internal sealed class StepDataFileRecognizerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataFileRecognizerHandle() : base(true) { }
     internal StepDataFileRecognizerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataFileRecognizerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataFileRecognizerRelease(handle); return true; }
 }
 
 internal sealed class StepDataFreeFormEntityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataFreeFormEntityHandle() : base(true) { }
     internal StepDataFreeFormEntityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataFreeFormEntityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataFreeFormEntityRelease(handle); return true; }
 }
 
 internal sealed class StepDataGeneralModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataGeneralModuleHandle() : base(true) { }
     internal StepDataGeneralModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataGeneralModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataGeneralModuleRelease(handle); return true; }
 }
 
 internal sealed class StepDataGlobalNodeOfWriterLibHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataGlobalNodeOfWriterLibHandle() : base(true) { }
     internal StepDataGlobalNodeOfWriterLibHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataGlobalNodeOfWriterLibRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataGlobalNodeOfWriterLibRelease(handle); return true; }
 }
 
 internal sealed class StepDataNodeOfWriterLibHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataNodeOfWriterLibHandle() : base(true) { }
     internal StepDataNodeOfWriterLibHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataNodeOfWriterLibRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataNodeOfWriterLibRelease(handle); return true; }
 }
 
 internal sealed class StepDataPDescrHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataPDescrHandle() : base(true) { }
     internal StepDataPDescrHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataPDescrRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataPDescrRelease(handle); return true; }
 }
 
 internal sealed class StepDataPlexHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataPlexHandle() : base(true) { }
     internal StepDataPlexHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataPlexRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataPlexRelease(handle); return true; }
 }
 
 internal sealed class StepDataProtocolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataProtocolHandle() : base(true) { }
     internal StepDataProtocolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataProtocolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataProtocolRelease(handle); return true; }
 }
 
 internal sealed class StepDataReadWriteModuleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataReadWriteModuleHandle() : base(true) { }
     internal StepDataReadWriteModuleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataReadWriteModuleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataReadWriteModuleRelease(handle); return true; }
 }
 
 internal sealed class StepDataSelectArrRealHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataSelectArrRealHandle() : base(true) { }
     internal StepDataSelectArrRealHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataSelectArrRealRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataSelectArrRealRelease(handle); return true; }
 }
 
 internal sealed class StepDataSelectIntHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataSelectIntHandle() : base(true) { }
     internal StepDataSelectIntHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataSelectIntRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataSelectIntRelease(handle); return true; }
 }
 
 internal sealed class StepDataSelectMemberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataSelectMemberHandle() : base(true) { }
     internal StepDataSelectMemberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataSelectMemberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataSelectMemberRelease(handle); return true; }
 }
 
 internal sealed class StepDataSelectNamedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataSelectNamedHandle() : base(true) { }
     internal StepDataSelectNamedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataSelectNamedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataSelectNamedRelease(handle); return true; }
 }
 
 internal sealed class StepDataSelectRealHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataSelectRealHandle() : base(true) { }
     internal StepDataSelectRealHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataSelectRealRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataSelectRealRelease(handle); return true; }
 }
 
 internal sealed class StepDataSimpleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataSimpleHandle() : base(true) { }
     internal StepDataSimpleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataSimpleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataSimpleRelease(handle); return true; }
 }
 
 internal sealed class StepDataStepModelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataStepModelHandle() : base(true) { }
     internal StepDataStepModelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataStepModelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataStepModelRelease(handle); return true; }
 }
 
 internal sealed class StepDataStepReaderDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataStepReaderDataHandle() : base(true) { }
     internal StepDataStepReaderDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataStepReaderDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataStepReaderDataRelease(handle); return true; }
 }
 
 internal sealed class StepDataUndefinedEntityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDataUndefinedEntityHandle() : base(true) { }
     internal StepDataUndefinedEntityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDataUndefinedEntityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDataUndefinedEntityRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolAngularityToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolAngularityToleranceHandle() : base(true) { }
     internal StepDimTolAngularityToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolAngularityToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolAngularityToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolCircularRunoutToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolCircularRunoutToleranceHandle() : base(true) { }
     internal StepDimTolCircularRunoutToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolCircularRunoutToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolCircularRunoutToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolCoaxialityToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolCoaxialityToleranceHandle() : base(true) { }
     internal StepDimTolCoaxialityToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolCoaxialityToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolCoaxialityToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolCommonDatumHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolCommonDatumHandle() : base(true) { }
     internal StepDimTolCommonDatumHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolCommonDatumRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolCommonDatumRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolConcentricityToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolConcentricityToleranceHandle() : base(true) { }
     internal StepDimTolConcentricityToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolConcentricityToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolConcentricityToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolCylindricityToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolCylindricityToleranceHandle() : base(true) { }
     internal StepDimTolCylindricityToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolCylindricityToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolCylindricityToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolDatumHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolDatumHandle() : base(true) { }
     internal StepDimTolDatumHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolDatumRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolDatumRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolDatumFeatureHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolDatumFeatureHandle() : base(true) { }
     internal StepDimTolDatumFeatureHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolDatumFeatureRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolDatumFeatureRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolDatumReferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolDatumReferenceHandle() : base(true) { }
     internal StepDimTolDatumReferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolDatumReferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolDatumReferenceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolDatumReferenceCompartmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolDatumReferenceCompartmentHandle() : base(true) { }
     internal StepDimTolDatumReferenceCompartmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolDatumReferenceCompartmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolDatumReferenceCompartmentRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolDatumReferenceElementHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolDatumReferenceElementHandle() : base(true) { }
     internal StepDimTolDatumReferenceElementHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolDatumReferenceElementRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolDatumReferenceElementRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolDatumReferenceModifierWithValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolDatumReferenceModifierWithValueHandle() : base(true) { }
     internal StepDimTolDatumReferenceModifierWithValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolDatumReferenceModifierWithValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolDatumReferenceModifierWithValueRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolDatumSystemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolDatumSystemHandle() : base(true) { }
     internal StepDimTolDatumSystemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolDatumSystemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolDatumSystemRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolDatumTargetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolDatumTargetHandle() : base(true) { }
     internal StepDimTolDatumTargetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolDatumTargetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolDatumTargetRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolFlatnessToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolFlatnessToleranceHandle() : base(true) { }
     internal StepDimTolFlatnessToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolFlatnessToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolFlatnessToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolGeneralDatumReferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolGeneralDatumReferenceHandle() : base(true) { }
     internal StepDimTolGeneralDatumReferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolGeneralDatumReferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolGeneralDatumReferenceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolGeoTolAndGeoTolWthDatRefHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolGeoTolAndGeoTolWthDatRefHandle() : base(true) { }
     internal StepDimTolGeoTolAndGeoTolWthDatRefHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolGeoTolAndGeoTolWthDatRefRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolGeoTolAndGeoTolWthDatRefRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolGeoTolAndGeoTolWthDatRefAndGeoTolWthMaxTolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolGeoTolAndGeoTolWthDatRefAndGeoTolWthMaxTolHandle() : base(true) { }
     internal StepDimTolGeoTolAndGeoTolWthDatRefAndGeoTolWthMaxTolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolGeoTolAndGeoTolWthDatRefAndGeoTolWthMaxTolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolGeoTolAndGeoTolWthDatRefAndGeoTolWthMaxTolRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolGeoTolAndGeoTolWthDatRefAndGeoTolWthModHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolGeoTolAndGeoTolWthDatRefAndGeoTolWthModHandle() : base(true) { }
     internal StepDimTolGeoTolAndGeoTolWthDatRefAndGeoTolWthModHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolGeoTolAndGeoTolWthDatRefAndGeoTolWthModRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolGeoTolAndGeoTolWthDatRefAndGeoTolWthModRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolGeoTolAndGeoTolWthDatRefAndModGeoTolAndPosTolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolGeoTolAndGeoTolWthDatRefAndModGeoTolAndPosTolHandle() : base(true) { }
     internal StepDimTolGeoTolAndGeoTolWthDatRefAndModGeoTolAndPosTolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolGeoTolAndGeoTolWthDatRefAndModGeoTolAndPosTolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolGeoTolAndGeoTolWthDatRefAndModGeoTolAndPosTolRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolGeoTolAndGeoTolWthDatRefAndUneqDisGeoTolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolGeoTolAndGeoTolWthDatRefAndUneqDisGeoTolHandle() : base(true) { }
     internal StepDimTolGeoTolAndGeoTolWthDatRefAndUneqDisGeoTolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolGeoTolAndGeoTolWthDatRefAndUneqDisGeoTolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolGeoTolAndGeoTolWthDatRefAndUneqDisGeoTolRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolGeoTolAndGeoTolWthMaxTolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolGeoTolAndGeoTolWthMaxTolHandle() : base(true) { }
     internal StepDimTolGeoTolAndGeoTolWthMaxTolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolGeoTolAndGeoTolWthMaxTolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolGeoTolAndGeoTolWthMaxTolRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolGeoTolAndGeoTolWthModHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolGeoTolAndGeoTolWthModHandle() : base(true) { }
     internal StepDimTolGeoTolAndGeoTolWthModHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolGeoTolAndGeoTolWthModRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolGeoTolAndGeoTolWthModRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolGeometricToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolGeometricToleranceHandle() : base(true) { }
     internal StepDimTolGeometricToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolGeometricToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolGeometricToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolGeometricToleranceRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolGeometricToleranceRelationshipHandle() : base(true) { }
     internal StepDimTolGeometricToleranceRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolGeometricToleranceRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolGeometricToleranceRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolGeometricToleranceWithDatumReferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolGeometricToleranceWithDatumReferenceHandle() : base(true) { }
     internal StepDimTolGeometricToleranceWithDatumReferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolGeometricToleranceWithDatumReferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolGeometricToleranceWithDatumReferenceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolGeometricToleranceWithDefinedAreaUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolGeometricToleranceWithDefinedAreaUnitHandle() : base(true) { }
     internal StepDimTolGeometricToleranceWithDefinedAreaUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolGeometricToleranceWithDefinedAreaUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolGeometricToleranceWithDefinedAreaUnitRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolGeometricToleranceWithDefinedUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolGeometricToleranceWithDefinedUnitHandle() : base(true) { }
     internal StepDimTolGeometricToleranceWithDefinedUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolGeometricToleranceWithDefinedUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolGeometricToleranceWithDefinedUnitRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolGeometricToleranceWithMaximumToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolGeometricToleranceWithMaximumToleranceHandle() : base(true) { }
     internal StepDimTolGeometricToleranceWithMaximumToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolGeometricToleranceWithMaximumToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolGeometricToleranceWithMaximumToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolGeometricToleranceWithModifiersHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolGeometricToleranceWithModifiersHandle() : base(true) { }
     internal StepDimTolGeometricToleranceWithModifiersHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolGeometricToleranceWithModifiersRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolGeometricToleranceWithModifiersRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolLineProfileToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolLineProfileToleranceHandle() : base(true) { }
     internal StepDimTolLineProfileToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolLineProfileToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolLineProfileToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolModifiedGeometricToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolModifiedGeometricToleranceHandle() : base(true) { }
     internal StepDimTolModifiedGeometricToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolModifiedGeometricToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolModifiedGeometricToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolNonUniformZoneDefinitionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolNonUniformZoneDefinitionHandle() : base(true) { }
     internal StepDimTolNonUniformZoneDefinitionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolNonUniformZoneDefinitionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolNonUniformZoneDefinitionRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolParallelismToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolParallelismToleranceHandle() : base(true) { }
     internal StepDimTolParallelismToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolParallelismToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolParallelismToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolPerpendicularityToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolPerpendicularityToleranceHandle() : base(true) { }
     internal StepDimTolPerpendicularityToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolPerpendicularityToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolPerpendicularityToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolPlacedDatumTargetFeatureHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolPlacedDatumTargetFeatureHandle() : base(true) { }
     internal StepDimTolPlacedDatumTargetFeatureHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolPlacedDatumTargetFeatureRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolPlacedDatumTargetFeatureRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolPositionToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolPositionToleranceHandle() : base(true) { }
     internal StepDimTolPositionToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolPositionToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolPositionToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolProjectedZoneDefinitionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolProjectedZoneDefinitionHandle() : base(true) { }
     internal StepDimTolProjectedZoneDefinitionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolProjectedZoneDefinitionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolProjectedZoneDefinitionRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolRoundnessToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolRoundnessToleranceHandle() : base(true) { }
     internal StepDimTolRoundnessToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolRoundnessToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolRoundnessToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolRunoutZoneDefinitionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolRunoutZoneDefinitionHandle() : base(true) { }
     internal StepDimTolRunoutZoneDefinitionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolRunoutZoneDefinitionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolRunoutZoneDefinitionRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolRunoutZoneOrientationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolRunoutZoneOrientationHandle() : base(true) { }
     internal StepDimTolRunoutZoneOrientationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolRunoutZoneOrientationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolRunoutZoneOrientationRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolSimpleDatumReferenceModifierMemberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolSimpleDatumReferenceModifierMemberHandle() : base(true) { }
     internal StepDimTolSimpleDatumReferenceModifierMemberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolSimpleDatumReferenceModifierMemberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolSimpleDatumReferenceModifierMemberRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolStraightnessToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolStraightnessToleranceHandle() : base(true) { }
     internal StepDimTolStraightnessToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolStraightnessToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolStraightnessToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolSurfaceProfileToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolSurfaceProfileToleranceHandle() : base(true) { }
     internal StepDimTolSurfaceProfileToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolSurfaceProfileToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolSurfaceProfileToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolSymmetryToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolSymmetryToleranceHandle() : base(true) { }
     internal StepDimTolSymmetryToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolSymmetryToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolSymmetryToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolToleranceZoneHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolToleranceZoneHandle() : base(true) { }
     internal StepDimTolToleranceZoneHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolToleranceZoneRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolToleranceZoneRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolToleranceZoneDefinitionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolToleranceZoneDefinitionHandle() : base(true) { }
     internal StepDimTolToleranceZoneDefinitionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolToleranceZoneDefinitionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolToleranceZoneDefinitionRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolToleranceZoneFormHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolToleranceZoneFormHandle() : base(true) { }
     internal StepDimTolToleranceZoneFormHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolToleranceZoneFormRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolToleranceZoneFormRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolTotalRunoutToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolTotalRunoutToleranceHandle() : base(true) { }
     internal StepDimTolTotalRunoutToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolTotalRunoutToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolTotalRunoutToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepDimTolUnequallyDisposedGeometricToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepDimTolUnequallyDisposedGeometricToleranceHandle() : base(true) { }
     internal StepDimTolUnequallyDisposedGeometricToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepDimTolUnequallyDisposedGeometricToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepDimTolUnequallyDisposedGeometricToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepElementAnalysisItemWithinRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementAnalysisItemWithinRepresentationHandle() : base(true) { }
     internal StepElementAnalysisItemWithinRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementAnalysisItemWithinRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementAnalysisItemWithinRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepElementCurve3dElementDescriptorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementCurve3dElementDescriptorHandle() : base(true) { }
     internal StepElementCurve3dElementDescriptorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementCurve3dElementDescriptorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementCurve3dElementDescriptorRelease(handle); return true; }
 }
 
 internal sealed class StepElementCurveElementEndReleasePacketHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementCurveElementEndReleasePacketHandle() : base(true) { }
     internal StepElementCurveElementEndReleasePacketHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementCurveElementEndReleasePacketRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementCurveElementEndReleasePacketRelease(handle); return true; }
 }
 
 internal sealed class StepElementCurveElementFreedomMemberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementCurveElementFreedomMemberHandle() : base(true) { }
     internal StepElementCurveElementFreedomMemberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementCurveElementFreedomMemberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementCurveElementFreedomMemberRelease(handle); return true; }
 }
 
 internal sealed class StepElementCurveElementPurposeMemberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementCurveElementPurposeMemberHandle() : base(true) { }
     internal StepElementCurveElementPurposeMemberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementCurveElementPurposeMemberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementCurveElementPurposeMemberRelease(handle); return true; }
 }
 
 internal sealed class StepElementCurveElementSectionDefinitionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementCurveElementSectionDefinitionHandle() : base(true) { }
     internal StepElementCurveElementSectionDefinitionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementCurveElementSectionDefinitionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementCurveElementSectionDefinitionRelease(handle); return true; }
 }
 
 internal sealed class StepElementCurveElementSectionDerivedDefinitionsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementCurveElementSectionDerivedDefinitionsHandle() : base(true) { }
     internal StepElementCurveElementSectionDerivedDefinitionsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementCurveElementSectionDerivedDefinitionsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementCurveElementSectionDerivedDefinitionsRelease(handle); return true; }
 }
 
 internal sealed class StepElementElementAspectMemberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementElementAspectMemberHandle() : base(true) { }
     internal StepElementElementAspectMemberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementElementAspectMemberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementElementAspectMemberRelease(handle); return true; }
 }
 
 internal sealed class StepElementElementDescriptorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementElementDescriptorHandle() : base(true) { }
     internal StepElementElementDescriptorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementElementDescriptorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementElementDescriptorRelease(handle); return true; }
 }
 
 internal sealed class StepElementElementMaterialHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementElementMaterialHandle() : base(true) { }
     internal StepElementElementMaterialHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementElementMaterialRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementElementMaterialRelease(handle); return true; }
 }
 
 internal sealed class StepElementMeasureOrUnspecifiedValueMemberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementMeasureOrUnspecifiedValueMemberHandle() : base(true) { }
     internal StepElementMeasureOrUnspecifiedValueMemberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementMeasureOrUnspecifiedValueMemberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementMeasureOrUnspecifiedValueMemberRelease(handle); return true; }
 }
 
 internal sealed class StepElementSurface3dElementDescriptorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementSurface3dElementDescriptorHandle() : base(true) { }
     internal StepElementSurface3dElementDescriptorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementSurface3dElementDescriptorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementSurface3dElementDescriptorRelease(handle); return true; }
 }
 
 internal sealed class StepElementSurfaceElementPropertyHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementSurfaceElementPropertyHandle() : base(true) { }
     internal StepElementSurfaceElementPropertyHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementSurfaceElementPropertyRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementSurfaceElementPropertyRelease(handle); return true; }
 }
 
 internal sealed class StepElementSurfaceElementPurposeMemberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementSurfaceElementPurposeMemberHandle() : base(true) { }
     internal StepElementSurfaceElementPurposeMemberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementSurfaceElementPurposeMemberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementSurfaceElementPurposeMemberRelease(handle); return true; }
 }
 
 internal sealed class StepElementSurfaceSectionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementSurfaceSectionHandle() : base(true) { }
     internal StepElementSurfaceSectionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementSurfaceSectionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementSurfaceSectionRelease(handle); return true; }
 }
 
 internal sealed class StepElementSurfaceSectionFieldHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementSurfaceSectionFieldHandle() : base(true) { }
     internal StepElementSurfaceSectionFieldHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementSurfaceSectionFieldRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementSurfaceSectionFieldRelease(handle); return true; }
 }
 
 internal sealed class StepElementSurfaceSectionFieldConstantHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementSurfaceSectionFieldConstantHandle() : base(true) { }
     internal StepElementSurfaceSectionFieldConstantHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementSurfaceSectionFieldConstantRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementSurfaceSectionFieldConstantRelease(handle); return true; }
 }
 
 internal sealed class StepElementSurfaceSectionFieldVaryingHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementSurfaceSectionFieldVaryingHandle() : base(true) { }
     internal StepElementSurfaceSectionFieldVaryingHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementSurfaceSectionFieldVaryingRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementSurfaceSectionFieldVaryingRelease(handle); return true; }
 }
 
 internal sealed class StepElementUniformSurfaceSectionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementUniformSurfaceSectionHandle() : base(true) { }
     internal StepElementUniformSurfaceSectionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementUniformSurfaceSectionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementUniformSurfaceSectionRelease(handle); return true; }
 }
 
 internal sealed class StepElementVolume3dElementDescriptorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementVolume3dElementDescriptorHandle() : base(true) { }
     internal StepElementVolume3dElementDescriptorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementVolume3dElementDescriptorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementVolume3dElementDescriptorRelease(handle); return true; }
 }
 
 internal sealed class StepElementVolumeElementPurposeMemberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepElementVolumeElementPurposeMemberHandle() : base(true) { }
     internal StepElementVolumeElementPurposeMemberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepElementVolumeElementPurposeMemberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepElementVolumeElementPurposeMemberRelease(handle); return true; }
 }
 
 internal sealed class StepFEAAlignedCurve3dElementCoordinateSystemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAAlignedCurve3dElementCoordinateSystemHandle() : base(true) { }
     internal StepFEAAlignedCurve3dElementCoordinateSystemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAAlignedCurve3dElementCoordinateSystemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAAlignedCurve3dElementCoordinateSystemRelease(handle); return true; }
 }
 
 internal sealed class StepFEAAlignedSurface3dElementCoordinateSystemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAAlignedSurface3dElementCoordinateSystemHandle() : base(true) { }
     internal StepFEAAlignedSurface3dElementCoordinateSystemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAAlignedSurface3dElementCoordinateSystemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAAlignedSurface3dElementCoordinateSystemRelease(handle); return true; }
 }
 
 internal sealed class StepFEAArbitraryVolume3dElementCoordinateSystemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAArbitraryVolume3dElementCoordinateSystemHandle() : base(true) { }
     internal StepFEAArbitraryVolume3dElementCoordinateSystemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAArbitraryVolume3dElementCoordinateSystemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAArbitraryVolume3dElementCoordinateSystemRelease(handle); return true; }
 }
 
 internal sealed class StepFEAConstantSurface3dElementCoordinateSystemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAConstantSurface3dElementCoordinateSystemHandle() : base(true) { }
     internal StepFEAConstantSurface3dElementCoordinateSystemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAConstantSurface3dElementCoordinateSystemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAConstantSurface3dElementCoordinateSystemRelease(handle); return true; }
 }
 
 internal sealed class StepFEACurve3dElementPropertyHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEACurve3dElementPropertyHandle() : base(true) { }
     internal StepFEACurve3dElementPropertyHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEACurve3dElementPropertyRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEACurve3dElementPropertyRelease(handle); return true; }
 }
 
 internal sealed class StepFEACurve3dElementRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEACurve3dElementRepresentationHandle() : base(true) { }
     internal StepFEACurve3dElementRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEACurve3dElementRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEACurve3dElementRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepFEACurveElementEndOffsetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEACurveElementEndOffsetHandle() : base(true) { }
     internal StepFEACurveElementEndOffsetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEACurveElementEndOffsetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEACurveElementEndOffsetRelease(handle); return true; }
 }
 
 internal sealed class StepFEACurveElementEndReleaseHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEACurveElementEndReleaseHandle() : base(true) { }
     internal StepFEACurveElementEndReleaseHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEACurveElementEndReleaseRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEACurveElementEndReleaseRelease(handle); return true; }
 }
 
 internal sealed class StepFEACurveElementIntervalHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEACurveElementIntervalHandle() : base(true) { }
     internal StepFEACurveElementIntervalHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEACurveElementIntervalRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEACurveElementIntervalRelease(handle); return true; }
 }
 
 internal sealed class StepFEACurveElementIntervalConstantHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEACurveElementIntervalConstantHandle() : base(true) { }
     internal StepFEACurveElementIntervalConstantHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEACurveElementIntervalConstantRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEACurveElementIntervalConstantRelease(handle); return true; }
 }
 
 internal sealed class StepFEACurveElementIntervalLinearlyVaryingHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEACurveElementIntervalLinearlyVaryingHandle() : base(true) { }
     internal StepFEACurveElementIntervalLinearlyVaryingHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEACurveElementIntervalLinearlyVaryingRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEACurveElementIntervalLinearlyVaryingRelease(handle); return true; }
 }
 
 internal sealed class StepFEACurveElementLocationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEACurveElementLocationHandle() : base(true) { }
     internal StepFEACurveElementLocationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEACurveElementLocationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEACurveElementLocationRelease(handle); return true; }
 }
 
 internal sealed class StepFEADegreeOfFreedomMemberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEADegreeOfFreedomMemberHandle() : base(true) { }
     internal StepFEADegreeOfFreedomMemberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEADegreeOfFreedomMemberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEADegreeOfFreedomMemberRelease(handle); return true; }
 }
 
 internal sealed class StepFEADummyNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEADummyNodeHandle() : base(true) { }
     internal StepFEADummyNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEADummyNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEADummyNodeRelease(handle); return true; }
 }
 
 internal sealed class StepFEAElementGeometricRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAElementGeometricRelationshipHandle() : base(true) { }
     internal StepFEAElementGeometricRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAElementGeometricRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAElementGeometricRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepFEAElementGroupHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAElementGroupHandle() : base(true) { }
     internal StepFEAElementGroupHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAElementGroupRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAElementGroupRelease(handle); return true; }
 }
 
 internal sealed class StepFEAElementRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAElementRepresentationHandle() : base(true) { }
     internal StepFEAElementRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAElementRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAElementRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaAreaDensityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaAreaDensityHandle() : base(true) { }
     internal StepFEAFeaAreaDensityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaAreaDensityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaAreaDensityRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaAxis2Placement3dHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaAxis2Placement3dHandle() : base(true) { }
     internal StepFEAFeaAxis2Placement3dHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaAxis2Placement3dRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaAxis2Placement3dRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaCurveSectionGeometricRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaCurveSectionGeometricRelationshipHandle() : base(true) { }
     internal StepFEAFeaCurveSectionGeometricRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaCurveSectionGeometricRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaCurveSectionGeometricRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaGroupHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaGroupHandle() : base(true) { }
     internal StepFEAFeaGroupHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaGroupRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaGroupRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaLinearElasticityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaLinearElasticityHandle() : base(true) { }
     internal StepFEAFeaLinearElasticityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaLinearElasticityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaLinearElasticityRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaMassDensityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaMassDensityHandle() : base(true) { }
     internal StepFEAFeaMassDensityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaMassDensityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaMassDensityRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaMaterialPropertyRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaMaterialPropertyRepresentationHandle() : base(true) { }
     internal StepFEAFeaMaterialPropertyRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaMaterialPropertyRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaMaterialPropertyRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaMaterialPropertyRepresentationItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaMaterialPropertyRepresentationItemHandle() : base(true) { }
     internal StepFEAFeaMaterialPropertyRepresentationItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaMaterialPropertyRepresentationItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaMaterialPropertyRepresentationItemRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaModelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaModelHandle() : base(true) { }
     internal StepFEAFeaModelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaModelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaModelRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaModel3dHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaModel3dHandle() : base(true) { }
     internal StepFEAFeaModel3dHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaModel3dRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaModel3dRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaModelDefinitionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaModelDefinitionHandle() : base(true) { }
     internal StepFEAFeaModelDefinitionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaModelDefinitionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaModelDefinitionRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaMoistureAbsorptionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaMoistureAbsorptionHandle() : base(true) { }
     internal StepFEAFeaMoistureAbsorptionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaMoistureAbsorptionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaMoistureAbsorptionRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaParametricPointHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaParametricPointHandle() : base(true) { }
     internal StepFEAFeaParametricPointHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaParametricPointRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaParametricPointRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaRepresentationItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaRepresentationItemHandle() : base(true) { }
     internal StepFEAFeaRepresentationItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaRepresentationItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaRepresentationItemRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaSecantCoefficientOfLinearThermalExpansionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaSecantCoefficientOfLinearThermalExpansionHandle() : base(true) { }
     internal StepFEAFeaSecantCoefficientOfLinearThermalExpansionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaSecantCoefficientOfLinearThermalExpansionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaSecantCoefficientOfLinearThermalExpansionRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaShellBendingStiffnessHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaShellBendingStiffnessHandle() : base(true) { }
     internal StepFEAFeaShellBendingStiffnessHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaShellBendingStiffnessRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaShellBendingStiffnessRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaShellMembraneBendingCouplingStiffnessHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaShellMembraneBendingCouplingStiffnessHandle() : base(true) { }
     internal StepFEAFeaShellMembraneBendingCouplingStiffnessHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaShellMembraneBendingCouplingStiffnessRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaShellMembraneBendingCouplingStiffnessRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaShellMembraneStiffnessHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaShellMembraneStiffnessHandle() : base(true) { }
     internal StepFEAFeaShellMembraneStiffnessHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaShellMembraneStiffnessRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaShellMembraneStiffnessRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaShellShearStiffnessHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaShellShearStiffnessHandle() : base(true) { }
     internal StepFEAFeaShellShearStiffnessHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaShellShearStiffnessRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaShellShearStiffnessRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaSurfaceSectionGeometricRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaSurfaceSectionGeometricRelationshipHandle() : base(true) { }
     internal StepFEAFeaSurfaceSectionGeometricRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaSurfaceSectionGeometricRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaSurfaceSectionGeometricRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFeaTangentialCoefficientOfLinearThermalExpansionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFeaTangentialCoefficientOfLinearThermalExpansionHandle() : base(true) { }
     internal StepFEAFeaTangentialCoefficientOfLinearThermalExpansionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFeaTangentialCoefficientOfLinearThermalExpansionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFeaTangentialCoefficientOfLinearThermalExpansionRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFreedomAndCoefficientHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFreedomAndCoefficientHandle() : base(true) { }
     internal StepFEAFreedomAndCoefficientHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFreedomAndCoefficientRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFreedomAndCoefficientRelease(handle); return true; }
 }
 
 internal sealed class StepFEAFreedomsListHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAFreedomsListHandle() : base(true) { }
     internal StepFEAFreedomsListHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAFreedomsListRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAFreedomsListRelease(handle); return true; }
 }
 
 internal sealed class StepFEAGeometricNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAGeometricNodeHandle() : base(true) { }
     internal StepFEAGeometricNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAGeometricNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAGeometricNodeRelease(handle); return true; }
 }
 
 internal sealed class StepFEANodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEANodeHandle() : base(true) { }
     internal StepFEANodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEANodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEANodeRelease(handle); return true; }
 }
 
 internal sealed class StepFEANodeDefinitionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEANodeDefinitionHandle() : base(true) { }
     internal StepFEANodeDefinitionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEANodeDefinitionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEANodeDefinitionRelease(handle); return true; }
 }
 
 internal sealed class StepFEANodeGroupHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEANodeGroupHandle() : base(true) { }
     internal StepFEANodeGroupHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEANodeGroupRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEANodeGroupRelease(handle); return true; }
 }
 
 internal sealed class StepFEANodeRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEANodeRepresentationHandle() : base(true) { }
     internal StepFEANodeRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEANodeRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEANodeRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepFEANodeSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEANodeSetHandle() : base(true) { }
     internal StepFEANodeSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEANodeSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEANodeSetRelease(handle); return true; }
 }
 
 internal sealed class StepFEANodeWithSolutionCoordinateSystemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEANodeWithSolutionCoordinateSystemHandle() : base(true) { }
     internal StepFEANodeWithSolutionCoordinateSystemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEANodeWithSolutionCoordinateSystemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEANodeWithSolutionCoordinateSystemRelease(handle); return true; }
 }
 
 internal sealed class StepFEANodeWithVectorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEANodeWithVectorHandle() : base(true) { }
     internal StepFEANodeWithVectorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEANodeWithVectorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEANodeWithVectorRelease(handle); return true; }
 }
 
 internal sealed class StepFEAParametricCurve3dElementCoordinateDirectionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAParametricCurve3dElementCoordinateDirectionHandle() : base(true) { }
     internal StepFEAParametricCurve3dElementCoordinateDirectionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAParametricCurve3dElementCoordinateDirectionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAParametricCurve3dElementCoordinateDirectionRelease(handle); return true; }
 }
 
 internal sealed class StepFEAParametricCurve3dElementCoordinateSystemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAParametricCurve3dElementCoordinateSystemHandle() : base(true) { }
     internal StepFEAParametricCurve3dElementCoordinateSystemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAParametricCurve3dElementCoordinateSystemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAParametricCurve3dElementCoordinateSystemRelease(handle); return true; }
 }
 
 internal sealed class StepFEAParametricSurface3dElementCoordinateSystemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAParametricSurface3dElementCoordinateSystemHandle() : base(true) { }
     internal StepFEAParametricSurface3dElementCoordinateSystemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAParametricSurface3dElementCoordinateSystemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAParametricSurface3dElementCoordinateSystemRelease(handle); return true; }
 }
 
 internal sealed class StepFEASurface3dElementRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEASurface3dElementRepresentationHandle() : base(true) { }
     internal StepFEASurface3dElementRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEASurface3dElementRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEASurface3dElementRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepFEASymmetricTensor23dMemberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEASymmetricTensor23dMemberHandle() : base(true) { }
     internal StepFEASymmetricTensor23dMemberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEASymmetricTensor23dMemberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEASymmetricTensor23dMemberRelease(handle); return true; }
 }
 
 internal sealed class StepFEASymmetricTensor43dMemberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEASymmetricTensor43dMemberHandle() : base(true) { }
     internal StepFEASymmetricTensor43dMemberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEASymmetricTensor43dMemberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEASymmetricTensor43dMemberRelease(handle); return true; }
 }
 
 internal sealed class StepFEAVolume3dElementRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepFEAVolume3dElementRepresentationHandle() : base(true) { }
     internal StepFEAVolume3dElementRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepFEAVolume3dElementRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepFEAVolume3dElementRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepGeomAxis1PlacementHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomAxis1PlacementHandle() : base(true) { }
     internal StepGeomAxis1PlacementHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomAxis1PlacementRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomAxis1PlacementRelease(handle); return true; }
 }
 
 internal sealed class StepGeomAxis2Placement2dHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomAxis2Placement2dHandle() : base(true) { }
     internal StepGeomAxis2Placement2dHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomAxis2Placement2dRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomAxis2Placement2dRelease(handle); return true; }
 }
 
 internal sealed class StepGeomAxis2Placement3dHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomAxis2Placement3dHandle() : base(true) { }
     internal StepGeomAxis2Placement3dHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomAxis2Placement3dRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomAxis2Placement3dRelease(handle); return true; }
 }
 
 internal sealed class StepGeomBSplineCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomBSplineCurveHandle() : base(true) { }
     internal StepGeomBSplineCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomBSplineCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomBSplineCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomBSplineCurveWithKnotsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomBSplineCurveWithKnotsHandle() : base(true) { }
     internal StepGeomBSplineCurveWithKnotsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomBSplineCurveWithKnotsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomBSplineCurveWithKnotsRelease(handle); return true; }
 }
 
 internal sealed class StepGeomBSplineCurveWithKnotsAndRationalBSplineCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomBSplineCurveWithKnotsAndRationalBSplineCurveHandle() : base(true) { }
     internal StepGeomBSplineCurveWithKnotsAndRationalBSplineCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomBSplineCurveWithKnotsAndRationalBSplineCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomBSplineCurveWithKnotsAndRationalBSplineCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomBSplineSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomBSplineSurfaceHandle() : base(true) { }
     internal StepGeomBSplineSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomBSplineSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomBSplineSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomBSplineSurfaceWithKnotsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomBSplineSurfaceWithKnotsHandle() : base(true) { }
     internal StepGeomBSplineSurfaceWithKnotsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomBSplineSurfaceWithKnotsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomBSplineSurfaceWithKnotsRelease(handle); return true; }
 }
 
 internal sealed class StepGeomBSplineSurfaceWithKnotsAndRationalBSplineSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomBSplineSurfaceWithKnotsAndRationalBSplineSurfaceHandle() : base(true) { }
     internal StepGeomBSplineSurfaceWithKnotsAndRationalBSplineSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomBSplineSurfaceWithKnotsAndRationalBSplineSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomBSplineSurfaceWithKnotsAndRationalBSplineSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomBezierCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomBezierCurveHandle() : base(true) { }
     internal StepGeomBezierCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomBezierCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomBezierCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomBezierCurveAndRationalBSplineCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomBezierCurveAndRationalBSplineCurveHandle() : base(true) { }
     internal StepGeomBezierCurveAndRationalBSplineCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomBezierCurveAndRationalBSplineCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomBezierCurveAndRationalBSplineCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomBezierSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomBezierSurfaceHandle() : base(true) { }
     internal StepGeomBezierSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomBezierSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomBezierSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomBezierSurfaceAndRationalBSplineSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomBezierSurfaceAndRationalBSplineSurfaceHandle() : base(true) { }
     internal StepGeomBezierSurfaceAndRationalBSplineSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomBezierSurfaceAndRationalBSplineSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomBezierSurfaceAndRationalBSplineSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomBoundaryCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomBoundaryCurveHandle() : base(true) { }
     internal StepGeomBoundaryCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomBoundaryCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomBoundaryCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomBoundedCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomBoundedCurveHandle() : base(true) { }
     internal StepGeomBoundedCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomBoundedCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomBoundedCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomBoundedSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomBoundedSurfaceHandle() : base(true) { }
     internal StepGeomBoundedSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomBoundedSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomBoundedSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomCartesianPointHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomCartesianPointHandle() : base(true) { }
     internal StepGeomCartesianPointHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomCartesianPointRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomCartesianPointRelease(handle); return true; }
 }
 
 internal sealed class StepGeomCartesianTransformationOperatorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomCartesianTransformationOperatorHandle() : base(true) { }
     internal StepGeomCartesianTransformationOperatorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomCartesianTransformationOperatorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomCartesianTransformationOperatorRelease(handle); return true; }
 }
 
 internal sealed class StepGeomCartesianTransformationOperator2dHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomCartesianTransformationOperator2dHandle() : base(true) { }
     internal StepGeomCartesianTransformationOperator2dHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomCartesianTransformationOperator2dRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomCartesianTransformationOperator2dRelease(handle); return true; }
 }
 
 internal sealed class StepGeomCartesianTransformationOperator3dHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomCartesianTransformationOperator3dHandle() : base(true) { }
     internal StepGeomCartesianTransformationOperator3dHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomCartesianTransformationOperator3dRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomCartesianTransformationOperator3dRelease(handle); return true; }
 }
 
 internal sealed class StepGeomCircleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomCircleHandle() : base(true) { }
     internal StepGeomCircleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomCircleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomCircleRelease(handle); return true; }
 }
 
 internal sealed class StepGeomCompositeCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomCompositeCurveHandle() : base(true) { }
     internal StepGeomCompositeCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomCompositeCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomCompositeCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomCompositeCurveOnSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomCompositeCurveOnSurfaceHandle() : base(true) { }
     internal StepGeomCompositeCurveOnSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomCompositeCurveOnSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomCompositeCurveOnSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomCompositeCurveSegmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomCompositeCurveSegmentHandle() : base(true) { }
     internal StepGeomCompositeCurveSegmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomCompositeCurveSegmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomCompositeCurveSegmentRelease(handle); return true; }
 }
 
 internal sealed class StepGeomConicHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomConicHandle() : base(true) { }
     internal StepGeomConicHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomConicRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomConicRelease(handle); return true; }
 }
 
 internal sealed class StepGeomConicalSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomConicalSurfaceHandle() : base(true) { }
     internal StepGeomConicalSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomConicalSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomConicalSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomCurveHandle() : base(true) { }
     internal StepGeomCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomCurveBoundedSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomCurveBoundedSurfaceHandle() : base(true) { }
     internal StepGeomCurveBoundedSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomCurveBoundedSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomCurveBoundedSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomCurveReplicaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomCurveReplicaHandle() : base(true) { }
     internal StepGeomCurveReplicaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomCurveReplicaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomCurveReplicaRelease(handle); return true; }
 }
 
 internal sealed class StepGeomCylindricalSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomCylindricalSurfaceHandle() : base(true) { }
     internal StepGeomCylindricalSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomCylindricalSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomCylindricalSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomDegeneratePcurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomDegeneratePcurveHandle() : base(true) { }
     internal StepGeomDegeneratePcurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomDegeneratePcurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomDegeneratePcurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomDegenerateToroidalSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomDegenerateToroidalSurfaceHandle() : base(true) { }
     internal StepGeomDegenerateToroidalSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomDegenerateToroidalSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomDegenerateToroidalSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomDirectionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomDirectionHandle() : base(true) { }
     internal StepGeomDirectionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomDirectionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomDirectionRelease(handle); return true; }
 }
 
 internal sealed class StepGeomElementarySurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomElementarySurfaceHandle() : base(true) { }
     internal StepGeomElementarySurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomElementarySurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomElementarySurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomEllipseHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomEllipseHandle() : base(true) { }
     internal StepGeomEllipseHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomEllipseRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomEllipseRelease(handle); return true; }
 }
 
 internal sealed class StepGeomEvaluatedDegeneratePcurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomEvaluatedDegeneratePcurveHandle() : base(true) { }
     internal StepGeomEvaluatedDegeneratePcurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomEvaluatedDegeneratePcurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomEvaluatedDegeneratePcurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomGeomRepContextAndGlobUnitAssCtxAndGlobUncertaintyAssCtxHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomGeomRepContextAndGlobUnitAssCtxAndGlobUncertaintyAssCtxHandle() : base(true) { }
     internal StepGeomGeomRepContextAndGlobUnitAssCtxAndGlobUncertaintyAssCtxHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomGeomRepContextAndGlobUnitAssCtxAndGlobUncertaintyAssCtxRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomGeomRepContextAndGlobUnitAssCtxAndGlobUncertaintyAssCtxRelease(handle); return true; }
 }
 
 internal sealed class StepGeomGeometricRepresentationContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomGeometricRepresentationContextHandle() : base(true) { }
     internal StepGeomGeometricRepresentationContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomGeometricRepresentationContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomGeometricRepresentationContextRelease(handle); return true; }
 }
 
 internal sealed class StepGeomGeometricRepresentationContextAndGlobalUnitAssignedContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomGeometricRepresentationContextAndGlobalUnitAssignedContextHandle() : base(true) { }
     internal StepGeomGeometricRepresentationContextAndGlobalUnitAssignedContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomGeometricRepresentationContextAndGlobalUnitAssignedContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomGeometricRepresentationContextAndGlobalUnitAssignedContextRelease(handle); return true; }
 }
 
 internal sealed class StepGeomGeometricRepresentationContextAndParametricRepresentationContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomGeometricRepresentationContextAndParametricRepresentationContextHandle() : base(true) { }
     internal StepGeomGeometricRepresentationContextAndParametricRepresentationContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomGeometricRepresentationContextAndParametricRepresentationContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomGeometricRepresentationContextAndParametricRepresentationContextRelease(handle); return true; }
 }
 
 internal sealed class StepGeomGeometricRepresentationItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomGeometricRepresentationItemHandle() : base(true) { }
     internal StepGeomGeometricRepresentationItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomGeometricRepresentationItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomGeometricRepresentationItemRelease(handle); return true; }
 }
 
 internal sealed class StepGeomHyperbolaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomHyperbolaHandle() : base(true) { }
     internal StepGeomHyperbolaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomHyperbolaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomHyperbolaRelease(handle); return true; }
 }
 
 internal sealed class StepGeomIntersectionCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomIntersectionCurveHandle() : base(true) { }
     internal StepGeomIntersectionCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomIntersectionCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomIntersectionCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomLineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomLineHandle() : base(true) { }
     internal StepGeomLineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomLineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomLineRelease(handle); return true; }
 }
 
 internal sealed class StepGeomOffsetCurve3dHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomOffsetCurve3dHandle() : base(true) { }
     internal StepGeomOffsetCurve3dHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomOffsetCurve3dRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomOffsetCurve3dRelease(handle); return true; }
 }
 
 internal sealed class StepGeomOffsetSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomOffsetSurfaceHandle() : base(true) { }
     internal StepGeomOffsetSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomOffsetSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomOffsetSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomOrientedSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomOrientedSurfaceHandle() : base(true) { }
     internal StepGeomOrientedSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomOrientedSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomOrientedSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomOuterBoundaryCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomOuterBoundaryCurveHandle() : base(true) { }
     internal StepGeomOuterBoundaryCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomOuterBoundaryCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomOuterBoundaryCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomParabolaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomParabolaHandle() : base(true) { }
     internal StepGeomParabolaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomParabolaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomParabolaRelease(handle); return true; }
 }
 
 internal sealed class StepGeomPcurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomPcurveHandle() : base(true) { }
     internal StepGeomPcurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomPcurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomPcurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomPlacementHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomPlacementHandle() : base(true) { }
     internal StepGeomPlacementHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomPlacementRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomPlacementRelease(handle); return true; }
 }
 
 internal sealed class StepGeomPlaneHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomPlaneHandle() : base(true) { }
     internal StepGeomPlaneHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomPlaneRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomPlaneRelease(handle); return true; }
 }
 
 internal sealed class StepGeomPointHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomPointHandle() : base(true) { }
     internal StepGeomPointHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomPointRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomPointRelease(handle); return true; }
 }
 
 internal sealed class StepGeomPointOnCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomPointOnCurveHandle() : base(true) { }
     internal StepGeomPointOnCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomPointOnCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomPointOnCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomPointOnSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomPointOnSurfaceHandle() : base(true) { }
     internal StepGeomPointOnSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomPointOnSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomPointOnSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomPointReplicaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomPointReplicaHandle() : base(true) { }
     internal StepGeomPointReplicaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomPointReplicaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomPointReplicaRelease(handle); return true; }
 }
 
 internal sealed class StepGeomPolylineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomPolylineHandle() : base(true) { }
     internal StepGeomPolylineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomPolylineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomPolylineRelease(handle); return true; }
 }
 
 internal sealed class StepGeomQuasiUniformCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomQuasiUniformCurveHandle() : base(true) { }
     internal StepGeomQuasiUniformCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomQuasiUniformCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomQuasiUniformCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomQuasiUniformCurveAndRationalBSplineCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomQuasiUniformCurveAndRationalBSplineCurveHandle() : base(true) { }
     internal StepGeomQuasiUniformCurveAndRationalBSplineCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomQuasiUniformCurveAndRationalBSplineCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomQuasiUniformCurveAndRationalBSplineCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomQuasiUniformSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomQuasiUniformSurfaceHandle() : base(true) { }
     internal StepGeomQuasiUniformSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomQuasiUniformSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomQuasiUniformSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomQuasiUniformSurfaceAndRationalBSplineSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomQuasiUniformSurfaceAndRationalBSplineSurfaceHandle() : base(true) { }
     internal StepGeomQuasiUniformSurfaceAndRationalBSplineSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomQuasiUniformSurfaceAndRationalBSplineSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomQuasiUniformSurfaceAndRationalBSplineSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomRationalBSplineCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomRationalBSplineCurveHandle() : base(true) { }
     internal StepGeomRationalBSplineCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomRationalBSplineCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomRationalBSplineCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomRationalBSplineSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomRationalBSplineSurfaceHandle() : base(true) { }
     internal StepGeomRationalBSplineSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomRationalBSplineSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomRationalBSplineSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomRectangularCompositeSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomRectangularCompositeSurfaceHandle() : base(true) { }
     internal StepGeomRectangularCompositeSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomRectangularCompositeSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomRectangularCompositeSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomRectangularTrimmedSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomRectangularTrimmedSurfaceHandle() : base(true) { }
     internal StepGeomRectangularTrimmedSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomRectangularTrimmedSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomRectangularTrimmedSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomReparametrisedCompositeCurveSegmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomReparametrisedCompositeCurveSegmentHandle() : base(true) { }
     internal StepGeomReparametrisedCompositeCurveSegmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomReparametrisedCompositeCurveSegmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomReparametrisedCompositeCurveSegmentRelease(handle); return true; }
 }
 
 internal sealed class StepGeomSeamCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomSeamCurveHandle() : base(true) { }
     internal StepGeomSeamCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomSeamCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomSeamCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomSphericalSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomSphericalSurfaceHandle() : base(true) { }
     internal StepGeomSphericalSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomSphericalSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomSphericalSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomSuParametersHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomSuParametersHandle() : base(true) { }
     internal StepGeomSuParametersHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomSuParametersRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomSuParametersRelease(handle); return true; }
 }
 
 internal sealed class StepGeomSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomSurfaceHandle() : base(true) { }
     internal StepGeomSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomSurfaceCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomSurfaceCurveHandle() : base(true) { }
     internal StepGeomSurfaceCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomSurfaceCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomSurfaceCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomSurfaceCurveAndBoundedCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomSurfaceCurveAndBoundedCurveHandle() : base(true) { }
     internal StepGeomSurfaceCurveAndBoundedCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomSurfaceCurveAndBoundedCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomSurfaceCurveAndBoundedCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomSurfaceOfLinearExtrusionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomSurfaceOfLinearExtrusionHandle() : base(true) { }
     internal StepGeomSurfaceOfLinearExtrusionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomSurfaceOfLinearExtrusionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomSurfaceOfLinearExtrusionRelease(handle); return true; }
 }
 
 internal sealed class StepGeomSurfaceOfRevolutionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomSurfaceOfRevolutionHandle() : base(true) { }
     internal StepGeomSurfaceOfRevolutionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomSurfaceOfRevolutionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomSurfaceOfRevolutionRelease(handle); return true; }
 }
 
 internal sealed class StepGeomSurfacePatchHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomSurfacePatchHandle() : base(true) { }
     internal StepGeomSurfacePatchHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomSurfacePatchRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomSurfacePatchRelease(handle); return true; }
 }
 
 internal sealed class StepGeomSurfaceReplicaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomSurfaceReplicaHandle() : base(true) { }
     internal StepGeomSurfaceReplicaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomSurfaceReplicaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomSurfaceReplicaRelease(handle); return true; }
 }
 
 internal sealed class StepGeomSweptSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomSweptSurfaceHandle() : base(true) { }
     internal StepGeomSweptSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomSweptSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomSweptSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomToroidalSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomToroidalSurfaceHandle() : base(true) { }
     internal StepGeomToroidalSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomToroidalSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomToroidalSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomTrimmedCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomTrimmedCurveHandle() : base(true) { }
     internal StepGeomTrimmedCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomTrimmedCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomTrimmedCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomTrimmingMemberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomTrimmingMemberHandle() : base(true) { }
     internal StepGeomTrimmingMemberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomTrimmingMemberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomTrimmingMemberRelease(handle); return true; }
 }
 
 internal sealed class StepGeomUniformCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomUniformCurveHandle() : base(true) { }
     internal StepGeomUniformCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomUniformCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomUniformCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomUniformCurveAndRationalBSplineCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomUniformCurveAndRationalBSplineCurveHandle() : base(true) { }
     internal StepGeomUniformCurveAndRationalBSplineCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomUniformCurveAndRationalBSplineCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomUniformCurveAndRationalBSplineCurveRelease(handle); return true; }
 }
 
 internal sealed class StepGeomUniformSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomUniformSurfaceHandle() : base(true) { }
     internal StepGeomUniformSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomUniformSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomUniformSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomUniformSurfaceAndRationalBSplineSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomUniformSurfaceAndRationalBSplineSurfaceHandle() : base(true) { }
     internal StepGeomUniformSurfaceAndRationalBSplineSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomUniformSurfaceAndRationalBSplineSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomUniformSurfaceAndRationalBSplineSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepGeomVectorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepGeomVectorHandle() : base(true) { }
     internal StepGeomVectorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepGeomVectorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepGeomVectorRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsActuatedKinPairAndOrderKinPairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsActuatedKinPairAndOrderKinPairHandle() : base(true) { }
     internal StepKinematicsActuatedKinPairAndOrderKinPairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsActuatedKinPairAndOrderKinPairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsActuatedKinPairAndOrderKinPairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsActuatedKinematicPairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsActuatedKinematicPairHandle() : base(true) { }
     internal StepKinematicsActuatedKinematicPairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsActuatedKinematicPairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsActuatedKinematicPairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsContextDependentKinematicLinkRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsContextDependentKinematicLinkRepresentationHandle() : base(true) { }
     internal StepKinematicsContextDependentKinematicLinkRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsContextDependentKinematicLinkRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsContextDependentKinematicLinkRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsCylindricalPairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsCylindricalPairHandle() : base(true) { }
     internal StepKinematicsCylindricalPairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsCylindricalPairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsCylindricalPairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsCylindricalPairValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsCylindricalPairValueHandle() : base(true) { }
     internal StepKinematicsCylindricalPairValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsCylindricalPairValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsCylindricalPairValueRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsCylindricalPairWithRangeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsCylindricalPairWithRangeHandle() : base(true) { }
     internal StepKinematicsCylindricalPairWithRangeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsCylindricalPairWithRangeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsCylindricalPairWithRangeRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsFullyConstrainedPairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsFullyConstrainedPairHandle() : base(true) { }
     internal StepKinematicsFullyConstrainedPairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsFullyConstrainedPairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsFullyConstrainedPairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsGearPairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsGearPairHandle() : base(true) { }
     internal StepKinematicsGearPairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsGearPairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsGearPairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsGearPairValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsGearPairValueHandle() : base(true) { }
     internal StepKinematicsGearPairValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsGearPairValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsGearPairValueRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsGearPairWithRangeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsGearPairWithRangeHandle() : base(true) { }
     internal StepKinematicsGearPairWithRangeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsGearPairWithRangeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsGearPairWithRangeRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsHighOrderKinematicPairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsHighOrderKinematicPairHandle() : base(true) { }
     internal StepKinematicsHighOrderKinematicPairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsHighOrderKinematicPairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsHighOrderKinematicPairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsHomokineticPairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsHomokineticPairHandle() : base(true) { }
     internal StepKinematicsHomokineticPairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsHomokineticPairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsHomokineticPairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsKinematicJointHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsKinematicJointHandle() : base(true) { }
     internal StepKinematicsKinematicJointHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsKinematicJointRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsKinematicJointRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsKinematicLinkHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsKinematicLinkHandle() : base(true) { }
     internal StepKinematicsKinematicLinkHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsKinematicLinkRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsKinematicLinkRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsKinematicLinkRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsKinematicLinkRepresentationHandle() : base(true) { }
     internal StepKinematicsKinematicLinkRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsKinematicLinkRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsKinematicLinkRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsKinematicLinkRepresentationAssociationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsKinematicLinkRepresentationAssociationHandle() : base(true) { }
     internal StepKinematicsKinematicLinkRepresentationAssociationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsKinematicLinkRepresentationAssociationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsKinematicLinkRepresentationAssociationRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsKinematicPairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsKinematicPairHandle() : base(true) { }
     internal StepKinematicsKinematicPairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsKinematicPairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsKinematicPairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsKinematicPropertyDefinitionRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsKinematicPropertyDefinitionRepresentationHandle() : base(true) { }
     internal StepKinematicsKinematicPropertyDefinitionRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsKinematicPropertyDefinitionRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsKinematicPropertyDefinitionRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsKinematicPropertyMechanismRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsKinematicPropertyMechanismRepresentationHandle() : base(true) { }
     internal StepKinematicsKinematicPropertyMechanismRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsKinematicPropertyMechanismRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsKinematicPropertyMechanismRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsKinematicTopologyDirectedStructureHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsKinematicTopologyDirectedStructureHandle() : base(true) { }
     internal StepKinematicsKinematicTopologyDirectedStructureHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsKinematicTopologyDirectedStructureRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsKinematicTopologyDirectedStructureRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsKinematicTopologyNetworkStructureHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsKinematicTopologyNetworkStructureHandle() : base(true) { }
     internal StepKinematicsKinematicTopologyNetworkStructureHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsKinematicTopologyNetworkStructureRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsKinematicTopologyNetworkStructureRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsKinematicTopologyStructureHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsKinematicTopologyStructureHandle() : base(true) { }
     internal StepKinematicsKinematicTopologyStructureHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsKinematicTopologyStructureRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsKinematicTopologyStructureRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsLinearFlexibleAndPinionPairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsLinearFlexibleAndPinionPairHandle() : base(true) { }
     internal StepKinematicsLinearFlexibleAndPinionPairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsLinearFlexibleAndPinionPairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsLinearFlexibleAndPinionPairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsLinearFlexibleAndPlanarCurvePairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsLinearFlexibleAndPlanarCurvePairHandle() : base(true) { }
     internal StepKinematicsLinearFlexibleAndPlanarCurvePairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsLinearFlexibleAndPlanarCurvePairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsLinearFlexibleAndPlanarCurvePairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsLinearFlexibleLinkRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsLinearFlexibleLinkRepresentationHandle() : base(true) { }
     internal StepKinematicsLinearFlexibleLinkRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsLinearFlexibleLinkRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsLinearFlexibleLinkRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsLowOrderKinematicPairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsLowOrderKinematicPairHandle() : base(true) { }
     internal StepKinematicsLowOrderKinematicPairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsLowOrderKinematicPairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsLowOrderKinematicPairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsLowOrderKinematicPairValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsLowOrderKinematicPairValueHandle() : base(true) { }
     internal StepKinematicsLowOrderKinematicPairValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsLowOrderKinematicPairValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsLowOrderKinematicPairValueRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsLowOrderKinematicPairWithMotionCouplingHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsLowOrderKinematicPairWithMotionCouplingHandle() : base(true) { }
     internal StepKinematicsLowOrderKinematicPairWithMotionCouplingHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsLowOrderKinematicPairWithMotionCouplingRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsLowOrderKinematicPairWithMotionCouplingRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsLowOrderKinematicPairWithRangeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsLowOrderKinematicPairWithRangeHandle() : base(true) { }
     internal StepKinematicsLowOrderKinematicPairWithRangeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsLowOrderKinematicPairWithRangeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsLowOrderKinematicPairWithRangeRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsMechanismRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsMechanismRepresentationHandle() : base(true) { }
     internal StepKinematicsMechanismRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsMechanismRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsMechanismRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsMechanismStateRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsMechanismStateRepresentationHandle() : base(true) { }
     internal StepKinematicsMechanismStateRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsMechanismStateRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsMechanismStateRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsOrientedJointHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsOrientedJointHandle() : base(true) { }
     internal StepKinematicsOrientedJointHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsOrientedJointRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsOrientedJointRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsPairRepresentationRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsPairRepresentationRelationshipHandle() : base(true) { }
     internal StepKinematicsPairRepresentationRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsPairRepresentationRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsPairRepresentationRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsPairValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsPairValueHandle() : base(true) { }
     internal StepKinematicsPairValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsPairValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsPairValueRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsPlanarCurvePairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsPlanarCurvePairHandle() : base(true) { }
     internal StepKinematicsPlanarCurvePairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsPlanarCurvePairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsPlanarCurvePairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsPlanarCurvePairRangeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsPlanarCurvePairRangeHandle() : base(true) { }
     internal StepKinematicsPlanarCurvePairRangeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsPlanarCurvePairRangeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsPlanarCurvePairRangeRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsPlanarPairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsPlanarPairHandle() : base(true) { }
     internal StepKinematicsPlanarPairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsPlanarPairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsPlanarPairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsPlanarPairValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsPlanarPairValueHandle() : base(true) { }
     internal StepKinematicsPlanarPairValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsPlanarPairValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsPlanarPairValueRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsPlanarPairWithRangeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsPlanarPairWithRangeHandle() : base(true) { }
     internal StepKinematicsPlanarPairWithRangeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsPlanarPairWithRangeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsPlanarPairWithRangeRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsPointOnPlanarCurvePairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsPointOnPlanarCurvePairHandle() : base(true) { }
     internal StepKinematicsPointOnPlanarCurvePairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsPointOnPlanarCurvePairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsPointOnPlanarCurvePairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsPointOnPlanarCurvePairValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsPointOnPlanarCurvePairValueHandle() : base(true) { }
     internal StepKinematicsPointOnPlanarCurvePairValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsPointOnPlanarCurvePairValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsPointOnPlanarCurvePairValueRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsPointOnPlanarCurvePairWithRangeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsPointOnPlanarCurvePairWithRangeHandle() : base(true) { }
     internal StepKinematicsPointOnPlanarCurvePairWithRangeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsPointOnPlanarCurvePairWithRangeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsPointOnPlanarCurvePairWithRangeRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsPointOnSurfacePairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsPointOnSurfacePairHandle() : base(true) { }
     internal StepKinematicsPointOnSurfacePairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsPointOnSurfacePairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsPointOnSurfacePairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsPointOnSurfacePairValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsPointOnSurfacePairValueHandle() : base(true) { }
     internal StepKinematicsPointOnSurfacePairValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsPointOnSurfacePairValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsPointOnSurfacePairValueRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsPointOnSurfacePairWithRangeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsPointOnSurfacePairWithRangeHandle() : base(true) { }
     internal StepKinematicsPointOnSurfacePairWithRangeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsPointOnSurfacePairWithRangeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsPointOnSurfacePairWithRangeRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsPrismaticPairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsPrismaticPairHandle() : base(true) { }
     internal StepKinematicsPrismaticPairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsPrismaticPairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsPrismaticPairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsPrismaticPairValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsPrismaticPairValueHandle() : base(true) { }
     internal StepKinematicsPrismaticPairValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsPrismaticPairValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsPrismaticPairValueRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsPrismaticPairWithRangeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsPrismaticPairWithRangeHandle() : base(true) { }
     internal StepKinematicsPrismaticPairWithRangeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsPrismaticPairWithRangeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsPrismaticPairWithRangeRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsProductDefinitionKinematicsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsProductDefinitionKinematicsHandle() : base(true) { }
     internal StepKinematicsProductDefinitionKinematicsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsProductDefinitionKinematicsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsProductDefinitionKinematicsRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsProductDefinitionRelationshipKinematicsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsProductDefinitionRelationshipKinematicsHandle() : base(true) { }
     internal StepKinematicsProductDefinitionRelationshipKinematicsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsProductDefinitionRelationshipKinematicsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsProductDefinitionRelationshipKinematicsRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsRackAndPinionPairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsRackAndPinionPairHandle() : base(true) { }
     internal StepKinematicsRackAndPinionPairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsRackAndPinionPairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsRackAndPinionPairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsRackAndPinionPairValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsRackAndPinionPairValueHandle() : base(true) { }
     internal StepKinematicsRackAndPinionPairValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsRackAndPinionPairValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsRackAndPinionPairValueRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsRackAndPinionPairWithRangeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsRackAndPinionPairWithRangeHandle() : base(true) { }
     internal StepKinematicsRackAndPinionPairWithRangeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsRackAndPinionPairWithRangeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsRackAndPinionPairWithRangeRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsRevolutePairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsRevolutePairHandle() : base(true) { }
     internal StepKinematicsRevolutePairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsRevolutePairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsRevolutePairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsRevolutePairValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsRevolutePairValueHandle() : base(true) { }
     internal StepKinematicsRevolutePairValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsRevolutePairValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsRevolutePairValueRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsRevolutePairWithRangeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsRevolutePairWithRangeHandle() : base(true) { }
     internal StepKinematicsRevolutePairWithRangeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsRevolutePairWithRangeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsRevolutePairWithRangeRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsRigidLinkRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsRigidLinkRepresentationHandle() : base(true) { }
     internal StepKinematicsRigidLinkRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsRigidLinkRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsRigidLinkRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsRollingCurvePairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsRollingCurvePairHandle() : base(true) { }
     internal StepKinematicsRollingCurvePairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsRollingCurvePairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsRollingCurvePairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsRollingCurvePairValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsRollingCurvePairValueHandle() : base(true) { }
     internal StepKinematicsRollingCurvePairValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsRollingCurvePairValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsRollingCurvePairValueRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsRollingSurfacePairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsRollingSurfacePairHandle() : base(true) { }
     internal StepKinematicsRollingSurfacePairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsRollingSurfacePairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsRollingSurfacePairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsRollingSurfacePairValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsRollingSurfacePairValueHandle() : base(true) { }
     internal StepKinematicsRollingSurfacePairValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsRollingSurfacePairValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsRollingSurfacePairValueRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsRotationAboutDirectionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsRotationAboutDirectionHandle() : base(true) { }
     internal StepKinematicsRotationAboutDirectionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsRotationAboutDirectionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsRotationAboutDirectionRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsScrewPairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsScrewPairHandle() : base(true) { }
     internal StepKinematicsScrewPairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsScrewPairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsScrewPairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsScrewPairValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsScrewPairValueHandle() : base(true) { }
     internal StepKinematicsScrewPairValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsScrewPairValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsScrewPairValueRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsScrewPairWithRangeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsScrewPairWithRangeHandle() : base(true) { }
     internal StepKinematicsScrewPairWithRangeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsScrewPairWithRangeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsScrewPairWithRangeRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsSlidingCurvePairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsSlidingCurvePairHandle() : base(true) { }
     internal StepKinematicsSlidingCurvePairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsSlidingCurvePairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsSlidingCurvePairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsSlidingCurvePairValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsSlidingCurvePairValueHandle() : base(true) { }
     internal StepKinematicsSlidingCurvePairValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsSlidingCurvePairValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsSlidingCurvePairValueRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsSlidingSurfacePairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsSlidingSurfacePairHandle() : base(true) { }
     internal StepKinematicsSlidingSurfacePairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsSlidingSurfacePairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsSlidingSurfacePairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsSlidingSurfacePairValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsSlidingSurfacePairValueHandle() : base(true) { }
     internal StepKinematicsSlidingSurfacePairValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsSlidingSurfacePairValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsSlidingSurfacePairValueRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsSphericalPairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsSphericalPairHandle() : base(true) { }
     internal StepKinematicsSphericalPairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsSphericalPairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsSphericalPairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsSphericalPairValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsSphericalPairValueHandle() : base(true) { }
     internal StepKinematicsSphericalPairValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsSphericalPairValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsSphericalPairValueRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsSphericalPairWithPinHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsSphericalPairWithPinHandle() : base(true) { }
     internal StepKinematicsSphericalPairWithPinHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsSphericalPairWithPinRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsSphericalPairWithPinRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsSphericalPairWithPinAndRangeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsSphericalPairWithPinAndRangeHandle() : base(true) { }
     internal StepKinematicsSphericalPairWithPinAndRangeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsSphericalPairWithPinAndRangeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsSphericalPairWithPinAndRangeRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsSphericalPairWithRangeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsSphericalPairWithRangeHandle() : base(true) { }
     internal StepKinematicsSphericalPairWithRangeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsSphericalPairWithRangeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsSphericalPairWithRangeRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsSurfacePairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsSurfacePairHandle() : base(true) { }
     internal StepKinematicsSurfacePairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsSurfacePairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsSurfacePairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsSurfacePairWithRangeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsSurfacePairWithRangeHandle() : base(true) { }
     internal StepKinematicsSurfacePairWithRangeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsSurfacePairWithRangeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsSurfacePairWithRangeRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsUnconstrainedPairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsUnconstrainedPairHandle() : base(true) { }
     internal StepKinematicsUnconstrainedPairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsUnconstrainedPairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsUnconstrainedPairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsUnconstrainedPairValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsUnconstrainedPairValueHandle() : base(true) { }
     internal StepKinematicsUnconstrainedPairValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsUnconstrainedPairValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsUnconstrainedPairValueRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsUniversalPairHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsUniversalPairHandle() : base(true) { }
     internal StepKinematicsUniversalPairHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsUniversalPairRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsUniversalPairRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsUniversalPairValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsUniversalPairValueHandle() : base(true) { }
     internal StepKinematicsUniversalPairValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsUniversalPairValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsUniversalPairValueRelease(handle); return true; }
 }
 
 internal sealed class StepKinematicsUniversalPairWithRangeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepKinematicsUniversalPairWithRangeHandle() : base(true) { }
     internal StepKinematicsUniversalPairWithRangeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepKinematicsUniversalPairWithRangeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepKinematicsUniversalPairWithRangeRelease(handle); return true; }
 }
 
 internal sealed class StepReprAllAroundShapeAspectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprAllAroundShapeAspectHandle() : base(true) { }
     internal StepReprAllAroundShapeAspectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprAllAroundShapeAspectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprAllAroundShapeAspectRelease(handle); return true; }
 }
 
 internal sealed class StepReprApexHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprApexHandle() : base(true) { }
     internal StepReprApexHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprApexRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprApexRelease(handle); return true; }
 }
 
 internal sealed class StepReprAssemblyComponentUsageHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprAssemblyComponentUsageHandle() : base(true) { }
     internal StepReprAssemblyComponentUsageHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprAssemblyComponentUsageRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprAssemblyComponentUsageRelease(handle); return true; }
 }
 
 internal sealed class StepReprAssemblyComponentUsageSubstituteHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprAssemblyComponentUsageSubstituteHandle() : base(true) { }
     internal StepReprAssemblyComponentUsageSubstituteHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprAssemblyComponentUsageSubstituteRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprAssemblyComponentUsageSubstituteRelease(handle); return true; }
 }
 
 internal sealed class StepReprBetweenShapeAspectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprBetweenShapeAspectHandle() : base(true) { }
     internal StepReprBetweenShapeAspectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprBetweenShapeAspectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprBetweenShapeAspectRelease(handle); return true; }
 }
 
 internal sealed class StepReprBooleanRepresentationItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprBooleanRepresentationItemHandle() : base(true) { }
     internal StepReprBooleanRepresentationItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprBooleanRepresentationItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprBooleanRepresentationItemRelease(handle); return true; }
 }
 
 internal sealed class StepReprCentreOfSymmetryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprCentreOfSymmetryHandle() : base(true) { }
     internal StepReprCentreOfSymmetryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprCentreOfSymmetryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprCentreOfSymmetryRelease(handle); return true; }
 }
 
 internal sealed class StepReprCharacterizedRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprCharacterizedRepresentationHandle() : base(true) { }
     internal StepReprCharacterizedRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprCharacterizedRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprCharacterizedRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepReprCompGroupShAspAndCompShAspAndDatumFeatAndShAspHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprCompGroupShAspAndCompShAspAndDatumFeatAndShAspHandle() : base(true) { }
     internal StepReprCompGroupShAspAndCompShAspAndDatumFeatAndShAspHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprCompGroupShAspAndCompShAspAndDatumFeatAndShAspRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprCompGroupShAspAndCompShAspAndDatumFeatAndShAspRelease(handle); return true; }
 }
 
 internal sealed class StepReprCompShAspAndDatumFeatAndShAspHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprCompShAspAndDatumFeatAndShAspHandle() : base(true) { }
     internal StepReprCompShAspAndDatumFeatAndShAspHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprCompShAspAndDatumFeatAndShAspRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprCompShAspAndDatumFeatAndShAspRelease(handle); return true; }
 }
 
 internal sealed class StepReprCompositeGroupShapeAspectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprCompositeGroupShapeAspectHandle() : base(true) { }
     internal StepReprCompositeGroupShapeAspectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprCompositeGroupShapeAspectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprCompositeGroupShapeAspectRelease(handle); return true; }
 }
 
 internal sealed class StepReprCompositeShapeAspectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprCompositeShapeAspectHandle() : base(true) { }
     internal StepReprCompositeShapeAspectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprCompositeShapeAspectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprCompositeShapeAspectRelease(handle); return true; }
 }
 
 internal sealed class StepReprCompoundRepresentationItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprCompoundRepresentationItemHandle() : base(true) { }
     internal StepReprCompoundRepresentationItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprCompoundRepresentationItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprCompoundRepresentationItemRelease(handle); return true; }
 }
 
 internal sealed class StepReprConfigurationDesignHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprConfigurationDesignHandle() : base(true) { }
     internal StepReprConfigurationDesignHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprConfigurationDesignRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprConfigurationDesignRelease(handle); return true; }
 }
 
 internal sealed class StepReprConfigurationEffectivityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprConfigurationEffectivityHandle() : base(true) { }
     internal StepReprConfigurationEffectivityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprConfigurationEffectivityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprConfigurationEffectivityRelease(handle); return true; }
 }
 
 internal sealed class StepReprConfigurationItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprConfigurationItemHandle() : base(true) { }
     internal StepReprConfigurationItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprConfigurationItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprConfigurationItemRelease(handle); return true; }
 }
 
 internal sealed class StepReprConstructiveGeometryRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprConstructiveGeometryRepresentationHandle() : base(true) { }
     internal StepReprConstructiveGeometryRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprConstructiveGeometryRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprConstructiveGeometryRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepReprConstructiveGeometryRepresentationRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprConstructiveGeometryRepresentationRelationshipHandle() : base(true) { }
     internal StepReprConstructiveGeometryRepresentationRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprConstructiveGeometryRepresentationRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprConstructiveGeometryRepresentationRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepReprContinuosShapeAspectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprContinuosShapeAspectHandle() : base(true) { }
     internal StepReprContinuosShapeAspectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprContinuosShapeAspectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprContinuosShapeAspectRelease(handle); return true; }
 }
 
 internal sealed class StepReprDataEnvironmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprDataEnvironmentHandle() : base(true) { }
     internal StepReprDataEnvironmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprDataEnvironmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprDataEnvironmentRelease(handle); return true; }
 }
 
 internal sealed class StepReprDefinitionalRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprDefinitionalRepresentationHandle() : base(true) { }
     internal StepReprDefinitionalRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprDefinitionalRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprDefinitionalRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepReprDerivedShapeAspectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprDerivedShapeAspectHandle() : base(true) { }
     internal StepReprDerivedShapeAspectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprDerivedShapeAspectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprDerivedShapeAspectRelease(handle); return true; }
 }
 
 internal sealed class StepReprDescriptiveRepresentationItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprDescriptiveRepresentationItemHandle() : base(true) { }
     internal StepReprDescriptiveRepresentationItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprDescriptiveRepresentationItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprDescriptiveRepresentationItemRelease(handle); return true; }
 }
 
 internal sealed class StepReprExtensionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprExtensionHandle() : base(true) { }
     internal StepReprExtensionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprExtensionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprExtensionRelease(handle); return true; }
 }
 
 internal sealed class StepReprExternallyDefinedRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprExternallyDefinedRepresentationHandle() : base(true) { }
     internal StepReprExternallyDefinedRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprExternallyDefinedRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprExternallyDefinedRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepReprFeatureForDatumTargetRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprFeatureForDatumTargetRelationshipHandle() : base(true) { }
     internal StepReprFeatureForDatumTargetRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprFeatureForDatumTargetRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprFeatureForDatumTargetRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepReprFunctionallyDefinedTransformationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprFunctionallyDefinedTransformationHandle() : base(true) { }
     internal StepReprFunctionallyDefinedTransformationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprFunctionallyDefinedTransformationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprFunctionallyDefinedTransformationRelease(handle); return true; }
 }
 
 internal sealed class StepReprGeometricAlignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprGeometricAlignmentHandle() : base(true) { }
     internal StepReprGeometricAlignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprGeometricAlignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprGeometricAlignmentRelease(handle); return true; }
 }
 
 internal sealed class StepReprGlobalUncertaintyAssignedContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprGlobalUncertaintyAssignedContextHandle() : base(true) { }
     internal StepReprGlobalUncertaintyAssignedContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprGlobalUncertaintyAssignedContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprGlobalUncertaintyAssignedContextRelease(handle); return true; }
 }
 
 internal sealed class StepReprGlobalUnitAssignedContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprGlobalUnitAssignedContextHandle() : base(true) { }
     internal StepReprGlobalUnitAssignedContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprGlobalUnitAssignedContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprGlobalUnitAssignedContextRelease(handle); return true; }
 }
 
 internal sealed class StepReprIntegerRepresentationItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprIntegerRepresentationItemHandle() : base(true) { }
     internal StepReprIntegerRepresentationItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprIntegerRepresentationItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprIntegerRepresentationItemRelease(handle); return true; }
 }
 
 internal sealed class StepReprItemDefinedTransformationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprItemDefinedTransformationHandle() : base(true) { }
     internal StepReprItemDefinedTransformationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprItemDefinedTransformationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprItemDefinedTransformationRelease(handle); return true; }
 }
 
 internal sealed class StepReprMakeFromUsageOptionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprMakeFromUsageOptionHandle() : base(true) { }
     internal StepReprMakeFromUsageOptionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprMakeFromUsageOptionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprMakeFromUsageOptionRelease(handle); return true; }
 }
 
 internal sealed class StepReprMappedItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprMappedItemHandle() : base(true) { }
     internal StepReprMappedItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprMappedItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprMappedItemRelease(handle); return true; }
 }
 
 internal sealed class StepReprMaterialDesignationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprMaterialDesignationHandle() : base(true) { }
     internal StepReprMaterialDesignationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprMaterialDesignationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprMaterialDesignationRelease(handle); return true; }
 }
 
 internal sealed class StepReprMaterialPropertyHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprMaterialPropertyHandle() : base(true) { }
     internal StepReprMaterialPropertyHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprMaterialPropertyRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprMaterialPropertyRelease(handle); return true; }
 }
 
 internal sealed class StepReprMaterialPropertyRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprMaterialPropertyRepresentationHandle() : base(true) { }
     internal StepReprMaterialPropertyRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprMaterialPropertyRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprMaterialPropertyRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepReprMeasureRepresentationItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprMeasureRepresentationItemHandle() : base(true) { }
     internal StepReprMeasureRepresentationItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprMeasureRepresentationItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprMeasureRepresentationItemRelease(handle); return true; }
 }
 
 internal sealed class StepReprMechanicalDesignAndDraughtingRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprMechanicalDesignAndDraughtingRelationshipHandle() : base(true) { }
     internal StepReprMechanicalDesignAndDraughtingRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprMechanicalDesignAndDraughtingRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprMechanicalDesignAndDraughtingRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepReprNextAssemblyUsageOccurrenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprNextAssemblyUsageOccurrenceHandle() : base(true) { }
     internal StepReprNextAssemblyUsageOccurrenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprNextAssemblyUsageOccurrenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprNextAssemblyUsageOccurrenceRelease(handle); return true; }
 }
 
 internal sealed class StepReprParallelOffsetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprParallelOffsetHandle() : base(true) { }
     internal StepReprParallelOffsetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprParallelOffsetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprParallelOffsetRelease(handle); return true; }
 }
 
 internal sealed class StepReprParametricRepresentationContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprParametricRepresentationContextHandle() : base(true) { }
     internal StepReprParametricRepresentationContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprParametricRepresentationContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprParametricRepresentationContextRelease(handle); return true; }
 }
 
 internal sealed class StepReprPerpendicularToHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprPerpendicularToHandle() : base(true) { }
     internal StepReprPerpendicularToHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprPerpendicularToRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprPerpendicularToRelease(handle); return true; }
 }
 
 internal sealed class StepReprProductConceptHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprProductConceptHandle() : base(true) { }
     internal StepReprProductConceptHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprProductConceptRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprProductConceptRelease(handle); return true; }
 }
 
 internal sealed class StepReprProductDefinitionShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprProductDefinitionShapeHandle() : base(true) { }
     internal StepReprProductDefinitionShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprProductDefinitionShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprProductDefinitionShapeRelease(handle); return true; }
 }
 
 internal sealed class StepReprProductDefinitionUsageHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprProductDefinitionUsageHandle() : base(true) { }
     internal StepReprProductDefinitionUsageHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprProductDefinitionUsageRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprProductDefinitionUsageRelease(handle); return true; }
 }
 
 internal sealed class StepReprPromissoryUsageOccurrenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprPromissoryUsageOccurrenceHandle() : base(true) { }
     internal StepReprPromissoryUsageOccurrenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprPromissoryUsageOccurrenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprPromissoryUsageOccurrenceRelease(handle); return true; }
 }
 
 internal sealed class StepReprPropertyDefinitionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprPropertyDefinitionHandle() : base(true) { }
     internal StepReprPropertyDefinitionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprPropertyDefinitionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprPropertyDefinitionRelease(handle); return true; }
 }
 
 internal sealed class StepReprPropertyDefinitionRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprPropertyDefinitionRelationshipHandle() : base(true) { }
     internal StepReprPropertyDefinitionRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprPropertyDefinitionRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprPropertyDefinitionRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepReprPropertyDefinitionRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprPropertyDefinitionRepresentationHandle() : base(true) { }
     internal StepReprPropertyDefinitionRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprPropertyDefinitionRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprPropertyDefinitionRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepReprQuantifiedAssemblyComponentUsageHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprQuantifiedAssemblyComponentUsageHandle() : base(true) { }
     internal StepReprQuantifiedAssemblyComponentUsageHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprQuantifiedAssemblyComponentUsageRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprQuantifiedAssemblyComponentUsageRelease(handle); return true; }
 }
 
 internal sealed class StepReprRealRepresentationItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprRealRepresentationItemHandle() : base(true) { }
     internal StepReprRealRepresentationItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprRealRepresentationItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprRealRepresentationItemRelease(handle); return true; }
 }
 
 internal sealed class StepReprReprItemAndLengthMeasureWithUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprReprItemAndLengthMeasureWithUnitHandle() : base(true) { }
     internal StepReprReprItemAndLengthMeasureWithUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprReprItemAndLengthMeasureWithUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprReprItemAndLengthMeasureWithUnitRelease(handle); return true; }
 }
 
 internal sealed class StepReprReprItemAndLengthMeasureWithUnitAndQRIHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprReprItemAndLengthMeasureWithUnitAndQRIHandle() : base(true) { }
     internal StepReprReprItemAndLengthMeasureWithUnitAndQRIHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprReprItemAndLengthMeasureWithUnitAndQRIRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprReprItemAndLengthMeasureWithUnitAndQRIRelease(handle); return true; }
 }
 
 internal sealed class StepReprReprItemAndMeasureWithUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprReprItemAndMeasureWithUnitHandle() : base(true) { }
     internal StepReprReprItemAndMeasureWithUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprReprItemAndMeasureWithUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprReprItemAndMeasureWithUnitRelease(handle); return true; }
 }
 
 internal sealed class StepReprReprItemAndMeasureWithUnitAndQRIHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprReprItemAndMeasureWithUnitAndQRIHandle() : base(true) { }
     internal StepReprReprItemAndMeasureWithUnitAndQRIHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprReprItemAndMeasureWithUnitAndQRIRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprReprItemAndMeasureWithUnitAndQRIRelease(handle); return true; }
 }
 
 internal sealed class StepReprReprItemAndPlaneAngleMeasureWithUnitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprReprItemAndPlaneAngleMeasureWithUnitHandle() : base(true) { }
     internal StepReprReprItemAndPlaneAngleMeasureWithUnitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprReprItemAndPlaneAngleMeasureWithUnitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprReprItemAndPlaneAngleMeasureWithUnitRelease(handle); return true; }
 }
 
 internal sealed class StepReprReprItemAndPlaneAngleMeasureWithUnitAndQRIHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprReprItemAndPlaneAngleMeasureWithUnitAndQRIHandle() : base(true) { }
     internal StepReprReprItemAndPlaneAngleMeasureWithUnitAndQRIHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprReprItemAndPlaneAngleMeasureWithUnitAndQRIRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprReprItemAndPlaneAngleMeasureWithUnitAndQRIRelease(handle); return true; }
 }
 
 internal sealed class StepReprRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprRepresentationHandle() : base(true) { }
     internal StepReprRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepReprRepresentationContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprRepresentationContextHandle() : base(true) { }
     internal StepReprRepresentationContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprRepresentationContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprRepresentationContextRelease(handle); return true; }
 }
 
 internal sealed class StepReprRepresentationContextReferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprRepresentationContextReferenceHandle() : base(true) { }
     internal StepReprRepresentationContextReferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprRepresentationContextReferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprRepresentationContextReferenceRelease(handle); return true; }
 }
 
 internal sealed class StepReprRepresentationItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprRepresentationItemHandle() : base(true) { }
     internal StepReprRepresentationItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprRepresentationItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprRepresentationItemRelease(handle); return true; }
 }
 
 internal sealed class StepReprRepresentationMapHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprRepresentationMapHandle() : base(true) { }
     internal StepReprRepresentationMapHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprRepresentationMapRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprRepresentationMapRelease(handle); return true; }
 }
 
 internal sealed class StepReprRepresentationReferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprRepresentationReferenceHandle() : base(true) { }
     internal StepReprRepresentationReferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprRepresentationReferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprRepresentationReferenceRelease(handle); return true; }
 }
 
 internal sealed class StepReprRepresentationRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprRepresentationRelationshipHandle() : base(true) { }
     internal StepReprRepresentationRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprRepresentationRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprRepresentationRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepReprRepresentationRelationshipWithTransformationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprRepresentationRelationshipWithTransformationHandle() : base(true) { }
     internal StepReprRepresentationRelationshipWithTransformationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprRepresentationRelationshipWithTransformationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprRepresentationRelationshipWithTransformationRelease(handle); return true; }
 }
 
 internal sealed class StepReprShapeAspectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprShapeAspectHandle() : base(true) { }
     internal StepReprShapeAspectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprShapeAspectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprShapeAspectRelease(handle); return true; }
 }
 
 internal sealed class StepReprShapeAspectDerivingRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprShapeAspectDerivingRelationshipHandle() : base(true) { }
     internal StepReprShapeAspectDerivingRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprShapeAspectDerivingRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprShapeAspectDerivingRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepReprShapeAspectRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprShapeAspectRelationshipHandle() : base(true) { }
     internal StepReprShapeAspectRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprShapeAspectRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprShapeAspectRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepReprShapeAspectTransitionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprShapeAspectTransitionHandle() : base(true) { }
     internal StepReprShapeAspectTransitionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprShapeAspectTransitionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprShapeAspectTransitionRelease(handle); return true; }
 }
 
 internal sealed class StepReprShapeRepresentationRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprShapeRepresentationRelationshipHandle() : base(true) { }
     internal StepReprShapeRepresentationRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprShapeRepresentationRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprShapeRepresentationRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepReprShapeRepresentationRelationshipWithTransformationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprShapeRepresentationRelationshipWithTransformationHandle() : base(true) { }
     internal StepReprShapeRepresentationRelationshipWithTransformationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprShapeRepresentationRelationshipWithTransformationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprShapeRepresentationRelationshipWithTransformationRelease(handle); return true; }
 }
 
 internal sealed class StepReprSpecifiedHigherUsageOccurrenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprSpecifiedHigherUsageOccurrenceHandle() : base(true) { }
     internal StepReprSpecifiedHigherUsageOccurrenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprSpecifiedHigherUsageOccurrenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprSpecifiedHigherUsageOccurrenceRelease(handle); return true; }
 }
 
 internal sealed class StepReprStructuralResponsePropertyHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprStructuralResponsePropertyHandle() : base(true) { }
     internal StepReprStructuralResponsePropertyHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprStructuralResponsePropertyRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprStructuralResponsePropertyRelease(handle); return true; }
 }
 
 internal sealed class StepReprStructuralResponsePropertyDefinitionRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprStructuralResponsePropertyDefinitionRepresentationHandle() : base(true) { }
     internal StepReprStructuralResponsePropertyDefinitionRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprStructuralResponsePropertyDefinitionRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprStructuralResponsePropertyDefinitionRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepReprSuppliedPartRelationshipHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprSuppliedPartRelationshipHandle() : base(true) { }
     internal StepReprSuppliedPartRelationshipHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprSuppliedPartRelationshipRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprSuppliedPartRelationshipRelease(handle); return true; }
 }
 
 internal sealed class StepReprTangentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprTangentHandle() : base(true) { }
     internal StepReprTangentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprTangentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprTangentRelease(handle); return true; }
 }
 
 internal sealed class StepReprValueRangeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprValueRangeHandle() : base(true) { }
     internal StepReprValueRangeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprValueRangeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprValueRangeRelease(handle); return true; }
 }
 
 internal sealed class StepReprValueRepresentationItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepReprValueRepresentationItemHandle() : base(true) { }
     internal StepReprValueRepresentationItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepReprValueRepresentationItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepReprValueRepresentationItemRelease(handle); return true; }
 }
 
 internal sealed class StepSelectActivatorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepSelectActivatorHandle() : base(true) { }
     internal StepSelectActivatorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepSelectActivatorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepSelectActivatorRelease(handle); return true; }
 }
 
 internal sealed class StepSelectFileModifierHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepSelectFileModifierHandle() : base(true) { }
     internal StepSelectFileModifierHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepSelectFileModifierRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepSelectFileModifierRelease(handle); return true; }
 }
 
 internal sealed class StepSelectFloatFormatHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepSelectFloatFormatHandle() : base(true) { }
     internal StepSelectFloatFormatHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepSelectFloatFormatRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepSelectFloatFormatRelease(handle); return true; }
 }
 
 internal sealed class StepSelectModelModifierHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepSelectModelModifierHandle() : base(true) { }
     internal StepSelectModelModifierHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepSelectModelModifierRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepSelectModelModifierRelease(handle); return true; }
 }
 
 internal sealed class StepSelectStepTypeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepSelectStepTypeHandle() : base(true) { }
     internal StepSelectStepTypeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepSelectStepTypeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepSelectStepTypeRelease(handle); return true; }
 }
 
 internal sealed class StepSelectWorkLibraryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepSelectWorkLibraryHandle() : base(true) { }
     internal StepSelectWorkLibraryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepSelectWorkLibraryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepSelectWorkLibraryRelease(handle); return true; }
 }
 
 internal sealed class StepShapeAdvancedBrepShapeRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeAdvancedBrepShapeRepresentationHandle() : base(true) { }
     internal StepShapeAdvancedBrepShapeRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeAdvancedBrepShapeRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeAdvancedBrepShapeRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeAdvancedFaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeAdvancedFaceHandle() : base(true) { }
     internal StepShapeAdvancedFaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeAdvancedFaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeAdvancedFaceRelease(handle); return true; }
 }
 
 internal sealed class StepShapeAngularLocationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeAngularLocationHandle() : base(true) { }
     internal StepShapeAngularLocationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeAngularLocationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeAngularLocationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeAngularSizeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeAngularSizeHandle() : base(true) { }
     internal StepShapeAngularSizeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeAngularSizeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeAngularSizeRelease(handle); return true; }
 }
 
 internal sealed class StepShapeBlockHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeBlockHandle() : base(true) { }
     internal StepShapeBlockHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeBlockRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeBlockRelease(handle); return true; }
 }
 
 internal sealed class StepShapeBooleanResultHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeBooleanResultHandle() : base(true) { }
     internal StepShapeBooleanResultHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeBooleanResultRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeBooleanResultRelease(handle); return true; }
 }
 
 internal sealed class StepShapeBoxDomainHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeBoxDomainHandle() : base(true) { }
     internal StepShapeBoxDomainHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeBoxDomainRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeBoxDomainRelease(handle); return true; }
 }
 
 internal sealed class StepShapeBoxedHalfSpaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeBoxedHalfSpaceHandle() : base(true) { }
     internal StepShapeBoxedHalfSpaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeBoxedHalfSpaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeBoxedHalfSpaceRelease(handle); return true; }
 }
 
 internal sealed class StepShapeBrepWithVoidsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeBrepWithVoidsHandle() : base(true) { }
     internal StepShapeBrepWithVoidsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeBrepWithVoidsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeBrepWithVoidsRelease(handle); return true; }
 }
 
 internal sealed class StepShapeClosedShellHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeClosedShellHandle() : base(true) { }
     internal StepShapeClosedShellHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeClosedShellRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeClosedShellRelease(handle); return true; }
 }
 
 internal sealed class StepShapeCompoundShapeRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeCompoundShapeRepresentationHandle() : base(true) { }
     internal StepShapeCompoundShapeRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeCompoundShapeRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeCompoundShapeRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeConnectedEdgeSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeConnectedEdgeSetHandle() : base(true) { }
     internal StepShapeConnectedEdgeSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeConnectedEdgeSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeConnectedEdgeSetRelease(handle); return true; }
 }
 
 internal sealed class StepShapeConnectedFaceSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeConnectedFaceSetHandle() : base(true) { }
     internal StepShapeConnectedFaceSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeConnectedFaceSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeConnectedFaceSetRelease(handle); return true; }
 }
 
 internal sealed class StepShapeConnectedFaceShapeRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeConnectedFaceShapeRepresentationHandle() : base(true) { }
     internal StepShapeConnectedFaceShapeRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeConnectedFaceShapeRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeConnectedFaceShapeRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeConnectedFaceSubSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeConnectedFaceSubSetHandle() : base(true) { }
     internal StepShapeConnectedFaceSubSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeConnectedFaceSubSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeConnectedFaceSubSetRelease(handle); return true; }
 }
 
 internal sealed class StepShapeContextDependentShapeRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeContextDependentShapeRepresentationHandle() : base(true) { }
     internal StepShapeContextDependentShapeRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeContextDependentShapeRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeContextDependentShapeRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeCsgShapeRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeCsgShapeRepresentationHandle() : base(true) { }
     internal StepShapeCsgShapeRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeCsgShapeRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeCsgShapeRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeCsgSolidHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeCsgSolidHandle() : base(true) { }
     internal StepShapeCsgSolidHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeCsgSolidRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeCsgSolidRelease(handle); return true; }
 }
 
 internal sealed class StepShapeDefinitionalRepresentationAndShapeRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeDefinitionalRepresentationAndShapeRepresentationHandle() : base(true) { }
     internal StepShapeDefinitionalRepresentationAndShapeRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeDefinitionalRepresentationAndShapeRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeDefinitionalRepresentationAndShapeRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeDimensionalCharacteristicRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeDimensionalCharacteristicRepresentationHandle() : base(true) { }
     internal StepShapeDimensionalCharacteristicRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeDimensionalCharacteristicRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeDimensionalCharacteristicRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeDimensionalLocationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeDimensionalLocationHandle() : base(true) { }
     internal StepShapeDimensionalLocationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeDimensionalLocationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeDimensionalLocationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeDimensionalLocationWithPathHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeDimensionalLocationWithPathHandle() : base(true) { }
     internal StepShapeDimensionalLocationWithPathHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeDimensionalLocationWithPathRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeDimensionalLocationWithPathRelease(handle); return true; }
 }
 
 internal sealed class StepShapeDimensionalSizeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeDimensionalSizeHandle() : base(true) { }
     internal StepShapeDimensionalSizeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeDimensionalSizeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeDimensionalSizeRelease(handle); return true; }
 }
 
 internal sealed class StepShapeDimensionalSizeWithPathHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeDimensionalSizeWithPathHandle() : base(true) { }
     internal StepShapeDimensionalSizeWithPathHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeDimensionalSizeWithPathRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeDimensionalSizeWithPathRelease(handle); return true; }
 }
 
 internal sealed class StepShapeDirectedDimensionalLocationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeDirectedDimensionalLocationHandle() : base(true) { }
     internal StepShapeDirectedDimensionalLocationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeDirectedDimensionalLocationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeDirectedDimensionalLocationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeEdgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeEdgeHandle() : base(true) { }
     internal StepShapeEdgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeEdgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeEdgeRelease(handle); return true; }
 }
 
 internal sealed class StepShapeEdgeBasedWireframeModelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeEdgeBasedWireframeModelHandle() : base(true) { }
     internal StepShapeEdgeBasedWireframeModelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeEdgeBasedWireframeModelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeEdgeBasedWireframeModelRelease(handle); return true; }
 }
 
 internal sealed class StepShapeEdgeBasedWireframeShapeRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeEdgeBasedWireframeShapeRepresentationHandle() : base(true) { }
     internal StepShapeEdgeBasedWireframeShapeRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeEdgeBasedWireframeShapeRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeEdgeBasedWireframeShapeRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeEdgeCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeEdgeCurveHandle() : base(true) { }
     internal StepShapeEdgeCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeEdgeCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeEdgeCurveRelease(handle); return true; }
 }
 
 internal sealed class StepShapeEdgeLoopHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeEdgeLoopHandle() : base(true) { }
     internal StepShapeEdgeLoopHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeEdgeLoopRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeEdgeLoopRelease(handle); return true; }
 }
 
 internal sealed class StepShapeExtrudedAreaSolidHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeExtrudedAreaSolidHandle() : base(true) { }
     internal StepShapeExtrudedAreaSolidHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeExtrudedAreaSolidRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeExtrudedAreaSolidRelease(handle); return true; }
 }
 
 internal sealed class StepShapeExtrudedFaceSolidHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeExtrudedFaceSolidHandle() : base(true) { }
     internal StepShapeExtrudedFaceSolidHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeExtrudedFaceSolidRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeExtrudedFaceSolidRelease(handle); return true; }
 }
 
 internal sealed class StepShapeFaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeFaceHandle() : base(true) { }
     internal StepShapeFaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeFaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeFaceRelease(handle); return true; }
 }
 
 internal sealed class StepShapeFaceBasedSurfaceModelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeFaceBasedSurfaceModelHandle() : base(true) { }
     internal StepShapeFaceBasedSurfaceModelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeFaceBasedSurfaceModelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeFaceBasedSurfaceModelRelease(handle); return true; }
 }
 
 internal sealed class StepShapeFaceBoundHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeFaceBoundHandle() : base(true) { }
     internal StepShapeFaceBoundHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeFaceBoundRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeFaceBoundRelease(handle); return true; }
 }
 
 internal sealed class StepShapeFaceOuterBoundHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeFaceOuterBoundHandle() : base(true) { }
     internal StepShapeFaceOuterBoundHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeFaceOuterBoundRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeFaceOuterBoundRelease(handle); return true; }
 }
 
 internal sealed class StepShapeFaceSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeFaceSurfaceHandle() : base(true) { }
     internal StepShapeFaceSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeFaceSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeFaceSurfaceRelease(handle); return true; }
 }
 
 internal sealed class StepShapeFacetedBrepHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeFacetedBrepHandle() : base(true) { }
     internal StepShapeFacetedBrepHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeFacetedBrepRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeFacetedBrepRelease(handle); return true; }
 }
 
 internal sealed class StepShapeFacetedBrepAndBrepWithVoidsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeFacetedBrepAndBrepWithVoidsHandle() : base(true) { }
     internal StepShapeFacetedBrepAndBrepWithVoidsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeFacetedBrepAndBrepWithVoidsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeFacetedBrepAndBrepWithVoidsRelease(handle); return true; }
 }
 
 internal sealed class StepShapeFacetedBrepShapeRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeFacetedBrepShapeRepresentationHandle() : base(true) { }
     internal StepShapeFacetedBrepShapeRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeFacetedBrepShapeRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeFacetedBrepShapeRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeGeometricCurveSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeGeometricCurveSetHandle() : base(true) { }
     internal StepShapeGeometricCurveSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeGeometricCurveSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeGeometricCurveSetRelease(handle); return true; }
 }
 
 internal sealed class StepShapeGeometricSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeGeometricSetHandle() : base(true) { }
     internal StepShapeGeometricSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeGeometricSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeGeometricSetRelease(handle); return true; }
 }
 
 internal sealed class StepShapeGeometricallyBoundedSurfaceShapeRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeGeometricallyBoundedSurfaceShapeRepresentationHandle() : base(true) { }
     internal StepShapeGeometricallyBoundedSurfaceShapeRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeGeometricallyBoundedSurfaceShapeRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeGeometricallyBoundedSurfaceShapeRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeGeometricallyBoundedWireframeShapeRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeGeometricallyBoundedWireframeShapeRepresentationHandle() : base(true) { }
     internal StepShapeGeometricallyBoundedWireframeShapeRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeGeometricallyBoundedWireframeShapeRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeGeometricallyBoundedWireframeShapeRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeHalfSpaceSolidHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeHalfSpaceSolidHandle() : base(true) { }
     internal StepShapeHalfSpaceSolidHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeHalfSpaceSolidRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeHalfSpaceSolidRelease(handle); return true; }
 }
 
 internal sealed class StepShapeLimitsAndFitsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeLimitsAndFitsHandle() : base(true) { }
     internal StepShapeLimitsAndFitsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeLimitsAndFitsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeLimitsAndFitsRelease(handle); return true; }
 }
 
 internal sealed class StepShapeLoopHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeLoopHandle() : base(true) { }
     internal StepShapeLoopHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeLoopRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeLoopRelease(handle); return true; }
 }
 
 internal sealed class StepShapeLoopAndPathHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeLoopAndPathHandle() : base(true) { }
     internal StepShapeLoopAndPathHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeLoopAndPathRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeLoopAndPathRelease(handle); return true; }
 }
 
 internal sealed class StepShapeManifoldSolidBrepHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeManifoldSolidBrepHandle() : base(true) { }
     internal StepShapeManifoldSolidBrepHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeManifoldSolidBrepRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeManifoldSolidBrepRelease(handle); return true; }
 }
 
 internal sealed class StepShapeManifoldSurfaceShapeRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeManifoldSurfaceShapeRepresentationHandle() : base(true) { }
     internal StepShapeManifoldSurfaceShapeRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeManifoldSurfaceShapeRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeManifoldSurfaceShapeRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeMeasureQualificationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeMeasureQualificationHandle() : base(true) { }
     internal StepShapeMeasureQualificationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeMeasureQualificationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeMeasureQualificationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeMeasureRepresentationItemAndQualifiedRepresentationItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeMeasureRepresentationItemAndQualifiedRepresentationItemHandle() : base(true) { }
     internal StepShapeMeasureRepresentationItemAndQualifiedRepresentationItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeMeasureRepresentationItemAndQualifiedRepresentationItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeMeasureRepresentationItemAndQualifiedRepresentationItemRelease(handle); return true; }
 }
 
 internal sealed class StepShapeNonManifoldSurfaceShapeRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeNonManifoldSurfaceShapeRepresentationHandle() : base(true) { }
     internal StepShapeNonManifoldSurfaceShapeRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeNonManifoldSurfaceShapeRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeNonManifoldSurfaceShapeRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeOpenShellHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeOpenShellHandle() : base(true) { }
     internal StepShapeOpenShellHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeOpenShellRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeOpenShellRelease(handle); return true; }
 }
 
 internal sealed class StepShapeOrientedClosedShellHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeOrientedClosedShellHandle() : base(true) { }
     internal StepShapeOrientedClosedShellHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeOrientedClosedShellRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeOrientedClosedShellRelease(handle); return true; }
 }
 
 internal sealed class StepShapeOrientedEdgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeOrientedEdgeHandle() : base(true) { }
     internal StepShapeOrientedEdgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeOrientedEdgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeOrientedEdgeRelease(handle); return true; }
 }
 
 internal sealed class StepShapeOrientedFaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeOrientedFaceHandle() : base(true) { }
     internal StepShapeOrientedFaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeOrientedFaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeOrientedFaceRelease(handle); return true; }
 }
 
 internal sealed class StepShapeOrientedOpenShellHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeOrientedOpenShellHandle() : base(true) { }
     internal StepShapeOrientedOpenShellHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeOrientedOpenShellRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeOrientedOpenShellRelease(handle); return true; }
 }
 
 internal sealed class StepShapeOrientedPathHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeOrientedPathHandle() : base(true) { }
     internal StepShapeOrientedPathHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeOrientedPathRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeOrientedPathRelease(handle); return true; }
 }
 
 internal sealed class StepShapePathHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapePathHandle() : base(true) { }
     internal StepShapePathHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapePathRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapePathRelease(handle); return true; }
 }
 
 internal sealed class StepShapePlusMinusToleranceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapePlusMinusToleranceHandle() : base(true) { }
     internal StepShapePlusMinusToleranceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapePlusMinusToleranceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapePlusMinusToleranceRelease(handle); return true; }
 }
 
 internal sealed class StepShapePointRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapePointRepresentationHandle() : base(true) { }
     internal StepShapePointRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapePointRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapePointRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepShapePolyLoopHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapePolyLoopHandle() : base(true) { }
     internal StepShapePolyLoopHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapePolyLoopRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapePolyLoopRelease(handle); return true; }
 }
 
 internal sealed class StepShapePrecisionQualifierHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapePrecisionQualifierHandle() : base(true) { }
     internal StepShapePrecisionQualifierHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapePrecisionQualifierRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapePrecisionQualifierRelease(handle); return true; }
 }
 
 internal sealed class StepShapeQualifiedRepresentationItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeQualifiedRepresentationItemHandle() : base(true) { }
     internal StepShapeQualifiedRepresentationItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeQualifiedRepresentationItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeQualifiedRepresentationItemRelease(handle); return true; }
 }
 
 internal sealed class StepShapeRevolvedAreaSolidHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeRevolvedAreaSolidHandle() : base(true) { }
     internal StepShapeRevolvedAreaSolidHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeRevolvedAreaSolidRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeRevolvedAreaSolidRelease(handle); return true; }
 }
 
 internal sealed class StepShapeRevolvedFaceSolidHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeRevolvedFaceSolidHandle() : base(true) { }
     internal StepShapeRevolvedFaceSolidHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeRevolvedFaceSolidRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeRevolvedFaceSolidRelease(handle); return true; }
 }
 
 internal sealed class StepShapeRightAngularWedgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeRightAngularWedgeHandle() : base(true) { }
     internal StepShapeRightAngularWedgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeRightAngularWedgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeRightAngularWedgeRelease(handle); return true; }
 }
 
 internal sealed class StepShapeRightCircularConeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeRightCircularConeHandle() : base(true) { }
     internal StepShapeRightCircularConeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeRightCircularConeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeRightCircularConeRelease(handle); return true; }
 }
 
 internal sealed class StepShapeRightCircularCylinderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeRightCircularCylinderHandle() : base(true) { }
     internal StepShapeRightCircularCylinderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeRightCircularCylinderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeRightCircularCylinderRelease(handle); return true; }
 }
 
 internal sealed class StepShapeSeamEdgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeSeamEdgeHandle() : base(true) { }
     internal StepShapeSeamEdgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeSeamEdgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeSeamEdgeRelease(handle); return true; }
 }
 
 internal sealed class StepShapeShapeDefinitionRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeShapeDefinitionRepresentationHandle() : base(true) { }
     internal StepShapeShapeDefinitionRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeShapeDefinitionRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeShapeDefinitionRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeShapeDimensionRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeShapeDimensionRepresentationHandle() : base(true) { }
     internal StepShapeShapeDimensionRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeShapeDimensionRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeShapeDimensionRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeShapeRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeShapeRepresentationHandle() : base(true) { }
     internal StepShapeShapeRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeShapeRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeShapeRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeShapeRepresentationWithParametersHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeShapeRepresentationWithParametersHandle() : base(true) { }
     internal StepShapeShapeRepresentationWithParametersHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeShapeRepresentationWithParametersRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeShapeRepresentationWithParametersRelease(handle); return true; }
 }
 
 internal sealed class StepShapeShellBasedSurfaceModelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeShellBasedSurfaceModelHandle() : base(true) { }
     internal StepShapeShellBasedSurfaceModelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeShellBasedSurfaceModelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeShellBasedSurfaceModelRelease(handle); return true; }
 }
 
 internal sealed class StepShapeSolidModelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeSolidModelHandle() : base(true) { }
     internal StepShapeSolidModelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeSolidModelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeSolidModelRelease(handle); return true; }
 }
 
 internal sealed class StepShapeSolidReplicaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeSolidReplicaHandle() : base(true) { }
     internal StepShapeSolidReplicaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeSolidReplicaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeSolidReplicaRelease(handle); return true; }
 }
 
 internal sealed class StepShapeSphereHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeSphereHandle() : base(true) { }
     internal StepShapeSphereHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeSphereRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeSphereRelease(handle); return true; }
 }
 
 internal sealed class StepShapeSubedgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeSubedgeHandle() : base(true) { }
     internal StepShapeSubedgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeSubedgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeSubedgeRelease(handle); return true; }
 }
 
 internal sealed class StepShapeSubfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeSubfaceHandle() : base(true) { }
     internal StepShapeSubfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeSubfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeSubfaceRelease(handle); return true; }
 }
 
 internal sealed class StepShapeSweptAreaSolidHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeSweptAreaSolidHandle() : base(true) { }
     internal StepShapeSweptAreaSolidHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeSweptAreaSolidRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeSweptAreaSolidRelease(handle); return true; }
 }
 
 internal sealed class StepShapeSweptFaceSolidHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeSweptFaceSolidHandle() : base(true) { }
     internal StepShapeSweptFaceSolidHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeSweptFaceSolidRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeSweptFaceSolidRelease(handle); return true; }
 }
 
 internal sealed class StepShapeToleranceValueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeToleranceValueHandle() : base(true) { }
     internal StepShapeToleranceValueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeToleranceValueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeToleranceValueRelease(handle); return true; }
 }
 
 internal sealed class StepShapeTopologicalRepresentationItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeTopologicalRepresentationItemHandle() : base(true) { }
     internal StepShapeTopologicalRepresentationItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeTopologicalRepresentationItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeTopologicalRepresentationItemRelease(handle); return true; }
 }
 
 internal sealed class StepShapeTorusHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeTorusHandle() : base(true) { }
     internal StepShapeTorusHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeTorusRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeTorusRelease(handle); return true; }
 }
 
 internal sealed class StepShapeTransitionalShapeRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeTransitionalShapeRepresentationHandle() : base(true) { }
     internal StepShapeTransitionalShapeRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeTransitionalShapeRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeTransitionalShapeRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepShapeTypeQualifierHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeTypeQualifierHandle() : base(true) { }
     internal StepShapeTypeQualifierHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeTypeQualifierRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeTypeQualifierRelease(handle); return true; }
 }
 
 internal sealed class StepShapeValueFormatTypeQualifierHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeValueFormatTypeQualifierHandle() : base(true) { }
     internal StepShapeValueFormatTypeQualifierHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeValueFormatTypeQualifierRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeValueFormatTypeQualifierRelease(handle); return true; }
 }
 
 internal sealed class StepShapeVertexHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeVertexHandle() : base(true) { }
     internal StepShapeVertexHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeVertexRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeVertexRelease(handle); return true; }
 }
 
 internal sealed class StepShapeVertexLoopHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeVertexLoopHandle() : base(true) { }
     internal StepShapeVertexLoopHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeVertexLoopRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeVertexLoopRelease(handle); return true; }
 }
 
 internal sealed class StepShapeVertexPointHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepShapeVertexPointHandle() : base(true) { }
     internal StepShapeVertexPointHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepShapeVertexPointRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepShapeVertexPointRelease(handle); return true; }
 }
 
 internal sealed class StepVisualAnnotationCurveOccurrenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualAnnotationCurveOccurrenceHandle() : base(true) { }
     internal StepVisualAnnotationCurveOccurrenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualAnnotationCurveOccurrenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualAnnotationCurveOccurrenceRelease(handle); return true; }
 }
 
 internal sealed class StepVisualAnnotationCurveOccurrenceAndGeomReprItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualAnnotationCurveOccurrenceAndGeomReprItemHandle() : base(true) { }
     internal StepVisualAnnotationCurveOccurrenceAndGeomReprItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualAnnotationCurveOccurrenceAndGeomReprItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualAnnotationCurveOccurrenceAndGeomReprItemRelease(handle); return true; }
 }
 
 internal sealed class StepVisualAnnotationFillAreaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualAnnotationFillAreaHandle() : base(true) { }
     internal StepVisualAnnotationFillAreaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualAnnotationFillAreaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualAnnotationFillAreaRelease(handle); return true; }
 }
 
 internal sealed class StepVisualAnnotationFillAreaOccurrenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualAnnotationFillAreaOccurrenceHandle() : base(true) { }
     internal StepVisualAnnotationFillAreaOccurrenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualAnnotationFillAreaOccurrenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualAnnotationFillAreaOccurrenceRelease(handle); return true; }
 }
 
 internal sealed class StepVisualAnnotationOccurrenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualAnnotationOccurrenceHandle() : base(true) { }
     internal StepVisualAnnotationOccurrenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualAnnotationOccurrenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualAnnotationOccurrenceRelease(handle); return true; }
 }
 
 internal sealed class StepVisualAnnotationPlaneHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualAnnotationPlaneHandle() : base(true) { }
     internal StepVisualAnnotationPlaneHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualAnnotationPlaneRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualAnnotationPlaneRelease(handle); return true; }
 }
 
 internal sealed class StepVisualAnnotationTextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualAnnotationTextHandle() : base(true) { }
     internal StepVisualAnnotationTextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualAnnotationTextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualAnnotationTextRelease(handle); return true; }
 }
 
 internal sealed class StepVisualAnnotationTextOccurrenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualAnnotationTextOccurrenceHandle() : base(true) { }
     internal StepVisualAnnotationTextOccurrenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualAnnotationTextOccurrenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualAnnotationTextOccurrenceRelease(handle); return true; }
 }
 
 internal sealed class StepVisualAreaInSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualAreaInSetHandle() : base(true) { }
     internal StepVisualAreaInSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualAreaInSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualAreaInSetRelease(handle); return true; }
 }
 
 internal sealed class StepVisualBackgroundColourHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualBackgroundColourHandle() : base(true) { }
     internal StepVisualBackgroundColourHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualBackgroundColourRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualBackgroundColourRelease(handle); return true; }
 }
 
 internal sealed class StepVisualCameraImageHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualCameraImageHandle() : base(true) { }
     internal StepVisualCameraImageHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualCameraImageRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualCameraImageRelease(handle); return true; }
 }
 
 internal sealed class StepVisualCameraImage2dWithScaleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualCameraImage2dWithScaleHandle() : base(true) { }
     internal StepVisualCameraImage2dWithScaleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualCameraImage2dWithScaleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualCameraImage2dWithScaleRelease(handle); return true; }
 }
 
 internal sealed class StepVisualCameraImage3dWithScaleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualCameraImage3dWithScaleHandle() : base(true) { }
     internal StepVisualCameraImage3dWithScaleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualCameraImage3dWithScaleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualCameraImage3dWithScaleRelease(handle); return true; }
 }
 
 internal sealed class StepVisualCameraModelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualCameraModelHandle() : base(true) { }
     internal StepVisualCameraModelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualCameraModelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualCameraModelRelease(handle); return true; }
 }
 
 internal sealed class StepVisualCameraModelD2Handle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualCameraModelD2Handle() : base(true) { }
     internal StepVisualCameraModelD2Handle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualCameraModelD2Release(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualCameraModelD2Release(handle); return true; }
 }
 
 internal sealed class StepVisualCameraModelD3Handle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualCameraModelD3Handle() : base(true) { }
     internal StepVisualCameraModelD3Handle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualCameraModelD3Release(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualCameraModelD3Release(handle); return true; }
 }
 
 internal sealed class StepVisualCameraModelD3MultiClippingHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualCameraModelD3MultiClippingHandle() : base(true) { }
     internal StepVisualCameraModelD3MultiClippingHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualCameraModelD3MultiClippingRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualCameraModelD3MultiClippingRelease(handle); return true; }
 }
 
 internal sealed class StepVisualCameraModelD3MultiClippingIntersectionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualCameraModelD3MultiClippingIntersectionHandle() : base(true) { }
     internal StepVisualCameraModelD3MultiClippingIntersectionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualCameraModelD3MultiClippingIntersectionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualCameraModelD3MultiClippingIntersectionRelease(handle); return true; }
 }
 
 internal sealed class StepVisualCameraModelD3MultiClippingUnionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualCameraModelD3MultiClippingUnionHandle() : base(true) { }
     internal StepVisualCameraModelD3MultiClippingUnionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualCameraModelD3MultiClippingUnionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualCameraModelD3MultiClippingUnionRelease(handle); return true; }
 }
 
 internal sealed class StepVisualCameraUsageHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualCameraUsageHandle() : base(true) { }
     internal StepVisualCameraUsageHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualCameraUsageRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualCameraUsageRelease(handle); return true; }
 }
 
 internal sealed class StepVisualCharacterizedObjAndRepresentationAndDraughtingModelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualCharacterizedObjAndRepresentationAndDraughtingModelHandle() : base(true) { }
     internal StepVisualCharacterizedObjAndRepresentationAndDraughtingModelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualCharacterizedObjAndRepresentationAndDraughtingModelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualCharacterizedObjAndRepresentationAndDraughtingModelRelease(handle); return true; }
 }
 
 internal sealed class StepVisualColourHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualColourHandle() : base(true) { }
     internal StepVisualColourHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualColourRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualColourRelease(handle); return true; }
 }
 
 internal sealed class StepVisualColourRgbHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualColourRgbHandle() : base(true) { }
     internal StepVisualColourRgbHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualColourRgbRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualColourRgbRelease(handle); return true; }
 }
 
 internal sealed class StepVisualColourSpecificationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualColourSpecificationHandle() : base(true) { }
     internal StepVisualColourSpecificationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualColourSpecificationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualColourSpecificationRelease(handle); return true; }
 }
 
 internal sealed class StepVisualComplexTriangulatedFaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualComplexTriangulatedFaceHandle() : base(true) { }
     internal StepVisualComplexTriangulatedFaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualComplexTriangulatedFaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualComplexTriangulatedFaceRelease(handle); return true; }
 }
 
 internal sealed class StepVisualComplexTriangulatedSurfaceSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualComplexTriangulatedSurfaceSetHandle() : base(true) { }
     internal StepVisualComplexTriangulatedSurfaceSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualComplexTriangulatedSurfaceSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualComplexTriangulatedSurfaceSetRelease(handle); return true; }
 }
 
 internal sealed class StepVisualCompositeTextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualCompositeTextHandle() : base(true) { }
     internal StepVisualCompositeTextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualCompositeTextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualCompositeTextRelease(handle); return true; }
 }
 
 internal sealed class StepVisualCompositeTextWithExtentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualCompositeTextWithExtentHandle() : base(true) { }
     internal StepVisualCompositeTextWithExtentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualCompositeTextWithExtentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualCompositeTextWithExtentRelease(handle); return true; }
 }
 
 internal sealed class StepVisualContextDependentInvisibilityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualContextDependentInvisibilityHandle() : base(true) { }
     internal StepVisualContextDependentInvisibilityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualContextDependentInvisibilityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualContextDependentInvisibilityRelease(handle); return true; }
 }
 
 internal sealed class StepVisualContextDependentOverRidingStyledItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualContextDependentOverRidingStyledItemHandle() : base(true) { }
     internal StepVisualContextDependentOverRidingStyledItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualContextDependentOverRidingStyledItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualContextDependentOverRidingStyledItemRelease(handle); return true; }
 }
 
 internal sealed class StepVisualCoordinatesListHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualCoordinatesListHandle() : base(true) { }
     internal StepVisualCoordinatesListHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualCoordinatesListRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualCoordinatesListRelease(handle); return true; }
 }
 
 internal sealed class StepVisualCubicBezierTessellatedEdgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualCubicBezierTessellatedEdgeHandle() : base(true) { }
     internal StepVisualCubicBezierTessellatedEdgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualCubicBezierTessellatedEdgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualCubicBezierTessellatedEdgeRelease(handle); return true; }
 }
 
 internal sealed class StepVisualCubicBezierTriangulatedFaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualCubicBezierTriangulatedFaceHandle() : base(true) { }
     internal StepVisualCubicBezierTriangulatedFaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualCubicBezierTriangulatedFaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualCubicBezierTriangulatedFaceRelease(handle); return true; }
 }
 
 internal sealed class StepVisualCurveStyleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualCurveStyleHandle() : base(true) { }
     internal StepVisualCurveStyleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualCurveStyleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualCurveStyleRelease(handle); return true; }
 }
 
 internal sealed class StepVisualCurveStyleFontHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualCurveStyleFontHandle() : base(true) { }
     internal StepVisualCurveStyleFontHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualCurveStyleFontRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualCurveStyleFontRelease(handle); return true; }
 }
 
 internal sealed class StepVisualCurveStyleFontPatternHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualCurveStyleFontPatternHandle() : base(true) { }
     internal StepVisualCurveStyleFontPatternHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualCurveStyleFontPatternRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualCurveStyleFontPatternRelease(handle); return true; }
 }
 
 internal sealed class StepVisualDraughtingAnnotationOccurrenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualDraughtingAnnotationOccurrenceHandle() : base(true) { }
     internal StepVisualDraughtingAnnotationOccurrenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualDraughtingAnnotationOccurrenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualDraughtingAnnotationOccurrenceRelease(handle); return true; }
 }
 
 internal sealed class StepVisualDraughtingCalloutHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualDraughtingCalloutHandle() : base(true) { }
     internal StepVisualDraughtingCalloutHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualDraughtingCalloutRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualDraughtingCalloutRelease(handle); return true; }
 }
 
 internal sealed class StepVisualDraughtingModelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualDraughtingModelHandle() : base(true) { }
     internal StepVisualDraughtingModelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualDraughtingModelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualDraughtingModelRelease(handle); return true; }
 }
 
 internal sealed class StepVisualDraughtingPreDefinedColourHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualDraughtingPreDefinedColourHandle() : base(true) { }
     internal StepVisualDraughtingPreDefinedColourHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualDraughtingPreDefinedColourRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualDraughtingPreDefinedColourRelease(handle); return true; }
 }
 
 internal sealed class StepVisualDraughtingPreDefinedCurveFontHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualDraughtingPreDefinedCurveFontHandle() : base(true) { }
     internal StepVisualDraughtingPreDefinedCurveFontHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualDraughtingPreDefinedCurveFontRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualDraughtingPreDefinedCurveFontRelease(handle); return true; }
 }
 
 internal sealed class StepVisualExternallyDefinedCurveFontHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualExternallyDefinedCurveFontHandle() : base(true) { }
     internal StepVisualExternallyDefinedCurveFontHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualExternallyDefinedCurveFontRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualExternallyDefinedCurveFontRelease(handle); return true; }
 }
 
 internal sealed class StepVisualExternallyDefinedTextFontHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualExternallyDefinedTextFontHandle() : base(true) { }
     internal StepVisualExternallyDefinedTextFontHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualExternallyDefinedTextFontRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualExternallyDefinedTextFontRelease(handle); return true; }
 }
 
 internal sealed class StepVisualFillAreaStyleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualFillAreaStyleHandle() : base(true) { }
     internal StepVisualFillAreaStyleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualFillAreaStyleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualFillAreaStyleRelease(handle); return true; }
 }
 
 internal sealed class StepVisualFillAreaStyleColourHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualFillAreaStyleColourHandle() : base(true) { }
     internal StepVisualFillAreaStyleColourHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualFillAreaStyleColourRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualFillAreaStyleColourRelease(handle); return true; }
 }
 
 internal sealed class StepVisualInvisibilityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualInvisibilityHandle() : base(true) { }
     internal StepVisualInvisibilityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualInvisibilityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualInvisibilityRelease(handle); return true; }
 }
 
 internal sealed class StepVisualMarkerMemberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualMarkerMemberHandle() : base(true) { }
     internal StepVisualMarkerMemberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualMarkerMemberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualMarkerMemberRelease(handle); return true; }
 }
 
 internal sealed class StepVisualMechanicalDesignGeometricPresentationAreaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualMechanicalDesignGeometricPresentationAreaHandle() : base(true) { }
     internal StepVisualMechanicalDesignGeometricPresentationAreaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualMechanicalDesignGeometricPresentationAreaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualMechanicalDesignGeometricPresentationAreaRelease(handle); return true; }
 }
 
 internal sealed class StepVisualMechanicalDesignGeometricPresentationRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualMechanicalDesignGeometricPresentationRepresentationHandle() : base(true) { }
     internal StepVisualMechanicalDesignGeometricPresentationRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualMechanicalDesignGeometricPresentationRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualMechanicalDesignGeometricPresentationRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepVisualNullStyleMemberHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualNullStyleMemberHandle() : base(true) { }
     internal StepVisualNullStyleMemberHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualNullStyleMemberRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualNullStyleMemberRelease(handle); return true; }
 }
 
 internal sealed class StepVisualOverRidingStyledItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualOverRidingStyledItemHandle() : base(true) { }
     internal StepVisualOverRidingStyledItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualOverRidingStyledItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualOverRidingStyledItemRelease(handle); return true; }
 }
 
 internal sealed class StepVisualPlanarBoxHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualPlanarBoxHandle() : base(true) { }
     internal StepVisualPlanarBoxHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualPlanarBoxRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualPlanarBoxRelease(handle); return true; }
 }
 
 internal sealed class StepVisualPlanarExtentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualPlanarExtentHandle() : base(true) { }
     internal StepVisualPlanarExtentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualPlanarExtentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualPlanarExtentRelease(handle); return true; }
 }
 
 internal sealed class StepVisualPointStyleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualPointStyleHandle() : base(true) { }
     internal StepVisualPointStyleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualPointStyleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualPointStyleRelease(handle); return true; }
 }
 
 internal sealed class StepVisualPreDefinedColourHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualPreDefinedColourHandle() : base(true) { }
     internal StepVisualPreDefinedColourHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualPreDefinedColourRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualPreDefinedColourRelease(handle); return true; }
 }
 
 internal sealed class StepVisualPreDefinedCurveFontHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualPreDefinedCurveFontHandle() : base(true) { }
     internal StepVisualPreDefinedCurveFontHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualPreDefinedCurveFontRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualPreDefinedCurveFontRelease(handle); return true; }
 }
 
 internal sealed class StepVisualPreDefinedItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualPreDefinedItemHandle() : base(true) { }
     internal StepVisualPreDefinedItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualPreDefinedItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualPreDefinedItemRelease(handle); return true; }
 }
 
 internal sealed class StepVisualPreDefinedTextFontHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualPreDefinedTextFontHandle() : base(true) { }
     internal StepVisualPreDefinedTextFontHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualPreDefinedTextFontRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualPreDefinedTextFontRelease(handle); return true; }
 }
 
 internal sealed class StepVisualPresentationAreaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualPresentationAreaHandle() : base(true) { }
     internal StepVisualPresentationAreaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualPresentationAreaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualPresentationAreaRelease(handle); return true; }
 }
 
 internal sealed class StepVisualPresentationLayerAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualPresentationLayerAssignmentHandle() : base(true) { }
     internal StepVisualPresentationLayerAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualPresentationLayerAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualPresentationLayerAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepVisualPresentationLayerUsageHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualPresentationLayerUsageHandle() : base(true) { }
     internal StepVisualPresentationLayerUsageHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualPresentationLayerUsageRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualPresentationLayerUsageRelease(handle); return true; }
 }
 
 internal sealed class StepVisualPresentationRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualPresentationRepresentationHandle() : base(true) { }
     internal StepVisualPresentationRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualPresentationRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualPresentationRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepVisualPresentationSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualPresentationSetHandle() : base(true) { }
     internal StepVisualPresentationSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualPresentationSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualPresentationSetRelease(handle); return true; }
 }
 
 internal sealed class StepVisualPresentationSizeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualPresentationSizeHandle() : base(true) { }
     internal StepVisualPresentationSizeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualPresentationSizeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualPresentationSizeRelease(handle); return true; }
 }
 
 internal sealed class StepVisualPresentationStyleAssignmentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualPresentationStyleAssignmentHandle() : base(true) { }
     internal StepVisualPresentationStyleAssignmentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualPresentationStyleAssignmentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualPresentationStyleAssignmentRelease(handle); return true; }
 }
 
 internal sealed class StepVisualPresentationStyleByContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualPresentationStyleByContextHandle() : base(true) { }
     internal StepVisualPresentationStyleByContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualPresentationStyleByContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualPresentationStyleByContextRelease(handle); return true; }
 }
 
 internal sealed class StepVisualPresentationViewHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualPresentationViewHandle() : base(true) { }
     internal StepVisualPresentationViewHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualPresentationViewRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualPresentationViewRelease(handle); return true; }
 }
 
 internal sealed class StepVisualPresentedItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualPresentedItemHandle() : base(true) { }
     internal StepVisualPresentedItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualPresentedItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualPresentedItemRelease(handle); return true; }
 }
 
 internal sealed class StepVisualPresentedItemRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualPresentedItemRepresentationHandle() : base(true) { }
     internal StepVisualPresentedItemRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualPresentedItemRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualPresentedItemRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepVisualRepositionedTessellatedGeometricSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualRepositionedTessellatedGeometricSetHandle() : base(true) { }
     internal StepVisualRepositionedTessellatedGeometricSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualRepositionedTessellatedGeometricSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualRepositionedTessellatedGeometricSetRelease(handle); return true; }
 }
 
 internal sealed class StepVisualRepositionedTessellatedItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualRepositionedTessellatedItemHandle() : base(true) { }
     internal StepVisualRepositionedTessellatedItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualRepositionedTessellatedItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualRepositionedTessellatedItemRelease(handle); return true; }
 }
 
 internal sealed class StepVisualStyledItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualStyledItemHandle() : base(true) { }
     internal StepVisualStyledItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualStyledItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualStyledItemRelease(handle); return true; }
 }
 
 internal sealed class StepVisualSurfaceSideStyleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualSurfaceSideStyleHandle() : base(true) { }
     internal StepVisualSurfaceSideStyleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualSurfaceSideStyleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualSurfaceSideStyleRelease(handle); return true; }
 }
 
 internal sealed class StepVisualSurfaceStyleBoundaryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualSurfaceStyleBoundaryHandle() : base(true) { }
     internal StepVisualSurfaceStyleBoundaryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualSurfaceStyleBoundaryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualSurfaceStyleBoundaryRelease(handle); return true; }
 }
 
 internal sealed class StepVisualSurfaceStyleControlGridHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualSurfaceStyleControlGridHandle() : base(true) { }
     internal StepVisualSurfaceStyleControlGridHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualSurfaceStyleControlGridRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualSurfaceStyleControlGridRelease(handle); return true; }
 }
 
 internal sealed class StepVisualSurfaceStyleFillAreaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualSurfaceStyleFillAreaHandle() : base(true) { }
     internal StepVisualSurfaceStyleFillAreaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualSurfaceStyleFillAreaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualSurfaceStyleFillAreaRelease(handle); return true; }
 }
 
 internal sealed class StepVisualSurfaceStyleParameterLineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualSurfaceStyleParameterLineHandle() : base(true) { }
     internal StepVisualSurfaceStyleParameterLineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualSurfaceStyleParameterLineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualSurfaceStyleParameterLineRelease(handle); return true; }
 }
 
 internal sealed class StepVisualSurfaceStyleReflectanceAmbientHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualSurfaceStyleReflectanceAmbientHandle() : base(true) { }
     internal StepVisualSurfaceStyleReflectanceAmbientHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualSurfaceStyleReflectanceAmbientRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualSurfaceStyleReflectanceAmbientRelease(handle); return true; }
 }
 
 internal sealed class StepVisualSurfaceStyleReflectanceAmbientDiffuseHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualSurfaceStyleReflectanceAmbientDiffuseHandle() : base(true) { }
     internal StepVisualSurfaceStyleReflectanceAmbientDiffuseHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualSurfaceStyleReflectanceAmbientDiffuseRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualSurfaceStyleReflectanceAmbientDiffuseRelease(handle); return true; }
 }
 
 internal sealed class StepVisualSurfaceStyleReflectanceAmbientDiffuseSpecularHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualSurfaceStyleReflectanceAmbientDiffuseSpecularHandle() : base(true) { }
     internal StepVisualSurfaceStyleReflectanceAmbientDiffuseSpecularHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualSurfaceStyleReflectanceAmbientDiffuseSpecularRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualSurfaceStyleReflectanceAmbientDiffuseSpecularRelease(handle); return true; }
 }
 
 internal sealed class StepVisualSurfaceStyleRenderingHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualSurfaceStyleRenderingHandle() : base(true) { }
     internal StepVisualSurfaceStyleRenderingHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualSurfaceStyleRenderingRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualSurfaceStyleRenderingRelease(handle); return true; }
 }
 
 internal sealed class StepVisualSurfaceStyleRenderingWithPropertiesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualSurfaceStyleRenderingWithPropertiesHandle() : base(true) { }
     internal StepVisualSurfaceStyleRenderingWithPropertiesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualSurfaceStyleRenderingWithPropertiesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualSurfaceStyleRenderingWithPropertiesRelease(handle); return true; }
 }
 
 internal sealed class StepVisualSurfaceStyleSegmentationCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualSurfaceStyleSegmentationCurveHandle() : base(true) { }
     internal StepVisualSurfaceStyleSegmentationCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualSurfaceStyleSegmentationCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualSurfaceStyleSegmentationCurveRelease(handle); return true; }
 }
 
 internal sealed class StepVisualSurfaceStyleSilhouetteHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualSurfaceStyleSilhouetteHandle() : base(true) { }
     internal StepVisualSurfaceStyleSilhouetteHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualSurfaceStyleSilhouetteRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualSurfaceStyleSilhouetteRelease(handle); return true; }
 }
 
 internal sealed class StepVisualSurfaceStyleTransparentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualSurfaceStyleTransparentHandle() : base(true) { }
     internal StepVisualSurfaceStyleTransparentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualSurfaceStyleTransparentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualSurfaceStyleTransparentRelease(handle); return true; }
 }
 
 internal sealed class StepVisualSurfaceStyleUsageHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualSurfaceStyleUsageHandle() : base(true) { }
     internal StepVisualSurfaceStyleUsageHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualSurfaceStyleUsageRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualSurfaceStyleUsageRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTemplateHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTemplateHandle() : base(true) { }
     internal StepVisualTemplateHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTemplateRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTemplateRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTemplateInstanceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTemplateInstanceHandle() : base(true) { }
     internal StepVisualTemplateInstanceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTemplateInstanceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTemplateInstanceRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTessellatedAnnotationOccurrenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTessellatedAnnotationOccurrenceHandle() : base(true) { }
     internal StepVisualTessellatedAnnotationOccurrenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTessellatedAnnotationOccurrenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTessellatedAnnotationOccurrenceRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTessellatedConnectingEdgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTessellatedConnectingEdgeHandle() : base(true) { }
     internal StepVisualTessellatedConnectingEdgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTessellatedConnectingEdgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTessellatedConnectingEdgeRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTessellatedCurveSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTessellatedCurveSetHandle() : base(true) { }
     internal StepVisualTessellatedCurveSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTessellatedCurveSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTessellatedCurveSetRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTessellatedEdgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTessellatedEdgeHandle() : base(true) { }
     internal StepVisualTessellatedEdgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTessellatedEdgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTessellatedEdgeRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTessellatedFaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTessellatedFaceHandle() : base(true) { }
     internal StepVisualTessellatedFaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTessellatedFaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTessellatedFaceRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTessellatedGeometricSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTessellatedGeometricSetHandle() : base(true) { }
     internal StepVisualTessellatedGeometricSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTessellatedGeometricSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTessellatedGeometricSetRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTessellatedItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTessellatedItemHandle() : base(true) { }
     internal StepVisualTessellatedItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTessellatedItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTessellatedItemRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTessellatedPointSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTessellatedPointSetHandle() : base(true) { }
     internal StepVisualTessellatedPointSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTessellatedPointSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTessellatedPointSetRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTessellatedShapeRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTessellatedShapeRepresentationHandle() : base(true) { }
     internal StepVisualTessellatedShapeRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTessellatedShapeRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTessellatedShapeRepresentationRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTessellatedShapeRepresentationWithAccuracyParametersHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTessellatedShapeRepresentationWithAccuracyParametersHandle() : base(true) { }
     internal StepVisualTessellatedShapeRepresentationWithAccuracyParametersHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTessellatedShapeRepresentationWithAccuracyParametersRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTessellatedShapeRepresentationWithAccuracyParametersRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTessellatedShellHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTessellatedShellHandle() : base(true) { }
     internal StepVisualTessellatedShellHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTessellatedShellRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTessellatedShellRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTessellatedSolidHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTessellatedSolidHandle() : base(true) { }
     internal StepVisualTessellatedSolidHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTessellatedSolidRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTessellatedSolidRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTessellatedStructuredItemHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTessellatedStructuredItemHandle() : base(true) { }
     internal StepVisualTessellatedStructuredItemHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTessellatedStructuredItemRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTessellatedStructuredItemRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTessellatedSurfaceSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTessellatedSurfaceSetHandle() : base(true) { }
     internal StepVisualTessellatedSurfaceSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTessellatedSurfaceSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTessellatedSurfaceSetRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTessellatedVertexHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTessellatedVertexHandle() : base(true) { }
     internal StepVisualTessellatedVertexHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTessellatedVertexRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTessellatedVertexRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTessellatedWireHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTessellatedWireHandle() : base(true) { }
     internal StepVisualTessellatedWireHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTessellatedWireRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTessellatedWireRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTextLiteralHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTextLiteralHandle() : base(true) { }
     internal StepVisualTextLiteralHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTextLiteralRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTextLiteralRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTextStyleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTextStyleHandle() : base(true) { }
     internal StepVisualTextStyleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTextStyleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTextStyleRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTextStyleForDefinedFontHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTextStyleForDefinedFontHandle() : base(true) { }
     internal StepVisualTextStyleForDefinedFontHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTextStyleForDefinedFontRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTextStyleForDefinedFontRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTextStyleWithBoxCharacteristicsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTextStyleWithBoxCharacteristicsHandle() : base(true) { }
     internal StepVisualTextStyleWithBoxCharacteristicsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTextStyleWithBoxCharacteristicsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTextStyleWithBoxCharacteristicsRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTriangulatedFaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTriangulatedFaceHandle() : base(true) { }
     internal StepVisualTriangulatedFaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTriangulatedFaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTriangulatedFaceRelease(handle); return true; }
 }
 
 internal sealed class StepVisualTriangulatedSurfaceSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualTriangulatedSurfaceSetHandle() : base(true) { }
     internal StepVisualTriangulatedSurfaceSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualTriangulatedSurfaceSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualTriangulatedSurfaceSetRelease(handle); return true; }
 }
 
 internal sealed class StepVisualViewVolumeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StepVisualViewVolumeHandle() : base(true) { }
     internal StepVisualViewVolumeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StepVisualViewVolumeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.StepVisualViewVolumeRelease(handle); return true; }
 }
 
 internal sealed class TransferBRepBinderOfShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferBRepBinderOfShapeHandle() : base(true) { }
     internal TransferBRepBinderOfShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferBRepBinderOfShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferBRepBinderOfShapeRelease(handle); return true; }
 }
 
 internal sealed class TransferBRepShapeBinderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferBRepShapeBinderHandle() : base(true) { }
     internal TransferBRepShapeBinderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferBRepShapeBinderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferBRepShapeBinderRelease(handle); return true; }
 }
 
 internal sealed class TransferBRepShapeListBinderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferBRepShapeListBinderHandle() : base(true) { }
     internal TransferBRepShapeListBinderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferBRepShapeListBinderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferBRepShapeListBinderRelease(handle); return true; }
 }
 
 internal sealed class TransferBRepShapeMapperHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferBRepShapeMapperHandle() : base(true) { }
     internal TransferBRepShapeMapperHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferBRepShapeMapperRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferBRepShapeMapperRelease(handle); return true; }
 }
 
 internal sealed class TransferBRepTransferResultInfoHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferBRepTransferResultInfoHandle() : base(true) { }
     internal TransferBRepTransferResultInfoHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferBRepTransferResultInfoRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferBRepTransferResultInfoRelease(handle); return true; }
 }
 
 internal sealed class TransferActorDispatchHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferActorDispatchHandle() : base(true) { }
     internal TransferActorDispatchHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferActorDispatchRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferActorDispatchRelease(handle); return true; }
 }
 
 internal sealed class TransferActorOfFinderProcessHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferActorOfFinderProcessHandle() : base(true) { }
     internal TransferActorOfFinderProcessHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferActorOfFinderProcessRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferActorOfFinderProcessRelease(handle); return true; }
 }
 
 internal sealed class TransferActorOfProcessForFinderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferActorOfProcessForFinderHandle() : base(true) { }
     internal TransferActorOfProcessForFinderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferActorOfProcessForFinderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferActorOfProcessForFinderRelease(handle); return true; }
 }
 
 internal sealed class TransferActorOfProcessForTransientHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferActorOfProcessForTransientHandle() : base(true) { }
     internal TransferActorOfProcessForTransientHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferActorOfProcessForTransientRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferActorOfProcessForTransientRelease(handle); return true; }
 }
 
 internal sealed class TransferActorOfTransientProcessHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferActorOfTransientProcessHandle() : base(true) { }
     internal TransferActorOfTransientProcessHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferActorOfTransientProcessRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferActorOfTransientProcessRelease(handle); return true; }
 }
 
 internal sealed class TransferBinderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferBinderHandle() : base(true) { }
     internal TransferBinderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferBinderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferBinderRelease(handle); return true; }
 }
 
 internal sealed class TransferBinderOfTransientIntegerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferBinderOfTransientIntegerHandle() : base(true) { }
     internal TransferBinderOfTransientIntegerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferBinderOfTransientIntegerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferBinderOfTransientIntegerRelease(handle); return true; }
 }
 
 internal sealed class TransferDispatchControlHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferDispatchControlHandle() : base(true) { }
     internal TransferDispatchControlHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferDispatchControlRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferDispatchControlRelease(handle); return true; }
 }
 
 internal sealed class TransferFinderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferFinderHandle() : base(true) { }
     internal TransferFinderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferFinderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferFinderRelease(handle); return true; }
 }
 
 internal sealed class TransferFinderProcessHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferFinderProcessHandle() : base(true) { }
     internal TransferFinderProcessHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferFinderProcessRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferFinderProcessRelease(handle); return true; }
 }
 
 internal sealed class TransferMapContainerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferMapContainerHandle() : base(true) { }
     internal TransferMapContainerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferMapContainerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferMapContainerRelease(handle); return true; }
 }
 
 internal sealed class TransferMultipleBinderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferMultipleBinderHandle() : base(true) { }
     internal TransferMultipleBinderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferMultipleBinderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferMultipleBinderRelease(handle); return true; }
 }
 
 internal sealed class TransferProcessForFinderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferProcessForFinderHandle() : base(true) { }
     internal TransferProcessForFinderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferProcessForFinderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferProcessForFinderRelease(handle); return true; }
 }
 
 internal sealed class TransferProcessForTransientHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferProcessForTransientHandle() : base(true) { }
     internal TransferProcessForTransientHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferProcessForTransientRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferProcessForTransientRelease(handle); return true; }
 }
 
 internal sealed class TransferResultFromModelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferResultFromModelHandle() : base(true) { }
     internal TransferResultFromModelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferResultFromModelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferResultFromModelRelease(handle); return true; }
 }
 
 internal sealed class TransferResultFromTransientHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferResultFromTransientHandle() : base(true) { }
     internal TransferResultFromTransientHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferResultFromTransientRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferResultFromTransientRelease(handle); return true; }
 }
 
 internal sealed class TransferSimpleBinderOfTransientHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferSimpleBinderOfTransientHandle() : base(true) { }
     internal TransferSimpleBinderOfTransientHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferSimpleBinderOfTransientRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferSimpleBinderOfTransientRelease(handle); return true; }
 }
 
 internal sealed class TransferTransientListBinderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferTransientListBinderHandle() : base(true) { }
     internal TransferTransientListBinderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferTransientListBinderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferTransientListBinderRelease(handle); return true; }
 }
 
 internal sealed class TransferTransientMapperHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferTransientMapperHandle() : base(true) { }
     internal TransferTransientMapperHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferTransientMapperRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferTransientMapperRelease(handle); return true; }
 }
 
 internal sealed class TransferTransientProcessHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferTransientProcessHandle() : base(true) { }
     internal TransferTransientProcessHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferTransientProcessRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferTransientProcessRelease(handle); return true; }
 }
 
 internal sealed class TransferVoidBinderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TransferVoidBinderHandle() : base(true) { }
     internal TransferVoidBinderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TransferVoidBinderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.TransferVoidBinderRelease(handle); return true; }
 }
 
 internal sealed class VrmlAPICafReaderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlAPICafReaderHandle() : base(true) { }
     internal VrmlAPICafReaderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlAPICafReaderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlAPICafReaderRelease(handle); return true; }
 }
 
 internal sealed class VrmlConverterDrawerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlConverterDrawerHandle() : base(true) { }
     internal VrmlConverterDrawerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlConverterDrawerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlConverterDrawerRelease(handle); return true; }
 }
 
 internal sealed class VrmlConverterIsoAspectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlConverterIsoAspectHandle() : base(true) { }
     internal VrmlConverterIsoAspectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlConverterIsoAspectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlConverterIsoAspectRelease(handle); return true; }
 }
 
 internal sealed class VrmlConverterLineAspectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlConverterLineAspectHandle() : base(true) { }
     internal VrmlConverterLineAspectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlConverterLineAspectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlConverterLineAspectRelease(handle); return true; }
 }
 
 internal sealed class VrmlConverterPointAspectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlConverterPointAspectHandle() : base(true) { }
     internal VrmlConverterPointAspectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlConverterPointAspectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlConverterPointAspectRelease(handle); return true; }
 }
 
 internal sealed class VrmlConverterProjectorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlConverterProjectorHandle() : base(true) { }
     internal VrmlConverterProjectorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlConverterProjectorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlConverterProjectorRelease(handle); return true; }
 }
 
 internal sealed class VrmlConverterShadingAspectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlConverterShadingAspectHandle() : base(true) { }
     internal VrmlConverterShadingAspectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlConverterShadingAspectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlConverterShadingAspectRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataAppearanceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataAppearanceHandle() : base(true) { }
     internal VrmlDataAppearanceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataAppearanceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataAppearanceRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataArrayVec3dHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataArrayVec3dHandle() : base(true) { }
     internal VrmlDataArrayVec3dHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataArrayVec3dRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataArrayVec3dRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataBoxHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataBoxHandle() : base(true) { }
     internal VrmlDataBoxHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataBoxRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataBoxRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataColorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataColorHandle() : base(true) { }
     internal VrmlDataColorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataColorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataColorRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataConeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataConeHandle() : base(true) { }
     internal VrmlDataConeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataConeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataConeRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataCoordinateHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataCoordinateHandle() : base(true) { }
     internal VrmlDataCoordinateHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataCoordinateRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataCoordinateRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataCylinderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataCylinderHandle() : base(true) { }
     internal VrmlDataCylinderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataCylinderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataCylinderRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataFacetedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataFacetedHandle() : base(true) { }
     internal VrmlDataFacetedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataFacetedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataFacetedRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataGeometryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataGeometryHandle() : base(true) { }
     internal VrmlDataGeometryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataGeometryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataGeometryRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataGroupHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataGroupHandle() : base(true) { }
     internal VrmlDataGroupHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataGroupRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataGroupRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataImageTextureHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataImageTextureHandle() : base(true) { }
     internal VrmlDataImageTextureHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataImageTextureRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataImageTextureRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataIndexedFaceSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataIndexedFaceSetHandle() : base(true) { }
     internal VrmlDataIndexedFaceSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataIndexedFaceSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataIndexedFaceSetRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataIndexedLineSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataIndexedLineSetHandle() : base(true) { }
     internal VrmlDataIndexedLineSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataIndexedLineSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataIndexedLineSetRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataMaterialHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataMaterialHandle() : base(true) { }
     internal VrmlDataMaterialHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataMaterialRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataMaterialRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataNodeHandle() : base(true) { }
     internal VrmlDataNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataNodeRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataNormalHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataNormalHandle() : base(true) { }
     internal VrmlDataNormalHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataNormalRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataNormalRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataShapeNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataShapeNodeHandle() : base(true) { }
     internal VrmlDataShapeNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataShapeNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataShapeNodeRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataSphereHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataSphereHandle() : base(true) { }
     internal VrmlDataSphereHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataSphereRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataSphereRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataTextureHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataTextureHandle() : base(true) { }
     internal VrmlDataTextureHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataTextureRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataTextureRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataTextureCoordinateHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataTextureCoordinateHandle() : base(true) { }
     internal VrmlDataTextureCoordinateHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataTextureCoordinateRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataTextureCoordinateRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataTextureTransformHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataTextureTransformHandle() : base(true) { }
     internal VrmlDataTextureTransformHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataTextureTransformRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataTextureTransformRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataUnknownNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataUnknownNodeHandle() : base(true) { }
     internal VrmlDataUnknownNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataUnknownNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataUnknownNodeRelease(handle); return true; }
 }
 
 internal sealed class VrmlDataWorldInfoHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlDataWorldInfoHandle() : base(true) { }
     internal VrmlDataWorldInfoHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlDataWorldInfoRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlDataWorldInfoRelease(handle); return true; }
 }
 
 internal sealed class VrmlAsciiTextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlAsciiTextHandle() : base(true) { }
     internal VrmlAsciiTextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlAsciiTextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlAsciiTextRelease(handle); return true; }
 }
 
 internal sealed class VrmlCoordinate3Handle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlCoordinate3Handle() : base(true) { }
     internal VrmlCoordinate3Handle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlCoordinate3Release(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlCoordinate3Release(handle); return true; }
 }
 
 internal sealed class VrmlIndexedFaceSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlIndexedFaceSetHandle() : base(true) { }
     internal VrmlIndexedFaceSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlIndexedFaceSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlIndexedFaceSetRelease(handle); return true; }
 }
 
 internal sealed class VrmlIndexedLineSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlIndexedLineSetHandle() : base(true) { }
     internal VrmlIndexedLineSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlIndexedLineSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlIndexedLineSetRelease(handle); return true; }
 }
 
 internal sealed class VrmlLODHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlLODHandle() : base(true) { }
     internal VrmlLODHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlLODRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlLODRelease(handle); return true; }
 }
 
 internal sealed class VrmlMaterialHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlMaterialHandle() : base(true) { }
     internal VrmlMaterialHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlMaterialRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlMaterialRelease(handle); return true; }
 }
 
 internal sealed class VrmlNormalHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlNormalHandle() : base(true) { }
     internal VrmlNormalHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlNormalRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlNormalRelease(handle); return true; }
 }
 
 internal sealed class VrmlSFImageHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlSFImageHandle() : base(true) { }
     internal VrmlSFImageHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlSFImageRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlSFImageRelease(handle); return true; }
 }
 
 internal sealed class VrmlTextureCoordinate2Handle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal VrmlTextureCoordinate2Handle() : base(true) { }
     internal VrmlTextureCoordinate2Handle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.VrmlTextureCoordinate2Release(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.VrmlTextureCoordinate2Release(handle); return true; }
 }
 
 internal sealed class XSAlgoAlgoContainerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XSAlgoAlgoContainerHandle() : base(true) { }
     internal XSAlgoAlgoContainerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XSAlgoAlgoContainerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.XSAlgoAlgoContainerRelease(handle); return true; }
 }
 
 internal sealed class XSControlConnectedShapesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XSControlConnectedShapesHandle() : base(true) { }
     internal XSControlConnectedShapesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XSControlConnectedShapesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.XSControlConnectedShapesRelease(handle); return true; }
 }
 
 internal sealed class XSControlControllerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XSControlControllerHandle() : base(true) { }
     internal XSControlControllerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XSControlControllerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.XSControlControllerRelease(handle); return true; }
 }
 
 internal sealed class XSControlSelectForTransferHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XSControlSelectForTransferHandle() : base(true) { }
     internal XSControlSelectForTransferHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XSControlSelectForTransferRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.XSControlSelectForTransferRelease(handle); return true; }
 }
 
 internal sealed class XSControlSignTransferStatusHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XSControlSignTransferStatusHandle() : base(true) { }
     internal XSControlSignTransferStatusHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XSControlSignTransferStatusRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.XSControlSignTransferStatusRelease(handle); return true; }
 }
 
 internal sealed class XSControlTransferReaderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XSControlTransferReaderHandle() : base(true) { }
     internal XSControlTransferReaderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XSControlTransferReaderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.XSControlTransferReaderRelease(handle); return true; }
 }
 
 internal sealed class XSControlTransferWriterHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XSControlTransferWriterHandle() : base(true) { }
     internal XSControlTransferWriterHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XSControlTransferWriterRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.XSControlTransferWriterRelease(handle); return true; }
 }
 
 internal sealed class XSControlVarsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XSControlVarsHandle() : base(true) { }
     internal XSControlVarsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XSControlVarsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.XSControlVarsRelease(handle); return true; }
 }
 
 internal sealed class XSControlWorkSessionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XSControlWorkSessionHandle() : base(true) { }
     internal XSControlWorkSessionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XSControlWorkSessionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DataExchangeGeneratedNativeMethods.XSControlWorkSessionRelease(handle); return true; }
 }
 
-internal static partial class GeneratedNativeMethods
+internal static partial class DataExchangeGeneratedNativeMethods
 {
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_apiheader_section_edit_header_create_0")]

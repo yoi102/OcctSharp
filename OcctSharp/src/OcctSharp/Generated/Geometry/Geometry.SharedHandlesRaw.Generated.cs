@@ -2254,1326 +2254,1326 @@ internal sealed class Adaptor2dCurve2dHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Adaptor2dCurve2dHandle() : base(true) { }
     internal Adaptor2dCurve2dHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Adaptor2dCurve2dRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Adaptor2dCurve2dRelease(handle); return true; }
 }
 
 internal sealed class Adaptor2dLine2dHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Adaptor2dLine2dHandle() : base(true) { }
     internal Adaptor2dLine2dHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Adaptor2dLine2dRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Adaptor2dLine2dRelease(handle); return true; }
 }
 
 internal sealed class Adaptor2dOffsetCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Adaptor2dOffsetCurveHandle() : base(true) { }
     internal Adaptor2dOffsetCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Adaptor2dOffsetCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Adaptor2dOffsetCurveRelease(handle); return true; }
 }
 
 internal sealed class Adaptor3dCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Adaptor3dCurveHandle() : base(true) { }
     internal Adaptor3dCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Adaptor3dCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Adaptor3dCurveRelease(handle); return true; }
 }
 
 internal sealed class Adaptor3dCurveOnSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Adaptor3dCurveOnSurfaceHandle() : base(true) { }
     internal Adaptor3dCurveOnSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Adaptor3dCurveOnSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Adaptor3dCurveOnSurfaceRelease(handle); return true; }
 }
 
 internal sealed class Adaptor3dHVertexHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Adaptor3dHVertexHandle() : base(true) { }
     internal Adaptor3dHVertexHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Adaptor3dHVertexRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Adaptor3dHVertexRelease(handle); return true; }
 }
 
 internal sealed class Adaptor3dIsoCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Adaptor3dIsoCurveHandle() : base(true) { }
     internal Adaptor3dIsoCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Adaptor3dIsoCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Adaptor3dIsoCurveRelease(handle); return true; }
 }
 
 internal sealed class Adaptor3dSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Adaptor3dSurfaceHandle() : base(true) { }
     internal Adaptor3dSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Adaptor3dSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Adaptor3dSurfaceRelease(handle); return true; }
 }
 
 internal sealed class Adaptor3dTopolToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Adaptor3dTopolToolHandle() : base(true) { }
     internal Adaptor3dTopolToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Adaptor3dTopolToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Adaptor3dTopolToolRelease(handle); return true; }
 }
 
 internal sealed class AdvApp2VarIsoHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal AdvApp2VarIsoHandle() : base(true) { }
     internal AdvApp2VarIsoHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.AdvApp2VarIsoRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.AdvApp2VarIsoRelease(handle); return true; }
 }
 
 internal sealed class AdvApp2VarNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal AdvApp2VarNodeHandle() : base(true) { }
     internal AdvApp2VarNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.AdvApp2VarNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.AdvApp2VarNodeRelease(handle); return true; }
 }
 
 internal sealed class AdvApp2VarPatchHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal AdvApp2VarPatchHandle() : base(true) { }
     internal AdvApp2VarPatchHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.AdvApp2VarPatchRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.AdvApp2VarPatchRelease(handle); return true; }
 }
 
 internal sealed class AppDefLinearCriteriaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal AppDefLinearCriteriaHandle() : base(true) { }
     internal AppDefLinearCriteriaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.AppDefLinearCriteriaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.AppDefLinearCriteriaRelease(handle); return true; }
 }
 
 internal sealed class AppDefSmoothCriterionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal AppDefSmoothCriterionHandle() : base(true) { }
     internal AppDefSmoothCriterionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.AppDefSmoothCriterionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.AppDefSmoothCriterionRelease(handle); return true; }
 }
 
 internal sealed class ApproxCurvlinFuncHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ApproxCurvlinFuncHandle() : base(true) { }
     internal ApproxCurvlinFuncHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ApproxCurvlinFuncRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.ApproxCurvlinFuncRelease(handle); return true; }
 }
 
 internal sealed class ApproxSweepFunctionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ApproxSweepFunctionHandle() : base(true) { }
     internal ApproxSweepFunctionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ApproxSweepFunctionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.ApproxSweepFunctionRelease(handle); return true; }
 }
 
 internal sealed class BSplCLibCacheHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BSplCLibCacheHandle() : base(true) { }
     internal BSplCLibCacheHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BSplCLibCacheRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.BSplCLibCacheRelease(handle); return true; }
 }
 
 internal sealed class BSplSLibCacheHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BSplSLibCacheHandle() : base(true) { }
     internal BSplSLibCacheHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BSplSLibCacheRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.BSplSLibCacheRelease(handle); return true; }
 }
 
 internal sealed class BiTgteCurveOnEdgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BiTgteCurveOnEdgeHandle() : base(true) { }
     internal BiTgteCurveOnEdgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BiTgteCurveOnEdgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.BiTgteCurveOnEdgeRelease(handle); return true; }
 }
 
 internal sealed class BiTgteCurveOnVertexHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BiTgteCurveOnVertexHandle() : base(true) { }
     internal BiTgteCurveOnVertexHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BiTgteCurveOnVertexRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.BiTgteCurveOnVertexRelease(handle); return true; }
 }
 
 internal sealed class BisectorBisecAnaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BisectorBisecAnaHandle() : base(true) { }
     internal BisectorBisecAnaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BisectorBisecAnaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.BisectorBisecAnaRelease(handle); return true; }
 }
 
 internal sealed class BisectorBisecCCHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BisectorBisecCCHandle() : base(true) { }
     internal BisectorBisecCCHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BisectorBisecCCRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.BisectorBisecCCRelease(handle); return true; }
 }
 
 internal sealed class BisectorBisecPCHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BisectorBisecPCHandle() : base(true) { }
     internal BisectorBisecPCHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BisectorBisecPCRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.BisectorBisecPCRelease(handle); return true; }
 }
 
 internal sealed class BisectorCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BisectorCurveHandle() : base(true) { }
     internal BisectorCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BisectorCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.BisectorCurveRelease(handle); return true; }
 }
 
 internal sealed class ExtremaExtPExtSHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExtremaExtPExtSHandle() : base(true) { }
     internal ExtremaExtPExtSHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExtremaExtPExtSRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.ExtremaExtPExtSRelease(handle); return true; }
 }
 
 internal sealed class ExtremaExtPRevSHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ExtremaExtPRevSHandle() : base(true) { }
     internal ExtremaExtPRevSHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ExtremaExtPRevSRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.ExtremaExtPRevSRelease(handle); return true; }
 }
 
 internal sealed class FEmToolCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal FEmToolCurveHandle() : base(true) { }
     internal FEmToolCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.FEmToolCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.FEmToolCurveRelease(handle); return true; }
 }
 
 internal sealed class FEmToolElementaryCriterionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal FEmToolElementaryCriterionHandle() : base(true) { }
     internal FEmToolElementaryCriterionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.FEmToolElementaryCriterionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.FEmToolElementaryCriterionRelease(handle); return true; }
 }
 
 internal sealed class FEmToolLinearFlexionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal FEmToolLinearFlexionHandle() : base(true) { }
     internal FEmToolLinearFlexionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.FEmToolLinearFlexionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.FEmToolLinearFlexionRelease(handle); return true; }
 }
 
 internal sealed class FEmToolLinearJerkHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal FEmToolLinearJerkHandle() : base(true) { }
     internal FEmToolLinearJerkHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.FEmToolLinearJerkRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.FEmToolLinearJerkRelease(handle); return true; }
 }
 
 internal sealed class FEmToolLinearTensionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal FEmToolLinearTensionHandle() : base(true) { }
     internal FEmToolLinearTensionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.FEmToolLinearTensionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.FEmToolLinearTensionRelease(handle); return true; }
 }
 
 internal sealed class FEmToolProfileMatrixHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal FEmToolProfileMatrixHandle() : base(true) { }
     internal FEmToolProfileMatrixHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.FEmToolProfileMatrixRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.FEmToolProfileMatrixRelease(handle); return true; }
 }
 
 internal sealed class FEmToolSparseMatrixHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal FEmToolSparseMatrixHandle() : base(true) { }
     internal FEmToolSparseMatrixHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.FEmToolSparseMatrixRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.FEmToolSparseMatrixRelease(handle); return true; }
 }
 
 internal sealed class GccIntBCircHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GccIntBCircHandle() : base(true) { }
     internal GccIntBCircHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GccIntBCircRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GccIntBCircRelease(handle); return true; }
 }
 
 internal sealed class GccIntBElipsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GccIntBElipsHandle() : base(true) { }
     internal GccIntBElipsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GccIntBElipsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GccIntBElipsRelease(handle); return true; }
 }
 
 internal sealed class GccIntBHyperHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GccIntBHyperHandle() : base(true) { }
     internal GccIntBHyperHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GccIntBHyperRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GccIntBHyperRelease(handle); return true; }
 }
 
 internal sealed class GccIntBLineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GccIntBLineHandle() : base(true) { }
     internal GccIntBLineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GccIntBLineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GccIntBLineRelease(handle); return true; }
 }
 
 internal sealed class GccIntBParabHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GccIntBParabHandle() : base(true) { }
     internal GccIntBParabHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GccIntBParabRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GccIntBParabRelease(handle); return true; }
 }
 
 internal sealed class GccIntBPointHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GccIntBPointHandle() : base(true) { }
     internal GccIntBPointHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GccIntBPointRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GccIntBPointRelease(handle); return true; }
 }
 
 internal sealed class GccIntBisecHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GccIntBisecHandle() : base(true) { }
     internal GccIntBisecHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GccIntBisecRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GccIntBisecRelease(handle); return true; }
 }
 
 internal sealed class Geom2dAdaptorCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dAdaptorCurveHandle() : base(true) { }
     internal Geom2dAdaptorCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dAdaptorCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dAdaptorCurveRelease(handle); return true; }
 }
 
 internal sealed class Geom2dEvalAHTBezierCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dEvalAHTBezierCurveHandle() : base(true) { }
     internal Geom2dEvalAHTBezierCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dEvalAHTBezierCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dEvalAHTBezierCurveRelease(handle); return true; }
 }
 
 internal sealed class Geom2dEvalArchimedeanSpiralCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dEvalArchimedeanSpiralCurveHandle() : base(true) { }
     internal Geom2dEvalArchimedeanSpiralCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dEvalArchimedeanSpiralCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dEvalArchimedeanSpiralCurveRelease(handle); return true; }
 }
 
 internal sealed class Geom2dEvalCircleInvoluteCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dEvalCircleInvoluteCurveHandle() : base(true) { }
     internal Geom2dEvalCircleInvoluteCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dEvalCircleInvoluteCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dEvalCircleInvoluteCurveRelease(handle); return true; }
 }
 
 internal sealed class Geom2dEvalLogarithmicSpiralCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dEvalLogarithmicSpiralCurveHandle() : base(true) { }
     internal Geom2dEvalLogarithmicSpiralCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dEvalLogarithmicSpiralCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dEvalLogarithmicSpiralCurveRelease(handle); return true; }
 }
 
 internal sealed class Geom2dEvalRepCurveDescBaseHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dEvalRepCurveDescBaseHandle() : base(true) { }
     internal Geom2dEvalRepCurveDescBaseHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dEvalRepCurveDescBaseRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dEvalRepCurveDescBaseRelease(handle); return true; }
 }
 
 internal sealed class Geom2dEvalSineWaveCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dEvalSineWaveCurveHandle() : base(true) { }
     internal Geom2dEvalSineWaveCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dEvalSineWaveCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dEvalSineWaveCurveRelease(handle); return true; }
 }
 
 internal sealed class Geom2dEvalTBezierCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dEvalTBezierCurveHandle() : base(true) { }
     internal Geom2dEvalTBezierCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dEvalTBezierCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dEvalTBezierCurveRelease(handle); return true; }
 }
 
 internal sealed class Geom2dAxisPlacementHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dAxisPlacementHandle() : base(true) { }
     internal Geom2dAxisPlacementHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dAxisPlacementRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dAxisPlacementRelease(handle); return true; }
 }
 
 internal sealed class Geom2dBSplineCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dBSplineCurveHandle() : base(true) { }
     internal Geom2dBSplineCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dBSplineCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dBSplineCurveRelease(handle); return true; }
 }
 
 internal sealed class Geom2dBezierCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dBezierCurveHandle() : base(true) { }
     internal Geom2dBezierCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dBezierCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dBezierCurveRelease(handle); return true; }
 }
 
 internal sealed class Geom2dBoundedCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dBoundedCurveHandle() : base(true) { }
     internal Geom2dBoundedCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dBoundedCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dBoundedCurveRelease(handle); return true; }
 }
 
 internal sealed class Geom2dCartesianPointHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dCartesianPointHandle() : base(true) { }
     internal Geom2dCartesianPointHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dCartesianPointRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dCartesianPointRelease(handle); return true; }
 }
 
 internal sealed class Geom2dCircleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dCircleHandle() : base(true) { }
     internal Geom2dCircleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dCircleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dCircleRelease(handle); return true; }
 }
 
 internal sealed class Geom2dConicHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dConicHandle() : base(true) { }
     internal Geom2dConicHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dConicRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dConicRelease(handle); return true; }
 }
 
 internal sealed class Geom2dCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dCurveHandle() : base(true) { }
     internal Geom2dCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dCurveRelease(handle); return true; }
 }
 
 internal sealed class Geom2dDirectionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dDirectionHandle() : base(true) { }
     internal Geom2dDirectionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dDirectionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dDirectionRelease(handle); return true; }
 }
 
 internal sealed class Geom2dEllipseHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dEllipseHandle() : base(true) { }
     internal Geom2dEllipseHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dEllipseRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dEllipseRelease(handle); return true; }
 }
 
 internal sealed class Geom2dGeometryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dGeometryHandle() : base(true) { }
     internal Geom2dGeometryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dGeometryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dGeometryRelease(handle); return true; }
 }
 
 internal sealed class Geom2dHyperbolaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dHyperbolaHandle() : base(true) { }
     internal Geom2dHyperbolaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dHyperbolaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dHyperbolaRelease(handle); return true; }
 }
 
 internal sealed class Geom2dLineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dLineHandle() : base(true) { }
     internal Geom2dLineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dLineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dLineRelease(handle); return true; }
 }
 
 internal sealed class Geom2dOffsetCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dOffsetCurveHandle() : base(true) { }
     internal Geom2dOffsetCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dOffsetCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dOffsetCurveRelease(handle); return true; }
 }
 
 internal sealed class Geom2dParabolaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dParabolaHandle() : base(true) { }
     internal Geom2dParabolaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dParabolaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dParabolaRelease(handle); return true; }
 }
 
 internal sealed class Geom2dPointHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dPointHandle() : base(true) { }
     internal Geom2dPointHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dPointRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dPointRelease(handle); return true; }
 }
 
 internal sealed class Geom2dTransformationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dTransformationHandle() : base(true) { }
     internal Geom2dTransformationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dTransformationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dTransformationRelease(handle); return true; }
 }
 
 internal sealed class Geom2dTrimmedCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dTrimmedCurveHandle() : base(true) { }
     internal Geom2dTrimmedCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dTrimmedCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dTrimmedCurveRelease(handle); return true; }
 }
 
 internal sealed class Geom2dVectorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dVectorHandle() : base(true) { }
     internal Geom2dVectorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dVectorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dVectorRelease(handle); return true; }
 }
 
 internal sealed class Geom2dVectorWithMagnitudeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal Geom2dVectorWithMagnitudeHandle() : base(true) { }
     internal Geom2dVectorWithMagnitudeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.Geom2dVectorWithMagnitudeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.Geom2dVectorWithMagnitudeRelease(handle); return true; }
 }
 
 internal sealed class GeomAdaptorCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomAdaptorCurveHandle() : base(true) { }
     internal GeomAdaptorCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomAdaptorCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomAdaptorCurveRelease(handle); return true; }
 }
 
 internal sealed class GeomAdaptorSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomAdaptorSurfaceHandle() : base(true) { }
     internal GeomAdaptorSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomAdaptorSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomAdaptorSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomAdaptorSurfaceOfLinearExtrusionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomAdaptorSurfaceOfLinearExtrusionHandle() : base(true) { }
     internal GeomAdaptorSurfaceOfLinearExtrusionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomAdaptorSurfaceOfLinearExtrusionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomAdaptorSurfaceOfLinearExtrusionRelease(handle); return true; }
 }
 
 internal sealed class GeomAdaptorSurfaceOfRevolutionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomAdaptorSurfaceOfRevolutionHandle() : base(true) { }
     internal GeomAdaptorSurfaceOfRevolutionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomAdaptorSurfaceOfRevolutionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomAdaptorSurfaceOfRevolutionRelease(handle); return true; }
 }
 
 internal sealed class GeomAdaptorTransformedCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomAdaptorTransformedCurveHandle() : base(true) { }
     internal GeomAdaptorTransformedCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomAdaptorTransformedCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomAdaptorTransformedCurveRelease(handle); return true; }
 }
 
 internal sealed class GeomAdaptorTransformedSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomAdaptorTransformedSurfaceHandle() : base(true) { }
     internal GeomAdaptorTransformedSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomAdaptorTransformedSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomAdaptorTransformedSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomEvalAHTBezierCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomEvalAHTBezierCurveHandle() : base(true) { }
     internal GeomEvalAHTBezierCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomEvalAHTBezierCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomEvalAHTBezierCurveRelease(handle); return true; }
 }
 
 internal sealed class GeomEvalAHTBezierSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomEvalAHTBezierSurfaceHandle() : base(true) { }
     internal GeomEvalAHTBezierSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomEvalAHTBezierSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomEvalAHTBezierSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomEvalCircularHelicoidSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomEvalCircularHelicoidSurfaceHandle() : base(true) { }
     internal GeomEvalCircularHelicoidSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomEvalCircularHelicoidSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomEvalCircularHelicoidSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomEvalCircularHelixCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomEvalCircularHelixCurveHandle() : base(true) { }
     internal GeomEvalCircularHelixCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomEvalCircularHelixCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomEvalCircularHelixCurveRelease(handle); return true; }
 }
 
 internal sealed class GeomEvalEllipsoidSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomEvalEllipsoidSurfaceHandle() : base(true) { }
     internal GeomEvalEllipsoidSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomEvalEllipsoidSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomEvalEllipsoidSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomEvalHypParaboloidSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomEvalHypParaboloidSurfaceHandle() : base(true) { }
     internal GeomEvalHypParaboloidSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomEvalHypParaboloidSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomEvalHypParaboloidSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomEvalHyperboloidSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomEvalHyperboloidSurfaceHandle() : base(true) { }
     internal GeomEvalHyperboloidSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomEvalHyperboloidSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomEvalHyperboloidSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomEvalParaboloidSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomEvalParaboloidSurfaceHandle() : base(true) { }
     internal GeomEvalParaboloidSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomEvalParaboloidSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomEvalParaboloidSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomEvalSineWaveCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomEvalSineWaveCurveHandle() : base(true) { }
     internal GeomEvalSineWaveCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomEvalSineWaveCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomEvalSineWaveCurveRelease(handle); return true; }
 }
 
 internal sealed class GeomEvalTBezierCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomEvalTBezierCurveHandle() : base(true) { }
     internal GeomEvalTBezierCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomEvalTBezierCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomEvalTBezierCurveRelease(handle); return true; }
 }
 
 internal sealed class GeomEvalTBezierSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomEvalTBezierSurfaceHandle() : base(true) { }
     internal GeomEvalTBezierSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomEvalTBezierSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomEvalTBezierSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomFillBoundWithSurfHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillBoundWithSurfHandle() : base(true) { }
     internal GeomFillBoundWithSurfHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillBoundWithSurfRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillBoundWithSurfRelease(handle); return true; }
 }
 
 internal sealed class GeomFillBoundaryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillBoundaryHandle() : base(true) { }
     internal GeomFillBoundaryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillBoundaryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillBoundaryRelease(handle); return true; }
 }
 
 internal sealed class GeomFillCircularBlendFuncHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillCircularBlendFuncHandle() : base(true) { }
     internal GeomFillCircularBlendFuncHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillCircularBlendFuncRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillCircularBlendFuncRelease(handle); return true; }
 }
 
 internal sealed class GeomFillConstantBiNormalHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillConstantBiNormalHandle() : base(true) { }
     internal GeomFillConstantBiNormalHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillConstantBiNormalRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillConstantBiNormalRelease(handle); return true; }
 }
 
 internal sealed class GeomFillCoonsAlgPatchHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillCoonsAlgPatchHandle() : base(true) { }
     internal GeomFillCoonsAlgPatchHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillCoonsAlgPatchRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillCoonsAlgPatchRelease(handle); return true; }
 }
 
 internal sealed class GeomFillCorrectedFrenetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillCorrectedFrenetHandle() : base(true) { }
     internal GeomFillCorrectedFrenetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillCorrectedFrenetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillCorrectedFrenetRelease(handle); return true; }
 }
 
 internal sealed class GeomFillCurveAndTrihedronHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillCurveAndTrihedronHandle() : base(true) { }
     internal GeomFillCurveAndTrihedronHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillCurveAndTrihedronRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillCurveAndTrihedronRelease(handle); return true; }
 }
 
 internal sealed class GeomFillDarbouxHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillDarbouxHandle() : base(true) { }
     internal GeomFillDarbouxHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillDarbouxRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillDarbouxRelease(handle); return true; }
 }
 
 internal sealed class GeomFillDegeneratedBoundHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillDegeneratedBoundHandle() : base(true) { }
     internal GeomFillDegeneratedBoundHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillDegeneratedBoundRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillDegeneratedBoundRelease(handle); return true; }
 }
 
 internal sealed class GeomFillDiscreteTrihedronHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillDiscreteTrihedronHandle() : base(true) { }
     internal GeomFillDiscreteTrihedronHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillDiscreteTrihedronRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillDiscreteTrihedronRelease(handle); return true; }
 }
 
 internal sealed class GeomFillDraftTrihedronHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillDraftTrihedronHandle() : base(true) { }
     internal GeomFillDraftTrihedronHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillDraftTrihedronRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillDraftTrihedronRelease(handle); return true; }
 }
 
 internal sealed class GeomFillEvolvedSectionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillEvolvedSectionHandle() : base(true) { }
     internal GeomFillEvolvedSectionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillEvolvedSectionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillEvolvedSectionRelease(handle); return true; }
 }
 
 internal sealed class GeomFillFixedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillFixedHandle() : base(true) { }
     internal GeomFillFixedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillFixedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillFixedRelease(handle); return true; }
 }
 
 internal sealed class GeomFillFrenetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillFrenetHandle() : base(true) { }
     internal GeomFillFrenetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillFrenetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillFrenetRelease(handle); return true; }
 }
 
 internal sealed class GeomFillGuideTrihedronACHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillGuideTrihedronACHandle() : base(true) { }
     internal GeomFillGuideTrihedronACHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillGuideTrihedronACRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillGuideTrihedronACRelease(handle); return true; }
 }
 
 internal sealed class GeomFillGuideTrihedronPlanHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillGuideTrihedronPlanHandle() : base(true) { }
     internal GeomFillGuideTrihedronPlanHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillGuideTrihedronPlanRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillGuideTrihedronPlanRelease(handle); return true; }
 }
 
 internal sealed class GeomFillLineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillLineHandle() : base(true) { }
     internal GeomFillLineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillLineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillLineRelease(handle); return true; }
 }
 
 internal sealed class GeomFillLocationDraftHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillLocationDraftHandle() : base(true) { }
     internal GeomFillLocationDraftHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillLocationDraftRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillLocationDraftRelease(handle); return true; }
 }
 
 internal sealed class GeomFillLocationGuideHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillLocationGuideHandle() : base(true) { }
     internal GeomFillLocationGuideHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillLocationGuideRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillLocationGuideRelease(handle); return true; }
 }
 
 internal sealed class GeomFillLocationLawHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillLocationLawHandle() : base(true) { }
     internal GeomFillLocationLawHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillLocationLawRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillLocationLawRelease(handle); return true; }
 }
 
 internal sealed class GeomFillNSectionsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillNSectionsHandle() : base(true) { }
     internal GeomFillNSectionsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillNSectionsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillNSectionsRelease(handle); return true; }
 }
 
 internal sealed class GeomFillSectionLawHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillSectionLawHandle() : base(true) { }
     internal GeomFillSectionLawHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillSectionLawRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillSectionLawRelease(handle); return true; }
 }
 
 internal sealed class GeomFillSimpleBoundHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillSimpleBoundHandle() : base(true) { }
     internal GeomFillSimpleBoundHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillSimpleBoundRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillSimpleBoundRelease(handle); return true; }
 }
 
 internal sealed class GeomFillSnglrFuncHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillSnglrFuncHandle() : base(true) { }
     internal GeomFillSnglrFuncHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillSnglrFuncRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillSnglrFuncRelease(handle); return true; }
 }
 
 internal sealed class GeomFillSweepFunctionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillSweepFunctionHandle() : base(true) { }
     internal GeomFillSweepFunctionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillSweepFunctionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillSweepFunctionRelease(handle); return true; }
 }
 
 internal sealed class GeomFillTgtFieldHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillTgtFieldHandle() : base(true) { }
     internal GeomFillTgtFieldHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillTgtFieldRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillTgtFieldRelease(handle); return true; }
 }
 
 internal sealed class GeomFillTgtOnCoonsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillTgtOnCoonsHandle() : base(true) { }
     internal GeomFillTgtOnCoonsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillTgtOnCoonsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillTgtOnCoonsRelease(handle); return true; }
 }
 
 internal sealed class GeomFillTrihedronLawHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillTrihedronLawHandle() : base(true) { }
     internal GeomFillTrihedronLawHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillTrihedronLawRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillTrihedronLawRelease(handle); return true; }
 }
 
 internal sealed class GeomFillTrihedronWithGuideHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillTrihedronWithGuideHandle() : base(true) { }
     internal GeomFillTrihedronWithGuideHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillTrihedronWithGuideRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillTrihedronWithGuideRelease(handle); return true; }
 }
 
 internal sealed class GeomFillUniformSectionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomFillUniformSectionHandle() : base(true) { }
     internal GeomFillUniformSectionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomFillUniformSectionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomFillUniformSectionRelease(handle); return true; }
 }
 
 internal sealed class GeomPlateCurveConstraintHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomPlateCurveConstraintHandle() : base(true) { }
     internal GeomPlateCurveConstraintHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomPlateCurveConstraintRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomPlateCurveConstraintRelease(handle); return true; }
 }
 
 internal sealed class GeomPlatePointConstraintHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomPlatePointConstraintHandle() : base(true) { }
     internal GeomPlatePointConstraintHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomPlatePointConstraintRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomPlatePointConstraintRelease(handle); return true; }
 }
 
 internal sealed class GeomPlateSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomPlateSurfaceHandle() : base(true) { }
     internal GeomPlateSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomPlateSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomPlateSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomToolsUndefinedTypeHandlerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomToolsUndefinedTypeHandlerHandle() : base(true) { }
     internal GeomToolsUndefinedTypeHandlerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomToolsUndefinedTypeHandlerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomToolsUndefinedTypeHandlerRelease(handle); return true; }
 }
 
 internal sealed class GeomAxis1PlacementHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomAxis1PlacementHandle() : base(true) { }
     internal GeomAxis1PlacementHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomAxis1PlacementRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomAxis1PlacementRelease(handle); return true; }
 }
 
 internal sealed class GeomAxis2PlacementHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomAxis2PlacementHandle() : base(true) { }
     internal GeomAxis2PlacementHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomAxis2PlacementRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomAxis2PlacementRelease(handle); return true; }
 }
 
 internal sealed class GeomAxisPlacementHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomAxisPlacementHandle() : base(true) { }
     internal GeomAxisPlacementHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomAxisPlacementRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomAxisPlacementRelease(handle); return true; }
 }
 
 internal sealed class GeomBSplineCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomBSplineCurveHandle() : base(true) { }
     internal GeomBSplineCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomBSplineCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomBSplineCurveRelease(handle); return true; }
 }
 
 internal sealed class GeomBSplineSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomBSplineSurfaceHandle() : base(true) { }
     internal GeomBSplineSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomBSplineSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomBSplineSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomBezierCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomBezierCurveHandle() : base(true) { }
     internal GeomBezierCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomBezierCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomBezierCurveRelease(handle); return true; }
 }
 
 internal sealed class GeomBezierSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomBezierSurfaceHandle() : base(true) { }
     internal GeomBezierSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomBezierSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomBezierSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomBoundedCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomBoundedCurveHandle() : base(true) { }
     internal GeomBoundedCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomBoundedCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomBoundedCurveRelease(handle); return true; }
 }
 
 internal sealed class GeomBoundedSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomBoundedSurfaceHandle() : base(true) { }
     internal GeomBoundedSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomBoundedSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomBoundedSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomCartesianPointHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomCartesianPointHandle() : base(true) { }
     internal GeomCartesianPointHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomCartesianPointRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomCartesianPointRelease(handle); return true; }
 }
 
 internal sealed class GeomCircleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomCircleHandle() : base(true) { }
     internal GeomCircleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomCircleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomCircleRelease(handle); return true; }
 }
 
 internal sealed class GeomConicHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomConicHandle() : base(true) { }
     internal GeomConicHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomConicRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomConicRelease(handle); return true; }
 }
 
 internal sealed class GeomConicalSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomConicalSurfaceHandle() : base(true) { }
     internal GeomConicalSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomConicalSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomConicalSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomCurveHandle() : base(true) { }
     internal GeomCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomCurveRelease(handle); return true; }
 }
 
 internal sealed class GeomCylindricalSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomCylindricalSurfaceHandle() : base(true) { }
     internal GeomCylindricalSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomCylindricalSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomCylindricalSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomDirectionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomDirectionHandle() : base(true) { }
     internal GeomDirectionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomDirectionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomDirectionRelease(handle); return true; }
 }
 
 internal sealed class GeomElementarySurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomElementarySurfaceHandle() : base(true) { }
     internal GeomElementarySurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomElementarySurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomElementarySurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomEllipseHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomEllipseHandle() : base(true) { }
     internal GeomEllipseHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomEllipseRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomEllipseRelease(handle); return true; }
 }
 
 internal sealed class GeomGeometryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomGeometryHandle() : base(true) { }
     internal GeomGeometryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomGeometryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomGeometryRelease(handle); return true; }
 }
 
 internal sealed class GeomHyperbolaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomHyperbolaHandle() : base(true) { }
     internal GeomHyperbolaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomHyperbolaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomHyperbolaRelease(handle); return true; }
 }
 
 internal sealed class GeomLineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomLineHandle() : base(true) { }
     internal GeomLineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomLineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomLineRelease(handle); return true; }
 }
 
 internal sealed class GeomOffsetCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomOffsetCurveHandle() : base(true) { }
     internal GeomOffsetCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomOffsetCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomOffsetCurveRelease(handle); return true; }
 }
 
 internal sealed class GeomOffsetSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomOffsetSurfaceHandle() : base(true) { }
     internal GeomOffsetSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomOffsetSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomOffsetSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomParabolaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomParabolaHandle() : base(true) { }
     internal GeomParabolaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomParabolaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomParabolaRelease(handle); return true; }
 }
 
 internal sealed class GeomPlaneHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomPlaneHandle() : base(true) { }
     internal GeomPlaneHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomPlaneRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomPlaneRelease(handle); return true; }
 }
 
 internal sealed class GeomPointHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomPointHandle() : base(true) { }
     internal GeomPointHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomPointRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomPointRelease(handle); return true; }
 }
 
 internal sealed class GeomRectangularTrimmedSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomRectangularTrimmedSurfaceHandle() : base(true) { }
     internal GeomRectangularTrimmedSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomRectangularTrimmedSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomRectangularTrimmedSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomSphericalSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomSphericalSurfaceHandle() : base(true) { }
     internal GeomSphericalSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomSphericalSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomSphericalSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomSurfaceHandle() : base(true) { }
     internal GeomSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomSurfaceOfLinearExtrusionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomSurfaceOfLinearExtrusionHandle() : base(true) { }
     internal GeomSurfaceOfLinearExtrusionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomSurfaceOfLinearExtrusionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomSurfaceOfLinearExtrusionRelease(handle); return true; }
 }
 
 internal sealed class GeomSurfaceOfRevolutionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomSurfaceOfRevolutionHandle() : base(true) { }
     internal GeomSurfaceOfRevolutionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomSurfaceOfRevolutionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomSurfaceOfRevolutionRelease(handle); return true; }
 }
 
 internal sealed class GeomSweptSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomSweptSurfaceHandle() : base(true) { }
     internal GeomSweptSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomSweptSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomSweptSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomToroidalSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomToroidalSurfaceHandle() : base(true) { }
     internal GeomToroidalSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomToroidalSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomToroidalSurfaceRelease(handle); return true; }
 }
 
 internal sealed class GeomTransformationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomTransformationHandle() : base(true) { }
     internal GeomTransformationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomTransformationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomTransformationRelease(handle); return true; }
 }
 
 internal sealed class GeomTrimmedCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomTrimmedCurveHandle() : base(true) { }
     internal GeomTrimmedCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomTrimmedCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomTrimmedCurveRelease(handle); return true; }
 }
 
 internal sealed class GeomVectorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomVectorHandle() : base(true) { }
     internal GeomVectorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomVectorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomVectorRelease(handle); return true; }
 }
 
 internal sealed class GeomVectorWithMagnitudeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeomVectorWithMagnitudeHandle() : base(true) { }
     internal GeomVectorWithMagnitudeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeomVectorWithMagnitudeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeomVectorWithMagnitudeRelease(handle); return true; }
 }
 
 internal sealed class GeometryTestDrawableQualifiedCurve2dHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal GeometryTestDrawableQualifiedCurve2dHandle() : base(true) { }
     internal GeometryTestDrawableQualifiedCurve2dHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.GeometryTestDrawableQualifiedCurve2dRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.GeometryTestDrawableQualifiedCurve2dRelease(handle); return true; }
 }
 
 internal sealed class LawBSpFuncHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal LawBSpFuncHandle() : base(true) { }
     internal LawBSpFuncHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.LawBSpFuncRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.LawBSpFuncRelease(handle); return true; }
 }
 
 internal sealed class LawBSplineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal LawBSplineHandle() : base(true) { }
     internal LawBSplineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.LawBSplineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.LawBSplineRelease(handle); return true; }
 }
 
 internal sealed class LawCompositeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal LawCompositeHandle() : base(true) { }
     internal LawCompositeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.LawCompositeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.LawCompositeRelease(handle); return true; }
 }
 
 internal sealed class LawConstantHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal LawConstantHandle() : base(true) { }
     internal LawConstantHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.LawConstantRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.LawConstantRelease(handle); return true; }
 }
 
 internal sealed class LawFunctionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal LawFunctionHandle() : base(true) { }
     internal LawFunctionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.LawFunctionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.LawFunctionRelease(handle); return true; }
 }
 
 internal sealed class LawInterpolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal LawInterpolHandle() : base(true) { }
     internal LawInterpolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.LawInterpolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.LawInterpolRelease(handle); return true; }
 }
 
 internal sealed class LawLinearHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal LawLinearHandle() : base(true) { }
     internal LawLinearHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.LawLinearRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.LawLinearRelease(handle); return true; }
 }
 
 internal sealed class LawSHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal LawSHandle() : base(true) { }
     internal LawSHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.LawSRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.LawSRelease(handle); return true; }
 }
 
 internal sealed class MAT2dCircuitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MAT2dCircuitHandle() : base(true) { }
     internal MAT2dCircuitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MAT2dCircuitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.MAT2dCircuitRelease(handle); return true; }
 }
 
 internal sealed class MAT2dConnexionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MAT2dConnexionHandle() : base(true) { }
     internal MAT2dConnexionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MAT2dConnexionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.MAT2dConnexionRelease(handle); return true; }
 }
 
 internal sealed class MATArcHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MATArcHandle() : base(true) { }
     internal MATArcHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MATArcRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.MATArcRelease(handle); return true; }
 }
 
 internal sealed class MATBasicEltHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MATBasicEltHandle() : base(true) { }
     internal MATBasicEltHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MATBasicEltRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.MATBasicEltRelease(handle); return true; }
 }
 
 internal sealed class MATBisectorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MATBisectorHandle() : base(true) { }
     internal MATBisectorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MATBisectorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.MATBisectorRelease(handle); return true; }
 }
 
 internal sealed class MATEdgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MATEdgeHandle() : base(true) { }
     internal MATEdgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MATEdgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.MATEdgeRelease(handle); return true; }
 }
 
 internal sealed class MATGraphHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MATGraphHandle() : base(true) { }
     internal MATGraphHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MATGraphRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.MATGraphRelease(handle); return true; }
 }
 
 internal sealed class MATListOfBisectorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MATListOfBisectorHandle() : base(true) { }
     internal MATListOfBisectorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MATListOfBisectorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.MATListOfBisectorRelease(handle); return true; }
 }
 
 internal sealed class MATListOfEdgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MATListOfEdgeHandle() : base(true) { }
     internal MATListOfEdgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MATListOfEdgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.MATListOfEdgeRelease(handle); return true; }
 }
 
 internal sealed class MATNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MATNodeHandle() : base(true) { }
     internal MATNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MATNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.MATNodeRelease(handle); return true; }
 }
 
 internal sealed class MATTListNodeOfListOfBisectorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MATTListNodeOfListOfBisectorHandle() : base(true) { }
     internal MATTListNodeOfListOfBisectorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MATTListNodeOfListOfBisectorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.MATTListNodeOfListOfBisectorRelease(handle); return true; }
 }
 
 internal sealed class MATTListNodeOfListOfEdgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MATTListNodeOfListOfEdgeHandle() : base(true) { }
     internal MATTListNodeOfListOfEdgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MATTListNodeOfListOfEdgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.MATTListNodeOfListOfEdgeRelease(handle); return true; }
 }
 
 internal sealed class MATZoneHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal MATZoneHandle() : base(true) { }
     internal MATZoneHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.MATZoneRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.MATZoneRelease(handle); return true; }
 }
 
 internal sealed class NLPlateHGPPConstraintHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal NLPlateHGPPConstraintHandle() : base(true) { }
     internal NLPlateHGPPConstraintHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.NLPlateHGPPConstraintRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.NLPlateHGPPConstraintRelease(handle); return true; }
 }
 
 internal sealed class NLPlateHPG0ConstraintHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal NLPlateHPG0ConstraintHandle() : base(true) { }
     internal NLPlateHPG0ConstraintHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.NLPlateHPG0ConstraintRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.NLPlateHPG0ConstraintRelease(handle); return true; }
 }
 
 internal sealed class NLPlateHPG0G1ConstraintHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal NLPlateHPG0G1ConstraintHandle() : base(true) { }
     internal NLPlateHPG0G1ConstraintHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.NLPlateHPG0G1ConstraintRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.NLPlateHPG0G1ConstraintRelease(handle); return true; }
 }
 
 internal sealed class NLPlateHPG0G2ConstraintHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal NLPlateHPG0G2ConstraintHandle() : base(true) { }
     internal NLPlateHPG0G2ConstraintHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.NLPlateHPG0G2ConstraintRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.NLPlateHPG0G2ConstraintRelease(handle); return true; }
 }
 
 internal sealed class NLPlateHPG0G3ConstraintHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal NLPlateHPG0G3ConstraintHandle() : base(true) { }
     internal NLPlateHPG0G3ConstraintHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.NLPlateHPG0G3ConstraintRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.NLPlateHPG0G3ConstraintRelease(handle); return true; }
 }
 
 internal sealed class NLPlateHPG1ConstraintHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal NLPlateHPG1ConstraintHandle() : base(true) { }
     internal NLPlateHPG1ConstraintHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.NLPlateHPG1ConstraintRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.NLPlateHPG1ConstraintRelease(handle); return true; }
 }
 
 internal sealed class NLPlateHPG2ConstraintHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal NLPlateHPG2ConstraintHandle() : base(true) { }
     internal NLPlateHPG2ConstraintHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.NLPlateHPG2ConstraintRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.NLPlateHPG2ConstraintRelease(handle); return true; }
 }
 
 internal sealed class NLPlateHPG3ConstraintHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal NLPlateHPG3ConstraintHandle() : base(true) { }
     internal NLPlateHPG3ConstraintHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.NLPlateHPG3ConstraintRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.NLPlateHPG3ConstraintRelease(handle); return true; }
 }
 
 internal sealed class ProjLibCompProjectedCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ProjLibCompProjectedCurveHandle() : base(true) { }
     internal ProjLibCompProjectedCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ProjLibCompProjectedCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.ProjLibCompProjectedCurveRelease(handle); return true; }
 }
 
 internal sealed class ProjLibProjectOnPlaneHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ProjLibProjectOnPlaneHandle() : base(true) { }
     internal ProjLibProjectOnPlaneHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ProjLibProjectOnPlaneRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.ProjLibProjectOnPlaneRelease(handle); return true; }
 }
 
 internal sealed class ProjLibProjectedCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ProjLibProjectedCurveHandle() : base(true) { }
     internal ProjLibProjectedCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ProjLibProjectedCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { GeometryGeneratedNativeMethods.ProjLibProjectedCurveRelease(handle); return true; }
 }
 
-internal static partial class GeneratedNativeMethods
+internal static partial class GeometryGeneratedNativeMethods
 {
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_adaptor2d_curve2d_method_bezier_0")]

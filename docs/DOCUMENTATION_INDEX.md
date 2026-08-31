@@ -52,6 +52,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   C++/CLI, and platform-adapter availability and package boundaries.
 - [Full inventory classification](FULL_INVENTORY_CLASSIFICATION.md) — complete declaration
   and header dispositions, reason codes, and complete-versus-generated metrics.
+- [Preview.10 release notes](RELEASE_NOTES_8.0.1_PREVIEW_10.md) — physical managed
+  modules, compatibility forwarding, one shared native package, and direct-module evidence.
 - [Preview.9 release notes](RELEASE_NOTES_8.0.1_PREVIEW_9.md) — complete Batch L digital
   mock-up bounds, interference, clearance, incremental, STEP/XDE, review, and local evidence.
 - [Preview.8 release notes](RELEASE_NOTES_8.0.1_PREVIEW_8.md) — complete Batch K assembly

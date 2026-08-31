@@ -1411,1760 +1411,1760 @@ internal sealed class BOPAlgoAlertAcquiredSelfIntersectionHandle : SafeHandleZer
 {
     internal BOPAlgoAlertAcquiredSelfIntersectionHandle() : base(true) { }
     internal BOPAlgoAlertAcquiredSelfIntersectionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertAcquiredSelfIntersectionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertAcquiredSelfIntersectionRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertBOPNotAllowedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertBOPNotAllowedHandle() : base(true) { }
     internal BOPAlgoAlertBOPNotAllowedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertBOPNotAllowedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertBOPNotAllowedRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertBOPNotSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertBOPNotSetHandle() : base(true) { }
     internal BOPAlgoAlertBOPNotSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertBOPNotSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertBOPNotSetRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertBadPositioningHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertBadPositioningHandle() : base(true) { }
     internal BOPAlgoAlertBadPositioningHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertBadPositioningRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertBadPositioningRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertBuilderFailedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertBuilderFailedHandle() : base(true) { }
     internal BOPAlgoAlertBuilderFailedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertBuilderFailedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertBuilderFailedRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertBuildingPCurveFailedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertBuildingPCurveFailedHandle() : base(true) { }
     internal BOPAlgoAlertBuildingPCurveFailedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertBuildingPCurveFailedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertBuildingPCurveFailedRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertEmptyShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertEmptyShapeHandle() : base(true) { }
     internal BOPAlgoAlertEmptyShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertEmptyShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertEmptyShapeRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertFaceBuilderUnusedEdgesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertFaceBuilderUnusedEdgesHandle() : base(true) { }
     internal BOPAlgoAlertFaceBuilderUnusedEdgesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertFaceBuilderUnusedEdgesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertFaceBuilderUnusedEdgesRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertIntersectionFailedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertIntersectionFailedHandle() : base(true) { }
     internal BOPAlgoAlertIntersectionFailedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertIntersectionFailedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertIntersectionFailedRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertIntersectionOfPairOfShapesFailedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertIntersectionOfPairOfShapesFailedHandle() : base(true) { }
     internal BOPAlgoAlertIntersectionOfPairOfShapesFailedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertIntersectionOfPairOfShapesFailedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertIntersectionOfPairOfShapesFailedRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertMultiDimensionalArgumentsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertMultiDimensionalArgumentsHandle() : base(true) { }
     internal BOPAlgoAlertMultiDimensionalArgumentsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertMultiDimensionalArgumentsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertMultiDimensionalArgumentsRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertMultipleArgumentsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertMultipleArgumentsHandle() : base(true) { }
     internal BOPAlgoAlertMultipleArgumentsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertMultipleArgumentsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertMultipleArgumentsRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertNoFacesToRemoveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertNoFacesToRemoveHandle() : base(true) { }
     internal BOPAlgoAlertNoFacesToRemoveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertNoFacesToRemoveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertNoFacesToRemoveRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertNoFillerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertNoFillerHandle() : base(true) { }
     internal BOPAlgoAlertNoFillerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertNoFillerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertNoFillerRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertNoPeriodicityRequiredHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertNoPeriodicityRequiredHandle() : base(true) { }
     internal BOPAlgoAlertNoPeriodicityRequiredHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertNoPeriodicityRequiredRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertNoPeriodicityRequiredRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertNotSplittableEdgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertNotSplittableEdgeHandle() : base(true) { }
     internal BOPAlgoAlertNotSplittableEdgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertNotSplittableEdgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertNotSplittableEdgeRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertNullInputShapesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertNullInputShapesHandle() : base(true) { }
     internal BOPAlgoAlertNullInputShapesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertNullInputShapesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertNullInputShapesRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertPostTreatFFHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertPostTreatFFHandle() : base(true) { }
     internal BOPAlgoAlertPostTreatFFHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertPostTreatFFRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertPostTreatFFRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertRemovalOfIBForEdgesFailedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertRemovalOfIBForEdgesFailedHandle() : base(true) { }
     internal BOPAlgoAlertRemovalOfIBForEdgesFailedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertRemovalOfIBForEdgesFailedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertRemovalOfIBForEdgesFailedRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertRemovalOfIBForFacesFailedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertRemovalOfIBForFacesFailedHandle() : base(true) { }
     internal BOPAlgoAlertRemovalOfIBForFacesFailedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertRemovalOfIBForFacesFailedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertRemovalOfIBForFacesFailedRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertRemovalOfIBForMDimShapesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertRemovalOfIBForMDimShapesHandle() : base(true) { }
     internal BOPAlgoAlertRemovalOfIBForMDimShapesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertRemovalOfIBForMDimShapesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertRemovalOfIBForMDimShapesRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertRemovalOfIBForSolidsFailedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertRemovalOfIBForSolidsFailedHandle() : base(true) { }
     internal BOPAlgoAlertRemovalOfIBForSolidsFailedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertRemovalOfIBForSolidsFailedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertRemovalOfIBForSolidsFailedRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertRemoveFeaturesFailedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertRemoveFeaturesFailedHandle() : base(true) { }
     internal BOPAlgoAlertRemoveFeaturesFailedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertRemoveFeaturesFailedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertRemoveFeaturesFailedRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertSelfInterferingShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertSelfInterferingShapeHandle() : base(true) { }
     internal BOPAlgoAlertSelfInterferingShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertSelfInterferingShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertSelfInterferingShapeRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertShapeIsNotPeriodicHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertShapeIsNotPeriodicHandle() : base(true) { }
     internal BOPAlgoAlertShapeIsNotPeriodicHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertShapeIsNotPeriodicRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertShapeIsNotPeriodicRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertShellSplitterFailedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertShellSplitterFailedHandle() : base(true) { }
     internal BOPAlgoAlertShellSplitterFailedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertShellSplitterFailedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertShellSplitterFailedRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertSolidBuilderFailedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertSolidBuilderFailedHandle() : base(true) { }
     internal BOPAlgoAlertSolidBuilderFailedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertSolidBuilderFailedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertSolidBuilderFailedRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertSolidBuilderUnusedFacesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertSolidBuilderUnusedFacesHandle() : base(true) { }
     internal BOPAlgoAlertSolidBuilderUnusedFacesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertSolidBuilderUnusedFacesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertSolidBuilderUnusedFacesRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertTooFewArgumentsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertTooFewArgumentsHandle() : base(true) { }
     internal BOPAlgoAlertTooFewArgumentsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertTooFewArgumentsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertTooFewArgumentsRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertTooSmallEdgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertTooSmallEdgeHandle() : base(true) { }
     internal BOPAlgoAlertTooSmallEdgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertTooSmallEdgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertTooSmallEdgeRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertUnableToGlueHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertUnableToGlueHandle() : base(true) { }
     internal BOPAlgoAlertUnableToGlueHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertUnableToGlueRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertUnableToGlueRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertUnableToMakeClosedEdgeOnFaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertUnableToMakeClosedEdgeOnFaceHandle() : base(true) { }
     internal BOPAlgoAlertUnableToMakeClosedEdgeOnFaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertUnableToMakeClosedEdgeOnFaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertUnableToMakeClosedEdgeOnFaceRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertUnableToMakeIdenticalHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertUnableToMakeIdenticalHandle() : base(true) { }
     internal BOPAlgoAlertUnableToMakeIdenticalHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertUnableToMakeIdenticalRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertUnableToMakeIdenticalRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertUnableToMakePeriodicHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertUnableToMakePeriodicHandle() : base(true) { }
     internal BOPAlgoAlertUnableToMakePeriodicHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertUnableToMakePeriodicRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertUnableToMakePeriodicRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertUnableToOrientTheShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertUnableToOrientTheShapeHandle() : base(true) { }
     internal BOPAlgoAlertUnableToOrientTheShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertUnableToOrientTheShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertUnableToOrientTheShapeRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertUnableToRemoveTheFeatureHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertUnableToRemoveTheFeatureHandle() : base(true) { }
     internal BOPAlgoAlertUnableToRemoveTheFeatureHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertUnableToRemoveTheFeatureRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertUnableToRemoveTheFeatureRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertUnableToRepeatHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertUnableToRepeatHandle() : base(true) { }
     internal BOPAlgoAlertUnableToRepeatHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertUnableToRepeatRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertUnableToRepeatRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertUnableToTrimHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertUnableToTrimHandle() : base(true) { }
     internal BOPAlgoAlertUnableToTrimHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertUnableToTrimRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertUnableToTrimRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertUnknownShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertUnknownShapeHandle() : base(true) { }
     internal BOPAlgoAlertUnknownShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertUnknownShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertUnknownShapeRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertUnsupportedTypeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertUnsupportedTypeHandle() : base(true) { }
     internal BOPAlgoAlertUnsupportedTypeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertUnsupportedTypeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertUnsupportedTypeRelease(handle); return true; }
 }
 
 internal sealed class BOPAlgoAlertUserBreakHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPAlgoAlertUserBreakHandle() : base(true) { }
     internal BOPAlgoAlertUserBreakHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPAlgoAlertUserBreakRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPAlgoAlertUserBreakRelease(handle); return true; }
 }
 
 internal sealed class BOPDSCommonBlockHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPDSCommonBlockHandle() : base(true) { }
     internal BOPDSCommonBlockHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPDSCommonBlockRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPDSCommonBlockRelease(handle); return true; }
 }
 
 internal sealed class BOPDSPaveBlockHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPDSPaveBlockHandle() : base(true) { }
     internal BOPDSPaveBlockHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPDSPaveBlockRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPDSPaveBlockRelease(handle); return true; }
 }
 
 internal sealed class BOPTestDrawableShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BOPTestDrawableShapeHandle() : base(true) { }
     internal BOPTestDrawableShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BOPTestDrawableShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BOPTestDrawableShapeRelease(handle); return true; }
 }
 
 internal sealed class BRepAdaptorCompCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepAdaptorCompCurveHandle() : base(true) { }
     internal BRepAdaptorCompCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepAdaptorCompCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepAdaptorCompCurveRelease(handle); return true; }
 }
 
 internal sealed class BRepAdaptorCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepAdaptorCurveHandle() : base(true) { }
     internal BRepAdaptorCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepAdaptorCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepAdaptorCurveRelease(handle); return true; }
 }
 
 internal sealed class BRepAdaptorCurve2dHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepAdaptorCurve2dHandle() : base(true) { }
     internal BRepAdaptorCurve2dHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepAdaptorCurve2dRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepAdaptorCurve2dRelease(handle); return true; }
 }
 
 internal sealed class BRepAdaptorSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepAdaptorSurfaceHandle() : base(true) { }
     internal BRepAdaptorSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepAdaptorSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepAdaptorSurfaceRelease(handle); return true; }
 }
 
 internal sealed class BRepAlgoAsDesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepAlgoAsDesHandle() : base(true) { }
     internal BRepAlgoAsDesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepAlgoAsDesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepAlgoAsDesRelease(handle); return true; }
 }
 
 internal sealed class BRepApproxApproxLineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepApproxApproxLineHandle() : base(true) { }
     internal BRepApproxApproxLineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepApproxApproxLineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepApproxApproxLineRelease(handle); return true; }
 }
 
 internal sealed class BRepBlendAppFuncHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepBlendAppFuncHandle() : base(true) { }
     internal BRepBlendAppFuncHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepBlendAppFuncRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepBlendAppFuncRelease(handle); return true; }
 }
 
 internal sealed class BRepBlendAppFuncRootHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepBlendAppFuncRootHandle() : base(true) { }
     internal BRepBlendAppFuncRootHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepBlendAppFuncRootRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepBlendAppFuncRootRelease(handle); return true; }
 }
 
 internal sealed class BRepBlendAppFuncRstHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepBlendAppFuncRstHandle() : base(true) { }
     internal BRepBlendAppFuncRstHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepBlendAppFuncRstRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepBlendAppFuncRstRelease(handle); return true; }
 }
 
 internal sealed class BRepBlendAppFuncRstRstHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepBlendAppFuncRstRstHandle() : base(true) { }
     internal BRepBlendAppFuncRstRstHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepBlendAppFuncRstRstRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepBlendAppFuncRstRstRelease(handle); return true; }
 }
 
 internal sealed class BRepBlendLineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepBlendLineHandle() : base(true) { }
     internal BRepBlendLineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepBlendLineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepBlendLineRelease(handle); return true; }
 }
 
 internal sealed class BRepBuilderAPIFastSewingHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepBuilderAPIFastSewingHandle() : base(true) { }
     internal BRepBuilderAPIFastSewingHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepBuilderAPIFastSewingRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepBuilderAPIFastSewingRelease(handle); return true; }
 }
 
 internal sealed class BRepBuilderAPISewingHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepBuilderAPISewingHandle() : base(true) { }
     internal BRepBuilderAPISewingHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepBuilderAPISewingRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepBuilderAPISewingRelease(handle); return true; }
 }
 
 internal sealed class BRepCheckEdgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepCheckEdgeHandle() : base(true) { }
     internal BRepCheckEdgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepCheckEdgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepCheckEdgeRelease(handle); return true; }
 }
 
 internal sealed class BRepCheckFaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepCheckFaceHandle() : base(true) { }
     internal BRepCheckFaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepCheckFaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepCheckFaceRelease(handle); return true; }
 }
 
 internal sealed class BRepCheckResultHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepCheckResultHandle() : base(true) { }
     internal BRepCheckResultHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepCheckResultRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepCheckResultRelease(handle); return true; }
 }
 
 internal sealed class BRepCheckShellHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepCheckShellHandle() : base(true) { }
     internal BRepCheckShellHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepCheckShellRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepCheckShellRelease(handle); return true; }
 }
 
 internal sealed class BRepCheckSolidHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepCheckSolidHandle() : base(true) { }
     internal BRepCheckSolidHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepCheckSolidRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepCheckSolidRelease(handle); return true; }
 }
 
 internal sealed class BRepCheckVertexHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepCheckVertexHandle() : base(true) { }
     internal BRepCheckVertexHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepCheckVertexRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepCheckVertexRelease(handle); return true; }
 }
 
 internal sealed class BRepCheckWireHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepCheckWireHandle() : base(true) { }
     internal BRepCheckWireHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepCheckWireRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepCheckWireRelease(handle); return true; }
 }
 
 internal sealed class BRepFillACRLawHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepFillACRLawHandle() : base(true) { }
     internal BRepFillACRLawHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepFillACRLawRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepFillACRLawRelease(handle); return true; }
 }
 
 internal sealed class BRepFillCurveConstraintHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepFillCurveConstraintHandle() : base(true) { }
     internal BRepFillCurveConstraintHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepFillCurveConstraintRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepFillCurveConstraintRelease(handle); return true; }
 }
 
 internal sealed class BRepFillDraftLawHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepFillDraftLawHandle() : base(true) { }
     internal BRepFillDraftLawHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepFillDraftLawRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepFillDraftLawRelease(handle); return true; }
 }
 
 internal sealed class BRepFillEdge3DLawHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepFillEdge3DLawHandle() : base(true) { }
     internal BRepFillEdge3DLawHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepFillEdge3DLawRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepFillEdge3DLawRelease(handle); return true; }
 }
 
 internal sealed class BRepFillEdgeOnSurfLawHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepFillEdgeOnSurfLawHandle() : base(true) { }
     internal BRepFillEdgeOnSurfLawHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepFillEdgeOnSurfLawRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepFillEdgeOnSurfLawRelease(handle); return true; }
 }
 
 internal sealed class BRepFillLocationLawHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepFillLocationLawHandle() : base(true) { }
     internal BRepFillLocationLawHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepFillLocationLawRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepFillLocationLawRelease(handle); return true; }
 }
 
 internal sealed class BRepFillNSectionsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepFillNSectionsHandle() : base(true) { }
     internal BRepFillNSectionsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepFillNSectionsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepFillNSectionsRelease(handle); return true; }
 }
 
 internal sealed class BRepFillPipeShellHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepFillPipeShellHandle() : base(true) { }
     internal BRepFillPipeShellHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepFillPipeShellRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepFillPipeShellRelease(handle); return true; }
 }
 
 internal sealed class BRepFillSectionLawHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepFillSectionLawHandle() : base(true) { }
     internal BRepFillSectionLawHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepFillSectionLawRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepFillSectionLawRelease(handle); return true; }
 }
 
 internal sealed class BRepFillShapeLawHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepFillShapeLawHandle() : base(true) { }
     internal BRepFillShapeLawHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepFillShapeLawRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepFillShapeLawRelease(handle); return true; }
 }
 
 internal sealed class BRepGraphCacheHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepGraphCacheHandle() : base(true) { }
     internal BRepGraphCacheHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepGraphCacheRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepGraphCacheRelease(handle); return true; }
 }
 
 internal sealed class BRepGraphCacheDerivedStateHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepGraphCacheDerivedStateHandle() : base(true) { }
     internal BRepGraphCacheDerivedStateHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepGraphCacheDerivedStateRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepGraphCacheDerivedStateRelease(handle); return true; }
 }
 
 internal sealed class BRepGraphCacheMeshHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepGraphCacheMeshHandle() : base(true) { }
     internal BRepGraphCacheMeshHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepGraphCacheMeshRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepGraphCacheMeshRelease(handle); return true; }
 }
 
 internal sealed class BRepGraphLayerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepGraphLayerHandle() : base(true) { }
     internal BRepGraphLayerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepGraphLayerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepGraphLayerRelease(handle); return true; }
 }
 
 internal sealed class BRepGraphLayerDeferredHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepGraphLayerDeferredHandle() : base(true) { }
     internal BRepGraphLayerDeferredHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepGraphLayerDeferredRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepGraphLayerDeferredRelease(handle); return true; }
 }
 
 internal sealed class BRepGraphLayerHistoryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepGraphLayerHistoryHandle() : base(true) { }
     internal BRepGraphLayerHistoryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepGraphLayerHistoryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepGraphLayerHistoryRelease(handle); return true; }
 }
 
 internal sealed class BRepGraphLayerLockHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepGraphLayerLockHandle() : base(true) { }
     internal BRepGraphLayerLockHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepGraphLayerLockRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepGraphLayerLockRelease(handle); return true; }
 }
 
 internal sealed class BRepGraphLayerParametricHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepGraphLayerParametricHandle() : base(true) { }
     internal BRepGraphLayerParametricHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepGraphLayerParametricRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepGraphLayerParametricRelease(handle); return true; }
 }
 
 internal sealed class BRepGraphLayerTopoSupplementHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepGraphLayerTopoSupplementHandle() : base(true) { }
     internal BRepGraphLayerTopoSupplementHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepGraphLayerTopoSupplementRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepGraphLayerTopoSupplementRelease(handle); return true; }
 }
 
 internal sealed class BRepOffsetSimpleOffsetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepOffsetSimpleOffsetHandle() : base(true) { }
     internal BRepOffsetSimpleOffsetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepOffsetSimpleOffsetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepOffsetSimpleOffsetRelease(handle); return true; }
 }
 
 internal sealed class BRepTestDrawableHistoryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepTestDrawableHistoryHandle() : base(true) { }
     internal BRepTestDrawableHistoryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepTestDrawableHistoryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepTestDrawableHistoryRelease(handle); return true; }
 }
 
 internal sealed class BRepToolsCopyModificationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepToolsCopyModificationHandle() : base(true) { }
     internal BRepToolsCopyModificationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepToolsCopyModificationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepToolsCopyModificationRelease(handle); return true; }
 }
 
 internal sealed class BRepToolsGTrsfModificationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepToolsGTrsfModificationHandle() : base(true) { }
     internal BRepToolsGTrsfModificationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepToolsGTrsfModificationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepToolsGTrsfModificationRelease(handle); return true; }
 }
 
 internal sealed class BRepToolsHistoryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepToolsHistoryHandle() : base(true) { }
     internal BRepToolsHistoryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepToolsHistoryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepToolsHistoryRelease(handle); return true; }
 }
 
 internal sealed class BRepToolsModificationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepToolsModificationHandle() : base(true) { }
     internal BRepToolsModificationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepToolsModificationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepToolsModificationRelease(handle); return true; }
 }
 
 internal sealed class BRepToolsNurbsConvertModificationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepToolsNurbsConvertModificationHandle() : base(true) { }
     internal BRepToolsNurbsConvertModificationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepToolsNurbsConvertModificationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepToolsNurbsConvertModificationRelease(handle); return true; }
 }
 
 internal sealed class BRepToolsReShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepToolsReShapeHandle() : base(true) { }
     internal BRepToolsReShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepToolsReShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepToolsReShapeRelease(handle); return true; }
 }
 
 internal sealed class BRepToolsTrsfModificationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepToolsTrsfModificationHandle() : base(true) { }
     internal BRepToolsTrsfModificationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepToolsTrsfModificationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepToolsTrsfModificationRelease(handle); return true; }
 }
 
 internal sealed class BRepTopAdaptorHVertexHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepTopAdaptorHVertexHandle() : base(true) { }
     internal BRepTopAdaptorHVertexHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepTopAdaptorHVertexRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepTopAdaptorHVertexRelease(handle); return true; }
 }
 
 internal sealed class BRepTopAdaptorTopolToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepTopAdaptorTopolToolHandle() : base(true) { }
     internal BRepTopAdaptorTopolToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepTopAdaptorTopolToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepTopAdaptorTopolToolRelease(handle); return true; }
 }
 
 internal sealed class BRepCurve3DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepCurve3DHandle() : base(true) { }
     internal BRepCurve3DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepCurve3DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepCurve3DRelease(handle); return true; }
 }
 
 internal sealed class BRepCurveOn2SurfacesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepCurveOn2SurfacesHandle() : base(true) { }
     internal BRepCurveOn2SurfacesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepCurveOn2SurfacesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepCurveOn2SurfacesRelease(handle); return true; }
 }
 
 internal sealed class BRepCurveOnClosedSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepCurveOnClosedSurfaceHandle() : base(true) { }
     internal BRepCurveOnClosedSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepCurveOnClosedSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepCurveOnClosedSurfaceRelease(handle); return true; }
 }
 
 internal sealed class BRepCurveOnSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepCurveOnSurfaceHandle() : base(true) { }
     internal BRepCurveOnSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepCurveOnSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepCurveOnSurfaceRelease(handle); return true; }
 }
 
 internal sealed class BRepCurveRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepCurveRepresentationHandle() : base(true) { }
     internal BRepCurveRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepCurveRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepCurveRepresentationRelease(handle); return true; }
 }
 
 internal sealed class BRepGCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepGCurveHandle() : base(true) { }
     internal BRepGCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepGCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepGCurveRelease(handle); return true; }
 }
 
 internal sealed class BRepPointOnCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepPointOnCurveHandle() : base(true) { }
     internal BRepPointOnCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepPointOnCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepPointOnCurveRelease(handle); return true; }
 }
 
 internal sealed class BRepPointOnCurveOnSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepPointOnCurveOnSurfaceHandle() : base(true) { }
     internal BRepPointOnCurveOnSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepPointOnCurveOnSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepPointOnCurveOnSurfaceRelease(handle); return true; }
 }
 
 internal sealed class BRepPointOnSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepPointOnSurfaceHandle() : base(true) { }
     internal BRepPointOnSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepPointOnSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepPointOnSurfaceRelease(handle); return true; }
 }
 
 internal sealed class BRepPointRepresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepPointRepresentationHandle() : base(true) { }
     internal BRepPointRepresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepPointRepresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepPointRepresentationRelease(handle); return true; }
 }
 
 internal sealed class BRepPointsOnSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepPointsOnSurfaceHandle() : base(true) { }
     internal BRepPointsOnSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepPointsOnSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepPointsOnSurfaceRelease(handle); return true; }
 }
 
 internal sealed class BRepPolygon3DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepPolygon3DHandle() : base(true) { }
     internal BRepPolygon3DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepPolygon3DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepPolygon3DRelease(handle); return true; }
 }
 
 internal sealed class BRepPolygonOnClosedSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepPolygonOnClosedSurfaceHandle() : base(true) { }
     internal BRepPolygonOnClosedSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepPolygonOnClosedSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepPolygonOnClosedSurfaceRelease(handle); return true; }
 }
 
 internal sealed class BRepPolygonOnClosedTriangulationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepPolygonOnClosedTriangulationHandle() : base(true) { }
     internal BRepPolygonOnClosedTriangulationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepPolygonOnClosedTriangulationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepPolygonOnClosedTriangulationRelease(handle); return true; }
 }
 
 internal sealed class BRepPolygonOnSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepPolygonOnSurfaceHandle() : base(true) { }
     internal BRepPolygonOnSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepPolygonOnSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepPolygonOnSurfaceRelease(handle); return true; }
 }
 
 internal sealed class BRepPolygonOnTriangulationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepPolygonOnTriangulationHandle() : base(true) { }
     internal BRepPolygonOnTriangulationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepPolygonOnTriangulationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepPolygonOnTriangulationRelease(handle); return true; }
 }
 
 internal sealed class BRepTEdgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepTEdgeHandle() : base(true) { }
     internal BRepTEdgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepTEdgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepTEdgeRelease(handle); return true; }
 }
 
 internal sealed class BRepTFaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepTFaceHandle() : base(true) { }
     internal BRepTFaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepTFaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepTFaceRelease(handle); return true; }
 }
 
 internal sealed class BRepTVertexHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BRepTVertexHandle() : base(true) { }
     internal BRepTVertexHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BRepTVertexRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.BRepTVertexRelease(handle); return true; }
 }
 
 internal sealed class ChFiDSChamfSpineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ChFiDSChamfSpineHandle() : base(true) { }
     internal ChFiDSChamfSpineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ChFiDSChamfSpineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ChFiDSChamfSpineRelease(handle); return true; }
 }
 
 internal sealed class ChFiDSElSpineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ChFiDSElSpineHandle() : base(true) { }
     internal ChFiDSElSpineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ChFiDSElSpineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ChFiDSElSpineRelease(handle); return true; }
 }
 
 internal sealed class ChFiDSFilSpineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ChFiDSFilSpineHandle() : base(true) { }
     internal ChFiDSFilSpineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ChFiDSFilSpineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ChFiDSFilSpineRelease(handle); return true; }
 }
 
 internal sealed class ChFiDSSpineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ChFiDSSpineHandle() : base(true) { }
     internal ChFiDSSpineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ChFiDSSpineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ChFiDSSpineRelease(handle); return true; }
 }
 
 internal sealed class ChFiDSStripeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ChFiDSStripeHandle() : base(true) { }
     internal ChFiDSStripeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ChFiDSStripeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ChFiDSStripeRelease(handle); return true; }
 }
 
 internal sealed class ChFiDSSurfDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ChFiDSSurfDataHandle() : base(true) { }
     internal ChFiDSSurfDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ChFiDSSurfDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ChFiDSSurfDataRelease(handle); return true; }
 }
 
 internal sealed class ContapTheIWLineOfTheIWalkingHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ContapTheIWLineOfTheIWalkingHandle() : base(true) { }
     internal ContapTheIWLineOfTheIWalkingHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ContapTheIWLineOfTheIWalkingRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ContapTheIWLineOfTheIWalkingRelease(handle); return true; }
 }
 
 internal sealed class DraftModificationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal DraftModificationHandle() : base(true) { }
     internal DraftModificationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.DraftModificationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.DraftModificationRelease(handle); return true; }
 }
 
 internal sealed class HLRAlgoEdgesBlockHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HLRAlgoEdgesBlockHandle() : base(true) { }
     internal HLRAlgoEdgesBlockHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HLRAlgoEdgesBlockRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.HLRAlgoEdgesBlockRelease(handle); return true; }
 }
 
 internal sealed class HLRAlgoPolyAlgoHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HLRAlgoPolyAlgoHandle() : base(true) { }
     internal HLRAlgoPolyAlgoHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HLRAlgoPolyAlgoRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.HLRAlgoPolyAlgoRelease(handle); return true; }
 }
 
 internal sealed class HLRAlgoPolyDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HLRAlgoPolyDataHandle() : base(true) { }
     internal HLRAlgoPolyDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HLRAlgoPolyDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.HLRAlgoPolyDataRelease(handle); return true; }
 }
 
 internal sealed class HLRAlgoPolyInternalDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HLRAlgoPolyInternalDataHandle() : base(true) { }
     internal HLRAlgoPolyInternalDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HLRAlgoPolyInternalDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.HLRAlgoPolyInternalDataRelease(handle); return true; }
 }
 
 internal sealed class HLRAlgoPolyInternalNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HLRAlgoPolyInternalNodeHandle() : base(true) { }
     internal HLRAlgoPolyInternalNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HLRAlgoPolyInternalNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.HLRAlgoPolyInternalNodeRelease(handle); return true; }
 }
 
 internal sealed class HLRAlgoPolyShellDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HLRAlgoPolyShellDataHandle() : base(true) { }
     internal HLRAlgoPolyShellDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HLRAlgoPolyShellDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.HLRAlgoPolyShellDataRelease(handle); return true; }
 }
 
 internal sealed class HLRAlgoWiresBlockHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HLRAlgoWiresBlockHandle() : base(true) { }
     internal HLRAlgoWiresBlockHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HLRAlgoWiresBlockRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.HLRAlgoWiresBlockRelease(handle); return true; }
 }
 
 internal sealed class HLRBRepAlgoHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HLRBRepAlgoHandle() : base(true) { }
     internal HLRBRepAlgoHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HLRBRepAlgoRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.HLRBRepAlgoRelease(handle); return true; }
 }
 
 internal sealed class HLRBRepAreaLimitHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HLRBRepAreaLimitHandle() : base(true) { }
     internal HLRBRepAreaLimitHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HLRBRepAreaLimitRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.HLRBRepAreaLimitRelease(handle); return true; }
 }
 
 internal sealed class HLRBRepDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HLRBRepDataHandle() : base(true) { }
     internal HLRBRepDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HLRBRepDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.HLRBRepDataRelease(handle); return true; }
 }
 
 internal sealed class HLRBRepInternalAlgoHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HLRBRepInternalAlgoHandle() : base(true) { }
     internal HLRBRepInternalAlgoHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HLRBRepInternalAlgoRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.HLRBRepInternalAlgoRelease(handle); return true; }
 }
 
 internal sealed class HLRBRepPolyAlgoHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HLRBRepPolyAlgoHandle() : base(true) { }
     internal HLRBRepPolyAlgoHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HLRBRepPolyAlgoRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.HLRBRepPolyAlgoRelease(handle); return true; }
 }
 
 internal sealed class HLRTestDrawableEdgeToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HLRTestDrawableEdgeToolHandle() : base(true) { }
     internal HLRTestDrawableEdgeToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HLRTestDrawableEdgeToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.HLRTestDrawableEdgeToolRelease(handle); return true; }
 }
 
 internal sealed class HLRTestDrawablePolyEdgeToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HLRTestDrawablePolyEdgeToolHandle() : base(true) { }
     internal HLRTestDrawablePolyEdgeToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HLRTestDrawablePolyEdgeToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.HLRTestDrawablePolyEdgeToolRelease(handle); return true; }
 }
 
 internal sealed class HLRTestOutLinerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HLRTestOutLinerHandle() : base(true) { }
     internal HLRTestOutLinerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HLRTestOutLinerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.HLRTestOutLinerRelease(handle); return true; }
 }
 
 internal sealed class HLRTestProjectorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HLRTestProjectorHandle() : base(true) { }
     internal HLRTestProjectorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HLRTestProjectorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.HLRTestProjectorRelease(handle); return true; }
 }
 
 internal sealed class HLRTestShapeDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HLRTestShapeDataHandle() : base(true) { }
     internal HLRTestShapeDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HLRTestShapeDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.HLRTestShapeDataRelease(handle); return true; }
 }
 
 internal sealed class HLRTopoBRepOutLinerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HLRTopoBRepOutLinerHandle() : base(true) { }
     internal HLRTopoBRepOutLinerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HLRTopoBRepOutLinerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.HLRTopoBRepOutLinerRelease(handle); return true; }
 }
 
 internal sealed class HelixGeomHelixCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal HelixGeomHelixCurveHandle() : base(true) { }
     internal HelixGeomHelixCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.HelixGeomHelixCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.HelixGeomHelixCurveRelease(handle); return true; }
 }
 
 internal sealed class IntCurvesFaceIntersectorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IntCurvesFaceIntersectorHandle() : base(true) { }
     internal IntCurvesFaceIntersectorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IntCurvesFaceIntersectorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.IntCurvesFaceIntersectorRelease(handle); return true; }
 }
 
 internal sealed class IntPatchALineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IntPatchALineHandle() : base(true) { }
     internal IntPatchALineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IntPatchALineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.IntPatchALineRelease(handle); return true; }
 }
 
 internal sealed class IntPatchGLineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IntPatchGLineHandle() : base(true) { }
     internal IntPatchGLineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IntPatchGLineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.IntPatchGLineRelease(handle); return true; }
 }
 
 internal sealed class IntPatchLineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IntPatchLineHandle() : base(true) { }
     internal IntPatchLineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IntPatchLineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.IntPatchLineRelease(handle); return true; }
 }
 
 internal sealed class IntPatchPointLineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IntPatchPointLineHandle() : base(true) { }
     internal IntPatchPointLineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IntPatchPointLineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.IntPatchPointLineRelease(handle); return true; }
 }
 
 internal sealed class IntPatchRLineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IntPatchRLineHandle() : base(true) { }
     internal IntPatchRLineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IntPatchRLineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.IntPatchRLineRelease(handle); return true; }
 }
 
 internal sealed class IntPatchTheIWLineOfTheIWalkingHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IntPatchTheIWLineOfTheIWalkingHandle() : base(true) { }
     internal IntPatchTheIWLineOfTheIWalkingHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IntPatchTheIWLineOfTheIWalkingRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.IntPatchTheIWLineOfTheIWalkingRelease(handle); return true; }
 }
 
 internal sealed class IntPatchWLineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IntPatchWLineHandle() : base(true) { }
     internal IntPatchWLineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IntPatchWLineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.IntPatchWLineRelease(handle); return true; }
 }
 
 internal sealed class IntStartSITopolToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IntStartSITopolToolHandle() : base(true) { }
     internal IntStartSITopolToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IntStartSITopolToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.IntStartSITopolToolRelease(handle); return true; }
 }
 
 internal sealed class IntSurfLineOn2SHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IntSurfLineOn2SHandle() : base(true) { }
     internal IntSurfLineOn2SHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IntSurfLineOn2SRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.IntSurfLineOn2SRelease(handle); return true; }
 }
 
 internal sealed class IntToolsContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IntToolsContextHandle() : base(true) { }
     internal IntToolsContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IntToolsContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.IntToolsContextRelease(handle); return true; }
 }
 
 internal sealed class IntToolsTopolToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal IntToolsTopolToolHandle() : base(true) { }
     internal IntToolsTopolToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.IntToolsTopolToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.IntToolsTopolToolRelease(handle); return true; }
 }
 
 internal sealed class LocOpeGeneratedShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal LocOpeGeneratedShapeHandle() : base(true) { }
     internal LocOpeGeneratedShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.LocOpeGeneratedShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.LocOpeGeneratedShapeRelease(handle); return true; }
 }
 
 internal sealed class LocOpeGluedShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal LocOpeGluedShapeHandle() : base(true) { }
     internal LocOpeGluedShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.LocOpeGluedShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.LocOpeGluedShapeRelease(handle); return true; }
 }
 
 internal sealed class LocOpeWiresOnShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal LocOpeWiresOnShapeHandle() : base(true) { }
     internal LocOpeWiresOnShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.LocOpeWiresOnShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.LocOpeWiresOnShapeRelease(handle); return true; }
 }
 
 internal sealed class ShapeAlgoAlgoContainerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeAlgoAlgoContainerHandle() : base(true) { }
     internal ShapeAlgoAlgoContainerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeAlgoAlgoContainerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeAlgoAlgoContainerRelease(handle); return true; }
 }
 
 internal sealed class ShapeAlgoToolContainerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeAlgoToolContainerHandle() : base(true) { }
     internal ShapeAlgoToolContainerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeAlgoToolContainerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeAlgoToolContainerRelease(handle); return true; }
 }
 
 internal sealed class ShapeAnalysisFreeBoundDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeAnalysisFreeBoundDataHandle() : base(true) { }
     internal ShapeAnalysisFreeBoundDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeAnalysisFreeBoundDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeAnalysisFreeBoundDataRelease(handle); return true; }
 }
 
 internal sealed class ShapeAnalysisSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeAnalysisSurfaceHandle() : base(true) { }
     internal ShapeAnalysisSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeAnalysisSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeAnalysisSurfaceRelease(handle); return true; }
 }
 
 internal sealed class ShapeAnalysisTransferParametersHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeAnalysisTransferParametersHandle() : base(true) { }
     internal ShapeAnalysisTransferParametersHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeAnalysisTransferParametersRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeAnalysisTransferParametersRelease(handle); return true; }
 }
 
 internal sealed class ShapeAnalysisTransferParametersProjHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeAnalysisTransferParametersProjHandle() : base(true) { }
     internal ShapeAnalysisTransferParametersProjHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeAnalysisTransferParametersProjRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeAnalysisTransferParametersProjRelease(handle); return true; }
 }
 
 internal sealed class ShapeAnalysisWireHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeAnalysisWireHandle() : base(true) { }
     internal ShapeAnalysisWireHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeAnalysisWireRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeAnalysisWireRelease(handle); return true; }
 }
 
 internal sealed class ShapeBuildReShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeBuildReShapeHandle() : base(true) { }
     internal ShapeBuildReShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeBuildReShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeBuildReShapeRelease(handle); return true; }
 }
 
 internal sealed class ShapeConstructProjectCurveOnSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeConstructProjectCurveOnSurfaceHandle() : base(true) { }
     internal ShapeConstructProjectCurveOnSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeConstructProjectCurveOnSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeConstructProjectCurveOnSurfaceRelease(handle); return true; }
 }
 
 internal sealed class ShapeCustomBSplineRestrictionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeCustomBSplineRestrictionHandle() : base(true) { }
     internal ShapeCustomBSplineRestrictionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeCustomBSplineRestrictionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeCustomBSplineRestrictionRelease(handle); return true; }
 }
 
 internal sealed class ShapeCustomConvertToBSplineHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeCustomConvertToBSplineHandle() : base(true) { }
     internal ShapeCustomConvertToBSplineHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeCustomConvertToBSplineRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeCustomConvertToBSplineRelease(handle); return true; }
 }
 
 internal sealed class ShapeCustomConvertToRevolutionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeCustomConvertToRevolutionHandle() : base(true) { }
     internal ShapeCustomConvertToRevolutionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeCustomConvertToRevolutionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeCustomConvertToRevolutionRelease(handle); return true; }
 }
 
 internal sealed class ShapeCustomDirectModificationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeCustomDirectModificationHandle() : base(true) { }
     internal ShapeCustomDirectModificationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeCustomDirectModificationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeCustomDirectModificationRelease(handle); return true; }
 }
 
 internal sealed class ShapeCustomModificationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeCustomModificationHandle() : base(true) { }
     internal ShapeCustomModificationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeCustomModificationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeCustomModificationRelease(handle); return true; }
 }
 
 internal sealed class ShapeCustomRestrictionParametersHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeCustomRestrictionParametersHandle() : base(true) { }
     internal ShapeCustomRestrictionParametersHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeCustomRestrictionParametersRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeCustomRestrictionParametersRelease(handle); return true; }
 }
 
 internal sealed class ShapeCustomSweptToElementaryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeCustomSweptToElementaryHandle() : base(true) { }
     internal ShapeCustomSweptToElementaryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeCustomSweptToElementaryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeCustomSweptToElementaryRelease(handle); return true; }
 }
 
 internal sealed class ShapeCustomTrsfModificationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeCustomTrsfModificationHandle() : base(true) { }
     internal ShapeCustomTrsfModificationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeCustomTrsfModificationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeCustomTrsfModificationRelease(handle); return true; }
 }
 
 internal sealed class ShapeExtendBasicMsgRegistratorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeExtendBasicMsgRegistratorHandle() : base(true) { }
     internal ShapeExtendBasicMsgRegistratorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeExtendBasicMsgRegistratorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeExtendBasicMsgRegistratorRelease(handle); return true; }
 }
 
 internal sealed class ShapeExtendComplexCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeExtendComplexCurveHandle() : base(true) { }
     internal ShapeExtendComplexCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeExtendComplexCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeExtendComplexCurveRelease(handle); return true; }
 }
 
 internal sealed class ShapeExtendCompositeSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeExtendCompositeSurfaceHandle() : base(true) { }
     internal ShapeExtendCompositeSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeExtendCompositeSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeExtendCompositeSurfaceRelease(handle); return true; }
 }
 
 internal sealed class ShapeExtendMsgRegistratorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeExtendMsgRegistratorHandle() : base(true) { }
     internal ShapeExtendMsgRegistratorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeExtendMsgRegistratorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeExtendMsgRegistratorRelease(handle); return true; }
 }
 
 internal sealed class ShapeExtendWireDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeExtendWireDataHandle() : base(true) { }
     internal ShapeExtendWireDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeExtendWireDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeExtendWireDataRelease(handle); return true; }
 }
 
 internal sealed class ShapeFixComposeShellHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeFixComposeShellHandle() : base(true) { }
     internal ShapeFixComposeShellHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeFixComposeShellRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeFixComposeShellRelease(handle); return true; }
 }
 
 internal sealed class ShapeFixEdgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeFixEdgeHandle() : base(true) { }
     internal ShapeFixEdgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeFixEdgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeFixEdgeRelease(handle); return true; }
 }
 
 internal sealed class ShapeFixEdgeProjAuxHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeFixEdgeProjAuxHandle() : base(true) { }
     internal ShapeFixEdgeProjAuxHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeFixEdgeProjAuxRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeFixEdgeProjAuxRelease(handle); return true; }
 }
 
 internal sealed class ShapeFixFaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeFixFaceHandle() : base(true) { }
     internal ShapeFixFaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeFixFaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeFixFaceRelease(handle); return true; }
 }
 
 internal sealed class ShapeFixFixSmallFaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeFixFixSmallFaceHandle() : base(true) { }
     internal ShapeFixFixSmallFaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeFixFixSmallFaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeFixFixSmallFaceRelease(handle); return true; }
 }
 
 internal sealed class ShapeFixFixSmallSolidHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeFixFixSmallSolidHandle() : base(true) { }
     internal ShapeFixFixSmallSolidHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeFixFixSmallSolidRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeFixFixSmallSolidRelease(handle); return true; }
 }
 
 internal sealed class ShapeFixRootHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeFixRootHandle() : base(true) { }
     internal ShapeFixRootHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeFixRootRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeFixRootRelease(handle); return true; }
 }
 
 internal sealed class ShapeFixShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeFixShapeHandle() : base(true) { }
     internal ShapeFixShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeFixShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeFixShapeRelease(handle); return true; }
 }
 
 internal sealed class ShapeFixShellHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeFixShellHandle() : base(true) { }
     internal ShapeFixShellHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeFixShellRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeFixShellRelease(handle); return true; }
 }
 
 internal sealed class ShapeFixSolidHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeFixSolidHandle() : base(true) { }
     internal ShapeFixSolidHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeFixSolidRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeFixSolidRelease(handle); return true; }
 }
 
 internal sealed class ShapeFixSplitCommonVertexHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeFixSplitCommonVertexHandle() : base(true) { }
     internal ShapeFixSplitCommonVertexHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeFixSplitCommonVertexRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeFixSplitCommonVertexRelease(handle); return true; }
 }
 
 internal sealed class ShapeFixWireHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeFixWireHandle() : base(true) { }
     internal ShapeFixWireHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeFixWireRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeFixWireRelease(handle); return true; }
 }
 
 internal sealed class ShapeFixWireframeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeFixWireframeHandle() : base(true) { }
     internal ShapeFixWireframeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeFixWireframeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeFixWireframeRelease(handle); return true; }
 }
 
 internal sealed class ShapeProcessContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeProcessContextHandle() : base(true) { }
     internal ShapeProcessContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeProcessContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeProcessContextRelease(handle); return true; }
 }
 
 internal sealed class ShapeProcessOperatorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeProcessOperatorHandle() : base(true) { }
     internal ShapeProcessOperatorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeProcessOperatorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeProcessOperatorRelease(handle); return true; }
 }
 
 internal sealed class ShapeProcessShapeContextHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeProcessShapeContextHandle() : base(true) { }
     internal ShapeProcessShapeContextHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeProcessShapeContextRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeProcessShapeContextRelease(handle); return true; }
 }
 
 internal sealed class ShapeProcessUOperatorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeProcessUOperatorHandle() : base(true) { }
     internal ShapeProcessUOperatorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeProcessUOperatorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeProcessUOperatorRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeClosedEdgeDivideHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeClosedEdgeDivideHandle() : base(true) { }
     internal ShapeUpgradeClosedEdgeDivideHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeClosedEdgeDivideRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeClosedEdgeDivideRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeClosedFaceDivideHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeClosedFaceDivideHandle() : base(true) { }
     internal ShapeUpgradeClosedFaceDivideHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeClosedFaceDivideRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeClosedFaceDivideRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeConvertCurve2dToBezierHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeConvertCurve2dToBezierHandle() : base(true) { }
     internal ShapeUpgradeConvertCurve2dToBezierHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeConvertCurve2dToBezierRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeConvertCurve2dToBezierRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeConvertCurve3dToBezierHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeConvertCurve3dToBezierHandle() : base(true) { }
     internal ShapeUpgradeConvertCurve3dToBezierHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeConvertCurve3dToBezierRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeConvertCurve3dToBezierRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeConvertSurfaceToBezierBasisHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeConvertSurfaceToBezierBasisHandle() : base(true) { }
     internal ShapeUpgradeConvertSurfaceToBezierBasisHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeConvertSurfaceToBezierBasisRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeConvertSurfaceToBezierBasisRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeEdgeDivideHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeEdgeDivideHandle() : base(true) { }
     internal ShapeUpgradeEdgeDivideHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeEdgeDivideRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeEdgeDivideRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeFaceDivideHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeFaceDivideHandle() : base(true) { }
     internal ShapeUpgradeFaceDivideHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeFaceDivideRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeFaceDivideRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeFaceDivideAreaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeFaceDivideAreaHandle() : base(true) { }
     internal ShapeUpgradeFaceDivideAreaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeFaceDivideAreaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeFaceDivideAreaRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeFixSmallBezierCurvesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeFixSmallBezierCurvesHandle() : base(true) { }
     internal ShapeUpgradeFixSmallBezierCurvesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeFixSmallBezierCurvesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeFixSmallBezierCurvesRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeFixSmallCurvesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeFixSmallCurvesHandle() : base(true) { }
     internal ShapeUpgradeFixSmallCurvesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeFixSmallCurvesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeFixSmallCurvesRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeRemoveInternalWiresHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeRemoveInternalWiresHandle() : base(true) { }
     internal ShapeUpgradeRemoveInternalWiresHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeRemoveInternalWiresRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeRemoveInternalWiresRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeRemoveLocationsHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeRemoveLocationsHandle() : base(true) { }
     internal ShapeUpgradeRemoveLocationsHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeRemoveLocationsRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeRemoveLocationsRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeSplitCurveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeSplitCurveHandle() : base(true) { }
     internal ShapeUpgradeSplitCurveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeSplitCurveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeSplitCurveRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeSplitCurve2dHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeSplitCurve2dHandle() : base(true) { }
     internal ShapeUpgradeSplitCurve2dHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeSplitCurve2dRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeSplitCurve2dRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeSplitCurve2dContinuityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeSplitCurve2dContinuityHandle() : base(true) { }
     internal ShapeUpgradeSplitCurve2dContinuityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeSplitCurve2dContinuityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeSplitCurve2dContinuityRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeSplitCurve3dHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeSplitCurve3dHandle() : base(true) { }
     internal ShapeUpgradeSplitCurve3dHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeSplitCurve3dRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeSplitCurve3dRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeSplitCurve3dContinuityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeSplitCurve3dContinuityHandle() : base(true) { }
     internal ShapeUpgradeSplitCurve3dContinuityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeSplitCurve3dContinuityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeSplitCurve3dContinuityRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeSplitSurfaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeSplitSurfaceHandle() : base(true) { }
     internal ShapeUpgradeSplitSurfaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeSplitSurfaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeSplitSurfaceRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeSplitSurfaceAngleHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeSplitSurfaceAngleHandle() : base(true) { }
     internal ShapeUpgradeSplitSurfaceAngleHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeSplitSurfaceAngleRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeSplitSurfaceAngleRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeSplitSurfaceAreaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeSplitSurfaceAreaHandle() : base(true) { }
     internal ShapeUpgradeSplitSurfaceAreaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeSplitSurfaceAreaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeSplitSurfaceAreaRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeSplitSurfaceContinuityHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeSplitSurfaceContinuityHandle() : base(true) { }
     internal ShapeUpgradeSplitSurfaceContinuityHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeSplitSurfaceContinuityRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeSplitSurfaceContinuityRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeToolHandle() : base(true) { }
     internal ShapeUpgradeToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeToolRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeUnifySameDomainHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeUnifySameDomainHandle() : base(true) { }
     internal ShapeUpgradeUnifySameDomainHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeUnifySameDomainRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeUnifySameDomainRelease(handle); return true; }
 }
 
 internal sealed class ShapeUpgradeWireDivideHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal ShapeUpgradeWireDivideHandle() : base(true) { }
     internal ShapeUpgradeWireDivideHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.ShapeUpgradeWireDivideRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.ShapeUpgradeWireDivideRelease(handle); return true; }
 }
 
 internal sealed class TopLocDatum3DHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopLocDatum3DHandle() : base(true) { }
     internal TopLocDatum3DHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopLocDatum3DRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopLocDatum3DRelease(handle); return true; }
 }
 
 internal sealed class TopLocSListNodeOfItemLocationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopLocSListNodeOfItemLocationHandle() : base(true) { }
     internal TopLocSListNodeOfItemLocationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopLocSListNodeOfItemLocationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopLocSListNodeOfItemLocationRelease(handle); return true; }
 }
 
 internal sealed class TopOpeBRepBuildHBuilderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopOpeBRepBuildHBuilderHandle() : base(true) { }
     internal TopOpeBRepBuildHBuilderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopOpeBRepBuildHBuilderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopOpeBRepBuildHBuilderRelease(handle); return true; }
 }
 
 internal sealed class TopOpeBRepBuildLoopHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopOpeBRepBuildLoopHandle() : base(true) { }
     internal TopOpeBRepBuildLoopHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopOpeBRepBuildLoopRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopOpeBRepBuildLoopRelease(handle); return true; }
 }
 
 internal sealed class TopOpeBRepBuildPaveHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopOpeBRepBuildPaveHandle() : base(true) { }
     internal TopOpeBRepBuildPaveHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopOpeBRepBuildPaveRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopOpeBRepBuildPaveRelease(handle); return true; }
 }
 
 internal sealed class TopOpeBRepDSAssociationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopOpeBRepDSAssociationHandle() : base(true) { }
     internal TopOpeBRepDSAssociationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopOpeBRepDSAssociationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopOpeBRepDSAssociationRelease(handle); return true; }
 }
 
 internal sealed class TopOpeBRepDSCheckHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopOpeBRepDSCheckHandle() : base(true) { }
     internal TopOpeBRepDSCheckHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopOpeBRepDSCheckRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopOpeBRepDSCheckRelease(handle); return true; }
 }
 
 internal sealed class TopOpeBRepDSCurvePointInterferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopOpeBRepDSCurvePointInterferenceHandle() : base(true) { }
     internal TopOpeBRepDSCurvePointInterferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopOpeBRepDSCurvePointInterferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopOpeBRepDSCurvePointInterferenceRelease(handle); return true; }
 }
 
 internal sealed class TopOpeBRepDSEdgeVertexInterferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopOpeBRepDSEdgeVertexInterferenceHandle() : base(true) { }
     internal TopOpeBRepDSEdgeVertexInterferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopOpeBRepDSEdgeVertexInterferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopOpeBRepDSEdgeVertexInterferenceRelease(handle); return true; }
 }
 
 internal sealed class TopOpeBRepDSFaceEdgeInterferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopOpeBRepDSFaceEdgeInterferenceHandle() : base(true) { }
     internal TopOpeBRepDSFaceEdgeInterferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopOpeBRepDSFaceEdgeInterferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopOpeBRepDSFaceEdgeInterferenceRelease(handle); return true; }
 }
 
 internal sealed class TopOpeBRepDSGapToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopOpeBRepDSGapToolHandle() : base(true) { }
     internal TopOpeBRepDSGapToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopOpeBRepDSGapToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopOpeBRepDSGapToolRelease(handle); return true; }
 }
 
 internal sealed class TopOpeBRepDSHDataStructureHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopOpeBRepDSHDataStructureHandle() : base(true) { }
     internal TopOpeBRepDSHDataStructureHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopOpeBRepDSHDataStructureRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopOpeBRepDSHDataStructureRelease(handle); return true; }
 }
 
 internal sealed class TopOpeBRepDSInterferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopOpeBRepDSInterferenceHandle() : base(true) { }
     internal TopOpeBRepDSInterferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopOpeBRepDSInterferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopOpeBRepDSInterferenceRelease(handle); return true; }
 }
 
 internal sealed class TopOpeBRepDSMarkerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopOpeBRepDSMarkerHandle() : base(true) { }
     internal TopOpeBRepDSMarkerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopOpeBRepDSMarkerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopOpeBRepDSMarkerRelease(handle); return true; }
 }
 
 internal sealed class TopOpeBRepDSShapeShapeInterferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopOpeBRepDSShapeShapeInterferenceHandle() : base(true) { }
     internal TopOpeBRepDSShapeShapeInterferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopOpeBRepDSShapeShapeInterferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopOpeBRepDSShapeShapeInterferenceRelease(handle); return true; }
 }
 
 internal sealed class TopOpeBRepDSSolidSurfaceInterferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopOpeBRepDSSolidSurfaceInterferenceHandle() : base(true) { }
     internal TopOpeBRepDSSolidSurfaceInterferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopOpeBRepDSSolidSurfaceInterferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopOpeBRepDSSolidSurfaceInterferenceRelease(handle); return true; }
 }
 
 internal sealed class TopOpeBRepDSSurfaceCurveInterferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopOpeBRepDSSurfaceCurveInterferenceHandle() : base(true) { }
     internal TopOpeBRepDSSurfaceCurveInterferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopOpeBRepDSSurfaceCurveInterferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopOpeBRepDSSurfaceCurveInterferenceRelease(handle); return true; }
 }
 
 internal sealed class TopOpeBRepToolHBoxToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopOpeBRepToolHBoxToolHandle() : base(true) { }
     internal TopOpeBRepToolHBoxToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopOpeBRepToolHBoxToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopOpeBRepToolHBoxToolRelease(handle); return true; }
 }
 
 internal sealed class TopOpeBRepFFDumperHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopOpeBRepFFDumperHandle() : base(true) { }
     internal TopOpeBRepFFDumperHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopOpeBRepFFDumperRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopOpeBRepFFDumperRelease(handle); return true; }
 }
 
 internal sealed class TopOpeBRepHctxee2dHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopOpeBRepHctxee2dHandle() : base(true) { }
     internal TopOpeBRepHctxee2dHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopOpeBRepHctxee2dRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopOpeBRepHctxee2dRelease(handle); return true; }
 }
 
 internal sealed class TopOpeBRepHctxff2dHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopOpeBRepHctxff2dHandle() : base(true) { }
     internal TopOpeBRepHctxff2dHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopOpeBRepHctxff2dRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopOpeBRepHctxff2dRelease(handle); return true; }
 }
 
 internal sealed class TopoDSAlertAttributeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopoDSAlertAttributeHandle() : base(true) { }
     internal TopoDSAlertAttributeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopoDSAlertAttributeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopoDSAlertAttributeRelease(handle); return true; }
 }
 
 internal sealed class TopoDSAlertWithShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopoDSAlertWithShapeHandle() : base(true) { }
     internal TopoDSAlertWithShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopoDSAlertWithShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopoDSAlertWithShapeRelease(handle); return true; }
 }
 
 internal sealed class TopoDSHShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopoDSHShapeHandle() : base(true) { }
     internal TopoDSHShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopoDSHShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopoDSHShapeRelease(handle); return true; }
 }
 
 internal sealed class TopoDSTCompSolidHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopoDSTCompSolidHandle() : base(true) { }
     internal TopoDSTCompSolidHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopoDSTCompSolidRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopoDSTCompSolidRelease(handle); return true; }
 }
 
 internal sealed class TopoDSTCompoundHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopoDSTCompoundHandle() : base(true) { }
     internal TopoDSTCompoundHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopoDSTCompoundRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopoDSTCompoundRelease(handle); return true; }
 }
 
 internal sealed class TopoDSTEdgeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopoDSTEdgeHandle() : base(true) { }
     internal TopoDSTEdgeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopoDSTEdgeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopoDSTEdgeRelease(handle); return true; }
 }
 
 internal sealed class TopoDSTFaceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopoDSTFaceHandle() : base(true) { }
     internal TopoDSTFaceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopoDSTFaceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopoDSTFaceRelease(handle); return true; }
 }
 
 internal sealed class TopoDSTShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopoDSTShapeHandle() : base(true) { }
     internal TopoDSTShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopoDSTShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopoDSTShapeRelease(handle); return true; }
 }
 
 internal sealed class TopoDSTShellHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopoDSTShellHandle() : base(true) { }
     internal TopoDSTShellHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopoDSTShellRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopoDSTShellRelease(handle); return true; }
 }
 
 internal sealed class TopoDSTSolidHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopoDSTSolidHandle() : base(true) { }
     internal TopoDSTSolidHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopoDSTSolidRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopoDSTSolidRelease(handle); return true; }
 }
 
 internal sealed class TopoDSTVertexHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopoDSTVertexHandle() : base(true) { }
     internal TopoDSTVertexHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopoDSTVertexRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopoDSTVertexRelease(handle); return true; }
 }
 
 internal sealed class TopoDSTWireHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TopoDSTWireHandle() : base(true) { }
     internal TopoDSTWireHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TopoDSTWireRelease(handle); return true; }
+    protected override bool ReleaseHandle() { ModelingGeneratedNativeMethods.TopoDSTWireRelease(handle); return true; }
 }
 
-internal static partial class GeneratedNativeMethods
+internal static partial class ModelingGeneratedNativeMethods
 {
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bopalgo_alert_acquired_self_intersection_clone")]

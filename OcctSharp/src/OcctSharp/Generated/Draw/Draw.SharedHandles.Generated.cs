@@ -18,7 +18,7 @@ public sealed class DBRepDrawableShape : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DBRepDrawableShapeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DBRepDrawableShapeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -29,7 +29,7 @@ public sealed class DBRepDrawableShape : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DBRepDrawableShapeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DBRepDrawableShapeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -39,7 +39,7 @@ public sealed class DBRepDrawableShape : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DBRepDrawableShapeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DBRepDrawableShapeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -47,7 +47,7 @@ public sealed class DBRepDrawableShape : IDisposable
     public DBRepDrawableShape Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DBRepDrawableShapeClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DBRepDrawableShapeClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DBRepDrawableShape(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -86,7 +86,7 @@ public sealed class DBRepEdge : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DBRepEdgeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DBRepEdgeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -97,7 +97,7 @@ public sealed class DBRepEdge : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DBRepEdgeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DBRepEdgeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -107,7 +107,7 @@ public sealed class DBRepEdge : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DBRepEdgeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DBRepEdgeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -115,7 +115,7 @@ public sealed class DBRepEdge : IDisposable
     public DBRepEdge Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DBRepEdgeClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DBRepEdgeClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DBRepEdge(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -154,7 +154,7 @@ public sealed class DBRepFace : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DBRepFaceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DBRepFaceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -165,7 +165,7 @@ public sealed class DBRepFace : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DBRepFaceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DBRepFaceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -175,7 +175,7 @@ public sealed class DBRepFace : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DBRepFaceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DBRepFaceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -183,7 +183,7 @@ public sealed class DBRepFace : IDisposable
     public DBRepFace Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DBRepFaceClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DBRepFaceClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DBRepFace(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -222,7 +222,7 @@ public sealed class DDFBrowser : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDFBrowserGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDFBrowserGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -233,7 +233,7 @@ public sealed class DDFBrowser : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDFBrowserGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDFBrowserGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -243,7 +243,7 @@ public sealed class DDFBrowser : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDFBrowserIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDFBrowserIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -251,7 +251,7 @@ public sealed class DDFBrowser : IDisposable
     public DDFBrowser Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDFBrowserClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDFBrowserClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DDFBrowser(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -290,7 +290,7 @@ public sealed class DDFData : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDFDataGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDFDataGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -301,7 +301,7 @@ public sealed class DDFData : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDFDataGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDFDataGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -311,7 +311,7 @@ public sealed class DDFData : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDFDataIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDFDataIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -319,7 +319,7 @@ public sealed class DDFData : IDisposable
     public DDFData Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDFDataClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDFDataClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DDFData(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -358,7 +358,7 @@ public sealed class DDFTransaction : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDFTransactionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDFTransactionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -369,7 +369,7 @@ public sealed class DDFTransaction : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDFTransactionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDFTransactionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -379,7 +379,7 @@ public sealed class DDFTransaction : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDFTransactionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDFTransactionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -387,7 +387,7 @@ public sealed class DDFTransaction : IDisposable
     public DDFTransaction Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDFTransactionClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDFTransactionClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DDFTransaction(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -426,7 +426,7 @@ public sealed class DDataStdDrawDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDataStdDrawDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDataStdDrawDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -437,7 +437,7 @@ public sealed class DDataStdDrawDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDataStdDrawDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDataStdDrawDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -447,7 +447,7 @@ public sealed class DDataStdDrawDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDataStdDrawDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDataStdDrawDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -455,7 +455,7 @@ public sealed class DDataStdDrawDriver : IDisposable
     public DDataStdDrawDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDataStdDrawDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDataStdDrawDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DDataStdDrawDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -494,7 +494,7 @@ public sealed class DDataStdDrawPresentation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDataStdDrawPresentationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDataStdDrawPresentationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -505,7 +505,7 @@ public sealed class DDataStdDrawPresentation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDataStdDrawPresentationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDataStdDrawPresentationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -515,7 +515,7 @@ public sealed class DDataStdDrawPresentation : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDataStdDrawPresentationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDataStdDrawPresentationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -523,7 +523,7 @@ public sealed class DDataStdDrawPresentation : IDisposable
     public DDataStdDrawPresentation Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDataStdDrawPresentationClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDataStdDrawPresentationClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DDataStdDrawPresentation(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -562,7 +562,7 @@ public sealed class DDataStdTreeBrowser : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDataStdTreeBrowserGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDataStdTreeBrowserGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -573,7 +573,7 @@ public sealed class DDataStdTreeBrowser : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDataStdTreeBrowserGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDataStdTreeBrowserGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -583,7 +583,7 @@ public sealed class DDataStdTreeBrowser : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDataStdTreeBrowserIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDataStdTreeBrowserIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -591,7 +591,7 @@ public sealed class DDataStdTreeBrowser : IDisposable
     public DDataStdTreeBrowser Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDataStdTreeBrowserClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDataStdTreeBrowserClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DDataStdTreeBrowser(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -630,7 +630,7 @@ public sealed class DDocStdDrawDocument : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDocStdDrawDocumentGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDocStdDrawDocumentGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -641,7 +641,7 @@ public sealed class DDocStdDrawDocument : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDocStdDrawDocumentGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDocStdDrawDocumentGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -651,7 +651,7 @@ public sealed class DDocStdDrawDocument : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDocStdDrawDocumentIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDocStdDrawDocumentIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -659,7 +659,7 @@ public sealed class DDocStdDrawDocument : IDisposable
     public DDocStdDrawDocument Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DDocStdDrawDocumentClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DDocStdDrawDocumentClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DDocStdDrawDocument(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -698,7 +698,7 @@ public sealed class DNamingBooleanOperationDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingBooleanOperationDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingBooleanOperationDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -709,7 +709,7 @@ public sealed class DNamingBooleanOperationDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingBooleanOperationDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingBooleanOperationDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -719,7 +719,7 @@ public sealed class DNamingBooleanOperationDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingBooleanOperationDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingBooleanOperationDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -727,7 +727,7 @@ public sealed class DNamingBooleanOperationDriver : IDisposable
     public DNamingBooleanOperationDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingBooleanOperationDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingBooleanOperationDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DNamingBooleanOperationDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -766,7 +766,7 @@ public sealed class DNamingBoxDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingBoxDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingBoxDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -777,7 +777,7 @@ public sealed class DNamingBoxDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingBoxDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingBoxDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -787,7 +787,7 @@ public sealed class DNamingBoxDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingBoxDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingBoxDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -795,7 +795,7 @@ public sealed class DNamingBoxDriver : IDisposable
     public DNamingBoxDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingBoxDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingBoxDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DNamingBoxDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -834,7 +834,7 @@ public sealed class DNamingCylinderDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingCylinderDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingCylinderDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -845,7 +845,7 @@ public sealed class DNamingCylinderDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingCylinderDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingCylinderDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -855,7 +855,7 @@ public sealed class DNamingCylinderDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingCylinderDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingCylinderDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -863,7 +863,7 @@ public sealed class DNamingCylinderDriver : IDisposable
     public DNamingCylinderDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingCylinderDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingCylinderDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DNamingCylinderDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -902,7 +902,7 @@ public sealed class DNamingFilletDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingFilletDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingFilletDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -913,7 +913,7 @@ public sealed class DNamingFilletDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingFilletDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingFilletDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -923,7 +923,7 @@ public sealed class DNamingFilletDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingFilletDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingFilletDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -931,7 +931,7 @@ public sealed class DNamingFilletDriver : IDisposable
     public DNamingFilletDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingFilletDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingFilletDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DNamingFilletDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -970,7 +970,7 @@ public sealed class DNamingLine3DDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingLine3DDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingLine3DDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -981,7 +981,7 @@ public sealed class DNamingLine3DDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingLine3DDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingLine3DDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -991,7 +991,7 @@ public sealed class DNamingLine3DDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingLine3DDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingLine3DDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -999,7 +999,7 @@ public sealed class DNamingLine3DDriver : IDisposable
     public DNamingLine3DDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingLine3DDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingLine3DDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DNamingLine3DDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1038,7 +1038,7 @@ public sealed class DNamingPointDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingPointDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingPointDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1049,7 +1049,7 @@ public sealed class DNamingPointDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingPointDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingPointDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1059,7 +1059,7 @@ public sealed class DNamingPointDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingPointDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingPointDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1067,7 +1067,7 @@ public sealed class DNamingPointDriver : IDisposable
     public DNamingPointDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingPointDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingPointDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DNamingPointDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1106,7 +1106,7 @@ public sealed class DNamingPrismDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingPrismDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingPrismDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1117,7 +1117,7 @@ public sealed class DNamingPrismDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingPrismDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingPrismDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1127,7 +1127,7 @@ public sealed class DNamingPrismDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingPrismDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingPrismDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1135,7 +1135,7 @@ public sealed class DNamingPrismDriver : IDisposable
     public DNamingPrismDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingPrismDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingPrismDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DNamingPrismDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1174,7 +1174,7 @@ public sealed class DNamingRevolutionDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingRevolutionDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingRevolutionDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1185,7 +1185,7 @@ public sealed class DNamingRevolutionDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingRevolutionDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingRevolutionDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1195,7 +1195,7 @@ public sealed class DNamingRevolutionDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingRevolutionDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingRevolutionDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1203,7 +1203,7 @@ public sealed class DNamingRevolutionDriver : IDisposable
     public DNamingRevolutionDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingRevolutionDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingRevolutionDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DNamingRevolutionDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1242,7 +1242,7 @@ public sealed class DNamingSelectionDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingSelectionDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingSelectionDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1253,7 +1253,7 @@ public sealed class DNamingSelectionDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingSelectionDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingSelectionDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1263,7 +1263,7 @@ public sealed class DNamingSelectionDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingSelectionDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingSelectionDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1271,7 +1271,7 @@ public sealed class DNamingSelectionDriver : IDisposable
     public DNamingSelectionDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingSelectionDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingSelectionDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DNamingSelectionDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1310,7 +1310,7 @@ public sealed class DNamingSphereDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingSphereDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingSphereDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1321,7 +1321,7 @@ public sealed class DNamingSphereDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingSphereDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingSphereDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1331,7 +1331,7 @@ public sealed class DNamingSphereDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingSphereDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingSphereDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1339,7 +1339,7 @@ public sealed class DNamingSphereDriver : IDisposable
     public DNamingSphereDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingSphereDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingSphereDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DNamingSphereDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1378,7 +1378,7 @@ public sealed class DNamingTransformationDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingTransformationDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingTransformationDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1389,7 +1389,7 @@ public sealed class DNamingTransformationDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingTransformationDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingTransformationDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1399,7 +1399,7 @@ public sealed class DNamingTransformationDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingTransformationDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingTransformationDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1407,7 +1407,7 @@ public sealed class DNamingTransformationDriver : IDisposable
     public DNamingTransformationDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DNamingTransformationDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DNamingTransformationDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DNamingTransformationDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1446,7 +1446,7 @@ public sealed class DrawDimAngle : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimAngleGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimAngleGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1457,7 +1457,7 @@ public sealed class DrawDimAngle : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimAngleGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimAngleGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1467,7 +1467,7 @@ public sealed class DrawDimAngle : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimAngleIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimAngleIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1475,7 +1475,7 @@ public sealed class DrawDimAngle : IDisposable
     public DrawDimAngle Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimAngleClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimAngleClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawDimAngle(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1514,7 +1514,7 @@ public sealed class DrawDimDimension : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimDimensionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimDimensionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1525,7 +1525,7 @@ public sealed class DrawDimDimension : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimDimensionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimDimensionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1535,7 +1535,7 @@ public sealed class DrawDimDimension : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimDimensionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimDimensionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1543,7 +1543,7 @@ public sealed class DrawDimDimension : IDisposable
     public DrawDimDimension Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimDimensionClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimDimensionClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawDimDimension(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1582,7 +1582,7 @@ public sealed class DrawDimDistance : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimDistanceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimDistanceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1593,7 +1593,7 @@ public sealed class DrawDimDistance : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimDistanceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimDistanceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1603,7 +1603,7 @@ public sealed class DrawDimDistance : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimDistanceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimDistanceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1611,7 +1611,7 @@ public sealed class DrawDimDistance : IDisposable
     public DrawDimDistance Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimDistanceClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimDistanceClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawDimDistance(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1650,7 +1650,7 @@ public sealed class DrawDimPlanarAngle : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarAngleGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarAngleGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1661,7 +1661,7 @@ public sealed class DrawDimPlanarAngle : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarAngleGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarAngleGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1671,7 +1671,7 @@ public sealed class DrawDimPlanarAngle : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarAngleIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarAngleIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1679,7 +1679,7 @@ public sealed class DrawDimPlanarAngle : IDisposable
     public DrawDimPlanarAngle Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarAngleClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarAngleClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawDimPlanarAngle(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1718,7 +1718,7 @@ public sealed class DrawDimPlanarDiameter : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarDiameterGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarDiameterGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1729,7 +1729,7 @@ public sealed class DrawDimPlanarDiameter : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarDiameterGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarDiameterGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1739,7 +1739,7 @@ public sealed class DrawDimPlanarDiameter : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarDiameterIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarDiameterIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1747,7 +1747,7 @@ public sealed class DrawDimPlanarDiameter : IDisposable
     public DrawDimPlanarDiameter Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarDiameterClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarDiameterClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawDimPlanarDiameter(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1786,7 +1786,7 @@ public sealed class DrawDimPlanarDimension : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarDimensionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarDimensionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1797,7 +1797,7 @@ public sealed class DrawDimPlanarDimension : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarDimensionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarDimensionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1807,7 +1807,7 @@ public sealed class DrawDimPlanarDimension : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarDimensionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarDimensionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1815,7 +1815,7 @@ public sealed class DrawDimPlanarDimension : IDisposable
     public DrawDimPlanarDimension Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarDimensionClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarDimensionClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawDimPlanarDimension(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1854,7 +1854,7 @@ public sealed class DrawDimPlanarDistance : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarDistanceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarDistanceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1865,7 +1865,7 @@ public sealed class DrawDimPlanarDistance : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarDistanceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarDistanceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1875,7 +1875,7 @@ public sealed class DrawDimPlanarDistance : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarDistanceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarDistanceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1883,7 +1883,7 @@ public sealed class DrawDimPlanarDistance : IDisposable
     public DrawDimPlanarDistance Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarDistanceClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarDistanceClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawDimPlanarDistance(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1922,7 +1922,7 @@ public sealed class DrawDimPlanarRadius : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarRadiusGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarRadiusGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1933,7 +1933,7 @@ public sealed class DrawDimPlanarRadius : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarRadiusGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarRadiusGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1943,7 +1943,7 @@ public sealed class DrawDimPlanarRadius : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarRadiusIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarRadiusIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1951,7 +1951,7 @@ public sealed class DrawDimPlanarRadius : IDisposable
     public DrawDimPlanarRadius Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimPlanarRadiusClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimPlanarRadiusClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawDimPlanarRadius(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1990,7 +1990,7 @@ public sealed class DrawDimRadius : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimRadiusGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimRadiusGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2001,7 +2001,7 @@ public sealed class DrawDimRadius : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimRadiusGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimRadiusGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2011,7 +2011,7 @@ public sealed class DrawDimRadius : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimRadiusIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimRadiusIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2019,7 +2019,7 @@ public sealed class DrawDimRadius : IDisposable
     public DrawDimRadius Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDimRadiusClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDimRadiusClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawDimRadius(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2058,7 +2058,7 @@ public sealed class DrawFairCurveBatten : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawFairCurveBattenGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawFairCurveBattenGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2069,7 +2069,7 @@ public sealed class DrawFairCurveBatten : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawFairCurveBattenGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawFairCurveBattenGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2079,7 +2079,7 @@ public sealed class DrawFairCurveBatten : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawFairCurveBattenIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawFairCurveBattenIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2087,7 +2087,7 @@ public sealed class DrawFairCurveBatten : IDisposable
     public DrawFairCurveBatten Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawFairCurveBattenClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawFairCurveBattenClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawFairCurveBatten(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2126,7 +2126,7 @@ public sealed class DrawFairCurveMinimalVariation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawFairCurveMinimalVariationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawFairCurveMinimalVariationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2137,7 +2137,7 @@ public sealed class DrawFairCurveMinimalVariation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawFairCurveMinimalVariationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawFairCurveMinimalVariationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2147,7 +2147,7 @@ public sealed class DrawFairCurveMinimalVariation : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawFairCurveMinimalVariationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawFairCurveMinimalVariationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2155,7 +2155,7 @@ public sealed class DrawFairCurveMinimalVariation : IDisposable
     public DrawFairCurveMinimalVariation Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawFairCurveMinimalVariationClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawFairCurveMinimalVariationClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawFairCurveMinimalVariation(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2194,7 +2194,7 @@ public sealed class DrawTrSurfBSplineCurve : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBSplineCurveGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBSplineCurveGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2205,7 +2205,7 @@ public sealed class DrawTrSurfBSplineCurve : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBSplineCurveGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBSplineCurveGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2215,7 +2215,7 @@ public sealed class DrawTrSurfBSplineCurve : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBSplineCurveIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBSplineCurveIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2223,7 +2223,7 @@ public sealed class DrawTrSurfBSplineCurve : IDisposable
     public DrawTrSurfBSplineCurve Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBSplineCurveClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBSplineCurveClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawTrSurfBSplineCurve(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2262,7 +2262,7 @@ public sealed class DrawTrSurfBSplineCurve2d : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBSplineCurve2dGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBSplineCurve2dGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2273,7 +2273,7 @@ public sealed class DrawTrSurfBSplineCurve2d : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBSplineCurve2dGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBSplineCurve2dGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2283,7 +2283,7 @@ public sealed class DrawTrSurfBSplineCurve2d : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBSplineCurve2dIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBSplineCurve2dIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2291,7 +2291,7 @@ public sealed class DrawTrSurfBSplineCurve2d : IDisposable
     public DrawTrSurfBSplineCurve2d Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBSplineCurve2dClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBSplineCurve2dClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawTrSurfBSplineCurve2d(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2330,7 +2330,7 @@ public sealed class DrawTrSurfBSplineSurface : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBSplineSurfaceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBSplineSurfaceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2341,7 +2341,7 @@ public sealed class DrawTrSurfBSplineSurface : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBSplineSurfaceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBSplineSurfaceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2351,7 +2351,7 @@ public sealed class DrawTrSurfBSplineSurface : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBSplineSurfaceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBSplineSurfaceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2359,7 +2359,7 @@ public sealed class DrawTrSurfBSplineSurface : IDisposable
     public DrawTrSurfBSplineSurface Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBSplineSurfaceClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBSplineSurfaceClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawTrSurfBSplineSurface(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2398,7 +2398,7 @@ public sealed class DrawTrSurfBezierCurve : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBezierCurveGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBezierCurveGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2409,7 +2409,7 @@ public sealed class DrawTrSurfBezierCurve : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBezierCurveGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBezierCurveGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2419,7 +2419,7 @@ public sealed class DrawTrSurfBezierCurve : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBezierCurveIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBezierCurveIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2427,7 +2427,7 @@ public sealed class DrawTrSurfBezierCurve : IDisposable
     public DrawTrSurfBezierCurve Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBezierCurveClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBezierCurveClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawTrSurfBezierCurve(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2466,7 +2466,7 @@ public sealed class DrawTrSurfBezierCurve2d : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBezierCurve2dGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBezierCurve2dGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2477,7 +2477,7 @@ public sealed class DrawTrSurfBezierCurve2d : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBezierCurve2dGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBezierCurve2dGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2487,7 +2487,7 @@ public sealed class DrawTrSurfBezierCurve2d : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBezierCurve2dIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBezierCurve2dIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2495,7 +2495,7 @@ public sealed class DrawTrSurfBezierCurve2d : IDisposable
     public DrawTrSurfBezierCurve2d Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBezierCurve2dClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBezierCurve2dClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawTrSurfBezierCurve2d(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2534,7 +2534,7 @@ public sealed class DrawTrSurfBezierSurface : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBezierSurfaceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBezierSurfaceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2545,7 +2545,7 @@ public sealed class DrawTrSurfBezierSurface : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBezierSurfaceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBezierSurfaceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2555,7 +2555,7 @@ public sealed class DrawTrSurfBezierSurface : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBezierSurfaceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBezierSurfaceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2563,7 +2563,7 @@ public sealed class DrawTrSurfBezierSurface : IDisposable
     public DrawTrSurfBezierSurface Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfBezierSurfaceClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfBezierSurfaceClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawTrSurfBezierSurface(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2602,7 +2602,7 @@ public sealed class DrawTrSurfCurve : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfCurveGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfCurveGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2613,7 +2613,7 @@ public sealed class DrawTrSurfCurve : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfCurveGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfCurveGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2623,7 +2623,7 @@ public sealed class DrawTrSurfCurve : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfCurveIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfCurveIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2631,7 +2631,7 @@ public sealed class DrawTrSurfCurve : IDisposable
     public DrawTrSurfCurve Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfCurveClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfCurveClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawTrSurfCurve(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2670,7 +2670,7 @@ public sealed class DrawTrSurfCurve2d : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfCurve2dGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfCurve2dGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2681,7 +2681,7 @@ public sealed class DrawTrSurfCurve2d : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfCurve2dGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfCurve2dGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2691,7 +2691,7 @@ public sealed class DrawTrSurfCurve2d : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfCurve2dIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfCurve2dIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2699,7 +2699,7 @@ public sealed class DrawTrSurfCurve2d : IDisposable
     public DrawTrSurfCurve2d Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfCurve2dClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfCurve2dClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawTrSurfCurve2d(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2738,7 +2738,7 @@ public sealed class DrawTrSurfDrawable : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfDrawableGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfDrawableGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2749,7 +2749,7 @@ public sealed class DrawTrSurfDrawable : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfDrawableGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfDrawableGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2759,7 +2759,7 @@ public sealed class DrawTrSurfDrawable : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfDrawableIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfDrawableIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2767,7 +2767,7 @@ public sealed class DrawTrSurfDrawable : IDisposable
     public DrawTrSurfDrawable Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfDrawableClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfDrawableClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawTrSurfDrawable(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2806,7 +2806,7 @@ public sealed class DrawTrSurfPoint : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfPointGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfPointGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2817,7 +2817,7 @@ public sealed class DrawTrSurfPoint : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfPointGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfPointGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2827,7 +2827,7 @@ public sealed class DrawTrSurfPoint : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfPointIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfPointIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2835,7 +2835,7 @@ public sealed class DrawTrSurfPoint : IDisposable
     public DrawTrSurfPoint Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfPointClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfPointClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawTrSurfPoint(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2874,7 +2874,7 @@ public sealed class DrawTrSurfPolygon2D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfPolygon2DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfPolygon2DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2885,7 +2885,7 @@ public sealed class DrawTrSurfPolygon2D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfPolygon2DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfPolygon2DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2895,7 +2895,7 @@ public sealed class DrawTrSurfPolygon2D : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfPolygon2DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfPolygon2DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2903,7 +2903,7 @@ public sealed class DrawTrSurfPolygon2D : IDisposable
     public DrawTrSurfPolygon2D Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfPolygon2DClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfPolygon2DClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawTrSurfPolygon2D(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2942,7 +2942,7 @@ public sealed class DrawTrSurfPolygon3D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfPolygon3DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfPolygon3DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2953,7 +2953,7 @@ public sealed class DrawTrSurfPolygon3D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfPolygon3DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfPolygon3DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2963,7 +2963,7 @@ public sealed class DrawTrSurfPolygon3D : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfPolygon3DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfPolygon3DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2971,7 +2971,7 @@ public sealed class DrawTrSurfPolygon3D : IDisposable
     public DrawTrSurfPolygon3D Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfPolygon3DClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfPolygon3DClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawTrSurfPolygon3D(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3010,7 +3010,7 @@ public sealed class DrawTrSurfSurface : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfSurfaceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfSurfaceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3021,7 +3021,7 @@ public sealed class DrawTrSurfSurface : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfSurfaceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfSurfaceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3031,7 +3031,7 @@ public sealed class DrawTrSurfSurface : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfSurfaceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfSurfaceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3039,7 +3039,7 @@ public sealed class DrawTrSurfSurface : IDisposable
     public DrawTrSurfSurface Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfSurfaceClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfSurfaceClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawTrSurfSurface(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3078,7 +3078,7 @@ public sealed class DrawTrSurfTriangulation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfTriangulationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfTriangulationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3089,7 +3089,7 @@ public sealed class DrawTrSurfTriangulation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfTriangulationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfTriangulationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3099,7 +3099,7 @@ public sealed class DrawTrSurfTriangulation : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfTriangulationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfTriangulationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3107,7 +3107,7 @@ public sealed class DrawTrSurfTriangulation : IDisposable
     public DrawTrSurfTriangulation Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfTriangulationClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfTriangulationClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawTrSurfTriangulation(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3146,7 +3146,7 @@ public sealed class DrawTrSurfTriangulation2D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfTriangulation2DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfTriangulation2DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3157,7 +3157,7 @@ public sealed class DrawTrSurfTriangulation2D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfTriangulation2DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfTriangulation2DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3167,7 +3167,7 @@ public sealed class DrawTrSurfTriangulation2D : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfTriangulation2DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfTriangulation2DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3175,7 +3175,7 @@ public sealed class DrawTrSurfTriangulation2D : IDisposable
     public DrawTrSurfTriangulation2D Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawTrSurfTriangulation2DClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawTrSurfTriangulation2DClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawTrSurfTriangulation2D(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3214,7 +3214,7 @@ public sealed class DrawAxis2D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawAxis2DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawAxis2DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3225,7 +3225,7 @@ public sealed class DrawAxis2D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawAxis2DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawAxis2DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3235,7 +3235,7 @@ public sealed class DrawAxis2D : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawAxis2DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawAxis2DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3243,7 +3243,7 @@ public sealed class DrawAxis2D : IDisposable
     public DrawAxis2D Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawAxis2DClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawAxis2DClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawAxis2D(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3282,7 +3282,7 @@ public sealed class DrawAxis3D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawAxis3DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawAxis3DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3293,7 +3293,7 @@ public sealed class DrawAxis3D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawAxis3DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawAxis3DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3303,7 +3303,7 @@ public sealed class DrawAxis3D : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawAxis3DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawAxis3DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3311,7 +3311,7 @@ public sealed class DrawAxis3D : IDisposable
     public DrawAxis3D Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawAxis3DClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawAxis3DClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawAxis3D(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3350,7 +3350,7 @@ public sealed class DrawBox : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawBoxGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawBoxGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3361,7 +3361,7 @@ public sealed class DrawBox : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawBoxGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawBoxGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3371,7 +3371,7 @@ public sealed class DrawBox : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawBoxIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawBoxIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3379,7 +3379,7 @@ public sealed class DrawBox : IDisposable
     public DrawBox Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawBoxClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawBoxClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawBox(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3418,7 +3418,7 @@ public sealed class DrawChronometer : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawChronometerGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawChronometerGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3429,7 +3429,7 @@ public sealed class DrawChronometer : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawChronometerGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawChronometerGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3439,7 +3439,7 @@ public sealed class DrawChronometer : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawChronometerIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawChronometerIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3447,7 +3447,7 @@ public sealed class DrawChronometer : IDisposable
     public DrawChronometer Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawChronometerClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawChronometerClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawChronometer(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3486,7 +3486,7 @@ public sealed class DrawCircle2D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawCircle2DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawCircle2DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3497,7 +3497,7 @@ public sealed class DrawCircle2D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawCircle2DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawCircle2DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3507,7 +3507,7 @@ public sealed class DrawCircle2D : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawCircle2DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawCircle2DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3515,7 +3515,7 @@ public sealed class DrawCircle2D : IDisposable
     public DrawCircle2D Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawCircle2DClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawCircle2DClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawCircle2D(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3554,7 +3554,7 @@ public sealed class DrawCircle3D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawCircle3DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawCircle3DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3565,7 +3565,7 @@ public sealed class DrawCircle3D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawCircle3DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawCircle3DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3575,7 +3575,7 @@ public sealed class DrawCircle3D : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawCircle3DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawCircle3DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3583,7 +3583,7 @@ public sealed class DrawCircle3D : IDisposable
     public DrawCircle3D Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawCircle3DClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawCircle3DClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawCircle3D(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3622,7 +3622,7 @@ public sealed class DrawDrawable2D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDrawable2DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDrawable2DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3633,7 +3633,7 @@ public sealed class DrawDrawable2D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDrawable2DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDrawable2DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3643,7 +3643,7 @@ public sealed class DrawDrawable2D : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDrawable2DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDrawable2DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3651,7 +3651,7 @@ public sealed class DrawDrawable2D : IDisposable
     public DrawDrawable2D Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDrawable2DClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDrawable2DClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawDrawable2D(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3690,7 +3690,7 @@ public sealed class DrawDrawable3D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDrawable3DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDrawable3DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3701,7 +3701,7 @@ public sealed class DrawDrawable3D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDrawable3DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDrawable3DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3711,7 +3711,7 @@ public sealed class DrawDrawable3D : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDrawable3DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDrawable3DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3719,7 +3719,7 @@ public sealed class DrawDrawable3D : IDisposable
     public DrawDrawable3D Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawDrawable3DClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawDrawable3DClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawDrawable3D(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3758,7 +3758,7 @@ public sealed class DrawGrid : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawGridGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawGridGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3769,7 +3769,7 @@ public sealed class DrawGrid : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawGridGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawGridGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3779,7 +3779,7 @@ public sealed class DrawGrid : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawGridIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawGridIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3787,7 +3787,7 @@ public sealed class DrawGrid : IDisposable
     public DrawGrid Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawGridClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawGridClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawGrid(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3826,7 +3826,7 @@ public sealed class DrawMarker2D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawMarker2DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawMarker2DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3837,7 +3837,7 @@ public sealed class DrawMarker2D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawMarker2DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawMarker2DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3847,7 +3847,7 @@ public sealed class DrawMarker2D : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawMarker2DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawMarker2DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3855,7 +3855,7 @@ public sealed class DrawMarker2D : IDisposable
     public DrawMarker2D Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawMarker2DClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawMarker2DClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawMarker2D(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3894,7 +3894,7 @@ public sealed class DrawMarker3D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawMarker3DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawMarker3DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3905,7 +3905,7 @@ public sealed class DrawMarker3D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawMarker3DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawMarker3DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3915,7 +3915,7 @@ public sealed class DrawMarker3D : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawMarker3DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawMarker3DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3923,7 +3923,7 @@ public sealed class DrawMarker3D : IDisposable
     public DrawMarker3D Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawMarker3DClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawMarker3DClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawMarker3D(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3962,7 +3962,7 @@ public sealed class DrawNumber : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawNumberGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawNumberGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3973,7 +3973,7 @@ public sealed class DrawNumber : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawNumberGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawNumberGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3983,7 +3983,7 @@ public sealed class DrawNumber : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawNumberIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawNumberIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3991,7 +3991,7 @@ public sealed class DrawNumber : IDisposable
     public DrawNumber Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawNumberClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawNumberClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawNumber(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4030,7 +4030,7 @@ public sealed class DrawPrinter : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawPrinterGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawPrinterGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4041,7 +4041,7 @@ public sealed class DrawPrinter : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawPrinterGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawPrinterGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4051,7 +4051,7 @@ public sealed class DrawPrinter : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawPrinterIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawPrinterIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4059,7 +4059,7 @@ public sealed class DrawPrinter : IDisposable
     public DrawPrinter Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawPrinterClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawPrinterClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawPrinter(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4098,7 +4098,7 @@ public sealed class DrawProgressIndicator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawProgressIndicatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawProgressIndicatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4109,7 +4109,7 @@ public sealed class DrawProgressIndicator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawProgressIndicatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawProgressIndicatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4119,7 +4119,7 @@ public sealed class DrawProgressIndicator : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawProgressIndicatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawProgressIndicatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4127,7 +4127,7 @@ public sealed class DrawProgressIndicator : IDisposable
     public DrawProgressIndicator Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawProgressIndicatorClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawProgressIndicatorClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawProgressIndicator(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4166,7 +4166,7 @@ public sealed class DrawSegment2D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawSegment2DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawSegment2DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4177,7 +4177,7 @@ public sealed class DrawSegment2D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawSegment2DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawSegment2DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4187,7 +4187,7 @@ public sealed class DrawSegment2D : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawSegment2DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawSegment2DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4195,7 +4195,7 @@ public sealed class DrawSegment2D : IDisposable
     public DrawSegment2D Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawSegment2DClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawSegment2DClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawSegment2D(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4234,7 +4234,7 @@ public sealed class DrawSegment3D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawSegment3DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawSegment3DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4245,7 +4245,7 @@ public sealed class DrawSegment3D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawSegment3DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawSegment3DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4255,7 +4255,7 @@ public sealed class DrawSegment3D : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawSegment3DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawSegment3DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4263,7 +4263,7 @@ public sealed class DrawSegment3D : IDisposable
     public DrawSegment3D Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawSegment3DClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawSegment3DClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawSegment3D(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4302,7 +4302,7 @@ public sealed class DrawText2D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawText2DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawText2DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4313,7 +4313,7 @@ public sealed class DrawText2D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawText2DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawText2DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4323,7 +4323,7 @@ public sealed class DrawText2D : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawText2DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawText2DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4331,7 +4331,7 @@ public sealed class DrawText2D : IDisposable
     public DrawText2D Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawText2DClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawText2DClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawText2D(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4370,7 +4370,7 @@ public sealed class DrawText3D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawText3DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawText3DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4381,7 +4381,7 @@ public sealed class DrawText3D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawText3DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawText3DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4391,7 +4391,7 @@ public sealed class DrawText3D : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawText3DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawText3DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4399,7 +4399,7 @@ public sealed class DrawText3D : IDisposable
     public DrawText3D Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DrawText3DClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.DrawText3DClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DrawText3D(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4438,7 +4438,7 @@ public sealed class ViewerTestEventManager : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ViewerTestEventManagerGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.ViewerTestEventManagerGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4449,7 +4449,7 @@ public sealed class ViewerTestEventManager : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ViewerTestEventManagerGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.ViewerTestEventManagerGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4459,7 +4459,7 @@ public sealed class ViewerTestEventManager : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ViewerTestEventManagerIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.ViewerTestEventManagerIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4467,7 +4467,7 @@ public sealed class ViewerTestEventManager : IDisposable
     public ViewerTestEventManager Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ViewerTestEventManagerClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.ViewerTestEventManagerClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ViewerTestEventManager(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4506,7 +4506,7 @@ public sealed class ViewerTestV3dView : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ViewerTestV3dViewGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.ViewerTestV3dViewGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4517,7 +4517,7 @@ public sealed class ViewerTestV3dView : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ViewerTestV3dViewGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.ViewerTestV3dViewGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4527,7 +4527,7 @@ public sealed class ViewerTestV3dView : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ViewerTestV3dViewIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.ViewerTestV3dViewIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4535,7 +4535,7 @@ public sealed class ViewerTestV3dView : IDisposable
     public ViewerTestV3dView Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ViewerTestV3dViewClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.ViewerTestV3dViewClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ViewerTestV3dView(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4574,7 +4574,7 @@ public sealed class XSDRAWSTLDataSource : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XSDRAWSTLDataSourceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.XSDRAWSTLDataSourceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4585,7 +4585,7 @@ public sealed class XSDRAWSTLDataSource : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XSDRAWSTLDataSourceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.XSDRAWSTLDataSourceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4595,7 +4595,7 @@ public sealed class XSDRAWSTLDataSource : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XSDRAWSTLDataSourceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.XSDRAWSTLDataSourceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4603,7 +4603,7 @@ public sealed class XSDRAWSTLDataSource : IDisposable
     public XSDRAWSTLDataSource Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XSDRAWSTLDataSourceClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.XSDRAWSTLDataSourceClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XSDRAWSTLDataSource(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4642,7 +4642,7 @@ public sealed class XSDRAWSTLDataSource3D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XSDRAWSTLDataSource3DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.XSDRAWSTLDataSource3DGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4653,7 +4653,7 @@ public sealed class XSDRAWSTLDataSource3D : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XSDRAWSTLDataSource3DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.XSDRAWSTLDataSource3DGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4663,7 +4663,7 @@ public sealed class XSDRAWSTLDataSource3D : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XSDRAWSTLDataSource3DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.XSDRAWSTLDataSource3DIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4671,7 +4671,7 @@ public sealed class XSDRAWSTLDataSource3D : IDisposable
     public XSDRAWSTLDataSource3D Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XSDRAWSTLDataSource3DClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.XSDRAWSTLDataSource3DClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XSDRAWSTLDataSource3D(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4710,7 +4710,7 @@ public sealed class XSDRAWSTLDrawableMesh : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XSDRAWSTLDrawableMeshGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.XSDRAWSTLDrawableMeshGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4721,7 +4721,7 @@ public sealed class XSDRAWSTLDrawableMesh : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XSDRAWSTLDrawableMeshGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.XSDRAWSTLDrawableMeshGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4731,7 +4731,7 @@ public sealed class XSDRAWSTLDrawableMesh : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XSDRAWSTLDrawableMeshIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.XSDRAWSTLDrawableMeshIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4739,7 +4739,7 @@ public sealed class XSDRAWSTLDrawableMesh : IDisposable
     public XSDRAWSTLDrawableMesh Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XSDRAWSTLDrawableMeshClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.XSDRAWSTLDrawableMeshClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XSDRAWSTLDrawableMesh(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4778,7 +4778,7 @@ public sealed class XSDRAWVars : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XSDRAWVarsGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.XSDRAWVarsGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4789,7 +4789,7 @@ public sealed class XSDRAWVars : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XSDRAWVarsGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.XSDRAWVarsGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4799,7 +4799,7 @@ public sealed class XSDRAWVars : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XSDRAWVarsIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.XSDRAWVarsIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4807,7 +4807,7 @@ public sealed class XSDRAWVars : IDisposable
     public XSDRAWVars Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XSDRAWVarsClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(DrawGeneratedNativeMethods.XSDRAWVarsClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XSDRAWVars(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 

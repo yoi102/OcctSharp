@@ -22,15 +22,8 @@ internal readonly struct Point3dRaw
     internal readonly double Z;
 }
 
-internal static partial class GeneratedNativeMethods
+internal static partial class GeometryGeneratedNativeMethods
 {
-    private const string LibraryName = "OcctSharp.Native";
-
-    static GeneratedNativeMethods()
-    {
-        global::OcctSharp.Interop.NativeLibraryResolver.EnsureRegistered();
-    }
-
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_pnt_create")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial Point3dRaw CreatePoint3d(double x, double y, double z);

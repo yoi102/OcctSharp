@@ -11,7 +11,7 @@ internal static class NativeError
             return;
         }
 
-        string? nativeMessage = Marshal.PtrToStringUTF8(NativeMethods.GetLastError());
+        string? nativeMessage = Marshal.PtrToStringUTF8(RuntimeNativeMethods.GetLastError());
         string message = string.IsNullOrWhiteSpace(nativeMessage)
             ? $"Native operation '{operation}' failed with status {status}."
             : nativeMessage;
@@ -33,4 +33,24 @@ internal static class NativeError
 
         throw new OcctException(status.ToString(), message);
     }
+}
+
+internal static partial class RuntimeNativeMethods
+{
+    private const string LibraryName = "OcctSharp.Native";
+
+    static RuntimeNativeMethods() =>
+        NativeLibraryResolver.EnsureRegistered(typeof(RuntimeNativeMethods).Assembly);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_get_abi_version")]
+    internal static partial uint GetAbiVersion();
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_get_bridge_version")]
+    internal static partial nint GetBridgeVersion();
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_get_occt_version")]
+    internal static partial nint GetOcctVersion();
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_get_last_error")]
+    internal static partial nint GetLastError();
 }

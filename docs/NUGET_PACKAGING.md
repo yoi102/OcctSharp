@@ -1,17 +1,21 @@
 # NuGet Packaging
 
-## Current package
+## Current package set
 
-The current experimental package is `OcctSharp` `8.0.1-preview.9` for .NET 10 and
-Windows x64. It contains:
+The current experimental package version is `8.0.1-preview.10` for .NET 10 and
+Windows x64. ADR-0074 produces 14 packages:
 
-- `lib/net10.0/OcctSharp.dll` and XML documentation.
-- The repository README and linked documentation set.
-- The Release `OcctSharp.Native.dll` bridge.
-- The complete currently inspected OCCT and third-party runtime DLL closure.
-- A transitive MSBuild target that copies native files for build and publish.
-- The MIT project-license expression and repository license.
-- OCCT, oneTBB, FreeImage, FreeType, OpenVR, FFmpeg, and jemalloc license/notice material.
+- 12 managed module packages: Runtime, Foundation, Geometry, MeshData, Modeling, Mesh,
+  Documents, Visualization, DataExchange, Xde, IVtk, and Draw;
+- `OcctSharp`, the compatibility entry, cross-family facade, and convenience meta-package;
+- `OcctSharp.Native.win-x64`, the only package containing `OcctSharp.Native.dll`, the
+  complete 62-DLL OCCT/third-party runtime closure, the transitive copy target, and all
+  bundled notice/license material.
+
+Every managed package contains one assembly/XML documentation pair and zero native DLLs.
+`OcctSharp.Runtime` depends on the native package; higher modules receive it transitively.
+All packages use the MIT project-license expression and include the repository README.
+The facade package also embeds the stable linked documentation set.
 
 The live repository `docs/STATUS.md` is intentionally not embedded in the package: it
 contains a package hash and would make the artifact self-referential. Release notes and
@@ -31,7 +35,9 @@ Package consumers receive this layout:
 ApplicationOutput/
 ├── Application.exe
 ├── Application.dll
-├── OcctSharp.dll
+├── OcctSharp.Runtime.dll
+├── selected OcctSharp module DLLs
+├── OcctSharp.dll                    # only for facade/meta-package consumers
 └── occt/
     ├── OcctSharp.Native.dll
     ├── TKernel.dll
@@ -53,10 +59,12 @@ From the inner `OcctSharp/` workspace:
 .\eng\verify-package.ps1 -SkipBuild
 ```
 
-`pack.ps1` performs a Release build unless `-SkipBuild` is supplied, then writes the
-package to `artifacts/packages/`. `verify-package.ps1` restores only that local package
-into `tests/OcctSharp.PackageConsumer`, publishes it, checks the output layout, loads
-the native runtime, checks ABI/OCCT identity, and exercises generated
+`pack.ps1` performs a Release build unless `-SkipBuild` is supplied, then writes all 14
+packages to `artifacts/packages/`. `verify-package.ps1` audits that only the native
+package contains the 62 DLLs. It restores the local `OcctSharp` facade package into
+`tests/OcctSharp.PackageConsumer` and the direct `OcctSharp.Modeling` package into
+`tests/OcctSharp.ModuleConsumer`. Both are published and executed. The facade consumer
+checks the output layout, loads the native runtime, checks ABI/OCCT identity, and exercises generated
 `GeomCartesianPoint`, base `TopoDS_Shape`, typed topology, modeling, mesh, exchange,
 all 129 generated StepBasic shared types and typed enums,
 the generated Geom/Geom2d point/direction/vector/plane/transformation families,
@@ -84,12 +92,21 @@ AABB/OBB, native-local broad/exact phase, filtering, clearance/contact/penetrati
 containment, pair-matrix, diagnostics, incremental, real-HWND review, screenshot, and
 source-disposal workflow.
 
+The direct module consumer creates and inspects a six-face box, verifies OCCT 8.0.1 and
+the same 62-DLL `occt/` closure, and fails if the `OcctSharp.dll` facade is present.
+
 ## Consumer use
 
 Once a package source contains the package, an application uses the normal command:
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.9
+dotnet add package OcctSharp --version 8.0.1-preview.10
+```
+
+A narrow consumer can instead select a module, for example:
+
+```powershell
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.10
 ```
 
 The application must run as a Windows x64 process on the current compatibility matrix.
@@ -109,24 +126,16 @@ CycloneDX SBOM, provenance, gate report, and SHA256 checksum list under
 `.nupkg` after the gate report is finalized. A passing local package consumer and
 completed release tooling do not override a `BLOCKED` or `NOT RUN` publication gate.
 
-## Planned package split
+## Managed split evidence
 
-Preview.9 package verification runs from the inner `OcctSharp/` workspace, where
-`global.json` selects SDK 10.0.400. Direct nupkg inspection confirms package identity
-`OcctSharp`/`8.0.1-preview.9`, managed assembly/file identity `0.1.0.0`, exact
-informational version `8.0.1-preview.9`, ABI 1.54, bridge 0.62.0, and 62 native DLLs under
-`occt`. The clean consumer restores, publishes, and runs the inherited Batch D-K paths
-plus Batch L occurrence expansion, bounds, broad/exact analysis, filters, complete pair
-classification/reporting, incremental reuse, STEP/XDE traceability, real HWND review,
-screenshot, and source-disposal workflow. Signing, hosted release execution, and
+Preview.10 package verification runs from the inner `OcctSharp/` workspace, where
+`global.json` selects SDK 10.0.400. Direct nupkg inspection confirms 13 managed packages
+with one managed DLL and zero native DLLs each, plus one native package with exactly 62
+DLLs. Package and informational versions are `8.0.1-preview.10`; managed assembly/file
+identity remains `0.1.0.0`; ABI remains 1.54 and bridge remains 0.62.0.
+
+The compatibility consumer restores, publishes, and runs the inherited Batch D-L paths.
+The direct Modeling consumer proves module-only consumption without the facade. Both
+converge on one application-local `occt` directory. Toolkit-per-package fragmentation and
+native bridge splitting are not planned. Signing, hosted release execution, and
 publication authorization remain separate `NOT RUN` gates.
-
-The final nupkg is 40,991,912 bytes with SHA256
-`A0337295813488D2084B48194763DE23836B16A873E07EE86E7641AD0BEF1FDC`.
-
-ADR-0015 keeps one package during the topology/modeling foundation, then introduces
-Runtime, Foundation, Modeling, Mesh, DataExchange, Xde, Visualization, and optional IVtk
-managed packages when the documented size/dependency/RID triggers are met. `OcctSharp`
-becomes the convenience meta-package. Native assets later move to RID packages, but all
-packages continue to converge on one application-local `occt` directory without duplicate
-files. Toolkit-per-package fragmentation is not planned.

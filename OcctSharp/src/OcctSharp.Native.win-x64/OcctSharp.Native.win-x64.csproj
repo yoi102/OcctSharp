@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <IsPackable>true</IsPackable>
+    <PackageId>OcctSharp.Native.win-x64</PackageId>
+    <PackageVersion>$(OcctSharpPackageVersion)</PackageVersion>
+    <Authors>OcctSharp contributors</Authors>
+    <Description>Windows x64 native OCCT 8.0.1 runtime shared by all OcctSharp managed modules.</Description>
+    <PackageTags>OCCT;OpenCASCADE;CAD;native;win-x64</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="lib\net10.0\_._" Pack="true" PackagePath="lib\net10.0\_._" />
+    <None Include="..\..\packaging\OcctSharp.targets"
+          Pack="true"
+          PackagePath="buildTransitive\OcctSharp.Native.win-x64.targets" />
+    <None Include="$(OcctSharpNativeRuntimeDir)\*.dll"
+          Pack="true"
+          PackagePath="buildTransitive\win-x64\occt\" />
+    <None Include="$(OcctSharpBundledRuntimeRoot)\licenses\**\*"
+          Pack="true"
+          PackagePath="licenses\%(RecursiveDir)" />
+    <None Include="$(OcctSharpBundledRuntimeRoot)\THIRD_PARTY_NOTICES.md"
+          Pack="true"
+          PackagePath="licenses\" />
+  </ItemGroup>
+</Project>

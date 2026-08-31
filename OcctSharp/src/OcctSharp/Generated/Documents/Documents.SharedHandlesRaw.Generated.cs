@@ -1355,1774 +1355,1774 @@ internal sealed class AppStdLApplicationHandle : SafeHandleZeroOrMinusOneIsInval
 {
     internal AppStdLApplicationHandle() : base(true) { }
     internal AppStdLApplicationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.AppStdLApplicationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.AppStdLApplicationRelease(handle); return true; }
 }
 
 internal sealed class AppStdApplicationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal AppStdApplicationHandle() : base(true) { }
     internal AppStdApplicationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.AppStdApplicationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.AppStdApplicationRelease(handle); return true; }
 }
 
 internal sealed class BinDriversDocumentRetrievalDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinDriversDocumentRetrievalDriverHandle() : base(true) { }
     internal BinDriversDocumentRetrievalDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinDriversDocumentRetrievalDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinDriversDocumentRetrievalDriverRelease(handle); return true; }
 }
 
 internal sealed class BinDriversDocumentStorageDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinDriversDocumentStorageDriverHandle() : base(true) { }
     internal BinDriversDocumentStorageDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinDriversDocumentStorageDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinDriversDocumentStorageDriverRelease(handle); return true; }
 }
 
 internal sealed class BinLDriversDocumentRetrievalDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinLDriversDocumentRetrievalDriverHandle() : base(true) { }
     internal BinLDriversDocumentRetrievalDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinLDriversDocumentRetrievalDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinLDriversDocumentRetrievalDriverRelease(handle); return true; }
 }
 
 internal sealed class BinLDriversDocumentStorageDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinLDriversDocumentStorageDriverHandle() : base(true) { }
     internal BinLDriversDocumentStorageDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinLDriversDocumentStorageDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinLDriversDocumentStorageDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDFADriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDFADriverHandle() : base(true) { }
     internal BinMDFADriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDFADriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDFADriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDFADriverTableHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDFADriverTableHandle() : base(true) { }
     internal BinMDFADriverTableHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDFADriverTableRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDFADriverTableRelease(handle); return true; }
 }
 
 internal sealed class BinMDFDerivedDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDFDerivedDriverHandle() : base(true) { }
     internal BinMDFDerivedDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDFDerivedDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDFDerivedDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDFReferenceDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDFReferenceDriverHandle() : base(true) { }
     internal BinMDFReferenceDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDFReferenceDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDFReferenceDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDFTagSourceDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDFTagSourceDriverHandle() : base(true) { }
     internal BinMDFTagSourceDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDFTagSourceDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDFTagSourceDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdAsciiStringDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdAsciiStringDriverHandle() : base(true) { }
     internal BinMDataStdAsciiStringDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdAsciiStringDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdAsciiStringDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdBooleanArrayDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdBooleanArrayDriverHandle() : base(true) { }
     internal BinMDataStdBooleanArrayDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdBooleanArrayDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdBooleanArrayDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdBooleanListDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdBooleanListDriverHandle() : base(true) { }
     internal BinMDataStdBooleanListDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdBooleanListDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdBooleanListDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdByteArrayDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdByteArrayDriverHandle() : base(true) { }
     internal BinMDataStdByteArrayDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdByteArrayDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdByteArrayDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdExpressionDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdExpressionDriverHandle() : base(true) { }
     internal BinMDataStdExpressionDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdExpressionDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdExpressionDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdExtStringArrayDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdExtStringArrayDriverHandle() : base(true) { }
     internal BinMDataStdExtStringArrayDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdExtStringArrayDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdExtStringArrayDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdExtStringListDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdExtStringListDriverHandle() : base(true) { }
     internal BinMDataStdExtStringListDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdExtStringListDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdExtStringListDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdGenericEmptyDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdGenericEmptyDriverHandle() : base(true) { }
     internal BinMDataStdGenericEmptyDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdGenericEmptyDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdGenericEmptyDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdGenericExtStringDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdGenericExtStringDriverHandle() : base(true) { }
     internal BinMDataStdGenericExtStringDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdGenericExtStringDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdGenericExtStringDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdIntPackedMapDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdIntPackedMapDriverHandle() : base(true) { }
     internal BinMDataStdIntPackedMapDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdIntPackedMapDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdIntPackedMapDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdIntegerArrayDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdIntegerArrayDriverHandle() : base(true) { }
     internal BinMDataStdIntegerArrayDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdIntegerArrayDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdIntegerArrayDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdIntegerDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdIntegerDriverHandle() : base(true) { }
     internal BinMDataStdIntegerDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdIntegerDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdIntegerDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdIntegerListDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdIntegerListDriverHandle() : base(true) { }
     internal BinMDataStdIntegerListDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdIntegerListDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdIntegerListDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdNamedDataDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdNamedDataDriverHandle() : base(true) { }
     internal BinMDataStdNamedDataDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdNamedDataDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdNamedDataDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdRealArrayDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdRealArrayDriverHandle() : base(true) { }
     internal BinMDataStdRealArrayDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdRealArrayDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdRealArrayDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdRealDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdRealDriverHandle() : base(true) { }
     internal BinMDataStdRealDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdRealDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdRealDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdRealListDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdRealListDriverHandle() : base(true) { }
     internal BinMDataStdRealListDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdRealListDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdRealListDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdReferenceArrayDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdReferenceArrayDriverHandle() : base(true) { }
     internal BinMDataStdReferenceArrayDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdReferenceArrayDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdReferenceArrayDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdReferenceListDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdReferenceListDriverHandle() : base(true) { }
     internal BinMDataStdReferenceListDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdReferenceListDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdReferenceListDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdTreeNodeDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdTreeNodeDriverHandle() : base(true) { }
     internal BinMDataStdTreeNodeDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdTreeNodeDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdTreeNodeDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdUAttributeDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdUAttributeDriverHandle() : base(true) { }
     internal BinMDataStdUAttributeDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdUAttributeDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdUAttributeDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataStdVariableDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataStdVariableDriverHandle() : base(true) { }
     internal BinMDataStdVariableDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataStdVariableDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataStdVariableDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataXtdConstraintDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataXtdConstraintDriverHandle() : base(true) { }
     internal BinMDataXtdConstraintDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataXtdConstraintDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataXtdConstraintDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataXtdGeometryDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataXtdGeometryDriverHandle() : base(true) { }
     internal BinMDataXtdGeometryDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataXtdGeometryDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataXtdGeometryDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataXtdPatternStdDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataXtdPatternStdDriverHandle() : base(true) { }
     internal BinMDataXtdPatternStdDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataXtdPatternStdDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataXtdPatternStdDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataXtdPositionDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataXtdPositionDriverHandle() : base(true) { }
     internal BinMDataXtdPositionDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataXtdPositionDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataXtdPositionDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataXtdPresentationDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataXtdPresentationDriverHandle() : base(true) { }
     internal BinMDataXtdPresentationDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataXtdPresentationDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataXtdPresentationDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDataXtdTriangulationDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDataXtdTriangulationDriverHandle() : base(true) { }
     internal BinMDataXtdTriangulationDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDataXtdTriangulationDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDataXtdTriangulationDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMDocStdXLinkDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMDocStdXLinkDriverHandle() : base(true) { }
     internal BinMDocStdXLinkDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMDocStdXLinkDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMDocStdXLinkDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMFunctionFunctionDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMFunctionFunctionDriverHandle() : base(true) { }
     internal BinMFunctionFunctionDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMFunctionFunctionDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMFunctionFunctionDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMFunctionGraphNodeDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMFunctionGraphNodeDriverHandle() : base(true) { }
     internal BinMFunctionGraphNodeDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMFunctionGraphNodeDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMFunctionGraphNodeDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMFunctionScopeDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMFunctionScopeDriverHandle() : base(true) { }
     internal BinMFunctionScopeDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMFunctionScopeDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMFunctionScopeDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMNamingNamedShapeDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMNamingNamedShapeDriverHandle() : base(true) { }
     internal BinMNamingNamedShapeDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMNamingNamedShapeDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMNamingNamedShapeDriverRelease(handle); return true; }
 }
 
 internal sealed class BinMNamingNamingDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinMNamingNamingDriverHandle() : base(true) { }
     internal BinMNamingNamingDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinMNamingNamingDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinMNamingNamingDriverRelease(handle); return true; }
 }
 
 internal sealed class BinObjMgtPositionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinObjMgtPositionHandle() : base(true) { }
     internal BinObjMgtPositionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinObjMgtPositionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinObjMgtPositionRelease(handle); return true; }
 }
 
 internal sealed class BinTObjDriversDocumentRetrievalDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinTObjDriversDocumentRetrievalDriverHandle() : base(true) { }
     internal BinTObjDriversDocumentRetrievalDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinTObjDriversDocumentRetrievalDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinTObjDriversDocumentRetrievalDriverRelease(handle); return true; }
 }
 
 internal sealed class BinTObjDriversDocumentStorageDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinTObjDriversDocumentStorageDriverHandle() : base(true) { }
     internal BinTObjDriversDocumentStorageDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinTObjDriversDocumentStorageDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinTObjDriversDocumentStorageDriverRelease(handle); return true; }
 }
 
 internal sealed class BinTObjDriversIntSparseArrayDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinTObjDriversIntSparseArrayDriverHandle() : base(true) { }
     internal BinTObjDriversIntSparseArrayDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinTObjDriversIntSparseArrayDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinTObjDriversIntSparseArrayDriverRelease(handle); return true; }
 }
 
 internal sealed class BinTObjDriversModelDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinTObjDriversModelDriverHandle() : base(true) { }
     internal BinTObjDriversModelDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinTObjDriversModelDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinTObjDriversModelDriverRelease(handle); return true; }
 }
 
 internal sealed class BinTObjDriversObjectDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinTObjDriversObjectDriverHandle() : base(true) { }
     internal BinTObjDriversObjectDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinTObjDriversObjectDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinTObjDriversObjectDriverRelease(handle); return true; }
 }
 
 internal sealed class BinTObjDriversReferenceDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinTObjDriversReferenceDriverHandle() : base(true) { }
     internal BinTObjDriversReferenceDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinTObjDriversReferenceDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinTObjDriversReferenceDriverRelease(handle); return true; }
 }
 
 internal sealed class BinTObjDriversXYZDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal BinTObjDriversXYZDriverHandle() : base(true) { }
     internal BinTObjDriversXYZDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.BinTObjDriversXYZDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.BinTObjDriversXYZDriverRelease(handle); return true; }
 }
 
 internal sealed class CDFApplicationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal CDFApplicationHandle() : base(true) { }
     internal CDFApplicationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.CDFApplicationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.CDFApplicationRelease(handle); return true; }
 }
 
 internal sealed class CDFDirectoryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal CDFDirectoryHandle() : base(true) { }
     internal CDFDirectoryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.CDFDirectoryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.CDFDirectoryRelease(handle); return true; }
 }
 
 internal sealed class CDFFWOSDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal CDFFWOSDriverHandle() : base(true) { }
     internal CDFFWOSDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.CDFFWOSDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.CDFFWOSDriverRelease(handle); return true; }
 }
 
 internal sealed class CDFMetaDataDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal CDFMetaDataDriverHandle() : base(true) { }
     internal CDFMetaDataDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.CDFMetaDataDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.CDFMetaDataDriverRelease(handle); return true; }
 }
 
 internal sealed class CDFMetaDataDriverFactoryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal CDFMetaDataDriverFactoryHandle() : base(true) { }
     internal CDFMetaDataDriverFactoryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.CDFMetaDataDriverFactoryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.CDFMetaDataDriverFactoryRelease(handle); return true; }
 }
 
 internal sealed class CDFStoreListHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal CDFStoreListHandle() : base(true) { }
     internal CDFStoreListHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.CDFStoreListRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.CDFStoreListRelease(handle); return true; }
 }
 
 internal sealed class CDMApplicationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal CDMApplicationHandle() : base(true) { }
     internal CDMApplicationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.CDMApplicationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.CDMApplicationRelease(handle); return true; }
 }
 
 internal sealed class CDMDocumentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal CDMDocumentHandle() : base(true) { }
     internal CDMDocumentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.CDMDocumentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.CDMDocumentRelease(handle); return true; }
 }
 
 internal sealed class CDMMetaDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal CDMMetaDataHandle() : base(true) { }
     internal CDMMetaDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.CDMMetaDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.CDMMetaDataRelease(handle); return true; }
 }
 
 internal sealed class CDMReferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal CDMReferenceHandle() : base(true) { }
     internal CDMReferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.CDMReferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.CDMReferenceRelease(handle); return true; }
 }
 
 internal sealed class FSDBinaryFileHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal FSDBinaryFileHandle() : base(true) { }
     internal FSDBinaryFileHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.FSDBinaryFileRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.FSDBinaryFileRelease(handle); return true; }
 }
 
 internal sealed class FSDCmpFileHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal FSDCmpFileHandle() : base(true) { }
     internal FSDCmpFileHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.FSDCmpFileRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.FSDCmpFileRelease(handle); return true; }
 }
 
 internal sealed class FSDFileHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal FSDFileHandle() : base(true) { }
     internal FSDFileHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.FSDFileRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.FSDFileRelease(handle); return true; }
 }
 
 internal sealed class LDOMMemManagerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal LDOMMemManagerHandle() : base(true) { }
     internal LDOMMemManagerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.LDOMMemManagerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.LDOMMemManagerRelease(handle); return true; }
 }
 
 internal sealed class PCDMDocumentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal PCDMDocumentHandle() : base(true) { }
     internal PCDMDocumentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.PCDMDocumentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.PCDMDocumentRelease(handle); return true; }
 }
 
 internal sealed class PCDMReadWriterHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal PCDMReadWriterHandle() : base(true) { }
     internal PCDMReadWriterHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.PCDMReadWriterRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.PCDMReadWriterRelease(handle); return true; }
 }
 
 internal sealed class PCDMReadWriter1Handle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal PCDMReadWriter1Handle() : base(true) { }
     internal PCDMReadWriter1Handle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.PCDMReadWriter1Release(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.PCDMReadWriter1Release(handle); return true; }
 }
 
 internal sealed class PCDMReaderHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal PCDMReaderHandle() : base(true) { }
     internal PCDMReaderHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.PCDMReaderRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.PCDMReaderRelease(handle); return true; }
 }
 
 internal sealed class PCDMReaderFilterHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal PCDMReaderFilterHandle() : base(true) { }
     internal PCDMReaderFilterHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.PCDMReaderFilterRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.PCDMReaderFilterRelease(handle); return true; }
 }
 
 internal sealed class PCDMReferenceIteratorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal PCDMReferenceIteratorHandle() : base(true) { }
     internal PCDMReferenceIteratorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.PCDMReferenceIteratorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.PCDMReferenceIteratorRelease(handle); return true; }
 }
 
 internal sealed class PCDMRetrievalDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal PCDMRetrievalDriverHandle() : base(true) { }
     internal PCDMRetrievalDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.PCDMRetrievalDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.PCDMRetrievalDriverRelease(handle); return true; }
 }
 
 internal sealed class PCDMStorageDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal PCDMStorageDriverHandle() : base(true) { }
     internal PCDMStorageDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.PCDMStorageDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.PCDMStorageDriverRelease(handle); return true; }
 }
 
 internal sealed class PCDMWriterHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal PCDMWriterHandle() : base(true) { }
     internal PCDMWriterHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.PCDMWriterRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.PCDMWriterRelease(handle); return true; }
 }
 
 internal sealed class StdDriversDocumentRetrievalDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StdDriversDocumentRetrievalDriverHandle() : base(true) { }
     internal StdDriversDocumentRetrievalDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StdDriversDocumentRetrievalDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StdDriversDocumentRetrievalDriverRelease(handle); return true; }
 }
 
 internal sealed class StdLDriversDocumentRetrievalDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StdLDriversDocumentRetrievalDriverHandle() : base(true) { }
     internal StdLDriversDocumentRetrievalDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StdLDriversDocumentRetrievalDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StdLDriversDocumentRetrievalDriverRelease(handle); return true; }
 }
 
 internal sealed class StdLPersistentDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StdLPersistentDataHandle() : base(true) { }
     internal StdLPersistentDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StdLPersistentDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StdLPersistentDataRelease(handle); return true; }
 }
 
 internal sealed class StdLPersistentDocumentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StdLPersistentDocumentHandle() : base(true) { }
     internal StdLPersistentDocumentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StdLPersistentDocumentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StdLPersistentDocumentRelease(handle); return true; }
 }
 
 internal sealed class StdObjMgtPersistentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StdObjMgtPersistentHandle() : base(true) { }
     internal StdObjMgtPersistentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StdObjMgtPersistentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StdObjMgtPersistentRelease(handle); return true; }
 }
 
 internal sealed class StdStorageDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StdStorageDataHandle() : base(true) { }
     internal StdStorageDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StdStorageDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StdStorageDataRelease(handle); return true; }
 }
 
 internal sealed class StdStorageHeaderDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StdStorageHeaderDataHandle() : base(true) { }
     internal StdStorageHeaderDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StdStorageHeaderDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StdStorageHeaderDataRelease(handle); return true; }
 }
 
 internal sealed class StdStorageRootHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StdStorageRootHandle() : base(true) { }
     internal StdStorageRootHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StdStorageRootRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StdStorageRootRelease(handle); return true; }
 }
 
 internal sealed class StdStorageRootDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StdStorageRootDataHandle() : base(true) { }
     internal StdStorageRootDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StdStorageRootDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StdStorageRootDataRelease(handle); return true; }
 }
 
 internal sealed class StdStorageTypeDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StdStorageTypeDataHandle() : base(true) { }
     internal StdStorageTypeDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StdStorageTypeDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StdStorageTypeDataRelease(handle); return true; }
 }
 
 internal sealed class StorageBaseDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StorageBaseDriverHandle() : base(true) { }
     internal StorageBaseDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StorageBaseDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StorageBaseDriverRelease(handle); return true; }
 }
 
 internal sealed class StorageCallBackHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StorageCallBackHandle() : base(true) { }
     internal StorageCallBackHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StorageCallBackRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StorageCallBackRelease(handle); return true; }
 }
 
 internal sealed class StorageDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StorageDataHandle() : base(true) { }
     internal StorageDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StorageDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StorageDataRelease(handle); return true; }
 }
 
 internal sealed class StorageDefaultCallBackHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StorageDefaultCallBackHandle() : base(true) { }
     internal StorageDefaultCallBackHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StorageDefaultCallBackRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StorageDefaultCallBackRelease(handle); return true; }
 }
 
 internal sealed class StorageHeaderDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StorageHeaderDataHandle() : base(true) { }
     internal StorageHeaderDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StorageHeaderDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StorageHeaderDataRelease(handle); return true; }
 }
 
 internal sealed class StorageInternalDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StorageInternalDataHandle() : base(true) { }
     internal StorageInternalDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StorageInternalDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StorageInternalDataRelease(handle); return true; }
 }
 
 internal sealed class StorageRootHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StorageRootHandle() : base(true) { }
     internal StorageRootHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StorageRootRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StorageRootRelease(handle); return true; }
 }
 
 internal sealed class StorageRootDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StorageRootDataHandle() : base(true) { }
     internal StorageRootDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StorageRootDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StorageRootDataRelease(handle); return true; }
 }
 
 internal sealed class StorageSchemaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StorageSchemaHandle() : base(true) { }
     internal StorageSchemaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StorageSchemaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StorageSchemaRelease(handle); return true; }
 }
 
 internal sealed class StorageTypeDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StorageTypeDataHandle() : base(true) { }
     internal StorageTypeDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StorageTypeDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StorageTypeDataRelease(handle); return true; }
 }
 
 internal sealed class StorageTypedCallBackHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal StorageTypedCallBackHandle() : base(true) { }
     internal StorageTypedCallBackHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.StorageTypedCallBackRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.StorageTypedCallBackRelease(handle); return true; }
 }
 
 internal sealed class TDFAttributeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDFAttributeHandle() : base(true) { }
     internal TDFAttributeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDFAttributeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDFAttributeRelease(handle); return true; }
 }
 
 internal sealed class TDFAttributeDeltaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDFAttributeDeltaHandle() : base(true) { }
     internal TDFAttributeDeltaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDFAttributeDeltaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDFAttributeDeltaRelease(handle); return true; }
 }
 
 internal sealed class TDFDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDFDataHandle() : base(true) { }
     internal TDFDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDFDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDFDataRelease(handle); return true; }
 }
 
 internal sealed class TDFDataSetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDFDataSetHandle() : base(true) { }
     internal TDFDataSetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDFDataSetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDFDataSetRelease(handle); return true; }
 }
 
 internal sealed class TDFDefaultDeltaOnModificationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDFDefaultDeltaOnModificationHandle() : base(true) { }
     internal TDFDefaultDeltaOnModificationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDFDefaultDeltaOnModificationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDFDefaultDeltaOnModificationRelease(handle); return true; }
 }
 
 internal sealed class TDFDefaultDeltaOnRemovalHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDFDefaultDeltaOnRemovalHandle() : base(true) { }
     internal TDFDefaultDeltaOnRemovalHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDFDefaultDeltaOnRemovalRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDFDefaultDeltaOnRemovalRelease(handle); return true; }
 }
 
 internal sealed class TDFDeltaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDFDeltaHandle() : base(true) { }
     internal TDFDeltaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDFDeltaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDFDeltaRelease(handle); return true; }
 }
 
 internal sealed class TDFDeltaOnAdditionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDFDeltaOnAdditionHandle() : base(true) { }
     internal TDFDeltaOnAdditionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDFDeltaOnAdditionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDFDeltaOnAdditionRelease(handle); return true; }
 }
 
 internal sealed class TDFDeltaOnForgetHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDFDeltaOnForgetHandle() : base(true) { }
     internal TDFDeltaOnForgetHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDFDeltaOnForgetRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDFDeltaOnForgetRelease(handle); return true; }
 }
 
 internal sealed class TDFDeltaOnModificationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDFDeltaOnModificationHandle() : base(true) { }
     internal TDFDeltaOnModificationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDFDeltaOnModificationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDFDeltaOnModificationRelease(handle); return true; }
 }
 
 internal sealed class TDFDeltaOnRemovalHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDFDeltaOnRemovalHandle() : base(true) { }
     internal TDFDeltaOnRemovalHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDFDeltaOnRemovalRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDFDeltaOnRemovalRelease(handle); return true; }
 }
 
 internal sealed class TDFDeltaOnResumeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDFDeltaOnResumeHandle() : base(true) { }
     internal TDFDeltaOnResumeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDFDeltaOnResumeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDFDeltaOnResumeRelease(handle); return true; }
 }
 
 internal sealed class TDFReferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDFReferenceHandle() : base(true) { }
     internal TDFReferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDFReferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDFReferenceRelease(handle); return true; }
 }
 
 internal sealed class TDFRelocationTableHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDFRelocationTableHandle() : base(true) { }
     internal TDFRelocationTableHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDFRelocationTableRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDFRelocationTableRelease(handle); return true; }
 }
 
 internal sealed class TDFTagSourceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDFTagSourceHandle() : base(true) { }
     internal TDFTagSourceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDFTagSourceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDFTagSourceRelease(handle); return true; }
 }
 
 internal sealed class TDataStdAsciiStringHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdAsciiStringHandle() : base(true) { }
     internal TDataStdAsciiStringHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdAsciiStringRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdAsciiStringRelease(handle); return true; }
 }
 
 internal sealed class TDataStdBooleanArrayHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdBooleanArrayHandle() : base(true) { }
     internal TDataStdBooleanArrayHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdBooleanArrayRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdBooleanArrayRelease(handle); return true; }
 }
 
 internal sealed class TDataStdBooleanListHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdBooleanListHandle() : base(true) { }
     internal TDataStdBooleanListHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdBooleanListRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdBooleanListRelease(handle); return true; }
 }
 
 internal sealed class TDataStdByteArrayHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdByteArrayHandle() : base(true) { }
     internal TDataStdByteArrayHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdByteArrayRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdByteArrayRelease(handle); return true; }
 }
 
 internal sealed class TDataStdCommentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdCommentHandle() : base(true) { }
     internal TDataStdCommentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdCommentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdCommentRelease(handle); return true; }
 }
 
 internal sealed class TDataStdCurrentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdCurrentHandle() : base(true) { }
     internal TDataStdCurrentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdCurrentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdCurrentRelease(handle); return true; }
 }
 
 internal sealed class TDataStdDeltaOnModificationOfByteArrayHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdDeltaOnModificationOfByteArrayHandle() : base(true) { }
     internal TDataStdDeltaOnModificationOfByteArrayHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdDeltaOnModificationOfByteArrayRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdDeltaOnModificationOfByteArrayRelease(handle); return true; }
 }
 
 internal sealed class TDataStdDeltaOnModificationOfExtStringArrayHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdDeltaOnModificationOfExtStringArrayHandle() : base(true) { }
     internal TDataStdDeltaOnModificationOfExtStringArrayHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdDeltaOnModificationOfExtStringArrayRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdDeltaOnModificationOfExtStringArrayRelease(handle); return true; }
 }
 
 internal sealed class TDataStdDeltaOnModificationOfIntArrayHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdDeltaOnModificationOfIntArrayHandle() : base(true) { }
     internal TDataStdDeltaOnModificationOfIntArrayHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdDeltaOnModificationOfIntArrayRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdDeltaOnModificationOfIntArrayRelease(handle); return true; }
 }
 
 internal sealed class TDataStdDeltaOnModificationOfIntPackedMapHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdDeltaOnModificationOfIntPackedMapHandle() : base(true) { }
     internal TDataStdDeltaOnModificationOfIntPackedMapHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdDeltaOnModificationOfIntPackedMapRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdDeltaOnModificationOfIntPackedMapRelease(handle); return true; }
 }
 
 internal sealed class TDataStdDeltaOnModificationOfRealArrayHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdDeltaOnModificationOfRealArrayHandle() : base(true) { }
     internal TDataStdDeltaOnModificationOfRealArrayHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdDeltaOnModificationOfRealArrayRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdDeltaOnModificationOfRealArrayRelease(handle); return true; }
 }
 
 internal sealed class TDataStdDirectoryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdDirectoryHandle() : base(true) { }
     internal TDataStdDirectoryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdDirectoryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdDirectoryRelease(handle); return true; }
 }
 
 internal sealed class TDataStdExpressionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdExpressionHandle() : base(true) { }
     internal TDataStdExpressionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdExpressionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdExpressionRelease(handle); return true; }
 }
 
 internal sealed class TDataStdExtStringArrayHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdExtStringArrayHandle() : base(true) { }
     internal TDataStdExtStringArrayHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdExtStringArrayRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdExtStringArrayRelease(handle); return true; }
 }
 
 internal sealed class TDataStdExtStringListHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdExtStringListHandle() : base(true) { }
     internal TDataStdExtStringListHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdExtStringListRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdExtStringListRelease(handle); return true; }
 }
 
 internal sealed class TDataStdGenericEmptyHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdGenericEmptyHandle() : base(true) { }
     internal TDataStdGenericEmptyHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdGenericEmptyRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdGenericEmptyRelease(handle); return true; }
 }
 
 internal sealed class TDataStdGenericExtStringHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdGenericExtStringHandle() : base(true) { }
     internal TDataStdGenericExtStringHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdGenericExtStringRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdGenericExtStringRelease(handle); return true; }
 }
 
 internal sealed class TDataStdHDataMapOfStringByteHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdHDataMapOfStringByteHandle() : base(true) { }
     internal TDataStdHDataMapOfStringByteHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdHDataMapOfStringByteRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdHDataMapOfStringByteRelease(handle); return true; }
 }
 
 internal sealed class TDataStdHDataMapOfStringHArray1OfIntegerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdHDataMapOfStringHArray1OfIntegerHandle() : base(true) { }
     internal TDataStdHDataMapOfStringHArray1OfIntegerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdHDataMapOfStringHArray1OfIntegerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdHDataMapOfStringHArray1OfIntegerRelease(handle); return true; }
 }
 
 internal sealed class TDataStdHDataMapOfStringHArray1OfRealHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdHDataMapOfStringHArray1OfRealHandle() : base(true) { }
     internal TDataStdHDataMapOfStringHArray1OfRealHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdHDataMapOfStringHArray1OfRealRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdHDataMapOfStringHArray1OfRealRelease(handle); return true; }
 }
 
 internal sealed class TDataStdHDataMapOfStringIntegerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdHDataMapOfStringIntegerHandle() : base(true) { }
     internal TDataStdHDataMapOfStringIntegerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdHDataMapOfStringIntegerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdHDataMapOfStringIntegerRelease(handle); return true; }
 }
 
 internal sealed class TDataStdHDataMapOfStringRealHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdHDataMapOfStringRealHandle() : base(true) { }
     internal TDataStdHDataMapOfStringRealHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdHDataMapOfStringRealRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdHDataMapOfStringRealRelease(handle); return true; }
 }
 
 internal sealed class TDataStdHDataMapOfStringStringHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdHDataMapOfStringStringHandle() : base(true) { }
     internal TDataStdHDataMapOfStringStringHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdHDataMapOfStringStringRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdHDataMapOfStringStringRelease(handle); return true; }
 }
 
 internal sealed class TDataStdIntPackedMapHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdIntPackedMapHandle() : base(true) { }
     internal TDataStdIntPackedMapHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdIntPackedMapRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdIntPackedMapRelease(handle); return true; }
 }
 
 internal sealed class TDataStdIntegerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdIntegerHandle() : base(true) { }
     internal TDataStdIntegerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdIntegerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdIntegerRelease(handle); return true; }
 }
 
 internal sealed class TDataStdIntegerArrayHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdIntegerArrayHandle() : base(true) { }
     internal TDataStdIntegerArrayHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdIntegerArrayRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdIntegerArrayRelease(handle); return true; }
 }
 
 internal sealed class TDataStdIntegerListHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdIntegerListHandle() : base(true) { }
     internal TDataStdIntegerListHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdIntegerListRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdIntegerListRelease(handle); return true; }
 }
 
 internal sealed class TDataStdNameHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdNameHandle() : base(true) { }
     internal TDataStdNameHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdNameRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdNameRelease(handle); return true; }
 }
 
 internal sealed class TDataStdNamedDataHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdNamedDataHandle() : base(true) { }
     internal TDataStdNamedDataHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdNamedDataRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdNamedDataRelease(handle); return true; }
 }
 
 internal sealed class TDataStdNoteBookHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdNoteBookHandle() : base(true) { }
     internal TDataStdNoteBookHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdNoteBookRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdNoteBookRelease(handle); return true; }
 }
 
 internal sealed class TDataStdRealHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdRealHandle() : base(true) { }
     internal TDataStdRealHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdRealRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdRealRelease(handle); return true; }
 }
 
 internal sealed class TDataStdRealArrayHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdRealArrayHandle() : base(true) { }
     internal TDataStdRealArrayHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdRealArrayRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdRealArrayRelease(handle); return true; }
 }
 
 internal sealed class TDataStdRealListHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdRealListHandle() : base(true) { }
     internal TDataStdRealListHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdRealListRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdRealListRelease(handle); return true; }
 }
 
 internal sealed class TDataStdReferenceArrayHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdReferenceArrayHandle() : base(true) { }
     internal TDataStdReferenceArrayHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdReferenceArrayRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdReferenceArrayRelease(handle); return true; }
 }
 
 internal sealed class TDataStdReferenceListHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdReferenceListHandle() : base(true) { }
     internal TDataStdReferenceListHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdReferenceListRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdReferenceListRelease(handle); return true; }
 }
 
 internal sealed class TDataStdRelationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdRelationHandle() : base(true) { }
     internal TDataStdRelationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdRelationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdRelationRelease(handle); return true; }
 }
 
 internal sealed class TDataStdTickHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdTickHandle() : base(true) { }
     internal TDataStdTickHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdTickRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdTickRelease(handle); return true; }
 }
 
 internal sealed class TDataStdTreeNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdTreeNodeHandle() : base(true) { }
     internal TDataStdTreeNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdTreeNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdTreeNodeRelease(handle); return true; }
 }
 
 internal sealed class TDataStdUAttributeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdUAttributeHandle() : base(true) { }
     internal TDataStdUAttributeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdUAttributeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdUAttributeRelease(handle); return true; }
 }
 
 internal sealed class TDataStdVariableHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataStdVariableHandle() : base(true) { }
     internal TDataStdVariableHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataStdVariableRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataStdVariableRelease(handle); return true; }
 }
 
 internal sealed class TDataXtdAxisHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataXtdAxisHandle() : base(true) { }
     internal TDataXtdAxisHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataXtdAxisRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataXtdAxisRelease(handle); return true; }
 }
 
 internal sealed class TDataXtdConstraintHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataXtdConstraintHandle() : base(true) { }
     internal TDataXtdConstraintHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataXtdConstraintRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataXtdConstraintRelease(handle); return true; }
 }
 
 internal sealed class TDataXtdGeometryHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataXtdGeometryHandle() : base(true) { }
     internal TDataXtdGeometryHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataXtdGeometryRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataXtdGeometryRelease(handle); return true; }
 }
 
 internal sealed class TDataXtdPatternHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataXtdPatternHandle() : base(true) { }
     internal TDataXtdPatternHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataXtdPatternRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataXtdPatternRelease(handle); return true; }
 }
 
 internal sealed class TDataXtdPatternStdHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataXtdPatternStdHandle() : base(true) { }
     internal TDataXtdPatternStdHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataXtdPatternStdRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataXtdPatternStdRelease(handle); return true; }
 }
 
 internal sealed class TDataXtdPlacementHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataXtdPlacementHandle() : base(true) { }
     internal TDataXtdPlacementHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataXtdPlacementRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataXtdPlacementRelease(handle); return true; }
 }
 
 internal sealed class TDataXtdPlaneHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataXtdPlaneHandle() : base(true) { }
     internal TDataXtdPlaneHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataXtdPlaneRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataXtdPlaneRelease(handle); return true; }
 }
 
 internal sealed class TDataXtdPointHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataXtdPointHandle() : base(true) { }
     internal TDataXtdPointHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataXtdPointRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataXtdPointRelease(handle); return true; }
 }
 
 internal sealed class TDataXtdPositionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataXtdPositionHandle() : base(true) { }
     internal TDataXtdPositionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataXtdPositionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataXtdPositionRelease(handle); return true; }
 }
 
 internal sealed class TDataXtdPresentationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataXtdPresentationHandle() : base(true) { }
     internal TDataXtdPresentationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataXtdPresentationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataXtdPresentationRelease(handle); return true; }
 }
 
 internal sealed class TDataXtdShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataXtdShapeHandle() : base(true) { }
     internal TDataXtdShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataXtdShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataXtdShapeRelease(handle); return true; }
 }
 
 internal sealed class TDataXtdTriangulationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDataXtdTriangulationHandle() : base(true) { }
     internal TDataXtdTriangulationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDataXtdTriangulationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDataXtdTriangulationRelease(handle); return true; }
 }
 
 internal sealed class TDocStdApplicationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDocStdApplicationHandle() : base(true) { }
     internal TDocStdApplicationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDocStdApplicationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDocStdApplicationRelease(handle); return true; }
 }
 
 internal sealed class TDocStdApplicationDeltaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDocStdApplicationDeltaHandle() : base(true) { }
     internal TDocStdApplicationDeltaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDocStdApplicationDeltaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDocStdApplicationDeltaRelease(handle); return true; }
 }
 
 internal sealed class TDocStdCompoundDeltaHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDocStdCompoundDeltaHandle() : base(true) { }
     internal TDocStdCompoundDeltaHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDocStdCompoundDeltaRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDocStdCompoundDeltaRelease(handle); return true; }
 }
 
 internal sealed class TDocStdDocumentHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDocStdDocumentHandle() : base(true) { }
     internal TDocStdDocumentHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDocStdDocumentRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDocStdDocumentRelease(handle); return true; }
 }
 
 internal sealed class TDocStdModifiedHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDocStdModifiedHandle() : base(true) { }
     internal TDocStdModifiedHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDocStdModifiedRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDocStdModifiedRelease(handle); return true; }
 }
 
 internal sealed class TDocStdMultiTransactionManagerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDocStdMultiTransactionManagerHandle() : base(true) { }
     internal TDocStdMultiTransactionManagerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDocStdMultiTransactionManagerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDocStdMultiTransactionManagerRelease(handle); return true; }
 }
 
 internal sealed class TDocStdOwnerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDocStdOwnerHandle() : base(true) { }
     internal TDocStdOwnerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDocStdOwnerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDocStdOwnerRelease(handle); return true; }
 }
 
 internal sealed class TDocStdXLinkHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDocStdXLinkHandle() : base(true) { }
     internal TDocStdXLinkHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDocStdXLinkRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDocStdXLinkRelease(handle); return true; }
 }
 
 internal sealed class TDocStdXLinkRootHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TDocStdXLinkRootHandle() : base(true) { }
     internal TDocStdXLinkRootHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TDocStdXLinkRootRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TDocStdXLinkRootRelease(handle); return true; }
 }
 
 internal sealed class TFunctionDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TFunctionDriverHandle() : base(true) { }
     internal TFunctionDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TFunctionDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TFunctionDriverRelease(handle); return true; }
 }
 
 internal sealed class TFunctionDriverTableHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TFunctionDriverTableHandle() : base(true) { }
     internal TFunctionDriverTableHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TFunctionDriverTableRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TFunctionDriverTableRelease(handle); return true; }
 }
 
 internal sealed class TFunctionFunctionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TFunctionFunctionHandle() : base(true) { }
     internal TFunctionFunctionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TFunctionFunctionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TFunctionFunctionRelease(handle); return true; }
 }
 
 internal sealed class TFunctionGraphNodeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TFunctionGraphNodeHandle() : base(true) { }
     internal TFunctionGraphNodeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TFunctionGraphNodeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TFunctionGraphNodeRelease(handle); return true; }
 }
 
 internal sealed class TFunctionLogbookHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TFunctionLogbookHandle() : base(true) { }
     internal TFunctionLogbookHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TFunctionLogbookRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TFunctionLogbookRelease(handle); return true; }
 }
 
 internal sealed class TFunctionScopeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TFunctionScopeHandle() : base(true) { }
     internal TFunctionScopeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TFunctionScopeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TFunctionScopeRelease(handle); return true; }
 }
 
 internal sealed class TNamingDeltaOnModificationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TNamingDeltaOnModificationHandle() : base(true) { }
     internal TNamingDeltaOnModificationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TNamingDeltaOnModificationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TNamingDeltaOnModificationRelease(handle); return true; }
 }
 
 internal sealed class TNamingDeltaOnRemovalHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TNamingDeltaOnRemovalHandle() : base(true) { }
     internal TNamingDeltaOnRemovalHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TNamingDeltaOnRemovalRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TNamingDeltaOnRemovalRelease(handle); return true; }
 }
 
 internal sealed class TNamingNamedShapeHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TNamingNamedShapeHandle() : base(true) { }
     internal TNamingNamedShapeHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TNamingNamedShapeRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TNamingNamedShapeRelease(handle); return true; }
 }
 
 internal sealed class TNamingNamingHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TNamingNamingHandle() : base(true) { }
     internal TNamingNamingHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TNamingNamingRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TNamingNamingRelease(handle); return true; }
 }
 
 internal sealed class TNamingTranslateToolHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TNamingTranslateToolHandle() : base(true) { }
     internal TNamingTranslateToolHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TNamingTranslateToolRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TNamingTranslateToolRelease(handle); return true; }
 }
 
 internal sealed class TNamingUsedShapesHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TNamingUsedShapesHandle() : base(true) { }
     internal TNamingUsedShapesHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TNamingUsedShapesRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TNamingUsedShapesRelease(handle); return true; }
 }
 
 internal sealed class TObjApplicationHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TObjApplicationHandle() : base(true) { }
     internal TObjApplicationHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TObjApplicationRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TObjApplicationRelease(handle); return true; }
 }
 
 internal sealed class TObjCheckModelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TObjCheckModelHandle() : base(true) { }
     internal TObjCheckModelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TObjCheckModelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TObjCheckModelRelease(handle); return true; }
 }
 
 internal sealed class TObjHiddenPartitionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TObjHiddenPartitionHandle() : base(true) { }
     internal TObjHiddenPartitionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TObjHiddenPartitionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TObjHiddenPartitionRelease(handle); return true; }
 }
 
 internal sealed class TObjLabelIteratorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TObjLabelIteratorHandle() : base(true) { }
     internal TObjLabelIteratorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TObjLabelIteratorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TObjLabelIteratorRelease(handle); return true; }
 }
 
 internal sealed class TObjModelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TObjModelHandle() : base(true) { }
     internal TObjModelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TObjModelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TObjModelRelease(handle); return true; }
 }
 
 internal sealed class TObjModelIteratorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TObjModelIteratorHandle() : base(true) { }
     internal TObjModelIteratorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TObjModelIteratorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TObjModelIteratorRelease(handle); return true; }
 }
 
 internal sealed class TObjObjectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TObjObjectHandle() : base(true) { }
     internal TObjObjectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TObjObjectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TObjObjectRelease(handle); return true; }
 }
 
 internal sealed class TObjObjectIteratorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TObjObjectIteratorHandle() : base(true) { }
     internal TObjObjectIteratorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TObjObjectIteratorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TObjObjectIteratorRelease(handle); return true; }
 }
 
 internal sealed class TObjOcafObjectIteratorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TObjOcafObjectIteratorHandle() : base(true) { }
     internal TObjOcafObjectIteratorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TObjOcafObjectIteratorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TObjOcafObjectIteratorRelease(handle); return true; }
 }
 
 internal sealed class TObjPartitionHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TObjPartitionHandle() : base(true) { }
     internal TObjPartitionHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TObjPartitionRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TObjPartitionRelease(handle); return true; }
 }
 
 internal sealed class TObjReferenceIteratorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TObjReferenceIteratorHandle() : base(true) { }
     internal TObjReferenceIteratorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TObjReferenceIteratorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TObjReferenceIteratorRelease(handle); return true; }
 }
 
 internal sealed class TObjSequenceIteratorHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TObjSequenceIteratorHandle() : base(true) { }
     internal TObjSequenceIteratorHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TObjSequenceIteratorRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TObjSequenceIteratorRelease(handle); return true; }
 }
 
 internal sealed class TObjTIntSparseArrayHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TObjTIntSparseArrayHandle() : base(true) { }
     internal TObjTIntSparseArrayHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TObjTIntSparseArrayRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TObjTIntSparseArrayRelease(handle); return true; }
 }
 
 internal sealed class TObjTModelHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TObjTModelHandle() : base(true) { }
     internal TObjTModelHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TObjTModelRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TObjTModelRelease(handle); return true; }
 }
 
 internal sealed class TObjTNameContainerHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TObjTNameContainerHandle() : base(true) { }
     internal TObjTNameContainerHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TObjTNameContainerRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TObjTNameContainerRelease(handle); return true; }
 }
 
 internal sealed class TObjTObjectHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TObjTObjectHandle() : base(true) { }
     internal TObjTObjectHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TObjTObjectRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TObjTObjectRelease(handle); return true; }
 }
 
 internal sealed class TObjTReferenceHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TObjTReferenceHandle() : base(true) { }
     internal TObjTReferenceHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TObjTReferenceRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TObjTReferenceRelease(handle); return true; }
 }
 
 internal sealed class TObjTXYZHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal TObjTXYZHandle() : base(true) { }
     internal TObjTXYZHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.TObjTXYZRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.TObjTXYZRelease(handle); return true; }
 }
 
 internal sealed class XmlDriversDocumentRetrievalDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlDriversDocumentRetrievalDriverHandle() : base(true) { }
     internal XmlDriversDocumentRetrievalDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlDriversDocumentRetrievalDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlDriversDocumentRetrievalDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlDriversDocumentStorageDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlDriversDocumentStorageDriverHandle() : base(true) { }
     internal XmlDriversDocumentStorageDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlDriversDocumentStorageDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlDriversDocumentStorageDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlLDriversDocumentRetrievalDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlLDriversDocumentRetrievalDriverHandle() : base(true) { }
     internal XmlLDriversDocumentRetrievalDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlLDriversDocumentRetrievalDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlLDriversDocumentRetrievalDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlLDriversDocumentStorageDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlLDriversDocumentStorageDriverHandle() : base(true) { }
     internal XmlLDriversDocumentStorageDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlLDriversDocumentStorageDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlLDriversDocumentStorageDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDFADriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDFADriverHandle() : base(true) { }
     internal XmlMDFADriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDFADriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDFADriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDFADriverTableHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDFADriverTableHandle() : base(true) { }
     internal XmlMDFADriverTableHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDFADriverTableRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDFADriverTableRelease(handle); return true; }
 }
 
 internal sealed class XmlMDFDerivedDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDFDerivedDriverHandle() : base(true) { }
     internal XmlMDFDerivedDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDFDerivedDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDFDerivedDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDFReferenceDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDFReferenceDriverHandle() : base(true) { }
     internal XmlMDFReferenceDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDFReferenceDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDFReferenceDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDFTagSourceDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDFTagSourceDriverHandle() : base(true) { }
     internal XmlMDFTagSourceDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDFTagSourceDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDFTagSourceDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdAsciiStringDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdAsciiStringDriverHandle() : base(true) { }
     internal XmlMDataStdAsciiStringDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdAsciiStringDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdAsciiStringDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdBooleanArrayDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdBooleanArrayDriverHandle() : base(true) { }
     internal XmlMDataStdBooleanArrayDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdBooleanArrayDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdBooleanArrayDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdBooleanListDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdBooleanListDriverHandle() : base(true) { }
     internal XmlMDataStdBooleanListDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdBooleanListDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdBooleanListDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdByteArrayDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdByteArrayDriverHandle() : base(true) { }
     internal XmlMDataStdByteArrayDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdByteArrayDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdByteArrayDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdExpressionDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdExpressionDriverHandle() : base(true) { }
     internal XmlMDataStdExpressionDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdExpressionDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdExpressionDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdExtStringArrayDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdExtStringArrayDriverHandle() : base(true) { }
     internal XmlMDataStdExtStringArrayDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdExtStringArrayDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdExtStringArrayDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdExtStringListDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdExtStringListDriverHandle() : base(true) { }
     internal XmlMDataStdExtStringListDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdExtStringListDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdExtStringListDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdGenericEmptyDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdGenericEmptyDriverHandle() : base(true) { }
     internal XmlMDataStdGenericEmptyDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdGenericEmptyDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdGenericEmptyDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdGenericExtStringDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdGenericExtStringDriverHandle() : base(true) { }
     internal XmlMDataStdGenericExtStringDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdGenericExtStringDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdGenericExtStringDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdIntPackedMapDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdIntPackedMapDriverHandle() : base(true) { }
     internal XmlMDataStdIntPackedMapDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdIntPackedMapDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdIntPackedMapDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdIntegerArrayDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdIntegerArrayDriverHandle() : base(true) { }
     internal XmlMDataStdIntegerArrayDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdIntegerArrayDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdIntegerArrayDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdIntegerDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdIntegerDriverHandle() : base(true) { }
     internal XmlMDataStdIntegerDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdIntegerDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdIntegerDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdIntegerListDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdIntegerListDriverHandle() : base(true) { }
     internal XmlMDataStdIntegerListDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdIntegerListDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdIntegerListDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdNamedDataDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdNamedDataDriverHandle() : base(true) { }
     internal XmlMDataStdNamedDataDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdNamedDataDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdNamedDataDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdRealArrayDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdRealArrayDriverHandle() : base(true) { }
     internal XmlMDataStdRealArrayDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdRealArrayDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdRealArrayDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdRealDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdRealDriverHandle() : base(true) { }
     internal XmlMDataStdRealDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdRealDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdRealDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdRealListDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdRealListDriverHandle() : base(true) { }
     internal XmlMDataStdRealListDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdRealListDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdRealListDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdReferenceArrayDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdReferenceArrayDriverHandle() : base(true) { }
     internal XmlMDataStdReferenceArrayDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdReferenceArrayDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdReferenceArrayDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdReferenceListDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdReferenceListDriverHandle() : base(true) { }
     internal XmlMDataStdReferenceListDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdReferenceListDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdReferenceListDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdTreeNodeDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdTreeNodeDriverHandle() : base(true) { }
     internal XmlMDataStdTreeNodeDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdTreeNodeDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdTreeNodeDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdUAttributeDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdUAttributeDriverHandle() : base(true) { }
     internal XmlMDataStdUAttributeDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdUAttributeDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdUAttributeDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataStdVariableDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataStdVariableDriverHandle() : base(true) { }
     internal XmlMDataStdVariableDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataStdVariableDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataStdVariableDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataXtdConstraintDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataXtdConstraintDriverHandle() : base(true) { }
     internal XmlMDataXtdConstraintDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataXtdConstraintDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataXtdConstraintDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataXtdGeometryDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataXtdGeometryDriverHandle() : base(true) { }
     internal XmlMDataXtdGeometryDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataXtdGeometryDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataXtdGeometryDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataXtdPatternStdDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataXtdPatternStdDriverHandle() : base(true) { }
     internal XmlMDataXtdPatternStdDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataXtdPatternStdDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataXtdPatternStdDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataXtdPositionDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataXtdPositionDriverHandle() : base(true) { }
     internal XmlMDataXtdPositionDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataXtdPositionDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataXtdPositionDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataXtdPresentationDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataXtdPresentationDriverHandle() : base(true) { }
     internal XmlMDataXtdPresentationDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataXtdPresentationDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataXtdPresentationDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDataXtdTriangulationDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDataXtdTriangulationDriverHandle() : base(true) { }
     internal XmlMDataXtdTriangulationDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDataXtdTriangulationDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDataXtdTriangulationDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMDocStdXLinkDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMDocStdXLinkDriverHandle() : base(true) { }
     internal XmlMDocStdXLinkDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMDocStdXLinkDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMDocStdXLinkDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMFunctionFunctionDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMFunctionFunctionDriverHandle() : base(true) { }
     internal XmlMFunctionFunctionDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMFunctionFunctionDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMFunctionFunctionDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMFunctionGraphNodeDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMFunctionGraphNodeDriverHandle() : base(true) { }
     internal XmlMFunctionGraphNodeDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMFunctionGraphNodeDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMFunctionGraphNodeDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMFunctionScopeDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMFunctionScopeDriverHandle() : base(true) { }
     internal XmlMFunctionScopeDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMFunctionScopeDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMFunctionScopeDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMNamingNamedShapeDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMNamingNamedShapeDriverHandle() : base(true) { }
     internal XmlMNamingNamedShapeDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMNamingNamedShapeDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMNamingNamedShapeDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlMNamingNamingDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlMNamingNamingDriverHandle() : base(true) { }
     internal XmlMNamingNamingDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlMNamingNamingDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlMNamingNamingDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlTObjDriversDocumentRetrievalDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlTObjDriversDocumentRetrievalDriverHandle() : base(true) { }
     internal XmlTObjDriversDocumentRetrievalDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlTObjDriversDocumentRetrievalDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlTObjDriversDocumentRetrievalDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlTObjDriversDocumentStorageDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlTObjDriversDocumentStorageDriverHandle() : base(true) { }
     internal XmlTObjDriversDocumentStorageDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlTObjDriversDocumentStorageDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlTObjDriversDocumentStorageDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlTObjDriversIntSparseArrayDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlTObjDriversIntSparseArrayDriverHandle() : base(true) { }
     internal XmlTObjDriversIntSparseArrayDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlTObjDriversIntSparseArrayDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlTObjDriversIntSparseArrayDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlTObjDriversModelDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlTObjDriversModelDriverHandle() : base(true) { }
     internal XmlTObjDriversModelDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlTObjDriversModelDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlTObjDriversModelDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlTObjDriversObjectDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlTObjDriversObjectDriverHandle() : base(true) { }
     internal XmlTObjDriversObjectDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlTObjDriversObjectDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlTObjDriversObjectDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlTObjDriversReferenceDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlTObjDriversReferenceDriverHandle() : base(true) { }
     internal XmlTObjDriversReferenceDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlTObjDriversReferenceDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlTObjDriversReferenceDriverRelease(handle); return true; }
 }
 
 internal sealed class XmlTObjDriversXYZDriverHandle : SafeHandleZeroOrMinusOneIsInvalid
 {
     internal XmlTObjDriversXYZDriverHandle() : base(true) { }
     internal XmlTObjDriversXYZDriverHandle(nint handle) : base(true) => SetHandle(handle);
-    protected override bool ReleaseHandle() { GeneratedNativeMethods.XmlTObjDriversXYZDriverRelease(handle); return true; }
+    protected override bool ReleaseHandle() { DocumentsGeneratedNativeMethods.XmlTObjDriversXYZDriverRelease(handle); return true; }
 }
 
-internal static partial class GeneratedNativeMethods
+internal static partial class DocumentsGeneratedNativeMethods
 {
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_app_std_l_application_clone")]

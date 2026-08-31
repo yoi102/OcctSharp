@@ -429,7 +429,7 @@ public sealed class BinMXCAFDocAssemblyItemRefDriver : IDisposable
     public BinMXCAFDocAssemblyItemRefDriver(MessageMessenger? theMsgDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocAssemblyItemRefDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocAssemblyItemRefDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BinMXCAFDocAssemblyItemRefDriverCreate0");
     }
 
@@ -437,7 +437,7 @@ public sealed class BinMXCAFDocAssemblyItemRefDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocAssemblyItemRefDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_assembly_item_ref_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocAssemblyItemRefDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_assembly_item_ref_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_bin_mxcafdoc_assembly_item_ref_driver_method_new_empty_0");
     }
 
@@ -447,7 +447,7 @@ public sealed class BinMXCAFDocAssemblyItemRefDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocAssemblyItemRefDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocAssemblyItemRefDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -458,7 +458,7 @@ public sealed class BinMXCAFDocAssemblyItemRefDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocAssemblyItemRefDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocAssemblyItemRefDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -468,7 +468,7 @@ public sealed class BinMXCAFDocAssemblyItemRefDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocAssemblyItemRefDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocAssemblyItemRefDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -476,7 +476,7 @@ public sealed class BinMXCAFDocAssemblyItemRefDriver : IDisposable
     public BinMXCAFDocAssemblyItemRefDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocAssemblyItemRefDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocAssemblyItemRefDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BinMXCAFDocAssemblyItemRefDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -513,7 +513,7 @@ public sealed class BinMXCAFDocCentroidDriver : IDisposable
     public BinMXCAFDocCentroidDriver(MessageMessenger? theMsgDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocCentroidDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocCentroidDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BinMXCAFDocCentroidDriverCreate0");
     }
 
@@ -521,7 +521,7 @@ public sealed class BinMXCAFDocCentroidDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocCentroidDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_centroid_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocCentroidDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_centroid_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_bin_mxcafdoc_centroid_driver_method_new_empty_0");
     }
 
@@ -531,7 +531,7 @@ public sealed class BinMXCAFDocCentroidDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocCentroidDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocCentroidDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -542,7 +542,7 @@ public sealed class BinMXCAFDocCentroidDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocCentroidDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocCentroidDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -552,7 +552,7 @@ public sealed class BinMXCAFDocCentroidDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocCentroidDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocCentroidDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -560,7 +560,7 @@ public sealed class BinMXCAFDocCentroidDriver : IDisposable
     public BinMXCAFDocCentroidDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocCentroidDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocCentroidDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BinMXCAFDocCentroidDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -597,7 +597,7 @@ public sealed class BinMXCAFDocColorDriver : IDisposable
     public BinMXCAFDocColorDriver(MessageMessenger? theMsgDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocColorDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocColorDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BinMXCAFDocColorDriverCreate0");
     }
 
@@ -605,7 +605,7 @@ public sealed class BinMXCAFDocColorDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocColorDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_color_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocColorDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_color_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_bin_mxcafdoc_color_driver_method_new_empty_0");
     }
 
@@ -615,7 +615,7 @@ public sealed class BinMXCAFDocColorDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocColorDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocColorDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -626,7 +626,7 @@ public sealed class BinMXCAFDocColorDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocColorDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocColorDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -636,7 +636,7 @@ public sealed class BinMXCAFDocColorDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocColorDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocColorDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -644,7 +644,7 @@ public sealed class BinMXCAFDocColorDriver : IDisposable
     public BinMXCAFDocColorDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocColorDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocColorDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BinMXCAFDocColorDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -681,7 +681,7 @@ public sealed class BinMXCAFDocDatumDriver : IDisposable
     public BinMXCAFDocDatumDriver(MessageMessenger? theMsgDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocDatumDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocDatumDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BinMXCAFDocDatumDriverCreate0");
     }
 
@@ -689,7 +689,7 @@ public sealed class BinMXCAFDocDatumDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocDatumDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_datum_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocDatumDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_datum_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_bin_mxcafdoc_datum_driver_method_new_empty_0");
     }
 
@@ -699,7 +699,7 @@ public sealed class BinMXCAFDocDatumDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocDatumDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocDatumDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -710,7 +710,7 @@ public sealed class BinMXCAFDocDatumDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocDatumDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocDatumDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -720,7 +720,7 @@ public sealed class BinMXCAFDocDatumDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocDatumDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocDatumDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -728,7 +728,7 @@ public sealed class BinMXCAFDocDatumDriver : IDisposable
     public BinMXCAFDocDatumDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocDatumDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocDatumDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BinMXCAFDocDatumDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -765,7 +765,7 @@ public sealed class BinMXCAFDocDimTolDriver : IDisposable
     public BinMXCAFDocDimTolDriver(MessageMessenger? theMsgDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocDimTolDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocDimTolDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BinMXCAFDocDimTolDriverCreate0");
     }
 
@@ -773,7 +773,7 @@ public sealed class BinMXCAFDocDimTolDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocDimTolDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_dim_tol_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocDimTolDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_dim_tol_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_bin_mxcafdoc_dim_tol_driver_method_new_empty_0");
     }
 
@@ -783,7 +783,7 @@ public sealed class BinMXCAFDocDimTolDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocDimTolDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocDimTolDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -794,7 +794,7 @@ public sealed class BinMXCAFDocDimTolDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocDimTolDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocDimTolDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -804,7 +804,7 @@ public sealed class BinMXCAFDocDimTolDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocDimTolDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocDimTolDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -812,7 +812,7 @@ public sealed class BinMXCAFDocDimTolDriver : IDisposable
     public BinMXCAFDocDimTolDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocDimTolDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocDimTolDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BinMXCAFDocDimTolDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -849,7 +849,7 @@ public sealed class BinMXCAFDocGraphNodeDriver : IDisposable
     public BinMXCAFDocGraphNodeDriver(MessageMessenger? theMsgDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocGraphNodeDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocGraphNodeDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BinMXCAFDocGraphNodeDriverCreate0");
     }
 
@@ -857,7 +857,7 @@ public sealed class BinMXCAFDocGraphNodeDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocGraphNodeDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_graph_node_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocGraphNodeDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_graph_node_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_bin_mxcafdoc_graph_node_driver_method_new_empty_0");
     }
 
@@ -867,7 +867,7 @@ public sealed class BinMXCAFDocGraphNodeDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocGraphNodeDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocGraphNodeDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -878,7 +878,7 @@ public sealed class BinMXCAFDocGraphNodeDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocGraphNodeDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocGraphNodeDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -888,7 +888,7 @@ public sealed class BinMXCAFDocGraphNodeDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocGraphNodeDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocGraphNodeDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -896,7 +896,7 @@ public sealed class BinMXCAFDocGraphNodeDriver : IDisposable
     public BinMXCAFDocGraphNodeDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocGraphNodeDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocGraphNodeDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BinMXCAFDocGraphNodeDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -933,7 +933,7 @@ public sealed class BinMXCAFDocLengthUnitDriver : IDisposable
     public BinMXCAFDocLengthUnitDriver(MessageMessenger? theMsgDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocLengthUnitDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocLengthUnitDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BinMXCAFDocLengthUnitDriverCreate0");
     }
 
@@ -941,7 +941,7 @@ public sealed class BinMXCAFDocLengthUnitDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocLengthUnitDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_length_unit_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocLengthUnitDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_length_unit_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_bin_mxcafdoc_length_unit_driver_method_new_empty_0");
     }
 
@@ -951,7 +951,7 @@ public sealed class BinMXCAFDocLengthUnitDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocLengthUnitDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocLengthUnitDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -962,7 +962,7 @@ public sealed class BinMXCAFDocLengthUnitDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocLengthUnitDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocLengthUnitDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -972,7 +972,7 @@ public sealed class BinMXCAFDocLengthUnitDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocLengthUnitDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocLengthUnitDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -980,7 +980,7 @@ public sealed class BinMXCAFDocLengthUnitDriver : IDisposable
     public BinMXCAFDocLengthUnitDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocLengthUnitDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocLengthUnitDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BinMXCAFDocLengthUnitDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1017,7 +1017,7 @@ public sealed class BinMXCAFDocLocationDriver : IDisposable
     public BinMXCAFDocLocationDriver(MessageMessenger? theMsgDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocLocationDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocLocationDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BinMXCAFDocLocationDriverCreate0");
     }
 
@@ -1025,7 +1025,7 @@ public sealed class BinMXCAFDocLocationDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocLocationDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_location_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocLocationDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_location_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_bin_mxcafdoc_location_driver_method_new_empty_0");
     }
 
@@ -1033,7 +1033,7 @@ public sealed class BinMXCAFDocLocationDriver : IDisposable
     public void SetNSDriver(BinMNamingNamedShapeDriver? theNSDriver)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocLocationDriverMethodSetNSDriver0(handle, theNSDriver is null ? nint.Zero : theNSDriver.NativeHandle.DangerousGetHandle()), "occtsharp_generated_bin_mxcafdoc_location_driver_method_set_nsdriver_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocLocationDriverMethodSetNSDriver0(handle, theNSDriver is null ? nint.Zero : theNSDriver.NativeHandle.DangerousGetHandle()), "occtsharp_generated_bin_mxcafdoc_location_driver_method_set_nsdriver_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -1042,7 +1042,7 @@ public sealed class BinMXCAFDocLocationDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocLocationDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocLocationDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1053,7 +1053,7 @@ public sealed class BinMXCAFDocLocationDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocLocationDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocLocationDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1063,7 +1063,7 @@ public sealed class BinMXCAFDocLocationDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocLocationDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocLocationDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1071,7 +1071,7 @@ public sealed class BinMXCAFDocLocationDriver : IDisposable
     public BinMXCAFDocLocationDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocLocationDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocLocationDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BinMXCAFDocLocationDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1108,7 +1108,7 @@ public sealed class BinMXCAFDocMaterialDriver : IDisposable
     public BinMXCAFDocMaterialDriver(MessageMessenger? theMsgDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocMaterialDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocMaterialDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BinMXCAFDocMaterialDriverCreate0");
     }
 
@@ -1116,7 +1116,7 @@ public sealed class BinMXCAFDocMaterialDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocMaterialDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_material_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocMaterialDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_material_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_bin_mxcafdoc_material_driver_method_new_empty_0");
     }
 
@@ -1126,7 +1126,7 @@ public sealed class BinMXCAFDocMaterialDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocMaterialDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocMaterialDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1137,7 +1137,7 @@ public sealed class BinMXCAFDocMaterialDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocMaterialDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocMaterialDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1147,7 +1147,7 @@ public sealed class BinMXCAFDocMaterialDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocMaterialDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocMaterialDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1155,7 +1155,7 @@ public sealed class BinMXCAFDocMaterialDriver : IDisposable
     public BinMXCAFDocMaterialDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocMaterialDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocMaterialDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BinMXCAFDocMaterialDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1192,7 +1192,7 @@ public sealed class BinMXCAFDocNoteBinDataDriver : IDisposable
     public BinMXCAFDocNoteBinDataDriver(MessageMessenger? theMsgDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocNoteBinDataDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocNoteBinDataDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BinMXCAFDocNoteBinDataDriverCreate0");
     }
 
@@ -1200,7 +1200,7 @@ public sealed class BinMXCAFDocNoteBinDataDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocNoteBinDataDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_note_bin_data_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocNoteBinDataDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_note_bin_data_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_bin_mxcafdoc_note_bin_data_driver_method_new_empty_0");
     }
 
@@ -1210,7 +1210,7 @@ public sealed class BinMXCAFDocNoteBinDataDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocNoteBinDataDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocNoteBinDataDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1221,7 +1221,7 @@ public sealed class BinMXCAFDocNoteBinDataDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocNoteBinDataDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocNoteBinDataDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1231,7 +1231,7 @@ public sealed class BinMXCAFDocNoteBinDataDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocNoteBinDataDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocNoteBinDataDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1239,7 +1239,7 @@ public sealed class BinMXCAFDocNoteBinDataDriver : IDisposable
     public BinMXCAFDocNoteBinDataDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocNoteBinDataDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocNoteBinDataDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BinMXCAFDocNoteBinDataDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1276,7 +1276,7 @@ public sealed class BinMXCAFDocNoteCommentDriver : IDisposable
     public BinMXCAFDocNoteCommentDriver(MessageMessenger? theMsgDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocNoteCommentDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocNoteCommentDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BinMXCAFDocNoteCommentDriverCreate0");
     }
 
@@ -1284,7 +1284,7 @@ public sealed class BinMXCAFDocNoteCommentDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocNoteCommentDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_note_comment_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocNoteCommentDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_note_comment_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_bin_mxcafdoc_note_comment_driver_method_new_empty_0");
     }
 
@@ -1294,7 +1294,7 @@ public sealed class BinMXCAFDocNoteCommentDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocNoteCommentDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocNoteCommentDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1305,7 +1305,7 @@ public sealed class BinMXCAFDocNoteCommentDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocNoteCommentDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocNoteCommentDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1315,7 +1315,7 @@ public sealed class BinMXCAFDocNoteCommentDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocNoteCommentDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocNoteCommentDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1323,7 +1323,7 @@ public sealed class BinMXCAFDocNoteCommentDriver : IDisposable
     public BinMXCAFDocNoteCommentDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocNoteCommentDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocNoteCommentDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BinMXCAFDocNoteCommentDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1362,7 +1362,7 @@ public sealed class BinMXCAFDocNoteDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocNoteDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocNoteDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1373,7 +1373,7 @@ public sealed class BinMXCAFDocNoteDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocNoteDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocNoteDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1383,7 +1383,7 @@ public sealed class BinMXCAFDocNoteDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocNoteDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocNoteDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1391,7 +1391,7 @@ public sealed class BinMXCAFDocNoteDriver : IDisposable
     public BinMXCAFDocNoteDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocNoteDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocNoteDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BinMXCAFDocNoteDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1428,7 +1428,7 @@ public sealed class BinMXCAFDocVisMaterialDriver : IDisposable
     public BinMXCAFDocVisMaterialDriver(MessageMessenger? theMsgDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocVisMaterialDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocVisMaterialDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BinMXCAFDocVisMaterialDriverCreate0");
     }
 
@@ -1436,7 +1436,7 @@ public sealed class BinMXCAFDocVisMaterialDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocVisMaterialDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_vis_material_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocVisMaterialDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_vis_material_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_bin_mxcafdoc_vis_material_driver_method_new_empty_0");
     }
 
@@ -1446,7 +1446,7 @@ public sealed class BinMXCAFDocVisMaterialDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocVisMaterialDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocVisMaterialDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1457,7 +1457,7 @@ public sealed class BinMXCAFDocVisMaterialDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocVisMaterialDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocVisMaterialDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1467,7 +1467,7 @@ public sealed class BinMXCAFDocVisMaterialDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocVisMaterialDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocVisMaterialDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1475,7 +1475,7 @@ public sealed class BinMXCAFDocVisMaterialDriver : IDisposable
     public BinMXCAFDocVisMaterialDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocVisMaterialDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocVisMaterialDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BinMXCAFDocVisMaterialDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1512,7 +1512,7 @@ public sealed class BinMXCAFDocVisMaterialToolDriver : IDisposable
     public BinMXCAFDocVisMaterialToolDriver(MessageMessenger? theMsgDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocVisMaterialToolDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocVisMaterialToolDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BinMXCAFDocVisMaterialToolDriverCreate0");
     }
 
@@ -1520,7 +1520,7 @@ public sealed class BinMXCAFDocVisMaterialToolDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocVisMaterialToolDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_vis_material_tool_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocVisMaterialToolDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_bin_mxcafdoc_vis_material_tool_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_bin_mxcafdoc_vis_material_tool_driver_method_new_empty_0");
     }
 
@@ -1530,7 +1530,7 @@ public sealed class BinMXCAFDocVisMaterialToolDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocVisMaterialToolDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocVisMaterialToolDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1541,7 +1541,7 @@ public sealed class BinMXCAFDocVisMaterialToolDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocVisMaterialToolDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocVisMaterialToolDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1551,7 +1551,7 @@ public sealed class BinMXCAFDocVisMaterialToolDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocVisMaterialToolDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocVisMaterialToolDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1559,7 +1559,7 @@ public sealed class BinMXCAFDocVisMaterialToolDriver : IDisposable
     public BinMXCAFDocVisMaterialToolDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinMXCAFDocVisMaterialToolDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinMXCAFDocVisMaterialToolDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BinMXCAFDocVisMaterialToolDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1596,7 +1596,7 @@ public sealed class BinXCAFDriversDocumentRetrievalDriver : IDisposable
     public BinXCAFDriversDocumentRetrievalDriver()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinXCAFDriversDocumentRetrievalDriverCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinXCAFDriversDocumentRetrievalDriverCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BinXCAFDriversDocumentRetrievalDriverCreate0");
     }
 
@@ -1604,7 +1604,7 @@ public sealed class BinXCAFDriversDocumentRetrievalDriver : IDisposable
     public BinMDFADriverTable? AttributeDrivers(MessageMessenger? theMsgDriver)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinXCAFDriversDocumentRetrievalDriverMethodAttributeDrivers0(handle, theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_bin_xcafdrivers_document_retrieval_driver_method_attribute_drivers_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinXCAFDriversDocumentRetrievalDriverMethodAttributeDrivers0(handle, theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_bin_xcafdrivers_document_retrieval_driver_method_attribute_drivers_0");
         return global::OcctSharp.BinMDFADriverTable.FromNative(handleValue, "occtsharp_generated_bin_xcafdrivers_document_retrieval_driver_method_attribute_drivers_0");
     }
 
@@ -1614,7 +1614,7 @@ public sealed class BinXCAFDriversDocumentRetrievalDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinXCAFDriversDocumentRetrievalDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinXCAFDriversDocumentRetrievalDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1625,7 +1625,7 @@ public sealed class BinXCAFDriversDocumentRetrievalDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinXCAFDriversDocumentRetrievalDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinXCAFDriversDocumentRetrievalDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1635,7 +1635,7 @@ public sealed class BinXCAFDriversDocumentRetrievalDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinXCAFDriversDocumentRetrievalDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinXCAFDriversDocumentRetrievalDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1643,7 +1643,7 @@ public sealed class BinXCAFDriversDocumentRetrievalDriver : IDisposable
     public BinXCAFDriversDocumentRetrievalDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinXCAFDriversDocumentRetrievalDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinXCAFDriversDocumentRetrievalDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BinXCAFDriversDocumentRetrievalDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1680,7 +1680,7 @@ public sealed class BinXCAFDriversDocumentStorageDriver : IDisposable
     public BinXCAFDriversDocumentStorageDriver()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinXCAFDriversDocumentStorageDriverCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinXCAFDriversDocumentStorageDriverCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BinXCAFDriversDocumentStorageDriverCreate0");
     }
 
@@ -1688,7 +1688,7 @@ public sealed class BinXCAFDriversDocumentStorageDriver : IDisposable
     public BinMDFADriverTable? AttributeDrivers(MessageMessenger? theMsgDriver)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinXCAFDriversDocumentStorageDriverMethodAttributeDrivers0(handle, theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_bin_xcafdrivers_document_storage_driver_method_attribute_drivers_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinXCAFDriversDocumentStorageDriverMethodAttributeDrivers0(handle, theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_bin_xcafdrivers_document_storage_driver_method_attribute_drivers_0");
         return global::OcctSharp.BinMDFADriverTable.FromNative(handleValue, "occtsharp_generated_bin_xcafdrivers_document_storage_driver_method_attribute_drivers_0");
     }
 
@@ -1698,7 +1698,7 @@ public sealed class BinXCAFDriversDocumentStorageDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinXCAFDriversDocumentStorageDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinXCAFDriversDocumentStorageDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1709,7 +1709,7 @@ public sealed class BinXCAFDriversDocumentStorageDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinXCAFDriversDocumentStorageDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinXCAFDriversDocumentStorageDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1719,7 +1719,7 @@ public sealed class BinXCAFDriversDocumentStorageDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinXCAFDriversDocumentStorageDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinXCAFDriversDocumentStorageDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1727,7 +1727,7 @@ public sealed class BinXCAFDriversDocumentStorageDriver : IDisposable
     public BinXCAFDriversDocumentStorageDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BinXCAFDriversDocumentStorageDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.BinXCAFDriversDocumentStorageDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BinXCAFDriversDocumentStorageDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1764,7 +1764,7 @@ public sealed class DEXCAFConfigurationNode : IDisposable
     public DEXCAFConfigurationNode()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DEXCAFConfigurationNodeCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.DEXCAFConfigurationNodeCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "DEXCAFConfigurationNodeCreate0");
     }
 
@@ -1772,7 +1772,7 @@ public sealed class DEXCAFConfigurationNode : IDisposable
     public DEXCAFConfigurationNode(DEXCAFConfigurationNode? theNode)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DEXCAFConfigurationNodeCreate1(theNode is null ? nint.Zero : theNode.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.DEXCAFConfigurationNodeCreate1(theNode is null ? nint.Zero : theNode.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "DEXCAFConfigurationNodeCreate1");
     }
 
@@ -1780,7 +1780,7 @@ public sealed class DEXCAFConfigurationNode : IDisposable
     public DEProvider? BuildProvider()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DEXCAFConfigurationNodeMethodBuildProvider0(handle, out nint handleValue), "occtsharp_generated_dexcaf_configuration_node_method_build_provider_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.DEXCAFConfigurationNodeMethodBuildProvider0(handle, out nint handleValue), "occtsharp_generated_dexcaf_configuration_node_method_build_provider_0");
         return global::OcctSharp.DEProvider.FromNative(handleValue, "occtsharp_generated_dexcaf_configuration_node_method_build_provider_0");
     }
 
@@ -1788,7 +1788,7 @@ public sealed class DEXCAFConfigurationNode : IDisposable
     public bool CheckContent(NCollectionBuffer? theBuffer)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DEXCAFConfigurationNodeMethodCheckContent0(handle, theBuffer is null ? nint.Zero : theBuffer.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_dexcaf_configuration_node_method_check_content_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.DEXCAFConfigurationNodeMethodCheckContent0(handle, theBuffer is null ? nint.Zero : theBuffer.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_dexcaf_configuration_node_method_check_content_0");
         return resultValue != 0;
     }
 
@@ -1796,7 +1796,7 @@ public sealed class DEXCAFConfigurationNode : IDisposable
     public DEConfigurationNode? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DEXCAFConfigurationNodeMethodCopy0(handle, out nint handleValue), "occtsharp_generated_dexcaf_configuration_node_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.DEXCAFConfigurationNodeMethodCopy0(handle, out nint handleValue), "occtsharp_generated_dexcaf_configuration_node_method_copy_0");
         return global::OcctSharp.DEConfigurationNode.FromNative(handleValue, "occtsharp_generated_dexcaf_configuration_node_method_copy_0");
     }
 
@@ -1804,7 +1804,7 @@ public sealed class DEXCAFConfigurationNode : IDisposable
     public bool IsExportSupported()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DEXCAFConfigurationNodeMethodIsExportSupported0(handle, out int resultValue), "occtsharp_generated_dexcaf_configuration_node_method_is_export_supported_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.DEXCAFConfigurationNodeMethodIsExportSupported0(handle, out int resultValue), "occtsharp_generated_dexcaf_configuration_node_method_is_export_supported_0");
         return resultValue != 0;
     }
 
@@ -1812,7 +1812,7 @@ public sealed class DEXCAFConfigurationNode : IDisposable
     public bool IsImportSupported()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DEXCAFConfigurationNodeMethodIsImportSupported0(handle, out int resultValue), "occtsharp_generated_dexcaf_configuration_node_method_is_import_supported_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.DEXCAFConfigurationNodeMethodIsImportSupported0(handle, out int resultValue), "occtsharp_generated_dexcaf_configuration_node_method_is_import_supported_0");
         return resultValue != 0;
     }
 
@@ -1820,7 +1820,7 @@ public sealed class DEXCAFConfigurationNode : IDisposable
     public bool Load(DEConfigurationContext? theResource)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DEXCAFConfigurationNodeMethodLoad0(handle, theResource is null ? nint.Zero : theResource.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_dexcaf_configuration_node_method_load_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.DEXCAFConfigurationNodeMethodLoad0(handle, theResource is null ? nint.Zero : theResource.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_dexcaf_configuration_node_method_load_0");
         return resultValue != 0;
     }
 
@@ -1830,7 +1830,7 @@ public sealed class DEXCAFConfigurationNode : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DEXCAFConfigurationNodeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.DEXCAFConfigurationNodeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1841,7 +1841,7 @@ public sealed class DEXCAFConfigurationNode : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DEXCAFConfigurationNodeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.DEXCAFConfigurationNodeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1851,7 +1851,7 @@ public sealed class DEXCAFConfigurationNode : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DEXCAFConfigurationNodeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.DEXCAFConfigurationNodeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1859,7 +1859,7 @@ public sealed class DEXCAFConfigurationNode : IDisposable
     public DEXCAFConfigurationNode Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DEXCAFConfigurationNodeClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.DEXCAFConfigurationNodeClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DEXCAFConfigurationNode(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1896,7 +1896,7 @@ public sealed class DEXCAFProvider : IDisposable
     public DEXCAFProvider()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DEXCAFProviderCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.DEXCAFProviderCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "DEXCAFProviderCreate0");
     }
 
@@ -1904,7 +1904,7 @@ public sealed class DEXCAFProvider : IDisposable
     public DEXCAFProvider(DEConfigurationNode? theNode)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DEXCAFProviderCreate1(theNode is null ? nint.Zero : theNode.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.DEXCAFProviderCreate1(theNode is null ? nint.Zero : theNode.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "DEXCAFProviderCreate1");
     }
 
@@ -1914,7 +1914,7 @@ public sealed class DEXCAFProvider : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DEXCAFProviderGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.DEXCAFProviderGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1925,7 +1925,7 @@ public sealed class DEXCAFProvider : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DEXCAFProviderGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.DEXCAFProviderGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1935,7 +1935,7 @@ public sealed class DEXCAFProvider : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DEXCAFProviderIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.DEXCAFProviderIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1943,7 +1943,7 @@ public sealed class DEXCAFProvider : IDisposable
     public DEXCAFProvider Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.DEXCAFProviderClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.DEXCAFProviderClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new DEXCAFProvider(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1980,7 +1980,7 @@ public sealed class STEPCAFControlActorWrite : IDisposable
     public STEPCAFControlActorWrite()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlActorWriteCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlActorWriteCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "STEPCAFControlActorWriteCreate0");
     }
 
@@ -1988,14 +1988,14 @@ public sealed class STEPCAFControlActorWrite : IDisposable
     public void ClearMap()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlActorWriteMethodClearMap0(handle), "occtsharp_generated_stepcafcontrol_actor_write_method_clear_map_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlActorWriteMethodClearMap0(handle), "occtsharp_generated_stepcafcontrol_actor_write_method_clear_map_0");
     }
 
     /// <summary>Invokes OCCT STEPCAFControl_ActorWrite::SetStdMode.</summary>
     public void SetStdMode(bool stdmode)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlActorWriteMethodSetStdMode0(handle, stdmode ? 1 : 0), "occtsharp_generated_stepcafcontrol_actor_write_method_set_std_mode_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlActorWriteMethodSetStdMode0(handle, stdmode ? 1 : 0), "occtsharp_generated_stepcafcontrol_actor_write_method_set_std_mode_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -2004,7 +2004,7 @@ public sealed class STEPCAFControlActorWrite : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlActorWriteGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlActorWriteGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2015,7 +2015,7 @@ public sealed class STEPCAFControlActorWrite : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlActorWriteGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlActorWriteGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2025,7 +2025,7 @@ public sealed class STEPCAFControlActorWrite : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlActorWriteIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlActorWriteIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2033,7 +2033,7 @@ public sealed class STEPCAFControlActorWrite : IDisposable
     public STEPCAFControlActorWrite Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlActorWriteClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlActorWriteClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new STEPCAFControlActorWrite(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2070,7 +2070,7 @@ public sealed class STEPCAFControlController : IDisposable
     public STEPCAFControlController()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlControllerCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlControllerCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "STEPCAFControlControllerCreate0");
     }
 
@@ -2080,7 +2080,7 @@ public sealed class STEPCAFControlController : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlControllerGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlControllerGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2091,7 +2091,7 @@ public sealed class STEPCAFControlController : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlControllerGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlControllerGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2101,7 +2101,7 @@ public sealed class STEPCAFControlController : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlControllerIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlControllerIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2109,7 +2109,7 @@ public sealed class STEPCAFControlController : IDisposable
     public STEPCAFControlController Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlControllerClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlControllerClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new STEPCAFControlController(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2146,7 +2146,7 @@ public sealed class STEPCAFControlExternFile : IDisposable
     public STEPCAFControlExternFile()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlExternFileCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlExternFileCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "STEPCAFControlExternFileCreate0");
     }
 
@@ -2154,7 +2154,7 @@ public sealed class STEPCAFControlExternFile : IDisposable
     public IFSelectReturnStatus GetLoadStatus()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlExternFileMethodGetLoadStatus0(handle, out int resultValue), "occtsharp_generated_stepcafcontrol_extern_file_method_get_load_status_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlExternFileMethodGetLoadStatus0(handle, out int resultValue), "occtsharp_generated_stepcafcontrol_extern_file_method_get_load_status_0");
         return (IFSelectReturnStatus)resultValue;
     }
 
@@ -2162,7 +2162,7 @@ public sealed class STEPCAFControlExternFile : IDisposable
     public TCollectionHAsciiString? GetName()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlExternFileMethodGetName0(handle, out nint handleValue), "occtsharp_generated_stepcafcontrol_extern_file_method_get_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlExternFileMethodGetName0(handle, out nint handleValue), "occtsharp_generated_stepcafcontrol_extern_file_method_get_name_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_stepcafcontrol_extern_file_method_get_name_0");
     }
 
@@ -2170,7 +2170,7 @@ public sealed class STEPCAFControlExternFile : IDisposable
     public bool GetTransferStatus()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlExternFileMethodGetTransferStatus0(handle, out int resultValue), "occtsharp_generated_stepcafcontrol_extern_file_method_get_transfer_status_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlExternFileMethodGetTransferStatus0(handle, out int resultValue), "occtsharp_generated_stepcafcontrol_extern_file_method_get_transfer_status_0");
         return resultValue != 0;
     }
 
@@ -2178,7 +2178,7 @@ public sealed class STEPCAFControlExternFile : IDisposable
     public IFSelectReturnStatus GetWriteStatus()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlExternFileMethodGetWriteStatus0(handle, out int resultValue), "occtsharp_generated_stepcafcontrol_extern_file_method_get_write_status_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlExternFileMethodGetWriteStatus0(handle, out int resultValue), "occtsharp_generated_stepcafcontrol_extern_file_method_get_write_status_0");
         return (IFSelectReturnStatus)resultValue;
     }
 
@@ -2186,7 +2186,7 @@ public sealed class STEPCAFControlExternFile : IDisposable
     public XSControlWorkSession? GetWS()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlExternFileMethodGetWS0(handle, out nint handleValue), "occtsharp_generated_stepcafcontrol_extern_file_method_get_ws_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlExternFileMethodGetWS0(handle, out nint handleValue), "occtsharp_generated_stepcafcontrol_extern_file_method_get_ws_0");
         return global::OcctSharp.XSControlWorkSession.FromNative(handleValue, "occtsharp_generated_stepcafcontrol_extern_file_method_get_ws_0");
     }
 
@@ -2194,35 +2194,35 @@ public sealed class STEPCAFControlExternFile : IDisposable
     public void SetLoadStatus(IFSelectReturnStatus stat)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlExternFileMethodSetLoadStatus0(handle, (int)stat), "occtsharp_generated_stepcafcontrol_extern_file_method_set_load_status_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlExternFileMethodSetLoadStatus0(handle, (int)stat), "occtsharp_generated_stepcafcontrol_extern_file_method_set_load_status_0");
     }
 
     /// <summary>Invokes OCCT STEPCAFControl_ExternFile::SetName.</summary>
     public void SetName(TCollectionHAsciiString? name)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlExternFileMethodSetName0(handle, name is null ? nint.Zero : name.NativeHandle.DangerousGetHandle()), "occtsharp_generated_stepcafcontrol_extern_file_method_set_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlExternFileMethodSetName0(handle, name is null ? nint.Zero : name.NativeHandle.DangerousGetHandle()), "occtsharp_generated_stepcafcontrol_extern_file_method_set_name_0");
     }
 
     /// <summary>Invokes OCCT STEPCAFControl_ExternFile::SetTransferStatus.</summary>
     public void SetTransferStatus(bool isok)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlExternFileMethodSetTransferStatus0(handle, isok ? 1 : 0), "occtsharp_generated_stepcafcontrol_extern_file_method_set_transfer_status_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlExternFileMethodSetTransferStatus0(handle, isok ? 1 : 0), "occtsharp_generated_stepcafcontrol_extern_file_method_set_transfer_status_0");
     }
 
     /// <summary>Invokes OCCT STEPCAFControl_ExternFile::SetWriteStatus.</summary>
     public void SetWriteStatus(IFSelectReturnStatus stat)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlExternFileMethodSetWriteStatus0(handle, (int)stat), "occtsharp_generated_stepcafcontrol_extern_file_method_set_write_status_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlExternFileMethodSetWriteStatus0(handle, (int)stat), "occtsharp_generated_stepcafcontrol_extern_file_method_set_write_status_0");
     }
 
     /// <summary>Invokes OCCT STEPCAFControl_ExternFile::SetWS.</summary>
     public void SetWS(XSControlWorkSession? wS)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlExternFileMethodSetWS0(handle, wS is null ? nint.Zero : wS.NativeHandle.DangerousGetHandle()), "occtsharp_generated_stepcafcontrol_extern_file_method_set_ws_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlExternFileMethodSetWS0(handle, wS is null ? nint.Zero : wS.NativeHandle.DangerousGetHandle()), "occtsharp_generated_stepcafcontrol_extern_file_method_set_ws_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -2231,7 +2231,7 @@ public sealed class STEPCAFControlExternFile : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlExternFileGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlExternFileGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2242,7 +2242,7 @@ public sealed class STEPCAFControlExternFile : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlExternFileGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlExternFileGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2252,7 +2252,7 @@ public sealed class STEPCAFControlExternFile : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlExternFileIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlExternFileIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2260,7 +2260,7 @@ public sealed class STEPCAFControlExternFile : IDisposable
     public STEPCAFControlExternFile Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.STEPCAFControlExternFileClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.STEPCAFControlExternFileClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new STEPCAFControlExternFile(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2297,7 +2297,7 @@ public sealed class XCAFAppApplication : IDisposable
     public void InitDocument(CDMDocument? aDoc)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFAppApplicationMethodInitDocument0(handle, aDoc is null ? nint.Zero : aDoc.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafapp_application_method_init_document_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFAppApplicationMethodInitDocument0(handle, aDoc is null ? nint.Zero : aDoc.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafapp_application_method_init_document_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -2306,7 +2306,7 @@ public sealed class XCAFAppApplication : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFAppApplicationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFAppApplicationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2317,7 +2317,7 @@ public sealed class XCAFAppApplication : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFAppApplicationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFAppApplicationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2327,7 +2327,7 @@ public sealed class XCAFAppApplication : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFAppApplicationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFAppApplicationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2335,7 +2335,7 @@ public sealed class XCAFAppApplication : IDisposable
     public XCAFAppApplication Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFAppApplicationClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFAppApplicationClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFAppApplication(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2372,7 +2372,7 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
     public XCAFDimTolObjectsDatumObject()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDimTolObjectsDatumObjectCreate0");
     }
 
@@ -2380,7 +2380,7 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
     public XCAFDimTolObjectsDatumObject(XCAFDimTolObjectsDatumObject? theObj)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectCreate1(theObj is null ? nint.Zero : theObj.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectCreate1(theObj is null ? nint.Zero : theObj.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDimTolObjectsDatumObjectCreate1");
     }
 
@@ -2388,14 +2388,14 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
     public void AddModifier(XCAFDimTolObjectsDatumSingleModif theModifier)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodAddModifier0(handle, (int)theModifier), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_add_modifier_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodAddModifier0(handle, (int)theModifier), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_add_modifier_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DatumObject::GetDatumTargetLength.</summary>
     public double GetDatumTargetLength()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodGetDatumTargetLength0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_get_datum_target_length_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodGetDatumTargetLength0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_get_datum_target_length_0");
         return resultValue;
     }
 
@@ -2403,7 +2403,7 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
     public int GetDatumTargetNumber()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodGetDatumTargetNumber0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_get_datum_target_number_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodGetDatumTargetNumber0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_get_datum_target_number_0");
         return resultValue;
     }
 
@@ -2411,7 +2411,7 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
     public XCAFDimTolObjectsDatumTargetType GetDatumTargetType()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodGetDatumTargetType0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_get_datum_target_type_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodGetDatumTargetType0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_get_datum_target_type_0");
         return (XCAFDimTolObjectsDatumTargetType)resultValue;
     }
 
@@ -2419,7 +2419,7 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
     public double GetDatumTargetWidth()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodGetDatumTargetWidth0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_get_datum_target_width_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodGetDatumTargetWidth0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_get_datum_target_width_0");
         return resultValue;
     }
 
@@ -2427,7 +2427,7 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
     public TCollectionHAsciiString? GetName()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodGetName0(handle, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_get_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodGetName0(handle, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_get_name_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdim_tol_objects_datum_object_method_get_name_0");
     }
 
@@ -2435,7 +2435,7 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
     public int GetPosition()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodGetPosition0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_get_position_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodGetPosition0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_get_position_0");
         return resultValue;
     }
 
@@ -2443,7 +2443,7 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
     public TCollectionHAsciiString? GetPresentationName()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodGetPresentationName0(handle, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_get_presentation_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodGetPresentationName0(handle, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_get_presentation_name_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdim_tol_objects_datum_object_method_get_presentation_name_0");
     }
 
@@ -2451,7 +2451,7 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
     public TCollectionHAsciiString? GetSemanticName()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodGetSemanticName0(handle, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_get_semantic_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodGetSemanticName0(handle, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_get_semantic_name_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdim_tol_objects_datum_object_method_get_semantic_name_0");
     }
 
@@ -2459,7 +2459,7 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
     public bool HasDatumTargetParams()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodHasDatumTargetParams0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_has_datum_target_params_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodHasDatumTargetParams0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_has_datum_target_params_0");
         return resultValue != 0;
     }
 
@@ -2467,7 +2467,7 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
     public bool HasPlane()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodHasPlane0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_has_plane_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodHasPlane0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_has_plane_0");
         return resultValue != 0;
     }
 
@@ -2475,7 +2475,7 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
     public bool HasPoint()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodHasPoint0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_has_point_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodHasPoint0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_has_point_0");
         return resultValue != 0;
     }
 
@@ -2483,7 +2483,7 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
     public bool HasPointText()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodHasPointText0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_has_point_text_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodHasPointText0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_has_point_text_0");
         return resultValue != 0;
     }
 
@@ -2491,7 +2491,7 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
     public bool IsDatumTarget()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodIsDatumTarget0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_is_datum_target_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodIsDatumTarget0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_is_datum_target_0");
         return resultValue != 0;
     }
 
@@ -2499,77 +2499,77 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
     public void IsDatumTarget(bool theIsDT)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodIsDatumTarget1(handle, theIsDT ? 1 : 0), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_is_datum_target_1");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodIsDatumTarget1(handle, theIsDT ? 1 : 0), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_is_datum_target_1");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DatumObject::SetDatumTargetLength.</summary>
     public void SetDatumTargetLength(double theLength)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetDatumTargetLength0(handle, theLength), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_datum_target_length_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetDatumTargetLength0(handle, theLength), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_datum_target_length_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DatumObject::SetDatumTargetNumber.</summary>
     public void SetDatumTargetNumber(int theNumber)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetDatumTargetNumber0(handle, theNumber), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_datum_target_number_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetDatumTargetNumber0(handle, theNumber), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_datum_target_number_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DatumObject::SetDatumTargetType.</summary>
     public void SetDatumTargetType(XCAFDimTolObjectsDatumTargetType theType)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetDatumTargetType0(handle, (int)theType), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_datum_target_type_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetDatumTargetType0(handle, (int)theType), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_datum_target_type_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DatumObject::SetDatumTargetWidth.</summary>
     public void SetDatumTargetWidth(double theWidth)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetDatumTargetWidth0(handle, theWidth), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_datum_target_width_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetDatumTargetWidth0(handle, theWidth), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_datum_target_width_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DatumObject::SetModifierWithValue.</summary>
     public void SetModifierWithValue(XCAFDimTolObjectsDatumModifWithValue theModifier, double theValue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetModifierWithValue0(handle, (int)theModifier, theValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_modifier_with_value_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetModifierWithValue0(handle, (int)theModifier, theValue), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_modifier_with_value_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DatumObject::SetName.</summary>
     public void SetName(TCollectionHAsciiString? theTag)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetName0(handle, theTag is null ? nint.Zero : theTag.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetName0(handle, theTag is null ? nint.Zero : theTag.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_name_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DatumObject::SetPoint.</summary>
     public void SetPoint(Point3d thePnt)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetPoint0(handle, new Point3dRaw(thePnt.X, thePnt.Y, thePnt.Z)), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_point_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetPoint0(handle, new Point3dRaw(thePnt.X, thePnt.Y, thePnt.Z)), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_point_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DatumObject::SetPointTextAttach.</summary>
     public void SetPointTextAttach(Point3d thePntText)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetPointTextAttach0(handle, new Point3dRaw(thePntText.X, thePntText.Y, thePntText.Z)), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_point_text_attach_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetPointTextAttach0(handle, new Point3dRaw(thePntText.X, thePntText.Y, thePntText.Z)), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_point_text_attach_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DatumObject::SetPosition.</summary>
     public void SetPosition(int thePosition)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetPosition0(handle, thePosition), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_position_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetPosition0(handle, thePosition), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_position_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DatumObject::SetSemanticName.</summary>
     public void SetSemanticName(TCollectionHAsciiString? theName)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetSemanticName0(handle, theName is null ? nint.Zero : theName.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_semantic_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectMethodSetSemanticName0(handle, theName is null ? nint.Zero : theName.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdim_tol_objects_datum_object_method_set_semantic_name_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -2578,7 +2578,7 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2589,7 +2589,7 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2599,7 +2599,7 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2607,7 +2607,7 @@ public sealed class XCAFDimTolObjectsDatumObject : IDisposable
     public XCAFDimTolObjectsDatumObject Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDatumObjectClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDatumObjectClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDimTolObjectsDatumObject(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2644,7 +2644,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public XCAFDimTolObjectsDimensionObject()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDimTolObjectsDimensionObjectCreate0");
     }
 
@@ -2652,7 +2652,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public XCAFDimTolObjectsDimensionObject(XCAFDimTolObjectsDimensionObject? theObj)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectCreate1(theObj is null ? nint.Zero : theObj.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectCreate1(theObj is null ? nint.Zero : theObj.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDimTolObjectsDimensionObjectCreate1");
     }
 
@@ -2660,21 +2660,21 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public void AddDescription(TCollectionHAsciiString? theDescription, TCollectionHAsciiString? theName)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodAddDescription0(handle, theDescription is null ? nint.Zero : theDescription.NativeHandle.DangerousGetHandle(), theName is null ? nint.Zero : theName.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_add_description_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodAddDescription0(handle, theDescription is null ? nint.Zero : theDescription.NativeHandle.DangerousGetHandle(), theName is null ? nint.Zero : theName.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_add_description_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::AddModifier.</summary>
     public void AddModifier(XCAFDimTolObjectsDimensionModif theModifier)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodAddModifier0(handle, (int)theModifier), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_add_modifier_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodAddModifier0(handle, (int)theModifier), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_add_modifier_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::GetAngularQualifier.</summary>
     public XCAFDimTolObjectsAngularQualifier GetAngularQualifier()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetAngularQualifier0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_angular_qualifier_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetAngularQualifier0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_angular_qualifier_0");
         return (XCAFDimTolObjectsAngularQualifier)resultValue;
     }
 
@@ -2682,7 +2682,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public TCollectionHAsciiString? GetConnectionName()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetConnectionName0(handle, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_connection_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetConnectionName0(handle, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_connection_name_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_connection_name_0");
     }
 
@@ -2690,7 +2690,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public TCollectionHAsciiString? GetConnectionName2()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetConnectionName20(handle, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_connection_name2_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetConnectionName20(handle, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_connection_name2_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_connection_name2_0");
     }
 
@@ -2698,7 +2698,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public TCollectionHAsciiString? GetDescription(int theNumber)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetDescription0(handle, theNumber, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_description_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetDescription0(handle, theNumber, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_description_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_description_0");
     }
 
@@ -2706,7 +2706,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public TCollectionHAsciiString? GetDescriptionName(int theNumber)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetDescriptionName0(handle, theNumber, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_description_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetDescriptionName0(handle, theNumber, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_description_name_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_description_name_0");
     }
 
@@ -2714,7 +2714,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public double GetLowerBound()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetLowerBound0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_lower_bound_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetLowerBound0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_lower_bound_0");
         return resultValue;
     }
 
@@ -2722,7 +2722,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public double GetLowerTolValue()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetLowerTolValue0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_lower_tol_value_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetLowerTolValue0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_lower_tol_value_0");
         return resultValue;
     }
 
@@ -2730,7 +2730,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public Point3d GetPoint()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetPoint0(handle, out Point3dRaw resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_point_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetPoint0(handle, out Point3dRaw resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_point_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
@@ -2738,7 +2738,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public Point3d GetPoint2()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetPoint20(handle, out Point3dRaw resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_point2_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetPoint20(handle, out Point3dRaw resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_point2_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
@@ -2746,7 +2746,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public TCollectionHAsciiString? GetPresentationName()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetPresentationName0(handle, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_presentation_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetPresentationName0(handle, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_presentation_name_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_presentation_name_0");
     }
 
@@ -2754,7 +2754,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public XCAFDimTolObjectsDimensionQualifier GetQualifier()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetQualifier0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_qualifier_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetQualifier0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_qualifier_0");
         return (XCAFDimTolObjectsDimensionQualifier)resultValue;
     }
 
@@ -2762,7 +2762,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public TCollectionHAsciiString? GetSemanticName()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetSemanticName0(handle, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_semantic_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetSemanticName0(handle, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_semantic_name_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_semantic_name_0");
     }
 
@@ -2770,7 +2770,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public XCAFDimTolObjectsDimensionType OcctGetType()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodOcctGetType0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_type_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodOcctGetType0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_type_0");
         return (XCAFDimTolObjectsDimensionType)resultValue;
     }
 
@@ -2778,7 +2778,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public double GetUpperBound()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetUpperBound0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_upper_bound_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetUpperBound0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_upper_bound_0");
         return resultValue;
     }
 
@@ -2786,7 +2786,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public double GetUpperTolValue()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetUpperTolValue0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_upper_tol_value_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetUpperTolValue0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_upper_tol_value_0");
         return resultValue;
     }
 
@@ -2794,7 +2794,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public double GetValue()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetValue0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_value_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetValue0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_value_0");
         return resultValue;
     }
 
@@ -2802,7 +2802,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public bool HasAngularQualifier()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodHasAngularQualifier0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_has_angular_qualifier_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodHasAngularQualifier0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_has_angular_qualifier_0");
         return resultValue != 0;
     }
 
@@ -2810,7 +2810,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public bool HasDescriptions()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodHasDescriptions0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_has_descriptions_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodHasDescriptions0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_has_descriptions_0");
         return resultValue != 0;
     }
 
@@ -2818,7 +2818,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public bool HasPlane()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodHasPlane0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_has_plane_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodHasPlane0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_has_plane_0");
         return resultValue != 0;
     }
 
@@ -2826,7 +2826,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public bool HasPoint()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodHasPoint0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_has_point_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodHasPoint0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_has_point_0");
         return resultValue != 0;
     }
 
@@ -2834,7 +2834,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public bool HasPoint2()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodHasPoint20(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_has_point2_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodHasPoint20(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_has_point2_0");
         return resultValue != 0;
     }
 
@@ -2842,7 +2842,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public bool HasQualifier()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodHasQualifier0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_has_qualifier_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodHasQualifier0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_has_qualifier_0");
         return resultValue != 0;
     }
 
@@ -2850,7 +2850,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public bool HasTextPoint()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodHasTextPoint0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_has_text_point_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodHasTextPoint0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_has_text_point_0");
         return resultValue != 0;
     }
 
@@ -2858,7 +2858,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public bool IsDimWithClassOfTolerance()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodIsDimWithClassOfTolerance0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_is_dim_with_class_of_tolerance_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodIsDimWithClassOfTolerance0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_is_dim_with_class_of_tolerance_0");
         return resultValue != 0;
     }
 
@@ -2866,7 +2866,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public bool IsDimWithPlusMinusTolerance()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodIsDimWithPlusMinusTolerance0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_is_dim_with_plus_minus_tolerance_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodIsDimWithPlusMinusTolerance0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_is_dim_with_plus_minus_tolerance_0");
         return resultValue != 0;
     }
 
@@ -2874,7 +2874,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public bool IsDimWithRange()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodIsDimWithRange0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_is_dim_with_range_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodIsDimWithRange0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_is_dim_with_range_0");
         return resultValue != 0;
     }
 
@@ -2882,7 +2882,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public bool IsPointConnection()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodIsPointConnection0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_is_point_connection_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodIsPointConnection0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_is_point_connection_0");
         return resultValue != 0;
     }
 
@@ -2890,7 +2890,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public bool IsPointConnection2()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodIsPointConnection20(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_is_point_connection2_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodIsPointConnection20(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_is_point_connection2_0");
         return resultValue != 0;
     }
 
@@ -2898,7 +2898,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public int NbDescriptions()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodNbDescriptions0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_nb_descriptions_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodNbDescriptions0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_nb_descriptions_0");
         return resultValue;
     }
 
@@ -2906,49 +2906,49 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public void RemoveDescription(int theNumber)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodRemoveDescription0(handle, theNumber), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_remove_description_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodRemoveDescription0(handle, theNumber), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_remove_description_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::SetAngularQualifier.</summary>
     public void SetAngularQualifier(XCAFDimTolObjectsAngularQualifier theAngularQualifier)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetAngularQualifier0(handle, (int)theAngularQualifier), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_angular_qualifier_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetAngularQualifier0(handle, (int)theAngularQualifier), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_angular_qualifier_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::SetClassOfTolerance.</summary>
     public void SetClassOfTolerance(bool theHole, XCAFDimTolObjectsDimensionFormVariance theFormVariance, XCAFDimTolObjectsDimensionGrade theGrade)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetClassOfTolerance0(handle, theHole ? 1 : 0, (int)theFormVariance, (int)theGrade), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_class_of_tolerance_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetClassOfTolerance0(handle, theHole ? 1 : 0, (int)theFormVariance, (int)theGrade), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_class_of_tolerance_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::SetConnectionName.</summary>
     public void SetConnectionName(TCollectionHAsciiString? theName)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetConnectionName0(handle, theName is null ? nint.Zero : theName.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_connection_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetConnectionName0(handle, theName is null ? nint.Zero : theName.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_connection_name_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::SetConnectionName2.</summary>
     public void SetConnectionName2(TCollectionHAsciiString? theName)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetConnectionName20(handle, theName is null ? nint.Zero : theName.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_connection_name2_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetConnectionName20(handle, theName is null ? nint.Zero : theName.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_connection_name2_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::SetLowerBound.</summary>
     public void SetLowerBound(double theLowerBound)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetLowerBound0(handle, theLowerBound), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_lower_bound_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetLowerBound0(handle, theLowerBound), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_lower_bound_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::SetLowerTolValue.</summary>
     public bool SetLowerTolValue(double theLowerTolValue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetLowerTolValue0(handle, theLowerTolValue, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_lower_tol_value_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetLowerTolValue0(handle, theLowerTolValue, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_lower_tol_value_0");
         return resultValue != 0;
     }
 
@@ -2956,63 +2956,63 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public void SetNbOfDecimalPlaces(int theL, int theR)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetNbOfDecimalPlaces0(handle, theL, theR), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_nb_of_decimal_places_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetNbOfDecimalPlaces0(handle, theL, theR), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_nb_of_decimal_places_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::SetPoint.</summary>
     public void SetPoint(Point3d thePnt)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetPoint0(handle, new Point3dRaw(thePnt.X, thePnt.Y, thePnt.Z)), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_point_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetPoint0(handle, new Point3dRaw(thePnt.X, thePnt.Y, thePnt.Z)), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_point_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::SetPoint2.</summary>
     public void SetPoint2(Point3d thePnt)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetPoint20(handle, new Point3dRaw(thePnt.X, thePnt.Y, thePnt.Z)), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_point2_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetPoint20(handle, new Point3dRaw(thePnt.X, thePnt.Y, thePnt.Z)), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_point2_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::SetPointTextAttach.</summary>
     public void SetPointTextAttach(Point3d thePntText)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetPointTextAttach0(handle, new Point3dRaw(thePntText.X, thePntText.Y, thePntText.Z)), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_point_text_attach_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetPointTextAttach0(handle, new Point3dRaw(thePntText.X, thePntText.Y, thePntText.Z)), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_point_text_attach_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::SetQualifier.</summary>
     public void SetQualifier(XCAFDimTolObjectsDimensionQualifier theQualifier)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetQualifier0(handle, (int)theQualifier), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_qualifier_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetQualifier0(handle, (int)theQualifier), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_qualifier_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::SetSemanticName.</summary>
     public void SetSemanticName(TCollectionHAsciiString? theName)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetSemanticName0(handle, theName is null ? nint.Zero : theName.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_semantic_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetSemanticName0(handle, theName is null ? nint.Zero : theName.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_semantic_name_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::SetType.</summary>
     public void SetType(XCAFDimTolObjectsDimensionType theTyupe)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetType0(handle, (int)theTyupe), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_type_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetType0(handle, (int)theTyupe), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_type_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::SetUpperBound.</summary>
     public void SetUpperBound(double theUpperBound)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetUpperBound0(handle, theUpperBound), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_upper_bound_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetUpperBound0(handle, theUpperBound), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_upper_bound_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::SetUpperTolValue.</summary>
     public bool SetUpperTolValue(double theUperTolValue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetUpperTolValue0(handle, theUperTolValue, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_upper_tol_value_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetUpperTolValue0(handle, theUperTolValue, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_upper_tol_value_0");
         return resultValue != 0;
     }
 
@@ -3020,7 +3020,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public void SetValue(double theValue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetValue0(handle, theValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_value_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetValue0(handle, theValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_value_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -3029,7 +3029,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3040,7 +3040,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3050,7 +3050,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3058,7 +3058,7 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     public XCAFDimTolObjectsDimensionObject Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDimTolObjectsDimensionObject(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3095,7 +3095,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     public XCAFDimTolObjectsGeomToleranceObject()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDimTolObjectsGeomToleranceObjectCreate0");
     }
 
@@ -3103,7 +3103,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     public XCAFDimTolObjectsGeomToleranceObject(XCAFDimTolObjectsGeomToleranceObject? theObj)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectCreate1(theObj is null ? nint.Zero : theObj.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectCreate1(theObj is null ? nint.Zero : theObj.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDimTolObjectsGeomToleranceObjectCreate1");
     }
 
@@ -3111,14 +3111,14 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     public void AddModifier(XCAFDimTolObjectsGeomToleranceModif theModifier)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodAddModifier0(handle, (int)theModifier), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_add_modifier_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodAddModifier0(handle, (int)theModifier), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_add_modifier_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_GeomToleranceObject::GetAffectedPlaneType.</summary>
     public XCAFDimTolObjectsToleranceZoneAffectedPlane GetAffectedPlaneType()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodGetAffectedPlaneType0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_affected_plane_type_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodGetAffectedPlaneType0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_affected_plane_type_0");
         return (XCAFDimTolObjectsToleranceZoneAffectedPlane)resultValue;
     }
 
@@ -3126,7 +3126,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     public XCAFDimTolObjectsGeomToleranceMatReqModif GetMaterialRequirementModifier()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodGetMaterialRequirementModifier0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_material_requirement_modifier_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodGetMaterialRequirementModifier0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_material_requirement_modifier_0");
         return (XCAFDimTolObjectsGeomToleranceMatReqModif)resultValue;
     }
 
@@ -3134,7 +3134,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     public double GetMaxValueModifier()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodGetMaxValueModifier0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_max_value_modifier_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodGetMaxValueModifier0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_max_value_modifier_0");
         return resultValue;
     }
 
@@ -3142,7 +3142,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     public TCollectionHAsciiString? GetPresentationName()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodGetPresentationName0(handle, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_presentation_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodGetPresentationName0(handle, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_presentation_name_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_presentation_name_0");
     }
 
@@ -3150,7 +3150,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     public TCollectionHAsciiString? GetSemanticName()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodGetSemanticName0(handle, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_semantic_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodGetSemanticName0(handle, out nint handleValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_semantic_name_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_semantic_name_0");
     }
 
@@ -3158,7 +3158,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     public XCAFDimTolObjectsGeomToleranceType OcctGetType()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodOcctGetType0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_type_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodOcctGetType0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_type_0");
         return (XCAFDimTolObjectsGeomToleranceType)resultValue;
     }
 
@@ -3166,7 +3166,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     public XCAFDimTolObjectsGeomToleranceTypeValue GetTypeOfValue()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodGetTypeOfValue0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_type_of_value_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodGetTypeOfValue0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_type_of_value_0");
         return (XCAFDimTolObjectsGeomToleranceTypeValue)resultValue;
     }
 
@@ -3174,7 +3174,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     public double GetValue()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodGetValue0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_value_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodGetValue0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_value_0");
         return resultValue;
     }
 
@@ -3182,7 +3182,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     public double GetValueOfZoneModifier()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodGetValueOfZoneModifier0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_value_of_zone_modifier_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodGetValueOfZoneModifier0(handle, out double resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_value_of_zone_modifier_0");
         return resultValue;
     }
 
@@ -3190,7 +3190,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     public XCAFDimTolObjectsGeomToleranceZoneModif GetZoneModifier()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodGetZoneModifier0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_zone_modifier_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodGetZoneModifier0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_get_zone_modifier_0");
         return (XCAFDimTolObjectsGeomToleranceZoneModif)resultValue;
     }
 
@@ -3198,7 +3198,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     public bool HasAffectedPlane()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodHasAffectedPlane0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_has_affected_plane_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodHasAffectedPlane0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_has_affected_plane_0");
         return resultValue != 0;
     }
 
@@ -3206,7 +3206,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     public bool HasAxis()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodHasAxis0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_has_axis_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodHasAxis0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_has_axis_0");
         return resultValue != 0;
     }
 
@@ -3214,7 +3214,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     public bool HasPlane()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodHasPlane0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_has_plane_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodHasPlane0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_has_plane_0");
         return resultValue != 0;
     }
 
@@ -3222,7 +3222,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     public bool HasPoint()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodHasPoint0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_has_point_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodHasPoint0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_has_point_0");
         return resultValue != 0;
     }
 
@@ -3230,7 +3230,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     public bool HasPointText()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodHasPointText0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_has_point_text_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodHasPointText0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_has_point_text_0");
         return resultValue != 0;
     }
 
@@ -3238,77 +3238,77 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     public void SetAffectedPlaneType(XCAFDimTolObjectsToleranceZoneAffectedPlane theType)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetAffectedPlaneType0(handle, (int)theType), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_affected_plane_type_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetAffectedPlaneType0(handle, (int)theType), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_affected_plane_type_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_GeomToleranceObject::SetMaterialRequirementModifier.</summary>
     public void SetMaterialRequirementModifier(XCAFDimTolObjectsGeomToleranceMatReqModif theMatReqModif)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetMaterialRequirementModifier0(handle, (int)theMatReqModif), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_material_requirement_modifier_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetMaterialRequirementModifier0(handle, (int)theMatReqModif), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_material_requirement_modifier_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_GeomToleranceObject::SetMaxValueModifier.</summary>
     public void SetMaxValueModifier(double theModifier)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetMaxValueModifier0(handle, theModifier), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_max_value_modifier_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetMaxValueModifier0(handle, theModifier), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_max_value_modifier_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_GeomToleranceObject::SetPoint.</summary>
     public void SetPoint(Point3d thePnt)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetPoint0(handle, new Point3dRaw(thePnt.X, thePnt.Y, thePnt.Z)), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_point_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetPoint0(handle, new Point3dRaw(thePnt.X, thePnt.Y, thePnt.Z)), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_point_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_GeomToleranceObject::SetPointTextAttach.</summary>
     public void SetPointTextAttach(Point3d thePntText)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetPointTextAttach0(handle, new Point3dRaw(thePntText.X, thePntText.Y, thePntText.Z)), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_point_text_attach_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetPointTextAttach0(handle, new Point3dRaw(thePntText.X, thePntText.Y, thePntText.Z)), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_point_text_attach_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_GeomToleranceObject::SetSemanticName.</summary>
     public void SetSemanticName(TCollectionHAsciiString? theName)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetSemanticName0(handle, theName is null ? nint.Zero : theName.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_semantic_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetSemanticName0(handle, theName is null ? nint.Zero : theName.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_semantic_name_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_GeomToleranceObject::SetType.</summary>
     public void SetType(XCAFDimTolObjectsGeomToleranceType theType)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetType0(handle, (int)theType), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_type_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetType0(handle, (int)theType), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_type_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_GeomToleranceObject::SetTypeOfValue.</summary>
     public void SetTypeOfValue(XCAFDimTolObjectsGeomToleranceTypeValue theTypeOfValue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetTypeOfValue0(handle, (int)theTypeOfValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_type_of_value_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetTypeOfValue0(handle, (int)theTypeOfValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_type_of_value_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_GeomToleranceObject::SetValue.</summary>
     public void SetValue(double theValue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetValue0(handle, theValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_value_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetValue0(handle, theValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_value_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_GeomToleranceObject::SetValueOfZoneModifier.</summary>
     public void SetValueOfZoneModifier(double theValue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetValueOfZoneModifier0(handle, theValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_value_of_zone_modifier_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetValueOfZoneModifier0(handle, theValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_value_of_zone_modifier_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_GeomToleranceObject::SetZoneModifier.</summary>
     public void SetZoneModifier(XCAFDimTolObjectsGeomToleranceZoneModif theZoneModif)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetZoneModifier0(handle, (int)theZoneModif), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_zone_modifier_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetZoneModifier0(handle, (int)theZoneModif), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_zone_modifier_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -3317,7 +3317,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3328,7 +3328,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3338,7 +3338,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3346,7 +3346,7 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
     public XCAFDimTolObjectsGeomToleranceObject Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDimTolObjectsGeomToleranceObject(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3383,7 +3383,7 @@ public sealed class XCAFDocArea : IDisposable
     public XCAFDocArea()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAreaCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAreaCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocAreaCreate0");
     }
 
@@ -3391,7 +3391,7 @@ public sealed class XCAFDocArea : IDisposable
     public double Get()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAreaMethodGet0(handle, out double resultValue), "occtsharp_generated_xcafdoc_area_method_get_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAreaMethodGet0(handle, out double resultValue), "occtsharp_generated_xcafdoc_area_method_get_0");
         return resultValue;
     }
 
@@ -3399,7 +3399,7 @@ public sealed class XCAFDocArea : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAreaMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_area_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAreaMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_area_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_area_method_new_empty_0");
     }
 
@@ -3407,7 +3407,7 @@ public sealed class XCAFDocArea : IDisposable
     public void Set(double vol)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAreaMethodSet0(handle, vol), "occtsharp_generated_xcafdoc_area_method_set_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAreaMethodSet0(handle, vol), "occtsharp_generated_xcafdoc_area_method_set_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -3416,7 +3416,7 @@ public sealed class XCAFDocArea : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAreaGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAreaGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3427,7 +3427,7 @@ public sealed class XCAFDocArea : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAreaGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAreaGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3437,7 +3437,7 @@ public sealed class XCAFDocArea : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAreaIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAreaIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3445,7 +3445,7 @@ public sealed class XCAFDocArea : IDisposable
     public XCAFDocArea Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAreaClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAreaClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocArea(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3482,7 +3482,7 @@ public sealed class XCAFDocAssemblyGraph : IDisposable
     public XCAFDocAssemblyGraph(TDocStdDocument? theDoc)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyGraphCreate0(theDoc is null ? nint.Zero : theDoc.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyGraphCreate0(theDoc is null ? nint.Zero : theDoc.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocAssemblyGraphCreate0");
     }
 
@@ -3490,7 +3490,7 @@ public sealed class XCAFDocAssemblyGraph : IDisposable
     public XCAFDocAssemblyGraphNodeType GetNodeType(int theNode)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyGraphMethodGetNodeType0(handle, theNode, out int resultValue), "occtsharp_generated_xcafdoc_assembly_graph_method_get_node_type_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyGraphMethodGetNodeType0(handle, theNode, out int resultValue), "occtsharp_generated_xcafdoc_assembly_graph_method_get_node_type_0");
         return (XCAFDocAssemblyGraphNodeType)resultValue;
     }
 
@@ -3498,7 +3498,7 @@ public sealed class XCAFDocAssemblyGraph : IDisposable
     public bool HasChildren(int theNode)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyGraphMethodHasChildren0(handle, theNode, out int resultValue), "occtsharp_generated_xcafdoc_assembly_graph_method_has_children_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyGraphMethodHasChildren0(handle, theNode, out int resultValue), "occtsharp_generated_xcafdoc_assembly_graph_method_has_children_0");
         return resultValue != 0;
     }
 
@@ -3506,7 +3506,7 @@ public sealed class XCAFDocAssemblyGraph : IDisposable
     public bool IsDirectLink(int theNode1, int theNode2)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyGraphMethodIsDirectLink0(handle, theNode1, theNode2, out int resultValue), "occtsharp_generated_xcafdoc_assembly_graph_method_is_direct_link_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyGraphMethodIsDirectLink0(handle, theNode1, theNode2, out int resultValue), "occtsharp_generated_xcafdoc_assembly_graph_method_is_direct_link_0");
         return resultValue != 0;
     }
 
@@ -3514,7 +3514,7 @@ public sealed class XCAFDocAssemblyGraph : IDisposable
     public int NbLinks()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyGraphMethodNbLinks0(handle, out int resultValue), "occtsharp_generated_xcafdoc_assembly_graph_method_nb_links_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyGraphMethodNbLinks0(handle, out int resultValue), "occtsharp_generated_xcafdoc_assembly_graph_method_nb_links_0");
         return resultValue;
     }
 
@@ -3522,7 +3522,7 @@ public sealed class XCAFDocAssemblyGraph : IDisposable
     public int NbNodes()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyGraphMethodNbNodes0(handle, out int resultValue), "occtsharp_generated_xcafdoc_assembly_graph_method_nb_nodes_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyGraphMethodNbNodes0(handle, out int resultValue), "occtsharp_generated_xcafdoc_assembly_graph_method_nb_nodes_0");
         return resultValue;
     }
 
@@ -3530,7 +3530,7 @@ public sealed class XCAFDocAssemblyGraph : IDisposable
     public int NbOccurrences(int theNode)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyGraphMethodNbOccurrences0(handle, theNode, out int resultValue), "occtsharp_generated_xcafdoc_assembly_graph_method_nb_occurrences_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyGraphMethodNbOccurrences0(handle, theNode, out int resultValue), "occtsharp_generated_xcafdoc_assembly_graph_method_nb_occurrences_0");
         return resultValue;
     }
 
@@ -3540,7 +3540,7 @@ public sealed class XCAFDocAssemblyGraph : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyGraphGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyGraphGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3551,7 +3551,7 @@ public sealed class XCAFDocAssemblyGraph : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyGraphGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyGraphGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3561,7 +3561,7 @@ public sealed class XCAFDocAssemblyGraph : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyGraphIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyGraphIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3569,7 +3569,7 @@ public sealed class XCAFDocAssemblyGraph : IDisposable
     public XCAFDocAssemblyGraph Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyGraphClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyGraphClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocAssemblyGraph(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3606,7 +3606,7 @@ public sealed class XCAFDocAssemblyItemRef : IDisposable
     public XCAFDocAssemblyItemRef()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyItemRefCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyItemRefCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocAssemblyItemRefCreate0");
     }
 
@@ -3614,14 +3614,14 @@ public sealed class XCAFDocAssemblyItemRef : IDisposable
     public void ClearExtraRef()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyItemRefMethodClearExtraRef0(handle), "occtsharp_generated_xcafdoc_assembly_item_ref_method_clear_extra_ref_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyItemRefMethodClearExtraRef0(handle), "occtsharp_generated_xcafdoc_assembly_item_ref_method_clear_extra_ref_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_AssemblyItemRef::GetSubshapeIndex.</summary>
     public int GetSubshapeIndex()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyItemRefMethodGetSubshapeIndex0(handle, out int resultValue), "occtsharp_generated_xcafdoc_assembly_item_ref_method_get_subshape_index_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyItemRefMethodGetSubshapeIndex0(handle, out int resultValue), "occtsharp_generated_xcafdoc_assembly_item_ref_method_get_subshape_index_0");
         return resultValue;
     }
 
@@ -3629,7 +3629,7 @@ public sealed class XCAFDocAssemblyItemRef : IDisposable
     public bool HasExtraRef()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyItemRefMethodHasExtraRef0(handle, out int resultValue), "occtsharp_generated_xcafdoc_assembly_item_ref_method_has_extra_ref_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyItemRefMethodHasExtraRef0(handle, out int resultValue), "occtsharp_generated_xcafdoc_assembly_item_ref_method_has_extra_ref_0");
         return resultValue != 0;
     }
 
@@ -3637,7 +3637,7 @@ public sealed class XCAFDocAssemblyItemRef : IDisposable
     public bool IsGUID()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyItemRefMethodIsGUID0(handle, out int resultValue), "occtsharp_generated_xcafdoc_assembly_item_ref_method_is_guid_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyItemRefMethodIsGUID0(handle, out int resultValue), "occtsharp_generated_xcafdoc_assembly_item_ref_method_is_guid_0");
         return resultValue != 0;
     }
 
@@ -3645,7 +3645,7 @@ public sealed class XCAFDocAssemblyItemRef : IDisposable
     public bool IsOrphan()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyItemRefMethodIsOrphan0(handle, out int resultValue), "occtsharp_generated_xcafdoc_assembly_item_ref_method_is_orphan_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyItemRefMethodIsOrphan0(handle, out int resultValue), "occtsharp_generated_xcafdoc_assembly_item_ref_method_is_orphan_0");
         return resultValue != 0;
     }
 
@@ -3653,7 +3653,7 @@ public sealed class XCAFDocAssemblyItemRef : IDisposable
     public bool IsSubshapeIndex()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyItemRefMethodIsSubshapeIndex0(handle, out int resultValue), "occtsharp_generated_xcafdoc_assembly_item_ref_method_is_subshape_index_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyItemRefMethodIsSubshapeIndex0(handle, out int resultValue), "occtsharp_generated_xcafdoc_assembly_item_ref_method_is_subshape_index_0");
         return resultValue != 0;
     }
 
@@ -3661,7 +3661,7 @@ public sealed class XCAFDocAssemblyItemRef : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyItemRefMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_assembly_item_ref_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyItemRefMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_assembly_item_ref_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_assembly_item_ref_method_new_empty_0");
     }
 
@@ -3669,21 +3669,21 @@ public sealed class XCAFDocAssemblyItemRef : IDisposable
     public void Paste(TDFAttribute? theAttrInto, TDFRelocationTable? theRT)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyItemRefMethodPaste0(handle, theAttrInto is null ? nint.Zero : theAttrInto.NativeHandle.DangerousGetHandle(), theRT is null ? nint.Zero : theRT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_assembly_item_ref_method_paste_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyItemRefMethodPaste0(handle, theAttrInto is null ? nint.Zero : theAttrInto.NativeHandle.DangerousGetHandle(), theRT is null ? nint.Zero : theRT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_assembly_item_ref_method_paste_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_AssemblyItemRef::Restore.</summary>
     public void Restore(TDFAttribute? theAttrFrom)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyItemRefMethodRestore0(handle, theAttrFrom is null ? nint.Zero : theAttrFrom.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_assembly_item_ref_method_restore_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyItemRefMethodRestore0(handle, theAttrFrom is null ? nint.Zero : theAttrFrom.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_assembly_item_ref_method_restore_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_AssemblyItemRef::SetSubshapeIndex.</summary>
     public void SetSubshapeIndex(int theShapeIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyItemRefMethodSetSubshapeIndex0(handle, theShapeIndex), "occtsharp_generated_xcafdoc_assembly_item_ref_method_set_subshape_index_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyItemRefMethodSetSubshapeIndex0(handle, theShapeIndex), "occtsharp_generated_xcafdoc_assembly_item_ref_method_set_subshape_index_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -3692,7 +3692,7 @@ public sealed class XCAFDocAssemblyItemRef : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyItemRefGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyItemRefGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3703,7 +3703,7 @@ public sealed class XCAFDocAssemblyItemRef : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyItemRefGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyItemRefGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3713,7 +3713,7 @@ public sealed class XCAFDocAssemblyItemRef : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyItemRefIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyItemRefIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3721,7 +3721,7 @@ public sealed class XCAFDocAssemblyItemRef : IDisposable
     public XCAFDocAssemblyItemRef Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocAssemblyItemRefClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocAssemblyItemRefClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocAssemblyItemRef(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3758,7 +3758,7 @@ public sealed class XCAFDocCentroid : IDisposable
     public XCAFDocCentroid()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocCentroidCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocCentroidCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocCentroidCreate0");
     }
 
@@ -3766,7 +3766,7 @@ public sealed class XCAFDocCentroid : IDisposable
     public Point3d Get()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocCentroidMethodGet0(handle, out Point3dRaw resultValue), "occtsharp_generated_xcafdoc_centroid_method_get_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocCentroidMethodGet0(handle, out Point3dRaw resultValue), "occtsharp_generated_xcafdoc_centroid_method_get_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
@@ -3774,7 +3774,7 @@ public sealed class XCAFDocCentroid : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocCentroidMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_centroid_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocCentroidMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_centroid_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_centroid_method_new_empty_0");
     }
 
@@ -3782,21 +3782,21 @@ public sealed class XCAFDocCentroid : IDisposable
     public void Paste(TDFAttribute? into, TDFRelocationTable? rT)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocCentroidMethodPaste0(handle, into is null ? nint.Zero : into.NativeHandle.DangerousGetHandle(), rT is null ? nint.Zero : rT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_centroid_method_paste_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocCentroidMethodPaste0(handle, into is null ? nint.Zero : into.NativeHandle.DangerousGetHandle(), rT is null ? nint.Zero : rT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_centroid_method_paste_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_Centroid::Restore.</summary>
     public void Restore(TDFAttribute? with)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocCentroidMethodRestore0(handle, with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_centroid_method_restore_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocCentroidMethodRestore0(handle, with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_centroid_method_restore_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_Centroid::Set.</summary>
     public void Set(Point3d pnt)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocCentroidMethodSet0(handle, new Point3dRaw(pnt.X, pnt.Y, pnt.Z)), "occtsharp_generated_xcafdoc_centroid_method_set_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocCentroidMethodSet0(handle, new Point3dRaw(pnt.X, pnt.Y, pnt.Z)), "occtsharp_generated_xcafdoc_centroid_method_set_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -3805,7 +3805,7 @@ public sealed class XCAFDocCentroid : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocCentroidGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocCentroidGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3816,7 +3816,7 @@ public sealed class XCAFDocCentroid : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocCentroidGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocCentroidGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3826,7 +3826,7 @@ public sealed class XCAFDocCentroid : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocCentroidIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocCentroidIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3834,7 +3834,7 @@ public sealed class XCAFDocCentroid : IDisposable
     public XCAFDocCentroid Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocCentroidClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocCentroidClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocCentroid(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3871,7 +3871,7 @@ public sealed class XCAFDocClippingPlaneTool : IDisposable
     public XCAFDocClippingPlaneTool()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocClippingPlaneToolCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocClippingPlaneToolCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocClippingPlaneToolCreate0");
     }
 
@@ -3879,7 +3879,7 @@ public sealed class XCAFDocClippingPlaneTool : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocClippingPlaneToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_clipping_plane_tool_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocClippingPlaneToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_clipping_plane_tool_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_clipping_plane_tool_method_new_empty_0");
     }
 
@@ -3889,7 +3889,7 @@ public sealed class XCAFDocClippingPlaneTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocClippingPlaneToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocClippingPlaneToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3900,7 +3900,7 @@ public sealed class XCAFDocClippingPlaneTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocClippingPlaneToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocClippingPlaneToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3910,7 +3910,7 @@ public sealed class XCAFDocClippingPlaneTool : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocClippingPlaneToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocClippingPlaneToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3918,7 +3918,7 @@ public sealed class XCAFDocClippingPlaneTool : IDisposable
     public XCAFDocClippingPlaneTool Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocClippingPlaneToolClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocClippingPlaneToolClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocClippingPlaneTool(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3955,7 +3955,7 @@ public sealed class XCAFDocColor : IDisposable
     public XCAFDocColor()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocColorCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocColorCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocColorCreate0");
     }
 
@@ -3963,7 +3963,7 @@ public sealed class XCAFDocColor : IDisposable
     public QuantityNameOfColor GetNOC()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocColorMethodGetNOC0(handle, out int resultValue), "occtsharp_generated_xcafdoc_color_method_get_noc_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocColorMethodGetNOC0(handle, out int resultValue), "occtsharp_generated_xcafdoc_color_method_get_noc_0");
         return (QuantityNameOfColor)resultValue;
     }
 
@@ -3971,7 +3971,7 @@ public sealed class XCAFDocColor : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocColorMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_color_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocColorMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_color_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_color_method_new_empty_0");
     }
 
@@ -3979,28 +3979,28 @@ public sealed class XCAFDocColor : IDisposable
     public void Paste(TDFAttribute? into, TDFRelocationTable? rT)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocColorMethodPaste0(handle, into is null ? nint.Zero : into.NativeHandle.DangerousGetHandle(), rT is null ? nint.Zero : rT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_color_method_paste_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocColorMethodPaste0(handle, into is null ? nint.Zero : into.NativeHandle.DangerousGetHandle(), rT is null ? nint.Zero : rT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_color_method_paste_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_Color::Restore.</summary>
     public void Restore(TDFAttribute? with)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocColorMethodRestore0(handle, with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_color_method_restore_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocColorMethodRestore0(handle, with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_color_method_restore_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_Color::Set.</summary>
     public void Set(QuantityNameOfColor c)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocColorMethodSet0(handle, (int)c), "occtsharp_generated_xcafdoc_color_method_set_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocColorMethodSet0(handle, (int)c), "occtsharp_generated_xcafdoc_color_method_set_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_Color::Set.</summary>
     public void Set(double r, double g, double b, double alpha)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocColorMethodSet1(handle, r, g, b, alpha), "occtsharp_generated_xcafdoc_color_method_set_1");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocColorMethodSet1(handle, r, g, b, alpha), "occtsharp_generated_xcafdoc_color_method_set_1");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -4009,7 +4009,7 @@ public sealed class XCAFDocColor : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocColorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocColorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4020,7 +4020,7 @@ public sealed class XCAFDocColor : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocColorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocColorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4030,7 +4030,7 @@ public sealed class XCAFDocColor : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocColorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocColorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4038,7 +4038,7 @@ public sealed class XCAFDocColor : IDisposable
     public XCAFDocColor Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocColorClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocColorClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocColor(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4075,7 +4075,7 @@ public sealed class XCAFDocColorTool : IDisposable
     public XCAFDocColorTool()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocColorToolCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocColorToolCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocColorToolCreate0");
     }
 
@@ -4083,7 +4083,7 @@ public sealed class XCAFDocColorTool : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocColorToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_color_tool_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocColorToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_color_tool_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_color_tool_method_new_empty_0");
     }
 
@@ -4091,7 +4091,7 @@ public sealed class XCAFDocColorTool : IDisposable
     public bool ReverseChainsOfTreeNodes()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocColorToolMethodReverseChainsOfTreeNodes0(handle, out int resultValue), "occtsharp_generated_xcafdoc_color_tool_method_reverse_chains_of_tree_nodes_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocColorToolMethodReverseChainsOfTreeNodes0(handle, out int resultValue), "occtsharp_generated_xcafdoc_color_tool_method_reverse_chains_of_tree_nodes_0");
         return resultValue != 0;
     }
 
@@ -4101,7 +4101,7 @@ public sealed class XCAFDocColorTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocColorToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocColorToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4112,7 +4112,7 @@ public sealed class XCAFDocColorTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocColorToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocColorToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4122,7 +4122,7 @@ public sealed class XCAFDocColorTool : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocColorToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocColorToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4130,7 +4130,7 @@ public sealed class XCAFDocColorTool : IDisposable
     public XCAFDocColorTool Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocColorToolClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocColorToolClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocColorTool(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4167,7 +4167,7 @@ public sealed class XCAFDocDatum : IDisposable
     public XCAFDocDatum()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDatumCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDatumCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocDatumCreate0");
     }
 
@@ -4175,7 +4175,7 @@ public sealed class XCAFDocDatum : IDisposable
     public TCollectionHAsciiString? GetDescription()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDatumMethodGetDescription0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_datum_method_get_description_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDatumMethodGetDescription0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_datum_method_get_description_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdoc_datum_method_get_description_0");
     }
 
@@ -4183,7 +4183,7 @@ public sealed class XCAFDocDatum : IDisposable
     public TCollectionHAsciiString? GetIdentification()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDatumMethodGetIdentification0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_datum_method_get_identification_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDatumMethodGetIdentification0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_datum_method_get_identification_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdoc_datum_method_get_identification_0");
     }
 
@@ -4191,7 +4191,7 @@ public sealed class XCAFDocDatum : IDisposable
     public TCollectionHAsciiString? GetName()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDatumMethodGetName0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_datum_method_get_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDatumMethodGetName0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_datum_method_get_name_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdoc_datum_method_get_name_0");
     }
 
@@ -4199,7 +4199,7 @@ public sealed class XCAFDocDatum : IDisposable
     public XCAFDimTolObjectsDatumObject? GetObject()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDatumMethodGetObject0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_datum_method_get_object_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDatumMethodGetObject0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_datum_method_get_object_0");
         return global::OcctSharp.XCAFDimTolObjectsDatumObject.FromNative(handleValue, "occtsharp_generated_xcafdoc_datum_method_get_object_0");
     }
 
@@ -4207,7 +4207,7 @@ public sealed class XCAFDocDatum : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDatumMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_datum_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDatumMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_datum_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_datum_method_new_empty_0");
     }
 
@@ -4215,28 +4215,28 @@ public sealed class XCAFDocDatum : IDisposable
     public void Paste(TDFAttribute? into, TDFRelocationTable? rT)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDatumMethodPaste0(handle, into is null ? nint.Zero : into.NativeHandle.DangerousGetHandle(), rT is null ? nint.Zero : rT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_datum_method_paste_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDatumMethodPaste0(handle, into is null ? nint.Zero : into.NativeHandle.DangerousGetHandle(), rT is null ? nint.Zero : rT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_datum_method_paste_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_Datum::Restore.</summary>
     public void Restore(TDFAttribute? with)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDatumMethodRestore0(handle, with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_datum_method_restore_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDatumMethodRestore0(handle, with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_datum_method_restore_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_Datum::Set.</summary>
     public void Set(TCollectionHAsciiString? aName, TCollectionHAsciiString? aDescription, TCollectionHAsciiString? anIdentification)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDatumMethodSet0(handle, aName is null ? nint.Zero : aName.NativeHandle.DangerousGetHandle(), aDescription is null ? nint.Zero : aDescription.NativeHandle.DangerousGetHandle(), anIdentification is null ? nint.Zero : anIdentification.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_datum_method_set_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDatumMethodSet0(handle, aName is null ? nint.Zero : aName.NativeHandle.DangerousGetHandle(), aDescription is null ? nint.Zero : aDescription.NativeHandle.DangerousGetHandle(), anIdentification is null ? nint.Zero : anIdentification.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_datum_method_set_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_Datum::SetObject.</summary>
     public void SetObject(XCAFDimTolObjectsDatumObject? theDatumObject)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDatumMethodSetObject0(handle, theDatumObject is null ? nint.Zero : theDatumObject.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_datum_method_set_object_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDatumMethodSetObject0(handle, theDatumObject is null ? nint.Zero : theDatumObject.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_datum_method_set_object_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -4245,7 +4245,7 @@ public sealed class XCAFDocDatum : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDatumGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDatumGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4256,7 +4256,7 @@ public sealed class XCAFDocDatum : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDatumGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDatumGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4266,7 +4266,7 @@ public sealed class XCAFDocDatum : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDatumIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDatumIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4274,7 +4274,7 @@ public sealed class XCAFDocDatum : IDisposable
     public XCAFDocDatum Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDatumClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDatumClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocDatum(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4311,7 +4311,7 @@ public sealed class XCAFDocDimTol : IDisposable
     public XCAFDocDimTol()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimTolCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimTolCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocDimTolCreate0");
     }
 
@@ -4319,7 +4319,7 @@ public sealed class XCAFDocDimTol : IDisposable
     public TCollectionHAsciiString? GetDescription()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimTolMethodGetDescription0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_dim_tol_method_get_description_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimTolMethodGetDescription0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_dim_tol_method_get_description_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdoc_dim_tol_method_get_description_0");
     }
 
@@ -4327,7 +4327,7 @@ public sealed class XCAFDocDimTol : IDisposable
     public int GetKind()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimTolMethodGetKind0(handle, out int resultValue), "occtsharp_generated_xcafdoc_dim_tol_method_get_kind_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimTolMethodGetKind0(handle, out int resultValue), "occtsharp_generated_xcafdoc_dim_tol_method_get_kind_0");
         return resultValue;
     }
 
@@ -4335,7 +4335,7 @@ public sealed class XCAFDocDimTol : IDisposable
     public TCollectionHAsciiString? GetName()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimTolMethodGetName0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_dim_tol_method_get_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimTolMethodGetName0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_dim_tol_method_get_name_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdoc_dim_tol_method_get_name_0");
     }
 
@@ -4343,7 +4343,7 @@ public sealed class XCAFDocDimTol : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimTolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_dim_tol_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimTolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_dim_tol_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_dim_tol_method_new_empty_0");
     }
 
@@ -4351,14 +4351,14 @@ public sealed class XCAFDocDimTol : IDisposable
     public void Paste(TDFAttribute? into, TDFRelocationTable? rT)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimTolMethodPaste0(handle, into is null ? nint.Zero : into.NativeHandle.DangerousGetHandle(), rT is null ? nint.Zero : rT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_dim_tol_method_paste_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimTolMethodPaste0(handle, into is null ? nint.Zero : into.NativeHandle.DangerousGetHandle(), rT is null ? nint.Zero : rT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_dim_tol_method_paste_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_DimTol::Restore.</summary>
     public void Restore(TDFAttribute? with)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimTolMethodRestore0(handle, with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_dim_tol_method_restore_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimTolMethodRestore0(handle, with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_dim_tol_method_restore_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -4367,7 +4367,7 @@ public sealed class XCAFDocDimTol : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimTolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimTolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4378,7 +4378,7 @@ public sealed class XCAFDocDimTol : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimTolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimTolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4388,7 +4388,7 @@ public sealed class XCAFDocDimTol : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimTolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimTolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4396,7 +4396,7 @@ public sealed class XCAFDocDimTol : IDisposable
     public XCAFDocDimTol Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimTolClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimTolClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocDimTol(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4433,7 +4433,7 @@ public sealed class XCAFDocDimTolTool : IDisposable
     public XCAFDocDimTolTool()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimTolToolCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimTolToolCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocDimTolToolCreate0");
     }
 
@@ -4441,7 +4441,7 @@ public sealed class XCAFDocDimTolTool : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimTolToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_dim_tol_tool_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimTolToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_dim_tol_tool_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_dim_tol_tool_method_new_empty_0");
     }
 
@@ -4451,7 +4451,7 @@ public sealed class XCAFDocDimTolTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimTolToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimTolToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4462,7 +4462,7 @@ public sealed class XCAFDocDimTolTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimTolToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimTolToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4472,7 +4472,7 @@ public sealed class XCAFDocDimTolTool : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimTolToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimTolToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4480,7 +4480,7 @@ public sealed class XCAFDocDimTolTool : IDisposable
     public XCAFDocDimTolTool Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimTolToolClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimTolToolClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocDimTolTool(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4517,7 +4517,7 @@ public sealed class XCAFDocDimension : IDisposable
     public XCAFDocDimension()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimensionCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimensionCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocDimensionCreate0");
     }
 
@@ -4525,7 +4525,7 @@ public sealed class XCAFDocDimension : IDisposable
     public XCAFDimTolObjectsDimensionObject? GetObject()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimensionMethodGetObject0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_dimension_method_get_object_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimensionMethodGetObject0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_dimension_method_get_object_0");
         return global::OcctSharp.XCAFDimTolObjectsDimensionObject.FromNative(handleValue, "occtsharp_generated_xcafdoc_dimension_method_get_object_0");
     }
 
@@ -4533,7 +4533,7 @@ public sealed class XCAFDocDimension : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimensionMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_dimension_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimensionMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_dimension_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_dimension_method_new_empty_0");
     }
 
@@ -4541,7 +4541,7 @@ public sealed class XCAFDocDimension : IDisposable
     public void SetObject(XCAFDimTolObjectsDimensionObject? theDimensionObject)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimensionMethodSetObject0(handle, theDimensionObject is null ? nint.Zero : theDimensionObject.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_dimension_method_set_object_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimensionMethodSetObject0(handle, theDimensionObject is null ? nint.Zero : theDimensionObject.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_dimension_method_set_object_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -4550,7 +4550,7 @@ public sealed class XCAFDocDimension : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimensionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimensionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4561,7 +4561,7 @@ public sealed class XCAFDocDimension : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimensionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimensionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4571,7 +4571,7 @@ public sealed class XCAFDocDimension : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimensionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimensionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4579,7 +4579,7 @@ public sealed class XCAFDocDimension : IDisposable
     public XCAFDocDimension Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDimensionClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDimensionClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocDimension(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4616,7 +4616,7 @@ public sealed class XCAFDocDocumentTool : IDisposable
     public XCAFDocDocumentTool()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDocumentToolCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDocumentToolCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocDocumentToolCreate0");
     }
 
@@ -4624,7 +4624,7 @@ public sealed class XCAFDocDocumentTool : IDisposable
     public bool AfterRetrieval(bool forceIt)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDocumentToolMethodAfterRetrieval0(handle, forceIt ? 1 : 0, out int resultValue), "occtsharp_generated_xcafdoc_document_tool_method_after_retrieval_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDocumentToolMethodAfterRetrieval0(handle, forceIt ? 1 : 0, out int resultValue), "occtsharp_generated_xcafdoc_document_tool_method_after_retrieval_0");
         return resultValue != 0;
     }
 
@@ -4632,14 +4632,14 @@ public sealed class XCAFDocDocumentTool : IDisposable
     public void Init()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDocumentToolMethodInit0(handle), "occtsharp_generated_xcafdoc_document_tool_method_init_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDocumentToolMethodInit0(handle), "occtsharp_generated_xcafdoc_document_tool_method_init_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_DocumentTool::NewEmpty.</summary>
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDocumentToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_document_tool_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDocumentToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_document_tool_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_document_tool_method_new_empty_0");
     }
 
@@ -4649,7 +4649,7 @@ public sealed class XCAFDocDocumentTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDocumentToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDocumentToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4660,7 +4660,7 @@ public sealed class XCAFDocDocumentTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDocumentToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDocumentToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4670,7 +4670,7 @@ public sealed class XCAFDocDocumentTool : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDocumentToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDocumentToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4678,7 +4678,7 @@ public sealed class XCAFDocDocumentTool : IDisposable
     public XCAFDocDocumentTool Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocDocumentToolClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocDocumentToolClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocDocumentTool(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4715,7 +4715,7 @@ public sealed class XCAFDocGeomTolerance : IDisposable
     public XCAFDocGeomTolerance()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGeomToleranceCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGeomToleranceCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocGeomToleranceCreate0");
     }
 
@@ -4723,7 +4723,7 @@ public sealed class XCAFDocGeomTolerance : IDisposable
     public XCAFDimTolObjectsGeomToleranceObject? GetObject()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGeomToleranceMethodGetObject0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_geom_tolerance_method_get_object_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGeomToleranceMethodGetObject0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_geom_tolerance_method_get_object_0");
         return global::OcctSharp.XCAFDimTolObjectsGeomToleranceObject.FromNative(handleValue, "occtsharp_generated_xcafdoc_geom_tolerance_method_get_object_0");
     }
 
@@ -4731,7 +4731,7 @@ public sealed class XCAFDocGeomTolerance : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGeomToleranceMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_geom_tolerance_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGeomToleranceMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_geom_tolerance_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_geom_tolerance_method_new_empty_0");
     }
 
@@ -4739,7 +4739,7 @@ public sealed class XCAFDocGeomTolerance : IDisposable
     public void SetObject(XCAFDimTolObjectsGeomToleranceObject? theGeomToleranceObject)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGeomToleranceMethodSetObject0(handle, theGeomToleranceObject is null ? nint.Zero : theGeomToleranceObject.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_geom_tolerance_method_set_object_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGeomToleranceMethodSetObject0(handle, theGeomToleranceObject is null ? nint.Zero : theGeomToleranceObject.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_geom_tolerance_method_set_object_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -4748,7 +4748,7 @@ public sealed class XCAFDocGeomTolerance : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGeomToleranceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGeomToleranceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4759,7 +4759,7 @@ public sealed class XCAFDocGeomTolerance : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGeomToleranceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGeomToleranceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4769,7 +4769,7 @@ public sealed class XCAFDocGeomTolerance : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGeomToleranceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGeomToleranceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4777,7 +4777,7 @@ public sealed class XCAFDocGeomTolerance : IDisposable
     public XCAFDocGeomTolerance Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGeomToleranceClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGeomToleranceClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocGeomTolerance(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4814,7 +4814,7 @@ public sealed class XCAFDocGraphNode : IDisposable
     public XCAFDocGraphNode()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocGraphNodeCreate0");
     }
 
@@ -4822,14 +4822,14 @@ public sealed class XCAFDocGraphNode : IDisposable
     public void BeforeForget()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeMethodBeforeForget0(handle), "occtsharp_generated_xcafdoc_graph_node_method_before_forget_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeMethodBeforeForget0(handle), "occtsharp_generated_xcafdoc_graph_node_method_before_forget_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_GraphNode::ChildIndex.</summary>
     public int ChildIndex(XCAFDocGraphNode? ch)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeMethodChildIndex0(handle, ch is null ? nint.Zero : ch.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_xcafdoc_graph_node_method_child_index_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeMethodChildIndex0(handle, ch is null ? nint.Zero : ch.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_xcafdoc_graph_node_method_child_index_0");
         return resultValue;
     }
 
@@ -4837,7 +4837,7 @@ public sealed class XCAFDocGraphNode : IDisposable
     public int FatherIndex(XCAFDocGraphNode? f)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeMethodFatherIndex0(handle, f is null ? nint.Zero : f.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_xcafdoc_graph_node_method_father_index_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeMethodFatherIndex0(handle, f is null ? nint.Zero : f.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_xcafdoc_graph_node_method_father_index_0");
         return resultValue;
     }
 
@@ -4845,7 +4845,7 @@ public sealed class XCAFDocGraphNode : IDisposable
     public XCAFDocGraphNode? GetChild(int chindex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeMethodGetChild0(handle, chindex, out nint handleValue), "occtsharp_generated_xcafdoc_graph_node_method_get_child_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeMethodGetChild0(handle, chindex, out nint handleValue), "occtsharp_generated_xcafdoc_graph_node_method_get_child_0");
         return global::OcctSharp.XCAFDocGraphNode.FromNative(handleValue, "occtsharp_generated_xcafdoc_graph_node_method_get_child_0");
     }
 
@@ -4853,7 +4853,7 @@ public sealed class XCAFDocGraphNode : IDisposable
     public XCAFDocGraphNode? GetFather(int findex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeMethodGetFather0(handle, findex, out nint handleValue), "occtsharp_generated_xcafdoc_graph_node_method_get_father_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeMethodGetFather0(handle, findex, out nint handleValue), "occtsharp_generated_xcafdoc_graph_node_method_get_father_0");
         return global::OcctSharp.XCAFDocGraphNode.FromNative(handleValue, "occtsharp_generated_xcafdoc_graph_node_method_get_father_0");
     }
 
@@ -4861,7 +4861,7 @@ public sealed class XCAFDocGraphNode : IDisposable
     public bool IsChild(XCAFDocGraphNode? f)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeMethodIsChild0(handle, f is null ? nint.Zero : f.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_xcafdoc_graph_node_method_is_child_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeMethodIsChild0(handle, f is null ? nint.Zero : f.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_xcafdoc_graph_node_method_is_child_0");
         return resultValue != 0;
     }
 
@@ -4869,7 +4869,7 @@ public sealed class XCAFDocGraphNode : IDisposable
     public bool IsFather(XCAFDocGraphNode? ch)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeMethodIsFather0(handle, ch is null ? nint.Zero : ch.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_xcafdoc_graph_node_method_is_father_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeMethodIsFather0(handle, ch is null ? nint.Zero : ch.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_xcafdoc_graph_node_method_is_father_0");
         return resultValue != 0;
     }
 
@@ -4877,7 +4877,7 @@ public sealed class XCAFDocGraphNode : IDisposable
     public int NbChildren()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeMethodNbChildren0(handle, out int resultValue), "occtsharp_generated_xcafdoc_graph_node_method_nb_children_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeMethodNbChildren0(handle, out int resultValue), "occtsharp_generated_xcafdoc_graph_node_method_nb_children_0");
         return resultValue;
     }
 
@@ -4885,7 +4885,7 @@ public sealed class XCAFDocGraphNode : IDisposable
     public int NbFathers()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeMethodNbFathers0(handle, out int resultValue), "occtsharp_generated_xcafdoc_graph_node_method_nb_fathers_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeMethodNbFathers0(handle, out int resultValue), "occtsharp_generated_xcafdoc_graph_node_method_nb_fathers_0");
         return resultValue;
     }
 
@@ -4893,7 +4893,7 @@ public sealed class XCAFDocGraphNode : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_graph_node_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_graph_node_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_graph_node_method_new_empty_0");
     }
 
@@ -4901,28 +4901,28 @@ public sealed class XCAFDocGraphNode : IDisposable
     public void Paste(TDFAttribute? into, TDFRelocationTable? rT)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeMethodPaste0(handle, into is null ? nint.Zero : into.NativeHandle.DangerousGetHandle(), rT is null ? nint.Zero : rT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_graph_node_method_paste_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeMethodPaste0(handle, into is null ? nint.Zero : into.NativeHandle.DangerousGetHandle(), rT is null ? nint.Zero : rT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_graph_node_method_paste_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_GraphNode::References.</summary>
     public void References(TDFDataSet? aDataSet)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeMethodReferences0(handle, aDataSet is null ? nint.Zero : aDataSet.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_graph_node_method_references_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeMethodReferences0(handle, aDataSet is null ? nint.Zero : aDataSet.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_graph_node_method_references_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_GraphNode::Restore.</summary>
     public void Restore(TDFAttribute? with)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeMethodRestore0(handle, with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_graph_node_method_restore_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeMethodRestore0(handle, with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_graph_node_method_restore_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_GraphNode::SetChild.</summary>
     public int SetChild(XCAFDocGraphNode? ch)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeMethodSetChild0(handle, ch is null ? nint.Zero : ch.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_xcafdoc_graph_node_method_set_child_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeMethodSetChild0(handle, ch is null ? nint.Zero : ch.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_xcafdoc_graph_node_method_set_child_0");
         return resultValue;
     }
 
@@ -4930,7 +4930,7 @@ public sealed class XCAFDocGraphNode : IDisposable
     public int SetFather(XCAFDocGraphNode? f)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeMethodSetFather0(handle, f is null ? nint.Zero : f.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_xcafdoc_graph_node_method_set_father_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeMethodSetFather0(handle, f is null ? nint.Zero : f.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_xcafdoc_graph_node_method_set_father_0");
         return resultValue;
     }
 
@@ -4938,28 +4938,28 @@ public sealed class XCAFDocGraphNode : IDisposable
     public void UnSetChild(int chindex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeMethodUnSetChild0(handle, chindex), "occtsharp_generated_xcafdoc_graph_node_method_un_set_child_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeMethodUnSetChild0(handle, chindex), "occtsharp_generated_xcafdoc_graph_node_method_un_set_child_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_GraphNode::UnSetChild.</summary>
     public void UnSetChild(XCAFDocGraphNode? ch)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeMethodUnSetChild1(handle, ch is null ? nint.Zero : ch.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_graph_node_method_un_set_child_1");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeMethodUnSetChild1(handle, ch is null ? nint.Zero : ch.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_graph_node_method_un_set_child_1");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_GraphNode::UnSetFather.</summary>
     public void UnSetFather(int findex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeMethodUnSetFather0(handle, findex), "occtsharp_generated_xcafdoc_graph_node_method_un_set_father_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeMethodUnSetFather0(handle, findex), "occtsharp_generated_xcafdoc_graph_node_method_un_set_father_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_GraphNode::UnSetFather.</summary>
     public void UnSetFather(XCAFDocGraphNode? f)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeMethodUnSetFather1(handle, f is null ? nint.Zero : f.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_graph_node_method_un_set_father_1");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeMethodUnSetFather1(handle, f is null ? nint.Zero : f.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_graph_node_method_un_set_father_1");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -4968,7 +4968,7 @@ public sealed class XCAFDocGraphNode : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4979,7 +4979,7 @@ public sealed class XCAFDocGraphNode : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4989,7 +4989,7 @@ public sealed class XCAFDocGraphNode : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4997,7 +4997,7 @@ public sealed class XCAFDocGraphNode : IDisposable
     public XCAFDocGraphNode Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocGraphNodeClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocGraphNodeClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocGraphNode(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -5034,7 +5034,7 @@ public sealed class XCAFDocLayerTool : IDisposable
     public XCAFDocLayerTool()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLayerToolCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLayerToolCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocLayerToolCreate0");
     }
 
@@ -5042,7 +5042,7 @@ public sealed class XCAFDocLayerTool : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLayerToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_layer_tool_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLayerToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_layer_tool_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_layer_tool_method_new_empty_0");
     }
 
@@ -5052,7 +5052,7 @@ public sealed class XCAFDocLayerTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLayerToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLayerToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -5063,7 +5063,7 @@ public sealed class XCAFDocLayerTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLayerToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLayerToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -5073,7 +5073,7 @@ public sealed class XCAFDocLayerTool : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLayerToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLayerToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -5081,7 +5081,7 @@ public sealed class XCAFDocLayerTool : IDisposable
     public XCAFDocLayerTool Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLayerToolClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLayerToolClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocLayerTool(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -5118,7 +5118,7 @@ public sealed class XCAFDocLengthUnit : IDisposable
     public XCAFDocLengthUnit()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLengthUnitCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLengthUnitCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocLengthUnitCreate0");
     }
 
@@ -5126,7 +5126,7 @@ public sealed class XCAFDocLengthUnit : IDisposable
     public double GetUnitValue()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLengthUnitMethodGetUnitValue0(handle, out double resultValue), "occtsharp_generated_xcafdoc_length_unit_method_get_unit_value_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLengthUnitMethodGetUnitValue0(handle, out double resultValue), "occtsharp_generated_xcafdoc_length_unit_method_get_unit_value_0");
         return resultValue;
     }
 
@@ -5134,7 +5134,7 @@ public sealed class XCAFDocLengthUnit : IDisposable
     public bool IsEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLengthUnitMethodIsEmpty0(handle, out int resultValue), "occtsharp_generated_xcafdoc_length_unit_method_is_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLengthUnitMethodIsEmpty0(handle, out int resultValue), "occtsharp_generated_xcafdoc_length_unit_method_is_empty_0");
         return resultValue != 0;
     }
 
@@ -5142,7 +5142,7 @@ public sealed class XCAFDocLengthUnit : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLengthUnitMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_length_unit_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLengthUnitMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_length_unit_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_length_unit_method_new_empty_0");
     }
 
@@ -5150,14 +5150,14 @@ public sealed class XCAFDocLengthUnit : IDisposable
     public void Paste(TDFAttribute? theInto, TDFRelocationTable? theRT)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLengthUnitMethodPaste0(handle, theInto is null ? nint.Zero : theInto.NativeHandle.DangerousGetHandle(), theRT is null ? nint.Zero : theRT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_length_unit_method_paste_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLengthUnitMethodPaste0(handle, theInto is null ? nint.Zero : theInto.NativeHandle.DangerousGetHandle(), theRT is null ? nint.Zero : theRT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_length_unit_method_paste_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_LengthUnit::Restore.</summary>
     public void Restore(TDFAttribute? theWith)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLengthUnitMethodRestore0(handle, theWith is null ? nint.Zero : theWith.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_length_unit_method_restore_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLengthUnitMethodRestore0(handle, theWith is null ? nint.Zero : theWith.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_length_unit_method_restore_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -5166,7 +5166,7 @@ public sealed class XCAFDocLengthUnit : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLengthUnitGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLengthUnitGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -5177,7 +5177,7 @@ public sealed class XCAFDocLengthUnit : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLengthUnitGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLengthUnitGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -5187,7 +5187,7 @@ public sealed class XCAFDocLengthUnit : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLengthUnitIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLengthUnitIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -5195,7 +5195,7 @@ public sealed class XCAFDocLengthUnit : IDisposable
     public XCAFDocLengthUnit Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLengthUnitClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLengthUnitClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocLengthUnit(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -5232,7 +5232,7 @@ public sealed class XCAFDocLocation : IDisposable
     public XCAFDocLocation()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLocationCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLocationCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocLocationCreate0");
     }
 
@@ -5240,7 +5240,7 @@ public sealed class XCAFDocLocation : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLocationMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_location_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLocationMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_location_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_location_method_new_empty_0");
     }
 
@@ -5248,14 +5248,14 @@ public sealed class XCAFDocLocation : IDisposable
     public void Paste(TDFAttribute? into, TDFRelocationTable? rT)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLocationMethodPaste0(handle, into is null ? nint.Zero : into.NativeHandle.DangerousGetHandle(), rT is null ? nint.Zero : rT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_location_method_paste_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLocationMethodPaste0(handle, into is null ? nint.Zero : into.NativeHandle.DangerousGetHandle(), rT is null ? nint.Zero : rT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_location_method_paste_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_Location::Restore.</summary>
     public void Restore(TDFAttribute? with)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLocationMethodRestore0(handle, with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_location_method_restore_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLocationMethodRestore0(handle, with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_location_method_restore_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -5264,7 +5264,7 @@ public sealed class XCAFDocLocation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLocationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLocationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -5275,7 +5275,7 @@ public sealed class XCAFDocLocation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLocationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLocationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -5285,7 +5285,7 @@ public sealed class XCAFDocLocation : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLocationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLocationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -5293,7 +5293,7 @@ public sealed class XCAFDocLocation : IDisposable
     public XCAFDocLocation Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocLocationClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocLocationClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocLocation(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -5330,7 +5330,7 @@ public sealed class XCAFDocMaterial : IDisposable
     public XCAFDocMaterial()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocMaterialCreate0");
     }
 
@@ -5338,7 +5338,7 @@ public sealed class XCAFDocMaterial : IDisposable
     public TCollectionHAsciiString? GetDensName()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialMethodGetDensName0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_material_method_get_dens_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialMethodGetDensName0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_material_method_get_dens_name_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdoc_material_method_get_dens_name_0");
     }
 
@@ -5346,7 +5346,7 @@ public sealed class XCAFDocMaterial : IDisposable
     public TCollectionHAsciiString? GetDensValType()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialMethodGetDensValType0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_material_method_get_dens_val_type_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialMethodGetDensValType0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_material_method_get_dens_val_type_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdoc_material_method_get_dens_val_type_0");
     }
 
@@ -5354,7 +5354,7 @@ public sealed class XCAFDocMaterial : IDisposable
     public double GetDensity()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialMethodGetDensity0(handle, out double resultValue), "occtsharp_generated_xcafdoc_material_method_get_density_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialMethodGetDensity0(handle, out double resultValue), "occtsharp_generated_xcafdoc_material_method_get_density_0");
         return resultValue;
     }
 
@@ -5362,7 +5362,7 @@ public sealed class XCAFDocMaterial : IDisposable
     public TCollectionHAsciiString? GetDescription()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialMethodGetDescription0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_material_method_get_description_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialMethodGetDescription0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_material_method_get_description_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdoc_material_method_get_description_0");
     }
 
@@ -5370,7 +5370,7 @@ public sealed class XCAFDocMaterial : IDisposable
     public TCollectionHAsciiString? GetName()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialMethodGetName0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_material_method_get_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialMethodGetName0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_material_method_get_name_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafdoc_material_method_get_name_0");
     }
 
@@ -5378,7 +5378,7 @@ public sealed class XCAFDocMaterial : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_material_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_material_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_material_method_new_empty_0");
     }
 
@@ -5386,21 +5386,21 @@ public sealed class XCAFDocMaterial : IDisposable
     public void Paste(TDFAttribute? into, TDFRelocationTable? rT)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialMethodPaste0(handle, into is null ? nint.Zero : into.NativeHandle.DangerousGetHandle(), rT is null ? nint.Zero : rT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_material_method_paste_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialMethodPaste0(handle, into is null ? nint.Zero : into.NativeHandle.DangerousGetHandle(), rT is null ? nint.Zero : rT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_material_method_paste_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_Material::Restore.</summary>
     public void Restore(TDFAttribute? with)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialMethodRestore0(handle, with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_material_method_restore_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialMethodRestore0(handle, with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_material_method_restore_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_Material::Set.</summary>
     public void Set(TCollectionHAsciiString? aName, TCollectionHAsciiString? aDescription, double aDensity, TCollectionHAsciiString? aDensName, TCollectionHAsciiString? aDensValType)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialMethodSet0(handle, aName is null ? nint.Zero : aName.NativeHandle.DangerousGetHandle(), aDescription is null ? nint.Zero : aDescription.NativeHandle.DangerousGetHandle(), aDensity, aDensName is null ? nint.Zero : aDensName.NativeHandle.DangerousGetHandle(), aDensValType is null ? nint.Zero : aDensValType.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_material_method_set_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialMethodSet0(handle, aName is null ? nint.Zero : aName.NativeHandle.DangerousGetHandle(), aDescription is null ? nint.Zero : aDescription.NativeHandle.DangerousGetHandle(), aDensity, aDensName is null ? nint.Zero : aDensName.NativeHandle.DangerousGetHandle(), aDensValType is null ? nint.Zero : aDensValType.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_material_method_set_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -5409,7 +5409,7 @@ public sealed class XCAFDocMaterial : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -5420,7 +5420,7 @@ public sealed class XCAFDocMaterial : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -5430,7 +5430,7 @@ public sealed class XCAFDocMaterial : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -5438,7 +5438,7 @@ public sealed class XCAFDocMaterial : IDisposable
     public XCAFDocMaterial Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocMaterial(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -5475,7 +5475,7 @@ public sealed class XCAFDocMaterialTool : IDisposable
     public XCAFDocMaterialTool()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialToolCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialToolCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocMaterialToolCreate0");
     }
 
@@ -5483,7 +5483,7 @@ public sealed class XCAFDocMaterialTool : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_material_tool_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_material_tool_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_material_tool_method_new_empty_0");
     }
 
@@ -5493,7 +5493,7 @@ public sealed class XCAFDocMaterialTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -5504,7 +5504,7 @@ public sealed class XCAFDocMaterialTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -5514,7 +5514,7 @@ public sealed class XCAFDocMaterialTool : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -5522,7 +5522,7 @@ public sealed class XCAFDocMaterialTool : IDisposable
     public XCAFDocMaterialTool Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocMaterialToolClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocMaterialToolClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocMaterialTool(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -5559,7 +5559,7 @@ public sealed class XCAFDocNote : IDisposable
     public XCAFNoteObjectsNoteObject? GetObject()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteMethodGetObject0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_note_method_get_object_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteMethodGetObject0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_note_method_get_object_0");
         return global::OcctSharp.XCAFNoteObjectsNoteObject.FromNative(handleValue, "occtsharp_generated_xcafdoc_note_method_get_object_0");
     }
 
@@ -5567,7 +5567,7 @@ public sealed class XCAFDocNote : IDisposable
     public bool IsOrphan()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteMethodIsOrphan0(handle, out int resultValue), "occtsharp_generated_xcafdoc_note_method_is_orphan_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteMethodIsOrphan0(handle, out int resultValue), "occtsharp_generated_xcafdoc_note_method_is_orphan_0");
         return resultValue != 0;
     }
 
@@ -5575,21 +5575,21 @@ public sealed class XCAFDocNote : IDisposable
     public void Paste(TDFAttribute? theAttrInto, TDFRelocationTable? theRT)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteMethodPaste0(handle, theAttrInto is null ? nint.Zero : theAttrInto.NativeHandle.DangerousGetHandle(), theRT is null ? nint.Zero : theRT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_note_method_paste_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteMethodPaste0(handle, theAttrInto is null ? nint.Zero : theAttrInto.NativeHandle.DangerousGetHandle(), theRT is null ? nint.Zero : theRT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_note_method_paste_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_Note::Restore.</summary>
     public void Restore(TDFAttribute? theAttrFrom)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteMethodRestore0(handle, theAttrFrom is null ? nint.Zero : theAttrFrom.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_note_method_restore_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteMethodRestore0(handle, theAttrFrom is null ? nint.Zero : theAttrFrom.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_note_method_restore_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_Note::SetObject.</summary>
     public void SetObject(XCAFNoteObjectsNoteObject? theObject)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteMethodSetObject0(handle, theObject is null ? nint.Zero : theObject.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_note_method_set_object_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteMethodSetObject0(handle, theObject is null ? nint.Zero : theObject.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_note_method_set_object_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -5598,7 +5598,7 @@ public sealed class XCAFDocNote : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -5609,7 +5609,7 @@ public sealed class XCAFDocNote : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -5619,7 +5619,7 @@ public sealed class XCAFDocNote : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -5627,7 +5627,7 @@ public sealed class XCAFDocNote : IDisposable
     public XCAFDocNote Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocNote(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -5664,7 +5664,7 @@ public sealed class XCAFDocNoteBalloon : IDisposable
     public XCAFDocNoteBalloon()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteBalloonCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteBalloonCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocNoteBalloonCreate0");
     }
 
@@ -5672,7 +5672,7 @@ public sealed class XCAFDocNoteBalloon : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteBalloonMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_note_balloon_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteBalloonMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_note_balloon_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_note_balloon_method_new_empty_0");
     }
 
@@ -5682,7 +5682,7 @@ public sealed class XCAFDocNoteBalloon : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteBalloonGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteBalloonGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -5693,7 +5693,7 @@ public sealed class XCAFDocNoteBalloon : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteBalloonGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteBalloonGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -5703,7 +5703,7 @@ public sealed class XCAFDocNoteBalloon : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteBalloonIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteBalloonIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -5711,7 +5711,7 @@ public sealed class XCAFDocNoteBalloon : IDisposable
     public XCAFDocNoteBalloon Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteBalloonClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteBalloonClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocNoteBalloon(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -5748,7 +5748,7 @@ public sealed class XCAFDocNoteBinData : IDisposable
     public XCAFDocNoteBinData()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteBinDataCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteBinDataCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocNoteBinDataCreate0");
     }
 
@@ -5756,7 +5756,7 @@ public sealed class XCAFDocNoteBinData : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteBinDataMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_note_bin_data_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteBinDataMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_note_bin_data_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_note_bin_data_method_new_empty_0");
     }
 
@@ -5764,21 +5764,21 @@ public sealed class XCAFDocNoteBinData : IDisposable
     public void Paste(TDFAttribute? theAttrInto, TDFRelocationTable? theRT)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteBinDataMethodPaste0(handle, theAttrInto is null ? nint.Zero : theAttrInto.NativeHandle.DangerousGetHandle(), theRT is null ? nint.Zero : theRT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_note_bin_data_method_paste_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteBinDataMethodPaste0(handle, theAttrInto is null ? nint.Zero : theAttrInto.NativeHandle.DangerousGetHandle(), theRT is null ? nint.Zero : theRT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_note_bin_data_method_paste_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_NoteBinData::Restore.</summary>
     public void Restore(TDFAttribute? theAttrFrom)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteBinDataMethodRestore0(handle, theAttrFrom is null ? nint.Zero : theAttrFrom.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_note_bin_data_method_restore_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteBinDataMethodRestore0(handle, theAttrFrom is null ? nint.Zero : theAttrFrom.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_note_bin_data_method_restore_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_NoteBinData::Size.</summary>
     public int Size()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteBinDataMethodSize0(handle, out int resultValue), "occtsharp_generated_xcafdoc_note_bin_data_method_size_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteBinDataMethodSize0(handle, out int resultValue), "occtsharp_generated_xcafdoc_note_bin_data_method_size_0");
         return resultValue;
     }
 
@@ -5788,7 +5788,7 @@ public sealed class XCAFDocNoteBinData : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteBinDataGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteBinDataGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -5799,7 +5799,7 @@ public sealed class XCAFDocNoteBinData : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteBinDataGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteBinDataGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -5809,7 +5809,7 @@ public sealed class XCAFDocNoteBinData : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteBinDataIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteBinDataIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -5817,7 +5817,7 @@ public sealed class XCAFDocNoteBinData : IDisposable
     public XCAFDocNoteBinData Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteBinDataClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteBinDataClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocNoteBinData(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -5854,7 +5854,7 @@ public sealed class XCAFDocNoteComment : IDisposable
     public XCAFDocNoteComment()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteCommentCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteCommentCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocNoteCommentCreate0");
     }
 
@@ -5862,7 +5862,7 @@ public sealed class XCAFDocNoteComment : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteCommentMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_note_comment_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteCommentMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_note_comment_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_note_comment_method_new_empty_0");
     }
 
@@ -5870,14 +5870,14 @@ public sealed class XCAFDocNoteComment : IDisposable
     public void Paste(TDFAttribute? theAttrInto, TDFRelocationTable? theRT)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteCommentMethodPaste0(handle, theAttrInto is null ? nint.Zero : theAttrInto.NativeHandle.DangerousGetHandle(), theRT is null ? nint.Zero : theRT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_note_comment_method_paste_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteCommentMethodPaste0(handle, theAttrInto is null ? nint.Zero : theAttrInto.NativeHandle.DangerousGetHandle(), theRT is null ? nint.Zero : theRT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_note_comment_method_paste_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_NoteComment::Restore.</summary>
     public void Restore(TDFAttribute? theAttrFrom)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteCommentMethodRestore0(handle, theAttrFrom is null ? nint.Zero : theAttrFrom.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_note_comment_method_restore_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteCommentMethodRestore0(handle, theAttrFrom is null ? nint.Zero : theAttrFrom.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_note_comment_method_restore_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -5886,7 +5886,7 @@ public sealed class XCAFDocNoteComment : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteCommentGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteCommentGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -5897,7 +5897,7 @@ public sealed class XCAFDocNoteComment : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteCommentGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteCommentGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -5907,7 +5907,7 @@ public sealed class XCAFDocNoteComment : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteCommentIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteCommentIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -5915,7 +5915,7 @@ public sealed class XCAFDocNoteComment : IDisposable
     public XCAFDocNoteComment Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNoteCommentClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNoteCommentClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocNoteComment(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -5952,7 +5952,7 @@ public sealed class XCAFDocNotesTool : IDisposable
     public XCAFDocNotesTool()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNotesToolCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNotesToolCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocNotesToolCreate0");
     }
 
@@ -5960,7 +5960,7 @@ public sealed class XCAFDocNotesTool : IDisposable
     public int DeleteAllNotes()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNotesToolMethodDeleteAllNotes0(handle, out int resultValue), "occtsharp_generated_xcafdoc_notes_tool_method_delete_all_notes_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNotesToolMethodDeleteAllNotes0(handle, out int resultValue), "occtsharp_generated_xcafdoc_notes_tool_method_delete_all_notes_0");
         return resultValue;
     }
 
@@ -5968,7 +5968,7 @@ public sealed class XCAFDocNotesTool : IDisposable
     public int DeleteOrphanNotes()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNotesToolMethodDeleteOrphanNotes0(handle, out int resultValue), "occtsharp_generated_xcafdoc_notes_tool_method_delete_orphan_notes_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNotesToolMethodDeleteOrphanNotes0(handle, out int resultValue), "occtsharp_generated_xcafdoc_notes_tool_method_delete_orphan_notes_0");
         return resultValue;
     }
 
@@ -5976,7 +5976,7 @@ public sealed class XCAFDocNotesTool : IDisposable
     public int NbAnnotatedItems()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNotesToolMethodNbAnnotatedItems0(handle, out int resultValue), "occtsharp_generated_xcafdoc_notes_tool_method_nb_annotated_items_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNotesToolMethodNbAnnotatedItems0(handle, out int resultValue), "occtsharp_generated_xcafdoc_notes_tool_method_nb_annotated_items_0");
         return resultValue;
     }
 
@@ -5984,7 +5984,7 @@ public sealed class XCAFDocNotesTool : IDisposable
     public int NbNotes()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNotesToolMethodNbNotes0(handle, out int resultValue), "occtsharp_generated_xcafdoc_notes_tool_method_nb_notes_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNotesToolMethodNbNotes0(handle, out int resultValue), "occtsharp_generated_xcafdoc_notes_tool_method_nb_notes_0");
         return resultValue;
     }
 
@@ -5992,7 +5992,7 @@ public sealed class XCAFDocNotesTool : IDisposable
     public int NbOrphanNotes()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNotesToolMethodNbOrphanNotes0(handle, out int resultValue), "occtsharp_generated_xcafdoc_notes_tool_method_nb_orphan_notes_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNotesToolMethodNbOrphanNotes0(handle, out int resultValue), "occtsharp_generated_xcafdoc_notes_tool_method_nb_orphan_notes_0");
         return resultValue;
     }
 
@@ -6000,7 +6000,7 @@ public sealed class XCAFDocNotesTool : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNotesToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_notes_tool_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNotesToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_notes_tool_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_notes_tool_method_new_empty_0");
     }
 
@@ -6010,7 +6010,7 @@ public sealed class XCAFDocNotesTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNotesToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNotesToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -6021,7 +6021,7 @@ public sealed class XCAFDocNotesTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNotesToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNotesToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -6031,7 +6031,7 @@ public sealed class XCAFDocNotesTool : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNotesToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNotesToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -6039,7 +6039,7 @@ public sealed class XCAFDocNotesTool : IDisposable
     public XCAFDocNotesTool Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocNotesToolClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocNotesToolClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocNotesTool(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -6076,7 +6076,7 @@ public sealed class XCAFDocShapeMapTool : IDisposable
     public XCAFDocShapeMapTool()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocShapeMapToolCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocShapeMapToolCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocShapeMapToolCreate0");
     }
 
@@ -6084,7 +6084,7 @@ public sealed class XCAFDocShapeMapTool : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocShapeMapToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_shape_map_tool_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocShapeMapToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_shape_map_tool_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_shape_map_tool_method_new_empty_0");
     }
 
@@ -6092,14 +6092,14 @@ public sealed class XCAFDocShapeMapTool : IDisposable
     public void Paste(TDFAttribute? into, TDFRelocationTable? rT)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocShapeMapToolMethodPaste0(handle, into is null ? nint.Zero : into.NativeHandle.DangerousGetHandle(), rT is null ? nint.Zero : rT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_shape_map_tool_method_paste_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocShapeMapToolMethodPaste0(handle, into is null ? nint.Zero : into.NativeHandle.DangerousGetHandle(), rT is null ? nint.Zero : rT.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_shape_map_tool_method_paste_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_ShapeMapTool::Restore.</summary>
     public void Restore(TDFAttribute? with)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocShapeMapToolMethodRestore0(handle, with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_shape_map_tool_method_restore_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocShapeMapToolMethodRestore0(handle, with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_shape_map_tool_method_restore_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -6108,7 +6108,7 @@ public sealed class XCAFDocShapeMapTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocShapeMapToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocShapeMapToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -6119,7 +6119,7 @@ public sealed class XCAFDocShapeMapTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocShapeMapToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocShapeMapToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -6129,7 +6129,7 @@ public sealed class XCAFDocShapeMapTool : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocShapeMapToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocShapeMapToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -6137,7 +6137,7 @@ public sealed class XCAFDocShapeMapTool : IDisposable
     public XCAFDocShapeMapTool Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocShapeMapToolClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocShapeMapToolClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocShapeMapTool(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -6174,7 +6174,7 @@ public sealed class XCAFDocShapeTool : IDisposable
     public XCAFDocShapeTool()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocShapeToolCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocShapeToolCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocShapeToolCreate0");
     }
 
@@ -6182,21 +6182,21 @@ public sealed class XCAFDocShapeTool : IDisposable
     public void ComputeSimpleShapes()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocShapeToolMethodComputeSimpleShapes0(handle), "occtsharp_generated_xcafdoc_shape_tool_method_compute_simple_shapes_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocShapeToolMethodComputeSimpleShapes0(handle), "occtsharp_generated_xcafdoc_shape_tool_method_compute_simple_shapes_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_ShapeTool::Init.</summary>
     public void Init()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocShapeToolMethodInit0(handle), "occtsharp_generated_xcafdoc_shape_tool_method_init_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocShapeToolMethodInit0(handle), "occtsharp_generated_xcafdoc_shape_tool_method_init_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_ShapeTool::NewEmpty.</summary>
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocShapeToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_shape_tool_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocShapeToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_shape_tool_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_shape_tool_method_new_empty_0");
     }
 
@@ -6204,7 +6204,7 @@ public sealed class XCAFDocShapeTool : IDisposable
     public void UpdateAssemblies()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocShapeToolMethodUpdateAssemblies0(handle), "occtsharp_generated_xcafdoc_shape_tool_method_update_assemblies_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocShapeToolMethodUpdateAssemblies0(handle), "occtsharp_generated_xcafdoc_shape_tool_method_update_assemblies_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -6213,7 +6213,7 @@ public sealed class XCAFDocShapeTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocShapeToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocShapeToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -6224,7 +6224,7 @@ public sealed class XCAFDocShapeTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocShapeToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocShapeToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -6234,7 +6234,7 @@ public sealed class XCAFDocShapeTool : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocShapeToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocShapeToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -6242,7 +6242,7 @@ public sealed class XCAFDocShapeTool : IDisposable
     public XCAFDocShapeTool Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocShapeToolClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocShapeToolClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocShapeTool(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -6279,7 +6279,7 @@ public sealed class XCAFDocView : IDisposable
     public XCAFDocView()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocViewCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocViewCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocViewCreate0");
     }
 
@@ -6287,7 +6287,7 @@ public sealed class XCAFDocView : IDisposable
     public XCAFViewObject? GetObject()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocViewMethodGetObject0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_view_method_get_object_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocViewMethodGetObject0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_view_method_get_object_0");
         return global::OcctSharp.XCAFViewObject.FromNative(handleValue, "occtsharp_generated_xcafdoc_view_method_get_object_0");
     }
 
@@ -6295,7 +6295,7 @@ public sealed class XCAFDocView : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocViewMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_view_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocViewMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_view_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_view_method_new_empty_0");
     }
 
@@ -6303,7 +6303,7 @@ public sealed class XCAFDocView : IDisposable
     public void SetObject(XCAFViewObject? theViewObject)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocViewMethodSetObject0(handle, theViewObject is null ? nint.Zero : theViewObject.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_view_method_set_object_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocViewMethodSetObject0(handle, theViewObject is null ? nint.Zero : theViewObject.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_view_method_set_object_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -6312,7 +6312,7 @@ public sealed class XCAFDocView : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocViewGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocViewGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -6323,7 +6323,7 @@ public sealed class XCAFDocView : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocViewGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocViewGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -6333,7 +6333,7 @@ public sealed class XCAFDocView : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocViewIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocViewIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -6341,7 +6341,7 @@ public sealed class XCAFDocView : IDisposable
     public XCAFDocView Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocViewClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocViewClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocView(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -6378,7 +6378,7 @@ public sealed class XCAFDocViewTool : IDisposable
     public XCAFDocViewTool()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocViewToolCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocViewToolCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocViewToolCreate0");
     }
 
@@ -6386,7 +6386,7 @@ public sealed class XCAFDocViewTool : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocViewToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_view_tool_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocViewToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_view_tool_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_view_tool_method_new_empty_0");
     }
 
@@ -6396,7 +6396,7 @@ public sealed class XCAFDocViewTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocViewToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocViewToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -6407,7 +6407,7 @@ public sealed class XCAFDocViewTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocViewToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocViewToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -6417,7 +6417,7 @@ public sealed class XCAFDocViewTool : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocViewToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocViewToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -6425,7 +6425,7 @@ public sealed class XCAFDocViewTool : IDisposable
     public XCAFDocViewTool Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocViewToolClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocViewToolClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocViewTool(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -6462,7 +6462,7 @@ public sealed class XCAFDocVisMaterial : IDisposable
     public XCAFDocVisMaterial()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocVisMaterialCreate0");
     }
 
@@ -6470,7 +6470,7 @@ public sealed class XCAFDocVisMaterial : IDisposable
     public Graphic3dAlphaMode AlphaMode()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialMethodAlphaMode0(handle, out int resultValue), "occtsharp_generated_xcafdoc_vis_material_method_alpha_mode_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialMethodAlphaMode0(handle, out int resultValue), "occtsharp_generated_xcafdoc_vis_material_method_alpha_mode_0");
         return (Graphic3dAlphaMode)resultValue;
     }
 
@@ -6478,7 +6478,7 @@ public sealed class XCAFDocVisMaterial : IDisposable
     public Graphic3dTypeOfBackfacingModel FaceCulling()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialMethodFaceCulling0(handle, out int resultValue), "occtsharp_generated_xcafdoc_vis_material_method_face_culling_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialMethodFaceCulling0(handle, out int resultValue), "occtsharp_generated_xcafdoc_vis_material_method_face_culling_0");
         return (Graphic3dTypeOfBackfacingModel)resultValue;
     }
 
@@ -6486,14 +6486,14 @@ public sealed class XCAFDocVisMaterial : IDisposable
     public void FillAspect(Graphic3dAspects? theAspect)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialMethodFillAspect0(handle, theAspect is null ? nint.Zero : theAspect.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_vis_material_method_fill_aspect_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialMethodFillAspect0(handle, theAspect is null ? nint.Zero : theAspect.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_vis_material_method_fill_aspect_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_VisMaterial::HasCommonMaterial.</summary>
     public bool HasCommonMaterial()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialMethodHasCommonMaterial0(handle, out int resultValue), "occtsharp_generated_xcafdoc_vis_material_method_has_common_material_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialMethodHasCommonMaterial0(handle, out int resultValue), "occtsharp_generated_xcafdoc_vis_material_method_has_common_material_0");
         return resultValue != 0;
     }
 
@@ -6501,7 +6501,7 @@ public sealed class XCAFDocVisMaterial : IDisposable
     public bool HasPbrMaterial()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialMethodHasPbrMaterial0(handle, out int resultValue), "occtsharp_generated_xcafdoc_vis_material_method_has_pbr_material_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialMethodHasPbrMaterial0(handle, out int resultValue), "occtsharp_generated_xcafdoc_vis_material_method_has_pbr_material_0");
         return resultValue != 0;
     }
 
@@ -6509,7 +6509,7 @@ public sealed class XCAFDocVisMaterial : IDisposable
     public bool IsDoubleSided()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialMethodIsDoubleSided0(handle, out int resultValue), "occtsharp_generated_xcafdoc_vis_material_method_is_double_sided_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialMethodIsDoubleSided0(handle, out int resultValue), "occtsharp_generated_xcafdoc_vis_material_method_is_double_sided_0");
         return resultValue != 0;
     }
 
@@ -6517,7 +6517,7 @@ public sealed class XCAFDocVisMaterial : IDisposable
     public bool IsEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialMethodIsEmpty0(handle, out int resultValue), "occtsharp_generated_xcafdoc_vis_material_method_is_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialMethodIsEmpty0(handle, out int resultValue), "occtsharp_generated_xcafdoc_vis_material_method_is_empty_0");
         return resultValue != 0;
     }
 
@@ -6525,7 +6525,7 @@ public sealed class XCAFDocVisMaterial : IDisposable
     public bool IsEqual(XCAFDocVisMaterial? theOther)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialMethodIsEqual0(handle, theOther is null ? nint.Zero : theOther.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_xcafdoc_vis_material_method_is_equal_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialMethodIsEqual0(handle, theOther is null ? nint.Zero : theOther.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_xcafdoc_vis_material_method_is_equal_0");
         return resultValue != 0;
     }
 
@@ -6533,7 +6533,7 @@ public sealed class XCAFDocVisMaterial : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_vis_material_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_vis_material_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_vis_material_method_new_empty_0");
     }
 
@@ -6541,49 +6541,49 @@ public sealed class XCAFDocVisMaterial : IDisposable
     public void Paste(TDFAttribute? theInto, TDFRelocationTable? theRelTable)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialMethodPaste0(handle, theInto is null ? nint.Zero : theInto.NativeHandle.DangerousGetHandle(), theRelTable is null ? nint.Zero : theRelTable.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_vis_material_method_paste_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialMethodPaste0(handle, theInto is null ? nint.Zero : theInto.NativeHandle.DangerousGetHandle(), theRelTable is null ? nint.Zero : theRelTable.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_vis_material_method_paste_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_VisMaterial::Restore.</summary>
     public void Restore(TDFAttribute? theWith)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialMethodRestore0(handle, theWith is null ? nint.Zero : theWith.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_vis_material_method_restore_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialMethodRestore0(handle, theWith is null ? nint.Zero : theWith.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_vis_material_method_restore_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_VisMaterial::SetDoubleSided.</summary>
     public void SetDoubleSided(bool theIsDoubleSided)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialMethodSetDoubleSided0(handle, theIsDoubleSided ? 1 : 0), "occtsharp_generated_xcafdoc_vis_material_method_set_double_sided_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialMethodSetDoubleSided0(handle, theIsDoubleSided ? 1 : 0), "occtsharp_generated_xcafdoc_vis_material_method_set_double_sided_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_VisMaterial::SetFaceCulling.</summary>
     public void SetFaceCulling(Graphic3dTypeOfBackfacingModel theFaceCulling)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialMethodSetFaceCulling0(handle, (int)theFaceCulling), "occtsharp_generated_xcafdoc_vis_material_method_set_face_culling_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialMethodSetFaceCulling0(handle, (int)theFaceCulling), "occtsharp_generated_xcafdoc_vis_material_method_set_face_culling_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_VisMaterial::SetRawName.</summary>
     public void SetRawName(TCollectionHAsciiString? theName)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialMethodSetRawName0(handle, theName is null ? nint.Zero : theName.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_vis_material_method_set_raw_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialMethodSetRawName0(handle, theName is null ? nint.Zero : theName.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_vis_material_method_set_raw_name_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_VisMaterial::UnsetCommonMaterial.</summary>
     public void UnsetCommonMaterial()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialMethodUnsetCommonMaterial0(handle), "occtsharp_generated_xcafdoc_vis_material_method_unset_common_material_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialMethodUnsetCommonMaterial0(handle), "occtsharp_generated_xcafdoc_vis_material_method_unset_common_material_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_VisMaterial::UnsetPbrMaterial.</summary>
     public void UnsetPbrMaterial()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialMethodUnsetPbrMaterial0(handle), "occtsharp_generated_xcafdoc_vis_material_method_unset_pbr_material_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialMethodUnsetPbrMaterial0(handle), "occtsharp_generated_xcafdoc_vis_material_method_unset_pbr_material_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -6592,7 +6592,7 @@ public sealed class XCAFDocVisMaterial : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -6603,7 +6603,7 @@ public sealed class XCAFDocVisMaterial : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -6613,7 +6613,7 @@ public sealed class XCAFDocVisMaterial : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -6621,7 +6621,7 @@ public sealed class XCAFDocVisMaterial : IDisposable
     public XCAFDocVisMaterial Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocVisMaterial(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -6658,7 +6658,7 @@ public sealed class XCAFDocVisMaterialTool : IDisposable
     public XCAFDocVisMaterialTool()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialToolCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialToolCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocVisMaterialToolCreate0");
     }
 
@@ -6666,7 +6666,7 @@ public sealed class XCAFDocVisMaterialTool : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_vis_material_tool_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialToolMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_vis_material_tool_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_vis_material_tool_method_new_empty_0");
     }
 
@@ -6674,14 +6674,14 @@ public sealed class XCAFDocVisMaterialTool : IDisposable
     public void Paste(TDFAttribute? value0, TDFRelocationTable? value1)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialToolMethodPaste0(handle, value0 is null ? nint.Zero : value0.NativeHandle.DangerousGetHandle(), value1 is null ? nint.Zero : value1.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_vis_material_tool_method_paste_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialToolMethodPaste0(handle, value0 is null ? nint.Zero : value0.NativeHandle.DangerousGetHandle(), value1 is null ? nint.Zero : value1.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_vis_material_tool_method_paste_0");
     }
 
     /// <summary>Invokes OCCT XCAFDoc_VisMaterialTool::Restore.</summary>
     public void Restore(TDFAttribute? value0)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialToolMethodRestore0(handle, value0 is null ? nint.Zero : value0.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_vis_material_tool_method_restore_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialToolMethodRestore0(handle, value0 is null ? nint.Zero : value0.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafdoc_vis_material_tool_method_restore_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -6690,7 +6690,7 @@ public sealed class XCAFDocVisMaterialTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -6701,7 +6701,7 @@ public sealed class XCAFDocVisMaterialTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -6711,7 +6711,7 @@ public sealed class XCAFDocVisMaterialTool : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -6719,7 +6719,7 @@ public sealed class XCAFDocVisMaterialTool : IDisposable
     public XCAFDocVisMaterialTool Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVisMaterialToolClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVisMaterialToolClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocVisMaterialTool(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -6756,7 +6756,7 @@ public sealed class XCAFDocVolume : IDisposable
     public XCAFDocVolume()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVolumeCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVolumeCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFDocVolumeCreate0");
     }
 
@@ -6764,7 +6764,7 @@ public sealed class XCAFDocVolume : IDisposable
     public double Get()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVolumeMethodGet0(handle, out double resultValue), "occtsharp_generated_xcafdoc_volume_method_get_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVolumeMethodGet0(handle, out double resultValue), "occtsharp_generated_xcafdoc_volume_method_get_0");
         return resultValue;
     }
 
@@ -6772,7 +6772,7 @@ public sealed class XCAFDocVolume : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVolumeMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_volume_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVolumeMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xcafdoc_volume_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xcafdoc_volume_method_new_empty_0");
     }
 
@@ -6780,7 +6780,7 @@ public sealed class XCAFDocVolume : IDisposable
     public void Set(double vol)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVolumeMethodSet0(handle, vol), "occtsharp_generated_xcafdoc_volume_method_set_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVolumeMethodSet0(handle, vol), "occtsharp_generated_xcafdoc_volume_method_set_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -6789,7 +6789,7 @@ public sealed class XCAFDocVolume : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVolumeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVolumeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -6800,7 +6800,7 @@ public sealed class XCAFDocVolume : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVolumeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVolumeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -6810,7 +6810,7 @@ public sealed class XCAFDocVolume : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVolumeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVolumeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -6818,7 +6818,7 @@ public sealed class XCAFDocVolume : IDisposable
     public XCAFDocVolume Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFDocVolumeClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDocVolumeClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFDocVolume(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -6855,7 +6855,7 @@ public sealed class XCAFNoteObjectsNoteObject : IDisposable
     public XCAFNoteObjectsNoteObject()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFNoteObjectsNoteObjectCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFNoteObjectsNoteObjectCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFNoteObjectsNoteObjectCreate0");
     }
 
@@ -6863,7 +6863,7 @@ public sealed class XCAFNoteObjectsNoteObject : IDisposable
     public XCAFNoteObjectsNoteObject(XCAFNoteObjectsNoteObject? theObj)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFNoteObjectsNoteObjectCreate1(theObj is null ? nint.Zero : theObj.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFNoteObjectsNoteObjectCreate1(theObj is null ? nint.Zero : theObj.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFNoteObjectsNoteObjectCreate1");
     }
 
@@ -6871,7 +6871,7 @@ public sealed class XCAFNoteObjectsNoteObject : IDisposable
     public bool HasPlane()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFNoteObjectsNoteObjectMethodHasPlane0(handle, out int resultValue), "occtsharp_generated_xcafnote_objects_note_object_method_has_plane_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFNoteObjectsNoteObjectMethodHasPlane0(handle, out int resultValue), "occtsharp_generated_xcafnote_objects_note_object_method_has_plane_0");
         return resultValue != 0;
     }
 
@@ -6879,7 +6879,7 @@ public sealed class XCAFNoteObjectsNoteObject : IDisposable
     public bool HasPoint()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFNoteObjectsNoteObjectMethodHasPoint0(handle, out int resultValue), "occtsharp_generated_xcafnote_objects_note_object_method_has_point_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFNoteObjectsNoteObjectMethodHasPoint0(handle, out int resultValue), "occtsharp_generated_xcafnote_objects_note_object_method_has_point_0");
         return resultValue != 0;
     }
 
@@ -6887,7 +6887,7 @@ public sealed class XCAFNoteObjectsNoteObject : IDisposable
     public bool HasPointText()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFNoteObjectsNoteObjectMethodHasPointText0(handle, out int resultValue), "occtsharp_generated_xcafnote_objects_note_object_method_has_point_text_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFNoteObjectsNoteObjectMethodHasPointText0(handle, out int resultValue), "occtsharp_generated_xcafnote_objects_note_object_method_has_point_text_0");
         return resultValue != 0;
     }
 
@@ -6895,21 +6895,21 @@ public sealed class XCAFNoteObjectsNoteObject : IDisposable
     public void Reset()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFNoteObjectsNoteObjectMethodReset0(handle), "occtsharp_generated_xcafnote_objects_note_object_method_reset_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFNoteObjectsNoteObjectMethodReset0(handle), "occtsharp_generated_xcafnote_objects_note_object_method_reset_0");
     }
 
     /// <summary>Invokes OCCT XCAFNoteObjects_NoteObject::SetPoint.</summary>
     public void SetPoint(Point3d thePnt)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFNoteObjectsNoteObjectMethodSetPoint0(handle, new Point3dRaw(thePnt.X, thePnt.Y, thePnt.Z)), "occtsharp_generated_xcafnote_objects_note_object_method_set_point_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFNoteObjectsNoteObjectMethodSetPoint0(handle, new Point3dRaw(thePnt.X, thePnt.Y, thePnt.Z)), "occtsharp_generated_xcafnote_objects_note_object_method_set_point_0");
     }
 
     /// <summary>Invokes OCCT XCAFNoteObjects_NoteObject::SetPointText.</summary>
     public void SetPointText(Point3d thePnt)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFNoteObjectsNoteObjectMethodSetPointText0(handle, new Point3dRaw(thePnt.X, thePnt.Y, thePnt.Z)), "occtsharp_generated_xcafnote_objects_note_object_method_set_point_text_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFNoteObjectsNoteObjectMethodSetPointText0(handle, new Point3dRaw(thePnt.X, thePnt.Y, thePnt.Z)), "occtsharp_generated_xcafnote_objects_note_object_method_set_point_text_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -6918,7 +6918,7 @@ public sealed class XCAFNoteObjectsNoteObject : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFNoteObjectsNoteObjectGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFNoteObjectsNoteObjectGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -6929,7 +6929,7 @@ public sealed class XCAFNoteObjectsNoteObject : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFNoteObjectsNoteObjectGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFNoteObjectsNoteObjectGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -6939,7 +6939,7 @@ public sealed class XCAFNoteObjectsNoteObject : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFNoteObjectsNoteObjectIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFNoteObjectsNoteObjectIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -6947,7 +6947,7 @@ public sealed class XCAFNoteObjectsNoteObject : IDisposable
     public XCAFNoteObjectsNoteObject Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFNoteObjectsNoteObjectClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFNoteObjectsNoteObjectClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFNoteObjectsNoteObject(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -6984,7 +6984,7 @@ public sealed class XCAFPrsAISObject : IDisposable
     public void DispatchStyles(bool theToSyncStyles)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFPrsAISObjectMethodDispatchStyles0(handle, theToSyncStyles ? 1 : 0), "occtsharp_generated_xcafprs_aisobject_method_dispatch_styles_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFPrsAISObjectMethodDispatchStyles0(handle, theToSyncStyles ? 1 : 0), "occtsharp_generated_xcafprs_aisobject_method_dispatch_styles_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -6993,7 +6993,7 @@ public sealed class XCAFPrsAISObject : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFPrsAISObjectGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFPrsAISObjectGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7004,7 +7004,7 @@ public sealed class XCAFPrsAISObject : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFPrsAISObjectGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFPrsAISObjectGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7014,7 +7014,7 @@ public sealed class XCAFPrsAISObject : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFPrsAISObjectIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFPrsAISObjectIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7022,7 +7022,7 @@ public sealed class XCAFPrsAISObject : IDisposable
     public XCAFPrsAISObject Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFPrsAISObjectClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFPrsAISObjectClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFPrsAISObject(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -7061,7 +7061,7 @@ public sealed class XCAFPrsDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFPrsDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFPrsDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7072,7 +7072,7 @@ public sealed class XCAFPrsDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFPrsDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFPrsDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7082,7 +7082,7 @@ public sealed class XCAFPrsDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFPrsDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFPrsDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7090,7 +7090,7 @@ public sealed class XCAFPrsDriver : IDisposable
     public XCAFPrsDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFPrsDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFPrsDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFPrsDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -7127,7 +7127,7 @@ public sealed class XCAFPrsTexture : IDisposable
     public XCAFPrsTexture(ImageTexture? theImageSource, Graphic3dTextureUnit theUnit)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFPrsTextureCreate0(theImageSource is null ? nint.Zero : theImageSource.NativeHandle.DangerousGetHandle(), (int)theUnit, out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFPrsTextureCreate0(theImageSource is null ? nint.Zero : theImageSource.NativeHandle.DangerousGetHandle(), (int)theUnit, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFPrsTextureCreate0");
     }
 
@@ -7135,7 +7135,7 @@ public sealed class XCAFPrsTexture : IDisposable
     public ImageCompressedPixMap? GetCompressedImage(ImageSupportedFormats? theSupported)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFPrsTextureMethodGetCompressedImage0(handle, theSupported is null ? nint.Zero : theSupported.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_xcafprs_texture_method_get_compressed_image_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFPrsTextureMethodGetCompressedImage0(handle, theSupported is null ? nint.Zero : theSupported.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_xcafprs_texture_method_get_compressed_image_0");
         return global::OcctSharp.ImageCompressedPixMap.FromNative(handleValue, "occtsharp_generated_xcafprs_texture_method_get_compressed_image_0");
     }
 
@@ -7143,7 +7143,7 @@ public sealed class XCAFPrsTexture : IDisposable
     public ImagePixMap? GetImage(ImageSupportedFormats? theSupported)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFPrsTextureMethodGetImage0(handle, theSupported is null ? nint.Zero : theSupported.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_xcafprs_texture_method_get_image_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFPrsTextureMethodGetImage0(handle, theSupported is null ? nint.Zero : theSupported.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_xcafprs_texture_method_get_image_0");
         return global::OcctSharp.ImagePixMap.FromNative(handleValue, "occtsharp_generated_xcafprs_texture_method_get_image_0");
     }
 
@@ -7153,7 +7153,7 @@ public sealed class XCAFPrsTexture : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFPrsTextureGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFPrsTextureGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7164,7 +7164,7 @@ public sealed class XCAFPrsTexture : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFPrsTextureGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFPrsTextureGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7174,7 +7174,7 @@ public sealed class XCAFPrsTexture : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFPrsTextureIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFPrsTextureIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7182,7 +7182,7 @@ public sealed class XCAFPrsTexture : IDisposable
     public XCAFPrsTexture Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFPrsTextureClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFPrsTextureClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFPrsTexture(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -7219,7 +7219,7 @@ public sealed class XCAFViewObject : IDisposable
     public XCAFViewObject()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFViewObjectCreate0");
     }
 
@@ -7227,7 +7227,7 @@ public sealed class XCAFViewObject : IDisposable
     public XCAFViewObject(XCAFViewObject? theObj)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectCreate1(theObj is null ? nint.Zero : theObj.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectCreate1(theObj is null ? nint.Zero : theObj.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XCAFViewObjectCreate1");
     }
 
@@ -7235,7 +7235,7 @@ public sealed class XCAFViewObject : IDisposable
     public double BackPlaneDistance()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodBackPlaneDistance0(handle, out double resultValue), "occtsharp_generated_xcafview_object_method_back_plane_distance_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodBackPlaneDistance0(handle, out double resultValue), "occtsharp_generated_xcafview_object_method_back_plane_distance_0");
         return resultValue;
     }
 
@@ -7243,7 +7243,7 @@ public sealed class XCAFViewObject : IDisposable
     public TCollectionHAsciiString? ClippingExpression()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodClippingExpression0(handle, out nint handleValue), "occtsharp_generated_xcafview_object_method_clipping_expression_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodClippingExpression0(handle, out nint handleValue), "occtsharp_generated_xcafview_object_method_clipping_expression_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafview_object_method_clipping_expression_0");
     }
 
@@ -7251,14 +7251,14 @@ public sealed class XCAFViewObject : IDisposable
     public void CreateGDTPoints(int theLenght)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodCreateGDTPoints0(handle, theLenght), "occtsharp_generated_xcafview_object_method_create_gdtpoints_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodCreateGDTPoints0(handle, theLenght), "occtsharp_generated_xcafview_object_method_create_gdtpoints_0");
     }
 
     /// <summary>Invokes OCCT XCAFView_Object::FrontPlaneDistance.</summary>
     public double FrontPlaneDistance()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodFrontPlaneDistance0(handle, out double resultValue), "occtsharp_generated_xcafview_object_method_front_plane_distance_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodFrontPlaneDistance0(handle, out double resultValue), "occtsharp_generated_xcafview_object_method_front_plane_distance_0");
         return resultValue;
     }
 
@@ -7266,7 +7266,7 @@ public sealed class XCAFViewObject : IDisposable
     public Point3d GDTPoint(int theIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodGDTPoint0(handle, theIndex, out Point3dRaw resultValue), "occtsharp_generated_xcafview_object_method_gdtpoint_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodGDTPoint0(handle, theIndex, out Point3dRaw resultValue), "occtsharp_generated_xcafview_object_method_gdtpoint_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
@@ -7274,7 +7274,7 @@ public sealed class XCAFViewObject : IDisposable
     public bool HasBackPlaneClipping()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodHasBackPlaneClipping0(handle, out int resultValue), "occtsharp_generated_xcafview_object_method_has_back_plane_clipping_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodHasBackPlaneClipping0(handle, out int resultValue), "occtsharp_generated_xcafview_object_method_has_back_plane_clipping_0");
         return resultValue != 0;
     }
 
@@ -7282,7 +7282,7 @@ public sealed class XCAFViewObject : IDisposable
     public bool HasFrontPlaneClipping()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodHasFrontPlaneClipping0(handle, out int resultValue), "occtsharp_generated_xcafview_object_method_has_front_plane_clipping_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodHasFrontPlaneClipping0(handle, out int resultValue), "occtsharp_generated_xcafview_object_method_has_front_plane_clipping_0");
         return resultValue != 0;
     }
 
@@ -7290,7 +7290,7 @@ public sealed class XCAFViewObject : IDisposable
     public bool HasGDTPoints()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodHasGDTPoints0(handle, out int resultValue), "occtsharp_generated_xcafview_object_method_has_gdtpoints_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodHasGDTPoints0(handle, out int resultValue), "occtsharp_generated_xcafview_object_method_has_gdtpoints_0");
         return resultValue != 0;
     }
 
@@ -7298,7 +7298,7 @@ public sealed class XCAFViewObject : IDisposable
     public bool HasViewVolumeSidesClipping()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodHasViewVolumeSidesClipping0(handle, out int resultValue), "occtsharp_generated_xcafview_object_method_has_view_volume_sides_clipping_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodHasViewVolumeSidesClipping0(handle, out int resultValue), "occtsharp_generated_xcafview_object_method_has_view_volume_sides_clipping_0");
         return resultValue != 0;
     }
 
@@ -7306,7 +7306,7 @@ public sealed class XCAFViewObject : IDisposable
     public TCollectionHAsciiString? Name()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodName0(handle, out nint handleValue), "occtsharp_generated_xcafview_object_method_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodName0(handle, out nint handleValue), "occtsharp_generated_xcafview_object_method_name_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_xcafview_object_method_name_0");
     }
 
@@ -7314,7 +7314,7 @@ public sealed class XCAFViewObject : IDisposable
     public int NbGDTPoints()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodNbGDTPoints0(handle, out int resultValue), "occtsharp_generated_xcafview_object_method_nb_gdtpoints_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodNbGDTPoints0(handle, out int resultValue), "occtsharp_generated_xcafview_object_method_nb_gdtpoints_0");
         return resultValue;
     }
 
@@ -7322,7 +7322,7 @@ public sealed class XCAFViewObject : IDisposable
     public Point3d ProjectionPoint()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodProjectionPoint0(handle, out Point3dRaw resultValue), "occtsharp_generated_xcafview_object_method_projection_point_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodProjectionPoint0(handle, out Point3dRaw resultValue), "occtsharp_generated_xcafview_object_method_projection_point_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
@@ -7330,84 +7330,84 @@ public sealed class XCAFViewObject : IDisposable
     public void SetBackPlaneDistance(double theDistance)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodSetBackPlaneDistance0(handle, theDistance), "occtsharp_generated_xcafview_object_method_set_back_plane_distance_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodSetBackPlaneDistance0(handle, theDistance), "occtsharp_generated_xcafview_object_method_set_back_plane_distance_0");
     }
 
     /// <summary>Invokes OCCT XCAFView_Object::SetClippingExpression.</summary>
     public void SetClippingExpression(TCollectionHAsciiString? theExpression)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodSetClippingExpression0(handle, theExpression is null ? nint.Zero : theExpression.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafview_object_method_set_clipping_expression_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodSetClippingExpression0(handle, theExpression is null ? nint.Zero : theExpression.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafview_object_method_set_clipping_expression_0");
     }
 
     /// <summary>Invokes OCCT XCAFView_Object::SetFrontPlaneDistance.</summary>
     public void SetFrontPlaneDistance(double theDistance)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodSetFrontPlaneDistance0(handle, theDistance), "occtsharp_generated_xcafview_object_method_set_front_plane_distance_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodSetFrontPlaneDistance0(handle, theDistance), "occtsharp_generated_xcafview_object_method_set_front_plane_distance_0");
     }
 
     /// <summary>Invokes OCCT XCAFView_Object::SetGDTPoint.</summary>
     public void SetGDTPoint(int theIndex, Point3d thePoint)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodSetGDTPoint0(handle, theIndex, new Point3dRaw(thePoint.X, thePoint.Y, thePoint.Z)), "occtsharp_generated_xcafview_object_method_set_gdtpoint_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodSetGDTPoint0(handle, theIndex, new Point3dRaw(thePoint.X, thePoint.Y, thePoint.Z)), "occtsharp_generated_xcafview_object_method_set_gdtpoint_0");
     }
 
     /// <summary>Invokes OCCT XCAFView_Object::SetName.</summary>
     public void SetName(TCollectionHAsciiString? theName)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodSetName0(handle, theName is null ? nint.Zero : theName.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafview_object_method_set_name_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodSetName0(handle, theName is null ? nint.Zero : theName.NativeHandle.DangerousGetHandle()), "occtsharp_generated_xcafview_object_method_set_name_0");
     }
 
     /// <summary>Invokes OCCT XCAFView_Object::SetProjectionPoint.</summary>
     public void SetProjectionPoint(Point3d thePoint)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodSetProjectionPoint0(handle, new Point3dRaw(thePoint.X, thePoint.Y, thePoint.Z)), "occtsharp_generated_xcafview_object_method_set_projection_point_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodSetProjectionPoint0(handle, new Point3dRaw(thePoint.X, thePoint.Y, thePoint.Z)), "occtsharp_generated_xcafview_object_method_set_projection_point_0");
     }
 
     /// <summary>Invokes OCCT XCAFView_Object::SetType.</summary>
     public void SetType(XCAFViewProjectionType theType)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodSetType0(handle, (int)theType), "occtsharp_generated_xcafview_object_method_set_type_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodSetType0(handle, (int)theType), "occtsharp_generated_xcafview_object_method_set_type_0");
     }
 
     /// <summary>Invokes OCCT XCAFView_Object::SetViewVolumeSidesClipping.</summary>
     public void SetViewVolumeSidesClipping(bool theViewVolumeSidesClipping)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodSetViewVolumeSidesClipping0(handle, theViewVolumeSidesClipping ? 1 : 0), "occtsharp_generated_xcafview_object_method_set_view_volume_sides_clipping_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodSetViewVolumeSidesClipping0(handle, theViewVolumeSidesClipping ? 1 : 0), "occtsharp_generated_xcafview_object_method_set_view_volume_sides_clipping_0");
     }
 
     /// <summary>Invokes OCCT XCAFView_Object::SetWindowHorizontalSize.</summary>
     public void SetWindowHorizontalSize(double theSize)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodSetWindowHorizontalSize0(handle, theSize), "occtsharp_generated_xcafview_object_method_set_window_horizontal_size_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodSetWindowHorizontalSize0(handle, theSize), "occtsharp_generated_xcafview_object_method_set_window_horizontal_size_0");
     }
 
     /// <summary>Invokes OCCT XCAFView_Object::SetWindowVerticalSize.</summary>
     public void SetWindowVerticalSize(double theSize)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodSetWindowVerticalSize0(handle, theSize), "occtsharp_generated_xcafview_object_method_set_window_vertical_size_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodSetWindowVerticalSize0(handle, theSize), "occtsharp_generated_xcafview_object_method_set_window_vertical_size_0");
     }
 
     /// <summary>Invokes OCCT XCAFView_Object::SetZoomFactor.</summary>
     public void SetZoomFactor(double theZoomFactor)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodSetZoomFactor0(handle, theZoomFactor), "occtsharp_generated_xcafview_object_method_set_zoom_factor_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodSetZoomFactor0(handle, theZoomFactor), "occtsharp_generated_xcafview_object_method_set_zoom_factor_0");
     }
 
     /// <summary>Invokes OCCT XCAFView_Object::Type.</summary>
     public XCAFViewProjectionType Type()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodType0(handle, out int resultValue), "occtsharp_generated_xcafview_object_method_type_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodType0(handle, out int resultValue), "occtsharp_generated_xcafview_object_method_type_0");
         return (XCAFViewProjectionType)resultValue;
     }
 
@@ -7415,21 +7415,21 @@ public sealed class XCAFViewObject : IDisposable
     public void UnsetBackPlaneClipping()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodUnsetBackPlaneClipping0(handle), "occtsharp_generated_xcafview_object_method_unset_back_plane_clipping_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodUnsetBackPlaneClipping0(handle), "occtsharp_generated_xcafview_object_method_unset_back_plane_clipping_0");
     }
 
     /// <summary>Invokes OCCT XCAFView_Object::UnsetFrontPlaneClipping.</summary>
     public void UnsetFrontPlaneClipping()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodUnsetFrontPlaneClipping0(handle), "occtsharp_generated_xcafview_object_method_unset_front_plane_clipping_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodUnsetFrontPlaneClipping0(handle), "occtsharp_generated_xcafview_object_method_unset_front_plane_clipping_0");
     }
 
     /// <summary>Invokes OCCT XCAFView_Object::WindowHorizontalSize.</summary>
     public double WindowHorizontalSize()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodWindowHorizontalSize0(handle, out double resultValue), "occtsharp_generated_xcafview_object_method_window_horizontal_size_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodWindowHorizontalSize0(handle, out double resultValue), "occtsharp_generated_xcafview_object_method_window_horizontal_size_0");
         return resultValue;
     }
 
@@ -7437,7 +7437,7 @@ public sealed class XCAFViewObject : IDisposable
     public double WindowVerticalSize()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodWindowVerticalSize0(handle, out double resultValue), "occtsharp_generated_xcafview_object_method_window_vertical_size_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodWindowVerticalSize0(handle, out double resultValue), "occtsharp_generated_xcafview_object_method_window_vertical_size_0");
         return resultValue;
     }
 
@@ -7445,7 +7445,7 @@ public sealed class XCAFViewObject : IDisposable
     public double ZoomFactor()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectMethodZoomFactor0(handle, out double resultValue), "occtsharp_generated_xcafview_object_method_zoom_factor_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectMethodZoomFactor0(handle, out double resultValue), "occtsharp_generated_xcafview_object_method_zoom_factor_0");
         return resultValue;
     }
 
@@ -7455,7 +7455,7 @@ public sealed class XCAFViewObject : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7466,7 +7466,7 @@ public sealed class XCAFViewObject : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7476,7 +7476,7 @@ public sealed class XCAFViewObject : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7484,7 +7484,7 @@ public sealed class XCAFViewObject : IDisposable
     public XCAFViewObject Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XCAFViewObjectClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFViewObjectClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XCAFViewObject(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -7521,7 +7521,7 @@ public sealed class XmlMXCAFDocAssemblyItemRefDriver : IDisposable
     public XmlMXCAFDocAssemblyItemRefDriver(MessageMessenger? theMessageDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocAssemblyItemRefDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocAssemblyItemRefDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XmlMXCAFDocAssemblyItemRefDriverCreate0");
     }
 
@@ -7529,7 +7529,7 @@ public sealed class XmlMXCAFDocAssemblyItemRefDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocAssemblyItemRefDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_assembly_item_ref_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocAssemblyItemRefDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_assembly_item_ref_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xml_mxcafdoc_assembly_item_ref_driver_method_new_empty_0");
     }
 
@@ -7539,7 +7539,7 @@ public sealed class XmlMXCAFDocAssemblyItemRefDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocAssemblyItemRefDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocAssemblyItemRefDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7550,7 +7550,7 @@ public sealed class XmlMXCAFDocAssemblyItemRefDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocAssemblyItemRefDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocAssemblyItemRefDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7560,7 +7560,7 @@ public sealed class XmlMXCAFDocAssemblyItemRefDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocAssemblyItemRefDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocAssemblyItemRefDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7568,7 +7568,7 @@ public sealed class XmlMXCAFDocAssemblyItemRefDriver : IDisposable
     public XmlMXCAFDocAssemblyItemRefDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocAssemblyItemRefDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocAssemblyItemRefDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XmlMXCAFDocAssemblyItemRefDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -7605,7 +7605,7 @@ public sealed class XmlMXCAFDocCentroidDriver : IDisposable
     public XmlMXCAFDocCentroidDriver(MessageMessenger? theMessageDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocCentroidDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocCentroidDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XmlMXCAFDocCentroidDriverCreate0");
     }
 
@@ -7613,7 +7613,7 @@ public sealed class XmlMXCAFDocCentroidDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocCentroidDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_centroid_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocCentroidDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_centroid_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xml_mxcafdoc_centroid_driver_method_new_empty_0");
     }
 
@@ -7623,7 +7623,7 @@ public sealed class XmlMXCAFDocCentroidDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocCentroidDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocCentroidDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7634,7 +7634,7 @@ public sealed class XmlMXCAFDocCentroidDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocCentroidDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocCentroidDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7644,7 +7644,7 @@ public sealed class XmlMXCAFDocCentroidDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocCentroidDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocCentroidDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7652,7 +7652,7 @@ public sealed class XmlMXCAFDocCentroidDriver : IDisposable
     public XmlMXCAFDocCentroidDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocCentroidDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocCentroidDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XmlMXCAFDocCentroidDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -7689,7 +7689,7 @@ public sealed class XmlMXCAFDocColorDriver : IDisposable
     public XmlMXCAFDocColorDriver(MessageMessenger? theMessageDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocColorDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocColorDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XmlMXCAFDocColorDriverCreate0");
     }
 
@@ -7697,7 +7697,7 @@ public sealed class XmlMXCAFDocColorDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocColorDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_color_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocColorDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_color_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xml_mxcafdoc_color_driver_method_new_empty_0");
     }
 
@@ -7707,7 +7707,7 @@ public sealed class XmlMXCAFDocColorDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocColorDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocColorDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7718,7 +7718,7 @@ public sealed class XmlMXCAFDocColorDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocColorDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocColorDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7728,7 +7728,7 @@ public sealed class XmlMXCAFDocColorDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocColorDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocColorDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7736,7 +7736,7 @@ public sealed class XmlMXCAFDocColorDriver : IDisposable
     public XmlMXCAFDocColorDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocColorDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocColorDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XmlMXCAFDocColorDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -7773,7 +7773,7 @@ public sealed class XmlMXCAFDocDatumDriver : IDisposable
     public XmlMXCAFDocDatumDriver(MessageMessenger? theMessageDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocDatumDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocDatumDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XmlMXCAFDocDatumDriverCreate0");
     }
 
@@ -7781,7 +7781,7 @@ public sealed class XmlMXCAFDocDatumDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocDatumDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_datum_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocDatumDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_datum_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xml_mxcafdoc_datum_driver_method_new_empty_0");
     }
 
@@ -7791,7 +7791,7 @@ public sealed class XmlMXCAFDocDatumDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocDatumDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocDatumDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7802,7 +7802,7 @@ public sealed class XmlMXCAFDocDatumDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocDatumDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocDatumDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7812,7 +7812,7 @@ public sealed class XmlMXCAFDocDatumDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocDatumDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocDatumDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7820,7 +7820,7 @@ public sealed class XmlMXCAFDocDatumDriver : IDisposable
     public XmlMXCAFDocDatumDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocDatumDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocDatumDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XmlMXCAFDocDatumDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -7857,7 +7857,7 @@ public sealed class XmlMXCAFDocDimTolDriver : IDisposable
     public XmlMXCAFDocDimTolDriver(MessageMessenger? theMessageDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocDimTolDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocDimTolDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XmlMXCAFDocDimTolDriverCreate0");
     }
 
@@ -7865,7 +7865,7 @@ public sealed class XmlMXCAFDocDimTolDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocDimTolDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_dim_tol_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocDimTolDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_dim_tol_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xml_mxcafdoc_dim_tol_driver_method_new_empty_0");
     }
 
@@ -7875,7 +7875,7 @@ public sealed class XmlMXCAFDocDimTolDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocDimTolDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocDimTolDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7886,7 +7886,7 @@ public sealed class XmlMXCAFDocDimTolDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocDimTolDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocDimTolDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7896,7 +7896,7 @@ public sealed class XmlMXCAFDocDimTolDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocDimTolDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocDimTolDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7904,7 +7904,7 @@ public sealed class XmlMXCAFDocDimTolDriver : IDisposable
     public XmlMXCAFDocDimTolDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocDimTolDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocDimTolDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XmlMXCAFDocDimTolDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -7941,7 +7941,7 @@ public sealed class XmlMXCAFDocGraphNodeDriver : IDisposable
     public XmlMXCAFDocGraphNodeDriver(MessageMessenger? theMessageDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocGraphNodeDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocGraphNodeDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XmlMXCAFDocGraphNodeDriverCreate0");
     }
 
@@ -7949,7 +7949,7 @@ public sealed class XmlMXCAFDocGraphNodeDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocGraphNodeDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_graph_node_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocGraphNodeDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_graph_node_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xml_mxcafdoc_graph_node_driver_method_new_empty_0");
     }
 
@@ -7959,7 +7959,7 @@ public sealed class XmlMXCAFDocGraphNodeDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocGraphNodeDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocGraphNodeDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7970,7 +7970,7 @@ public sealed class XmlMXCAFDocGraphNodeDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocGraphNodeDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocGraphNodeDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7980,7 +7980,7 @@ public sealed class XmlMXCAFDocGraphNodeDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocGraphNodeDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocGraphNodeDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7988,7 +7988,7 @@ public sealed class XmlMXCAFDocGraphNodeDriver : IDisposable
     public XmlMXCAFDocGraphNodeDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocGraphNodeDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocGraphNodeDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XmlMXCAFDocGraphNodeDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8025,7 +8025,7 @@ public sealed class XmlMXCAFDocLengthUnitDriver : IDisposable
     public XmlMXCAFDocLengthUnitDriver(MessageMessenger? theMessageDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocLengthUnitDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocLengthUnitDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XmlMXCAFDocLengthUnitDriverCreate0");
     }
 
@@ -8033,7 +8033,7 @@ public sealed class XmlMXCAFDocLengthUnitDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocLengthUnitDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_length_unit_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocLengthUnitDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_length_unit_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xml_mxcafdoc_length_unit_driver_method_new_empty_0");
     }
 
@@ -8043,7 +8043,7 @@ public sealed class XmlMXCAFDocLengthUnitDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocLengthUnitDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocLengthUnitDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8054,7 +8054,7 @@ public sealed class XmlMXCAFDocLengthUnitDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocLengthUnitDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocLengthUnitDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8064,7 +8064,7 @@ public sealed class XmlMXCAFDocLengthUnitDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocLengthUnitDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocLengthUnitDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8072,7 +8072,7 @@ public sealed class XmlMXCAFDocLengthUnitDriver : IDisposable
     public XmlMXCAFDocLengthUnitDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocLengthUnitDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocLengthUnitDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XmlMXCAFDocLengthUnitDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8109,7 +8109,7 @@ public sealed class XmlMXCAFDocLocationDriver : IDisposable
     public XmlMXCAFDocLocationDriver(MessageMessenger? theMessageDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocLocationDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocLocationDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XmlMXCAFDocLocationDriverCreate0");
     }
 
@@ -8117,7 +8117,7 @@ public sealed class XmlMXCAFDocLocationDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocLocationDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_location_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocLocationDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_location_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xml_mxcafdoc_location_driver_method_new_empty_0");
     }
 
@@ -8127,7 +8127,7 @@ public sealed class XmlMXCAFDocLocationDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocLocationDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocLocationDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8138,7 +8138,7 @@ public sealed class XmlMXCAFDocLocationDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocLocationDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocLocationDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8148,7 +8148,7 @@ public sealed class XmlMXCAFDocLocationDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocLocationDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocLocationDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8156,7 +8156,7 @@ public sealed class XmlMXCAFDocLocationDriver : IDisposable
     public XmlMXCAFDocLocationDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocLocationDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocLocationDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XmlMXCAFDocLocationDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8193,7 +8193,7 @@ public sealed class XmlMXCAFDocMaterialDriver : IDisposable
     public XmlMXCAFDocMaterialDriver(MessageMessenger? theMessageDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocMaterialDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocMaterialDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XmlMXCAFDocMaterialDriverCreate0");
     }
 
@@ -8201,7 +8201,7 @@ public sealed class XmlMXCAFDocMaterialDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocMaterialDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_material_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocMaterialDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_material_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xml_mxcafdoc_material_driver_method_new_empty_0");
     }
 
@@ -8211,7 +8211,7 @@ public sealed class XmlMXCAFDocMaterialDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocMaterialDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocMaterialDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8222,7 +8222,7 @@ public sealed class XmlMXCAFDocMaterialDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocMaterialDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocMaterialDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8232,7 +8232,7 @@ public sealed class XmlMXCAFDocMaterialDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocMaterialDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocMaterialDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8240,7 +8240,7 @@ public sealed class XmlMXCAFDocMaterialDriver : IDisposable
     public XmlMXCAFDocMaterialDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocMaterialDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocMaterialDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XmlMXCAFDocMaterialDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8277,7 +8277,7 @@ public sealed class XmlMXCAFDocNoteBinDataDriver : IDisposable
     public XmlMXCAFDocNoteBinDataDriver(MessageMessenger? theMessageDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocNoteBinDataDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocNoteBinDataDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XmlMXCAFDocNoteBinDataDriverCreate0");
     }
 
@@ -8285,7 +8285,7 @@ public sealed class XmlMXCAFDocNoteBinDataDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocNoteBinDataDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_note_bin_data_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocNoteBinDataDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_note_bin_data_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xml_mxcafdoc_note_bin_data_driver_method_new_empty_0");
     }
 
@@ -8295,7 +8295,7 @@ public sealed class XmlMXCAFDocNoteBinDataDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocNoteBinDataDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocNoteBinDataDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8306,7 +8306,7 @@ public sealed class XmlMXCAFDocNoteBinDataDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocNoteBinDataDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocNoteBinDataDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8316,7 +8316,7 @@ public sealed class XmlMXCAFDocNoteBinDataDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocNoteBinDataDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocNoteBinDataDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8324,7 +8324,7 @@ public sealed class XmlMXCAFDocNoteBinDataDriver : IDisposable
     public XmlMXCAFDocNoteBinDataDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocNoteBinDataDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocNoteBinDataDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XmlMXCAFDocNoteBinDataDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8361,7 +8361,7 @@ public sealed class XmlMXCAFDocNoteCommentDriver : IDisposable
     public XmlMXCAFDocNoteCommentDriver(MessageMessenger? theMessageDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocNoteCommentDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocNoteCommentDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XmlMXCAFDocNoteCommentDriverCreate0");
     }
 
@@ -8369,7 +8369,7 @@ public sealed class XmlMXCAFDocNoteCommentDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocNoteCommentDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_note_comment_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocNoteCommentDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_note_comment_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xml_mxcafdoc_note_comment_driver_method_new_empty_0");
     }
 
@@ -8379,7 +8379,7 @@ public sealed class XmlMXCAFDocNoteCommentDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocNoteCommentDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocNoteCommentDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8390,7 +8390,7 @@ public sealed class XmlMXCAFDocNoteCommentDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocNoteCommentDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocNoteCommentDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8400,7 +8400,7 @@ public sealed class XmlMXCAFDocNoteCommentDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocNoteCommentDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocNoteCommentDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8408,7 +8408,7 @@ public sealed class XmlMXCAFDocNoteCommentDriver : IDisposable
     public XmlMXCAFDocNoteCommentDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocNoteCommentDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocNoteCommentDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XmlMXCAFDocNoteCommentDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8447,7 +8447,7 @@ public sealed class XmlMXCAFDocNoteDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocNoteDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocNoteDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8458,7 +8458,7 @@ public sealed class XmlMXCAFDocNoteDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocNoteDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocNoteDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8468,7 +8468,7 @@ public sealed class XmlMXCAFDocNoteDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocNoteDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocNoteDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8476,7 +8476,7 @@ public sealed class XmlMXCAFDocNoteDriver : IDisposable
     public XmlMXCAFDocNoteDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocNoteDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocNoteDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XmlMXCAFDocNoteDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8513,7 +8513,7 @@ public sealed class XmlMXCAFDocVisMaterialDriver : IDisposable
     public XmlMXCAFDocVisMaterialDriver(MessageMessenger? theMessageDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocVisMaterialDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocVisMaterialDriverCreate0(theMessageDriver is null ? nint.Zero : theMessageDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XmlMXCAFDocVisMaterialDriverCreate0");
     }
 
@@ -8521,7 +8521,7 @@ public sealed class XmlMXCAFDocVisMaterialDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocVisMaterialDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_vis_material_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocVisMaterialDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_vis_material_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xml_mxcafdoc_vis_material_driver_method_new_empty_0");
     }
 
@@ -8531,7 +8531,7 @@ public sealed class XmlMXCAFDocVisMaterialDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocVisMaterialDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocVisMaterialDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8542,7 +8542,7 @@ public sealed class XmlMXCAFDocVisMaterialDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocVisMaterialDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocVisMaterialDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8552,7 +8552,7 @@ public sealed class XmlMXCAFDocVisMaterialDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocVisMaterialDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocVisMaterialDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8560,7 +8560,7 @@ public sealed class XmlMXCAFDocVisMaterialDriver : IDisposable
     public XmlMXCAFDocVisMaterialDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocVisMaterialDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocVisMaterialDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XmlMXCAFDocVisMaterialDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8597,7 +8597,7 @@ public sealed class XmlMXCAFDocVisMaterialToolDriver : IDisposable
     public XmlMXCAFDocVisMaterialToolDriver(MessageMessenger? theMsgDriver)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocVisMaterialToolDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocVisMaterialToolDriverCreate0(theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XmlMXCAFDocVisMaterialToolDriverCreate0");
     }
 
@@ -8605,7 +8605,7 @@ public sealed class XmlMXCAFDocVisMaterialToolDriver : IDisposable
     public TDFAttribute? NewEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocVisMaterialToolDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_vis_material_tool_driver_method_new_empty_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocVisMaterialToolDriverMethodNewEmpty0(handle, out nint handleValue), "occtsharp_generated_xml_mxcafdoc_vis_material_tool_driver_method_new_empty_0");
         return global::OcctSharp.TDFAttribute.FromNative(handleValue, "occtsharp_generated_xml_mxcafdoc_vis_material_tool_driver_method_new_empty_0");
     }
 
@@ -8615,7 +8615,7 @@ public sealed class XmlMXCAFDocVisMaterialToolDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocVisMaterialToolDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocVisMaterialToolDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8626,7 +8626,7 @@ public sealed class XmlMXCAFDocVisMaterialToolDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocVisMaterialToolDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocVisMaterialToolDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8636,7 +8636,7 @@ public sealed class XmlMXCAFDocVisMaterialToolDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocVisMaterialToolDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocVisMaterialToolDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8644,7 +8644,7 @@ public sealed class XmlMXCAFDocVisMaterialToolDriver : IDisposable
     public XmlMXCAFDocVisMaterialToolDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlMXCAFDocVisMaterialToolDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlMXCAFDocVisMaterialToolDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XmlMXCAFDocVisMaterialToolDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8681,7 +8681,7 @@ public sealed class XmlXCAFDriversDocumentRetrievalDriver : IDisposable
     public XmlXCAFDriversDocumentRetrievalDriver()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlXCAFDriversDocumentRetrievalDriverCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlXCAFDriversDocumentRetrievalDriverCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XmlXCAFDriversDocumentRetrievalDriverCreate0");
     }
 
@@ -8689,7 +8689,7 @@ public sealed class XmlXCAFDriversDocumentRetrievalDriver : IDisposable
     public XmlMDFADriverTable? AttributeDrivers(MessageMessenger? theMsgDriver)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlXCAFDriversDocumentRetrievalDriverMethodAttributeDrivers0(handle, theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_xml_xcafdrivers_document_retrieval_driver_method_attribute_drivers_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlXCAFDriversDocumentRetrievalDriverMethodAttributeDrivers0(handle, theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_xml_xcafdrivers_document_retrieval_driver_method_attribute_drivers_0");
         return global::OcctSharp.XmlMDFADriverTable.FromNative(handleValue, "occtsharp_generated_xml_xcafdrivers_document_retrieval_driver_method_attribute_drivers_0");
     }
 
@@ -8699,7 +8699,7 @@ public sealed class XmlXCAFDriversDocumentRetrievalDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlXCAFDriversDocumentRetrievalDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlXCAFDriversDocumentRetrievalDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8710,7 +8710,7 @@ public sealed class XmlXCAFDriversDocumentRetrievalDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlXCAFDriversDocumentRetrievalDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlXCAFDriversDocumentRetrievalDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8720,7 +8720,7 @@ public sealed class XmlXCAFDriversDocumentRetrievalDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlXCAFDriversDocumentRetrievalDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlXCAFDriversDocumentRetrievalDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8728,7 +8728,7 @@ public sealed class XmlXCAFDriversDocumentRetrievalDriver : IDisposable
     public XmlXCAFDriversDocumentRetrievalDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlXCAFDriversDocumentRetrievalDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlXCAFDriversDocumentRetrievalDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XmlXCAFDriversDocumentRetrievalDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8765,7 +8765,7 @@ public sealed class XmlXCAFDriversDocumentStorageDriver : IDisposable
     public XmlMDFADriverTable? AttributeDrivers(MessageMessenger? theMsgDriver)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlXCAFDriversDocumentStorageDriverMethodAttributeDrivers0(handle, theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_xml_xcafdrivers_document_storage_driver_method_attribute_drivers_0");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlXCAFDriversDocumentStorageDriverMethodAttributeDrivers0(handle, theMsgDriver is null ? nint.Zero : theMsgDriver.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_xml_xcafdrivers_document_storage_driver_method_attribute_drivers_0");
         return global::OcctSharp.XmlMDFADriverTable.FromNative(handleValue, "occtsharp_generated_xml_xcafdrivers_document_storage_driver_method_attribute_drivers_0");
     }
 
@@ -8775,7 +8775,7 @@ public sealed class XmlXCAFDriversDocumentStorageDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlXCAFDriversDocumentStorageDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlXCAFDriversDocumentStorageDriverGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8786,7 +8786,7 @@ public sealed class XmlXCAFDriversDocumentStorageDriver : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlXCAFDriversDocumentStorageDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlXCAFDriversDocumentStorageDriverGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8796,7 +8796,7 @@ public sealed class XmlXCAFDriversDocumentStorageDriver : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlXCAFDriversDocumentStorageDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlXCAFDriversDocumentStorageDriverIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8804,7 +8804,7 @@ public sealed class XmlXCAFDriversDocumentStorageDriver : IDisposable
     public XmlXCAFDriversDocumentStorageDriver Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XmlXCAFDriversDocumentStorageDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XmlXCAFDriversDocumentStorageDriverClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XmlXCAFDriversDocumentStorageDriver(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 

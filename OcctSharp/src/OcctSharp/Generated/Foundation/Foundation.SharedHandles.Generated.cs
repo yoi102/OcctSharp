@@ -570,14 +570,14 @@ public sealed class BVHBuildThread : IDisposable
     public void Run()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHBuildThreadMethodRun0(handle), "occtsharp_generated_bvh_build_thread_method_run_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHBuildThreadMethodRun0(handle), "occtsharp_generated_bvh_build_thread_method_run_0");
     }
 
     /// <summary>Invokes OCCT BVH_BuildThread::Wait.</summary>
     public void Wait()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHBuildThreadMethodWait0(handle), "occtsharp_generated_bvh_build_thread_method_wait_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHBuildThreadMethodWait0(handle), "occtsharp_generated_bvh_build_thread_method_wait_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -586,7 +586,7 @@ public sealed class BVHBuildThread : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHBuildThreadGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHBuildThreadGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -597,7 +597,7 @@ public sealed class BVHBuildThread : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHBuildThreadGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHBuildThreadGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -607,7 +607,7 @@ public sealed class BVHBuildThread : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHBuildThreadIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHBuildThreadIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -615,7 +615,7 @@ public sealed class BVHBuildThread : IDisposable
     public BVHBuildThread Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHBuildThreadClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHBuildThreadClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BVHBuildThread(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -652,7 +652,7 @@ public sealed class BVHBuilderTransient : IDisposable
     public bool IsParallel()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHBuilderTransientMethodIsParallel0(handle, out int resultValue), "occtsharp_generated_bvh_builder_transient_method_is_parallel_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHBuilderTransientMethodIsParallel0(handle, out int resultValue), "occtsharp_generated_bvh_builder_transient_method_is_parallel_0");
         return resultValue != 0;
     }
 
@@ -660,7 +660,7 @@ public sealed class BVHBuilderTransient : IDisposable
     public int LeafNodeSize()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHBuilderTransientMethodLeafNodeSize0(handle, out int resultValue), "occtsharp_generated_bvh_builder_transient_method_leaf_node_size_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHBuilderTransientMethodLeafNodeSize0(handle, out int resultValue), "occtsharp_generated_bvh_builder_transient_method_leaf_node_size_0");
         return resultValue;
     }
 
@@ -668,7 +668,7 @@ public sealed class BVHBuilderTransient : IDisposable
     public int MaxTreeDepth()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHBuilderTransientMethodMaxTreeDepth0(handle, out int resultValue), "occtsharp_generated_bvh_builder_transient_method_max_tree_depth_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHBuilderTransientMethodMaxTreeDepth0(handle, out int resultValue), "occtsharp_generated_bvh_builder_transient_method_max_tree_depth_0");
         return resultValue;
     }
 
@@ -676,7 +676,7 @@ public sealed class BVHBuilderTransient : IDisposable
     public void SetParallel(bool isParallel)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHBuilderTransientMethodSetParallel0(handle, isParallel ? 1 : 0), "occtsharp_generated_bvh_builder_transient_method_set_parallel_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHBuilderTransientMethodSetParallel0(handle, isParallel ? 1 : 0), "occtsharp_generated_bvh_builder_transient_method_set_parallel_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -685,7 +685,7 @@ public sealed class BVHBuilderTransient : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHBuilderTransientGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHBuilderTransientGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -696,7 +696,7 @@ public sealed class BVHBuilderTransient : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHBuilderTransientGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHBuilderTransientGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -706,7 +706,7 @@ public sealed class BVHBuilderTransient : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHBuilderTransientIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHBuilderTransientIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -714,7 +714,7 @@ public sealed class BVHBuilderTransient : IDisposable
     public BVHBuilderTransient Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHBuilderTransientClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHBuilderTransientClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BVHBuilderTransient(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -751,7 +751,7 @@ public sealed class BVHObjectTransient : IDisposable
     public bool IsDirty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHObjectTransientMethodIsDirty0(handle, out int resultValue), "occtsharp_generated_bvh_object_transient_method_is_dirty_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHObjectTransientMethodIsDirty0(handle, out int resultValue), "occtsharp_generated_bvh_object_transient_method_is_dirty_0");
         return resultValue != 0;
     }
 
@@ -759,14 +759,14 @@ public sealed class BVHObjectTransient : IDisposable
     public void MarkDirty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHObjectTransientMethodMarkDirty0(handle), "occtsharp_generated_bvh_object_transient_method_mark_dirty_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHObjectTransientMethodMarkDirty0(handle), "occtsharp_generated_bvh_object_transient_method_mark_dirty_0");
     }
 
     /// <summary>Invokes OCCT BVH_ObjectTransient::SetProperties.</summary>
     public void SetProperties(BVHProperties? theProperties)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHObjectTransientMethodSetProperties0(handle, theProperties is null ? nint.Zero : theProperties.NativeHandle.DangerousGetHandle()), "occtsharp_generated_bvh_object_transient_method_set_properties_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHObjectTransientMethodSetProperties0(handle, theProperties is null ? nint.Zero : theProperties.NativeHandle.DangerousGetHandle()), "occtsharp_generated_bvh_object_transient_method_set_properties_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -775,7 +775,7 @@ public sealed class BVHObjectTransient : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHObjectTransientGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHObjectTransientGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -786,7 +786,7 @@ public sealed class BVHObjectTransient : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHObjectTransientGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHObjectTransientGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -796,7 +796,7 @@ public sealed class BVHObjectTransient : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHObjectTransientIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHObjectTransientIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -804,7 +804,7 @@ public sealed class BVHObjectTransient : IDisposable
     public BVHObjectTransient Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHObjectTransientClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHObjectTransientClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BVHObjectTransient(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -843,7 +843,7 @@ public sealed class BVHProperties : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHPropertiesGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHPropertiesGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -854,7 +854,7 @@ public sealed class BVHProperties : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHPropertiesGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHPropertiesGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -864,7 +864,7 @@ public sealed class BVHProperties : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHPropertiesIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHPropertiesIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -872,7 +872,7 @@ public sealed class BVHProperties : IDisposable
     public BVHProperties Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHPropertiesClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHPropertiesClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BVHProperties(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -911,7 +911,7 @@ public sealed class BVHTreeBaseTransient : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHTreeBaseTransientGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHTreeBaseTransientGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -922,7 +922,7 @@ public sealed class BVHTreeBaseTransient : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHTreeBaseTransientGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHTreeBaseTransientGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -932,7 +932,7 @@ public sealed class BVHTreeBaseTransient : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHTreeBaseTransientIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHTreeBaseTransientIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -940,7 +940,7 @@ public sealed class BVHTreeBaseTransient : IDisposable
     public BVHTreeBaseTransient Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BVHTreeBaseTransientClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.BVHTreeBaseTransientClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BVHTreeBaseTransient(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -977,7 +977,7 @@ public sealed class ExprIntrpGenExp : IDisposable
     public ExprGeneralExpression? Expression()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGenExpMethodExpression0(handle, out nint handleValue), "occtsharp_generated_expr_intrp_gen_exp_method_expression_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGenExpMethodExpression0(handle, out nint handleValue), "occtsharp_generated_expr_intrp_gen_exp_method_expression_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_intrp_gen_exp_method_expression_0");
     }
 
@@ -985,7 +985,7 @@ public sealed class ExprIntrpGenExp : IDisposable
     public bool IsDone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGenExpMethodIsDone0(handle, out int resultValue), "occtsharp_generated_expr_intrp_gen_exp_method_is_done_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGenExpMethodIsDone0(handle, out int resultValue), "occtsharp_generated_expr_intrp_gen_exp_method_is_done_0");
         return resultValue != 0;
     }
 
@@ -995,7 +995,7 @@ public sealed class ExprIntrpGenExp : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGenExpGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGenExpGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1006,7 +1006,7 @@ public sealed class ExprIntrpGenExp : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGenExpGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGenExpGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1016,7 +1016,7 @@ public sealed class ExprIntrpGenExp : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGenExpIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGenExpIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1024,7 +1024,7 @@ public sealed class ExprIntrpGenExp : IDisposable
     public ExprIntrpGenExp Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGenExpClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGenExpClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprIntrpGenExp(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1061,7 +1061,7 @@ public sealed class ExprIntrpGenFct : IDisposable
     public bool IsDone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGenFctMethodIsDone0(handle, out int resultValue), "occtsharp_generated_expr_intrp_gen_fct_method_is_done_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGenFctMethodIsDone0(handle, out int resultValue), "occtsharp_generated_expr_intrp_gen_fct_method_is_done_0");
         return resultValue != 0;
     }
 
@@ -1071,7 +1071,7 @@ public sealed class ExprIntrpGenFct : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGenFctGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGenFctGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1082,7 +1082,7 @@ public sealed class ExprIntrpGenFct : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGenFctGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGenFctGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1092,7 +1092,7 @@ public sealed class ExprIntrpGenFct : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGenFctIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGenFctIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1100,7 +1100,7 @@ public sealed class ExprIntrpGenFct : IDisposable
     public ExprIntrpGenFct Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGenFctClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGenFctClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprIntrpGenFct(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1137,7 +1137,7 @@ public sealed class ExprIntrpGenRel : IDisposable
     public bool IsDone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGenRelMethodIsDone0(handle, out int resultValue), "occtsharp_generated_expr_intrp_gen_rel_method_is_done_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGenRelMethodIsDone0(handle, out int resultValue), "occtsharp_generated_expr_intrp_gen_rel_method_is_done_0");
         return resultValue != 0;
     }
 
@@ -1145,7 +1145,7 @@ public sealed class ExprIntrpGenRel : IDisposable
     public ExprGeneralRelation? Relation()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGenRelMethodRelation0(handle, out nint handleValue), "occtsharp_generated_expr_intrp_gen_rel_method_relation_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGenRelMethodRelation0(handle, out nint handleValue), "occtsharp_generated_expr_intrp_gen_rel_method_relation_0");
         return global::OcctSharp.ExprGeneralRelation.FromNative(handleValue, "occtsharp_generated_expr_intrp_gen_rel_method_relation_0");
     }
 
@@ -1155,7 +1155,7 @@ public sealed class ExprIntrpGenRel : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGenRelGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGenRelGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1166,7 +1166,7 @@ public sealed class ExprIntrpGenRel : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGenRelGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGenRelGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1176,7 +1176,7 @@ public sealed class ExprIntrpGenRel : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGenRelIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGenRelIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1184,7 +1184,7 @@ public sealed class ExprIntrpGenRel : IDisposable
     public ExprIntrpGenRel Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGenRelClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGenRelClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprIntrpGenRel(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1221,14 +1221,14 @@ public sealed class ExprIntrpGenerator : IDisposable
     public void Use(ExprNamedExpression? named)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGeneratorMethodUse0(handle, named is null ? nint.Zero : named.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_intrp_generator_method_use_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGeneratorMethodUse0(handle, named is null ? nint.Zero : named.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_intrp_generator_method_use_0");
     }
 
     /// <summary>Invokes OCCT ExprIntrp_Generator::Use.</summary>
     public void Use(ExprNamedFunction? func)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGeneratorMethodUse1(handle, func is null ? nint.Zero : func.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_intrp_generator_method_use_1");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGeneratorMethodUse1(handle, func is null ? nint.Zero : func.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_intrp_generator_method_use_1");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -1237,7 +1237,7 @@ public sealed class ExprIntrpGenerator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGeneratorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGeneratorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1248,7 +1248,7 @@ public sealed class ExprIntrpGenerator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGeneratorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGeneratorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1258,7 +1258,7 @@ public sealed class ExprIntrpGenerator : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGeneratorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGeneratorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1266,7 +1266,7 @@ public sealed class ExprIntrpGenerator : IDisposable
     public ExprIntrpGenerator Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprIntrpGeneratorClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprIntrpGeneratorClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprIntrpGenerator(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1303,7 +1303,7 @@ public sealed class ExprAbsolute : IDisposable
     public ExprAbsolute(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprAbsoluteCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprAbsoluteCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprAbsoluteCreate0");
     }
 
@@ -1311,7 +1311,7 @@ public sealed class ExprAbsolute : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprAbsoluteMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_absolute_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprAbsoluteMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_absolute_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_absolute_method_copy_0");
     }
 
@@ -1319,7 +1319,7 @@ public sealed class ExprAbsolute : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprAbsoluteMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_absolute_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprAbsoluteMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_absolute_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_absolute_method_derivative_0");
     }
 
@@ -1327,7 +1327,7 @@ public sealed class ExprAbsolute : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprAbsoluteMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_absolute_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprAbsoluteMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_absolute_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -1335,7 +1335,7 @@ public sealed class ExprAbsolute : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprAbsoluteMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_absolute_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprAbsoluteMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_absolute_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -1343,7 +1343,7 @@ public sealed class ExprAbsolute : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprAbsoluteMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_absolute_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprAbsoluteMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_absolute_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_absolute_method_shallow_simplified_0");
     }
 
@@ -1353,7 +1353,7 @@ public sealed class ExprAbsolute : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprAbsoluteGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprAbsoluteGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1364,7 +1364,7 @@ public sealed class ExprAbsolute : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprAbsoluteGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprAbsoluteGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1374,7 +1374,7 @@ public sealed class ExprAbsolute : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprAbsoluteIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprAbsoluteIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1382,7 +1382,7 @@ public sealed class ExprAbsolute : IDisposable
     public ExprAbsolute Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprAbsoluteClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprAbsoluteClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprAbsolute(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1419,7 +1419,7 @@ public sealed class ExprArcCosine : IDisposable
     public ExprArcCosine(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcCosineCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcCosineCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprArcCosineCreate0");
     }
 
@@ -1427,7 +1427,7 @@ public sealed class ExprArcCosine : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcCosineMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_arc_cosine_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcCosineMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_arc_cosine_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_arc_cosine_method_copy_0");
     }
 
@@ -1435,7 +1435,7 @@ public sealed class ExprArcCosine : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcCosineMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_arc_cosine_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcCosineMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_arc_cosine_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_arc_cosine_method_derivative_0");
     }
 
@@ -1443,7 +1443,7 @@ public sealed class ExprArcCosine : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcCosineMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_arc_cosine_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcCosineMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_arc_cosine_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -1451,7 +1451,7 @@ public sealed class ExprArcCosine : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcCosineMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_arc_cosine_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcCosineMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_arc_cosine_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -1459,7 +1459,7 @@ public sealed class ExprArcCosine : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcCosineMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_arc_cosine_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcCosineMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_arc_cosine_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_arc_cosine_method_shallow_simplified_0");
     }
 
@@ -1469,7 +1469,7 @@ public sealed class ExprArcCosine : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcCosineGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcCosineGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1480,7 +1480,7 @@ public sealed class ExprArcCosine : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcCosineGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcCosineGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1490,7 +1490,7 @@ public sealed class ExprArcCosine : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcCosineIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcCosineIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1498,7 +1498,7 @@ public sealed class ExprArcCosine : IDisposable
     public ExprArcCosine Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcCosineClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcCosineClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprArcCosine(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1535,7 +1535,7 @@ public sealed class ExprArcSine : IDisposable
     public ExprArcSine(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcSineCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcSineCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprArcSineCreate0");
     }
 
@@ -1543,7 +1543,7 @@ public sealed class ExprArcSine : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcSineMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_arc_sine_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcSineMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_arc_sine_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_arc_sine_method_copy_0");
     }
 
@@ -1551,7 +1551,7 @@ public sealed class ExprArcSine : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcSineMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_arc_sine_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcSineMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_arc_sine_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_arc_sine_method_derivative_0");
     }
 
@@ -1559,7 +1559,7 @@ public sealed class ExprArcSine : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcSineMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_arc_sine_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcSineMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_arc_sine_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -1567,7 +1567,7 @@ public sealed class ExprArcSine : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcSineMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_arc_sine_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcSineMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_arc_sine_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -1575,7 +1575,7 @@ public sealed class ExprArcSine : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcSineMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_arc_sine_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcSineMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_arc_sine_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_arc_sine_method_shallow_simplified_0");
     }
 
@@ -1585,7 +1585,7 @@ public sealed class ExprArcSine : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcSineGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcSineGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1596,7 +1596,7 @@ public sealed class ExprArcSine : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcSineGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcSineGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1606,7 +1606,7 @@ public sealed class ExprArcSine : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcSineIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcSineIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1614,7 +1614,7 @@ public sealed class ExprArcSine : IDisposable
     public ExprArcSine Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcSineClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcSineClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprArcSine(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1651,7 +1651,7 @@ public sealed class ExprArcTangent : IDisposable
     public ExprArcTangent(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcTangentCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcTangentCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprArcTangentCreate0");
     }
 
@@ -1659,7 +1659,7 @@ public sealed class ExprArcTangent : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcTangentMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_arc_tangent_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcTangentMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_arc_tangent_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_arc_tangent_method_copy_0");
     }
 
@@ -1667,7 +1667,7 @@ public sealed class ExprArcTangent : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcTangentMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_arc_tangent_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcTangentMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_arc_tangent_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_arc_tangent_method_derivative_0");
     }
 
@@ -1675,7 +1675,7 @@ public sealed class ExprArcTangent : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcTangentMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_arc_tangent_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcTangentMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_arc_tangent_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -1683,7 +1683,7 @@ public sealed class ExprArcTangent : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcTangentMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_arc_tangent_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcTangentMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_arc_tangent_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -1691,7 +1691,7 @@ public sealed class ExprArcTangent : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcTangentMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_arc_tangent_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcTangentMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_arc_tangent_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_arc_tangent_method_shallow_simplified_0");
     }
 
@@ -1701,7 +1701,7 @@ public sealed class ExprArcTangent : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcTangentGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcTangentGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1712,7 +1712,7 @@ public sealed class ExprArcTangent : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcTangentGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcTangentGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1722,7 +1722,7 @@ public sealed class ExprArcTangent : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcTangentIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcTangentIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1730,7 +1730,7 @@ public sealed class ExprArcTangent : IDisposable
     public ExprArcTangent Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArcTangentClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArcTangentClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprArcTangent(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1767,7 +1767,7 @@ public sealed class ExprArgCosh : IDisposable
     public ExprArgCosh(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgCoshCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgCoshCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprArgCoshCreate0");
     }
 
@@ -1775,7 +1775,7 @@ public sealed class ExprArgCosh : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgCoshMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_arg_cosh_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgCoshMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_arg_cosh_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_arg_cosh_method_copy_0");
     }
 
@@ -1783,7 +1783,7 @@ public sealed class ExprArgCosh : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgCoshMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_arg_cosh_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgCoshMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_arg_cosh_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_arg_cosh_method_derivative_0");
     }
 
@@ -1791,7 +1791,7 @@ public sealed class ExprArgCosh : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgCoshMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_arg_cosh_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgCoshMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_arg_cosh_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -1799,7 +1799,7 @@ public sealed class ExprArgCosh : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgCoshMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_arg_cosh_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgCoshMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_arg_cosh_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -1807,7 +1807,7 @@ public sealed class ExprArgCosh : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgCoshMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_arg_cosh_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgCoshMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_arg_cosh_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_arg_cosh_method_shallow_simplified_0");
     }
 
@@ -1817,7 +1817,7 @@ public sealed class ExprArgCosh : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgCoshGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgCoshGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1828,7 +1828,7 @@ public sealed class ExprArgCosh : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgCoshGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgCoshGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1838,7 +1838,7 @@ public sealed class ExprArgCosh : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgCoshIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgCoshIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1846,7 +1846,7 @@ public sealed class ExprArgCosh : IDisposable
     public ExprArgCosh Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgCoshClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgCoshClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprArgCosh(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1883,7 +1883,7 @@ public sealed class ExprArgSinh : IDisposable
     public ExprArgSinh(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgSinhCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgSinhCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprArgSinhCreate0");
     }
 
@@ -1891,7 +1891,7 @@ public sealed class ExprArgSinh : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgSinhMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_arg_sinh_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgSinhMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_arg_sinh_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_arg_sinh_method_copy_0");
     }
 
@@ -1899,7 +1899,7 @@ public sealed class ExprArgSinh : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgSinhMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_arg_sinh_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgSinhMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_arg_sinh_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_arg_sinh_method_derivative_0");
     }
 
@@ -1907,7 +1907,7 @@ public sealed class ExprArgSinh : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgSinhMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_arg_sinh_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgSinhMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_arg_sinh_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -1915,7 +1915,7 @@ public sealed class ExprArgSinh : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgSinhMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_arg_sinh_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgSinhMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_arg_sinh_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -1923,7 +1923,7 @@ public sealed class ExprArgSinh : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgSinhMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_arg_sinh_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgSinhMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_arg_sinh_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_arg_sinh_method_shallow_simplified_0");
     }
 
@@ -1933,7 +1933,7 @@ public sealed class ExprArgSinh : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgSinhGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgSinhGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1944,7 +1944,7 @@ public sealed class ExprArgSinh : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgSinhGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgSinhGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1954,7 +1954,7 @@ public sealed class ExprArgSinh : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgSinhIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgSinhIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1962,7 +1962,7 @@ public sealed class ExprArgSinh : IDisposable
     public ExprArgSinh Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgSinhClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgSinhClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprArgSinh(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1999,7 +1999,7 @@ public sealed class ExprArgTanh : IDisposable
     public ExprArgTanh(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgTanhCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgTanhCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprArgTanhCreate0");
     }
 
@@ -2007,7 +2007,7 @@ public sealed class ExprArgTanh : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgTanhMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_arg_tanh_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgTanhMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_arg_tanh_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_arg_tanh_method_copy_0");
     }
 
@@ -2015,7 +2015,7 @@ public sealed class ExprArgTanh : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgTanhMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_arg_tanh_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgTanhMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_arg_tanh_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_arg_tanh_method_derivative_0");
     }
 
@@ -2023,7 +2023,7 @@ public sealed class ExprArgTanh : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgTanhMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_arg_tanh_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgTanhMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_arg_tanh_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -2031,7 +2031,7 @@ public sealed class ExprArgTanh : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgTanhMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_arg_tanh_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgTanhMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_arg_tanh_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -2039,7 +2039,7 @@ public sealed class ExprArgTanh : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgTanhMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_arg_tanh_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgTanhMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_arg_tanh_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_arg_tanh_method_shallow_simplified_0");
     }
 
@@ -2049,7 +2049,7 @@ public sealed class ExprArgTanh : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgTanhGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgTanhGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2060,7 +2060,7 @@ public sealed class ExprArgTanh : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgTanhGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgTanhGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2070,7 +2070,7 @@ public sealed class ExprArgTanh : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgTanhIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgTanhIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2078,7 +2078,7 @@ public sealed class ExprArgTanh : IDisposable
     public ExprArgTanh Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprArgTanhClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprArgTanhClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprArgTanh(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2115,7 +2115,7 @@ public sealed class ExprBinaryExpression : IDisposable
     public bool Contains(ExprGeneralExpression? exp)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryExpressionMethodContains0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_binary_expression_method_contains_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryExpressionMethodContains0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_binary_expression_method_contains_0");
         return resultValue != 0;
     }
 
@@ -2123,7 +2123,7 @@ public sealed class ExprBinaryExpression : IDisposable
     public bool ContainsUnknowns()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryExpressionMethodContainsUnknowns0(handle, out int resultValue), "occtsharp_generated_expr_binary_expression_method_contains_unknowns_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryExpressionMethodContainsUnknowns0(handle, out int resultValue), "occtsharp_generated_expr_binary_expression_method_contains_unknowns_0");
         return resultValue != 0;
     }
 
@@ -2131,7 +2131,7 @@ public sealed class ExprBinaryExpression : IDisposable
     public int NbSubExpressions()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryExpressionMethodNbSubExpressions0(handle, out int resultValue), "occtsharp_generated_expr_binary_expression_method_nb_sub_expressions_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryExpressionMethodNbSubExpressions0(handle, out int resultValue), "occtsharp_generated_expr_binary_expression_method_nb_sub_expressions_0");
         return resultValue;
     }
 
@@ -2139,28 +2139,28 @@ public sealed class ExprBinaryExpression : IDisposable
     public void Replace(ExprNamedUnknown? var, ExprGeneralExpression? with)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryExpressionMethodReplace0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_binary_expression_method_replace_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryExpressionMethodReplace0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_binary_expression_method_replace_0");
     }
 
     /// <summary>Invokes OCCT Expr_BinaryExpression::SetFirstOperand.</summary>
     public void SetFirstOperand(ExprGeneralExpression? exp)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryExpressionMethodSetFirstOperand0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_binary_expression_method_set_first_operand_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryExpressionMethodSetFirstOperand0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_binary_expression_method_set_first_operand_0");
     }
 
     /// <summary>Invokes OCCT Expr_BinaryExpression::SetSecondOperand.</summary>
     public void SetSecondOperand(ExprGeneralExpression? exp)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryExpressionMethodSetSecondOperand0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_binary_expression_method_set_second_operand_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryExpressionMethodSetSecondOperand0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_binary_expression_method_set_second_operand_0");
     }
 
     /// <summary>Invokes OCCT Expr_BinaryExpression::Simplified.</summary>
     public ExprGeneralExpression? Simplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryExpressionMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_binary_expression_method_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryExpressionMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_binary_expression_method_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_binary_expression_method_simplified_0");
     }
 
@@ -2170,7 +2170,7 @@ public sealed class ExprBinaryExpression : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryExpressionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryExpressionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2181,7 +2181,7 @@ public sealed class ExprBinaryExpression : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryExpressionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryExpressionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2191,7 +2191,7 @@ public sealed class ExprBinaryExpression : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryExpressionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryExpressionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2199,7 +2199,7 @@ public sealed class ExprBinaryExpression : IDisposable
     public ExprBinaryExpression Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryExpressionClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryExpressionClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprBinaryExpression(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2236,7 +2236,7 @@ public sealed class ExprBinaryFunction : IDisposable
     public ExprBinaryFunction(ExprGeneralFunction? func, ExprGeneralExpression? exp1, ExprGeneralExpression? exp2)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryFunctionCreate0(func is null ? nint.Zero : func.NativeHandle.DangerousGetHandle(), exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryFunctionCreate0(func is null ? nint.Zero : func.NativeHandle.DangerousGetHandle(), exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprBinaryFunctionCreate0");
     }
 
@@ -2244,7 +2244,7 @@ public sealed class ExprBinaryFunction : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryFunctionMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_binary_function_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryFunctionMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_binary_function_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_binary_function_method_copy_0");
     }
 
@@ -2252,7 +2252,7 @@ public sealed class ExprBinaryFunction : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryFunctionMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_binary_function_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryFunctionMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_binary_function_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_binary_function_method_derivative_0");
     }
 
@@ -2260,7 +2260,7 @@ public sealed class ExprBinaryFunction : IDisposable
     public ExprGeneralFunction? Function()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryFunctionMethodFunction0(handle, out nint handleValue), "occtsharp_generated_expr_binary_function_method_function_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryFunctionMethodFunction0(handle, out nint handleValue), "occtsharp_generated_expr_binary_function_method_function_0");
         return global::OcctSharp.ExprGeneralFunction.FromNative(handleValue, "occtsharp_generated_expr_binary_function_method_function_0");
     }
 
@@ -2268,7 +2268,7 @@ public sealed class ExprBinaryFunction : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryFunctionMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_binary_function_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryFunctionMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_binary_function_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -2276,7 +2276,7 @@ public sealed class ExprBinaryFunction : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryFunctionMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_binary_function_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryFunctionMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_binary_function_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -2284,7 +2284,7 @@ public sealed class ExprBinaryFunction : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryFunctionMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_binary_function_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryFunctionMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_binary_function_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_binary_function_method_shallow_simplified_0");
     }
 
@@ -2294,7 +2294,7 @@ public sealed class ExprBinaryFunction : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryFunctionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryFunctionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2305,7 +2305,7 @@ public sealed class ExprBinaryFunction : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryFunctionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryFunctionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2315,7 +2315,7 @@ public sealed class ExprBinaryFunction : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryFunctionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryFunctionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2323,7 +2323,7 @@ public sealed class ExprBinaryFunction : IDisposable
     public ExprBinaryFunction Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprBinaryFunctionClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprBinaryFunctionClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprBinaryFunction(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2360,7 +2360,7 @@ public sealed class ExprCosh : IDisposable
     public ExprCosh(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCoshCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCoshCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprCoshCreate0");
     }
 
@@ -2368,7 +2368,7 @@ public sealed class ExprCosh : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCoshMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_cosh_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCoshMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_cosh_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_cosh_method_copy_0");
     }
 
@@ -2376,7 +2376,7 @@ public sealed class ExprCosh : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCoshMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_cosh_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCoshMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_cosh_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_cosh_method_derivative_0");
     }
 
@@ -2384,7 +2384,7 @@ public sealed class ExprCosh : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCoshMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_cosh_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCoshMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_cosh_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -2392,7 +2392,7 @@ public sealed class ExprCosh : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCoshMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_cosh_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCoshMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_cosh_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -2400,7 +2400,7 @@ public sealed class ExprCosh : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCoshMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_cosh_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCoshMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_cosh_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_cosh_method_shallow_simplified_0");
     }
 
@@ -2410,7 +2410,7 @@ public sealed class ExprCosh : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCoshGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCoshGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2421,7 +2421,7 @@ public sealed class ExprCosh : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCoshGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCoshGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2431,7 +2431,7 @@ public sealed class ExprCosh : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCoshIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCoshIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2439,7 +2439,7 @@ public sealed class ExprCosh : IDisposable
     public ExprCosh Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCoshClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCoshClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprCosh(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2476,7 +2476,7 @@ public sealed class ExprCosine : IDisposable
     public ExprCosine(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCosineCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCosineCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprCosineCreate0");
     }
 
@@ -2484,7 +2484,7 @@ public sealed class ExprCosine : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCosineMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_cosine_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCosineMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_cosine_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_cosine_method_copy_0");
     }
 
@@ -2492,7 +2492,7 @@ public sealed class ExprCosine : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCosineMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_cosine_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCosineMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_cosine_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_cosine_method_derivative_0");
     }
 
@@ -2500,7 +2500,7 @@ public sealed class ExprCosine : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCosineMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_cosine_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCosineMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_cosine_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -2508,7 +2508,7 @@ public sealed class ExprCosine : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCosineMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_cosine_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCosineMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_cosine_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -2516,7 +2516,7 @@ public sealed class ExprCosine : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCosineMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_cosine_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCosineMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_cosine_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_cosine_method_shallow_simplified_0");
     }
 
@@ -2526,7 +2526,7 @@ public sealed class ExprCosine : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCosineGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCosineGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2537,7 +2537,7 @@ public sealed class ExprCosine : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCosineGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCosineGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2547,7 +2547,7 @@ public sealed class ExprCosine : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCosineIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCosineIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2555,7 +2555,7 @@ public sealed class ExprCosine : IDisposable
     public ExprCosine Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprCosineClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprCosineClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprCosine(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2592,7 +2592,7 @@ public sealed class ExprDifference : IDisposable
     public ExprDifference(ExprGeneralExpression? exp1, ExprGeneralExpression? exp2)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferenceCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferenceCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprDifferenceCreate0");
     }
 
@@ -2600,7 +2600,7 @@ public sealed class ExprDifference : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferenceMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_difference_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferenceMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_difference_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_difference_method_copy_0");
     }
 
@@ -2608,7 +2608,7 @@ public sealed class ExprDifference : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferenceMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_difference_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferenceMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_difference_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_difference_method_derivative_0");
     }
 
@@ -2616,7 +2616,7 @@ public sealed class ExprDifference : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferenceMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_difference_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferenceMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_difference_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -2624,7 +2624,7 @@ public sealed class ExprDifference : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferenceMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_difference_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferenceMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_difference_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -2632,7 +2632,7 @@ public sealed class ExprDifference : IDisposable
     public ExprGeneralExpression? NDerivative(ExprNamedUnknown? x, int n)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferenceMethodNDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), n, out nint handleValue), "occtsharp_generated_expr_difference_method_nderivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferenceMethodNDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), n, out nint handleValue), "occtsharp_generated_expr_difference_method_nderivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_difference_method_nderivative_0");
     }
 
@@ -2640,7 +2640,7 @@ public sealed class ExprDifference : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferenceMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_difference_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferenceMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_difference_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_difference_method_shallow_simplified_0");
     }
 
@@ -2650,7 +2650,7 @@ public sealed class ExprDifference : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferenceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferenceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2661,7 +2661,7 @@ public sealed class ExprDifference : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferenceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferenceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2671,7 +2671,7 @@ public sealed class ExprDifference : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferenceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferenceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2679,7 +2679,7 @@ public sealed class ExprDifference : IDisposable
     public ExprDifference Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferenceClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferenceClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprDifference(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2716,7 +2716,7 @@ public sealed class ExprDifferent : IDisposable
     public ExprDifferent(ExprGeneralExpression? exp1, ExprGeneralExpression? exp2)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferentCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferentCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprDifferentCreate0");
     }
 
@@ -2724,7 +2724,7 @@ public sealed class ExprDifferent : IDisposable
     public ExprGeneralRelation? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferentMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_different_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferentMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_different_method_copy_0");
         return global::OcctSharp.ExprGeneralRelation.FromNative(handleValue, "occtsharp_generated_expr_different_method_copy_0");
     }
 
@@ -2732,7 +2732,7 @@ public sealed class ExprDifferent : IDisposable
     public bool IsSatisfied()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferentMethodIsSatisfied0(handle, out int resultValue), "occtsharp_generated_expr_different_method_is_satisfied_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferentMethodIsSatisfied0(handle, out int resultValue), "occtsharp_generated_expr_different_method_is_satisfied_0");
         return resultValue != 0;
     }
 
@@ -2740,7 +2740,7 @@ public sealed class ExprDifferent : IDisposable
     public ExprGeneralRelation? Simplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferentMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_different_method_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferentMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_different_method_simplified_0");
         return global::OcctSharp.ExprGeneralRelation.FromNative(handleValue, "occtsharp_generated_expr_different_method_simplified_0");
     }
 
@@ -2748,7 +2748,7 @@ public sealed class ExprDifferent : IDisposable
     public void Simplify()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferentMethodSimplify0(handle), "occtsharp_generated_expr_different_method_simplify_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferentMethodSimplify0(handle), "occtsharp_generated_expr_different_method_simplify_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -2757,7 +2757,7 @@ public sealed class ExprDifferent : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferentGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferentGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2768,7 +2768,7 @@ public sealed class ExprDifferent : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferentGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferentGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2778,7 +2778,7 @@ public sealed class ExprDifferent : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferentIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferentIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2786,7 +2786,7 @@ public sealed class ExprDifferent : IDisposable
     public ExprDifferent Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDifferentClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDifferentClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprDifferent(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2823,7 +2823,7 @@ public sealed class ExprDivision : IDisposable
     public ExprDivision(ExprGeneralExpression? exp1, ExprGeneralExpression? exp2)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDivisionCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDivisionCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprDivisionCreate0");
     }
 
@@ -2831,7 +2831,7 @@ public sealed class ExprDivision : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDivisionMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_division_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDivisionMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_division_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_division_method_copy_0");
     }
 
@@ -2839,7 +2839,7 @@ public sealed class ExprDivision : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDivisionMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_division_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDivisionMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_division_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_division_method_derivative_0");
     }
 
@@ -2847,7 +2847,7 @@ public sealed class ExprDivision : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDivisionMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_division_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDivisionMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_division_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -2855,7 +2855,7 @@ public sealed class ExprDivision : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDivisionMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_division_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDivisionMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_division_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -2863,7 +2863,7 @@ public sealed class ExprDivision : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDivisionMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_division_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDivisionMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_division_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_division_method_shallow_simplified_0");
     }
 
@@ -2873,7 +2873,7 @@ public sealed class ExprDivision : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDivisionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDivisionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2884,7 +2884,7 @@ public sealed class ExprDivision : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDivisionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDivisionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2894,7 +2894,7 @@ public sealed class ExprDivision : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDivisionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDivisionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2902,7 +2902,7 @@ public sealed class ExprDivision : IDisposable
     public ExprDivision Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprDivisionClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprDivisionClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprDivision(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2939,7 +2939,7 @@ public sealed class ExprEqual : IDisposable
     public ExprEqual(ExprGeneralExpression? exp1, ExprGeneralExpression? exp2)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprEqualCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprEqualCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprEqualCreate0");
     }
 
@@ -2947,7 +2947,7 @@ public sealed class ExprEqual : IDisposable
     public ExprGeneralRelation? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprEqualMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_equal_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprEqualMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_equal_method_copy_0");
         return global::OcctSharp.ExprGeneralRelation.FromNative(handleValue, "occtsharp_generated_expr_equal_method_copy_0");
     }
 
@@ -2955,7 +2955,7 @@ public sealed class ExprEqual : IDisposable
     public bool IsSatisfied()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprEqualMethodIsSatisfied0(handle, out int resultValue), "occtsharp_generated_expr_equal_method_is_satisfied_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprEqualMethodIsSatisfied0(handle, out int resultValue), "occtsharp_generated_expr_equal_method_is_satisfied_0");
         return resultValue != 0;
     }
 
@@ -2963,7 +2963,7 @@ public sealed class ExprEqual : IDisposable
     public ExprGeneralRelation? Simplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprEqualMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_equal_method_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprEqualMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_equal_method_simplified_0");
         return global::OcctSharp.ExprGeneralRelation.FromNative(handleValue, "occtsharp_generated_expr_equal_method_simplified_0");
     }
 
@@ -2971,7 +2971,7 @@ public sealed class ExprEqual : IDisposable
     public void Simplify()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprEqualMethodSimplify0(handle), "occtsharp_generated_expr_equal_method_simplify_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprEqualMethodSimplify0(handle), "occtsharp_generated_expr_equal_method_simplify_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -2980,7 +2980,7 @@ public sealed class ExprEqual : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprEqualGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprEqualGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2991,7 +2991,7 @@ public sealed class ExprEqual : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprEqualGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprEqualGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3001,7 +3001,7 @@ public sealed class ExprEqual : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprEqualIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprEqualIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3009,7 +3009,7 @@ public sealed class ExprEqual : IDisposable
     public ExprEqual Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprEqualClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprEqualClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprEqual(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3046,7 +3046,7 @@ public sealed class ExprExponential : IDisposable
     public ExprExponential(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentialCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentialCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprExponentialCreate0");
     }
 
@@ -3054,7 +3054,7 @@ public sealed class ExprExponential : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentialMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_exponential_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentialMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_exponential_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_exponential_method_copy_0");
     }
 
@@ -3062,7 +3062,7 @@ public sealed class ExprExponential : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentialMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_exponential_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentialMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_exponential_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_exponential_method_derivative_0");
     }
 
@@ -3070,7 +3070,7 @@ public sealed class ExprExponential : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentialMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_exponential_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentialMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_exponential_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -3078,7 +3078,7 @@ public sealed class ExprExponential : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentialMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_exponential_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentialMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_exponential_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -3086,7 +3086,7 @@ public sealed class ExprExponential : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentialMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_exponential_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentialMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_exponential_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_exponential_method_shallow_simplified_0");
     }
 
@@ -3096,7 +3096,7 @@ public sealed class ExprExponential : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentialGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentialGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3107,7 +3107,7 @@ public sealed class ExprExponential : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentialGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentialGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3117,7 +3117,7 @@ public sealed class ExprExponential : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentialIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentialIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3125,7 +3125,7 @@ public sealed class ExprExponential : IDisposable
     public ExprExponential Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentialClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentialClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprExponential(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3162,7 +3162,7 @@ public sealed class ExprExponentiate : IDisposable
     public ExprExponentiate(ExprGeneralExpression? exp1, ExprGeneralExpression? exp2)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentiateCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentiateCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprExponentiateCreate0");
     }
 
@@ -3170,7 +3170,7 @@ public sealed class ExprExponentiate : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentiateMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_exponentiate_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentiateMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_exponentiate_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_exponentiate_method_copy_0");
     }
 
@@ -3178,7 +3178,7 @@ public sealed class ExprExponentiate : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentiateMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_exponentiate_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentiateMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_exponentiate_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_exponentiate_method_derivative_0");
     }
 
@@ -3186,7 +3186,7 @@ public sealed class ExprExponentiate : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentiateMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_exponentiate_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentiateMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_exponentiate_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -3194,7 +3194,7 @@ public sealed class ExprExponentiate : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentiateMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_exponentiate_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentiateMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_exponentiate_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -3202,7 +3202,7 @@ public sealed class ExprExponentiate : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentiateMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_exponentiate_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentiateMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_exponentiate_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_exponentiate_method_shallow_simplified_0");
     }
 
@@ -3212,7 +3212,7 @@ public sealed class ExprExponentiate : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentiateGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentiateGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3223,7 +3223,7 @@ public sealed class ExprExponentiate : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentiateGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentiateGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3233,7 +3233,7 @@ public sealed class ExprExponentiate : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentiateIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentiateIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3241,7 +3241,7 @@ public sealed class ExprExponentiate : IDisposable
     public ExprExponentiate Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprExponentiateClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprExponentiateClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprExponentiate(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3278,7 +3278,7 @@ public sealed class ExprFunctionDerivative : IDisposable
     public ExprFunctionDerivative(ExprGeneralFunction? func, ExprNamedUnknown? withX, int deg)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprFunctionDerivativeCreate0(func is null ? nint.Zero : func.NativeHandle.DangerousGetHandle(), withX is null ? nint.Zero : withX.NativeHandle.DangerousGetHandle(), deg, out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprFunctionDerivativeCreate0(func is null ? nint.Zero : func.NativeHandle.DangerousGetHandle(), withX is null ? nint.Zero : withX.NativeHandle.DangerousGetHandle(), deg, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprFunctionDerivativeCreate0");
     }
 
@@ -3286,7 +3286,7 @@ public sealed class ExprFunctionDerivative : IDisposable
     public ExprGeneralFunction? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprFunctionDerivativeMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_function_derivative_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprFunctionDerivativeMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_function_derivative_method_copy_0");
         return global::OcctSharp.ExprGeneralFunction.FromNative(handleValue, "occtsharp_generated_expr_function_derivative_method_copy_0");
     }
 
@@ -3294,7 +3294,7 @@ public sealed class ExprFunctionDerivative : IDisposable
     public int Degree()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprFunctionDerivativeMethodDegree0(handle, out int resultValue), "occtsharp_generated_expr_function_derivative_method_degree_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprFunctionDerivativeMethodDegree0(handle, out int resultValue), "occtsharp_generated_expr_function_derivative_method_degree_0");
         return resultValue;
     }
 
@@ -3302,7 +3302,7 @@ public sealed class ExprFunctionDerivative : IDisposable
     public ExprNamedUnknown? DerivVariable()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprFunctionDerivativeMethodDerivVariable0(handle, out nint handleValue), "occtsharp_generated_expr_function_derivative_method_deriv_variable_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprFunctionDerivativeMethodDerivVariable0(handle, out nint handleValue), "occtsharp_generated_expr_function_derivative_method_deriv_variable_0");
         return global::OcctSharp.ExprNamedUnknown.FromNative(handleValue, "occtsharp_generated_expr_function_derivative_method_deriv_variable_0");
     }
 
@@ -3310,7 +3310,7 @@ public sealed class ExprFunctionDerivative : IDisposable
     public ExprGeneralFunction? Derivative(ExprNamedUnknown? var)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprFunctionDerivativeMethodDerivative0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_function_derivative_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprFunctionDerivativeMethodDerivative0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_function_derivative_method_derivative_0");
         return global::OcctSharp.ExprGeneralFunction.FromNative(handleValue, "occtsharp_generated_expr_function_derivative_method_derivative_0");
     }
 
@@ -3318,7 +3318,7 @@ public sealed class ExprFunctionDerivative : IDisposable
     public ExprGeneralFunction? Derivative(ExprNamedUnknown? var, int deg)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprFunctionDerivativeMethodDerivative1(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), deg, out nint handleValue), "occtsharp_generated_expr_function_derivative_method_derivative_1");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprFunctionDerivativeMethodDerivative1(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), deg, out nint handleValue), "occtsharp_generated_expr_function_derivative_method_derivative_1");
         return global::OcctSharp.ExprGeneralFunction.FromNative(handleValue, "occtsharp_generated_expr_function_derivative_method_derivative_1");
     }
 
@@ -3326,7 +3326,7 @@ public sealed class ExprFunctionDerivative : IDisposable
     public ExprGeneralExpression? Expression()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprFunctionDerivativeMethodExpression0(handle, out nint handleValue), "occtsharp_generated_expr_function_derivative_method_expression_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprFunctionDerivativeMethodExpression0(handle, out nint handleValue), "occtsharp_generated_expr_function_derivative_method_expression_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_function_derivative_method_expression_0");
     }
 
@@ -3334,7 +3334,7 @@ public sealed class ExprFunctionDerivative : IDisposable
     public ExprGeneralFunction? Function()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprFunctionDerivativeMethodFunction0(handle, out nint handleValue), "occtsharp_generated_expr_function_derivative_method_function_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprFunctionDerivativeMethodFunction0(handle, out nint handleValue), "occtsharp_generated_expr_function_derivative_method_function_0");
         return global::OcctSharp.ExprGeneralFunction.FromNative(handleValue, "occtsharp_generated_expr_function_derivative_method_function_0");
     }
 
@@ -3342,7 +3342,7 @@ public sealed class ExprFunctionDerivative : IDisposable
     public bool IsIdentical(ExprGeneralFunction? func)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprFunctionDerivativeMethodIsIdentical0(handle, func is null ? nint.Zero : func.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_function_derivative_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprFunctionDerivativeMethodIsIdentical0(handle, func is null ? nint.Zero : func.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_function_derivative_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -3350,7 +3350,7 @@ public sealed class ExprFunctionDerivative : IDisposable
     public bool IsLinearOnVariable(int index)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprFunctionDerivativeMethodIsLinearOnVariable0(handle, index, out int resultValue), "occtsharp_generated_expr_function_derivative_method_is_linear_on_variable_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprFunctionDerivativeMethodIsLinearOnVariable0(handle, index, out int resultValue), "occtsharp_generated_expr_function_derivative_method_is_linear_on_variable_0");
         return resultValue != 0;
     }
 
@@ -3358,7 +3358,7 @@ public sealed class ExprFunctionDerivative : IDisposable
     public int NbOfVariables()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprFunctionDerivativeMethodNbOfVariables0(handle, out int resultValue), "occtsharp_generated_expr_function_derivative_method_nb_of_variables_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprFunctionDerivativeMethodNbOfVariables0(handle, out int resultValue), "occtsharp_generated_expr_function_derivative_method_nb_of_variables_0");
         return resultValue;
     }
 
@@ -3366,14 +3366,14 @@ public sealed class ExprFunctionDerivative : IDisposable
     public void UpdateExpression()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprFunctionDerivativeMethodUpdateExpression0(handle), "occtsharp_generated_expr_function_derivative_method_update_expression_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprFunctionDerivativeMethodUpdateExpression0(handle), "occtsharp_generated_expr_function_derivative_method_update_expression_0");
     }
 
     /// <summary>Invokes OCCT Expr_FunctionDerivative::Variable.</summary>
     public ExprNamedUnknown? Variable(int index)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprFunctionDerivativeMethodVariable0(handle, index, out nint handleValue), "occtsharp_generated_expr_function_derivative_method_variable_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprFunctionDerivativeMethodVariable0(handle, index, out nint handleValue), "occtsharp_generated_expr_function_derivative_method_variable_0");
         return global::OcctSharp.ExprNamedUnknown.FromNative(handleValue, "occtsharp_generated_expr_function_derivative_method_variable_0");
     }
 
@@ -3383,7 +3383,7 @@ public sealed class ExprFunctionDerivative : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprFunctionDerivativeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprFunctionDerivativeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3394,7 +3394,7 @@ public sealed class ExprFunctionDerivative : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprFunctionDerivativeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprFunctionDerivativeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3404,7 +3404,7 @@ public sealed class ExprFunctionDerivative : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprFunctionDerivativeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprFunctionDerivativeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3412,7 +3412,7 @@ public sealed class ExprFunctionDerivative : IDisposable
     public ExprFunctionDerivative Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprFunctionDerivativeClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprFunctionDerivativeClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprFunctionDerivative(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3449,7 +3449,7 @@ public sealed class ExprGeneralExpression : IDisposable
     public double EvaluateNumeric()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGeneralExpressionMethodEvaluateNumeric0(handle, out double resultValue), "occtsharp_generated_expr_general_expression_method_evaluate_numeric_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGeneralExpressionMethodEvaluateNumeric0(handle, out double resultValue), "occtsharp_generated_expr_general_expression_method_evaluate_numeric_0");
         return resultValue;
     }
 
@@ -3457,7 +3457,7 @@ public sealed class ExprGeneralExpression : IDisposable
     public bool IsShareable()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGeneralExpressionMethodIsShareable0(handle, out int resultValue), "occtsharp_generated_expr_general_expression_method_is_shareable_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGeneralExpressionMethodIsShareable0(handle, out int resultValue), "occtsharp_generated_expr_general_expression_method_is_shareable_0");
         return resultValue != 0;
     }
 
@@ -3465,7 +3465,7 @@ public sealed class ExprGeneralExpression : IDisposable
     public ExprGeneralExpression? NDerivative(ExprNamedUnknown? x, int n)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGeneralExpressionMethodNDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), n, out nint handleValue), "occtsharp_generated_expr_general_expression_method_nderivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGeneralExpressionMethodNDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), n, out nint handleValue), "occtsharp_generated_expr_general_expression_method_nderivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_general_expression_method_nderivative_0");
     }
 
@@ -3475,7 +3475,7 @@ public sealed class ExprGeneralExpression : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGeneralExpressionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGeneralExpressionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3486,7 +3486,7 @@ public sealed class ExprGeneralExpression : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGeneralExpressionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGeneralExpressionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3496,7 +3496,7 @@ public sealed class ExprGeneralExpression : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGeneralExpressionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGeneralExpressionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3504,7 +3504,7 @@ public sealed class ExprGeneralExpression : IDisposable
     public ExprGeneralExpression Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGeneralExpressionClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGeneralExpressionClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprGeneralExpression(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3543,7 +3543,7 @@ public sealed class ExprGeneralFunction : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGeneralFunctionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGeneralFunctionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3554,7 +3554,7 @@ public sealed class ExprGeneralFunction : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGeneralFunctionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGeneralFunctionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3564,7 +3564,7 @@ public sealed class ExprGeneralFunction : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGeneralFunctionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGeneralFunctionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3572,7 +3572,7 @@ public sealed class ExprGeneralFunction : IDisposable
     public ExprGeneralFunction Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGeneralFunctionClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGeneralFunctionClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprGeneralFunction(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3611,7 +3611,7 @@ public sealed class ExprGeneralRelation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGeneralRelationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGeneralRelationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3622,7 +3622,7 @@ public sealed class ExprGeneralRelation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGeneralRelationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGeneralRelationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3632,7 +3632,7 @@ public sealed class ExprGeneralRelation : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGeneralRelationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGeneralRelationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3640,7 +3640,7 @@ public sealed class ExprGeneralRelation : IDisposable
     public ExprGeneralRelation Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGeneralRelationClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGeneralRelationClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprGeneralRelation(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3677,7 +3677,7 @@ public sealed class ExprGreaterThan : IDisposable
     public ExprGreaterThan(ExprGeneralExpression? exp1, ExprGeneralExpression? exp2)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGreaterThanCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGreaterThanCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprGreaterThanCreate0");
     }
 
@@ -3685,7 +3685,7 @@ public sealed class ExprGreaterThan : IDisposable
     public ExprGeneralRelation? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGreaterThanMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_greater_than_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGreaterThanMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_greater_than_method_copy_0");
         return global::OcctSharp.ExprGeneralRelation.FromNative(handleValue, "occtsharp_generated_expr_greater_than_method_copy_0");
     }
 
@@ -3693,7 +3693,7 @@ public sealed class ExprGreaterThan : IDisposable
     public bool IsSatisfied()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGreaterThanMethodIsSatisfied0(handle, out int resultValue), "occtsharp_generated_expr_greater_than_method_is_satisfied_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGreaterThanMethodIsSatisfied0(handle, out int resultValue), "occtsharp_generated_expr_greater_than_method_is_satisfied_0");
         return resultValue != 0;
     }
 
@@ -3701,7 +3701,7 @@ public sealed class ExprGreaterThan : IDisposable
     public ExprGeneralRelation? Simplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGreaterThanMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_greater_than_method_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGreaterThanMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_greater_than_method_simplified_0");
         return global::OcctSharp.ExprGeneralRelation.FromNative(handleValue, "occtsharp_generated_expr_greater_than_method_simplified_0");
     }
 
@@ -3709,7 +3709,7 @@ public sealed class ExprGreaterThan : IDisposable
     public void Simplify()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGreaterThanMethodSimplify0(handle), "occtsharp_generated_expr_greater_than_method_simplify_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGreaterThanMethodSimplify0(handle), "occtsharp_generated_expr_greater_than_method_simplify_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -3718,7 +3718,7 @@ public sealed class ExprGreaterThan : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGreaterThanGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGreaterThanGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3729,7 +3729,7 @@ public sealed class ExprGreaterThan : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGreaterThanGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGreaterThanGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3739,7 +3739,7 @@ public sealed class ExprGreaterThan : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGreaterThanIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGreaterThanIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3747,7 +3747,7 @@ public sealed class ExprGreaterThan : IDisposable
     public ExprGreaterThan Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGreaterThanClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGreaterThanClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprGreaterThan(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3784,7 +3784,7 @@ public sealed class ExprGreaterThanOrEqual : IDisposable
     public ExprGreaterThanOrEqual(ExprGeneralExpression? exp1, ExprGeneralExpression? exp2)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGreaterThanOrEqualCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGreaterThanOrEqualCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprGreaterThanOrEqualCreate0");
     }
 
@@ -3792,7 +3792,7 @@ public sealed class ExprGreaterThanOrEqual : IDisposable
     public ExprGeneralRelation? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGreaterThanOrEqualMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_greater_than_or_equal_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGreaterThanOrEqualMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_greater_than_or_equal_method_copy_0");
         return global::OcctSharp.ExprGeneralRelation.FromNative(handleValue, "occtsharp_generated_expr_greater_than_or_equal_method_copy_0");
     }
 
@@ -3800,7 +3800,7 @@ public sealed class ExprGreaterThanOrEqual : IDisposable
     public bool IsSatisfied()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGreaterThanOrEqualMethodIsSatisfied0(handle, out int resultValue), "occtsharp_generated_expr_greater_than_or_equal_method_is_satisfied_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGreaterThanOrEqualMethodIsSatisfied0(handle, out int resultValue), "occtsharp_generated_expr_greater_than_or_equal_method_is_satisfied_0");
         return resultValue != 0;
     }
 
@@ -3808,7 +3808,7 @@ public sealed class ExprGreaterThanOrEqual : IDisposable
     public ExprGeneralRelation? Simplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGreaterThanOrEqualMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_greater_than_or_equal_method_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGreaterThanOrEqualMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_greater_than_or_equal_method_simplified_0");
         return global::OcctSharp.ExprGeneralRelation.FromNative(handleValue, "occtsharp_generated_expr_greater_than_or_equal_method_simplified_0");
     }
 
@@ -3816,7 +3816,7 @@ public sealed class ExprGreaterThanOrEqual : IDisposable
     public void Simplify()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGreaterThanOrEqualMethodSimplify0(handle), "occtsharp_generated_expr_greater_than_or_equal_method_simplify_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGreaterThanOrEqualMethodSimplify0(handle), "occtsharp_generated_expr_greater_than_or_equal_method_simplify_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -3825,7 +3825,7 @@ public sealed class ExprGreaterThanOrEqual : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGreaterThanOrEqualGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGreaterThanOrEqualGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3836,7 +3836,7 @@ public sealed class ExprGreaterThanOrEqual : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGreaterThanOrEqualGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGreaterThanOrEqualGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3846,7 +3846,7 @@ public sealed class ExprGreaterThanOrEqual : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGreaterThanOrEqualIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGreaterThanOrEqualIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3854,7 +3854,7 @@ public sealed class ExprGreaterThanOrEqual : IDisposable
     public ExprGreaterThanOrEqual Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprGreaterThanOrEqualClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprGreaterThanOrEqualClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprGreaterThanOrEqual(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3891,7 +3891,7 @@ public sealed class ExprLessThan : IDisposable
     public ExprLessThan(ExprGeneralExpression? exp1, ExprGeneralExpression? exp2)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLessThanCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLessThanCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprLessThanCreate0");
     }
 
@@ -3899,7 +3899,7 @@ public sealed class ExprLessThan : IDisposable
     public ExprGeneralRelation? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLessThanMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_less_than_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLessThanMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_less_than_method_copy_0");
         return global::OcctSharp.ExprGeneralRelation.FromNative(handleValue, "occtsharp_generated_expr_less_than_method_copy_0");
     }
 
@@ -3907,7 +3907,7 @@ public sealed class ExprLessThan : IDisposable
     public bool IsSatisfied()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLessThanMethodIsSatisfied0(handle, out int resultValue), "occtsharp_generated_expr_less_than_method_is_satisfied_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLessThanMethodIsSatisfied0(handle, out int resultValue), "occtsharp_generated_expr_less_than_method_is_satisfied_0");
         return resultValue != 0;
     }
 
@@ -3915,7 +3915,7 @@ public sealed class ExprLessThan : IDisposable
     public ExprGeneralRelation? Simplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLessThanMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_less_than_method_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLessThanMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_less_than_method_simplified_0");
         return global::OcctSharp.ExprGeneralRelation.FromNative(handleValue, "occtsharp_generated_expr_less_than_method_simplified_0");
     }
 
@@ -3923,7 +3923,7 @@ public sealed class ExprLessThan : IDisposable
     public void Simplify()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLessThanMethodSimplify0(handle), "occtsharp_generated_expr_less_than_method_simplify_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLessThanMethodSimplify0(handle), "occtsharp_generated_expr_less_than_method_simplify_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -3932,7 +3932,7 @@ public sealed class ExprLessThan : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLessThanGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLessThanGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3943,7 +3943,7 @@ public sealed class ExprLessThan : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLessThanGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLessThanGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3953,7 +3953,7 @@ public sealed class ExprLessThan : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLessThanIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLessThanIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3961,7 +3961,7 @@ public sealed class ExprLessThan : IDisposable
     public ExprLessThan Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLessThanClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLessThanClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprLessThan(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3998,7 +3998,7 @@ public sealed class ExprLessThanOrEqual : IDisposable
     public ExprLessThanOrEqual(ExprGeneralExpression? exp1, ExprGeneralExpression? exp2)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLessThanOrEqualCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLessThanOrEqualCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprLessThanOrEqualCreate0");
     }
 
@@ -4006,7 +4006,7 @@ public sealed class ExprLessThanOrEqual : IDisposable
     public ExprGeneralRelation? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLessThanOrEqualMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_less_than_or_equal_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLessThanOrEqualMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_less_than_or_equal_method_copy_0");
         return global::OcctSharp.ExprGeneralRelation.FromNative(handleValue, "occtsharp_generated_expr_less_than_or_equal_method_copy_0");
     }
 
@@ -4014,7 +4014,7 @@ public sealed class ExprLessThanOrEqual : IDisposable
     public bool IsSatisfied()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLessThanOrEqualMethodIsSatisfied0(handle, out int resultValue), "occtsharp_generated_expr_less_than_or_equal_method_is_satisfied_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLessThanOrEqualMethodIsSatisfied0(handle, out int resultValue), "occtsharp_generated_expr_less_than_or_equal_method_is_satisfied_0");
         return resultValue != 0;
     }
 
@@ -4022,7 +4022,7 @@ public sealed class ExprLessThanOrEqual : IDisposable
     public ExprGeneralRelation? Simplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLessThanOrEqualMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_less_than_or_equal_method_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLessThanOrEqualMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_less_than_or_equal_method_simplified_0");
         return global::OcctSharp.ExprGeneralRelation.FromNative(handleValue, "occtsharp_generated_expr_less_than_or_equal_method_simplified_0");
     }
 
@@ -4030,7 +4030,7 @@ public sealed class ExprLessThanOrEqual : IDisposable
     public void Simplify()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLessThanOrEqualMethodSimplify0(handle), "occtsharp_generated_expr_less_than_or_equal_method_simplify_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLessThanOrEqualMethodSimplify0(handle), "occtsharp_generated_expr_less_than_or_equal_method_simplify_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -4039,7 +4039,7 @@ public sealed class ExprLessThanOrEqual : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLessThanOrEqualGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLessThanOrEqualGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4050,7 +4050,7 @@ public sealed class ExprLessThanOrEqual : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLessThanOrEqualGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLessThanOrEqualGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4060,7 +4060,7 @@ public sealed class ExprLessThanOrEqual : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLessThanOrEqualIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLessThanOrEqualIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4068,7 +4068,7 @@ public sealed class ExprLessThanOrEqual : IDisposable
     public ExprLessThanOrEqual Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLessThanOrEqualClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLessThanOrEqualClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprLessThanOrEqual(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4105,7 +4105,7 @@ public sealed class ExprLogOf10 : IDisposable
     public ExprLogOf10(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOf10Create0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOf10Create0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprLogOf10Create0");
     }
 
@@ -4113,7 +4113,7 @@ public sealed class ExprLogOf10 : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOf10MethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_log_of10_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOf10MethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_log_of10_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_log_of10_method_copy_0");
     }
 
@@ -4121,7 +4121,7 @@ public sealed class ExprLogOf10 : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOf10MethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_log_of10_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOf10MethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_log_of10_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_log_of10_method_derivative_0");
     }
 
@@ -4129,7 +4129,7 @@ public sealed class ExprLogOf10 : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOf10MethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_log_of10_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOf10MethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_log_of10_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -4137,7 +4137,7 @@ public sealed class ExprLogOf10 : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOf10MethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_log_of10_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOf10MethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_log_of10_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -4145,7 +4145,7 @@ public sealed class ExprLogOf10 : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOf10MethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_log_of10_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOf10MethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_log_of10_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_log_of10_method_shallow_simplified_0");
     }
 
@@ -4155,7 +4155,7 @@ public sealed class ExprLogOf10 : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOf10GetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOf10GetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4166,7 +4166,7 @@ public sealed class ExprLogOf10 : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOf10GetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOf10GetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4176,7 +4176,7 @@ public sealed class ExprLogOf10 : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOf10IsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOf10IsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4184,7 +4184,7 @@ public sealed class ExprLogOf10 : IDisposable
     public ExprLogOf10 Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOf10Clone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOf10Clone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprLogOf10(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4221,7 +4221,7 @@ public sealed class ExprLogOfe : IDisposable
     public ExprLogOfe(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOfeCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOfeCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprLogOfeCreate0");
     }
 
@@ -4229,7 +4229,7 @@ public sealed class ExprLogOfe : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOfeMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_log_ofe_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOfeMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_log_ofe_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_log_ofe_method_copy_0");
     }
 
@@ -4237,7 +4237,7 @@ public sealed class ExprLogOfe : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOfeMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_log_ofe_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOfeMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_log_ofe_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_log_ofe_method_derivative_0");
     }
 
@@ -4245,7 +4245,7 @@ public sealed class ExprLogOfe : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOfeMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_log_ofe_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOfeMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_log_ofe_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -4253,7 +4253,7 @@ public sealed class ExprLogOfe : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOfeMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_log_ofe_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOfeMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_log_ofe_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -4261,7 +4261,7 @@ public sealed class ExprLogOfe : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOfeMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_log_ofe_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOfeMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_log_ofe_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_log_ofe_method_shallow_simplified_0");
     }
 
@@ -4271,7 +4271,7 @@ public sealed class ExprLogOfe : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOfeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOfeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4282,7 +4282,7 @@ public sealed class ExprLogOfe : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOfeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOfeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4292,7 +4292,7 @@ public sealed class ExprLogOfe : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOfeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOfeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4300,7 +4300,7 @@ public sealed class ExprLogOfe : IDisposable
     public ExprLogOfe Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprLogOfeClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprLogOfeClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprLogOfe(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4337,7 +4337,7 @@ public sealed class ExprNamedConstant : IDisposable
     public bool Contains(ExprGeneralExpression? exp)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedConstantMethodContains0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_named_constant_method_contains_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedConstantMethodContains0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_named_constant_method_contains_0");
         return resultValue != 0;
     }
 
@@ -4345,7 +4345,7 @@ public sealed class ExprNamedConstant : IDisposable
     public bool ContainsUnknowns()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedConstantMethodContainsUnknowns0(handle, out int resultValue), "occtsharp_generated_expr_named_constant_method_contains_unknowns_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedConstantMethodContainsUnknowns0(handle, out int resultValue), "occtsharp_generated_expr_named_constant_method_contains_unknowns_0");
         return resultValue != 0;
     }
 
@@ -4353,7 +4353,7 @@ public sealed class ExprNamedConstant : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedConstantMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_named_constant_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedConstantMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_named_constant_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_named_constant_method_copy_0");
     }
 
@@ -4361,7 +4361,7 @@ public sealed class ExprNamedConstant : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedConstantMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_named_constant_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedConstantMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_named_constant_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_named_constant_method_derivative_0");
     }
 
@@ -4369,7 +4369,7 @@ public sealed class ExprNamedConstant : IDisposable
     public double GetValue()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedConstantMethodGetValue0(handle, out double resultValue), "occtsharp_generated_expr_named_constant_method_get_value_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedConstantMethodGetValue0(handle, out double resultValue), "occtsharp_generated_expr_named_constant_method_get_value_0");
         return resultValue;
     }
 
@@ -4377,7 +4377,7 @@ public sealed class ExprNamedConstant : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedConstantMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_named_constant_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedConstantMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_named_constant_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -4385,7 +4385,7 @@ public sealed class ExprNamedConstant : IDisposable
     public int NbSubExpressions()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedConstantMethodNbSubExpressions0(handle, out int resultValue), "occtsharp_generated_expr_named_constant_method_nb_sub_expressions_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedConstantMethodNbSubExpressions0(handle, out int resultValue), "occtsharp_generated_expr_named_constant_method_nb_sub_expressions_0");
         return resultValue;
     }
 
@@ -4393,7 +4393,7 @@ public sealed class ExprNamedConstant : IDisposable
     public ExprGeneralExpression? NDerivative(ExprNamedUnknown? x, int n)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedConstantMethodNDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), n, out nint handleValue), "occtsharp_generated_expr_named_constant_method_nderivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedConstantMethodNDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), n, out nint handleValue), "occtsharp_generated_expr_named_constant_method_nderivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_named_constant_method_nderivative_0");
     }
 
@@ -4401,14 +4401,14 @@ public sealed class ExprNamedConstant : IDisposable
     public void Replace(ExprNamedUnknown? var, ExprGeneralExpression? with)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedConstantMethodReplace0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_named_constant_method_replace_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedConstantMethodReplace0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_named_constant_method_replace_0");
     }
 
     /// <summary>Invokes OCCT Expr_NamedConstant::ShallowSimplified.</summary>
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedConstantMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_named_constant_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedConstantMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_named_constant_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_named_constant_method_shallow_simplified_0");
     }
 
@@ -4416,7 +4416,7 @@ public sealed class ExprNamedConstant : IDisposable
     public ExprGeneralExpression? Simplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedConstantMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_named_constant_method_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedConstantMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_named_constant_method_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_named_constant_method_simplified_0");
     }
 
@@ -4426,7 +4426,7 @@ public sealed class ExprNamedConstant : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedConstantGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedConstantGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4437,7 +4437,7 @@ public sealed class ExprNamedConstant : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedConstantGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedConstantGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4447,7 +4447,7 @@ public sealed class ExprNamedConstant : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedConstantIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedConstantIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4455,7 +4455,7 @@ public sealed class ExprNamedConstant : IDisposable
     public ExprNamedConstant Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedConstantClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedConstantClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprNamedConstant(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4492,7 +4492,7 @@ public sealed class ExprNamedExpression : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedExpressionMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_named_expression_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedExpressionMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_named_expression_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -4500,7 +4500,7 @@ public sealed class ExprNamedExpression : IDisposable
     public bool IsShareable()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedExpressionMethodIsShareable0(handle, out int resultValue), "occtsharp_generated_expr_named_expression_method_is_shareable_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedExpressionMethodIsShareable0(handle, out int resultValue), "occtsharp_generated_expr_named_expression_method_is_shareable_0");
         return resultValue != 0;
     }
 
@@ -4510,7 +4510,7 @@ public sealed class ExprNamedExpression : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedExpressionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedExpressionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4521,7 +4521,7 @@ public sealed class ExprNamedExpression : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedExpressionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedExpressionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4531,7 +4531,7 @@ public sealed class ExprNamedExpression : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedExpressionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedExpressionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4539,7 +4539,7 @@ public sealed class ExprNamedExpression : IDisposable
     public ExprNamedExpression Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedExpressionClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedExpressionClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprNamedExpression(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4576,7 +4576,7 @@ public sealed class ExprNamedFunction : IDisposable
     public ExprGeneralFunction? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedFunctionMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_named_function_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedFunctionMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_named_function_method_copy_0");
         return global::OcctSharp.ExprGeneralFunction.FromNative(handleValue, "occtsharp_generated_expr_named_function_method_copy_0");
     }
 
@@ -4584,7 +4584,7 @@ public sealed class ExprNamedFunction : IDisposable
     public ExprGeneralFunction? Derivative(ExprNamedUnknown? var)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedFunctionMethodDerivative0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_named_function_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedFunctionMethodDerivative0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_named_function_method_derivative_0");
         return global::OcctSharp.ExprGeneralFunction.FromNative(handleValue, "occtsharp_generated_expr_named_function_method_derivative_0");
     }
 
@@ -4592,7 +4592,7 @@ public sealed class ExprNamedFunction : IDisposable
     public ExprGeneralFunction? Derivative(ExprNamedUnknown? var, int deg)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedFunctionMethodDerivative1(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), deg, out nint handleValue), "occtsharp_generated_expr_named_function_method_derivative_1");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedFunctionMethodDerivative1(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), deg, out nint handleValue), "occtsharp_generated_expr_named_function_method_derivative_1");
         return global::OcctSharp.ExprGeneralFunction.FromNative(handleValue, "occtsharp_generated_expr_named_function_method_derivative_1");
     }
 
@@ -4600,7 +4600,7 @@ public sealed class ExprNamedFunction : IDisposable
     public ExprGeneralExpression? Expression()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedFunctionMethodExpression0(handle, out nint handleValue), "occtsharp_generated_expr_named_function_method_expression_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedFunctionMethodExpression0(handle, out nint handleValue), "occtsharp_generated_expr_named_function_method_expression_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_named_function_method_expression_0");
     }
 
@@ -4608,7 +4608,7 @@ public sealed class ExprNamedFunction : IDisposable
     public bool IsIdentical(ExprGeneralFunction? func)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedFunctionMethodIsIdentical0(handle, func is null ? nint.Zero : func.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_named_function_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedFunctionMethodIsIdentical0(handle, func is null ? nint.Zero : func.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_named_function_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -4616,7 +4616,7 @@ public sealed class ExprNamedFunction : IDisposable
     public bool IsLinearOnVariable(int index)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedFunctionMethodIsLinearOnVariable0(handle, index, out int resultValue), "occtsharp_generated_expr_named_function_method_is_linear_on_variable_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedFunctionMethodIsLinearOnVariable0(handle, index, out int resultValue), "occtsharp_generated_expr_named_function_method_is_linear_on_variable_0");
         return resultValue != 0;
     }
 
@@ -4624,7 +4624,7 @@ public sealed class ExprNamedFunction : IDisposable
     public int NbOfVariables()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedFunctionMethodNbOfVariables0(handle, out int resultValue), "occtsharp_generated_expr_named_function_method_nb_of_variables_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedFunctionMethodNbOfVariables0(handle, out int resultValue), "occtsharp_generated_expr_named_function_method_nb_of_variables_0");
         return resultValue;
     }
 
@@ -4632,14 +4632,14 @@ public sealed class ExprNamedFunction : IDisposable
     public void SetExpression(ExprGeneralExpression? exp)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedFunctionMethodSetExpression0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_named_function_method_set_expression_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedFunctionMethodSetExpression0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_named_function_method_set_expression_0");
     }
 
     /// <summary>Invokes OCCT Expr_NamedFunction::Variable.</summary>
     public ExprNamedUnknown? Variable(int index)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedFunctionMethodVariable0(handle, index, out nint handleValue), "occtsharp_generated_expr_named_function_method_variable_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedFunctionMethodVariable0(handle, index, out nint handleValue), "occtsharp_generated_expr_named_function_method_variable_0");
         return global::OcctSharp.ExprNamedUnknown.FromNative(handleValue, "occtsharp_generated_expr_named_function_method_variable_0");
     }
 
@@ -4649,7 +4649,7 @@ public sealed class ExprNamedFunction : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedFunctionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedFunctionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4660,7 +4660,7 @@ public sealed class ExprNamedFunction : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedFunctionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedFunctionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4670,7 +4670,7 @@ public sealed class ExprNamedFunction : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedFunctionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedFunctionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4678,7 +4678,7 @@ public sealed class ExprNamedFunction : IDisposable
     public ExprNamedFunction Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedFunctionClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedFunctionClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprNamedFunction(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4715,14 +4715,14 @@ public sealed class ExprNamedUnknown : IDisposable
     public void Assign(ExprGeneralExpression? exp)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedUnknownMethodAssign0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_named_unknown_method_assign_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedUnknownMethodAssign0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_named_unknown_method_assign_0");
     }
 
     /// <summary>Invokes OCCT Expr_NamedUnknown::Contains.</summary>
     public bool Contains(ExprGeneralExpression? exp)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedUnknownMethodContains0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_named_unknown_method_contains_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedUnknownMethodContains0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_named_unknown_method_contains_0");
         return resultValue != 0;
     }
 
@@ -4730,7 +4730,7 @@ public sealed class ExprNamedUnknown : IDisposable
     public bool ContainsUnknowns()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedUnknownMethodContainsUnknowns0(handle, out int resultValue), "occtsharp_generated_expr_named_unknown_method_contains_unknowns_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedUnknownMethodContainsUnknowns0(handle, out int resultValue), "occtsharp_generated_expr_named_unknown_method_contains_unknowns_0");
         return resultValue != 0;
     }
 
@@ -4738,7 +4738,7 @@ public sealed class ExprNamedUnknown : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedUnknownMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_named_unknown_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedUnknownMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_named_unknown_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_named_unknown_method_copy_0");
     }
 
@@ -4746,14 +4746,14 @@ public sealed class ExprNamedUnknown : IDisposable
     public void Deassign()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedUnknownMethodDeassign0(handle), "occtsharp_generated_expr_named_unknown_method_deassign_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedUnknownMethodDeassign0(handle), "occtsharp_generated_expr_named_unknown_method_deassign_0");
     }
 
     /// <summary>Invokes OCCT Expr_NamedUnknown::Derivative.</summary>
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedUnknownMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_named_unknown_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedUnknownMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_named_unknown_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_named_unknown_method_derivative_0");
     }
 
@@ -4761,7 +4761,7 @@ public sealed class ExprNamedUnknown : IDisposable
     public bool IsAssigned()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedUnknownMethodIsAssigned0(handle, out int resultValue), "occtsharp_generated_expr_named_unknown_method_is_assigned_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedUnknownMethodIsAssigned0(handle, out int resultValue), "occtsharp_generated_expr_named_unknown_method_is_assigned_0");
         return resultValue != 0;
     }
 
@@ -4769,7 +4769,7 @@ public sealed class ExprNamedUnknown : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedUnknownMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_named_unknown_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedUnknownMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_named_unknown_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -4777,7 +4777,7 @@ public sealed class ExprNamedUnknown : IDisposable
     public int NbSubExpressions()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedUnknownMethodNbSubExpressions0(handle, out int resultValue), "occtsharp_generated_expr_named_unknown_method_nb_sub_expressions_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedUnknownMethodNbSubExpressions0(handle, out int resultValue), "occtsharp_generated_expr_named_unknown_method_nb_sub_expressions_0");
         return resultValue;
     }
 
@@ -4785,14 +4785,14 @@ public sealed class ExprNamedUnknown : IDisposable
     public void Replace(ExprNamedUnknown? var, ExprGeneralExpression? with)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedUnknownMethodReplace0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_named_unknown_method_replace_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedUnknownMethodReplace0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_named_unknown_method_replace_0");
     }
 
     /// <summary>Invokes OCCT Expr_NamedUnknown::ShallowSimplified.</summary>
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedUnknownMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_named_unknown_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedUnknownMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_named_unknown_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_named_unknown_method_shallow_simplified_0");
     }
 
@@ -4800,7 +4800,7 @@ public sealed class ExprNamedUnknown : IDisposable
     public ExprGeneralExpression? Simplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedUnknownMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_named_unknown_method_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedUnknownMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_named_unknown_method_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_named_unknown_method_simplified_0");
     }
 
@@ -4810,7 +4810,7 @@ public sealed class ExprNamedUnknown : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedUnknownGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedUnknownGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4821,7 +4821,7 @@ public sealed class ExprNamedUnknown : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedUnknownGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedUnknownGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4831,7 +4831,7 @@ public sealed class ExprNamedUnknown : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedUnknownIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedUnknownIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4839,7 +4839,7 @@ public sealed class ExprNamedUnknown : IDisposable
     public ExprNamedUnknown Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNamedUnknownClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNamedUnknownClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprNamedUnknown(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4876,7 +4876,7 @@ public sealed class ExprNumericValue : IDisposable
     public ExprNumericValue(double val)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNumericValueCreate0(val, out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNumericValueCreate0(val, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprNumericValueCreate0");
     }
 
@@ -4884,7 +4884,7 @@ public sealed class ExprNumericValue : IDisposable
     public bool Contains(ExprGeneralExpression? exp)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNumericValueMethodContains0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_numeric_value_method_contains_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNumericValueMethodContains0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_numeric_value_method_contains_0");
         return resultValue != 0;
     }
 
@@ -4892,7 +4892,7 @@ public sealed class ExprNumericValue : IDisposable
     public bool ContainsUnknowns()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNumericValueMethodContainsUnknowns0(handle, out int resultValue), "occtsharp_generated_expr_numeric_value_method_contains_unknowns_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNumericValueMethodContainsUnknowns0(handle, out int resultValue), "occtsharp_generated_expr_numeric_value_method_contains_unknowns_0");
         return resultValue != 0;
     }
 
@@ -4900,7 +4900,7 @@ public sealed class ExprNumericValue : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNumericValueMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_numeric_value_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNumericValueMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_numeric_value_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_numeric_value_method_copy_0");
     }
 
@@ -4908,7 +4908,7 @@ public sealed class ExprNumericValue : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNumericValueMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_numeric_value_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNumericValueMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_numeric_value_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_numeric_value_method_derivative_0");
     }
 
@@ -4916,7 +4916,7 @@ public sealed class ExprNumericValue : IDisposable
     public double GetValue()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNumericValueMethodGetValue0(handle, out double resultValue), "occtsharp_generated_expr_numeric_value_method_get_value_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNumericValueMethodGetValue0(handle, out double resultValue), "occtsharp_generated_expr_numeric_value_method_get_value_0");
         return resultValue;
     }
 
@@ -4924,7 +4924,7 @@ public sealed class ExprNumericValue : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNumericValueMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_numeric_value_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNumericValueMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_numeric_value_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -4932,7 +4932,7 @@ public sealed class ExprNumericValue : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNumericValueMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_numeric_value_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNumericValueMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_numeric_value_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -4940,7 +4940,7 @@ public sealed class ExprNumericValue : IDisposable
     public int NbSubExpressions()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNumericValueMethodNbSubExpressions0(handle, out int resultValue), "occtsharp_generated_expr_numeric_value_method_nb_sub_expressions_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNumericValueMethodNbSubExpressions0(handle, out int resultValue), "occtsharp_generated_expr_numeric_value_method_nb_sub_expressions_0");
         return resultValue;
     }
 
@@ -4948,7 +4948,7 @@ public sealed class ExprNumericValue : IDisposable
     public ExprGeneralExpression? NDerivative(ExprNamedUnknown? x, int n)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNumericValueMethodNDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), n, out nint handleValue), "occtsharp_generated_expr_numeric_value_method_nderivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNumericValueMethodNDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), n, out nint handleValue), "occtsharp_generated_expr_numeric_value_method_nderivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_numeric_value_method_nderivative_0");
     }
 
@@ -4956,21 +4956,21 @@ public sealed class ExprNumericValue : IDisposable
     public void Replace(ExprNamedUnknown? var, ExprGeneralExpression? with)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNumericValueMethodReplace0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_numeric_value_method_replace_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNumericValueMethodReplace0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_numeric_value_method_replace_0");
     }
 
     /// <summary>Invokes OCCT Expr_NumericValue::SetValue.</summary>
     public void SetValue(double val)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNumericValueMethodSetValue0(handle, val), "occtsharp_generated_expr_numeric_value_method_set_value_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNumericValueMethodSetValue0(handle, val), "occtsharp_generated_expr_numeric_value_method_set_value_0");
     }
 
     /// <summary>Invokes OCCT Expr_NumericValue::ShallowSimplified.</summary>
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNumericValueMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_numeric_value_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNumericValueMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_numeric_value_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_numeric_value_method_shallow_simplified_0");
     }
 
@@ -4978,7 +4978,7 @@ public sealed class ExprNumericValue : IDisposable
     public ExprGeneralExpression? Simplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNumericValueMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_numeric_value_method_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNumericValueMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_numeric_value_method_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_numeric_value_method_simplified_0");
     }
 
@@ -4988,7 +4988,7 @@ public sealed class ExprNumericValue : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNumericValueGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNumericValueGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4999,7 +4999,7 @@ public sealed class ExprNumericValue : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNumericValueGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNumericValueGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -5009,7 +5009,7 @@ public sealed class ExprNumericValue : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNumericValueIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNumericValueIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -5017,7 +5017,7 @@ public sealed class ExprNumericValue : IDisposable
     public ExprNumericValue Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprNumericValueClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprNumericValueClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprNumericValue(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -5054,7 +5054,7 @@ public sealed class ExprPolyExpression : IDisposable
     public bool Contains(ExprGeneralExpression? exp)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyExpressionMethodContains0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_poly_expression_method_contains_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyExpressionMethodContains0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_poly_expression_method_contains_0");
         return resultValue != 0;
     }
 
@@ -5062,7 +5062,7 @@ public sealed class ExprPolyExpression : IDisposable
     public bool ContainsUnknowns()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyExpressionMethodContainsUnknowns0(handle, out int resultValue), "occtsharp_generated_expr_poly_expression_method_contains_unknowns_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyExpressionMethodContainsUnknowns0(handle, out int resultValue), "occtsharp_generated_expr_poly_expression_method_contains_unknowns_0");
         return resultValue != 0;
     }
 
@@ -5070,7 +5070,7 @@ public sealed class ExprPolyExpression : IDisposable
     public int NbOperands()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyExpressionMethodNbOperands0(handle, out int resultValue), "occtsharp_generated_expr_poly_expression_method_nb_operands_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyExpressionMethodNbOperands0(handle, out int resultValue), "occtsharp_generated_expr_poly_expression_method_nb_operands_0");
         return resultValue;
     }
 
@@ -5078,7 +5078,7 @@ public sealed class ExprPolyExpression : IDisposable
     public int NbSubExpressions()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyExpressionMethodNbSubExpressions0(handle, out int resultValue), "occtsharp_generated_expr_poly_expression_method_nb_sub_expressions_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyExpressionMethodNbSubExpressions0(handle, out int resultValue), "occtsharp_generated_expr_poly_expression_method_nb_sub_expressions_0");
         return resultValue;
     }
 
@@ -5086,21 +5086,21 @@ public sealed class ExprPolyExpression : IDisposable
     public void Replace(ExprNamedUnknown? var, ExprGeneralExpression? with)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyExpressionMethodReplace0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_poly_expression_method_replace_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyExpressionMethodReplace0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_poly_expression_method_replace_0");
     }
 
     /// <summary>Invokes OCCT Expr_PolyExpression::SetOperand.</summary>
     public void SetOperand(ExprGeneralExpression? exp, int index)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyExpressionMethodSetOperand0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), index), "occtsharp_generated_expr_poly_expression_method_set_operand_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyExpressionMethodSetOperand0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), index), "occtsharp_generated_expr_poly_expression_method_set_operand_0");
     }
 
     /// <summary>Invokes OCCT Expr_PolyExpression::Simplified.</summary>
     public ExprGeneralExpression? Simplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyExpressionMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_poly_expression_method_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyExpressionMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_poly_expression_method_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_poly_expression_method_simplified_0");
     }
 
@@ -5110,7 +5110,7 @@ public sealed class ExprPolyExpression : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyExpressionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyExpressionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -5121,7 +5121,7 @@ public sealed class ExprPolyExpression : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyExpressionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyExpressionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -5131,7 +5131,7 @@ public sealed class ExprPolyExpression : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyExpressionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyExpressionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -5139,7 +5139,7 @@ public sealed class ExprPolyExpression : IDisposable
     public ExprPolyExpression Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyExpressionClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyExpressionClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprPolyExpression(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -5176,7 +5176,7 @@ public sealed class ExprPolyFunction : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyFunctionMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_poly_function_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyFunctionMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_poly_function_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_poly_function_method_copy_0");
     }
 
@@ -5184,7 +5184,7 @@ public sealed class ExprPolyFunction : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyFunctionMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_poly_function_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyFunctionMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_poly_function_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_poly_function_method_derivative_0");
     }
 
@@ -5192,7 +5192,7 @@ public sealed class ExprPolyFunction : IDisposable
     public ExprGeneralFunction? Function()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyFunctionMethodFunction0(handle, out nint handleValue), "occtsharp_generated_expr_poly_function_method_function_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyFunctionMethodFunction0(handle, out nint handleValue), "occtsharp_generated_expr_poly_function_method_function_0");
         return global::OcctSharp.ExprGeneralFunction.FromNative(handleValue, "occtsharp_generated_expr_poly_function_method_function_0");
     }
 
@@ -5200,7 +5200,7 @@ public sealed class ExprPolyFunction : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyFunctionMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_poly_function_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyFunctionMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_poly_function_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -5208,7 +5208,7 @@ public sealed class ExprPolyFunction : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyFunctionMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_poly_function_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyFunctionMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_poly_function_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -5216,7 +5216,7 @@ public sealed class ExprPolyFunction : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyFunctionMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_poly_function_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyFunctionMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_poly_function_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_poly_function_method_shallow_simplified_0");
     }
 
@@ -5226,7 +5226,7 @@ public sealed class ExprPolyFunction : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyFunctionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyFunctionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -5237,7 +5237,7 @@ public sealed class ExprPolyFunction : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyFunctionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyFunctionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -5247,7 +5247,7 @@ public sealed class ExprPolyFunction : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyFunctionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyFunctionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -5255,7 +5255,7 @@ public sealed class ExprPolyFunction : IDisposable
     public ExprPolyFunction Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprPolyFunctionClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprPolyFunctionClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprPolyFunction(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -5292,7 +5292,7 @@ public sealed class ExprProduct : IDisposable
     public ExprProduct(ExprGeneralExpression? exp1, ExprGeneralExpression? exp2)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprProductCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprProductCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprProductCreate0");
     }
 
@@ -5300,7 +5300,7 @@ public sealed class ExprProduct : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprProductMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_product_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprProductMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_product_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_product_method_copy_0");
     }
 
@@ -5308,7 +5308,7 @@ public sealed class ExprProduct : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprProductMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_product_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprProductMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_product_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_product_method_derivative_0");
     }
 
@@ -5316,7 +5316,7 @@ public sealed class ExprProduct : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprProductMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_product_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprProductMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_product_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -5324,7 +5324,7 @@ public sealed class ExprProduct : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprProductMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_product_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprProductMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_product_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -5332,7 +5332,7 @@ public sealed class ExprProduct : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprProductMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_product_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprProductMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_product_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_product_method_shallow_simplified_0");
     }
 
@@ -5342,7 +5342,7 @@ public sealed class ExprProduct : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprProductGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprProductGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -5353,7 +5353,7 @@ public sealed class ExprProduct : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprProductGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprProductGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -5363,7 +5363,7 @@ public sealed class ExprProduct : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprProductIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprProductIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -5371,7 +5371,7 @@ public sealed class ExprProduct : IDisposable
     public ExprProduct Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprProductClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprProductClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprProduct(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -5408,7 +5408,7 @@ public sealed class ExprSign : IDisposable
     public ExprSign(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSignCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSignCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprSignCreate0");
     }
 
@@ -5416,7 +5416,7 @@ public sealed class ExprSign : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSignMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_sign_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSignMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_sign_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_sign_method_copy_0");
     }
 
@@ -5424,7 +5424,7 @@ public sealed class ExprSign : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSignMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_sign_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSignMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_sign_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_sign_method_derivative_0");
     }
 
@@ -5432,7 +5432,7 @@ public sealed class ExprSign : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSignMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_sign_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSignMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_sign_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -5440,7 +5440,7 @@ public sealed class ExprSign : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSignMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_sign_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSignMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_sign_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -5448,7 +5448,7 @@ public sealed class ExprSign : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSignMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_sign_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSignMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_sign_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_sign_method_shallow_simplified_0");
     }
 
@@ -5458,7 +5458,7 @@ public sealed class ExprSign : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSignGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSignGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -5469,7 +5469,7 @@ public sealed class ExprSign : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSignGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSignGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -5479,7 +5479,7 @@ public sealed class ExprSign : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSignIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSignIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -5487,7 +5487,7 @@ public sealed class ExprSign : IDisposable
     public ExprSign Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSignClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSignClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprSign(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -5524,7 +5524,7 @@ public sealed class ExprSine : IDisposable
     public ExprSine(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSineCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSineCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprSineCreate0");
     }
 
@@ -5532,7 +5532,7 @@ public sealed class ExprSine : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSineMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_sine_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSineMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_sine_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_sine_method_copy_0");
     }
 
@@ -5540,7 +5540,7 @@ public sealed class ExprSine : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSineMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_sine_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSineMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_sine_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_sine_method_derivative_0");
     }
 
@@ -5548,7 +5548,7 @@ public sealed class ExprSine : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSineMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_sine_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSineMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_sine_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -5556,7 +5556,7 @@ public sealed class ExprSine : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSineMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_sine_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSineMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_sine_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -5564,7 +5564,7 @@ public sealed class ExprSine : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSineMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_sine_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSineMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_sine_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_sine_method_shallow_simplified_0");
     }
 
@@ -5574,7 +5574,7 @@ public sealed class ExprSine : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSineGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSineGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -5585,7 +5585,7 @@ public sealed class ExprSine : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSineGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSineGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -5595,7 +5595,7 @@ public sealed class ExprSine : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSineIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSineIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -5603,7 +5603,7 @@ public sealed class ExprSine : IDisposable
     public ExprSine Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSineClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSineClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprSine(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -5640,7 +5640,7 @@ public sealed class ExprSingleRelation : IDisposable
     public bool Contains(ExprGeneralExpression? exp)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSingleRelationMethodContains0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_single_relation_method_contains_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSingleRelationMethodContains0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_single_relation_method_contains_0");
         return resultValue != 0;
     }
 
@@ -5648,7 +5648,7 @@ public sealed class ExprSingleRelation : IDisposable
     public ExprGeneralExpression? FirstMember()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSingleRelationMethodFirstMember0(handle, out nint handleValue), "occtsharp_generated_expr_single_relation_method_first_member_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSingleRelationMethodFirstMember0(handle, out nint handleValue), "occtsharp_generated_expr_single_relation_method_first_member_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_single_relation_method_first_member_0");
     }
 
@@ -5656,7 +5656,7 @@ public sealed class ExprSingleRelation : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSingleRelationMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_single_relation_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSingleRelationMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_single_relation_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -5664,7 +5664,7 @@ public sealed class ExprSingleRelation : IDisposable
     public int NbOfSingleRelations()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSingleRelationMethodNbOfSingleRelations0(handle, out int resultValue), "occtsharp_generated_expr_single_relation_method_nb_of_single_relations_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSingleRelationMethodNbOfSingleRelations0(handle, out int resultValue), "occtsharp_generated_expr_single_relation_method_nb_of_single_relations_0");
         return resultValue;
     }
 
@@ -5672,7 +5672,7 @@ public sealed class ExprSingleRelation : IDisposable
     public int NbOfSubRelations()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSingleRelationMethodNbOfSubRelations0(handle, out int resultValue), "occtsharp_generated_expr_single_relation_method_nb_of_sub_relations_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSingleRelationMethodNbOfSubRelations0(handle, out int resultValue), "occtsharp_generated_expr_single_relation_method_nb_of_sub_relations_0");
         return resultValue;
     }
 
@@ -5680,14 +5680,14 @@ public sealed class ExprSingleRelation : IDisposable
     public void Replace(ExprNamedUnknown? var, ExprGeneralExpression? with)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSingleRelationMethodReplace0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_single_relation_method_replace_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSingleRelationMethodReplace0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_single_relation_method_replace_0");
     }
 
     /// <summary>Invokes OCCT Expr_SingleRelation::SecondMember.</summary>
     public ExprGeneralExpression? SecondMember()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSingleRelationMethodSecondMember0(handle, out nint handleValue), "occtsharp_generated_expr_single_relation_method_second_member_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSingleRelationMethodSecondMember0(handle, out nint handleValue), "occtsharp_generated_expr_single_relation_method_second_member_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_single_relation_method_second_member_0");
     }
 
@@ -5695,21 +5695,21 @@ public sealed class ExprSingleRelation : IDisposable
     public void SetFirstMember(ExprGeneralExpression? exp)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSingleRelationMethodSetFirstMember0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_single_relation_method_set_first_member_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSingleRelationMethodSetFirstMember0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_single_relation_method_set_first_member_0");
     }
 
     /// <summary>Invokes OCCT Expr_SingleRelation::SetSecondMember.</summary>
     public void SetSecondMember(ExprGeneralExpression? exp)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSingleRelationMethodSetSecondMember0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_single_relation_method_set_second_member_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSingleRelationMethodSetSecondMember0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_single_relation_method_set_second_member_0");
     }
 
     /// <summary>Invokes OCCT Expr_SingleRelation::SubRelation.</summary>
     public ExprGeneralRelation? SubRelation(int index)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSingleRelationMethodSubRelation0(handle, index, out nint handleValue), "occtsharp_generated_expr_single_relation_method_sub_relation_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSingleRelationMethodSubRelation0(handle, index, out nint handleValue), "occtsharp_generated_expr_single_relation_method_sub_relation_0");
         return global::OcctSharp.ExprGeneralRelation.FromNative(handleValue, "occtsharp_generated_expr_single_relation_method_sub_relation_0");
     }
 
@@ -5719,7 +5719,7 @@ public sealed class ExprSingleRelation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSingleRelationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSingleRelationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -5730,7 +5730,7 @@ public sealed class ExprSingleRelation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSingleRelationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSingleRelationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -5740,7 +5740,7 @@ public sealed class ExprSingleRelation : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSingleRelationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSingleRelationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -5748,7 +5748,7 @@ public sealed class ExprSingleRelation : IDisposable
     public ExprSingleRelation Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSingleRelationClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSingleRelationClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprSingleRelation(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -5785,7 +5785,7 @@ public sealed class ExprSinh : IDisposable
     public ExprSinh(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSinhCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSinhCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprSinhCreate0");
     }
 
@@ -5793,7 +5793,7 @@ public sealed class ExprSinh : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSinhMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_sinh_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSinhMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_sinh_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_sinh_method_copy_0");
     }
 
@@ -5801,7 +5801,7 @@ public sealed class ExprSinh : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSinhMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_sinh_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSinhMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_sinh_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_sinh_method_derivative_0");
     }
 
@@ -5809,7 +5809,7 @@ public sealed class ExprSinh : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSinhMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_sinh_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSinhMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_sinh_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -5817,7 +5817,7 @@ public sealed class ExprSinh : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSinhMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_sinh_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSinhMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_sinh_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -5825,7 +5825,7 @@ public sealed class ExprSinh : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSinhMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_sinh_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSinhMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_sinh_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_sinh_method_shallow_simplified_0");
     }
 
@@ -5835,7 +5835,7 @@ public sealed class ExprSinh : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSinhGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSinhGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -5846,7 +5846,7 @@ public sealed class ExprSinh : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSinhGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSinhGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -5856,7 +5856,7 @@ public sealed class ExprSinh : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSinhIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSinhIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -5864,7 +5864,7 @@ public sealed class ExprSinh : IDisposable
     public ExprSinh Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSinhClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSinhClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprSinh(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -5901,7 +5901,7 @@ public sealed class ExprSquare : IDisposable
     public ExprSquare(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprSquareCreate0");
     }
 
@@ -5909,7 +5909,7 @@ public sealed class ExprSquare : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_square_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_square_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_square_method_copy_0");
     }
 
@@ -5917,7 +5917,7 @@ public sealed class ExprSquare : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_square_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_square_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_square_method_derivative_0");
     }
 
@@ -5925,7 +5925,7 @@ public sealed class ExprSquare : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_square_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_square_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -5933,7 +5933,7 @@ public sealed class ExprSquare : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_square_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_square_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -5941,7 +5941,7 @@ public sealed class ExprSquare : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_square_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_square_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_square_method_shallow_simplified_0");
     }
 
@@ -5951,7 +5951,7 @@ public sealed class ExprSquare : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -5962,7 +5962,7 @@ public sealed class ExprSquare : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -5972,7 +5972,7 @@ public sealed class ExprSquare : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -5980,7 +5980,7 @@ public sealed class ExprSquare : IDisposable
     public ExprSquare Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprSquare(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -6017,7 +6017,7 @@ public sealed class ExprSquareRoot : IDisposable
     public ExprSquareRoot(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareRootCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareRootCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprSquareRootCreate0");
     }
 
@@ -6025,7 +6025,7 @@ public sealed class ExprSquareRoot : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareRootMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_square_root_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareRootMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_square_root_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_square_root_method_copy_0");
     }
 
@@ -6033,7 +6033,7 @@ public sealed class ExprSquareRoot : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareRootMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_square_root_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareRootMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_square_root_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_square_root_method_derivative_0");
     }
 
@@ -6041,7 +6041,7 @@ public sealed class ExprSquareRoot : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareRootMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_square_root_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareRootMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_square_root_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -6049,7 +6049,7 @@ public sealed class ExprSquareRoot : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareRootMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_square_root_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareRootMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_square_root_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -6057,7 +6057,7 @@ public sealed class ExprSquareRoot : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareRootMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_square_root_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareRootMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_square_root_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_square_root_method_shallow_simplified_0");
     }
 
@@ -6067,7 +6067,7 @@ public sealed class ExprSquareRoot : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareRootGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareRootGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -6078,7 +6078,7 @@ public sealed class ExprSquareRoot : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareRootGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareRootGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -6088,7 +6088,7 @@ public sealed class ExprSquareRoot : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareRootIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareRootIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -6096,7 +6096,7 @@ public sealed class ExprSquareRoot : IDisposable
     public ExprSquareRoot Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSquareRootClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSquareRootClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprSquareRoot(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -6133,7 +6133,7 @@ public sealed class ExprSum : IDisposable
     public ExprSum(ExprGeneralExpression? exp1, ExprGeneralExpression? exp2)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSumCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSumCreate0(exp1 is null ? nint.Zero : exp1.NativeHandle.DangerousGetHandle(), exp2 is null ? nint.Zero : exp2.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprSumCreate0");
     }
 
@@ -6141,7 +6141,7 @@ public sealed class ExprSum : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSumMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_sum_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSumMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_sum_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_sum_method_copy_0");
     }
 
@@ -6149,7 +6149,7 @@ public sealed class ExprSum : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSumMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_sum_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSumMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_sum_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_sum_method_derivative_0");
     }
 
@@ -6157,7 +6157,7 @@ public sealed class ExprSum : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSumMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_sum_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSumMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_sum_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -6165,7 +6165,7 @@ public sealed class ExprSum : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSumMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_sum_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSumMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_sum_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -6173,7 +6173,7 @@ public sealed class ExprSum : IDisposable
     public ExprGeneralExpression? NDerivative(ExprNamedUnknown? x, int n)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSumMethodNDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), n, out nint handleValue), "occtsharp_generated_expr_sum_method_nderivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSumMethodNDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), n, out nint handleValue), "occtsharp_generated_expr_sum_method_nderivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_sum_method_nderivative_0");
     }
 
@@ -6181,7 +6181,7 @@ public sealed class ExprSum : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSumMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_sum_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSumMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_sum_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_sum_method_shallow_simplified_0");
     }
 
@@ -6191,7 +6191,7 @@ public sealed class ExprSum : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSumGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSumGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -6202,7 +6202,7 @@ public sealed class ExprSum : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSumGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSumGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -6212,7 +6212,7 @@ public sealed class ExprSum : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSumIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSumIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -6220,7 +6220,7 @@ public sealed class ExprSum : IDisposable
     public ExprSum Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSumClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSumClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprSum(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -6257,7 +6257,7 @@ public sealed class ExprSystemRelation : IDisposable
     public ExprSystemRelation(ExprGeneralRelation? relation)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSystemRelationCreate0(relation is null ? nint.Zero : relation.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSystemRelationCreate0(relation is null ? nint.Zero : relation.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprSystemRelationCreate0");
     }
 
@@ -6265,14 +6265,14 @@ public sealed class ExprSystemRelation : IDisposable
     public void Add(ExprGeneralRelation? relation)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSystemRelationMethodAdd0(handle, relation is null ? nint.Zero : relation.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_system_relation_method_add_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSystemRelationMethodAdd0(handle, relation is null ? nint.Zero : relation.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_system_relation_method_add_0");
     }
 
     /// <summary>Invokes OCCT Expr_SystemRelation::Contains.</summary>
     public bool Contains(ExprGeneralExpression? exp)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSystemRelationMethodContains0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_system_relation_method_contains_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSystemRelationMethodContains0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_system_relation_method_contains_0");
         return resultValue != 0;
     }
 
@@ -6280,7 +6280,7 @@ public sealed class ExprSystemRelation : IDisposable
     public ExprGeneralRelation? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSystemRelationMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_system_relation_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSystemRelationMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_system_relation_method_copy_0");
         return global::OcctSharp.ExprGeneralRelation.FromNative(handleValue, "occtsharp_generated_expr_system_relation_method_copy_0");
     }
 
@@ -6288,7 +6288,7 @@ public sealed class ExprSystemRelation : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSystemRelationMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_system_relation_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSystemRelationMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_system_relation_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -6296,7 +6296,7 @@ public sealed class ExprSystemRelation : IDisposable
     public bool IsSatisfied()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSystemRelationMethodIsSatisfied0(handle, out int resultValue), "occtsharp_generated_expr_system_relation_method_is_satisfied_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSystemRelationMethodIsSatisfied0(handle, out int resultValue), "occtsharp_generated_expr_system_relation_method_is_satisfied_0");
         return resultValue != 0;
     }
 
@@ -6304,7 +6304,7 @@ public sealed class ExprSystemRelation : IDisposable
     public int NbOfSingleRelations()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSystemRelationMethodNbOfSingleRelations0(handle, out int resultValue), "occtsharp_generated_expr_system_relation_method_nb_of_single_relations_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSystemRelationMethodNbOfSingleRelations0(handle, out int resultValue), "occtsharp_generated_expr_system_relation_method_nb_of_single_relations_0");
         return resultValue;
     }
 
@@ -6312,7 +6312,7 @@ public sealed class ExprSystemRelation : IDisposable
     public int NbOfSubRelations()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSystemRelationMethodNbOfSubRelations0(handle, out int resultValue), "occtsharp_generated_expr_system_relation_method_nb_of_sub_relations_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSystemRelationMethodNbOfSubRelations0(handle, out int resultValue), "occtsharp_generated_expr_system_relation_method_nb_of_sub_relations_0");
         return resultValue;
     }
 
@@ -6320,21 +6320,21 @@ public sealed class ExprSystemRelation : IDisposable
     public void Remove(ExprGeneralRelation? relation)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSystemRelationMethodRemove0(handle, relation is null ? nint.Zero : relation.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_system_relation_method_remove_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSystemRelationMethodRemove0(handle, relation is null ? nint.Zero : relation.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_system_relation_method_remove_0");
     }
 
     /// <summary>Invokes OCCT Expr_SystemRelation::Replace.</summary>
     public void Replace(ExprNamedUnknown? var, ExprGeneralExpression? with)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSystemRelationMethodReplace0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_system_relation_method_replace_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSystemRelationMethodReplace0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_system_relation_method_replace_0");
     }
 
     /// <summary>Invokes OCCT Expr_SystemRelation::Simplified.</summary>
     public ExprGeneralRelation? Simplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSystemRelationMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_system_relation_method_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSystemRelationMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_system_relation_method_simplified_0");
         return global::OcctSharp.ExprGeneralRelation.FromNative(handleValue, "occtsharp_generated_expr_system_relation_method_simplified_0");
     }
 
@@ -6342,14 +6342,14 @@ public sealed class ExprSystemRelation : IDisposable
     public void Simplify()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSystemRelationMethodSimplify0(handle), "occtsharp_generated_expr_system_relation_method_simplify_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSystemRelationMethodSimplify0(handle), "occtsharp_generated_expr_system_relation_method_simplify_0");
     }
 
     /// <summary>Invokes OCCT Expr_SystemRelation::SubRelation.</summary>
     public ExprGeneralRelation? SubRelation(int index)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSystemRelationMethodSubRelation0(handle, index, out nint handleValue), "occtsharp_generated_expr_system_relation_method_sub_relation_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSystemRelationMethodSubRelation0(handle, index, out nint handleValue), "occtsharp_generated_expr_system_relation_method_sub_relation_0");
         return global::OcctSharp.ExprGeneralRelation.FromNative(handleValue, "occtsharp_generated_expr_system_relation_method_sub_relation_0");
     }
 
@@ -6359,7 +6359,7 @@ public sealed class ExprSystemRelation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSystemRelationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSystemRelationGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -6370,7 +6370,7 @@ public sealed class ExprSystemRelation : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSystemRelationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSystemRelationGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -6380,7 +6380,7 @@ public sealed class ExprSystemRelation : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSystemRelationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSystemRelationIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -6388,7 +6388,7 @@ public sealed class ExprSystemRelation : IDisposable
     public ExprSystemRelation Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprSystemRelationClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprSystemRelationClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprSystemRelation(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -6425,7 +6425,7 @@ public sealed class ExprTangent : IDisposable
     public ExprTangent(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTangentCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTangentCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprTangentCreate0");
     }
 
@@ -6433,7 +6433,7 @@ public sealed class ExprTangent : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTangentMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_tangent_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTangentMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_tangent_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_tangent_method_copy_0");
     }
 
@@ -6441,7 +6441,7 @@ public sealed class ExprTangent : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTangentMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_tangent_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTangentMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_tangent_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_tangent_method_derivative_0");
     }
 
@@ -6449,7 +6449,7 @@ public sealed class ExprTangent : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTangentMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_tangent_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTangentMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_tangent_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -6457,7 +6457,7 @@ public sealed class ExprTangent : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTangentMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_tangent_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTangentMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_tangent_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -6465,7 +6465,7 @@ public sealed class ExprTangent : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTangentMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_tangent_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTangentMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_tangent_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_tangent_method_shallow_simplified_0");
     }
 
@@ -6475,7 +6475,7 @@ public sealed class ExprTangent : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTangentGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTangentGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -6486,7 +6486,7 @@ public sealed class ExprTangent : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTangentGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTangentGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -6496,7 +6496,7 @@ public sealed class ExprTangent : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTangentIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTangentIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -6504,7 +6504,7 @@ public sealed class ExprTangent : IDisposable
     public ExprTangent Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTangentClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTangentClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprTangent(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -6541,7 +6541,7 @@ public sealed class ExprTanh : IDisposable
     public ExprTanh(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTanhCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTanhCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprTanhCreate0");
     }
 
@@ -6549,7 +6549,7 @@ public sealed class ExprTanh : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTanhMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_tanh_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTanhMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_tanh_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_tanh_method_copy_0");
     }
 
@@ -6557,7 +6557,7 @@ public sealed class ExprTanh : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTanhMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_tanh_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTanhMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_tanh_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_tanh_method_derivative_0");
     }
 
@@ -6565,7 +6565,7 @@ public sealed class ExprTanh : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTanhMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_tanh_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTanhMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_tanh_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -6573,7 +6573,7 @@ public sealed class ExprTanh : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTanhMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_tanh_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTanhMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_tanh_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -6581,7 +6581,7 @@ public sealed class ExprTanh : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTanhMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_tanh_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTanhMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_tanh_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_tanh_method_shallow_simplified_0");
     }
 
@@ -6591,7 +6591,7 @@ public sealed class ExprTanh : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTanhGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTanhGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -6602,7 +6602,7 @@ public sealed class ExprTanh : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTanhGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTanhGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -6612,7 +6612,7 @@ public sealed class ExprTanh : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTanhIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTanhIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -6620,7 +6620,7 @@ public sealed class ExprTanh : IDisposable
     public ExprTanh Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprTanhClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprTanhClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprTanh(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -6657,7 +6657,7 @@ public sealed class ExprUnaryExpression : IDisposable
     public bool Contains(ExprGeneralExpression? exp)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryExpressionMethodContains0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_unary_expression_method_contains_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryExpressionMethodContains0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_unary_expression_method_contains_0");
         return resultValue != 0;
     }
 
@@ -6665,7 +6665,7 @@ public sealed class ExprUnaryExpression : IDisposable
     public bool ContainsUnknowns()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryExpressionMethodContainsUnknowns0(handle, out int resultValue), "occtsharp_generated_expr_unary_expression_method_contains_unknowns_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryExpressionMethodContainsUnknowns0(handle, out int resultValue), "occtsharp_generated_expr_unary_expression_method_contains_unknowns_0");
         return resultValue != 0;
     }
 
@@ -6673,7 +6673,7 @@ public sealed class ExprUnaryExpression : IDisposable
     public int NbSubExpressions()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryExpressionMethodNbSubExpressions0(handle, out int resultValue), "occtsharp_generated_expr_unary_expression_method_nb_sub_expressions_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryExpressionMethodNbSubExpressions0(handle, out int resultValue), "occtsharp_generated_expr_unary_expression_method_nb_sub_expressions_0");
         return resultValue;
     }
 
@@ -6681,21 +6681,21 @@ public sealed class ExprUnaryExpression : IDisposable
     public void Replace(ExprNamedUnknown? var, ExprGeneralExpression? with)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryExpressionMethodReplace0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_unary_expression_method_replace_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryExpressionMethodReplace0(handle, var is null ? nint.Zero : var.NativeHandle.DangerousGetHandle(), with is null ? nint.Zero : with.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_unary_expression_method_replace_0");
     }
 
     /// <summary>Invokes OCCT Expr_UnaryExpression::SetOperand.</summary>
     public void SetOperand(ExprGeneralExpression? exp)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryExpressionMethodSetOperand0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_unary_expression_method_set_operand_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryExpressionMethodSetOperand0(handle, exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle()), "occtsharp_generated_expr_unary_expression_method_set_operand_0");
     }
 
     /// <summary>Invokes OCCT Expr_UnaryExpression::Simplified.</summary>
     public ExprGeneralExpression? Simplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryExpressionMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_unary_expression_method_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryExpressionMethodSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_unary_expression_method_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_unary_expression_method_simplified_0");
     }
 
@@ -6705,7 +6705,7 @@ public sealed class ExprUnaryExpression : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryExpressionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryExpressionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -6716,7 +6716,7 @@ public sealed class ExprUnaryExpression : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryExpressionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryExpressionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -6726,7 +6726,7 @@ public sealed class ExprUnaryExpression : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryExpressionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryExpressionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -6734,7 +6734,7 @@ public sealed class ExprUnaryExpression : IDisposable
     public ExprUnaryExpression Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryExpressionClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryExpressionClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprUnaryExpression(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -6771,7 +6771,7 @@ public sealed class ExprUnaryFunction : IDisposable
     public ExprUnaryFunction(ExprGeneralFunction? func, ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryFunctionCreate0(func is null ? nint.Zero : func.NativeHandle.DangerousGetHandle(), exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryFunctionCreate0(func is null ? nint.Zero : func.NativeHandle.DangerousGetHandle(), exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprUnaryFunctionCreate0");
     }
 
@@ -6779,7 +6779,7 @@ public sealed class ExprUnaryFunction : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryFunctionMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_unary_function_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryFunctionMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_unary_function_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_unary_function_method_copy_0");
     }
 
@@ -6787,7 +6787,7 @@ public sealed class ExprUnaryFunction : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryFunctionMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_unary_function_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryFunctionMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_unary_function_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_unary_function_method_derivative_0");
     }
 
@@ -6795,7 +6795,7 @@ public sealed class ExprUnaryFunction : IDisposable
     public ExprGeneralFunction? Function()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryFunctionMethodFunction0(handle, out nint handleValue), "occtsharp_generated_expr_unary_function_method_function_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryFunctionMethodFunction0(handle, out nint handleValue), "occtsharp_generated_expr_unary_function_method_function_0");
         return global::OcctSharp.ExprGeneralFunction.FromNative(handleValue, "occtsharp_generated_expr_unary_function_method_function_0");
     }
 
@@ -6803,7 +6803,7 @@ public sealed class ExprUnaryFunction : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryFunctionMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_unary_function_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryFunctionMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_unary_function_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -6811,7 +6811,7 @@ public sealed class ExprUnaryFunction : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryFunctionMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_unary_function_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryFunctionMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_unary_function_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -6819,7 +6819,7 @@ public sealed class ExprUnaryFunction : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryFunctionMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_unary_function_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryFunctionMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_unary_function_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_unary_function_method_shallow_simplified_0");
     }
 
@@ -6829,7 +6829,7 @@ public sealed class ExprUnaryFunction : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryFunctionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryFunctionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -6840,7 +6840,7 @@ public sealed class ExprUnaryFunction : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryFunctionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryFunctionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -6850,7 +6850,7 @@ public sealed class ExprUnaryFunction : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryFunctionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryFunctionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -6858,7 +6858,7 @@ public sealed class ExprUnaryFunction : IDisposable
     public ExprUnaryFunction Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryFunctionClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryFunctionClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprUnaryFunction(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -6895,7 +6895,7 @@ public sealed class ExprUnaryMinus : IDisposable
     public ExprUnaryMinus(ExprGeneralExpression? exp)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryMinusCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryMinusCreate0(exp is null ? nint.Zero : exp.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ExprUnaryMinusCreate0");
     }
 
@@ -6903,7 +6903,7 @@ public sealed class ExprUnaryMinus : IDisposable
     public ExprGeneralExpression? Copy()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryMinusMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_unary_minus_method_copy_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryMinusMethodCopy0(handle, out nint handleValue), "occtsharp_generated_expr_unary_minus_method_copy_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_unary_minus_method_copy_0");
     }
 
@@ -6911,7 +6911,7 @@ public sealed class ExprUnaryMinus : IDisposable
     public ExprGeneralExpression? Derivative(ExprNamedUnknown? x)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryMinusMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_unary_minus_method_derivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryMinusMethodDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_expr_unary_minus_method_derivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_unary_minus_method_derivative_0");
     }
 
@@ -6919,7 +6919,7 @@ public sealed class ExprUnaryMinus : IDisposable
     public bool IsIdentical(ExprGeneralExpression? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryMinusMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_unary_minus_method_is_identical_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryMinusMethodIsIdentical0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_expr_unary_minus_method_is_identical_0");
         return resultValue != 0;
     }
 
@@ -6927,7 +6927,7 @@ public sealed class ExprUnaryMinus : IDisposable
     public bool IsLinear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryMinusMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_unary_minus_method_is_linear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryMinusMethodIsLinear0(handle, out int resultValue), "occtsharp_generated_expr_unary_minus_method_is_linear_0");
         return resultValue != 0;
     }
 
@@ -6935,7 +6935,7 @@ public sealed class ExprUnaryMinus : IDisposable
     public ExprGeneralExpression? NDerivative(ExprNamedUnknown? x, int n)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryMinusMethodNDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), n, out nint handleValue), "occtsharp_generated_expr_unary_minus_method_nderivative_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryMinusMethodNDerivative0(handle, x is null ? nint.Zero : x.NativeHandle.DangerousGetHandle(), n, out nint handleValue), "occtsharp_generated_expr_unary_minus_method_nderivative_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_unary_minus_method_nderivative_0");
     }
 
@@ -6943,7 +6943,7 @@ public sealed class ExprUnaryMinus : IDisposable
     public ExprGeneralExpression? ShallowSimplified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryMinusMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_unary_minus_method_shallow_simplified_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryMinusMethodShallowSimplified0(handle, out nint handleValue), "occtsharp_generated_expr_unary_minus_method_shallow_simplified_0");
         return global::OcctSharp.ExprGeneralExpression.FromNative(handleValue, "occtsharp_generated_expr_unary_minus_method_shallow_simplified_0");
     }
 
@@ -6953,7 +6953,7 @@ public sealed class ExprUnaryMinus : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryMinusGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryMinusGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -6964,7 +6964,7 @@ public sealed class ExprUnaryMinus : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryMinusGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryMinusGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -6974,7 +6974,7 @@ public sealed class ExprUnaryMinus : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryMinusIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryMinusIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -6982,7 +6982,7 @@ public sealed class ExprUnaryMinus : IDisposable
     public ExprUnaryMinus Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ExprUnaryMinusClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ExprUnaryMinusClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ExprUnaryMinus(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -7019,7 +7019,7 @@ public sealed class MessageAlert : IDisposable
     public bool Merge(MessageAlert? theTarget)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlertMethodMerge0(handle, theTarget is null ? nint.Zero : theTarget.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_alert_method_merge_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlertMethodMerge0(handle, theTarget is null ? nint.Zero : theTarget.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_alert_method_merge_0");
         return resultValue != 0;
     }
 
@@ -7027,7 +7027,7 @@ public sealed class MessageAlert : IDisposable
     public bool SupportsMerge()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlertMethodSupportsMerge0(handle, out int resultValue), "occtsharp_generated_message_alert_method_supports_merge_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlertMethodSupportsMerge0(handle, out int resultValue), "occtsharp_generated_message_alert_method_supports_merge_0");
         return resultValue != 0;
     }
 
@@ -7037,7 +7037,7 @@ public sealed class MessageAlert : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlertGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlertGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7048,7 +7048,7 @@ public sealed class MessageAlert : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlertGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlertGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7058,7 +7058,7 @@ public sealed class MessageAlert : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlertIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlertIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7066,7 +7066,7 @@ public sealed class MessageAlert : IDisposable
     public MessageAlert Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlertClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlertClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new MessageAlert(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -7103,7 +7103,7 @@ public sealed class MessageAlertExtended : IDisposable
     public MessageAlertExtended()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlertExtendedCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlertExtendedCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "MessageAlertExtendedCreate0");
     }
 
@@ -7111,7 +7111,7 @@ public sealed class MessageAlertExtended : IDisposable
     public MessageCompositeAlerts? CompositeAlerts(bool theToCreate)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlertExtendedMethodCompositeAlerts0(handle, theToCreate ? 1 : 0, out nint handleValue), "occtsharp_generated_message_alert_extended_method_composite_alerts_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlertExtendedMethodCompositeAlerts0(handle, theToCreate ? 1 : 0, out nint handleValue), "occtsharp_generated_message_alert_extended_method_composite_alerts_0");
         return global::OcctSharp.MessageCompositeAlerts.FromNative(handleValue, "occtsharp_generated_message_alert_extended_method_composite_alerts_0");
     }
 
@@ -7119,7 +7119,7 @@ public sealed class MessageAlertExtended : IDisposable
     public bool Merge(MessageAlert? theTarget)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlertExtendedMethodMerge0(handle, theTarget is null ? nint.Zero : theTarget.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_alert_extended_method_merge_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlertExtendedMethodMerge0(handle, theTarget is null ? nint.Zero : theTarget.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_alert_extended_method_merge_0");
         return resultValue != 0;
     }
 
@@ -7127,14 +7127,14 @@ public sealed class MessageAlertExtended : IDisposable
     public void SetAttribute(MessageAttribute? theAttribute)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlertExtendedMethodSetAttribute0(handle, theAttribute is null ? nint.Zero : theAttribute.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_alert_extended_method_set_attribute_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlertExtendedMethodSetAttribute0(handle, theAttribute is null ? nint.Zero : theAttribute.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_alert_extended_method_set_attribute_0");
     }
 
     /// <summary>Invokes OCCT Message_AlertExtended::SupportsMerge.</summary>
     public bool SupportsMerge()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlertExtendedMethodSupportsMerge0(handle, out int resultValue), "occtsharp_generated_message_alert_extended_method_supports_merge_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlertExtendedMethodSupportsMerge0(handle, out int resultValue), "occtsharp_generated_message_alert_extended_method_supports_merge_0");
         return resultValue != 0;
     }
 
@@ -7144,7 +7144,7 @@ public sealed class MessageAlertExtended : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlertExtendedGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlertExtendedGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7155,7 +7155,7 @@ public sealed class MessageAlertExtended : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlertExtendedGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlertExtendedGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7165,7 +7165,7 @@ public sealed class MessageAlertExtended : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlertExtendedIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlertExtendedIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7173,7 +7173,7 @@ public sealed class MessageAlertExtended : IDisposable
     public MessageAlertExtended Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlertExtendedClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlertExtendedClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new MessageAlertExtended(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -7210,7 +7210,7 @@ public sealed class MessageAlgorithm : IDisposable
     public MessageAlgorithm()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlgorithmCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlgorithmCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "MessageAlgorithmCreate0");
     }
 
@@ -7218,21 +7218,21 @@ public sealed class MessageAlgorithm : IDisposable
     public void AddStatus(MessageAlgorithm? theOther)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlgorithmMethodAddStatus0(handle, theOther is null ? nint.Zero : theOther.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_algorithm_method_add_status_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlgorithmMethodAddStatus0(handle, theOther is null ? nint.Zero : theOther.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_algorithm_method_add_status_0");
     }
 
     /// <summary>Invokes OCCT Message_Algorithm::ClearStatus.</summary>
     public void ClearStatus()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlgorithmMethodClearStatus0(handle), "occtsharp_generated_message_algorithm_method_clear_status_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlgorithmMethodClearStatus0(handle), "occtsharp_generated_message_algorithm_method_clear_status_0");
     }
 
     /// <summary>Invokes OCCT Message_Algorithm::GetMessageNumbers.</summary>
     public TColStdHPackedMapOfInteger? GetMessageNumbers(MessageStatus theStatus)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlgorithmMethodGetMessageNumbers0(handle, (int)theStatus, out nint handleValue), "occtsharp_generated_message_algorithm_method_get_message_numbers_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlgorithmMethodGetMessageNumbers0(handle, (int)theStatus, out nint handleValue), "occtsharp_generated_message_algorithm_method_get_message_numbers_0");
         return global::OcctSharp.TColStdHPackedMapOfInteger.FromNative(handleValue, "occtsharp_generated_message_algorithm_method_get_message_numbers_0");
     }
 
@@ -7240,7 +7240,7 @@ public sealed class MessageAlgorithm : IDisposable
     public MessageMessenger? GetMessenger()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlgorithmMethodGetMessenger0(handle, out nint handleValue), "occtsharp_generated_message_algorithm_method_get_messenger_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlgorithmMethodGetMessenger0(handle, out nint handleValue), "occtsharp_generated_message_algorithm_method_get_messenger_0");
         return global::OcctSharp.MessageMessenger.FromNative(handleValue, "occtsharp_generated_message_algorithm_method_get_messenger_0");
     }
 
@@ -7248,42 +7248,42 @@ public sealed class MessageAlgorithm : IDisposable
     public void SendMessages(MessageGravity theTraceLevel, int theMaxCount)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlgorithmMethodSendMessages0(handle, (int)theTraceLevel, theMaxCount), "occtsharp_generated_message_algorithm_method_send_messages_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlgorithmMethodSendMessages0(handle, (int)theTraceLevel, theMaxCount), "occtsharp_generated_message_algorithm_method_send_messages_0");
     }
 
     /// <summary>Invokes OCCT Message_Algorithm::SetMessenger.</summary>
     public void SetMessenger(MessageMessenger? theMsgr)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlgorithmMethodSetMessenger0(handle, theMsgr is null ? nint.Zero : theMsgr.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_algorithm_method_set_messenger_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlgorithmMethodSetMessenger0(handle, theMsgr is null ? nint.Zero : theMsgr.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_algorithm_method_set_messenger_0");
     }
 
     /// <summary>Invokes OCCT Message_Algorithm::SetStatus.</summary>
     public void SetStatus(MessageStatus theStat)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlgorithmMethodSetStatus0(handle, (int)theStat), "occtsharp_generated_message_algorithm_method_set_status_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlgorithmMethodSetStatus0(handle, (int)theStat), "occtsharp_generated_message_algorithm_method_set_status_0");
     }
 
     /// <summary>Invokes OCCT Message_Algorithm::SetStatus.</summary>
     public void SetStatus(MessageStatus theStat, int theInt)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlgorithmMethodSetStatus1(handle, (int)theStat, theInt), "occtsharp_generated_message_algorithm_method_set_status_1");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlgorithmMethodSetStatus1(handle, (int)theStat, theInt), "occtsharp_generated_message_algorithm_method_set_status_1");
     }
 
     /// <summary>Invokes OCCT Message_Algorithm::SetStatus.</summary>
     public void SetStatus(MessageStatus theStat, TCollectionHAsciiString? theStr, bool noRepetitions)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlgorithmMethodSetStatus2(handle, (int)theStat, theStr is null ? nint.Zero : theStr.NativeHandle.DangerousGetHandle(), noRepetitions ? 1 : 0), "occtsharp_generated_message_algorithm_method_set_status_2");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlgorithmMethodSetStatus2(handle, (int)theStat, theStr is null ? nint.Zero : theStr.NativeHandle.DangerousGetHandle(), noRepetitions ? 1 : 0), "occtsharp_generated_message_algorithm_method_set_status_2");
     }
 
     /// <summary>Invokes OCCT Message_Algorithm::SetStatus.</summary>
     public void SetStatus(MessageStatus theStat, TCollectionHExtendedString? theStr, bool noRepetitions)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlgorithmMethodSetStatus3(handle, (int)theStat, theStr is null ? nint.Zero : theStr.NativeHandle.DangerousGetHandle(), noRepetitions ? 1 : 0), "occtsharp_generated_message_algorithm_method_set_status_3");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlgorithmMethodSetStatus3(handle, (int)theStat, theStr is null ? nint.Zero : theStr.NativeHandle.DangerousGetHandle(), noRepetitions ? 1 : 0), "occtsharp_generated_message_algorithm_method_set_status_3");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -7292,7 +7292,7 @@ public sealed class MessageAlgorithm : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlgorithmGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlgorithmGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7303,7 +7303,7 @@ public sealed class MessageAlgorithm : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlgorithmGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlgorithmGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7313,7 +7313,7 @@ public sealed class MessageAlgorithm : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlgorithmIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlgorithmIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7321,7 +7321,7 @@ public sealed class MessageAlgorithm : IDisposable
     public MessageAlgorithm Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAlgorithmClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAlgorithmClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new MessageAlgorithm(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -7360,7 +7360,7 @@ public sealed class MessageAttribute : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7371,7 +7371,7 @@ public sealed class MessageAttribute : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7381,7 +7381,7 @@ public sealed class MessageAttribute : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7389,7 +7389,7 @@ public sealed class MessageAttribute : IDisposable
     public MessageAttribute Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new MessageAttribute(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -7426,7 +7426,7 @@ public sealed class MessageAttributeMeter : IDisposable
     public bool HasMetric(MessageMetricType theMetric)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeMeterMethodHasMetric0(handle, (int)theMetric, out int resultValue), "occtsharp_generated_message_attribute_meter_method_has_metric_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeMeterMethodHasMetric0(handle, (int)theMetric, out int resultValue), "occtsharp_generated_message_attribute_meter_method_has_metric_0");
         return resultValue != 0;
     }
 
@@ -7434,7 +7434,7 @@ public sealed class MessageAttributeMeter : IDisposable
     public bool IsMetricValid(MessageMetricType theMetric)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeMeterMethodIsMetricValid0(handle, (int)theMetric, out int resultValue), "occtsharp_generated_message_attribute_meter_method_is_metric_valid_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeMeterMethodIsMetricValid0(handle, (int)theMetric, out int resultValue), "occtsharp_generated_message_attribute_meter_method_is_metric_valid_0");
         return resultValue != 0;
     }
 
@@ -7442,21 +7442,21 @@ public sealed class MessageAttributeMeter : IDisposable
     public void SetStartValue(MessageMetricType theMetric, double theValue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeMeterMethodSetStartValue0(handle, (int)theMetric, theValue), "occtsharp_generated_message_attribute_meter_method_set_start_value_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeMeterMethodSetStartValue0(handle, (int)theMetric, theValue), "occtsharp_generated_message_attribute_meter_method_set_start_value_0");
     }
 
     /// <summary>Invokes OCCT Message_AttributeMeter::SetStopValue.</summary>
     public void SetStopValue(MessageMetricType theMetric, double theValue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeMeterMethodSetStopValue0(handle, (int)theMetric, theValue), "occtsharp_generated_message_attribute_meter_method_set_stop_value_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeMeterMethodSetStopValue0(handle, (int)theMetric, theValue), "occtsharp_generated_message_attribute_meter_method_set_stop_value_0");
     }
 
     /// <summary>Invokes OCCT Message_AttributeMeter::StartValue.</summary>
     public double StartValue(MessageMetricType theMetric)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeMeterMethodStartValue0(handle, (int)theMetric, out double resultValue), "occtsharp_generated_message_attribute_meter_method_start_value_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeMeterMethodStartValue0(handle, (int)theMetric, out double resultValue), "occtsharp_generated_message_attribute_meter_method_start_value_0");
         return resultValue;
     }
 
@@ -7464,7 +7464,7 @@ public sealed class MessageAttributeMeter : IDisposable
     public double StopValue(MessageMetricType theMetric)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeMeterMethodStopValue0(handle, (int)theMetric, out double resultValue), "occtsharp_generated_message_attribute_meter_method_stop_value_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeMeterMethodStopValue0(handle, (int)theMetric, out double resultValue), "occtsharp_generated_message_attribute_meter_method_stop_value_0");
         return resultValue;
     }
 
@@ -7474,7 +7474,7 @@ public sealed class MessageAttributeMeter : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeMeterGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeMeterGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7485,7 +7485,7 @@ public sealed class MessageAttributeMeter : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeMeterGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeMeterGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7495,7 +7495,7 @@ public sealed class MessageAttributeMeter : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeMeterIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeMeterIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7503,7 +7503,7 @@ public sealed class MessageAttributeMeter : IDisposable
     public MessageAttributeMeter Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeMeterClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeMeterClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new MessageAttributeMeter(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -7540,7 +7540,7 @@ public sealed class MessageAttributeObject : IDisposable
     public void SetObject(StandardTransient? theObject)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeObjectMethodSetObject0(handle, theObject is null ? nint.Zero : theObject.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_attribute_object_method_set_object_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeObjectMethodSetObject0(handle, theObject is null ? nint.Zero : theObject.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_attribute_object_method_set_object_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -7549,7 +7549,7 @@ public sealed class MessageAttributeObject : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeObjectGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeObjectGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7560,7 +7560,7 @@ public sealed class MessageAttributeObject : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeObjectGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeObjectGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7570,7 +7570,7 @@ public sealed class MessageAttributeObject : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeObjectIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeObjectIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7578,7 +7578,7 @@ public sealed class MessageAttributeObject : IDisposable
     public MessageAttributeObject Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeObjectClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeObjectClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new MessageAttributeObject(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -7617,7 +7617,7 @@ public sealed class MessageAttributeStream : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeStreamGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeStreamGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7628,7 +7628,7 @@ public sealed class MessageAttributeStream : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeStreamGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeStreamGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7638,7 +7638,7 @@ public sealed class MessageAttributeStream : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeStreamIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeStreamIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7646,7 +7646,7 @@ public sealed class MessageAttributeStream : IDisposable
     public MessageAttributeStream Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageAttributeStreamClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageAttributeStreamClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new MessageAttributeStream(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -7683,7 +7683,7 @@ public sealed class MessageCompositeAlerts : IDisposable
     public MessageCompositeAlerts()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageCompositeAlertsCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageCompositeAlertsCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "MessageCompositeAlertsCreate0");
     }
 
@@ -7691,7 +7691,7 @@ public sealed class MessageCompositeAlerts : IDisposable
     public bool AddAlert(MessageGravity theGravity, MessageAlert? theAlert)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageCompositeAlertsMethodAddAlert0(handle, (int)theGravity, theAlert is null ? nint.Zero : theAlert.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_composite_alerts_method_add_alert_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageCompositeAlertsMethodAddAlert0(handle, (int)theGravity, theAlert is null ? nint.Zero : theAlert.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_composite_alerts_method_add_alert_0");
         return resultValue != 0;
     }
 
@@ -7699,28 +7699,28 @@ public sealed class MessageCompositeAlerts : IDisposable
     public void Clear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageCompositeAlertsMethodClear0(handle), "occtsharp_generated_message_composite_alerts_method_clear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageCompositeAlertsMethodClear0(handle), "occtsharp_generated_message_composite_alerts_method_clear_0");
     }
 
     /// <summary>Invokes OCCT Message_CompositeAlerts::Clear.</summary>
     public void Clear(MessageGravity theGravity)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageCompositeAlertsMethodClear1(handle, (int)theGravity), "occtsharp_generated_message_composite_alerts_method_clear_1");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageCompositeAlertsMethodClear1(handle, (int)theGravity), "occtsharp_generated_message_composite_alerts_method_clear_1");
     }
 
     /// <summary>Invokes OCCT Message_CompositeAlerts::Clear.</summary>
     public void Clear(StandardType? theType)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageCompositeAlertsMethodClear2(handle, theType is null ? nint.Zero : theType.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_composite_alerts_method_clear_2");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageCompositeAlertsMethodClear2(handle, theType is null ? nint.Zero : theType.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_composite_alerts_method_clear_2");
     }
 
     /// <summary>Invokes OCCT Message_CompositeAlerts::HasAlert.</summary>
     public bool HasAlert(MessageAlert? theAlert)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageCompositeAlertsMethodHasAlert0(handle, theAlert is null ? nint.Zero : theAlert.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_composite_alerts_method_has_alert_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageCompositeAlertsMethodHasAlert0(handle, theAlert is null ? nint.Zero : theAlert.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_composite_alerts_method_has_alert_0");
         return resultValue != 0;
     }
 
@@ -7728,7 +7728,7 @@ public sealed class MessageCompositeAlerts : IDisposable
     public bool HasAlert(StandardType? theType, MessageGravity theGravity)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageCompositeAlertsMethodHasAlert1(handle, theType is null ? nint.Zero : theType.NativeHandle.DangerousGetHandle(), (int)theGravity, out int resultValue), "occtsharp_generated_message_composite_alerts_method_has_alert_1");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageCompositeAlertsMethodHasAlert1(handle, theType is null ? nint.Zero : theType.NativeHandle.DangerousGetHandle(), (int)theGravity, out int resultValue), "occtsharp_generated_message_composite_alerts_method_has_alert_1");
         return resultValue != 0;
     }
 
@@ -7736,7 +7736,7 @@ public sealed class MessageCompositeAlerts : IDisposable
     public bool RemoveAlert(MessageGravity theGravity, MessageAlert? theAlert)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageCompositeAlertsMethodRemoveAlert0(handle, (int)theGravity, theAlert is null ? nint.Zero : theAlert.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_composite_alerts_method_remove_alert_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageCompositeAlertsMethodRemoveAlert0(handle, (int)theGravity, theAlert is null ? nint.Zero : theAlert.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_composite_alerts_method_remove_alert_0");
         return resultValue != 0;
     }
 
@@ -7746,7 +7746,7 @@ public sealed class MessageCompositeAlerts : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageCompositeAlertsGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageCompositeAlertsGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7757,7 +7757,7 @@ public sealed class MessageCompositeAlerts : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageCompositeAlertsGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageCompositeAlertsGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7767,7 +7767,7 @@ public sealed class MessageCompositeAlerts : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageCompositeAlertsIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageCompositeAlertsIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7775,7 +7775,7 @@ public sealed class MessageCompositeAlerts : IDisposable
     public MessageCompositeAlerts Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageCompositeAlertsClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageCompositeAlertsClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new MessageCompositeAlerts(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -7812,7 +7812,7 @@ public sealed class MessageMessenger : IDisposable
     public MessageMessenger()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageMessengerCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageMessengerCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "MessageMessengerCreate0");
     }
 
@@ -7820,7 +7820,7 @@ public sealed class MessageMessenger : IDisposable
     public MessageMessenger(MessagePrinter? thePrinter)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageMessengerCreate1(thePrinter is null ? nint.Zero : thePrinter.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageMessengerCreate1(thePrinter is null ? nint.Zero : thePrinter.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "MessageMessengerCreate1");
     }
 
@@ -7828,7 +7828,7 @@ public sealed class MessageMessenger : IDisposable
     public bool AddPrinter(MessagePrinter? thePrinter)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageMessengerMethodAddPrinter0(handle, thePrinter is null ? nint.Zero : thePrinter.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_messenger_method_add_printer_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageMessengerMethodAddPrinter0(handle, thePrinter is null ? nint.Zero : thePrinter.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_messenger_method_add_printer_0");
         return resultValue != 0;
     }
 
@@ -7836,7 +7836,7 @@ public sealed class MessageMessenger : IDisposable
     public bool RemovePrinter(MessagePrinter? thePrinter)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageMessengerMethodRemovePrinter0(handle, thePrinter is null ? nint.Zero : thePrinter.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_messenger_method_remove_printer_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageMessengerMethodRemovePrinter0(handle, thePrinter is null ? nint.Zero : thePrinter.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_messenger_method_remove_printer_0");
         return resultValue != 0;
     }
 
@@ -7844,7 +7844,7 @@ public sealed class MessageMessenger : IDisposable
     public int RemovePrinters(StandardType? theType)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageMessengerMethodRemovePrinters0(handle, theType is null ? nint.Zero : theType.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_messenger_method_remove_printers_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageMessengerMethodRemovePrinters0(handle, theType is null ? nint.Zero : theType.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_messenger_method_remove_printers_0");
         return resultValue;
     }
 
@@ -7852,7 +7852,7 @@ public sealed class MessageMessenger : IDisposable
     public void Send(StandardTransient? theObject, MessageGravity theGravity)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageMessengerMethodSend0(handle, theObject is null ? nint.Zero : theObject.NativeHandle.DangerousGetHandle(), (int)theGravity), "occtsharp_generated_message_messenger_method_send_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageMessengerMethodSend0(handle, theObject is null ? nint.Zero : theObject.NativeHandle.DangerousGetHandle(), (int)theGravity), "occtsharp_generated_message_messenger_method_send_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -7861,7 +7861,7 @@ public sealed class MessageMessenger : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageMessengerGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageMessengerGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7872,7 +7872,7 @@ public sealed class MessageMessenger : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageMessengerGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageMessengerGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7882,7 +7882,7 @@ public sealed class MessageMessenger : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageMessengerIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageMessengerIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7890,7 +7890,7 @@ public sealed class MessageMessenger : IDisposable
     public MessageMessenger Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageMessengerClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageMessengerClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new MessageMessenger(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -7927,7 +7927,7 @@ public sealed class MessagePrinter : IDisposable
     public MessageGravity GetTraceLevel()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterMethodGetTraceLevel0(handle, out int resultValue), "occtsharp_generated_message_printer_method_get_trace_level_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterMethodGetTraceLevel0(handle, out int resultValue), "occtsharp_generated_message_printer_method_get_trace_level_0");
         return (MessageGravity)resultValue;
     }
 
@@ -7935,14 +7935,14 @@ public sealed class MessagePrinter : IDisposable
     public void SendObject(StandardTransient? theObject, MessageGravity theGravity)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterMethodSendObject0(handle, theObject is null ? nint.Zero : theObject.NativeHandle.DangerousGetHandle(), (int)theGravity), "occtsharp_generated_message_printer_method_send_object_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterMethodSendObject0(handle, theObject is null ? nint.Zero : theObject.NativeHandle.DangerousGetHandle(), (int)theGravity), "occtsharp_generated_message_printer_method_send_object_0");
     }
 
     /// <summary>Invokes OCCT Message_Printer::SetTraceLevel.</summary>
     public void SetTraceLevel(MessageGravity theTraceLevel)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterMethodSetTraceLevel0(handle, (int)theTraceLevel), "occtsharp_generated_message_printer_method_set_trace_level_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterMethodSetTraceLevel0(handle, (int)theTraceLevel), "occtsharp_generated_message_printer_method_set_trace_level_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -7951,7 +7951,7 @@ public sealed class MessagePrinter : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -7962,7 +7962,7 @@ public sealed class MessagePrinter : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -7972,7 +7972,7 @@ public sealed class MessagePrinter : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -7980,7 +7980,7 @@ public sealed class MessagePrinter : IDisposable
     public MessagePrinter Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new MessagePrinter(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8017,7 +8017,7 @@ public sealed class MessagePrinterOStream : IDisposable
     public MessagePrinterOStream(MessageGravity theTraceLevel)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterOStreamCreate0((int)theTraceLevel, out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterOStreamCreate0((int)theTraceLevel, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "MessagePrinterOStreamCreate0");
     }
 
@@ -8025,21 +8025,21 @@ public sealed class MessagePrinterOStream : IDisposable
     public void Close()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterOStreamMethodClose0(handle), "occtsharp_generated_message_printer_ostream_method_close_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterOStreamMethodClose0(handle), "occtsharp_generated_message_printer_ostream_method_close_0");
     }
 
     /// <summary>Invokes OCCT Message_PrinterOStream::SetToColorize.</summary>
     public void SetToColorize(bool theToColorize)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterOStreamMethodSetToColorize0(handle, theToColorize ? 1 : 0), "occtsharp_generated_message_printer_ostream_method_set_to_colorize_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterOStreamMethodSetToColorize0(handle, theToColorize ? 1 : 0), "occtsharp_generated_message_printer_ostream_method_set_to_colorize_0");
     }
 
     /// <summary>Invokes OCCT Message_PrinterOStream::ToColorize.</summary>
     public bool ToColorize()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterOStreamMethodToColorize0(handle, out int resultValue), "occtsharp_generated_message_printer_ostream_method_to_colorize_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterOStreamMethodToColorize0(handle, out int resultValue), "occtsharp_generated_message_printer_ostream_method_to_colorize_0");
         return resultValue != 0;
     }
 
@@ -8049,7 +8049,7 @@ public sealed class MessagePrinterOStream : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterOStreamGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterOStreamGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8060,7 +8060,7 @@ public sealed class MessagePrinterOStream : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterOStreamGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterOStreamGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8070,7 +8070,7 @@ public sealed class MessagePrinterOStream : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterOStreamIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterOStreamIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8078,7 +8078,7 @@ public sealed class MessagePrinterOStream : IDisposable
     public MessagePrinterOStream Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterOStreamClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterOStreamClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new MessagePrinterOStream(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8117,7 +8117,7 @@ public sealed class MessagePrinterSystemLog : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterSystemLogGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterSystemLogGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8128,7 +8128,7 @@ public sealed class MessagePrinterSystemLog : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterSystemLogGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterSystemLogGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8138,7 +8138,7 @@ public sealed class MessagePrinterSystemLog : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterSystemLogIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterSystemLogIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8146,7 +8146,7 @@ public sealed class MessagePrinterSystemLog : IDisposable
     public MessagePrinterSystemLog Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterSystemLogClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterSystemLogClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new MessagePrinterSystemLog(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8183,7 +8183,7 @@ public sealed class MessagePrinterToReport : IDisposable
     public MessagePrinterToReport()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterToReportCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterToReportCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "MessagePrinterToReportCreate0");
     }
 
@@ -8191,14 +8191,14 @@ public sealed class MessagePrinterToReport : IDisposable
     public void SendObject(StandardTransient? theObject, MessageGravity theGravity)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterToReportMethodSendObject0(handle, theObject is null ? nint.Zero : theObject.NativeHandle.DangerousGetHandle(), (int)theGravity), "occtsharp_generated_message_printer_to_report_method_send_object_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterToReportMethodSendObject0(handle, theObject is null ? nint.Zero : theObject.NativeHandle.DangerousGetHandle(), (int)theGravity), "occtsharp_generated_message_printer_to_report_method_send_object_0");
     }
 
     /// <summary>Invokes OCCT Message_PrinterToReport::SetReport.</summary>
     public void SetReport(MessageReport? theReport)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterToReportMethodSetReport0(handle, theReport is null ? nint.Zero : theReport.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_printer_to_report_method_set_report_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterToReportMethodSetReport0(handle, theReport is null ? nint.Zero : theReport.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_printer_to_report_method_set_report_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -8207,7 +8207,7 @@ public sealed class MessagePrinterToReport : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterToReportGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterToReportGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8218,7 +8218,7 @@ public sealed class MessagePrinterToReport : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterToReportGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterToReportGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8228,7 +8228,7 @@ public sealed class MessagePrinterToReport : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterToReportIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterToReportIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8236,7 +8236,7 @@ public sealed class MessagePrinterToReport : IDisposable
     public MessagePrinterToReport Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessagePrinterToReportClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessagePrinterToReportClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new MessagePrinterToReport(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8273,7 +8273,7 @@ public sealed class MessageProgressIndicator : IDisposable
     public double GetPosition()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageProgressIndicatorMethodGetPosition0(handle, out double resultValue), "occtsharp_generated_message_progress_indicator_method_get_position_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageProgressIndicatorMethodGetPosition0(handle, out double resultValue), "occtsharp_generated_message_progress_indicator_method_get_position_0");
         return resultValue;
     }
 
@@ -8283,7 +8283,7 @@ public sealed class MessageProgressIndicator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageProgressIndicatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageProgressIndicatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8294,7 +8294,7 @@ public sealed class MessageProgressIndicator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageProgressIndicatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageProgressIndicatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8304,7 +8304,7 @@ public sealed class MessageProgressIndicator : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageProgressIndicatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageProgressIndicatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8312,7 +8312,7 @@ public sealed class MessageProgressIndicator : IDisposable
     public MessageProgressIndicator Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageProgressIndicatorClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageProgressIndicatorClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new MessageProgressIndicator(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8349,7 +8349,7 @@ public sealed class MessageReport : IDisposable
     public MessageReport()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "MessageReportCreate0");
     }
 
@@ -8357,49 +8357,49 @@ public sealed class MessageReport : IDisposable
     public void ActivateInMessenger(bool toActivate, MessageMessenger? theMessenger)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportMethodActivateInMessenger0(handle, toActivate ? 1 : 0, theMessenger is null ? nint.Zero : theMessenger.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_report_method_activate_in_messenger_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportMethodActivateInMessenger0(handle, toActivate ? 1 : 0, theMessenger is null ? nint.Zero : theMessenger.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_report_method_activate_in_messenger_0");
     }
 
     /// <summary>Invokes OCCT Message_Report::AddAlert.</summary>
     public void AddAlert(MessageGravity theGravity, MessageAlert? theAlert)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportMethodAddAlert0(handle, (int)theGravity, theAlert is null ? nint.Zero : theAlert.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_report_method_add_alert_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportMethodAddAlert0(handle, (int)theGravity, theAlert is null ? nint.Zero : theAlert.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_report_method_add_alert_0");
     }
 
     /// <summary>Invokes OCCT Message_Report::Clear.</summary>
     public void Clear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportMethodClear0(handle), "occtsharp_generated_message_report_method_clear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportMethodClear0(handle), "occtsharp_generated_message_report_method_clear_0");
     }
 
     /// <summary>Invokes OCCT Message_Report::Clear.</summary>
     public void Clear(MessageGravity theGravity)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportMethodClear1(handle, (int)theGravity), "occtsharp_generated_message_report_method_clear_1");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportMethodClear1(handle, (int)theGravity), "occtsharp_generated_message_report_method_clear_1");
     }
 
     /// <summary>Invokes OCCT Message_Report::Clear.</summary>
     public void Clear(StandardType? theType)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportMethodClear2(handle, theType is null ? nint.Zero : theType.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_report_method_clear_2");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportMethodClear2(handle, theType is null ? nint.Zero : theType.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_report_method_clear_2");
     }
 
     /// <summary>Invokes OCCT Message_Report::ClearMetrics.</summary>
     public void ClearMetrics()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportMethodClearMetrics0(handle), "occtsharp_generated_message_report_method_clear_metrics_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportMethodClearMetrics0(handle), "occtsharp_generated_message_report_method_clear_metrics_0");
     }
 
     /// <summary>Invokes OCCT Message_Report::HasAlert.</summary>
     public bool HasAlert(StandardType? theType)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportMethodHasAlert0(handle, theType is null ? nint.Zero : theType.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_report_method_has_alert_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportMethodHasAlert0(handle, theType is null ? nint.Zero : theType.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_report_method_has_alert_0");
         return resultValue != 0;
     }
 
@@ -8407,7 +8407,7 @@ public sealed class MessageReport : IDisposable
     public bool HasAlert(StandardType? theType, MessageGravity theGravity)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportMethodHasAlert1(handle, theType is null ? nint.Zero : theType.NativeHandle.DangerousGetHandle(), (int)theGravity, out int resultValue), "occtsharp_generated_message_report_method_has_alert_1");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportMethodHasAlert1(handle, theType is null ? nint.Zero : theType.NativeHandle.DangerousGetHandle(), (int)theGravity, out int resultValue), "occtsharp_generated_message_report_method_has_alert_1");
         return resultValue != 0;
     }
 
@@ -8415,7 +8415,7 @@ public sealed class MessageReport : IDisposable
     public bool IsActiveInMessenger(MessageMessenger? theMessenger)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportMethodIsActiveInMessenger0(handle, theMessenger is null ? nint.Zero : theMessenger.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_report_method_is_active_in_messenger_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportMethodIsActiveInMessenger0(handle, theMessenger is null ? nint.Zero : theMessenger.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_message_report_method_is_active_in_messenger_0");
         return resultValue != 0;
     }
 
@@ -8423,7 +8423,7 @@ public sealed class MessageReport : IDisposable
     public int Limit()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportMethodLimit0(handle, out int resultValue), "occtsharp_generated_message_report_method_limit_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportMethodLimit0(handle, out int resultValue), "occtsharp_generated_message_report_method_limit_0");
         return resultValue;
     }
 
@@ -8431,49 +8431,49 @@ public sealed class MessageReport : IDisposable
     public void Merge(MessageReport? theOther)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportMethodMerge0(handle, theOther is null ? nint.Zero : theOther.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_report_method_merge_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportMethodMerge0(handle, theOther is null ? nint.Zero : theOther.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_report_method_merge_0");
     }
 
     /// <summary>Invokes OCCT Message_Report::Merge.</summary>
     public void Merge(MessageReport? theOther, MessageGravity theGravity)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportMethodMerge1(handle, theOther is null ? nint.Zero : theOther.NativeHandle.DangerousGetHandle(), (int)theGravity), "occtsharp_generated_message_report_method_merge_1");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportMethodMerge1(handle, theOther is null ? nint.Zero : theOther.NativeHandle.DangerousGetHandle(), (int)theGravity), "occtsharp_generated_message_report_method_merge_1");
     }
 
     /// <summary>Invokes OCCT Message_Report::SendMessages.</summary>
     public void SendMessages(MessageMessenger? theMessenger)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportMethodSendMessages0(handle, theMessenger is null ? nint.Zero : theMessenger.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_report_method_send_messages_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportMethodSendMessages0(handle, theMessenger is null ? nint.Zero : theMessenger.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_report_method_send_messages_0");
     }
 
     /// <summary>Invokes OCCT Message_Report::SendMessages.</summary>
     public void SendMessages(MessageMessenger? theMessenger, MessageGravity theGravity)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportMethodSendMessages1(handle, theMessenger is null ? nint.Zero : theMessenger.NativeHandle.DangerousGetHandle(), (int)theGravity), "occtsharp_generated_message_report_method_send_messages_1");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportMethodSendMessages1(handle, theMessenger is null ? nint.Zero : theMessenger.NativeHandle.DangerousGetHandle(), (int)theGravity), "occtsharp_generated_message_report_method_send_messages_1");
     }
 
     /// <summary>Invokes OCCT Message_Report::SetActiveMetric.</summary>
     public void SetActiveMetric(MessageMetricType theMetricType, bool theActivate)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportMethodSetActiveMetric0(handle, (int)theMetricType, theActivate ? 1 : 0), "occtsharp_generated_message_report_method_set_active_metric_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportMethodSetActiveMetric0(handle, (int)theMetricType, theActivate ? 1 : 0), "occtsharp_generated_message_report_method_set_active_metric_0");
     }
 
     /// <summary>Invokes OCCT Message_Report::SetLimit.</summary>
     public void SetLimit(int theLimit)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportMethodSetLimit0(handle, theLimit), "occtsharp_generated_message_report_method_set_limit_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportMethodSetLimit0(handle, theLimit), "occtsharp_generated_message_report_method_set_limit_0");
     }
 
     /// <summary>Invokes OCCT Message_Report::UpdateActiveInMessenger.</summary>
     public void UpdateActiveInMessenger(MessageMessenger? theMessenger)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportMethodUpdateActiveInMessenger0(handle, theMessenger is null ? nint.Zero : theMessenger.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_report_method_update_active_in_messenger_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportMethodUpdateActiveInMessenger0(handle, theMessenger is null ? nint.Zero : theMessenger.NativeHandle.DangerousGetHandle()), "occtsharp_generated_message_report_method_update_active_in_messenger_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -8482,7 +8482,7 @@ public sealed class MessageReport : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8493,7 +8493,7 @@ public sealed class MessageReport : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8503,7 +8503,7 @@ public sealed class MessageReport : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8511,7 +8511,7 @@ public sealed class MessageReport : IDisposable
     public MessageReport Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.MessageReportClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.MessageReportClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new MessageReport(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8550,7 +8550,7 @@ public sealed class NCollectionAccAllocator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionAccAllocatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionAccAllocatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8561,7 +8561,7 @@ public sealed class NCollectionAccAllocator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionAccAllocatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionAccAllocatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8571,7 +8571,7 @@ public sealed class NCollectionAccAllocator : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionAccAllocatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionAccAllocatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8579,7 +8579,7 @@ public sealed class NCollectionAccAllocator : IDisposable
     public NCollectionAccAllocator Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionAccAllocatorClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionAccAllocatorClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new NCollectionAccAllocator(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8618,7 +8618,7 @@ public sealed class NCollectionAlignedAllocator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionAlignedAllocatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionAlignedAllocatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8629,7 +8629,7 @@ public sealed class NCollectionAlignedAllocator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionAlignedAllocatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionAlignedAllocatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8639,7 +8639,7 @@ public sealed class NCollectionAlignedAllocator : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionAlignedAllocatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionAlignedAllocatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8647,7 +8647,7 @@ public sealed class NCollectionAlignedAllocator : IDisposable
     public NCollectionAlignedAllocator Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionAlignedAllocatorClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionAlignedAllocatorClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new NCollectionAlignedAllocator(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8686,7 +8686,7 @@ public sealed class NCollectionBaseAllocator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionBaseAllocatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionBaseAllocatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8697,7 +8697,7 @@ public sealed class NCollectionBaseAllocator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionBaseAllocatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionBaseAllocatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8707,7 +8707,7 @@ public sealed class NCollectionBaseAllocator : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionBaseAllocatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionBaseAllocatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8715,7 +8715,7 @@ public sealed class NCollectionBaseAllocator : IDisposable
     public NCollectionBaseAllocator Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionBaseAllocatorClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionBaseAllocatorClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new NCollectionBaseAllocator(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8752,14 +8752,14 @@ public sealed class NCollectionBuffer : IDisposable
     public void Free()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionBufferMethodFree0(handle), "occtsharp_generated_ncollection_buffer_method_free_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionBufferMethodFree0(handle), "occtsharp_generated_ncollection_buffer_method_free_0");
     }
 
     /// <summary>Invokes OCCT NCollection_Buffer::IsEmpty.</summary>
     public bool IsEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionBufferMethodIsEmpty0(handle, out int resultValue), "occtsharp_generated_ncollection_buffer_method_is_empty_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionBufferMethodIsEmpty0(handle, out int resultValue), "occtsharp_generated_ncollection_buffer_method_is_empty_0");
         return resultValue != 0;
     }
 
@@ -8767,7 +8767,7 @@ public sealed class NCollectionBuffer : IDisposable
     public void SetAllocator(NCollectionBaseAllocator? theAlloc)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionBufferMethodSetAllocator0(handle, theAlloc is null ? nint.Zero : theAlloc.NativeHandle.DangerousGetHandle()), "occtsharp_generated_ncollection_buffer_method_set_allocator_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionBufferMethodSetAllocator0(handle, theAlloc is null ? nint.Zero : theAlloc.NativeHandle.DangerousGetHandle()), "occtsharp_generated_ncollection_buffer_method_set_allocator_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -8776,7 +8776,7 @@ public sealed class NCollectionBuffer : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionBufferGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionBufferGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8787,7 +8787,7 @@ public sealed class NCollectionBuffer : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionBufferGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionBufferGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8797,7 +8797,7 @@ public sealed class NCollectionBuffer : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionBufferIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionBufferIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8805,7 +8805,7 @@ public sealed class NCollectionBuffer : IDisposable
     public NCollectionBuffer Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionBufferClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionBufferClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new NCollectionBuffer(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8844,7 +8844,7 @@ public sealed class NCollectionHeapAllocator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionHeapAllocatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionHeapAllocatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8855,7 +8855,7 @@ public sealed class NCollectionHeapAllocator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionHeapAllocatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionHeapAllocatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8865,7 +8865,7 @@ public sealed class NCollectionHeapAllocator : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionHeapAllocatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionHeapAllocatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8873,7 +8873,7 @@ public sealed class NCollectionHeapAllocator : IDisposable
     public NCollectionHeapAllocator Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionHeapAllocatorClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionHeapAllocatorClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new NCollectionHeapAllocator(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8910,14 +8910,14 @@ public sealed class NCollectionIncAllocator : IDisposable
     public void Reset(bool theReleaseMemory)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionIncAllocatorMethodReset0(handle, theReleaseMemory ? 1 : 0), "occtsharp_generated_ncollection_inc_allocator_method_reset_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionIncAllocatorMethodReset0(handle, theReleaseMemory ? 1 : 0), "occtsharp_generated_ncollection_inc_allocator_method_reset_0");
     }
 
     /// <summary>Invokes OCCT NCollection_IncAllocator::SetThreadSafe.</summary>
     public void SetThreadSafe(bool theIsThreadSafe)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionIncAllocatorMethodSetThreadSafe0(handle, theIsThreadSafe ? 1 : 0), "occtsharp_generated_ncollection_inc_allocator_method_set_thread_safe_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionIncAllocatorMethodSetThreadSafe0(handle, theIsThreadSafe ? 1 : 0), "occtsharp_generated_ncollection_inc_allocator_method_set_thread_safe_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -8926,7 +8926,7 @@ public sealed class NCollectionIncAllocator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionIncAllocatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionIncAllocatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -8937,7 +8937,7 @@ public sealed class NCollectionIncAllocator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionIncAllocatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionIncAllocatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -8947,7 +8947,7 @@ public sealed class NCollectionIncAllocator : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionIncAllocatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionIncAllocatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -8955,7 +8955,7 @@ public sealed class NCollectionIncAllocator : IDisposable
     public NCollectionIncAllocator Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionIncAllocatorClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionIncAllocatorClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new NCollectionIncAllocator(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -8994,7 +8994,7 @@ public sealed class NCollectionWinHeapAllocator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionWinHeapAllocatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionWinHeapAllocatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -9005,7 +9005,7 @@ public sealed class NCollectionWinHeapAllocator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionWinHeapAllocatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionWinHeapAllocatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -9015,7 +9015,7 @@ public sealed class NCollectionWinHeapAllocator : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionWinHeapAllocatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionWinHeapAllocatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -9023,7 +9023,7 @@ public sealed class NCollectionWinHeapAllocator : IDisposable
     public NCollectionWinHeapAllocator Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.NCollectionWinHeapAllocatorClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.NCollectionWinHeapAllocatorClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new NCollectionWinHeapAllocator(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -9060,7 +9060,7 @@ public sealed class OSDCachedFileSystem : IDisposable
     public OSDCachedFileSystem(OSDFileSystem? theLinkedFileSystem)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDCachedFileSystemCreate0(theLinkedFileSystem is null ? nint.Zero : theLinkedFileSystem.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDCachedFileSystemCreate0(theLinkedFileSystem is null ? nint.Zero : theLinkedFileSystem.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "OSDCachedFileSystemCreate0");
     }
 
@@ -9068,7 +9068,7 @@ public sealed class OSDCachedFileSystem : IDisposable
     public void SetLinkedFileSystem(OSDFileSystem? theLinkedFileSystem)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDCachedFileSystemMethodSetLinkedFileSystem0(handle, theLinkedFileSystem is null ? nint.Zero : theLinkedFileSystem.NativeHandle.DangerousGetHandle()), "occtsharp_generated_osd_cached_file_system_method_set_linked_file_system_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDCachedFileSystemMethodSetLinkedFileSystem0(handle, theLinkedFileSystem is null ? nint.Zero : theLinkedFileSystem.NativeHandle.DangerousGetHandle()), "occtsharp_generated_osd_cached_file_system_method_set_linked_file_system_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -9077,7 +9077,7 @@ public sealed class OSDCachedFileSystem : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDCachedFileSystemGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDCachedFileSystemGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -9088,7 +9088,7 @@ public sealed class OSDCachedFileSystem : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDCachedFileSystemGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDCachedFileSystemGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -9098,7 +9098,7 @@ public sealed class OSDCachedFileSystem : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDCachedFileSystemIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDCachedFileSystemIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -9106,7 +9106,7 @@ public sealed class OSDCachedFileSystem : IDisposable
     public OSDCachedFileSystem Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDCachedFileSystemClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDCachedFileSystemClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new OSDCachedFileSystem(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -9145,7 +9145,7 @@ public sealed class OSDFileSystem : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDFileSystemGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDFileSystemGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -9156,7 +9156,7 @@ public sealed class OSDFileSystem : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDFileSystemGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDFileSystemGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -9166,7 +9166,7 @@ public sealed class OSDFileSystem : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDFileSystemIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDFileSystemIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -9174,7 +9174,7 @@ public sealed class OSDFileSystem : IDisposable
     public OSDFileSystem Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDFileSystemClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDFileSystemClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new OSDFileSystem(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -9211,7 +9211,7 @@ public sealed class OSDFileSystemSelector : IDisposable
     public OSDFileSystemSelector()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDFileSystemSelectorCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDFileSystemSelectorCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "OSDFileSystemSelectorCreate0");
     }
 
@@ -9219,14 +9219,14 @@ public sealed class OSDFileSystemSelector : IDisposable
     public void AddProtocol(OSDFileSystem? theFileSystem, bool theIsPreferred)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDFileSystemSelectorMethodAddProtocol0(handle, theFileSystem is null ? nint.Zero : theFileSystem.NativeHandle.DangerousGetHandle(), theIsPreferred ? 1 : 0), "occtsharp_generated_osd_file_system_selector_method_add_protocol_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDFileSystemSelectorMethodAddProtocol0(handle, theFileSystem is null ? nint.Zero : theFileSystem.NativeHandle.DangerousGetHandle(), theIsPreferred ? 1 : 0), "occtsharp_generated_osd_file_system_selector_method_add_protocol_0");
     }
 
     /// <summary>Invokes OCCT OSD_FileSystemSelector::RemoveProtocol.</summary>
     public void RemoveProtocol(OSDFileSystem? theFileSystem)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDFileSystemSelectorMethodRemoveProtocol0(handle, theFileSystem is null ? nint.Zero : theFileSystem.NativeHandle.DangerousGetHandle()), "occtsharp_generated_osd_file_system_selector_method_remove_protocol_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDFileSystemSelectorMethodRemoveProtocol0(handle, theFileSystem is null ? nint.Zero : theFileSystem.NativeHandle.DangerousGetHandle()), "occtsharp_generated_osd_file_system_selector_method_remove_protocol_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -9235,7 +9235,7 @@ public sealed class OSDFileSystemSelector : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDFileSystemSelectorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDFileSystemSelectorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -9246,7 +9246,7 @@ public sealed class OSDFileSystemSelector : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDFileSystemSelectorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDFileSystemSelectorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -9256,7 +9256,7 @@ public sealed class OSDFileSystemSelector : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDFileSystemSelectorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDFileSystemSelectorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -9264,7 +9264,7 @@ public sealed class OSDFileSystemSelector : IDisposable
     public OSDFileSystemSelector Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDFileSystemSelectorClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDFileSystemSelectorClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new OSDFileSystemSelector(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -9301,7 +9301,7 @@ public sealed class OSDLocalFileSystem : IDisposable
     public OSDLocalFileSystem()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDLocalFileSystemCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDLocalFileSystemCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "OSDLocalFileSystemCreate0");
     }
 
@@ -9311,7 +9311,7 @@ public sealed class OSDLocalFileSystem : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDLocalFileSystemGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDLocalFileSystemGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -9322,7 +9322,7 @@ public sealed class OSDLocalFileSystem : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDLocalFileSystemGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDLocalFileSystemGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -9332,7 +9332,7 @@ public sealed class OSDLocalFileSystem : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDLocalFileSystemIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDLocalFileSystemIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -9340,7 +9340,7 @@ public sealed class OSDLocalFileSystem : IDisposable
     public OSDLocalFileSystem Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDLocalFileSystemClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDLocalFileSystemClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new OSDLocalFileSystem(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -9377,7 +9377,7 @@ public sealed class OSDThreadPool : IDisposable
     public OSDThreadPool(int theNbThreads)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDThreadPoolCreate0(theNbThreads, out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDThreadPoolCreate0(theNbThreads, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "OSDThreadPoolCreate0");
     }
 
@@ -9385,7 +9385,7 @@ public sealed class OSDThreadPool : IDisposable
     public bool HasThreads()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDThreadPoolMethodHasThreads0(handle, out int resultValue), "occtsharp_generated_osd_thread_pool_method_has_threads_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDThreadPoolMethodHasThreads0(handle, out int resultValue), "occtsharp_generated_osd_thread_pool_method_has_threads_0");
         return resultValue != 0;
     }
 
@@ -9393,14 +9393,14 @@ public sealed class OSDThreadPool : IDisposable
     public void Init(int theNbThreads)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDThreadPoolMethodInit0(handle, theNbThreads), "occtsharp_generated_osd_thread_pool_method_init_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDThreadPoolMethodInit0(handle, theNbThreads), "occtsharp_generated_osd_thread_pool_method_init_0");
     }
 
     /// <summary>Invokes OCCT OSD_ThreadPool::IsInUse.</summary>
     public bool IsInUse()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDThreadPoolMethodIsInUse0(handle, out int resultValue), "occtsharp_generated_osd_thread_pool_method_is_in_use_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDThreadPoolMethodIsInUse0(handle, out int resultValue), "occtsharp_generated_osd_thread_pool_method_is_in_use_0");
         return resultValue != 0;
     }
 
@@ -9408,7 +9408,7 @@ public sealed class OSDThreadPool : IDisposable
     public int LowerThreadIndex()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDThreadPoolMethodLowerThreadIndex0(handle, out int resultValue), "occtsharp_generated_osd_thread_pool_method_lower_thread_index_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDThreadPoolMethodLowerThreadIndex0(handle, out int resultValue), "occtsharp_generated_osd_thread_pool_method_lower_thread_index_0");
         return resultValue;
     }
 
@@ -9416,7 +9416,7 @@ public sealed class OSDThreadPool : IDisposable
     public int NbDefaultThreadsToLaunch()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDThreadPoolMethodNbDefaultThreadsToLaunch0(handle, out int resultValue), "occtsharp_generated_osd_thread_pool_method_nb_default_threads_to_launch_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDThreadPoolMethodNbDefaultThreadsToLaunch0(handle, out int resultValue), "occtsharp_generated_osd_thread_pool_method_nb_default_threads_to_launch_0");
         return resultValue;
     }
 
@@ -9424,7 +9424,7 @@ public sealed class OSDThreadPool : IDisposable
     public int NbThreads()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDThreadPoolMethodNbThreads0(handle, out int resultValue), "occtsharp_generated_osd_thread_pool_method_nb_threads_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDThreadPoolMethodNbThreads0(handle, out int resultValue), "occtsharp_generated_osd_thread_pool_method_nb_threads_0");
         return resultValue;
     }
 
@@ -9432,14 +9432,14 @@ public sealed class OSDThreadPool : IDisposable
     public void SetNbDefaultThreadsToLaunch(int theNbThreads)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDThreadPoolMethodSetNbDefaultThreadsToLaunch0(handle, theNbThreads), "occtsharp_generated_osd_thread_pool_method_set_nb_default_threads_to_launch_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDThreadPoolMethodSetNbDefaultThreadsToLaunch0(handle, theNbThreads), "occtsharp_generated_osd_thread_pool_method_set_nb_default_threads_to_launch_0");
     }
 
     /// <summary>Invokes OCCT OSD_ThreadPool::UpperThreadIndex.</summary>
     public int UpperThreadIndex()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDThreadPoolMethodUpperThreadIndex0(handle, out int resultValue), "occtsharp_generated_osd_thread_pool_method_upper_thread_index_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDThreadPoolMethodUpperThreadIndex0(handle, out int resultValue), "occtsharp_generated_osd_thread_pool_method_upper_thread_index_0");
         return resultValue;
     }
 
@@ -9449,7 +9449,7 @@ public sealed class OSDThreadPool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDThreadPoolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDThreadPoolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -9460,7 +9460,7 @@ public sealed class OSDThreadPool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDThreadPoolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDThreadPoolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -9470,7 +9470,7 @@ public sealed class OSDThreadPool : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDThreadPoolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDThreadPoolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -9478,7 +9478,7 @@ public sealed class OSDThreadPool : IDisposable
     public OSDThreadPool Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.OSDThreadPoolClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.OSDThreadPoolClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new OSDThreadPool(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -9515,7 +9515,7 @@ public sealed class ResourceManager : IDisposable
     public ResourceManager()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ResourceManagerCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ResourceManagerCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "ResourceManagerCreate0");
     }
 
@@ -9523,7 +9523,7 @@ public sealed class ResourceManager : IDisposable
     public bool IsInitialized()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ResourceManagerMethodIsInitialized0(handle, out int resultValue), "occtsharp_generated_resource_manager_method_is_initialized_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ResourceManagerMethodIsInitialized0(handle, out int resultValue), "occtsharp_generated_resource_manager_method_is_initialized_0");
         return resultValue != 0;
     }
 
@@ -9531,7 +9531,7 @@ public sealed class ResourceManager : IDisposable
     public bool Save()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ResourceManagerMethodSave0(handle, out int resultValue), "occtsharp_generated_resource_manager_method_save_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ResourceManagerMethodSave0(handle, out int resultValue), "occtsharp_generated_resource_manager_method_save_0");
         return resultValue != 0;
     }
 
@@ -9541,7 +9541,7 @@ public sealed class ResourceManager : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ResourceManagerGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ResourceManagerGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -9552,7 +9552,7 @@ public sealed class ResourceManager : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ResourceManagerGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ResourceManagerGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -9562,7 +9562,7 @@ public sealed class ResourceManager : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ResourceManagerIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ResourceManagerIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -9570,7 +9570,7 @@ public sealed class ResourceManager : IDisposable
     public ResourceManager Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.ResourceManagerClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.ResourceManagerClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new ResourceManager(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -9607,7 +9607,7 @@ public sealed class StandardPersistent : IDisposable
     public StandardPersistent()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardPersistentCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardPersistentCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "StandardPersistentCreate0");
     }
 
@@ -9617,7 +9617,7 @@ public sealed class StandardPersistent : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardPersistentGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardPersistentGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -9628,7 +9628,7 @@ public sealed class StandardPersistent : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardPersistentGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardPersistentGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -9638,7 +9638,7 @@ public sealed class StandardPersistent : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardPersistentIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardPersistentIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -9646,7 +9646,7 @@ public sealed class StandardPersistent : IDisposable
     public StandardPersistent Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardPersistentClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardPersistentClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new StandardPersistent(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -9683,7 +9683,7 @@ public sealed class StandardTransient : IDisposable
     public int DecrementRefCounter()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardTransientMethodDecrementRefCounter0(handle, out int resultValue), "occtsharp_generated_standard_transient_method_decrement_ref_counter_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardTransientMethodDecrementRefCounter0(handle, out int resultValue), "occtsharp_generated_standard_transient_method_decrement_ref_counter_0");
         return resultValue;
     }
 
@@ -9691,14 +9691,14 @@ public sealed class StandardTransient : IDisposable
     public void Delete()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardTransientMethodDelete0(handle), "occtsharp_generated_standard_transient_method_delete_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardTransientMethodDelete0(handle), "occtsharp_generated_standard_transient_method_delete_0");
     }
 
     /// <summary>Invokes OCCT Standard_Transient::GetRefCount.</summary>
     public int GetRefCount()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardTransientMethodGetRefCount0(handle, out int resultValue), "occtsharp_generated_standard_transient_method_get_ref_count_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardTransientMethodGetRefCount0(handle, out int resultValue), "occtsharp_generated_standard_transient_method_get_ref_count_0");
         return resultValue;
     }
 
@@ -9706,14 +9706,14 @@ public sealed class StandardTransient : IDisposable
     public void IncrementRefCounter()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardTransientMethodIncrementRefCounter0(handle), "occtsharp_generated_standard_transient_method_increment_ref_counter_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardTransientMethodIncrementRefCounter0(handle), "occtsharp_generated_standard_transient_method_increment_ref_counter_0");
     }
 
     /// <summary>Invokes OCCT Standard_Transient::IsInstance.</summary>
     public bool IsInstance(StandardType? theType)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardTransientMethodIsInstance0(handle, theType is null ? nint.Zero : theType.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_standard_transient_method_is_instance_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardTransientMethodIsInstance0(handle, theType is null ? nint.Zero : theType.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_standard_transient_method_is_instance_0");
         return resultValue != 0;
     }
 
@@ -9721,7 +9721,7 @@ public sealed class StandardTransient : IDisposable
     public bool OcctIsKind(StandardType? theType)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardTransientMethodOcctIsKind0(handle, theType is null ? nint.Zero : theType.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_standard_transient_method_is_kind_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardTransientMethodOcctIsKind0(handle, theType is null ? nint.Zero : theType.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_standard_transient_method_is_kind_0");
         return resultValue != 0;
     }
 
@@ -9731,7 +9731,7 @@ public sealed class StandardTransient : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardTransientGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardTransientGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -9742,7 +9742,7 @@ public sealed class StandardTransient : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardTransientGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardTransientGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -9752,7 +9752,7 @@ public sealed class StandardTransient : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardTransientIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardTransientIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -9760,7 +9760,7 @@ public sealed class StandardTransient : IDisposable
     public StandardTransient Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardTransientClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardTransientClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new StandardTransient(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -9797,7 +9797,7 @@ public sealed class StandardType : IDisposable
     public bool SubType(StandardType? theOther)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardTypeMethodSubType0(handle, theOther is null ? nint.Zero : theOther.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_standard_type_method_sub_type_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardTypeMethodSubType0(handle, theOther is null ? nint.Zero : theOther.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_standard_type_method_sub_type_0");
         return resultValue != 0;
     }
 
@@ -9807,7 +9807,7 @@ public sealed class StandardType : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardTypeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardTypeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -9818,7 +9818,7 @@ public sealed class StandardType : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardTypeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardTypeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -9828,7 +9828,7 @@ public sealed class StandardType : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardTypeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardTypeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -9836,7 +9836,7 @@ public sealed class StandardType : IDisposable
     public StandardType Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.StandardTypeClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.StandardTypeClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new StandardType(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -9873,7 +9873,7 @@ public sealed class TColStdHPackedMapOfInteger : IDisposable
     public TColStdHPackedMapOfInteger(int theNbBuckets)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TColStdHPackedMapOfIntegerCreate0(theNbBuckets, out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TColStdHPackedMapOfIntegerCreate0(theNbBuckets, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "TColStdHPackedMapOfIntegerCreate0");
     }
 
@@ -9883,7 +9883,7 @@ public sealed class TColStdHPackedMapOfInteger : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TColStdHPackedMapOfIntegerGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TColStdHPackedMapOfIntegerGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -9894,7 +9894,7 @@ public sealed class TColStdHPackedMapOfInteger : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TColStdHPackedMapOfIntegerGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TColStdHPackedMapOfIntegerGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -9904,7 +9904,7 @@ public sealed class TColStdHPackedMapOfInteger : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TColStdHPackedMapOfIntegerIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TColStdHPackedMapOfIntegerIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -9912,7 +9912,7 @@ public sealed class TColStdHPackedMapOfInteger : IDisposable
     public TColStdHPackedMapOfInteger Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TColStdHPackedMapOfIntegerClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TColStdHPackedMapOfIntegerClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new TColStdHPackedMapOfInteger(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -9949,7 +9949,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     public TCollectionHAsciiString()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "TCollectionHAsciiStringCreate0");
     }
 
@@ -9957,7 +9957,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     public TCollectionHAsciiString(double value)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringCreate1(value, out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringCreate1(value, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "TCollectionHAsciiStringCreate1");
     }
 
@@ -9965,7 +9965,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     public TCollectionHAsciiString(int value)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringCreate2(value, out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringCreate2(value, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "TCollectionHAsciiStringCreate2");
     }
 
@@ -9973,7 +9973,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     public TCollectionHAsciiString(TCollectionHAsciiString? aString)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringCreate3(aString is null ? nint.Zero : aString.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringCreate3(aString is null ? nint.Zero : aString.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "TCollectionHAsciiStringCreate3");
     }
 
@@ -9981,21 +9981,21 @@ public sealed class TCollectionHAsciiString : IDisposable
     public void AssignCat(TCollectionHAsciiString? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodAssignCat0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle()), "occtsharp_generated_tcollection_hascii_string_method_assign_cat_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodAssignCat0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle()), "occtsharp_generated_tcollection_hascii_string_method_assign_cat_0");
     }
 
     /// <summary>Invokes OCCT TCollection_HAsciiString::Capitalize.</summary>
     public void Capitalize()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodCapitalize0(handle), "occtsharp_generated_tcollection_hascii_string_method_capitalize_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodCapitalize0(handle), "occtsharp_generated_tcollection_hascii_string_method_capitalize_0");
     }
 
     /// <summary>Invokes OCCT TCollection_HAsciiString::Cat.</summary>
     public TCollectionHAsciiString? Cat(TCollectionHAsciiString? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodCat0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_tcollection_hascii_string_method_cat_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodCat0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_tcollection_hascii_string_method_cat_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_tcollection_hascii_string_method_cat_0");
     }
 
@@ -10003,14 +10003,14 @@ public sealed class TCollectionHAsciiString : IDisposable
     public void Clear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodClear0(handle), "occtsharp_generated_tcollection_hascii_string_method_clear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodClear0(handle), "occtsharp_generated_tcollection_hascii_string_method_clear_0");
     }
 
     /// <summary>Invokes OCCT TCollection_HAsciiString::FirstLocationInSet.</summary>
     public int FirstLocationInSet(TCollectionHAsciiString? set, int fromIndex, int toIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodFirstLocationInSet0(handle, set is null ? nint.Zero : set.NativeHandle.DangerousGetHandle(), fromIndex, toIndex, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_first_location_in_set_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodFirstLocationInSet0(handle, set is null ? nint.Zero : set.NativeHandle.DangerousGetHandle(), fromIndex, toIndex, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_first_location_in_set_0");
         return resultValue;
     }
 
@@ -10018,7 +10018,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     public int FirstLocationNotInSet(TCollectionHAsciiString? set, int fromIndex, int toIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodFirstLocationNotInSet0(handle, set is null ? nint.Zero : set.NativeHandle.DangerousGetHandle(), fromIndex, toIndex, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_first_location_not_in_set_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodFirstLocationNotInSet0(handle, set is null ? nint.Zero : set.NativeHandle.DangerousGetHandle(), fromIndex, toIndex, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_first_location_not_in_set_0");
         return resultValue;
     }
 
@@ -10026,28 +10026,28 @@ public sealed class TCollectionHAsciiString : IDisposable
     public void Insert(int where, TCollectionHAsciiString? what)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodInsert0(handle, where, what is null ? nint.Zero : what.NativeHandle.DangerousGetHandle()), "occtsharp_generated_tcollection_hascii_string_method_insert_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodInsert0(handle, where, what is null ? nint.Zero : what.NativeHandle.DangerousGetHandle()), "occtsharp_generated_tcollection_hascii_string_method_insert_0");
     }
 
     /// <summary>Invokes OCCT TCollection_HAsciiString::InsertAfter.</summary>
     public void InsertAfter(int index, TCollectionHAsciiString? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodInsertAfter0(handle, index, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle()), "occtsharp_generated_tcollection_hascii_string_method_insert_after_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodInsertAfter0(handle, index, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle()), "occtsharp_generated_tcollection_hascii_string_method_insert_after_0");
     }
 
     /// <summary>Invokes OCCT TCollection_HAsciiString::InsertBefore.</summary>
     public void InsertBefore(int index, TCollectionHAsciiString? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodInsertBefore0(handle, index, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle()), "occtsharp_generated_tcollection_hascii_string_method_insert_before_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodInsertBefore0(handle, index, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle()), "occtsharp_generated_tcollection_hascii_string_method_insert_before_0");
     }
 
     /// <summary>Invokes OCCT TCollection_HAsciiString::IntegerValue.</summary>
     public int IntegerValue()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodIntegerValue0(handle, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_integer_value_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodIntegerValue0(handle, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_integer_value_0");
         return resultValue;
     }
 
@@ -10055,7 +10055,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     public bool IsAscii()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodIsAscii0(handle, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_ascii_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodIsAscii0(handle, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_ascii_0");
         return resultValue != 0;
     }
 
@@ -10063,7 +10063,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     public bool IsDifferent(TCollectionHAsciiString? s)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodIsDifferent0(handle, s is null ? nint.Zero : s.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_different_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodIsDifferent0(handle, s is null ? nint.Zero : s.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_different_0");
         return resultValue != 0;
     }
 
@@ -10071,7 +10071,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     public bool IsEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodIsEmpty0(handle, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_empty_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodIsEmpty0(handle, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_empty_0");
         return resultValue != 0;
     }
 
@@ -10079,7 +10079,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     public bool IsGreater(TCollectionHAsciiString? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodIsGreater0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_greater_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodIsGreater0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_greater_0");
         return resultValue != 0;
     }
 
@@ -10087,7 +10087,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     public bool IsIntegerValue()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodIsIntegerValue0(handle, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_integer_value_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodIsIntegerValue0(handle, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_integer_value_0");
         return resultValue != 0;
     }
 
@@ -10095,7 +10095,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     public bool IsLess(TCollectionHAsciiString? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodIsLess0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_less_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodIsLess0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_less_0");
         return resultValue != 0;
     }
 
@@ -10103,7 +10103,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     public bool IsRealValue()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodIsRealValue0(handle, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_real_value_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodIsRealValue0(handle, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_real_value_0");
         return resultValue != 0;
     }
 
@@ -10111,7 +10111,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     public bool IsSameState(TCollectionHAsciiString? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodIsSameState0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_same_state_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodIsSameState0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_same_state_0");
         return resultValue != 0;
     }
 
@@ -10119,7 +10119,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     public bool IsSameString(TCollectionHAsciiString? s)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodIsSameString0(handle, s is null ? nint.Zero : s.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_same_string_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodIsSameString0(handle, s is null ? nint.Zero : s.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_same_string_0");
         return resultValue != 0;
     }
 
@@ -10127,7 +10127,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     public bool IsSameString(TCollectionHAsciiString? s, bool caseSensitive)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodIsSameString1(handle, s is null ? nint.Zero : s.NativeHandle.DangerousGetHandle(), caseSensitive ? 1 : 0, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_same_string_1");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodIsSameString1(handle, s is null ? nint.Zero : s.NativeHandle.DangerousGetHandle(), caseSensitive ? 1 : 0, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_is_same_string_1");
         return resultValue != 0;
     }
 
@@ -10135,14 +10135,14 @@ public sealed class TCollectionHAsciiString : IDisposable
     public void LeftAdjust()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodLeftAdjust0(handle), "occtsharp_generated_tcollection_hascii_string_method_left_adjust_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodLeftAdjust0(handle), "occtsharp_generated_tcollection_hascii_string_method_left_adjust_0");
     }
 
     /// <summary>Invokes OCCT TCollection_HAsciiString::Length.</summary>
     public int Length()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodLength0(handle, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_length_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodLength0(handle, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_length_0");
         return resultValue;
     }
 
@@ -10150,7 +10150,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     public int Location(TCollectionHAsciiString? other, int fromIndex, int toIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodLocation0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), fromIndex, toIndex, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_location_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodLocation0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), fromIndex, toIndex, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_location_0");
         return resultValue;
     }
 
@@ -10158,21 +10158,21 @@ public sealed class TCollectionHAsciiString : IDisposable
     public void LowerCase()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodLowerCase0(handle), "occtsharp_generated_tcollection_hascii_string_method_lower_case_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodLowerCase0(handle), "occtsharp_generated_tcollection_hascii_string_method_lower_case_0");
     }
 
     /// <summary>Invokes OCCT TCollection_HAsciiString::Prepend.</summary>
     public void Prepend(TCollectionHAsciiString? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodPrepend0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle()), "occtsharp_generated_tcollection_hascii_string_method_prepend_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodPrepend0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle()), "occtsharp_generated_tcollection_hascii_string_method_prepend_0");
     }
 
     /// <summary>Invokes OCCT TCollection_HAsciiString::RealValue.</summary>
     public double RealValue()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodRealValue0(handle, out double resultValue), "occtsharp_generated_tcollection_hascii_string_method_real_value_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodRealValue0(handle, out double resultValue), "occtsharp_generated_tcollection_hascii_string_method_real_value_0");
         return resultValue;
     }
 
@@ -10180,21 +10180,21 @@ public sealed class TCollectionHAsciiString : IDisposable
     public void Remove(int where, int ahowmany)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodRemove0(handle, where, ahowmany), "occtsharp_generated_tcollection_hascii_string_method_remove_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodRemove0(handle, where, ahowmany), "occtsharp_generated_tcollection_hascii_string_method_remove_0");
     }
 
     /// <summary>Invokes OCCT TCollection_HAsciiString::RightAdjust.</summary>
     public void RightAdjust()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodRightAdjust0(handle), "occtsharp_generated_tcollection_hascii_string_method_right_adjust_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodRightAdjust0(handle), "occtsharp_generated_tcollection_hascii_string_method_right_adjust_0");
     }
 
     /// <summary>Invokes OCCT TCollection_HAsciiString::Search.</summary>
     public int Search(TCollectionHAsciiString? what)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodSearch0(handle, what is null ? nint.Zero : what.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_search_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodSearch0(handle, what is null ? nint.Zero : what.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_search_0");
         return resultValue;
     }
 
@@ -10202,7 +10202,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     public int SearchFromEnd(TCollectionHAsciiString? what)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodSearchFromEnd0(handle, what is null ? nint.Zero : what.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_search_from_end_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodSearchFromEnd0(handle, what is null ? nint.Zero : what.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_search_from_end_0");
         return resultValue;
     }
 
@@ -10210,14 +10210,14 @@ public sealed class TCollectionHAsciiString : IDisposable
     public void SetValue(int where, TCollectionHAsciiString? what)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodSetValue0(handle, where, what is null ? nint.Zero : what.NativeHandle.DangerousGetHandle()), "occtsharp_generated_tcollection_hascii_string_method_set_value_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodSetValue0(handle, where, what is null ? nint.Zero : what.NativeHandle.DangerousGetHandle()), "occtsharp_generated_tcollection_hascii_string_method_set_value_0");
     }
 
     /// <summary>Invokes OCCT TCollection_HAsciiString::Split.</summary>
     public TCollectionHAsciiString? Split(int where)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodSplit0(handle, where, out nint handleValue), "occtsharp_generated_tcollection_hascii_string_method_split_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodSplit0(handle, where, out nint handleValue), "occtsharp_generated_tcollection_hascii_string_method_split_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_tcollection_hascii_string_method_split_0");
     }
 
@@ -10225,7 +10225,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     public TCollectionHAsciiString? SubString(int fromIndex, int toIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodSubString0(handle, fromIndex, toIndex, out nint handleValue), "occtsharp_generated_tcollection_hascii_string_method_sub_string_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodSubString0(handle, fromIndex, toIndex, out nint handleValue), "occtsharp_generated_tcollection_hascii_string_method_sub_string_0");
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_tcollection_hascii_string_method_sub_string_0");
     }
 
@@ -10233,21 +10233,21 @@ public sealed class TCollectionHAsciiString : IDisposable
     public void Trunc(int ahowmany)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodTrunc0(handle, ahowmany), "occtsharp_generated_tcollection_hascii_string_method_trunc_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodTrunc0(handle, ahowmany), "occtsharp_generated_tcollection_hascii_string_method_trunc_0");
     }
 
     /// <summary>Invokes OCCT TCollection_HAsciiString::UpperCase.</summary>
     public void UpperCase()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodUpperCase0(handle), "occtsharp_generated_tcollection_hascii_string_method_upper_case_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodUpperCase0(handle), "occtsharp_generated_tcollection_hascii_string_method_upper_case_0");
     }
 
     /// <summary>Invokes OCCT TCollection_HAsciiString::UsefullLength.</summary>
     public int UsefullLength()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringMethodUsefullLength0(handle, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_usefull_length_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringMethodUsefullLength0(handle, out int resultValue), "occtsharp_generated_tcollection_hascii_string_method_usefull_length_0");
         return resultValue;
     }
 
@@ -10257,7 +10257,7 @@ public sealed class TCollectionHAsciiString : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -10268,7 +10268,7 @@ public sealed class TCollectionHAsciiString : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -10278,7 +10278,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -10286,7 +10286,7 @@ public sealed class TCollectionHAsciiString : IDisposable
     public TCollectionHAsciiString Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHAsciiStringClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHAsciiStringClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new TCollectionHAsciiString(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -10323,7 +10323,7 @@ public sealed class TCollectionHExtendedString : IDisposable
     public TCollectionHExtendedString()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "TCollectionHExtendedStringCreate0");
     }
 
@@ -10331,7 +10331,7 @@ public sealed class TCollectionHExtendedString : IDisposable
     public TCollectionHExtendedString(TCollectionHAsciiString? aString)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringCreate1(aString is null ? nint.Zero : aString.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringCreate1(aString is null ? nint.Zero : aString.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "TCollectionHExtendedStringCreate1");
     }
 
@@ -10339,7 +10339,7 @@ public sealed class TCollectionHExtendedString : IDisposable
     public TCollectionHExtendedString(TCollectionHExtendedString? aString)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringCreate2(aString is null ? nint.Zero : aString.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringCreate2(aString is null ? nint.Zero : aString.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "TCollectionHExtendedStringCreate2");
     }
 
@@ -10347,14 +10347,14 @@ public sealed class TCollectionHExtendedString : IDisposable
     public void AssignCat(TCollectionHExtendedString? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringMethodAssignCat0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle()), "occtsharp_generated_tcollection_hextended_string_method_assign_cat_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringMethodAssignCat0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle()), "occtsharp_generated_tcollection_hextended_string_method_assign_cat_0");
     }
 
     /// <summary>Invokes OCCT TCollection_HExtendedString::Cat.</summary>
     public TCollectionHExtendedString? Cat(TCollectionHExtendedString? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringMethodCat0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_tcollection_hextended_string_method_cat_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringMethodCat0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_tcollection_hextended_string_method_cat_0");
         return global::OcctSharp.TCollectionHExtendedString.FromNative(handleValue, "occtsharp_generated_tcollection_hextended_string_method_cat_0");
     }
 
@@ -10362,21 +10362,21 @@ public sealed class TCollectionHExtendedString : IDisposable
     public void Clear()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringMethodClear0(handle), "occtsharp_generated_tcollection_hextended_string_method_clear_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringMethodClear0(handle), "occtsharp_generated_tcollection_hextended_string_method_clear_0");
     }
 
     /// <summary>Invokes OCCT TCollection_HExtendedString::Insert.</summary>
     public void Insert(int where, TCollectionHExtendedString? what)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringMethodInsert0(handle, where, what is null ? nint.Zero : what.NativeHandle.DangerousGetHandle()), "occtsharp_generated_tcollection_hextended_string_method_insert_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringMethodInsert0(handle, where, what is null ? nint.Zero : what.NativeHandle.DangerousGetHandle()), "occtsharp_generated_tcollection_hextended_string_method_insert_0");
     }
 
     /// <summary>Invokes OCCT TCollection_HExtendedString::IsAscii.</summary>
     public bool IsAscii()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringMethodIsAscii0(handle, out int resultValue), "occtsharp_generated_tcollection_hextended_string_method_is_ascii_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringMethodIsAscii0(handle, out int resultValue), "occtsharp_generated_tcollection_hextended_string_method_is_ascii_0");
         return resultValue != 0;
     }
 
@@ -10384,7 +10384,7 @@ public sealed class TCollectionHExtendedString : IDisposable
     public bool IsEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringMethodIsEmpty0(handle, out int resultValue), "occtsharp_generated_tcollection_hextended_string_method_is_empty_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringMethodIsEmpty0(handle, out int resultValue), "occtsharp_generated_tcollection_hextended_string_method_is_empty_0");
         return resultValue != 0;
     }
 
@@ -10392,7 +10392,7 @@ public sealed class TCollectionHExtendedString : IDisposable
     public bool IsGreater(TCollectionHExtendedString? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringMethodIsGreater0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hextended_string_method_is_greater_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringMethodIsGreater0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hextended_string_method_is_greater_0");
         return resultValue != 0;
     }
 
@@ -10400,7 +10400,7 @@ public sealed class TCollectionHExtendedString : IDisposable
     public bool IsLess(TCollectionHExtendedString? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringMethodIsLess0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hextended_string_method_is_less_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringMethodIsLess0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hextended_string_method_is_less_0");
         return resultValue != 0;
     }
 
@@ -10408,7 +10408,7 @@ public sealed class TCollectionHExtendedString : IDisposable
     public bool IsSameState(TCollectionHExtendedString? other)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringMethodIsSameState0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hextended_string_method_is_same_state_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringMethodIsSameState0(handle, other is null ? nint.Zero : other.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hextended_string_method_is_same_state_0");
         return resultValue != 0;
     }
 
@@ -10416,7 +10416,7 @@ public sealed class TCollectionHExtendedString : IDisposable
     public int Length()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringMethodLength0(handle, out int resultValue), "occtsharp_generated_tcollection_hextended_string_method_length_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringMethodLength0(handle, out int resultValue), "occtsharp_generated_tcollection_hextended_string_method_length_0");
         return resultValue;
     }
 
@@ -10424,14 +10424,14 @@ public sealed class TCollectionHExtendedString : IDisposable
     public void Remove(int where, int ahowmany)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringMethodRemove0(handle, where, ahowmany), "occtsharp_generated_tcollection_hextended_string_method_remove_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringMethodRemove0(handle, where, ahowmany), "occtsharp_generated_tcollection_hextended_string_method_remove_0");
     }
 
     /// <summary>Invokes OCCT TCollection_HExtendedString::Search.</summary>
     public int Search(TCollectionHExtendedString? what)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringMethodSearch0(handle, what is null ? nint.Zero : what.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hextended_string_method_search_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringMethodSearch0(handle, what is null ? nint.Zero : what.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hextended_string_method_search_0");
         return resultValue;
     }
 
@@ -10439,7 +10439,7 @@ public sealed class TCollectionHExtendedString : IDisposable
     public int SearchFromEnd(TCollectionHExtendedString? what)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringMethodSearchFromEnd0(handle, what is null ? nint.Zero : what.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hextended_string_method_search_from_end_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringMethodSearchFromEnd0(handle, what is null ? nint.Zero : what.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_tcollection_hextended_string_method_search_from_end_0");
         return resultValue;
     }
 
@@ -10447,14 +10447,14 @@ public sealed class TCollectionHExtendedString : IDisposable
     public void SetValue(int where, TCollectionHExtendedString? what)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringMethodSetValue0(handle, where, what is null ? nint.Zero : what.NativeHandle.DangerousGetHandle()), "occtsharp_generated_tcollection_hextended_string_method_set_value_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringMethodSetValue0(handle, where, what is null ? nint.Zero : what.NativeHandle.DangerousGetHandle()), "occtsharp_generated_tcollection_hextended_string_method_set_value_0");
     }
 
     /// <summary>Invokes OCCT TCollection_HExtendedString::Split.</summary>
     public TCollectionHExtendedString? Split(int where)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringMethodSplit0(handle, where, out nint handleValue), "occtsharp_generated_tcollection_hextended_string_method_split_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringMethodSplit0(handle, where, out nint handleValue), "occtsharp_generated_tcollection_hextended_string_method_split_0");
         return global::OcctSharp.TCollectionHExtendedString.FromNative(handleValue, "occtsharp_generated_tcollection_hextended_string_method_split_0");
     }
 
@@ -10462,7 +10462,7 @@ public sealed class TCollectionHExtendedString : IDisposable
     public void Trunc(int ahowmany)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringMethodTrunc0(handle, ahowmany), "occtsharp_generated_tcollection_hextended_string_method_trunc_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringMethodTrunc0(handle, ahowmany), "occtsharp_generated_tcollection_hextended_string_method_trunc_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -10471,7 +10471,7 @@ public sealed class TCollectionHExtendedString : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -10482,7 +10482,7 @@ public sealed class TCollectionHExtendedString : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -10492,7 +10492,7 @@ public sealed class TCollectionHExtendedString : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -10500,7 +10500,7 @@ public sealed class TCollectionHExtendedString : IDisposable
     public TCollectionHExtendedString Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.TCollectionHExtendedStringClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.TCollectionHExtendedStringClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new TCollectionHExtendedString(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -10537,7 +10537,7 @@ public sealed class UnitsDimensions : IDisposable
     public UnitsDimensions(double amass, double alength, double atime, double anelectriccurrent, double athermodynamictemperature, double anamountofsubstance, double aluminousintensity, double aplaneangle, double asolidangle)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsCreate0(amass, alength, atime, anelectriccurrent, athermodynamictemperature, anamountofsubstance, aluminousintensity, aplaneangle, asolidangle, out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsCreate0(amass, alength, atime, anelectriccurrent, athermodynamictemperature, anamountofsubstance, aluminousintensity, aplaneangle, asolidangle, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "UnitsDimensionsCreate0");
     }
 
@@ -10545,7 +10545,7 @@ public sealed class UnitsDimensions : IDisposable
     public double AmountOfSubstance()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsMethodAmountOfSubstance0(handle, out double resultValue), "occtsharp_generated_units_dimensions_method_amount_of_substance_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsMethodAmountOfSubstance0(handle, out double resultValue), "occtsharp_generated_units_dimensions_method_amount_of_substance_0");
         return resultValue;
     }
 
@@ -10553,7 +10553,7 @@ public sealed class UnitsDimensions : IDisposable
     public UnitsDimensions? Divide(UnitsDimensions? adimensions)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsMethodDivide0(handle, adimensions is null ? nint.Zero : adimensions.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_units_dimensions_method_divide_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsMethodDivide0(handle, adimensions is null ? nint.Zero : adimensions.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_units_dimensions_method_divide_0");
         return global::OcctSharp.UnitsDimensions.FromNative(handleValue, "occtsharp_generated_units_dimensions_method_divide_0");
     }
 
@@ -10561,14 +10561,14 @@ public sealed class UnitsDimensions : IDisposable
     public void Dump(int ashift)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsMethodDump0(handle, ashift), "occtsharp_generated_units_dimensions_method_dump_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsMethodDump0(handle, ashift), "occtsharp_generated_units_dimensions_method_dump_0");
     }
 
     /// <summary>Invokes OCCT Units_Dimensions::ElectricCurrent.</summary>
     public double ElectricCurrent()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsMethodElectricCurrent0(handle, out double resultValue), "occtsharp_generated_units_dimensions_method_electric_current_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsMethodElectricCurrent0(handle, out double resultValue), "occtsharp_generated_units_dimensions_method_electric_current_0");
         return resultValue;
     }
 
@@ -10576,7 +10576,7 @@ public sealed class UnitsDimensions : IDisposable
     public bool IsEqual(UnitsDimensions? adimensions)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsMethodIsEqual0(handle, adimensions is null ? nint.Zero : adimensions.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_units_dimensions_method_is_equal_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsMethodIsEqual0(handle, adimensions is null ? nint.Zero : adimensions.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_units_dimensions_method_is_equal_0");
         return resultValue != 0;
     }
 
@@ -10584,7 +10584,7 @@ public sealed class UnitsDimensions : IDisposable
     public bool IsNotEqual(UnitsDimensions? adimensions)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsMethodIsNotEqual0(handle, adimensions is null ? nint.Zero : adimensions.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_units_dimensions_method_is_not_equal_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsMethodIsNotEqual0(handle, adimensions is null ? nint.Zero : adimensions.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_units_dimensions_method_is_not_equal_0");
         return resultValue != 0;
     }
 
@@ -10592,7 +10592,7 @@ public sealed class UnitsDimensions : IDisposable
     public double Length()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsMethodLength0(handle, out double resultValue), "occtsharp_generated_units_dimensions_method_length_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsMethodLength0(handle, out double resultValue), "occtsharp_generated_units_dimensions_method_length_0");
         return resultValue;
     }
 
@@ -10600,7 +10600,7 @@ public sealed class UnitsDimensions : IDisposable
     public double LuminousIntensity()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsMethodLuminousIntensity0(handle, out double resultValue), "occtsharp_generated_units_dimensions_method_luminous_intensity_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsMethodLuminousIntensity0(handle, out double resultValue), "occtsharp_generated_units_dimensions_method_luminous_intensity_0");
         return resultValue;
     }
 
@@ -10608,7 +10608,7 @@ public sealed class UnitsDimensions : IDisposable
     public double Mass()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsMethodMass0(handle, out double resultValue), "occtsharp_generated_units_dimensions_method_mass_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsMethodMass0(handle, out double resultValue), "occtsharp_generated_units_dimensions_method_mass_0");
         return resultValue;
     }
 
@@ -10616,7 +10616,7 @@ public sealed class UnitsDimensions : IDisposable
     public UnitsDimensions? Multiply(UnitsDimensions? adimensions)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsMethodMultiply0(handle, adimensions is null ? nint.Zero : adimensions.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_units_dimensions_method_multiply_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsMethodMultiply0(handle, adimensions is null ? nint.Zero : adimensions.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_units_dimensions_method_multiply_0");
         return global::OcctSharp.UnitsDimensions.FromNative(handleValue, "occtsharp_generated_units_dimensions_method_multiply_0");
     }
 
@@ -10624,7 +10624,7 @@ public sealed class UnitsDimensions : IDisposable
     public double PlaneAngle()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsMethodPlaneAngle0(handle, out double resultValue), "occtsharp_generated_units_dimensions_method_plane_angle_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsMethodPlaneAngle0(handle, out double resultValue), "occtsharp_generated_units_dimensions_method_plane_angle_0");
         return resultValue;
     }
 
@@ -10632,7 +10632,7 @@ public sealed class UnitsDimensions : IDisposable
     public UnitsDimensions? Power(double anexponent)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsMethodPower0(handle, anexponent, out nint handleValue), "occtsharp_generated_units_dimensions_method_power_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsMethodPower0(handle, anexponent, out nint handleValue), "occtsharp_generated_units_dimensions_method_power_0");
         return global::OcctSharp.UnitsDimensions.FromNative(handleValue, "occtsharp_generated_units_dimensions_method_power_0");
     }
 
@@ -10640,7 +10640,7 @@ public sealed class UnitsDimensions : IDisposable
     public double SolidAngle()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsMethodSolidAngle0(handle, out double resultValue), "occtsharp_generated_units_dimensions_method_solid_angle_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsMethodSolidAngle0(handle, out double resultValue), "occtsharp_generated_units_dimensions_method_solid_angle_0");
         return resultValue;
     }
 
@@ -10648,7 +10648,7 @@ public sealed class UnitsDimensions : IDisposable
     public double ThermodynamicTemperature()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsMethodThermodynamicTemperature0(handle, out double resultValue), "occtsharp_generated_units_dimensions_method_thermodynamic_temperature_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsMethodThermodynamicTemperature0(handle, out double resultValue), "occtsharp_generated_units_dimensions_method_thermodynamic_temperature_0");
         return resultValue;
     }
 
@@ -10656,7 +10656,7 @@ public sealed class UnitsDimensions : IDisposable
     public double Time()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsMethodTime0(handle, out double resultValue), "occtsharp_generated_units_dimensions_method_time_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsMethodTime0(handle, out double resultValue), "occtsharp_generated_units_dimensions_method_time_0");
         return resultValue;
     }
 
@@ -10666,7 +10666,7 @@ public sealed class UnitsDimensions : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -10677,7 +10677,7 @@ public sealed class UnitsDimensions : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -10687,7 +10687,7 @@ public sealed class UnitsDimensions : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -10695,7 +10695,7 @@ public sealed class UnitsDimensions : IDisposable
     public UnitsDimensions Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsDimensionsClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsDimensionsClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new UnitsDimensions(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -10732,7 +10732,7 @@ public sealed class UnitsLexicon : IDisposable
     public UnitsLexicon()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsLexiconCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsLexiconCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "UnitsLexiconCreate0");
     }
 
@@ -10740,14 +10740,14 @@ public sealed class UnitsLexicon : IDisposable
     public void Creates()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsLexiconMethodCreates0(handle), "occtsharp_generated_units_lexicon_method_creates_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsLexiconMethodCreates0(handle), "occtsharp_generated_units_lexicon_method_creates_0");
     }
 
     /// <summary>Invokes OCCT Units_Lexicon::Dump.</summary>
     public void Dump()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsLexiconMethodDump0(handle), "occtsharp_generated_units_lexicon_method_dump_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsLexiconMethodDump0(handle), "occtsharp_generated_units_lexicon_method_dump_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -10756,7 +10756,7 @@ public sealed class UnitsLexicon : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsLexiconGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsLexiconGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -10767,7 +10767,7 @@ public sealed class UnitsLexicon : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsLexiconGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsLexiconGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -10777,7 +10777,7 @@ public sealed class UnitsLexicon : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsLexiconIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsLexiconIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -10785,7 +10785,7 @@ public sealed class UnitsLexicon : IDisposable
     public UnitsLexicon Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsLexiconClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsLexiconClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new UnitsLexicon(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -10822,7 +10822,7 @@ public sealed class UnitsQuantity : IDisposable
     public UnitsDimensions? Dimensions()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsQuantityMethodDimensions0(handle, out nint handleValue), "occtsharp_generated_units_quantity_method_dimensions_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsQuantityMethodDimensions0(handle, out nint handleValue), "occtsharp_generated_units_quantity_method_dimensions_0");
         return global::OcctSharp.UnitsDimensions.FromNative(handleValue, "occtsharp_generated_units_quantity_method_dimensions_0");
     }
 
@@ -10830,7 +10830,7 @@ public sealed class UnitsQuantity : IDisposable
     public void Dump(int ashift, int alevel)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsQuantityMethodDump0(handle, ashift, alevel), "occtsharp_generated_units_quantity_method_dump_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsQuantityMethodDump0(handle, ashift, alevel), "occtsharp_generated_units_quantity_method_dump_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -10839,7 +10839,7 @@ public sealed class UnitsQuantity : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsQuantityGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsQuantityGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -10850,7 +10850,7 @@ public sealed class UnitsQuantity : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsQuantityGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsQuantityGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -10860,7 +10860,7 @@ public sealed class UnitsQuantity : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsQuantityIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsQuantityIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -10868,7 +10868,7 @@ public sealed class UnitsQuantity : IDisposable
     public UnitsQuantity Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsQuantityClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsQuantityClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new UnitsQuantity(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -10905,7 +10905,7 @@ public sealed class UnitsShiftedToken : IDisposable
     public UnitsToken? Creates()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsShiftedTokenMethodCreates0(handle, out nint handleValue), "occtsharp_generated_units_shifted_token_method_creates_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsShiftedTokenMethodCreates0(handle, out nint handleValue), "occtsharp_generated_units_shifted_token_method_creates_0");
         return global::OcctSharp.UnitsToken.FromNative(handleValue, "occtsharp_generated_units_shifted_token_method_creates_0");
     }
 
@@ -10913,7 +10913,7 @@ public sealed class UnitsShiftedToken : IDisposable
     public double Divided(double avalue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsShiftedTokenMethodDivided0(handle, avalue, out double resultValue), "occtsharp_generated_units_shifted_token_method_divided_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsShiftedTokenMethodDivided0(handle, avalue, out double resultValue), "occtsharp_generated_units_shifted_token_method_divided_0");
         return resultValue;
     }
 
@@ -10921,14 +10921,14 @@ public sealed class UnitsShiftedToken : IDisposable
     public void Dump(int ashift, int alevel)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsShiftedTokenMethodDump0(handle, ashift, alevel), "occtsharp_generated_units_shifted_token_method_dump_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsShiftedTokenMethodDump0(handle, ashift, alevel), "occtsharp_generated_units_shifted_token_method_dump_0");
     }
 
     /// <summary>Invokes OCCT Units_ShiftedToken::Move.</summary>
     public double Move()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsShiftedTokenMethodMove0(handle, out double resultValue), "occtsharp_generated_units_shifted_token_method_move_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsShiftedTokenMethodMove0(handle, out double resultValue), "occtsharp_generated_units_shifted_token_method_move_0");
         return resultValue;
     }
 
@@ -10936,7 +10936,7 @@ public sealed class UnitsShiftedToken : IDisposable
     public double Multiplied(double avalue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsShiftedTokenMethodMultiplied0(handle, avalue, out double resultValue), "occtsharp_generated_units_shifted_token_method_multiplied_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsShiftedTokenMethodMultiplied0(handle, avalue, out double resultValue), "occtsharp_generated_units_shifted_token_method_multiplied_0");
         return resultValue;
     }
 
@@ -10946,7 +10946,7 @@ public sealed class UnitsShiftedToken : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsShiftedTokenGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsShiftedTokenGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -10957,7 +10957,7 @@ public sealed class UnitsShiftedToken : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsShiftedTokenGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsShiftedTokenGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -10967,7 +10967,7 @@ public sealed class UnitsShiftedToken : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsShiftedTokenIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsShiftedTokenIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -10975,7 +10975,7 @@ public sealed class UnitsShiftedToken : IDisposable
     public UnitsShiftedToken Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsShiftedTokenClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsShiftedTokenClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new UnitsShiftedToken(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -11012,14 +11012,14 @@ public sealed class UnitsShiftedUnit : IDisposable
     public void Dump(int ashift, int alevel)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsShiftedUnitMethodDump0(handle, ashift, alevel), "occtsharp_generated_units_shifted_unit_method_dump_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsShiftedUnitMethodDump0(handle, ashift, alevel), "occtsharp_generated_units_shifted_unit_method_dump_0");
     }
 
     /// <summary>Invokes OCCT Units_ShiftedUnit::Move.</summary>
     public double Move()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsShiftedUnitMethodMove0(handle, out double resultValue), "occtsharp_generated_units_shifted_unit_method_move_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsShiftedUnitMethodMove0(handle, out double resultValue), "occtsharp_generated_units_shifted_unit_method_move_0");
         return resultValue;
     }
 
@@ -11027,14 +11027,14 @@ public sealed class UnitsShiftedUnit : IDisposable
     public void Move(double amove)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsShiftedUnitMethodMove1(handle, amove), "occtsharp_generated_units_shifted_unit_method_move_1");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsShiftedUnitMethodMove1(handle, amove), "occtsharp_generated_units_shifted_unit_method_move_1");
     }
 
     /// <summary>Invokes OCCT Units_ShiftedUnit::Token.</summary>
     public UnitsToken? Token()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsShiftedUnitMethodToken0(handle, out nint handleValue), "occtsharp_generated_units_shifted_unit_method_token_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsShiftedUnitMethodToken0(handle, out nint handleValue), "occtsharp_generated_units_shifted_unit_method_token_0");
         return global::OcctSharp.UnitsToken.FromNative(handleValue, "occtsharp_generated_units_shifted_unit_method_token_0");
     }
 
@@ -11044,7 +11044,7 @@ public sealed class UnitsShiftedUnit : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsShiftedUnitGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsShiftedUnitGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -11055,7 +11055,7 @@ public sealed class UnitsShiftedUnit : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsShiftedUnitGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsShiftedUnitGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -11065,7 +11065,7 @@ public sealed class UnitsShiftedUnit : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsShiftedUnitIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsShiftedUnitIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -11073,7 +11073,7 @@ public sealed class UnitsShiftedUnit : IDisposable
     public UnitsShiftedUnit Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsShiftedUnitClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsShiftedUnitClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new UnitsShiftedUnit(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -11110,7 +11110,7 @@ public sealed class UnitsToken : IDisposable
     public UnitsToken()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "UnitsTokenCreate0");
     }
 
@@ -11118,7 +11118,7 @@ public sealed class UnitsToken : IDisposable
     public UnitsToken(UnitsToken? atoken)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenCreate1(atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenCreate1(atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "UnitsTokenCreate1");
     }
 
@@ -11126,7 +11126,7 @@ public sealed class UnitsToken : IDisposable
     public UnitsToken? Add(int aninteger)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodAdd0(handle, aninteger, out nint handleValue), "occtsharp_generated_units_token_method_add_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodAdd0(handle, aninteger, out nint handleValue), "occtsharp_generated_units_token_method_add_0");
         return global::OcctSharp.UnitsToken.FromNative(handleValue, "occtsharp_generated_units_token_method_add_0");
     }
 
@@ -11134,7 +11134,7 @@ public sealed class UnitsToken : IDisposable
     public UnitsToken? Add(UnitsToken? atoken)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodAdd1(handle, atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_units_token_method_add_1");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodAdd1(handle, atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_units_token_method_add_1");
         return global::OcctSharp.UnitsToken.FromNative(handleValue, "occtsharp_generated_units_token_method_add_1");
     }
 
@@ -11142,7 +11142,7 @@ public sealed class UnitsToken : IDisposable
     public UnitsToken? Creates()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodCreates0(handle, out nint handleValue), "occtsharp_generated_units_token_method_creates_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodCreates0(handle, out nint handleValue), "occtsharp_generated_units_token_method_creates_0");
         return global::OcctSharp.UnitsToken.FromNative(handleValue, "occtsharp_generated_units_token_method_creates_0");
     }
 
@@ -11150,7 +11150,7 @@ public sealed class UnitsToken : IDisposable
     public UnitsDimensions? Dimensions()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodDimensions0(handle, out nint handleValue), "occtsharp_generated_units_token_method_dimensions_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodDimensions0(handle, out nint handleValue), "occtsharp_generated_units_token_method_dimensions_0");
         return global::OcctSharp.UnitsDimensions.FromNative(handleValue, "occtsharp_generated_units_token_method_dimensions_0");
     }
 
@@ -11158,14 +11158,14 @@ public sealed class UnitsToken : IDisposable
     public void Dimensions(UnitsDimensions? adimensions)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodDimensions1(handle, adimensions is null ? nint.Zero : adimensions.NativeHandle.DangerousGetHandle()), "occtsharp_generated_units_token_method_dimensions_1");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodDimensions1(handle, adimensions is null ? nint.Zero : adimensions.NativeHandle.DangerousGetHandle()), "occtsharp_generated_units_token_method_dimensions_1");
     }
 
     /// <summary>Invokes OCCT Units_Token::Divide.</summary>
     public UnitsToken? Divide(UnitsToken? atoken)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodDivide0(handle, atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_units_token_method_divide_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodDivide0(handle, atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_units_token_method_divide_0");
         return global::OcctSharp.UnitsToken.FromNative(handleValue, "occtsharp_generated_units_token_method_divide_0");
     }
 
@@ -11173,7 +11173,7 @@ public sealed class UnitsToken : IDisposable
     public double Divided(double avalue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodDivided0(handle, avalue, out double resultValue), "occtsharp_generated_units_token_method_divided_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodDivided0(handle, avalue, out double resultValue), "occtsharp_generated_units_token_method_divided_0");
         return resultValue;
     }
 
@@ -11181,14 +11181,14 @@ public sealed class UnitsToken : IDisposable
     public void Dump(int ashift, int alevel)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodDump0(handle, ashift, alevel), "occtsharp_generated_units_token_method_dump_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodDump0(handle, ashift, alevel), "occtsharp_generated_units_token_method_dump_0");
     }
 
     /// <summary>Invokes OCCT Units_Token::IsEqual.</summary>
     public bool IsEqual(UnitsToken? atoken)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodIsEqual0(handle, atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_units_token_method_is_equal_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodIsEqual0(handle, atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_units_token_method_is_equal_0");
         return resultValue != 0;
     }
 
@@ -11196,7 +11196,7 @@ public sealed class UnitsToken : IDisposable
     public bool IsGreater(UnitsToken? atoken)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodIsGreater0(handle, atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_units_token_method_is_greater_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodIsGreater0(handle, atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_units_token_method_is_greater_0");
         return resultValue != 0;
     }
 
@@ -11204,7 +11204,7 @@ public sealed class UnitsToken : IDisposable
     public bool IsGreaterOrEqual(UnitsToken? atoken)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodIsGreaterOrEqual0(handle, atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_units_token_method_is_greater_or_equal_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodIsGreaterOrEqual0(handle, atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_units_token_method_is_greater_or_equal_0");
         return resultValue != 0;
     }
 
@@ -11212,7 +11212,7 @@ public sealed class UnitsToken : IDisposable
     public bool IsNotEqual(UnitsToken? atoken)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodIsNotEqual0(handle, atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_units_token_method_is_not_equal_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodIsNotEqual0(handle, atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out int resultValue), "occtsharp_generated_units_token_method_is_not_equal_0");
         return resultValue != 0;
     }
 
@@ -11220,7 +11220,7 @@ public sealed class UnitsToken : IDisposable
     public int Length()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodLength0(handle, out int resultValue), "occtsharp_generated_units_token_method_length_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodLength0(handle, out int resultValue), "occtsharp_generated_units_token_method_length_0");
         return resultValue;
     }
 
@@ -11228,7 +11228,7 @@ public sealed class UnitsToken : IDisposable
     public double Multiplied(double avalue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodMultiplied0(handle, avalue, out double resultValue), "occtsharp_generated_units_token_method_multiplied_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodMultiplied0(handle, avalue, out double resultValue), "occtsharp_generated_units_token_method_multiplied_0");
         return resultValue;
     }
 
@@ -11236,7 +11236,7 @@ public sealed class UnitsToken : IDisposable
     public UnitsToken? Multiply(UnitsToken? atoken)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodMultiply0(handle, atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_units_token_method_multiply_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodMultiply0(handle, atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_units_token_method_multiply_0");
         return global::OcctSharp.UnitsToken.FromNative(handleValue, "occtsharp_generated_units_token_method_multiply_0");
     }
 
@@ -11244,7 +11244,7 @@ public sealed class UnitsToken : IDisposable
     public UnitsToken? Power(double anexponent)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodPower0(handle, anexponent, out nint handleValue), "occtsharp_generated_units_token_method_power_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodPower0(handle, anexponent, out nint handleValue), "occtsharp_generated_units_token_method_power_0");
         return global::OcctSharp.UnitsToken.FromNative(handleValue, "occtsharp_generated_units_token_method_power_0");
     }
 
@@ -11252,7 +11252,7 @@ public sealed class UnitsToken : IDisposable
     public UnitsToken? Power(UnitsToken? atoken)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodPower1(handle, atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_units_token_method_power_1");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodPower1(handle, atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_units_token_method_power_1");
         return global::OcctSharp.UnitsToken.FromNative(handleValue, "occtsharp_generated_units_token_method_power_1");
     }
 
@@ -11260,7 +11260,7 @@ public sealed class UnitsToken : IDisposable
     public UnitsToken? Subtract(UnitsToken? atoken)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodSubtract0(handle, atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_units_token_method_subtract_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodSubtract0(handle, atoken is null ? nint.Zero : atoken.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_units_token_method_subtract_0");
         return global::OcctSharp.UnitsToken.FromNative(handleValue, "occtsharp_generated_units_token_method_subtract_0");
     }
 
@@ -11268,7 +11268,7 @@ public sealed class UnitsToken : IDisposable
     public double Value()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodValue0(handle, out double resultValue), "occtsharp_generated_units_token_method_value_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodValue0(handle, out double resultValue), "occtsharp_generated_units_token_method_value_0");
         return resultValue;
     }
 
@@ -11276,7 +11276,7 @@ public sealed class UnitsToken : IDisposable
     public void Value(double avalue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenMethodValue1(handle, avalue), "occtsharp_generated_units_token_method_value_1");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenMethodValue1(handle, avalue), "occtsharp_generated_units_token_method_value_1");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -11285,7 +11285,7 @@ public sealed class UnitsToken : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -11296,7 +11296,7 @@ public sealed class UnitsToken : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -11306,7 +11306,7 @@ public sealed class UnitsToken : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -11314,7 +11314,7 @@ public sealed class UnitsToken : IDisposable
     public UnitsToken Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsTokenClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsTokenClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new UnitsToken(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -11351,14 +11351,14 @@ public sealed class UnitsUnit : IDisposable
     public void Dump(int ashift, int alevel)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitMethodDump0(handle, ashift, alevel), "occtsharp_generated_units_unit_method_dump_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitMethodDump0(handle, ashift, alevel), "occtsharp_generated_units_unit_method_dump_0");
     }
 
     /// <summary>Invokes OCCT Units_Unit::Quantity.</summary>
     public UnitsQuantity? Quantity()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitMethodQuantity0(handle, out nint handleValue), "occtsharp_generated_units_unit_method_quantity_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitMethodQuantity0(handle, out nint handleValue), "occtsharp_generated_units_unit_method_quantity_0");
         return global::OcctSharp.UnitsQuantity.FromNative(handleValue, "occtsharp_generated_units_unit_method_quantity_0");
     }
 
@@ -11366,14 +11366,14 @@ public sealed class UnitsUnit : IDisposable
     public void Quantity(UnitsQuantity? aquantity)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitMethodQuantity1(handle, aquantity is null ? nint.Zero : aquantity.NativeHandle.DangerousGetHandle()), "occtsharp_generated_units_unit_method_quantity_1");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitMethodQuantity1(handle, aquantity is null ? nint.Zero : aquantity.NativeHandle.DangerousGetHandle()), "occtsharp_generated_units_unit_method_quantity_1");
     }
 
     /// <summary>Invokes OCCT Units_Unit::Token.</summary>
     public UnitsToken? Token()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitMethodToken0(handle, out nint handleValue), "occtsharp_generated_units_unit_method_token_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitMethodToken0(handle, out nint handleValue), "occtsharp_generated_units_unit_method_token_0");
         return global::OcctSharp.UnitsToken.FromNative(handleValue, "occtsharp_generated_units_unit_method_token_0");
     }
 
@@ -11381,7 +11381,7 @@ public sealed class UnitsUnit : IDisposable
     public double Value()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitMethodValue0(handle, out double resultValue), "occtsharp_generated_units_unit_method_value_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitMethodValue0(handle, out double resultValue), "occtsharp_generated_units_unit_method_value_0");
         return resultValue;
     }
 
@@ -11389,7 +11389,7 @@ public sealed class UnitsUnit : IDisposable
     public void Value(double avalue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitMethodValue1(handle, avalue), "occtsharp_generated_units_unit_method_value_1");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitMethodValue1(handle, avalue), "occtsharp_generated_units_unit_method_value_1");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -11398,7 +11398,7 @@ public sealed class UnitsUnit : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -11409,7 +11409,7 @@ public sealed class UnitsUnit : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -11419,7 +11419,7 @@ public sealed class UnitsUnit : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -11427,7 +11427,7 @@ public sealed class UnitsUnit : IDisposable
     public UnitsUnit Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new UnitsUnit(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -11464,7 +11464,7 @@ public sealed class UnitsUnitsDictionary : IDisposable
     public UnitsUnitsDictionary()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsDictionaryCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsDictionaryCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "UnitsUnitsDictionaryCreate0");
     }
 
@@ -11472,21 +11472,21 @@ public sealed class UnitsUnitsDictionary : IDisposable
     public void Creates()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsDictionaryMethodCreates0(handle), "occtsharp_generated_units_units_dictionary_method_creates_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsDictionaryMethodCreates0(handle), "occtsharp_generated_units_units_dictionary_method_creates_0");
     }
 
     /// <summary>Invokes OCCT Units_UnitsDictionary::Dump.</summary>
     public void Dump(int alevel)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsDictionaryMethodDump0(handle, alevel), "occtsharp_generated_units_units_dictionary_method_dump_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsDictionaryMethodDump0(handle, alevel), "occtsharp_generated_units_units_dictionary_method_dump_0");
     }
 
     /// <summary>Invokes OCCT Units_UnitsDictionary::Dump.</summary>
     public void Dump(UnitsDimensions? adimensions)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsDictionaryMethodDump1(handle, adimensions is null ? nint.Zero : adimensions.NativeHandle.DangerousGetHandle()), "occtsharp_generated_units_units_dictionary_method_dump_1");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsDictionaryMethodDump1(handle, adimensions is null ? nint.Zero : adimensions.NativeHandle.DangerousGetHandle()), "occtsharp_generated_units_units_dictionary_method_dump_1");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -11495,7 +11495,7 @@ public sealed class UnitsUnitsDictionary : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsDictionaryGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsDictionaryGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -11506,7 +11506,7 @@ public sealed class UnitsUnitsDictionary : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsDictionaryGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsDictionaryGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -11516,7 +11516,7 @@ public sealed class UnitsUnitsDictionary : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsDictionaryIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsDictionaryIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -11524,7 +11524,7 @@ public sealed class UnitsUnitsDictionary : IDisposable
     public UnitsUnitsDictionary Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsDictionaryClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsDictionaryClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new UnitsUnitsDictionary(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -11561,7 +11561,7 @@ public sealed class UnitsUnitsLexicon : IDisposable
     public UnitsUnitsLexicon()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsLexiconCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsLexiconCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "UnitsUnitsLexiconCreate0");
     }
 
@@ -11569,14 +11569,14 @@ public sealed class UnitsUnitsLexicon : IDisposable
     public void Creates(bool amode)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsLexiconMethodCreates0(handle, amode ? 1 : 0), "occtsharp_generated_units_units_lexicon_method_creates_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsLexiconMethodCreates0(handle, amode ? 1 : 0), "occtsharp_generated_units_units_lexicon_method_creates_0");
     }
 
     /// <summary>Invokes OCCT Units_UnitsLexicon::Dump.</summary>
     public void Dump()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsLexiconMethodDump0(handle), "occtsharp_generated_units_units_lexicon_method_dump_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsLexiconMethodDump0(handle), "occtsharp_generated_units_units_lexicon_method_dump_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -11585,7 +11585,7 @@ public sealed class UnitsUnitsLexicon : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsLexiconGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsLexiconGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -11596,7 +11596,7 @@ public sealed class UnitsUnitsLexicon : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsLexiconGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsLexiconGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -11606,7 +11606,7 @@ public sealed class UnitsUnitsLexicon : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsLexiconIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsLexiconIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -11614,7 +11614,7 @@ public sealed class UnitsUnitsLexicon : IDisposable
     public UnitsUnitsLexicon Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsLexiconClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsLexiconClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new UnitsUnitsLexicon(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -11651,7 +11651,7 @@ public sealed class UnitsUnitsSystem : IDisposable
     public UnitsUnitsSystem()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsSystemCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsSystemCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "UnitsUnitsSystemCreate0");
     }
 
@@ -11659,21 +11659,21 @@ public sealed class UnitsUnitsSystem : IDisposable
     public void Activates()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsSystemMethodActivates0(handle), "occtsharp_generated_units_units_system_method_activates_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsSystemMethodActivates0(handle), "occtsharp_generated_units_units_system_method_activates_0");
     }
 
     /// <summary>Invokes OCCT Units_UnitsSystem::Dump.</summary>
     public void Dump()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsSystemMethodDump0(handle), "occtsharp_generated_units_units_system_method_dump_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsSystemMethodDump0(handle), "occtsharp_generated_units_units_system_method_dump_0");
     }
 
     /// <summary>Invokes OCCT Units_UnitsSystem::IsEmpty.</summary>
     public bool IsEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsSystemMethodIsEmpty0(handle, out int resultValue), "occtsharp_generated_units_units_system_method_is_empty_0");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsSystemMethodIsEmpty0(handle, out int resultValue), "occtsharp_generated_units_units_system_method_is_empty_0");
         return resultValue != 0;
     }
 
@@ -11683,7 +11683,7 @@ public sealed class UnitsUnitsSystem : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsSystemGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsSystemGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -11694,7 +11694,7 @@ public sealed class UnitsUnitsSystem : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsSystemGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsSystemGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -11704,7 +11704,7 @@ public sealed class UnitsUnitsSystem : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsSystemIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsSystemIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -11712,7 +11712,7 @@ public sealed class UnitsUnitsSystem : IDisposable
     public UnitsUnitsSystem Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.UnitsUnitsSystemClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(FoundationGeneratedNativeMethods.UnitsUnitsSystemClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new UnitsUnitsSystem(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 

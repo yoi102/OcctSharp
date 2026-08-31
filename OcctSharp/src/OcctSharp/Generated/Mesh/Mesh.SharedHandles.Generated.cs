@@ -122,7 +122,7 @@ public sealed class BRepMeshDataCurve : IDisposable
     {
         OcctRuntime.EnsureCompatible();
         ArgumentNullException.ThrowIfNull(theAllocator);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataCurveCreate0(theAllocator is null ? nint.Zero : theAllocator.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataCurveCreate0(theAllocator is null ? nint.Zero : theAllocator.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshDataCurveCreate0");
     }
 
@@ -130,28 +130,28 @@ public sealed class BRepMeshDataCurve : IDisposable
     public void AddPoint(Point3d thePoint, double theParamOnCurve)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataCurveMethodAddPoint0(handle, new Point3dRaw(thePoint.X, thePoint.Y, thePoint.Z), theParamOnCurve), "occtsharp_generated_brep_mesh_data_curve_method_add_point_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataCurveMethodAddPoint0(handle, new Point3dRaw(thePoint.X, thePoint.Y, thePoint.Z), theParamOnCurve), "occtsharp_generated_brep_mesh_data_curve_method_add_point_0");
     }
 
     /// <summary>Invokes OCCT BRepMeshData_Curve::Clear.</summary>
     public void Clear(bool isKeepEndPoints)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataCurveMethodClear0(handle, isKeepEndPoints ? 1 : 0), "occtsharp_generated_brep_mesh_data_curve_method_clear_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataCurveMethodClear0(handle, isKeepEndPoints ? 1 : 0), "occtsharp_generated_brep_mesh_data_curve_method_clear_0");
     }
 
     /// <summary>Invokes OCCT BRepMeshData_Curve::InsertPoint.</summary>
     public void InsertPoint(int thePosition, Point3d thePoint, double theParamOnPCurve)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataCurveMethodInsertPoint0(handle, thePosition, new Point3dRaw(thePoint.X, thePoint.Y, thePoint.Z), theParamOnPCurve), "occtsharp_generated_brep_mesh_data_curve_method_insert_point_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataCurveMethodInsertPoint0(handle, thePosition, new Point3dRaw(thePoint.X, thePoint.Y, thePoint.Z), theParamOnPCurve), "occtsharp_generated_brep_mesh_data_curve_method_insert_point_0");
     }
 
     /// <summary>Invokes OCCT BRepMeshData_Curve::ParametersNb.</summary>
     public int ParametersNb()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataCurveMethodParametersNb0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_curve_method_parameters_nb_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataCurveMethodParametersNb0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_curve_method_parameters_nb_0");
         return resultValue;
     }
 
@@ -159,7 +159,7 @@ public sealed class BRepMeshDataCurve : IDisposable
     public void RemovePoint(int theIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataCurveMethodRemovePoint0(handle, theIndex), "occtsharp_generated_brep_mesh_data_curve_method_remove_point_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataCurveMethodRemovePoint0(handle, theIndex), "occtsharp_generated_brep_mesh_data_curve_method_remove_point_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -168,7 +168,7 @@ public sealed class BRepMeshDataCurve : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataCurveGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataCurveGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -179,7 +179,7 @@ public sealed class BRepMeshDataCurve : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataCurveGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataCurveGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -189,7 +189,7 @@ public sealed class BRepMeshDataCurve : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataCurveIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataCurveIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -197,7 +197,7 @@ public sealed class BRepMeshDataCurve : IDisposable
     public BRepMeshDataCurve Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataCurveClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataCurveClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshDataCurve(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -234,7 +234,7 @@ public sealed class BRepMeshDataEdge : IDisposable
     public int PCurvesNb()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataEdgeMethodPCurvesNb0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_edge_method_pcurves_nb_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataEdgeMethodPCurvesNb0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_edge_method_pcurves_nb_0");
         return resultValue;
     }
 
@@ -244,7 +244,7 @@ public sealed class BRepMeshDataEdge : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataEdgeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataEdgeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -255,7 +255,7 @@ public sealed class BRepMeshDataEdge : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataEdgeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataEdgeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -265,7 +265,7 @@ public sealed class BRepMeshDataEdge : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataEdgeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataEdgeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -273,7 +273,7 @@ public sealed class BRepMeshDataEdge : IDisposable
     public BRepMeshDataEdge Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataEdgeClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataEdgeClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshDataEdge(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -310,7 +310,7 @@ public sealed class BRepMeshDataFace : IDisposable
     public int WiresNb()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataFaceMethodWiresNb0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_face_method_wires_nb_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataFaceMethodWiresNb0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_face_method_wires_nb_0");
         return resultValue;
     }
 
@@ -320,7 +320,7 @@ public sealed class BRepMeshDataFace : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataFaceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataFaceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -331,7 +331,7 @@ public sealed class BRepMeshDataFace : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataFaceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataFaceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -341,7 +341,7 @@ public sealed class BRepMeshDataFace : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataFaceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataFaceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -349,7 +349,7 @@ public sealed class BRepMeshDataFace : IDisposable
     public BRepMeshDataFace Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataFaceClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataFaceClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshDataFace(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -386,7 +386,7 @@ public sealed class BRepMeshDataModel : IDisposable
     public int EdgesNb()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataModelMethodEdgesNb0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_model_method_edges_nb_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataModelMethodEdgesNb0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_model_method_edges_nb_0");
         return resultValue;
     }
 
@@ -394,7 +394,7 @@ public sealed class BRepMeshDataModel : IDisposable
     public int FacesNb()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataModelMethodFacesNb0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_model_method_faces_nb_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataModelMethodFacesNb0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_model_method_faces_nb_0");
         return resultValue;
     }
 
@@ -402,7 +402,7 @@ public sealed class BRepMeshDataModel : IDisposable
     public double GetMaxSize()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataModelMethodGetMaxSize0(handle, out double resultValue), "occtsharp_generated_brep_mesh_data_model_method_get_max_size_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataModelMethodGetMaxSize0(handle, out double resultValue), "occtsharp_generated_brep_mesh_data_model_method_get_max_size_0");
         return resultValue;
     }
 
@@ -410,7 +410,7 @@ public sealed class BRepMeshDataModel : IDisposable
     public void SetMaxSize(double theValue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataModelMethodSetMaxSize0(handle, theValue), "occtsharp_generated_brep_mesh_data_model_method_set_max_size_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataModelMethodSetMaxSize0(handle, theValue), "occtsharp_generated_brep_mesh_data_model_method_set_max_size_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -419,7 +419,7 @@ public sealed class BRepMeshDataModel : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataModelGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataModelGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -430,7 +430,7 @@ public sealed class BRepMeshDataModel : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataModelGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataModelGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -440,7 +440,7 @@ public sealed class BRepMeshDataModel : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataModelIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataModelIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -448,7 +448,7 @@ public sealed class BRepMeshDataModel : IDisposable
     public BRepMeshDataModel Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataModelClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataModelClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshDataModel(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -485,14 +485,14 @@ public sealed class BRepMeshDataPCurve : IDisposable
     public void Clear(bool isKeepEndPoints)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataPCurveMethodClear0(handle, isKeepEndPoints ? 1 : 0), "occtsharp_generated_brep_mesh_data_pcurve_method_clear_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataPCurveMethodClear0(handle, isKeepEndPoints ? 1 : 0), "occtsharp_generated_brep_mesh_data_pcurve_method_clear_0");
     }
 
     /// <summary>Invokes OCCT BRepMeshData_PCurve::ParametersNb.</summary>
     public int ParametersNb()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataPCurveMethodParametersNb0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_pcurve_method_parameters_nb_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataPCurveMethodParametersNb0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_pcurve_method_parameters_nb_0");
         return resultValue;
     }
 
@@ -500,7 +500,7 @@ public sealed class BRepMeshDataPCurve : IDisposable
     public void RemovePoint(int theIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataPCurveMethodRemovePoint0(handle, theIndex), "occtsharp_generated_brep_mesh_data_pcurve_method_remove_point_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataPCurveMethodRemovePoint0(handle, theIndex), "occtsharp_generated_brep_mesh_data_pcurve_method_remove_point_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -509,7 +509,7 @@ public sealed class BRepMeshDataPCurve : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataPCurveGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataPCurveGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -520,7 +520,7 @@ public sealed class BRepMeshDataPCurve : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataPCurveGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataPCurveGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -530,7 +530,7 @@ public sealed class BRepMeshDataPCurve : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataPCurveIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataPCurveIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -538,7 +538,7 @@ public sealed class BRepMeshDataPCurve : IDisposable
     public BRepMeshDataPCurve Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataPCurveClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataPCurveClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshDataPCurve(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -575,7 +575,7 @@ public sealed class BRepMeshDataWire : IDisposable
     public int EdgesNb()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataWireMethodEdgesNb0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_wire_method_edges_nb_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataWireMethodEdgesNb0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_wire_method_edges_nb_0");
         return resultValue;
     }
 
@@ -583,7 +583,7 @@ public sealed class BRepMeshDataWire : IDisposable
     public TopAbsOrientation GetEdgeOrientation(int theIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataWireMethodGetEdgeOrientation0(handle, theIndex, out int resultValue), "occtsharp_generated_brep_mesh_data_wire_method_get_edge_orientation_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataWireMethodGetEdgeOrientation0(handle, theIndex, out int resultValue), "occtsharp_generated_brep_mesh_data_wire_method_get_edge_orientation_0");
         return (TopAbsOrientation)resultValue;
     }
 
@@ -593,7 +593,7 @@ public sealed class BRepMeshDataWire : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataWireGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataWireGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -604,7 +604,7 @@ public sealed class BRepMeshDataWire : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataWireGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataWireGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -614,7 +614,7 @@ public sealed class BRepMeshDataWire : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataWireIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataWireIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -622,7 +622,7 @@ public sealed class BRepMeshDataWire : IDisposable
     public BRepMeshDataWire Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataWireClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataWireClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshDataWire(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -661,7 +661,7 @@ public sealed class BRepMeshBaseMeshAlgo : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshBaseMeshAlgoGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshBaseMeshAlgoGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -672,7 +672,7 @@ public sealed class BRepMeshBaseMeshAlgo : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshBaseMeshAlgoGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshBaseMeshAlgoGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -682,7 +682,7 @@ public sealed class BRepMeshBaseMeshAlgo : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshBaseMeshAlgoIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshBaseMeshAlgoIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -690,7 +690,7 @@ public sealed class BRepMeshBaseMeshAlgo : IDisposable
     public BRepMeshBaseMeshAlgo Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshBaseMeshAlgoClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshBaseMeshAlgoClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshBaseMeshAlgo(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -727,7 +727,7 @@ public sealed class BRepMeshClassifier : IDisposable
     public BRepMeshClassifier()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshClassifierCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshClassifierCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshClassifierCreate0");
     }
 
@@ -737,7 +737,7 @@ public sealed class BRepMeshClassifier : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshClassifierGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshClassifierGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -748,7 +748,7 @@ public sealed class BRepMeshClassifier : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshClassifierGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshClassifierGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -758,7 +758,7 @@ public sealed class BRepMeshClassifier : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshClassifierIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshClassifierIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -766,7 +766,7 @@ public sealed class BRepMeshClassifier : IDisposable
     public BRepMeshClassifier Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshClassifierClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshClassifierClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshClassifier(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -805,7 +805,7 @@ public sealed class BRepMeshConstrainedBaseMeshAlgo : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshConstrainedBaseMeshAlgoGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshConstrainedBaseMeshAlgoGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -816,7 +816,7 @@ public sealed class BRepMeshConstrainedBaseMeshAlgo : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshConstrainedBaseMeshAlgoGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshConstrainedBaseMeshAlgoGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -826,7 +826,7 @@ public sealed class BRepMeshConstrainedBaseMeshAlgo : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshConstrainedBaseMeshAlgoIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshConstrainedBaseMeshAlgoIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -834,7 +834,7 @@ public sealed class BRepMeshConstrainedBaseMeshAlgo : IDisposable
     public BRepMeshConstrainedBaseMeshAlgo Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshConstrainedBaseMeshAlgoClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshConstrainedBaseMeshAlgoClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshConstrainedBaseMeshAlgo(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -871,7 +871,7 @@ public sealed class BRepMeshContext : IDisposable
     public BRepMeshContext(IMeshToolsMeshAlgoType theMeshType)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshContextCreate0((int)theMeshType, out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshContextCreate0((int)theMeshType, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshContextCreate0");
     }
 
@@ -881,7 +881,7 @@ public sealed class BRepMeshContext : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshContextGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshContextGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -892,7 +892,7 @@ public sealed class BRepMeshContext : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshContextGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshContextGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -902,7 +902,7 @@ public sealed class BRepMeshContext : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshContextIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshContextIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -910,7 +910,7 @@ public sealed class BRepMeshContext : IDisposable
     public BRepMeshContext Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshContextClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshContextClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshContext(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -947,7 +947,7 @@ public sealed class BRepMeshCurveTessellator : IDisposable
     public int PointsNb()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshCurveTessellatorMethodPointsNb0(handle, out int resultValue), "occtsharp_generated_brep_mesh_curve_tessellator_method_points_nb_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshCurveTessellatorMethodPointsNb0(handle, out int resultValue), "occtsharp_generated_brep_mesh_curve_tessellator_method_points_nb_0");
         return resultValue;
     }
 
@@ -957,7 +957,7 @@ public sealed class BRepMeshCurveTessellator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshCurveTessellatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshCurveTessellatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -968,7 +968,7 @@ public sealed class BRepMeshCurveTessellator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshCurveTessellatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshCurveTessellatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -978,7 +978,7 @@ public sealed class BRepMeshCurveTessellator : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshCurveTessellatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshCurveTessellatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -986,7 +986,7 @@ public sealed class BRepMeshCurveTessellator : IDisposable
     public BRepMeshCurveTessellator Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshCurveTessellatorClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshCurveTessellatorClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshCurveTessellator(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1025,7 +1025,7 @@ public sealed class BRepMeshCustomBaseMeshAlgo : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshCustomBaseMeshAlgoGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshCustomBaseMeshAlgoGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1036,7 +1036,7 @@ public sealed class BRepMeshCustomBaseMeshAlgo : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshCustomBaseMeshAlgoGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshCustomBaseMeshAlgoGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1046,7 +1046,7 @@ public sealed class BRepMeshCustomBaseMeshAlgo : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshCustomBaseMeshAlgoIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshCustomBaseMeshAlgoIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1054,7 +1054,7 @@ public sealed class BRepMeshCustomBaseMeshAlgo : IDisposable
     public BRepMeshCustomBaseMeshAlgo Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshCustomBaseMeshAlgoClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshCustomBaseMeshAlgoClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshCustomBaseMeshAlgo(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1091,7 +1091,7 @@ public sealed class BRepMeshDataStructureOfDelaun : IDisposable
     public BRepMeshDataStructureOfDelaun(NCollectionIncAllocator? theAllocator, int theReservedNodeSize)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataStructureOfDelaunCreate0(theAllocator is null ? nint.Zero : theAllocator.NativeHandle.DangerousGetHandle(), theReservedNodeSize, out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataStructureOfDelaunCreate0(theAllocator is null ? nint.Zero : theAllocator.NativeHandle.DangerousGetHandle(), theReservedNodeSize, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshDataStructureOfDelaunCreate0");
     }
 
@@ -1099,21 +1099,21 @@ public sealed class BRepMeshDataStructureOfDelaun : IDisposable
     public void ClearDeleted()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodClearDeleted0(handle), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_clear_deleted_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodClearDeleted0(handle), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_clear_deleted_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_DataStructureOfDelaun::ClearDomain.</summary>
     public void ClearDomain()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodClearDomain0(handle), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_clear_domain_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodClearDomain0(handle), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_clear_domain_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_DataStructureOfDelaun::NbElements.</summary>
     public int NbElements()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodNbElements0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_nb_elements_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodNbElements0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_nb_elements_0");
         return resultValue;
     }
 
@@ -1121,7 +1121,7 @@ public sealed class BRepMeshDataStructureOfDelaun : IDisposable
     public int NbLinks()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodNbLinks0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_nb_links_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodNbLinks0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_nb_links_0");
         return resultValue;
     }
 
@@ -1129,7 +1129,7 @@ public sealed class BRepMeshDataStructureOfDelaun : IDisposable
     public int NbNodes()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodNbNodes0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_nb_nodes_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodNbNodes0(handle, out int resultValue), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_nb_nodes_0");
         return resultValue;
     }
 
@@ -1137,21 +1137,21 @@ public sealed class BRepMeshDataStructureOfDelaun : IDisposable
     public void RemoveElement(int theIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodRemoveElement0(handle, theIndex), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_remove_element_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodRemoveElement0(handle, theIndex), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_remove_element_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_DataStructureOfDelaun::RemoveLink.</summary>
     public void RemoveLink(int theIndex, bool isForce)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodRemoveLink0(handle, theIndex, isForce ? 1 : 0), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_remove_link_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodRemoveLink0(handle, theIndex, isForce ? 1 : 0), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_remove_link_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_DataStructureOfDelaun::RemoveNode.</summary>
     public void RemoveNode(int theIndex, bool isForce)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodRemoveNode0(handle, theIndex, isForce ? 1 : 0), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_remove_node_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataStructureOfDelaunMethodRemoveNode0(handle, theIndex, isForce ? 1 : 0), "occtsharp_generated_brep_mesh_data_structure_of_delaun_method_remove_node_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -1160,7 +1160,7 @@ public sealed class BRepMeshDataStructureOfDelaun : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataStructureOfDelaunGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataStructureOfDelaunGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1171,7 +1171,7 @@ public sealed class BRepMeshDataStructureOfDelaun : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataStructureOfDelaunGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataStructureOfDelaunGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1181,7 +1181,7 @@ public sealed class BRepMeshDataStructureOfDelaun : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataStructureOfDelaunIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataStructureOfDelaunIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1189,7 +1189,7 @@ public sealed class BRepMeshDataStructureOfDelaun : IDisposable
     public BRepMeshDataStructureOfDelaun Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDataStructureOfDelaunClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataStructureOfDelaunClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshDataStructureOfDelaun(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1228,7 +1228,7 @@ public sealed class BRepMeshDeflection : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDeflectionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDeflectionGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1239,7 +1239,7 @@ public sealed class BRepMeshDeflection : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDeflectionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDeflectionGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1249,7 +1249,7 @@ public sealed class BRepMeshDeflection : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDeflectionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDeflectionIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1257,7 +1257,7 @@ public sealed class BRepMeshDeflection : IDisposable
     public BRepMeshDeflection Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDeflectionClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDeflectionClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshDeflection(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1294,7 +1294,7 @@ public sealed class BRepMeshDelabellaBaseMeshAlgo : IDisposable
     public BRepMeshDelabellaBaseMeshAlgo()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDelabellaBaseMeshAlgoCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDelabellaBaseMeshAlgoCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshDelabellaBaseMeshAlgoCreate0");
     }
 
@@ -1304,7 +1304,7 @@ public sealed class BRepMeshDelabellaBaseMeshAlgo : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDelabellaBaseMeshAlgoGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDelabellaBaseMeshAlgoGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1315,7 +1315,7 @@ public sealed class BRepMeshDelabellaBaseMeshAlgo : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDelabellaBaseMeshAlgoGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDelabellaBaseMeshAlgoGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1325,7 +1325,7 @@ public sealed class BRepMeshDelabellaBaseMeshAlgo : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDelabellaBaseMeshAlgoIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDelabellaBaseMeshAlgoIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1333,7 +1333,7 @@ public sealed class BRepMeshDelabellaBaseMeshAlgo : IDisposable
     public BRepMeshDelabellaBaseMeshAlgo Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDelabellaBaseMeshAlgoClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDelabellaBaseMeshAlgoClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshDelabellaBaseMeshAlgo(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1370,7 +1370,7 @@ public sealed class BRepMeshDelabellaMeshAlgoFactory : IDisposable
     public BRepMeshDelabellaMeshAlgoFactory()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDelabellaMeshAlgoFactoryCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDelabellaMeshAlgoFactoryCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshDelabellaMeshAlgoFactoryCreate0");
     }
 
@@ -1380,7 +1380,7 @@ public sealed class BRepMeshDelabellaMeshAlgoFactory : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDelabellaMeshAlgoFactoryGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDelabellaMeshAlgoFactoryGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1391,7 +1391,7 @@ public sealed class BRepMeshDelabellaMeshAlgoFactory : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDelabellaMeshAlgoFactoryGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDelabellaMeshAlgoFactoryGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1401,7 +1401,7 @@ public sealed class BRepMeshDelabellaMeshAlgoFactory : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDelabellaMeshAlgoFactoryIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDelabellaMeshAlgoFactoryIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1409,7 +1409,7 @@ public sealed class BRepMeshDelabellaMeshAlgoFactory : IDisposable
     public BRepMeshDelabellaMeshAlgoFactory Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDelabellaMeshAlgoFactoryClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDelabellaMeshAlgoFactoryClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshDelabellaMeshAlgoFactory(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1446,7 +1446,7 @@ public sealed class BRepMeshDelaunayBaseMeshAlgo : IDisposable
     public BRepMeshDelaunayBaseMeshAlgo()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDelaunayBaseMeshAlgoCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDelaunayBaseMeshAlgoCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshDelaunayBaseMeshAlgoCreate0");
     }
 
@@ -1456,7 +1456,7 @@ public sealed class BRepMeshDelaunayBaseMeshAlgo : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDelaunayBaseMeshAlgoGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDelaunayBaseMeshAlgoGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1467,7 +1467,7 @@ public sealed class BRepMeshDelaunayBaseMeshAlgo : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDelaunayBaseMeshAlgoGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDelaunayBaseMeshAlgoGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1477,7 +1477,7 @@ public sealed class BRepMeshDelaunayBaseMeshAlgo : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDelaunayBaseMeshAlgoIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDelaunayBaseMeshAlgoIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1485,7 +1485,7 @@ public sealed class BRepMeshDelaunayBaseMeshAlgo : IDisposable
     public BRepMeshDelaunayBaseMeshAlgo Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDelaunayBaseMeshAlgoClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDelaunayBaseMeshAlgoClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshDelaunayBaseMeshAlgo(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1524,7 +1524,7 @@ public sealed class BRepMeshDiscretAlgoFactory : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDiscretAlgoFactoryGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDiscretAlgoFactoryGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1535,7 +1535,7 @@ public sealed class BRepMeshDiscretAlgoFactory : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDiscretAlgoFactoryGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDiscretAlgoFactoryGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1545,7 +1545,7 @@ public sealed class BRepMeshDiscretAlgoFactory : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDiscretAlgoFactoryIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDiscretAlgoFactoryIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1553,7 +1553,7 @@ public sealed class BRepMeshDiscretAlgoFactory : IDisposable
     public BRepMeshDiscretAlgoFactory Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDiscretAlgoFactoryClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDiscretAlgoFactoryClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshDiscretAlgoFactory(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1590,7 +1590,7 @@ public sealed class BRepMeshDiscretRoot : IDisposable
     public bool IsDone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDiscretRootMethodIsDone0(handle, out int resultValue), "occtsharp_generated_brep_mesh_discret_root_method_is_done_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDiscretRootMethodIsDone0(handle, out int resultValue), "occtsharp_generated_brep_mesh_discret_root_method_is_done_0");
         return resultValue != 0;
     }
 
@@ -1600,7 +1600,7 @@ public sealed class BRepMeshDiscretRoot : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDiscretRootGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDiscretRootGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1611,7 +1611,7 @@ public sealed class BRepMeshDiscretRoot : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDiscretRootGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDiscretRootGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1621,7 +1621,7 @@ public sealed class BRepMeshDiscretRoot : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDiscretRootIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDiscretRootIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1629,7 +1629,7 @@ public sealed class BRepMeshDiscretRoot : IDisposable
     public BRepMeshDiscretRoot Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshDiscretRootClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDiscretRootClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshDiscretRoot(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1666,7 +1666,7 @@ public sealed class BRepMeshEdgeDiscret : IDisposable
     public BRepMeshEdgeDiscret()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshEdgeDiscretCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshEdgeDiscretCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshEdgeDiscretCreate0");
     }
 
@@ -1676,7 +1676,7 @@ public sealed class BRepMeshEdgeDiscret : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshEdgeDiscretGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshEdgeDiscretGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1687,7 +1687,7 @@ public sealed class BRepMeshEdgeDiscret : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshEdgeDiscretGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshEdgeDiscretGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1697,7 +1697,7 @@ public sealed class BRepMeshEdgeDiscret : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshEdgeDiscretIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshEdgeDiscretIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1705,7 +1705,7 @@ public sealed class BRepMeshEdgeDiscret : IDisposable
     public BRepMeshEdgeDiscret Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshEdgeDiscretClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshEdgeDiscretClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshEdgeDiscret(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1742,7 +1742,7 @@ public sealed class BRepMeshEdgeTessellationExtractor : IDisposable
     public BRepMeshEdgeTessellationExtractor(IMeshDataEdge? theEdge, IMeshDataFace? theFace)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshEdgeTessellationExtractorCreate0(theEdge is null ? nint.Zero : theEdge.NativeHandle.DangerousGetHandle(), theFace is null ? nint.Zero : theFace.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshEdgeTessellationExtractorCreate0(theEdge is null ? nint.Zero : theEdge.NativeHandle.DangerousGetHandle(), theFace is null ? nint.Zero : theFace.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshEdgeTessellationExtractorCreate0");
     }
 
@@ -1750,7 +1750,7 @@ public sealed class BRepMeshEdgeTessellationExtractor : IDisposable
     public int PointsNb()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshEdgeTessellationExtractorMethodPointsNb0(handle, out int resultValue), "occtsharp_generated_brep_mesh_edge_tessellation_extractor_method_points_nb_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshEdgeTessellationExtractorMethodPointsNb0(handle, out int resultValue), "occtsharp_generated_brep_mesh_edge_tessellation_extractor_method_points_nb_0");
         return resultValue;
     }
 
@@ -1760,7 +1760,7 @@ public sealed class BRepMeshEdgeTessellationExtractor : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshEdgeTessellationExtractorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshEdgeTessellationExtractorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1771,7 +1771,7 @@ public sealed class BRepMeshEdgeTessellationExtractor : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshEdgeTessellationExtractorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshEdgeTessellationExtractorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1781,7 +1781,7 @@ public sealed class BRepMeshEdgeTessellationExtractor : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshEdgeTessellationExtractorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshEdgeTessellationExtractorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1789,7 +1789,7 @@ public sealed class BRepMeshEdgeTessellationExtractor : IDisposable
     public BRepMeshEdgeTessellationExtractor Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshEdgeTessellationExtractorClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshEdgeTessellationExtractorClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshEdgeTessellationExtractor(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1826,7 +1826,7 @@ public sealed class BRepMeshFaceChecker : IDisposable
     public bool Perform()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshFaceCheckerMethodPerform0(handle, out int resultValue), "occtsharp_generated_brep_mesh_face_checker_method_perform_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshFaceCheckerMethodPerform0(handle, out int resultValue), "occtsharp_generated_brep_mesh_face_checker_method_perform_0");
         return resultValue != 0;
     }
 
@@ -1836,7 +1836,7 @@ public sealed class BRepMeshFaceChecker : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshFaceCheckerGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshFaceCheckerGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1847,7 +1847,7 @@ public sealed class BRepMeshFaceChecker : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshFaceCheckerGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshFaceCheckerGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1857,7 +1857,7 @@ public sealed class BRepMeshFaceChecker : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshFaceCheckerIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshFaceCheckerIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1865,7 +1865,7 @@ public sealed class BRepMeshFaceChecker : IDisposable
     public BRepMeshFaceChecker Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshFaceCheckerClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshFaceCheckerClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshFaceChecker(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1902,7 +1902,7 @@ public sealed class BRepMeshFaceDiscret : IDisposable
     public BRepMeshFaceDiscret(IMeshToolsMeshAlgoFactory? theAlgoFactory)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshFaceDiscretCreate0(theAlgoFactory is null ? nint.Zero : theAlgoFactory.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshFaceDiscretCreate0(theAlgoFactory is null ? nint.Zero : theAlgoFactory.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshFaceDiscretCreate0");
     }
 
@@ -1912,7 +1912,7 @@ public sealed class BRepMeshFaceDiscret : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshFaceDiscretGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshFaceDiscretGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -1923,7 +1923,7 @@ public sealed class BRepMeshFaceDiscret : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshFaceDiscretGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshFaceDiscretGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -1933,7 +1933,7 @@ public sealed class BRepMeshFaceDiscret : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshFaceDiscretIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshFaceDiscretIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -1941,7 +1941,7 @@ public sealed class BRepMeshFaceDiscret : IDisposable
     public BRepMeshFaceDiscret Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshFaceDiscretClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshFaceDiscretClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshFaceDiscret(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -1978,7 +1978,7 @@ public sealed class BRepMeshIncrementalMesh : IDisposable
     public BRepMeshIncrementalMesh()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshIncrementalMeshCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshIncrementalMeshCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshIncrementalMeshCreate0");
     }
 
@@ -1986,7 +1986,7 @@ public sealed class BRepMeshIncrementalMesh : IDisposable
     public int GetStatusFlags()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshIncrementalMeshMethodGetStatusFlags0(handle, out int resultValue), "occtsharp_generated_brep_mesh_incremental_mesh_method_get_status_flags_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshIncrementalMeshMethodGetStatusFlags0(handle, out int resultValue), "occtsharp_generated_brep_mesh_incremental_mesh_method_get_status_flags_0");
         return resultValue;
     }
 
@@ -1994,7 +1994,7 @@ public sealed class BRepMeshIncrementalMesh : IDisposable
     public bool IsModified()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshIncrementalMeshMethodIsModified0(handle, out int resultValue), "occtsharp_generated_brep_mesh_incremental_mesh_method_is_modified_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshIncrementalMeshMethodIsModified0(handle, out int resultValue), "occtsharp_generated_brep_mesh_incremental_mesh_method_is_modified_0");
         return resultValue != 0;
     }
 
@@ -2004,7 +2004,7 @@ public sealed class BRepMeshIncrementalMesh : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshIncrementalMeshGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshIncrementalMeshGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2015,7 +2015,7 @@ public sealed class BRepMeshIncrementalMesh : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshIncrementalMeshGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshIncrementalMeshGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2025,7 +2025,7 @@ public sealed class BRepMeshIncrementalMesh : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshIncrementalMeshIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshIncrementalMeshIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2033,7 +2033,7 @@ public sealed class BRepMeshIncrementalMesh : IDisposable
     public BRepMeshIncrementalMesh Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshIncrementalMeshClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshIncrementalMeshClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshIncrementalMesh(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2070,7 +2070,7 @@ public sealed class BRepMeshIncrementalMeshFactory : IDisposable
     public BRepMeshIncrementalMeshFactory()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshIncrementalMeshFactoryCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshIncrementalMeshFactoryCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshIncrementalMeshFactoryCreate0");
     }
 
@@ -2080,7 +2080,7 @@ public sealed class BRepMeshIncrementalMeshFactory : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshIncrementalMeshFactoryGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshIncrementalMeshFactoryGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2091,7 +2091,7 @@ public sealed class BRepMeshIncrementalMeshFactory : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshIncrementalMeshFactoryGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshIncrementalMeshFactoryGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2101,7 +2101,7 @@ public sealed class BRepMeshIncrementalMeshFactory : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshIncrementalMeshFactoryIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshIncrementalMeshFactoryIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2109,7 +2109,7 @@ public sealed class BRepMeshIncrementalMeshFactory : IDisposable
     public BRepMeshIncrementalMeshFactory Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshIncrementalMeshFactoryClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshIncrementalMeshFactoryClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshIncrementalMeshFactory(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2146,7 +2146,7 @@ public sealed class BRepMeshMeshAlgoFactory : IDisposable
     public BRepMeshMeshAlgoFactory()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshMeshAlgoFactoryCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshAlgoFactoryCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshMeshAlgoFactoryCreate0");
     }
 
@@ -2156,7 +2156,7 @@ public sealed class BRepMeshMeshAlgoFactory : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshMeshAlgoFactoryGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshAlgoFactoryGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2167,7 +2167,7 @@ public sealed class BRepMeshMeshAlgoFactory : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshMeshAlgoFactoryGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshAlgoFactoryGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2177,7 +2177,7 @@ public sealed class BRepMeshMeshAlgoFactory : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshMeshAlgoFactoryIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshAlgoFactoryIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2185,7 +2185,7 @@ public sealed class BRepMeshMeshAlgoFactory : IDisposable
     public BRepMeshMeshAlgoFactory Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshMeshAlgoFactoryClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshAlgoFactoryClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshMeshAlgoFactory(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2222,7 +2222,7 @@ public sealed class BRepMeshMeshTool : IDisposable
     public BRepMeshMeshTool(BRepMeshDataStructureOfDelaun? theStructure)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshMeshToolCreate0(theStructure is null ? nint.Zero : theStructure.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshToolCreate0(theStructure is null ? nint.Zero : theStructure.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshMeshToolCreate0");
     }
 
@@ -2230,35 +2230,35 @@ public sealed class BRepMeshMeshTool : IDisposable
     public void AddAndLegalizeTriangle(int thePoint1, int thePoint2, int thePoint3)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshMeshToolMethodAddAndLegalizeTriangle0(handle, thePoint1, thePoint2, thePoint3), "occtsharp_generated_brep_mesh_mesh_tool_method_add_and_legalize_triangle_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshToolMethodAddAndLegalizeTriangle0(handle, thePoint1, thePoint2, thePoint3), "occtsharp_generated_brep_mesh_mesh_tool_method_add_and_legalize_triangle_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_MeshTool::CleanFrontierLinks.</summary>
     public void CleanFrontierLinks()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshMeshToolMethodCleanFrontierLinks0(handle), "occtsharp_generated_brep_mesh_mesh_tool_method_clean_frontier_links_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshToolMethodCleanFrontierLinks0(handle), "occtsharp_generated_brep_mesh_mesh_tool_method_clean_frontier_links_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_MeshTool::EraseFreeLinks.</summary>
     public void EraseFreeLinks()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshMeshToolMethodEraseFreeLinks0(handle), "occtsharp_generated_brep_mesh_mesh_tool_method_erase_free_links_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshToolMethodEraseFreeLinks0(handle), "occtsharp_generated_brep_mesh_mesh_tool_method_erase_free_links_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_MeshTool::EraseItemsConnectedTo.</summary>
     public void EraseItemsConnectedTo(int theNodeIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshMeshToolMethodEraseItemsConnectedTo0(handle, theNodeIndex), "occtsharp_generated_brep_mesh_mesh_tool_method_erase_items_connected_to_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshToolMethodEraseItemsConnectedTo0(handle, theNodeIndex), "occtsharp_generated_brep_mesh_mesh_tool_method_erase_items_connected_to_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_MeshTool::Legalize.</summary>
     public void Legalize(int theLinkIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshMeshToolMethodLegalize0(handle, theLinkIndex), "occtsharp_generated_brep_mesh_mesh_tool_method_legalize_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshToolMethodLegalize0(handle, theLinkIndex), "occtsharp_generated_brep_mesh_mesh_tool_method_legalize_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -2267,7 +2267,7 @@ public sealed class BRepMeshMeshTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshMeshToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2278,7 +2278,7 @@ public sealed class BRepMeshMeshTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshMeshToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2288,7 +2288,7 @@ public sealed class BRepMeshMeshTool : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshMeshToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2296,7 +2296,7 @@ public sealed class BRepMeshMeshTool : IDisposable
     public BRepMeshMeshTool Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshMeshToolClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshMeshToolClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshMeshTool(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2333,7 +2333,7 @@ public sealed class BRepMeshModelBuilder : IDisposable
     public BRepMeshModelBuilder()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelBuilderCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelBuilderCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshModelBuilderCreate0");
     }
 
@@ -2343,7 +2343,7 @@ public sealed class BRepMeshModelBuilder : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelBuilderGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelBuilderGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2354,7 +2354,7 @@ public sealed class BRepMeshModelBuilder : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelBuilderGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelBuilderGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2364,7 +2364,7 @@ public sealed class BRepMeshModelBuilder : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelBuilderIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelBuilderIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2372,7 +2372,7 @@ public sealed class BRepMeshModelBuilder : IDisposable
     public BRepMeshModelBuilder Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelBuilderClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelBuilderClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshModelBuilder(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2409,7 +2409,7 @@ public sealed class BRepMeshModelHealer : IDisposable
     public BRepMeshModelHealer()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelHealerCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelHealerCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshModelHealerCreate0");
     }
 
@@ -2419,7 +2419,7 @@ public sealed class BRepMeshModelHealer : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelHealerGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelHealerGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2430,7 +2430,7 @@ public sealed class BRepMeshModelHealer : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelHealerGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelHealerGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2440,7 +2440,7 @@ public sealed class BRepMeshModelHealer : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelHealerIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelHealerIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2448,7 +2448,7 @@ public sealed class BRepMeshModelHealer : IDisposable
     public BRepMeshModelHealer Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelHealerClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelHealerClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshModelHealer(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2485,7 +2485,7 @@ public sealed class BRepMeshModelPostProcessor : IDisposable
     public BRepMeshModelPostProcessor()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelPostProcessorCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelPostProcessorCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshModelPostProcessorCreate0");
     }
 
@@ -2495,7 +2495,7 @@ public sealed class BRepMeshModelPostProcessor : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelPostProcessorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelPostProcessorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2506,7 +2506,7 @@ public sealed class BRepMeshModelPostProcessor : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelPostProcessorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelPostProcessorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2516,7 +2516,7 @@ public sealed class BRepMeshModelPostProcessor : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelPostProcessorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelPostProcessorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2524,7 +2524,7 @@ public sealed class BRepMeshModelPostProcessor : IDisposable
     public BRepMeshModelPostProcessor Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelPostProcessorClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelPostProcessorClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshModelPostProcessor(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2561,7 +2561,7 @@ public sealed class BRepMeshModelPreProcessor : IDisposable
     public BRepMeshModelPreProcessor()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelPreProcessorCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelPreProcessorCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshModelPreProcessorCreate0");
     }
 
@@ -2571,7 +2571,7 @@ public sealed class BRepMeshModelPreProcessor : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelPreProcessorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelPreProcessorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2582,7 +2582,7 @@ public sealed class BRepMeshModelPreProcessor : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelPreProcessorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelPreProcessorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2592,7 +2592,7 @@ public sealed class BRepMeshModelPreProcessor : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelPreProcessorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelPreProcessorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2600,7 +2600,7 @@ public sealed class BRepMeshModelPreProcessor : IDisposable
     public BRepMeshModelPreProcessor Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshModelPreProcessorClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshModelPreProcessorClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshModelPreProcessor(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2637,7 +2637,7 @@ public sealed class BRepMeshSelectorOfDataStructureOfDelaun : IDisposable
     public BRepMeshSelectorOfDataStructureOfDelaun()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshSelectorOfDataStructureOfDelaunCreate0");
     }
 
@@ -2645,7 +2645,7 @@ public sealed class BRepMeshSelectorOfDataStructureOfDelaun : IDisposable
     public BRepMeshSelectorOfDataStructureOfDelaun(BRepMeshDataStructureOfDelaun? theMesh)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunCreate1(theMesh is null ? nint.Zero : theMesh.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunCreate1(theMesh is null ? nint.Zero : theMesh.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshSelectorOfDataStructureOfDelaunCreate1");
     }
 
@@ -2653,35 +2653,35 @@ public sealed class BRepMeshSelectorOfDataStructureOfDelaun : IDisposable
     public void AddNeighbours()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunMethodAddNeighbours0(handle), "occtsharp_generated_brep_mesh_selector_of_data_structure_of_delaun_method_add_neighbours_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunMethodAddNeighbours0(handle), "occtsharp_generated_brep_mesh_selector_of_data_structure_of_delaun_method_add_neighbours_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_SelectorOfDataStructureOfDelaun::Initialize.</summary>
     public void Initialize(BRepMeshDataStructureOfDelaun? theMesh)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunMethodInitialize0(handle, theMesh is null ? nint.Zero : theMesh.NativeHandle.DangerousGetHandle()), "occtsharp_generated_brep_mesh_selector_of_data_structure_of_delaun_method_initialize_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunMethodInitialize0(handle, theMesh is null ? nint.Zero : theMesh.NativeHandle.DangerousGetHandle()), "occtsharp_generated_brep_mesh_selector_of_data_structure_of_delaun_method_initialize_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_SelectorOfDataStructureOfDelaun::NeighboursOfElement.</summary>
     public void NeighboursOfElement(int theElementIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunMethodNeighboursOfElement0(handle, theElementIndex), "occtsharp_generated_brep_mesh_selector_of_data_structure_of_delaun_method_neighbours_of_element_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunMethodNeighboursOfElement0(handle, theElementIndex), "occtsharp_generated_brep_mesh_selector_of_data_structure_of_delaun_method_neighbours_of_element_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_SelectorOfDataStructureOfDelaun::NeighboursOfLink.</summary>
     public void NeighboursOfLink(int theLinkIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunMethodNeighboursOfLink0(handle, theLinkIndex), "occtsharp_generated_brep_mesh_selector_of_data_structure_of_delaun_method_neighbours_of_link_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunMethodNeighboursOfLink0(handle, theLinkIndex), "occtsharp_generated_brep_mesh_selector_of_data_structure_of_delaun_method_neighbours_of_link_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_SelectorOfDataStructureOfDelaun::NeighboursOfNode.</summary>
     public void NeighboursOfNode(int theNodeIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunMethodNeighboursOfNode0(handle, theNodeIndex), "occtsharp_generated_brep_mesh_selector_of_data_structure_of_delaun_method_neighbours_of_node_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunMethodNeighboursOfNode0(handle, theNodeIndex), "occtsharp_generated_brep_mesh_selector_of_data_structure_of_delaun_method_neighbours_of_node_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -2690,7 +2690,7 @@ public sealed class BRepMeshSelectorOfDataStructureOfDelaun : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2701,7 +2701,7 @@ public sealed class BRepMeshSelectorOfDataStructureOfDelaun : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2711,7 +2711,7 @@ public sealed class BRepMeshSelectorOfDataStructureOfDelaun : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2719,7 +2719,7 @@ public sealed class BRepMeshSelectorOfDataStructureOfDelaun : IDisposable
     public BRepMeshSelectorOfDataStructureOfDelaun Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshSelectorOfDataStructureOfDelaunClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshSelectorOfDataStructureOfDelaun(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2758,7 +2758,7 @@ public sealed class BRepMeshShapeTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshShapeToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshShapeToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2769,7 +2769,7 @@ public sealed class BRepMeshShapeTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshShapeToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshShapeToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2779,7 +2779,7 @@ public sealed class BRepMeshShapeTool : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshShapeToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshShapeToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2787,7 +2787,7 @@ public sealed class BRepMeshShapeTool : IDisposable
     public BRepMeshShapeTool Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshShapeToolClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshShapeToolClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshShapeTool(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2824,7 +2824,7 @@ public sealed class BRepMeshShapeVisitor : IDisposable
     public BRepMeshShapeVisitor(IMeshDataModel? theModel)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshShapeVisitorCreate0(theModel is null ? nint.Zero : theModel.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshShapeVisitorCreate0(theModel is null ? nint.Zero : theModel.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshShapeVisitorCreate0");
     }
 
@@ -2834,7 +2834,7 @@ public sealed class BRepMeshShapeVisitor : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshShapeVisitorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshShapeVisitorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2845,7 +2845,7 @@ public sealed class BRepMeshShapeVisitor : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshShapeVisitorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshShapeVisitorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2855,7 +2855,7 @@ public sealed class BRepMeshShapeVisitor : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshShapeVisitorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshShapeVisitorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2863,7 +2863,7 @@ public sealed class BRepMeshShapeVisitor : IDisposable
     public BRepMeshShapeVisitor Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshShapeVisitorClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshShapeVisitorClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshShapeVisitor(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -2900,7 +2900,7 @@ public sealed class BRepMeshVertexTool : IDisposable
     public BRepMeshVertexTool(NCollectionIncAllocator? theAllocator)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshVertexToolCreate0(theAllocator is null ? nint.Zero : theAllocator.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshVertexToolCreate0(theAllocator is null ? nint.Zero : theAllocator.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "BRepMeshVertexToolCreate0");
     }
 
@@ -2908,14 +2908,14 @@ public sealed class BRepMeshVertexTool : IDisposable
     public void DeleteVertex(int theIndex)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshVertexToolMethodDeleteVertex0(handle, theIndex), "occtsharp_generated_brep_mesh_vertex_tool_method_delete_vertex_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshVertexToolMethodDeleteVertex0(handle, theIndex), "occtsharp_generated_brep_mesh_vertex_tool_method_delete_vertex_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_VertexTool::Extent.</summary>
     public int Extent()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshVertexToolMethodExtent0(handle, out int resultValue), "occtsharp_generated_brep_mesh_vertex_tool_method_extent_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshVertexToolMethodExtent0(handle, out int resultValue), "occtsharp_generated_brep_mesh_vertex_tool_method_extent_0");
         return resultValue;
     }
 
@@ -2923,7 +2923,7 @@ public sealed class BRepMeshVertexTool : IDisposable
     public bool IsEmpty()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshVertexToolMethodIsEmpty0(handle, out int resultValue), "occtsharp_generated_brep_mesh_vertex_tool_method_is_empty_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshVertexToolMethodIsEmpty0(handle, out int resultValue), "occtsharp_generated_brep_mesh_vertex_tool_method_is_empty_0");
         return resultValue != 0;
     }
 
@@ -2931,35 +2931,35 @@ public sealed class BRepMeshVertexTool : IDisposable
     public void RemoveLast()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshVertexToolMethodRemoveLast0(handle), "occtsharp_generated_brep_mesh_vertex_tool_method_remove_last_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshVertexToolMethodRemoveLast0(handle), "occtsharp_generated_brep_mesh_vertex_tool_method_remove_last_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_VertexTool::SetCellSize.</summary>
     public void SetCellSize(double theSize)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshVertexToolMethodSetCellSize0(handle, theSize), "occtsharp_generated_brep_mesh_vertex_tool_method_set_cell_size_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshVertexToolMethodSetCellSize0(handle, theSize), "occtsharp_generated_brep_mesh_vertex_tool_method_set_cell_size_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_VertexTool::SetCellSize.</summary>
     public void SetCellSize(double theSizeX, double theSizeY)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshVertexToolMethodSetCellSize1(handle, theSizeX, theSizeY), "occtsharp_generated_brep_mesh_vertex_tool_method_set_cell_size_1");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshVertexToolMethodSetCellSize1(handle, theSizeX, theSizeY), "occtsharp_generated_brep_mesh_vertex_tool_method_set_cell_size_1");
     }
 
     /// <summary>Invokes OCCT BRepMesh_VertexTool::SetTolerance.</summary>
     public void SetTolerance(double theTolerance)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshVertexToolMethodSetTolerance0(handle, theTolerance), "occtsharp_generated_brep_mesh_vertex_tool_method_set_tolerance_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshVertexToolMethodSetTolerance0(handle, theTolerance), "occtsharp_generated_brep_mesh_vertex_tool_method_set_tolerance_0");
     }
 
     /// <summary>Invokes OCCT BRepMesh_VertexTool::SetTolerance.</summary>
     public void SetTolerance(double theToleranceX, double theToleranceY)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshVertexToolMethodSetTolerance1(handle, theToleranceX, theToleranceY), "occtsharp_generated_brep_mesh_vertex_tool_method_set_tolerance_1");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshVertexToolMethodSetTolerance1(handle, theToleranceX, theToleranceY), "occtsharp_generated_brep_mesh_vertex_tool_method_set_tolerance_1");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -2968,7 +2968,7 @@ public sealed class BRepMeshVertexTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshVertexToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshVertexToolGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -2979,7 +2979,7 @@ public sealed class BRepMeshVertexTool : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshVertexToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshVertexToolGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -2989,7 +2989,7 @@ public sealed class BRepMeshVertexTool : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshVertexToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshVertexToolIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -2997,7 +2997,7 @@ public sealed class BRepMeshVertexTool : IDisposable
     public BRepMeshVertexTool Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.BRepMeshVertexToolClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshVertexToolClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new BRepMeshVertexTool(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3036,7 +3036,7 @@ public sealed class IMeshDataCurve : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataCurveGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataCurveGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3047,7 +3047,7 @@ public sealed class IMeshDataCurve : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataCurveGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataCurveGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3057,7 +3057,7 @@ public sealed class IMeshDataCurve : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataCurveIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataCurveIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3065,7 +3065,7 @@ public sealed class IMeshDataCurve : IDisposable
     public IMeshDataCurve Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataCurveClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataCurveClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IMeshDataCurve(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3102,14 +3102,14 @@ public sealed class IMeshDataEdge : IDisposable
     public void Clear(bool isKeepEndPoints)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataEdgeMethodClear0(handle, isKeepEndPoints ? 1 : 0), "occtsharp_generated_imesh_data_edge_method_clear_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataEdgeMethodClear0(handle, isKeepEndPoints ? 1 : 0), "occtsharp_generated_imesh_data_edge_method_clear_0");
     }
 
     /// <summary>Invokes OCCT IMeshData_Edge::GetAngularDeflection.</summary>
     public double GetAngularDeflection()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataEdgeMethodGetAngularDeflection0(handle, out double resultValue), "occtsharp_generated_imesh_data_edge_method_get_angular_deflection_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataEdgeMethodGetAngularDeflection0(handle, out double resultValue), "occtsharp_generated_imesh_data_edge_method_get_angular_deflection_0");
         return resultValue;
     }
 
@@ -3117,7 +3117,7 @@ public sealed class IMeshDataEdge : IDisposable
     public bool GetDegenerated()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataEdgeMethodGetDegenerated0(handle, out int resultValue), "occtsharp_generated_imesh_data_edge_method_get_degenerated_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataEdgeMethodGetDegenerated0(handle, out int resultValue), "occtsharp_generated_imesh_data_edge_method_get_degenerated_0");
         return resultValue != 0;
     }
 
@@ -3125,7 +3125,7 @@ public sealed class IMeshDataEdge : IDisposable
     public bool GetSameParam()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataEdgeMethodGetSameParam0(handle, out int resultValue), "occtsharp_generated_imesh_data_edge_method_get_same_param_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataEdgeMethodGetSameParam0(handle, out int resultValue), "occtsharp_generated_imesh_data_edge_method_get_same_param_0");
         return resultValue != 0;
     }
 
@@ -3133,7 +3133,7 @@ public sealed class IMeshDataEdge : IDisposable
     public bool GetSameRange()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataEdgeMethodGetSameRange0(handle, out int resultValue), "occtsharp_generated_imesh_data_edge_method_get_same_range_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataEdgeMethodGetSameRange0(handle, out int resultValue), "occtsharp_generated_imesh_data_edge_method_get_same_range_0");
         return resultValue != 0;
     }
 
@@ -3141,7 +3141,7 @@ public sealed class IMeshDataEdge : IDisposable
     public bool IsFree()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataEdgeMethodIsFree0(handle, out int resultValue), "occtsharp_generated_imesh_data_edge_method_is_free_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataEdgeMethodIsFree0(handle, out int resultValue), "occtsharp_generated_imesh_data_edge_method_is_free_0");
         return resultValue != 0;
     }
 
@@ -3149,35 +3149,35 @@ public sealed class IMeshDataEdge : IDisposable
     public void SetAngularDeflection(double theValue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataEdgeMethodSetAngularDeflection0(handle, theValue), "occtsharp_generated_imesh_data_edge_method_set_angular_deflection_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataEdgeMethodSetAngularDeflection0(handle, theValue), "occtsharp_generated_imesh_data_edge_method_set_angular_deflection_0");
     }
 
     /// <summary>Invokes OCCT IMeshData_Edge::SetCurve.</summary>
     public void SetCurve(IMeshDataCurve? theCurve)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataEdgeMethodSetCurve0(handle, theCurve is null ? nint.Zero : theCurve.NativeHandle.DangerousGetHandle()), "occtsharp_generated_imesh_data_edge_method_set_curve_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataEdgeMethodSetCurve0(handle, theCurve is null ? nint.Zero : theCurve.NativeHandle.DangerousGetHandle()), "occtsharp_generated_imesh_data_edge_method_set_curve_0");
     }
 
     /// <summary>Invokes OCCT IMeshData_Edge::SetDegenerated.</summary>
     public void SetDegenerated(bool theValue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataEdgeMethodSetDegenerated0(handle, theValue ? 1 : 0), "occtsharp_generated_imesh_data_edge_method_set_degenerated_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataEdgeMethodSetDegenerated0(handle, theValue ? 1 : 0), "occtsharp_generated_imesh_data_edge_method_set_degenerated_0");
     }
 
     /// <summary>Invokes OCCT IMeshData_Edge::SetSameParam.</summary>
     public void SetSameParam(bool theValue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataEdgeMethodSetSameParam0(handle, theValue ? 1 : 0), "occtsharp_generated_imesh_data_edge_method_set_same_param_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataEdgeMethodSetSameParam0(handle, theValue ? 1 : 0), "occtsharp_generated_imesh_data_edge_method_set_same_param_0");
     }
 
     /// <summary>Invokes OCCT IMeshData_Edge::SetSameRange.</summary>
     public void SetSameRange(bool theValue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataEdgeMethodSetSameRange0(handle, theValue ? 1 : 0), "occtsharp_generated_imesh_data_edge_method_set_same_range_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataEdgeMethodSetSameRange0(handle, theValue ? 1 : 0), "occtsharp_generated_imesh_data_edge_method_set_same_range_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -3186,7 +3186,7 @@ public sealed class IMeshDataEdge : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataEdgeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataEdgeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3197,7 +3197,7 @@ public sealed class IMeshDataEdge : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataEdgeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataEdgeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3207,7 +3207,7 @@ public sealed class IMeshDataEdge : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataEdgeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataEdgeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3215,7 +3215,7 @@ public sealed class IMeshDataEdge : IDisposable
     public IMeshDataEdge Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataEdgeClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataEdgeClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IMeshDataEdge(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3252,7 +3252,7 @@ public sealed class IMeshDataFace : IDisposable
     public bool IsValid()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataFaceMethodIsValid0(handle, out int resultValue), "occtsharp_generated_imesh_data_face_method_is_valid_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataFaceMethodIsValid0(handle, out int resultValue), "occtsharp_generated_imesh_data_face_method_is_valid_0");
         return resultValue != 0;
     }
 
@@ -3262,7 +3262,7 @@ public sealed class IMeshDataFace : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataFaceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataFaceGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3273,7 +3273,7 @@ public sealed class IMeshDataFace : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataFaceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataFaceGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3283,7 +3283,7 @@ public sealed class IMeshDataFace : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataFaceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataFaceIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3291,7 +3291,7 @@ public sealed class IMeshDataFace : IDisposable
     public IMeshDataFace Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataFaceClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataFaceClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IMeshDataFace(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3330,7 +3330,7 @@ public sealed class IMeshDataModel : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataModelGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataModelGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3341,7 +3341,7 @@ public sealed class IMeshDataModel : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataModelGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataModelGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3351,7 +3351,7 @@ public sealed class IMeshDataModel : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataModelIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataModelIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3359,7 +3359,7 @@ public sealed class IMeshDataModel : IDisposable
     public IMeshDataModel Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataModelClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataModelClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IMeshDataModel(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3396,7 +3396,7 @@ public sealed class IMeshDataPCurve : IDisposable
     public TopAbsOrientation GetOrientation()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataPCurveMethodGetOrientation0(handle, out int resultValue), "occtsharp_generated_imesh_data_pcurve_method_get_orientation_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataPCurveMethodGetOrientation0(handle, out int resultValue), "occtsharp_generated_imesh_data_pcurve_method_get_orientation_0");
         return (TopAbsOrientation)resultValue;
     }
 
@@ -3404,7 +3404,7 @@ public sealed class IMeshDataPCurve : IDisposable
     public bool IsForward()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataPCurveMethodIsForward0(handle, out int resultValue), "occtsharp_generated_imesh_data_pcurve_method_is_forward_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataPCurveMethodIsForward0(handle, out int resultValue), "occtsharp_generated_imesh_data_pcurve_method_is_forward_0");
         return resultValue != 0;
     }
 
@@ -3412,7 +3412,7 @@ public sealed class IMeshDataPCurve : IDisposable
     public bool IsInternal()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataPCurveMethodIsInternal0(handle, out int resultValue), "occtsharp_generated_imesh_data_pcurve_method_is_internal_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataPCurveMethodIsInternal0(handle, out int resultValue), "occtsharp_generated_imesh_data_pcurve_method_is_internal_0");
         return resultValue != 0;
     }
 
@@ -3422,7 +3422,7 @@ public sealed class IMeshDataPCurve : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataPCurveGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataPCurveGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3433,7 +3433,7 @@ public sealed class IMeshDataPCurve : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataPCurveGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataPCurveGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3443,7 +3443,7 @@ public sealed class IMeshDataPCurve : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataPCurveIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataPCurveIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3451,7 +3451,7 @@ public sealed class IMeshDataPCurve : IDisposable
     public IMeshDataPCurve Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataPCurveClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataPCurveClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IMeshDataPCurve(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3490,7 +3490,7 @@ public sealed class IMeshDataParametersList : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataParametersListGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataParametersListGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3501,7 +3501,7 @@ public sealed class IMeshDataParametersList : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataParametersListGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataParametersListGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3511,7 +3511,7 @@ public sealed class IMeshDataParametersList : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataParametersListIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataParametersListIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3519,7 +3519,7 @@ public sealed class IMeshDataParametersList : IDisposable
     public IMeshDataParametersList Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataParametersListClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataParametersListClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IMeshDataParametersList(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3558,7 +3558,7 @@ public sealed class IMeshDataShape : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataShapeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataShapeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3569,7 +3569,7 @@ public sealed class IMeshDataShape : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataShapeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataShapeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3579,7 +3579,7 @@ public sealed class IMeshDataShape : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataShapeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataShapeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3587,7 +3587,7 @@ public sealed class IMeshDataShape : IDisposable
     public IMeshDataShape Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataShapeClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataShapeClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IMeshDataShape(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3624,7 +3624,7 @@ public sealed class IMeshDataTessellatedShape : IDisposable
     public double GetDeflection()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataTessellatedShapeMethodGetDeflection0(handle, out double resultValue), "occtsharp_generated_imesh_data_tessellated_shape_method_get_deflection_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataTessellatedShapeMethodGetDeflection0(handle, out double resultValue), "occtsharp_generated_imesh_data_tessellated_shape_method_get_deflection_0");
         return resultValue;
     }
 
@@ -3632,7 +3632,7 @@ public sealed class IMeshDataTessellatedShape : IDisposable
     public void SetDeflection(double theValue)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataTessellatedShapeMethodSetDeflection0(handle, theValue), "occtsharp_generated_imesh_data_tessellated_shape_method_set_deflection_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataTessellatedShapeMethodSetDeflection0(handle, theValue), "occtsharp_generated_imesh_data_tessellated_shape_method_set_deflection_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -3641,7 +3641,7 @@ public sealed class IMeshDataTessellatedShape : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataTessellatedShapeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataTessellatedShapeGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3652,7 +3652,7 @@ public sealed class IMeshDataTessellatedShape : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataTessellatedShapeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataTessellatedShapeGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3662,7 +3662,7 @@ public sealed class IMeshDataTessellatedShape : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataTessellatedShapeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataTessellatedShapeIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3670,7 +3670,7 @@ public sealed class IMeshDataTessellatedShape : IDisposable
     public IMeshDataTessellatedShape Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataTessellatedShapeClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataTessellatedShapeClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IMeshDataTessellatedShape(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3709,7 +3709,7 @@ public sealed class IMeshDataWire : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataWireGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataWireGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3720,7 +3720,7 @@ public sealed class IMeshDataWire : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataWireGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataWireGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3730,7 +3730,7 @@ public sealed class IMeshDataWire : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataWireIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataWireIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3738,7 +3738,7 @@ public sealed class IMeshDataWire : IDisposable
     public IMeshDataWire Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshDataWireClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshDataWireClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IMeshDataWire(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3775,7 +3775,7 @@ public sealed class IMeshToolsContext : IDisposable
     public IMeshToolsContext()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsContextCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "IMeshToolsContextCreate0");
     }
 
@@ -3783,7 +3783,7 @@ public sealed class IMeshToolsContext : IDisposable
     public bool BuildModel()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsContextMethodBuildModel0(handle, out int resultValue), "occtsharp_generated_imesh_tools_context_method_build_model_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodBuildModel0(handle, out int resultValue), "occtsharp_generated_imesh_tools_context_method_build_model_0");
         return resultValue != 0;
     }
 
@@ -3791,14 +3791,14 @@ public sealed class IMeshToolsContext : IDisposable
     public void Clean()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsContextMethodClean0(handle), "occtsharp_generated_imesh_tools_context_method_clean_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodClean0(handle), "occtsharp_generated_imesh_tools_context_method_clean_0");
     }
 
     /// <summary>Invokes OCCT IMeshTools_Context::DiscretizeEdges.</summary>
     public bool DiscretizeEdges()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsContextMethodDiscretizeEdges0(handle, out int resultValue), "occtsharp_generated_imesh_tools_context_method_discretize_edges_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodDiscretizeEdges0(handle, out int resultValue), "occtsharp_generated_imesh_tools_context_method_discretize_edges_0");
         return resultValue != 0;
     }
 
@@ -3806,7 +3806,7 @@ public sealed class IMeshToolsContext : IDisposable
     public bool HealModel()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsContextMethodHealModel0(handle, out int resultValue), "occtsharp_generated_imesh_tools_context_method_heal_model_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodHealModel0(handle, out int resultValue), "occtsharp_generated_imesh_tools_context_method_heal_model_0");
         return resultValue != 0;
     }
 
@@ -3814,7 +3814,7 @@ public sealed class IMeshToolsContext : IDisposable
     public bool PostProcessModel()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsContextMethodPostProcessModel0(handle, out int resultValue), "occtsharp_generated_imesh_tools_context_method_post_process_model_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodPostProcessModel0(handle, out int resultValue), "occtsharp_generated_imesh_tools_context_method_post_process_model_0");
         return resultValue != 0;
     }
 
@@ -3822,7 +3822,7 @@ public sealed class IMeshToolsContext : IDisposable
     public bool PreProcessModel()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsContextMethodPreProcessModel0(handle, out int resultValue), "occtsharp_generated_imesh_tools_context_method_pre_process_model_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodPreProcessModel0(handle, out int resultValue), "occtsharp_generated_imesh_tools_context_method_pre_process_model_0");
         return resultValue != 0;
     }
 
@@ -3830,42 +3830,42 @@ public sealed class IMeshToolsContext : IDisposable
     public void SetEdgeDiscret(IMeshToolsModelAlgo? theEdgeDiscret)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsContextMethodSetEdgeDiscret0(handle, theEdgeDiscret is null ? nint.Zero : theEdgeDiscret.NativeHandle.DangerousGetHandle()), "occtsharp_generated_imesh_tools_context_method_set_edge_discret_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodSetEdgeDiscret0(handle, theEdgeDiscret is null ? nint.Zero : theEdgeDiscret.NativeHandle.DangerousGetHandle()), "occtsharp_generated_imesh_tools_context_method_set_edge_discret_0");
     }
 
     /// <summary>Invokes OCCT IMeshTools_Context::SetFaceDiscret.</summary>
     public void SetFaceDiscret(IMeshToolsModelAlgo? theFaceDiscret)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsContextMethodSetFaceDiscret0(handle, theFaceDiscret is null ? nint.Zero : theFaceDiscret.NativeHandle.DangerousGetHandle()), "occtsharp_generated_imesh_tools_context_method_set_face_discret_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodSetFaceDiscret0(handle, theFaceDiscret is null ? nint.Zero : theFaceDiscret.NativeHandle.DangerousGetHandle()), "occtsharp_generated_imesh_tools_context_method_set_face_discret_0");
     }
 
     /// <summary>Invokes OCCT IMeshTools_Context::SetModelBuilder.</summary>
     public void SetModelBuilder(IMeshToolsModelBuilder? theBuilder)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsContextMethodSetModelBuilder0(handle, theBuilder is null ? nint.Zero : theBuilder.NativeHandle.DangerousGetHandle()), "occtsharp_generated_imesh_tools_context_method_set_model_builder_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodSetModelBuilder0(handle, theBuilder is null ? nint.Zero : theBuilder.NativeHandle.DangerousGetHandle()), "occtsharp_generated_imesh_tools_context_method_set_model_builder_0");
     }
 
     /// <summary>Invokes OCCT IMeshTools_Context::SetModelHealer.</summary>
     public void SetModelHealer(IMeshToolsModelAlgo? theModelHealer)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsContextMethodSetModelHealer0(handle, theModelHealer is null ? nint.Zero : theModelHealer.NativeHandle.DangerousGetHandle()), "occtsharp_generated_imesh_tools_context_method_set_model_healer_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodSetModelHealer0(handle, theModelHealer is null ? nint.Zero : theModelHealer.NativeHandle.DangerousGetHandle()), "occtsharp_generated_imesh_tools_context_method_set_model_healer_0");
     }
 
     /// <summary>Invokes OCCT IMeshTools_Context::SetPostProcessor.</summary>
     public void SetPostProcessor(IMeshToolsModelAlgo? thePostProcessor)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsContextMethodSetPostProcessor0(handle, thePostProcessor is null ? nint.Zero : thePostProcessor.NativeHandle.DangerousGetHandle()), "occtsharp_generated_imesh_tools_context_method_set_post_processor_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodSetPostProcessor0(handle, thePostProcessor is null ? nint.Zero : thePostProcessor.NativeHandle.DangerousGetHandle()), "occtsharp_generated_imesh_tools_context_method_set_post_processor_0");
     }
 
     /// <summary>Invokes OCCT IMeshTools_Context::SetPreProcessor.</summary>
     public void SetPreProcessor(IMeshToolsModelAlgo? thePreProcessor)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsContextMethodSetPreProcessor0(handle, thePreProcessor is null ? nint.Zero : thePreProcessor.NativeHandle.DangerousGetHandle()), "occtsharp_generated_imesh_tools_context_method_set_pre_processor_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextMethodSetPreProcessor0(handle, thePreProcessor is null ? nint.Zero : thePreProcessor.NativeHandle.DangerousGetHandle()), "occtsharp_generated_imesh_tools_context_method_set_pre_processor_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -3874,7 +3874,7 @@ public sealed class IMeshToolsContext : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsContextGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3885,7 +3885,7 @@ public sealed class IMeshToolsContext : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsContextGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3895,7 +3895,7 @@ public sealed class IMeshToolsContext : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsContextIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3903,7 +3903,7 @@ public sealed class IMeshToolsContext : IDisposable
     public IMeshToolsContext Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsContextClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsContextClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IMeshToolsContext(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -3942,7 +3942,7 @@ public sealed class IMeshToolsCurveTessellator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsCurveTessellatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsCurveTessellatorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -3953,7 +3953,7 @@ public sealed class IMeshToolsCurveTessellator : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsCurveTessellatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsCurveTessellatorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -3963,7 +3963,7 @@ public sealed class IMeshToolsCurveTessellator : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsCurveTessellatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsCurveTessellatorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -3971,7 +3971,7 @@ public sealed class IMeshToolsCurveTessellator : IDisposable
     public IMeshToolsCurveTessellator Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsCurveTessellatorClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsCurveTessellatorClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IMeshToolsCurveTessellator(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4010,7 +4010,7 @@ public sealed class IMeshToolsMeshAlgo : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsMeshAlgoGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsMeshAlgoGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4021,7 +4021,7 @@ public sealed class IMeshToolsMeshAlgo : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsMeshAlgoGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsMeshAlgoGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4031,7 +4031,7 @@ public sealed class IMeshToolsMeshAlgo : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsMeshAlgoIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsMeshAlgoIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4039,7 +4039,7 @@ public sealed class IMeshToolsMeshAlgo : IDisposable
     public IMeshToolsMeshAlgo Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsMeshAlgoClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsMeshAlgoClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IMeshToolsMeshAlgo(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4078,7 +4078,7 @@ public sealed class IMeshToolsMeshAlgoFactory : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsMeshAlgoFactoryGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsMeshAlgoFactoryGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4089,7 +4089,7 @@ public sealed class IMeshToolsMeshAlgoFactory : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsMeshAlgoFactoryGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsMeshAlgoFactoryGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4099,7 +4099,7 @@ public sealed class IMeshToolsMeshAlgoFactory : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsMeshAlgoFactoryIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsMeshAlgoFactoryIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4107,7 +4107,7 @@ public sealed class IMeshToolsMeshAlgoFactory : IDisposable
     public IMeshToolsMeshAlgoFactory Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsMeshAlgoFactoryClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsMeshAlgoFactoryClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IMeshToolsMeshAlgoFactory(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4144,7 +4144,7 @@ public sealed class IMeshToolsMeshBuilder : IDisposable
     public IMeshToolsMeshBuilder()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsMeshBuilderCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsMeshBuilderCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "IMeshToolsMeshBuilderCreate0");
     }
 
@@ -4152,7 +4152,7 @@ public sealed class IMeshToolsMeshBuilder : IDisposable
     public IMeshToolsMeshBuilder(IMeshToolsContext? theContext)
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsMeshBuilderCreate1(theContext is null ? nint.Zero : theContext.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsMeshBuilderCreate1(theContext is null ? nint.Zero : theContext.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "IMeshToolsMeshBuilderCreate1");
     }
 
@@ -4160,7 +4160,7 @@ public sealed class IMeshToolsMeshBuilder : IDisposable
     public void SetContext(IMeshToolsContext? theContext)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsMeshBuilderMethodSetContext0(handle, theContext is null ? nint.Zero : theContext.NativeHandle.DangerousGetHandle()), "occtsharp_generated_imesh_tools_mesh_builder_method_set_context_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsMeshBuilderMethodSetContext0(handle, theContext is null ? nint.Zero : theContext.NativeHandle.DangerousGetHandle()), "occtsharp_generated_imesh_tools_mesh_builder_method_set_context_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -4169,7 +4169,7 @@ public sealed class IMeshToolsMeshBuilder : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsMeshBuilderGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsMeshBuilderGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4180,7 +4180,7 @@ public sealed class IMeshToolsMeshBuilder : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsMeshBuilderGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsMeshBuilderGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4190,7 +4190,7 @@ public sealed class IMeshToolsMeshBuilder : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsMeshBuilderIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsMeshBuilderIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4198,7 +4198,7 @@ public sealed class IMeshToolsMeshBuilder : IDisposable
     public IMeshToolsMeshBuilder Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsMeshBuilderClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsMeshBuilderClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IMeshToolsMeshBuilder(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4237,7 +4237,7 @@ public sealed class IMeshToolsModelAlgo : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsModelAlgoGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsModelAlgoGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4248,7 +4248,7 @@ public sealed class IMeshToolsModelAlgo : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsModelAlgoGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsModelAlgoGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4258,7 +4258,7 @@ public sealed class IMeshToolsModelAlgo : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsModelAlgoIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsModelAlgoIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4266,7 +4266,7 @@ public sealed class IMeshToolsModelAlgo : IDisposable
     public IMeshToolsModelAlgo Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsModelAlgoClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsModelAlgoClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IMeshToolsModelAlgo(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4305,7 +4305,7 @@ public sealed class IMeshToolsModelBuilder : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsModelBuilderGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsModelBuilderGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4316,7 +4316,7 @@ public sealed class IMeshToolsModelBuilder : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsModelBuilderGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsModelBuilderGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4326,7 +4326,7 @@ public sealed class IMeshToolsModelBuilder : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsModelBuilderIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsModelBuilderIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4334,7 +4334,7 @@ public sealed class IMeshToolsModelBuilder : IDisposable
     public IMeshToolsModelBuilder Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsModelBuilderClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsModelBuilderClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IMeshToolsModelBuilder(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4371,7 +4371,7 @@ public sealed class IMeshToolsShapeExplorer : IDisposable
     public void Accept(IMeshToolsShapeVisitor? theVisitor)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsShapeExplorerMethodAccept0(handle, theVisitor is null ? nint.Zero : theVisitor.NativeHandle.DangerousGetHandle()), "occtsharp_generated_imesh_tools_shape_explorer_method_accept_0");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsShapeExplorerMethodAccept0(handle, theVisitor is null ? nint.Zero : theVisitor.NativeHandle.DangerousGetHandle()), "occtsharp_generated_imesh_tools_shape_explorer_method_accept_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -4380,7 +4380,7 @@ public sealed class IMeshToolsShapeExplorer : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsShapeExplorerGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsShapeExplorerGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4391,7 +4391,7 @@ public sealed class IMeshToolsShapeExplorer : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsShapeExplorerGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsShapeExplorerGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4401,7 +4401,7 @@ public sealed class IMeshToolsShapeExplorer : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsShapeExplorerIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsShapeExplorerIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4409,7 +4409,7 @@ public sealed class IMeshToolsShapeExplorer : IDisposable
     public IMeshToolsShapeExplorer Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsShapeExplorerClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsShapeExplorerClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IMeshToolsShapeExplorer(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4448,7 +4448,7 @@ public sealed class IMeshToolsShapeVisitor : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsShapeVisitorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsShapeVisitorGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4459,7 +4459,7 @@ public sealed class IMeshToolsShapeVisitor : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsShapeVisitorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsShapeVisitorGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4469,7 +4469,7 @@ public sealed class IMeshToolsShapeVisitor : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsShapeVisitorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsShapeVisitorIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4477,7 +4477,7 @@ public sealed class IMeshToolsShapeVisitor : IDisposable
     public IMeshToolsShapeVisitor Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.IMeshToolsShapeVisitorClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.IMeshToolsShapeVisitorClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new IMeshToolsShapeVisitor(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 
@@ -4514,7 +4514,7 @@ public sealed class XBRepMeshFactory : IDisposable
     public XBRepMeshFactory()
     {
         OcctRuntime.EnsureCompatible();
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XBRepMeshFactoryCreate0(out nint nativeHandle), "generated_shared_create");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.XBRepMeshFactoryCreate0(out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "XBRepMeshFactoryCreate0");
     }
 
@@ -4524,7 +4524,7 @@ public sealed class XBRepMeshFactory : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XBRepMeshFactoryGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.XBRepMeshFactoryGetReferenceCount(handle, out int value), "generated_shared_get_ref_count");
             return value;
         }
     }
@@ -4535,7 +4535,7 @@ public sealed class XBRepMeshFactory : IDisposable
         get
         {
             ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-            Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XBRepMeshFactoryGetTypeName(handle, out nint value), "generated_shared_get_type_name");
+            Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.XBRepMeshFactoryGetTypeName(handle, out nint value), "generated_shared_get_type_name");
             return Marshal.PtrToStringUTF8(value) ?? string.Empty;
         }
     }
@@ -4545,7 +4545,7 @@ public sealed class XBRepMeshFactory : IDisposable
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(typeName);
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XBRepMeshFactoryIsKind(handle, typeName, out int value), "generated_shared_is_kind");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.XBRepMeshFactoryIsKind(handle, typeName, out int value), "generated_shared_is_kind");
         return value != 0;
     }
 
@@ -4553,7 +4553,7 @@ public sealed class XBRepMeshFactory : IDisposable
     public XBRepMeshFactory Clone()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
-        Interop.NativeError.ThrowIfFailed(GeneratedNativeMethods.XBRepMeshFactoryClone(handle, out nint nativeHandle), "generated_shared_clone");
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.XBRepMeshFactoryClone(handle, out nint nativeHandle), "generated_shared_clone");
         return new XBRepMeshFactory(CreateHandle(nativeHandle, "generated_shared_clone"));
     }
 

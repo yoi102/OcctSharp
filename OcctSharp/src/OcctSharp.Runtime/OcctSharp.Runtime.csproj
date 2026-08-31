@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\OcctSharp.Module.props" />
+  <PropertyGroup>
+    <Description>Runtime loading, ABI identity, errors, and shared interop contracts for OcctSharp.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\OcctSharp\OcctException.cs" Link="OcctException.cs" />
+    <Compile Include="..\OcctSharp\OcctRuntime.cs" Link="OcctRuntime.cs" />
+    <Compile Include="..\OcctSharp\OcctRuntimeInfo.cs" Link="OcctRuntimeInfo.cs" />
+    <Compile Include="..\OcctSharp\Interop\NativeError.cs" Link="Interop\NativeError.cs" />
+    <Compile Include="..\OcctSharp\Interop\NativeLibraryResolver.cs" Link="Interop\NativeLibraryResolver.cs" />
+    <Compile Include="..\OcctSharp\Interop\NativeStatus.cs" Link="Interop\NativeStatus.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OcctSharp.Native.win-x64\OcctSharp.Native.win-x64.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\OcctSharp.Module.props" />
+  <PropertyGroup><Description>Optional OCCT IVtk binding surface for OcctSharp.</Description></PropertyGroup>
+  <ItemGroup><Compile Include="..\OcctSharp\Generated\IVtk\**\*.cs" Link="Generated\%(RecursiveDir)%(Filename)%(Extension)" /></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OcctSharp.Runtime\OcctSharp.Runtime.csproj" />
+    <ProjectReference Include="..\OcctSharp.Visualization\OcctSharp.Visualization.csproj" />
+  </ItemGroup>
+</Project>

@@ -106,9 +106,11 @@ Create and verify the package from the committed runtime without a native rebuil
 .\eng\verify-package.ps1 -SkipBuild
 ```
 
-The package verifier restores the new local package into a package-only consumer,
-publishes it, confirms all 62 native runtime DLLs are below `occt`, then loads OCCT and
-executes box, generated typed-handle, and generated topology-value checks. See
+The package verifier first audits all 14 local packages: the 13 managed packages must
+contain zero native DLLs and `OcctSharp.Native.win-x64` must contain exactly 62. It then
+publishes and executes both the `OcctSharp` compatibility consumer and a direct
+`OcctSharp.Modeling` consumer. The direct consumer must not receive `OcctSharp.dll`.
+Both load the shared `occt/` runtime and execute topology/ABI checks. See
 [NuGet packaging](NUGET_PACKAGING.md) for the exact layout.
 
 The current file-exchange bridge also copies the transitive OCCT Data Exchange,
@@ -143,8 +145,9 @@ Application Framework, Visualization, and required third-party DLL closure. See
   ignored `artifacts/generator-reports/`.
 - Separate catalog and batched semantic inventory for the complete OCCT public-header
   surface; it is intentionally excluded from normal build latency.
-- Experimental single-package NuGet layout with automatic application-local native
-  loading from `occt` and a clean package consumer.
+- Physical managed module/facade NuGet layout with one shared native runtime package,
+  automatic application-local loading from `occt`, and compatibility plus direct-module
+  clean consumers.
 - Geometry-only STEP read/write, transformed compound assembly, metadata-preserving
   one-shot STEPCAF/XDE assembly, STL export with meshing, and BRep-mode IGES export.
 
@@ -190,10 +193,10 @@ A released package set must make these relationships unambiguous:
 - Complete native runtime dependency closure or explicit external-runtime contract.
 - Third-party license and notice content.
 
-ADR-0008 selects one package containing the single current Windows x64 runtime.
-ADR-0015 keeps that layout through topology/basic modeling, then permits the documented
-managed module and RID-package split when size, optional-dependency, multi-RID, or
-independent-release triggers are met.
+ADR-0008 selects the application-local runtime contract. ADR-0015 stages modularity;
+ADR-0074 now implements 12 managed modules, one compatibility/facade package, and one
+`OcctSharp.Native.win-x64` package. Every managed package converges on that same native
+package and contains no copied native assets.
 
 ## Release gates
 
@@ -240,12 +243,14 @@ workflows, and the complete Batch L occurrence/bounds/interference/clearance/inc
 the clean 62-DLL package consumer, deterministic generation/regeneration, inventory, API
 compatibility, runtime hashes, SBOM/provenance/checksums, and Git whitespace. MIT project
 licensing and bundled third-party notices pass. Hosted full release execution, package
-signing, and NuGet publication are `NOT RUN`; therefore local Batch L implementation is
-complete while public release readiness remains false.
+signing, and NuGet publication are `NOT RUN`; therefore local implementation may be
+complete while public release readiness remains false. Preview.10 additionally checks
+the managed module graph, 3,233 facade forwarders, aggregate API compatibility, 14-package
+asset isolation, and a direct Modeling-package consumer.
 
 ```powershell
 cd OcctSharp
-.\eng\release-check.ps1 -PackageVersion 8.0.1-preview.9
+.\eng\release-check.ps1 -PackageVersion 8.0.1-preview.10
 ```
 
 Release evidence is written below `OcctSharp/artifacts/release/`: `api-diff.json`,

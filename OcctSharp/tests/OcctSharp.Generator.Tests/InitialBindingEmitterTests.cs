@@ -19,14 +19,17 @@ public sealed class InitialBindingEmitterTests
         Assert.Equal(first.OcctVersion, second.OcctVersion);
         Assert.Equal(first.SourceStableIds, second.SourceStableIds);
         Assert.Equal(first.Files, second.Files);
-        Assert.Equal(3, first.Files.Count);
+        Assert.Equal(4, first.Files.Count);
         Assert.Equal([TestStableId], first.SourceStableIds);
         Assert.Contains(first.Files, static file =>
             file.RelativePath.EndsWith("OcctSharp.Geometry.Values.Generated.cpp", StringComparison.Ordinal)
             && file.Content.Contains("gp_Pnt value", StringComparison.Ordinal));
         Assert.Contains(first.Files, static file =>
             file.RelativePath.EndsWith("Point3dRaw.Generated.cs", StringComparison.Ordinal)
-            && file.Content.Contains("LibraryImport", StringComparison.Ordinal));
+            && file.Content.Contains("GeometryGeneratedNativeMethods", StringComparison.Ordinal));
+        Assert.Contains(first.Files, static file =>
+            file.RelativePath.EndsWith("Geometry.ModuleRuntime.Generated.cs", StringComparison.Ordinal)
+            && file.Content.Contains("typeof(GeometryGeneratedNativeMethods).Assembly", StringComparison.Ordinal));
     }
 
     [Fact]
