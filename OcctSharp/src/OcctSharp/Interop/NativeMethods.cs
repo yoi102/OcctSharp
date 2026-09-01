@@ -1322,6 +1322,71 @@ internal static partial class NativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus RemoveViewerPresentation(ViewerHandle viewer, long presentationId);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_presentation_get_transform")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetViewerPresentationTransform(ViewerHandle viewer, long presentationId, out nint transform);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_presentation_set_transform")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerPresentationTransform(ViewerHandle viewer, long presentationId, TransformHandle transform);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_presentation_reset_transform")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ResetViewerPresentationTransform(ViewerHandle viewer, long presentationId);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_manipulator_attach")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus AttachViewerManipulator(
+        ViewerHandle viewer, long presentationId, int adjustPosition, int adjustSize, int enableModes, out long manipulatorId);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_manipulator_set_part")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerManipulatorPart(ViewerHandle viewer, long manipulatorId, int axis, int mode, int enabled);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_manipulator_enable_mode")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus EnableViewerManipulatorMode(ViewerHandle viewer, long manipulatorId, int mode);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_manipulator_set_activation_on_detection")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerManipulatorActivationOnDetection(ViewerHandle viewer, long manipulatorId, int enabled);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_manipulator_set_position")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerManipulatorPosition(ViewerHandle viewer, long manipulatorId, in Ax2Raw position);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_manipulator_set_appearance")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerManipulatorAppearance(ViewerHandle viewer, long manipulatorId, double size, double gap, int skin);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_manipulator_set_zoom_persistence")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus SetViewerManipulatorZoomPersistence(ViewerHandle viewer, long manipulatorId, int enabled);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_manipulator_start")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus StartViewerManipulator(ViewerHandle viewer, long manipulatorId, int x, int y);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_manipulator_transform_mouse")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus TransformViewerManipulatorMouse(ViewerHandle viewer, long manipulatorId, int x, int y, out nint transform);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_manipulator_transform_custom")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus TransformViewerManipulatorCustom(ViewerHandle viewer, long manipulatorId, TransformHandle transform);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_manipulator_stop")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus StopViewerManipulator(ViewerHandle viewer, long manipulatorId, int apply);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_manipulator_get_state")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetViewerManipulatorState(ViewerHandle viewer, long manipulatorId, out ViewerManipulatorStateRaw state);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_manipulator_detach")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus DetachViewerManipulator(ViewerHandle viewer, long manipulatorId);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_fit_all")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus FitAllViewer(ViewerHandle viewer);

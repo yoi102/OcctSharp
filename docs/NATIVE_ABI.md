@@ -534,6 +534,14 @@ tolerances, parallel and non-destructive options, copied distance/volume state, 
 independently registered owning issue shape. Bnd/BVH, extrema, classifier, Boolean, map,
 and progress state remains native-local. The bridge implementation is 0.62.0.
 
+ABI 1.55 is the Preview.11 Batch M interactive placement-editing boundary. It adds
+presentation-local transform get/set/reset plus a viewer-owned manipulator registry for
+attach/detach, finite mode/axis/activation/position/size/gap/skin/zoom configuration,
+copied 144-byte state, mouse/custom transforms, and apply/cancel. AIS, V3d, selection,
+and attach-option objects remain native-local and thread-affine; only parent-bound IDs,
+fixed copied values, and independently owned opaque `GpTrsf` handles cross the ABI. The
+bridge implementation is 0.63.0.
+
 ## Verification
 
 Alpha.48 verification confirms the existing ABI contract for all 162 IGES public

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.12",
+  "schemaVersion": "1.13",
   "occtVersion": "8.0.1",
   "scope": "foundation-prototype",
   "headers": [
@@ -2301,6 +2301,38 @@
     {
       "stableId": "c:@S@Bnd_OBB@F@ZHSize#1",
       "specialCaseId": "SC-048"
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@Location#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1",
+      "specialCaseId": "SC-049"
+    },
+    {
+      "stableId": "c:@S@AIS_InteractiveContext@F@SetLocation#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#&1$@S@TopLoc_Location#",
+      "specialCaseId": "SC-049"
+    },
+    {
+      "stableId": "c:@S@AIS_Manipulator@F@Attach#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#&1$@S@AIS_Manipulator@S@OptionsForAttach#",
+      "specialCaseId": "SC-049"
+    },
+    {
+      "stableId": "c:@S@AIS_Manipulator@F@SetGap#f#",
+      "specialCaseId": "SC-049"
+    },
+    {
+      "stableId": "c:@S@AIS_Manipulator@F@SetPosition#&1$@S@gp_Ax2#",
+      "specialCaseId": "SC-049"
+    },
+    {
+      "stableId": "c:@S@AIS_Manipulator@F@SetSize#f#",
+      "specialCaseId": "SC-049"
+    },
+    {
+      "stableId": "c:@S@AIS_Manipulator@F@Transform#&1$@S@gp_Trsf#",
+      "specialCaseId": "SC-049"
+    },
+    {
+      "stableId": "c:@S@AIS_Manipulator@F@Transform#I#I#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
+      "specialCaseId": "SC-049"
     }
   ],
   "excludedBindings": [

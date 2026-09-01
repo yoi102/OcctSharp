@@ -486,3 +486,23 @@ report. XDE labels remain document-parent-bound; viewer presentations remain ses
 viewer-parent-bound and creating-thread-affine. Preview.9 focused 4/4, Release/Debug
 147/147, real STEP/XDE, real HWND, source/document disposal, and clean-package tests
 validate this complete 24/24 boundary.
+
+### Batch M interactive placement editing boundary
+
+ADR-0075 extends the existing viewer owner graph with a native-local
+`AIS_Manipulator` registry. `ViewerManipulator` and its state are addressed only through
+one `OcctViewer` and its creation thread; no AIS context, interactive-object, view,
+selection owner, or C++ layout crosses the ABI. Presentation removal and viewer disposal
+detach dependent manipulators before invalidating their IDs. Returned transforms are
+independent registry-owned `GpTrsf` values, while position, appearance, mode, axis, and
+activation state are copied values.
+
+`XdePlacementEditSession` owns copied original and pending transforms. Preview changes
+only the viewer presentation. Cancel restores the original presentation transform even
+when disposal closes an unfinished session; copied transforms are released on every
+completion path. Commit rejects scale and mirror, opens one named document transaction,
+relocates the occurrence, returns the document-parent-bound replacement label, and
+updates the presentation's copied source identity. DMU and STEP/XDE operations remain
+call-local and reuse their existing owning/copied contracts. Preview.11 focused 4/4,
+Release/Debug, real STEP/XDE, real HWND, source/document/presentation disposal, and the
+clean package consumer validate the complete 24/24 boundary.

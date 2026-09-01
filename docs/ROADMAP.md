@@ -6,7 +6,24 @@ evidence; creating files or generating a large method count is not sufficient.
 The retired B00–B20 capability milestones and future package boundaries are documented
 in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the completed
 product-scale batch `B`; none is a separate current batch or commit boundary.
-Batch B through Batch L are complete for their accepted local implementation scopes.
+Batch B through Batch M are complete for their accepted local implementation scopes.
+Batch M closes its one 24-capability interactive assembly-placement editing wave under
+ADR-0075. It was not split into AIS, XDE, transaction, DMU, exchange, or viewer
+checkpoints.
+
+## Completed priority: Batch M interactive assembly placement editing
+
+ADR-0075 and [the Batch M gap inventory](BATCH_M_INTERACTIVE_PLACEMENT_EDITING_GAP_INVENTORY.md)
+lock presentation-local transforms, viewer-parent-bound manipulators, rigid XDE occurrence
+preview/commit/cancel, named history, DMU recheck, STEP/XDE, real HWND, and clean-package
+evidence as one 24-capability wave. Preparation audits 24 roots and 1,650 declarations:
+516 emitted, 60 manual, 662 blocked, and 412 skipped. Only eight directly used blocked
+overloads enter SC-049; the other 654 retain their prior blocked dispositions.
+Implementation and preparation are complete at 24/24. Release and Debug build all 19
+projects with zero warnings/errors; Generator 91/91, Runtime 151/151, focused Batch M
+4/4, dependency profiles 6/6, real STEP/XDE and HWND, DMU, history, clean facade and
+direct-module consumers, 94-file clean regeneration, compatibility, inventory, SBOM,
+provenance, checksums, and the complete Preview.11 local release check pass.
 ADR-0063 closes C at alpha.54, ADR-0064 closes D at alpha.55,
 and ADR-0066 closes E in Preview.2 as one 24-capability engineering-inspection,
 exact-measurement, and PMI/AP242 wave. ADR-0067 closes F in Preview.3 as one 24-capability
@@ -402,3 +419,6 @@ recovery denominator under ADR-0071 in Preview.7. The next product wave starts o
 after a new cross-family denominator and dependency closure are audited and frozen.
 Batch K and Batch L likewise complete their immutable 24-capability assembly-authoring
 and digital-mock-up denominators in Preview.8 and Preview.9.
+Batch M completes its immutable 24-capability interactive presentation/manipulator and
+rigid XDE occurrence-placement editing denominator in Preview.11 while retaining the
+Preview.10 managed module graph and one native DLL.

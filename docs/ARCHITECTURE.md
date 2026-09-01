@@ -115,6 +115,9 @@ The accepted boundaries are recorded in ADRs:
 - [ADR-0074](adr/0074-physical-managed-modules-and-shared-native-package.md): physical
   managed modules, deterministic type-forwarded compatibility facade, and one shared
   native runtime package while retaining one native DLL.
+- [ADR-0075](adr/0075-interactive-assembly-placement-editing-batch.md): one finite
+  Batch M interactive presentation/manipulator and rigid XDE occurrence-placement
+  editing closure with named history, DMU, exchange, and real-HWND evidence.
 
 ## Components
 
@@ -298,6 +301,15 @@ capabilities through focused 4/4, Release/Debug Runtime 147/147, exact SC-048 ac
 real STEP/XDE and HWND review, source/document disposal, and the clean 62-DLL consumer.
 Stable order-independent pair IDs, copied reports, and independently cloned incremental
 results retain no algorithm, spatial-index, document, or input-shape lifetime.
+
+Batch M retains the Preview.10 managed module graph and one native bridge. AIS
+manipulators, contexts, presentations, attach options, and V3d views stay native-local in
+the thread-affine viewer registry. Managed code receives only viewer-parent-bound IDs,
+copied configuration/state, and independently owned opaque transforms. Presentation
+preview remains separate from XDE mutation. A rigid placement session commits only
+through a named document transaction, returns the replacement occurrence label, and
+composes the existing DMU and STEP/XDE paths. Preview.11 validates all 24 capabilities
+in repository runtime and the clean shared-runtime package consumer.
 
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native

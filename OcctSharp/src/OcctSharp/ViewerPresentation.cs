@@ -16,7 +16,20 @@ public sealed class ViewerPresentation : IDisposable
     internal bool IsVisible { get; private set; } = true;
 
     /// <summary>Gets copied XDE occurrence identity, or null for an ordinary shape display.</summary>
-    public ViewerSourceIdentity? SourceIdentity { get; }
+    public ViewerSourceIdentity? SourceIdentity { get; private set; }
+
+    /// <summary>Creates and attaches one viewer-parent-bound manipulator.</summary>
+    public ViewerManipulator CreateManipulator(ViewerManipulatorOptions? options = null) =>
+        Viewer.CreateManipulator(this, options ?? new ViewerManipulatorOptions());
+
+    /// <summary>Returns an independent copy of this presentation's local transform.</summary>
+    public GpTrsf GetTransform() => Viewer.GetTransform(this);
+
+    /// <summary>Sets this presentation's local transform without forcing a redraw.</summary>
+    public void SetTransform(GpTrsf transform) => Viewer.SetTransform(this, transform);
+
+    /// <summary>Resets this presentation's local transform without forcing a redraw.</summary>
+    public void ResetTransform() => Viewer.ResetTransform(this);
 
     /// <summary>Shows this presentation without forcing a redraw.</summary>
     public void Show() => Viewer.SetVisible(this, true);
@@ -59,4 +72,13 @@ public sealed class ViewerPresentation : IDisposable
 
     internal void MarkRemoved() => IsRemoved = true;
     internal void MarkVisible(bool visible) => IsVisible = visible;
+    internal void UpdateSourceIdentity(string occurrenceEntry)
+    {
+        if (SourceIdentity is ViewerSourceIdentity identity)
+        {
+            string[] path = identity.OccurrencePath.ToArray();
+            if (path.Length > 0) path[^1] = occurrenceEntry;
+            SourceIdentity = new ViewerSourceIdentity(path, occurrenceEntry, identity.ReferredEntry);
+        }
+    }
 }

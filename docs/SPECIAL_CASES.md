@@ -1423,3 +1423,51 @@ rules or design:
 - Removal criteria: Replace this exception only after generated output-reference value
   projection can preserve the same copied layout, failure behavior, ownership, and
   end-to-end package evidence.
+
+## SC-049: Batch M interactive presentation and occurrence-placement editing closure
+
+- Status: Accepted and implemented for the complete 24-capability Batch M closure;
+  final all-gates validation is recorded in `STATUS.md`.
+- Scope: Exactly eight newly direct blocked OCCT 8.0.1 stable IDs. The 662 blocked
+  declarations in the preparation audit were not bulk-marked manual; 654 retain their
+  prior dispositions.
+- Reason: `AIS_Manipulator`, its attached `AIS_InteractiveObject`, the interactive
+  context, and `V3d_View` are creator-owned, thread-affine OCCT objects. Their handles,
+  attach options, and transformation methods cannot safely cross the C ABI as generated
+  shared wrappers or borrowed references.
+- Native/ABI/managed behavior: ABI 1.55, bridge 0.63.0, package
+  `8.0.1-preview.11`, and schema 1.13 keep the manipulator native-local in the viewer
+  registry. Managed code exposes only viewer-parent-bound IDs, copied configuration and
+  state, and independently owned `GpTrsf` values. Presentation-local transforms and
+  preview/apply/cancel behavior compose with a named XDE occurrence-placement session.
+- Ownership: Viewer disposal or presentation removal detaches dependent manipulators.
+  All manipulator operations enforce the viewer creation thread and parent identity.
+  XDE labels remain document-parent-bound; preview mutates only the presentation, while
+  commit relocates the occurrence in one named document transaction and returns its
+  replacement label.
+- Coverage accounting: The schema 1.13 configuration lists these exact unique IDs:
+
+  1. `c:@S@AIS_InteractiveContext@F@Location#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#1`
+  2. `c:@S@AIS_InteractiveContext@F@SetLocation#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#&1$@S@TopLoc_Location#`
+  3. `c:@S@AIS_Manipulator@F@Attach#&1$@N@opencascade@S@handle>#$@S@AIS_InteractiveObject#&1$@S@AIS_Manipulator@S@OptionsForAttach#`
+  4. `c:@S@AIS_Manipulator@F@SetGap#f#`
+  5. `c:@S@AIS_Manipulator@F@SetPosition#&1$@S@gp_Ax2#`
+  6. `c:@S@AIS_Manipulator@F@SetSize#f#`
+  7. `c:@S@AIS_Manipulator@F@Transform#&1$@S@gp_Trsf#`
+  8. `c:@S@AIS_Manipulator@F@Transform#I#I#&1$@N@opencascade@S@handle>#$@S@V3d_View#`
+
+- Validation: Focused Batch M 4/4 covers presentation transform round-trip,
+  translation/rotation/scaling/plane modes, all axes, copied configuration/state,
+  custom and mouse transforms, apply/cancel, thread/parent/disposal guards, replacement
+  occurrences, named history, undo/redo, DMU recheck, STEP/XDE round-trip, a real HWND,
+  screenshot output, and the fixed 144-byte state layout. The clean package repeats the
+  complete workflow.
+- Upgrade impact: Recheck manipulator attach/detach semantics, active-axis/mode mapping,
+  size/gap interaction, the detach-configure-reattach sequence required when changing to
+  OCCT 8.0.1 flat skin, zoom persistence, the deterministic `FitAll` rejection while
+  flat skin remains attached,
+  mouse transform conventions, presentation local-location composition, and all eight
+  exact IDs on each OCCT/compiler upgrade.
+- Removal criteria: Replace this exception only after generated viewer-parent handles and
+  transform-value projections preserve the same thread, lifetime, rollback, and
+  end-to-end package evidence.

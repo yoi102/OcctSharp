@@ -25,3 +25,19 @@ internal readonly struct ViewerPickRayRaw
     internal readonly XyzRaw Origin;
     internal readonly XyzRaw Direction;
 }
+
+[StructLayout(LayoutKind.Sequential)]
+internal readonly struct ViewerManipulatorStateRaw
+{
+    internal readonly int Attached;
+    internal readonly int ActiveMode;
+    internal readonly int ActiveAxis;
+    internal readonly int HasActiveTransformation;
+    internal readonly int ActivationOnDetection;
+    internal readonly int ZoomPersistence;
+    internal readonly int Skin;
+    internal readonly int Reserved;
+    internal readonly double Size;
+    internal readonly double Gap;
+    internal readonly Ax2Raw Position;
+}

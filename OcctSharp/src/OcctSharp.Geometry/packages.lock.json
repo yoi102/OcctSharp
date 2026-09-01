@@ -5,7 +5,7 @@
       "occtsharp.foundation": {
         "type": "Project",
         "dependencies": {
-          "OcctSharp.Runtime": "[8.0.1-preview.10, )"
+          "OcctSharp.Runtime": "[8.0.1-preview.11, )"
         }
       },
       "occtsharp.native.win-x64": {
@@ -14,7 +14,7 @@
       "occtsharp.runtime": {
         "type": "Project",
         "dependencies": {
-          "OcctSharp.Native.win-x64": "[8.0.1-preview.10, )"
+          "OcctSharp.Native.win-x64": "[8.0.1-preview.11, )"
         }
       }
     },

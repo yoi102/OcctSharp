@@ -190,6 +190,18 @@ numerics, full-topology validity, public subshape counts, invalid/null/disposed/
 paths, and source/result lifetime independence in both Release and Debug. Package
 validation must load `TKFillet` and `TKOffset` from application-local `occt/`.
 
+An interactive assembly-placement profile additionally requires all 24 ADR-0075
+capabilities to execute together: presentation transform round-trip/reset; one
+viewer-parent-bound manipulator; translation, rotation, scaling, plane, axis, activation,
+position, size, gap, skin, and zoom configuration; copied state; custom and real-view
+mouse transforms; apply/cancel; thread, parent, presentation-removal, viewer-disposal,
+and repeated-disposal guards; rigid XDE occurrence preview/commit with a replacement
+label; named history and undo/redo; DMU recheck; STEP/XDE round-trip; and a non-empty
+real-HWND screenshot. Managed and native layout tests must both hold the copied state at
+144 bytes. OCCT 8.0.1's unsafe generic fit with an attached flat-skin manipulator must
+fail deterministically; fitting after detach must pass. The same workflow must pass in Release and Debug and from the clean shared
+62-DLL package consumer. Preview.11 satisfies this profile as one complete Batch M run.
+
 ## Real CAD fixtures
 
 Every committed fixture must have:

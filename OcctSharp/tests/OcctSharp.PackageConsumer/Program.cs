@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 54)
-    || runtime.BridgeVersion != "0.62.0"
+if (runtime.AbiVersion != new Version(1, 55)
+    || runtime.BridgeVersion != "0.63.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -1632,6 +1632,96 @@ try
     if (batchLIncremental.Summary.ReusedPairCount != 1
         || batchLIncremental.PairById[new DigitalMockupPairId("A", "B")].State != DigitalMockupPairState.Interfering)
         throw new InvalidOperationException("The packaged Batch L stable-ID incremental workflow failed.");
+
+    string batchMStep = Path.Combine(exchangeDirectory, "package-batch-m-placement.step");
+    using Shape batchMShape = ShapeFactory.CreateBox(10, 10, 10);
+    using XdeDocument batchMDocument = XdeDocument.Create();
+    batchMDocument.UndoLimit = 8;
+    XdeLabel batchMRoot;
+    XdeLabel batchMMoving;
+    using (XdeTransaction transaction = batchMDocument.BeginTransaction("Package Batch M assembly"))
+    {
+        XdeLabel part = batchMDocument.AddShape(batchMShape, "Package Batch M Part");
+        batchMRoot = batchMDocument.AddAssembly("Package Batch M Root");
+        using GpTrsf firstTransform = GpTrsf.Create(0, 0, 0);
+        using GpTrsf secondTransform = GpTrsf.Create(30, 0, 0);
+        using TopLocLocation firstLocation = TopLocLocation.FromTransform(firstTransform);
+        using TopLocLocation secondLocation = TopLocLocation.FromTransform(secondTransform);
+        batchMMoving = batchMDocument.AddComponent(batchMRoot, part, firstLocation);
+        _ = batchMDocument.AddComponent(batchMRoot, part, secondLocation);
+        if (!transaction.Commit())
+            throw new InvalidOperationException("The packaged Batch M initial transaction failed.");
+    }
+    nint batchMWindow = PackageWindowMethods.CreateWindowEx(
+        0, "STATIC", "OcctSharp Batch M package placement", 0x80000000u,
+        -32000, -32000, 320, 320, 0, 0, 0, 0);
+    if (batchMWindow == 0)
+        throw new InvalidOperationException("The Batch M package HWND could not be created.");
+    try
+    {
+        _ = PackageWindowMethods.ShowWindow(batchMWindow, 4);
+        _ = PackageWindowMethods.UpdateWindow(batchMWindow);
+        using OcctViewer batchMViewer = OcctViewer.Create(batchMWindow);
+        IReadOnlyList<XdeOccurrence> batchMOccurrences = batchMRoot.GetOccurrences();
+        using XdeOccurrence occurrence = batchMOccurrences
+            .Single(item => item.OccurrenceLabel.Entry == batchMMoving.Entry);
+        foreach (XdeOccurrence other in batchMOccurrences)
+            if (!ReferenceEquals(other, occurrence)) other.Dispose();
+        using ViewerPresentation presentation = batchMViewer.Display(occurrence);
+        using ViewerManipulator manipulator = presentation.CreateManipulator(new()
+        {
+            EnabledModes = ViewerManipulatorModes.Rigid,
+            ActivationOnDetection = true,
+            Skin = ViewerManipulatorSkin.Flat,
+            Size = 120,
+            Gap = 12
+        });
+        manipulator.SetPart(ViewerManipulatorAxis.X, ViewerManipulatorMode.Translation, true);
+        manipulator.EnableMode(ViewerManipulatorMode.Translation);
+        manipulator.EnableMode(ViewerManipulatorMode.Rotation);
+        manipulator.EnableMode(ViewerManipulatorMode.TranslationPlane);
+        manipulator.Start(160, 160);
+        using GpTrsf customPreview = GpTrsf.Create(5, 0, 0);
+        manipulator.Preview(customPreview);
+        manipulator.Stop(apply: false);
+        using (GpTrsf cancelled = presentation.GetTransform())
+            if (Math.Abs(cancelled.Value(1, 4)) > 1e-8)
+                throw new InvalidOperationException("The packaged Batch M manipulator cancel failed.");
+
+        using GpTrsf placement = GpTrsf.Create(25, 0, 0);
+        using (XdePlacementEditSession edit = batchMDocument.BeginPlacementEdit(
+                   batchMMoving, presentation, "Package Batch M placement"))
+        {
+            edit.Preview(placement);
+            batchMMoving = edit.Commit();
+        }
+        if (batchMDocument.UndoHistory[0].Name != "Package Batch M placement"
+            || presentation.SourceIdentity?.OccurrenceEntry != batchMMoving.Entry)
+            throw new InvalidOperationException("The packaged Batch M replacement/history identity failed.");
+        using (DigitalMockupReport report = DigitalMockupAnalyzer.AnalyzeAssembly(
+                   batchMRoot, new DigitalMockupPolicy { ExactDistanceForAllPairs = true }))
+            if (report.Pairs.Single().State != DigitalMockupPairState.Interfering)
+                throw new InvalidOperationException("The packaged Batch M post-move DMU recheck failed.");
+        if (!batchMDocument.Undo() || !batchMDocument.Redo())
+            throw new InvalidOperationException("The packaged Batch M undo/redo workflow failed.");
+        batchMDocument.WriteStep(batchMStep);
+        using XdeDocument batchMImported = XdeDocument.ReadStep(batchMStep);
+        IReadOnlyList<XdeOccurrence> batchMImportedOccurrences =
+            batchMImported.GetFreeShapes().Single().GetOccurrences();
+        try
+        {
+            if (batchMImportedOccurrences.Count != 2)
+                throw new InvalidOperationException("The packaged Batch M STEP/XDE round trip failed.");
+        }
+        finally { foreach (XdeOccurrence item in batchMImportedOccurrences) item.Dispose(); }
+        manipulator.Dispose();
+        batchMViewer.FitAll();
+        string batchMImage = batchMViewer.SaveScreenshot(
+            Path.Combine(exchangeDirectory, "package-batch-m-placement.png"), overwrite: true);
+        if (!File.Exists(batchMImage) || new FileInfo(batchMImage).Length == 0)
+            throw new InvalidOperationException("The packaged Batch M real-HWND screenshot failed.");
+    }
+    finally { _ = PackageWindowMethods.DestroyWindow(batchMWindow); }
 }
 finally
 {

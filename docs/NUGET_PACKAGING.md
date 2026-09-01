@@ -2,7 +2,7 @@
 
 ## Current package set
 
-The current experimental package version is `8.0.1-preview.10` for .NET 10 and
+The current experimental package version is `8.0.1-preview.11` for .NET 10 and
 Windows x64. ADR-0074 produces 14 packages:
 
 - 12 managed module packages: Runtime, Foundation, Geometry, MeshData, Modeling, Mesh,
@@ -100,13 +100,13 @@ the same 62-DLL `occt/` closure, and fails if the `OcctSharp.dll` facade is pres
 Once a package source contains the package, an application uses the normal command:
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.10
+dotnet add package OcctSharp --version 8.0.1-preview.11
 ```
 
 A narrow consumer can instead select a module, for example:
 
 ```powershell
-dotnet add package OcctSharp.Modeling --version 8.0.1-preview.10
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.11
 ```
 
 The application must run as a Windows x64 process on the current compatibility matrix.
@@ -128,13 +128,13 @@ completed release tooling do not override a `BLOCKED` or `NOT RUN` publication g
 
 ## Managed split evidence
 
-Preview.10 package verification runs from the inner `OcctSharp/` workspace, where
+Preview.11 package verification runs from the inner `OcctSharp/` workspace, where
 `global.json` selects SDK 10.0.400. Direct nupkg inspection confirms 13 managed packages
 with one managed DLL and zero native DLLs each, plus one native package with exactly 62
-DLLs. Package and informational versions are `8.0.1-preview.10`; managed assembly/file
-identity remains `0.1.0.0`; ABI remains 1.54 and bridge remains 0.62.0.
+DLLs. Package and informational versions are `8.0.1-preview.11`; managed assembly/file
+identity remains `0.1.0.0`; ABI is 1.55 and bridge is 0.63.0.
 
-The compatibility consumer restores, publishes, and runs the inherited Batch D-L paths.
+The compatibility consumer restores, publishes, and runs the inherited Batch D-M paths.
 The direct Modeling consumer proves module-only consumption without the facade. Both
 converge on one application-local `occt` directory. Toolkit-per-package fragmentation and
 native bridge splitting are not planned. Signing, hosted release execution, and

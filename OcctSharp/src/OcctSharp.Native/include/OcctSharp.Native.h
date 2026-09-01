@@ -257,6 +257,20 @@ typedef struct OcctSharp_Ax2
   OcctSharp_Xyz y_direction;
   OcctSharp_Xyz direction;
 } OcctSharp_Ax2;
+typedef struct OcctSharp_ViewerManipulatorState
+{
+  int32_t attached;
+  int32_t active_mode;
+  int32_t active_axis;
+  int32_t has_active_transformation;
+  int32_t activation_on_detection;
+  int32_t zoom_persistence;
+  int32_t skin;
+  int32_t reserved;
+  double size;
+  double gap;
+  OcctSharp_Ax2 position;
+} OcctSharp_ViewerManipulatorState;
 typedef struct OcctSharp_Ax3
 {
   OcctSharp_Xyz origin;
@@ -1939,6 +1953,42 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_set_presentation_
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_remove_presentation(
   OcctSharp_ViewerHandle* viewer,
   int64_t presentation_id);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_presentation_get_transform(
+  OcctSharp_ViewerHandle* viewer, int64_t presentation_id, OcctSharp_TrsfHandle** transform);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_presentation_set_transform(
+  OcctSharp_ViewerHandle* viewer, int64_t presentation_id, const OcctSharp_TrsfHandle* transform);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_presentation_reset_transform(
+  OcctSharp_ViewerHandle* viewer, int64_t presentation_id);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_attach(
+  OcctSharp_ViewerHandle* viewer, int64_t presentation_id, int32_t adjust_position,
+  int32_t adjust_size, int32_t enable_modes, int64_t* manipulator_id);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_set_part(
+  OcctSharp_ViewerHandle* viewer, int64_t manipulator_id, int32_t axis,
+  int32_t mode, int32_t enabled);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_enable_mode(
+  OcctSharp_ViewerHandle* viewer, int64_t manipulator_id, int32_t mode);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_set_activation_on_detection(
+  OcctSharp_ViewerHandle* viewer, int64_t manipulator_id, int32_t enabled);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_set_position(
+  OcctSharp_ViewerHandle* viewer, int64_t manipulator_id, const OcctSharp_Ax2* position);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_set_appearance(
+  OcctSharp_ViewerHandle* viewer, int64_t manipulator_id, double size, double gap, int32_t skin);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_set_zoom_persistence(
+  OcctSharp_ViewerHandle* viewer, int64_t manipulator_id, int32_t enabled);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_start(
+  OcctSharp_ViewerHandle* viewer, int64_t manipulator_id, int32_t x, int32_t y);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_transform_mouse(
+  OcctSharp_ViewerHandle* viewer, int64_t manipulator_id, int32_t x, int32_t y,
+  OcctSharp_TrsfHandle** transform);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_transform_custom(
+  OcctSharp_ViewerHandle* viewer, int64_t manipulator_id, const OcctSharp_TrsfHandle* transform);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_stop(
+  OcctSharp_ViewerHandle* viewer, int64_t manipulator_id, int32_t apply);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_get_state(
+  OcctSharp_ViewerHandle* viewer, int64_t manipulator_id,
+  OcctSharp_ViewerManipulatorState* state);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_manipulator_detach(
+  OcctSharp_ViewerHandle* viewer, int64_t manipulator_id);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_fit_all(
   OcctSharp_ViewerHandle* viewer);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_redraw(

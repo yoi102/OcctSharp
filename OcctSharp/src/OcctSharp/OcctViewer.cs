@@ -9,6 +9,7 @@ public sealed class OcctViewer : IDisposable
     private readonly Dictionary<long, ViewerPresentation> _presentations = [];
     private readonly Dictionary<long, ViewerClipPlane> _clipPlanes = [];
     private readonly Dictionary<long, ViewerDimension> _dimensions = [];
+    private readonly Dictionary<long, ViewerManipulator> _manipulators = [];
     private readonly List<ViewerClipPlane> _savedViewClipPlanes = [];
     private Dictionary<long, bool>? _isolationVisibility;
 
@@ -787,10 +788,187 @@ public sealed class OcctViewer : IDisposable
     {
         if (presentation.IsRemoved) return;
         EnsurePresentation(presentation);
+        foreach (ViewerManipulator manipulator in _manipulators.Values
+                     .Where(item => ReferenceEquals(item.Presentation, presentation)).ToArray())
+            RemoveManipulator(manipulator);
         NativeError.ThrowIfFailed(NativeMethods.RemoveViewerPresentation(Handle, presentation.Id), "viewer_remove_presentation");
         _presentations.Remove(presentation.Id);
         _isolationVisibility?.Remove(presentation.Id);
         presentation.MarkRemoved();
+    }
+
+    internal ViewerManipulator CreateManipulator(ViewerPresentation presentation, ViewerManipulatorOptions options)
+    {
+        ArgumentNullException.ThrowIfNull(options);
+        options.Validate();
+        EnsurePresentation(presentation);
+        NativeError.ThrowIfFailed(
+            NativeMethods.AttachViewerManipulator(
+                Handle, presentation.Id, options.AdjustPosition ? 1 : 0,
+                options.AdjustSize ? 1 : 0, 0, out long id),
+            "viewer_manipulator_attach");
+        ViewerManipulator manipulator = new(this, presentation, id);
+        _manipulators.Add(id, manipulator);
+        try
+        {
+            SetManipulatorAppearance(manipulator, options.Size, options.Gap, options.Skin);
+            SetManipulatorActivationOnDetection(manipulator, options.ActivationOnDetection);
+            SetManipulatorZoomPersistence(manipulator, options.ZoomPersistence);
+            if (options.Position is GpAx2Value position) SetManipulatorPosition(manipulator, position);
+            if (options.EnableModesOnAttach)
+                foreach ((ViewerManipulatorModes flag, ViewerManipulatorMode mode) in ManipulatorModes)
+                    if ((options.EnabledModes & flag) != 0) EnableManipulatorMode(manipulator, mode);
+            return manipulator;
+        }
+        catch
+        {
+            RemoveManipulator(manipulator);
+            throw;
+        }
+    }
+
+    internal GpTrsf GetTransform(ViewerPresentation presentation)
+    {
+        EnsurePresentation(presentation);
+        NativeError.ThrowIfFailed(
+            NativeMethods.GetViewerPresentationTransform(Handle, presentation.Id, out nint transform),
+            "viewer_presentation_get_transform");
+        return GpTrsf.FromNativeHandle(transform);
+    }
+
+    internal void SetTransform(ViewerPresentation presentation, GpTrsf transform)
+    {
+        ArgumentNullException.ThrowIfNull(transform);
+        transform.ThrowIfDisposedForLocation();
+        EnsurePresentation(presentation);
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerPresentationTransform(Handle, presentation.Id, transform.Handle),
+            "viewer_presentation_set_transform");
+    }
+
+    internal void ResetTransform(ViewerPresentation presentation)
+    {
+        EnsurePresentation(presentation);
+        NativeError.ThrowIfFailed(
+            NativeMethods.ResetViewerPresentationTransform(Handle, presentation.Id),
+            "viewer_presentation_reset_transform");
+    }
+
+    internal void SetManipulatorPart(
+        ViewerManipulator manipulator, ViewerManipulatorAxis axis, ViewerManipulatorMode mode, bool enabled)
+    {
+        if (!Enum.IsDefined(axis)) throw new ArgumentOutOfRangeException(nameof(axis));
+        ValidateManipulatorMode(mode);
+        EnsureManipulator(manipulator);
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerManipulatorPart(Handle, manipulator.Id, (int)axis, (int)mode, enabled ? 1 : 0),
+            "viewer_manipulator_set_part");
+    }
+
+    internal void EnableManipulatorMode(ViewerManipulator manipulator, ViewerManipulatorMode mode)
+    {
+        ValidateManipulatorMode(mode);
+        EnsureManipulator(manipulator);
+        NativeError.ThrowIfFailed(
+            NativeMethods.EnableViewerManipulatorMode(Handle, manipulator.Id, (int)mode),
+            "viewer_manipulator_enable_mode");
+    }
+
+    internal void SetManipulatorActivationOnDetection(ViewerManipulator manipulator, bool enabled)
+    {
+        EnsureManipulator(manipulator);
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerManipulatorActivationOnDetection(Handle, manipulator.Id, enabled ? 1 : 0),
+            "viewer_manipulator_set_activation_on_detection");
+    }
+
+    internal void SetManipulatorPosition(ViewerManipulator manipulator, GpAx2Value position)
+    {
+        EnsureManipulator(manipulator);
+        Ax2Raw raw = ToRaw(position);
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerManipulatorPosition(Handle, manipulator.Id, in raw),
+            "viewer_manipulator_set_position");
+    }
+
+    internal void SetManipulatorAppearance(
+        ViewerManipulator manipulator, double size, double gap, ViewerManipulatorSkin skin)
+    {
+        if (!Enum.IsDefined(skin)) throw new ArgumentOutOfRangeException(nameof(skin));
+        if (!double.IsFinite(size) || size is <= 0 or > 1_000_000)
+            throw new ArgumentOutOfRangeException(nameof(size));
+        if (!double.IsFinite(gap) || gap < 0 || gap > size)
+            throw new ArgumentOutOfRangeException(nameof(gap));
+        EnsureManipulator(manipulator);
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerManipulatorAppearance(Handle, manipulator.Id, size, gap, (int)skin),
+            "viewer_manipulator_set_appearance");
+    }
+
+    internal void SetManipulatorZoomPersistence(ViewerManipulator manipulator, bool enabled)
+    {
+        EnsureManipulator(manipulator);
+        NativeError.ThrowIfFailed(
+            NativeMethods.SetViewerManipulatorZoomPersistence(Handle, manipulator.Id, enabled ? 1 : 0),
+            "viewer_manipulator_set_zoom_persistence");
+    }
+
+    internal void StartManipulator(ViewerManipulator manipulator, int x, int y)
+    {
+        EnsureManipulator(manipulator);
+        NativeError.ThrowIfFailed(
+            NativeMethods.StartViewerManipulator(Handle, manipulator.Id, x, y), "viewer_manipulator_start");
+    }
+
+    internal GpTrsf TransformManipulator(ViewerManipulator manipulator, int x, int y)
+    {
+        EnsureManipulator(manipulator);
+        NativeError.ThrowIfFailed(
+            NativeMethods.TransformViewerManipulatorMouse(Handle, manipulator.Id, x, y, out nint transform),
+            "viewer_manipulator_transform_mouse");
+        return GpTrsf.FromNativeHandle(transform);
+    }
+
+    internal void PreviewManipulator(ViewerManipulator manipulator, GpTrsf transform)
+    {
+        ArgumentNullException.ThrowIfNull(transform);
+        transform.ThrowIfDisposedForLocation();
+        EnsureManipulator(manipulator);
+        NativeError.ThrowIfFailed(
+            NativeMethods.TransformViewerManipulatorCustom(Handle, manipulator.Id, transform.Handle),
+            "viewer_manipulator_transform_custom");
+    }
+
+    internal void StopManipulator(ViewerManipulator manipulator, bool apply)
+    {
+        EnsureManipulator(manipulator);
+        NativeError.ThrowIfFailed(
+            NativeMethods.StopViewerManipulator(Handle, manipulator.Id, apply ? 1 : 0),
+            "viewer_manipulator_stop");
+    }
+
+    internal ViewerManipulatorState GetManipulatorState(ViewerManipulator manipulator)
+    {
+        EnsureManipulator(manipulator);
+        NativeError.ThrowIfFailed(
+            NativeMethods.GetViewerManipulatorState(Handle, manipulator.Id, out ViewerManipulatorStateRaw state),
+            "viewer_manipulator_get_state");
+        return new ViewerManipulatorState(
+            state.Attached != 0, (ViewerManipulatorMode)state.ActiveMode, state.ActiveAxis,
+            state.HasActiveTransformation != 0, state.ActivationOnDetection != 0,
+            state.ZoomPersistence != 0, (ViewerManipulatorSkin)state.Skin,
+            state.Size, state.Gap, FromRaw(state.Position));
+    }
+
+    internal void RemoveManipulator(ViewerManipulator manipulator)
+    {
+        ArgumentNullException.ThrowIfNull(manipulator);
+        if (manipulator.IsDetached) return;
+        EnsureManipulator(manipulator);
+        NativeError.ThrowIfFailed(
+            NativeMethods.DetachViewerManipulator(Handle, manipulator.Id), "viewer_manipulator_detach");
+        _manipulators.Remove(manipulator.Id);
+        manipulator.MarkDetached();
     }
 
     internal bool IsDisposed => Handle.IsClosed || Handle.IsInvalid;
@@ -803,9 +981,11 @@ public sealed class OcctViewer : IDisposable
         foreach (ViewerPresentation presentation in _presentations.Values) presentation.MarkRemoved();
         foreach (ViewerClipPlane plane in _clipPlanes.Values) plane.MarkRemoved();
         foreach (ViewerDimension dimension in _dimensions.Values) dimension.MarkRemoved();
+        foreach (ViewerManipulator manipulator in _manipulators.Values) manipulator.MarkDetached();
         _presentations.Clear();
         _clipPlanes.Clear();
         _dimensions.Clear();
+        _manipulators.Clear();
         _savedViewClipPlanes.Clear();
         _isolationVisibility = null;
         Handle.Dispose();
@@ -839,6 +1019,36 @@ public sealed class OcctViewer : IDisposable
             throw new ArgumentException("The viewer dimension belongs to another viewer.", nameof(dimension));
         ObjectDisposedException.ThrowIf(dimension.IsRemoved || !_dimensions.ContainsKey(dimension.Id), dimension);
     }
+
+    private void EnsureManipulator(ViewerManipulator manipulator)
+    {
+        ArgumentNullException.ThrowIfNull(manipulator);
+        EnsureThread();
+        if (!ReferenceEquals(manipulator.Viewer, this))
+            throw new ArgumentException("The manipulator belongs to another viewer.", nameof(manipulator));
+        ObjectDisposedException.ThrowIf(
+            manipulator.IsDetached || !_manipulators.ContainsKey(manipulator.Id), manipulator);
+    }
+
+    private static readonly (ViewerManipulatorModes Flag, ViewerManipulatorMode Mode)[] ManipulatorModes =
+    [
+        (ViewerManipulatorModes.Translation, ViewerManipulatorMode.Translation),
+        (ViewerManipulatorModes.Rotation, ViewerManipulatorMode.Rotation),
+        (ViewerManipulatorModes.Scaling, ViewerManipulatorMode.Scaling),
+        (ViewerManipulatorModes.TranslationPlane, ViewerManipulatorMode.TranslationPlane)
+    ];
+
+    private static void ValidateManipulatorMode(ViewerManipulatorMode mode)
+    {
+        if (mode is < ViewerManipulatorMode.Translation or > ViewerManipulatorMode.TranslationPlane)
+            throw new ArgumentOutOfRangeException(nameof(mode));
+    }
+
+    private static Ax2Raw ToRaw(GpAx2Value value) => new(
+        ToRaw(value.Origin), ToRaw(value.XDirection), ToRaw(value.YDirection), ToRaw(value.Direction));
+
+    private static GpAx2Value FromRaw(Ax2Raw value) => new(
+        ToXyz(value.Origin), ToXyz(value.XDirection), ToXyz(value.YDirection), ToXyz(value.Direction));
 
     private static GpPoint ToPoint(XyzRaw value) => new(value.X, value.Y, value.Z);
     private static GpXyz ToXyz(XyzRaw value) => new(value.X, value.Y, value.Z);

@@ -223,6 +223,14 @@ Batch D-L workflows, while a direct Modeling-package consumer creates a six-face
 without receiving `OcctSharp.dll`. Native ABI, handle ownership, and the application-local
 `occt/` layout are unchanged.
 
+The `8.0.1-preview.11` workspace advances to ABI 1.55/bridge 0.63.0 and completes
+Batch M. Release and Debug, focused Batch M 4/4, and the clean 62-DLL facade consumer
+validate presentation transforms, viewer-parent-bound manipulator configuration and
+state, custom/mouse apply/cancel, thread/parent/disposal guards, rigid XDE occurrence
+placement with replacement identity and named undo/redo history, DMU recheck, real
+STEP/XDE round-trip, and a real-HWND screenshot. The Preview.10 managed/package split,
+public namespaces, assembly identity `0.1.0.0`, and one shared native DLL remain intact.
+
 ## Planned validation dimensions
 
 - Operating system and version.
