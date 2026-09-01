@@ -1,3 +1,32 @@
+# WPF Viewer Sample
+
+`OcctSharp/samples/OcctSharpViewer.Wpf` is a .NET 10 WPF/MVVM desktop viewer using
+`CommunityToolkit.Mvvm`. Run it from the inner workspace with:
+
+```powershell
+dotnet run --project .\samples\OcctSharpViewer.Wpf --configuration Release
+```
+
+The sample opens STEP/STP and IGES/IGS files, fits the model, provides axonometric and
+standard orthographic views, switches between shaded and wireframe display, and supports
+selection. Right-drag rotates, middle-drag pans, the mouse wheel zooms, and left-click
+selects; Shift, Ctrl, and Alt apply add, toggle, and remove selection semantics.
+
+STEP files use the XDE/STEPCAF reader instead of the geometry-only reader. Assembly leaf
+occurrences first use their occurrence color or visualization-material base color, then
+fall back to the referred part's corresponding style; uncolored objects use the sample's
+neutral fallback color. This
+preserves common assembly/part colors and avoids drawing parent assemblies together with
+their leaf occurrences. Independent face/subshape colors are not yet projected by this
+sample. The current IGES path is geometry-only and therefore uses the fallback color.
+
+OCCT renders through OpenGL into a native child window hosted by `HwndHost`. WPF controls
+can be arranged around the viewport, but WPF airspace rules prevent reliable WPF overlays
+above it. A `D3DImage` path was not selected because it would require an additional
+OpenGL-to-D3D9Ex shared-surface, synchronization, resize, and device-recovery bridge.
+The committed 62-DLL Windows x64 runtime is copied automatically; no local OCCT SDK is
+needed for the default sample build.
+
 # Console Samples
 
 The .NET 10 project `OcctSharp/samples/OcctSharp.Samples` is the single interactive

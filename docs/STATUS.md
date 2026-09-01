@@ -19,6 +19,23 @@
 - Last complete full inventory: 116,272/116,272 declarations and 7,090/7,090 headers have final dispositions; `Emitted` 16,353, `Manual` 542, `SupportedUnselected` 0, `Skipped` 49,344, `Blocked` 50,033, pending 0, HD099 0; SHA256 `71E921851AF636875BCA5BBAABE1B673521071A86873E6A8B538683CEAD9C4C1`
 - Overall state: Preview.11 completes ADR-0075 over ADR-0074's managed physical split. Twelve module assemblies plus the `OcctSharp` compatibility/facade assembly share one `OcctSharp.Native.dll` and one `OcctSharp.Native.win-x64` runtime package. Native-DLL splitting remains deliberately deferred. Managed assembly/file identity remains `0.1.0.0`; native ABI is 1.55, bridge is 0.63.0, and schema is 1.13. `publicReleaseReady` remains false because hosted release execution, signing, and NuGet publication are `NOT RUN`
 
+### WPF MVVM viewer sample
+
+- Added `samples/OcctSharpViewer.Wpf` with `CommunityToolkit.Mvvm`, a WPF command/status
+  surface, and an OCCT OpenGL viewport hosted by `HwndHost`. It opens STEP/IGES, supports
+  rotation, pan, wheel zoom, selection modifiers, fit, standard views, and shaded or
+  wireframe display. The project is part of `OcctSharp.slnx` and receives the committed
+  62-DLL Windows x64 runtime through the normal project graph.
+- STEP loading uses XDE/STEPCAF and displays leaf occurrences independently. Occurrence
+  color/material style takes precedence over the referred definition's color/material
+  style; unstyled topology keeps a neutral fallback. Independent face/subshape colors and
+  IGES metadata colors are explicitly not projected by the current sample.
+- Release and Debug sample builds pass with zero warnings/errors. A real Release process
+  created the WPF window and OCCT OpenGL child viewport; `ArduinoUnoRev3PCB.step` loaded
+  successfully with its green STEP/XDE color visible. D3DImage interop is `NOT IMPLEMENTED`
+  because the OpenGL-to-D3D9Ex sharing, synchronization, and device-recovery cost is not
+  justified for this sample; WPF airspace constraints therefore remain documented.
+
 ### Preview.11 Batch M interactive assembly placement editing completion
 
 - ADR-0075 and `BATCH_M_INTERACTIVE_PLACEMENT_EDITING_GAP_INVENTORY.md` lock all

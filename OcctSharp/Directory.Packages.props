@@ -3,6 +3,7 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
   <ItemGroup>
+    <PackageVersion Include="CommunityToolkit.Mvvm" Version="8.4.0" />
     <PackageVersion Include="ClangSharp" Version="21.1.8.4" />
     <PackageVersion Include="libClangSharp" Version="21.1.8.2" />
     <PackageVersion Include="libClangSharp.runtime.win-x64" Version="21.1.8.2" />

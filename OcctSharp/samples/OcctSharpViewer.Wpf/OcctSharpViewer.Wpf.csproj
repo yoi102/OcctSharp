@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Description>MVVM WPF STEP and IGES viewer sample for OcctSharp.</Description>
+    <CopyOcctSharpNativeRuntime>true</CopyOcctSharpNativeRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" />
+    <ProjectReference Include="..\..\src\OcctSharp\OcctSharp.csproj" />
+  </ItemGroup>
+</Project>
