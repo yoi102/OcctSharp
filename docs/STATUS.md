@@ -1,7 +1,7 @@
 # Current Status
 
 - Last updated: 2026-09-02
-- Current phase: Batch B through Batch M remain complete locally; Preview.12 adds STEP/XCAF disconnected presentation-style recovery, has passed every local release gate, and is awaiting NuGet upload/public indexing
+- Current phase: Batch B through Batch M remain complete locally; Preview.12 adds STEP/XCAF disconnected presentation-style recovery and has passed every local release gate. The final `OcctSharp.Native.win-x64` package is uploaded and validated on NuGet.org but still awaits flat-container indexing; the other 13 packages were not uploaded by explicit user direction
 - Batch B engineering progress: 100% for the accepted local implementation scope (not a claim that every OCCT declaration is a managed API or that public release is ready)
 - Batch C implementation progress: 100% of the finite local implementation denominator; locked wave denominators are 14/14, 7/7, 8/8, and final 15/15 capabilities validated
 - Batch D implementation progress: 24/24 capabilities (100%); ADR-0064's one large cross-family wave passes all implementation, compile, runtime, real-HWND, clean-package, inventory, and local release gates
@@ -17,7 +17,7 @@
 - Complete-migration batch progress: B, C, D, E, F, G, H, I, J, K, L, and M are complete locally; retired B00-B20 and forbidden numbered/dotted batch labels are not counted as batches
 - Accepted surface: 16,353 generated manifest IDs plus 542 accepted manual stable IDs; Release and Debug native/managed builds, Generator 91/91, Runtime 152/152, discovery/report determinism, generated dependency closure, and dependency profiles 6/6 pass
 - Last complete full inventory: 116,272/116,272 declarations and 7,090/7,090 headers have final dispositions; `Emitted` 16,353, `Manual` 542, `SupportedUnselected` 0, `Skipped` 49,344, `Blocked` 50,033, pending 0, HD099 0; SHA256 `71E921851AF636875BCA5BBAABE1B673521071A86873E6A8B538683CEAD9C4C1`
-- Overall state: Preview.12 implements ADR-0076 over ADR-0075/ADR-0074 without changing the managed split. Twelve module assemblies plus the `OcctSharp` compatibility/facade assembly share one `OcctSharp.Native.dll` and one `OcctSharp.Native.win-x64` runtime package. Native-DLL splitting remains deliberately deferred. Managed assembly/file identity remains `0.1.0.0`; native ABI is 1.56, bridge is 0.64.0, and schema is 1.13. The complete local release check passes; package signing, hosted full release execution, NuGet upload/indexing, and a public-source consumer remain separate and are not claimed.
+- Overall state: Preview.12 implements ADR-0076 over ADR-0075/ADR-0074 without changing the managed split. Twelve module assemblies plus the `OcctSharp` compatibility/facade assembly share one `OcctSharp.Native.dll` and one `OcctSharp.Native.win-x64` runtime package. Native-DLL splitting remains deliberately deferred. Managed assembly/file identity remains `0.1.0.0`; native ABI is 1.56, bridge is 0.64.0, and schema is 1.13. The complete local release check passes. Only the native package has been submitted to NuGet.org; signing, hosted full release execution, native-package indexing, the 13 managed-package uploads, and a public-source consumer remain separate and are not claimed.
 
 ### WPF MVVM viewer sample
 
@@ -61,7 +61,9 @@
   API comparison against alpha.38 is additive at 38,791 additions and zero removals;
   the facade nupkg SHA256 is
   `246584492CF1A5116C68E4D131C76225509C374320DA2915FB2C01355BCF3E6D`.
-  NuGet upload/indexing and the clean public-source consumer are `NOT RUN`.
+  `OcctSharp.Native.win-x64` was uploaded to NuGet.org from the final package and passed
+  package validation; flat-container indexing is still pending. The other 13 packages and
+  the clean public-source consumer are `NOT RUN` by explicit user direction.
 
 ### Preview.11 Batch M interactive assembly placement editing completion
 
@@ -1483,8 +1485,8 @@ publication/indexing, and public-source consumption remain separate release-read
 | Hosted CI execution | PASS (clone/runtime); full release NOT RUN | GitHub run 33064559589: generator-tests and bundled-runtime manifest/Release/Debug smoke succeeded at commit c8a38c2; SDK-dependent full-windows was conditionally skipped because artifact variables are not configured |
 | API compatibility | PASS | Alpha.38 606-signature baseline comparison: 38,791 additions, zero removals, non-breaking |
 | Release engineering | PASS (Preview.12 local) | Complete local release check passes Release/Debug, Generator 91/91, Runtime 152/152, dependency profiles 6/6, 94-file freshness/clean regeneration, 14-package isolation, facade/direct-module consumers, API/inventory/SBOM/provenance/checksums, and Git whitespace |
-| NuGet publication/indexing | NOT RUN | The public flat-container endpoints return 404 for all 14 package IDs; Chrome package-file transfer is blocked until the ChatGPT extension is allowed to access file URLs |
-| Public release readiness | BLOCKED | MIT, bundled notices, and every local gate PASS; hosted full release execution, signing, NuGet publication/indexing, and the public-source consumer are NOT RUN |
+| NuGet publication/indexing | PARTIAL | Final `OcctSharp.Native.win-x64 8.0.1-preview.12` uploaded successfully and passed NuGet package validation; its flat-container endpoint is still 404 pending indexing. The other 13 packages were not uploaded by explicit user direction |
+| Public release readiness | BLOCKED | MIT, bundled notices, and every local gate PASS; native-package indexing, the 13 managed-package uploads, hosted full release execution, signing, and the public-source consumer remain incomplete |
 
 ## Migration loop state
 

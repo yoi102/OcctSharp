@@ -103,7 +103,8 @@ The complete local release check passes:
 | `OcctSharp.Draw` | `2689EEA84C668EEDD49B56972BDCC361C24745B5F871F8E966258F4697AF115A` |
 | `OcctSharp` | `246584492CF1A5116C68E4D131C76225509C374320DA2915FB2C01355BCF3E6D` |
 
-NuGet upload/indexing and the clean public-source consumer are `NOT RUN`. The public
-flat-container endpoints currently return 404 for all 14 package IDs. Hosted full release
-execution and package signing also remain `NOT RUN`; these are not presented as local
-build or package failures.
+The final `OcctSharp.Native.win-x64` package was uploaded to NuGet.org and passed package
+validation. Its flat-container endpoint still returns 404 while indexing is pending. The
+other 13 packages and the clean public-source consumer are `NOT RUN` by explicit user
+direction. Hosted full release execution and package signing also remain `NOT RUN`; these
+are not presented as local build or package failures.

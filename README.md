@@ -126,13 +126,31 @@ The committed, SHA256-pinned Release runtime is copied automatically. Building t
 native bridge or regenerating bindings still requires the documented MSVC/OCCT contributor
 toolchain.
 
+## License and third-party runtime terms
+
+The OcctSharp project code, generated bindings, and repository-built
+`OcctSharp.Native.dll` are licensed under the [MIT License](https://github.com/yoi102/OcctSharp/blob/main/LICENSE).
+The NuGet packages therefore declare `MIT` for the OcctSharp-owned package content.
+
+That MIT declaration does **not** relicense OCCT or the other native libraries bundled in
+`OcctSharp.Native.win-x64`. In particular, the Open CASCADE Technology 8.0.1 DLLs are
+distributed under `LGPL-2.1-only` with the Open CASCADE exception. oneTBB, FreeImage,
+FreeType, OpenVR, FFmpeg, and jemalloc retain their respective upstream terms.
+
+Before redistributing the native package or an application that ships its `occt/`
+directory, review the complete
+[third-party runtime notice](https://github.com/yoi102/OcctSharp/blob/main/OcctSharp/runtime/win-x64/THIRD_PARTY_NOTICES.md)
+and the accompanying
+[license texts](https://github.com/yoi102/OcctSharp/tree/main/OcctSharp/runtime/win-x64/licenses).
+Those files are included in `OcctSharp.Native.win-x64` under its `licenses/` directory.
+
 ## Project structure and status
 
 - `docs/` contains architecture, decisions, compatibility, packaging, samples, and status.
 - `OcctSharp/` contains the solution, source, tests, generator, runtime, samples, and
   release tooling.
-- Project code is MIT licensed. OCCT and bundled third-party components retain their own
-  license terms beside the native runtime.
+- Project code is MIT licensed; bundled native components remain governed by the terms
+  summarized above.
 
 See [documentation](docs/DOCUMENTATION_INDEX.md), [current status](docs/STATUS.md),
 [samples](docs/SAMPLES.md), [NuGet packaging](docs/NUGET_PACKAGING.md), and
