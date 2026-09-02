@@ -118,6 +118,8 @@ The accepted boundaries are recorded in ADRs:
 - [ADR-0075](adr/0075-interactive-assembly-placement-editing-batch.md): one finite
   Batch M interactive presentation/manipulator and rigid XDE occurrence-placement
   editing closure with named history, DMU, exchange, and real-HWND evidence.
+- [ADR-0077](adr/0077-iges-xde-metadata-path-interoperability-batch.md): one finite
+  Batch N metadata-aware IGES/XDE, Unicode-path, mixed-format, viewer, and package wave.
 
 ## Components
 
@@ -318,6 +320,15 @@ presentation geometry to the XDE document. Managed snapshots contain copied styl
 and independently owning located topology; `OcctViewer.Display(XdeLabel)` creates one
 viewer-parent-bound colored presentation with the native XCAF style inheritance already
 applied. This adds no cross-DLL registry and does not change the managed module graph.
+
+Batch N retains that module graph and the single native bridge. IGESCAF readers, writers,
+work sessions, interface models, maps, iterators, and diagnostics stay native-local.
+Managed code receives owned XDE documents, document-parent-bound labels, registered
+topology owners, and copied metadata/diagnostics only. Format-neutral routing composes
+the existing STEPCAF and new IGESCAF paths. Non-ASCII Windows paths are handled behind a
+cleanup-safe temporary ASCII staging boundary without changing public path semantics.
+The immutable 24-capability denominator is prepared in ADR-0077; implementation and its
+runtime evidence are not yet claimed.
 
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native

@@ -1,7 +1,7 @@
 # Current Status
 
 - Last updated: 2026-09-02
-- Current phase: Batch B through Batch M remain complete locally; Preview.12 adds STEP/XCAF disconnected presentation-style recovery and has passed every local release gate. The final `OcctSharp.Native.win-x64` package is uploaded and validated on NuGet.org but still awaits flat-container indexing; the other 13 packages were not uploaded by explicit user direction
+- Current phase: Batch B through Batch M remain complete locally; Batch N metadata-aware IGES/XDE interoperability preparation is complete and implementation is not started. Preview.12 remains the last fully validated local release. The final `OcctSharp.Native.win-x64` package is uploaded and validated on NuGet.org but still awaits flat-container indexing; the other 13 packages were not uploaded by explicit user direction
 - Batch B engineering progress: 100% for the accepted local implementation scope (not a claim that every OCCT declaration is a managed API or that public release is ready)
 - Batch C implementation progress: 100% of the finite local implementation denominator; locked wave denominators are 14/14, 7/7, 8/8, and final 15/15 capabilities validated
 - Batch D implementation progress: 24/24 capabilities (100%); ADR-0064's one large cross-family wave passes all implementation, compile, runtime, real-HWND, clean-package, inventory, and local release gates
@@ -14,10 +14,25 @@
 - Batch K implementation progress: 24/24 capabilities (100%); ADR-0072's assembly-authoring/BOM/reference/metadata/review wave passes implementation, compile, runtime/lifetime/transaction, STEP/XDE, real-HWND, clean-package, inventory, and local release gates
 - Batch L implementation progress: 24/24 capabilities (100%); ADR-0073's occurrence-aware bounds/interference/clearance/containment/incremental/review wave passes every local gate
 - Batch M implementation progress: 24/24 capabilities (100%); ADR-0075's presentation/manipulator, rigid XDE placement, named history, DMU, exchange, and real-HWND wave passes every local gate
-- Complete-migration batch progress: B, C, D, E, F, G, H, I, J, K, L, and M are complete locally; retired B00-B20 and forbidden numbered/dotted batch labels are not counted as batches
+- Batch N preparation progress: 100%; implementation progress: 0/24 (0%). ADR-0077 locks one metadata-aware IGES/XDE, Unicode-path, mixed-format, viewer, and package wave; all Batch N implementation and validation gates are `NOT RUN`
+- Complete-migration batch progress: B, C, D, E, F, G, H, I, J, K, L, and M are complete locally; N is prepared but not implemented; retired B00-B20 and forbidden numbered/dotted batch labels are not counted as batches
 - Accepted surface: 16,353 generated manifest IDs plus 542 accepted manual stable IDs; Release and Debug native/managed builds, Generator 91/91, Runtime 152/152, discovery/report determinism, generated dependency closure, and dependency profiles 6/6 pass
 - Last complete full inventory: 116,272/116,272 declarations and 7,090/7,090 headers have final dispositions; `Emitted` 16,353, `Manual` 542, `SupportedUnselected` 0, `Skipped` 49,344, `Blocked` 50,033, pending 0, HD099 0; SHA256 `71E921851AF636875BCA5BBAABE1B673521071A86873E6A8B538683CEAD9C4C1`
 - Overall state: Preview.12 implements ADR-0076 over ADR-0075/ADR-0074 without changing the managed split. Twelve module assemblies plus the `OcctSharp` compatibility/facade assembly share one `OcctSharp.Native.dll` and one `OcctSharp.Native.win-x64` runtime package. Native-DLL splitting remains deliberately deferred. Managed assembly/file identity remains `0.1.0.0`; native ABI is 1.56, bridge is 0.64.0, and schema is 1.13. The complete local release check passes. Only the native package has been submitted to NuGet.org; signing, hosted full release execution, native-package indexing, the 13 managed-package uploads, and a public-source consumer remain separate and are not claimed.
+
+### Batch N IGES/XDE interoperability preparation
+
+- ADR-0077 and `BATCH_N_IGES_XDE_INTEROPERABILITY_GAP_INVENTORY.md` freeze one
+  24-capability wave across IGESCAF read/import/write, copied names/colors/layers/
+  visibility/diagnostics/units, Unicode Windows paths, format-neutral routing, mixed
+  STEP/IGES composition, XDE-label viewer display, lifetime, and clean-package evidence.
+- The Preview.12 final inventory audit covers exactly 24 roots and 1,593 candidates:
+  814 blocked, 434 emitted, 45 manual, and 300 skipped. SC-051 may reconcile only exact
+  blocked overloads directly invoked by the bridge; no root or overload family is
+  bulk-promoted.
+- The wave reserves package `8.0.1-preview.13`, native ABI 1.57, bridge 0.65.0, and
+  schema 1.13. Preparation is complete; implementation, tests, runtime manifest updates,
+  packaging, and every Batch N validation gate are `NOT RUN` at this checkpoint.
 
 ### WPF MVVM viewer sample
 

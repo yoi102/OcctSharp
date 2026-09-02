@@ -11,6 +11,19 @@ Batch M closes its one 24-capability interactive assembly-placement editing wave
 ADR-0075. It was not split into AIS, XDE, transaction, DMU, exchange, or viewer
 checkpoints.
 
+## Current priority: Batch N IGES/XDE interoperability
+
+ADR-0077 and [the Batch N gap inventory](BATCH_N_IGES_XDE_INTEROPERABILITY_GAP_INVENTORY.md)
+lock metadata-aware IGES read/import/write, copied diagnostics and units, name/color/layer/
+visibility preservation, non-ASCII Windows paths, mixed STEP/IGES composition, XDE-label
+viewer display, real files, lifetime, and clean-package evidence as one 24-capability
+wave. Preparation is complete at 0/24 implementation. The Preview.12 inventory audit
+covers exactly 24 roots and 1,593 declarations: 434 emitted, 45 manual, 814 blocked, and
+300 skipped. Only exact directly invoked blocked overloads may enter SC-051. Package
+`8.0.1-preview.13`, native ABI 1.57, bridge 0.65.0, and schema 1.13 are reserved. No
+reader-only, writer-only, color-only, path-only, viewer-only, or numbered fragment is a
+completion point.
+
 ## Completed priority: Batch M interactive assembly placement editing
 
 ADR-0075 and [the Batch M gap inventory](BATCH_M_INTERACTIVE_PLACEMENT_EDITING_GAP_INVENTORY.md)

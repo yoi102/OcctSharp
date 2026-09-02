@@ -1,5 +1,19 @@
 # Known Issues
 
+## KI-029: IGES exchange is geometry-only and does not preserve XDE metadata
+
+- Status: Planned in Batch N
+- Severity: Medium
+- Area: IGESCAF/XDE exchange and WPF viewer
+- Problem: The managed IGES path uses `IGESControl` and returns one owning shape. It does
+  not project IGES names, colors, layers, or visibility into an owned XDE document, so
+  the WPF sample displays IGES with the neutral fallback color.
+- Current mitigation: Geometry-only IGES read/write remains available and reports
+  transfer failure explicitly.
+- Planned resolution: Implement ADR-0077's complete metadata-aware IGES/XDE read/import/
+  write, mixed-format, viewer, round-trip, lifetime, and package wave; do not close this
+  issue on a reader-only or color-only checkpoint.
+
 ## KI-028: Batch F freeform curve/surface authoring closure was not implemented
 
 - Status: Resolved in Preview.3 at 24/24 under ADR-0067.
@@ -143,15 +157,15 @@ evidence updated.
 
 ## KI-009: Windows non-ASCII exchange paths are not validated
 
-- Status: Open
+- Status: Planned in Batch N
 - Severity: Medium
 - Area: Native file exchange
 - Problem: Managed paths are marshalled as UTF-8, while the selected OCCT file APIs
   accept narrow `char*` paths and their Windows non-ASCII behavior has not been proven.
 - Current mitigation: Validation and samples use ASCII paths; failures return explicit
   file I/O status and diagnostics.
-- Planned resolution: Add non-ASCII path tests and, if required, a controlled temporary
-  ASCII-path or stream-based strategy without changing public path semantics.
+- Planned resolution: ADR-0077 requires non-ASCII input/output tests and a controlled,
+  cleanup-safe temporary ASCII-path strategy without changing public path semantics.
 
 ## KI-010: XDE material placement has an OCCT writer limitation
 

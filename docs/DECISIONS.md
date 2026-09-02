@@ -83,6 +83,7 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0074](adr/0074-physical-managed-modules-and-shared-native-package.md) | Split managed assemblies/packages with type-forwarded compatibility, one facade, and one shared native runtime package | Accepted and implemented |
 | [ADR-0075](adr/0075-interactive-assembly-placement-editing-batch.md) | Define Batch M as one 24-capability interactive presentation and XDE occurrence-placement editing wave | Accepted and implemented |
 | [ADR-0076](adr/0076-xcaf-disconnected-step-presentation-style-recovery.md) | Recover disconnected STEP styles into copied XDE snapshots and viewer-native presentation overrides | Accepted and implemented |
+| [ADR-0077](adr/0077-iges-xde-metadata-path-interoperability-batch.md) | Define Batch N as one 24-capability metadata-aware IGES/XDE, Unicode-path, viewer, and package wave | Accepted for implementation |
 
 ## Pending decisions
 
