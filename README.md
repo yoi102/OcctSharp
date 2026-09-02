@@ -5,7 +5,7 @@ versioned native C ABI, generated low-level bindings, and friendly managed CAD A
 modeling, STEP/IGES/STL exchange, XDE assemblies and metadata, meshing, inspection, and
 Windows visualization.
 
-Current preview: `8.0.1-preview.12` for Windows x64. The NuGet graph contains 12 managed
+Current preview: `8.0.1-preview.13` for Windows x64. The NuGet graph contains 12 managed
 modules, the `OcctSharp` compatibility/facade package, and one shared
 `OcctSharp.Native.win-x64` runtime package. The native package places the complete
 62-DLL runtime in the application's `occt/` directory; no machine-wide OCCT installation
@@ -14,13 +14,13 @@ or `PATH` change is required.
 ## Install
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.12
+dotnet add package OcctSharp --version 8.0.1-preview.13
 ```
 
 A narrow consumer can reference a module directly, for example:
 
 ```powershell
-dotnet add package OcctSharp.Modeling --version 8.0.1-preview.12
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.13
 ```
 
 The supported runtime baseline is .NET 10, Windows x64, and OCCT 8.0.1.
@@ -83,6 +83,28 @@ foreach (XdeLabel root in document.GetFreeShapes())
 material, alpha, and visibility styles to one `AIS_ColoredShape` presentation. Viewer
 objects are UI-thread-affine and require a native child-window handle.
 
+## Read or write metadata-aware IGES
+
+Use the XDE-centered exchange API for IGES names, colors, layers, visibility, diagnostics,
+and Unicode Windows paths. The format-neutral methods route STEP or IGES by extension:
+
+```csharp
+using OcctSharp;
+
+using XdeDocument document = XdeDocument.ReadIges(
+    @"C:\CAD\彩色装配.iges",
+    new XdeIgesReadOptions(ReadNames: true, ReadColors: true, ReadLayers: true),
+    out XdeIgesReadReport report);
+
+Console.WriteLine($"Transferred {report.TransferredRootCount} IGES roots");
+document.WriteExchange(@"C:\CAD\导出副本.igs");
+
+using XdeDocument routed = XdeDocument.ReadExchange("assembly.step");
+```
+
+Imported labels remain bound to their owning `XdeDocument`; copied diagnostics and
+independently owned topology do not retain the native IGES transfer session.
+
 ## Samples
 
 The repository contains two runnable .NET 10 sample projects. Both use the committed,
@@ -92,7 +114,7 @@ SDK or native build toolchain.
 | Sample | Description | Detailed guide |
 |---|---|---|
 | `OcctSharp.Samples` | Interactive console menu covering solid creation, STEP/STL/IGES export, transformed XDE STEP assemblies, a native viewer window, and a complete BREP/topology/mesh/XDE workflow. It also provides the non-interactive `--smoke` clone/runtime check. | [Console sample README](https://github.com/yoi102/OcctSharp/blob/main/OcctSharp/samples/OcctSharp.Samples/README.md) |
-| `OcctSharpViewer.Wpf` | `CommunityToolkit.Mvvm` WPF viewer for STEP/STP and IGES/IGS with STEP/XCAF colors, standard views, shaded/wireframe display, selection, rotation, pan, and zoom. | [WPF viewer README](https://github.com/yoi102/OcctSharp/blob/main/OcctSharp/samples/OcctSharpViewer.Wpf/README.md) |
+| `OcctSharpViewer.Wpf` | `CommunityToolkit.Mvvm` WPF viewer for STEP/STP and IGES/IGS with XDE presentation colors, standard views, shaded/wireframe display, selection, rotation, pan, and zoom. | [WPF viewer README](https://github.com/yoi102/OcctSharp/blob/main/OcctSharp/samples/OcctSharpViewer.Wpf/README.md) |
 
 Run the console sample from the inner workspace:
 

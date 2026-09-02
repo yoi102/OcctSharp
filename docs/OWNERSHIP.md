@@ -521,3 +521,19 @@ collects styles and creates the AIS presentation. The resulting presentation ret
 own OCCT shape reference and style overrides, remains bound to its `OcctViewer`, and is
 valid only on the viewer creation thread. No STEP/XCAF/AIS native handle is returned to
 managed or WPF code. The WPF host owns and disposes the resulting presentation list.
+
+### Preview.13 IGES/XDE and Unicode-path boundary
+
+ADR-0077 keeps IGESCAF readers, writers, work sessions, interface models, maps,
+iterators, progress state, and diagnostic objects inside one native call. A reader's
+transfer document is never exposed directly. The bridge clones every transferable root
+and supported metadata into a `TDocStd_Application`-owned destination XDE document, then
+managed code exposes only document-parent-bound stable-entry labels. Layer references are
+copied explicitly. Reader/session/source disposal therefore cannot invalidate returned
+labels; imported topology copied out of a report retains its existing independent owner.
+
+Names, colors, layers, visibility, counts, units, and diagnostics cross as copied values.
+Managed non-ASCII path staging owns unique temporary files, promotes output only after
+successful native completion, and cleans success/failure/exception paths. No temporary
+path or file owner escapes to callers. The WPF host owns the imported XDE document and
+viewer-parent-bound presentations exactly as it does for STEP.

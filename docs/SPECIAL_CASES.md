@@ -1504,3 +1504,55 @@ rules or design:
 - Removal criteria: Replace this exception only when upstream STEPCAF reliably transfers
   and maps the same authored styles, or generated bindings can preserve the same copied
   ownership and viewer behavior without exposing document/session-local state.
+
+## SC-051: Batch N metadata-aware IGES/XDE interoperability closure
+
+- Status: Accepted and implemented for the complete 24-capability Batch N closure;
+  final all-gates validation is recorded in `STATUS.md`.
+- Scope: Exactly fifteen newly direct blocked OCCT 8.0.1 stable IDs. The preparation
+  audit's 814 blocked declarations are not bulk-marked manual; 799 retain their prior
+  blocked dispositions.
+- Reason: IGESCAF readers, writers, inherited XSControl sessions, IGES models/global
+  sections, XDE documents, and metadata tables are call-local or document-parent-bound.
+  Generated wrappers do not encode the transfer-session lifetime, destination document
+  ownership, copied diagnostics, Unicode path staging, or output-promotion contract.
+- Native/ABI/managed behavior: ABI 1.57, bridge 0.65.0, package
+  `8.0.1-preview.13`, and schema 1.13 read/import/write IGES through IGESCAF. Transfer
+  documents are cloned into application-owned XDE documents before reader destruction;
+  names, colors, numeric layer assignments, visibility, source/root counts, and source/
+  system unit diagnostics cross only as copied state. Managed path staging hides narrow
+  OCCT file APIs for non-ASCII Windows paths.
+- Ownership: Readers, writers, sessions, models, global sections, maps, iterators, and
+  progress objects remain native-local. Returned documents own their labels; imported
+  labels are destination-parent-bound; presentation-style topology is independently
+  owning; viewer presentations remain viewer/thread-parent-bound. Temporary path files
+  are cleaned on success, failure, and disposal.
+- Coverage accounting: The schema 1.13 configuration lists these exact unique IDs:
+
+  1. `c:@S@IGESCAFControl_Reader@F@IGESCAFControl_Reader#`
+  2. `c:@S@IGESCAFControl_Reader@F@SetColorMode#b#`
+  3. `c:@S@IGESCAFControl_Reader@F@SetLayerMode#b#`
+  4. `c:@S@IGESCAFControl_Reader@F@SetNameMode#b#`
+  5. `c:@S@IGESCAFControl_Reader@F@Transfer#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#`
+  6. `c:@S@IGESCAFControl_Writer@F@IGESCAFControl_Writer#`
+  7. `c:@S@IGESCAFControl_Writer@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#*1C#&1$@S@Message_ProgressRange#`
+  8. `c:@S@IGESCAFControl_Writer@F@SetColorMode#b#`
+  9. `c:@S@IGESCAFControl_Writer@F@SetLayerMode#b#`
+  10. `c:@S@IGESCAFControl_Writer@F@SetNameMode#b#`
+  11. `c:@S@IGESControl_Reader@F@IGESModel#1`
+  12. `c:@S@IGESControl_Reader@F@NbRootsForTransfer#`
+  13. `c:@S@IGESData_GlobalSection@F@UnitValue#1`
+  14. `c:@S@IGESData_IGESModel@F@GlobalSection#1`
+  15. `c:@S@XSControl_Reader@F@ReadFile#*1C#`
+
+- Validation: Focused Batch N tests cover metadata modes, copied diagnostics/units,
+  geometry and metadata round-trip, Unicode input/output and failed-read cleanup, mixed
+  STEP/IGES composition, source/session disposal, and real-HWND XDE-label display. Full
+  Release/Debug, clean-package, inventory, generation, runtime, SBOM, provenance, and
+  checksum evidence passes and remains governed by the Batch N inventory and `STATUS.md`.
+- Upgrade impact: Recheck IGES unit semantics, numeric layer mapping, color/style
+  inheritance, reader-transfer document lifetime, clone behavior, writer option modes,
+  narrow-path behavior, and all fifteen exact IDs on every OCCT/compiler upgrade.
+- Removal criteria: Replace this exception only after generated session/document
+  ownership and path-safe exchange can preserve the same copied diagnostics, metadata,
+  lifetime, failure, viewer, and package evidence.

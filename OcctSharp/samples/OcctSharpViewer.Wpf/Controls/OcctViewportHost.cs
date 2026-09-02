@@ -112,8 +112,7 @@ public sealed class OcctViewportHost : HwndHost, IViewerService
         string extension = Path.GetExtension(filePath).ToUpperInvariant();
         List<ViewerPresentation> nextPresentations = extension switch
         {
-            ".STEP" or ".STP" => DisplayStep(activeViewer, filePath),
-            ".IGES" or ".IGS" => DisplayGeometry(activeViewer, ShapeExchange.ReadIges(filePath)),
+            ".STEP" or ".STP" or ".IGES" or ".IGS" => DisplayExchange(activeViewer, filePath),
             _ => throw new NotSupportedException("Only STEP (.step/.stp) and IGES (.iges/.igs) files are supported."),
         };
 
@@ -165,9 +164,9 @@ public sealed class OcctViewportHost : HwndHost, IViewerService
 
     private OcctViewer GetViewer() => viewer ?? throw new InvalidOperationException("The OCCT viewport is not initialized.");
 
-    private static List<ViewerPresentation> DisplayStep(OcctViewer viewer, string filePath)
+    private static List<ViewerPresentation> DisplayExchange(OcctViewer viewer, string filePath)
     {
-        using XdeDocument document = XdeDocument.ReadStep(filePath, new XdeStepReadOptions(ReadColors: true));
+        using XdeDocument document = XdeDocument.ReadExchange(filePath);
         List<ViewerPresentation> result = [];
         try
         {
@@ -179,7 +178,9 @@ public sealed class OcctViewportHost : HwndHost, IViewerService
                     // The whole-presentation color is only the fallback. OCCT's XCAF style
                     // collector has already installed instance, part, face, edge, material,
                     // alpha, and visibility overrides on the AIS_ColoredShape.
-                    ApplyColor(presentation, GetColor(root));
+                    bool isIges = Path.GetExtension(filePath).Equals(".iges", StringComparison.OrdinalIgnoreCase)
+                        || Path.GetExtension(filePath).Equals(".igs", StringComparison.OrdinalIgnoreCase);
+                    ApplyColor(presentation, isIges ? null : GetColor(root));
                     result.Add(presentation);
                 }
                 catch
@@ -191,7 +192,11 @@ public sealed class OcctViewportHost : HwndHost, IViewerService
 
             if (result.Count == 0)
             {
-                using Shape fallback = ShapeExchange.ReadStep(filePath);
+                using Shape fallback = Path.GetExtension(filePath).ToUpperInvariant() switch
+                {
+                    ".IGES" or ".IGS" => ShapeExchange.ReadIges(filePath),
+                    _ => ShapeExchange.ReadStep(filePath),
+                };
                 result.Add(DisplayStyled(viewer, fallback, null));
             }
 
@@ -202,12 +207,6 @@ public sealed class OcctViewportHost : HwndHost, IViewerService
             DisposePresentations(result);
             throw;
         }
-    }
-
-    private static List<ViewerPresentation> DisplayGeometry(OcctViewer viewer, Shape shape)
-    {
-        using (shape)
-            return [DisplayStyled(viewer, shape, null)];
     }
 
     private static ViewerPresentation DisplayStyled(OcctViewer viewer, Shape shape, XdeColor? color)

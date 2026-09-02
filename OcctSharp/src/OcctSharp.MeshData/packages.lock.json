@@ -5,14 +5,14 @@
       "occtsharp.foundation": {
         "type": "Project",
         "dependencies": {
-          "OcctSharp.Runtime": "[8.0.1-preview.12, )"
+          "OcctSharp.Runtime": "[8.0.1-preview.13, )"
         }
       },
       "occtsharp.geometry": {
         "type": "Project",
         "dependencies": {
-          "OcctSharp.Foundation": "[8.0.1-preview.12, )",
-          "OcctSharp.Runtime": "[8.0.1-preview.12, )"
+          "OcctSharp.Foundation": "[8.0.1-preview.13, )",
+          "OcctSharp.Runtime": "[8.0.1-preview.13, )"
         }
       },
       "occtsharp.native.win-x64": {
@@ -21,7 +21,7 @@
       "occtsharp.runtime": {
         "type": "Project",
         "dependencies": {
-          "OcctSharp.Native.win-x64": "[8.0.1-preview.12, )"
+          "OcctSharp.Native.win-x64": "[8.0.1-preview.13, )"
         }
       }
     },

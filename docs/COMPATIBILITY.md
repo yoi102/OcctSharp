@@ -237,6 +237,13 @@ one-native-runtime graph. It adds location-aware copied XDE presentation styles,
 whole-label viewer display, and native-local recovery for STEP styled targets omitted by
 ordinary product transfer. The compatibility facade remains additive.
 
+The `8.0.1-preview.13` workspace advances to ABI 1.57/bridge 0.65.0 while retaining
+OCCT 8.0.1, schema 1.13, managed assembly identity `0.1.0.0`, and the same 14-package/
+one-native-runtime graph. It adds metadata-aware IGESCAF/XDE read/import/write,
+format-neutral routing, Unicode-path staging, mixed STEP/IGES composition, and IGES
+XDE-label display. API comparison against alpha.38 is additive at 38,838 additions and
+zero removals; the compatibility facade and direct module identities remain intact.
+
 ## Planned validation dimensions
 
 - Operating system and version.

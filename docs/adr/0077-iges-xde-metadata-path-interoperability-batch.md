@@ -1,6 +1,6 @@
 # ADR-0077: Implement metadata-aware IGES/XDE and path interoperability as Batch N
 
-- Status: Accepted for implementation
+- Status: Accepted and implemented
 - Date: 2026-09-02
 - Scope: Batch N product denominator, IGESCAF/XDE exchange, path reliability, ownership, and validation
 
@@ -63,7 +63,8 @@ package.
 - STEP and IGES can share one XDE-centered managed workflow while retaining format-
   specific options where the formats differ.
 - Temporary ASCII staging becomes an internal resource that requires collision-safe
-  creation, atomic output promotion, and verified cleanup.
+creation, success-only output promotion, and verified cleanup. Same-volume promotion is
+atomic; cross-volume promotion uses managed copy/delete after native success.
 - IGES metadata fidelity is limited to what OCCT 8.0.1 `IGESCAFControl` transfers and
   writes; unsupported entity-level semantics are not inferred.
 - Only exact directly called blocked declarations may enter SC-051. The 814 blocked root
@@ -78,6 +79,18 @@ Release and Debug Generator/Runtime suites; real colored/layered IGES and mixed 
 assembly; real-HWND rendering; clean facade and direct-module package consumers; exact
 SC-051 accounting; generation/freshness/compatibility/inventory/runtime/SBOM/provenance/
 checksum gates; documentation synchronization; and `git diff --check`.
+
+## Implementation evidence
+
+Preview.13 completes all 24 capabilities as one wave. IGESCAF read/import/write,
+format-neutral routing, Unicode-path staging, mixed STEP/IGES composition, XDE-label
+viewer display, copied metadata/diagnostics/units, and source/session-disposal behavior
+pass the focused 4/4 Batch N tests and the full Release/Debug Runtime 156/156 suites.
+Generator 91/91, dependency profiles 6/6, real HWND evidence, the clean 62-DLL facade
+consumer, the direct Modeling consumer, 94-file byte-identical clean regeneration,
+additive API comparison, complete inventory, SBOM, provenance, checksums, and the local
+Preview.13 release check pass. SC-051 reconciles exactly 15 directly invoked blocked
+stable IDs; the remaining audited blocked candidates keep their prior dispositions.
 
 ## Related decisions
 

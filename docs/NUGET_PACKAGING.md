@@ -2,7 +2,7 @@
 
 ## Current package set
 
-The current preview package version is `8.0.1-preview.12` for .NET 10 and
+The current preview package version is `8.0.1-preview.13` for .NET 10 and
 Windows x64. ADR-0074 produces 14 packages:
 
 - 12 managed module packages: Runtime, Foundation, Geometry, MeshData, Modeling, Mesh,
@@ -23,7 +23,7 @@ contains a package hash and would make the artifact self-referential. Release no
 the stable architecture/topic documents are packaged; status remains authoritative in
 the repository.
 
-Preview.12 is approved by the project owner for NuGet publication. The release workstream produces
+Preview.13 is packaged and validated locally but is not published. The release workstream produces
 immutable native provenance, SBOM/checksum evidence, API diff, and CI configuration.
 The project license and bundled third-party notice layout are resolved by ADR-0059;
 hosted release execution and signing remain separate gates. Publication evidence is
@@ -93,6 +93,9 @@ Preview.9 additionally runs the complete Batch L world-located XDE occurrence, c
 AABB/OBB, native-local broad/exact phase, filtering, clearance/contact/penetration/
 containment, pair-matrix, diagnostics, incremental, real-HWND review, screenshot, and
 source-disposal workflow.
+Preview.13 additionally runs the complete Batch N IGESCAF/XDE metadata, option,
+diagnostic/unit, Unicode-path cleanup, mixed STEP/IGES, round-trip, lifetime, and
+real-HWND workflow.
 
 The direct module consumer creates and inspects a six-face box, verifies OCCT 8.0.1 and
 the same 62-DLL `occt/` closure, and fails if the `OcctSharp.dll` facade is present.
@@ -102,13 +105,13 @@ the same 62-DLL `occt/` closure, and fails if the `OcctSharp.dll` facade is pres
 Once a package source contains the package, an application uses the normal command:
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.12
+dotnet add package OcctSharp --version 8.0.1-preview.13
 ```
 
 A narrow consumer can instead select a module, for example:
 
 ```powershell
-dotnet add package OcctSharp.Modeling --version 8.0.1-preview.12
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.13
 ```
 
 The application must run as a Windows x64 process on the current compatibility matrix.
@@ -130,14 +133,14 @@ completed release tooling do not override a `BLOCKED` or `NOT RUN` publication g
 
 ## Managed split evidence
 
-Preview.12 package verification runs from the inner `OcctSharp/` workspace, where
+Preview.13 package verification runs from the inner `OcctSharp/` workspace, where
 `global.json` selects SDK 10.0.400. Direct nupkg inspection confirms 13 managed packages
 with one managed DLL and zero native DLLs each, plus one native package with exactly 62
 DLLs. Every nupkg contains the shared README and icon. Package and informational versions
-are `8.0.1-preview.12`; managed assembly/file identity remains `0.1.0.0`; ABI is 1.56
-and bridge is 0.64.0.
+are `8.0.1-preview.13`; managed assembly/file identity remains `0.1.0.0`; ABI is 1.57
+and bridge is 0.65.0.
 
-The compatibility consumer restores, publishes, and runs the inherited Batch D-M paths.
+The compatibility consumer restores, publishes, and runs the inherited Batch D-N paths.
 The direct Modeling consumer proves module-only consumption without the facade. Both
 converge on one application-local `occt` directory. Toolkit-per-package fragmentation and
 native bridge splitting are not planned. Signing, hosted full release execution, NuGet

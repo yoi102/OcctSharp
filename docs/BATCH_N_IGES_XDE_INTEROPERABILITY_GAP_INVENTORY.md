@@ -4,7 +4,7 @@ This document locks the product denominator, dependency closure, and exit eviden
 Batch N. It measures one metadata-aware IGES/XDE workflow, not isolated IGESCAF,
 IGESControl, XSControl, XCAF, OCAF, path, viewer, or package class counts.
 
-Preparation status: **COMPLETE**. Implementation status: **NOT STARTED (0/24)**. The
+Preparation and implementation status: **COMPLETE — 24/24 capabilities (100%)**. The
 denominator below is immutable for Batch N.
 
 ## Product outcome
@@ -112,8 +112,18 @@ deterministic generation, clean regeneration, compatibility/inventory/runtime ha
 SBOM/provenance/checksums, documentation, and the complete Preview.13 local release check
 pass together.
 
-Preparation establishes no implementation or runtime claim. At this checkpoint all
-implementation and validation gates above are `NOT RUN` for Batch N.
+All gates pass in Preview.13. SC-051 reconciles exactly 15 directly used blocked stable
+IDs. Release and Debug build all 19 projects with zero code warnings/errors; Generator
+91/91, Runtime 156/156, focused Batch N 4/4, and dependency profiles 6/6 pass. The
+repository runtime and clean facade consumer execute metadata-aware IGES read/import/
+write, independent name/color/layer modes, copied diagnostics and units, non-ASCII input
+and output staging with failure cleanup, mixed STEP/IGES composition, round-trip,
+source/session disposal, and real-HWND XDE-label display. All 94 generated files are
+fresh and byte-identical after clean regeneration. API comparison against alpha.38 is
+additive at 38,838 additions and zero removals. Full inventory closes 116,272 declarations
+and 7,090 headers with zero pending/HD099. The committed 15,356,928-byte bridge is
+byte-identical to the Release rebuild with SHA256
+`7DD8EB7A3CF5EA975F45D2F84812FBB2521B0E35F87C500DF5A42E9FC64C9EAD`.
 
 ## Explicit non-goals
 

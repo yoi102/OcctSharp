@@ -64,8 +64,10 @@ can omit, including disconnected visible presentation geometry and representatio
 transforms. The neutral blue-gray color is only a fallback for topology without an XCAF
 presentation style.
 
-The current IGES path uses `ShapeExchange.ReadIges`, which is geometry-only. IGES models
-therefore use the neutral fallback color rather than imported metadata colors.
+IGES files use `XdeDocument.ReadIges`/`IGESCAFControl` through the same XDE-label display
+path. Supported IGES names, generic/surface/curve colors, layers, and visibility are
+therefore projected by OCCT instead of forcing the neutral fallback over the whole model.
+STEP and IGES can also be routed uniformly with `XdeDocument.ReadExchange`.
 
 ## MVVM and viewer structure
 

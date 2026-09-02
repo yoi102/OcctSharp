@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 56)
-    || runtime.BridgeVersion != "0.64.0"
+if (runtime.AbiVersion != new Version(1, 57)
+    || runtime.BridgeVersion != "0.65.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -1722,6 +1722,51 @@ try
             throw new InvalidOperationException("The packaged Batch M real-HWND screenshot failed.");
     }
     finally { _ = PackageWindowMethods.DestroyWindow(batchMWindow); }
+
+    string batchNUnicodeDirectory = Path.Combine(exchangeDirectory, "BatchN-颜色");
+    Directory.CreateDirectory(batchNUnicodeDirectory);
+    string batchNIges = Path.Combine(batchNUnicodeDirectory, "package-batch-n-蓝色.iges");
+    using Shape batchNShape = ShapeFactory.CreateCylinder(4, 14);
+    using (XdeDocument batchNSource = XdeDocument.Create())
+    {
+        using XdeTransaction transaction = batchNSource.BeginTransaction("Package Batch N metadata");
+        XdeLabel part = batchNSource.AddShape(batchNShape, "Package Batch N Part");
+        part.Color = new XdeColor(0.12, 0.42, 0.88, 1);
+        part.SetLayer("Package Batch N Layer");
+        if (!transaction.Commit())
+            throw new InvalidOperationException("The packaged Batch N metadata transaction failed.");
+        batchNSource.WriteExchange(batchNIges, XdeExchangeFormat.Iges);
+    }
+    using XdeDocument batchNImported = XdeDocument.ReadIges(
+        batchNIges,
+        new XdeIgesReadOptions(ReadNames: true, ReadColors: true, ReadLayers: true),
+        out XdeIgesReadReport batchNReport);
+    XdeLabel batchNRoot = batchNImported.GetFreeShapes().Single();
+    if (batchNReport.SourceEntityCount <= 0 || batchNReport.TransferredRootCount != 1
+        || batchNReport.SourceLengthUnitMeters <= 0 || batchNReport.SystemLengthUnitMillimeters <= 0
+        || !(batchNRoot.Name?.Contains("Batch N", StringComparison.OrdinalIgnoreCase) ?? false))
+        throw new InvalidOperationException("The packaged Batch N IGES diagnostics/name workflow failed.");
+    IReadOnlyList<XdePresentationStyle> batchNStyles = batchNRoot.GetPresentationStyles();
+    try
+    {
+        if (!batchNStyles.Any(style => style.EffectiveColor is not null))
+            throw new InvalidOperationException("The packaged Batch N IGES color workflow failed.");
+    }
+    finally { foreach (XdePresentationStyle style in batchNStyles) style.Dispose(); }
+    using XdeDocument batchNComposition = XdeDocument.Create();
+    using (XdeTransaction transaction = batchNComposition.BeginTransaction("Package Batch N mixed import"))
+    {
+        if (batchNComposition.ImportExchange(batchNIges).Count != 1
+            || batchNComposition.ImportExchange(batchMStep, XdeExchangeFormat.Step).Count != 1)
+            throw new InvalidOperationException("The packaged Batch N mixed STEP/IGES import failed.");
+        if (!transaction.Commit())
+            throw new InvalidOperationException("The packaged Batch N mixed import transaction failed.");
+    }
+    string batchNRoundTrip = batchNComposition.WriteExchange(
+        Path.Combine(batchNUnicodeDirectory, "package-batch-n-roundtrip.igs"));
+    using XdeDocument batchNReread = XdeDocument.ReadExchange(batchNRoundTrip);
+    if (batchNReread.GetFreeShapes().Length != 2)
+        throw new InvalidOperationException("The packaged Batch N mixed IGES round trip failed.");
 }
 finally
 {

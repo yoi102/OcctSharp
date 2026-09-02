@@ -20,8 +20,9 @@ root is displayed through `OcctViewer.Display(XdeLabel)`, which applies OCCT's i
 occurrence, part, face, edge, material-base, alpha, and visibility styles to one colored
 presentation. Preview.12 also recovers styled representation targets that OCCT 8.0.1's
 ordinary product transfer can omit, including disconnected presentation geometry. Only
-topology without an XCAF style uses the sample's neutral fallback color. The current IGES
-path is geometry-only and therefore still uses the fallback color.
+topology without an XCAF style uses the sample's neutral fallback color. Preview.13 routes
+IGES through IGESCAF/XDE and the same label-display path, preserving supported names,
+generic/surface/curve colors, layers, and visibility.
 
 OCCT renders through OpenGL into a native child window hosted by `HwndHost`. WPF controls
 can be arranged around the viewport, but WPF airspace rules prevent reliable WPF overlays

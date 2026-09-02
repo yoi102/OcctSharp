@@ -84,6 +84,49 @@ public sealed partial class XdeDocument : IDisposable
             "xde_document_read_step_options");
     }
 
+    /// <summary>Imports an IGES file through IGESCAF with names, colors, and layers enabled.</summary>
+    public static XdeDocument ReadIges(string filePath) =>
+        ReadIges(filePath, new XdeIgesReadOptions(), out _);
+
+    /// <summary>Imports an IGES file through IGESCAF and returns copied transfer diagnostics.</summary>
+    public static XdeDocument ReadIges(
+        string filePath,
+        XdeIgesReadOptions options,
+        out XdeIgesReadReport report)
+    {
+        ArgumentNullException.ThrowIfNull(options);
+        ArgumentException.ThrowIfNullOrWhiteSpace(filePath);
+        string fullPath = Path.GetFullPath(filePath);
+        if (!File.Exists(fullPath)) throw new FileNotFoundException("The IGES input file does not exist.", fullPath);
+        OcctRuntime.EnsureCompatible();
+        using ExchangePathStage stage = ExchangePathStage.ForInput(fullPath);
+        NativeError.ThrowIfFailed(
+            NativeMethods.ReadIgesXdeDocumentWithOptions(
+                stage.NativePath,
+                options.ReadNames ? 1 : 0,
+                options.ReadColors ? 1 : 0,
+                options.ReadLayers ? 1 : 0,
+                out XdeIgesReadReportRaw raw,
+                out nint handle),
+            "xde_document_read_iges_options");
+        report = new(
+            raw.SourceEntityCount,
+            raw.CandidateRootCount,
+            raw.TransferredRootCount,
+            raw.SourceLengthUnitMeters,
+            raw.SystemLengthUnitMillimeters);
+        return new XdeDocument(new OcafDocumentHandle(handle));
+    }
+
+    /// <summary>Reads STEP or IGES into an owned XDE document.</summary>
+    public static XdeDocument ReadExchange(string filePath, XdeExchangeFormat? format = null) =>
+        ResolveExchangeFormat(filePath, format) switch
+        {
+            XdeExchangeFormat.Step => ReadStep(filePath),
+            XdeExchangeFormat.Iges => ReadIges(filePath),
+            _ => throw new ArgumentOutOfRangeException(nameof(format)),
+        };
+
     /// <summary>Begins an XDE/OCAF transaction.</summary>
     public XdeTransaction BeginTransaction()
     {
@@ -106,29 +149,20 @@ public sealed partial class XdeDocument : IDisposable
     /// newly cloned parent-bound labels. The caller can compose them into any assembly.
     /// </summary>
     public IReadOnlyList<XdeLabel> ImportStep(string filePath)
-    {
-        ArgumentException.ThrowIfNullOrWhiteSpace(filePath);
-        string fullPath = Path.GetFullPath(filePath);
-        if (!File.Exists(fullPath)) throw new FileNotFoundException("The STEP input file does not exist.", fullPath);
-        ThrowIfDisposed();
+        => ImportFile(filePath, NativeMethods.ImportStepIntoXdeDocument, "STEP", "xde_document_import_step");
 
-        HashSet<string> existingEntries = GetFreeShapes()
-            .Select(static label => label.Entry)
-            .ToHashSet(StringComparer.Ordinal);
-        NativeError.ThrowIfFailed(
-            NativeMethods.ImportStepIntoXdeDocument(Handle, fullPath, out int importedCount),
-            "xde_document_import_step");
-        XdeLabel[] imported = GetFreeShapes()
-            .Where(label => !existingEntries.Contains(label.Entry))
-            .ToArray();
-        if (imported.Length != importedCount)
+    /// <summary>Imports every IGESCAF/XDE free root into this document.</summary>
+    public IReadOnlyList<XdeLabel> ImportIges(string filePath) =>
+        ImportFile(filePath, NativeMethods.ImportIgesIntoXdeDocument, "IGES", "xde_document_import_iges");
+
+    /// <summary>Imports STEP or IGES roots into this document.</summary>
+    public IReadOnlyList<XdeLabel> ImportExchange(string filePath, XdeExchangeFormat? format = null) =>
+        ResolveExchangeFormat(filePath, format) switch
         {
-            throw new OcctException(
-                NativeStatus.UnknownException.ToString(),
-                $"The XDE STEP importer reported {importedCount} roots but exposed {imported.Length} new labels.");
-        }
-        return imported;
-    }
+            XdeExchangeFormat.Step => ImportStep(filePath),
+            XdeExchangeFormat.Iges => ImportIges(filePath),
+            _ => throw new ArgumentOutOfRangeException(nameof(format)),
+        };
 
     /// <summary>Adds a top-level shape inside the current transaction.</summary>
     public XdeLabel AddShape(Shape shape, string name)
@@ -298,6 +332,34 @@ public sealed partial class XdeDocument : IDisposable
                 options.WriteGdt ? 1 : 0),
             "xde_document_write_step_options");
     }
+
+    /// <summary>Writes this document through IGESCAF with names, colors, and layers enabled.</summary>
+    public string WriteIges(string filePath) =>
+        WriteFile(filePath, NativeMethods.WriteIgesXdeDocument, "xde_document_write_iges");
+
+    /// <summary>Writes this document through IGESCAF with explicit metadata switches.</summary>
+    public string WriteIges(string filePath, XdeIgesWriteOptions options)
+    {
+        ArgumentNullException.ThrowIfNull(options);
+        return WriteFile(
+            filePath,
+            (document, path) => NativeMethods.WriteIgesXdeDocumentWithOptions(
+                document,
+                path,
+                options.WriteNames ? 1 : 0,
+                options.WriteColors ? 1 : 0,
+                options.WriteLayers ? 1 : 0),
+            "xde_document_write_iges_options");
+    }
+
+    /// <summary>Writes this document as STEP or IGES.</summary>
+    public string WriteExchange(string filePath, XdeExchangeFormat? format = null) =>
+        ResolveExchangeFormat(filePath, format) switch
+        {
+            XdeExchangeFormat.Step => WriteStep(filePath),
+            XdeExchangeFormat.Iges => WriteIges(filePath),
+            _ => throw new ArgumentOutOfRangeException(nameof(format)),
+        };
 
     internal Shape GetShape(string entry)
     {
@@ -617,6 +679,7 @@ public sealed partial class XdeDocument : IDisposable
 
     private delegate NativeStatus DocumentReader(string path, out nint document);
     private delegate NativeStatus FileWriter(OcafDocumentHandle document, string path);
+    private delegate NativeStatus FileImporter(OcafDocumentHandle document, string path, out int rootCount);
     private delegate NativeStatus Utf8Reader(nint buffer, int capacity, out int written);
 
     private static XdeDocument OpenCore(string filePath, DocumentReader reader, string operation)
@@ -625,7 +688,8 @@ public sealed partial class XdeDocument : IDisposable
         string fullPath = Path.GetFullPath(filePath);
         if (!File.Exists(fullPath)) throw new FileNotFoundException("The XDE input file does not exist.", fullPath);
         OcctRuntime.EnsureCompatible();
-        NativeError.ThrowIfFailed(reader(fullPath, out nint handle), operation);
+        using ExchangePathStage stage = ExchangePathStage.ForInput(fullPath);
+        NativeError.ThrowIfFailed(reader(stage.NativePath, out nint handle), operation);
         return new XdeDocument(new OcafDocumentHandle(handle));
     }
 
@@ -636,8 +700,53 @@ public sealed partial class XdeDocument : IDisposable
         string fullPath = Path.GetFullPath(filePath);
         string? directory = Path.GetDirectoryName(fullPath);
         if (!string.IsNullOrEmpty(directory)) Directory.CreateDirectory(directory);
-        NativeError.ThrowIfFailed(writer(Handle, fullPath), operation);
+        using ExchangePathStage stage = ExchangePathStage.ForOutput(fullPath);
+        NativeError.ThrowIfFailed(writer(Handle, stage.NativePath), operation);
+        stage.Complete();
         return fullPath;
+    }
+
+    private XdeLabel[] ImportFile(
+        string filePath,
+        FileImporter importer,
+        string format,
+        string operation)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(filePath);
+        string fullPath = Path.GetFullPath(filePath);
+        if (!File.Exists(fullPath)) throw new FileNotFoundException($"The {format} input file does not exist.", fullPath);
+        ThrowIfDisposed();
+        HashSet<string> existingEntries = GetFreeShapes()
+            .Select(static label => label.Entry)
+            .ToHashSet(StringComparer.Ordinal);
+        using ExchangePathStage stage = ExchangePathStage.ForInput(fullPath);
+        NativeError.ThrowIfFailed(importer(Handle, stage.NativePath, out int importedCount), operation);
+        XdeLabel[] imported = GetFreeShapes()
+            .Where(label => !existingEntries.Contains(label.Entry))
+            .ToArray();
+        if (imported.Length != importedCount)
+        {
+            throw new OcctException(
+                NativeStatus.UnknownException.ToString(),
+                $"The XDE {format} importer reported {importedCount} roots but exposed {imported.Length} new labels.");
+        }
+        return imported;
+    }
+
+    private static XdeExchangeFormat ResolveExchangeFormat(string filePath, XdeExchangeFormat? format)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(filePath);
+        if (format is not null)
+        {
+            if (!Enum.IsDefined(format.Value)) throw new ArgumentOutOfRangeException(nameof(format));
+            return format.Value;
+        }
+        return Path.GetExtension(filePath).ToUpperInvariant() switch
+        {
+            ".STEP" or ".STP" => XdeExchangeFormat.Step,
+            ".IGES" or ".IGS" => XdeExchangeFormat.Iges,
+            _ => throw new NotSupportedException("Only STEP (.step/.stp) and IGES (.iges/.igs) XDE exchange formats are supported."),
+        };
     }
 
     private static string ReadFixed(Utf8Reader reader, string operation) => ReadBuffer(EntryCapacity, reader, operation);

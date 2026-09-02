@@ -19,7 +19,7 @@ into one ambiguous version string.
 - Under ADR-0065, NuGet package versions align their numeric core with the supported
   OCCT version: `<OCCT major>.<minor>.<patch>-preview.<OcctSharp preview number>`.
 - The current line began at `8.0.1-preview.1`; the current package is
-  `8.0.1-preview.12`. Increment the preview counter for an
+  `8.0.1-preview.13`. Increment the preview counter for an
   OcctSharp package-visible change while the OCCT baseline remains 8.0.1. Reserve the
   stable `8.0.1` package version for public-release readiness.
 - A later OCCT baseline changes the three-part numeric core and restarts the preview
@@ -32,8 +32,8 @@ into one ambiguous version string.
 - Record the exact OCCT build identity in package metadata and runtime diagnostics.
 - Keep package, managed assembly, generator, native ABI, bridge, binding-model schema,
   configuration schema, and OCCT build identities independent. In particular, the
-  Preview.12 managed assembly identities remain `0.1.0.0`; native ABI is 1.56 and bridge
-  implementation is 0.64.0.
+  Preview.13 managed assembly identities remain `0.1.0.0`; native ABI is 1.57 and bridge
+  implementation is 0.65.0.
 
 ## Runtime identity
 
@@ -280,6 +280,13 @@ managed assembly/file identity `0.1.0.0`, schema 1.13, and the Preview.10 14-pac
 graph; advances native ABI to 1.56 and bridge to 0.64.0; and adds copied
 `XdePresentationStyle` snapshots plus XDE-label viewer presentation. SC-050 records the
 native-local transfer/style recovery without bulk-reclassifying generator inventory.
+
+Preview.13 completes the additive Batch N IGES/XDE interoperability wave. It retains
+managed assembly/file identity `0.1.0.0`, schema 1.13, and the same 14-package graph;
+advances native ABI to 1.57 and bridge to 0.65.0; and adds metadata-aware IGESCAF read/
+import/write, format-neutral STEP/IGES routing, Unicode-path staging, mixed composition,
+and XDE-label IGES display. SC-051 adds exactly 15 direct manual stable IDs without
+removing generated APIs.
 
 An OCCT upgrade report must classify:
 

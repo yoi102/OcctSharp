@@ -6,23 +6,27 @@ evidence; creating files or generating a large method count is not sufficient.
 The retired B00–B20 capability milestones and future package boundaries are documented
 in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the completed
 product-scale batch `B`; none is a separate current batch or commit boundary.
-Batch B through Batch M are complete for their accepted local implementation scopes.
-Batch M closes its one 24-capability interactive assembly-placement editing wave under
-ADR-0075. It was not split into AIS, XDE, transaction, DMU, exchange, or viewer
+Batch B through Batch N are complete for their accepted local implementation scopes.
+Batch N closes its one 24-capability metadata-aware IGES/XDE interoperability wave under
+ADR-0077. It was not split into reader, writer, metadata, path, viewer, or package
 checkpoints.
 
-## Current priority: Batch N IGES/XDE interoperability
+## Completed priority: Batch N IGES/XDE interoperability
 
 ADR-0077 and [the Batch N gap inventory](BATCH_N_IGES_XDE_INTEROPERABILITY_GAP_INVENTORY.md)
 lock metadata-aware IGES read/import/write, copied diagnostics and units, name/color/layer/
 visibility preservation, non-ASCII Windows paths, mixed STEP/IGES composition, XDE-label
 viewer display, real files, lifetime, and clean-package evidence as one 24-capability
-wave. Preparation is complete at 0/24 implementation. The Preview.12 inventory audit
+wave. Preparation and implementation are complete at 24/24. The Preview.12 baseline audit
 covers exactly 24 roots and 1,593 declarations: 434 emitted, 45 manual, 814 blocked, and
 300 skipped. Only exact directly invoked blocked overloads may enter SC-051. Package
-`8.0.1-preview.13`, native ABI 1.57, bridge 0.65.0, and schema 1.13 are reserved. No
+`8.0.1-preview.13`, native ABI 1.57, bridge 0.65.0, and schema 1.13 are validated. No
 reader-only, writer-only, color-only, path-only, viewer-only, or numbered fragment is a
-completion point.
+completion point. SC-051 reconciles exactly 15 direct blocked stable IDs. Release/Debug,
+Generator 91/91, Runtime 156/156, focused 4/4, real IGES/XDE and HWND, Unicode cleanup,
+the clean 62-DLL facade consumer, direct-module consumer, 94-file clean regeneration,
+compatibility, inventory, SBOM, provenance, checksums, and the complete Preview.13 local
+release check pass.
 
 ## Completed priority: Batch M interactive assembly placement editing
 
@@ -55,18 +59,15 @@ signing, and NuGet publication remain separate
 release-readiness work rather than
 unfinished batch implementation.
 
-## Current release priority: Preview.12 STEP/XCAF presentation fidelity
+## Current release priority: Preview.13 local completion
 
-ADR-0076 is a package-visible corrective release, not a new numbered product batch. It
-closes the real-file presentation gap by pre-transferring styled STEP targets, recovering
-mapped transforms and disconnected visible presentation geometry into XDE, exposing
-copied `XdePresentationStyle` snapshots, and displaying whole XDE roots with inherited
-subshape styles. The managed module graph, one-native-DLL architecture, completed Batch
-B-M denominators, and schema 1.13 remain unchanged. Release/Debug, real-file/WPF,
-14-package, committed-runtime, clean-regeneration, local consumers, API/inventory, and
-release-metadata gates pass. Public indexing and a clean nuget.org-only consumer are the
-remaining Preview.12 exit criteria; hosted full release execution and signing stay
-independent `NOT RUN` gates.
+ADR-0077 completes the package-visible Batch N wave while retaining ADR-0074's managed
+module graph and one-native-DLL architecture. Preview.13 adds metadata-aware IGESCAF/XDE,
+format-neutral STEP/IGES routing, Unicode-path staging, mixed composition, round-trip,
+and XDE-label viewer behavior. Release/Debug, real-file/HWND, 14-package isolation,
+committed-runtime identity, clean regeneration, local consumers, API/inventory, and
+release-metadata gates pass. Hosted full release execution, signing, NuGet publication/
+indexing, and a public-source consumer remain independent `NOT RUN` gates.
 
 ## Completed priority: Batch L digital mock-up interference and clearance
 

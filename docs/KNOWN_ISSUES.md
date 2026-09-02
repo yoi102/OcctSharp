@@ -2,17 +2,16 @@
 
 ## KI-029: IGES exchange is geometry-only and does not preserve XDE metadata
 
-- Status: Planned in Batch N
+- Status: Resolved in Preview.13 at 24/24 under ADR-0077
 - Severity: Medium
 - Area: IGESCAF/XDE exchange and WPF viewer
-- Problem: The managed IGES path uses `IGESControl` and returns one owning shape. It does
+- Original problem: The managed IGES path used `IGESControl` and returned one owning shape. It did
   not project IGES names, colors, layers, or visibility into an owned XDE document, so
   the WPF sample displays IGES with the neutral fallback color.
-- Current mitigation: Geometry-only IGES read/write remains available and reports
-  transfer failure explicitly.
-- Planned resolution: Implement ADR-0077's complete metadata-aware IGES/XDE read/import/
-  write, mixed-format, viewer, round-trip, lifetime, and package wave; do not close this
-  issue on a reader-only or color-only checkpoint.
+- Resolution: Preview.13 implements ADR-0077's complete metadata-aware IGES/XDE read/
+  import/write, independent name/color/layer options, copied diagnostics/units, mixed-
+  format composition, XDE-label viewer display, round-trip, lifetime, Unicode paths, and
+  clean-package evidence. Focused Batch N 4/4 and full Release/Debug Runtime 156/156 pass.
 
 ## KI-028: Batch F freeform curve/surface authoring closure was not implemented
 
@@ -140,9 +139,9 @@ evidence updated.
 - Severity: High
 - Area: Generator
 - Problem: Deterministic native/managed generation now owns 16,353 stable IDs and the
-  accepted friendly/manual layer reconciles 534 additional stable IDs. This is a broad,
+  accepted friendly/manual layer reconciles 557 additional stable IDs. This is a broad,
   validated selected surface, not full OCCT API coverage. The complete classification
-  still contains 49,344 skipped and 50,041 narrowly blocked declarations, while 32 of
+  still contains 49,344 skipped and 50,018 narrowly blocked declarations, while 32 of
   7,090 entry headers cannot be semantically scanned with the supplied optional/artifact
   inputs. A single generated/total percentage would therefore mix different denominators
   and overstate support.
@@ -157,15 +156,15 @@ evidence updated.
 
 ## KI-009: Windows non-ASCII exchange paths are not validated
 
-- Status: Planned in Batch N
+- Status: Resolved in Preview.13 under ADR-0077
 - Severity: Medium
 - Area: Native file exchange
-- Problem: Managed paths are marshalled as UTF-8, while the selected OCCT file APIs
+- Original problem: Managed paths were marshalled as UTF-8, while the selected OCCT file APIs
   accept narrow `char*` paths and their Windows non-ASCII behavior has not been proven.
-- Current mitigation: Validation and samples use ASCII paths; failures return explicit
-  file I/O status and diagnostics.
-- Planned resolution: ADR-0077 requires non-ASCII input/output tests and a controlled,
-  cleanup-safe temporary ASCII-path strategy without changing public path semantics.
+- Resolution: ASCII paths retain their direct behavior. Non-ASCII input is copied to a
+  unique ASCII staging file; non-ASCII output is written to staging and promoted only
+  after success. Preview.13 tests successful read/write, failure and exception cleanup,
+  diagnostics retaining the public path, package consumption, and round-trip behavior.
 
 ## KI-010: XDE material placement has an OCCT writer limitation
 

@@ -202,6 +202,15 @@ real-HWND screenshot. Managed and native layout tests must both hold the copied 
 fail deterministically; fitting after detach must pass. The same workflow must pass in Release and Debug and from the clean shared
 62-DLL package consumer. Preview.11 satisfies this profile as one complete Batch M run.
 
+A metadata-aware IGES/XDE interoperability profile additionally requires all 24
+ADR-0077 capabilities to execute together: explicit/extension format routing; IGESCAF
+read/import/write; all transferable roots; names, generic/surface/curve colors, layers,
+and visibility; copied source/root/transfer diagnostics and units; non-ASCII input/output
+with failure cleanup; mixed STEP/IGES composition; destination-parent-bound labels;
+source/session disposal; independent writer modes; geometry and metadata round-trip;
+XDE-label WPF display; real HWND; and clean package consumption. Preview.13 satisfies
+this profile through focused 4/4 and full Release/Debug Runtime 156/156.
+
 ## Real CAD fixtures
 
 Every committed fixture must have:

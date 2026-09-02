@@ -1025,6 +1025,11 @@ internal static partial class NativeMethods
     internal static partial NativeStatus ImportStepIntoXdeDocument(
         OcafDocumentHandle document, string filePath, out int rootCount);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_import_iges", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ImportIgesIntoXdeDocument(
+        OcafDocumentHandle document, string filePath, out int rootCount);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_open", StringMarshalling = StringMarshalling.Utf8)]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus OpenXdeDocument(string filePath, out nint document);
@@ -1032,6 +1037,20 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_read_step", StringMarshalling = StringMarshalling.Utf8)]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus ReadStepXdeDocument(string filePath, out nint document);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_read_iges", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ReadIgesXdeDocument(string filePath, out nint document);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_read_iges_options", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus ReadIgesXdeDocumentWithOptions(
+        string filePath,
+        int readNames,
+        int readColors,
+        int readLayers,
+        out XdeIgesReadReportRaw report,
+        out nint document);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_read_step_options", StringMarshalling = StringMarshalling.Utf8)]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -1049,6 +1068,19 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_write_step", StringMarshalling = StringMarshalling.Utf8)]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus WriteStepXdeDocument(OcafDocumentHandle document, string filePath);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_write_iges", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus WriteIgesXdeDocument(OcafDocumentHandle document, string filePath);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_write_iges_options", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus WriteIgesXdeDocumentWithOptions(
+        OcafDocumentHandle document,
+        string filePath,
+        int writeNames,
+        int writeColors,
+        int writeLayers);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_document_write_step_options", StringMarshalling = StringMarshalling.Utf8)]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

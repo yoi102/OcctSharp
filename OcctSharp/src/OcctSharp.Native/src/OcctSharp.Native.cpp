@@ -105,6 +105,9 @@
 #include <Interface_InterfaceModel.hxx>
 #include <IGESControl_Writer.hxx>
 #include <IGESControl_Reader.hxx>
+#include <IGESCAFControl_Reader.hxx>
+#include <IGESCAFControl_Writer.hxx>
+#include <IGESData_IGESModel.hxx>
 #include <NCollection_DataMap.hxx>
 #include <NCollection_Array1.hxx>
 #include <NCollection_Array2.hxx>
@@ -146,6 +149,7 @@
 #include <StlAPI_Reader.hxx>
 #include <TCollection_ExtendedString.hxx>
 #include <TCollection_AsciiString.hxx>
+#include <UnitsMethods.hxx>
 #include <TDataStd_Name.hxx>
 #include <TDataStd_Comment.hxx>
 #include <TDataStd_AsciiString.hxx>
@@ -213,6 +217,7 @@
 #include <XCAFDoc_VisMaterialTool.hxx>
 #include <XCAFDoc_VisMaterialPBR.hxx>
 #include <XCAFDoc.hxx>
+#include <XCAFDoc_Color.hxx>
 #include <XCAFDoc_GraphNode.hxx>
 #include <XCAFPrs.hxx>
 #include <XCAFPrs_Style.hxx>
@@ -336,6 +341,8 @@ static_assert(sizeof(OcctSharp_DetailedMeshTriangle) == 20);
 static_assert(sizeof(OcctSharp_ValidationIssue) == 8);
 static_assert(sizeof(OcctSharp_StepReadReport) == 24);
 static_assert(offsetof(OcctSharp_StepReadReport, system_length_unit) == 16);
+static_assert(sizeof(OcctSharp_IgesReadReport) == 32);
+static_assert(offsetof(OcctSharp_IgesReadReport, source_length_unit_meters) == 16);
 static_assert(sizeof(OcctSharp_StepReaderInfo) == 32);
 static_assert(offsetof(OcctSharp_StepReaderInfo, system_length_unit) == 8);
 static_assert(alignof(OcctSharp_ShapeDistanceResult) == 8);
@@ -471,8 +478,8 @@ struct OcctSharp_FeatureResultHandle
 
 namespace
 {
-constexpr uint32_t AbiVersion = 0x00010038U;
-constexpr const char* BridgeVersion = "0.64.0";
+constexpr uint32_t AbiVersion = 0x00010039U;
+constexpr const char* BridgeVersion = "0.65.0";
 thread_local std::string LastError;
 std::mutex LiveShapesMutex;
 std::unordered_set<const OcctSharp_ShapeHandle*> LiveShapes;
@@ -1701,6 +1708,11 @@ void ConfigureXdeWriter(
   writer.SetVisualMaterialMode(true);
 }
 
+std::vector<TDF_Label> CloneXdeRootsIntoDocument(
+  const occ::handle<TDocStd_Document>& source_document,
+  const occ::handle<TDocStd_Document>& output_document,
+  const char* source_format);
+
 std::vector<TDF_Label> ImportStepRootsIntoXdeDocument(
   const char* file_path,
   const occ::handle<TDocStd_Document>& output_document)
@@ -1717,14 +1729,29 @@ std::vector<TDF_Label> ImportStepRootsIntoXdeDocument(
     throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "A STEP input could not be transferred into an XDE document.");
   RecoverStepPresentationStyles(reader, source_document);
 
+  return CloneXdeRootsIntoDocument(source_document, output_document, "STEP");
+}
+
+std::vector<TDF_Label> CloneXdeRootsIntoDocument(
+  const occ::handle<TDocStd_Document>& source_document,
+  const occ::handle<TDocStd_Document>& output_document,
+  const char* source_format)
+{
   occ::handle<XCAFDoc_ShapeTool> source_shape_tool =
     XCAFDoc_DocumentTool::ShapeTool(source_document->Main());
   occ::handle<XCAFDoc_ShapeTool> output_shape_tool =
     XCAFDoc_DocumentTool::ShapeTool(output_document->Main());
+  occ::handle<XCAFDoc_LayerTool> source_layer_tool =
+    XCAFDoc_DocumentTool::LayerTool(source_document->Main());
+  occ::handle<XCAFDoc_LayerTool> output_layer_tool =
+    XCAFDoc_DocumentTool::LayerTool(output_document->Main());
   NCollection_Sequence<TDF_Label> source_roots;
   source_shape_tool->GetFreeShapes(source_roots);
   if (source_roots.IsEmpty())
-    throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "A STEP input produced no free XDE shape roots.");
+  {
+    const std::string message = std::string("A ") + source_format + " input produced no free XDE shape roots.";
+    throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, message.c_str());
+  }
 
   std::vector<TDF_Label> imported_roots;
   imported_roots.reserve(static_cast<size_t>(source_roots.Size()));
@@ -1746,9 +1773,17 @@ std::vector<TDF_Label> ImportStepRootsIntoXdeDocument(
       const bool has_material_reference =
         label_iterator.Key().FindAttribute(XCAFDoc::MaterialRefGUID(), material_reference)
         && material_reference->HasFather();
+      const occ::handle<NCollection_HSequence<TCollection_ExtendedString>> source_layers =
+        source_layer_tool->GetLayers(label_iterator.Key());
       XCAFDoc_Editor::CloneMetaData(
         label_iterator.Key(), label_iterator.Value(), &visual_material_map,
-        true, true, true, true, true);
+        true, false, true, true, true);
+      if (!source_layers.IsNull())
+      {
+        for (int32_t layer_index = 1; layer_index <= source_layers->Length(); ++layer_index)
+          output_layer_tool->SetLayer(
+            label_iterator.Value(), source_layers->Value(layer_index), false);
+      }
       if (has_material_reference && label_iterator.Value() != cloned_root)
       {
         XCAFDoc_Editor::CloneMetaData(
@@ -1759,6 +1794,69 @@ std::vector<TDF_Label> ImportStepRootsIntoXdeDocument(
     imported_roots.push_back(cloned_root);
   }
   return imported_roots;
+}
+
+void ConfigureXdeIgesReader(
+  IGESCAFControl_Reader& reader,
+  const bool read_names,
+  const bool read_colors,
+  const bool read_layers)
+{
+  reader.SetNameMode(read_names);
+  reader.SetColorMode(read_colors);
+  reader.SetLayerMode(read_layers);
+}
+
+occ::handle<TDocStd_Document> ReadIgesXdeDocument(
+  const char* file_path,
+  const bool read_names,
+  const bool read_colors,
+  const bool read_layers,
+  OcctSharp_IgesReadReport* report)
+{
+  ValidatePath(file_path);
+  occ::handle<TDocStd_Document> document = CreateXdeDocument();
+  InitializeXdeTools(document);
+  IGESCAFControl_Reader reader;
+  ConfigureXdeIgesReader(reader, read_names, read_colors, read_layers);
+  const IFSelect_ReturnStatus status = reader.ReadFile(file_path);
+  if (status != IFSelect_RetDone)
+  {
+    const std::string message =
+      "OCCT could not read IGES into XDE; status " + std::to_string(static_cast<int>(status)) + ".";
+    throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, message.c_str());
+  }
+  if (report != nullptr)
+  {
+    const occ::handle<IGESData_IGESModel> model = reader.IGESModel();
+    report->source_entity_count = model.IsNull() ? 0 : model->NbEntities();
+    report->candidate_root_count = reader.NbRootsForTransfer();
+    report->source_length_unit_meters = model.IsNull() ? 0.0 : model->GlobalSection().UnitValue();
+    report->system_length_unit_millimeters = UnitsMethods::GetCasCadeLengthUnit();
+  }
+  if (!reader.Transfer(document))
+    throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not transfer IGES into the XDE document.");
+  NCollection_Sequence<TDF_Label> roots;
+  XCAFDoc_DocumentTool::ShapeTool(document->Main())->GetFreeShapes(roots);
+  if (report != nullptr) report->transferred_root_count = roots.Size();
+  if (roots.IsEmpty())
+    throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "An IGES input produced no free XDE shape roots.");
+  // IGESCAF may leave color/layer references tied to its transfer document internals.
+  // Clone the complete root trees and metadata into the caller-owned document so every
+  // returned label remains valid after the reader/work session is destroyed.
+  occ::handle<TDocStd_Document> owned_document = CreateXdeDocument();
+  InitializeXdeTools(owned_document);
+  CloneXdeRootsIntoDocument(document, owned_document, "IGES");
+  return owned_document;
+}
+
+std::vector<TDF_Label> ImportIgesRootsIntoXdeDocument(
+  const char* file_path,
+  const occ::handle<TDocStd_Document>& output_document)
+{
+  const occ::handle<TDocStd_Document> source_document =
+    ReadIgesXdeDocument(file_path, true, true, true, nullptr);
+  return CloneXdeRootsIntoDocument(source_document, output_document, "IGES");
 }
 }
 
@@ -8657,6 +8755,25 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_import_step(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_import_iges(
+  OcctSharp_OcafDocumentHandle* document, const char* file_path, int32_t* out_root_count)
+{
+  if (out_root_count == nullptr)
+  {
+    SetLastError("The imported IGES root-count pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_root_count = 0;
+  return Guard([&]
+  {
+    ValidateOcafDocument(document);
+    RequireOpenOcafCommand(document);
+    std::vector<TDF_Label> roots = ImportIgesRootsIntoXdeDocument(file_path, document->Document);
+    GetXdeShapeTool(document)->UpdateAssemblies();
+    *out_root_count = static_cast<int32_t>(roots.size());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_open(
   const char* file_path, OcctSharp_OcafDocumentHandle** out_document)
 {
@@ -8692,6 +8809,51 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step(
 {
   return occtsharp_xde_document_read_step_options(
     file_path, 1, 1, 1, 1, 1, 1, 1, out_document);
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_iges(
+  const char* file_path, OcctSharp_OcafDocumentHandle** out_document)
+{
+  OcctSharp_IgesReadReport report{};
+  return occtsharp_xde_document_read_iges_options(
+    file_path, 1, 1, 1, &report, out_document);
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_iges_options(
+  const char* file_path,
+  const int32_t read_names,
+  const int32_t read_colors,
+  const int32_t read_layers,
+  OcctSharp_IgesReadReport* out_report,
+  OcctSharp_OcafDocumentHandle** out_document)
+{
+  if (out_document == nullptr || out_report == nullptr)
+  {
+    SetLastError("The output IGES XDE document or report pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *out_document = nullptr;
+  *out_report = {};
+  return Guard([&]
+  {
+    const auto is_flag = [](const int32_t value) { return value == 0 || value == 1; };
+    if (!is_flag(read_names) || !is_flag(read_colors) || !is_flag(read_layers))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "An XDE IGES read option is not Boolean.");
+    OcctSharp_OcafDocumentHandle* result = CreateOwnedXdeDocument();
+    try
+    {
+      const occ::handle<TDocStd_Document> source = ReadIgesXdeDocument(
+        file_path, read_names != 0, read_colors != 0, read_layers != 0, out_report);
+      CloneXdeRootsIntoDocument(source, result->Document, "IGES");
+      GetXdeShapeTool(result)->UpdateAssemblies();
+      *out_document = result;
+    }
+    catch (...)
+    {
+      occtsharp_ocaf_document_release(result);
+      throw;
+    }
+  });
 }
 
 template <typename TProvider>
@@ -8805,6 +8967,37 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step(
 {
   return occtsharp_xde_document_write_step_options(
     document, file_path, 0, 4, 1, 1, 1, 1, 1, 1);
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_iges(
+  const OcctSharp_OcafDocumentHandle* document, const char* file_path)
+{
+  return occtsharp_xde_document_write_iges_options(document, file_path, 1, 1, 1);
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_iges_options(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* file_path,
+  const int32_t write_names,
+  const int32_t write_colors,
+  const int32_t write_layers)
+{
+  return Guard([&]
+  {
+    const auto is_flag = [](const int32_t value) { return value == 0 || value == 1; };
+    if (!is_flag(write_names) || !is_flag(write_colors) || !is_flag(write_layers))
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "An XDE IGES write option is not Boolean.");
+    ValidateOcafDocument(document);
+    ValidatePath(file_path);
+    if (document->Document->HasOpenCommand())
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The XDE transaction must be closed before IGES export.");
+    IGESCAFControl_Writer writer;
+    writer.SetNameMode(write_names != 0);
+    writer.SetColorMode(write_colors != 0);
+    writer.SetLayerMode(write_layers != 0);
+    if (!writer.Perform(document->Document, file_path))
+      throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not write the XDE document as IGES.");
+  });
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step_options(
@@ -10555,11 +10748,24 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_get_color(
   *color = {};
   return Guard([&]
   {
-    Quantity_ColorRGBA nativeColor;
     const TDF_Label label = ResolveOcafLabel(document, entry);
-    if (XCAFDoc_ColorTool::GetColor(label, XCAFDoc_ColorGen, nativeColor)
-        || XCAFDoc_ColorTool::GetColor(label, XCAFDoc_ColorSurf, nativeColor)
-        || XCAFDoc_ColorTool::GetColor(label, XCAFDoc_ColorCurv, nativeColor))
+    Quantity_ColorRGBA nativeColor;
+    const auto try_color = [&](const XCAFDoc_ColorType type)
+    {
+      occ::handle<TDataStd_TreeNode> reference;
+      if (!label.FindAttribute(XCAFDoc::ColorRefGUID(type), reference)
+          || reference.IsNull() || !reference->HasFather()) return false;
+      occ::handle<XCAFDoc_Color> attribute;
+      const TDF_Label color_label = reference->Father()->Label();
+      if (color_label.IsNull()
+          || !color_label.FindAttribute(XCAFDoc_Color::GetID(), attribute)
+          || attribute.IsNull()) return false;
+      nativeColor = attribute->GetColorRGBA();
+      return true;
+    };
+    if (try_color(XCAFDoc_ColorGen)
+        || try_color(XCAFDoc_ColorSurf)
+        || try_color(XCAFDoc_ColorCurv))
     {
       *has_color = 1;
       *color = {

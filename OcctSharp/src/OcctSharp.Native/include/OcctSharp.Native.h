@@ -155,6 +155,15 @@ typedef struct OcctSharp_StepReadReport
   double system_length_unit;
 } OcctSharp_StepReadReport;
 
+typedef struct OcctSharp_IgesReadReport
+{
+  int32_t source_entity_count;
+  int32_t candidate_root_count;
+  int32_t transferred_root_count;
+  double source_length_unit_meters;
+  double system_length_unit_millimeters;
+} OcctSharp_IgesReadReport;
+
 typedef struct OcctSharp_Xyz
 {
   double x;
@@ -1530,10 +1539,21 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_create(
   OcctSharp_OcafDocumentHandle** out_document);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_import_step(
   OcctSharp_OcafDocumentHandle* document, const char* file_path, int32_t* out_root_count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_import_iges(
+  OcctSharp_OcafDocumentHandle* document, const char* file_path, int32_t* out_root_count);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_open(
   const char* file_path, OcctSharp_OcafDocumentHandle** out_document);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step(
   const char* file_path, OcctSharp_OcafDocumentHandle** out_document);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_iges(
+  const char* file_path, OcctSharp_OcafDocumentHandle** out_document);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_iges_options(
+  const char* file_path,
+  int32_t read_names,
+  int32_t read_colors,
+  int32_t read_layers,
+  OcctSharp_IgesReadReport* out_report,
+  OcctSharp_OcafDocumentHandle** out_document);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_gltf(
   const char* file_path, OcctSharp_OcafDocumentHandle** out_document);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_obj(
@@ -1550,6 +1570,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step_o
   OcctSharp_OcafDocumentHandle** out_document);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_step(
   const OcctSharp_OcafDocumentHandle* document, const char* file_path);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_iges(
+  const OcctSharp_OcafDocumentHandle* document, const char* file_path);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_iges_options(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* file_path,
+  int32_t write_names,
+  int32_t write_colors,
+  int32_t write_layers);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_gltf(
   const OcctSharp_OcafDocumentHandle* document, const char* file_path);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_write_obj(

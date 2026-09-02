@@ -550,6 +550,15 @@ handles remain native-local. The same native import path pre-transfers styled AP
 targets and installs recovered surface/curve/rendering colors and visibility into XDE.
 The bridge implementation is 0.64.0; schema remains 1.13.
 
+ABI 1.57 is the Preview.13 Batch N IGES/XDE interoperability boundary. It adds native-
+local IGESCAF document read/import/write entry points with independent name/color/layer
+modes, copied transfer diagnostics and unit values, and format-neutral managed routing.
+IGESCAF sessions, models, maps, iterators, and labels never cross the C ABI. Transfer
+results are cloned into application-owned XDE documents before document-parent-bound
+managed labels are exposed; imported layer references are copied explicitly. Non-ASCII
+Windows path staging remains managed-internal and does not alter the native ABI. The
+bridge implementation is 0.65.0; schema remains 1.13.
+
 ## Verification
 
 Alpha.48 verification confirms the existing ABI contract for all 162 IGES public

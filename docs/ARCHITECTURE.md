@@ -327,8 +327,11 @@ Managed code receives owned XDE documents, document-parent-bound labels, registe
 topology owners, and copied metadata/diagnostics only. Format-neutral routing composes
 the existing STEPCAF and new IGESCAF paths. Non-ASCII Windows paths are handled behind a
 cleanup-safe temporary ASCII staging boundary without changing public path semantics.
-The immutable 24-capability denominator is prepared in ADR-0077; implementation and its
-runtime evidence are not yet claimed.
+The immutable 24-capability denominator in ADR-0077 is complete in Preview.13. IGESCAF
+transfer documents are cloned into application-owned XDE documents before managed labels
+are exposed; layer references are explicitly copied. Focused 4/4, Release/Debug Runtime
+156/156, Unicode cleanup, mixed STEP/IGES, real-HWND, clean-package, regeneration,
+inventory, compatibility, and local release evidence validate this boundary.
 
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native

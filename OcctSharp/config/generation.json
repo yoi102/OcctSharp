@@ -2333,6 +2333,66 @@
     {
       "stableId": "c:@S@AIS_Manipulator@F@Transform#I#I#&1$@N@opencascade@S@handle>#$@S@V3d_View#",
       "specialCaseId": "SC-049"
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Reader@F@IGESCAFControl_Reader#",
+      "specialCaseId": "SC-051"
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Reader@F@SetColorMode#b#",
+      "specialCaseId": "SC-051"
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Reader@F@SetLayerMode#b#",
+      "specialCaseId": "SC-051"
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Reader@F@SetNameMode#b#",
+      "specialCaseId": "SC-051"
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Reader@F@Transfer#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-051"
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@IGESCAFControl_Writer#",
+      "specialCaseId": "SC-051"
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#*1C#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-051"
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@SetColorMode#b#",
+      "specialCaseId": "SC-051"
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@SetLayerMode#b#",
+      "specialCaseId": "SC-051"
+    },
+    {
+      "stableId": "c:@S@IGESCAFControl_Writer@F@SetNameMode#b#",
+      "specialCaseId": "SC-051"
+    },
+    {
+      "stableId": "c:@S@IGESControl_Reader@F@IGESModel#1",
+      "specialCaseId": "SC-051"
+    },
+    {
+      "stableId": "c:@S@IGESControl_Reader@F@NbRootsForTransfer#",
+      "specialCaseId": "SC-051"
+    },
+    {
+      "stableId": "c:@S@IGESData_GlobalSection@F@UnitValue#1",
+      "specialCaseId": "SC-051"
+    },
+    {
+      "stableId": "c:@S@IGESData_IGESModel@F@GlobalSection#1",
+      "specialCaseId": "SC-051"
+    },
+    {
+      "stableId": "c:@S@XSControl_Reader@F@ReadFile#*1C#",
+      "specialCaseId": "SC-051"
     }
   ],
   "excludedBindings": [

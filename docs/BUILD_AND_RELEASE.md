@@ -148,13 +148,18 @@ Application Framework, Visualization, and required third-party DLL closure. See
 - Physical managed module/facade NuGet layout with one shared native runtime package,
   automatic application-local loading from `occt`, and compatibility plus direct-module
   clean consumers.
-- Geometry-only STEP read/write, transformed compound assembly, metadata-preserving
-  one-shot STEPCAF/XDE assembly, STL export with meshing, and BRep-mode IGES export.
+- Geometry and metadata-aware STEP/IGES read, import, compose, round-trip, and export;
+  OCAF/XDE documents, stable parent-bound labels, transactions, history, persistence,
+  assemblies, PMI, scene/mesh exchange, and the Windows HWND viewer.
+- Fourteen OCCT-aligned Preview.13 packages: 12 managed modules, the compatibility/facade
+  package, and one shared native package containing the manifest-verified 62-DLL runtime
+  plus 11 third-party notice/license files. Local SBOM, provenance, checksums, isolation,
+  and clean facade/direct-module consumers pass.
 
-General native and managed binding emitters, full type mapping, broad ownership
-inference, general XDE/OCAF document APIs, and public release are not implemented yet.
-Local package creation is implemented, but complete notices, provenance, CI production,
-signing, and public publication are not.
+The generated surface remains deliberately selective rather than full OCCT coverage,
+and unknown ownership still fails closed. Hosted full release execution, package signing,
+Preview.13 NuGet publication/indexing, and a public-source consumer are not implemented
+or run; local package creation and the complete local release evidence pipeline are.
 
 ## Build principles
 
@@ -248,9 +253,16 @@ complete while public release readiness remains false. Preview.10 additionally c
 the managed module graph, 3,233 facade forwarders, aggregate API compatibility, 14-package
 asset isolation, and a direct Modeling-package consumer.
 
+Preview.13 additionally validates Batch N IGESCAF/XDE metadata read/import/write,
+format-neutral routing, Unicode-path staging and cleanup, mixed STEP/IGES composition,
+round-trip, lifetime, and real-HWND display. Release and Debug pass Generator 91/91 and
+Runtime 156/156; focused Batch N is 4/4; 94-file clean regeneration, 14-package isolation,
+clean facade/direct-module consumers, full inventory, API, SBOM, provenance, checksums,
+and Git whitespace pass.
+
 ```powershell
 cd OcctSharp
-.\eng\release-check.ps1 -PackageVersion 8.0.1-preview.10
+.\eng\release-check.ps1 -PackageVersion 8.0.1-preview.13
 ```
 
 Release evidence is written below `OcctSharp/artifacts/release/`: `api-diff.json`,

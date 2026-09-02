@@ -29,3 +29,13 @@ internal readonly struct StepReaderInfoRaw
     internal readonly int AngleUnitCount;
     internal readonly int SolidAngleUnitCount;
 }
+
+[StructLayout(LayoutKind.Sequential)]
+internal readonly struct XdeIgesReadReportRaw
+{
+    internal readonly int SourceEntityCount;
+    internal readonly int CandidateRootCount;
+    internal readonly int TransferredRootCount;
+    internal readonly double SourceLengthUnitMeters;
+    internal readonly double SystemLengthUnitMillimeters;
+}
