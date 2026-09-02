@@ -60,7 +60,7 @@
   SHA256 `56E0854F062D672552792C11DF2CE760EEF0EB1687F270C3E6671B15B96A13AC`.
   API comparison against alpha.38 is additive at 38,791 additions and zero removals;
   the facade nupkg SHA256 is
-  `60CE880F30283F3FF0EA7CA2E7140A1E940E1A6FA64458001EA7B8F010BCE1E0`.
+  `246584492CF1A5116C68E4D131C76225509C374320DA2915FB2C01355BCF3E6D`.
   NuGet upload/indexing and the clean public-source consumer are `NOT RUN`.
 
 ### Preview.11 Batch M interactive assembly placement editing completion
@@ -1474,7 +1474,7 @@ publication/indexing, and public-source consumption remain separate release-read
 | STEPCAF/XDE metadata | PASS (scoped) | Existing seven-input metadata workflow plus alpha.53 area/volume/centroid attributes, nested occurrence placement, metadata filters, and BinXCAF/STEPCAF round trips |
 | XDE native runtime libraries | PASS | `TKXCAF`, `TKCAF`, `TKLCAF`, and `TKCDF` present in Debug and Release runtime directories |
 | Checked shared-handle cast | PASS | Release/Debug `TryCastDerived` and `CastDerived`: retained success, wrong/null rejection, and `InvalidCastException` |
-| NuGet package contents | PASS | `8.0.1-preview.12`; 13 managed packages each contain one managed DLL and zero native DLLs; `OcctSharp.Native.win-x64` alone contains 62 DLLs and 11 notices/licenses; every package contains the shared README/icon; facade nupkg SHA256 `60CE880F30283F3FF0EA7CA2E7140A1E940E1A6FA64458001EA7B8F010BCE1E0` |
+| NuGet package contents | PASS | `8.0.1-preview.12`; 13 managed packages each contain one managed DLL and zero native DLLs; `OcctSharp.Native.win-x64` alone contains 62 DLLs and 11 notices/licenses; every package contains the shared README/icon; facade nupkg SHA256 `246584492CF1A5116C68E4D131C76225509C374320DA2915FB2C01355BCF3E6D` |
 | Package output layout | PASS | Published executable has `occt/` closure and no root `OcctSharp.Native.dll` |
 | Packaging/clean consumer | PASS | Clean SDK 10.0.400 facade restore/publish/runtime passes the complete inherited Batch D-M workflow; direct Modeling restore/publish creates a six-face solid without `OcctSharp.dll`; both use ABI 1.56/bridge 0.64.0, OCCT 8.0.1, and the same 62-DLL closure |
 | Fresh-clone Sample bundled runtime | PASS | New clone without local settings/OCCT environment passed manifest, Release/Debug `--smoke`, exact 62-DLL output, box creation, and package creation |

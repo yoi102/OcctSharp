@@ -83,22 +83,34 @@ foreach (XdeLabel root in document.GetFreeShapes())
 material, alpha, and visibility styles to one `AIS_ColoredShape` presentation. Viewer
 objects are UI-thread-affine and require a native child-window handle.
 
-## WPF MVVM viewer
+## Samples
 
-The `OcctSharpViewer.Wpf` sample uses `CommunityToolkit.Mvvm` and an OCCT OpenGL viewport
-hosted by `HwndHost`. It loads STEP/STP and IGES/IGS, preserves STEP/XCAF presentation
-colors, fits the model, provides standard views, shaded/wireframe modes, selection,
-right-drag rotation, middle-drag pan, and wheel zoom.
+The repository contains two runnable .NET 10 sample projects. Both use the committed,
+manifest-verified Windows x64 runtime, so a normal clone does not need a separate OCCT
+SDK or native build toolchain.
 
-From the inner workspace:
+| Sample | Description | Detailed guide |
+|---|---|---|
+| `OcctSharp.Samples` | Interactive console menu covering solid creation, STEP/STL/IGES export, transformed XDE STEP assemblies, a native viewer window, and a complete BREP/topology/mesh/XDE workflow. It also provides the non-interactive `--smoke` clone/runtime check. | [Console sample README](https://github.com/yoi102/OcctSharp/blob/main/OcctSharp/samples/OcctSharp.Samples/README.md) |
+| `OcctSharpViewer.Wpf` | `CommunityToolkit.Mvvm` WPF viewer for STEP/STP and IGES/IGS with STEP/XCAF colors, standard views, shaded/wireframe display, selection, rotation, pan, and zoom. | [WPF viewer README](https://github.com/yoi102/OcctSharp/blob/main/OcctSharp/samples/OcctSharpViewer.Wpf/README.md) |
+
+Run the console sample from the inner workspace:
 
 ```powershell
 cd OcctSharp
+dotnet run --project .\samples\OcctSharp.Samples --configuration Release
+```
+
+Run the WPF/MVVM viewer:
+
+```powershell
 dotnet run --project .\samples\OcctSharpViewer.Wpf --configuration Release
 ```
 
-WPF controls can be placed around the viewport. WPF airspace rules still prevent reliable
-WPF overlays above the `HwndHost`; a `D3DImage` bridge is not included.
+The WPF viewer hosts OCCT's OpenGL output with `HwndHost`. WPF controls can be placed
+around the viewport, but WPF airspace rules prevent reliable overlays above it; a
+`D3DImage` bridge is not included. See the project README for architecture, mouse
+controls, STEP color behavior, and troubleshooting.
 
 ## Clone and run without an OCCT SDK
 

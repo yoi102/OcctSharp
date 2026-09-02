@@ -3,6 +3,9 @@
 `OcctSharp/samples/OcctSharpViewer.Wpf` is a .NET 10 WPF/MVVM desktop viewer using
 `CommunityToolkit.Mvvm`. Run it from the inner workspace with:
 
+Project-specific setup, controls, architecture, color behavior, and troubleshooting are
+documented in the [WPF viewer README](../OcctSharp/samples/OcctSharpViewer.Wpf/README.md).
+
 ```powershell
 dotnet run --project .\samples\OcctSharpViewer.Wpf --configuration Release
 ```
@@ -33,6 +36,10 @@ The .NET 10 project `OcctSharp/samples/OcctSharp.Samples` is the single interact
 console entry point for current examples. It shows a menu and reads choices and paths
 with `Console.ReadLine`; each workflow has its own English-named class. `--smoke` is the
 non-interactive clone/runtime verification entry point.
+
+The menu, default outputs, input rules, native-viewer controls, smoke contract, and
+source map are documented in the
+[console sample README](../OcctSharp/samples/OcctSharp.Samples/README.md).
 
 Run this command from the inner `OcctSharp/` workspace:
 
