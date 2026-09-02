@@ -461,6 +461,69 @@ public sealed partial class XdeDocument : IDisposable
         return hasColor == 0 ? null : new XdeColor(color.Red, color.Green, color.Blue, color.Alpha);
     }
 
+    internal unsafe IReadOnlyList<XdePresentationStyle> GetPresentationStyles(string entry)
+    {
+        ThrowIfDisposed();
+        NativeError.ThrowIfFailed(
+            NativeMethods.GetXdePresentationStyleCount(Handle, entry, out int count),
+            "xde_label_presentation_style_count");
+        if (count == 0) return [];
+
+        nint[] nativeShapes = new nint[count];
+        XdePresentationStyleRaw[] nativeStyles = new XdePresentationStyleRaw[count];
+        int written;
+        fixed (nint* shapePointer = nativeShapes)
+        fixed (XdePresentationStyleRaw* stylePointer = nativeStyles)
+        {
+            NativeError.ThrowIfFailed(
+                NativeMethods.SnapshotXdePresentationStyles(
+                    Handle, entry, shapePointer, stylePointer, count, out written),
+                "xde_label_presentation_style_snapshot");
+        }
+
+        if (written < 0 || written > count)
+        {
+            foreach (nint nativeShape in nativeShapes)
+                if (nativeShape != 0) NativeMethods.ReleaseShape(nativeShape);
+            throw new OcctException(
+                NativeStatus.UnknownException.ToString(),
+                "The native XDE presentation-style snapshot returned an invalid count.");
+        }
+
+        XdePresentationStyle[] result = new XdePresentationStyle[written];
+        int created = 0;
+        try
+        {
+            for (; created < written; ++created)
+            {
+                Shape shape = ShapeFactory.FromNativeHandle(
+                    nativeShapes[created], "xde_label_presentation_style_snapshot");
+                nativeShapes[created] = 0;
+                XdePresentationStyleRaw style = nativeStyles[created];
+                result[created] = new XdePresentationStyle(
+                    shape,
+                    style.IsVisible != 0,
+                    CopyColor(style.HasSurfaceColor, style.SurfaceColor),
+                    CopyColor(style.HasCurveColor, style.CurveColor),
+                    CopyColor(style.HasMaterialColor, style.MaterialColor));
+            }
+            return result;
+        }
+        catch
+        {
+            for (int index = 0; index < created; ++index) result[index].Dispose();
+            throw;
+        }
+        finally
+        {
+            foreach (nint nativeShape in nativeShapes)
+                if (nativeShape != 0) NativeMethods.ReleaseShape(nativeShape);
+        }
+
+        static XdeColor? CopyColor(int hasColor, XdeColorRaw color) =>
+            hasColor == 0 ? null : new XdeColor(color.Red, color.Green, color.Blue, color.Alpha);
+    }
+
     internal void AddLayer(string entry, string layer, bool replace)
     {
         ThrowIfDisposed();

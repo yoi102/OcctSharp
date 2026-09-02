@@ -99,6 +99,10 @@
 #include <GProp_GProps.hxx>
 #include <GProp_PrincipalProps.hxx>
 #include <IFSelect_ReturnStatus.hxx>
+#include <Interface_EntityIterator.hxx>
+#include <Interface_Graph.hxx>
+#include <Interface_HGraph.hxx>
+#include <Interface_InterfaceModel.hxx>
 #include <IGESControl_Writer.hxx>
 #include <IGESControl_Reader.hxx>
 #include <NCollection_DataMap.hxx>
@@ -115,10 +119,17 @@
 #include <Graphic3d_Camera.hxx>
 #include <Graphic3d_ClipPlane.hxx>
 #include <STEPControl_Reader.hxx>
+#include <STEPControl_ActorRead.hxx>
 #include <STEPControl_StepModelType.hxx>
 #include <STEPControl_Writer.hxx>
 #include <STEPCAFControl_Reader.hxx>
 #include <STEPCAFControl_Writer.hxx>
+#include <STEPConstruct_Styles.hxx>
+#include <StepRepr_Representation.hxx>
+#include <StepRepr_RepresentationRelationshipWithTransformation.hxx>
+#include <StepShape_ShapeRepresentation.hxx>
+#include <StepVisual_Colour.hxx>
+#include <StepVisual_StyledItem.hxx>
 #include <ShapeFix_Shape.hxx>
 #include <ShapeFix_Face.hxx>
 #include <ShapeFix_Shell.hxx>
@@ -166,6 +177,9 @@
 #include <TopoDS_Compound.hxx>
 #include <TopoDS_Edge.hxx>
 #include <TopoDS_Shape.hxx>
+#include <TransferBRep.hxx>
+#include <Transfer_Binder.hxx>
+#include <Transfer_TransientProcess.hxx>
 #include <Poly_Triangulation.hxx>
 #include <Poly_Triangle.hxx>
 #include <Precision.hxx>
@@ -200,6 +214,10 @@
 #include <XCAFDoc_VisMaterialPBR.hxx>
 #include <XCAFDoc.hxx>
 #include <XCAFDoc_GraphNode.hxx>
+#include <XCAFPrs.hxx>
+#include <XCAFPrs_Style.hxx>
+#include <XSControl_WorkSession.hxx>
+#include <XSControl_TransferReader.hxx>
 #include <XCAFDimTolObjects_DatumObject.hxx>
 #include <XCAFDimTolObjects_DimensionObject.hxx>
 #include <XCAFDimTolObjects_GeomToleranceObject.hxx>
@@ -295,6 +313,10 @@ static_assert(alignof(OcctSharp_BoundingBox) == 8);
 static_assert(offsetof(OcctSharp_BoundingBox, min_x) == 0);
 static_assert(offsetof(OcctSharp_BoundingBox, max_x) == 24);
 static_assert(sizeof(OcctSharp_XdeColor) == 32);
+static_assert(sizeof(OcctSharp_XdePresentationStyle) == 112);
+static_assert(alignof(OcctSharp_XdePresentationStyle) == 8);
+static_assert(offsetof(OcctSharp_XdePresentationStyle, surface_color) == 16);
+static_assert(offsetof(OcctSharp_XdePresentationStyle, material_color) == 80);
 static_assert(sizeof(OcctSharp_XdeValidationProperties) == 56);
 static_assert(alignof(OcctSharp_XdeValidationProperties) == 8);
 static_assert(offsetof(OcctSharp_XdeValidationProperties, area) == 0);
@@ -449,8 +471,8 @@ struct OcctSharp_FeatureResultHandle
 
 namespace
 {
-constexpr uint32_t AbiVersion = 0x00010037U;
-constexpr const char* BridgeVersion = "0.63.0";
+constexpr uint32_t AbiVersion = 0x00010038U;
+constexpr const char* BridgeVersion = "0.64.0";
 thread_local std::string LastError;
 std::mutex LiveShapesMutex;
 std::unordered_set<const OcctSharp_ShapeHandle*> LiveShapes;
@@ -1514,6 +1536,151 @@ void ConfigureXdeReader(
   reader.SetViewMode(read_views);
 }
 
+IFSelect_ReturnStatus ReadXdeStepFile(STEPCAFControl_Reader& reader, const char* file_path)
+{
+  DESTEP_Parameters parameters;
+  parameters.InitFromStatic();
+  return reader.ReadFile(file_path, parameters);
+}
+
+void PreTransferStepStyleTargets(STEPCAFControl_Reader& reader)
+{
+  const occ::handle<XSControl_WorkSession> work_session = reader.Reader().WS();
+  if (work_session.IsNull() || work_session->Model().IsNull()) return;
+  for (int32_t index = 1; index <= work_session->Model()->NbEntities(); ++index)
+  {
+    const occ::handle<StepVisual_StyledItem> style =
+      occ::down_cast<StepVisual_StyledItem>(work_session->Model()->Value(index));
+    if (style.IsNull() || style->ItemAP242().IsNull()) continue;
+    reader.ChangeReader().TransferEntity(style->ItemAP242().Value());
+  }
+}
+
+void RecoverStepPresentationStyles(
+  STEPCAFControl_Reader& reader,
+  const occ::handle<TDocStd_Document>& document)
+{
+  const occ::handle<XSControl_WorkSession> work_session = reader.Reader().WS();
+  if (work_session.IsNull() || work_session->Model().IsNull()) return;
+  const occ::handle<XSControl_TransferReader> transfer_reader = work_session->TransferReader();
+  if (transfer_reader.IsNull()) return;
+  const occ::handle<Transfer_TransientProcess> transfer = transfer_reader->TransientProcess();
+  if (transfer.IsNull()) return;
+  const Interface_Graph& graph = work_session->HGraph()->Graph();
+  const occ::handle<STEPControl_ActorRead> actor =
+    occ::down_cast<STEPControl_ActorRead>(transfer_reader->Actor());
+  const occ::handle<XCAFDoc_ShapeTool> shape_tool =
+    XCAFDoc_DocumentTool::ShapeTool(document->Main());
+  const occ::handle<XCAFDoc_ColorTool> color_tool =
+    XCAFDoc_DocumentTool::ColorTool(document->Main());
+
+  struct RecoveredStyle
+  {
+    occ::handle<StepVisual_StyledItem> Style;
+    TopoDS_Shape Shape;
+  };
+  std::vector<RecoveredStyle> recovered;
+  for (int32_t index = 1; index <= work_session->Model()->NbEntities(); ++index)
+  {
+    const occ::handle<StepVisual_StyledItem> style =
+      occ::down_cast<StepVisual_StyledItem>(work_session->Model()->Value(index));
+    if (style.IsNull() || style->ItemAP242().IsNull()) continue;
+    const occ::handle<Standard_Transient> target = style->ItemAP242().Value();
+    const int32_t map_index = transfer->MapIndex(target);
+    if (map_index <= 0) continue;
+    TopoDS_Shape shape = TransferBRep::ShapeResult(transfer->MapItem(map_index));
+    if (shape.IsNull()) continue;
+
+    occ::handle<StepShape_ShapeRepresentation> representation =
+      occ::down_cast<StepShape_ShapeRepresentation>(target);
+    if (representation.IsNull())
+    {
+      Interface_EntityIterator parents = graph.Sharings(target);
+      for (parents.Start(); parents.More(); parents.Next())
+      {
+        representation = occ::down_cast<StepShape_ShapeRepresentation>(parents.Value());
+        if (!representation.IsNull()) break;
+      }
+    }
+    if (!representation.IsNull() && !actor.IsNull())
+    {
+      Interface_EntityIterator relationships = graph.Sharings(representation);
+      for (relationships.Start(); relationships.More(); relationships.Next())
+      {
+        const occ::handle<StepRepr_RepresentationRelationshipWithTransformation> relationship =
+          occ::down_cast<StepRepr_RepresentationRelationshipWithTransformation>(
+            relationships.Value());
+        if (relationship.IsNull()) continue;
+        gp_Trsf transformation;
+        if (!actor->ComputeSRRWT(relationship, transfer, transformation)) break;
+        if (relationship->Rep2() == representation) transformation.Invert();
+        shape.Move(TopLoc_Location(transformation), false);
+        break;
+      }
+    }
+    recovered.push_back({style, shape});
+  }
+
+  std::stable_sort(
+    recovered.begin(),
+    recovered.end(),
+    [](const RecoveredStyle& first, const RecoveredStyle& second)
+    {
+      return first.Shape.ShapeType() < second.Shape.ShapeType();
+    });
+
+  STEPConstruct_Styles style_reader(work_session);
+  occ::handle<NCollection_HSequence<occ::handle<Standard_Transient>>> invisible_styles =
+    new NCollection_HSequence<occ::handle<Standard_Transient>>;
+  style_reader.LoadInvisStyles(invisible_styles);
+  for (const RecoveredStyle& item : recovered)
+  {
+    TDF_Label label;
+    bool found = shape_tool->SearchUsingMap(item.Shape, label, true, true);
+    if (!found)
+    {
+      const TDF_Label main_label = shape_tool->FindMainShapeUsingMap(item.Shape);
+      if (!main_label.IsNull())
+        found = shape_tool->AddSubShape(main_label, item.Shape, label) || !label.IsNull();
+    }
+    if (!found && item.Shape.ShapeType() <= TopAbs_SHELL)
+    {
+      label = shape_tool->AddShape(item.Shape, false, false);
+      found = !label.IsNull();
+    }
+    if (!found) continue;
+
+    occ::handle<StepVisual_Colour> surface_color;
+    occ::handle<StepVisual_Colour> boundary_color;
+    occ::handle<StepVisual_Colour> curve_color;
+    STEPConstruct_RenderingProperties rendering;
+    bool is_component = false;
+    const bool has_color = style_reader.GetColors(
+      item.Style, surface_color, boundary_color, curve_color, rendering, is_component);
+    bool is_visible = true;
+    for (int32_t index = 1; index <= invisible_styles->Length(); ++index)
+    {
+      if (invisible_styles->Value(index) == item.Style)
+      {
+        is_visible = false;
+        break;
+      }
+    }
+    if (!has_color && is_visible) continue;
+
+    Quantity_Color decoded;
+    if (!surface_color.IsNull() && STEPConstruct_Styles::DecodeColor(surface_color, decoded))
+      color_tool->SetColor(label, Quantity_ColorRGBA(decoded), XCAFDoc_ColorSurf);
+    if (rendering.IsDefined())
+      color_tool->SetColor(label, rendering.GetRGBAColor(), XCAFDoc_ColorSurf);
+    if (!boundary_color.IsNull() && STEPConstruct_Styles::DecodeColor(boundary_color, decoded))
+      color_tool->SetColor(label, decoded, XCAFDoc_ColorCurv);
+    if (!curve_color.IsNull() && STEPConstruct_Styles::DecodeColor(curve_color, decoded))
+      color_tool->SetColor(label, decoded, XCAFDoc_ColorCurv);
+    if (!is_visible) color_tool->SetVisibility(label, false);
+  }
+}
+
 void ConfigureXdeWriter(
   STEPCAFControl_Writer& writer,
   const bool write_names = true,
@@ -1543,10 +1710,12 @@ std::vector<TDF_Label> ImportStepRootsIntoXdeDocument(
   InitializeXdeTools(source_document);
   STEPCAFControl_Reader reader;
   ConfigureXdeReader(reader);
-  if (reader.ReadFile(file_path) != IFSelect_RetDone)
+  if (ReadXdeStepFile(reader, file_path) != IFSelect_RetDone)
     throw OperationFailure(OCCTSHARP_STATUS_FILE_IO_ERROR, "OCCT could not read a STEP input through STEPCAF.");
+  PreTransferStepStyleTargets(reader);
   if (!reader.Transfer(source_document))
     throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "A STEP input could not be transferred into an XDE document.");
+  RecoverStepPresentationStyles(reader, source_document);
 
   occ::handle<XCAFDoc_ShapeTool> source_shape_tool =
     XCAFDoc_DocumentTool::ShapeTool(source_document->Main());
@@ -7178,18 +7347,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_step_merge_xde(
       InitializeXdeTools(sourceDocument);
       STEPCAFControl_Reader reader;
       ConfigureXdeReader(reader);
-      if (reader.ReadFile(input.file_path) != IFSelect_RetDone)
+      if (ReadXdeStepFile(reader, input.file_path) != IFSelect_RetDone)
       {
         throw OperationFailure(
           OCCTSHARP_STATUS_FILE_IO_ERROR,
           "OCCT could not read a STEP input through STEPCAF.");
       }
+      PreTransferStepStyleTargets(reader);
       if (!reader.Transfer(sourceDocument))
       {
         throw OperationFailure(
           OCCTSHARP_STATUS_TRANSFER_FAILED,
           "A STEP input could not be transferred into an XDE document.");
       }
+      RecoverStepPresentationStyles(reader, sourceDocument);
 
       occ::handle<XCAFDoc_ShapeTool> sourceShapeTool =
         XCAFDoc_DocumentTool::ShapeTool(sourceDocument->Main());
@@ -8351,6 +8522,60 @@ opencascade::handle<XCAFDoc_ShapeTool> GetXdeShapeTool(
   return XCAFDoc_DocumentTool::ShapeTool(document->Document->Main());
 }
 
+using XdePresentationStyleMap =
+  NCollection_IndexedDataMap<TopoDS_Shape, XCAFPrs_Style, TopTools_ShapeMapHasher>;
+
+XdePresentationStyleMap CollectXdePresentationStyles(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry)
+{
+  XdePresentationStyleMap settings;
+  XCAFPrs::CollectStyleSettings(
+    ResolveOcafLabel(document, entry), TopLoc_Location(), settings);
+  return settings;
+}
+
+OcctSharp_XdeColor CopyXdeColor(const Quantity_ColorRGBA& color)
+{
+  return {
+    color.GetRGB().Red(), color.GetRGB().Green(), color.GetRGB().Blue(), color.Alpha()};
+}
+
+OcctSharp_XdeColor CopyXdeColor(const Quantity_Color& color, const double alpha = 1.0)
+{
+  return {color.Red(), color.Green(), color.Blue(), alpha};
+}
+
+OcctSharp_XdePresentationStyle CopyXdePresentationStyle(const XCAFPrs_Style& style)
+{
+  OcctSharp_XdePresentationStyle result{};
+  result.is_visible = style.IsVisible() ? 1 : 0;
+  if (style.IsSetColorSurf())
+  {
+    result.has_surface_color = 1;
+    result.surface_color = CopyXdeColor(style.GetColorSurfRGBA());
+  }
+  if (style.IsSetColorCurv())
+  {
+    result.has_curve_color = 1;
+    result.curve_color = CopyXdeColor(style.GetColorCurv());
+  }
+
+  const opencascade::handle<XCAFDoc_VisMaterial>& material = style.Material();
+  if (!material.IsNull() && material->HasPbrMaterial())
+  {
+    result.has_material_color = 1;
+    result.material_color = CopyXdeColor(material->PbrMaterial().BaseColor);
+  }
+  else if (!material.IsNull() && material->HasCommonMaterial())
+  {
+    result.has_material_color = 1;
+    const XCAFDoc_VisMaterialCommon& common = material->CommonMaterial();
+    result.material_color = CopyXdeColor(common.DiffuseColor, 1.0 - common.Transparency);
+  }
+  return result;
+}
+
 bool GetAssignedMaterial(
   const TDF_Label& label,
   opencascade::handle<TCollection_HAsciiString>& name,
@@ -8555,10 +8780,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_document_read_step_options(
         read_materials != 0,
         read_gdt != 0,
         read_views != 0);
-      if (reader.ReadFile(file_path) != IFSelect_RetDone || !reader.Transfer(result->Document))
+      if (ReadXdeStepFile(reader, file_path) != IFSelect_RetDone)
+      {
+        throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not read STEP into the XDE document.");
+      }
+      if (read_colors != 0) PreTransferStepStyleTargets(reader);
+      if (!reader.Transfer(result->Document))
       {
         throw OperationFailure(OCCTSHARP_STATUS_TRANSFER_FAILED, "OCCT could not transfer STEP into the XDE document.");
       }
+      if (read_colors != 0) RecoverStepPresentationStyles(reader, result->Document);
       *out_document = result;
     }
     catch (...)
@@ -10338,6 +10569,78 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_get_color(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_presentation_style_count(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  int32_t* count)
+{
+  if (count == nullptr)
+  {
+    SetLastError("The XDE presentation-style count pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *count = 0;
+  return Guard([&]
+  {
+    *count = CollectXdePresentationStyles(document, entry).Extent();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_presentation_style_snapshot(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  OcctSharp_ShapeHandle** shapes,
+  OcctSharp_XdePresentationStyle* styles,
+  const int32_t capacity,
+  int32_t* written)
+{
+  if (written == nullptr || capacity < 0
+      || (capacity > 0 && (shapes == nullptr || styles == nullptr)))
+  {
+    SetLastError("The XDE presentation-style snapshot buffer is invalid.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *written = 0;
+  for (int32_t index = 0; index < capacity; ++index)
+  {
+    shapes[index] = nullptr;
+    styles[index] = {};
+  }
+
+  return Guard([&]
+  {
+    const XdePresentationStyleMap settings = CollectXdePresentationStyles(document, entry);
+    if (settings.Extent() > capacity)
+    {
+      throw OperationFailure(
+        OCCTSHARP_STATUS_INVALID_ARGUMENT,
+        "The XDE presentation-style snapshot capacity is too small.");
+    }
+
+    int32_t allocated = 0;
+    try
+    {
+      for (int32_t index = 1; index <= settings.Extent(); ++index)
+      {
+        shapes[index - 1] = AllocateShape(settings.FindKey(index));
+        ++allocated;
+        styles[index - 1] = CopyXdePresentationStyle(settings.FindFromIndex(index));
+      }
+    }
+    catch (...)
+    {
+      for (int32_t index = 0; index < allocated; ++index)
+      {
+        UnregisterShape(shapes[index]);
+        delete shapes[index];
+        shapes[index] = nullptr;
+      }
+      throw;
+    }
+    *written = settings.Extent();
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_layer(
   OcctSharp_OcafDocumentHandle* document,
   const char* entry,
@@ -10913,6 +11216,81 @@ void ValidateSubshape(
   }
 }
 
+bool TryGetXdeStyleColor(
+  const XCAFPrs_Style& style,
+  const TopAbs_ShapeEnum shapeType,
+  Quantity_ColorRGBA& color)
+{
+  const bool curveFirst = shapeType == TopAbs_EDGE || shapeType == TopAbs_WIRE;
+  if (curveFirst && style.IsSetColorCurv())
+  {
+    color = Quantity_ColorRGBA(style.GetColorCurv());
+    return true;
+  }
+  if (style.IsSetColorSurf())
+  {
+    color = style.GetColorSurfRGBA();
+    return true;
+  }
+
+  const opencascade::handle<XCAFDoc_VisMaterial>& material = style.Material();
+  if (!material.IsNull() && material->HasPbrMaterial())
+  {
+    color = material->PbrMaterial().BaseColor;
+    return true;
+  }
+  if (!material.IsNull() && material->HasCommonMaterial())
+  {
+    const XCAFDoc_VisMaterialCommon& common = material->CommonMaterial();
+    color = Quantity_ColorRGBA(
+      common.DiffuseColor, static_cast<float>(1.0 - common.Transparency));
+    return true;
+  }
+  if (style.IsSetColorCurv())
+  {
+    color = Quantity_ColorRGBA(style.GetColorCurv());
+    return true;
+  }
+  return false;
+}
+
+void ApplyXdePresentationStyles(
+  const opencascade::handle<AIS_ColoredShape>& presentation,
+  const XdePresentationStyleMap& settings)
+{
+  const TopoDS_Shape root = presentation->Shape();
+  for (int32_t index = 1; index <= settings.Extent(); ++index)
+  {
+    const TopoDS_Shape& styledShape = settings.FindKey(index);
+    bool contains = root.IsSame(styledShape);
+    if (!contains)
+    {
+      for (TopExp_Explorer explorer(root, styledShape.ShapeType()); explorer.More(); explorer.Next())
+      {
+        if (explorer.Current().IsSame(styledShape))
+        {
+          contains = true;
+          break;
+        }
+      }
+    }
+    if (!contains) continue;
+
+    const XCAFPrs_Style& style = settings.FindFromIndex(index);
+    if (!style.IsVisible())
+    {
+      presentation->SetCustomTransparency(styledShape, 1.0);
+      continue;
+    }
+
+    Quantity_ColorRGBA color;
+    if (!TryGetXdeStyleColor(style, styledShape.ShapeType(), color)) continue;
+    presentation->SetCustomColor(styledShape, color.GetRGB());
+    if (color.Alpha() < 1.0f)
+      presentation->SetCustomTransparency(styledShape, 1.0 - color.Alpha());
+  }
+}
+
 Aspect_TypeOfTriedronPosition ToTrihedronPosition(const int32_t position)
 {
   switch (position)
@@ -11006,6 +11384,35 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_display_shape(
     ValidateViewerThread(viewer);
     ValidateUsableShape(shape);
     opencascade::handle<AIS_ColoredShape> presentation = new AIS_ColoredShape(shape->Value);
+    const int64_t id = viewer->NextPresentationId++;
+    viewer->Presentations.emplace(id, presentation);
+    viewer->Context->Display(presentation, false);
+    *presentation_id = id;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_display_xde_label(
+  OcctSharp_ViewerHandle* viewer,
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  int64_t* presentation_id)
+{
+  if (presentation_id == nullptr)
+  {
+    SetLastError("The XDE viewer presentation ID output pointer is null.");
+    return OCCTSHARP_STATUS_INVALID_ARGUMENT;
+  }
+  *presentation_id = 0;
+  return Guard([&]
+  {
+    ValidateViewerThread(viewer);
+    TopoDS_Shape shape;
+    const TDF_Label label = ResolveOcafLabel(document, entry);
+    if (!XCAFDoc_ShapeTool::GetShape(label, shape) || shape.IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_NULL_HANDLE, "The XDE label contains no shape.");
+
+    const opencascade::handle<AIS_ColoredShape> presentation = new AIS_ColoredShape(shape);
+    ApplyXdePresentationStyles(presentation, CollectXdePresentationStyles(document, entry));
     const int64_t id = viewer->NextPresentationId++;
     viewer->Presentations.emplace(id, presentation);
     viewer->Context->Display(presentation, false);

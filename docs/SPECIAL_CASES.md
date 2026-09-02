@@ -1471,3 +1471,36 @@ rules or design:
 - Removal criteria: Replace this exception only after generated viewer-parent handles and
   transform-value projections preserve the same thread, lifetime, rollback, and
   end-to-end package evidence.
+
+## SC-050: STEP/XCAF disconnected presentation-style recovery
+
+- Status: Accepted and implemented for Preview.12 under ADR-0076.
+- Scope: A native-local STEPCAF/XCAF recovery workflow plus two manual stable C-ABI
+  operations for copied presentation-style snapshots and XDE-label display. This does
+  not bulk-reclassify generator inventory declarations and does not change schema 1.13.
+- Reason: Some STEP files attach styles to AP242 representation targets that OCCT 8.0.1's
+  normal product transfer does not transfer or map into XDE. Directly exposing
+  `StepVisual_StyledItem`, `Transfer_TransientProcess`, `Interface_Graph`,
+  `STEPConstruct_Styles`, `XCAFPrs_Style`, or its indexed shape map would leak session-
+  local handles, containers, labels, and iterators across the fixed C ABI.
+- Native/ABI/managed behavior: ABI 1.56, bridge 0.64.0, and package
+  `8.0.1-preview.12` pre-transfer styled targets, recover representation transforms,
+  install decoded surface/curve/rendering colors and visibility in XDE, and retain
+  disconnected visible shell-or-higher presentation geometry as free shapes.
+  `XdeLabel.GetPresentationStyles()` returns copied style values paired with independent
+  owning located shapes. `OcctViewer.Display(XdeLabel)` applies inherited XCAF styles to
+  a viewer-owned `AIS_ColoredShape`.
+- Ownership: STEP/XCAF sessions, graphs, binders, entities, maps, styles, labels, and AIS
+  handles remain native-local. Managed style colors/visibility are copied; each style
+  topology is independently owning and disposable. Viewer presentations remain
+  viewer-parent-bound and creation-thread-affine.
+- Validation: Complete Release/Debug, runtime/lifetime, STEP/XDE, real-file, WPF visual,
+  real-HWND, clean-package, inventory, and release gates are recorded in `STATUS.md` and
+  the Preview.12 release notes only after execution.
+- Upgrade impact: Recheck AP242 target representation, transfer-map lookup,
+  `ComputeSRRWT` direction, `CollectStyleSettings` inheritance/location behavior,
+  disconnected-shape insertion, invisibility handling, and material/color precedence on
+  every OCCT upgrade.
+- Removal criteria: Replace this exception only when upstream STEPCAF reliably transfers
+  and maps the same authored styles, or generated bindings can preserve the same copied
+  ownership and viewer behavior without exposing document/session-local state.

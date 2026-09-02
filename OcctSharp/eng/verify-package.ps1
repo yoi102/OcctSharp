@@ -2,7 +2,7 @@
 param(
     [string]$OcctRoot,
 
-    [string]$PackageVersion = '8.0.1-preview.11',
+    [string]$PackageVersion = '8.0.1-preview.12',
 
     [switch]$SkipBuild
 )
@@ -41,23 +41,57 @@ foreach ($packageId in $packageIds) {
     $packagePath = Join-Path $packageDirectory "$packageId.$PackageVersion.nupkg"
     $archive = [IO.Compression.ZipFile]::OpenRead($packagePath)
     try {
+        $readmeEntry = $archive.GetEntry('README.md')
+        $iconEntry = $archive.GetEntry('occtsharp-icon.png')
+        if ($null -eq $readmeEntry -or $readmeEntry.Length -eq 0) {
+            throw "Package '$packageId' does not contain the shared package README."
+        }
+        if ($null -eq $iconEntry -or $iconEntry.Length -eq 0 -or $iconEntry.Length -gt 1MB) {
+            throw "Package '$packageId' does not contain a valid NuGet icon below 1 MiB."
+        }
+
+        $nuspecEntry = @($archive.Entries | Where-Object FullName -Like '*.nuspec')
+        if ($nuspecEntry.Count -ne 1) {
+            throw "Package '$packageId' contains $($nuspecEntry.Count) nuspec entries; expected one."
+        }
+        $nuspecStream = $nuspecEntry[0].Open()
+        try {
+            $reader = [IO.StreamReader]::new($nuspecStream)
+            try { [xml]$nuspec = $reader.ReadToEnd() }
+            finally { $reader.Dispose() }
+        }
+        finally { $nuspecStream.Dispose() }
+        if ($nuspec.package.metadata.readme -ne 'README.md' -or
+            $nuspec.package.metadata.icon -ne 'occtsharp-icon.png') {
+            throw "Package '$packageId' does not declare the accepted README and icon metadata."
+        }
+
         $packagedNativeCount = @($archive.Entries | Where-Object {
             $_.FullName -like 'buildTransitive/win-x64/occt/*.dll'
+        }).Count
+        $managedAssemblyCount = @($archive.Entries | Where-Object {
+            $_.FullName -like 'lib/net10.0/*.dll'
         }).Count
         if ($packageId -eq 'OcctSharp.Native.win-x64') {
             if ($packagedNativeCount -ne $expectedNativeCount) {
                 throw "The shared native package contains $packagedNativeCount DLLs; expected $expectedNativeCount."
             }
+            if ($managedAssemblyCount -ne 0) {
+                throw "The shared native package unexpectedly contains $managedAssemblyCount managed assemblies."
+            }
         }
         elseif ($packagedNativeCount -ne 0) {
             throw "Managed package '$packageId' duplicates $packagedNativeCount native runtime DLLs."
+        }
+        elseif ($managedAssemblyCount -ne 1) {
+            throw "Managed package '$packageId' contains $managedAssemblyCount managed assemblies; expected one."
         }
     }
     finally {
         $archive.Dispose()
     }
 }
-Write-Host "Package asset audit verified one $expectedNativeCount-DLL native package and zero native duplication in 13 managed packages."
+Write-Host "Package asset audit verified the README/icon metadata, one $expectedNativeCount-DLL native package, and one assembly with zero native duplication in each managed package."
 
 if (Test-Path -LiteralPath $consumerRoot) {
     $resolvedConsumerRoot = (Resolve-Path -LiteralPath $consumerRoot).Path

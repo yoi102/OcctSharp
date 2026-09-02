@@ -311,6 +311,14 @@ through a named document transaction, returns the replacement occurrence label, 
 composes the existing DMU and STEP/XDE paths. Preview.11 validates all 24 capabilities
 in repository runtime and the clean shared-runtime package consumer.
 
+Preview.12 extends the same document/viewer boundary for STEP presentation fidelity.
+STEP entities, transfer binders, representation graphs, XCAF style maps, and labels are
+native-local. Import may install recovered style attributes or add disconnected visible
+presentation geometry to the XDE document. Managed snapshots contain copied style values
+and independently owning located topology; `OcctViewer.Display(XdeLabel)` creates one
+viewer-parent-bound colored presentation with the native XCAF style inheritance already
+applied. This adds no cross-DLL registry and does not change the managed module graph.
+
 The common-modeling capability milestone follows the existing owning-shape category. Primitive,
 feature, offset, section, bounding, and analyzer objects exist only during one native
 call. Topology results are independent registered owners; bounds are fixed copied values.

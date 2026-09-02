@@ -8,7 +8,7 @@
       "occtsharp.runtime": {
         "type": "Project",
         "dependencies": {
-          "OcctSharp.Native.win-x64": "[8.0.1-preview.11, )"
+          "OcctSharp.Native.win-x64": "[8.0.1-preview.12, )"
         }
       }
     },

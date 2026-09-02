@@ -231,6 +231,12 @@ placement with replacement identity and named undo/redo history, DMU recheck, re
 STEP/XDE round-trip, and a real-HWND screenshot. The Preview.10 managed/package split,
 public namespaces, assembly identity `0.1.0.0`, and one shared native DLL remain intact.
 
+The `8.0.1-preview.12` workspace advances to ABI 1.56/bridge 0.64.0 while retaining
+OCCT 8.0.1, schema 1.13, managed assembly identity `0.1.0.0`, and the same 14-package/
+one-native-runtime graph. It adds location-aware copied XDE presentation styles,
+whole-label viewer display, and native-local recovery for STEP styled targets omitted by
+ordinary product transfer. The compatibility facade remains additive.
+
 ## Planned validation dimensions
 
 - Operating system and version.

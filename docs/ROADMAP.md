@@ -42,6 +42,19 @@ signing, and NuGet publication remain separate
 release-readiness work rather than
 unfinished batch implementation.
 
+## Current release priority: Preview.12 STEP/XCAF presentation fidelity
+
+ADR-0076 is a package-visible corrective release, not a new numbered product batch. It
+closes the real-file presentation gap by pre-transferring styled STEP targets, recovering
+mapped transforms and disconnected visible presentation geometry into XDE, exposing
+copied `XdePresentationStyle` snapshots, and displaying whole XDE roots with inherited
+subshape styles. The managed module graph, one-native-DLL architecture, completed Batch
+B-M denominators, and schema 1.13 remain unchanged. Release/Debug, real-file/WPF,
+14-package, committed-runtime, clean-regeneration, local consumers, API/inventory, and
+release-metadata gates pass. Public indexing and a clean nuget.org-only consumer are the
+remaining Preview.12 exit criteria; hosted full release execution and signing stay
+independent `NOT RUN` gates.
+
 ## Completed priority: Batch L digital mock-up interference and clearance
 
 ADR-0073 and [the Batch L gap inventory](BATCH_L_DIGITAL_MOCKUP_INTERFERENCE_GAP_INVENTORY.md)

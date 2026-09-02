@@ -12,13 +12,13 @@ standard orthographic views, switches between shaded and wireframe display, and 
 selection. Right-drag rotates, middle-drag pans, the mouse wheel zooms, and left-click
 selects; Shift, Ctrl, and Alt apply add, toggle, and remove selection semantics.
 
-STEP files use the XDE/STEPCAF reader instead of the geometry-only reader. Assembly leaf
-occurrences first use their occurrence color or visualization-material base color, then
-fall back to the referred part's corresponding style; uncolored objects use the sample's
-neutral fallback color. This
-preserves common assembly/part colors and avoids drawing parent assemblies together with
-their leaf occurrences. Independent face/subshape colors are not yet projected by this
-sample. The current IGES path is geometry-only and therefore uses the fallback color.
+STEP files use the XDE/STEPCAF reader instead of the geometry-only reader. Each free XDE
+root is displayed through `OcctViewer.Display(XdeLabel)`, which applies OCCT's inherited
+occurrence, part, face, edge, material-base, alpha, and visibility styles to one colored
+presentation. Preview.12 also recovers styled representation targets that OCCT 8.0.1's
+ordinary product transfer can omit, including disconnected presentation geometry. Only
+topology without an XCAF style uses the sample's neutral fallback color. The current IGES
+path is geometry-only and therefore still uses the fallback color.
 
 OCCT renders through OpenGL into a native child window hosted by `HwndHost`. WPF controls
 can be arranged around the viewport, but WPF airspace rules prevent reliable WPF overlays

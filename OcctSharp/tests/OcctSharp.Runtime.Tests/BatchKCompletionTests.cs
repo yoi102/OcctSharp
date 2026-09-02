@@ -243,12 +243,14 @@ public sealed class BatchKCompletionTests
             Assert.True(importedRoot.IsAssembly);
             AssemblyBomItem importedItem = Assert.Single(imported.CreateBom(importedRoot).Items);
             Assert.Equal("STEP Occurrence", importedItem.Name);
+            IReadOnlyList<XdePresentationStyle> styles = importedRoot.GetPresentationStyles();
             using OcctViewer viewer = OcctViewer.Create(window);
-            IReadOnlyList<AssemblyViewerPresentation> presentations = imported.DisplayAssembly(importedRoot, viewer);
             try
             {
-                Assert.Single(presentations);
-                Assert.Single(presentations[0].Path);
+                Assert.NotEmpty(styles);
+                Assert.Contains(styles, style => style.EffectiveColor is XdeColor color
+                    && color.Red > 0.75 && color.Green < 0.35 && color.Blue < 0.35);
+                using ViewerPresentation presentation = viewer.Display(importedRoot);
                 viewer.FitAll();
                 viewer.Redraw();
                 string screenshot = viewer.SaveScreenshot(Path.Combine(directory, "batch-k.png"));
@@ -256,7 +258,7 @@ public sealed class BatchKCompletionTests
             }
             finally
             {
-                foreach (AssemblyViewerPresentation presentation in presentations) presentation.Dispose();
+                foreach (XdePresentationStyle style in styles) style.Dispose();
             }
         }
         finally

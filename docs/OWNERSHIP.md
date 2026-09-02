@@ -506,3 +506,18 @@ updates the presentation's copied source identity. DMU and STEP/XDE operations r
 call-local and reuse their existing owning/copied contracts. Preview.11 focused 4/4,
 Release/Debug, real STEP/XDE, real HWND, source/document/presentation disposal, and the
 clean package consumer validate the complete 24/24 boundary.
+
+### Preview.12 STEP/XCAF presentation-style recovery boundary
+
+ADR-0076 keeps STEP models, styled entities, transfer binders, representation graphs,
+style decoders, XCAF tools, labels, and indexed shape/style maps inside one native import
+or snapshot call. `XdePresentationStyle` receives only copied visibility and RGBA values
+plus an independently registered, already located owning `Shape`. Disposing the source
+XDE document does not invalidate returned style topology; callers must dispose every
+style entry to release that topology.
+
+`OcctViewer.Display(XdeLabel)` borrows the document and stable-entry label only while it
+collects styles and creates the AIS presentation. The resulting presentation retains its
+own OCCT shape reference and style overrides, remains bound to its `OcctViewer`, and is
+valid only on the viewer creation thread. No STEP/XCAF/AIS native handle is returned to
+managed or WPF code. The WPF host owns and disposes the resulting presentation list.

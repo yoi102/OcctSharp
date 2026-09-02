@@ -3,7 +3,7 @@
     <OutputType>Exe</OutputType>
     <ManagePackageVersionsCentrally>false</ManagePackageVersionsCentrally>
     <RestorePackagesWithLockFile>false</RestorePackagesWithLockFile>
-    <OcctSharpPackageVersion Condition="'$(OcctSharpPackageVersion)' == ''">8.0.1-preview.11</OcctSharpPackageVersion>
+    <OcctSharpPackageVersion Condition="'$(OcctSharpPackageVersion)' == ''">8.0.1-preview.12</OcctSharpPackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="OcctSharp" Version="$(OcctSharpPackageVersion)" />

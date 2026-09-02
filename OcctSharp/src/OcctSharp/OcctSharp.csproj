@@ -15,6 +15,7 @@
     <PackageDescription>.NET 10 bindings and friendly API for Open CASCADE Technology 8.0.1 on Windows x64.</PackageDescription>
     <PackageTags>OCCT;OpenCASCADE;CAD;STEP;STL;IGES;XDE</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>occtsharp-icon.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <IsPackable>true</IsPackable>
@@ -44,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\assets\occtsharp-icon.png" Pack="true" PackagePath="\" />
     <None Include="..\..\..\LICENSE" Pack="true" PackagePath="\" />
     <None Include="..\..\..\docs\**\*.md"
           Exclude="..\..\..\docs\STATUS.md"

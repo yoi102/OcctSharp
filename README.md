@@ -1,19 +1,106 @@
 # OcctSharp
 
-OcctSharp is a generator and .NET SDK for Open CASCADE Technology (OCCT).
-Its purpose is to make OCCT bindings reproducible, reviewable, testable, and easier
-to regenerate when the upstream OCCT version changes.
+OcctSharp is a .NET 10 SDK for Open CASCADE Technology (OCCT) 8.0.1. It combines a
+versioned native C ABI, generated low-level bindings, and friendly managed CAD APIs for
+modeling, STEP/IGES/STL exchange, XDE assemblies and metadata, meshing, inspection, and
+Windows visualization.
 
-The repository now contains a .NET 10/Windows x64 foundation: a CMake native bridge,
-managed API, Clang-based generator discovery, deterministic reports, and OCCT-backed
-runtime tests against the first OCCT 8.0.1 baseline. An experimental local NuGet package
-also delivers the complete native runtime below an application's `occt` directory.
-Generation also produces deterministic package coverage and per-declaration diagnostics
-for review during binding and OCCT upgrade work. A separate batched inventory audits the
-entire public OCCT header surface without slowing the normal build. The verified Windows
-x64 runtime is committed, so examples do not require a separate OCCT SDK.
+Current preview: `8.0.1-preview.12` for Windows x64. The NuGet graph contains 12 managed
+modules, the `OcctSharp` compatibility/facade package, and one shared
+`OcctSharp.Native.win-x64` runtime package. The native package places the complete
+62-DLL runtime in the application's `occt/` directory; no machine-wide OCCT installation
+or `PATH` change is required.
 
-## Clone and run
+## Install
+
+```powershell
+dotnet add package OcctSharp --version 8.0.1-preview.12
+```
+
+A narrow consumer can reference a module directly, for example:
+
+```powershell
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.12
+```
+
+The supported runtime baseline is .NET 10, Windows x64, and OCCT 8.0.1.
+
+## Create a solid
+
+```csharp
+using OcctSharp;
+
+using Shape box = ShapeFactory.CreateBox(40, 30, 20);
+using Shape cylinder = ShapeFactory.CreateCylinder(6, 20);
+
+Console.WriteLine($"Box faces: {box.FaceCount}");
+Console.WriteLine($"Cylinder faces: {cylinder.FaceCount}");
+```
+
+## Read ordinary STEP geometry
+
+Use the geometry-only API when product structure and presentation metadata are not
+needed:
+
+```csharp
+using OcctSharp;
+
+using Shape shape = ShapeExchange.ReadStep("part.step");
+Console.WriteLine($"Imported faces: {shape.FaceCount}");
+```
+
+## Read STEP/XDE colors and subshape styles
+
+Use `XdeDocument` for assemblies, names, layers, colors, materials, visibility, and
+location-aware face/subshape presentation styles:
+
+```csharp
+using OcctSharp;
+
+using XdeDocument document = XdeDocument.ReadStep("assembly.step");
+
+foreach (XdeLabel root in document.GetFreeShapes())
+{
+    IReadOnlyList<XdePresentationStyle> styles = root.GetPresentationStyles();
+    try
+    {
+        foreach (XdePresentationStyle style in styles)
+        {
+            XdeColor? color = style.EffectiveColor;
+            Console.WriteLine(
+                $"faces={style.Shape.FaceCount}, visible={style.IsVisible}, " +
+                $"rgba={color?.Red:F3},{color?.Green:F3},{color?.Blue:F3},{color?.Alpha:F3}");
+        }
+    }
+    finally
+    {
+        foreach (XdePresentationStyle style in styles) style.Dispose();
+    }
+}
+```
+
+`OcctViewer.Display(XdeLabel)` applies the same inherited occurrence, part, face, edge,
+material, alpha, and visibility styles to one `AIS_ColoredShape` presentation. Viewer
+objects are UI-thread-affine and require a native child-window handle.
+
+## WPF MVVM viewer
+
+The `OcctSharpViewer.Wpf` sample uses `CommunityToolkit.Mvvm` and an OCCT OpenGL viewport
+hosted by `HwndHost`. It loads STEP/STP and IGES/IGS, preserves STEP/XCAF presentation
+colors, fits the model, provides standard views, shaded/wireframe modes, selection,
+right-drag rotation, middle-drag pan, and wheel zoom.
+
+From the inner workspace:
+
+```powershell
+cd OcctSharp
+dotnet run --project .\samples\OcctSharpViewer.Wpf --configuration Release
+```
+
+WPF controls can be placed around the viewport. WPF airspace rules still prevent reliable
+WPF overlays above the `HwndHost`; a `D3DImage` bridge is not included.
+
+## Clone and run without an OCCT SDK
 
 On Windows x64 with .NET SDK 10.0.400:
 
@@ -23,52 +110,18 @@ cd OcctSharp\OcctSharp
 dotnet run --project .\samples\OcctSharp.Samples -- --smoke
 ```
 
-The command verifies ABI 1.48, bridge 0.56.0, OCCT 8.0.1, all 62 application-local
-DLLs, and exercises topology and detailed-mesh inspection on a six-face OCCT box. Run without `--smoke` for the interactive sample
-menu. No OCCT installation, CMake, Visual Studio C++ workload, environment variable, or
-private settings file is required for these examples.
+The committed, SHA256-pinned Release runtime is copied automatically. Building the
+native bridge or regenerating bindings still requires the documented MSVC/OCCT contributor
+toolchain.
 
-## Repository boundary
+## Project structure and status
 
-- `docs/` contains project architecture, decisions, plans, and status documents.
-- `OcctSharp/` is reserved for all solution, source, test, benchmark, configuration,
-  generated-output, report, and packaging files.
-- The Git repository belongs at this repository root so both areas are versioned
-  together.
+- `docs/` contains architecture, decisions, compatibility, packaging, samples, and status.
+- `OcctSharp/` contains the solution, source, tests, generator, runtime, samples, and
+  release tooling.
+- Project code is MIT licensed. OCCT and bundled third-party components retain their own
+  license terms beside the native runtime.
 
-See [the documentation index](docs/DOCUMENTATION_INDEX.md),
-[current status](docs/STATUS.md), [roadmap](docs/ROADMAP.md), and
-[build instructions](docs/BUILD_AND_RELEASE.md). The runnable workflows are listed in
-[console samples](docs/SAMPLES.md), and package layout is described in
-[NuGet packaging](docs/NUGET_PACKAGING.md).
-
-## Current state
-
-- Batch B through Batch L are locally complete for their finite accepted denominators.
-  Preview.10 independently completes the ADR-0074 managed assembly/package split without
-  changing those product-batch claims. Generated/API coverage and public publication
-  authority remain separate facts.
-- Managed target is .NET 10; the validated baseline is Windows x64 and OCCT 8.0.1.
-- ClangSharp semantic discovery, deterministic generation, native C ABI, friendly managed
-  owners/values, geometry and metadata exchange, OCAF/XDE, and Windows HWND visualization
-  are implemented for their declared profiles.
-- Full inventory classifies 116,272 discovered declarations and all 7,090 catalogued
-  headers with zero `SupportedUnselected`, zero broad LT001-LT004 reasons, and 16,353
-  generated plus 534 accepted manual stable IDs. Narrow blocked dispositions are not
-  claimed as managed APIs.
-- The .NET 10 console sample contains seven separate workflows, including native BREP,
-  topology/tolerance inspection, STEP diagnostics/repair, detailed mesh transfer, XDE
-  validation properties/recursive occurrences, explicit STEPCAF options, and Viewer controls.
-- Package version `8.0.1-preview.10` provides 12 managed modules, the `OcctSharp`
-  compatibility/facade package, and one `OcctSharp.Native.win-x64` package carrying the
-  committed 62-DLL ABI 1.54 runtime and notice/license layout below application-local
-  `occt/` and `licenses/`.
-- An ordinary clone runs the Sample directly from the SHA256-pinned committed runtime.
-  The SDK/CMake bootstrap remains available only as an explicit contributor override.
-- The release pipeline records a 606-signature API baseline, clean regeneration,
-  CycloneDX SBOM, provenance, checksums, release gates, and CI configuration.
-- Project code is MIT licensed. OCCT and third-party runtime terms are preserved beside
-  the bundled DLLs; hosted CI, signing, and NuGet publication remain separate gates.
-- Architecture and behavior are recorded through ADR-0074. CMM devices, automatic
-  tolerance judgment, custom rendering, optional integration implementation, cold schema,
-  and physical native-DLL splitting remain outside the completed product denominators.
+See [documentation](docs/DOCUMENTATION_INDEX.md), [current status](docs/STATUS.md),
+[samples](docs/SAMPLES.md), [NuGet packaging](docs/NUGET_PACKAGING.md), and
+[build/release instructions](docs/BUILD_AND_RELEASE.md).

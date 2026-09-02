@@ -291,6 +291,17 @@ typedef struct OcctSharp_XdeColor
   double alpha;
 } OcctSharp_XdeColor;
 
+typedef struct OcctSharp_XdePresentationStyle
+{
+  int32_t is_visible;
+  int32_t has_surface_color;
+  int32_t has_curve_color;
+  int32_t has_material_color;
+  OcctSharp_XdeColor surface_color;
+  OcctSharp_XdeColor curve_color;
+  OcctSharp_XdeColor material_color;
+} OcctSharp_XdePresentationStyle;
+
 typedef struct OcctSharp_XdeValidationProperties
 {
   double area;
@@ -1809,6 +1820,17 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_get_color(
   const char* entry,
   int32_t* has_color,
   OcctSharp_XdeColor* color);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_presentation_style_count(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  int32_t* count);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_presentation_style_snapshot(
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
+  OcctSharp_ShapeHandle** shapes,
+  OcctSharp_XdePresentationStyle* styles,
+  int32_t capacity,
+  int32_t* written);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_xde_label_set_layer(
   OcctSharp_OcafDocumentHandle* document,
   const char* entry,
@@ -1892,6 +1914,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_create(
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_display_shape(
   OcctSharp_ViewerHandle* viewer,
   const OcctSharp_ShapeHandle* shape,
+  int64_t* presentation_id);
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_display_xde_label(
+  OcctSharp_ViewerHandle* viewer,
+  const OcctSharp_OcafDocumentHandle* document,
+  const char* entry,
   int64_t* presentation_id);
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_dimension_create(
   OcctSharp_ViewerHandle* viewer,

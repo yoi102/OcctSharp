@@ -1222,6 +1222,23 @@ internal static partial class NativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus GetXdeColor(OcafDocumentHandle document, string entry, out int hasColor, out XdeColorRaw color);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_presentation_style_count", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus GetXdePresentationStyleCount(
+        OcafDocumentHandle document,
+        string entry,
+        out int count);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_presentation_style_snapshot", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static unsafe partial NativeStatus SnapshotXdePresentationStyles(
+        OcafDocumentHandle document,
+        string entry,
+        nint* shapes,
+        XdePresentationStyleRaw* styles,
+        int capacity,
+        out int written);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_xde_label_set_layer", StringMarshalling = StringMarshalling.Utf8)]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus SetXdeLayer(OcafDocumentHandle document, string entry, nint layerUtf8, int layerLength, int replaceExisting);
@@ -1275,6 +1292,14 @@ internal static partial class NativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_display_shape")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial NativeStatus DisplayViewerShape(ViewerHandle viewer, ShapeHandle shape, out long presentationId);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_display_xde_label", StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial NativeStatus DisplayViewerXdeLabel(
+        ViewerHandle viewer,
+        OcafDocumentHandle document,
+        string entry,
+        out long presentationId);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_viewer_dimension_create", StringMarshalling = StringMarshalling.Utf8)]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

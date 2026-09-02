@@ -41,6 +41,29 @@ public sealed class OcctViewer : IDisposable
         return DisplayCore(shape, null);
     }
 
+    /// <summary>
+    /// Displays an XDE label through OCCT's inherited component and subshape styles,
+    /// including surface, curve, material-base, alpha, and visibility overrides.
+    /// The presentation remains valid after the source document is disposed.
+    /// </summary>
+    public ViewerPresentation Display(XdeLabel label)
+    {
+        ArgumentNullException.ThrowIfNull(label);
+        EnsureThread();
+        NativeError.ThrowIfFailed(
+            NativeMethods.DisplayViewerXdeLabel(
+                Handle, label.Document.Handle, label.Entry, out long id),
+            "viewer_display_xde_label");
+        ViewerPresentation presentation = new(this, id, null);
+        _presentations.Add(id, presentation);
+        if (_isolationVisibility is not null)
+        {
+            _isolationVisibility[id] = true;
+            SetVisible(presentation, false);
+        }
+        return presentation;
+    }
+
     /// <summary>Displays a located XDE occurrence with copied identity independent of the document.</summary>
     public ViewerPresentation Display(XdeOccurrence occurrence)
     {

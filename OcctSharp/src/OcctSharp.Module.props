@@ -15,11 +15,15 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>OCCT;OpenCASCADE;CAD</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>occtsharp-icon.png</PackageIcon>
     <IsPackable>true</IsPackable>
     <OcctSharpModuleProject>true</OcctSharpModuleProject>
   </PropertyGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)..\..\README.md"
+          Pack="true"
+          PackagePath="\" />
+    <None Include="$(MSBuildThisFileDirectory)..\assets\occtsharp-icon.png"
           Pack="true"
           PackagePath="\" />
   </ItemGroup>

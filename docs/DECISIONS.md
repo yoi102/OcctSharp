@@ -82,6 +82,7 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0073](adr/0073-digital-mockup-interference-clearance-batch.md) | Define Batch L as one 24-capability occurrence-aware interference, clearance, containment, and review wave | Accepted and implemented |
 | [ADR-0074](adr/0074-physical-managed-modules-and-shared-native-package.md) | Split managed assemblies/packages with type-forwarded compatibility, one facade, and one shared native runtime package | Accepted and implemented |
 | [ADR-0075](adr/0075-interactive-assembly-placement-editing-batch.md) | Define Batch M as one 24-capability interactive presentation and XDE occurrence-placement editing wave | Accepted and implemented |
+| [ADR-0076](adr/0076-xcaf-disconnected-step-presentation-style-recovery.md) | Recover disconnected STEP styles into copied XDE snapshots and viewer-native presentation overrides | Accepted and implemented |
 
 ## Pending decisions
 

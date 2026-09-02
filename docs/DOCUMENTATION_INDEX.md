@@ -9,7 +9,7 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Architecture](ARCHITECTURE.md) — system boundaries and component ownership.
 - [Repository layout](REPOSITORY_LAYOUT.md) — physical separation of documentation
   and code-related files.
-- [Roadmap](ROADMAP.md) — completed Batch B-L outcomes and future-wave boundary.
+- [Roadmap](ROADMAP.md) — completed Batch B-M outcomes and future-wave boundary.
 - [Complete migration plan](MIGRATION_PLAN.md) — completed Batch C, Batch D, and Batch E
   matrices, large-wave rules, module/package boundaries, metrics,
   and product-scale gates.
@@ -52,6 +52,10 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   C++/CLI, and platform-adapter availability and package boundaries.
 - [Full inventory classification](FULL_INVENTORY_CLASSIFICATION.md) — complete declaration
   and header dispositions, reason codes, and complete-versus-generated metrics.
+- [Preview.12 release notes](RELEASE_NOTES_8.0.1_PREVIEW_12.md) — STEP/XCAF style
+  recovery, copied presentation snapshots, XDE-label display, package icon, and README.
+- [Preview.11 release notes](RELEASE_NOTES_8.0.1_PREVIEW_11.md) — complete Batch M
+  interactive presentation/manipulator and rigid occurrence-placement editing evidence.
 - [Preview.10 release notes](RELEASE_NOTES_8.0.1_PREVIEW_10.md) — physical managed
   modules, compatibility forwarding, one shared native package, and direct-module evidence.
 - [Preview.9 release notes](RELEASE_NOTES_8.0.1_PREVIEW_9.md) — complete Batch L digital
@@ -135,6 +139,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   — one large cross-family mesh/material/LOD/scene/interchange wave.
 - [Batch I document state and persistence decision](adr/0070-document-state-attribute-graph-history-persistence-batch.md)
   — one large cross-family OCAF/XDE attribute/graph/history/persistence wave.
+- [STEP/XCAF presentation-style recovery decision](adr/0076-xcaf-disconnected-step-presentation-style-recovery.md)
+  — native-local styled-target recovery, copied XDE styles, and viewer ownership.
 - [Native ABI](NATIVE_ABI.md) — C ABI boundary rules.
 - [Ownership](OWNERSHIP.md) — lifetime and resource ownership rules.
 - [Type mapping](TYPE_MAPPING.md) — native-to-managed mapping policy.

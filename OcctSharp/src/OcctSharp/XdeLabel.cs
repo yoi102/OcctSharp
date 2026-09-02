@@ -144,6 +144,13 @@ public sealed class XdeLabel
         set => Document.SetColor(Entry, value ?? throw new ArgumentNullException(nameof(value)));
     }
 
+    /// <summary>
+    /// Collects independently owned, location-aware XCAF presentation styles for this
+    /// label, including inherited component and subshape styles.
+    /// </summary>
+    public IReadOnlyList<XdePresentationStyle> GetPresentationStyles() =>
+        Document.GetPresentationStyles(Entry);
+
     /// <summary>Gets a copied snapshot of all assigned layer names.</summary>
     public IReadOnlyList<string> Layers => Document.GetLayers(Entry);
 

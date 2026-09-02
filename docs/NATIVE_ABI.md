@@ -542,6 +542,14 @@ and attach-option objects remain native-local and thread-affine; only parent-bou
 fixed copied values, and independently owned opaque `GpTrsf` handles cross the ABI. The
 bridge implementation is 0.63.0.
 
+ABI 1.56 is the Preview.12 STEP/XCAF presentation-style recovery boundary. It adds a
+fixed 112-byte copied presentation-style record, a count/snapshot pair returning
+independently owned located shape handles, and XDE-label display through the existing
+viewer registry. STEP entities, transfer graphs/binders, XCAF maps/styles/labels, and AIS
+handles remain native-local. The same native import path pre-transfers styled AP242
+targets and installs recovered surface/curve/rendering colors and visibility into XDE.
+The bridge implementation is 0.64.0; schema remains 1.13.
+
 ## Verification
 
 Alpha.48 verification confirms the existing ABI contract for all 162 IGES public

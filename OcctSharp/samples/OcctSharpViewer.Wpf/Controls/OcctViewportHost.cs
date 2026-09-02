@@ -173,37 +173,19 @@ public sealed class OcctViewportHost : HwndHost, IViewerService
         {
             foreach (XdeLabel root in document.GetFreeShapes())
             {
-                if (!root.IsAssembly)
-                {
-                    using Shape shape = root.Shape;
-                    result.Add(DisplayStyled(viewer, shape, GetColor(root)));
-                    continue;
-                }
-
-                IReadOnlyList<XdeOccurrence> occurrences = root.GetOccurrences(recursive: true);
-                int countBeforeRoot = result.Count;
+                ViewerPresentation presentation = viewer.Display(root);
                 try
                 {
-                    foreach (XdeOccurrence occurrence in occurrences)
-                    {
-                        // An assembly occurrence already contains all descendants, so displaying
-                        // it together with its leaf occurrences would draw the same parts twice.
-                        if (occurrence.IsAssembly) continue;
-                        ViewerPresentation presentation = viewer.Display(occurrence);
-                        ApplyColor(presentation, GetColor(occurrence));
-                        result.Add(presentation);
-                    }
+                    // The whole-presentation color is only the fallback. OCCT's XCAF style
+                    // collector has already installed instance, part, face, edge, material,
+                    // alpha, and visibility overrides on the AIS_ColoredShape.
+                    ApplyColor(presentation, GetColor(root));
+                    result.Add(presentation);
                 }
-                finally
+                catch
                 {
-                    foreach (XdeOccurrence occurrence in occurrences) occurrence.Dispose();
-                }
-
-                // Preserve unusual empty/root-only XDE shapes instead of showing a blank viewport.
-                if (result.Count == countBeforeRoot)
-                {
-                    using Shape shape = root.Shape;
-                    result.Add(DisplayStyled(viewer, shape, GetColor(root)));
+                    presentation.Dispose();
+                    throw;
                 }
             }
 
@@ -251,9 +233,6 @@ public sealed class OcctViewportHost : HwndHost, IViewerService
 
     private static XdeColor? GetColor(XdeLabel label) =>
         label.Color ?? label.VisualMaterial?.BaseColor;
-
-    private static XdeColor? GetColor(XdeOccurrence occurrence) =>
-        GetColor(occurrence.OccurrenceLabel) ?? GetColor(occurrence.ReferredLabel);
 
     private static void DisposePresentations(List<ViewerPresentation> values)
     {
