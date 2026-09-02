@@ -11,6 +11,18 @@ Batch N closes its one 24-capability metadata-aware IGES/XDE interoperability wa
 ADR-0077. It was not split into reader, writer, metadata, path, viewer, or package
 checkpoints.
 
+## Current priority: Batch O 2D sketch and planar modeling
+
+ADR-0078 and [the Batch O gap inventory](BATCH_O_2D_SKETCH_PLANAR_MODELING_GAP_INVENTORY.md)
+lock one 24-capability copied-definition-to-owning-topology workflow across `gp_*2d`,
+Geom2d/Geom2dAPI, curve inspection/edit/intersection/offset, mixed loop validation,
+hole-aware faces, extrusion/revolution/add-cut features, XDE, STEP/IGES, real HWND, and
+clean packages. Preparation is complete and implementation is 0/24. The Preview.13
+baseline audit covers exactly 24 roots and 849 declarations: 587 blocked, 93 emitted,
+14 manual, and 155 skipped. Only exact directly invoked blocked overloads may enter
+SC-052. Preview.14, ABI 1.58, bridge 0.66.0, and schema 1.13 are reserved; all Batch O
+compile/runtime/package/release gates are `NOT RUN` until implementation.
+
 ## Completed priority: Batch N IGES/XDE interoperability
 
 ADR-0077 and [the Batch N gap inventory](BATCH_N_IGES_XDE_INTEROPERABILITY_GAP_INVENTORY.md)

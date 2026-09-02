@@ -9,7 +9,7 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Architecture](ARCHITECTURE.md) — system boundaries and component ownership.
 - [Repository layout](REPOSITORY_LAYOUT.md) — physical separation of documentation
   and code-related files.
-- [Roadmap](ROADMAP.md) — completed Batch B-N outcomes and current release boundary.
+- [Roadmap](ROADMAP.md) — completed Batch B-N outcomes, active Batch O, and current release boundary.
 - [Complete migration plan](MIGRATION_PLAN.md) — completed Batch C, Batch D, and Batch E
   matrices, large-wave rules, module/package boundaries, metrics,
   and product-scale gates.
@@ -43,6 +43,9 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Batch N IGES/XDE interoperability gap inventory](BATCH_N_IGES_XDE_INTEROPERABILITY_GAP_INVENTORY.md)
   — completed immutable 24-capability metadata-aware IGES/XDE, Unicode-path, mixed-format,
   viewer, and clean-package denominator.
+- [Batch O 2D sketch and planar-modeling gap inventory](BATCH_O_2D_SKETCH_PLANAR_MODELING_GAP_INVENTORY.md)
+  — active immutable 24-capability copied 2D definition, inspection/edit, planar topology,
+  solid-feature, STEP/IGES, viewer, and clean-package denominator.
 - [AI migration loop prompt](AI_MIGRATION_LOOP_PROMPT.md) — reusable re-entrant prompt
   for executing the largest coherent common-workflow wave instead of per-class tasks.
 - [Status](STATUS.md) — current phase, blockers, and last verified results.

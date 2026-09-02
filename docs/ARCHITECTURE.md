@@ -120,6 +120,8 @@ The accepted boundaries are recorded in ADRs:
   editing closure with named history, DMU, exchange, and real-HWND evidence.
 - [ADR-0077](adr/0077-iges-xde-metadata-path-interoperability-batch.md): one finite
   Batch N metadata-aware IGES/XDE, Unicode-path, mixed-format, viewer, and package wave.
+- [ADR-0078](adr/0078-2d-sketch-planar-modeling-batch.md): one finite Batch O copied
+  2D-sketch, planar topology/feature, exchange, viewer, and package wave.
 
 ## Components
 

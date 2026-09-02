@@ -100,14 +100,16 @@ batch fragments remain forbidden. ADR-0064 closes product-scale batch `D` with t
 | L — Digital Mock-up Interference and Clearance | Complete (24/24, local implementation) | Preview.9 closes occurrence bounds, broad/exact phase, clearance/contact/penetration/containment, matrices, diagnostics, incremental rerun, STEP/XDE, and review evidence | None inside Batch L |
 | M — Interactive Assembly Placement Editing | Complete (24/24, local implementation) | Preview.11 closes presentation transforms, viewer manipulators, rigid occurrence placement, named history, DMU recheck, STEP/XDE, real-HWND, and package evidence | None inside Batch M |
 | N — IGES/XDE Metadata and Path Interoperability | Complete (24/24, local implementation) | Preview.13 closes IGESCAF read/import/write, metadata/options/diagnostics/units, Unicode staging, mixed STEP/IGES composition, round-trip, lifetime, XDE-label viewer, and clean-package evidence. Release/Debug Runtime 156/156, focused 4/4, 94-file clean regeneration, compatibility, inventory, and the complete local release check pass | None inside Batch N. Hosted release, signing, NuGet publication, and the public-source consumer remain independent release-readiness gates |
+| O — 2D Sketch and Planar Modeling | Prepared (0/24) | ADR-0078 and the Batch O gap inventory lock copied 2D values/definitions, evaluation/projection/intersection/edit/offset, mixed-loop validation, hole-aware faces, profile features, XDE, STEP/IGES, real-HWND, and clean-package evidence. Preview.13 root audit: 849 candidates (587 blocked, 93 emitted, 14 manual, 155 skipped) | Implement all 24 capabilities as one wave; reconcile only directly used SC-052 IDs; run Release/Debug, focused/runtime, real-file/HWND, package, regeneration, compatibility, inventory, provenance, and Preview.14 local release gates |
 
 Current B completion is not represented by counting retired planning labels. Engineering
 progress, selected binding coverage, full-profile coverage, inventory completeness,
 validation coverage, and publication readiness are reported independently. B through N
-are 100% for their accepted local denominators because every local exit condition above
-has evidence; this does not make the public package release-ready. Future implementation
-requires a separately accepted product denominator and is never reported by reopening
-B/C/D/E/F/G/H/I/J/K/L/M/N or inventing numbered or dotted labels.
+are 100% for their accepted local denominators; O is prepared at 0/24 because no Batch O
+implementation gate has run. Completed batches have every local exit condition above
+backed by evidence; this does not make the public package release-ready. Future implementation
+is never reported by reopening B/C/D/E/F/G/H/I/J/K/L/M/N or inventing numbered or dotted
+labels.
 
 The 16,353 emitted plus 61 accepted manual stable IDs are Batch B's baseline binding
 coverage. Batch C adds 41 accepted manual stable IDs across SC-036 through SC-039 and
