@@ -1,8 +1,13 @@
+
+
+
 # OcctSharpViewer.Wpf
 
 `OcctSharpViewer.Wpf` is a .NET 10 WPF/MVVM desktop CAD viewer. It uses
 `CommunityToolkit.Mvvm` for commands and observable state and hosts OCCT's OpenGL viewer
 inside a native child window.
+
+https://github.com/user-attachments/assets/2f3e5b9b-bc01-4aeb-b36e-64ade2463fe4
 
 ## Features
 
