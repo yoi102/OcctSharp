@@ -723,6 +723,8 @@
 // Source: c:@S@IGESAppli_NodalDisplAndRot@F@Node#I#1
 // Source: c:@S@IGESAppli_NodalDisplAndRot@F@NodeIdentifier#I#1
 // Source: c:@S@IGESAppli_NodalDisplAndRot@F@Note#I#1
+// Source: c:@S@IGESAppli_NodalDisplAndRot@F@RotationalParameter#I#I#1
+// Source: c:@S@IGESAppli_NodalDisplAndRot@F@TranslationParameter#I#I#1
 // Source: c:@S@IGESAppli_NodalResults@F@Data#I#I#1
 // Source: c:@S@IGESAppli_NodalResults@F@DynamicType#1
 // Source: c:@S@IGESAppli_NodalResults@F@IGESAppli_NodalResults#
@@ -737,6 +739,7 @@
 // Source: c:@S@IGESAppli_Node@F@Coord#1
 // Source: c:@S@IGESAppli_Node@F@DynamicType#1
 // Source: c:@S@IGESAppli_Node@F@IGESAppli_Node#
+// Source: c:@S@IGESAppli_Node@F@Init#&1$@S@gp_XYZ#&1$@N@opencascade@S@handle>#$@S@IGESGeom_TransformationMatrix#
 // Source: c:@S@IGESAppli_Node@F@System#1
 // Source: c:@S@IGESAppli_Node@F@SystemType#1
 // Source: c:@S@IGESAppli_Node@F@TransformedNodalCoord#1
@@ -918,8 +921,11 @@
 // Source: c:@S@IGESBasic_SingularSubfigure@F@DynamicType#1
 // Source: c:@S@IGESBasic_SingularSubfigure@F@HasScaleFactor#1
 // Source: c:@S@IGESBasic_SingularSubfigure@F@IGESBasic_SingularSubfigure#
+// Source: c:@S@IGESBasic_SingularSubfigure@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESBasic_SubfigureDef#&1$@S@gp_XYZ#b#d#
 // Source: c:@S@IGESBasic_SingularSubfigure@F@ScaleFactor#1
 // Source: c:@S@IGESBasic_SingularSubfigure@F@Subfigure#1
+// Source: c:@S@IGESBasic_SingularSubfigure@F@TransformedTranslation#1
+// Source: c:@S@IGESBasic_SingularSubfigure@F@Translation#1
 // Source: c:@S@IGESBasic_SpecificModule@F@DynamicType#1
 // Source: c:@S@IGESBasic_SpecificModule@F@IGESBasic_SpecificModule#
 // Source: c:@S@IGESBasic_SpecificModule@F@OwnCorrect#I#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
@@ -1230,13 +1236,21 @@
 // Source: c:@S@IGESDimen_AngularDimension@F@HasFirstWitnessLine#1
 // Source: c:@S@IGESDimen_AngularDimension@F@HasSecondWitnessLine#1
 // Source: c:@S@IGESDimen_AngularDimension@F@IGESDimen_AngularDimension#
+// Source: c:@S@IGESDimen_AngularDimension@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESDimen_GeneralNote#&1$@N@opencascade@S@handle>#$@S@IGESDimen_WitnessLine#S3_#&1$@S@gp_XY#d#&1$@N@opencascade@S@handle>#$@S@IGESDimen_LeaderArrow#S8_#
 // Source: c:@S@IGESDimen_AngularDimension@F@Note#1
 // Source: c:@S@IGESDimen_AngularDimension@F@Radius#1
 // Source: c:@S@IGESDimen_AngularDimension@F@SecondLeader#1
 // Source: c:@S@IGESDimen_AngularDimension@F@SecondWitnessLine#1
+// Source: c:@S@IGESDimen_AngularDimension@F@TransformedVertex#1
+// Source: c:@S@IGESDimen_AngularDimension@F@Vertex#1
 // Source: c:@S@IGESDimen_BasicDimension@F@DynamicType#1
 // Source: c:@S@IGESDimen_BasicDimension@F@IGESDimen_BasicDimension#
+// Source: c:@S@IGESDimen_BasicDimension@F@Init#I#&1$@S@gp_XY#S0_#S0_#S0_#
+// Source: c:@S@IGESDimen_BasicDimension@F@LowerLeft#1
+// Source: c:@S@IGESDimen_BasicDimension@F@LowerRight#1
 // Source: c:@S@IGESDimen_BasicDimension@F@NbPropertyValues#1
+// Source: c:@S@IGESDimen_BasicDimension@F@UpperLeft#1
+// Source: c:@S@IGESDimen_BasicDimension@F@UpperRight#1
 // Source: c:@S@IGESDimen_CenterLine@F@Datatype#1
 // Source: c:@S@IGESDimen_CenterLine@F@DynamicType#1
 // Source: c:@S@IGESDimen_CenterLine@F@IGESDimen_CenterLine#
@@ -1259,12 +1273,15 @@
 // Source: c:@S@IGESDimen_CurveDimension@F@SecondCurve#1
 // Source: c:@S@IGESDimen_CurveDimension@F@SecondLeader#1
 // Source: c:@S@IGESDimen_CurveDimension@F@SecondWitnessLine#1
+// Source: c:@S@IGESDimen_DiameterDimension@F@Center#1
 // Source: c:@S@IGESDimen_DiameterDimension@F@DynamicType#1
 // Source: c:@S@IGESDimen_DiameterDimension@F@FirstLeader#1
 // Source: c:@S@IGESDimen_DiameterDimension@F@HasSecondLeader#1
 // Source: c:@S@IGESDimen_DiameterDimension@F@IGESDimen_DiameterDimension#
+// Source: c:@S@IGESDimen_DiameterDimension@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESDimen_GeneralNote#&1$@N@opencascade@S@handle>#$@S@IGESDimen_LeaderArrow#S3_#&1$@S@gp_XY#
 // Source: c:@S@IGESDimen_DiameterDimension@F@Note#1
 // Source: c:@S@IGESDimen_DiameterDimension@F@SecondLeader#1
+// Source: c:@S@IGESDimen_DiameterDimension@F@TransformedCenter#1
 // Source: c:@S@IGESDimen_DimensionDisplayData@F@ArrowHeadOrientation#1
 // Source: c:@S@IGESDimen_DimensionDisplayData@F@CharacterSet#1
 // Source: c:@S@IGESDimen_DimensionDisplayData@F@DecimalSymbol#1
@@ -1358,11 +1375,13 @@
 // Source: c:@S@IGESDimen_GeneralSymbol@F@NbLeaders#1
 // Source: c:@S@IGESDimen_GeneralSymbol@F@Note#1
 // Source: c:@S@IGESDimen_GeneralSymbol@F@SetFormNumber#I#
+// Source: c:@S@IGESDimen_LeaderArrow@F@ArrowHead#1
 // Source: c:@S@IGESDimen_LeaderArrow@F@ArrowHeadHeight#1
 // Source: c:@S@IGESDimen_LeaderArrow@F@ArrowHeadWidth#1
 // Source: c:@S@IGESDimen_LeaderArrow@F@DynamicType#1
 // Source: c:@S@IGESDimen_LeaderArrow@F@IGESDimen_LeaderArrow#
 // Source: c:@S@IGESDimen_LeaderArrow@F@NbSegments#1
+// Source: c:@S@IGESDimen_LeaderArrow@F@SegmentTail#I#1
 // Source: c:@S@IGESDimen_LeaderArrow@F@SetFormNumber#I#
 // Source: c:@S@IGESDimen_LeaderArrow@F@TransformedArrowHead#1
 // Source: c:@S@IGESDimen_LeaderArrow@F@TransformedSegmentTail#I#1
@@ -1449,9 +1468,11 @@
 // Source: c:@S@IGESDimen_Protocol@F@NbResources#1
 // Source: c:@S@IGESDimen_Protocol@F@Resource#I#1
 // Source: c:@S@IGESDimen_Protocol@F@TypeNumber#&1$@N@opencascade@S@handle>#$@S@Standard_Type#1
+// Source: c:@S@IGESDimen_RadiusDimension@F@Center#1
 // Source: c:@S@IGESDimen_RadiusDimension@F@DynamicType#1
 // Source: c:@S@IGESDimen_RadiusDimension@F@HasLeader2#1
 // Source: c:@S@IGESDimen_RadiusDimension@F@IGESDimen_RadiusDimension#
+// Source: c:@S@IGESDimen_RadiusDimension@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESDimen_GeneralNote#&1$@N@opencascade@S@handle>#$@S@IGESDimen_LeaderArrow#&1$@S@gp_XY#S3_#
 // Source: c:@S@IGESDimen_RadiusDimension@F@InitForm#I#
 // Source: c:@S@IGESDimen_RadiusDimension@F@Leader#1
 // Source: c:@S@IGESDimen_RadiusDimension@F@Leader2#1
@@ -1518,6 +1539,7 @@
 // Source: c:@S@IGESDraw_ConnectPoint@F@HasOwnerSubfigure#1
 // Source: c:@S@IGESDraw_ConnectPoint@F@IGESDraw_ConnectPoint#
 // Source: c:@S@IGESDraw_ConnectPoint@F@IdentifierTemplate#1
+// Source: c:@S@IGESDraw_ConnectPoint@F@Init#&1$@S@gp_XYZ#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#I#I#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#&1$@N@opencascade@S@handle>#$@S@IGESGraph_TextDisplayTemplate#S5_#S8_#I#I#I#S2_#
 // Source: c:@S@IGESDraw_ConnectPoint@F@OwnerSubfigure#1
 // Source: c:@S@IGESDraw_ConnectPoint@F@Point#1
 // Source: c:@S@IGESDraw_ConnectPoint@F@PointIdentifier#1
@@ -1530,6 +1552,8 @@
 // Source: c:@S@IGESDraw_Drawing@F@NbAnnotations#1
 // Source: c:@S@IGESDraw_Drawing@F@NbViews#1
 // Source: c:@S@IGESDraw_Drawing@F@ViewItem#I#1
+// Source: c:@S@IGESDraw_Drawing@F@ViewOrigin#I#1
+// Source: c:@S@IGESDraw_Drawing@F@ViewToDrawing#I#&1$@S@gp_XYZ#1
 // Source: c:@S@IGESDraw_DrawingWithRotation@F@Annotation#I#1
 // Source: c:@S@IGESDraw_DrawingWithRotation@F@DynamicType#1
 // Source: c:@S@IGESDraw_DrawingWithRotation@F@IGESDraw_DrawingWithRotation#
@@ -1537,6 +1561,8 @@
 // Source: c:@S@IGESDraw_DrawingWithRotation@F@NbViews#1
 // Source: c:@S@IGESDraw_DrawingWithRotation@F@OrientationAngle#I#1
 // Source: c:@S@IGESDraw_DrawingWithRotation@F@ViewItem#I#1
+// Source: c:@S@IGESDraw_DrawingWithRotation@F@ViewOrigin#I#1
+// Source: c:@S@IGESDraw_DrawingWithRotation@F@ViewToDrawing#I#&1$@S@gp_XYZ#1
 // Source: c:@S@IGESDraw_GeneralModule@F@DynamicType#1
 // Source: c:@S@IGESDraw_GeneralModule@F@IGESDraw_GeneralModule#
 // Source: c:@S@IGESDraw_GeneralModule@F@OwnDeleteCase#I#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
@@ -1556,7 +1582,10 @@
 // Source: c:@S@IGESDraw_NetworkSubfigure@F@IGESDraw_NetworkSubfigure#
 // Source: c:@S@IGESDraw_NetworkSubfigure@F@NbConnectPoints#1
 // Source: c:@S@IGESDraw_NetworkSubfigure@F@ReferenceDesignator#1
+// Source: c:@S@IGESDraw_NetworkSubfigure@F@ScaleFactors#1
 // Source: c:@S@IGESDraw_NetworkSubfigure@F@SubfigureDefinition#1
+// Source: c:@S@IGESDraw_NetworkSubfigure@F@TransformedTranslation#1
+// Source: c:@S@IGESDraw_NetworkSubfigure@F@Translation#1
 // Source: c:@S@IGESDraw_NetworkSubfigure@F@TypeFlag#1
 // Source: c:@S@IGESDraw_NetworkSubfigureDef@F@Depth#1
 // Source: c:@S@IGESDraw_NetworkSubfigureDef@F@Designator#1
@@ -1572,19 +1601,25 @@
 // Source: c:@S@IGESDraw_NetworkSubfigureDef@F@PointEntity#I#1
 // Source: c:@S@IGESDraw_NetworkSubfigureDef@F@TypeFlag#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@BackPlaneDistance#1
+// Source: c:@S@IGESDraw_PerspectiveView@F@BottomRight#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@CenterOfProjection#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@DepthClip#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@DynamicType#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@FrontPlaneDistance#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@IGESDraw_PerspectiveView#
+// Source: c:@S@IGESDraw_PerspectiveView@F@Init#I#d#&1$@S@gp_XYZ#S0_#S0_#S0_#d#&1$@S@gp_XY#S2_#I#d#d#
 // Source: c:@S@IGESDraw_PerspectiveView@F@IsSingle#1
+// Source: c:@S@IGESDraw_PerspectiveView@F@ModelToView#&1$@S@gp_XYZ#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@NbViews#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@ScaleFactor#1
+// Source: c:@S@IGESDraw_PerspectiveView@F@TopLeft#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@ViewItem#I#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@ViewMatrix#1
+// Source: c:@S@IGESDraw_PerspectiveView@F@ViewNormalVector#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@ViewNumber#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@ViewPlaneDistance#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@ViewReferencePoint#1
+// Source: c:@S@IGESDraw_PerspectiveView@F@ViewUpVector#1
 // Source: c:@S@IGESDraw_Planar@F@DynamicType#1
 // Source: c:@S@IGESDraw_Planar@F@Entity#I#1
 // Source: c:@S@IGESDraw_Planar@F@IGESDraw_Planar#
@@ -1648,6 +1683,7 @@
 // Source: c:@S@IGESDraw_View@F@Init#I#d#&1$@N@opencascade@S@handle>#$@S@IGESGeom_Plane#S0_#S0_#S0_#S0_#S0_#
 // Source: c:@S@IGESDraw_View@F@IsSingle#1
 // Source: c:@S@IGESDraw_View@F@LeftPlane#1
+// Source: c:@S@IGESDraw_View@F@ModelToView#&1$@S@gp_XYZ#1
 // Source: c:@S@IGESDraw_View@F@NbViews#1
 // Source: c:@S@IGESDraw_View@F@RightPlane#1
 // Source: c:@S@IGESDraw_View@F@ScaleFactor#1
@@ -1686,6 +1722,7 @@
 // Source: c:@S@IGESGeom_BSplineCurve@F@Knot#I#1
 // Source: c:@S@IGESGeom_BSplineCurve@F@NbKnots#1
 // Source: c:@S@IGESGeom_BSplineCurve@F@NbPoles#1
+// Source: c:@S@IGESGeom_BSplineCurve@F@Normal#1
 // Source: c:@S@IGESGeom_BSplineCurve@F@Pole#I#1
 // Source: c:@S@IGESGeom_BSplineCurve@F@SetFormNumber#I#
 // Source: c:@S@IGESGeom_BSplineCurve@F@TransformedPole#I#1
@@ -1735,10 +1772,16 @@
 // Source: c:@S@IGESGeom_BoundedSurface@F@RepresentationType#1
 // Source: c:@S@IGESGeom_BoundedSurface@F@Surface#1
 // Source: c:@S@IGESGeom_CircularArc@F@Angle#1
+// Source: c:@S@IGESGeom_CircularArc@F@Axis#1
+// Source: c:@S@IGESGeom_CircularArc@F@Center#1
 // Source: c:@S@IGESGeom_CircularArc@F@DynamicType#1
+// Source: c:@S@IGESGeom_CircularArc@F@EndPoint#1
 // Source: c:@S@IGESGeom_CircularArc@F@IGESGeom_CircularArc#
+// Source: c:@S@IGESGeom_CircularArc@F@Init#d#&1$@S@gp_XY#S0_#S0_#
 // Source: c:@S@IGESGeom_CircularArc@F@IsClosed#1
 // Source: c:@S@IGESGeom_CircularArc@F@Radius#1
+// Source: c:@S@IGESGeom_CircularArc@F@StartPoint#1
+// Source: c:@S@IGESGeom_CircularArc@F@TransformedAxis#1
 // Source: c:@S@IGESGeom_CircularArc@F@TransformedCenter#1
 // Source: c:@S@IGESGeom_CircularArc@F@TransformedEndPoint#1
 // Source: c:@S@IGESGeom_CircularArc@F@TransformedStartPoint#1
@@ -1747,14 +1790,19 @@
 // Source: c:@S@IGESGeom_CompositeCurve@F@DynamicType#1
 // Source: c:@S@IGESGeom_CompositeCurve@F@IGESGeom_CompositeCurve#
 // Source: c:@S@IGESGeom_CompositeCurve@F@NbCurves#1
+// Source: c:@S@IGESGeom_ConicArc@F@Axis#1
 // Source: c:@S@IGESGeom_ConicArc@F@ComputedFormNumber#1
 // Source: c:@S@IGESGeom_ConicArc@F@DynamicType#1
+// Source: c:@S@IGESGeom_ConicArc@F@EndPoint#1
 // Source: c:@S@IGESGeom_ConicArc@F@IGESGeom_ConicArc#
+// Source: c:@S@IGESGeom_ConicArc@F@Init#d#d#d#d#d#d#d#&1$@S@gp_XY#S0_#
 // Source: c:@S@IGESGeom_ConicArc@F@IsClosed#1
 // Source: c:@S@IGESGeom_ConicArc@F@IsFromEllipse#1
 // Source: c:@S@IGESGeom_ConicArc@F@IsFromHyperbola#1
 // Source: c:@S@IGESGeom_ConicArc@F@IsFromParabola#1
 // Source: c:@S@IGESGeom_ConicArc@F@OwnCorrect#
+// Source: c:@S@IGESGeom_ConicArc@F@StartPoint#1
+// Source: c:@S@IGESGeom_ConicArc@F@TransformedAxis#1
 // Source: c:@S@IGESGeom_ConicArc@F@TransformedEndPoint#1
 // Source: c:@S@IGESGeom_ConicArc@F@TransformedStartPoint#1
 // Source: c:@S@IGESGeom_ConicArc@F@ZPlane#1
@@ -1770,6 +1818,8 @@
 // Source: c:@S@IGESGeom_CopiousData@F@SetClosedPath2D#
 // Source: c:@S@IGESGeom_CopiousData@F@SetPolyline#b#
 // Source: c:@S@IGESGeom_CopiousData@F@TransformedPoint#I#1
+// Source: c:@S@IGESGeom_CopiousData@F@TransformedVector#I#1
+// Source: c:@S@IGESGeom_CopiousData@F@Vector#I#1
 // Source: c:@S@IGESGeom_CopiousData@F@ZPlane#1
 // Source: c:@S@IGESGeom_CurveOnSurface@F@CreationMode#1
 // Source: c:@S@IGESGeom_CurveOnSurface@F@Curve3D#1
@@ -1781,12 +1831,17 @@
 // Source: c:@S@IGESGeom_CurveOnSurface@F@Surface#1
 // Source: c:@S@IGESGeom_Direction@F@DynamicType#1
 // Source: c:@S@IGESGeom_Direction@F@IGESGeom_Direction#
+// Source: c:@S@IGESGeom_Direction@F@Init#&1$@S@gp_XYZ#
+// Source: c:@S@IGESGeom_Direction@F@TransformedValue#1
+// Source: c:@S@IGESGeom_Direction@F@Value#1
 // Source: c:@S@IGESGeom_Flash@F@Dimension1#1
 // Source: c:@S@IGESGeom_Flash@F@Dimension2#1
 // Source: c:@S@IGESGeom_Flash@F@DynamicType#1
 // Source: c:@S@IGESGeom_Flash@F@HasReferenceEntity#1
 // Source: c:@S@IGESGeom_Flash@F@IGESGeom_Flash#
+// Source: c:@S@IGESGeom_Flash@F@Init#&1$@S@gp_XY#d#d#d#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#
 // Source: c:@S@IGESGeom_Flash@F@ReferenceEntity#1
+// Source: c:@S@IGESGeom_Flash@F@ReferencePoint#1
 // Source: c:@S@IGESGeom_Flash@F@Rotation#1
 // Source: c:@S@IGESGeom_Flash@F@SetFormNumber#I#
 // Source: c:@S@IGESGeom_Flash@F@TransformedReferencePoint#1
@@ -1796,6 +1851,7 @@
 // Source: c:@S@IGESGeom_Line@F@EndPoint#1
 // Source: c:@S@IGESGeom_Line@F@IGESGeom_Line#
 // Source: c:@S@IGESGeom_Line@F@Infinite#1
+// Source: c:@S@IGESGeom_Line@F@Init#&1$@S@gp_XYZ#S0_#
 // Source: c:@S@IGESGeom_Line@F@SetInfinite#I#
 // Source: c:@S@IGESGeom_Line@F@StartPoint#1
 // Source: c:@S@IGESGeom_Line@F@TransformedEndPoint#1
@@ -1810,20 +1866,27 @@
 // Source: c:@S@IGESGeom_OffsetCurve@F@FunctionParameter#1
 // Source: c:@S@IGESGeom_OffsetCurve@F@HasFunction#1
 // Source: c:@S@IGESGeom_OffsetCurve@F@IGESGeom_OffsetCurve#
+// Source: c:@S@IGESGeom_OffsetCurve@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#I#S0_#I#I#d#d#d#d#&1$@S@gp_XYZ#d#d#
+// Source: c:@S@IGESGeom_OffsetCurve@F@NormalVector#1
 // Source: c:@S@IGESGeom_OffsetCurve@F@OffsetType#1
 // Source: c:@S@IGESGeom_OffsetCurve@F@SecondOffsetDistance#1
 // Source: c:@S@IGESGeom_OffsetCurve@F@StartParameter#1
 // Source: c:@S@IGESGeom_OffsetCurve@F@TaperedOffsetType#1
+// Source: c:@S@IGESGeom_OffsetCurve@F@TransformedNormalVector#1
 // Source: c:@S@IGESGeom_OffsetSurface@F@Distance#1
 // Source: c:@S@IGESGeom_OffsetSurface@F@DynamicType#1
 // Source: c:@S@IGESGeom_OffsetSurface@F@IGESGeom_OffsetSurface#
+// Source: c:@S@IGESGeom_OffsetSurface@F@Init#&1$@S@gp_XYZ#d#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#
+// Source: c:@S@IGESGeom_OffsetSurface@F@OffsetIndicator#1
 // Source: c:@S@IGESGeom_OffsetSurface@F@Surface#1
+// Source: c:@S@IGESGeom_OffsetSurface@F@TransformedOffsetIndicator#1
 // Source: c:@S@IGESGeom_Plane@F@BoundingCurve#1
 // Source: c:@S@IGESGeom_Plane@F@DynamicType#1
 // Source: c:@S@IGESGeom_Plane@F@HasBoundingCurve#1
 // Source: c:@S@IGESGeom_Plane@F@HasBoundingCurveHole#1
 // Source: c:@S@IGESGeom_Plane@F@HasSymbolAttach#1
 // Source: c:@S@IGESGeom_Plane@F@IGESGeom_Plane#
+// Source: c:@S@IGESGeom_Plane@F@Init#d#d#d#d#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#&1$@S@gp_XYZ#d#
 // Source: c:@S@IGESGeom_Plane@F@SetFormNumber#I#
 // Source: c:@S@IGESGeom_Plane@F@SymbolAttach#1
 // Source: c:@S@IGESGeom_Plane@F@SymbolSize#1
@@ -1832,6 +1895,7 @@
 // Source: c:@S@IGESGeom_Point@F@DynamicType#1
 // Source: c:@S@IGESGeom_Point@F@HasDisplaySymbol#1
 // Source: c:@S@IGESGeom_Point@F@IGESGeom_Point#
+// Source: c:@S@IGESGeom_Point@F@Init#&1$@S@gp_XYZ#&1$@N@opencascade@S@handle>#$@S@IGESBasic_SubfigureDef#
 // Source: c:@S@IGESGeom_Point@F@TransformedValue#1
 // Source: c:@S@IGESGeom_Point@F@Value#1
 // Source: c:@S@IGESGeom_Protocol@F@DynamicType#1
@@ -1880,6 +1944,7 @@
 // Source: c:@S@IGESGeom_TabulatedCylinder@F@DynamicType#1
 // Source: c:@S@IGESGeom_TabulatedCylinder@F@EndPoint#1
 // Source: c:@S@IGESGeom_TabulatedCylinder@F@IGESGeom_TabulatedCylinder#
+// Source: c:@S@IGESGeom_TabulatedCylinder@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#&1$@S@gp_XYZ#
 // Source: c:@S@IGESGeom_TabulatedCylinder@F@TransformedEndPoint#1
 // Source: c:@S@IGESGeom_TransformationMatrix@F@Data#I#I#1
 // Source: c:@S@IGESGeom_TransformationMatrix@F@DynamicType#1
@@ -1978,6 +2043,7 @@
 // Source: c:@S@IGESGraph_TextDisplayTemplate@F@FontCode#1
 // Source: c:@S@IGESGraph_TextDisplayTemplate@F@FontEntity#1
 // Source: c:@S@IGESGraph_TextDisplayTemplate@F@IGESGraph_TextDisplayTemplate#
+// Source: c:@S@IGESGraph_TextDisplayTemplate@F@Init#d#d#I#&1$@N@opencascade@S@handle>#$@S@IGESGraph_TextFontDef#d#d#I#I#&1$@S@gp_XYZ#
 // Source: c:@S@IGESGraph_TextDisplayTemplate@F@IsFontEntity#1
 // Source: c:@S@IGESGraph_TextDisplayTemplate@F@IsIncremental#1
 // Source: c:@S@IGESGraph_TextDisplayTemplate@F@MirrorFlag#1
@@ -2000,7 +2066,10 @@
 // Source: c:@S@IGESGraph_TextFontDef@F@SupersededFontCode#1
 // Source: c:@S@IGESGraph_TextFontDef@F@SupersededFontEntity#1
 // Source: c:@S@IGESGraph_UniformRectGrid@F@DynamicType#1
+// Source: c:@S@IGESGraph_UniformRectGrid@F@GridPoint#1
+// Source: c:@S@IGESGraph_UniformRectGrid@F@GridSpacing#1
 // Source: c:@S@IGESGraph_UniformRectGrid@F@IGESGraph_UniformRectGrid#
+// Source: c:@S@IGESGraph_UniformRectGrid@F@Init#I#I#I#I#&1$@S@gp_XY#S0_#I#I#
 // Source: c:@S@IGESGraph_UniformRectGrid@F@IsFinite#1
 // Source: c:@S@IGESGraph_UniformRectGrid@F@IsLine#1
 // Source: c:@S@IGESGraph_UniformRectGrid@F@IsWeighted#1
@@ -2158,9 +2227,17 @@
 // Source: c:@S@IGESSolid_Block@F@Corner#1
 // Source: c:@S@IGESSolid_Block@F@DynamicType#1
 // Source: c:@S@IGESSolid_Block@F@IGESSolid_Block#
+// Source: c:@S@IGESSolid_Block@F@Init#&1$@S@gp_XYZ#S0_#S0_#S0_#
+// Source: c:@S@IGESSolid_Block@F@Size#1
 // Source: c:@S@IGESSolid_Block@F@TransformedCorner#1
+// Source: c:@S@IGESSolid_Block@F@TransformedXAxis#1
+// Source: c:@S@IGESSolid_Block@F@TransformedYAxis#1
+// Source: c:@S@IGESSolid_Block@F@TransformedZAxis#1
+// Source: c:@S@IGESSolid_Block@F@XAxis#1
 // Source: c:@S@IGESSolid_Block@F@XLength#1
+// Source: c:@S@IGESSolid_Block@F@YAxis#1
 // Source: c:@S@IGESSolid_Block@F@YLength#1
+// Source: c:@S@IGESSolid_Block@F@ZAxis#1
 // Source: c:@S@IGESSolid_Block@F@ZLength#1
 // Source: c:@S@IGESSolid_BooleanTree@F@DynamicType#1
 // Source: c:@S@IGESSolid_BooleanTree@F@IGESSolid_BooleanTree#
@@ -2168,12 +2245,15 @@
 // Source: c:@S@IGESSolid_BooleanTree@F@Length#1
 // Source: c:@S@IGESSolid_BooleanTree@F@Operand#I#1
 // Source: c:@S@IGESSolid_BooleanTree@F@Operation#I#1
+// Source: c:@S@IGESSolid_ConeFrustum@F@Axis#1
 // Source: c:@S@IGESSolid_ConeFrustum@F@DynamicType#1
 // Source: c:@S@IGESSolid_ConeFrustum@F@FaceCenter#1
 // Source: c:@S@IGESSolid_ConeFrustum@F@Height#1
 // Source: c:@S@IGESSolid_ConeFrustum@F@IGESSolid_ConeFrustum#
+// Source: c:@S@IGESSolid_ConeFrustum@F@Init#d#d#d#&1$@S@gp_XYZ#S0_#
 // Source: c:@S@IGESSolid_ConeFrustum@F@LargerRadius#1
 // Source: c:@S@IGESSolid_ConeFrustum@F@SmallerRadius#1
+// Source: c:@S@IGESSolid_ConeFrustum@F@TransformedAxis#1
 // Source: c:@S@IGESSolid_ConeFrustum@F@TransformedFaceCenter#1
 // Source: c:@S@IGESSolid_ConicalSurface@F@Axis#1
 // Source: c:@S@IGESSolid_ConicalSurface@F@DynamicType#1
@@ -2184,11 +2264,14 @@
 // Source: c:@S@IGESSolid_ConicalSurface@F@Radius#1
 // Source: c:@S@IGESSolid_ConicalSurface@F@ReferenceDir#1
 // Source: c:@S@IGESSolid_ConicalSurface@F@SemiAngle#1
+// Source: c:@S@IGESSolid_Cylinder@F@Axis#1
 // Source: c:@S@IGESSolid_Cylinder@F@DynamicType#1
 // Source: c:@S@IGESSolid_Cylinder@F@FaceCenter#1
 // Source: c:@S@IGESSolid_Cylinder@F@Height#1
 // Source: c:@S@IGESSolid_Cylinder@F@IGESSolid_Cylinder#
+// Source: c:@S@IGESSolid_Cylinder@F@Init#d#d#&1$@S@gp_XYZ#S0_#
 // Source: c:@S@IGESSolid_Cylinder@F@Radius#1
+// Source: c:@S@IGESSolid_Cylinder@F@TransformedAxis#1
 // Source: c:@S@IGESSolid_Cylinder@F@TransformedFaceCenter#1
 // Source: c:@S@IGESSolid_CylindricalSurface@F@Axis#1
 // Source: c:@S@IGESSolid_CylindricalSurface@F@DynamicType#1
@@ -2209,9 +2292,17 @@
 // Source: c:@S@IGESSolid_Ellipsoid@F@Center#1
 // Source: c:@S@IGESSolid_Ellipsoid@F@DynamicType#1
 // Source: c:@S@IGESSolid_Ellipsoid@F@IGESSolid_Ellipsoid#
+// Source: c:@S@IGESSolid_Ellipsoid@F@Init#&1$@S@gp_XYZ#S0_#S0_#S0_#
+// Source: c:@S@IGESSolid_Ellipsoid@F@Size#1
 // Source: c:@S@IGESSolid_Ellipsoid@F@TransformedCenter#1
+// Source: c:@S@IGESSolid_Ellipsoid@F@TransformedXAxis#1
+// Source: c:@S@IGESSolid_Ellipsoid@F@TransformedYAxis#1
+// Source: c:@S@IGESSolid_Ellipsoid@F@TransformedZAxis#1
+// Source: c:@S@IGESSolid_Ellipsoid@F@XAxis#1
 // Source: c:@S@IGESSolid_Ellipsoid@F@XLength#1
+// Source: c:@S@IGESSolid_Ellipsoid@F@YAxis#1
 // Source: c:@S@IGESSolid_Ellipsoid@F@YLength#1
+// Source: c:@S@IGESSolid_Ellipsoid@F@ZAxis#1
 // Source: c:@S@IGESSolid_Ellipsoid@F@ZLength#1
 // Source: c:@S@IGESSolid_Face@F@DynamicType#1
 // Source: c:@S@IGESSolid_Face@F@HasOuterLoop#1
@@ -2258,14 +2349,23 @@
 // Source: c:@S@IGESSolid_RightAngularWedge@F@Corner#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@DynamicType#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@IGESSolid_RightAngularWedge#
+// Source: c:@S@IGESSolid_RightAngularWedge@F@Init#&1$@S@gp_XYZ#d#S0_#S0_#S0_#
+// Source: c:@S@IGESSolid_RightAngularWedge@F@Size#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@TransformedCorner#1
+// Source: c:@S@IGESSolid_RightAngularWedge@F@TransformedXAxis#1
+// Source: c:@S@IGESSolid_RightAngularWedge@F@TransformedYAxis#1
+// Source: c:@S@IGESSolid_RightAngularWedge@F@TransformedZAxis#1
+// Source: c:@S@IGESSolid_RightAngularWedge@F@XAxis#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@XBigLength#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@XSmallLength#1
+// Source: c:@S@IGESSolid_RightAngularWedge@F@YAxis#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@YLength#1
+// Source: c:@S@IGESSolid_RightAngularWedge@F@ZAxis#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@ZLength#1
 // Source: c:@S@IGESSolid_SelectedComponent@F@Component#1
 // Source: c:@S@IGESSolid_SelectedComponent@F@DynamicType#1
 // Source: c:@S@IGESSolid_SelectedComponent@F@IGESSolid_SelectedComponent#
+// Source: c:@S@IGESSolid_SelectedComponent@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESSolid_BooleanTree#&1$@S@gp_XYZ#
 // Source: c:@S@IGESSolid_SelectedComponent@F@SelectPoint#1
 // Source: c:@S@IGESSolid_SelectedComponent@F@TransformedSelectPoint#1
 // Source: c:@S@IGESSolid_Shell@F@DynamicType#1
@@ -2290,21 +2390,28 @@
 // Source: c:@S@IGESSolid_SolidInstance@F@SetBrep#b#
 // Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@Curve#1
 // Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@DynamicType#1
+// Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@ExtrusionDirection#1
 // Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@ExtrusionLength#1
 // Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@IGESSolid_SolidOfLinearExtrusion#
+// Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#d#&1$@S@gp_XYZ#
+// Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@TransformedExtrusionDirection#1
+// Source: c:@S@IGESSolid_SolidOfRevolution@F@Axis#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@AxisPoint#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@Curve#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@DynamicType#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@Fraction#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@IGESSolid_SolidOfRevolution#
+// Source: c:@S@IGESSolid_SolidOfRevolution@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#d#&1$@S@gp_XYZ#S3_#
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@IsClosedToAxis#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@SetClosedToAxis#b#
+// Source: c:@S@IGESSolid_SolidOfRevolution@F@TransformedAxis#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@TransformedAxisPoint#1
 // Source: c:@S@IGESSolid_SpecificModule@F@DynamicType#1
 // Source: c:@S@IGESSolid_SpecificModule@F@IGESSolid_SpecificModule#
 // Source: c:@S@IGESSolid_Sphere@F@Center#1
 // Source: c:@S@IGESSolid_Sphere@F@DynamicType#1
 // Source: c:@S@IGESSolid_Sphere@F@IGESSolid_Sphere#
+// Source: c:@S@IGESSolid_Sphere@F@Init#d#&1$@S@gp_XYZ#
 // Source: c:@S@IGESSolid_Sphere@F@Radius#1
 // Source: c:@S@IGESSolid_Sphere@F@TransformedCenter#1
 // Source: c:@S@IGESSolid_SphericalSurface@F@Axis#1
@@ -2326,11 +2433,14 @@
 // Source: c:@S@IGESSolid_ToroidalSurface@F@MinorRadius#1
 // Source: c:@S@IGESSolid_ToroidalSurface@F@ReferenceDir#1
 // Source: c:@S@IGESSolid_ToroidalSurface@F@TransformedCenter#1
+// Source: c:@S@IGESSolid_Torus@F@Axis#1
 // Source: c:@S@IGESSolid_Torus@F@AxisPoint#1
 // Source: c:@S@IGESSolid_Torus@F@DiscRadius#1
 // Source: c:@S@IGESSolid_Torus@F@DynamicType#1
 // Source: c:@S@IGESSolid_Torus@F@IGESSolid_Torus#
+// Source: c:@S@IGESSolid_Torus@F@Init#d#d#&1$@S@gp_XYZ#S0_#
 // Source: c:@S@IGESSolid_Torus@F@MajorRadius#1
+// Source: c:@S@IGESSolid_Torus@F@TransformedAxis#1
 // Source: c:@S@IGESSolid_Torus@F@TransformedAxisPoint#1
 // Source: c:@S@IGESSolid_VertexList@F@DynamicType#1
 // Source: c:@S@IGESSolid_VertexList@F@IGESSolid_VertexList#
@@ -2681,17 +2791,21 @@
 // Source: c:@S@RWMesh_CafReader@F@Document#1
 // Source: c:@S@RWMesh_CafReader@F@DynamicType#1
 // Source: c:@S@RWMesh_CafReader@F@ExtraStatus#1
+// Source: c:@S@RWMesh_CafReader@F@FileCoordinateSystem#1
 // Source: c:@S@RWMesh_CafReader@F@FileLengthUnit#1
 // Source: c:@S@RWMesh_CafReader@F@HasFileCoordinateSystem#1
 // Source: c:@S@RWMesh_CafReader@F@HasSystemCoordinateSystem#1
 // Source: c:@S@RWMesh_CafReader@F@MemoryLimitMiB#1
 // Source: c:@S@RWMesh_CafReader@F@SetDocument#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#
 // Source: c:@S@RWMesh_CafReader@F@SetFileCoordinateSystem#$@E@RWMesh_CoordinateSystem#
+// Source: c:@S@RWMesh_CafReader@F@SetFileCoordinateSystem#&1$@S@gp_Ax3#
 // Source: c:@S@RWMesh_CafReader@F@SetFileLengthUnit#d#
 // Source: c:@S@RWMesh_CafReader@F@SetFillIncompleteDocument#b#
 // Source: c:@S@RWMesh_CafReader@F@SetMemoryLimitMiB#I#
 // Source: c:@S@RWMesh_CafReader@F@SetSystemCoordinateSystem#$@E@RWMesh_CoordinateSystem#
+// Source: c:@S@RWMesh_CafReader@F@SetSystemCoordinateSystem#&1$@S@gp_Ax3#
 // Source: c:@S@RWMesh_CafReader@F@SetSystemLengthUnit#d#
+// Source: c:@S@RWMesh_CafReader@F@SystemCoordinateSystem#1
 // Source: c:@S@RWMesh_CafReader@F@SystemLengthUnit#1
 // Source: c:@S@RWMesh_CafReader@F@ToFillIncompleteDocument#1
 // Source: c:@S@RWMesh_MaterialMap@F@CreateTextureFolder#
@@ -7276,6 +7390,8 @@
 // Source: c:@S@VrmlData_ArrayVec3d@F@Length#1
 // Source: c:@S@VrmlData_Box@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
 // Source: c:@S@VrmlData_Box@F@DynamicType#1
+// Source: c:@S@VrmlData_Box@F@SetSize#&1$@S@gp_XYZ#
+// Source: c:@S@VrmlData_Box@F@Size#1
 // Source: c:@S@VrmlData_Box@F@TShape#
 // Source: c:@S@VrmlData_Box@F@VrmlData_Box#
 // Source: c:@S@VrmlData_Color@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
@@ -7293,6 +7409,7 @@
 // Source: c:@S@VrmlData_Cone@F@TShape#
 // Source: c:@S@VrmlData_Cone@F@VrmlData_Cone#
 // Source: c:@S@VrmlData_Coordinate@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
+// Source: c:@S@VrmlData_Coordinate@F@Coordinate#I#1
 // Source: c:@S@VrmlData_Coordinate@F@DynamicType#1
 // Source: c:@S@VrmlData_Coordinate@F@VrmlData_Coordinate#
 // Source: c:@S@VrmlData_Cylinder@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
@@ -7366,6 +7483,7 @@
 // Source: c:@S@VrmlData_Node@F@WriteClosing#1
 // Source: c:@S@VrmlData_Normal@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
 // Source: c:@S@VrmlData_Normal@F@DynamicType#1
+// Source: c:@S@VrmlData_Normal@F@Normal#I#1
 // Source: c:@S@VrmlData_Normal@F@VrmlData_Normal#
 // Source: c:@S@VrmlData_ShapeNode@F@Appearance#1
 // Source: c:@S@VrmlData_ShapeNode@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
@@ -7391,9 +7509,15 @@
 // Source: c:@S@VrmlData_TextureCoordinate@F@DynamicType#1
 // Source: c:@S@VrmlData_TextureCoordinate@F@Length#
 // Source: c:@S@VrmlData_TextureCoordinate@F@VrmlData_TextureCoordinate#
+// Source: c:@S@VrmlData_TextureTransform@F@Center#1
 // Source: c:@S@VrmlData_TextureTransform@F@DynamicType#1
 // Source: c:@S@VrmlData_TextureTransform@F@Rotation#1
+// Source: c:@S@VrmlData_TextureTransform@F@Scale#1
+// Source: c:@S@VrmlData_TextureTransform@F@SetCenter#&1$@S@gp_XY#
 // Source: c:@S@VrmlData_TextureTransform@F@SetRotation#d#
+// Source: c:@S@VrmlData_TextureTransform@F@SetScale#&1$@S@gp_XY#
+// Source: c:@S@VrmlData_TextureTransform@F@SetTranslation#&1$@S@gp_XY#
+// Source: c:@S@VrmlData_TextureTransform@F@Translation#1
 // Source: c:@S@VrmlData_UnknownNode@F@DynamicType#1
 // Source: c:@S@VrmlData_UnknownNode@F@IsDefault#1
 // Source: c:@S@VrmlData_UnknownNode@F@VrmlData_UnknownNode#
@@ -7415,7 +7539,9 @@
 // Source: c:@S@Vrml_IndexedFaceSet@F@Vrml_IndexedFaceSet#
 // Source: c:@S@Vrml_IndexedLineSet@F@DynamicType#1
 // Source: c:@S@Vrml_IndexedLineSet@F@Vrml_IndexedLineSet#
+// Source: c:@S@Vrml_LOD@F@Center#1
 // Source: c:@S@Vrml_LOD@F@DynamicType#1
+// Source: c:@S@Vrml_LOD@F@SetCenter#&1$@S@gp_Vec#
 // Source: c:@S@Vrml_LOD@F@Vrml_LOD#
 // Source: c:@S@Vrml_Material@F@DynamicType#1
 // Source: c:@S@Vrml_Material@F@Vrml_Material#
@@ -63691,6 +63817,34 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesappli_nodal_displ_and_ro
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesappli_nodal_displ_and_rot_method_rotational_parameter_0(
+  const OcctSharp_IGESAppliNodalDisplAndRotHandle* handle,
+  int32_t nodeNum,
+  int32_t caseNum,
+  OcctSharp_Value_Coordinates3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESAppli_NodalDisplAndRot*>(ValidateIGESAppliNodalDisplAndRot(handle)->Value.get())->RotationalParameter(nodeNum, caseNum));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesappli_nodal_displ_and_rot_method_translation_parameter_0(
+  const OcctSharp_IGESAppliNodalDisplAndRotHandle* handle,
+  int32_t nodeNum,
+  int32_t caseNum,
+  OcctSharp_Value_Coordinates3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESAppli_NodalDisplAndRot*>(ValidateIGESAppliNodalDisplAndRot(handle)->Value.get())->TranslationParameter(nodeNum, caseNum));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesappli_nodal_displ_and_rot_clone(
   const OcctSharp_IGESAppliNodalDisplAndRotHandle* source,
   OcctSharp_IGESAppliNodalDisplAndRotHandle** out_handle)
@@ -63955,6 +64109,17 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesappli_node_method_dynami
   {
     opencascade::handle<Standard_Type> returnedHandle = static_cast<const IGESAppli_Node*>(ValidateIGESAppliNode(handle)->Value.get())->DynamicType();
     if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesappli_node_method_init_0(
+  const OcctSharp_IGESAppliNodeHandle* handle,
+  OcctSharp_Value_Coordinates3d aCoord,
+  const OcctSharp_IGESGeomTransformationMatrixHandle* aCoordSystem)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESAppliNode(handle)->Value->Init(OcctSharp_GeometryValues::ToNative(aCoord), (aCoordSystem == nullptr ? opencascade::handle<IGESGeom_TransformationMatrix>() : ValidateIGESGeomTransformationMatrix(aCoordSystem)->Value));
   });
 }
 
@@ -67736,6 +67901,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesbasic_singular_subfigure
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesbasic_singular_subfigure_method_init_0(
+  const OcctSharp_IGESBasicSingularSubfigureHandle* handle,
+  const OcctSharp_IGESBasicSubfigureDefHandle* aSubfigureDef,
+  OcctSharp_Value_Coordinates3d aTranslation,
+  int32_t hasScale,
+  double aScale)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESBasicSingularSubfigure(handle)->Value->Init((aSubfigureDef == nullptr ? opencascade::handle<IGESBasic_SubfigureDef>() : ValidateIGESBasicSubfigureDef(aSubfigureDef)->Value), OcctSharp_GeometryValues::ToNative(aTranslation), (hasScale != 0), aScale);
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesbasic_singular_subfigure_method_scale_factor_0(
   const OcctSharp_IGESBasicSingularSubfigureHandle* handle,
   double* out_value)
@@ -67758,6 +67936,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesbasic_singular_subfigure
   {
     opencascade::handle<IGESBasic_SubfigureDef> returnedHandle = ValidateIGESBasicSingularSubfigure(handle)->Value->Subfigure();
     if (!returnedHandle.IsNull()) *out_handle = AllocateIGESBasicSubfigureDef(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesbasic_singular_subfigure_method_transformed_translation_0(
+  const OcctSharp_IGESBasicSingularSubfigureHandle* handle,
+  OcctSharp_Value_Coordinates3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESBasic_SingularSubfigure*>(ValidateIGESBasicSingularSubfigure(handle)->Value.get())->TransformedTranslation());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesbasic_singular_subfigure_method_translation_0(
+  const OcctSharp_IGESBasicSingularSubfigureHandle* handle,
+  OcctSharp_Value_Coordinates3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESBasic_SingularSubfigure*>(ValidateIGESBasicSingularSubfigure(handle)->Value.get())->Translation());
   });
 }
 
@@ -73746,6 +73948,22 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_angular_dimension_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_angular_dimension_method_init_0(
+  const OcctSharp_IGESDimenAngularDimensionHandle* handle,
+  const OcctSharp_IGESDimenGeneralNoteHandle* aNote,
+  const OcctSharp_IGESDimenWitnessLineHandle* aLine,
+  const OcctSharp_IGESDimenWitnessLineHandle* anotherLine,
+  OcctSharp_Value_Coordinates2d aVertex,
+  double aRadius,
+  const OcctSharp_IGESDimenLeaderArrowHandle* aLeader,
+  const OcctSharp_IGESDimenLeaderArrowHandle* anotherLeader)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESDimenAngularDimension(handle)->Value->Init((aNote == nullptr ? opencascade::handle<IGESDimen_GeneralNote>() : ValidateIGESDimenGeneralNote(aNote)->Value), (aLine == nullptr ? opencascade::handle<IGESDimen_WitnessLine>() : ValidateIGESDimenWitnessLine(aLine)->Value), (anotherLine == nullptr ? opencascade::handle<IGESDimen_WitnessLine>() : ValidateIGESDimenWitnessLine(anotherLine)->Value), OcctSharp_GeometryValues::ToNative(aVertex), aRadius, (aLeader == nullptr ? opencascade::handle<IGESDimen_LeaderArrow>() : ValidateIGESDimenLeaderArrow(aLeader)->Value), (anotherLeader == nullptr ? opencascade::handle<IGESDimen_LeaderArrow>() : ValidateIGESDimenLeaderArrow(anotherLeader)->Value));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_angular_dimension_method_note_0(
   const OcctSharp_IGESDimenAngularDimensionHandle* handle,
   OcctSharp_IGESDimenGeneralNoteHandle** out_handle)
@@ -73794,6 +74012,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_angular_dimension_
   {
     opencascade::handle<IGESDimen_WitnessLine> returnedHandle = ValidateIGESDimenAngularDimension(handle)->Value->SecondWitnessLine();
     if (!returnedHandle.IsNull()) *out_handle = AllocateIGESDimenWitnessLine(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_angular_dimension_method_transformed_vertex_0(
+  const OcctSharp_IGESDimenAngularDimensionHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDimen_AngularDimension*>(ValidateIGESDimenAngularDimension(handle)->Value.get())->TransformedVertex());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_angular_dimension_method_vertex_0(
+  const OcctSharp_IGESDimenAngularDimensionHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDimen_AngularDimension*>(ValidateIGESDimenAngularDimension(handle)->Value.get())->Vertex());
   });
 }
 
@@ -73868,6 +74110,44 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_basic_dimension_me
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_basic_dimension_method_init_0(
+  const OcctSharp_IGESDimenBasicDimensionHandle* handle,
+  int32_t nbPropVal,
+  OcctSharp_Value_Coordinates2d lowerLeft,
+  OcctSharp_Value_Coordinates2d lowerRight,
+  OcctSharp_Value_Coordinates2d upperRight,
+  OcctSharp_Value_Coordinates2d upperLeft)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESDimenBasicDimension(handle)->Value->Init(nbPropVal, OcctSharp_GeometryValues::ToNative(lowerLeft), OcctSharp_GeometryValues::ToNative(lowerRight), OcctSharp_GeometryValues::ToNative(upperRight), OcctSharp_GeometryValues::ToNative(upperLeft));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_basic_dimension_method_lower_left_0(
+  const OcctSharp_IGESDimenBasicDimensionHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDimen_BasicDimension*>(ValidateIGESDimenBasicDimension(handle)->Value.get())->LowerLeft());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_basic_dimension_method_lower_right_0(
+  const OcctSharp_IGESDimenBasicDimensionHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDimen_BasicDimension*>(ValidateIGESDimenBasicDimension(handle)->Value.get())->LowerRight());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_basic_dimension_method_nb_property_values_0(
   const OcctSharp_IGESDimenBasicDimensionHandle* handle,
   int32_t* out_value)
@@ -73877,6 +74157,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_basic_dimension_me
   return GeneratedGuard([&]
   {
     *out_value = ValidateIGESDimenBasicDimension(handle)->Value->NbPropertyValues();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_basic_dimension_method_upper_left_0(
+  const OcctSharp_IGESDimenBasicDimensionHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDimen_BasicDimension*>(ValidateIGESDimenBasicDimension(handle)->Value.get())->UpperLeft());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_basic_dimension_method_upper_right_0(
+  const OcctSharp_IGESDimenBasicDimensionHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDimen_BasicDimension*>(ValidateIGESDimenBasicDimension(handle)->Value.get())->UpperRight());
   });
 }
 
@@ -74309,6 +74613,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_diameter_dimension
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_diameter_dimension_method_center_0(
+  const OcctSharp_IGESDimenDiameterDimensionHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDimen_DiameterDimension*>(ValidateIGESDimenDiameterDimension(handle)->Value.get())->Center());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_diameter_dimension_method_dynamic_type_0(
   const OcctSharp_IGESDimenDiameterDimensionHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle)
@@ -74347,6 +74663,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_diameter_dimension
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_diameter_dimension_method_init_0(
+  const OcctSharp_IGESDimenDiameterDimensionHandle* handle,
+  const OcctSharp_IGESDimenGeneralNoteHandle* aNote,
+  const OcctSharp_IGESDimenLeaderArrowHandle* aLeader,
+  const OcctSharp_IGESDimenLeaderArrowHandle* anotherLeader,
+  OcctSharp_Value_Coordinates2d aCenter)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESDimenDiameterDimension(handle)->Value->Init((aNote == nullptr ? opencascade::handle<IGESDimen_GeneralNote>() : ValidateIGESDimenGeneralNote(aNote)->Value), (aLeader == nullptr ? opencascade::handle<IGESDimen_LeaderArrow>() : ValidateIGESDimenLeaderArrow(aLeader)->Value), (anotherLeader == nullptr ? opencascade::handle<IGESDimen_LeaderArrow>() : ValidateIGESDimenLeaderArrow(anotherLeader)->Value), OcctSharp_GeometryValues::ToNative(aCenter));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_diameter_dimension_method_note_0(
   const OcctSharp_IGESDimenDiameterDimensionHandle* handle,
   OcctSharp_IGESDimenGeneralNoteHandle** out_handle)
@@ -74370,6 +74699,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_diameter_dimension
   {
     opencascade::handle<IGESDimen_LeaderArrow> returnedHandle = ValidateIGESDimenDiameterDimension(handle)->Value->SecondLeader();
     if (!returnedHandle.IsNull()) *out_handle = AllocateIGESDimenLeaderArrow(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_diameter_dimension_method_transformed_center_0(
+  const OcctSharp_IGESDimenDiameterDimensionHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDimen_DiameterDimension*>(ValidateIGESDimenDiameterDimension(handle)->Value.get())->TransformedCenter());
   });
 }
 
@@ -76015,6 +76356,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_leader_arrow_creat
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_leader_arrow_method_arrow_head_0(
+  const OcctSharp_IGESDimenLeaderArrowHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDimen_LeaderArrow*>(ValidateIGESDimenLeaderArrow(handle)->Value.get())->ArrowHead());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_leader_arrow_method_arrow_head_height_0(
   const OcctSharp_IGESDimenLeaderArrowHandle* handle,
   double* out_value)
@@ -76061,6 +76414,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_leader_arrow_metho
   return GeneratedGuard([&]
   {
     *out_value = ValidateIGESDimenLeaderArrow(handle)->Value->NbSegments();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_leader_arrow_method_segment_tail_0(
+  const OcctSharp_IGESDimenLeaderArrowHandle* handle,
+  int32_t index,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDimen_LeaderArrow*>(ValidateIGESDimenLeaderArrow(handle)->Value.get())->SegmentTail(index));
   });
 }
 
@@ -77495,6 +77861,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_radius_dimension_c
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_radius_dimension_method_center_0(
+  const OcctSharp_IGESDimenRadiusDimensionHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDimen_RadiusDimension*>(ValidateIGESDimenRadiusDimension(handle)->Value.get())->Center());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_radius_dimension_method_dynamic_type_0(
   const OcctSharp_IGESDimenRadiusDimensionHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle)
@@ -77517,6 +77895,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_radius_dimension_m
   return GeneratedGuard([&]
   {
     *out_value = ValidateIGESDimenRadiusDimension(handle)->Value->HasLeader2() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdimen_radius_dimension_method_init_0(
+  const OcctSharp_IGESDimenRadiusDimensionHandle* handle,
+  const OcctSharp_IGESDimenGeneralNoteHandle* aNote,
+  const OcctSharp_IGESDimenLeaderArrowHandle* anArrow,
+  OcctSharp_Value_Coordinates2d arcCenter,
+  const OcctSharp_IGESDimenLeaderArrowHandle* anotherArrow)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESDimenRadiusDimension(handle)->Value->Init((aNote == nullptr ? opencascade::handle<IGESDimen_GeneralNote>() : ValidateIGESDimenGeneralNote(aNote)->Value), (anArrow == nullptr ? opencascade::handle<IGESDimen_LeaderArrow>() : ValidateIGESDimenLeaderArrow(anArrow)->Value), OcctSharp_GeometryValues::ToNative(arcCenter), (anotherArrow == nullptr ? opencascade::handle<IGESDimen_LeaderArrow>() : ValidateIGESDimenLeaderArrow(anotherArrow)->Value));
   });
 }
 
@@ -78666,6 +79057,27 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_connect_point_metho
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_connect_point_method_init_0(
+  const OcctSharp_IGESDrawConnectPointHandle* handle,
+  OcctSharp_Value_Coordinates3d aPoint,
+  const OcctSharp_IGESDataIGESEntityHandle* aDisplaySymbol,
+  int32_t aTypeFlag,
+  int32_t aFunctionFlag,
+  const OcctSharp_TCollectionHAsciiStringHandle* aFunctionIdentifier,
+  const OcctSharp_IGESGraphTextDisplayTemplateHandle* anIdentifierTemplate,
+  const OcctSharp_TCollectionHAsciiStringHandle* aFunctionName,
+  const OcctSharp_IGESGraphTextDisplayTemplateHandle* aFunctionTemplate,
+  int32_t aPointIdentifier,
+  int32_t aFunctionCode,
+  int32_t aSwapFlag,
+  const OcctSharp_IGESDataIGESEntityHandle* anOwnerSubfigure)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESDrawConnectPoint(handle)->Value->Init(OcctSharp_GeometryValues::ToNative(aPoint), (aDisplaySymbol == nullptr ? opencascade::handle<IGESData_IGESEntity>() : ValidateIGESDataIGESEntity(aDisplaySymbol)->Value), aTypeFlag, aFunctionFlag, (aFunctionIdentifier == nullptr ? opencascade::handle<TCollection_HAsciiString>() : ValidateTCollectionHAsciiString(aFunctionIdentifier)->Value), (anIdentifierTemplate == nullptr ? opencascade::handle<IGESGraph_TextDisplayTemplate>() : ValidateIGESGraphTextDisplayTemplate(anIdentifierTemplate)->Value), (aFunctionName == nullptr ? opencascade::handle<TCollection_HAsciiString>() : ValidateTCollectionHAsciiString(aFunctionName)->Value), (aFunctionTemplate == nullptr ? opencascade::handle<IGESGraph_TextDisplayTemplate>() : ValidateIGESGraphTextDisplayTemplate(aFunctionTemplate)->Value), aPointIdentifier, aFunctionCode, aSwapFlag, (anOwnerSubfigure == nullptr ? opencascade::handle<IGESData_IGESEntity>() : ValidateIGESDataIGESEntity(anOwnerSubfigure)->Value));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_connect_point_method_owner_subfigure_0(
   const OcctSharp_IGESDrawConnectPointHandle* handle,
   OcctSharp_IGESDataIGESEntityHandle** out_handle)
@@ -78864,6 +79276,33 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_drawing_method_view
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_drawing_method_view_origin_0(
+  const OcctSharp_IGESDrawDrawingHandle* handle,
+  int32_t tViewIndex,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDraw_Drawing*>(ValidateIGESDrawDrawing(handle)->Value.get())->ViewOrigin(tViewIndex));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_drawing_method_view_to_drawing_0(
+  const OcctSharp_IGESDrawDrawingHandle* handle,
+  int32_t numView,
+  OcctSharp_Value_Coordinates3d viewCoords,
+  OcctSharp_Value_Coordinates2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDraw_Drawing*>(ValidateIGESDrawDrawing(handle)->Value.get())->ViewToDrawing(numView, OcctSharp_GeometryValues::ToNative(viewCoords)));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_drawing_clone(
   const OcctSharp_IGESDrawDrawingHandle* source,
   OcctSharp_IGESDrawDrawingHandle** out_handle)
@@ -78997,6 +79436,33 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_drawing_with_rotati
   {
     opencascade::handle<IGESData_ViewKindEntity> returnedHandle = ValidateIGESDrawDrawingWithRotation(handle)->Value->ViewItem(index);
     if (!returnedHandle.IsNull()) *out_handle = AllocateIGESDataViewKindEntity(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_drawing_with_rotation_method_view_origin_0(
+  const OcctSharp_IGESDrawDrawingWithRotationHandle* handle,
+  int32_t index,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDraw_DrawingWithRotation*>(ValidateIGESDrawDrawingWithRotation(handle)->Value.get())->ViewOrigin(index));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_drawing_with_rotation_method_view_to_drawing_0(
+  const OcctSharp_IGESDrawDrawingWithRotationHandle* handle,
+  int32_t numView,
+  OcctSharp_Value_Coordinates3d viewCoords,
+  OcctSharp_Value_Coordinates2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDraw_DrawingWithRotation*>(ValidateIGESDrawDrawingWithRotation(handle)->Value.get())->ViewToDrawing(numView, OcctSharp_GeometryValues::ToNative(viewCoords)));
   });
 }
 
@@ -79383,6 +79849,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_network_subfigure_m
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_network_subfigure_method_scale_factors_0(
+  const OcctSharp_IGESDrawNetworkSubfigureHandle* handle,
+  OcctSharp_Value_Coordinates3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDraw_NetworkSubfigure*>(ValidateIGESDrawNetworkSubfigure(handle)->Value.get())->ScaleFactors());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_network_subfigure_method_subfigure_definition_0(
   const OcctSharp_IGESDrawNetworkSubfigureHandle* handle,
   OcctSharp_IGESDrawNetworkSubfigureDefHandle** out_handle)
@@ -79393,6 +79871,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_network_subfigure_m
   {
     opencascade::handle<IGESDraw_NetworkSubfigureDef> returnedHandle = ValidateIGESDrawNetworkSubfigure(handle)->Value->SubfigureDefinition();
     if (!returnedHandle.IsNull()) *out_handle = AllocateIGESDrawNetworkSubfigureDef(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_network_subfigure_method_transformed_translation_0(
+  const OcctSharp_IGESDrawNetworkSubfigureHandle* handle,
+  OcctSharp_Value_Coordinates3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDraw_NetworkSubfigure*>(ValidateIGESDrawNetworkSubfigure(handle)->Value.get())->TransformedTranslation());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_network_subfigure_method_translation_0(
+  const OcctSharp_IGESDrawNetworkSubfigureHandle* handle,
+  OcctSharp_Value_Coordinates3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDraw_NetworkSubfigure*>(ValidateIGESDrawNetworkSubfigure(handle)->Value.get())->Translation());
   });
 }
 
@@ -79689,6 +80191,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_perspective_view_me
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_perspective_view_method_bottom_right_0(
+  const OcctSharp_IGESDrawPerspectiveViewHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDraw_PerspectiveView*>(ValidateIGESDrawPerspectiveView(handle)->Value.get())->BottomRight());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_perspective_view_method_center_of_projection_0(
   const OcctSharp_IGESDrawPerspectiveViewHandle* handle,
   OcctSharp_Point3d* out_value)
@@ -79739,6 +80253,27 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_perspective_view_me
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_perspective_view_method_init_0(
+  const OcctSharp_IGESDrawPerspectiveViewHandle* handle,
+  int32_t aViewNumber,
+  double aScaleFactor,
+  OcctSharp_Value_Coordinates3d aViewNormalVector,
+  OcctSharp_Value_Coordinates3d aViewReferencePoint,
+  OcctSharp_Value_Coordinates3d aCenterOfProjection,
+  OcctSharp_Value_Coordinates3d aViewUpVector,
+  double aViewPlaneDistance,
+  OcctSharp_Value_Coordinates2d aTopLeft,
+  OcctSharp_Value_Coordinates2d aBottomRight,
+  int32_t aDepthClip,
+  double aBackPlaneDistance,
+  double aFrontPlaneDistance)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESDrawPerspectiveView(handle)->Value->Init(aViewNumber, aScaleFactor, OcctSharp_GeometryValues::ToNative(aViewNormalVector), OcctSharp_GeometryValues::ToNative(aViewReferencePoint), OcctSharp_GeometryValues::ToNative(aCenterOfProjection), OcctSharp_GeometryValues::ToNative(aViewUpVector), aViewPlaneDistance, OcctSharp_GeometryValues::ToNative(aTopLeft), OcctSharp_GeometryValues::ToNative(aBottomRight), aDepthClip, aBackPlaneDistance, aFrontPlaneDistance);
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_perspective_view_method_is_single_0(
   const OcctSharp_IGESDrawPerspectiveViewHandle* handle,
   int32_t* out_value)
@@ -79748,6 +80283,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_perspective_view_me
   return GeneratedGuard([&]
   {
     *out_value = ValidateIGESDrawPerspectiveView(handle)->Value->IsSingle() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_perspective_view_method_model_to_view_0(
+  const OcctSharp_IGESDrawPerspectiveViewHandle* handle,
+  OcctSharp_Value_Coordinates3d coords,
+  OcctSharp_Value_Coordinates3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDraw_PerspectiveView*>(ValidateIGESDrawPerspectiveView(handle)->Value.get())->ModelToView(OcctSharp_GeometryValues::ToNative(coords)));
   });
 }
 
@@ -79775,6 +80323,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_perspective_view_me
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_perspective_view_method_top_left_0(
+  const OcctSharp_IGESDrawPerspectiveViewHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDraw_PerspectiveView*>(ValidateIGESDrawPerspectiveView(handle)->Value.get())->TopLeft());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_perspective_view_method_view_item_0(
   const OcctSharp_IGESDrawPerspectiveViewHandle* handle,
   int32_t num,
@@ -79799,6 +80359,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_perspective_view_me
   {
     opencascade::handle<IGESData_TransfEntity> returnedHandle = ValidateIGESDrawPerspectiveView(handle)->Value->ViewMatrix();
     if (!returnedHandle.IsNull()) *out_handle = AllocateIGESDataTransfEntity(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_perspective_view_method_view_normal_vector_0(
+  const OcctSharp_IGESDrawPerspectiveViewHandle* handle,
+  OcctSharp_Value_Vector3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDraw_PerspectiveView*>(ValidateIGESDrawPerspectiveView(handle)->Value.get())->ViewNormalVector());
   });
 }
 
@@ -79836,6 +80408,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_perspective_view_me
   {
     const gp_Pnt nativeValue = ValidateIGESDrawPerspectiveView(handle)->Value->ViewReferencePoint();
     *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_perspective_view_method_view_up_vector_0(
+  const OcctSharp_IGESDrawPerspectiveViewHandle* handle,
+  OcctSharp_Value_Vector3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDraw_PerspectiveView*>(ValidateIGESDrawPerspectiveView(handle)->Value.get())->ViewUpVector());
   });
 }
 
@@ -80961,6 +81545,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_view_method_left_pl
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_view_method_model_to_view_0(
+  const OcctSharp_IGESDrawViewHandle* handle,
+  OcctSharp_Value_Coordinates3d coords,
+  OcctSharp_Value_Coordinates3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESDraw_View*>(ValidateIGESDrawView(handle)->Value.get())->ModelToView(OcctSharp_GeometryValues::ToNative(coords)));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesdraw_view_method_nb_views_0(
   const OcctSharp_IGESDrawViewHandle* handle,
   int32_t* out_value)
@@ -81579,6 +82176,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_bspline_curve_metho
   return GeneratedGuard([&]
   {
     *out_value = ValidateIGESGeomBSplineCurve(handle)->Value->NbPoles();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_bspline_curve_method_normal_0(
+  const OcctSharp_IGESGeomBSplineCurveHandle* handle,
+  OcctSharp_Value_Coordinates3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGeom_BSplineCurve*>(ValidateIGESGeomBSplineCurve(handle)->Value.get())->Normal());
   });
 }
 
@@ -82392,6 +83001,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_circular_arc_method
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_circular_arc_method_axis_0(
+  const OcctSharp_IGESGeomCircularArcHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGeom_CircularArc*>(ValidateIGESGeomCircularArc(handle)->Value.get())->Axis());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_circular_arc_method_center_0(
+  const OcctSharp_IGESGeomCircularArcHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGeom_CircularArc*>(ValidateIGESGeomCircularArc(handle)->Value.get())->Center());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_circular_arc_method_dynamic_type_0(
   const OcctSharp_IGESGeomCircularArcHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle)
@@ -82402,6 +83035,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_circular_arc_method
   {
     opencascade::handle<Standard_Type> returnedHandle = static_cast<const IGESGeom_CircularArc*>(ValidateIGESGeomCircularArc(handle)->Value.get())->DynamicType();
     if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_circular_arc_method_end_point_0(
+  const OcctSharp_IGESGeomCircularArcHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGeom_CircularArc*>(ValidateIGESGeomCircularArc(handle)->Value.get())->EndPoint());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_circular_arc_method_init_0(
+  const OcctSharp_IGESGeomCircularArcHandle* handle,
+  double aZT,
+  OcctSharp_Value_Coordinates2d aCenter,
+  OcctSharp_Value_Coordinates2d aStart,
+  OcctSharp_Value_Coordinates2d anEnd)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESGeomCircularArc(handle)->Value->Init(aZT, OcctSharp_GeometryValues::ToNative(aCenter), OcctSharp_GeometryValues::ToNative(aStart), OcctSharp_GeometryValues::ToNative(anEnd));
   });
 }
 
@@ -82426,6 +83084,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_circular_arc_method
   return GeneratedGuard([&]
   {
     *out_value = ValidateIGESGeomCircularArc(handle)->Value->Radius();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_circular_arc_method_start_point_0(
+  const OcctSharp_IGESGeomCircularArcHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGeom_CircularArc*>(ValidateIGESGeomCircularArc(handle)->Value.get())->StartPoint());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_circular_arc_method_transformed_axis_0(
+  const OcctSharp_IGESGeomCircularArcHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGeom_CircularArc*>(ValidateIGESGeomCircularArc(handle)->Value.get())->TransformedAxis());
   });
 }
 
@@ -82635,6 +83317,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_conic_arc_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_conic_arc_method_axis_0(
+  const OcctSharp_IGESGeomConicArcHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGeom_ConicArc*>(ValidateIGESGeomConicArc(handle)->Value.get())->Axis());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_conic_arc_method_computed_form_number_0(
   const OcctSharp_IGESGeomConicArcHandle* handle,
   int32_t* out_value)
@@ -82657,6 +83351,36 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_conic_arc_method_dy
   {
     opencascade::handle<Standard_Type> returnedHandle = static_cast<const IGESGeom_ConicArc*>(ValidateIGESGeomConicArc(handle)->Value.get())->DynamicType();
     if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_conic_arc_method_end_point_0(
+  const OcctSharp_IGESGeomConicArcHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGeom_ConicArc*>(ValidateIGESGeomConicArc(handle)->Value.get())->EndPoint());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_conic_arc_method_init_0(
+  const OcctSharp_IGESGeomConicArcHandle* handle,
+  double a,
+  double b,
+  double c,
+  double d,
+  double e,
+  double f,
+  double zT,
+  OcctSharp_Value_Coordinates2d aStart,
+  OcctSharp_Value_Coordinates2d anEnd)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESGeomConicArc(handle)->Value->Init(a, b, c, d, e, f, zT, OcctSharp_GeometryValues::ToNative(aStart), OcctSharp_GeometryValues::ToNative(anEnd));
   });
 }
 
@@ -82717,6 +83441,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_conic_arc_method_ow
   return GeneratedGuard([&]
   {
     *out_value = ValidateIGESGeomConicArc(handle)->Value->OwnCorrect() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_conic_arc_method_start_point_0(
+  const OcctSharp_IGESGeomConicArcHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGeom_ConicArc*>(ValidateIGESGeomConicArc(handle)->Value.get())->StartPoint());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_conic_arc_method_transformed_axis_0(
+  const OcctSharp_IGESGeomConicArcHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGeom_ConicArc*>(ValidateIGESGeomConicArc(handle)->Value.get())->TransformedAxis());
   });
 }
 
@@ -82947,6 +83695,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_copious_data_method
   {
     const gp_Pnt nativeValue = ValidateIGESGeomCopiousData(handle)->Value->TransformedPoint(anIndex);
     *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_copious_data_method_transformed_vector_0(
+  const OcctSharp_IGESGeomCopiousDataHandle* handle,
+  int32_t anIndex,
+  OcctSharp_Value_Vector3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGeom_CopiousData*>(ValidateIGESGeomCopiousData(handle)->Value.get())->TransformedVector(anIndex));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_copious_data_method_vector_0(
+  const OcctSharp_IGESGeomCopiousDataHandle* handle,
+  int32_t anIndex,
+  OcctSharp_Value_Vector3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGeom_CopiousData*>(ValidateIGESGeomCopiousData(handle)->Value.get())->Vector(anIndex));
   });
 }
 
@@ -83181,6 +83955,40 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_direction_method_dy
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_direction_method_init_0(
+  const OcctSharp_IGESGeomDirectionHandle* handle,
+  OcctSharp_Value_Coordinates3d aDirection)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESGeomDirection(handle)->Value->Init(OcctSharp_GeometryValues::ToNative(aDirection));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_direction_method_transformed_value_0(
+  const OcctSharp_IGESGeomDirectionHandle* handle,
+  OcctSharp_Value_Vector3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGeom_Direction*>(ValidateIGESGeomDirection(handle)->Value.get())->TransformedValue());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_direction_method_value_0(
+  const OcctSharp_IGESGeomDirectionHandle* handle,
+  OcctSharp_Value_Vector3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGeom_Direction*>(ValidateIGESGeomDirection(handle)->Value.get())->Value());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_direction_clone(
   const OcctSharp_IGESGeomDirectionHandle* source,
   OcctSharp_IGESGeomDirectionHandle** out_handle)
@@ -83288,6 +84096,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_flash_method_has_re
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_flash_method_init_0(
+  const OcctSharp_IGESGeomFlashHandle* handle,
+  OcctSharp_Value_Coordinates2d aPoint,
+  double aDim,
+  double anotherDim,
+  double aRotation,
+  const OcctSharp_IGESDataIGESEntityHandle* aReference)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESGeomFlash(handle)->Value->Init(OcctSharp_GeometryValues::ToNative(aPoint), aDim, anotherDim, aRotation, (aReference == nullptr ? opencascade::handle<IGESData_IGESEntity>() : ValidateIGESDataIGESEntity(aReference)->Value));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_flash_method_reference_entity_0(
   const OcctSharp_IGESGeomFlashHandle* handle,
   OcctSharp_IGESDataIGESEntityHandle** out_handle)
@@ -83298,6 +84120,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_flash_method_refere
   {
     opencascade::handle<IGESData_IGESEntity> returnedHandle = ValidateIGESGeomFlash(handle)->Value->ReferenceEntity();
     if (!returnedHandle.IsNull()) *out_handle = AllocateIGESDataIGESEntity(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_flash_method_reference_point_0(
+  const OcctSharp_IGESGeomFlashHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGeom_Flash*>(ValidateIGESGeomFlash(handle)->Value.get())->ReferencePoint());
   });
 }
 
@@ -83500,6 +84334,17 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_line_method_infinit
   return GeneratedGuard([&]
   {
     *out_value = ValidateIGESGeomLine(handle)->Value->Infinite();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_line_method_init_0(
+  const OcctSharp_IGESGeomLineHandle* handle,
+  OcctSharp_Value_Coordinates3d aStart,
+  OcctSharp_Value_Coordinates3d anEnd)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESGeomLine(handle)->Value->Init(OcctSharp_GeometryValues::ToNative(aStart), OcctSharp_GeometryValues::ToNative(anEnd));
   });
 }
 
@@ -83721,6 +84566,39 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_offset_curve_method
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_offset_curve_method_init_0(
+  const OcctSharp_IGESGeomOffsetCurveHandle* handle,
+  const OcctSharp_IGESDataIGESEntityHandle* aBaseCurve,
+  int32_t anOffsetType,
+  const OcctSharp_IGESDataIGESEntityHandle* aFunction,
+  int32_t aFunctionCoord,
+  int32_t aTaperedOffsetType,
+  double offDistance1,
+  double arcLength1,
+  double offDistance2,
+  double arcLength2,
+  OcctSharp_Value_Coordinates3d aNormalVec,
+  double anOffsetParam,
+  double anotherOffsetParam)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESGeomOffsetCurve(handle)->Value->Init((aBaseCurve == nullptr ? opencascade::handle<IGESData_IGESEntity>() : ValidateIGESDataIGESEntity(aBaseCurve)->Value), anOffsetType, (aFunction == nullptr ? opencascade::handle<IGESData_IGESEntity>() : ValidateIGESDataIGESEntity(aFunction)->Value), aFunctionCoord, aTaperedOffsetType, offDistance1, arcLength1, offDistance2, arcLength2, OcctSharp_GeometryValues::ToNative(aNormalVec), anOffsetParam, anotherOffsetParam);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_offset_curve_method_normal_vector_0(
+  const OcctSharp_IGESGeomOffsetCurveHandle* handle,
+  OcctSharp_Value_Vector3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGeom_OffsetCurve*>(ValidateIGESGeomOffsetCurve(handle)->Value.get())->NormalVector());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_offset_curve_method_offset_type_0(
   const OcctSharp_IGESGeomOffsetCurveHandle* handle,
   int32_t* out_value)
@@ -83766,6 +84644,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_offset_curve_method
   return GeneratedGuard([&]
   {
     *out_value = ValidateIGESGeomOffsetCurve(handle)->Value->TaperedOffsetType();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_offset_curve_method_transformed_normal_vector_0(
+  const OcctSharp_IGESGeomOffsetCurveHandle* handle,
+  OcctSharp_Value_Vector3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGeom_OffsetCurve*>(ValidateIGESGeomOffsetCurve(handle)->Value.get())->TransformedNormalVector());
   });
 }
 
@@ -83852,6 +84742,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_offset_surface_meth
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_offset_surface_method_init_0(
+  const OcctSharp_IGESGeomOffsetSurfaceHandle* handle,
+  OcctSharp_Value_Coordinates3d anIndicatoR,
+  double aDistance,
+  const OcctSharp_IGESDataIGESEntityHandle* aSurface)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESGeomOffsetSurface(handle)->Value->Init(OcctSharp_GeometryValues::ToNative(anIndicatoR), aDistance, (aSurface == nullptr ? opencascade::handle<IGESData_IGESEntity>() : ValidateIGESDataIGESEntity(aSurface)->Value));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_offset_surface_method_offset_indicator_0(
+  const OcctSharp_IGESGeomOffsetSurfaceHandle* handle,
+  OcctSharp_Value_Vector3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGeom_OffsetSurface*>(ValidateIGESGeomOffsetSurface(handle)->Value.get())->OffsetIndicator());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_offset_surface_method_surface_0(
   const OcctSharp_IGESGeomOffsetSurfaceHandle* handle,
   OcctSharp_IGESDataIGESEntityHandle** out_handle)
@@ -83862,6 +84776,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_offset_surface_meth
   {
     opencascade::handle<IGESData_IGESEntity> returnedHandle = ValidateIGESGeomOffsetSurface(handle)->Value->Surface();
     if (!returnedHandle.IsNull()) *out_handle = AllocateIGESDataIGESEntity(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_offset_surface_method_transformed_offset_indicator_0(
+  const OcctSharp_IGESGeomOffsetSurfaceHandle* handle,
+  OcctSharp_Value_Vector3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGeom_OffsetSurface*>(ValidateIGESGeomOffsetSurface(handle)->Value.get())->TransformedOffsetIndicator());
   });
 }
 
@@ -83982,6 +84908,22 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_plane_method_has_sy
   return GeneratedGuard([&]
   {
     *out_value = ValidateIGESGeomPlane(handle)->Value->HasSymbolAttach() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_plane_method_init_0(
+  const OcctSharp_IGESGeomPlaneHandle* handle,
+  double a,
+  double b,
+  double c,
+  double d,
+  const OcctSharp_IGESDataIGESEntityHandle* aCurve,
+  OcctSharp_Value_Coordinates3d attach,
+  double aSize)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESGeomPlane(handle)->Value->Init(a, b, c, d, (aCurve == nullptr ? opencascade::handle<IGESData_IGESEntity>() : ValidateIGESDataIGESEntity(aCurve)->Value), OcctSharp_GeometryValues::ToNative(attach), aSize);
   });
 }
 
@@ -84126,6 +85068,17 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_point_method_has_di
   return GeneratedGuard([&]
   {
     *out_value = ValidateIGESGeomPoint(handle)->Value->HasDisplaySymbol() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_point_method_init_0(
+  const OcctSharp_IGESGeomPointHandle* handle,
+  OcctSharp_Value_Coordinates3d aPoint,
+  const OcctSharp_IGESBasicSubfigureDefHandle* aSymbol)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESGeomPoint(handle)->Value->Init(OcctSharp_GeometryValues::ToNative(aPoint), (aSymbol == nullptr ? opencascade::handle<IGESBasic_SubfigureDef>() : ValidateIGESBasicSubfigureDef(aSymbol)->Value));
   });
 }
 
@@ -85096,6 +86049,17 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_tabulated_cylinder_
   {
     const gp_Pnt nativeValue = ValidateIGESGeomTabulatedCylinder(handle)->Value->EndPoint();
     *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgeom_tabulated_cylinder_method_init_0(
+  const OcctSharp_IGESGeomTabulatedCylinderHandle* handle,
+  const OcctSharp_IGESDataIGESEntityHandle* aDirectrix,
+  OcctSharp_Value_Coordinates3d anEnd)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESGeomTabulatedCylinder(handle)->Value->Init((aDirectrix == nullptr ? opencascade::handle<IGESData_IGESEntity>() : ValidateIGESDataIGESEntity(aDirectrix)->Value), OcctSharp_GeometryValues::ToNative(anEnd));
   });
 }
 
@@ -87142,6 +88106,24 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgraph_text_display_templ
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgraph_text_display_template_method_init_0(
+  const OcctSharp_IGESGraphTextDisplayTemplateHandle* handle,
+  double aWidth,
+  double aHeight,
+  int32_t aFontCode,
+  const OcctSharp_IGESGraphTextFontDefHandle* aFontEntity,
+  double aSlantAngle,
+  double aRotationAngle,
+  int32_t aMirrorFlag,
+  int32_t aRotationFlag,
+  OcctSharp_Value_Coordinates3d aCorner)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESGraphTextDisplayTemplate(handle)->Value->Init(aWidth, aHeight, aFontCode, (aFontEntity == nullptr ? opencascade::handle<IGESGraph_TextFontDef>() : ValidateIGESGraphTextFontDef(aFontEntity)->Value), aSlantAngle, aRotationAngle, aMirrorFlag, aRotationFlag, OcctSharp_GeometryValues::ToNative(aCorner));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgraph_text_display_template_method_is_font_entity_0(
   const OcctSharp_IGESGraphTextDisplayTemplateHandle* handle,
   int32_t* out_value)
@@ -87515,6 +88497,47 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgraph_uniform_rect_grid_
   {
     opencascade::handle<Standard_Type> returnedHandle = static_cast<const IGESGraph_UniformRectGrid*>(ValidateIGESGraphUniformRectGrid(handle)->Value.get())->DynamicType();
     if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgraph_uniform_rect_grid_method_grid_point_0(
+  const OcctSharp_IGESGraphUniformRectGridHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGraph_UniformRectGrid*>(ValidateIGESGraphUniformRectGrid(handle)->Value.get())->GridPoint());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgraph_uniform_rect_grid_method_grid_spacing_0(
+  const OcctSharp_IGESGraphUniformRectGridHandle* handle,
+  OcctSharp_Value_Vector2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESGraph_UniformRectGrid*>(ValidateIGESGraphUniformRectGrid(handle)->Value.get())->GridSpacing());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igesgraph_uniform_rect_grid_method_init_0(
+  const OcctSharp_IGESGraphUniformRectGridHandle* handle,
+  int32_t nbProps,
+  int32_t finite,
+  int32_t line,
+  int32_t weighted,
+  OcctSharp_Value_Coordinates2d aGridPoint,
+  OcctSharp_Value_Coordinates2d aGridSpacing,
+  int32_t pointsX,
+  int32_t pointsY)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESGraphUniformRectGrid(handle)->Value->Init(nbProps, finite, line, weighted, OcctSharp_GeometryValues::ToNative(aGridPoint), OcctSharp_GeometryValues::ToNative(aGridSpacing), pointsX, pointsY);
   });
 }
 
@@ -91652,6 +92675,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_block_method_dynam
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_block_method_init_0(
+  const OcctSharp_IGESSolidBlockHandle* handle,
+  OcctSharp_Value_Coordinates3d aSize,
+  OcctSharp_Value_Coordinates3d aCorner,
+  OcctSharp_Value_Coordinates3d aXAxis,
+  OcctSharp_Value_Coordinates3d aZAxis)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESSolidBlock(handle)->Value->Init(OcctSharp_GeometryValues::ToNative(aSize), OcctSharp_GeometryValues::ToNative(aCorner), OcctSharp_GeometryValues::ToNative(aXAxis), OcctSharp_GeometryValues::ToNative(aZAxis));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_block_method_size_0(
+  const OcctSharp_IGESSolidBlockHandle* handle,
+  OcctSharp_Value_Coordinates3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_Block*>(ValidateIGESSolidBlock(handle)->Value.get())->Size());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_block_method_transformed_corner_0(
   const OcctSharp_IGESSolidBlockHandle* handle,
   OcctSharp_Point3d* out_value)
@@ -91662,6 +92710,54 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_block_method_trans
   {
     const gp_Pnt nativeValue = ValidateIGESSolidBlock(handle)->Value->TransformedCorner();
     *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_block_method_transformed_xaxis_0(
+  const OcctSharp_IGESSolidBlockHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_Block*>(ValidateIGESSolidBlock(handle)->Value.get())->TransformedXAxis());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_block_method_transformed_yaxis_0(
+  const OcctSharp_IGESSolidBlockHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_Block*>(ValidateIGESSolidBlock(handle)->Value.get())->TransformedYAxis());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_block_method_transformed_zaxis_0(
+  const OcctSharp_IGESSolidBlockHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_Block*>(ValidateIGESSolidBlock(handle)->Value.get())->TransformedZAxis());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_block_method_xaxis_0(
+  const OcctSharp_IGESSolidBlockHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_Block*>(ValidateIGESSolidBlock(handle)->Value.get())->XAxis());
   });
 }
 
@@ -91677,6 +92773,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_block_method_xleng
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_block_method_yaxis_0(
+  const OcctSharp_IGESSolidBlockHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_Block*>(ValidateIGESSolidBlock(handle)->Value.get())->YAxis());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_block_method_ylength_0(
   const OcctSharp_IGESSolidBlockHandle* handle,
   double* out_value)
@@ -91686,6 +92794,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_block_method_yleng
   return GeneratedGuard([&]
   {
     *out_value = ValidateIGESSolidBlock(handle)->Value->YLength();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_block_method_zaxis_0(
+  const OcctSharp_IGESSolidBlockHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_Block*>(ValidateIGESSolidBlock(handle)->Value.get())->ZAxis());
   });
 }
 
@@ -91882,6 +93002,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_cone_frustum_creat
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_cone_frustum_method_axis_0(
+  const OcctSharp_IGESSolidConeFrustumHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_ConeFrustum*>(ValidateIGESSolidConeFrustum(handle)->Value.get())->Axis());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_cone_frustum_method_dynamic_type_0(
   const OcctSharp_IGESSolidConeFrustumHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle)
@@ -91920,6 +93052,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_cone_frustum_metho
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_cone_frustum_method_init_0(
+  const OcctSharp_IGESSolidConeFrustumHandle* handle,
+  double ht,
+  double r1,
+  double r2,
+  OcctSharp_Value_Coordinates3d center,
+  OcctSharp_Value_Coordinates3d anAxis)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESSolidConeFrustum(handle)->Value->Init(ht, r1, r2, OcctSharp_GeometryValues::ToNative(center), OcctSharp_GeometryValues::ToNative(anAxis));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_cone_frustum_method_larger_radius_0(
   const OcctSharp_IGESSolidConeFrustumHandle* handle,
   double* out_value)
@@ -91941,6 +93087,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_cone_frustum_metho
   return GeneratedGuard([&]
   {
     *out_value = ValidateIGESSolidConeFrustum(handle)->Value->SmallerRadius();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_cone_frustum_method_transformed_axis_0(
+  const OcctSharp_IGESSolidConeFrustumHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_ConeFrustum*>(ValidateIGESSolidConeFrustum(handle)->Value.get())->TransformedAxis());
   });
 }
 
@@ -92175,6 +93333,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_cylinder_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_cylinder_method_axis_0(
+  const OcctSharp_IGESSolidCylinderHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_Cylinder*>(ValidateIGESSolidCylinder(handle)->Value.get())->Axis());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_cylinder_method_dynamic_type_0(
   const OcctSharp_IGESSolidCylinderHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle)
@@ -92213,6 +93383,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_cylinder_method_he
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_cylinder_method_init_0(
+  const OcctSharp_IGESSolidCylinderHandle* handle,
+  double aHeight,
+  double aRadius,
+  OcctSharp_Value_Coordinates3d aCenter,
+  OcctSharp_Value_Coordinates3d anAxis)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESSolidCylinder(handle)->Value->Init(aHeight, aRadius, OcctSharp_GeometryValues::ToNative(aCenter), OcctSharp_GeometryValues::ToNative(anAxis));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_cylinder_method_radius_0(
   const OcctSharp_IGESSolidCylinderHandle* handle,
   double* out_value)
@@ -92222,6 +93405,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_cylinder_method_ra
   return GeneratedGuard([&]
   {
     *out_value = ValidateIGESSolidCylinder(handle)->Value->Radius();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_cylinder_method_transformed_axis_0(
+  const OcctSharp_IGESSolidCylinderHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_Cylinder*>(ValidateIGESSolidCylinder(handle)->Value.get())->TransformedAxis());
   });
 }
 
@@ -92620,6 +93815,31 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_ellipsoid_method_d
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_ellipsoid_method_init_0(
+  const OcctSharp_IGESSolidEllipsoidHandle* handle,
+  OcctSharp_Value_Coordinates3d aSize,
+  OcctSharp_Value_Coordinates3d aCenter,
+  OcctSharp_Value_Coordinates3d anXAxis,
+  OcctSharp_Value_Coordinates3d anZAxis)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESSolidEllipsoid(handle)->Value->Init(OcctSharp_GeometryValues::ToNative(aSize), OcctSharp_GeometryValues::ToNative(aCenter), OcctSharp_GeometryValues::ToNative(anXAxis), OcctSharp_GeometryValues::ToNative(anZAxis));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_ellipsoid_method_size_0(
+  const OcctSharp_IGESSolidEllipsoidHandle* handle,
+  OcctSharp_Value_Coordinates3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_Ellipsoid*>(ValidateIGESSolidEllipsoid(handle)->Value.get())->Size());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_ellipsoid_method_transformed_center_0(
   const OcctSharp_IGESSolidEllipsoidHandle* handle,
   OcctSharp_Point3d* out_value)
@@ -92630,6 +93850,54 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_ellipsoid_method_t
   {
     const gp_Pnt nativeValue = ValidateIGESSolidEllipsoid(handle)->Value->TransformedCenter();
     *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_ellipsoid_method_transformed_xaxis_0(
+  const OcctSharp_IGESSolidEllipsoidHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_Ellipsoid*>(ValidateIGESSolidEllipsoid(handle)->Value.get())->TransformedXAxis());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_ellipsoid_method_transformed_yaxis_0(
+  const OcctSharp_IGESSolidEllipsoidHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_Ellipsoid*>(ValidateIGESSolidEllipsoid(handle)->Value.get())->TransformedYAxis());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_ellipsoid_method_transformed_zaxis_0(
+  const OcctSharp_IGESSolidEllipsoidHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_Ellipsoid*>(ValidateIGESSolidEllipsoid(handle)->Value.get())->TransformedZAxis());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_ellipsoid_method_xaxis_0(
+  const OcctSharp_IGESSolidEllipsoidHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_Ellipsoid*>(ValidateIGESSolidEllipsoid(handle)->Value.get())->XAxis());
   });
 }
 
@@ -92645,6 +93913,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_ellipsoid_method_x
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_ellipsoid_method_yaxis_0(
+  const OcctSharp_IGESSolidEllipsoidHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_Ellipsoid*>(ValidateIGESSolidEllipsoid(handle)->Value.get())->YAxis());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_ellipsoid_method_ylength_0(
   const OcctSharp_IGESSolidEllipsoidHandle* handle,
   double* out_value)
@@ -92654,6 +93934,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_ellipsoid_method_y
   return GeneratedGuard([&]
   {
     *out_value = ValidateIGESSolidEllipsoid(handle)->Value->YLength();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_ellipsoid_method_zaxis_0(
+  const OcctSharp_IGESSolidEllipsoidHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_Ellipsoid*>(ValidateIGESSolidEllipsoid(handle)->Value.get())->ZAxis());
   });
 }
 
@@ -93610,6 +94902,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_right_angular_wedg
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_right_angular_wedge_method_init_0(
+  const OcctSharp_IGESSolidRightAngularWedgeHandle* handle,
+  OcctSharp_Value_Coordinates3d aSize,
+  double lowX,
+  OcctSharp_Value_Coordinates3d aCorner,
+  OcctSharp_Value_Coordinates3d anXAxis,
+  OcctSharp_Value_Coordinates3d anZAxis)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESSolidRightAngularWedge(handle)->Value->Init(OcctSharp_GeometryValues::ToNative(aSize), lowX, OcctSharp_GeometryValues::ToNative(aCorner), OcctSharp_GeometryValues::ToNative(anXAxis), OcctSharp_GeometryValues::ToNative(anZAxis));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_right_angular_wedge_method_size_0(
+  const OcctSharp_IGESSolidRightAngularWedgeHandle* handle,
+  OcctSharp_Value_Coordinates3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_RightAngularWedge*>(ValidateIGESSolidRightAngularWedge(handle)->Value.get())->Size());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_right_angular_wedge_method_transformed_corner_0(
   const OcctSharp_IGESSolidRightAngularWedgeHandle* handle,
   OcctSharp_Point3d* out_value)
@@ -93620,6 +94938,54 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_right_angular_wedg
   {
     const gp_Pnt nativeValue = ValidateIGESSolidRightAngularWedge(handle)->Value->TransformedCorner();
     *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_right_angular_wedge_method_transformed_xaxis_0(
+  const OcctSharp_IGESSolidRightAngularWedgeHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_RightAngularWedge*>(ValidateIGESSolidRightAngularWedge(handle)->Value.get())->TransformedXAxis());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_right_angular_wedge_method_transformed_yaxis_0(
+  const OcctSharp_IGESSolidRightAngularWedgeHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_RightAngularWedge*>(ValidateIGESSolidRightAngularWedge(handle)->Value.get())->TransformedYAxis());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_right_angular_wedge_method_transformed_zaxis_0(
+  const OcctSharp_IGESSolidRightAngularWedgeHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_RightAngularWedge*>(ValidateIGESSolidRightAngularWedge(handle)->Value.get())->TransformedZAxis());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_right_angular_wedge_method_xaxis_0(
+  const OcctSharp_IGESSolidRightAngularWedgeHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_RightAngularWedge*>(ValidateIGESSolidRightAngularWedge(handle)->Value.get())->XAxis());
   });
 }
 
@@ -93647,6 +95013,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_right_angular_wedg
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_right_angular_wedge_method_yaxis_0(
+  const OcctSharp_IGESSolidRightAngularWedgeHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_RightAngularWedge*>(ValidateIGESSolidRightAngularWedge(handle)->Value.get())->YAxis());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_right_angular_wedge_method_ylength_0(
   const OcctSharp_IGESSolidRightAngularWedgeHandle* handle,
   double* out_value)
@@ -93656,6 +95034,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_right_angular_wedg
   return GeneratedGuard([&]
   {
     *out_value = ValidateIGESSolidRightAngularWedge(handle)->Value->YLength();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_right_angular_wedge_method_zaxis_0(
+  const OcctSharp_IGESSolidRightAngularWedgeHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_RightAngularWedge*>(ValidateIGESSolidRightAngularWedge(handle)->Value.get())->ZAxis());
   });
 }
 
@@ -93752,6 +95142,17 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_selected_component
   {
     opencascade::handle<Standard_Type> returnedHandle = static_cast<const IGESSolid_SelectedComponent*>(ValidateIGESSolidSelectedComponent(handle)->Value.get())->DynamicType();
     if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_selected_component_method_init_0(
+  const OcctSharp_IGESSolidSelectedComponentHandle* handle,
+  const OcctSharp_IGESSolidBooleanTreeHandle* anEntity,
+  OcctSharp_Value_Coordinates3d selectPnt)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESSolidSelectedComponent(handle)->Value->Init((anEntity == nullptr ? opencascade::handle<IGESSolid_BooleanTree>() : ValidateIGESSolidBooleanTree(anEntity)->Value), OcctSharp_GeometryValues::ToNative(selectPnt));
   });
 }
 
@@ -94246,6 +95647,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_solid_of_linear_ex
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_solid_of_linear_extrusion_method_extrusion_direction_0(
+  const OcctSharp_IGESSolidSolidOfLinearExtrusionHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_SolidOfLinearExtrusion*>(ValidateIGESSolidSolidOfLinearExtrusion(handle)->Value.get())->ExtrusionDirection());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_solid_of_linear_extrusion_method_extrusion_length_0(
   const OcctSharp_IGESSolidSolidOfLinearExtrusionHandle* handle,
   double* out_value)
@@ -94255,6 +95668,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_solid_of_linear_ex
   return GeneratedGuard([&]
   {
     *out_value = ValidateIGESSolidSolidOfLinearExtrusion(handle)->Value->ExtrusionLength();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_solid_of_linear_extrusion_method_init_0(
+  const OcctSharp_IGESSolidSolidOfLinearExtrusionHandle* handle,
+  const OcctSharp_IGESDataIGESEntityHandle* aCurve,
+  double aLength,
+  OcctSharp_Value_Coordinates3d aDirection)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESSolidSolidOfLinearExtrusion(handle)->Value->Init((aCurve == nullptr ? opencascade::handle<IGESData_IGESEntity>() : ValidateIGESDataIGESEntity(aCurve)->Value), aLength, OcctSharp_GeometryValues::ToNative(aDirection));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_solid_of_linear_extrusion_method_transformed_extrusion_direction_0(
+  const OcctSharp_IGESSolidSolidOfLinearExtrusionHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_SolidOfLinearExtrusion*>(ValidateIGESSolidSolidOfLinearExtrusion(handle)->Value.get())->TransformedExtrusionDirection());
   });
 }
 
@@ -94316,6 +95753,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_solid_of_revolutio
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_solid_of_revolution_method_axis_0(
+  const OcctSharp_IGESSolidSolidOfRevolutionHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_SolidOfRevolution*>(ValidateIGESSolidSolidOfRevolution(handle)->Value.get())->Axis());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_solid_of_revolution_method_axis_point_0(
   const OcctSharp_IGESSolidSolidOfRevolutionHandle* handle,
   OcctSharp_Point3d* out_value)
@@ -94367,6 +95816,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_solid_of_revolutio
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_solid_of_revolution_method_init_0(
+  const OcctSharp_IGESSolidSolidOfRevolutionHandle* handle,
+  const OcctSharp_IGESDataIGESEntityHandle* aCurve,
+  double aFract,
+  OcctSharp_Value_Coordinates3d aAxisPnt,
+  OcctSharp_Value_Coordinates3d aDirection)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESSolidSolidOfRevolution(handle)->Value->Init((aCurve == nullptr ? opencascade::handle<IGESData_IGESEntity>() : ValidateIGESDataIGESEntity(aCurve)->Value), aFract, OcctSharp_GeometryValues::ToNative(aAxisPnt), OcctSharp_GeometryValues::ToNative(aDirection));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_solid_of_revolution_method_is_closed_to_axis_0(
   const OcctSharp_IGESSolidSolidOfRevolutionHandle* handle,
   int32_t* out_value)
@@ -94386,6 +95848,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_solid_of_revolutio
   return GeneratedGuard([&]
   {
     ValidateIGESSolidSolidOfRevolution(handle)->Value->SetClosedToAxis((mode != 0));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_solid_of_revolution_method_transformed_axis_0(
+  const OcctSharp_IGESSolidSolidOfRevolutionHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_SolidOfRevolution*>(ValidateIGESSolidSolidOfRevolution(handle)->Value.get())->TransformedAxis());
   });
 }
 
@@ -94554,6 +96028,17 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_sphere_method_dyna
   {
     opencascade::handle<Standard_Type> returnedHandle = static_cast<const IGESSolid_Sphere*>(ValidateIGESSolidSphere(handle)->Value.get())->DynamicType();
     if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_sphere_method_init_0(
+  const OcctSharp_IGESSolidSphereHandle* handle,
+  double aRadius,
+  OcctSharp_Value_Coordinates3d aCenter)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESSolidSphere(handle)->Value->Init(aRadius, OcctSharp_GeometryValues::ToNative(aCenter));
   });
 }
 
@@ -94973,6 +96458,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_torus_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_torus_method_axis_0(
+  const OcctSharp_IGESSolidTorusHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_Torus*>(ValidateIGESSolidTorus(handle)->Value.get())->Axis());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_torus_method_axis_point_0(
   const OcctSharp_IGESSolidTorusHandle* handle,
   OcctSharp_Point3d* out_value)
@@ -95011,6 +96508,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_torus_method_dynam
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_torus_method_init_0(
+  const OcctSharp_IGESSolidTorusHandle* handle,
+  double r1,
+  double r2,
+  OcctSharp_Value_Coordinates3d aPoint,
+  OcctSharp_Value_Coordinates3d anAxisdir)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIGESSolidTorus(handle)->Value->Init(r1, r2, OcctSharp_GeometryValues::ToNative(aPoint), OcctSharp_GeometryValues::ToNative(anAxisdir));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_torus_method_major_radius_0(
   const OcctSharp_IGESSolidTorusHandle* handle,
   double* out_value)
@@ -95020,6 +96530,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_torus_method_major
   return GeneratedGuard([&]
   {
     *out_value = ValidateIGESSolidTorus(handle)->Value->MajorRadius();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_igessolid_torus_method_transformed_axis_0(
+  const OcctSharp_IGESSolidTorusHandle* handle,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IGESSolid_Torus*>(ValidateIGESSolidTorus(handle)->Value.get())->TransformedAxis());
   });
 }
 
@@ -101516,6 +103038,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_rwmesh_caf_reader_method_ext
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_rwmesh_caf_reader_method_file_coordinate_system_0(
+  const OcctSharp_RWMeshCafReaderHandle* handle,
+  OcctSharp_Value_Axis3* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const RWMesh_CafReader*>(ValidateRWMeshCafReader(handle)->Value.get())->FileCoordinateSystem());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_rwmesh_caf_reader_method_file_length_unit_0(
   const OcctSharp_RWMeshCafReaderHandle* handle,
   double* out_value)
@@ -101584,6 +103118,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_rwmesh_caf_reader_method_set
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_rwmesh_caf_reader_method_set_file_coordinate_system_1(
+  const OcctSharp_RWMeshCafReaderHandle* handle,
+  OcctSharp_Value_Axis3 theCS)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateRWMeshCafReader(handle)->Value->SetFileCoordinateSystem(OcctSharp_GeometryValues::ToNative(theCS));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_rwmesh_caf_reader_method_set_file_length_unit_0(
   const OcctSharp_RWMeshCafReaderHandle* handle,
   double theUnits)
@@ -101624,6 +103168,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_rwmesh_caf_reader_method_set
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_rwmesh_caf_reader_method_set_system_coordinate_system_1(
+  const OcctSharp_RWMeshCafReaderHandle* handle,
+  OcctSharp_Value_Axis3 theCS)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateRWMeshCafReader(handle)->Value->SetSystemCoordinateSystem(OcctSharp_GeometryValues::ToNative(theCS));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_rwmesh_caf_reader_method_set_system_length_unit_0(
   const OcctSharp_RWMeshCafReaderHandle* handle,
   double theUnits)
@@ -101631,6 +103185,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_rwmesh_caf_reader_method_set
   return GeneratedGuard([&]
   {
     ValidateRWMeshCafReader(handle)->Value->SetSystemLengthUnit(theUnits);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_rwmesh_caf_reader_method_system_coordinate_system_0(
+  const OcctSharp_RWMeshCafReaderHandle* handle,
+  OcctSharp_Value_Axis3* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const RWMesh_CafReader*>(ValidateRWMeshCafReader(handle)->Value.get())->SystemCoordinateSystem());
   });
 }
 
@@ -195409,6 +196975,28 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_data_box_method_dynamic
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_data_box_method_set_size_0(
+  const OcctSharp_VrmlDataBoxHandle* handle,
+  OcctSharp_Value_Coordinates3d theSize)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateVrmlDataBox(handle)->Value->SetSize(OcctSharp_GeometryValues::ToNative(theSize));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_data_box_method_size_0(
+  const OcctSharp_VrmlDataBoxHandle* handle,
+  OcctSharp_Value_Coordinates3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const VrmlData_Box*>(ValidateVrmlDataBox(handle)->Value.get())->Size());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_data_box_method_tshape_0(
   const OcctSharp_VrmlDataBoxHandle* handle,
   OcctSharp_TopoDSTShapeHandle** out_handle)
@@ -195753,6 +197341,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_data_coordinate_method_
   {
     opencascade::handle<VrmlData_Node> returnedHandle = ValidateVrmlDataCoordinate(handle)->Value->Clone((theOther == nullptr ? opencascade::handle<VrmlData_Node>() : ValidateVrmlDataNode(theOther)->Value));
     if (!returnedHandle.IsNull()) *out_handle = AllocateVrmlDataNode(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_data_coordinate_method_coordinate_0(
+  const OcctSharp_VrmlDataCoordinateHandle* handle,
+  int32_t i,
+  OcctSharp_Value_Coordinates3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const VrmlData_Coordinate*>(ValidateVrmlDataCoordinate(handle)->Value.get())->Coordinate(i));
   });
 }
 
@@ -197094,6 +198695,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_data_normal_method_dyna
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_data_normal_method_normal_0(
+  const OcctSharp_VrmlDataNormalHandle* handle,
+  int32_t i,
+  OcctSharp_Value_Coordinates3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const VrmlData_Normal*>(ValidateVrmlDataNormal(handle)->Value.get())->Normal(i));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_data_normal_clone(
   const OcctSharp_VrmlDataNormalHandle* source,
   OcctSharp_VrmlDataNormalHandle** out_handle)
@@ -197616,6 +199230,18 @@ void OCCTSHARP_CALL occtsharp_generated_vrml_data_texture_coordinate_release(Occ
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_data_texture_transform_method_center_0(
+  const OcctSharp_VrmlDataTextureTransformHandle* handle,
+  OcctSharp_Value_Coordinates2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const VrmlData_TextureTransform*>(ValidateVrmlDataTextureTransform(handle)->Value.get())->Center());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_data_texture_transform_method_dynamic_type_0(
   const OcctSharp_VrmlDataTextureTransformHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle)
@@ -197641,6 +199267,28 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_data_texture_transform_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_data_texture_transform_method_scale_0(
+  const OcctSharp_VrmlDataTextureTransformHandle* handle,
+  OcctSharp_Value_Coordinates2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const VrmlData_TextureTransform*>(ValidateVrmlDataTextureTransform(handle)->Value.get())->Scale());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_data_texture_transform_method_set_center_0(
+  const OcctSharp_VrmlDataTextureTransformHandle* handle,
+  OcctSharp_Value_Coordinates2d v)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateVrmlDataTextureTransform(handle)->Value->SetCenter(OcctSharp_GeometryValues::ToNative(v));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_data_texture_transform_method_set_rotation_0(
   const OcctSharp_VrmlDataTextureTransformHandle* handle,
   double v)
@@ -197648,6 +199296,38 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_data_texture_transform_
   return GeneratedGuard([&]
   {
     ValidateVrmlDataTextureTransform(handle)->Value->SetRotation(v);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_data_texture_transform_method_set_scale_0(
+  const OcctSharp_VrmlDataTextureTransformHandle* handle,
+  OcctSharp_Value_Coordinates2d v)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateVrmlDataTextureTransform(handle)->Value->SetScale(OcctSharp_GeometryValues::ToNative(v));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_data_texture_transform_method_set_translation_0(
+  const OcctSharp_VrmlDataTextureTransformHandle* handle,
+  OcctSharp_Value_Coordinates2d v)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateVrmlDataTextureTransform(handle)->Value->SetTranslation(OcctSharp_GeometryValues::ToNative(v));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_data_texture_transform_method_translation_0(
+  const OcctSharp_VrmlDataTextureTransformHandle* handle,
+  OcctSharp_Value_Coordinates2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const VrmlData_TextureTransform*>(ValidateVrmlDataTextureTransform(handle)->Value.get())->Translation());
   });
 }
 
@@ -198239,6 +199919,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_lod_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_lod_method_center_0(
+  const OcctSharp_VrmlLODHandle* handle,
+  OcctSharp_Value_Vector3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const Vrml_LOD*>(ValidateVrmlLOD(handle)->Value.get())->Center());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_lod_method_dynamic_type_0(
   const OcctSharp_VrmlLODHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle)
@@ -198249,6 +199941,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_lod_method_dynamic_type
   {
     opencascade::handle<Standard_Type> returnedHandle = static_cast<const Vrml_LOD*>(ValidateVrmlLOD(handle)->Value.get())->DynamicType();
     if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_vrml_lod_method_set_center_0(
+  const OcctSharp_VrmlLODHandle* handle,
+  OcctSharp_Value_Vector3d aCenter)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateVrmlLOD(handle)->Value->SetCenter(OcctSharp_GeometryValues::ToNative(aCenter));
   });
 }
 

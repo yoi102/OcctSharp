@@ -45,6 +45,7 @@
 // Source: c:@S@AIS_Axis@F@AIS_Axis#&1$@N@opencascade@S@handle>#$@S@Geom_Axis1Placement#
 // Source: c:@S@AIS_Axis@F@AIS_Axis#&1$@N@opencascade@S@handle>#$@S@Geom_Axis2Placement#$@E@AIS_TypeOfAxis#
 // Source: c:@S@AIS_Axis@F@AIS_Axis#&1$@N@opencascade@S@handle>#$@S@Geom_Line#
+// Source: c:@S@AIS_Axis@F@AIS_Axis#&1$@S@gp_Ax1#d#
 // Source: c:@S@AIS_Axis@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_Axis@F@Axis2Placement#1
 // Source: c:@S@AIS_Axis@F@Component#1
@@ -294,6 +295,7 @@
 // Source: c:@S@AIS_InteractiveContext@F@MoreCurrent#1
 // Source: c:@S@AIS_InteractiveContext@F@MoreDetected#1
 // Source: c:@S@AIS_InteractiveContext@F@MoreSelected#1
+// Source: c:@S@AIS_InteractiveContext@F@MoveTo#&1$@S@gp_Ax1#&1$@N@opencascade@S@handle>#$@S@V3d_View#b#
 // Source: c:@S@AIS_InteractiveContext@F@MoveTo#I#I#&1$@N@opencascade@S@handle>#$@S@V3d_View#b#
 // Source: c:@S@AIS_InteractiveContext@F@NbCurrents#
 // Source: c:@S@AIS_InteractiveContext@F@NbSelected#
@@ -440,6 +442,7 @@
 // Source: c:@S@AIS_Line@F@UnsetColor#
 // Source: c:@S@AIS_Line@F@UnsetWidth#
 // Source: c:@S@AIS_Manipulator@F@AIS_Manipulator#
+// Source: c:@S@AIS_Manipulator@F@AIS_Manipulator#&1$@S@gp_Ax2#
 // Source: c:@S@AIS_Manipulator@F@ActiveAxisIndex#1
 // Source: c:@S@AIS_Manipulator@F@ActiveMode#1
 // Source: c:@S@AIS_Manipulator@F@ClearSelected#
@@ -456,6 +459,7 @@
 // Source: c:@S@AIS_Manipulator@F@IsModeActivationOnDetection#1
 // Source: c:@S@AIS_Manipulator@F@Object#1
 // Source: c:@S@AIS_Manipulator@F@Object#I#1
+// Source: c:@S@AIS_Manipulator@F@Position#1
 // Source: c:@S@AIS_Manipulator@F@RecomputeSelection#$@E@AIS_ManipulatorMode#
 // Source: c:@S@AIS_Manipulator@F@RecomputeTransformation#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@AIS_Manipulator@F@SetModeActivationOnDetection#b#
@@ -600,10 +604,16 @@
 // Source: c:@S@AIS_Shape@F@SetOwnDeviationAngle#d#
 // Source: c:@S@AIS_Shape@F@SetOwnDeviationCoefficient#
 // Source: c:@S@AIS_Shape@F@SetOwnDeviationCoefficient#d#
+// Source: c:@S@AIS_Shape@F@SetTextureOriginUV#&1$@S@gp_Pnt2d#
+// Source: c:@S@AIS_Shape@F@SetTextureRepeatUV#&1$@S@gp_Pnt2d#
+// Source: c:@S@AIS_Shape@F@SetTextureScaleUV#&1$@S@gp_Pnt2d#
 // Source: c:@S@AIS_Shape@F@SetTransparency#d#
 // Source: c:@S@AIS_Shape@F@SetTypeOfHLR#$@E@Prs3d_TypeOfHLR#
 // Source: c:@S@AIS_Shape@F@SetWidth#d#
 // Source: c:@S@AIS_Shape@F@Signature#1
+// Source: c:@S@AIS_Shape@F@TextureOriginUV#1
+// Source: c:@S@AIS_Shape@F@TextureRepeatUV#1
+// Source: c:@S@AIS_Shape@F@TextureScaleUV#1
 // Source: c:@S@AIS_Shape@F@Transparency#1
 // Source: c:@S@AIS_Shape@F@Type#1
 // Source: c:@S@AIS_Shape@F@TypeOfHLR#1
@@ -622,6 +632,7 @@
 // Source: c:@S@AIS_TextLabel@F@HasFlipping#1
 // Source: c:@S@AIS_TextLabel@F@HasOrientation3D#1
 // Source: c:@S@AIS_TextLabel@F@HasOwnAnchorPoint#1
+// Source: c:@S@AIS_TextLabel@F@Orientation3D#1
 // Source: c:@S@AIS_TextLabel@F@Position#1
 // Source: c:@S@AIS_TextLabel@F@SetAngle#d#
 // Source: c:@S@AIS_TextLabel@F@SetDisplayType#$@E@Aspect_TypeOfDisplayText#
@@ -629,6 +640,7 @@
 // Source: c:@S@AIS_TextLabel@F@SetFontAspect#$@E@Font_FontAspect#
 // Source: c:@S@AIS_TextLabel@F@SetHJustification#$@E@Graphic3d_HorizontalTextAlignment#
 // Source: c:@S@AIS_TextLabel@F@SetHeight#d#
+// Source: c:@S@AIS_TextLabel@F@SetOrientation3D#&1$@S@gp_Ax2#
 // Source: c:@S@AIS_TextLabel@F@SetOwnAnchorPoint#b#
 // Source: c:@S@AIS_TextLabel@F@SetPosition#&1$@S@gp_Pnt#
 // Source: c:@S@AIS_TextLabel@F@SetTextFormatter#&1$@N@opencascade@S@handle>#$@S@Font_TextFormatter#
@@ -1005,6 +1017,10 @@
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddTriangleFanEdges#I#I#b#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddTriangleStripEdges#I#I#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#&1$@S@gp_Pnt#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#&1$@S@gp_Pnt#&1$@S@gp_Dir#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#&1$@S@gp_Pnt#&1$@S@gp_Dir#&1$@S@gp_Pnt2d#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#&1$@S@gp_Pnt#&1$@S@gp_Dir#I#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#&1$@S@gp_Pnt#&1$@S@gp_Pnt2d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#&1$@S@gp_Pnt#I#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#d#d#d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#d#d#d#d#d#
@@ -1033,13 +1049,17 @@
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetBoundColor#I#d#d#d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertexColor#I#I#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertexColor#I#d#d#d#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertexNormal#I#&1$@S@gp_Dir#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertexNormal#I#d#d#d#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertexTexel#I#&1$@S@gp_Pnt2d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertexTexel#I#d#d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertice#I#&1$@S@gp_Pnt#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertice#I#f#f#f#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Type#1
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@VertexNormal#I#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@VertexNumber#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@VertexNumberAllocated#1
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@VertexTexel#I#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Vertice#I#1
 // Source: c:@S@Graphic3d_ArrayOfQuadrangleStrips@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfQuadrangleStrips@F@Graphic3d_ArrayOfQuadrangleStrips#I#I#I#
@@ -1301,6 +1321,7 @@
 // Source: c:@S@Graphic3d_CView@F@ZLayerRedrawMode#1
 // Source: c:@S@Graphic3d_CView@F@ZLayerTarget#1
 // Source: c:@S@Graphic3d_Camera@F@Aspect#1
+// Source: c:@S@Graphic3d_Camera@F@AxialScale#1
 // Source: c:@S@Graphic3d_Camera@F@Center#1
 // Source: c:@S@Graphic3d_Camera@F@ConvertProj2View#&1$@S@gp_Pnt#1
 // Source: c:@S@Graphic3d_Camera@F@ConvertView2Proj#&1$@S@gp_Pnt#1
@@ -1309,6 +1330,7 @@
 // Source: c:@S@Graphic3d_Camera@F@Copy#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@Graphic3d_Camera@F@CopyMappingData#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@Graphic3d_Camera@F@CopyOrientationData#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
+// Source: c:@S@Graphic3d_Camera@F@Direction#1
 // Source: c:@S@Graphic3d_Camera@F@Distance#1
 // Source: c:@S@Graphic3d_Camera@F@DynamicType#1
 // Source: c:@S@Graphic3d_Camera@F@FOV2d#1
@@ -1330,13 +1352,17 @@
 // Source: c:@S@Graphic3d_Camera@F@NDC2dOffsetX#1
 // Source: c:@S@Graphic3d_Camera@F@NDC2dOffsetY#1
 // Source: c:@S@Graphic3d_Camera@F@OrthogonalizeUp#
+// Source: c:@S@Graphic3d_Camera@F@OrthogonalizedUp#1
 // Source: c:@S@Graphic3d_Camera@F@Project#&1$@S@gp_Pnt#1
 // Source: c:@S@Graphic3d_Camera@F@ProjectionState#1
 // Source: c:@S@Graphic3d_Camera@F@ProjectionType#1
 // Source: c:@S@Graphic3d_Camera@F@ResetCustomProjection#
 // Source: c:@S@Graphic3d_Camera@F@Scale#1
 // Source: c:@S@Graphic3d_Camera@F@SetAspect#d#
+// Source: c:@S@Graphic3d_Camera@F@SetAxialScale#&1$@S@gp_XYZ#
 // Source: c:@S@Graphic3d_Camera@F@SetCenter#&1$@S@gp_Pnt#
+// Source: c:@S@Graphic3d_Camera@F@SetDirection#&1$@S@gp_Dir#
+// Source: c:@S@Graphic3d_Camera@F@SetDirectionFromEye#&1$@S@gp_Dir#
 // Source: c:@S@Graphic3d_Camera@F@SetDistance#d#
 // Source: c:@S@Graphic3d_Camera@F@SetEye#&1$@S@gp_Pnt#
 // Source: c:@S@Graphic3d_Camera@F@SetEyeAndCenter#&1$@S@gp_Pnt#S0_#
@@ -1349,7 +1375,10 @@
 // Source: c:@S@Graphic3d_Camera@F@SetZFocus#$@S@Graphic3d_Camera@E@FocusType#d#
 // Source: c:@S@Graphic3d_Camera@F@SetZRange#d#d#
 // Source: c:@S@Graphic3d_Camera@F@SetZeroToOneDepth#b#
+// Source: c:@S@Graphic3d_Camera@F@SideRight#1
 // Source: c:@S@Graphic3d_Camera@F@UnProject#&1$@S@gp_Pnt#1
+// Source: c:@S@Graphic3d_Camera@F@ViewDimensions#1
+// Source: c:@S@Graphic3d_Camera@F@ViewDimensions#d#1
 // Source: c:@S@Graphic3d_Camera@F@WorldViewState#1
 // Source: c:@S@Graphic3d_Camera@F@ZFar#1
 // Source: c:@S@Graphic3d_Camera@F@ZFocus#1
@@ -1383,6 +1412,7 @@
 // Source: c:@S@Graphic3d_ClipPlane@F@SetUseObjectMaterial#b#
 // Source: c:@S@Graphic3d_ClipPlane@F@SetUseObjectShader#b#
 // Source: c:@S@Graphic3d_ClipPlane@F@SetUseObjectTexture#b#
+// Source: c:@S@Graphic3d_ClipPlane@F@ToPlane#1
 // Source: c:@S@Graphic3d_ClipPlane@F@ToUseObjectMaterial#1
 // Source: c:@S@Graphic3d_ClipPlane@F@ToUseObjectProperties#1
 // Source: c:@S@Graphic3d_ClipPlane@F@ToUseObjectShader#1
@@ -1405,6 +1435,9 @@
 // Source: c:@S@Graphic3d_CubeMapSeparate@F@Value#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
 // Source: c:@S@Graphic3d_DataStructureManager@F@DynamicType#1
 // Source: c:@S@Graphic3d_Flipper@F@DynamicType#1
+// Source: c:@S@Graphic3d_Flipper@F@Graphic3d_Flipper#&1$@S@gp_Ax2#
+// Source: c:@S@Graphic3d_Flipper@F@RefPlane#1
+// Source: c:@S@Graphic3d_Flipper@F@SetRefPlane#&1$@S@gp_Ax2#
 // Source: c:@S@Graphic3d_FrameStats@F@CounterValue#$@E@Graphic3d_FrameStatsCounter#1
 // Source: c:@S@Graphic3d_FrameStats@F@DynamicType#1
 // Source: c:@S@Graphic3d_FrameStats@F@FrameDuration#1
@@ -1661,10 +1694,12 @@
 // Source: c:@S@Graphic3d_Text@F@HasPlane#1
 // Source: c:@S@Graphic3d_Text@F@Height#1
 // Source: c:@S@Graphic3d_Text@F@HorizontalAlignment#1
+// Source: c:@S@Graphic3d_Text@F@Orientation#1
 // Source: c:@S@Graphic3d_Text@F@Position#1
 // Source: c:@S@Graphic3d_Text@F@ResetOrientation#
 // Source: c:@S@Graphic3d_Text@F@SetHeight#f#
 // Source: c:@S@Graphic3d_Text@F@SetHorizontalAlignment#$@E@Graphic3d_HorizontalTextAlignment#
+// Source: c:@S@Graphic3d_Text@F@SetOrientation#&1$@S@gp_Ax2#
 // Source: c:@S@Graphic3d_Text@F@SetOwnAnchorPoint#b#
 // Source: c:@S@Graphic3d_Text@F@SetPosition#&1$@S@gp_Pnt#
 // Source: c:@S@Graphic3d_Text@F@SetTextFormatter#&1$@N@opencascade@S@handle>#$@S@Font_TextFormatter#
@@ -1948,6 +1983,7 @@
 // Source: c:@S@MeshVS_DeformedDataSource@F@MeshVS_DeformedDataSource#&1$@N@opencascade@S@handle>#$@S@MeshVS_DataSource#d#
 // Source: c:@S@MeshVS_DeformedDataSource@F@SetMagnify#d#
 // Source: c:@S@MeshVS_DeformedDataSource@F@SetNonDeformedDataSource#&1$@N@opencascade@S@handle>#$@S@MeshVS_DataSource#
+// Source: c:@S@MeshVS_DeformedDataSource@F@SetVector#I#&1$@S@gp_Vec#
 // Source: c:@S@MeshVS_Drawer@F@Assign#&1$@N@opencascade@S@handle>#$@S@MeshVS_Drawer#
 // Source: c:@S@MeshVS_Drawer@F@DynamicType#1
 // Source: c:@S@MeshVS_Drawer@F@RemoveAsciiString#I#
@@ -2074,6 +2110,7 @@
 // Source: c:@S@MeshVS_VectorPrsBuilder@F@HasVectors#b#1
 // Source: c:@S@MeshVS_VectorPrsBuilder@F@SetSimplePrsMode#b#
 // Source: c:@S@MeshVS_VectorPrsBuilder@F@SetSimplePrsParams#d#d#d#
+// Source: c:@S@MeshVS_VectorPrsBuilder@F@SetVector#b#I#&1$@S@gp_Vec#
 // Source: c:@S@OpenGl_Buffer@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
 // Source: c:@S@OpenGl_Buffer@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_Buffer@F@DynamicType#1
@@ -2288,6 +2325,7 @@
 // Source: c:@S@OpenGl_Group@F@OpenGl_Group#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@OpenGl_Group@F@Release#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_Group@F@Render#&1$@N@opencascade@S@handle>#$@S@OpenGl_Workspace#1
+// Source: c:@S@OpenGl_Group@F@SetFlippingOptions#b#&1$@S@gp_Ax2#
 // Source: c:@S@OpenGl_Group@F@SetGroupPrimitivesAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Aspects#
 // Source: c:@S@OpenGl_Group@F@SetPrimitivesAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Aspects#
 // Source: c:@S@OpenGl_Group@F@SetStencilTestOptions#b#
@@ -2359,6 +2397,7 @@
 // Source: c:@S@OpenGl_ShaderManager@F@GetBgSkydomeProgram#
 // Source: c:@S@OpenGl_ShaderManager@F@GetColoredQuadProgram#
 // Source: c:@S@OpenGl_ShaderManager@F@IsEmpty#1
+// Source: c:@S@OpenGl_ShaderManager@F@LocalOrigin#1
 // Source: c:@S@OpenGl_ShaderManager@F@PushClippingState#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#1
 // Source: c:@S@OpenGl_ShaderManager@F@PushInteriorState#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Aspects#1
 // Source: c:@S@OpenGl_ShaderManager@F@PushLightSourceState#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#1
@@ -2371,6 +2410,7 @@
 // Source: c:@S@OpenGl_ShaderManager@F@ResetOitState#
 // Source: c:@S@OpenGl_ShaderManager@F@RevertClippingState#
 // Source: c:@S@OpenGl_ShaderManager@F@SetCastShadows#b#
+// Source: c:@S@OpenGl_ShaderManager@F@SetLocalOrigin#&1$@S@gp_XYZ#
 // Source: c:@S@OpenGl_ShaderManager@F@SetOitState#$@E@Graphic3d_RenderTransparentMethod#
 // Source: c:@S@OpenGl_ShaderManager@F@SetShadingModel#$@E@Graphic3d_TypeOfShadingModel#
 // Source: c:@S@OpenGl_ShaderManager@F@SetWeighedOitState#f#
@@ -2542,6 +2582,7 @@
 // Source: c:@S@OpenGl_View@F@IsInvalidated#
 // Source: c:@S@OpenGl_View@F@Layer#I#1
 // Source: c:@S@OpenGl_View@F@Lights#1
+// Source: c:@S@OpenGl_View@F@LocalOrigin#1
 // Source: c:@S@OpenGl_View@F@Redraw#
 // Source: c:@S@OpenGl_View@F@RedrawImmediate#
 // Source: c:@S@OpenGl_View@F@ReleaseGlResources#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
@@ -2555,6 +2596,7 @@
 // Source: c:@S@OpenGl_View@F@SetImageBasedLighting#b#
 // Source: c:@S@OpenGl_View@F@SetImmediateModeDrawToFront#b#
 // Source: c:@S@OpenGl_View@F@SetLights#&1$@N@opencascade@S@handle>#$@S@Graphic3d_LightSet#
+// Source: c:@S@OpenGl_View@F@SetLocalOrigin#&1$@S@gp_XYZ#
 // Source: c:@S@OpenGl_View@F@SetTextureEnv#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureEnv#
 // Source: c:@S@OpenGl_View@F@SetToFlipOutput#b#
 // Source: c:@S@OpenGl_View@F@SpecIBLMapLevels#1
@@ -2897,8 +2939,12 @@
 // Source: c:@S@PrsDim_Chamf3dDimension@F@KindOfDimension#1
 // Source: c:@S@PrsDim_ConcentricRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_DiameterDimension@F@AnchorPoint#
+// Source: c:@S@PrsDim_DiameterDimension@F@Circle#1
 // Source: c:@S@PrsDim_DiameterDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_DiameterDimension@F@GetTextPosition#1
+// Source: c:@S@PrsDim_DiameterDimension@F@PrsDim_DiameterDimension#&1$@S@gp_Circ#
+// Source: c:@S@PrsDim_DiameterDimension@F@PrsDim_DiameterDimension#&1$@S@gp_Circ#&1$@S@gp_Pln#
+// Source: c:@S@PrsDim_DiameterDimension@F@SetMeasuredGeometry#&1$@S@gp_Circ#
 // Source: c:@S@PrsDim_DiameterDimension@F@SetTextPosition#&1$@S@gp_Pnt#
 // Source: c:@S@PrsDim_Dimension@F@AcceptDisplayMode#I#1
 // Source: c:@S@PrsDim_Dimension@F@DimensionAspect#1
@@ -2906,6 +2952,7 @@
 // Source: c:@S@PrsDim_Dimension@F@DynamicType#1
 // Source: c:@S@PrsDim_Dimension@F@GetFlyout#1
 // Source: c:@S@PrsDim_Dimension@F@GetGeometryType#1
+// Source: c:@S@PrsDim_Dimension@F@GetPlane#1
 // Source: c:@S@PrsDim_Dimension@F@GetTextPosition#1
 // Source: c:@S@PrsDim_Dimension@F@GetValue#1
 // Source: c:@S@PrsDim_Dimension@F@IsTextPositionCustom#1
@@ -2913,6 +2960,7 @@
 // Source: c:@S@PrsDim_Dimension@F@KindOfDimension#1
 // Source: c:@S@PrsDim_Dimension@F@SelToleranceForText2d#1
 // Source: c:@S@PrsDim_Dimension@F@SetComputedValue#
+// Source: c:@S@PrsDim_Dimension@F@SetCustomPlane#&1$@S@gp_Pln#
 // Source: c:@S@PrsDim_Dimension@F@SetCustomValue#d#
 // Source: c:@S@PrsDim_Dimension@F@SetDimensionAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_DimensionAspect#
 // Source: c:@S@PrsDim_Dimension@F@SetDisplaySpecialSymbol#$@E@PrsDim_DisplaySpecialSymbol#
@@ -2946,6 +2994,8 @@
 // Source: c:@S@PrsDim_LengthDimension@F@GetTextPosition#1
 // Source: c:@S@PrsDim_LengthDimension@F@PrsDim_LengthDimension#
 // Source: c:@S@PrsDim_LengthDimension@F@SecondPoint#1
+// Source: c:@S@PrsDim_LengthDimension@F@SetDirection#&1$@S@gp_Dir#b#
+// Source: c:@S@PrsDim_LengthDimension@F@SetMeasuredGeometry#&1$@S@gp_Pnt#S0_#&1$@S@gp_Pln#
 // Source: c:@S@PrsDim_LengthDimension@F@SetTextPosition#&1$@S@gp_Pnt#
 // Source: c:@S@PrsDim_MaxRadiusDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_MidPointRelation@F@DynamicType#1
@@ -2958,8 +3008,13 @@
 // Source: c:@S@PrsDim_ParallelRelation@F@IsMovable#1
 // Source: c:@S@PrsDim_PerpendicularRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_RadiusDimension@F@AnchorPoint#1
+// Source: c:@S@PrsDim_RadiusDimension@F@Circle#1
 // Source: c:@S@PrsDim_RadiusDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_RadiusDimension@F@GetTextPosition#1
+// Source: c:@S@PrsDim_RadiusDimension@F@PrsDim_RadiusDimension#&1$@S@gp_Circ#
+// Source: c:@S@PrsDim_RadiusDimension@F@PrsDim_RadiusDimension#&1$@S@gp_Circ#&1$@S@gp_Pnt#
+// Source: c:@S@PrsDim_RadiusDimension@F@SetMeasuredGeometry#&1$@S@gp_Circ#
+// Source: c:@S@PrsDim_RadiusDimension@F@SetMeasuredGeometry#&1$@S@gp_Circ#&1$@S@gp_Pnt#b#
 // Source: c:@S@PrsDim_RadiusDimension@F@SetTextPosition#&1$@S@gp_Pnt#
 // Source: c:@S@PrsDim_Relation@F@AcceptDisplayMode#I#1
 // Source: c:@S@PrsDim_Relation@F@ArrowSize#1
@@ -3118,10 +3173,12 @@
 // Source: c:@S@Select3D_SensitiveBox@F@Select3D_SensitiveBox#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#d#d#d#d#d#d#
 // Source: c:@S@Select3D_SensitiveBox@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitiveCircle@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveCircle@F@Circle#1
 // Source: c:@S@Select3D_SensitiveCircle@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveCircle@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveCircle@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveCircle@F@Radius#1
+// Source: c:@S@Select3D_SensitiveCircle@F@Select3D_SensitiveCircle#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Circ#b#
 // Source: c:@S@Select3D_SensitiveCircle@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitiveCurve@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveCurve@F@GetConnected#
@@ -3144,6 +3201,7 @@
 // Source: c:@S@Select3D_SensitiveEntity@F@OwnerId#1
 // Source: c:@S@Select3D_SensitiveEntity@F@SensitivityFactor#1
 // Source: c:@S@Select3D_SensitiveEntity@F@Set#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
+// Source: c:@S@Select3D_SensitiveEntity@F@SetFlippingOptions#b#&1$@S@gp_Ax2#
 // Source: c:@S@Select3D_SensitiveEntity@F@SetSensitivityFactor#I#
 // Source: c:@S@Select3D_SensitiveEntity@F@SetTransformPersistence#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TransformPers#
 // Source: c:@S@Select3D_SensitiveEntity@F@ToBuildBVH#1
@@ -3186,6 +3244,7 @@
 // Source: c:@S@Select3D_SensitivePoly@F@DynamicType#1
 // Source: c:@S@Select3D_SensitivePoly@F@GetPoint3d#I#1
 // Source: c:@S@Select3D_SensitivePoly@F@NbSubElements#1
+// Source: c:@S@Select3D_SensitivePoly@F@Select3D_SensitivePoly#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Circ#d#d#b#I#
 // Source: c:@S@Select3D_SensitivePoly@F@Select3D_SensitivePoly#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#b#I#
 // Source: c:@S@Select3D_SensitivePoly@F@Size#1
 // Source: c:@S@Select3D_SensitivePoly@F@Swap#I#I#
@@ -3291,6 +3350,8 @@
 // Source: c:@S@SelectMgr_AxisIntersector@F@DistToGeometryCenter#&1$@S@gp_Pnt#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@GetFarPnt#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@GetNearPnt#1
+// Source: c:@S@SelectMgr_AxisIntersector@F@GetViewRayDirection#1
+// Source: c:@S@SelectMgr_AxisIntersector@F@Init#&1$@S@gp_Ax1#
 // Source: c:@S@SelectMgr_AxisIntersector@F@IsScalable#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@OverlapsPoint#&1$@S@gp_Pnt#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@SelectMgr_AxisIntersector#
@@ -3311,8 +3372,10 @@
 // Source: c:@S@SelectMgr_BaseIntersector@F@DistToGeometryCenter#&1$@S@gp_Pnt#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@DynamicType#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@GetFarPnt#1
+// Source: c:@S@SelectMgr_BaseIntersector@F@GetMousePosition#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@GetNearPnt#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@GetSelectionType#1
+// Source: c:@S@SelectMgr_BaseIntersector@F@GetViewRayDirection#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@SetCamera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@SelectMgr_BaseIntersector@F@SetPixelTolerance#I#
 // Source: c:@S@SelectMgr_BaseIntersector@F@SetViewport#d#d#d#d#
@@ -3451,6 +3514,7 @@
 // Source: c:@S@SelectMgr_ViewerSelector@F@MoveSelectableObject#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#
 // Source: c:@S@SelectMgr_ViewerSelector@F@NbPicked#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@OnePicked#1
+// Source: c:@S@SelectMgr_ViewerSelector@F@Pick#&1$@S@gp_Ax1#&1$@N@opencascade@S@handle>#$@S@V3d_View#
 // Source: c:@S@SelectMgr_ViewerSelector@F@Pick#I#I#&1$@N@opencascade@S@handle>#$@S@V3d_View#
 // Source: c:@S@SelectMgr_ViewerSelector@F@Pick#I#I#I#I#&1$@N@opencascade@S@handle>#$@S@V3d_View#
 // Source: c:@S@SelectMgr_ViewerSelector@F@Picked#I#1
@@ -3711,6 +3775,7 @@
 // Source: c:@S@V3d_View@F@SetFocale#d#
 // Source: c:@S@V3d_View@F@SetFront#
 // Source: c:@S@V3d_View@F@SetFrustumCulling#b#
+// Source: c:@S@V3d_View@F@SetGrid#&1$@S@gp_Ax3#&1$@N@opencascade@S@handle>#$@S@Aspect_Grid#
 // Source: c:@S@V3d_View@F@SetGridActivity#b#
 // Source: c:@S@V3d_View@F@SetImageBasedLighting#b#b#
 // Source: c:@S@V3d_View@F@SetImmediateUpdate#b#
@@ -3797,6 +3862,7 @@
 // Source: c:@S@V3d_Viewer@F@NextActiveViews#
 // Source: c:@S@V3d_Viewer@F@NextDefinedLights#
 // Source: c:@S@V3d_Viewer@F@NextDefinedViews#
+// Source: c:@S@V3d_Viewer@F@PrivilegedPlane#1
 // Source: c:@S@V3d_Viewer@F@Redraw#1
 // Source: c:@S@V3d_Viewer@F@RedrawImmediate#1
 // Source: c:@S@V3d_Viewer@F@Remove#
@@ -3815,6 +3881,7 @@
 // Source: c:@S@V3d_Viewer@F@SetGridEcho#b#
 // Source: c:@S@V3d_Viewer@F@SetLightOff#
 // Source: c:@S@V3d_Viewer@F@SetLightOn#
+// Source: c:@S@V3d_Viewer@F@SetPrivilegedPlane#&1$@S@gp_Ax3#
 // Source: c:@S@V3d_Viewer@F@SetRectangularGridGraphicValues#d#d#d#
 // Source: c:@S@V3d_Viewer@F@SetRectangularGridValues#d#d#d#d#d#
 // Source: c:@S@V3d_Viewer@F@SetViewOff#
@@ -4799,6 +4866,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_axis_creat
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_axis_create_2(
   const OcctSharp_GeomLineHandle* aComponent,
+  OcctSharp_AISAxisHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_axis_create_3(
+  OcctSharp_Value_Axis1 theAxis,
+  double theLength,
   OcctSharp_AISAxisHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_axis_method_accept_display_mode_0(
@@ -6098,6 +6170,13 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactiv
   int32_t theToRedrawOnUpdate,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_move_to_1(
+  const OcctSharp_AISInteractiveContextHandle* handle,
+  OcctSharp_Value_Axis1 theAxis,
+  const OcctSharp_V3dViewHandle* theView,
+  int32_t theToRedrawOnUpdate,
+  int32_t* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_interactive_context_method_nb_currents_0(
   const OcctSharp_AISInteractiveContextHandle* handle,
   int32_t* out_value);
@@ -6848,6 +6927,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_ais_line_release(OcctSharp
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_manipulator_create_0(
   OcctSharp_AISManipulatorHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_manipulator_create_1(
+  OcctSharp_Value_Axis2 thePosition,
+  OcctSharp_AISManipulatorHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_manipulator_method_active_axis_index_0(
   const OcctSharp_AISManipulatorHandle* handle,
   int32_t* out_value);
@@ -6912,6 +6995,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_manipulato
   const OcctSharp_AISManipulatorHandle* handle,
   int32_t theIndex,
   OcctSharp_AISInteractiveObjectHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_manipulator_method_position_0(
+  const OcctSharp_AISManipulatorHandle* handle,
+  OcctSharp_Value_Axis2* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_manipulator_method_recompute_selection_0(
   const OcctSharp_AISManipulatorHandle* handle,
@@ -7729,6 +7816,18 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_shape_meth
   const OcctSharp_AISShapeHandle* handle,
   double aCoefficient);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_shape_method_set_texture_origin_uv_0(
+  const OcctSharp_AISShapeHandle* handle,
+  OcctSharp_Value_Point2d theOriginUV);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_shape_method_set_texture_repeat_uv_0(
+  const OcctSharp_AISShapeHandle* handle,
+  OcctSharp_Value_Point2d theRepeatUV);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_shape_method_set_texture_scale_uv_0(
+  const OcctSharp_AISShapeHandle* handle,
+  OcctSharp_Value_Point2d theScaleUV);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_shape_method_set_transparency_0(
   const OcctSharp_AISShapeHandle* handle,
   double aValue);
@@ -7744,6 +7843,18 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_shape_meth
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_shape_method_signature_0(
   const OcctSharp_AISShapeHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_shape_method_texture_origin_uv_0(
+  const OcctSharp_AISShapeHandle* handle,
+  OcctSharp_Value_Point2d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_shape_method_texture_repeat_uv_0(
+  const OcctSharp_AISShapeHandle* handle,
+  OcctSharp_Value_Point2d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_shape_method_texture_scale_uv_0(
+  const OcctSharp_AISShapeHandle* handle,
+  OcctSharp_Value_Point2d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_shape_method_transparency_0(
   const OcctSharp_AISShapeHandle* handle,
@@ -7853,6 +7964,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_text_label
   const OcctSharp_AISTextLabelHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_text_label_method_orientation3_d_0(
+  const OcctSharp_AISTextLabelHandle* handle,
+  OcctSharp_Value_Axis2* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_text_label_method_position_0(
   const OcctSharp_AISTextLabelHandle* handle,
   OcctSharp_Point3d* out_value);
@@ -7880,6 +7995,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_text_label
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_text_label_method_set_hjustification_0(
   const OcctSharp_AISTextLabelHandle* handle,
   int32_t theHJust);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_text_label_method_set_orientation3_d_0(
+  const OcctSharp_AISTextLabelHandle* handle,
+  OcctSharp_Value_Axis2 theOrientation);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ais_text_label_method_set_own_anchor_point_0(
   const OcctSharp_AISTextLabelHandle* handle,
@@ -10203,6 +10322,32 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_arra
   float theTY,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_10(
+  const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
+  OcctSharp_Point3d theVertex,
+  OcctSharp_Value_Direction3d theNormal,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_11(
+  const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
+  OcctSharp_Point3d theVertex,
+  OcctSharp_Value_Direction3d theNormal,
+  OcctSharp_Value_Point2d theTexel,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_12(
+  const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
+  OcctSharp_Point3d theVertex,
+  OcctSharp_Value_Direction3d theNormal,
+  int32_t theColor32,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_13(
+  const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
+  OcctSharp_Point3d theVertex,
+  OcctSharp_Value_Point2d theTexel,
+  int32_t* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_attributes_0(
   const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
   OcctSharp_Graphic3dBufferHandle** out_handle);
@@ -10295,11 +10440,21 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_arra
   double theNY,
   double theNZ);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_set_vertex_normal_1(
+  const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
+  int32_t theIndex,
+  OcctSharp_Value_Direction3d theNormal);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_set_vertex_texel_0(
   const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
   int32_t theIndex,
   double theTX,
   double theTY);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_set_vertex_texel_1(
+  const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
+  int32_t theIndex,
+  OcctSharp_Value_Point2d theTexel);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_set_vertice_0(
   const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
@@ -10317,6 +10472,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_arra
   const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_vertex_normal_0(
+  const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
+  int32_t theRank,
+  OcctSharp_Value_Direction3d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_vertex_number_0(
   const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
   int32_t* out_value);
@@ -10324,6 +10484,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_arra
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_vertex_number_allocated_0(
   const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_vertex_texel_0(
+  const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
+  int32_t theRank,
+  OcctSharp_Value_Point2d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_array_of_primitives_method_vertice_0(
   const OcctSharp_Graphic3dArrayOfPrimitivesHandle* handle,
@@ -11738,6 +11903,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_came
   const OcctSharp_Graphic3dCameraHandle* handle,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_axial_scale_0(
+  const OcctSharp_Graphic3dCameraHandle* handle,
+  OcctSharp_Value_Coordinates3d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_center_0(
   const OcctSharp_Graphic3dCameraHandle* handle,
   OcctSharp_Point3d* out_value);
@@ -11773,6 +11942,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_came
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_copy_orientation_data_0(
   const OcctSharp_Graphic3dCameraHandle* handle,
   const OcctSharp_Graphic3dCameraHandle* theOtherCamera);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_direction_0(
+  const OcctSharp_Graphic3dCameraHandle* handle,
+  OcctSharp_Value_Direction3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_distance_0(
   const OcctSharp_Graphic3dCameraHandle* handle,
@@ -11847,6 +12020,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_came
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_orthogonalize_up_0(
   const OcctSharp_Graphic3dCameraHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_orthogonalized_up_0(
+  const OcctSharp_Graphic3dCameraHandle* handle,
+  OcctSharp_Value_Direction3d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_project_0(
   const OcctSharp_Graphic3dCameraHandle* handle,
   OcctSharp_Point3d thePnt,
@@ -11871,9 +12048,21 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_came
   const OcctSharp_Graphic3dCameraHandle* handle,
   double theAspect);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_set_axial_scale_0(
+  const OcctSharp_Graphic3dCameraHandle* handle,
+  OcctSharp_Value_Coordinates3d theAxialScale);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_set_center_0(
   const OcctSharp_Graphic3dCameraHandle* handle,
   OcctSharp_Point3d theCenter);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_set_direction_0(
+  const OcctSharp_Graphic3dCameraHandle* handle,
+  OcctSharp_Value_Direction3d theDir);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_set_direction_from_eye_0(
+  const OcctSharp_Graphic3dCameraHandle* handle,
+  OcctSharp_Value_Direction3d theDir);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_set_distance_0(
   const OcctSharp_Graphic3dCameraHandle* handle,
@@ -11926,10 +12115,23 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_came
   double theZNear,
   double theZFar);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_side_right_0(
+  const OcctSharp_Graphic3dCameraHandle* handle,
+  OcctSharp_Value_Direction3d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_un_project_0(
   const OcctSharp_Graphic3dCameraHandle* handle,
   OcctSharp_Point3d thePnt,
   OcctSharp_Point3d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_view_dimensions_0(
+  const OcctSharp_Graphic3dCameraHandle* handle,
+  OcctSharp_Value_Coordinates3d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_view_dimensions_1(
+  const OcctSharp_Graphic3dCameraHandle* handle,
+  double theZValue,
+  OcctSharp_Value_Coordinates3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_camera_method_world_view_state_0(
   const OcctSharp_Graphic3dCameraHandle* handle,
@@ -12078,6 +12280,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clip
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clip_plane_method_set_use_object_texture_0(
   const OcctSharp_Graphic3dClipPlaneHandle* handle,
   int32_t theToUse);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clip_plane_method_to_plane_0(
+  const OcctSharp_Graphic3dClipPlaneHandle* handle,
+  OcctSharp_Value_Plane* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_clip_plane_method_to_use_object_material_0(
   const OcctSharp_Graphic3dClipPlaneHandle* handle,
@@ -12262,9 +12468,21 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_data
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_graphic3d_data_structure_manager_release(OcctSharp_Graphic3dDataStructureManagerHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_flipper_create_0(
+  OcctSharp_Value_Axis2 theRefPlane,
+  OcctSharp_Graphic3dFlipperHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_flipper_method_dynamic_type_0(
   const OcctSharp_Graphic3dFlipperHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_flipper_method_ref_plane_0(
+  const OcctSharp_Graphic3dFlipperHandle* handle,
+  OcctSharp_Value_Axis2* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_flipper_method_set_ref_plane_0(
+  const OcctSharp_Graphic3dFlipperHandle* handle,
+  OcctSharp_Value_Axis2 theValue);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_flipper_clone(
   const OcctSharp_Graphic3dFlipperHandle* source,
@@ -13732,6 +13950,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_text
   const OcctSharp_Graphic3dTextHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_text_method_orientation_0(
+  const OcctSharp_Graphic3dTextHandle* handle,
+  OcctSharp_Value_Axis2* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_text_method_position_0(
   const OcctSharp_Graphic3dTextHandle* handle,
   OcctSharp_Point3d* out_value);
@@ -13746,6 +13968,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_text
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_text_method_set_horizontal_alignment_0(
   const OcctSharp_Graphic3dTextHandle* handle,
   int32_t theJustification);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_text_method_set_orientation_0(
+  const OcctSharp_Graphic3dTextHandle* handle,
+  OcctSharp_Value_Axis2 theOrientation);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_text_method_set_own_anchor_point_0(
   const OcctSharp_Graphic3dTextHandle* handle,
@@ -15543,6 +15769,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_deform
   const OcctSharp_MeshVSDeformedDataSourceHandle* handle,
   const OcctSharp_MeshVSDataSourceHandle* theDS);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_deformed_data_source_method_set_vector_0(
+  const OcctSharp_MeshVSDeformedDataSourceHandle* handle,
+  int32_t iD,
+  OcctSharp_Value_Vector3d vect);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_deformed_data_source_clone(
   const OcctSharp_MeshVSDeformedDataSourceHandle* source,
   OcctSharp_MeshVSDeformedDataSourceHandle** out_handle);
@@ -16408,6 +16639,12 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_vector
   double theLineWidthParam,
   double theStartParam,
   double theEndParam);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_vector_prs_builder_method_set_vector_0(
+  const OcctSharp_MeshVSVectorPrsBuilderHandle* handle,
+  int32_t isElement,
+  int32_t iD,
+  OcctSharp_Value_Vector3d vect);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_mesh_vs_vector_prs_builder_clone(
   const OcctSharp_MeshVSVectorPrsBuilderHandle* source,
@@ -17518,6 +17755,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_group_
   const OcctSharp_OpenGlGroupHandle* handle,
   const OcctSharp_OpenGlWorkspaceHandle* theWorkspace);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_group_method_set_flipping_options_0(
+  const OcctSharp_OpenGlGroupHandle* handle,
+  int32_t theIsEnabled,
+  OcctSharp_Value_Axis2 theRefPlane);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_group_method_set_group_primitives_aspect_0(
   const OcctSharp_OpenGlGroupHandle* handle,
   const OcctSharp_Graphic3dAspectsHandle* theAspect);
@@ -18043,6 +18285,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader
   const OcctSharp_OpenGlShaderManagerHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_manager_method_local_origin_0(
+  const OcctSharp_OpenGlShaderManagerHandle* handle,
+  OcctSharp_Value_Coordinates3d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_manager_method_push_clipping_state_0(
   const OcctSharp_OpenGlShaderManagerHandle* handle,
   const OcctSharp_OpenGlShaderProgramHandle* theProgram);
@@ -18119,6 +18365,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader
   const OcctSharp_OpenGlShaderManagerHandle* handle,
   int32_t theToCast,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_manager_method_set_local_origin_0(
+  const OcctSharp_OpenGlShaderManagerHandle* handle,
+  OcctSharp_Value_Coordinates3d theOrigin);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_shader_manager_method_set_oit_state_0(
   const OcctSharp_OpenGlShaderManagerHandle* handle,
@@ -19040,6 +19290,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_m
   const OcctSharp_OpenGlViewHandle* handle,
   OcctSharp_Graphic3dLightSetHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_method_local_origin_0(
+  const OcctSharp_OpenGlViewHandle* handle,
+  OcctSharp_Value_Coordinates3d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_method_redraw_0(
   const OcctSharp_OpenGlViewHandle* handle);
 
@@ -19089,6 +19343,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_m
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_method_set_lights_0(
   const OcctSharp_OpenGlViewHandle* handle,
   const OcctSharp_Graphic3dLightSetHandle* theLights);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_method_set_local_origin_0(
+  const OcctSharp_OpenGlViewHandle* handle,
+  OcctSharp_Value_Coordinates3d theOrigin);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_open_gl_view_method_set_texture_env_0(
   const OcctSharp_OpenGlViewHandle* handle,
@@ -20809,9 +21067,22 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_concen
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_prs_dim_concentric_relation_release(OcctSharp_PrsDimConcentricRelationHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_diameter_dimension_create_0(
+  OcctSharp_Value_Circle3d theCircle,
+  OcctSharp_PrsDimDiameterDimensionHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_diameter_dimension_create_1(
+  OcctSharp_Value_Circle3d theCircle,
+  OcctSharp_Value_Plane thePlane,
+  OcctSharp_PrsDimDiameterDimensionHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_diameter_dimension_method_anchor_point_0(
   const OcctSharp_PrsDimDiameterDimensionHandle* handle,
   OcctSharp_Point3d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_diameter_dimension_method_circle_0(
+  const OcctSharp_PrsDimDiameterDimensionHandle* handle,
+  OcctSharp_Value_Circle3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_diameter_dimension_method_dynamic_type_0(
   const OcctSharp_PrsDimDiameterDimensionHandle* handle,
@@ -20820,6 +21091,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_diamet
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_diameter_dimension_method_get_text_position_0(
   const OcctSharp_PrsDimDiameterDimensionHandle* handle,
   OcctSharp_Point3d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_diameter_dimension_method_set_measured_geometry_0(
+  const OcctSharp_PrsDimDiameterDimensionHandle* handle,
+  OcctSharp_Value_Circle3d theCircle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_diameter_dimension_method_set_text_position_0(
   const OcctSharp_PrsDimDiameterDimensionHandle* handle,
@@ -20869,6 +21144,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_dimens
   const OcctSharp_PrsDimDimensionHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_dimension_method_get_plane_0(
+  const OcctSharp_PrsDimDimensionHandle* handle,
+  OcctSharp_Value_Plane* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_dimension_method_get_text_position_0(
   const OcctSharp_PrsDimDimensionHandle* handle,
   OcctSharp_Point3d* out_value);
@@ -20895,6 +21174,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_dimens
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_dimension_method_set_computed_value_0(
   const OcctSharp_PrsDimDimensionHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_dimension_method_set_custom_plane_0(
+  const OcctSharp_PrsDimDimensionHandle* handle,
+  OcctSharp_Value_Plane thePlane);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_dimension_method_set_custom_value_0(
   const OcctSharp_PrsDimDimensionHandle* handle,
@@ -21163,6 +21446,17 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_length
   const OcctSharp_PrsDimLengthDimensionHandle* handle,
   OcctSharp_Point3d* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_length_dimension_method_set_direction_0(
+  const OcctSharp_PrsDimLengthDimensionHandle* handle,
+  OcctSharp_Value_Direction3d theDirection,
+  int32_t theUseDirection);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_length_dimension_method_set_measured_geometry_0(
+  const OcctSharp_PrsDimLengthDimensionHandle* handle,
+  OcctSharp_Point3d theFirstPoint,
+  OcctSharp_Point3d theSecondPoint,
+  OcctSharp_Value_Plane thePlane);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_length_dimension_method_set_text_position_0(
   const OcctSharp_PrsDimLengthDimensionHandle* handle,
   OcctSharp_Point3d theTextPos);
@@ -21340,9 +21634,22 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_perpen
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_prs_dim_perpendicular_relation_release(OcctSharp_PrsDimPerpendicularRelationHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_radius_dimension_create_0(
+  OcctSharp_Value_Circle3d theCircle,
+  OcctSharp_PrsDimRadiusDimensionHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_radius_dimension_create_1(
+  OcctSharp_Value_Circle3d theCircle,
+  OcctSharp_Point3d theAnchorPoint,
+  OcctSharp_PrsDimRadiusDimensionHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_radius_dimension_method_anchor_point_0(
   const OcctSharp_PrsDimRadiusDimensionHandle* handle,
   OcctSharp_Point3d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_radius_dimension_method_circle_0(
+  const OcctSharp_PrsDimRadiusDimensionHandle* handle,
+  OcctSharp_Value_Circle3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_radius_dimension_method_dynamic_type_0(
   const OcctSharp_PrsDimRadiusDimensionHandle* handle,
@@ -21351,6 +21658,16 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_radius
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_radius_dimension_method_get_text_position_0(
   const OcctSharp_PrsDimRadiusDimensionHandle* handle,
   OcctSharp_Point3d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_radius_dimension_method_set_measured_geometry_0(
+  const OcctSharp_PrsDimRadiusDimensionHandle* handle,
+  OcctSharp_Value_Circle3d theCircle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_radius_dimension_method_set_measured_geometry_1(
+  const OcctSharp_PrsDimRadiusDimensionHandle* handle,
+  OcctSharp_Value_Circle3d theCircle,
+  OcctSharp_Point3d theAnchorPoint,
+  int32_t theHasAnchor);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_radius_dimension_method_set_text_position_0(
   const OcctSharp_PrsDimRadiusDimensionHandle* handle,
@@ -22210,9 +22527,19 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sens
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_box_release(OcctSharp_Select3DSensitiveBoxHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_circle_create_0(
+  const OcctSharp_SelectMgrEntityOwnerHandle* theOwnerId,
+  OcctSharp_Value_Circle3d theCircle,
+  int32_t theIsFilled,
+  OcctSharp_Select3DSensitiveCircleHandle** out_handle);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_circle_method_center_of_geometry_0(
   const OcctSharp_Select3DSensitiveCircleHandle* handle,
   OcctSharp_Point3d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_circle_method_circle_0(
+  const OcctSharp_Select3DSensitiveCircleHandle* handle,
+  OcctSharp_Value_Circle3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_circle_method_dynamic_type_0(
   const OcctSharp_Select3DSensitiveCircleHandle* handle,
@@ -22374,6 +22701,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sens
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_entity_method_set_0(
   const OcctSharp_Select3DSensitiveEntityHandle* handle,
   const OcctSharp_SelectMgrEntityOwnerHandle* theOwnerId);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_entity_method_set_flipping_options_0(
+  const OcctSharp_Select3DSensitiveEntityHandle* handle,
+  int32_t theIsEnabled,
+  OcctSharp_Value_Axis2 theRefPlane);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_entity_method_set_sensitivity_factor_0(
   const OcctSharp_Select3DSensitiveEntityHandle* handle,
@@ -22607,6 +22939,15 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_point_
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_poly_create_0(
   const OcctSharp_SelectMgrEntityOwnerHandle* theOwnerId,
   int32_t theIsBVHEnabled,
+  int32_t theNbPnts,
+  OcctSharp_Select3DSensitivePolyHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select3_d_sensitive_poly_create_1(
+  const OcctSharp_SelectMgrEntityOwnerHandle* theOwnerId,
+  OcctSharp_Value_Circle3d theCircle,
+  double theU1,
+  double theU2,
+  int32_t theIsFilled,
   int32_t theNbPnts,
   OcctSharp_Select3DSensitivePolyHandle** out_handle);
 
@@ -23263,6 +23604,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_axi
   const OcctSharp_SelectMgrAxisIntersectorHandle* handle,
   OcctSharp_Point3d* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_axis_intersector_method_get_view_ray_direction_0(
+  const OcctSharp_SelectMgrAxisIntersectorHandle* handle,
+  OcctSharp_Value_Direction3d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_axis_intersector_method_init_0(
+  const OcctSharp_SelectMgrAxisIntersectorHandle* handle,
+  OcctSharp_Value_Axis1 theAxis);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_axis_intersector_method_is_scalable_0(
   const OcctSharp_SelectMgrAxisIntersectorHandle* handle,
   int32_t* out_value);
@@ -23401,6 +23750,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_bas
   const OcctSharp_SelectMgrBaseIntersectorHandle* handle,
   OcctSharp_Point3d* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_base_intersector_method_get_mouse_position_0(
+  const OcctSharp_SelectMgrBaseIntersectorHandle* handle,
+  OcctSharp_Value_Point2d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_base_intersector_method_get_near_pnt_0(
   const OcctSharp_SelectMgrBaseIntersectorHandle* handle,
   OcctSharp_Point3d* out_value);
@@ -23408,6 +23761,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_bas
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_base_intersector_method_get_selection_type_0(
   const OcctSharp_SelectMgrBaseIntersectorHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_base_intersector_method_get_view_ray_direction_0(
+  const OcctSharp_SelectMgrBaseIntersectorHandle* handle,
+  OcctSharp_Value_Direction3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_base_intersector_method_set_camera_0(
   const OcctSharp_SelectMgrBaseIntersectorHandle* handle,
@@ -24246,6 +24603,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_vie
   const OcctSharp_SelectMgrViewerSelectorHandle* handle,
   int32_t theXPix,
   int32_t theYPix,
+  const OcctSharp_V3dViewHandle* theView);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_viewer_selector_method_pick_2(
+  const OcctSharp_SelectMgrViewerSelectorHandle* handle,
+  OcctSharp_Value_Axis1 theAxis,
   const OcctSharp_V3dViewHandle* theView);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_select_mgr_viewer_selector_method_picked_0(
@@ -25892,6 +26254,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_view_metho
   const OcctSharp_V3dViewHandle* handle,
   int32_t theMode);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_view_method_set_grid_0(
+  const OcctSharp_V3dViewHandle* handle,
+  OcctSharp_Value_Axis3 aPlane,
+  const OcctSharp_AspectGridHandle* aGrid);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_view_method_set_grid_activity_0(
   const OcctSharp_V3dViewHandle* handle,
   int32_t aFlag);
@@ -26279,6 +26646,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_viewer_met
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_viewer_method_next_defined_views_0(
   const OcctSharp_V3dViewerHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_viewer_method_privileged_plane_0(
+  const OcctSharp_V3dViewerHandle* handle,
+  OcctSharp_Value_Axis3* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_viewer_method_redraw_0(
   const OcctSharp_V3dViewerHandle* handle);
 
@@ -26350,6 +26721,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_viewer_met
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_viewer_method_set_light_on_0(
   const OcctSharp_V3dViewerHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_viewer_method_set_privileged_plane_0(
+  const OcctSharp_V3dViewerHandle* handle,
+  OcctSharp_Value_Axis3 thePlane);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_viewer_method_set_rectangular_grid_graphic_values_0(
   const OcctSharp_V3dViewerHandle* handle,

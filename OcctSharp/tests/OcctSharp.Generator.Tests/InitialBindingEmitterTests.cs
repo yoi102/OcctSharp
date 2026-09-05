@@ -9,6 +9,21 @@ public sealed class InitialBindingEmitterTests
     private const string TestStableId = "test:gp-pnt-three-coordinates";
 
     [Fact]
+    public void CheckedStaticParametersEscapeManagedKeywordsOnly()
+    {
+        DiscoveryReport basis = CreateReport();
+        BindingDeclaration method = CreatePrecisionMethod("y:keyword", "Precision::Reference", "keyword parameter",
+            CreateValueType("double", false), [new(0, "ref", CreateValueType("double", false), false)]);
+        GeneratedBindingSet emitted = InitialBindingEmitter.Emit(basis with { Model = new BindingModel([.. basis.Model.Declarations, method]) });
+        string managed = Assert.Single(emitted.Files, f => f.RelativePath.EndsWith("Foundation.ScalarRaw.Generated.cs", StringComparison.Ordinal)).Content;
+        string native = Assert.Single(emitted.Files, f => f.RelativePath.EndsWith("Foundation.Values.Generated.cpp", StringComparison.Ordinal)).Content;
+        Assert.Contains("double @ref", managed, StringComparison.Ordinal);
+        Assert.Contains("Checked(@ref, out double", managed, StringComparison.Ordinal);
+        Assert.Contains("double ref", native, StringComparison.Ordinal);
+        Assert.DoesNotContain("@ref", native, StringComparison.Ordinal);
+    }
+
+    [Fact]
     public void NewScalarOverloadAppendsWithoutChangingExistingAbiAndContainsExceptions()
     {
         DiscoveryReport basis = CreateReport();
@@ -44,7 +59,7 @@ public sealed class InitialBindingEmitterTests
         Assert.Equal(first.OcctVersion, second.OcctVersion);
         Assert.Equal(first.SourceStableIds, second.SourceStableIds);
         Assert.Equal(first.Files, second.Files);
-        Assert.Equal(4, first.Files.Count);
+        Assert.Equal(7, first.Files.Count);
         Assert.Equal([TestStableId], first.SourceStableIds);
         Assert.Contains(first.Files, static file =>
             file.RelativePath.EndsWith("OcctSharp.Geometry.Values.Generated.cpp", StringComparison.Ordinal)
@@ -55,6 +70,23 @@ public sealed class InitialBindingEmitterTests
         Assert.Contains(first.Files, static file =>
             file.RelativePath.EndsWith("Geometry.ModuleRuntime.Generated.cs", StringComparison.Ordinal)
             && file.Content.Contains("typeof(GeometryGeneratedNativeMethods).Assembly", StringComparison.Ordinal));
+    }
+
+    [Fact]
+    public void GeometricRecordsHaveExplicitLayoutsAndPreserveFrameHandedness()
+    {
+        GeneratedBindingSet emitted = InitialBindingEmitter.Emit(CreateReport());
+        string header = Assert.Single(emitted.Files, file => file.RelativePath.EndsWith("GeometryValues.Generated.h", StringComparison.Ordinal)).Content;
+        string managed = Assert.Single(emitted.Files, file => file.RelativePath.EndsWith("GeometryValues.Generated.cs", StringComparison.Ordinal)).Content;
+        Assert.Contains("static_assert(sizeof(OcctSharp_Value_Matrix3x3) == 72)", header, StringComparison.Ordinal);
+        Assert.Contains("offsetof(OcctSharp_Value_Matrix3x3, M23) == 40", header, StringComparison.Ordinal);
+        Assert.Contains("result.YReverse()", header, StringComparison.Ordinal);
+        Assert.Contains("Inconsistent axis handedness", header, StringComparison.Ordinal);
+        Assert.Contains("std::isfinite", header, StringComparison.Ordinal);
+        Assert.Contains("gp_Mat2d(gp_XY(Check(value.M11), Check(value.M21)), gp_XY(Check(value.M12), Check(value.M22)))", header, StringComparison.Ordinal);
+        Assert.Contains("[StructLayout(LayoutKind.Sequential)]", managed, StringComparison.Ordinal);
+        Assert.Contains("public readonly record struct Torus(Axis3 Position, double MajorRadius, double MinorRadius)", managed, StringComparison.Ordinal);
+        Assert.Single(emitted.SourceStableIds); // Support DTOs are not fake emitted native declarations.
     }
 
     [Fact]

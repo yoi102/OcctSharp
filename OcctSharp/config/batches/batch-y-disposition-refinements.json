@@ -1,0 +1,2014 @@
+{
+  "schemaVersion": "1.0",
+  "baselineInventorySha256": "B714207D4224DFAAD3A34CEBB9CFFE7353211779276AC084CA330A7F06A480DB",
+  "purpose": "Audited Blocked-to-Blocked reason refinements only; no classification override and no migrated IDs.",
+  "declarations": [
+    {
+      "stableId": "c:@S@Adaptor3d_HSurfaceTool@F@AxeOfRevolution#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#S",
+      "nativeName": "Adaptor3d_HSurfaceTool::AxeOfRevolution",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@D2#d#d#&1$@S@gp_Cone#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S4_#S4_#S",
+      "nativeName": "ElSLib::D2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@D2#d#d#&1$@S@gp_Cylinder#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S4_#S4_#S",
+      "nativeName": "ElSLib::D2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@D2#d#d#&1$@S@gp_Sphere#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S4_#S4_#S",
+      "nativeName": "ElSLib::D2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@D2#d#d#&1$@S@gp_Torus#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S4_#S4_#S",
+      "nativeName": "ElSLib::D2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@D3#d#d#&1$@S@gp_Cone#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S4_#S4_#S4_#S4_#S4_#S4_#S",
+      "nativeName": "ElSLib::D3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@D3#d#d#&1$@S@gp_Cylinder#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S4_#S4_#S4_#S4_#S4_#S4_#S",
+      "nativeName": "ElSLib::D3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@D3#d#d#&1$@S@gp_Sphere#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S4_#S4_#S4_#S4_#S4_#S4_#S",
+      "nativeName": "ElSLib::D3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@D3#d#d#&1$@S@gp_Torus#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S4_#S4_#S4_#S4_#S4_#S4_#S",
+      "nativeName": "ElSLib::D3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@Parameters#&1$@S@gp_Cone#&1$@S@gp_Pnt#&d#S4_#S",
+      "nativeName": "ElSLib::Parameters",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@Parameters#&1$@S@gp_Cylinder#&1$@S@gp_Pnt#&d#S4_#S",
+      "nativeName": "ElSLib::Parameters",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@Parameters#&1$@S@gp_Pln#&1$@S@gp_Pnt#&d#S4_#S",
+      "nativeName": "ElSLib::Parameters",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@D1#d#d#&1$@S@gp_Torus#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S",
+      "nativeName": "ElSLib::D1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@Parameters#&1$@S@gp_Sphere#&1$@S@gp_Pnt#&d#S4_#S",
+      "nativeName": "ElSLib::Parameters",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@PlaneD0#d#d#&1$@S@gp_Ax3#&$@S@gp_Pnt#S",
+      "nativeName": "ElSLib::PlaneD0",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@PlaneD1#d#d#&1$@S@gp_Ax3#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S",
+      "nativeName": "ElSLib::PlaneD1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@PlaneParameters#&1$@S@gp_Ax3#&1$@S@gp_Pnt#&d#S4_#S",
+      "nativeName": "ElSLib::PlaneParameters",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@SphereD0#d#d#&1$@S@gp_Ax3#d#&$@S@gp_Pnt#S",
+      "nativeName": "ElSLib::SphereD0",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@SphereD1#d#d#&1$@S@gp_Ax3#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S",
+      "nativeName": "ElSLib::SphereD1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@SphereD2#d#d#&1$@S@gp_Ax3#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S4_#S4_#S",
+      "nativeName": "ElSLib::SphereD2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@SphereD3#d#d#&1$@S@gp_Ax3#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S4_#S4_#S4_#S4_#S4_#S4_#S",
+      "nativeName": "ElSLib::SphereD3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@SphereParameters#&1$@S@gp_Ax3#d#&1$@S@gp_Pnt#&d#S4_#S",
+      "nativeName": "ElSLib::SphereParameters",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@TorusD0#d#d#&1$@S@gp_Ax3#d#d#&$@S@gp_Pnt#S",
+      "nativeName": "ElSLib::TorusD0",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@TorusD1#d#d#&1$@S@gp_Ax3#d#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S",
+      "nativeName": "ElSLib::TorusD1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@TorusD2#d#d#&1$@S@gp_Ax3#d#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S4_#S4_#S",
+      "nativeName": "ElSLib::TorusD2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@Parameters#&1$@S@gp_Torus#&1$@S@gp_Pnt#&d#S4_#S",
+      "nativeName": "ElSLib::Parameters",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@TorusD3#d#d#&1$@S@gp_Ax3#d#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S4_#S4_#S4_#S4_#S4_#S4_#S",
+      "nativeName": "ElSLib::TorusD3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@D1#d#d#&1$@S@gp_Sphere#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S",
+      "nativeName": "ElSLib::D1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@D1#d#d#&1$@S@gp_Cylinder#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S",
+      "nativeName": "ElSLib::D1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@HyperbolaD3#d#&1$@S@gp_Ax2#d#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S",
+      "nativeName": "ElCLib::HyperbolaD3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@HyperbolaD3#d#&1$@S@gp_Ax22d#d#d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S4_#S4_#S",
+      "nativeName": "ElCLib::HyperbolaD3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@LineD1#d#&1$@S@gp_Ax1#&$@S@gp_Pnt#&$@S@gp_Vec#S",
+      "nativeName": "ElCLib::LineD1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@LineD1#d#&1$@S@gp_Ax2d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S",
+      "nativeName": "ElCLib::LineD1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@ParabolaD1#d#&1$@S@gp_Ax2#d#&$@S@gp_Pnt#&$@S@gp_Vec#S",
+      "nativeName": "ElCLib::ParabolaD1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@ParabolaD1#d#&1$@S@gp_Ax22d#d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S",
+      "nativeName": "ElCLib::ParabolaD1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@ParabolaD2#d#&1$@S@gp_Ax2#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S",
+      "nativeName": "ElCLib::ParabolaD2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@ParabolaD2#d#&1$@S@gp_Ax22d#d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S4_#S",
+      "nativeName": "ElCLib::ParabolaD2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@ConeD0#d#d#&1$@S@gp_Ax3#d#d#&$@S@gp_Pnt#S",
+      "nativeName": "ElSLib::ConeD0",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@ConeD1#d#d#&1$@S@gp_Ax3#d#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S",
+      "nativeName": "ElSLib::ConeD1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@ConeD2#d#d#&1$@S@gp_Ax3#d#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S4_#S4_#S",
+      "nativeName": "ElSLib::ConeD2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@D1#d#d#&1$@S@gp_Pln#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S",
+      "nativeName": "ElSLib::D1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@ConeD3#d#d#&1$@S@gp_Ax3#d#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S4_#S4_#S4_#S4_#S4_#S4_#S",
+      "nativeName": "ElSLib::ConeD3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@CylinderD0#d#d#&1$@S@gp_Ax3#d#&$@S@gp_Pnt#S",
+      "nativeName": "ElSLib::CylinderD0",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@CylinderD1#d#d#&1$@S@gp_Ax3#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S",
+      "nativeName": "ElSLib::CylinderD1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@CylinderD2#d#d#&1$@S@gp_Ax3#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S4_#S4_#S",
+      "nativeName": "ElSLib::CylinderD2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@CylinderD3#d#d#&1$@S@gp_Ax3#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S4_#S4_#S4_#S4_#S4_#S4_#S",
+      "nativeName": "ElSLib::CylinderD3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@CylinderParameters#&1$@S@gp_Ax3#d#&1$@S@gp_Pnt#&d#S4_#S",
+      "nativeName": "ElSLib::CylinderParameters",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@D0#d#d#&1$@S@gp_Cone#&$@S@gp_Pnt#S",
+      "nativeName": "ElSLib::D0",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@D0#d#d#&1$@S@gp_Cylinder#&$@S@gp_Pnt#S",
+      "nativeName": "ElSLib::D0",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@D0#d#d#&1$@S@gp_Pln#&$@S@gp_Pnt#S",
+      "nativeName": "ElSLib::D0",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@D0#d#d#&1$@S@gp_Sphere#&$@S@gp_Pnt#S",
+      "nativeName": "ElSLib::D0",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@D0#d#d#&1$@S@gp_Torus#&$@S@gp_Pnt#S",
+      "nativeName": "ElSLib::D0",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@D1#d#d#&1$@S@gp_Cone#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S",
+      "nativeName": "ElSLib::D1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@ConeParameters#&1$@S@gp_Ax3#d#d#&1$@S@gp_Pnt#&d#S4_#S",
+      "nativeName": "ElSLib::ConeParameters",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@HyperbolaD2#d#&1$@S@gp_Ax22d#d#d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S4_#S",
+      "nativeName": "ElCLib::HyperbolaD2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElSLib@F@TorusParameters#&1$@S@gp_Ax3#d#d#&1$@S@gp_Pnt#&d#S4_#S",
+      "nativeName": "ElSLib::TorusParameters",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BSplineCurve@F@MovePointAndTangent#d#&1$@S@gp_Pnt2d#&1$@S@gp_Vec2d#d#I#I#&I#",
+      "nativeName": "Geom2d_BSplineCurve::MovePointAndTangent",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@IntCurveSurface_TheHCurveTool@F@Hyperbola#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#S",
+      "nativeName": "IntCurveSurface_TheHCurveTool::Hyperbola",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@IntCurveSurface_TheHCurveTool@F@Line#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#S",
+      "nativeName": "IntCurveSurface_TheHCurveTool::Line",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@IntCurveSurface_TheHCurveTool@F@Parabola#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#S",
+      "nativeName": "IntCurveSurface_TheHCurveTool::Parabola",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@IntPatch_HCurve2dTool@F@Circle#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#S",
+      "nativeName": "IntPatch_HCurve2dTool::Circle",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@IntPatch_HCurve2dTool@F@DN#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#d#I#S",
+      "nativeName": "IntPatch_HCurve2dTool::DN",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@IntPatch_HCurve2dTool@F@Ellipse#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#S",
+      "nativeName": "IntPatch_HCurve2dTool::Ellipse",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@IntPatch_HCurve2dTool@F@Hyperbola#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#S",
+      "nativeName": "IntPatch_HCurve2dTool::Hyperbola",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@IntPatch_HCurve2dTool@F@Line#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#S",
+      "nativeName": "IntPatch_HCurve2dTool::Line",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@IntPatch_HCurve2dTool@F@Parabola#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#S",
+      "nativeName": "IntPatch_HCurve2dTool::Parabola",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@IntPatch_HCurve2dTool@F@Value#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#d#S",
+      "nativeName": "IntPatch_HCurve2dTool::Value",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@IntSurf@F@MakeTransition#&1$@S@gp_Vec#S0_#&1$@S@gp_Dir#&$@S@IntSurf_Transition#S4_#S",
+      "nativeName": "IntSurf::MakeTransition",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@IntCurveSurface_TheHCurveTool@F@Ellipse#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#S",
+      "nativeName": "IntCurveSurface_TheHCurveTool::Ellipse",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@IntTools_Tools@F@SegPln#&1$@S@gp_Lin#d#d#d#&1$@S@gp_Pln#d#&$@S@gp_Pnt#&d#S6_#S6_#S6_#S",
+      "nativeName": "IntTools_Tools::SegPln",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@MoniTool_CaseData@F@AddXYZ#&1$@S@gp_XYZ#*1C#",
+      "nativeName": "MoniTool_CaseData::AddXYZ",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Geometric values now map, but a raw pointer input still needs explicit buffer/lifetime semantics."
+    },
+    {
+      "stableId": "c:@S@Poly@F@IntersectTriLine#&1$@S@gp_XYZ#&1$@S@gp_Dir#S0_#S0_#S0_#&d#S",
+      "nativeName": "Poly::IntersectTriLine",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@Poly@F@PointOnTriangle#&1$@S@gp_XY#S0_#S0_#S0_#&S1_#S",
+      "nativeName": "Poly::PointOnTriangle",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@PrsDim@F@NearestApex#&1$@S@gp_Elips#&1$@S@gp_Pnt#S2_#d#d#&b#S",
+      "nativeName": "PrsDim::NearestApex",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_BaseFrustum@F@IsBoundaryIntersectSphere#&1$@S@gp_Pnt#d#&1$@S@gp_Dir#&1$@S@NCollection_Array1>#S1_#&b#1",
+      "nativeName": "SelectMgr_BaseFrustum::IsBoundaryIntersectSphere",
+      "beforeCode": "BL208",
+      "afterCode": "BL206",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "TemplateInstantiationProjection",
+      "reason": "Geometric values now map, but a template/array instantiation still needs a concrete projection."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_BaseIntersector@F@RayCircleIntersection#d#&1$@S@gp_Pnt#&1$@S@gp_Dir#b#&d#1",
+      "nativeName": "SelectMgr_BaseIntersector::RayCircleIntersection",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_BaseIntersector@F@RayCylinderIntersection#d#d#d#&1$@S@gp_Pnt#&1$@S@gp_Dir#b#&d#S4_#1",
+      "nativeName": "SelectMgr_BaseIntersector::RayCylinderIntersection",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@SelectMgr_BaseIntersector@F@RaySphereIntersection#&1$@S@gp_Pnt#d#S0_#&1$@S@gp_Dir#&d#S4_#1",
+      "nativeName": "SelectMgr_BaseIntersector::RaySphereIntersection",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Surface@F@ProjectDegenerated#&1$@S@gp_Pnt#d#&1$@S@gp_Pnt2d#&S3_#",
+      "nativeName": "ShapeAnalysis_Surface::ProjectDegenerated",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_CompositeSurface@F@LocateUVPoint#&1$@S@gp_Pnt2d#&I#S2_#1",
+      "nativeName": "ShapeExtend_CompositeSurface::LocateUVPoint",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@TopOpeBRepTool_TOOL@F@Matter#&1$@S@gp_Dir#S0_#S0_#S0_#d#&d#S",
+      "nativeName": "TopOpeBRepTool_TOOL::Matter",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@MoniTool_CaseData@F@AddXY#&1$@S@gp_XY#*1C#",
+      "nativeName": "MoniTool_CaseData::AddXY",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Geometric values now map, but a raw pointer input still needs explicit buffer/lifetime semantics."
+    },
+    {
+      "stableId": "c:@S@Geom2d_BSplineCurve@F@MovePoint#d#&1$@S@gp_Pnt2d#I#I#&I#S2_#",
+      "nativeName": "Geom2d_BSplineCurve::MovePoint",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@IntCurveSurface_TheHCurveTool@F@DN#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#d#I#S",
+      "nativeName": "IntCurveSurface_TheHCurveTool::DN",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@IGESDimen_NewGeneralNote@F@Init#d#d#I#&1$@S@gp_XYZ#d#S0_#d#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#S5_#S5_#S5_#S2_#S5_#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#S2_#S5_#S5_#S2_#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#S5_#S5_#S2_#S2_#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S1_#S8_#",
+      "nativeName": "IGESDimen_NewGeneralNote::Init",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@GeomConvert_CurveToAnaCurve@F@GetLine#&1$@S@gp_Pnt#S0_#&d#S2_#S",
+      "nativeName": "GeomConvert_CurveToAnaCurve::GetLine",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@GeomFill@F@GetCircle#$@E@Convert_ParameterisationType#&1$@S@gp_Vec#S1_#S1_#&1$@S@gp_Pnt#S3_#d#S3_#&$@S@NCollection_Array1>#S4_#&$@S@NCollection_Array1>#d#S",
+      "nativeName": "GeomFill::GetCircle",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@GeomFill@F@GetCircle#$@E@Convert_ParameterisationType#&1$@S@gp_Vec#S1_#S1_#S1_#S1_#S1_#&1$@S@gp_Pnt#S3_#S1_#S1_#d#d#S3_#S1_#&$@S@NCollection_Array1>#S4_#&$@S@NCollection_Array1>#S2_#&$@S@NCollection_Array1>#d#S9_#S",
+      "nativeName": "GeomFill::GetCircle",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@GeomFill@F@GetCircle#$@E@Convert_ParameterisationType#&1$@S@gp_Vec#S1_#S1_#S1_#S1_#S1_#S1_#S1_#S1_#&1$@S@gp_Pnt#S3_#S1_#S1_#S1_#S1_#d#d#d#S3_#S1_#S1_#&$@S@NCollection_Array1>#S4_#&$@S@NCollection_Array1>#S2_#S7_#&$@S@NCollection_Array1>#d#S9_#S9_#S",
+      "nativeName": "GeomFill::GetCircle",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@Geom_BSplineCurve@F@MovePointAndTangent#d#&1$@S@gp_Pnt#&1$@S@gp_Vec#d#I#I#&I#",
+      "nativeName": "Geom_BSplineCurve::MovePointAndTangent",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_LineTool@F@D0#&1$@S@gp_Lin#d#&$@S@gp_Pnt#S",
+      "nativeName": "HLRBRep_LineTool::D0",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_LineTool@F@D1#&1$@S@gp_Lin#d#&$@S@gp_Pnt#&$@S@gp_Vec#S",
+      "nativeName": "HLRBRep_LineTool::D1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_LineTool@F@D2#&1$@S@gp_Lin#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S",
+      "nativeName": "HLRBRep_LineTool::D2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_LineTool@F@D3#&1$@S@gp_Lin#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S",
+      "nativeName": "HLRBRep_LineTool::D3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_LineTool@F@Intervals#&1$@S@gp_Lin#&$@S@NCollection_Array1>#d#$@E@GeomAbs_Shape#S",
+      "nativeName": "HLRBRep_LineTool::Intervals",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_LineTool@F@KnotsAndMultiplicities#&1$@S@gp_Lin#&$@S@NCollection_Array1>#d#&$@S@NCollection_Array1>#I#S",
+      "nativeName": "HLRBRep_LineTool::KnotsAndMultiplicities",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@IntCurveSurface_TheHCurveTool@F@Circle#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#S",
+      "nativeName": "IntCurveSurface_TheHCurveTool::Circle",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_LineTool@F@Poles#&1$@S@gp_Lin#&$@S@NCollection_Array1>#$@S@gp_Pnt#S",
+      "nativeName": "HLRBRep_LineTool::Poles",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_LineTool@F@SamplePars#&1$@S@gp_Lin#d#d#d#I#&$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#S",
+      "nativeName": "HLRBRep_LineTool::SamplePars",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_SurfaceTool@F@AxeOfRevolution#*1$@S@HLRBRep_Surface#S",
+      "nativeName": "HLRBRep_SurfaceTool::AxeOfRevolution",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Geometric values now map, but a raw pointer input still needs explicit buffer/lifetime semantics."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_SurfaceTool@F@Cone#*1$@S@HLRBRep_Surface#S",
+      "nativeName": "HLRBRep_SurfaceTool::Cone",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Geometric values now map, but a raw pointer input still needs explicit buffer/lifetime semantics."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_SurfaceTool@F@Cylinder#*1$@S@HLRBRep_Surface#S",
+      "nativeName": "HLRBRep_SurfaceTool::Cylinder",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Geometric values now map, but a raw pointer input still needs explicit buffer/lifetime semantics."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_SurfaceTool@F@DN#*1$@S@HLRBRep_Surface#d#d#I#I#S",
+      "nativeName": "HLRBRep_SurfaceTool::DN",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Geometric values now map, but a raw pointer input still needs explicit buffer/lifetime semantics."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_SurfaceTool@F@Direction#*1$@S@HLRBRep_Surface#S",
+      "nativeName": "HLRBRep_SurfaceTool::Direction",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Geometric values now map, but a raw pointer input still needs explicit buffer/lifetime semantics."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_SurfaceTool@F@Plane#*1$@S@HLRBRep_Surface#S",
+      "nativeName": "HLRBRep_SurfaceTool::Plane",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Geometric values now map, but a raw pointer input still needs explicit buffer/lifetime semantics."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_SurfaceTool@F@Sphere#*1$@S@HLRBRep_Surface#S",
+      "nativeName": "HLRBRep_SurfaceTool::Sphere",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Geometric values now map, but a raw pointer input still needs explicit buffer/lifetime semantics."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_SurfaceTool@F@Torus#*1$@S@HLRBRep_Surface#S",
+      "nativeName": "HLRBRep_SurfaceTool::Torus",
+      "beforeCode": "BL208",
+      "afterCode": "BL202",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "RawPointerLifetime",
+      "reason": "Geometric values now map, but a raw pointer input still needs explicit buffer/lifetime semantics."
+    },
+    {
+      "stableId": "c:@S@IGESDimen_FlagNote@F@Init#&1$@S@gp_XYZ#d#&1$@N@opencascade@S@handle>#$@S@IGESDimen_GeneralNote#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@N@opencascade@S@handle>#$@S@IGESDimen_LeaderArrow#",
+      "nativeName": "IGESDimen_FlagNote::Init",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@IGESDimen_LeaderArrow@F@Init#d#d#d#&1$@S@gp_XY#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#S1_#",
+      "nativeName": "IGESDimen_LeaderArrow::Init",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@HLRBRep_LineTool@F@PolesAndWeights#&1$@S@gp_Lin#&$@S@NCollection_Array1>#$@S@gp_Pnt#&$@S@NCollection_Array1>#d#S",
+      "nativeName": "HLRBRep_LineTool::PolesAndWeights",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@TopOpeBRepTool_TOOL@F@TrslUV#&1$@S@gp_Vec2d#&$@S@TopOpeBRepTool_C2DF#S",
+      "nativeName": "TopOpeBRepTool_TOOL::TrslUV",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@HyperbolaD2#d#&1$@S@gp_Ax2#d#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S",
+      "nativeName": "ElCLib::HyperbolaD2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@HyperbolaD1#d#&1$@S@gp_Ax2#d#d#&$@S@gp_Pnt#&$@S@gp_Vec#S",
+      "nativeName": "ElCLib::HyperbolaD1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MovePoint#d#&1$@S@gp_Vec2d#I#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S6_#&I#S8_#&S3_#S",
+      "nativeName": "BSplCLib::MovePoint",
+      "beforeCode": "BL208",
+      "afterCode": "BL206",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "TemplateInstantiationProjection",
+      "reason": "Geometric values now map, but a template/array instantiation still needs a concrete projection."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MovePointAndTangent#d#&1$@S@gp_Vec#S0_#d#I#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S6_#&S3_#&I#S",
+      "nativeName": "BSplCLib::MovePointAndTangent",
+      "beforeCode": "BL208",
+      "afterCode": "BL206",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "TemplateInstantiationProjection",
+      "reason": "Geometric values now map, but a template/array instantiation still needs a concrete projection."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MovePointAndTangent#d#&1$@S@gp_Vec2d#S0_#d#I#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#*1$@S@NCollection_Array1>#d#&1S6_#&S3_#&I#S",
+      "nativeName": "BSplCLib::MovePointAndTangent",
+      "beforeCode": "BL208",
+      "afterCode": "BL206",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "TemplateInstantiationProjection",
+      "reason": "Geometric values now map, but a template/array instantiation still needs a concrete projection."
+    },
+    {
+      "stableId": "c:@S@BSplSLib@F@MovePoint#d#d#&1$@S@gp_Vec#I#I#I#I#I#I#b#&1$@S@NCollection_Array2>#$@S@gp_Pnt#&1$@S@NCollection_Array2>#d#&1$@S@NCollection_Array1>#d#S7_#&I#S9_#S9_#S9_#&S3_#S",
+      "nativeName": "BSplSLib::MovePoint",
+      "beforeCode": "BL208",
+      "afterCode": "BL206",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "TemplateInstantiationProjection",
+      "reason": "Geometric values now map, but a template/array instantiation still needs a concrete projection."
+    },
+    {
+      "stableId": "c:@S@Bisector_BisecCC@F@ValueAndDist#d#&d#S0_#S0_#1",
+      "nativeName": "Bisector_BisecCC::ValueAndDist",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@Bisector_BisecCC@F@ValueByInt#d#&d#S0_#S0_#1",
+      "nativeName": "Bisector_BisecCC::ValueByInt",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Circ#d#&$@S@Bnd_Box#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Circ#d#d#d#&$@S@Bnd_Box#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Circ2d#d#&$@S@Bnd_Box2d#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Circ2d#d#d#d#&$@S@Bnd_Box2d#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Cone#d#d#d#&$@S@Bnd_Box#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BSplCLib@F@MovePoint#d#&1$@S@gp_Vec#I#I#I#&1$@S@NCollection_Array1>#$@S@gp_Pnt#*1$@S@NCollection_Array1>#d#&1S6_#&I#S8_#&S3_#S",
+      "nativeName": "BSplCLib::MovePoint",
+      "beforeCode": "BL208",
+      "afterCode": "BL206",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "TemplateInstantiationProjection",
+      "reason": "Geometric values now map, but a template/array instantiation still needs a concrete projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Cone#d#d#d#d#d#&$@S@Bnd_Box#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Cylinder#d#d#d#d#d#&$@S@Bnd_Box#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Elips#d#&$@S@Bnd_Box#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Elips#d#d#d#&$@S@Bnd_Box#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Elips2d#d#&$@S@Bnd_Box2d#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Elips2d#d#d#d#&$@S@Bnd_Box2d#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Hypr#d#d#d#&$@S@Bnd_Box#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Hypr2d#d#d#d#&$@S@Bnd_Box2d#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Lin#d#d#d#&$@S@Bnd_Box#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Lin2d#d#d#d#&$@S@Bnd_Box2d#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Parab#d#d#d#&$@S@Bnd_Box#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Parab2d#d#d#d#&$@S@Bnd_Box2d#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Cylinder#d#d#d#&$@S@Bnd_Box#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Sphere#d#&$@S@Bnd_Box#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_GeomTool@F@IntSegSeg#&1$@S@gp_XY#S0_#S0_#S0_#b#b#&$@S@gp_Pnt2d#S",
+      "nativeName": "BRepMesh_GeomTool::IntSegSeg",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_CircleTool@F@MakeCircle#&1$@S@gp_XY#S0_#S0_#&S1_#&d#S",
+      "nativeName": "BRepMesh_CircleTool::MakeCircle",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@Adaptor3d_HSurfaceTool@F@Cone#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#S",
+      "nativeName": "Adaptor3d_HSurfaceTool::Cone",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@Adaptor3d_HSurfaceTool@F@Cylinder#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#S",
+      "nativeName": "Adaptor3d_HSurfaceTool::Cylinder",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@Adaptor3d_HSurfaceTool@F@DN#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#d#d#I#I#S",
+      "nativeName": "Adaptor3d_HSurfaceTool::DN",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@Adaptor3d_HSurfaceTool@F@Direction#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#S",
+      "nativeName": "Adaptor3d_HSurfaceTool::Direction",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@Adaptor3d_HSurfaceTool@F@Plane#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#S",
+      "nativeName": "Adaptor3d_HSurfaceTool::Plane",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@Adaptor3d_HSurfaceTool@F@Sphere#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#S",
+      "nativeName": "Adaptor3d_HSurfaceTool::Sphere",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@Adaptor3d_HSurfaceTool@F@Torus#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#S",
+      "nativeName": "Adaptor3d_HSurfaceTool::Torus",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@Adaptor3d_TopolTool@F@Classify#&1$@S@gp_Pnt2d#d#b#",
+      "nativeName": "Adaptor3d_TopolTool::Classify",
+      "beforeCode": "BL208",
+      "afterCode": "BL210",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "CrossModuleProjectionContract",
+      "reason": "SC-062: the TopAbs_State return would create a Geometry-to-Modeling cycle."
+    },
+    {
+      "stableId": "c:@S@Adaptor3d_TopolTool@F@GetConeApexParam#&1$@S@gp_Cone#&d#S2_#S",
+      "nativeName": "Adaptor3d_TopolTool::GetConeApexParam",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BRepBlend_BlendTool@F@Inters#&1$@S@gp_Pnt2d#S0_#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#&d#S8_#S",
+      "nativeName": "BRepBlend_BlendTool::Inters",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@BRepBlend_BlendTool@F@Project#&1$@S@gp_Pnt2d#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#&d#S8_#S",
+      "nativeName": "BRepBlend_BlendTool::Project",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@BRepMesh_GeomTool@F@IntLinLin#&1$@S@gp_XY#S0_#S0_#S0_#&S1_#&{n2d#S",
+      "nativeName": "BRepMesh_GeomTool::IntLinLin",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BRepBlend_HCurve2dTool@F@Circle#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#S",
+      "nativeName": "BRepBlend_HCurve2dTool::Circle",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@BRepBlend_HCurve2dTool@F@Ellipse#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#S",
+      "nativeName": "BRepBlend_HCurve2dTool::Ellipse",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@BRepBlend_HCurve2dTool@F@Hyperbola#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#S",
+      "nativeName": "BRepBlend_HCurve2dTool::Hyperbola",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@BRepBlend_HCurve2dTool@F@Line#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#S",
+      "nativeName": "BRepBlend_HCurve2dTool::Line",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@BRepBlend_HCurve2dTool@F@Parabola#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#S",
+      "nativeName": "BRepBlend_HCurve2dTool::Parabola",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@BRepBlend_HCurve2dTool@F@Value#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#d#S",
+      "nativeName": "BRepBlend_HCurve2dTool::Value",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@BRepBlend_HCurveTool@F@Circle#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#S",
+      "nativeName": "BRepBlend_HCurveTool::Circle",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@BRepBlend_HCurveTool@F@DN#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#d#I#S",
+      "nativeName": "BRepBlend_HCurveTool::DN",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@BRepBlend_HCurveTool@F@Ellipse#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#S",
+      "nativeName": "BRepBlend_HCurveTool::Ellipse",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@BRepBlend_HCurveTool@F@Hyperbola#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#S",
+      "nativeName": "BRepBlend_HCurveTool::Hyperbola",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@BRepBlend_HCurveTool@F@Line#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#S",
+      "nativeName": "BRepBlend_HCurveTool::Line",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@BRepBlend_HCurveTool@F@Parabola#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#S",
+      "nativeName": "BRepBlend_HCurveTool::Parabola",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@BRepBlend_HCurve2dTool@F@DN#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#d#I#S",
+      "nativeName": "BRepBlend_HCurve2dTool::DN",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@HyperbolaD1#d#&1$@S@gp_Ax22d#d#d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S",
+      "nativeName": "ElCLib::HyperbolaD1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Sphere#d#d#d#d#d#&$@S@Bnd_Box#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Torus#d#d#d#d#d#&$@S@Bnd_Box#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D1#d#&1$@S@gp_Lin#&$@S@gp_Pnt#&$@S@gp_Vec#S",
+      "nativeName": "ElCLib::D1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D1#d#&1$@S@gp_Lin2d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S",
+      "nativeName": "ElCLib::D1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D1#d#&1$@S@gp_Parab#&$@S@gp_Pnt#&$@S@gp_Vec#S",
+      "nativeName": "ElCLib::D1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D1#d#&1$@S@gp_Parab2d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S",
+      "nativeName": "ElCLib::D1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D2#d#&1$@S@gp_Circ#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S",
+      "nativeName": "ElCLib::D2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D2#d#&1$@S@gp_Circ2d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S4_#S",
+      "nativeName": "ElCLib::D2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D2#d#&1$@S@gp_Elips#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S",
+      "nativeName": "ElCLib::D2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D2#d#&1$@S@gp_Elips2d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S4_#S",
+      "nativeName": "ElCLib::D2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D2#d#&1$@S@gp_Hypr#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S",
+      "nativeName": "ElCLib::D2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D2#d#&1$@S@gp_Hypr2d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S4_#S",
+      "nativeName": "ElCLib::D2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D2#d#&1$@S@gp_Parab#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S",
+      "nativeName": "ElCLib::D2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D1#d#&1$@S@gp_Hypr2d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S",
+      "nativeName": "ElCLib::D1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D2#d#&1$@S@gp_Parab2d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S4_#S",
+      "nativeName": "ElCLib::D2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D3#d#&1$@S@gp_Circ2d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S4_#S4_#S",
+      "nativeName": "ElCLib::D3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D3#d#&1$@S@gp_Elips#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S",
+      "nativeName": "ElCLib::D3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D3#d#&1$@S@gp_Elips2d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S4_#S4_#S",
+      "nativeName": "ElCLib::D3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D3#d#&1$@S@gp_Hypr#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S",
+      "nativeName": "ElCLib::D3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D3#d#&1$@S@gp_Hypr2d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S4_#S4_#S",
+      "nativeName": "ElCLib::D3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@EllipseD1#d#&1$@S@gp_Ax2#d#d#&$@S@gp_Pnt#&$@S@gp_Vec#S",
+      "nativeName": "ElCLib::EllipseD1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@EllipseD1#d#&1$@S@gp_Ax22d#d#d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S",
+      "nativeName": "ElCLib::EllipseD1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@EllipseD2#d#&1$@S@gp_Ax2#d#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S",
+      "nativeName": "ElCLib::EllipseD2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@EllipseD2#d#&1$@S@gp_Ax22d#d#d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S4_#S",
+      "nativeName": "ElCLib::EllipseD2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@EllipseD3#d#&1$@S@gp_Ax2#d#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S",
+      "nativeName": "ElCLib::EllipseD3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@EllipseD3#d#&1$@S@gp_Ax22d#d#d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S4_#S4_#S",
+      "nativeName": "ElCLib::EllipseD3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D3#d#&1$@S@gp_Circ#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S",
+      "nativeName": "ElCLib::D3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@BndLib@F@Add#&1$@S@gp_Torus#d#&$@S@Bnd_Box#S",
+      "nativeName": "BndLib::Add",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D1#d#&1$@S@gp_Hypr#&$@S@gp_Pnt#&$@S@gp_Vec#S",
+      "nativeName": "ElCLib::D1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D1#d#&1$@S@gp_Elips#&$@S@gp_Pnt#&$@S@gp_Vec#S",
+      "nativeName": "ElCLib::D1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@CSLib@F@DNNUV#I#I#&1$@S@NCollection_Array2>#$@S@gp_Vec#S",
+      "nativeName": "CSLib::DNNUV",
+      "beforeCode": "BL208",
+      "afterCode": "BL206",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "TemplateInstantiationProjection",
+      "reason": "Geometric values now map, but a template/array instantiation still needs a concrete projection."
+    },
+    {
+      "stableId": "c:@S@CSLib@F@DNNUV#I#I#&1$@S@NCollection_Array2>#$@S@gp_Vec#S0_#S",
+      "nativeName": "CSLib::DNNUV",
+      "beforeCode": "BL208",
+      "afterCode": "BL206",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "TemplateInstantiationProjection",
+      "reason": "Geometric values now map, but a template/array instantiation still needs a concrete projection."
+    },
+    {
+      "stableId": "c:@S@CSLib@F@DNNormal#I#I#&1$@S@NCollection_Array2>#$@S@gp_Vec#I#I#S",
+      "nativeName": "CSLib::DNNormal",
+      "beforeCode": "BL208",
+      "afterCode": "BL206",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "TemplateInstantiationProjection",
+      "reason": "Geometric values now map, but a template/array instantiation still needs a concrete projection."
+    },
+    {
+      "stableId": "c:@S@CSLib@F@Normal#&1$@S@gp_Vec#S0_#S0_#S0_#S0_#d#&b#&$@E@CSLib_NormalStatus#&$@S@gp_Dir#S",
+      "nativeName": "CSLib::Normal",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@CSLib@F@Normal#&1$@S@gp_Vec#S0_#d#&$@E@CSLib_DerivativeStatus#&$@S@gp_Dir#S",
+      "nativeName": "CSLib::Normal",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@CSLib@F@Normal#&1$@S@gp_Vec#S0_#d#&$@E@CSLib_NormalStatus#&$@S@gp_Dir#S",
+      "nativeName": "CSLib::Normal",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@Contap_HCurve2dTool@F@Circle#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#S",
+      "nativeName": "Contap_HCurve2dTool::Circle",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@Contap_HCurve2dTool@F@DN#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#d#I#S",
+      "nativeName": "Contap_HCurve2dTool::DN",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@Contap_HCurve2dTool@F@Ellipse#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#S",
+      "nativeName": "Contap_HCurve2dTool::Ellipse",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@Contap_HCurve2dTool@F@Hyperbola#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#S",
+      "nativeName": "Contap_HCurve2dTool::Hyperbola",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@Contap_HCurve2dTool@F@Line#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#S",
+      "nativeName": "Contap_HCurve2dTool::Line",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D1#d#&1$@S@gp_Elips2d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S",
+      "nativeName": "ElCLib::D1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@Contap_HCurve2dTool@F@Parabola#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#S",
+      "nativeName": "Contap_HCurve2dTool::Parabola",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@DsgPrs@F@ComputeFacesAnglePresentation#d#d#&1$@S@gp_Pnt#S0_#S0_#&1$@S@gp_Dir#S2_#S2_#b#&1$@S@gp_Ax1#S0_#&$@S@gp_Circ#&d#S8_#&S1_#S9_#&S3_#S10_#S9_#S6_#S8_#S8_#S",
+      "nativeName": "DsgPrs::ComputeFacesAnglePresentation",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@DsgPrs@F@ComputeFilletRadiusPresentation#d#d#&1$@S@gp_Pnt#&1$@S@gp_Dir#S0_#S0_#S0_#S0_#b#&b#&$@S@gp_Circ#&d#S7_#&S1_#&S3_#S8_#S",
+      "nativeName": "DsgPrs::ComputeFilletRadiusPresentation",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@DsgPrs@F@ComputePlanarFacesLengthPresentation#d#d#&1$@S@gp_Pnt#S0_#&1$@S@gp_Dir#S0_#&1$@S@gp_Pln#&S1_#S6_#&S3_#S",
+      "nativeName": "DsgPrs::ComputePlanarFacesLengthPresentation",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@CircleD1#d#&1$@S@gp_Ax2#d#&$@S@gp_Pnt#&$@S@gp_Vec#S",
+      "nativeName": "ElCLib::CircleD1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@CircleD1#d#&1$@S@gp_Ax22d#d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S",
+      "nativeName": "ElCLib::CircleD1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@CircleD2#d#&1$@S@gp_Ax2#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S",
+      "nativeName": "ElCLib::CircleD2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@CircleD2#d#&1$@S@gp_Ax22d#d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S4_#S",
+      "nativeName": "ElCLib::CircleD2",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@CircleD3#d#&1$@S@gp_Ax2#d#&$@S@gp_Pnt#&$@S@gp_Vec#S4_#S4_#S",
+      "nativeName": "ElCLib::CircleD3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@CircleD3#d#&1$@S@gp_Ax22d#d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S4_#S4_#S",
+      "nativeName": "ElCLib::CircleD3",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D1#d#&1$@S@gp_Circ#&$@S@gp_Pnt#&$@S@gp_Vec#S",
+      "nativeName": "ElCLib::D1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@ElCLib@F@D1#d#&1$@S@gp_Circ2d#&$@S@gp_Pnt2d#&$@S@gp_Vec2d#S",
+      "nativeName": "ElCLib::D1",
+      "beforeCode": "BL208",
+      "afterCode": "BL204",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "BorrowedOrOutputReference",
+      "reason": "Geometric values now map, but another borrowed or mutable/output reference requires its own projection."
+    },
+    {
+      "stableId": "c:@S@Contap_HCurve2dTool@F@Value#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#d#S",
+      "nativeName": "Contap_HCurve2dTool::Value",
+      "beforeCode": "BL208",
+      "afterCode": "BL205",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "UnselectedHandleTarget",
+      "reason": "Geometric values now map, but an unselected handle target still needs a verified typed ownership scope."
+    },
+    {
+      "stableId": "c:@S@gp_Pnt@F@gp_Pnt#&1$@S@gp_XYZ#",
+      "nativeName": "gp_Pnt::gp_Pnt",
+      "beforeCode": "BL208",
+      "afterCode": "BL211",
+      "beforeCategory": "UnmappedValueType",
+      "afterCategory": "ValueConstructorEmissionContract",
+      "reason": "SC-062: the initial point constructor emitter has no gp_XYZ record-input path."
+    }
+  ]
+}

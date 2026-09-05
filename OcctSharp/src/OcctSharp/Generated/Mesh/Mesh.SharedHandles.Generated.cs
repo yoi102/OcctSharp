@@ -19,8 +19,10 @@
 // Source: c:@S@BRepMeshData_Model@F@GetFace#I#1
 // Source: c:@S@BRepMeshData_Model@F@GetMaxSize#1
 // Source: c:@S@BRepMeshData_Model@F@SetMaxSize#d#
+// Source: c:@S@BRepMeshData_PCurve@F@AddPoint#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@BRepMeshData_PCurve@F@Clear#b#
 // Source: c:@S@BRepMeshData_PCurve@F@DynamicType#1
+// Source: c:@S@BRepMeshData_PCurve@F@InsertPoint#I#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@BRepMeshData_PCurve@F@ParametersNb#1
 // Source: c:@S@BRepMeshData_PCurve@F@RemovePoint#I#
 // Source: c:@S@BRepMeshData_Wire@F@DynamicType#1
@@ -29,6 +31,7 @@
 // Source: c:@S@BRepMesh_BaseMeshAlgo@F@DynamicType#1
 // Source: c:@S@BRepMesh_Classifier@F@BRepMesh_Classifier#
 // Source: c:@S@BRepMesh_Classifier@F@DynamicType#1
+// Source: c:@S@BRepMesh_Classifier@F@Perform#&1$@S@gp_Pnt2d#1
 // Source: c:@S@BRepMesh_ConstrainedBaseMeshAlgo@F@DynamicType#1
 // Source: c:@S@BRepMesh_Context@F@BRepMesh_Context#$@E@IMeshTools_MeshAlgoType#
 // Source: c:@S@BRepMesh_Context@F@DynamicType#1
@@ -616,6 +619,13 @@ public sealed class BRepMeshDataPCurve : IDisposable
 
     private BRepMeshDataPCurve(BRepMeshDataPCurveHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT BRepMeshData_PCurve::AddPoint.</summary>
+    public void AddPoint(global::OcctSharp.Values.Point2d thePoint, double theParamOnPCurve)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataPCurveMethodAddPoint0(handle, thePoint, theParamOnPCurve), "occtsharp_generated_brep_mesh_data_pcurve_method_add_point_0");
+    }
+
     /// <summary>Invokes OCCT BRepMeshData_PCurve::Clear.</summary>
     public void Clear(bool isKeepEndPoints)
     {
@@ -629,6 +639,13 @@ public sealed class BRepMeshDataPCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataPCurveMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_data_pcurve_method_dynamic_type_0");
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_data_pcurve_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT BRepMeshData_PCurve::InsertPoint.</summary>
+    public void InsertPoint(int thePosition, global::OcctSharp.Values.Point2d thePoint, double theParamOnPCurve)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshDataPCurveMethodInsertPoint0(handle, thePosition, thePoint, theParamOnPCurve), "occtsharp_generated_brep_mesh_data_pcurve_method_insert_point_0");
     }
 
     /// <summary>Invokes OCCT BRepMeshData_PCurve::ParametersNb.</summary>
@@ -896,6 +913,14 @@ public sealed class BRepMeshClassifier : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshClassifierMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_brep_mesh_classifier_method_dynamic_type_0");
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_mesh_classifier_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT BRepMesh_Classifier::Perform.</summary>
+    public TopAbsState Perform(global::OcctSharp.Values.Point2d thePoint)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshGeneratedNativeMethods.BRepMeshClassifierMethodPerform0(handle, thePoint, out int resultValue), "occtsharp_generated_brep_mesh_classifier_method_perform_0");
+        return (TopAbsState)resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>

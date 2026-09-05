@@ -20,13 +20,7 @@ public static class SimpleBindingEligibilityPass
         ArgumentNullException.ThrowIfNull(declaration);
         ArgumentNullException.ThrowIfNull(typeMap);
 
-        // OCCT documents this reference as the start of an array, not a scalar value.
-        // Keep it blocked until a sized buffer-copy contract exists (SC-061).
-        if (declaration.StableId == "c:@S@BSplCLib@F@FlatBezierKnots#I#S")
-        {
-            return new SimpleBindingEligibilityAssessment(
-                "EL008", "ReferenceSequence", "FlatBezierKnots requires a sized knot-array copy, not a scalar reference copy.", false);
-        }
+        if (GetProjectionConstraint(declaration) is { } constraint) return constraint;
 
         return declaration.Kind switch
         {
@@ -40,6 +34,15 @@ public static class SimpleBindingEligibilityPass
                 false),
         };
     }
+
+    internal static SimpleBindingEligibilityAssessment? GetProjectionConstraint(BindingDeclaration declaration) => declaration.StableId switch
+    {
+        "c:@S@BSplCLib@F@FlatBezierKnots#I#S" => new(
+            "EL008", "ReferenceSequence", "FlatBezierKnots requires a sized knot-array copy, not a scalar reference copy (SC-061).", false),
+        "c:@S@Adaptor3d_TopolTool@F@Classify#&1$@S@gp_Pnt2d#d#b#" => new(
+            "EL009", "ModuleProjection", "Geometry cannot expose Modeling's TopAbs_State without a reverse module dependency (SC-062).", false),
+        _ => null,
+    };
 
     private static BindingDeclaration Promote(
         BindingDeclaration declaration,
@@ -74,7 +77,8 @@ public static class SimpleBindingEligibilityPass
     {
         string? declaringType = GetDeclaringType(declaration.NativeName);
         if (declaringType is null
-            || !TryMapValueType(declaringType, typeMap, BindingTypeUsage.ReturnValue, out _))
+            || !TryMapValueType(declaringType, typeMap, BindingTypeUsage.ReturnValue, out BindingTypeProjection? constructed)
+            || constructed?.RuleId == "TM009")
         {
             return new SimpleBindingEligibilityAssessment(
                 "EL003",
@@ -83,6 +87,11 @@ public static class SimpleBindingEligibilityPass
                 false);
         }
 
+        if (constructed?.RuleId == "TM005" && declaration.Parameters.Any(parameter =>
+            typeMap.TryMap(parameter.Type, BindingTypeUsage.Parameter, out BindingTypeProjection? input) && input?.RuleId == "TM009"))
+        {
+            return new("EL010", "ValueConstructorEmission", "The point constructor emitter supports scalar coordinates and point copies, not geometric-record inputs.", false);
+        }
         return AssessParameters(declaration.Parameters, typeMap);
     }
 

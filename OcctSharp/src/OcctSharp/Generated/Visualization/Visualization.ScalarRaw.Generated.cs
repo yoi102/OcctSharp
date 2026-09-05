@@ -6,6 +6,7 @@
 // Source: c:@S@AIS_ViewCube@F@IsBoxEdge#$@E@V3d_TypeOfOrientation#S
 // Source: c:@S@AIS_ViewCube@F@IsBoxSide#$@E@V3d_TypeOfOrientation#S
 // Source: c:@S@Aspect_OpenVRSession@F@IsHmdPresent#S
+// Source: c:@S@DsgPrs@F@DistanceFromApex#&1$@S@gp_Elips#&1$@S@gp_Pnt#d#S
 // Source: c:@S@Graphic3d_Aspects@F@DefaultLinePatternForType#$@E@Aspect_TypeOfLine#S
 // Source: c:@S@Graphic3d_Aspects@F@DefaultLineTypeForPattern#s#S
 // Source: c:@S@Graphic3d_Attribute@F@Stride#$@E@Graphic3d_TypeOfData#S
@@ -51,9 +52,14 @@
 // Source: c:@S@Prs3d_DatumAspect@F@ArrowPartForAxis#$@E@Prs3d_DatumParts#S
 // Source: c:@S@Prs3d_ToolQuadric@F@TrianglesNb#I#I#S
 // Source: c:@S@Prs3d_ToolQuadric@F@VerticesNb#I#I#b#S
+// Source: c:@S@PrsDim@F@DistanceFromApex#&1$@S@gp_Elips#&1$@S@gp_Pnt#d#S
 // Source: c:@S@PrsDim@F@InDomain#d#d#d#S
+// Source: c:@S@PrsDim@F@Nearest#&1$@S@gp_Lin#&1$@S@gp_Pnt#S
+// Source: c:@S@PrsDim@F@ProjectPointOnLine#&1$@S@gp_Pnt#&1$@S@gp_Lin#S
+// Source: c:@S@PrsDim@F@ProjectPointOnPlane#&1$@S@gp_Pnt#&1$@S@gp_Pln#S
 // Source: c:@S@SelectBasics@F@MaxOwnerPriority#S
 // Source: c:@S@SelectBasics@F@MinOwnerPriority#S
+// Source: c:@S@V3d@F@GetProjAxis#$@E@V3d_TypeOfOrientation#S
 // Source: c:@S@WNT_HIDSpaceMouse@F@IsKnownProduct#l#S
 // Source: c:@S@WNT_Window@F@MouseButtonsAsync#S
 // Source: c:@S@WNT_Window@F@MouseButtonsFromEvent#k#S
@@ -98,6 +104,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_aspect_open_vrsession_is_hmd_present_static_is_hmd_present_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial int AspectOpenVRSessionStaticIsHmdPresent0();
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_dsg_prs_distance_from_apex_static_distance_from_apex_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus DsgPrsStaticDistanceFromApex0Checked(global::OcctSharp.Values.Ellipse3d elips, Point3dRaw Apex, double par, out double generatedResult);
+    internal static double DsgPrsStaticDistanceFromApex0(global::OcctSharp.Values.Ellipse3d elips, Point3dRaw Apex, double par)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(DsgPrsStaticDistanceFromApex0Checked(elips, Apex, par, out double generatedResult), "occtsharp_generated_dsg_prs_distance_from_apex_static_distance_from_apex_0");
+        return generatedResult;
+    }
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_graphic3d_aspects_default_line_pattern_for_type_static_default_line_pattern_for_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     private static partial global::OcctSharp.Interop.NativeStatus Graphic3dAspectsStaticDefaultLinePatternForType0Checked(int theType, out ushort generatedResult);
@@ -330,10 +344,42 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs3d_tool_quadric_vertices_nb_static_vertices_nb_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial int Prs3dToolQuadricStaticVerticesNb0(int theSlicesNb, int theStacksNb, int theIsIndexed);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_distance_from_apex_static_distance_from_apex_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus PrsDimStaticDistanceFromApex0Checked(global::OcctSharp.Values.Ellipse3d elips, Point3dRaw Apex, double par, out double generatedResult);
+    internal static double PrsDimStaticDistanceFromApex0(global::OcctSharp.Values.Ellipse3d elips, Point3dRaw Apex, double par)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(PrsDimStaticDistanceFromApex0Checked(elips, Apex, par, out double generatedResult), "occtsharp_generated_prs_dim_distance_from_apex_static_distance_from_apex_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_in_domain_static_in_domain_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial int PrsDimStaticInDomain0(double aFirstPar, double aLastPar, double anAttachPar);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_nearest_static_nearest_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus PrsDimStaticNearest0Checked(global::OcctSharp.Values.Line3d theLine, Point3dRaw thePoint, out Point3dRaw generatedResult);
+    internal static Point3dRaw PrsDimStaticNearest0(global::OcctSharp.Values.Line3d theLine, Point3dRaw thePoint)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(PrsDimStaticNearest0Checked(theLine, thePoint, out Point3dRaw generatedResult), "occtsharp_generated_prs_dim_nearest_static_nearest_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_project_point_on_line_static_project_point_on_line_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus PrsDimStaticProjectPointOnLine0Checked(Point3dRaw aPoint, global::OcctSharp.Values.Line3d aLine, out Point3dRaw generatedResult);
+    internal static Point3dRaw PrsDimStaticProjectPointOnLine0(Point3dRaw aPoint, global::OcctSharp.Values.Line3d aLine)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(PrsDimStaticProjectPointOnLine0Checked(aPoint, aLine, out Point3dRaw generatedResult), "occtsharp_generated_prs_dim_project_point_on_line_static_project_point_on_line_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_prs_dim_project_point_on_plane_static_project_point_on_plane_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus PrsDimStaticProjectPointOnPlane0Checked(Point3dRaw aPoint, global::OcctSharp.Values.Plane aPlane, out Point3dRaw generatedResult);
+    internal static Point3dRaw PrsDimStaticProjectPointOnPlane0(Point3dRaw aPoint, global::OcctSharp.Values.Plane aPlane)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(PrsDimStaticProjectPointOnPlane0Checked(aPoint, aPlane, out Point3dRaw generatedResult), "occtsharp_generated_prs_dim_project_point_on_plane_static_project_point_on_plane_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_basics_max_owner_priority_static_max_owner_priority_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -342,6 +388,14 @@ internal static partial class VisualizationGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_select_basics_min_owner_priority_static_min_owner_priority_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial int SelectBasicsStaticMinOwnerPriority0();
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_v3d_get_proj_axis_static_get_proj_axis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus V3dStaticGetProjAxis0Checked(int theOrientation, out global::OcctSharp.Values.Direction3d generatedResult);
+    internal static global::OcctSharp.Values.Direction3d V3dStaticGetProjAxis0(int theOrientation)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(V3dStaticGetProjAxis0Checked(theOrientation, out global::OcctSharp.Values.Direction3d generatedResult), "occtsharp_generated_v3d_get_proj_axis_static_get_proj_axis_0");
+        return generatedResult;
+    }
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_wnt_hidspace_mouse_is_known_product_static_is_known_product_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     private static partial global::OcctSharp.Interop.NativeStatus WNTHIDSpaceMouseStaticIsKnownProduct0Checked(uint theProductId, out int generatedResult);

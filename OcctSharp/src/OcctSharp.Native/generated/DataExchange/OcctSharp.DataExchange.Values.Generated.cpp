@@ -35,6 +35,7 @@
 // Source: c:@S@MoniTool_Timer@F@ClearTimers#S
 // Source: c:@S@MoniTool_Timer@F@ComputeAmendments#S
 // Source: c:@S@RWHeaderSection@F@Init#S
+// Source: c:@S@RWMesh_CoordinateSystemConverter@F@StandardCoordinateSystem#$@E@RWMesh_CoordinateSystem#S
 // Source: c:@S@STEPConstruct_UnitContext@F@ConvertSiPrefix#$@E@StepBasic_SiPrefix#S
 // Source: c:@S@STEPControl_Controller@F@Init#S
 // Source: c:@S@StepData@F@Init#S
@@ -78,6 +79,7 @@ static_assert(sizeof(double) == 8 && std::numeric_limits<double>::is_iec559);
 #include <Interface_TypedValue.hxx>
 #include <MoniTool_Timer.hxx>
 #include <RWHeaderSection.hxx>
+#include <RWMesh_CoordinateSystemConverter.hxx>
 #include <STEPConstruct_UnitContext.hxx>
 #include <STEPControl_Controller.hxx>
 #include <StepData.hxx>
@@ -283,6 +285,21 @@ void OCCTSHARP_CALL occtsharp_generated_moni_tool_timer_compute_amendments_stati
 void OCCTSHARP_CALL occtsharp_generated_rwheader_section_init_static_init_0(void)
 {
   return RWHeaderSection::Init();
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_rwmesh_coordinate_system_converter_standard_coordinate_system_static_standard_coordinate_system_0(int32_t theSys, OcctSharp_Value_Axis3* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(RWMesh_CoordinateSystemConverter::StandardCoordinateSystem(static_cast<RWMesh_CoordinateSystem>(theSys)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }
 
 double OCCTSHARP_CALL occtsharp_generated_stepconstruct_unit_context_convert_si_prefix_static_convert_si_prefix_0(

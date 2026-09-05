@@ -5037,6 +5037,18 @@
   ],
   "excludedBindings": [
     {
+      "stableId": "c:@S@VrmlData_IndexedFaceSet@F@GetNormal#I#I#",
+      "code": "SK008",
+      "category": "ArtifactUnavailable",
+      "detail": "Batch Y SC-062: GetNormal(int,int) is declared but absent from both pinned TKDEVRML Release/Debug exports; the exact generated call fails linkage."
+    },
+    {
+      "stableId": "c:@S@Select3D_SensitiveCircle@F@Select3D_SensitiveCircle#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Circ#b#I#",
+      "code": "SK008",
+      "category": "ArtifactUnavailable",
+      "detail": "Batch Y SC-062: the deprecated four-argument inline delegating constructor requires a Select3D_SensitiveCircle vftable absent from both pinned TKV3d artifacts. The exported three-argument constructor remains selected."
+    },
+    {
       "stableId": "c:@S@Cocoa_Window@F@VirtualKeyFromNative#I#S",
       "code": "SK008",
       "category": "ArtifactUnavailable",

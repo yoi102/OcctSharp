@@ -94,6 +94,7 @@
 // Source: c:@S@Poly_Triangulation@F@SetDoublePrecision#b#
 // Source: c:@S@Poly_Triangulation@F@SetMeshPurpose#i#
 // Source: c:@S@Poly_Triangulation@F@SetNode#I#&1$@S@gp_Pnt#
+// Source: c:@S@Poly_Triangulation@F@SetNormal#I#&1$@S@gp_Dir#
 // Source: c:@S@Poly_Triangulation@F@UnloadDeferredData#
 // Source: c:@S@Poly_Triangulation@F@UpdateCachedMinMax#
 // Source: c:@S@Poly_TriangulationParameters@F@Angle#1
@@ -1723,6 +1724,17 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_poly_triangulation_method_se
   return GeneratedGuard([&]
   {
     ValidatePolyTriangulation(handle)->Value->SetNode(theIndex, gp_Pnt(thePnt.x, thePnt.y, thePnt.z));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_poly_triangulation_method_set_normal_0(
+  const OcctSharp_PolyTriangulationHandle* handle,
+  int32_t theIndex,
+  OcctSharp_Value_Direction3d theNormal)
+{
+  return GeneratedGuard([&]
+  {
+    ValidatePolyTriangulation(handle)->Value->SetNormal(theIndex, OcctSharp_GeometryValues::ToNative(theNormal));
   });
 }
 

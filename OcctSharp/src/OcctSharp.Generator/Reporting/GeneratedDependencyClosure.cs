@@ -220,6 +220,7 @@ public static class GeneratedDependencyClosureAnalyzer
         {
             "TM004" => moduleIndex.Resolve(type.BaseCanonicalSpelling, type.BaseNativeSpelling),
             "TM005" => OcctProductModule.Geometry,
+            "TM009" => OcctProductModule.Foundation,
             "TM006" when !string.IsNullOrWhiteSpace(type.HandleTargetType) =>
                 moduleIndex.Resolve(type.HandleTargetType),
             "TM007" => OcctProductModule.Modeling,

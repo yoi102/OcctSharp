@@ -35,6 +35,7 @@
 // Source: c:@S@MoniTool_Timer@F@ClearTimers#S
 // Source: c:@S@MoniTool_Timer@F@ComputeAmendments#S
 // Source: c:@S@RWHeaderSection@F@Init#S
+// Source: c:@S@RWMesh_CoordinateSystemConverter@F@StandardCoordinateSystem#$@E@RWMesh_CoordinateSystem#S
 // Source: c:@S@STEPConstruct_UnitContext@F@ConvertSiPrefix#$@E@StepBasic_SiPrefix#S
 // Source: c:@S@STEPControl_Controller@F@Init#S
 // Source: c:@S@StepData@F@Init#S
@@ -47,6 +48,7 @@
 #pragma once
 
 #include "../../include/OcctSharp.Native.h"
+#include "../Foundation/OcctSharp.Foundation.GeometryValues.Generated.h"
 #include "../Geometry/OcctSharp.Geometry.Values.Generated.h"
 
 #ifdef __cplusplus
@@ -143,6 +145,8 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_moni_tool_timer_clear_time
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_moni_tool_timer_compute_amendments_static_compute_amendments_0(void);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_rwheader_section_init_static_init_0(void);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_rwmesh_coordinate_system_converter_standard_coordinate_system_static_standard_coordinate_system_0(int32_t theSys, OcctSharp_Value_Axis3* generatedResult);
 
 OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_stepconstruct_unit_context_convert_si_prefix_static_convert_si_prefix_0(
   int32_t aPrefix);

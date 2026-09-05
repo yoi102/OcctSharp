@@ -23,7 +23,8 @@ public static class SharedHandleBindingEligibilityPass
         InitialTypeMap typeMap)
     {
         if (declaration.SupportState != BindingSupportState.Pending
-            || declaration.Access != BindingAccess.Public)
+            || declaration.Access != BindingAccess.Public
+            || SimpleBindingEligibilityPass.GetProjectionConstraint(declaration) is not null)
         {
             return declaration;
         }

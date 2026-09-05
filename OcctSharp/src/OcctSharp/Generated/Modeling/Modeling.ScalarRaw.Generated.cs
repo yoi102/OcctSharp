@@ -10,9 +10,14 @@
 // Source: c:@S@BOPDS_Tools@F@TypeToInteger#$@E@TopAbs_ShapeEnum#S0_#S
 // Source: c:@S@BOPTools_AlgoTools2D@F@IntermediatePoint#d#d#S
 // Source: c:@S@BOPTools_AlgoTools3D@F@MinStepIn2d#S
+// Source: c:@S@BOPTools_AlgoTools3D@F@SenseFlag#&1$@S@gp_Dir#S0_#S
 // Source: c:@S@BOPTools_AlgoTools@F@DTolerance#S
 // Source: c:@S@BRepBuilderAPI@F@Precision#S
 // Source: c:@S@BRepBuilderAPI@F@Precision#d#S
+// Source: c:@S@BRepBuilderAPI_VertexInspector@F@Coord#I#&1$@S@gp_XYZ#S
+// Source: c:@S@BRepBuilderAPI_VertexInspector@F@Shift#&1$@S@gp_XYZ#d#S
+// Source: c:@S@BRepExtrema_VertexInspector@F@Coord#I#&1$@S@gp_XYZ#S
+// Source: c:@S@BRepExtrema_VertexInspector@F@Shift#&1$@S@gp_XYZ#d#S
 // Source: c:@S@BRepGraph_Layer@F@KindBit#$@S@BRepGraph_NodeId@E@Kind#S
 // Source: c:@S@BRepGraph_Layer@F@RefKindBit#$@S@BRepGraph_RefId@E@Kind#S
 // Source: c:@S@BRepGraph_LayerParametric@F@GenerationMask#$@S@BRepGraph_LayerParametric@E@GenerationFlag#S
@@ -30,8 +35,34 @@
 // Source: c:@S@BRepLib@F@Precision#d#S
 // Source: c:@S@BlendFunc@F@NextShape#$@E@GeomAbs_Shape#S
 // Source: c:@S@ChFi3d@F@SameSide#$@E@TopAbs_Orientation#S0_#S0_#S0_#S0_#S
+// Source: c:@S@HLRBRep_LineTool@F@Circle#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@Continuity#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@DN#&1$@S@gp_Lin#d#I#S
+// Source: c:@S@HLRBRep_LineTool@F@Degree#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@Ellipse#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@FirstParameter#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@GetType#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@Hyperbola#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@IntervalContinuity#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@IntervalFirst#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@IntervalLast#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@IsClosed#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@IsPeriodic#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@IsRational#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@LastParameter#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@Line#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@NbIntervals#&1$@S@gp_Lin#$@E@GeomAbs_Shape#S
+// Source: c:@S@HLRBRep_LineTool@F@NbKnots#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@NbPoles#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@NbSamples#&1$@S@gp_Lin#d#d#S
+// Source: c:@S@HLRBRep_LineTool@F@Parabola#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@Period#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@Resolution#&1$@S@gp_Lin#d#S
+// Source: c:@S@HLRBRep_LineTool@F@Value#&1$@S@gp_Lin#d#S
 // Source: c:@S@IntTools_Tools@F@ComputeIntRange#d#d#d#S
 // Source: c:@S@IntTools_Tools@F@IntermediatePoint#d#d#S
+// Source: c:@S@IntTools_Tools@F@IsDirsCoinside#&1$@S@gp_Dir#S0_#S
+// Source: c:@S@IntTools_Tools@F@IsDirsCoinside#&1$@S@gp_Dir#S0_#d#S
 // Source: c:@S@Intf@F@Contain#&1$@S@gp_Pnt#S0_#S0_#S0_#S
 // Source: c:@S@ShapeAlgo@F@Init#S
 // Source: c:@S@ShapeAnalysis@F@AdjustByPeriod#d#d#d#S
@@ -53,6 +84,8 @@
 // Source: c:@S@TopOpeBRepDS@F@IsTopology#$@E@TopOpeBRepDS_Kind#S
 // Source: c:@S@TopOpeBRepDS@F@KindToShape#$@E@TopOpeBRepDS_Kind#S
 // Source: c:@S@TopOpeBRepDS@F@ShapeToKind#$@E@TopAbs_ShapeEnum#S
+// Source: c:@S@TopOpeBRepTool_TOOL@F@Matter#&1$@S@gp_Vec#S0_#S0_#S
+// Source: c:@S@TopOpeBRepTool_TOOL@F@Matter#&1$@S@gp_Vec2d#S0_#S
 // Source: c:@S@TopTools@F@Dummy#I#S
 // Source: c:@S@TopTrans_SurfaceTransition@F@GetAfter#$@E@TopAbs_Orientation#S
 // Source: c:@S@TopTrans_SurfaceTransition@F@GetBefore#$@E@TopAbs_Orientation#S
@@ -107,6 +140,14 @@ internal static partial class ModelingGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_boptools_algo_tools3_d_min_step_in2d_static_min_step_in2d_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial double BOPToolsAlgoTools3DStaticMinStepIn2d0();
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_boptools_algo_tools3_d_sense_flag_static_sense_flag_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus BOPToolsAlgoTools3DStaticSenseFlag0Checked(global::OcctSharp.Values.Direction3d aNF1, global::OcctSharp.Values.Direction3d aNF2, out int generatedResult);
+    internal static int BOPToolsAlgoTools3DStaticSenseFlag0(global::OcctSharp.Values.Direction3d aNF1, global::OcctSharp.Values.Direction3d aNF2)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(BOPToolsAlgoTools3DStaticSenseFlag0Checked(aNF1, aNF2, out int generatedResult), "occtsharp_generated_boptools_algo_tools3_d_sense_flag_static_sense_flag_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_boptools_algo_tools_dtolerance_static_d_tolerance_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -119,6 +160,38 @@ internal static partial class ModelingGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_builder_api_precision_static_precision_1")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void BRepBuilderAPIStaticPrecision1(double P);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_builder_api_vertex_inspector_coord_static_coord_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus BRepBuilderAPIVertexInspectorStaticCoord0Checked(int i, global::OcctSharp.Values.Coordinates3d thePnt, out double generatedResult);
+    internal static double BRepBuilderAPIVertexInspectorStaticCoord0(int i, global::OcctSharp.Values.Coordinates3d thePnt)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(BRepBuilderAPIVertexInspectorStaticCoord0Checked(i, thePnt, out double generatedResult), "occtsharp_generated_brep_builder_api_vertex_inspector_coord_static_coord_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_builder_api_vertex_inspector_shift_static_shift_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus BRepBuilderAPIVertexInspectorStaticShift0Checked(global::OcctSharp.Values.Coordinates3d thePnt, double theTol, out global::OcctSharp.Values.Coordinates3d generatedResult);
+    internal static global::OcctSharp.Values.Coordinates3d BRepBuilderAPIVertexInspectorStaticShift0(global::OcctSharp.Values.Coordinates3d thePnt, double theTol)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(BRepBuilderAPIVertexInspectorStaticShift0Checked(thePnt, theTol, out global::OcctSharp.Values.Coordinates3d generatedResult), "occtsharp_generated_brep_builder_api_vertex_inspector_shift_static_shift_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_extrema_vertex_inspector_coord_static_coord_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus BRepExtremaVertexInspectorStaticCoord0Checked(int i, global::OcctSharp.Values.Coordinates3d thePnt, out double generatedResult);
+    internal static double BRepExtremaVertexInspectorStaticCoord0(int i, global::OcctSharp.Values.Coordinates3d thePnt)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(BRepExtremaVertexInspectorStaticCoord0Checked(i, thePnt, out double generatedResult), "occtsharp_generated_brep_extrema_vertex_inspector_coord_static_coord_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_extrema_vertex_inspector_shift_static_shift_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus BRepExtremaVertexInspectorStaticShift0Checked(global::OcctSharp.Values.Coordinates3d thePnt, double theTol, out global::OcctSharp.Values.Coordinates3d generatedResult);
+    internal static global::OcctSharp.Values.Coordinates3d BRepExtremaVertexInspectorStaticShift0(global::OcctSharp.Values.Coordinates3d thePnt, double theTol)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(BRepExtremaVertexInspectorStaticShift0Checked(thePnt, theTol, out global::OcctSharp.Values.Coordinates3d generatedResult), "occtsharp_generated_brep_extrema_vertex_inspector_shift_static_shift_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_graph_layer_kind_bit_static_kind_bit_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -199,6 +272,198 @@ internal static partial class ModelingGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_ch_fi3d_same_side_static_same_side_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial int ChFi3dStaticSameSide0(int Or, int OrSave1, int OrSave2, int OrFace1, int OrFace2);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_circle_static_circle_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticCircle0Checked(global::OcctSharp.Values.Line3d C, out global::OcctSharp.Values.Circle3d generatedResult);
+    internal static global::OcctSharp.Values.Circle3d HLRBRepLineToolStaticCircle0(global::OcctSharp.Values.Line3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticCircle0Checked(C, out global::OcctSharp.Values.Circle3d generatedResult), "occtsharp_generated_hlrbrep_line_tool_circle_static_circle_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_continuity_static_continuity_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticContinuity0Checked(global::OcctSharp.Values.Line3d C, out int generatedResult);
+    internal static int HLRBRepLineToolStaticContinuity0(global::OcctSharp.Values.Line3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticContinuity0Checked(C, out int generatedResult), "occtsharp_generated_hlrbrep_line_tool_continuity_static_continuity_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_dn_static_dn_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticDN0Checked(global::OcctSharp.Values.Line3d C, double U, int N, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d HLRBRepLineToolStaticDN0(global::OcctSharp.Values.Line3d C, double U, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticDN0Checked(C, U, N, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_hlrbrep_line_tool_dn_static_dn_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_degree_static_degree_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticDegree0Checked(global::OcctSharp.Values.Line3d C, out int generatedResult);
+    internal static int HLRBRepLineToolStaticDegree0(global::OcctSharp.Values.Line3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticDegree0Checked(C, out int generatedResult), "occtsharp_generated_hlrbrep_line_tool_degree_static_degree_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_ellipse_static_ellipse_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticEllipse0Checked(global::OcctSharp.Values.Line3d C, out global::OcctSharp.Values.Ellipse3d generatedResult);
+    internal static global::OcctSharp.Values.Ellipse3d HLRBRepLineToolStaticEllipse0(global::OcctSharp.Values.Line3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticEllipse0Checked(C, out global::OcctSharp.Values.Ellipse3d generatedResult), "occtsharp_generated_hlrbrep_line_tool_ellipse_static_ellipse_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_first_parameter_static_first_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticFirstParameter0Checked(global::OcctSharp.Values.Line3d C, out double generatedResult);
+    internal static double HLRBRepLineToolStaticFirstParameter0(global::OcctSharp.Values.Line3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticFirstParameter0Checked(C, out double generatedResult), "occtsharp_generated_hlrbrep_line_tool_first_parameter_static_first_parameter_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_get_type_static_get_type_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticGetType0Checked(global::OcctSharp.Values.Line3d C, out int generatedResult);
+    internal static int HLRBRepLineToolStaticGetType0(global::OcctSharp.Values.Line3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticGetType0Checked(C, out int generatedResult), "occtsharp_generated_hlrbrep_line_tool_get_type_static_get_type_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_hyperbola_static_hyperbola_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticHyperbola0Checked(global::OcctSharp.Values.Line3d C, out global::OcctSharp.Values.Hyperbola3d generatedResult);
+    internal static global::OcctSharp.Values.Hyperbola3d HLRBRepLineToolStaticHyperbola0(global::OcctSharp.Values.Line3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticHyperbola0Checked(C, out global::OcctSharp.Values.Hyperbola3d generatedResult), "occtsharp_generated_hlrbrep_line_tool_hyperbola_static_hyperbola_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_interval_continuity_static_interval_continuity_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticIntervalContinuity0Checked(global::OcctSharp.Values.Line3d C, out int generatedResult);
+    internal static int HLRBRepLineToolStaticIntervalContinuity0(global::OcctSharp.Values.Line3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticIntervalContinuity0Checked(C, out int generatedResult), "occtsharp_generated_hlrbrep_line_tool_interval_continuity_static_interval_continuity_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_interval_first_static_interval_first_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticIntervalFirst0Checked(global::OcctSharp.Values.Line3d C, out double generatedResult);
+    internal static double HLRBRepLineToolStaticIntervalFirst0(global::OcctSharp.Values.Line3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticIntervalFirst0Checked(C, out double generatedResult), "occtsharp_generated_hlrbrep_line_tool_interval_first_static_interval_first_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_interval_last_static_interval_last_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticIntervalLast0Checked(global::OcctSharp.Values.Line3d C, out double generatedResult);
+    internal static double HLRBRepLineToolStaticIntervalLast0(global::OcctSharp.Values.Line3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticIntervalLast0Checked(C, out double generatedResult), "occtsharp_generated_hlrbrep_line_tool_interval_last_static_interval_last_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_is_closed_static_is_closed_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticIsClosed0Checked(global::OcctSharp.Values.Line3d C, out int generatedResult);
+    internal static int HLRBRepLineToolStaticIsClosed0(global::OcctSharp.Values.Line3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticIsClosed0Checked(C, out int generatedResult), "occtsharp_generated_hlrbrep_line_tool_is_closed_static_is_closed_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_is_periodic_static_is_periodic_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticIsPeriodic0Checked(global::OcctSharp.Values.Line3d C, out int generatedResult);
+    internal static int HLRBRepLineToolStaticIsPeriodic0(global::OcctSharp.Values.Line3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticIsPeriodic0Checked(C, out int generatedResult), "occtsharp_generated_hlrbrep_line_tool_is_periodic_static_is_periodic_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_is_rational_static_is_rational_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticIsRational0Checked(global::OcctSharp.Values.Line3d C, out int generatedResult);
+    internal static int HLRBRepLineToolStaticIsRational0(global::OcctSharp.Values.Line3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticIsRational0Checked(C, out int generatedResult), "occtsharp_generated_hlrbrep_line_tool_is_rational_static_is_rational_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_last_parameter_static_last_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticLastParameter0Checked(global::OcctSharp.Values.Line3d C, out double generatedResult);
+    internal static double HLRBRepLineToolStaticLastParameter0(global::OcctSharp.Values.Line3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticLastParameter0Checked(C, out double generatedResult), "occtsharp_generated_hlrbrep_line_tool_last_parameter_static_last_parameter_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_line_static_line_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticLine0Checked(global::OcctSharp.Values.Line3d C, out global::OcctSharp.Values.Line3d generatedResult);
+    internal static global::OcctSharp.Values.Line3d HLRBRepLineToolStaticLine0(global::OcctSharp.Values.Line3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticLine0Checked(C, out global::OcctSharp.Values.Line3d generatedResult), "occtsharp_generated_hlrbrep_line_tool_line_static_line_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_nb_intervals_static_nb_intervals_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticNbIntervals0Checked(global::OcctSharp.Values.Line3d C, int S, out int generatedResult);
+    internal static int HLRBRepLineToolStaticNbIntervals0(global::OcctSharp.Values.Line3d C, int S)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticNbIntervals0Checked(C, S, out int generatedResult), "occtsharp_generated_hlrbrep_line_tool_nb_intervals_static_nb_intervals_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_nb_knots_static_nb_knots_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticNbKnots0Checked(global::OcctSharp.Values.Line3d C, out int generatedResult);
+    internal static int HLRBRepLineToolStaticNbKnots0(global::OcctSharp.Values.Line3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticNbKnots0Checked(C, out int generatedResult), "occtsharp_generated_hlrbrep_line_tool_nb_knots_static_nb_knots_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_nb_poles_static_nb_poles_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticNbPoles0Checked(global::OcctSharp.Values.Line3d C, out int generatedResult);
+    internal static int HLRBRepLineToolStaticNbPoles0(global::OcctSharp.Values.Line3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticNbPoles0Checked(C, out int generatedResult), "occtsharp_generated_hlrbrep_line_tool_nb_poles_static_nb_poles_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_nb_samples_static_nb_samples_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticNbSamples0Checked(global::OcctSharp.Values.Line3d C, double U0, double U1, out int generatedResult);
+    internal static int HLRBRepLineToolStaticNbSamples0(global::OcctSharp.Values.Line3d C, double U0, double U1)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticNbSamples0Checked(C, U0, U1, out int generatedResult), "occtsharp_generated_hlrbrep_line_tool_nb_samples_static_nb_samples_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_parabola_static_parabola_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticParabola0Checked(global::OcctSharp.Values.Line3d C, out global::OcctSharp.Values.Parabola3d generatedResult);
+    internal static global::OcctSharp.Values.Parabola3d HLRBRepLineToolStaticParabola0(global::OcctSharp.Values.Line3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticParabola0Checked(C, out global::OcctSharp.Values.Parabola3d generatedResult), "occtsharp_generated_hlrbrep_line_tool_parabola_static_parabola_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_period_static_period_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticPeriod0Checked(global::OcctSharp.Values.Line3d C, out double generatedResult);
+    internal static double HLRBRepLineToolStaticPeriod0(global::OcctSharp.Values.Line3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticPeriod0Checked(C, out double generatedResult), "occtsharp_generated_hlrbrep_line_tool_period_static_period_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_resolution_static_resolution_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticResolution0Checked(global::OcctSharp.Values.Line3d C, double R3d, out double generatedResult);
+    internal static double HLRBRepLineToolStaticResolution0(global::OcctSharp.Values.Line3d C, double R3d)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticResolution0Checked(C, R3d, out double generatedResult), "occtsharp_generated_hlrbrep_line_tool_resolution_static_resolution_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_hlrbrep_line_tool_value_static_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus HLRBRepLineToolStaticValue0Checked(global::OcctSharp.Values.Line3d C, double U, out Point3dRaw generatedResult);
+    internal static Point3dRaw HLRBRepLineToolStaticValue0(global::OcctSharp.Values.Line3d C, double U)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(HLRBRepLineToolStaticValue0Checked(C, U, out Point3dRaw generatedResult), "occtsharp_generated_hlrbrep_line_tool_value_static_value_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_int_tools_tools_compute_int_range_static_compute_int_range_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -207,6 +472,22 @@ internal static partial class ModelingGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_int_tools_tools_intermediate_point_static_intermediate_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial double IntToolsToolsStaticIntermediatePoint0(double aFirst, double aLast);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_int_tools_tools_is_dirs_coinside_static_is_dirs_coinside_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus IntToolsToolsStaticIsDirsCoinside0Checked(global::OcctSharp.Values.Direction3d D1, global::OcctSharp.Values.Direction3d D2, out int generatedResult);
+    internal static int IntToolsToolsStaticIsDirsCoinside0(global::OcctSharp.Values.Direction3d D1, global::OcctSharp.Values.Direction3d D2)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(IntToolsToolsStaticIsDirsCoinside0Checked(D1, D2, out int generatedResult), "occtsharp_generated_int_tools_tools_is_dirs_coinside_static_is_dirs_coinside_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_int_tools_tools_is_dirs_coinside_static_is_dirs_coinside_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus IntToolsToolsStaticIsDirsCoinside1Checked(global::OcctSharp.Values.Direction3d D1, global::OcctSharp.Values.Direction3d D2, double aTol, out int generatedResult);
+    internal static int IntToolsToolsStaticIsDirsCoinside1(global::OcctSharp.Values.Direction3d D1, global::OcctSharp.Values.Direction3d D2, double aTol)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(IntToolsToolsStaticIsDirsCoinside1Checked(D1, D2, aTol, out int generatedResult), "occtsharp_generated_int_tools_tools_is_dirs_coinside_static_is_dirs_coinside_1");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_intf_contain_static_contain_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -291,6 +572,22 @@ internal static partial class ModelingGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_top_ope_brep_ds_shape_to_kind_static_shape_to_kind_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial int TopOpeBRepDSStaticShapeToKind0(int S);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_top_ope_brep_tool_tool_matter_static_matter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus TopOpeBRepToolTOOLStaticMatter0Checked(global::OcctSharp.Values.Vector3d d1, global::OcctSharp.Values.Vector3d d2, global::OcctSharp.Values.Vector3d @ref, out double generatedResult);
+    internal static double TopOpeBRepToolTOOLStaticMatter0(global::OcctSharp.Values.Vector3d d1, global::OcctSharp.Values.Vector3d d2, global::OcctSharp.Values.Vector3d @ref)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(TopOpeBRepToolTOOLStaticMatter0Checked(d1, d2, @ref, out double generatedResult), "occtsharp_generated_top_ope_brep_tool_tool_matter_static_matter_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_top_ope_brep_tool_tool_matter_static_matter_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus TopOpeBRepToolTOOLStaticMatter1Checked(global::OcctSharp.Values.Vector2d d1, global::OcctSharp.Values.Vector2d d2, out double generatedResult);
+    internal static double TopOpeBRepToolTOOLStaticMatter1(global::OcctSharp.Values.Vector2d d1, global::OcctSharp.Values.Vector2d d2)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(TopOpeBRepToolTOOLStaticMatter1Checked(d1, d2, out double generatedResult), "occtsharp_generated_top_ope_brep_tool_tool_matter_static_matter_1");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_top_tools_dummy_static_dummy_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

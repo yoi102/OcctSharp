@@ -94,6 +94,7 @@
 // Source: c:@S@Poly_Triangulation@F@SetDoublePrecision#b#
 // Source: c:@S@Poly_Triangulation@F@SetMeshPurpose#i#
 // Source: c:@S@Poly_Triangulation@F@SetNode#I#&1$@S@gp_Pnt#
+// Source: c:@S@Poly_Triangulation@F@SetNormal#I#&1$@S@gp_Dir#
 // Source: c:@S@Poly_Triangulation@F@UnloadDeferredData#
 // Source: c:@S@Poly_Triangulation@F@UpdateCachedMinMax#
 // Source: c:@S@Poly_TriangulationParameters@F@Angle#1
@@ -638,6 +639,10 @@ internal static partial class MeshDataGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_poly_triangulation_method_set_node_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus PolyTriangulationMethodSetNode0(PolyTriangulationHandle handle, int theIndex, Point3dRaw thePnt);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_poly_triangulation_method_set_normal_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus PolyTriangulationMethodSetNormal0(PolyTriangulationHandle handle, int theIndex, global::OcctSharp.Values.Direction3d theNormal);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_poly_triangulation_method_unload_deferred_data_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

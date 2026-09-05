@@ -19,8 +19,10 @@
 // Source: c:@S@BRepMeshData_Model@F@GetFace#I#1
 // Source: c:@S@BRepMeshData_Model@F@GetMaxSize#1
 // Source: c:@S@BRepMeshData_Model@F@SetMaxSize#d#
+// Source: c:@S@BRepMeshData_PCurve@F@AddPoint#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@BRepMeshData_PCurve@F@Clear#b#
 // Source: c:@S@BRepMeshData_PCurve@F@DynamicType#1
+// Source: c:@S@BRepMeshData_PCurve@F@InsertPoint#I#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@BRepMeshData_PCurve@F@ParametersNb#1
 // Source: c:@S@BRepMeshData_PCurve@F@RemovePoint#I#
 // Source: c:@S@BRepMeshData_Wire@F@DynamicType#1
@@ -29,6 +31,7 @@
 // Source: c:@S@BRepMesh_BaseMeshAlgo@F@DynamicType#1
 // Source: c:@S@BRepMesh_Classifier@F@BRepMesh_Classifier#
 // Source: c:@S@BRepMesh_Classifier@F@DynamicType#1
+// Source: c:@S@BRepMesh_Classifier@F@Perform#&1$@S@gp_Pnt2d#1
 // Source: c:@S@BRepMesh_ConstrainedBaseMeshAlgo@F@DynamicType#1
 // Source: c:@S@BRepMesh_Context@F@BRepMesh_Context#$@E@IMeshTools_MeshAlgoType#
 // Source: c:@S@BRepMesh_Context@F@DynamicType#1
@@ -460,6 +463,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_model_release(OcctSharp_BRepMeshDataModelHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_pcurve_method_add_point_0(
+  const OcctSharp_BRepMeshDataPCurveHandle* handle,
+  OcctSharp_Value_Point2d thePoint,
+  double theParamOnPCurve);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_pcurve_method_clear_0(
   const OcctSharp_BRepMeshDataPCurveHandle* handle,
   int32_t isKeepEndPoints);
@@ -467,6 +475,12 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_pcurve_method_dynamic_type_0(
   const OcctSharp_BRepMeshDataPCurveHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_pcurve_method_insert_point_0(
+  const OcctSharp_BRepMeshDataPCurveHandle* handle,
+  int32_t thePosition,
+  OcctSharp_Value_Point2d thePoint,
+  double theParamOnPCurve);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_pcurve_method_parameters_nb_0(
   const OcctSharp_BRepMeshDataPCurveHandle* handle,
@@ -556,6 +570,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_clas
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_classifier_method_dynamic_type_0(
   const OcctSharp_BRepMeshClassifierHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_classifier_method_perform_0(
+  const OcctSharp_BRepMeshClassifierHandle* handle,
+  OcctSharp_Value_Point2d thePoint,
+  int32_t* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_classifier_clone(
   const OcctSharp_BRepMeshClassifierHandle* source,

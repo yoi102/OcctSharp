@@ -5,6 +5,82 @@ namespace OcctSharp.Generator.Tests;
 
 public sealed class InitialTypeMapTests
 {
+    [Fact]
+    public void ExactReverseModuleEdgeCannotBePromotedByEitherEligibilityPass()
+    {
+        BindingDeclaration method = new("c:@S@Adaptor3d_TopolTool@F@Classify#&1$@S@gp_Pnt2d#d#b#",
+            "Adaptor3d_TopolTool::Classify", BindingDeclarationKind.Method, "Adaptor3d_TopolTool.hxx", 1, 1)
+        { Access = BindingAccess.Public, ReturnType = CreateValueType("double", "double"), SupportState = BindingSupportState.Pending };
+        var assessment = Transformation.SimpleBindingEligibilityPass.Assess(method, new InitialTypeMap());
+        Assert.False(assessment.IsEligible);
+        Assert.Equal("EL009", assessment.Code);
+        BindingDeclaration owner = new("y:owner", "Adaptor3d_TopolTool", BindingDeclarationKind.Record, "Adaptor3d_TopolTool.hxx", 1, 1)
+        { BaseTypes = [new(CreateValueType("Standard_Transient", "Standard_Transient"), BindingAccess.Public, false)] };
+        BindingDeclaration unrelated = method with { StableId = "y:unrelated-overload" };
+        BindingModel result = Transformation.SharedHandleBindingEligibilityPass.Apply(new BindingModel([owner, method, unrelated]));
+        Assert.Equal(BindingSupportState.Pending, result.Declarations.Single(d => d.StableId == method.StableId).SupportState);
+        Assert.Equal(BindingSupportState.Supported, result.Declarations.Single(d => d.StableId == unrelated.StableId).SupportState);
+    }
+
+    [Theory]
+    [InlineData("gp_XY")]
+    [InlineData("gp_XYZ")]
+    [InlineData("gp_Pnt2d")]
+    [InlineData("gp_Vec2d")]
+    [InlineData("gp_Vec")]
+    [InlineData("gp_Dir2d")]
+    [InlineData("gp_Dir")]
+    [InlineData("gp_Ax1")]
+    [InlineData("gp_Ax2")]
+    [InlineData("gp_Ax3")]
+    [InlineData("gp_Ax2d")]
+    [InlineData("gp_Ax22d")]
+    [InlineData("gp_Mat2d")]
+    [InlineData("gp_Mat")]
+    [InlineData("gp_Quaternion")]
+    [InlineData("gp_Lin2d")]
+    [InlineData("gp_Lin")]
+    [InlineData("gp_Circ2d")]
+    [InlineData("gp_Circ")]
+    [InlineData("gp_Elips2d")]
+    [InlineData("gp_Elips")]
+    [InlineData("gp_Hypr2d")]
+    [InlineData("gp_Hypr")]
+    [InlineData("gp_Parab2d")]
+    [InlineData("gp_Parab")]
+    [InlineData("gp_Pln")]
+    [InlineData("gp_Cylinder")]
+    [InlineData("gp_Cone")]
+    [InlineData("gp_Sphere")]
+    [InlineData("gp_Torus")]
+    public void GeometryCopiesAcceptValuesAndConstReferencesOnly(string native)
+    {
+        InitialTypeMap map = new();
+        foreach (BindingTypeUsage usage in new[] { BindingTypeUsage.Parameter, BindingTypeUsage.ReturnValue })
+        {
+            Assert.True(map.TryMap(CreateValueType(native, native), usage, out BindingTypeProjection? projection));
+            Assert.Equal("TM009", projection?.RuleId);
+            Assert.Equal("ValueCopy", projection?.Ownership);
+            Assert.True(map.TryMap(CreateType("const " + native + " &", "const " + native + " &", native, native,
+                new(BindingTypeLayerKind.LValueReference, false), new(BindingTypeLayerKind.Value, true)), usage, out _));
+            Assert.False(map.TryMap(CreateType(native + " &", native + " &", native, native,
+                new(BindingTypeLayerKind.LValueReference, false), new(BindingTypeLayerKind.Value, false)), usage, out _));
+            Assert.False(map.TryMap(CreateType(native + " *", native + " *", native, native,
+                new(BindingTypeLayerKind.PointerIndirection, false), new(BindingTypeLayerKind.Value, false)), usage, out _));
+        }
+    }
+
+    [Fact]
+    public void MappingGeometryInputsDoesNotClaimUnemittedValueConstructors()
+    {
+        BindingDeclaration constructor = new("y:vector-ctor", "gp_Vec::gp_Vec", BindingDeclarationKind.Constructor, "gp_Vec.hxx", 1, 1);
+        Assert.False(Transformation.SimpleBindingEligibilityPass.Assess(constructor, new InitialTypeMap()).IsEligible);
+        Assert.False(new InitialTypeMap().TryMap(CreateValueType("gp_Trsf", "gp_Trsf"), BindingTypeUsage.ReturnValue, out _));
+        BindingDeclaration pointFromXyz = constructor with { NativeName = "gp_Pnt::gp_Pnt",
+            Parameters = [new(0, "xyz", CreateValueType("gp_XYZ", "gp_XYZ"), false)] };
+        Assert.Equal("EL010", Transformation.SimpleBindingEligibilityPass.Assess(pointFromXyz, new InitialTypeMap()).Code);
+    }
+
     [Theory]
     [InlineData("Standard_Integer", "int", "TM001", "int32_t", "int")]
     [InlineData("Standard_Real", "double", "TM002", "double", "double")]

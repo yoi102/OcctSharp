@@ -110,6 +110,8 @@
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@AddModifier#$@E@XCAFDimTolObjects_DimensionModif#
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@DynamicType#1
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@GetAngularQualifier#1
+// Source: c:@S@XCAFDimTolObjects_DimensionObject@F@GetConnectionAxis#1
+// Source: c:@S@XCAFDimTolObjects_DimensionObject@F@GetConnectionAxis2#1
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@GetConnectionName#1
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@GetConnectionName2#1
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@GetDescription#I#1
@@ -141,6 +143,8 @@
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@RemoveDescription#I#
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetAngularQualifier#$@E@XCAFDimTolObjects_AngularQualifier#
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetClassOfTolerance#b#$@E@XCAFDimTolObjects_DimensionFormVariance#$@E@XCAFDimTolObjects_DimensionGrade#
+// Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetConnectionAxis#&1$@S@gp_Ax2#
+// Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetConnectionAxis2#&1$@S@gp_Ax2#
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetConnectionName#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetConnectionName2#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetLowerBound#d#
@@ -174,6 +178,7 @@
 // Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@HasPlane#1
 // Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@HasPoint#1
 // Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@HasPointText#1
+// Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@SetAffectedPlane#&1$@S@gp_Pln#
 // Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@SetAffectedPlaneType#$@E@XCAFDimTolObjects_ToleranceZoneAffectedPlane#
 // Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@SetMaterialRequirementModifier#$@E@XCAFDimTolObjects_GeomToleranceMatReqModif#
 // Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@SetMaxValueModifier#d#
@@ -404,12 +409,14 @@
 // Source: c:@S@XCAFDoc_Volume@F@Set#d#
 // Source: c:@S@XCAFDoc_Volume@F@XCAFDoc_Volume#
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@DynamicType#1
+// Source: c:@S@XCAFNoteObjects_NoteObject@F@GetPlane#1
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@GetPoint#1
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@GetPointText#1
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@HasPlane#1
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@HasPoint#1
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@HasPointText#1
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@Reset#
+// Source: c:@S@XCAFNoteObjects_NoteObject@F@SetPlane#&1$@S@gp_Ax2#
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@SetPoint#&1$@S@gp_Pnt#
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@SetPointText#&1$@S@gp_Pnt#
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@XCAFNoteObjects_NoteObject#
@@ -2957,6 +2964,22 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
         return (XCAFDimTolObjectsAngularQualifier)resultValue;
     }
 
+    /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::GetConnectionAxis.</summary>
+    public global::OcctSharp.Values.Axis2 GetConnectionAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetConnectionAxis0(handle, out global::OcctSharp.Values.Axis2 resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_connection_axis_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::GetConnectionAxis2.</summary>
+    public global::OcctSharp.Values.Axis2 GetConnectionAxis2()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodGetConnectionAxis20(handle, out global::OcctSharp.Values.Axis2 resultValue), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_connection_axis2_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::GetConnectionName.</summary>
     public TCollectionHAsciiString? GetConnectionName()
     {
@@ -3200,6 +3223,20 @@ public sealed class XCAFDimTolObjectsDimensionObject : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetClassOfTolerance0(handle, theHole ? 1 : 0, (int)theFormVariance, (int)theGrade), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_class_of_tolerance_0");
+    }
+
+    /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::SetConnectionAxis.</summary>
+    public void SetConnectionAxis(global::OcctSharp.Values.Axis2 theAxis)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetConnectionAxis0(handle, theAxis), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_connection_axis_0");
+    }
+
+    /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::SetConnectionAxis2.</summary>
+    public void SetConnectionAxis2(global::OcctSharp.Values.Axis2 theAxis)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsDimensionObjectMethodSetConnectionAxis20(handle, theAxis), "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_connection_axis2_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_DimensionObject::SetConnectionName.</summary>
@@ -3519,6 +3556,13 @@ public sealed class XCAFDimTolObjectsGeomToleranceObject : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodHasPointText0(handle, out int resultValue), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_has_point_text_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT XCAFDimTolObjects_GeomToleranceObject::SetAffectedPlane.</summary>
+    public void SetAffectedPlane(global::OcctSharp.Values.Plane thePlane)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFDimTolObjectsGeomToleranceObjectMethodSetAffectedPlane0(handle, thePlane), "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_affected_plane_0");
     }
 
     /// <summary>Invokes OCCT XCAFDimTolObjects_GeomToleranceObject::SetAffectedPlaneType.</summary>
@@ -7466,6 +7510,14 @@ public sealed class XCAFNoteObjectsNoteObject : IDisposable
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_xcafnote_objects_note_object_method_dynamic_type_0");
     }
 
+    /// <summary>Invokes OCCT XCAFNoteObjects_NoteObject::GetPlane.</summary>
+    public global::OcctSharp.Values.Axis2 GetPlane()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFNoteObjectsNoteObjectMethodGetPlane0(handle, out global::OcctSharp.Values.Axis2 resultValue), "occtsharp_generated_xcafnote_objects_note_object_method_get_plane_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT XCAFNoteObjects_NoteObject::GetPoint.</summary>
     public Point3d GetPoint()
     {
@@ -7511,6 +7563,13 @@ public sealed class XCAFNoteObjectsNoteObject : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFNoteObjectsNoteObjectMethodReset0(handle), "occtsharp_generated_xcafnote_objects_note_object_method_reset_0");
+    }
+
+    /// <summary>Invokes OCCT XCAFNoteObjects_NoteObject::SetPlane.</summary>
+    public void SetPlane(global::OcctSharp.Values.Axis2 thePlane)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(XdeGeneratedNativeMethods.XCAFNoteObjectsNoteObjectMethodSetPlane0(handle, thePlane), "occtsharp_generated_xcafnote_objects_note_object_method_set_plane_0");
     }
 
     /// <summary>Invokes OCCT XCAFNoteObjects_NoteObject::SetPoint.</summary>

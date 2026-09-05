@@ -1,5 +1,15 @@
 # Ownership and Lifetime
 
+## Batch Y geometric copies
+
+ADR-0093 adds only ValueCopy projections. Geometric fields are copied during the
+checked native call and survive receiver mutation/disposal without retaining an owner.
+Input records are reconstructed into temporary native values; no C++ storage address
+or layout crosses the ABI. Existing receiver/thread restrictions still apply during
+the call. Invalid nested values fail before invoking the native operation. Indexed
+element references copy one element and retain the native index/domain contract;
+this does not implement bulk sequences or output references.
+
 ## Batch X generated const-reference copies
 
 ADR-0092 adds no borrowed owner category. Known scalar/enum/point const-reference

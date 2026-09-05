@@ -45,6 +45,7 @@
 // Source: c:@S@AIS_Axis@F@AIS_Axis#&1$@N@opencascade@S@handle>#$@S@Geom_Axis1Placement#
 // Source: c:@S@AIS_Axis@F@AIS_Axis#&1$@N@opencascade@S@handle>#$@S@Geom_Axis2Placement#$@E@AIS_TypeOfAxis#
 // Source: c:@S@AIS_Axis@F@AIS_Axis#&1$@N@opencascade@S@handle>#$@S@Geom_Line#
+// Source: c:@S@AIS_Axis@F@AIS_Axis#&1$@S@gp_Ax1#d#
 // Source: c:@S@AIS_Axis@F@AcceptDisplayMode#I#1
 // Source: c:@S@AIS_Axis@F@Axis2Placement#1
 // Source: c:@S@AIS_Axis@F@Component#1
@@ -294,6 +295,7 @@
 // Source: c:@S@AIS_InteractiveContext@F@MoreCurrent#1
 // Source: c:@S@AIS_InteractiveContext@F@MoreDetected#1
 // Source: c:@S@AIS_InteractiveContext@F@MoreSelected#1
+// Source: c:@S@AIS_InteractiveContext@F@MoveTo#&1$@S@gp_Ax1#&1$@N@opencascade@S@handle>#$@S@V3d_View#b#
 // Source: c:@S@AIS_InteractiveContext@F@MoveTo#I#I#&1$@N@opencascade@S@handle>#$@S@V3d_View#b#
 // Source: c:@S@AIS_InteractiveContext@F@NbCurrents#
 // Source: c:@S@AIS_InteractiveContext@F@NbSelected#
@@ -440,6 +442,7 @@
 // Source: c:@S@AIS_Line@F@UnsetColor#
 // Source: c:@S@AIS_Line@F@UnsetWidth#
 // Source: c:@S@AIS_Manipulator@F@AIS_Manipulator#
+// Source: c:@S@AIS_Manipulator@F@AIS_Manipulator#&1$@S@gp_Ax2#
 // Source: c:@S@AIS_Manipulator@F@ActiveAxisIndex#1
 // Source: c:@S@AIS_Manipulator@F@ActiveMode#1
 // Source: c:@S@AIS_Manipulator@F@ClearSelected#
@@ -456,6 +459,7 @@
 // Source: c:@S@AIS_Manipulator@F@IsModeActivationOnDetection#1
 // Source: c:@S@AIS_Manipulator@F@Object#1
 // Source: c:@S@AIS_Manipulator@F@Object#I#1
+// Source: c:@S@AIS_Manipulator@F@Position#1
 // Source: c:@S@AIS_Manipulator@F@RecomputeSelection#$@E@AIS_ManipulatorMode#
 // Source: c:@S@AIS_Manipulator@F@RecomputeTransformation#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@AIS_Manipulator@F@SetModeActivationOnDetection#b#
@@ -600,10 +604,16 @@
 // Source: c:@S@AIS_Shape@F@SetOwnDeviationAngle#d#
 // Source: c:@S@AIS_Shape@F@SetOwnDeviationCoefficient#
 // Source: c:@S@AIS_Shape@F@SetOwnDeviationCoefficient#d#
+// Source: c:@S@AIS_Shape@F@SetTextureOriginUV#&1$@S@gp_Pnt2d#
+// Source: c:@S@AIS_Shape@F@SetTextureRepeatUV#&1$@S@gp_Pnt2d#
+// Source: c:@S@AIS_Shape@F@SetTextureScaleUV#&1$@S@gp_Pnt2d#
 // Source: c:@S@AIS_Shape@F@SetTransparency#d#
 // Source: c:@S@AIS_Shape@F@SetTypeOfHLR#$@E@Prs3d_TypeOfHLR#
 // Source: c:@S@AIS_Shape@F@SetWidth#d#
 // Source: c:@S@AIS_Shape@F@Signature#1
+// Source: c:@S@AIS_Shape@F@TextureOriginUV#1
+// Source: c:@S@AIS_Shape@F@TextureRepeatUV#1
+// Source: c:@S@AIS_Shape@F@TextureScaleUV#1
 // Source: c:@S@AIS_Shape@F@Transparency#1
 // Source: c:@S@AIS_Shape@F@Type#1
 // Source: c:@S@AIS_Shape@F@TypeOfHLR#1
@@ -622,6 +632,7 @@
 // Source: c:@S@AIS_TextLabel@F@HasFlipping#1
 // Source: c:@S@AIS_TextLabel@F@HasOrientation3D#1
 // Source: c:@S@AIS_TextLabel@F@HasOwnAnchorPoint#1
+// Source: c:@S@AIS_TextLabel@F@Orientation3D#1
 // Source: c:@S@AIS_TextLabel@F@Position#1
 // Source: c:@S@AIS_TextLabel@F@SetAngle#d#
 // Source: c:@S@AIS_TextLabel@F@SetDisplayType#$@E@Aspect_TypeOfDisplayText#
@@ -629,6 +640,7 @@
 // Source: c:@S@AIS_TextLabel@F@SetFontAspect#$@E@Font_FontAspect#
 // Source: c:@S@AIS_TextLabel@F@SetHJustification#$@E@Graphic3d_HorizontalTextAlignment#
 // Source: c:@S@AIS_TextLabel@F@SetHeight#d#
+// Source: c:@S@AIS_TextLabel@F@SetOrientation3D#&1$@S@gp_Ax2#
 // Source: c:@S@AIS_TextLabel@F@SetOwnAnchorPoint#b#
 // Source: c:@S@AIS_TextLabel@F@SetPosition#&1$@S@gp_Pnt#
 // Source: c:@S@AIS_TextLabel@F@SetTextFormatter#&1$@N@opencascade@S@handle>#$@S@Font_TextFormatter#
@@ -1005,6 +1017,10 @@
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddTriangleFanEdges#I#I#b#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddTriangleStripEdges#I#I#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#&1$@S@gp_Pnt#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#&1$@S@gp_Pnt#&1$@S@gp_Dir#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#&1$@S@gp_Pnt#&1$@S@gp_Dir#&1$@S@gp_Pnt2d#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#&1$@S@gp_Pnt#&1$@S@gp_Dir#I#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#&1$@S@gp_Pnt#&1$@S@gp_Pnt2d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#&1$@S@gp_Pnt#I#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#d#d#d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@AddVertex#d#d#d#d#d#
@@ -1033,13 +1049,17 @@
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetBoundColor#I#d#d#d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertexColor#I#I#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertexColor#I#d#d#d#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertexNormal#I#&1$@S@gp_Dir#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertexNormal#I#d#d#d#
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertexTexel#I#&1$@S@gp_Pnt2d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertexTexel#I#d#d#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertice#I#&1$@S@gp_Pnt#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@SetVertice#I#f#f#f#
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Type#1
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@VertexNormal#I#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@VertexNumber#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@VertexNumberAllocated#1
+// Source: c:@S@Graphic3d_ArrayOfPrimitives@F@VertexTexel#I#1
 // Source: c:@S@Graphic3d_ArrayOfPrimitives@F@Vertice#I#1
 // Source: c:@S@Graphic3d_ArrayOfQuadrangleStrips@F@DynamicType#1
 // Source: c:@S@Graphic3d_ArrayOfQuadrangleStrips@F@Graphic3d_ArrayOfQuadrangleStrips#I#I#I#
@@ -1301,6 +1321,7 @@
 // Source: c:@S@Graphic3d_CView@F@ZLayerRedrawMode#1
 // Source: c:@S@Graphic3d_CView@F@ZLayerTarget#1
 // Source: c:@S@Graphic3d_Camera@F@Aspect#1
+// Source: c:@S@Graphic3d_Camera@F@AxialScale#1
 // Source: c:@S@Graphic3d_Camera@F@Center#1
 // Source: c:@S@Graphic3d_Camera@F@ConvertProj2View#&1$@S@gp_Pnt#1
 // Source: c:@S@Graphic3d_Camera@F@ConvertView2Proj#&1$@S@gp_Pnt#1
@@ -1309,6 +1330,7 @@
 // Source: c:@S@Graphic3d_Camera@F@Copy#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@Graphic3d_Camera@F@CopyMappingData#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@Graphic3d_Camera@F@CopyOrientationData#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
+// Source: c:@S@Graphic3d_Camera@F@Direction#1
 // Source: c:@S@Graphic3d_Camera@F@Distance#1
 // Source: c:@S@Graphic3d_Camera@F@DynamicType#1
 // Source: c:@S@Graphic3d_Camera@F@FOV2d#1
@@ -1330,13 +1352,17 @@
 // Source: c:@S@Graphic3d_Camera@F@NDC2dOffsetX#1
 // Source: c:@S@Graphic3d_Camera@F@NDC2dOffsetY#1
 // Source: c:@S@Graphic3d_Camera@F@OrthogonalizeUp#
+// Source: c:@S@Graphic3d_Camera@F@OrthogonalizedUp#1
 // Source: c:@S@Graphic3d_Camera@F@Project#&1$@S@gp_Pnt#1
 // Source: c:@S@Graphic3d_Camera@F@ProjectionState#1
 // Source: c:@S@Graphic3d_Camera@F@ProjectionType#1
 // Source: c:@S@Graphic3d_Camera@F@ResetCustomProjection#
 // Source: c:@S@Graphic3d_Camera@F@Scale#1
 // Source: c:@S@Graphic3d_Camera@F@SetAspect#d#
+// Source: c:@S@Graphic3d_Camera@F@SetAxialScale#&1$@S@gp_XYZ#
 // Source: c:@S@Graphic3d_Camera@F@SetCenter#&1$@S@gp_Pnt#
+// Source: c:@S@Graphic3d_Camera@F@SetDirection#&1$@S@gp_Dir#
+// Source: c:@S@Graphic3d_Camera@F@SetDirectionFromEye#&1$@S@gp_Dir#
 // Source: c:@S@Graphic3d_Camera@F@SetDistance#d#
 // Source: c:@S@Graphic3d_Camera@F@SetEye#&1$@S@gp_Pnt#
 // Source: c:@S@Graphic3d_Camera@F@SetEyeAndCenter#&1$@S@gp_Pnt#S0_#
@@ -1349,7 +1375,10 @@
 // Source: c:@S@Graphic3d_Camera@F@SetZFocus#$@S@Graphic3d_Camera@E@FocusType#d#
 // Source: c:@S@Graphic3d_Camera@F@SetZRange#d#d#
 // Source: c:@S@Graphic3d_Camera@F@SetZeroToOneDepth#b#
+// Source: c:@S@Graphic3d_Camera@F@SideRight#1
 // Source: c:@S@Graphic3d_Camera@F@UnProject#&1$@S@gp_Pnt#1
+// Source: c:@S@Graphic3d_Camera@F@ViewDimensions#1
+// Source: c:@S@Graphic3d_Camera@F@ViewDimensions#d#1
 // Source: c:@S@Graphic3d_Camera@F@WorldViewState#1
 // Source: c:@S@Graphic3d_Camera@F@ZFar#1
 // Source: c:@S@Graphic3d_Camera@F@ZFocus#1
@@ -1383,6 +1412,7 @@
 // Source: c:@S@Graphic3d_ClipPlane@F@SetUseObjectMaterial#b#
 // Source: c:@S@Graphic3d_ClipPlane@F@SetUseObjectShader#b#
 // Source: c:@S@Graphic3d_ClipPlane@F@SetUseObjectTexture#b#
+// Source: c:@S@Graphic3d_ClipPlane@F@ToPlane#1
 // Source: c:@S@Graphic3d_ClipPlane@F@ToUseObjectMaterial#1
 // Source: c:@S@Graphic3d_ClipPlane@F@ToUseObjectProperties#1
 // Source: c:@S@Graphic3d_ClipPlane@F@ToUseObjectShader#1
@@ -1405,6 +1435,9 @@
 // Source: c:@S@Graphic3d_CubeMapSeparate@F@Value#&1$@N@opencascade@S@handle>#$@S@Image_SupportedFormats#
 // Source: c:@S@Graphic3d_DataStructureManager@F@DynamicType#1
 // Source: c:@S@Graphic3d_Flipper@F@DynamicType#1
+// Source: c:@S@Graphic3d_Flipper@F@Graphic3d_Flipper#&1$@S@gp_Ax2#
+// Source: c:@S@Graphic3d_Flipper@F@RefPlane#1
+// Source: c:@S@Graphic3d_Flipper@F@SetRefPlane#&1$@S@gp_Ax2#
 // Source: c:@S@Graphic3d_FrameStats@F@CounterValue#$@E@Graphic3d_FrameStatsCounter#1
 // Source: c:@S@Graphic3d_FrameStats@F@DynamicType#1
 // Source: c:@S@Graphic3d_FrameStats@F@FrameDuration#1
@@ -1661,10 +1694,12 @@
 // Source: c:@S@Graphic3d_Text@F@HasPlane#1
 // Source: c:@S@Graphic3d_Text@F@Height#1
 // Source: c:@S@Graphic3d_Text@F@HorizontalAlignment#1
+// Source: c:@S@Graphic3d_Text@F@Orientation#1
 // Source: c:@S@Graphic3d_Text@F@Position#1
 // Source: c:@S@Graphic3d_Text@F@ResetOrientation#
 // Source: c:@S@Graphic3d_Text@F@SetHeight#f#
 // Source: c:@S@Graphic3d_Text@F@SetHorizontalAlignment#$@E@Graphic3d_HorizontalTextAlignment#
+// Source: c:@S@Graphic3d_Text@F@SetOrientation#&1$@S@gp_Ax2#
 // Source: c:@S@Graphic3d_Text@F@SetOwnAnchorPoint#b#
 // Source: c:@S@Graphic3d_Text@F@SetPosition#&1$@S@gp_Pnt#
 // Source: c:@S@Graphic3d_Text@F@SetTextFormatter#&1$@N@opencascade@S@handle>#$@S@Font_TextFormatter#
@@ -1948,6 +1983,7 @@
 // Source: c:@S@MeshVS_DeformedDataSource@F@MeshVS_DeformedDataSource#&1$@N@opencascade@S@handle>#$@S@MeshVS_DataSource#d#
 // Source: c:@S@MeshVS_DeformedDataSource@F@SetMagnify#d#
 // Source: c:@S@MeshVS_DeformedDataSource@F@SetNonDeformedDataSource#&1$@N@opencascade@S@handle>#$@S@MeshVS_DataSource#
+// Source: c:@S@MeshVS_DeformedDataSource@F@SetVector#I#&1$@S@gp_Vec#
 // Source: c:@S@MeshVS_Drawer@F@Assign#&1$@N@opencascade@S@handle>#$@S@MeshVS_Drawer#
 // Source: c:@S@MeshVS_Drawer@F@DynamicType#1
 // Source: c:@S@MeshVS_Drawer@F@RemoveAsciiString#I#
@@ -2074,6 +2110,7 @@
 // Source: c:@S@MeshVS_VectorPrsBuilder@F@HasVectors#b#1
 // Source: c:@S@MeshVS_VectorPrsBuilder@F@SetSimplePrsMode#b#
 // Source: c:@S@MeshVS_VectorPrsBuilder@F@SetSimplePrsParams#d#d#d#
+// Source: c:@S@MeshVS_VectorPrsBuilder@F@SetVector#b#I#&1$@S@gp_Vec#
 // Source: c:@S@OpenGl_Buffer@F@Bind#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#1
 // Source: c:@S@OpenGl_Buffer@F@Create#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_Buffer@F@DynamicType#1
@@ -2288,6 +2325,7 @@
 // Source: c:@S@OpenGl_Group@F@OpenGl_Group#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#
 // Source: c:@S@OpenGl_Group@F@Release#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
 // Source: c:@S@OpenGl_Group@F@Render#&1$@N@opencascade@S@handle>#$@S@OpenGl_Workspace#1
+// Source: c:@S@OpenGl_Group@F@SetFlippingOptions#b#&1$@S@gp_Ax2#
 // Source: c:@S@OpenGl_Group@F@SetGroupPrimitivesAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Aspects#
 // Source: c:@S@OpenGl_Group@F@SetPrimitivesAspect#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Aspects#
 // Source: c:@S@OpenGl_Group@F@SetStencilTestOptions#b#
@@ -2359,6 +2397,7 @@
 // Source: c:@S@OpenGl_ShaderManager@F@GetBgSkydomeProgram#
 // Source: c:@S@OpenGl_ShaderManager@F@GetColoredQuadProgram#
 // Source: c:@S@OpenGl_ShaderManager@F@IsEmpty#1
+// Source: c:@S@OpenGl_ShaderManager@F@LocalOrigin#1
 // Source: c:@S@OpenGl_ShaderManager@F@PushClippingState#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#1
 // Source: c:@S@OpenGl_ShaderManager@F@PushInteriorState#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Aspects#1
 // Source: c:@S@OpenGl_ShaderManager@F@PushLightSourceState#&1$@N@opencascade@S@handle>#$@S@OpenGl_ShaderProgram#1
@@ -2371,6 +2410,7 @@
 // Source: c:@S@OpenGl_ShaderManager@F@ResetOitState#
 // Source: c:@S@OpenGl_ShaderManager@F@RevertClippingState#
 // Source: c:@S@OpenGl_ShaderManager@F@SetCastShadows#b#
+// Source: c:@S@OpenGl_ShaderManager@F@SetLocalOrigin#&1$@S@gp_XYZ#
 // Source: c:@S@OpenGl_ShaderManager@F@SetOitState#$@E@Graphic3d_RenderTransparentMethod#
 // Source: c:@S@OpenGl_ShaderManager@F@SetShadingModel#$@E@Graphic3d_TypeOfShadingModel#
 // Source: c:@S@OpenGl_ShaderManager@F@SetWeighedOitState#f#
@@ -2542,6 +2582,7 @@
 // Source: c:@S@OpenGl_View@F@IsInvalidated#
 // Source: c:@S@OpenGl_View@F@Layer#I#1
 // Source: c:@S@OpenGl_View@F@Lights#1
+// Source: c:@S@OpenGl_View@F@LocalOrigin#1
 // Source: c:@S@OpenGl_View@F@Redraw#
 // Source: c:@S@OpenGl_View@F@RedrawImmediate#
 // Source: c:@S@OpenGl_View@F@ReleaseGlResources#&1$@N@opencascade@S@handle>#$@S@OpenGl_Context#
@@ -2555,6 +2596,7 @@
 // Source: c:@S@OpenGl_View@F@SetImageBasedLighting#b#
 // Source: c:@S@OpenGl_View@F@SetImmediateModeDrawToFront#b#
 // Source: c:@S@OpenGl_View@F@SetLights#&1$@N@opencascade@S@handle>#$@S@Graphic3d_LightSet#
+// Source: c:@S@OpenGl_View@F@SetLocalOrigin#&1$@S@gp_XYZ#
 // Source: c:@S@OpenGl_View@F@SetTextureEnv#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TextureEnv#
 // Source: c:@S@OpenGl_View@F@SetToFlipOutput#b#
 // Source: c:@S@OpenGl_View@F@SpecIBLMapLevels#1
@@ -2897,8 +2939,12 @@
 // Source: c:@S@PrsDim_Chamf3dDimension@F@KindOfDimension#1
 // Source: c:@S@PrsDim_ConcentricRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_DiameterDimension@F@AnchorPoint#
+// Source: c:@S@PrsDim_DiameterDimension@F@Circle#1
 // Source: c:@S@PrsDim_DiameterDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_DiameterDimension@F@GetTextPosition#1
+// Source: c:@S@PrsDim_DiameterDimension@F@PrsDim_DiameterDimension#&1$@S@gp_Circ#
+// Source: c:@S@PrsDim_DiameterDimension@F@PrsDim_DiameterDimension#&1$@S@gp_Circ#&1$@S@gp_Pln#
+// Source: c:@S@PrsDim_DiameterDimension@F@SetMeasuredGeometry#&1$@S@gp_Circ#
 // Source: c:@S@PrsDim_DiameterDimension@F@SetTextPosition#&1$@S@gp_Pnt#
 // Source: c:@S@PrsDim_Dimension@F@AcceptDisplayMode#I#1
 // Source: c:@S@PrsDim_Dimension@F@DimensionAspect#1
@@ -2906,6 +2952,7 @@
 // Source: c:@S@PrsDim_Dimension@F@DynamicType#1
 // Source: c:@S@PrsDim_Dimension@F@GetFlyout#1
 // Source: c:@S@PrsDim_Dimension@F@GetGeometryType#1
+// Source: c:@S@PrsDim_Dimension@F@GetPlane#1
 // Source: c:@S@PrsDim_Dimension@F@GetTextPosition#1
 // Source: c:@S@PrsDim_Dimension@F@GetValue#1
 // Source: c:@S@PrsDim_Dimension@F@IsTextPositionCustom#1
@@ -2913,6 +2960,7 @@
 // Source: c:@S@PrsDim_Dimension@F@KindOfDimension#1
 // Source: c:@S@PrsDim_Dimension@F@SelToleranceForText2d#1
 // Source: c:@S@PrsDim_Dimension@F@SetComputedValue#
+// Source: c:@S@PrsDim_Dimension@F@SetCustomPlane#&1$@S@gp_Pln#
 // Source: c:@S@PrsDim_Dimension@F@SetCustomValue#d#
 // Source: c:@S@PrsDim_Dimension@F@SetDimensionAspect#&1$@N@opencascade@S@handle>#$@S@Prs3d_DimensionAspect#
 // Source: c:@S@PrsDim_Dimension@F@SetDisplaySpecialSymbol#$@E@PrsDim_DisplaySpecialSymbol#
@@ -2946,6 +2994,8 @@
 // Source: c:@S@PrsDim_LengthDimension@F@GetTextPosition#1
 // Source: c:@S@PrsDim_LengthDimension@F@PrsDim_LengthDimension#
 // Source: c:@S@PrsDim_LengthDimension@F@SecondPoint#1
+// Source: c:@S@PrsDim_LengthDimension@F@SetDirection#&1$@S@gp_Dir#b#
+// Source: c:@S@PrsDim_LengthDimension@F@SetMeasuredGeometry#&1$@S@gp_Pnt#S0_#&1$@S@gp_Pln#
 // Source: c:@S@PrsDim_LengthDimension@F@SetTextPosition#&1$@S@gp_Pnt#
 // Source: c:@S@PrsDim_MaxRadiusDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_MidPointRelation@F@DynamicType#1
@@ -2958,8 +3008,13 @@
 // Source: c:@S@PrsDim_ParallelRelation@F@IsMovable#1
 // Source: c:@S@PrsDim_PerpendicularRelation@F@DynamicType#1
 // Source: c:@S@PrsDim_RadiusDimension@F@AnchorPoint#1
+// Source: c:@S@PrsDim_RadiusDimension@F@Circle#1
 // Source: c:@S@PrsDim_RadiusDimension@F@DynamicType#1
 // Source: c:@S@PrsDim_RadiusDimension@F@GetTextPosition#1
+// Source: c:@S@PrsDim_RadiusDimension@F@PrsDim_RadiusDimension#&1$@S@gp_Circ#
+// Source: c:@S@PrsDim_RadiusDimension@F@PrsDim_RadiusDimension#&1$@S@gp_Circ#&1$@S@gp_Pnt#
+// Source: c:@S@PrsDim_RadiusDimension@F@SetMeasuredGeometry#&1$@S@gp_Circ#
+// Source: c:@S@PrsDim_RadiusDimension@F@SetMeasuredGeometry#&1$@S@gp_Circ#&1$@S@gp_Pnt#b#
 // Source: c:@S@PrsDim_RadiusDimension@F@SetTextPosition#&1$@S@gp_Pnt#
 // Source: c:@S@PrsDim_Relation@F@AcceptDisplayMode#I#1
 // Source: c:@S@PrsDim_Relation@F@ArrowSize#1
@@ -3118,10 +3173,12 @@
 // Source: c:@S@Select3D_SensitiveBox@F@Select3D_SensitiveBox#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#d#d#d#d#d#d#
 // Source: c:@S@Select3D_SensitiveBox@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitiveCircle@F@CenterOfGeometry#1
+// Source: c:@S@Select3D_SensitiveCircle@F@Circle#1
 // Source: c:@S@Select3D_SensitiveCircle@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveCircle@F@GetConnected#
 // Source: c:@S@Select3D_SensitiveCircle@F@NbSubElements#1
 // Source: c:@S@Select3D_SensitiveCircle@F@Radius#1
+// Source: c:@S@Select3D_SensitiveCircle@F@Select3D_SensitiveCircle#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Circ#b#
 // Source: c:@S@Select3D_SensitiveCircle@F@ToBuildBVH#1
 // Source: c:@S@Select3D_SensitiveCurve@F@DynamicType#1
 // Source: c:@S@Select3D_SensitiveCurve@F@GetConnected#
@@ -3144,6 +3201,7 @@
 // Source: c:@S@Select3D_SensitiveEntity@F@OwnerId#1
 // Source: c:@S@Select3D_SensitiveEntity@F@SensitivityFactor#1
 // Source: c:@S@Select3D_SensitiveEntity@F@Set#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#
+// Source: c:@S@Select3D_SensitiveEntity@F@SetFlippingOptions#b#&1$@S@gp_Ax2#
 // Source: c:@S@Select3D_SensitiveEntity@F@SetSensitivityFactor#I#
 // Source: c:@S@Select3D_SensitiveEntity@F@SetTransformPersistence#&1$@N@opencascade@S@handle>#$@S@Graphic3d_TransformPers#
 // Source: c:@S@Select3D_SensitiveEntity@F@ToBuildBVH#1
@@ -3186,6 +3244,7 @@
 // Source: c:@S@Select3D_SensitivePoly@F@DynamicType#1
 // Source: c:@S@Select3D_SensitivePoly@F@GetPoint3d#I#1
 // Source: c:@S@Select3D_SensitivePoly@F@NbSubElements#1
+// Source: c:@S@Select3D_SensitivePoly@F@Select3D_SensitivePoly#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#&1$@S@gp_Circ#d#d#b#I#
 // Source: c:@S@Select3D_SensitivePoly@F@Select3D_SensitivePoly#&1$@N@opencascade@S@handle>#$@S@SelectMgr_EntityOwner#b#I#
 // Source: c:@S@Select3D_SensitivePoly@F@Size#1
 // Source: c:@S@Select3D_SensitivePoly@F@Swap#I#I#
@@ -3291,6 +3350,8 @@
 // Source: c:@S@SelectMgr_AxisIntersector@F@DistToGeometryCenter#&1$@S@gp_Pnt#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@GetFarPnt#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@GetNearPnt#1
+// Source: c:@S@SelectMgr_AxisIntersector@F@GetViewRayDirection#1
+// Source: c:@S@SelectMgr_AxisIntersector@F@Init#&1$@S@gp_Ax1#
 // Source: c:@S@SelectMgr_AxisIntersector@F@IsScalable#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@OverlapsPoint#&1$@S@gp_Pnt#1
 // Source: c:@S@SelectMgr_AxisIntersector@F@SelectMgr_AxisIntersector#
@@ -3311,8 +3372,10 @@
 // Source: c:@S@SelectMgr_BaseIntersector@F@DistToGeometryCenter#&1$@S@gp_Pnt#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@DynamicType#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@GetFarPnt#1
+// Source: c:@S@SelectMgr_BaseIntersector@F@GetMousePosition#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@GetNearPnt#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@GetSelectionType#1
+// Source: c:@S@SelectMgr_BaseIntersector@F@GetViewRayDirection#1
 // Source: c:@S@SelectMgr_BaseIntersector@F@SetCamera#&1$@N@opencascade@S@handle>#$@S@Graphic3d_Camera#
 // Source: c:@S@SelectMgr_BaseIntersector@F@SetPixelTolerance#I#
 // Source: c:@S@SelectMgr_BaseIntersector@F@SetViewport#d#d#d#d#
@@ -3451,6 +3514,7 @@
 // Source: c:@S@SelectMgr_ViewerSelector@F@MoveSelectableObject#&1$@N@opencascade@S@handle>#$@S@SelectMgr_SelectableObject#
 // Source: c:@S@SelectMgr_ViewerSelector@F@NbPicked#1
 // Source: c:@S@SelectMgr_ViewerSelector@F@OnePicked#1
+// Source: c:@S@SelectMgr_ViewerSelector@F@Pick#&1$@S@gp_Ax1#&1$@N@opencascade@S@handle>#$@S@V3d_View#
 // Source: c:@S@SelectMgr_ViewerSelector@F@Pick#I#I#&1$@N@opencascade@S@handle>#$@S@V3d_View#
 // Source: c:@S@SelectMgr_ViewerSelector@F@Pick#I#I#I#I#&1$@N@opencascade@S@handle>#$@S@V3d_View#
 // Source: c:@S@SelectMgr_ViewerSelector@F@Picked#I#1
@@ -3711,6 +3775,7 @@
 // Source: c:@S@V3d_View@F@SetFocale#d#
 // Source: c:@S@V3d_View@F@SetFront#
 // Source: c:@S@V3d_View@F@SetFrustumCulling#b#
+// Source: c:@S@V3d_View@F@SetGrid#&1$@S@gp_Ax3#&1$@N@opencascade@S@handle>#$@S@Aspect_Grid#
 // Source: c:@S@V3d_View@F@SetGridActivity#b#
 // Source: c:@S@V3d_View@F@SetImageBasedLighting#b#b#
 // Source: c:@S@V3d_View@F@SetImmediateUpdate#b#
@@ -3797,6 +3862,7 @@
 // Source: c:@S@V3d_Viewer@F@NextActiveViews#
 // Source: c:@S@V3d_Viewer@F@NextDefinedLights#
 // Source: c:@S@V3d_Viewer@F@NextDefinedViews#
+// Source: c:@S@V3d_Viewer@F@PrivilegedPlane#1
 // Source: c:@S@V3d_Viewer@F@Redraw#1
 // Source: c:@S@V3d_Viewer@F@RedrawImmediate#1
 // Source: c:@S@V3d_Viewer@F@Remove#
@@ -3815,6 +3881,7 @@
 // Source: c:@S@V3d_Viewer@F@SetGridEcho#b#
 // Source: c:@S@V3d_Viewer@F@SetLightOff#
 // Source: c:@S@V3d_Viewer@F@SetLightOn#
+// Source: c:@S@V3d_Viewer@F@SetPrivilegedPlane#&1$@S@gp_Ax3#
 // Source: c:@S@V3d_Viewer@F@SetRectangularGridGraphicValues#d#d#d#
 // Source: c:@S@V3d_Viewer@F@SetRectangularGridValues#d#d#d#d#d#
 // Source: c:@S@V3d_Viewer@F@SetViewOff#
@@ -4557,6 +4624,14 @@ public sealed class AISAxis : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISAxisCreate2(aComponent is null ? nint.Zero : aComponent.NativeHandle.DangerousGetHandle(), out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "AISAxisCreate2");
+    }
+
+    /// <summary>Creates a retained OCCT AIS_Axis shared object.</summary>
+    public AISAxis(global::OcctSharp.Values.Axis1 theAxis, double theLength)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISAxisCreate3(theAxis, theLength, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "AISAxisCreate3");
     }
 
     /// <summary>Invokes OCCT AIS_Axis::AcceptDisplayMode.</summary>
@@ -7269,6 +7344,14 @@ public sealed class AISInteractiveContext : IDisposable
         return (AISStatusOfDetection)resultValue;
     }
 
+    /// <summary>Invokes OCCT AIS_InteractiveContext::MoveTo.</summary>
+    public AISStatusOfDetection MoveTo(global::OcctSharp.Values.Axis1 theAxis, V3dView? theView, bool theToRedrawOnUpdate)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISInteractiveContextMethodMoveTo1(handle, theAxis, theView is null ? nint.Zero : theView.NativeHandle.DangerousGetHandle(), theToRedrawOnUpdate ? 1 : 0, out int resultValue), "occtsharp_generated_ais_interactive_context_method_move_to_1");
+        return (AISStatusOfDetection)resultValue;
+    }
+
     /// <summary>Invokes OCCT AIS_InteractiveContext::NbCurrents.</summary>
     public int NbCurrents()
     {
@@ -8677,6 +8760,14 @@ public sealed class AISManipulator : IDisposable
         handle = CreateHandle(nativeHandle, "AISManipulatorCreate0");
     }
 
+    /// <summary>Creates a retained OCCT AIS_Manipulator shared object.</summary>
+    public AISManipulator(global::OcctSharp.Values.Axis2 thePosition)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISManipulatorCreate1(thePosition, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "AISManipulatorCreate1");
+    }
+
     /// <summary>Invokes OCCT AIS_Manipulator::ActiveAxisIndex.</summary>
     public int ActiveAxisIndex()
     {
@@ -8797,6 +8888,14 @@ public sealed class AISManipulator : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISManipulatorMethodObject1(handle, theIndex, out nint handleValue), "occtsharp_generated_ais_manipulator_method_object_1");
         return global::OcctSharp.AISInteractiveObject.FromNative(handleValue, "occtsharp_generated_ais_manipulator_method_object_1");
+    }
+
+    /// <summary>Invokes OCCT AIS_Manipulator::Position.</summary>
+    public global::OcctSharp.Values.Axis2 Position()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISManipulatorMethodPosition0(handle, out global::OcctSharp.Values.Axis2 resultValue), "occtsharp_generated_ais_manipulator_method_position_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT AIS_Manipulator::RecomputeSelection.</summary>
@@ -10641,6 +10740,27 @@ public sealed class AISShape : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISShapeMethodSetOwnDeviationCoefficient1(handle, aCoefficient), "occtsharp_generated_ais_shape_method_set_own_deviation_coefficient_1");
     }
 
+    /// <summary>Invokes OCCT AIS_Shape::SetTextureOriginUV.</summary>
+    public void SetTextureOriginUV(global::OcctSharp.Values.Point2d theOriginUV)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISShapeMethodSetTextureOriginUV0(handle, theOriginUV), "occtsharp_generated_ais_shape_method_set_texture_origin_uv_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_Shape::SetTextureRepeatUV.</summary>
+    public void SetTextureRepeatUV(global::OcctSharp.Values.Point2d theRepeatUV)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISShapeMethodSetTextureRepeatUV0(handle, theRepeatUV), "occtsharp_generated_ais_shape_method_set_texture_repeat_uv_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_Shape::SetTextureScaleUV.</summary>
+    public void SetTextureScaleUV(global::OcctSharp.Values.Point2d theScaleUV)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISShapeMethodSetTextureScaleUV0(handle, theScaleUV), "occtsharp_generated_ais_shape_method_set_texture_scale_uv_0");
+    }
+
     /// <summary>Invokes OCCT AIS_Shape::SetTransparency.</summary>
     public void SetTransparency(double aValue)
     {
@@ -10667,6 +10787,30 @@ public sealed class AISShape : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISShapeMethodSignature0(handle, out int resultValue), "occtsharp_generated_ais_shape_method_signature_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT AIS_Shape::TextureOriginUV.</summary>
+    public global::OcctSharp.Values.Point2d TextureOriginUV()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISShapeMethodTextureOriginUV0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_ais_shape_method_texture_origin_uv_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT AIS_Shape::TextureRepeatUV.</summary>
+    public global::OcctSharp.Values.Point2d TextureRepeatUV()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISShapeMethodTextureRepeatUV0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_ais_shape_method_texture_repeat_uv_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT AIS_Shape::TextureScaleUV.</summary>
+    public global::OcctSharp.Values.Point2d TextureScaleUV()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISShapeMethodTextureScaleUV0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_ais_shape_method_texture_scale_uv_0");
         return resultValue;
     }
 
@@ -10946,6 +11090,14 @@ public sealed class AISTextLabel : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT AIS_TextLabel::Orientation3D.</summary>
+    public global::OcctSharp.Values.Axis2 Orientation3D()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTextLabelMethodOrientation3D0(handle, out global::OcctSharp.Values.Axis2 resultValue), "occtsharp_generated_ais_text_label_method_orientation3_d_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT AIS_TextLabel::Position.</summary>
     public Point3d Position()
     {
@@ -10994,6 +11146,13 @@ public sealed class AISTextLabel : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTextLabelMethodSetHJustification0(handle, (int)theHJust), "occtsharp_generated_ais_text_label_method_set_hjustification_0");
+    }
+
+    /// <summary>Invokes OCCT AIS_TextLabel::SetOrientation3D.</summary>
+    public void SetOrientation3D(global::OcctSharp.Values.Axis2 theOrientation)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.AISTextLabelMethodSetOrientation3D0(handle, theOrientation), "occtsharp_generated_ais_text_label_method_set_orientation3_d_0");
     }
 
     /// <summary>Invokes OCCT AIS_TextLabel::SetOwnAnchorPoint.</summary>
@@ -16249,6 +16408,38 @@ public sealed class Graphic3dArrayOfPrimitives : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::AddVertex.</summary>
+    public int AddVertex(Point3d theVertex, global::OcctSharp.Values.Direction3d theNormal)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodAddVertex10(handle, new Point3dRaw(theVertex.X, theVertex.Y, theVertex.Z), theNormal, out int resultValue), "occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_10");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::AddVertex.</summary>
+    public int AddVertex(Point3d theVertex, global::OcctSharp.Values.Direction3d theNormal, global::OcctSharp.Values.Point2d theTexel)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodAddVertex11(handle, new Point3dRaw(theVertex.X, theVertex.Y, theVertex.Z), theNormal, theTexel, out int resultValue), "occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_11");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::AddVertex.</summary>
+    public int AddVertex(Point3d theVertex, global::OcctSharp.Values.Direction3d theNormal, int theColor32)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodAddVertex12(handle, new Point3dRaw(theVertex.X, theVertex.Y, theVertex.Z), theNormal, theColor32, out int resultValue), "occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_12");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::AddVertex.</summary>
+    public int AddVertex(Point3d theVertex, global::OcctSharp.Values.Point2d theTexel)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodAddVertex13(handle, new Point3dRaw(theVertex.X, theVertex.Y, theVertex.Z), theTexel, out int resultValue), "occtsharp_generated_graphic3d_array_of_primitives_method_add_vertex_13");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::Attributes.</summary>
     public Graphic3dBuffer? Attributes()
     {
@@ -16405,11 +16596,25 @@ public sealed class Graphic3dArrayOfPrimitives : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodSetVertexNormal0(handle, theIndex, theNX, theNY, theNZ), "occtsharp_generated_graphic3d_array_of_primitives_method_set_vertex_normal_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::SetVertexNormal.</summary>
+    public void SetVertexNormal(int theIndex, global::OcctSharp.Values.Direction3d theNormal)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodSetVertexNormal1(handle, theIndex, theNormal), "occtsharp_generated_graphic3d_array_of_primitives_method_set_vertex_normal_1");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::SetVertexTexel.</summary>
     public void SetVertexTexel(int theIndex, double theTX, double theTY)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodSetVertexTexel0(handle, theIndex, theTX, theTY), "occtsharp_generated_graphic3d_array_of_primitives_method_set_vertex_texel_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::SetVertexTexel.</summary>
+    public void SetVertexTexel(int theIndex, global::OcctSharp.Values.Point2d theTexel)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodSetVertexTexel1(handle, theIndex, theTexel), "occtsharp_generated_graphic3d_array_of_primitives_method_set_vertex_texel_1");
     }
 
     /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::SetVertice.</summary>
@@ -16434,6 +16639,14 @@ public sealed class Graphic3dArrayOfPrimitives : IDisposable
         return (Graphic3dTypeOfPrimitiveArray)resultValue;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::VertexNormal.</summary>
+    public global::OcctSharp.Values.Direction3d VertexNormal(int theRank)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodVertexNormal0(handle, theRank, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_graphic3d_array_of_primitives_method_vertex_normal_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::VertexNumber.</summary>
     public int VertexNumber()
     {
@@ -16447,6 +16660,14 @@ public sealed class Graphic3dArrayOfPrimitives : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodVertexNumberAllocated0(handle, out int resultValue), "occtsharp_generated_graphic3d_array_of_primitives_method_vertex_number_allocated_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ArrayOfPrimitives::VertexTexel.</summary>
+    public global::OcctSharp.Values.Point2d VertexTexel(int theRank)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dArrayOfPrimitivesMethodVertexTexel0(handle, theRank, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_graphic3d_array_of_primitives_method_vertex_texel_0");
         return resultValue;
     }
 
@@ -19665,6 +19886,14 @@ public sealed class Graphic3dCamera : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Camera::AxialScale.</summary>
+    public global::OcctSharp.Values.Coordinates3d AxialScale()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCameraMethodAxialScale0(handle, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_graphic3d_camera_method_axial_scale_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Camera::Center.</summary>
     public Point3d Center()
     {
@@ -19724,6 +19953,14 @@ public sealed class Graphic3dCamera : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCameraMethodCopyOrientationData0(handle, theOtherCamera is null ? nint.Zero : theOtherCamera.NativeHandle.DangerousGetHandle()), "occtsharp_generated_graphic3d_camera_method_copy_orientation_data_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Camera::Direction.</summary>
+    public global::OcctSharp.Values.Direction3d Direction()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCameraMethodDirection0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_graphic3d_camera_method_direction_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT Graphic3d_Camera::Distance.</summary>
@@ -19874,6 +20111,14 @@ public sealed class Graphic3dCamera : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCameraMethodOrthogonalizeUp0(handle), "occtsharp_generated_graphic3d_camera_method_orthogonalize_up_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Camera::OrthogonalizedUp.</summary>
+    public global::OcctSharp.Values.Direction3d OrthogonalizedUp()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCameraMethodOrthogonalizedUp0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_graphic3d_camera_method_orthogonalized_up_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Camera::Project.</summary>
     public Point3d Project(Point3d thePnt)
     {
@@ -19920,11 +20165,32 @@ public sealed class Graphic3dCamera : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCameraMethodSetAspect0(handle, theAspect), "occtsharp_generated_graphic3d_camera_method_set_aspect_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Camera::SetAxialScale.</summary>
+    public void SetAxialScale(global::OcctSharp.Values.Coordinates3d theAxialScale)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCameraMethodSetAxialScale0(handle, theAxialScale), "occtsharp_generated_graphic3d_camera_method_set_axial_scale_0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Camera::SetCenter.</summary>
     public void SetCenter(Point3d theCenter)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCameraMethodSetCenter0(handle, new Point3dRaw(theCenter.X, theCenter.Y, theCenter.Z)), "occtsharp_generated_graphic3d_camera_method_set_center_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Camera::SetDirection.</summary>
+    public void SetDirection(global::OcctSharp.Values.Direction3d theDir)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCameraMethodSetDirection0(handle, theDir), "occtsharp_generated_graphic3d_camera_method_set_direction_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Camera::SetDirectionFromEye.</summary>
+    public void SetDirectionFromEye(global::OcctSharp.Values.Direction3d theDir)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCameraMethodSetDirectionFromEye0(handle, theDir), "occtsharp_generated_graphic3d_camera_method_set_direction_from_eye_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_Camera::SetDistance.</summary>
@@ -20011,12 +20277,36 @@ public sealed class Graphic3dCamera : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCameraMethodSetZRange0(handle, theZNear, theZFar), "occtsharp_generated_graphic3d_camera_method_set_zrange_0");
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Camera::SideRight.</summary>
+    public global::OcctSharp.Values.Direction3d SideRight()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCameraMethodSideRight0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_graphic3d_camera_method_side_right_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Camera::UnProject.</summary>
     public Point3d UnProject(Point3d thePnt)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCameraMethodUnProject0(handle, new Point3dRaw(thePnt.X, thePnt.Y, thePnt.Z), out Point3dRaw resultValue), "occtsharp_generated_graphic3d_camera_method_un_project_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Camera::ViewDimensions.</summary>
+    public global::OcctSharp.Values.Coordinates3d ViewDimensions()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCameraMethodViewDimensions0(handle, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_graphic3d_camera_method_view_dimensions_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Camera::ViewDimensions.</summary>
+    public global::OcctSharp.Values.Coordinates3d ViewDimensions(double theZValue)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dCameraMethodViewDimensions1(handle, theZValue, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_graphic3d_camera_method_view_dimensions_1");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT Graphic3d_Camera::WorldViewState.</summary>
@@ -20337,6 +20627,14 @@ public sealed class Graphic3dClipPlane : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dClipPlaneMethodSetUseObjectTexture0(handle, theToUse ? 1 : 0), "occtsharp_generated_graphic3d_clip_plane_method_set_use_object_texture_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_ClipPlane::ToPlane.</summary>
+    public global::OcctSharp.Values.Plane ToPlane()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dClipPlaneMethodToPlane0(handle, out global::OcctSharp.Values.Plane resultValue), "occtsharp_generated_graphic3d_clip_plane_method_to_plane_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT Graphic3d_ClipPlane::ToUseObjectMaterial.</summary>
@@ -20844,12 +21142,35 @@ public sealed class Graphic3dFlipper : IDisposable
 
     private Graphic3dFlipper(Graphic3dFlipperHandle handle) => this.handle = handle;
 
+    /// <summary>Creates a retained OCCT Graphic3d_Flipper shared object.</summary>
+    public Graphic3dFlipper(global::OcctSharp.Values.Axis2 theRefPlane)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dFlipperCreate0(theRefPlane, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "Graphic3dFlipperCreate0");
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Flipper::DynamicType.</summary>
     public StandardType? DynamicType()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dFlipperMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_graphic3d_flipper_method_dynamic_type_0");
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_graphic3d_flipper_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Flipper::RefPlane.</summary>
+    public global::OcctSharp.Values.Axis2 RefPlane()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dFlipperMethodRefPlane0(handle, out global::OcctSharp.Values.Axis2 resultValue), "occtsharp_generated_graphic3d_flipper_method_ref_plane_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Flipper::SetRefPlane.</summary>
+    public void SetRefPlane(global::OcctSharp.Values.Axis2 theValue)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dFlipperMethodSetRefPlane0(handle, theValue), "occtsharp_generated_graphic3d_flipper_method_set_ref_plane_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -24301,6 +24622,14 @@ public sealed class Graphic3dText : IDisposable
         return (Graphic3dHorizontalTextAlignment)resultValue;
     }
 
+    /// <summary>Invokes OCCT Graphic3d_Text::Orientation.</summary>
+    public global::OcctSharp.Values.Axis2 Orientation()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextMethodOrientation0(handle, out global::OcctSharp.Values.Axis2 resultValue), "occtsharp_generated_graphic3d_text_method_orientation_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Graphic3d_Text::Position.</summary>
     public Point3d Position()
     {
@@ -24328,6 +24657,13 @@ public sealed class Graphic3dText : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextMethodSetHorizontalAlignment0(handle, (int)theJustification), "occtsharp_generated_graphic3d_text_method_set_horizontal_alignment_0");
+    }
+
+    /// <summary>Invokes OCCT Graphic3d_Text::SetOrientation.</summary>
+    public void SetOrientation(global::OcctSharp.Values.Axis2 theOrientation)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Graphic3dTextMethodSetOrientation0(handle, theOrientation), "occtsharp_generated_graphic3d_text_method_set_orientation_0");
     }
 
     /// <summary>Invokes OCCT Graphic3d_Text::SetOwnAnchorPoint.</summary>
@@ -28827,6 +29163,13 @@ public sealed class MeshVSDeformedDataSource : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSDeformedDataSourceMethodSetNonDeformedDataSource0(handle, theDS is null ? nint.Zero : theDS.NativeHandle.DangerousGetHandle()), "occtsharp_generated_mesh_vs_deformed_data_source_method_set_non_deformed_data_source_0");
     }
 
+    /// <summary>Invokes OCCT MeshVS_DeformedDataSource::SetVector.</summary>
+    public void SetVector(int iD, global::OcctSharp.Values.Vector3d vect)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSDeformedDataSourceMethodSetVector0(handle, iD, vect), "occtsharp_generated_mesh_vs_deformed_data_source_method_set_vector_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -30885,6 +31228,13 @@ public sealed class MeshVSVectorPrsBuilder : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSVectorPrsBuilderMethodSetSimplePrsParams0(handle, theLineWidthParam, theStartParam, theEndParam), "occtsharp_generated_mesh_vs_vector_prs_builder_method_set_simple_prs_params_0");
+    }
+
+    /// <summary>Invokes OCCT MeshVS_VectorPrsBuilder::SetVector.</summary>
+    public void SetVector(bool isElement, int iD, global::OcctSharp.Values.Vector3d vect)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.MeshVSVectorPrsBuilderMethodSetVector0(handle, isElement ? 1 : 0, iD, vect), "occtsharp_generated_mesh_vs_vector_prs_builder_method_set_vector_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -33289,6 +33639,13 @@ public sealed class OpenGlGroup : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlGroupMethodRender0(handle, theWorkspace is null ? nint.Zero : theWorkspace.NativeHandle.DangerousGetHandle()), "occtsharp_generated_open_gl_group_method_render_0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_Group::SetFlippingOptions.</summary>
+    public void SetFlippingOptions(bool theIsEnabled, global::OcctSharp.Values.Axis2 theRefPlane)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlGroupMethodSetFlippingOptions0(handle, theIsEnabled ? 1 : 0, theRefPlane), "occtsharp_generated_open_gl_group_method_set_flipping_options_0");
+    }
+
     /// <summary>Invokes OCCT OpenGl_Group::SetGroupPrimitivesAspect.</summary>
     public void SetGroupPrimitivesAspect(Graphic3dAspects? theAspect)
     {
@@ -34528,6 +34885,14 @@ public sealed class OpenGlShaderManager : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT OpenGl_ShaderManager::LocalOrigin.</summary>
+    public global::OcctSharp.Values.Coordinates3d LocalOrigin()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderManagerMethodLocalOrigin0(handle, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_open_gl_shader_manager_method_local_origin_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT OpenGl_ShaderManager::PushClippingState.</summary>
     public void PushClippingState(OpenGlShaderProgram? theProgram)
     {
@@ -34660,6 +35025,13 @@ public sealed class OpenGlShaderManager : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderManagerMethodSetCastShadows0(handle, theToCast ? 1 : 0, out int resultValue), "occtsharp_generated_open_gl_shader_manager_method_set_cast_shadows_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT OpenGl_ShaderManager::SetLocalOrigin.</summary>
+    public void SetLocalOrigin(global::OcctSharp.Values.Coordinates3d theOrigin)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlShaderManagerMethodSetLocalOrigin0(handle, theOrigin), "occtsharp_generated_open_gl_shader_manager_method_set_local_origin_0");
     }
 
     /// <summary>Invokes OCCT OpenGl_ShaderManager::SetOitState.</summary>
@@ -36735,6 +37107,14 @@ public sealed class OpenGlView : IDisposable
         return global::OcctSharp.Graphic3dLightSet.FromNative(handleValue, "occtsharp_generated_open_gl_view_method_lights_0");
     }
 
+    /// <summary>Invokes OCCT OpenGl_View::LocalOrigin.</summary>
+    public global::OcctSharp.Values.Coordinates3d LocalOrigin()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlViewMethodLocalOrigin0(handle, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_open_gl_view_method_local_origin_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT OpenGl_View::Redraw.</summary>
     public void Redraw()
     {
@@ -36825,6 +37205,13 @@ public sealed class OpenGlView : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlViewMethodSetLights0(handle, theLights is null ? nint.Zero : theLights.NativeHandle.DangerousGetHandle()), "occtsharp_generated_open_gl_view_method_set_lights_0");
+    }
+
+    /// <summary>Invokes OCCT OpenGl_View::SetLocalOrigin.</summary>
+    public void SetLocalOrigin(global::OcctSharp.Values.Coordinates3d theOrigin)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.OpenGlViewMethodSetLocalOrigin0(handle, theOrigin), "occtsharp_generated_open_gl_view_method_set_local_origin_0");
     }
 
     /// <summary>Invokes OCCT OpenGl_View::SetTextureEnv.</summary>
@@ -40718,12 +41105,36 @@ public sealed class PrsDimDiameterDimension : IDisposable
 
     private PrsDimDiameterDimension(PrsDimDiameterDimensionHandle handle) => this.handle = handle;
 
+    /// <summary>Creates a retained OCCT PrsDim_DiameterDimension shared object.</summary>
+    public PrsDimDiameterDimension(global::OcctSharp.Values.Circle3d theCircle)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimDiameterDimensionCreate0(theCircle, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "PrsDimDiameterDimensionCreate0");
+    }
+
+    /// <summary>Creates a retained OCCT PrsDim_DiameterDimension shared object.</summary>
+    public PrsDimDiameterDimension(global::OcctSharp.Values.Circle3d theCircle, global::OcctSharp.Values.Plane thePlane)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimDiameterDimensionCreate1(theCircle, thePlane, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "PrsDimDiameterDimensionCreate1");
+    }
+
     /// <summary>Invokes OCCT PrsDim_DiameterDimension::AnchorPoint.</summary>
     public Point3d AnchorPoint()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimDiameterDimensionMethodAnchorPoint0(handle, out Point3dRaw resultValue), "occtsharp_generated_prs_dim_diameter_dimension_method_anchor_point_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT PrsDim_DiameterDimension::Circle.</summary>
+    public global::OcctSharp.Values.Circle3d Circle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimDiameterDimensionMethodCircle0(handle, out global::OcctSharp.Values.Circle3d resultValue), "occtsharp_generated_prs_dim_diameter_dimension_method_circle_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT PrsDim_DiameterDimension::DynamicType.</summary>
@@ -40740,6 +41151,13 @@ public sealed class PrsDimDiameterDimension : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimDiameterDimensionMethodGetTextPosition0(handle, out Point3dRaw resultValue), "occtsharp_generated_prs_dim_diameter_dimension_method_get_text_position_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT PrsDim_DiameterDimension::SetMeasuredGeometry.</summary>
+    public void SetMeasuredGeometry(global::OcctSharp.Values.Circle3d theCircle)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimDiameterDimensionMethodSetMeasuredGeometry0(handle, theCircle), "occtsharp_generated_prs_dim_diameter_dimension_method_set_measured_geometry_0");
     }
 
     /// <summary>Invokes OCCT PrsDim_DiameterDimension::SetTextPosition.</summary>
@@ -40865,6 +41283,14 @@ public sealed class PrsDimDimension : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT PrsDim_Dimension::GetPlane.</summary>
+    public global::OcctSharp.Values.Plane GetPlane()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimDimensionMethodGetPlane0(handle, out global::OcctSharp.Values.Plane resultValue), "occtsharp_generated_prs_dim_dimension_method_get_plane_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT PrsDim_Dimension::GetTextPosition.</summary>
     public Point3d GetTextPosition()
     {
@@ -40918,6 +41344,13 @@ public sealed class PrsDimDimension : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimDimensionMethodSetComputedValue0(handle), "occtsharp_generated_prs_dim_dimension_method_set_computed_value_0");
+    }
+
+    /// <summary>Invokes OCCT PrsDim_Dimension::SetCustomPlane.</summary>
+    public void SetCustomPlane(global::OcctSharp.Values.Plane thePlane)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimDimensionMethodSetCustomPlane0(handle, thePlane), "occtsharp_generated_prs_dim_dimension_method_set_custom_plane_0");
     }
 
     /// <summary>Invokes OCCT PrsDim_Dimension::SetCustomValue.</summary>
@@ -41647,6 +42080,20 @@ public sealed class PrsDimLengthDimension : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT PrsDim_LengthDimension::SetDirection.</summary>
+    public void SetDirection(global::OcctSharp.Values.Direction3d theDirection, bool theUseDirection)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimLengthDimensionMethodSetDirection0(handle, theDirection, theUseDirection ? 1 : 0), "occtsharp_generated_prs_dim_length_dimension_method_set_direction_0");
+    }
+
+    /// <summary>Invokes OCCT PrsDim_LengthDimension::SetMeasuredGeometry.</summary>
+    public void SetMeasuredGeometry(Point3d theFirstPoint, Point3d theSecondPoint, global::OcctSharp.Values.Plane thePlane)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimLengthDimensionMethodSetMeasuredGeometry0(handle, new Point3dRaw(theFirstPoint.X, theFirstPoint.Y, theFirstPoint.Z), new Point3dRaw(theSecondPoint.X, theSecondPoint.Y, theSecondPoint.Z), thePlane), "occtsharp_generated_prs_dim_length_dimension_method_set_measured_geometry_0");
+    }
+
     /// <summary>Invokes OCCT PrsDim_LengthDimension::SetTextPosition.</summary>
     public void SetTextPosition(Point3d theTextPos)
     {
@@ -42210,12 +42657,36 @@ public sealed class PrsDimRadiusDimension : IDisposable
 
     private PrsDimRadiusDimension(PrsDimRadiusDimensionHandle handle) => this.handle = handle;
 
+    /// <summary>Creates a retained OCCT PrsDim_RadiusDimension shared object.</summary>
+    public PrsDimRadiusDimension(global::OcctSharp.Values.Circle3d theCircle)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimRadiusDimensionCreate0(theCircle, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "PrsDimRadiusDimensionCreate0");
+    }
+
+    /// <summary>Creates a retained OCCT PrsDim_RadiusDimension shared object.</summary>
+    public PrsDimRadiusDimension(global::OcctSharp.Values.Circle3d theCircle, Point3d theAnchorPoint)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimRadiusDimensionCreate1(theCircle, new Point3dRaw(theAnchorPoint.X, theAnchorPoint.Y, theAnchorPoint.Z), out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "PrsDimRadiusDimensionCreate1");
+    }
+
     /// <summary>Invokes OCCT PrsDim_RadiusDimension::AnchorPoint.</summary>
     public Point3d AnchorPoint()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimRadiusDimensionMethodAnchorPoint0(handle, out Point3dRaw resultValue), "occtsharp_generated_prs_dim_radius_dimension_method_anchor_point_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT PrsDim_RadiusDimension::Circle.</summary>
+    public global::OcctSharp.Values.Circle3d Circle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimRadiusDimensionMethodCircle0(handle, out global::OcctSharp.Values.Circle3d resultValue), "occtsharp_generated_prs_dim_radius_dimension_method_circle_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT PrsDim_RadiusDimension::DynamicType.</summary>
@@ -42232,6 +42703,20 @@ public sealed class PrsDimRadiusDimension : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimRadiusDimensionMethodGetTextPosition0(handle, out Point3dRaw resultValue), "occtsharp_generated_prs_dim_radius_dimension_method_get_text_position_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT PrsDim_RadiusDimension::SetMeasuredGeometry.</summary>
+    public void SetMeasuredGeometry(global::OcctSharp.Values.Circle3d theCircle)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimRadiusDimensionMethodSetMeasuredGeometry0(handle, theCircle), "occtsharp_generated_prs_dim_radius_dimension_method_set_measured_geometry_0");
+    }
+
+    /// <summary>Invokes OCCT PrsDim_RadiusDimension::SetMeasuredGeometry.</summary>
+    public void SetMeasuredGeometry(global::OcctSharp.Values.Circle3d theCircle, Point3d theAnchorPoint, bool theHasAnchor)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.PrsDimRadiusDimensionMethodSetMeasuredGeometry1(handle, theCircle, new Point3dRaw(theAnchorPoint.X, theAnchorPoint.Y, theAnchorPoint.Z), theHasAnchor ? 1 : 0), "occtsharp_generated_prs_dim_radius_dimension_method_set_measured_geometry_1");
     }
 
     /// <summary>Invokes OCCT PrsDim_RadiusDimension::SetTextPosition.</summary>
@@ -44094,12 +44579,28 @@ public sealed class Select3DSensitiveCircle : IDisposable
 
     private Select3DSensitiveCircle(Select3DSensitiveCircleHandle handle) => this.handle = handle;
 
+    /// <summary>Creates a retained OCCT Select3D_SensitiveCircle shared object.</summary>
+    public Select3DSensitiveCircle(SelectMgrEntityOwner? theOwnerId, global::OcctSharp.Values.Circle3d theCircle, bool theIsFilled)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveCircleCreate0(theOwnerId is null ? nint.Zero : theOwnerId.NativeHandle.DangerousGetHandle(), theCircle, theIsFilled ? 1 : 0, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "Select3DSensitiveCircleCreate0");
+    }
+
     /// <summary>Invokes OCCT Select3D_SensitiveCircle::CenterOfGeometry.</summary>
     public Point3d CenterOfGeometry()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveCircleMethodCenterOfGeometry0(handle, out Point3dRaw resultValue), "occtsharp_generated_select3_d_sensitive_circle_method_center_of_geometry_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT Select3D_SensitiveCircle::Circle.</summary>
+    public global::OcctSharp.Values.Circle3d Circle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveCircleMethodCircle0(handle, out global::OcctSharp.Values.Circle3d resultValue), "occtsharp_generated_select3_d_sensitive_circle_method_circle_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT Select3D_SensitiveCircle::DynamicType.</summary>
@@ -44509,6 +45010,13 @@ public sealed class Select3DSensitiveEntity : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveEntityMethodSet0(handle, theOwnerId is null ? nint.Zero : theOwnerId.NativeHandle.DangerousGetHandle()), "occtsharp_generated_select3_d_sensitive_entity_method_set_0");
+    }
+
+    /// <summary>Invokes OCCT Select3D_SensitiveEntity::SetFlippingOptions.</summary>
+    public void SetFlippingOptions(bool theIsEnabled, global::OcctSharp.Values.Axis2 theRefPlane)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitiveEntityMethodSetFlippingOptions0(handle, theIsEnabled ? 1 : 0, theRefPlane), "occtsharp_generated_select3_d_sensitive_entity_method_set_flipping_options_0");
     }
 
     /// <summary>Invokes OCCT Select3D_SensitiveEntity::SetSensitivityFactor.</summary>
@@ -45075,6 +45583,14 @@ public sealed class Select3DSensitivePoly : IDisposable
         OcctRuntime.EnsureCompatible();
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitivePolyCreate0(theOwnerId is null ? nint.Zero : theOwnerId.NativeHandle.DangerousGetHandle(), theIsBVHEnabled ? 1 : 0, theNbPnts, out nint nativeHandle), "generated_shared_create");
         handle = CreateHandle(nativeHandle, "Select3DSensitivePolyCreate0");
+    }
+
+    /// <summary>Creates a retained OCCT Select3D_SensitivePoly shared object.</summary>
+    public Select3DSensitivePoly(SelectMgrEntityOwner? theOwnerId, global::OcctSharp.Values.Circle3d theCircle, double theU1, double theU2, bool theIsFilled, int theNbPnts)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.Select3DSensitivePolyCreate1(theOwnerId is null ? nint.Zero : theOwnerId.NativeHandle.DangerousGetHandle(), theCircle, theU1, theU2, theIsFilled ? 1 : 0, theNbPnts, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "Select3DSensitivePolyCreate1");
     }
 
     /// <summary>Invokes OCCT Select3D_SensitivePoly::Center.</summary>
@@ -46611,6 +47127,21 @@ public sealed class SelectMgrAxisIntersector : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT SelectMgr_AxisIntersector::GetViewRayDirection.</summary>
+    public global::OcctSharp.Values.Direction3d GetViewRayDirection()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrAxisIntersectorMethodGetViewRayDirection0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_select_mgr_axis_intersector_method_get_view_ray_direction_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT SelectMgr_AxisIntersector::Init.</summary>
+    public void Init(global::OcctSharp.Values.Axis1 theAxis)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrAxisIntersectorMethodInit0(handle, theAxis), "occtsharp_generated_select_mgr_axis_intersector_method_init_0");
+    }
+
     /// <summary>Invokes OCCT SelectMgr_AxisIntersector::IsScalable.</summary>
     public bool IsScalable()
     {
@@ -46958,6 +47489,14 @@ public sealed class SelectMgrBaseIntersector : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT SelectMgr_BaseIntersector::GetMousePosition.</summary>
+    public global::OcctSharp.Values.Point2d GetMousePosition()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrBaseIntersectorMethodGetMousePosition0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_select_mgr_base_intersector_method_get_mouse_position_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT SelectMgr_BaseIntersector::GetNearPnt.</summary>
     public Point3d GetNearPnt()
     {
@@ -46972,6 +47511,14 @@ public sealed class SelectMgrBaseIntersector : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrBaseIntersectorMethodGetSelectionType0(handle, out int resultValue), "occtsharp_generated_select_mgr_base_intersector_method_get_selection_type_0");
         return (SelectMgrSelectionType)resultValue;
+    }
+
+    /// <summary>Invokes OCCT SelectMgr_BaseIntersector::GetViewRayDirection.</summary>
+    public global::OcctSharp.Values.Direction3d GetViewRayDirection()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrBaseIntersectorMethodGetViewRayDirection0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_select_mgr_base_intersector_method_get_view_ray_direction_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT SelectMgr_BaseIntersector::SetCamera.</summary>
@@ -48843,6 +49390,13 @@ public sealed class SelectMgrViewerSelector : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrViewerSelectorMethodPick1(handle, theXPix, theYPix, theView is null ? nint.Zero : theView.NativeHandle.DangerousGetHandle()), "occtsharp_generated_select_mgr_viewer_selector_method_pick_1");
+    }
+
+    /// <summary>Invokes OCCT SelectMgr_ViewerSelector::Pick.</summary>
+    public void Pick(global::OcctSharp.Values.Axis1 theAxis, V3dView? theView)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.SelectMgrViewerSelectorMethodPick2(handle, theAxis, theView is null ? nint.Zero : theView.NativeHandle.DangerousGetHandle()), "occtsharp_generated_select_mgr_viewer_selector_method_pick_2");
     }
 
     /// <summary>Invokes OCCT SelectMgr_ViewerSelector::Picked.</summary>
@@ -52764,6 +53318,13 @@ public sealed class V3dView : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewMethodSetFrustumCulling0(handle, theMode ? 1 : 0), "occtsharp_generated_v3d_view_method_set_frustum_culling_0");
     }
 
+    /// <summary>Invokes OCCT V3d_View::SetGrid.</summary>
+    public void SetGrid(global::OcctSharp.Values.Axis3 aPlane, AspectGrid? aGrid)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewMethodSetGrid0(handle, aPlane, aGrid is null ? nint.Zero : aGrid.NativeHandle.DangerousGetHandle()), "occtsharp_generated_v3d_view_method_set_grid_0");
+    }
+
     /// <summary>Invokes OCCT V3d_View::SetGridActivity.</summary>
     public void SetGridActivity(bool aFlag)
     {
@@ -53463,6 +54024,14 @@ public sealed class V3dViewer : IDisposable
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewerMethodNextDefinedViews0(handle), "occtsharp_generated_v3d_viewer_method_next_defined_views_0");
     }
 
+    /// <summary>Invokes OCCT V3d_Viewer::PrivilegedPlane.</summary>
+    public global::OcctSharp.Values.Axis3 PrivilegedPlane()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewerMethodPrivilegedPlane0(handle, out global::OcctSharp.Values.Axis3 resultValue), "occtsharp_generated_v3d_viewer_method_privileged_plane_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT V3d_Viewer::Redraw.</summary>
     public void Redraw()
     {
@@ -53588,6 +54157,13 @@ public sealed class V3dViewer : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewerMethodSetLightOn0(handle), "occtsharp_generated_v3d_viewer_method_set_light_on_0");
+    }
+
+    /// <summary>Invokes OCCT V3d_Viewer::SetPrivilegedPlane.</summary>
+    public void SetPrivilegedPlane(global::OcctSharp.Values.Axis3 thePlane)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(VisualizationGeneratedNativeMethods.V3dViewerMethodSetPrivilegedPlane0(handle, thePlane), "occtsharp_generated_v3d_viewer_method_set_privileged_plane_0");
     }
 
     /// <summary>Invokes OCCT V3d_Viewer::SetRectangularGridGraphicValues.</summary>

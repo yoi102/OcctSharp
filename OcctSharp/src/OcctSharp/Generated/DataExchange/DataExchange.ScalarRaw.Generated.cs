@@ -35,6 +35,7 @@
 // Source: c:@S@MoniTool_Timer@F@ClearTimers#S
 // Source: c:@S@MoniTool_Timer@F@ComputeAmendments#S
 // Source: c:@S@RWHeaderSection@F@Init#S
+// Source: c:@S@RWMesh_CoordinateSystemConverter@F@StandardCoordinateSystem#$@E@RWMesh_CoordinateSystem#S
 // Source: c:@S@STEPConstruct_UnitContext@F@ConvertSiPrefix#$@E@StepBasic_SiPrefix#S
 // Source: c:@S@STEPControl_Controller@F@Init#S
 // Source: c:@S@StepData@F@Init#S
@@ -195,6 +196,14 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_rwheader_section_init_static_init_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void RWHeaderSectionStaticInit0();
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_rwmesh_coordinate_system_converter_standard_coordinate_system_static_standard_coordinate_system_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus RWMeshCoordinateSystemConverterStaticStandardCoordinateSystem0Checked(int theSys, out global::OcctSharp.Values.Axis3 generatedResult);
+    internal static global::OcctSharp.Values.Axis3 RWMeshCoordinateSystemConverterStaticStandardCoordinateSystem0(int theSys)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(RWMeshCoordinateSystemConverterStaticStandardCoordinateSystem0Checked(theSys, out global::OcctSharp.Values.Axis3 generatedResult), "occtsharp_generated_rwmesh_coordinate_system_converter_standard_coordinate_system_static_standard_coordinate_system_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_stepconstruct_unit_context_convert_si_prefix_static_convert_si_prefix_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

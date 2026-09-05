@@ -75,19 +75,25 @@
 // Source: c:@S@BRepAdaptor_CompCurve@F@BRepAdaptor_CompCurve#
 // Source: c:@S@BRepAdaptor_CompCurve@F@BSpline#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@Bezier#1
+// Source: c:@S@BRepAdaptor_CompCurve@F@Circle#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@Continuity#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@Degree#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@DynamicType#1
+// Source: c:@S@BRepAdaptor_CompCurve@F@Ellipse#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@EvalD0#d#1
+// Source: c:@S@BRepAdaptor_CompCurve@F@EvalDN#d#I#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@FirstParameter#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@GetType#1
+// Source: c:@S@BRepAdaptor_CompCurve@F@Hyperbola#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@IsClosed#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@IsPeriodic#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@IsRational#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@LastParameter#1
+// Source: c:@S@BRepAdaptor_CompCurve@F@Line#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@NbKnots#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@NbPoles#1
+// Source: c:@S@BRepAdaptor_CompCurve@F@Parabola#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@Period#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@Resolution#d#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@ShallowCopy#1
@@ -247,6 +253,8 @@
 // Source: c:@S@BRepFill_PipeShell@F@IsBuildHistory#1
 // Source: c:@S@BRepFill_PipeShell@F@IsReady#1
 // Source: c:@S@BRepFill_PipeShell@F@MakeSolid#
+// Source: c:@S@BRepFill_PipeShell@F@Set#&1$@S@gp_Ax2#
+// Source: c:@S@BRepFill_PipeShell@F@Set#&1$@S@gp_Dir#
 // Source: c:@S@BRepFill_PipeShell@F@Set#b#
 // Source: c:@S@BRepFill_PipeShell@F@SetDiscrete#
 // Source: c:@S@BRepFill_PipeShell@F@SetForceApproxC1#b#
@@ -334,8 +342,10 @@
 // Source: c:@S@BRepTopAdaptor_HVertex@F@Orientation#
 // Source: c:@S@BRepTopAdaptor_HVertex@F@Parameter#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#
 // Source: c:@S@BRepTopAdaptor_HVertex@F@Resolution#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#
+// Source: c:@S@BRepTopAdaptor_HVertex@F@Value#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@BRepTopAdaptor_TopolTool#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@BRepTopAdaptor_TopolTool#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#
+// Source: c:@S@BRepTopAdaptor_TopolTool@F@Classify#&1$@S@gp_Pnt2d#d#b#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@ComputeSamplePoints#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@Destroy#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@DomainIsInfinite#
@@ -346,6 +356,7 @@
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@Initialize#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@Initialize#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@Initialize#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#
+// Source: c:@S@BRepTopAdaptor_TopolTool@F@IsThePointOn#&1$@S@gp_Pnt2d#d#b#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@More#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@MoreVertex#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@NbSamples#
@@ -380,6 +391,7 @@
 // Source: c:@S@BRep_CurveOnClosedSurface@F@IsRegularity#1
 // Source: c:@S@BRep_CurveOnClosedSurface@F@PCurve2#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#
 // Source: c:@S@BRep_CurveOnClosedSurface@F@PCurve2#1
+// Source: c:@S@BRep_CurveOnClosedSurface@F@SetUVPoints2#&1$@S@gp_Pnt2d#S0_#
 // Source: c:@S@BRep_CurveOnClosedSurface@F@Surface2#1
 // Source: c:@S@BRep_CurveOnClosedSurface@F@Update#
 // Source: c:@S@BRep_CurveOnSurface@F@Copy#1
@@ -387,6 +399,7 @@
 // Source: c:@S@BRep_CurveOnSurface@F@IsCurveOnSurface#1
 // Source: c:@S@BRep_CurveOnSurface@F@PCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#
 // Source: c:@S@BRep_CurveOnSurface@F@PCurve#1
+// Source: c:@S@BRep_CurveOnSurface@F@SetUVPoints#&1$@S@gp_Pnt2d#S0_#
 // Source: c:@S@BRep_CurveOnSurface@F@Surface#1
 // Source: c:@S@BRep_CurveOnSurface@F@Update#
 // Source: c:@S@BRep_CurveRepresentation@F@Continuity#$@E@GeomAbs_Shape#
@@ -524,33 +537,42 @@
 // Source: c:@S@ChFiDS_ChamfSpine@F@SetDistAngle#d#d#
 // Source: c:@S@ChFiDS_ChamfSpine@F@SetDists#d#d#
 // Source: c:@S@ChFiDS_ChamfSpine@F@SetMode#$@E@ChFiDS_ChamfMode#
+// Source: c:@S@ChFiDS_ElSpine@F@AddVertexWithTangent#&1$@S@gp_Ax1#
 // Source: c:@S@ChFiDS_ElSpine@F@BSpline#1
 // Source: c:@S@ChFiDS_ElSpine@F@Bezier#1
 // Source: c:@S@ChFiDS_ElSpine@F@ChFiDS_ElSpine#
+// Source: c:@S@ChFiDS_ElSpine@F@Circle#1
 // Source: c:@S@ChFiDS_ElSpine@F@Continuity#1
 // Source: c:@S@ChFiDS_ElSpine@F@DynamicType#1
+// Source: c:@S@ChFiDS_ElSpine@F@Ellipse#1
 // Source: c:@S@ChFiDS_ElSpine@F@EvalD0#d#1
 // Source: c:@S@ChFiDS_ElSpine@F@FirstParameter#1
 // Source: c:@S@ChFiDS_ElSpine@F@FirstParameter#d#
 // Source: c:@S@ChFiDS_ElSpine@F@GetSavedFirstParameter#1
 // Source: c:@S@ChFiDS_ElSpine@F@GetSavedLastParameter#1
 // Source: c:@S@ChFiDS_ElSpine@F@GetType#1
+// Source: c:@S@ChFiDS_ElSpine@F@Hyperbola#1
 // Source: c:@S@ChFiDS_ElSpine@F@IsPeriodic#1
 // Source: c:@S@ChFiDS_ElSpine@F@LastParameter#1
 // Source: c:@S@ChFiDS_ElSpine@F@LastParameter#d#
+// Source: c:@S@ChFiDS_ElSpine@F@Line#1
 // Source: c:@S@ChFiDS_ElSpine@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@ChFiDS_ElSpine@F@NbVertices#1
 // Source: c:@S@ChFiDS_ElSpine@F@Next#1
+// Source: c:@S@ChFiDS_ElSpine@F@Parabola#1
 // Source: c:@S@ChFiDS_ElSpine@F@Period#1
 // Source: c:@S@ChFiDS_ElSpine@F@Previous#1
 // Source: c:@S@ChFiDS_ElSpine@F@Resolution#d#1
 // Source: c:@S@ChFiDS_ElSpine@F@SaveFirstParameter#
 // Source: c:@S@ChFiDS_ElSpine@F@SaveLastParameter#
 // Source: c:@S@ChFiDS_ElSpine@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#
+// Source: c:@S@ChFiDS_ElSpine@F@SetFirstPointAndTgt#&1$@S@gp_Pnt#&1$@S@gp_Vec#
+// Source: c:@S@ChFiDS_ElSpine@F@SetLastPointAndTgt#&1$@S@gp_Pnt#&1$@S@gp_Vec#
 // Source: c:@S@ChFiDS_ElSpine@F@SetOrigin#d#
 // Source: c:@S@ChFiDS_ElSpine@F@SetPeriodic#b#
 // Source: c:@S@ChFiDS_ElSpine@F@ShallowCopy#1
 // Source: c:@S@ChFiDS_ElSpine@F@Trim#d#d#d#1
+// Source: c:@S@ChFiDS_ElSpine@F@VertexWithTangent#I#1
 // Source: c:@S@ChFiDS_FilSpine@F@AppendElSpine#&1$@N@opencascade@S@handle>#$@S@ChFiDS_ElSpine#
 // Source: c:@S@ChFiDS_FilSpine@F@ChFiDS_FilSpine#
 // Source: c:@S@ChFiDS_FilSpine@F@ChFiDS_FilSpine#d#
@@ -563,6 +585,7 @@
 // Source: c:@S@ChFiDS_FilSpine@F@Radius#I#1
 // Source: c:@S@ChFiDS_FilSpine@F@Reset#b#
 // Source: c:@S@ChFiDS_FilSpine@F@SetRadius#&1$@N@opencascade@S@handle>#$@S@Law_Function#I#
+// Source: c:@S@ChFiDS_FilSpine@F@SetRadius#&1$@S@gp_XY#I#
 // Source: c:@S@ChFiDS_FilSpine@F@SetRadius#d#
 // Source: c:@S@ChFiDS_Spine@F@Absc#d#
 // Source: c:@S@ChFiDS_Spine@F@Absc#d#I#
@@ -570,6 +593,7 @@
 // Source: c:@S@ChFiDS_Spine@F@AppendOffsetElSpine#&1$@N@opencascade@S@handle>#$@S@ChFiDS_ElSpine#
 // Source: c:@S@ChFiDS_Spine@F@ChFiDS_Spine#
 // Source: c:@S@ChFiDS_Spine@F@ChFiDS_Spine#d#
+// Source: c:@S@ChFiDS_Spine@F@Circle#1
 // Source: c:@S@ChFiDS_Spine@F@CurrentIndexOfElementarySpine#1
 // Source: c:@S@ChFiDS_Spine@F@DynamicType#1
 // Source: c:@S@ChFiDS_Spine@F@ElSpine#I#1
@@ -591,6 +615,7 @@
 // Source: c:@S@ChFiDS_Spine@F@LastParameter#I#1
 // Source: c:@S@ChFiDS_Spine@F@LastStatus#1
 // Source: c:@S@ChFiDS_Spine@F@Length#I#1
+// Source: c:@S@ChFiDS_Spine@F@Line#1
 // Source: c:@S@ChFiDS_Spine@F@Load#
 // Source: c:@S@ChFiDS_Spine@F@Mode#1
 // Source: c:@S@ChFiDS_Spine@F@NbEdges#1
@@ -669,6 +694,7 @@
 // Source: c:@S@ChFiDS_SurfData@F@FirstExtensionValue#d#
 // Source: c:@S@ChFiDS_SurfData@F@FirstSpineParam#1
 // Source: c:@S@ChFiDS_SurfData@F@FirstSpineParam#d#
+// Source: c:@S@ChFiDS_SurfData@F@Get2dPoints#b#I#1
 // Source: c:@S@ChFiDS_SurfData@F@Index#I#1
 // Source: c:@S@ChFiDS_SurfData@F@IndexOfC#I#1
 // Source: c:@S@ChFiDS_SurfData@F@IndexOfC1#1
@@ -684,6 +710,7 @@
 // Source: c:@S@ChFiDS_SurfData@F@LastSpineParam#d#
 // Source: c:@S@ChFiDS_SurfData@F@Orientation#1
 // Source: c:@S@ChFiDS_SurfData@F@ResetSimul#
+// Source: c:@S@ChFiDS_SurfData@F@Set2dPoints#&1$@S@gp_Pnt2d#S0_#S0_#S0_#
 // Source: c:@S@ChFiDS_SurfData@F@SetIndexOfC1#I#
 // Source: c:@S@ChFiDS_SurfData@F@SetIndexOfC2#I#
 // Source: c:@S@ChFiDS_SurfData@F@SetSimul#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#
@@ -713,6 +740,7 @@
 // Source: c:@S@Contap_TheIWLineOfTheIWalking@F@Reverse#
 // Source: c:@S@Contap_TheIWLineOfTheIWalking@F@SetTangencyAtBegining#b#
 // Source: c:@S@Contap_TheIWLineOfTheIWalking@F@SetTangencyAtEnd#b#
+// Source: c:@S@Contap_TheIWLineOfTheIWalking@F@SetTangentVector#&1$@S@gp_Vec#I#
 // Source: c:@S@Draft_Modification@F@Clear#
 // Source: c:@S@Draft_Modification@F@DynamicType#1
 // Source: c:@S@Draft_Modification@F@Error#1
@@ -867,6 +895,7 @@
 // Source: c:@S@HelixGeom_HelixCurve@F@Continuity#1
 // Source: c:@S@HelixGeom_HelixCurve@F@DynamicType#1
 // Source: c:@S@HelixGeom_HelixCurve@F@EvalD0#d#1
+// Source: c:@S@HelixGeom_HelixCurve@F@EvalDN#d#I#1
 // Source: c:@S@HelixGeom_HelixCurve@F@FirstParameter#1
 // Source: c:@S@HelixGeom_HelixCurve@F@HelixGeom_HelixCurve#
 // Source: c:@S@HelixGeom_HelixCurve@F@IsClosed#1
@@ -877,12 +906,14 @@
 // Source: c:@S@HelixGeom_HelixCurve@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@HelixGeom_HelixCurve@F@Period#1
 // Source: c:@S@HelixGeom_HelixCurve@F@Resolution#d#1
+// Source: c:@S@IntCurvesFace_Intersector@F@ClassifyUVPoint#&1$@S@gp_Pnt2d#1
 // Source: c:@S@IntCurvesFace_Intersector@F@DynamicType#1
 // Source: c:@S@IntCurvesFace_Intersector@F@GetUseBoundToler#1
 // Source: c:@S@IntCurvesFace_Intersector@F@IsDone#1
 // Source: c:@S@IntCurvesFace_Intersector@F@IsParallel#1
 // Source: c:@S@IntCurvesFace_Intersector@F@NbPnt#1
 // Source: c:@S@IntCurvesFace_Intersector@F@Perform#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#d#d#
+// Source: c:@S@IntCurvesFace_Intersector@F@Perform#&1$@S@gp_Lin#d#d#
 // Source: c:@S@IntCurvesFace_Intersector@F@Pnt#I#1
 // Source: c:@S@IntCurvesFace_Intersector@F@SetUseBoundToler#b#
 // Source: c:@S@IntCurvesFace_Intersector@F@State#I#1
@@ -899,11 +930,31 @@
 // Source: c:@S@IntPatch_ALine@F@SetFirstPoint#I#
 // Source: c:@S@IntPatch_ALine@F@SetLastPoint#I#
 // Source: c:@S@IntPatch_ALine@F@Value#d#
+// Source: c:@S@IntPatch_GLine@F@Circle#1
 // Source: c:@S@IntPatch_GLine@F@ComputeVertexParameters#d#
 // Source: c:@S@IntPatch_GLine@F@DynamicType#1
+// Source: c:@S@IntPatch_GLine@F@Ellipse#1
 // Source: c:@S@IntPatch_GLine@F@HasFirstPoint#1
 // Source: c:@S@IntPatch_GLine@F@HasLastPoint#1
+// Source: c:@S@IntPatch_GLine@F@Hyperbola#1
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Circ#b#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Circ#b#$@E@IntSurf_Situation#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Circ#b#$@E@IntSurf_TypeTrans#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Elips#b#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Elips#b#$@E@IntSurf_Situation#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Elips#b#$@E@IntSurf_TypeTrans#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Hypr#b#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Hypr#b#$@E@IntSurf_Situation#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Hypr#b#$@E@IntSurf_TypeTrans#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Lin#b#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Lin#b#$@E@IntSurf_Situation#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Lin#b#$@E@IntSurf_TypeTrans#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Parab#b#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Parab#b#$@E@IntSurf_Situation#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Parab#b#$@E@IntSurf_TypeTrans#S2_#
+// Source: c:@S@IntPatch_GLine@F@Line#1
 // Source: c:@S@IntPatch_GLine@F@NbVertex#1
+// Source: c:@S@IntPatch_GLine@F@Parabola#1
 // Source: c:@S@IntPatch_GLine@F@SetFirstPoint#I#
 // Source: c:@S@IntPatch_GLine@F@SetLastPoint#I#
 // Source: c:@S@IntPatch_Line@F@ArcType#1
@@ -936,6 +987,8 @@
 // Source: c:@S@IntPatch_RLine@F@IsArcOnS1#1
 // Source: c:@S@IntPatch_RLine@F@IsArcOnS2#1
 // Source: c:@S@IntPatch_RLine@F@IsOutBox#&1$@S@gp_Pnt#1
+// Source: c:@S@IntPatch_RLine@F@IsOutSurf1Box#&1$@S@gp_Pnt2d#1
+// Source: c:@S@IntPatch_RLine@F@IsOutSurf2Box#&1$@S@gp_Pnt2d#1
 // Source: c:@S@IntPatch_RLine@F@NbPnts#1
 // Source: c:@S@IntPatch_RLine@F@NbVertex#1
 // Source: c:@S@IntPatch_RLine@F@RemoveVertex#I#
@@ -964,6 +1017,7 @@
 // Source: c:@S@IntPatch_TheIWLineOfTheIWalking@F@Reverse#
 // Source: c:@S@IntPatch_TheIWLineOfTheIWalking@F@SetTangencyAtBegining#b#
 // Source: c:@S@IntPatch_TheIWLineOfTheIWalking@F@SetTangencyAtEnd#b#
+// Source: c:@S@IntPatch_TheIWLineOfTheIWalking@F@SetTangentVector#&1$@S@gp_Vec#I#
 // Source: c:@S@IntPatch_WLine@F@ClearVertexes#
 // Source: c:@S@IntPatch_WLine@F@ComputeVertexParameters#d#
 // Source: c:@S@IntPatch_WLine@F@Curve#1
@@ -981,6 +1035,8 @@
 // Source: c:@S@IntPatch_WLine@F@IntPatch_WLine#&1$@N@opencascade@S@handle>#$@S@IntSurf_LineOn2S#b#$@E@IntSurf_Situation#S3_#
 // Source: c:@S@IntPatch_WLine@F@IntPatch_WLine#&1$@N@opencascade@S@handle>#$@S@IntSurf_LineOn2S#b#$@E@IntSurf_TypeTrans#S3_#
 // Source: c:@S@IntPatch_WLine@F@IsOutBox#&1$@S@gp_Pnt#1
+// Source: c:@S@IntPatch_WLine@F@IsOutSurf1Box#&1$@S@gp_Pnt2d#1
+// Source: c:@S@IntPatch_WLine@F@IsOutSurf2Box#&1$@S@gp_Pnt2d#1
 // Source: c:@S@IntPatch_WLine@F@IsPurgingAllowed#
 // Source: c:@S@IntPatch_WLine@F@NbPnts#1
 // Source: c:@S@IntPatch_WLine@F@NbVertex#1
@@ -1000,6 +1056,8 @@
 // Source: c:@S@IntSurf_LineOn2S@F@DynamicType#1
 // Source: c:@S@IntSurf_LineOn2S@F@IntSurf_LineOn2S#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@IntSurf_LineOn2S@F@IsOutBox#&1$@S@gp_Pnt#
+// Source: c:@S@IntSurf_LineOn2S@F@IsOutSurf1Box#&1$@S@gp_Pnt2d#
+// Source: c:@S@IntSurf_LineOn2S@F@IsOutSurf2Box#&1$@S@gp_Pnt2d#
 // Source: c:@S@IntSurf_LineOn2S@F@NbPoints#1
 // Source: c:@S@IntSurf_LineOn2S@F@RemovePoint#I#
 // Source: c:@S@IntSurf_LineOn2S@F@Reverse#
@@ -1062,9 +1120,11 @@
 // Source: c:@S@ShapeAnalysis_Surface@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#
 // Source: c:@S@ShapeAnalysis_Surface@F@Init#&1$@N@opencascade@S@handle>#$@S@ShapeAnalysis_Surface#
 // Source: c:@S@ShapeAnalysis_Surface@F@IsDegenerated#&1$@S@gp_Pnt#d#
+// Source: c:@S@ShapeAnalysis_Surface@F@IsDegenerated#&1$@S@gp_Pnt2d#S0_#d#d#
 // Source: c:@S@ShapeAnalysis_Surface@F@IsUClosed#d#
 // Source: c:@S@ShapeAnalysis_Surface@F@IsVClosed#d#
 // Source: c:@S@ShapeAnalysis_Surface@F@NbSingularities#d#
+// Source: c:@S@ShapeAnalysis_Surface@F@NextValueOfUV#&1$@S@gp_Pnt2d#&1$@S@gp_Pnt#d#d#
 // Source: c:@S@ShapeAnalysis_Surface@F@SetDomain#d#d#d#d#
 // Source: c:@S@ShapeAnalysis_Surface@F@ShapeAnalysis_Surface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#
 // Source: c:@S@ShapeAnalysis_Surface@F@Surface#1
@@ -1073,7 +1133,9 @@
 // Source: c:@S@ShapeAnalysis_Surface@F@UIso#d#
 // Source: c:@S@ShapeAnalysis_Surface@F@VCloseVal#1
 // Source: c:@S@ShapeAnalysis_Surface@F@VIso#d#
+// Source: c:@S@ShapeAnalysis_Surface@F@Value#&1$@S@gp_Pnt2d#
 // Source: c:@S@ShapeAnalysis_Surface@F@Value#d#d#
+// Source: c:@S@ShapeAnalysis_Surface@F@ValueOfUV#&1$@S@gp_Pnt#d#
 // Source: c:@S@ShapeAnalysis_TransferParameters@F@DynamicType#1
 // Source: c:@S@ShapeAnalysis_TransferParameters@F@IsSameRange#1
 // Source: c:@S@ShapeAnalysis_TransferParameters@F@Perform#d#b#
@@ -1189,6 +1251,7 @@
 // Source: c:@S@ShapeExtend_ComplexCurve@F@Continuity#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@DynamicType#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@EvalD0#d#1
+// Source: c:@S@ShapeExtend_ComplexCurve@F@EvalDN#d#I#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@FirstParameter#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@IsCN#I#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@IsClosed#1
@@ -1201,16 +1264,20 @@
 // Source: c:@S@ShapeExtend_CompositeSurface@F@Copy#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@DynamicType#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@EvalD0#d#d#1
+// Source: c:@S@ShapeExtend_CompositeSurface@F@EvalDN#d#d#I#I#1
+// Source: c:@S@ShapeExtend_CompositeSurface@F@GlobalToLocal#I#I#&1$@S@gp_Pnt2d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@IsCNu#I#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@IsCNv#I#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@IsUClosed#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@IsUPeriodic#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@IsVClosed#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@IsVPeriodic#1
+// Source: c:@S@ShapeExtend_CompositeSurface@F@LocalToGlobal#I#I#&1$@S@gp_Pnt2d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@LocateUParameter#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@LocateVParameter#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@NbUPatches#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@NbVPatches#1
+// Source: c:@S@ShapeExtend_CompositeSurface@F@Patch#&1$@S@gp_Pnt2d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@Patch#I#I#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@Patch#d#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@SetUFirstValue#d#
@@ -1228,6 +1295,7 @@
 // Source: c:@S@ShapeExtend_CompositeSurface@F@VLocalToGlobal#I#I#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@VReverse#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@VReversedParameter#d#1
+// Source: c:@S@ShapeExtend_CompositeSurface@F@Value#&1$@S@gp_Pnt2d#1
 // Source: c:@S@ShapeExtend_MsgRegistrator@F@DynamicType#1
 // Source: c:@S@ShapeExtend_MsgRegistrator@F@ShapeExtend_MsgRegistrator#
 // Source: c:@S@ShapeExtend_WireData@F@Add#&1$@N@opencascade@S@handle>#$@S@ShapeExtend_WireData#I#
@@ -3437,6 +3505,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_c
   const OcctSharp_BRepAdaptorCompCurveHandle* handle,
   OcctSharp_GeomBSplineCurveHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_circle_0(
+  const OcctSharp_BRepAdaptorCompCurveHandle* handle,
+  OcctSharp_Value_Circle3d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_continuity_0(
   const OcctSharp_BRepAdaptorCompCurveHandle* handle,
   int32_t* out_value);
@@ -3449,10 +3521,20 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_c
   const OcctSharp_BRepAdaptorCompCurveHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_ellipse_0(
+  const OcctSharp_BRepAdaptorCompCurveHandle* handle,
+  OcctSharp_Value_Ellipse3d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_eval_d0_0(
   const OcctSharp_BRepAdaptorCompCurveHandle* handle,
   double theU,
   OcctSharp_Point3d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_eval_dn_0(
+  const OcctSharp_BRepAdaptorCompCurveHandle* handle,
+  double theU,
+  int32_t theN,
+  OcctSharp_Value_Vector3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_first_parameter_0(
   const OcctSharp_BRepAdaptorCompCurveHandle* handle,
@@ -3461,6 +3543,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_c
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_get_type_0(
   const OcctSharp_BRepAdaptorCompCurveHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_hyperbola_0(
+  const OcctSharp_BRepAdaptorCompCurveHandle* handle,
+  OcctSharp_Value_Hyperbola3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_is_closed_0(
   const OcctSharp_BRepAdaptorCompCurveHandle* handle,
@@ -3478,6 +3564,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_c
   const OcctSharp_BRepAdaptorCompCurveHandle* handle,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_line_0(
+  const OcctSharp_BRepAdaptorCompCurveHandle* handle,
+  OcctSharp_Value_Line3d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_nb_intervals_0(
   const OcctSharp_BRepAdaptorCompCurveHandle* handle,
   int32_t s,
@@ -3490,6 +3580,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_c
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_nb_poles_0(
   const OcctSharp_BRepAdaptorCompCurveHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_parabola_0(
+  const OcctSharp_BRepAdaptorCompCurveHandle* handle,
+  OcctSharp_Value_Parabola3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_period_0(
   const OcctSharp_BRepAdaptorCompCurveHandle* handle,
@@ -4661,6 +4755,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_fill_pipe
   const OcctSharp_BRepFillPipeShellHandle* handle,
   int32_t frenet);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_fill_pipe_shell_method_set_1(
+  const OcctSharp_BRepFillPipeShellHandle* handle,
+  OcctSharp_Value_Axis2 axe);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_fill_pipe_shell_method_set_2(
+  const OcctSharp_BRepFillPipeShellHandle* handle,
+  OcctSharp_Value_Direction3d biNormal);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_fill_pipe_shell_method_set_discrete_0(
   const OcctSharp_BRepFillPipeShellHandle* handle);
 
@@ -5393,6 +5495,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_top_adapt
   const OcctSharp_Adaptor2dCurve2dHandle* c,
   double* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_top_adaptor_hvertex_method_value_0(
+  const OcctSharp_BRepTopAdaptorHVertexHandle* handle,
+  OcctSharp_Value_Point2d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_top_adaptor_hvertex_clone(
   const OcctSharp_BRepTopAdaptorHVertexHandle* source,
   OcctSharp_BRepTopAdaptorHVertexHandle** out_handle);
@@ -5418,6 +5524,13 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_top_adapt
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_top_adaptor_topol_tool_create_1(
   const OcctSharp_Adaptor3dSurfaceHandle* surface,
   OcctSharp_BRepTopAdaptorTopolToolHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_top_adaptor_topol_tool_method_classify_0(
+  const OcctSharp_BRepTopAdaptorTopolToolHandle* handle,
+  OcctSharp_Value_Point2d p2d,
+  double tol,
+  int32_t recadreOnPeriodic,
+  int32_t* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_top_adaptor_topol_tool_method_compute_sample_points_0(
   const OcctSharp_BRepTopAdaptorTopolToolHandle* handle);
@@ -5453,6 +5566,13 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_top_adapt
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_top_adaptor_topol_tool_method_initialize_2(
   const OcctSharp_BRepTopAdaptorTopolToolHandle* handle,
   const OcctSharp_Adaptor3dSurfaceHandle* s);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_top_adaptor_topol_tool_method_is_the_point_on_0(
+  const OcctSharp_BRepTopAdaptorTopolToolHandle* handle,
+  OcctSharp_Value_Point2d p2d,
+  double tol,
+  int32_t recadreOnPeriodic,
+  int32_t* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_top_adaptor_topol_tool_method_more_0(
   const OcctSharp_BRepTopAdaptorTopolToolHandle* handle,
@@ -5650,6 +5770,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_curve_on_
   const OcctSharp_BRepCurveOnClosedSurfaceHandle* handle,
   OcctSharp_Geom2dCurveHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_curve_on_closed_surface_method_set_uvpoints2_0(
+  const OcctSharp_BRepCurveOnClosedSurfaceHandle* handle,
+  OcctSharp_Value_Point2d p1,
+  OcctSharp_Value_Point2d p2);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_curve_on_closed_surface_method_surface2_0(
   const OcctSharp_BRepCurveOnClosedSurfaceHandle* handle,
   OcctSharp_GeomSurfaceHandle** out_handle);
@@ -5695,6 +5820,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_curve_on_
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_curve_on_surface_method_pcurve_1(
   const OcctSharp_BRepCurveOnSurfaceHandle* handle,
   OcctSharp_Geom2dCurveHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_curve_on_surface_method_set_uvpoints_0(
+  const OcctSharp_BRepCurveOnSurfaceHandle* handle,
+  OcctSharp_Value_Point2d p1,
+  OcctSharp_Value_Point2d p2);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_curve_on_surface_method_surface_0(
   const OcctSharp_BRepCurveOnSurfaceHandle* handle,
@@ -6569,6 +6699,10 @@ OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_chamf_spine_relea
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_create_0(
   OcctSharp_ChFiDSElSpineHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_add_vertex_with_tangent_0(
+  const OcctSharp_ChFiDSElSpineHandle* handle,
+  OcctSharp_Value_Axis1 anAx1);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_bezier_0(
   const OcctSharp_ChFiDSElSpineHandle* handle,
   OcctSharp_GeomBezierCurveHandle** out_handle);
@@ -6577,6 +6711,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_sp
   const OcctSharp_ChFiDSElSpineHandle* handle,
   OcctSharp_GeomBSplineCurveHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_circle_0(
+  const OcctSharp_ChFiDSElSpineHandle* handle,
+  OcctSharp_Value_Circle3d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_continuity_0(
   const OcctSharp_ChFiDSElSpineHandle* handle,
   int32_t* out_value);
@@ -6584,6 +6722,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_sp
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_dynamic_type_0(
   const OcctSharp_ChFiDSElSpineHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_ellipse_0(
+  const OcctSharp_ChFiDSElSpineHandle* handle,
+  OcctSharp_Value_Ellipse3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_eval_d0_0(
   const OcctSharp_ChFiDSElSpineHandle* handle,
@@ -6610,6 +6752,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_sp
   const OcctSharp_ChFiDSElSpineHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_hyperbola_0(
+  const OcctSharp_ChFiDSElSpineHandle* handle,
+  OcctSharp_Value_Hyperbola3d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_is_periodic_0(
   const OcctSharp_ChFiDSElSpineHandle* handle,
   int32_t* out_value);
@@ -6621,6 +6767,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_sp
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_last_parameter_1(
   const OcctSharp_ChFiDSElSpineHandle* handle,
   double p);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_line_0(
+  const OcctSharp_ChFiDSElSpineHandle* handle,
+  OcctSharp_Value_Line3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_nb_intervals_0(
   const OcctSharp_ChFiDSElSpineHandle* handle,
@@ -6634,6 +6784,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_sp
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_next_0(
   const OcctSharp_ChFiDSElSpineHandle* handle,
   OcctSharp_ChFiDSSurfDataHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_parabola_0(
+  const OcctSharp_ChFiDSElSpineHandle* handle,
+  OcctSharp_Value_Parabola3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_period_0(
   const OcctSharp_ChFiDSElSpineHandle* handle,
@@ -6658,6 +6812,16 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_sp
   const OcctSharp_ChFiDSElSpineHandle* handle,
   const OcctSharp_GeomCurveHandle* c);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_set_first_point_and_tgt_0(
+  const OcctSharp_ChFiDSElSpineHandle* handle,
+  OcctSharp_Point3d p,
+  OcctSharp_Value_Vector3d t);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_set_last_point_and_tgt_0(
+  const OcctSharp_ChFiDSElSpineHandle* handle,
+  OcctSharp_Point3d p,
+  OcctSharp_Value_Vector3d t);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_set_origin_0(
   const OcctSharp_ChFiDSElSpineHandle* handle,
   double o);
@@ -6676,6 +6840,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_sp
   double last,
   double tol,
   OcctSharp_Adaptor3dCurveHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_vertex_with_tangent_0(
+  const OcctSharp_ChFiDSElSpineHandle* handle,
+  int32_t index,
+  OcctSharp_Value_Axis1* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_clone(
   const OcctSharp_ChFiDSElSpineHandle* source,
@@ -6751,6 +6920,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_fil_s
   const OcctSharp_LawFunctionHandle* c,
   int32_t iinC);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_fil_spine_method_set_radius_2(
+  const OcctSharp_ChFiDSFilSpineHandle* handle,
+  OcctSharp_Value_Coordinates2d uandR,
+  int32_t iinC);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_fil_spine_clone(
   const OcctSharp_ChFiDSFilSpineHandle* source,
   OcctSharp_ChFiDSFilSpineHandle** out_handle);
@@ -6795,6 +6969,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_spine
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_spine_method_append_offset_el_spine_0(
   const OcctSharp_ChFiDSSpineHandle* handle,
   const OcctSharp_ChFiDSElSpineHandle* els);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_spine_method_circle_0(
+  const OcctSharp_ChFiDSSpineHandle* handle,
+  OcctSharp_Value_Circle3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_spine_method_current_index_of_elementary_spine_0(
   const OcctSharp_ChFiDSSpineHandle* handle,
@@ -6887,6 +7065,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_spine
   const OcctSharp_ChFiDSSpineHandle* handle,
   int32_t indexSpine,
   double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_spine_method_line_0(
+  const OcctSharp_ChFiDSSpineHandle* handle,
+  OcctSharp_Value_Line3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_spine_method_load_0(
   const OcctSharp_ChFiDSSpineHandle* handle);
@@ -7255,6 +7437,12 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_surf_
   const OcctSharp_ChFiDSSurfDataHandle* handle,
   double par);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_surf_data_method_get2d_points_0(
+  const OcctSharp_ChFiDSSurfDataHandle* handle,
+  int32_t first,
+  int32_t onS,
+  OcctSharp_Value_Point2d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_surf_data_method_index_0(
   const OcctSharp_ChFiDSSurfDataHandle* handle,
   int32_t ofS,
@@ -7316,6 +7504,13 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_surf_
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_surf_data_method_reset_simul_0(
   const OcctSharp_ChFiDSSurfDataHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_surf_data_method_set2d_points_0(
+  const OcctSharp_ChFiDSSurfDataHandle* handle,
+  OcctSharp_Value_Point2d p2df1,
+  OcctSharp_Value_Point2d p2dl1,
+  OcctSharp_Value_Point2d p2df2,
+  OcctSharp_Value_Point2d p2dl2);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_surf_data_method_set_index_of_c1_0(
   const OcctSharp_ChFiDSSurfDataHandle* handle,
@@ -7453,6 +7648,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_contap_the_iwl
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_contap_the_iwline_of_the_iwalking_method_set_tangency_at_end_0(
   const OcctSharp_ContapTheIWLineOfTheIWalkingHandle* handle,
   int32_t isTangent);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_contap_the_iwline_of_the_iwalking_method_set_tangent_vector_0(
+  const OcctSharp_ContapTheIWLineOfTheIWalkingHandle* handle,
+  OcctSharp_Value_Vector3d v,
+  int32_t index);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_contap_the_iwline_of_the_iwalking_clone(
   const OcctSharp_ContapTheIWLineOfTheIWalkingHandle* source,
@@ -8443,6 +8643,12 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_helix_geom_hel
   double theU,
   OcctSharp_Point3d* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_helix_geom_helix_curve_method_eval_dn_0(
+  const OcctSharp_HelixGeomHelixCurveHandle* handle,
+  double theU,
+  int32_t theN,
+  OcctSharp_Value_Vector3d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_helix_geom_helix_curve_method_first_parameter_0(
   const OcctSharp_HelixGeomHelixCurveHandle* handle,
   double* out_value);
@@ -8504,6 +8710,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_helix_geom_hel
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_helix_geom_helix_curve_release(OcctSharp_HelixGeomHelixCurveHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_curves_face_intersector_method_classify_uvpoint_0(
+  const OcctSharp_IntCurvesFaceIntersectorHandle* handle,
+  OcctSharp_Value_Point2d puv,
+  int32_t* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_curves_face_intersector_method_dynamic_type_0(
   const OcctSharp_IntCurvesFaceIntersectorHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle);
@@ -8527,6 +8738,12 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_curves_fac
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_curves_face_intersector_method_perform_0(
   const OcctSharp_IntCurvesFaceIntersectorHandle* handle,
   const OcctSharp_Adaptor3dCurveHandle* hCu,
+  double pInf,
+  double pSup);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_curves_face_intersector_method_perform_1(
+  const OcctSharp_IntCurvesFaceIntersectorHandle* handle,
+  OcctSharp_Value_Line3d l,
   double pInf,
   double pSup);
 
@@ -8639,6 +8856,105 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_alin
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_int_patch_aline_release(OcctSharp_IntPatchALineHandle* handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_0(
+  OcctSharp_Value_Circle3d c,
+  int32_t tang,
+  OcctSharp_IntPatchGLineHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_1(
+  OcctSharp_Value_Circle3d c,
+  int32_t tang,
+  int32_t situ1,
+  int32_t situ2,
+  OcctSharp_IntPatchGLineHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_2(
+  OcctSharp_Value_Circle3d c,
+  int32_t tang,
+  int32_t trans1,
+  int32_t trans2,
+  OcctSharp_IntPatchGLineHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_3(
+  OcctSharp_Value_Ellipse3d e,
+  int32_t tang,
+  OcctSharp_IntPatchGLineHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_4(
+  OcctSharp_Value_Ellipse3d e,
+  int32_t tang,
+  int32_t situ1,
+  int32_t situ2,
+  OcctSharp_IntPatchGLineHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_5(
+  OcctSharp_Value_Ellipse3d e,
+  int32_t tang,
+  int32_t trans1,
+  int32_t trans2,
+  OcctSharp_IntPatchGLineHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_6(
+  OcctSharp_Value_Hyperbola3d h,
+  int32_t tang,
+  OcctSharp_IntPatchGLineHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_7(
+  OcctSharp_Value_Hyperbola3d h,
+  int32_t tang,
+  int32_t situ1,
+  int32_t situ2,
+  OcctSharp_IntPatchGLineHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_8(
+  OcctSharp_Value_Hyperbola3d h,
+  int32_t tang,
+  int32_t trans1,
+  int32_t trans2,
+  OcctSharp_IntPatchGLineHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_9(
+  OcctSharp_Value_Line3d l,
+  int32_t tang,
+  OcctSharp_IntPatchGLineHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_10(
+  OcctSharp_Value_Line3d l,
+  int32_t tang,
+  int32_t situ1,
+  int32_t situ2,
+  OcctSharp_IntPatchGLineHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_11(
+  OcctSharp_Value_Line3d l,
+  int32_t tang,
+  int32_t trans1,
+  int32_t trans2,
+  OcctSharp_IntPatchGLineHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_12(
+  OcctSharp_Value_Parabola3d p,
+  int32_t tang,
+  OcctSharp_IntPatchGLineHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_13(
+  OcctSharp_Value_Parabola3d p,
+  int32_t tang,
+  int32_t situ1,
+  int32_t situ2,
+  OcctSharp_IntPatchGLineHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_14(
+  OcctSharp_Value_Parabola3d p,
+  int32_t tang,
+  int32_t trans1,
+  int32_t trans2,
+  OcctSharp_IntPatchGLineHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_circle_0(
+  const OcctSharp_IntPatchGLineHandle* handle,
+  OcctSharp_Value_Circle3d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_compute_vertex_parameters_0(
   const OcctSharp_IntPatchGLineHandle* handle,
   double tol);
@@ -8646,6 +8962,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_glin
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_dynamic_type_0(
   const OcctSharp_IntPatchGLineHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_ellipse_0(
+  const OcctSharp_IntPatchGLineHandle* handle,
+  OcctSharp_Value_Ellipse3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_has_first_point_0(
   const OcctSharp_IntPatchGLineHandle* handle,
@@ -8655,9 +8975,21 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_glin
   const OcctSharp_IntPatchGLineHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_hyperbola_0(
+  const OcctSharp_IntPatchGLineHandle* handle,
+  OcctSharp_Value_Hyperbola3d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_line_0(
+  const OcctSharp_IntPatchGLineHandle* handle,
+  OcctSharp_Value_Line3d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_nb_vertex_0(
   const OcctSharp_IntPatchGLineHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_parabola_0(
+  const OcctSharp_IntPatchGLineHandle* handle,
+  OcctSharp_Value_Parabola3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_set_first_point_0(
   const OcctSharp_IntPatchGLineHandle* handle,
@@ -8851,6 +9183,16 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_rlin
   OcctSharp_Point3d theP,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_rline_method_is_out_surf1_box_0(
+  const OcctSharp_IntPatchRLineHandle* handle,
+  OcctSharp_Value_Point2d theP,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_rline_method_is_out_surf2_box_0(
+  const OcctSharp_IntPatchRLineHandle* handle,
+  OcctSharp_Value_Point2d theP,
+  int32_t* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_rline_method_nb_pnts_0(
   const OcctSharp_IntPatchRLineHandle* handle,
   int32_t* out_value);
@@ -8984,6 +9326,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_the_
   const OcctSharp_IntPatchTheIWLineOfTheIWalkingHandle* handle,
   int32_t isTangent);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_the_iwline_of_the_iwalking_method_set_tangent_vector_0(
+  const OcctSharp_IntPatchTheIWLineOfTheIWalkingHandle* handle,
+  OcctSharp_Value_Vector3d v,
+  int32_t index);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_the_iwline_of_the_iwalking_clone(
   const OcctSharp_IntPatchTheIWLineOfTheIWalkingHandle* source,
   OcctSharp_IntPatchTheIWLineOfTheIWalkingHandle** out_handle);
@@ -9076,6 +9423,16 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_wlin
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_wline_method_is_out_box_0(
   const OcctSharp_IntPatchWLineHandle* handle,
   OcctSharp_Point3d theP,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_wline_method_is_out_surf1_box_0(
+  const OcctSharp_IntPatchWLineHandle* handle,
+  OcctSharp_Value_Point2d theP,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_wline_method_is_out_surf2_box_0(
+  const OcctSharp_IntPatchWLineHandle* handle,
+  OcctSharp_Value_Point2d theP,
   int32_t* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_wline_method_is_purging_allowed_0(
@@ -9193,6 +9550,16 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_surf_line_
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_surf_line_on2_s_method_is_out_box_0(
   const OcctSharp_IntSurfLineOn2SHandle* handle,
   OcctSharp_Point3d theP,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_surf_line_on2_s_method_is_out_surf1_box_0(
+  const OcctSharp_IntSurfLineOn2SHandle* handle,
+  OcctSharp_Value_Point2d theP,
+  int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_surf_line_on2_s_method_is_out_surf2_box_0(
+  const OcctSharp_IntSurfLineOn2SHandle* handle,
+  OcctSharp_Value_Point2d theP,
   int32_t* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_surf_line_on2_s_method_nb_points_0(
@@ -9628,6 +9995,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_analysis
   double preci,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_analysis_surface_method_is_degenerated_1(
+  const OcctSharp_ShapeAnalysisSurfaceHandle* handle,
+  OcctSharp_Value_Point2d p2d1,
+  OcctSharp_Value_Point2d p2d2,
+  double tol,
+  double ratio,
+  int32_t* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_analysis_surface_method_is_uclosed_0(
   const OcctSharp_ShapeAnalysisSurfaceHandle* handle,
   double preci,
@@ -9642,6 +10017,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_analysis
   const OcctSharp_ShapeAnalysisSurfaceHandle* handle,
   double preci,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_analysis_surface_method_next_value_of_uv_0(
+  const OcctSharp_ShapeAnalysisSurfaceHandle* handle,
+  OcctSharp_Value_Point2d p2dPrev,
+  OcctSharp_Point3d p3D,
+  double preci,
+  double maxpreci,
+  OcctSharp_Value_Point2d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_analysis_surface_method_set_domain_0(
   const OcctSharp_ShapeAnalysisSurfaceHandle* handle,
@@ -9672,6 +10055,17 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_analysis
   double u,
   double v,
   OcctSharp_Point3d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_analysis_surface_method_value_1(
+  const OcctSharp_ShapeAnalysisSurfaceHandle* handle,
+  OcctSharp_Value_Point2d p2d,
+  OcctSharp_Point3d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_analysis_surface_method_value_of_uv_0(
+  const OcctSharp_ShapeAnalysisSurfaceHandle* handle,
+  OcctSharp_Point3d p3D,
+  double preci,
+  OcctSharp_Value_Point2d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_analysis_surface_method_vclose_val_0(
   const OcctSharp_ShapeAnalysisSurfaceHandle* handle,
@@ -10479,6 +10873,12 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_c
   double u,
   OcctSharp_Point3d* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_complex_curve_method_eval_dn_0(
+  const OcctSharp_ShapeExtendComplexCurveHandle* handle,
+  double u,
+  int32_t n,
+  OcctSharp_Value_Vector3d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_complex_curve_method_first_parameter_0(
   const OcctSharp_ShapeExtendComplexCurveHandle* handle,
   double* out_value);
@@ -10554,6 +10954,21 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_c
   double v,
   OcctSharp_Point3d* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_eval_dn_0(
+  const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
+  double u,
+  double v,
+  int32_t nu,
+  int32_t nv,
+  OcctSharp_Value_Vector3d* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_global_to_local_0(
+  const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
+  int32_t i,
+  int32_t j,
+  OcctSharp_Value_Point2d uV,
+  OcctSharp_Value_Point2d* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_is_cnu_0(
   const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
   int32_t n,
@@ -10579,6 +10994,13 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_c
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_is_vperiodic_0(
   const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_local_to_global_0(
+  const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
+  int32_t i,
+  int32_t j,
+  OcctSharp_Value_Point2d uv,
+  OcctSharp_Value_Point2d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_locate_uparameter_0(
   const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
@@ -10608,6 +11030,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_c
   const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
   int32_t i,
   int32_t j,
+  OcctSharp_GeomSurfaceHandle** out_handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_patch_2(
+  const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
+  OcctSharp_Value_Point2d pnt,
   OcctSharp_GeomSurfaceHandle** out_handle);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_set_ufirst_value_0(
@@ -10649,6 +11076,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_c
   const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
   double u,
   double* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_value_0(
+  const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
+  OcctSharp_Value_Point2d pnt,
+  OcctSharp_Point3d* out_value);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_vglobal_to_local_0(
   const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,

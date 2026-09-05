@@ -56,7 +56,7 @@ public static class InitialBindingEmitter
             declaration => IsPointCopyConstructor(declaration, typeMap));
         GeneratedStaticMethod[] staticMethods = SelectStaticMethods(eligibleModel, typeMap, generationScopes);
 
-        List<GeneratedFile> files = [];
+        List<GeneratedFile> files = [.. GeometryValueEmitter.Emit()];
         Dictionary<OcctProductModule, GeneratedStaticMethod[]> staticMethodsByModule = staticMethods
             .GroupBy(static method => GetProductModule(method.Declaration))
             .ToDictionary(
@@ -268,6 +268,7 @@ public static class InitialBindingEmitter
         builder.AppendLine("#pragma once");
         builder.AppendLine();
         builder.AppendLine("#include \"../../include/OcctSharp.Native.h\"");
+        builder.AppendLine("#include \"" + GeometryValueEmitter.HeaderInclude + "\"");
         if (!includePoint)
         {
             builder.AppendLine("#include \"../Geometry/OcctSharp.Geometry.Values.Generated.h\"");
@@ -484,7 +485,7 @@ public static class InitialBindingEmitter
             builder.Append(method.ManagedName);
             builder.Append('(');
             builder.Append(string.Join(", ", method.Parameters.Select(static parameter =>
-                $"{parameter.Projection.ManagedRawType} {parameter.Name}")));
+                $"{parameter.Projection.ManagedRawType} {EnumBindingEmitter.ToIdentifier(parameter.Name)}")));
             builder.AppendLine(");");
         }
 
@@ -604,9 +605,9 @@ public static class InitialBindingEmitter
     private static void AppendCheckedManagedStatic(StringBuilder builder, GeneratedStaticMethod method)
     {
         string result = ResultName(method);
-        string parameterList = string.Join(", ", method.Parameters.Select(parameter => $"{parameter.Projection.ManagedRawType} {parameter.Name}"));
-        List<string> rawParameters = method.Parameters.Select(parameter => $"{parameter.Projection.ManagedRawType} {parameter.Name}").ToList();
-        List<string> arguments = method.Parameters.Select(parameter => parameter.Name).ToList();
+        string parameterList = string.Join(", ", method.Parameters.Select(parameter => $"{parameter.Projection.ManagedRawType} {EnumBindingEmitter.ToIdentifier(parameter.Name)}"));
+        List<string> rawParameters = method.Parameters.Select(parameter => $"{parameter.Projection.ManagedRawType} {EnumBindingEmitter.ToIdentifier(parameter.Name)}").ToList();
+        List<string> arguments = method.Parameters.Select(parameter => EnumBindingEmitter.ToIdentifier(parameter.Name)).ToList();
         if (method.ReturnProjection.RuleId != "TM000")
         {
             rawParameters.Add($"out {method.ReturnProjection.ManagedRawType} {result}");
@@ -628,6 +629,7 @@ public static class InitialBindingEmitter
         "TM004" => $"static_cast<{parameter.Type.BaseCanonicalSpelling}>({parameter.Name})",
         "TM005" => $"gp_Pnt({parameter.Name}.x, {parameter.Name}.y, {parameter.Name}.z)",
         "TM008" => $"static_cast<{parameter.Type.BaseCanonicalSpelling}>({parameter.Name})",
+        "TM009" => $"OcctSharp_GeometryValues::ToNative({parameter.Name})",
         _ => parameter.Name,
     };
 
@@ -635,6 +637,7 @@ public static class InitialBindingEmitter
     {
         "TM003" => $"{invocation} ? 1 : 0",
         "TM004" => $"static_cast<int32_t>({invocation})",
+        "TM009" => $"OcctSharp_GeometryValues::FromNative({invocation})",
         _ => invocation,
     };
 
@@ -727,7 +730,7 @@ public static class InitialBindingEmitter
         return typeMap.TryMap(type, usage, out projection)
             && projection is not null
             && ((projection.Ownership == "ValueCopy"
-                    && projection.RuleId is "TM001" or "TM002" or "TM003" or "TM004" or "TM005" or "TM008")
+                    && projection.RuleId is "TM001" or "TM002" or "TM003" or "TM004" or "TM005" or "TM008" or "TM009")
                 || (usage == BindingTypeUsage.ReturnValue && projection.RuleId == "TM000"));
     }
 

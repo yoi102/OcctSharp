@@ -19,8 +19,10 @@
 // Source: c:@S@BRepMeshData_Model@F@GetFace#I#1
 // Source: c:@S@BRepMeshData_Model@F@GetMaxSize#1
 // Source: c:@S@BRepMeshData_Model@F@SetMaxSize#d#
+// Source: c:@S@BRepMeshData_PCurve@F@AddPoint#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@BRepMeshData_PCurve@F@Clear#b#
 // Source: c:@S@BRepMeshData_PCurve@F@DynamicType#1
+// Source: c:@S@BRepMeshData_PCurve@F@InsertPoint#I#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@BRepMeshData_PCurve@F@ParametersNb#1
 // Source: c:@S@BRepMeshData_PCurve@F@RemovePoint#I#
 // Source: c:@S@BRepMeshData_Wire@F@DynamicType#1
@@ -29,6 +31,7 @@
 // Source: c:@S@BRepMesh_BaseMeshAlgo@F@DynamicType#1
 // Source: c:@S@BRepMesh_Classifier@F@BRepMesh_Classifier#
 // Source: c:@S@BRepMesh_Classifier@F@DynamicType#1
+// Source: c:@S@BRepMesh_Classifier@F@Perform#&1$@S@gp_Pnt2d#1
 // Source: c:@S@BRepMesh_ConstrainedBaseMeshAlgo@F@DynamicType#1
 // Source: c:@S@BRepMesh_Context@F@BRepMesh_Context#$@E@IMeshTools_MeshAlgoType#
 // Source: c:@S@BRepMesh_Context@F@DynamicType#1
@@ -2431,6 +2434,17 @@ void OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_model_release(OcctSharp_B
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_pcurve_method_add_point_0(
+  const OcctSharp_BRepMeshDataPCurveHandle* handle,
+  OcctSharp_Value_Point2d thePoint,
+  double theParamOnPCurve)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateBRepMeshDataPCurve(handle)->Value->AddPoint(OcctSharp_GeometryValues::ToNative(thePoint), theParamOnPCurve);
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_pcurve_method_clear_0(
   const OcctSharp_BRepMeshDataPCurveHandle* handle,
   int32_t isKeepEndPoints)
@@ -2451,6 +2465,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_pcurve_method
   {
     opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMeshData_PCurve*>(ValidateBRepMeshDataPCurve(handle)->Value.get())->DynamicType();
     if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_data_pcurve_method_insert_point_0(
+  const OcctSharp_BRepMeshDataPCurveHandle* handle,
+  int32_t thePosition,
+  OcctSharp_Value_Point2d thePoint,
+  double theParamOnPCurve)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateBRepMeshDataPCurve(handle)->Value->InsertPoint(thePosition, OcctSharp_GeometryValues::ToNative(thePoint), theParamOnPCurve);
   });
 }
 
@@ -2687,6 +2713,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_classifier_method_
   {
     opencascade::handle<Standard_Type> returnedHandle = static_cast<const BRepMesh_Classifier*>(ValidateBRepMeshClassifier(handle)->Value.get())->DynamicType();
     if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_mesh_classifier_method_perform_0(
+  const OcctSharp_BRepMeshClassifierHandle* handle,
+  OcctSharp_Value_Point2d thePoint,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<int32_t>(static_cast<const BRepMesh_Classifier*>(ValidateBRepMeshClassifier(handle)->Value.get())->Perform(OcctSharp_GeometryValues::ToNative(thePoint)));
   });
 }
 

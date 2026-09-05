@@ -75,19 +75,25 @@
 // Source: c:@S@BRepAdaptor_CompCurve@F@BRepAdaptor_CompCurve#
 // Source: c:@S@BRepAdaptor_CompCurve@F@BSpline#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@Bezier#1
+// Source: c:@S@BRepAdaptor_CompCurve@F@Circle#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@Continuity#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@Degree#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@DynamicType#1
+// Source: c:@S@BRepAdaptor_CompCurve@F@Ellipse#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@EvalD0#d#1
+// Source: c:@S@BRepAdaptor_CompCurve@F@EvalDN#d#I#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@FirstParameter#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@GetType#1
+// Source: c:@S@BRepAdaptor_CompCurve@F@Hyperbola#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@IsClosed#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@IsPeriodic#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@IsRational#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@LastParameter#1
+// Source: c:@S@BRepAdaptor_CompCurve@F@Line#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@NbKnots#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@NbPoles#1
+// Source: c:@S@BRepAdaptor_CompCurve@F@Parabola#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@Period#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@Resolution#d#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@ShallowCopy#1
@@ -247,6 +253,8 @@
 // Source: c:@S@BRepFill_PipeShell@F@IsBuildHistory#1
 // Source: c:@S@BRepFill_PipeShell@F@IsReady#1
 // Source: c:@S@BRepFill_PipeShell@F@MakeSolid#
+// Source: c:@S@BRepFill_PipeShell@F@Set#&1$@S@gp_Ax2#
+// Source: c:@S@BRepFill_PipeShell@F@Set#&1$@S@gp_Dir#
 // Source: c:@S@BRepFill_PipeShell@F@Set#b#
 // Source: c:@S@BRepFill_PipeShell@F@SetDiscrete#
 // Source: c:@S@BRepFill_PipeShell@F@SetForceApproxC1#b#
@@ -334,8 +342,10 @@
 // Source: c:@S@BRepTopAdaptor_HVertex@F@Orientation#
 // Source: c:@S@BRepTopAdaptor_HVertex@F@Parameter#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#
 // Source: c:@S@BRepTopAdaptor_HVertex@F@Resolution#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#
+// Source: c:@S@BRepTopAdaptor_HVertex@F@Value#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@BRepTopAdaptor_TopolTool#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@BRepTopAdaptor_TopolTool#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#
+// Source: c:@S@BRepTopAdaptor_TopolTool@F@Classify#&1$@S@gp_Pnt2d#d#b#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@ComputeSamplePoints#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@Destroy#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@DomainIsInfinite#
@@ -346,6 +356,7 @@
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@Initialize#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@Initialize#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@Initialize#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#
+// Source: c:@S@BRepTopAdaptor_TopolTool@F@IsThePointOn#&1$@S@gp_Pnt2d#d#b#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@More#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@MoreVertex#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@NbSamples#
@@ -380,6 +391,7 @@
 // Source: c:@S@BRep_CurveOnClosedSurface@F@IsRegularity#1
 // Source: c:@S@BRep_CurveOnClosedSurface@F@PCurve2#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#
 // Source: c:@S@BRep_CurveOnClosedSurface@F@PCurve2#1
+// Source: c:@S@BRep_CurveOnClosedSurface@F@SetUVPoints2#&1$@S@gp_Pnt2d#S0_#
 // Source: c:@S@BRep_CurveOnClosedSurface@F@Surface2#1
 // Source: c:@S@BRep_CurveOnClosedSurface@F@Update#
 // Source: c:@S@BRep_CurveOnSurface@F@Copy#1
@@ -387,6 +399,7 @@
 // Source: c:@S@BRep_CurveOnSurface@F@IsCurveOnSurface#1
 // Source: c:@S@BRep_CurveOnSurface@F@PCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#
 // Source: c:@S@BRep_CurveOnSurface@F@PCurve#1
+// Source: c:@S@BRep_CurveOnSurface@F@SetUVPoints#&1$@S@gp_Pnt2d#S0_#
 // Source: c:@S@BRep_CurveOnSurface@F@Surface#1
 // Source: c:@S@BRep_CurveOnSurface@F@Update#
 // Source: c:@S@BRep_CurveRepresentation@F@Continuity#$@E@GeomAbs_Shape#
@@ -524,33 +537,42 @@
 // Source: c:@S@ChFiDS_ChamfSpine@F@SetDistAngle#d#d#
 // Source: c:@S@ChFiDS_ChamfSpine@F@SetDists#d#d#
 // Source: c:@S@ChFiDS_ChamfSpine@F@SetMode#$@E@ChFiDS_ChamfMode#
+// Source: c:@S@ChFiDS_ElSpine@F@AddVertexWithTangent#&1$@S@gp_Ax1#
 // Source: c:@S@ChFiDS_ElSpine@F@BSpline#1
 // Source: c:@S@ChFiDS_ElSpine@F@Bezier#1
 // Source: c:@S@ChFiDS_ElSpine@F@ChFiDS_ElSpine#
+// Source: c:@S@ChFiDS_ElSpine@F@Circle#1
 // Source: c:@S@ChFiDS_ElSpine@F@Continuity#1
 // Source: c:@S@ChFiDS_ElSpine@F@DynamicType#1
+// Source: c:@S@ChFiDS_ElSpine@F@Ellipse#1
 // Source: c:@S@ChFiDS_ElSpine@F@EvalD0#d#1
 // Source: c:@S@ChFiDS_ElSpine@F@FirstParameter#1
 // Source: c:@S@ChFiDS_ElSpine@F@FirstParameter#d#
 // Source: c:@S@ChFiDS_ElSpine@F@GetSavedFirstParameter#1
 // Source: c:@S@ChFiDS_ElSpine@F@GetSavedLastParameter#1
 // Source: c:@S@ChFiDS_ElSpine@F@GetType#1
+// Source: c:@S@ChFiDS_ElSpine@F@Hyperbola#1
 // Source: c:@S@ChFiDS_ElSpine@F@IsPeriodic#1
 // Source: c:@S@ChFiDS_ElSpine@F@LastParameter#1
 // Source: c:@S@ChFiDS_ElSpine@F@LastParameter#d#
+// Source: c:@S@ChFiDS_ElSpine@F@Line#1
 // Source: c:@S@ChFiDS_ElSpine@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@ChFiDS_ElSpine@F@NbVertices#1
 // Source: c:@S@ChFiDS_ElSpine@F@Next#1
+// Source: c:@S@ChFiDS_ElSpine@F@Parabola#1
 // Source: c:@S@ChFiDS_ElSpine@F@Period#1
 // Source: c:@S@ChFiDS_ElSpine@F@Previous#1
 // Source: c:@S@ChFiDS_ElSpine@F@Resolution#d#1
 // Source: c:@S@ChFiDS_ElSpine@F@SaveFirstParameter#
 // Source: c:@S@ChFiDS_ElSpine@F@SaveLastParameter#
 // Source: c:@S@ChFiDS_ElSpine@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#
+// Source: c:@S@ChFiDS_ElSpine@F@SetFirstPointAndTgt#&1$@S@gp_Pnt#&1$@S@gp_Vec#
+// Source: c:@S@ChFiDS_ElSpine@F@SetLastPointAndTgt#&1$@S@gp_Pnt#&1$@S@gp_Vec#
 // Source: c:@S@ChFiDS_ElSpine@F@SetOrigin#d#
 // Source: c:@S@ChFiDS_ElSpine@F@SetPeriodic#b#
 // Source: c:@S@ChFiDS_ElSpine@F@ShallowCopy#1
 // Source: c:@S@ChFiDS_ElSpine@F@Trim#d#d#d#1
+// Source: c:@S@ChFiDS_ElSpine@F@VertexWithTangent#I#1
 // Source: c:@S@ChFiDS_FilSpine@F@AppendElSpine#&1$@N@opencascade@S@handle>#$@S@ChFiDS_ElSpine#
 // Source: c:@S@ChFiDS_FilSpine@F@ChFiDS_FilSpine#
 // Source: c:@S@ChFiDS_FilSpine@F@ChFiDS_FilSpine#d#
@@ -563,6 +585,7 @@
 // Source: c:@S@ChFiDS_FilSpine@F@Radius#I#1
 // Source: c:@S@ChFiDS_FilSpine@F@Reset#b#
 // Source: c:@S@ChFiDS_FilSpine@F@SetRadius#&1$@N@opencascade@S@handle>#$@S@Law_Function#I#
+// Source: c:@S@ChFiDS_FilSpine@F@SetRadius#&1$@S@gp_XY#I#
 // Source: c:@S@ChFiDS_FilSpine@F@SetRadius#d#
 // Source: c:@S@ChFiDS_Spine@F@Absc#d#
 // Source: c:@S@ChFiDS_Spine@F@Absc#d#I#
@@ -570,6 +593,7 @@
 // Source: c:@S@ChFiDS_Spine@F@AppendOffsetElSpine#&1$@N@opencascade@S@handle>#$@S@ChFiDS_ElSpine#
 // Source: c:@S@ChFiDS_Spine@F@ChFiDS_Spine#
 // Source: c:@S@ChFiDS_Spine@F@ChFiDS_Spine#d#
+// Source: c:@S@ChFiDS_Spine@F@Circle#1
 // Source: c:@S@ChFiDS_Spine@F@CurrentIndexOfElementarySpine#1
 // Source: c:@S@ChFiDS_Spine@F@DynamicType#1
 // Source: c:@S@ChFiDS_Spine@F@ElSpine#I#1
@@ -591,6 +615,7 @@
 // Source: c:@S@ChFiDS_Spine@F@LastParameter#I#1
 // Source: c:@S@ChFiDS_Spine@F@LastStatus#1
 // Source: c:@S@ChFiDS_Spine@F@Length#I#1
+// Source: c:@S@ChFiDS_Spine@F@Line#1
 // Source: c:@S@ChFiDS_Spine@F@Load#
 // Source: c:@S@ChFiDS_Spine@F@Mode#1
 // Source: c:@S@ChFiDS_Spine@F@NbEdges#1
@@ -669,6 +694,7 @@
 // Source: c:@S@ChFiDS_SurfData@F@FirstExtensionValue#d#
 // Source: c:@S@ChFiDS_SurfData@F@FirstSpineParam#1
 // Source: c:@S@ChFiDS_SurfData@F@FirstSpineParam#d#
+// Source: c:@S@ChFiDS_SurfData@F@Get2dPoints#b#I#1
 // Source: c:@S@ChFiDS_SurfData@F@Index#I#1
 // Source: c:@S@ChFiDS_SurfData@F@IndexOfC#I#1
 // Source: c:@S@ChFiDS_SurfData@F@IndexOfC1#1
@@ -684,6 +710,7 @@
 // Source: c:@S@ChFiDS_SurfData@F@LastSpineParam#d#
 // Source: c:@S@ChFiDS_SurfData@F@Orientation#1
 // Source: c:@S@ChFiDS_SurfData@F@ResetSimul#
+// Source: c:@S@ChFiDS_SurfData@F@Set2dPoints#&1$@S@gp_Pnt2d#S0_#S0_#S0_#
 // Source: c:@S@ChFiDS_SurfData@F@SetIndexOfC1#I#
 // Source: c:@S@ChFiDS_SurfData@F@SetIndexOfC2#I#
 // Source: c:@S@ChFiDS_SurfData@F@SetSimul#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#
@@ -713,6 +740,7 @@
 // Source: c:@S@Contap_TheIWLineOfTheIWalking@F@Reverse#
 // Source: c:@S@Contap_TheIWLineOfTheIWalking@F@SetTangencyAtBegining#b#
 // Source: c:@S@Contap_TheIWLineOfTheIWalking@F@SetTangencyAtEnd#b#
+// Source: c:@S@Contap_TheIWLineOfTheIWalking@F@SetTangentVector#&1$@S@gp_Vec#I#
 // Source: c:@S@Draft_Modification@F@Clear#
 // Source: c:@S@Draft_Modification@F@DynamicType#1
 // Source: c:@S@Draft_Modification@F@Error#1
@@ -867,6 +895,7 @@
 // Source: c:@S@HelixGeom_HelixCurve@F@Continuity#1
 // Source: c:@S@HelixGeom_HelixCurve@F@DynamicType#1
 // Source: c:@S@HelixGeom_HelixCurve@F@EvalD0#d#1
+// Source: c:@S@HelixGeom_HelixCurve@F@EvalDN#d#I#1
 // Source: c:@S@HelixGeom_HelixCurve@F@FirstParameter#1
 // Source: c:@S@HelixGeom_HelixCurve@F@HelixGeom_HelixCurve#
 // Source: c:@S@HelixGeom_HelixCurve@F@IsClosed#1
@@ -877,12 +906,14 @@
 // Source: c:@S@HelixGeom_HelixCurve@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@HelixGeom_HelixCurve@F@Period#1
 // Source: c:@S@HelixGeom_HelixCurve@F@Resolution#d#1
+// Source: c:@S@IntCurvesFace_Intersector@F@ClassifyUVPoint#&1$@S@gp_Pnt2d#1
 // Source: c:@S@IntCurvesFace_Intersector@F@DynamicType#1
 // Source: c:@S@IntCurvesFace_Intersector@F@GetUseBoundToler#1
 // Source: c:@S@IntCurvesFace_Intersector@F@IsDone#1
 // Source: c:@S@IntCurvesFace_Intersector@F@IsParallel#1
 // Source: c:@S@IntCurvesFace_Intersector@F@NbPnt#1
 // Source: c:@S@IntCurvesFace_Intersector@F@Perform#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#d#d#
+// Source: c:@S@IntCurvesFace_Intersector@F@Perform#&1$@S@gp_Lin#d#d#
 // Source: c:@S@IntCurvesFace_Intersector@F@Pnt#I#1
 // Source: c:@S@IntCurvesFace_Intersector@F@SetUseBoundToler#b#
 // Source: c:@S@IntCurvesFace_Intersector@F@State#I#1
@@ -899,11 +930,31 @@
 // Source: c:@S@IntPatch_ALine@F@SetFirstPoint#I#
 // Source: c:@S@IntPatch_ALine@F@SetLastPoint#I#
 // Source: c:@S@IntPatch_ALine@F@Value#d#
+// Source: c:@S@IntPatch_GLine@F@Circle#1
 // Source: c:@S@IntPatch_GLine@F@ComputeVertexParameters#d#
 // Source: c:@S@IntPatch_GLine@F@DynamicType#1
+// Source: c:@S@IntPatch_GLine@F@Ellipse#1
 // Source: c:@S@IntPatch_GLine@F@HasFirstPoint#1
 // Source: c:@S@IntPatch_GLine@F@HasLastPoint#1
+// Source: c:@S@IntPatch_GLine@F@Hyperbola#1
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Circ#b#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Circ#b#$@E@IntSurf_Situation#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Circ#b#$@E@IntSurf_TypeTrans#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Elips#b#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Elips#b#$@E@IntSurf_Situation#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Elips#b#$@E@IntSurf_TypeTrans#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Hypr#b#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Hypr#b#$@E@IntSurf_Situation#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Hypr#b#$@E@IntSurf_TypeTrans#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Lin#b#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Lin#b#$@E@IntSurf_Situation#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Lin#b#$@E@IntSurf_TypeTrans#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Parab#b#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Parab#b#$@E@IntSurf_Situation#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Parab#b#$@E@IntSurf_TypeTrans#S2_#
+// Source: c:@S@IntPatch_GLine@F@Line#1
 // Source: c:@S@IntPatch_GLine@F@NbVertex#1
+// Source: c:@S@IntPatch_GLine@F@Parabola#1
 // Source: c:@S@IntPatch_GLine@F@SetFirstPoint#I#
 // Source: c:@S@IntPatch_GLine@F@SetLastPoint#I#
 // Source: c:@S@IntPatch_Line@F@ArcType#1
@@ -936,6 +987,8 @@
 // Source: c:@S@IntPatch_RLine@F@IsArcOnS1#1
 // Source: c:@S@IntPatch_RLine@F@IsArcOnS2#1
 // Source: c:@S@IntPatch_RLine@F@IsOutBox#&1$@S@gp_Pnt#1
+// Source: c:@S@IntPatch_RLine@F@IsOutSurf1Box#&1$@S@gp_Pnt2d#1
+// Source: c:@S@IntPatch_RLine@F@IsOutSurf2Box#&1$@S@gp_Pnt2d#1
 // Source: c:@S@IntPatch_RLine@F@NbPnts#1
 // Source: c:@S@IntPatch_RLine@F@NbVertex#1
 // Source: c:@S@IntPatch_RLine@F@RemoveVertex#I#
@@ -964,6 +1017,7 @@
 // Source: c:@S@IntPatch_TheIWLineOfTheIWalking@F@Reverse#
 // Source: c:@S@IntPatch_TheIWLineOfTheIWalking@F@SetTangencyAtBegining#b#
 // Source: c:@S@IntPatch_TheIWLineOfTheIWalking@F@SetTangencyAtEnd#b#
+// Source: c:@S@IntPatch_TheIWLineOfTheIWalking@F@SetTangentVector#&1$@S@gp_Vec#I#
 // Source: c:@S@IntPatch_WLine@F@ClearVertexes#
 // Source: c:@S@IntPatch_WLine@F@ComputeVertexParameters#d#
 // Source: c:@S@IntPatch_WLine@F@Curve#1
@@ -981,6 +1035,8 @@
 // Source: c:@S@IntPatch_WLine@F@IntPatch_WLine#&1$@N@opencascade@S@handle>#$@S@IntSurf_LineOn2S#b#$@E@IntSurf_Situation#S3_#
 // Source: c:@S@IntPatch_WLine@F@IntPatch_WLine#&1$@N@opencascade@S@handle>#$@S@IntSurf_LineOn2S#b#$@E@IntSurf_TypeTrans#S3_#
 // Source: c:@S@IntPatch_WLine@F@IsOutBox#&1$@S@gp_Pnt#1
+// Source: c:@S@IntPatch_WLine@F@IsOutSurf1Box#&1$@S@gp_Pnt2d#1
+// Source: c:@S@IntPatch_WLine@F@IsOutSurf2Box#&1$@S@gp_Pnt2d#1
 // Source: c:@S@IntPatch_WLine@F@IsPurgingAllowed#
 // Source: c:@S@IntPatch_WLine@F@NbPnts#1
 // Source: c:@S@IntPatch_WLine@F@NbVertex#1
@@ -1000,6 +1056,8 @@
 // Source: c:@S@IntSurf_LineOn2S@F@DynamicType#1
 // Source: c:@S@IntSurf_LineOn2S@F@IntSurf_LineOn2S#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@IntSurf_LineOn2S@F@IsOutBox#&1$@S@gp_Pnt#
+// Source: c:@S@IntSurf_LineOn2S@F@IsOutSurf1Box#&1$@S@gp_Pnt2d#
+// Source: c:@S@IntSurf_LineOn2S@F@IsOutSurf2Box#&1$@S@gp_Pnt2d#
 // Source: c:@S@IntSurf_LineOn2S@F@NbPoints#1
 // Source: c:@S@IntSurf_LineOn2S@F@RemovePoint#I#
 // Source: c:@S@IntSurf_LineOn2S@F@Reverse#
@@ -1062,9 +1120,11 @@
 // Source: c:@S@ShapeAnalysis_Surface@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#
 // Source: c:@S@ShapeAnalysis_Surface@F@Init#&1$@N@opencascade@S@handle>#$@S@ShapeAnalysis_Surface#
 // Source: c:@S@ShapeAnalysis_Surface@F@IsDegenerated#&1$@S@gp_Pnt#d#
+// Source: c:@S@ShapeAnalysis_Surface@F@IsDegenerated#&1$@S@gp_Pnt2d#S0_#d#d#
 // Source: c:@S@ShapeAnalysis_Surface@F@IsUClosed#d#
 // Source: c:@S@ShapeAnalysis_Surface@F@IsVClosed#d#
 // Source: c:@S@ShapeAnalysis_Surface@F@NbSingularities#d#
+// Source: c:@S@ShapeAnalysis_Surface@F@NextValueOfUV#&1$@S@gp_Pnt2d#&1$@S@gp_Pnt#d#d#
 // Source: c:@S@ShapeAnalysis_Surface@F@SetDomain#d#d#d#d#
 // Source: c:@S@ShapeAnalysis_Surface@F@ShapeAnalysis_Surface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#
 // Source: c:@S@ShapeAnalysis_Surface@F@Surface#1
@@ -1073,7 +1133,9 @@
 // Source: c:@S@ShapeAnalysis_Surface@F@UIso#d#
 // Source: c:@S@ShapeAnalysis_Surface@F@VCloseVal#1
 // Source: c:@S@ShapeAnalysis_Surface@F@VIso#d#
+// Source: c:@S@ShapeAnalysis_Surface@F@Value#&1$@S@gp_Pnt2d#
 // Source: c:@S@ShapeAnalysis_Surface@F@Value#d#d#
+// Source: c:@S@ShapeAnalysis_Surface@F@ValueOfUV#&1$@S@gp_Pnt#d#
 // Source: c:@S@ShapeAnalysis_TransferParameters@F@DynamicType#1
 // Source: c:@S@ShapeAnalysis_TransferParameters@F@IsSameRange#1
 // Source: c:@S@ShapeAnalysis_TransferParameters@F@Perform#d#b#
@@ -1189,6 +1251,7 @@
 // Source: c:@S@ShapeExtend_ComplexCurve@F@Continuity#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@DynamicType#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@EvalD0#d#1
+// Source: c:@S@ShapeExtend_ComplexCurve@F@EvalDN#d#I#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@FirstParameter#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@IsCN#I#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@IsClosed#1
@@ -1201,16 +1264,20 @@
 // Source: c:@S@ShapeExtend_CompositeSurface@F@Copy#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@DynamicType#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@EvalD0#d#d#1
+// Source: c:@S@ShapeExtend_CompositeSurface@F@EvalDN#d#d#I#I#1
+// Source: c:@S@ShapeExtend_CompositeSurface@F@GlobalToLocal#I#I#&1$@S@gp_Pnt2d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@IsCNu#I#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@IsCNv#I#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@IsUClosed#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@IsUPeriodic#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@IsVClosed#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@IsVPeriodic#1
+// Source: c:@S@ShapeExtend_CompositeSurface@F@LocalToGlobal#I#I#&1$@S@gp_Pnt2d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@LocateUParameter#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@LocateVParameter#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@NbUPatches#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@NbVPatches#1
+// Source: c:@S@ShapeExtend_CompositeSurface@F@Patch#&1$@S@gp_Pnt2d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@Patch#I#I#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@Patch#d#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@SetUFirstValue#d#
@@ -1228,6 +1295,7 @@
 // Source: c:@S@ShapeExtend_CompositeSurface@F@VLocalToGlobal#I#I#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@VReverse#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@VReversedParameter#d#1
+// Source: c:@S@ShapeExtend_CompositeSurface@F@Value#&1$@S@gp_Pnt2d#1
 // Source: c:@S@ShapeExtend_MsgRegistrator@F@DynamicType#1
 // Source: c:@S@ShapeExtend_MsgRegistrator@F@ShapeExtend_MsgRegistrator#
 // Source: c:@S@ShapeExtend_WireData@F@Add#&1$@N@opencascade@S@handle>#$@S@ShapeExtend_WireData#I#
@@ -13061,6 +13129,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_meth
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_circle_0(
+  const OcctSharp_BRepAdaptorCompCurveHandle* handle,
+  OcctSharp_Value_Circle3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const BRepAdaptor_CompCurve*>(ValidateBRepAdaptorCompCurve(handle)->Value.get())->Circle());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_continuity_0(
   const OcctSharp_BRepAdaptorCompCurveHandle* handle,
   int32_t* out_value)
@@ -13098,6 +13178,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_meth
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_ellipse_0(
+  const OcctSharp_BRepAdaptorCompCurveHandle* handle,
+  OcctSharp_Value_Ellipse3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const BRepAdaptor_CompCurve*>(ValidateBRepAdaptorCompCurve(handle)->Value.get())->Ellipse());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_eval_d0_0(
   const OcctSharp_BRepAdaptorCompCurveHandle* handle,
   double theU,
@@ -13109,6 +13201,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_meth
   {
     const gp_Pnt nativeValue = ValidateBRepAdaptorCompCurve(handle)->Value->EvalD0(theU);
     *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_eval_dn_0(
+  const OcctSharp_BRepAdaptorCompCurveHandle* handle,
+  double theU,
+  int32_t theN,
+  OcctSharp_Value_Vector3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const BRepAdaptor_CompCurve*>(ValidateBRepAdaptorCompCurve(handle)->Value.get())->EvalDN(theU, theN));
   });
 }
 
@@ -13133,6 +13239,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_meth
   return GeneratedGuard([&]
   {
     *out_value = static_cast<int32_t>(ValidateBRepAdaptorCompCurve(handle)->Value->GetType());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_hyperbola_0(
+  const OcctSharp_BRepAdaptorCompCurveHandle* handle,
+  OcctSharp_Value_Hyperbola3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const BRepAdaptor_CompCurve*>(ValidateBRepAdaptorCompCurve(handle)->Value.get())->Hyperbola());
   });
 }
 
@@ -13184,6 +13302,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_meth
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_line_0(
+  const OcctSharp_BRepAdaptorCompCurveHandle* handle,
+  OcctSharp_Value_Line3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const BRepAdaptor_CompCurve*>(ValidateBRepAdaptorCompCurve(handle)->Value.get())->Line());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_nb_intervals_0(
   const OcctSharp_BRepAdaptorCompCurveHandle* handle,
   int32_t s,
@@ -13218,6 +13348,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_meth
   return GeneratedGuard([&]
   {
     *out_value = ValidateBRepAdaptorCompCurve(handle)->Value->NbPoles();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_adaptor_comp_curve_method_parabola_0(
+  const OcctSharp_BRepAdaptorCompCurveHandle* handle,
+  OcctSharp_Value_Parabola3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const BRepAdaptor_CompCurve*>(ValidateBRepAdaptorCompCurve(handle)->Value.get())->Parabola());
   });
 }
 
@@ -16347,6 +16489,26 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_fill_pipe_shell_method_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_fill_pipe_shell_method_set_1(
+  const OcctSharp_BRepFillPipeShellHandle* handle,
+  OcctSharp_Value_Axis2 axe)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateBRepFillPipeShell(handle)->Value->Set(OcctSharp_GeometryValues::ToNative(axe));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_fill_pipe_shell_method_set_2(
+  const OcctSharp_BRepFillPipeShellHandle* handle,
+  OcctSharp_Value_Direction3d biNormal)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateBRepFillPipeShell(handle)->Value->Set(OcctSharp_GeometryValues::ToNative(biNormal));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_fill_pipe_shell_method_set_discrete_0(
   const OcctSharp_BRepFillPipeShellHandle* handle)
 {
@@ -18306,6 +18468,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_top_adaptor_hvertex_met
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_top_adaptor_hvertex_method_value_0(
+  const OcctSharp_BRepTopAdaptorHVertexHandle* handle,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(ValidateBRepTopAdaptorHVertex(handle)->Value->Value());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_top_adaptor_hvertex_clone(
   const OcctSharp_BRepTopAdaptorHVertexHandle* source,
   OcctSharp_BRepTopAdaptorHVertexHandle** out_handle)
@@ -18374,6 +18548,21 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_top_adaptor_topol_tool_
   {
     opencascade::handle<BRepTopAdaptor_TopolTool> createdHandle = new BRepTopAdaptor_TopolTool((surface == nullptr ? opencascade::handle<Adaptor3d_Surface>() : ValidateAdaptor3dSurface(surface)->Value));
     *out_handle = AllocateBRepTopAdaptorTopolTool(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_top_adaptor_topol_tool_method_classify_0(
+  const OcctSharp_BRepTopAdaptorTopolToolHandle* handle,
+  OcctSharp_Value_Point2d p2d,
+  double tol,
+  int32_t recadreOnPeriodic,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<int32_t>(ValidateBRepTopAdaptorTopolTool(handle)->Value->Classify(OcctSharp_GeometryValues::ToNative(p2d), tol, (recadreOnPeriodic != 0)));
   });
 }
 
@@ -18476,6 +18665,21 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_top_adaptor_topol_tool_
   return GeneratedGuard([&]
   {
     ValidateBRepTopAdaptorTopolTool(handle)->Value->Initialize((s == nullptr ? opencascade::handle<Adaptor3d_Surface>() : ValidateAdaptor3dSurface(s)->Value));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_top_adaptor_topol_tool_method_is_the_point_on_0(
+  const OcctSharp_BRepTopAdaptorTopolToolHandle* handle,
+  OcctSharp_Value_Point2d p2d,
+  double tol,
+  int32_t recadreOnPeriodic,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateBRepTopAdaptorTopolTool(handle)->Value->IsThePointOn(OcctSharp_GeometryValues::ToNative(p2d), tol, (recadreOnPeriodic != 0)) ? 1 : 0;
   });
 }
 
@@ -19029,6 +19233,17 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_curve_on_closed_surface
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_curve_on_closed_surface_method_set_uvpoints2_0(
+  const OcctSharp_BRepCurveOnClosedSurfaceHandle* handle,
+  OcctSharp_Value_Point2d p1,
+  OcctSharp_Value_Point2d p2)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateBRepCurveOnClosedSurface(handle)->Value->SetUVPoints2(OcctSharp_GeometryValues::ToNative(p1), OcctSharp_GeometryValues::ToNative(p2));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_curve_on_closed_surface_method_surface2_0(
   const OcctSharp_BRepCurveOnClosedSurfaceHandle* handle,
   OcctSharp_GeomSurfaceHandle** out_handle)
@@ -19155,6 +19370,17 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_curve_on_surface_method
   {
     opencascade::handle<Geom2d_Curve> returnedHandle = static_cast<const BRep_CurveOnSurface*>(ValidateBRepCurveOnSurface(handle)->Value.get())->PCurve();
     if (!returnedHandle.IsNull()) *out_handle = AllocateGeom2dCurve(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_curve_on_surface_method_set_uvpoints_0(
+  const OcctSharp_BRepCurveOnSurfaceHandle* handle,
+  OcctSharp_Value_Point2d p1,
+  OcctSharp_Value_Point2d p2)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateBRepCurveOnSurface(handle)->Value->SetUVPoints(OcctSharp_GeometryValues::ToNative(p1), OcctSharp_GeometryValues::ToNative(p2));
   });
 }
 
@@ -21565,6 +21791,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_create_0(
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_add_vertex_with_tangent_0(
+  const OcctSharp_ChFiDSElSpineHandle* handle,
+  OcctSharp_Value_Axis1 anAx1)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateChFiDSElSpine(handle)->Value->AddVertexWithTangent(OcctSharp_GeometryValues::ToNative(anAx1));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_bezier_0(
   const OcctSharp_ChFiDSElSpineHandle* handle,
   OcctSharp_GeomBezierCurveHandle** out_handle)
@@ -21591,6 +21827,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_bsp
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_circle_0(
+  const OcctSharp_ChFiDSElSpineHandle* handle,
+  OcctSharp_Value_Circle3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const ChFiDS_ElSpine*>(ValidateChFiDSElSpine(handle)->Value.get())->Circle());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_continuity_0(
   const OcctSharp_ChFiDSElSpineHandle* handle,
   int32_t* out_value)
@@ -21613,6 +21861,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_dyn
   {
     opencascade::handle<Standard_Type> returnedHandle = static_cast<const ChFiDS_ElSpine*>(ValidateChFiDSElSpine(handle)->Value.get())->DynamicType();
     if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_ellipse_0(
+  const OcctSharp_ChFiDSElSpineHandle* handle,
+  OcctSharp_Value_Ellipse3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const ChFiDS_ElSpine*>(ValidateChFiDSElSpine(handle)->Value.get())->Ellipse());
   });
 }
 
@@ -21688,6 +21948,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_get
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_hyperbola_0(
+  const OcctSharp_ChFiDSElSpineHandle* handle,
+  OcctSharp_Value_Hyperbola3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const ChFiDS_ElSpine*>(ValidateChFiDSElSpine(handle)->Value.get())->Hyperbola());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_is_periodic_0(
   const OcctSharp_ChFiDSElSpineHandle* handle,
   int32_t* out_value)
@@ -21719,6 +21991,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_las
   return GeneratedGuard([&]
   {
     ValidateChFiDSElSpine(handle)->Value->LastParameter(p);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_line_0(
+  const OcctSharp_ChFiDSElSpineHandle* handle,
+  OcctSharp_Value_Line3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const ChFiDS_ElSpine*>(ValidateChFiDSElSpine(handle)->Value.get())->Line());
   });
 }
 
@@ -21757,6 +22041,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_nex
   {
     opencascade::handle<ChFiDS_SurfData> returnedHandle = static_cast<const ChFiDS_ElSpine*>(ValidateChFiDSElSpine(handle)->Value.get())->Next();
     if (!returnedHandle.IsNull()) *out_handle = AllocateChFiDSSurfData(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_parabola_0(
+  const OcctSharp_ChFiDSElSpineHandle* handle,
+  OcctSharp_Value_Parabola3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const ChFiDS_ElSpine*>(ValidateChFiDSElSpine(handle)->Value.get())->Parabola());
   });
 }
 
@@ -21826,6 +22122,28 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_set
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_set_first_point_and_tgt_0(
+  const OcctSharp_ChFiDSElSpineHandle* handle,
+  OcctSharp_Point3d p,
+  OcctSharp_Value_Vector3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateChFiDSElSpine(handle)->Value->SetFirstPointAndTgt(gp_Pnt(p.x, p.y, p.z), OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_set_last_point_and_tgt_0(
+  const OcctSharp_ChFiDSElSpineHandle* handle,
+  OcctSharp_Point3d p,
+  OcctSharp_Value_Vector3d t)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateChFiDSElSpine(handle)->Value->SetLastPointAndTgt(gp_Pnt(p.x, p.y, p.z), OcctSharp_GeometryValues::ToNative(t));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_set_origin_0(
   const OcctSharp_ChFiDSElSpineHandle* handle,
   double o)
@@ -21872,6 +22190,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_tri
   {
     opencascade::handle<Adaptor3d_Curve> returnedHandle = ValidateChFiDSElSpine(handle)->Value->Trim(first, last, tol);
     if (!returnedHandle.IsNull()) *out_handle = AllocateAdaptor3dCurve(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_el_spine_method_vertex_with_tangent_0(
+  const OcctSharp_ChFiDSElSpineHandle* handle,
+  int32_t index,
+  OcctSharp_Value_Axis1* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const ChFiDS_ElSpine*>(ValidateChFiDSElSpine(handle)->Value.get())->VertexWithTangent(index));
   });
 }
 
@@ -22076,6 +22407,17 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_fil_spine_method_se
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_fil_spine_method_set_radius_2(
+  const OcctSharp_ChFiDSFilSpineHandle* handle,
+  OcctSharp_Value_Coordinates2d uandR,
+  int32_t iinC)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateChFiDSFilSpine(handle)->Value->SetRadius(OcctSharp_GeometryValues::ToNative(uandR), iinC);
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_fil_spine_clone(
   const OcctSharp_ChFiDSFilSpineHandle* source,
   OcctSharp_ChFiDSFilSpineHandle** out_handle)
@@ -22191,6 +22533,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_spine_method_append
   return GeneratedGuard([&]
   {
     ValidateChFiDSSpine(handle)->Value->AppendOffsetElSpine((els == nullptr ? opencascade::handle<ChFiDS_ElSpine>() : ValidateChFiDSElSpine(els)->Value));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_spine_method_circle_0(
+  const OcctSharp_ChFiDSSpineHandle* handle,
+  OcctSharp_Value_Circle3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const ChFiDS_Spine*>(ValidateChFiDSSpine(handle)->Value.get())->Circle());
   });
 }
 
@@ -22454,6 +22808,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_spine_method_length
   return GeneratedGuard([&]
   {
     *out_value = ValidateChFiDSSpine(handle)->Value->Length(indexSpine);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_spine_method_line_0(
+  const OcctSharp_ChFiDSSpineHandle* handle,
+  OcctSharp_Value_Line3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const ChFiDS_Spine*>(ValidateChFiDSSpine(handle)->Value.get())->Line());
   });
 }
 
@@ -23423,6 +23789,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_surf_data_method_fi
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_surf_data_method_get2d_points_0(
+  const OcctSharp_ChFiDSSurfDataHandle* handle,
+  int32_t first,
+  int32_t onS,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const ChFiDS_SurfData*>(ValidateChFiDSSurfData(handle)->Value.get())->Get2dPoints((first != 0), onS));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_surf_data_method_index_0(
   const OcctSharp_ChFiDSSurfDataHandle* handle,
   int32_t ofS,
@@ -23596,6 +23976,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_surf_data_method_re
   return GeneratedGuard([&]
   {
     ValidateChFiDSSurfData(handle)->Value->ResetSimul();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_ch_fi_ds_surf_data_method_set2d_points_0(
+  const OcctSharp_ChFiDSSurfDataHandle* handle,
+  OcctSharp_Value_Point2d p2df1,
+  OcctSharp_Value_Point2d p2dl1,
+  OcctSharp_Value_Point2d p2df2,
+  OcctSharp_Value_Point2d p2dl2)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateChFiDSSurfData(handle)->Value->Set2dPoints(OcctSharp_GeometryValues::ToNative(p2df1), OcctSharp_GeometryValues::ToNative(p2dl1), OcctSharp_GeometryValues::ToNative(p2df2), OcctSharp_GeometryValues::ToNative(p2dl2));
   });
 }
 
@@ -23970,6 +24363,17 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_contap_the_iwline_of_the_iwa
   return GeneratedGuard([&]
   {
     ValidateContapTheIWLineOfTheIWalking(handle)->Value->SetTangencyAtEnd((isTangent != 0));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_contap_the_iwline_of_the_iwalking_method_set_tangent_vector_0(
+  const OcctSharp_ContapTheIWLineOfTheIWalkingHandle* handle,
+  OcctSharp_Value_Vector3d v,
+  int32_t index)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateContapTheIWLineOfTheIWalking(handle)->Value->SetTangentVector(OcctSharp_GeometryValues::ToNative(v), index);
   });
 }
 
@@ -26651,6 +27055,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_helix_geom_helix_curve_metho
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_helix_geom_helix_curve_method_eval_dn_0(
+  const OcctSharp_HelixGeomHelixCurveHandle* handle,
+  double theU,
+  int32_t theN,
+  OcctSharp_Value_Vector3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const HelixGeom_HelixCurve*>(ValidateHelixGeomHelixCurve(handle)->Value.get())->EvalDN(theU, theN));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_helix_geom_helix_curve_method_first_parameter_0(
   const OcctSharp_HelixGeomHelixCurveHandle* handle,
   double* out_value)
@@ -26807,6 +27225,19 @@ void OCCTSHARP_CALL occtsharp_generated_helix_geom_helix_curve_release(OcctSharp
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_curves_face_intersector_method_classify_uvpoint_0(
+  const OcctSharp_IntCurvesFaceIntersectorHandle* handle,
+  OcctSharp_Value_Point2d puv,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<int32_t>(static_cast<const IntCurvesFace_Intersector*>(ValidateIntCurvesFaceIntersector(handle)->Value.get())->ClassifyUVPoint(OcctSharp_GeometryValues::ToNative(puv)));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_curves_face_intersector_method_dynamic_type_0(
   const OcctSharp_IntCurvesFaceIntersectorHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle)
@@ -26877,6 +27308,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_curves_face_intersector_
   return GeneratedGuard([&]
   {
     ValidateIntCurvesFaceIntersector(handle)->Value->Perform((hCu == nullptr ? opencascade::handle<Adaptor3d_Curve>() : ValidateAdaptor3dCurve(hCu)->Value), pInf, pSup);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_curves_face_intersector_method_perform_1(
+  const OcctSharp_IntCurvesFaceIntersectorHandle* handle,
+  OcctSharp_Value_Line3d l,
+  double pInf,
+  double pSup)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIntCurvesFaceIntersector(handle)->Value->Perform(OcctSharp_GeometryValues::ToNative(l), pInf, pSup);
   });
 }
 
@@ -27166,6 +27609,248 @@ void OCCTSHARP_CALL occtsharp_generated_int_patch_aline_release(OcctSharp_IntPat
   if (removed) delete handle;
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_0(
+  OcctSharp_Value_Circle3d c,
+  int32_t tang,
+  OcctSharp_IntPatchGLineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IntPatch_GLine> createdHandle = new IntPatch_GLine(OcctSharp_GeometryValues::ToNative(c), (tang != 0));
+    *out_handle = AllocateIntPatchGLine(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_1(
+  OcctSharp_Value_Circle3d c,
+  int32_t tang,
+  int32_t situ1,
+  int32_t situ2,
+  OcctSharp_IntPatchGLineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IntPatch_GLine> createdHandle = new IntPatch_GLine(OcctSharp_GeometryValues::ToNative(c), (tang != 0), static_cast<const IntSurf_Situation>(situ1), static_cast<const IntSurf_Situation>(situ2));
+    *out_handle = AllocateIntPatchGLine(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_2(
+  OcctSharp_Value_Circle3d c,
+  int32_t tang,
+  int32_t trans1,
+  int32_t trans2,
+  OcctSharp_IntPatchGLineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IntPatch_GLine> createdHandle = new IntPatch_GLine(OcctSharp_GeometryValues::ToNative(c), (tang != 0), static_cast<const IntSurf_TypeTrans>(trans1), static_cast<const IntSurf_TypeTrans>(trans2));
+    *out_handle = AllocateIntPatchGLine(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_3(
+  OcctSharp_Value_Ellipse3d e,
+  int32_t tang,
+  OcctSharp_IntPatchGLineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IntPatch_GLine> createdHandle = new IntPatch_GLine(OcctSharp_GeometryValues::ToNative(e), (tang != 0));
+    *out_handle = AllocateIntPatchGLine(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_4(
+  OcctSharp_Value_Ellipse3d e,
+  int32_t tang,
+  int32_t situ1,
+  int32_t situ2,
+  OcctSharp_IntPatchGLineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IntPatch_GLine> createdHandle = new IntPatch_GLine(OcctSharp_GeometryValues::ToNative(e), (tang != 0), static_cast<const IntSurf_Situation>(situ1), static_cast<const IntSurf_Situation>(situ2));
+    *out_handle = AllocateIntPatchGLine(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_5(
+  OcctSharp_Value_Ellipse3d e,
+  int32_t tang,
+  int32_t trans1,
+  int32_t trans2,
+  OcctSharp_IntPatchGLineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IntPatch_GLine> createdHandle = new IntPatch_GLine(OcctSharp_GeometryValues::ToNative(e), (tang != 0), static_cast<const IntSurf_TypeTrans>(trans1), static_cast<const IntSurf_TypeTrans>(trans2));
+    *out_handle = AllocateIntPatchGLine(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_6(
+  OcctSharp_Value_Hyperbola3d h,
+  int32_t tang,
+  OcctSharp_IntPatchGLineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IntPatch_GLine> createdHandle = new IntPatch_GLine(OcctSharp_GeometryValues::ToNative(h), (tang != 0));
+    *out_handle = AllocateIntPatchGLine(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_7(
+  OcctSharp_Value_Hyperbola3d h,
+  int32_t tang,
+  int32_t situ1,
+  int32_t situ2,
+  OcctSharp_IntPatchGLineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IntPatch_GLine> createdHandle = new IntPatch_GLine(OcctSharp_GeometryValues::ToNative(h), (tang != 0), static_cast<const IntSurf_Situation>(situ1), static_cast<const IntSurf_Situation>(situ2));
+    *out_handle = AllocateIntPatchGLine(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_8(
+  OcctSharp_Value_Hyperbola3d h,
+  int32_t tang,
+  int32_t trans1,
+  int32_t trans2,
+  OcctSharp_IntPatchGLineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IntPatch_GLine> createdHandle = new IntPatch_GLine(OcctSharp_GeometryValues::ToNative(h), (tang != 0), static_cast<const IntSurf_TypeTrans>(trans1), static_cast<const IntSurf_TypeTrans>(trans2));
+    *out_handle = AllocateIntPatchGLine(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_9(
+  OcctSharp_Value_Line3d l,
+  int32_t tang,
+  OcctSharp_IntPatchGLineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IntPatch_GLine> createdHandle = new IntPatch_GLine(OcctSharp_GeometryValues::ToNative(l), (tang != 0));
+    *out_handle = AllocateIntPatchGLine(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_10(
+  OcctSharp_Value_Line3d l,
+  int32_t tang,
+  int32_t situ1,
+  int32_t situ2,
+  OcctSharp_IntPatchGLineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IntPatch_GLine> createdHandle = new IntPatch_GLine(OcctSharp_GeometryValues::ToNative(l), (tang != 0), static_cast<const IntSurf_Situation>(situ1), static_cast<const IntSurf_Situation>(situ2));
+    *out_handle = AllocateIntPatchGLine(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_11(
+  OcctSharp_Value_Line3d l,
+  int32_t tang,
+  int32_t trans1,
+  int32_t trans2,
+  OcctSharp_IntPatchGLineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IntPatch_GLine> createdHandle = new IntPatch_GLine(OcctSharp_GeometryValues::ToNative(l), (tang != 0), static_cast<const IntSurf_TypeTrans>(trans1), static_cast<const IntSurf_TypeTrans>(trans2));
+    *out_handle = AllocateIntPatchGLine(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_12(
+  OcctSharp_Value_Parabola3d p,
+  int32_t tang,
+  OcctSharp_IntPatchGLineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IntPatch_GLine> createdHandle = new IntPatch_GLine(OcctSharp_GeometryValues::ToNative(p), (tang != 0));
+    *out_handle = AllocateIntPatchGLine(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_13(
+  OcctSharp_Value_Parabola3d p,
+  int32_t tang,
+  int32_t situ1,
+  int32_t situ2,
+  OcctSharp_IntPatchGLineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IntPatch_GLine> createdHandle = new IntPatch_GLine(OcctSharp_GeometryValues::ToNative(p), (tang != 0), static_cast<const IntSurf_Situation>(situ1), static_cast<const IntSurf_Situation>(situ2));
+    *out_handle = AllocateIntPatchGLine(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_create_14(
+  OcctSharp_Value_Parabola3d p,
+  int32_t tang,
+  int32_t trans1,
+  int32_t trans2,
+  OcctSharp_IntPatchGLineHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The output generated shared handle pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<IntPatch_GLine> createdHandle = new IntPatch_GLine(OcctSharp_GeometryValues::ToNative(p), (tang != 0), static_cast<const IntSurf_TypeTrans>(trans1), static_cast<const IntSurf_TypeTrans>(trans2));
+    *out_handle = AllocateIntPatchGLine(std::move(createdHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_circle_0(
+  const OcctSharp_IntPatchGLineHandle* handle,
+  OcctSharp_Value_Circle3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IntPatch_GLine*>(ValidateIntPatchGLine(handle)->Value.get())->Circle());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_compute_vertex_parameters_0(
   const OcctSharp_IntPatchGLineHandle* handle,
   double tol)
@@ -27186,6 +27871,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_dynam
   {
     opencascade::handle<Standard_Type> returnedHandle = static_cast<const IntPatch_GLine*>(ValidateIntPatchGLine(handle)->Value.get())->DynamicType();
     if (!returnedHandle.IsNull()) *out_handle = AllocateStandardType(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_ellipse_0(
+  const OcctSharp_IntPatchGLineHandle* handle,
+  OcctSharp_Value_Ellipse3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IntPatch_GLine*>(ValidateIntPatchGLine(handle)->Value.get())->Ellipse());
   });
 }
 
@@ -27213,6 +27910,30 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_has_l
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_hyperbola_0(
+  const OcctSharp_IntPatchGLineHandle* handle,
+  OcctSharp_Value_Hyperbola3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IntPatch_GLine*>(ValidateIntPatchGLine(handle)->Value.get())->Hyperbola());
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_line_0(
+  const OcctSharp_IntPatchGLineHandle* handle,
+  OcctSharp_Value_Line3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IntPatch_GLine*>(ValidateIntPatchGLine(handle)->Value.get())->Line());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_nb_vertex_0(
   const OcctSharp_IntPatchGLineHandle* handle,
   int32_t* out_value)
@@ -27222,6 +27943,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_nb_ve
   return GeneratedGuard([&]
   {
     *out_value = ValidateIntPatchGLine(handle)->Value->NbVertex();
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_gline_method_parabola_0(
+  const OcctSharp_IntPatchGLineHandle* handle,
+  OcctSharp_Value_Parabola3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const IntPatch_GLine*>(ValidateIntPatchGLine(handle)->Value.get())->Parabola());
   });
 }
 
@@ -27749,6 +28482,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_rline_method_is_ou
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_rline_method_is_out_surf1_box_0(
+  const OcctSharp_IntPatchRLineHandle* handle,
+  OcctSharp_Value_Point2d theP,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const IntPatch_RLine*>(ValidateIntPatchRLine(handle)->Value.get())->IsOutSurf1Box(OcctSharp_GeometryValues::ToNative(theP)) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_rline_method_is_out_surf2_box_0(
+  const OcctSharp_IntPatchRLineHandle* handle,
+  OcctSharp_Value_Point2d theP,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const IntPatch_RLine*>(ValidateIntPatchRLine(handle)->Value.get())->IsOutSurf2Box(OcctSharp_GeometryValues::ToNative(theP)) ? 1 : 0;
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_rline_method_nb_pnts_0(
   const OcctSharp_IntPatchRLineHandle* handle,
   int32_t* out_value)
@@ -28108,6 +28867,17 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_the_iwline_of_the_
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_the_iwline_of_the_iwalking_method_set_tangent_vector_0(
+  const OcctSharp_IntPatchTheIWLineOfTheIWalkingHandle* handle,
+  OcctSharp_Value_Vector3d v,
+  int32_t index)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateIntPatchTheIWLineOfTheIWalking(handle)->Value->SetTangentVector(OcctSharp_GeometryValues::ToNative(v), index);
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_the_iwline_of_the_iwalking_clone(
   const OcctSharp_IntPatchTheIWLineOfTheIWalkingHandle* source,
   OcctSharp_IntPatchTheIWLineOfTheIWalkingHandle** out_handle)
@@ -28361,6 +29131,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_wline_method_is_ou
   return GeneratedGuard([&]
   {
     *out_value = ValidateIntPatchWLine(handle)->Value->IsOutBox(gp_Pnt(theP.x, theP.y, theP.z)) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_wline_method_is_out_surf1_box_0(
+  const OcctSharp_IntPatchWLineHandle* handle,
+  OcctSharp_Value_Point2d theP,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const IntPatch_WLine*>(ValidateIntPatchWLine(handle)->Value.get())->IsOutSurf1Box(OcctSharp_GeometryValues::ToNative(theP)) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_patch_wline_method_is_out_surf2_box_0(
+  const OcctSharp_IntPatchWLineHandle* handle,
+  OcctSharp_Value_Point2d theP,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = static_cast<const IntPatch_WLine*>(ValidateIntPatchWLine(handle)->Value.get())->IsOutSurf2Box(OcctSharp_GeometryValues::ToNative(theP)) ? 1 : 0;
   });
 }
 
@@ -28671,6 +29467,32 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_surf_line_on2_s_method_i
   return GeneratedGuard([&]
   {
     *out_value = ValidateIntSurfLineOn2S(handle)->Value->IsOutBox(gp_Pnt(theP.x, theP.y, theP.z)) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_surf_line_on2_s_method_is_out_surf1_box_0(
+  const OcctSharp_IntSurfLineOn2SHandle* handle,
+  OcctSharp_Value_Point2d theP,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateIntSurfLineOn2S(handle)->Value->IsOutSurf1Box(OcctSharp_GeometryValues::ToNative(theP)) ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_surf_line_on2_s_method_is_out_surf2_box_0(
+  const OcctSharp_IntSurfLineOn2SHandle* handle,
+  OcctSharp_Value_Point2d theP,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateIntSurfLineOn2S(handle)->Value->IsOutSurf2Box(OcctSharp_GeometryValues::ToNative(theP)) ? 1 : 0;
   });
 }
 
@@ -29836,6 +30658,22 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_analysis_surface_metho
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_analysis_surface_method_is_degenerated_1(
+  const OcctSharp_ShapeAnalysisSurfaceHandle* handle,
+  OcctSharp_Value_Point2d p2d1,
+  OcctSharp_Value_Point2d p2d2,
+  double tol,
+  double ratio,
+  int32_t* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = ValidateShapeAnalysisSurface(handle)->Value->IsDegenerated(OcctSharp_GeometryValues::ToNative(p2d1), OcctSharp_GeometryValues::ToNative(p2d2), tol, ratio) ? 1 : 0;
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_analysis_surface_method_is_uclosed_0(
   const OcctSharp_ShapeAnalysisSurfaceHandle* handle,
   double preci,
@@ -29872,6 +30710,22 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_analysis_surface_metho
   return GeneratedGuard([&]
   {
     *out_value = ValidateShapeAnalysisSurface(handle)->Value->NbSingularities(preci);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_analysis_surface_method_next_value_of_uv_0(
+  const OcctSharp_ShapeAnalysisSurfaceHandle* handle,
+  OcctSharp_Value_Point2d p2dPrev,
+  OcctSharp_Point3d p3D,
+  double preci,
+  double maxpreci,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(ValidateShapeAnalysisSurface(handle)->Value->NextValueOfUV(OcctSharp_GeometryValues::ToNative(p2dPrev), gp_Pnt(p3D.x, p3D.y, p3D.z), preci, maxpreci));
   });
 }
 
@@ -29952,6 +30806,34 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_analysis_surface_metho
   {
     const gp_Pnt nativeValue = ValidateShapeAnalysisSurface(handle)->Value->Value(u, v);
     *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_analysis_surface_method_value_1(
+  const OcctSharp_ShapeAnalysisSurfaceHandle* handle,
+  OcctSharp_Value_Point2d p2d,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = ValidateShapeAnalysisSurface(handle)->Value->Value(OcctSharp_GeometryValues::ToNative(p2d));
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_analysis_surface_method_value_of_uv_0(
+  const OcctSharp_ShapeAnalysisSurfaceHandle* handle,
+  OcctSharp_Point3d p3D,
+  double preci,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(ValidateShapeAnalysisSurface(handle)->Value->ValueOfUV(gp_Pnt(p3D.x, p3D.y, p3D.z), preci));
   });
 }
 
@@ -32086,6 +32968,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_complex_curve_m
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_complex_curve_method_eval_dn_0(
+  const OcctSharp_ShapeExtendComplexCurveHandle* handle,
+  double u,
+  int32_t n,
+  OcctSharp_Value_Vector3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const ShapeExtend_ComplexCurve*>(ValidateShapeExtendComplexCurve(handle)->Value.get())->EvalDN(u, n));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_complex_curve_method_first_parameter_0(
   const OcctSharp_ShapeExtendComplexCurveHandle* handle,
   double* out_value)
@@ -32294,6 +33190,37 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surfa
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_eval_dn_0(
+  const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
+  double u,
+  double v,
+  int32_t nu,
+  int32_t nv,
+  OcctSharp_Value_Vector3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const ShapeExtend_CompositeSurface*>(ValidateShapeExtendCompositeSurface(handle)->Value.get())->EvalDN(u, v, nu, nv));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_global_to_local_0(
+  const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
+  int32_t i,
+  int32_t j,
+  OcctSharp_Value_Point2d uV,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const ShapeExtend_CompositeSurface*>(ValidateShapeExtendCompositeSurface(handle)->Value.get())->GlobalToLocal(i, j, OcctSharp_GeometryValues::ToNative(uV)));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_is_cnu_0(
   const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
   int32_t n,
@@ -32365,6 +33292,21 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surfa
   return GeneratedGuard([&]
   {
     *out_value = ValidateShapeExtendCompositeSurface(handle)->Value->IsVPeriodic() ? 1 : 0;
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_local_to_global_0(
+  const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
+  int32_t i,
+  int32_t j,
+  OcctSharp_Value_Point2d uv,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const ShapeExtend_CompositeSurface*>(ValidateShapeExtendCompositeSurface(handle)->Value.get())->LocalToGlobal(i, j, OcctSharp_GeometryValues::ToNative(uv)));
   });
 }
 
@@ -32444,6 +33386,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surfa
   return GeneratedGuard([&]
   {
     opencascade::handle<Geom_Surface> returnedHandle = static_cast<const ShapeExtend_CompositeSurface*>(ValidateShapeExtendCompositeSurface(handle)->Value.get())->Patch(i, j);
+    if (!returnedHandle.IsNull()) *out_handle = AllocateGeomSurface(std::move(returnedHandle));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_patch_2(
+  const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
+  OcctSharp_Value_Point2d pnt,
+  OcctSharp_GeomSurfaceHandle** out_handle)
+{
+  if (out_handle == nullptr) { OcctSharp_Internal_SetLastError("The generated shared return pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_handle = nullptr;
+  return GeneratedGuard([&]
+  {
+    opencascade::handle<Geom_Surface> returnedHandle = static_cast<const ShapeExtend_CompositeSurface*>(ValidateShapeExtendCompositeSurface(handle)->Value.get())->Patch(OcctSharp_GeometryValues::ToNative(pnt));
     if (!returnedHandle.IsNull()) *out_handle = AllocateGeomSurface(std::move(returnedHandle));
   });
 }
@@ -32544,6 +33500,20 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surfa
   return GeneratedGuard([&]
   {
     *out_value = ValidateShapeExtendCompositeSurface(handle)->Value->UReversedParameter(u);
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_shape_extend_composite_surface_method_value_0(
+  const OcctSharp_ShapeExtendCompositeSurfaceHandle* handle,
+  OcctSharp_Value_Point2d pnt,
+  OcctSharp_Point3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    const gp_Pnt nativeValue = static_cast<const ShapeExtend_CompositeSurface*>(ValidateShapeExtendCompositeSurface(handle)->Value.get())->Value(OcctSharp_GeometryValues::ToNative(pnt));
+    *out_value = {nativeValue.X(), nativeValue.Y(), nativeValue.Z()};
   });
 }
 

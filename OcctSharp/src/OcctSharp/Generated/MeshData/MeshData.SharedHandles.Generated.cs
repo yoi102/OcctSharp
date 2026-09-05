@@ -94,6 +94,7 @@
 // Source: c:@S@Poly_Triangulation@F@SetDoublePrecision#b#
 // Source: c:@S@Poly_Triangulation@F@SetMeshPurpose#i#
 // Source: c:@S@Poly_Triangulation@F@SetNode#I#&1$@S@gp_Pnt#
+// Source: c:@S@Poly_Triangulation@F@SetNormal#I#&1$@S@gp_Dir#
 // Source: c:@S@Poly_Triangulation@F@UnloadDeferredData#
 // Source: c:@S@Poly_Triangulation@F@UpdateCachedMinMax#
 // Source: c:@S@Poly_TriangulationParameters@F@Angle#1
@@ -1187,6 +1188,13 @@ public sealed class PolyTriangulation : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodSetNode0(handle, theIndex, new Point3dRaw(thePnt.X, thePnt.Y, thePnt.Z)), "occtsharp_generated_poly_triangulation_method_set_node_0");
+    }
+
+    /// <summary>Invokes OCCT Poly_Triangulation::SetNormal.</summary>
+    public void SetNormal(int theIndex, global::OcctSharp.Values.Direction3d theNormal)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(MeshDataGeneratedNativeMethods.PolyTriangulationMethodSetNormal0(handle, theIndex, theNormal), "occtsharp_generated_poly_triangulation_method_set_normal_0");
     }
 
     /// <summary>Invokes OCCT Poly_Triangulation::UnloadDeferredData.</summary>

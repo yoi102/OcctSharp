@@ -6,6 +6,7 @@
 // Source: c:@S@AIS_ViewCube@F@IsBoxEdge#$@E@V3d_TypeOfOrientation#S
 // Source: c:@S@AIS_ViewCube@F@IsBoxSide#$@E@V3d_TypeOfOrientation#S
 // Source: c:@S@Aspect_OpenVRSession@F@IsHmdPresent#S
+// Source: c:@S@DsgPrs@F@DistanceFromApex#&1$@S@gp_Elips#&1$@S@gp_Pnt#d#S
 // Source: c:@S@Graphic3d_Aspects@F@DefaultLinePatternForType#$@E@Aspect_TypeOfLine#S
 // Source: c:@S@Graphic3d_Aspects@F@DefaultLineTypeForPattern#s#S
 // Source: c:@S@Graphic3d_Attribute@F@Stride#$@E@Graphic3d_TypeOfData#S
@@ -51,9 +52,14 @@
 // Source: c:@S@Prs3d_DatumAspect@F@ArrowPartForAxis#$@E@Prs3d_DatumParts#S
 // Source: c:@S@Prs3d_ToolQuadric@F@TrianglesNb#I#I#S
 // Source: c:@S@Prs3d_ToolQuadric@F@VerticesNb#I#I#b#S
+// Source: c:@S@PrsDim@F@DistanceFromApex#&1$@S@gp_Elips#&1$@S@gp_Pnt#d#S
 // Source: c:@S@PrsDim@F@InDomain#d#d#d#S
+// Source: c:@S@PrsDim@F@Nearest#&1$@S@gp_Lin#&1$@S@gp_Pnt#S
+// Source: c:@S@PrsDim@F@ProjectPointOnLine#&1$@S@gp_Pnt#&1$@S@gp_Lin#S
+// Source: c:@S@PrsDim@F@ProjectPointOnPlane#&1$@S@gp_Pnt#&1$@S@gp_Pln#S
 // Source: c:@S@SelectBasics@F@MaxOwnerPriority#S
 // Source: c:@S@SelectBasics@F@MinOwnerPriority#S
+// Source: c:@S@V3d@F@GetProjAxis#$@E@V3d_TypeOfOrientation#S
 // Source: c:@S@WNT_HIDSpaceMouse@F@IsKnownProduct#l#S
 // Source: c:@S@WNT_Window@F@MouseButtonsAsync#S
 // Source: c:@S@WNT_Window@F@MouseButtonsFromEvent#k#S
@@ -75,10 +81,12 @@ static_assert(sizeof(double) == 8 && std::numeric_limits<double>::is_iec559);
 #include <exception>
 #include "../../include/OcctSharp.Native.Internal.hxx"
 
+#include <gp_Pnt.hxx>
 #include <AIS_ColorScale.hxx>
 #include <AIS_Shape.hxx>
 #include <AIS_ViewCube.hxx>
 #include <Aspect_OpenVRSession.hxx>
+#include <DsgPrs.hxx>
 #include <Graphic3d_Aspects.hxx>
 #include <Graphic3d_Buffer.hxx>
 #include <Graphic3d_MaterialAspect.hxx>
@@ -102,6 +110,7 @@ static_assert(sizeof(double) == 8 && std::numeric_limits<double>::is_iec559);
 #include <Prs3d_ToolQuadric.hxx>
 #include <PrsDim.hxx>
 #include <SelectBasics.hxx>
+#include <V3d.hxx>
 #include <WNT_HIDSpaceMouse.hxx>
 #include <WNT_Window.hxx>
 #include <Wasm_Window.hxx>
@@ -146,6 +155,21 @@ int32_t OCCTSHARP_CALL occtsharp_generated_ais_view_cube_is_box_side_static_is_b
 int32_t OCCTSHARP_CALL occtsharp_generated_aspect_open_vrsession_is_hmd_present_static_is_hmd_present_0(void)
 {
   return Aspect_OpenVRSession::IsHmdPresent() ? 1 : 0;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_dsg_prs_distance_from_apex_static_distance_from_apex_0(OcctSharp_Value_Ellipse3d elips, OcctSharp_Point3d Apex, double par, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = DsgPrs::DistanceFromApex(OcctSharp_GeometryValues::ToNative(elips), gp_Pnt(Apex.x, Apex.y, Apex.z), par);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_graphic3d_aspects_default_line_pattern_for_type_static_default_line_pattern_for_type_0(int32_t theType, uint16_t* generatedResult)
@@ -521,12 +545,75 @@ int32_t OCCTSHARP_CALL occtsharp_generated_prs3d_tool_quadric_vertices_nb_static
   return Prs3d_ToolQuadric::VerticesNb(theSlicesNb, theStacksNb, (theIsIndexed != 0));
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_distance_from_apex_static_distance_from_apex_0(OcctSharp_Value_Ellipse3d elips, OcctSharp_Point3d Apex, double par, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = PrsDim::DistanceFromApex(OcctSharp_GeometryValues::ToNative(elips), gp_Pnt(Apex.x, Apex.y, Apex.z), par);
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
 int32_t OCCTSHARP_CALL occtsharp_generated_prs_dim_in_domain_static_in_domain_0(
   const double aFirstPar,
   const double aLastPar,
   const double anAttachPar)
 {
   return PrsDim::InDomain(aFirstPar, aLastPar, anAttachPar) ? 1 : 0;
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_nearest_static_nearest_0(OcctSharp_Value_Line3d theLine, OcctSharp_Point3d thePoint, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = PrsDim::Nearest(OcctSharp_GeometryValues::ToNative(theLine), gp_Pnt(thePoint.x, thePoint.y, thePoint.z));
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_project_point_on_line_static_project_point_on_line_0(OcctSharp_Point3d aPoint, OcctSharp_Value_Line3d aLine, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = PrsDim::ProjectPointOnLine(gp_Pnt(aPoint.x, aPoint.y, aPoint.z), OcctSharp_GeometryValues::ToNative(aLine));
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_prs_dim_project_point_on_plane_static_project_point_on_plane_0(OcctSharp_Point3d aPoint, OcctSharp_Value_Plane aPlane, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = PrsDim::ProjectPointOnPlane(gp_Pnt(aPoint.x, aPoint.y, aPoint.z), OcctSharp_GeometryValues::ToNative(aPlane));
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }
 
 int32_t OCCTSHARP_CALL occtsharp_generated_select_basics_max_owner_priority_static_max_owner_priority_0(void)
@@ -537,6 +624,21 @@ int32_t OCCTSHARP_CALL occtsharp_generated_select_basics_max_owner_priority_stat
 int32_t OCCTSHARP_CALL occtsharp_generated_select_basics_min_owner_priority_static_min_owner_priority_0(void)
 {
   return SelectBasics::MinOwnerPriority();
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_v3d_get_proj_axis_static_get_proj_axis_0(int32_t theOrientation, OcctSharp_Value_Direction3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(V3d::GetProjAxis(static_cast<const V3d_TypeOfOrientation>(theOrientation)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }
 
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_wnt_hidspace_mouse_is_known_product_static_is_known_product_0(uint32_t theProductId, int32_t* generatedResult)

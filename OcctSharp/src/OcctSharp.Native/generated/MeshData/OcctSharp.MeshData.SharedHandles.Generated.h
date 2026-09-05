@@ -94,6 +94,7 @@
 // Source: c:@S@Poly_Triangulation@F@SetDoublePrecision#b#
 // Source: c:@S@Poly_Triangulation@F@SetMeshPurpose#i#
 // Source: c:@S@Poly_Triangulation@F@SetNode#I#&1$@S@gp_Pnt#
+// Source: c:@S@Poly_Triangulation@F@SetNormal#I#&1$@S@gp_Dir#
 // Source: c:@S@Poly_Triangulation@F@UnloadDeferredData#
 // Source: c:@S@Poly_Triangulation@F@UpdateCachedMinMax#
 // Source: c:@S@Poly_TriangulationParameters@F@Angle#1
@@ -617,6 +618,11 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_poly_triangula
   const OcctSharp_PolyTriangulationHandle* handle,
   int32_t theIndex,
   OcctSharp_Point3d thePnt);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_poly_triangulation_method_set_normal_0(
+  const OcctSharp_PolyTriangulationHandle* handle,
+  int32_t theIndex,
+  OcctSharp_Value_Direction3d theNormal);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_poly_triangulation_method_unload_deferred_data_0(
   const OcctSharp_PolyTriangulationHandle* handle,

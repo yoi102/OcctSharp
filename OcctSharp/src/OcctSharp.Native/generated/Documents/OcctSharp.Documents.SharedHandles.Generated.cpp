@@ -1102,12 +1102,16 @@
 // Source: c:@S@TDataXtd_Triangulation@F@NbTriangles#1
 // Source: c:@S@TDataXtd_Triangulation@F@NewEmpty#1
 // Source: c:@S@TDataXtd_Triangulation@F@Node#I#1
+// Source: c:@S@TDataXtd_Triangulation@F@Normal#I#1
 // Source: c:@S@TDataXtd_Triangulation@F@Paste#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#&1$@N@opencascade@S@handle>#$@S@TDF_RelocationTable#1
 // Source: c:@S@TDataXtd_Triangulation@F@RemoveUVNodes#
 // Source: c:@S@TDataXtd_Triangulation@F@Restore#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#
 // Source: c:@S@TDataXtd_Triangulation@F@Set#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#
 // Source: c:@S@TDataXtd_Triangulation@F@SetNode#I#&1$@S@gp_Pnt#
+// Source: c:@S@TDataXtd_Triangulation@F@SetNormal#I#&1$@S@gp_Dir#
+// Source: c:@S@TDataXtd_Triangulation@F@SetUVNode#I#&1$@S@gp_Pnt2d#
 // Source: c:@S@TDataXtd_Triangulation@F@TDataXtd_Triangulation#
+// Source: c:@S@TDataXtd_Triangulation@F@UVNode#I#1
 // Source: c:@S@TDocStd_Application@F@Close#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#
 // Source: c:@S@TDocStd_Application@F@DynamicType#1
 // Source: c:@S@TDocStd_Application@F@GetDocument#I#1
@@ -1457,9 +1461,11 @@
 // Source: c:@S@TObj_TReference@F@Restore#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#
 // Source: c:@S@TObj_TReference@F@TObj_TReference#
 // Source: c:@S@TObj_TXYZ@F@DynamicType#1
+// Source: c:@S@TObj_TXYZ@F@Get#1
 // Source: c:@S@TObj_TXYZ@F@NewEmpty#1
 // Source: c:@S@TObj_TXYZ@F@Paste#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#&1$@N@opencascade@S@handle>#$@S@TDF_RelocationTable#1
 // Source: c:@S@TObj_TXYZ@F@Restore#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#
+// Source: c:@S@TObj_TXYZ@F@Set#&1$@S@gp_XYZ#
 // Source: c:@S@TObj_TXYZ@F@TObj_TXYZ#
 // Source: c:@S@XmlDrivers_DocumentRetrievalDriver@F@AttributeDrivers#&1$@N@opencascade@S@handle>#$@S@Message_Messenger#
 // Source: c:@S@XmlDrivers_DocumentRetrievalDriver@F@DynamicType#1
@@ -30568,6 +30574,19 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tdata_xtd_triangulation_meth
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tdata_xtd_triangulation_method_normal_0(
+  const OcctSharp_TDataXtdTriangulationHandle* handle,
+  int32_t theIndex,
+  OcctSharp_Value_Direction3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const TDataXtd_Triangulation*>(ValidateTDataXtdTriangulation(handle)->Value.get())->Normal(theIndex));
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tdata_xtd_triangulation_method_paste_0(
   const OcctSharp_TDataXtdTriangulationHandle* handle,
   const OcctSharp_TDFAttributeHandle* into,
@@ -30616,6 +30635,41 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tdata_xtd_triangulation_meth
   return GeneratedGuard([&]
   {
     ValidateTDataXtdTriangulation(handle)->Value->SetNode(theIndex, gp_Pnt(theNode.x, theNode.y, theNode.z));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tdata_xtd_triangulation_method_set_normal_0(
+  const OcctSharp_TDataXtdTriangulationHandle* handle,
+  int32_t theIndex,
+  OcctSharp_Value_Direction3d theNormal)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateTDataXtdTriangulation(handle)->Value->SetNormal(theIndex, OcctSharp_GeometryValues::ToNative(theNormal));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tdata_xtd_triangulation_method_set_uvnode_0(
+  const OcctSharp_TDataXtdTriangulationHandle* handle,
+  int32_t theIndex,
+  OcctSharp_Value_Point2d theUVNode)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateTDataXtdTriangulation(handle)->Value->SetUVNode(theIndex, OcctSharp_GeometryValues::ToNative(theUVNode));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tdata_xtd_triangulation_method_uvnode_0(
+  const OcctSharp_TDataXtdTriangulationHandle* handle,
+  int32_t theIndex,
+  OcctSharp_Value_Point2d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const TDataXtd_Triangulation*>(ValidateTDataXtdTriangulation(handle)->Value.get())->UVNode(theIndex));
   });
 }
 
@@ -36472,6 +36526,18 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tobj_txyz_method_dynamic_typ
   });
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tobj_txyz_method_get_0(
+  const OcctSharp_TObjTXYZHandle* handle,
+  OcctSharp_Value_Coordinates3d* out_value)
+{
+  if (out_value == nullptr) { OcctSharp_Internal_SetLastError("The generated method output pointer is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *out_value = {};
+  return GeneratedGuard([&]
+  {
+    *out_value = OcctSharp_GeometryValues::FromNative(static_cast<const TObj_TXYZ*>(ValidateTObjTXYZ(handle)->Value.get())->Get());
+  });
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tobj_txyz_method_new_empty_0(
   const OcctSharp_TObjTXYZHandle* handle,
   OcctSharp_TDFAttributeHandle** out_handle)
@@ -36503,6 +36569,16 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tobj_txyz_method_restore_0(
   return GeneratedGuard([&]
   {
     ValidateTObjTXYZ(handle)->Value->Restore((theWith == nullptr ? opencascade::handle<TDF_Attribute>() : ValidateTDFAttribute(theWith)->Value));
+  });
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_tobj_txyz_method_set_0(
+  const OcctSharp_TObjTXYZHandle* handle,
+  OcctSharp_Value_Coordinates3d theXYZ)
+{
+  return GeneratedGuard([&]
+  {
+    ValidateTObjTXYZ(handle)->Value->Set(OcctSharp_GeometryValues::ToNative(theXYZ));
   });
 }
 

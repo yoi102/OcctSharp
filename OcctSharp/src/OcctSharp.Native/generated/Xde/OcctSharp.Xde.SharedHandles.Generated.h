@@ -110,6 +110,8 @@
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@AddModifier#$@E@XCAFDimTolObjects_DimensionModif#
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@DynamicType#1
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@GetAngularQualifier#1
+// Source: c:@S@XCAFDimTolObjects_DimensionObject@F@GetConnectionAxis#1
+// Source: c:@S@XCAFDimTolObjects_DimensionObject@F@GetConnectionAxis2#1
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@GetConnectionName#1
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@GetConnectionName2#1
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@GetDescription#I#1
@@ -141,6 +143,8 @@
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@RemoveDescription#I#
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetAngularQualifier#$@E@XCAFDimTolObjects_AngularQualifier#
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetClassOfTolerance#b#$@E@XCAFDimTolObjects_DimensionFormVariance#$@E@XCAFDimTolObjects_DimensionGrade#
+// Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetConnectionAxis#&1$@S@gp_Ax2#
+// Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetConnectionAxis2#&1$@S@gp_Ax2#
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetConnectionName#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetConnectionName2#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetLowerBound#d#
@@ -174,6 +178,7 @@
 // Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@HasPlane#1
 // Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@HasPoint#1
 // Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@HasPointText#1
+// Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@SetAffectedPlane#&1$@S@gp_Pln#
 // Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@SetAffectedPlaneType#$@E@XCAFDimTolObjects_ToleranceZoneAffectedPlane#
 // Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@SetMaterialRequirementModifier#$@E@XCAFDimTolObjects_GeomToleranceMatReqModif#
 // Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@SetMaxValueModifier#d#
@@ -404,12 +409,14 @@
 // Source: c:@S@XCAFDoc_Volume@F@Set#d#
 // Source: c:@S@XCAFDoc_Volume@F@XCAFDoc_Volume#
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@DynamicType#1
+// Source: c:@S@XCAFNoteObjects_NoteObject@F@GetPlane#1
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@GetPoint#1
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@GetPointText#1
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@HasPlane#1
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@HasPoint#1
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@HasPointText#1
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@Reset#
+// Source: c:@S@XCAFNoteObjects_NoteObject@F@SetPlane#&1$@S@gp_Ax2#
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@SetPoint#&1$@S@gp_Pnt#
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@SetPointText#&1$@S@gp_Pnt#
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@XCAFNoteObjects_NoteObject#
@@ -1588,6 +1595,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xcafdim_tol_ob
   const OcctSharp_XCAFDimTolObjectsDimensionObjectHandle* handle,
   int32_t* out_value);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_connection_axis_0(
+  const OcctSharp_XCAFDimTolObjectsDimensionObjectHandle* handle,
+  OcctSharp_Value_Axis2* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_connection_axis2_0(
+  const OcctSharp_XCAFDimTolObjectsDimensionObjectHandle* handle,
+  OcctSharp_Value_Axis2* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_connection_name_0(
   const OcctSharp_XCAFDimTolObjectsDimensionObjectHandle* handle,
   OcctSharp_TCollectionHAsciiStringHandle** out_handle);
@@ -1715,6 +1730,14 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xcafdim_tol_ob
   int32_t theHole,
   int32_t theFormVariance,
   int32_t theGrade);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_connection_axis_0(
+  const OcctSharp_XCAFDimTolObjectsDimensionObjectHandle* handle,
+  OcctSharp_Value_Axis2 theAxis);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_connection_axis2_0(
+  const OcctSharp_XCAFDimTolObjectsDimensionObjectHandle* handle,
+  OcctSharp_Value_Axis2 theAxis);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_connection_name_0(
   const OcctSharp_XCAFDimTolObjectsDimensionObjectHandle* handle,
@@ -1868,6 +1891,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xcafdim_tol_ob
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_has_point_text_0(
   const OcctSharp_XCAFDimTolObjectsGeomToleranceObjectHandle* handle,
   int32_t* out_value);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_affected_plane_0(
+  const OcctSharp_XCAFDimTolObjectsGeomToleranceObjectHandle* handle,
+  OcctSharp_Value_Plane thePlane);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_affected_plane_type_0(
   const OcctSharp_XCAFDimTolObjectsGeomToleranceObjectHandle* handle,
@@ -3398,6 +3425,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xcafnote_objec
   const OcctSharp_XCAFNoteObjectsNoteObjectHandle* handle,
   OcctSharp_StandardTypeHandle** out_handle);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xcafnote_objects_note_object_method_get_plane_0(
+  const OcctSharp_XCAFNoteObjectsNoteObjectHandle* handle,
+  OcctSharp_Value_Axis2* out_value);
+
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xcafnote_objects_note_object_method_get_point_0(
   const OcctSharp_XCAFNoteObjectsNoteObjectHandle* handle,
   OcctSharp_Point3d* out_value);
@@ -3420,6 +3451,10 @@ OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xcafnote_objec
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xcafnote_objects_note_object_method_reset_0(
   const OcctSharp_XCAFNoteObjectsNoteObjectHandle* handle);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xcafnote_objects_note_object_method_set_plane_0(
+  const OcctSharp_XCAFNoteObjectsNoteObjectHandle* handle,
+  OcctSharp_Value_Axis2 thePlane);
 
 OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_xcafnote_objects_note_object_method_set_point_0(
   const OcctSharp_XCAFNoteObjectsNoteObjectHandle* handle,

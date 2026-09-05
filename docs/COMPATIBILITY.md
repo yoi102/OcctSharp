@@ -1,5 +1,14 @@
 # Compatibility
 
+## Preview.24 geometric projection expansion
+
+Y preserves both the 16,353 Preview.22 IDs and 3,329 Preview.23 additions in embedded
+immutable epochs. New overloads append after both groups; X checked statics stay checked.
+All 32,076 previous generated native signatures/bodies are compared against X commit
+2cbe55e. New DTOs belong to Foundation without moving any old public type. Schema 1.13,
+binding-model schema 1.3 and assembly/file 0.1.0.0 remain. Final API, native export and
+consumer verification results are maintained in STATUS.
+
 ## Preview.23 generated projection expansion
 
 X preserves Preview.22 overload ordinals using the immutable 16,353 stable-ID baseline.

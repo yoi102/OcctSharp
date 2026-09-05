@@ -1,5 +1,34 @@
 # Special Cases
 
+## SC-062: Batch Y geometric value projection boundary
+
+TM009 adds generated field copies, not manual binding IDs. A gp_Mat2d has a column-based
+constructor in the pinned SDK, so the emitter reconstructs columns from row-major ABI
+fields explicitly. Full frames retain their Y direction and handedness; inconsistent
+axes reject. Mutable/output references and transformations remain outside the rule.
+The initial gp_Pnt constructor emitter accepts coordinates and point copies only;
+gp_Pnt(gp_XYZ) remains Blocked/BL211 until that emitter supports the new input record.
+This prevents an eligible-but-unemitted declaration from inflating migration counts.
+
+The exact declaration `c:@S@Adaptor3d_TopolTool@F@Classify#&1$@S@gp_Pnt2d#d#b#`
+would introduce Geometry -> Modeling through its TopAbs_State return and form a cycle.
+Keep it Blocked/BL210 (CrossModuleProjectionContract), without moving the existing enum,
+adding a reverse dependency or excluding other Adaptor3d_TopolTool methods. A future
+module-neutral result contract can address it separately. The first Y dependency audit
+records the exact SD002 edge; this declaration is not counted as migrated.
+
+Two exact artifact exclusions use SK008: `VrmlData_IndexedFaceSet::GetNormal(int,int)`
+is absent from both TKDEVRML binaries. The deprecated four-argument
+`Select3D_SensitiveCircle` delegating constructor needs a vftable absent from both
+TKV3d binaries; its exported three-argument constructor remains generated. The exact
+stable IDs and evidence are in generation.json and the Y link/export audit. Neither
+exclusion suppresses a whole type or counts as a manual migration.
+
+The Y return audit covers 74 new const-reference declarations: individual fields,
+indexed elements and one retained surface handle. None describes a sequence start.
+Native sentinel results (for example an undefined mouse point) are copied as returned;
+the finite check applies to input conversion, not to native output semantics.
+
 ## SC-061: Batch X declaration-level reference and artifact exceptions
 
 The generic X type rules do not override SDK-specific return semantics or binary availability.

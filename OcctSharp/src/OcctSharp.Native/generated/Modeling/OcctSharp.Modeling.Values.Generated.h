@@ -10,9 +10,14 @@
 // Source: c:@S@BOPDS_Tools@F@TypeToInteger#$@E@TopAbs_ShapeEnum#S0_#S
 // Source: c:@S@BOPTools_AlgoTools2D@F@IntermediatePoint#d#d#S
 // Source: c:@S@BOPTools_AlgoTools3D@F@MinStepIn2d#S
+// Source: c:@S@BOPTools_AlgoTools3D@F@SenseFlag#&1$@S@gp_Dir#S0_#S
 // Source: c:@S@BOPTools_AlgoTools@F@DTolerance#S
 // Source: c:@S@BRepBuilderAPI@F@Precision#S
 // Source: c:@S@BRepBuilderAPI@F@Precision#d#S
+// Source: c:@S@BRepBuilderAPI_VertexInspector@F@Coord#I#&1$@S@gp_XYZ#S
+// Source: c:@S@BRepBuilderAPI_VertexInspector@F@Shift#&1$@S@gp_XYZ#d#S
+// Source: c:@S@BRepExtrema_VertexInspector@F@Coord#I#&1$@S@gp_XYZ#S
+// Source: c:@S@BRepExtrema_VertexInspector@F@Shift#&1$@S@gp_XYZ#d#S
 // Source: c:@S@BRepGraph_Layer@F@KindBit#$@S@BRepGraph_NodeId@E@Kind#S
 // Source: c:@S@BRepGraph_Layer@F@RefKindBit#$@S@BRepGraph_RefId@E@Kind#S
 // Source: c:@S@BRepGraph_LayerParametric@F@GenerationMask#$@S@BRepGraph_LayerParametric@E@GenerationFlag#S
@@ -30,8 +35,34 @@
 // Source: c:@S@BRepLib@F@Precision#d#S
 // Source: c:@S@BlendFunc@F@NextShape#$@E@GeomAbs_Shape#S
 // Source: c:@S@ChFi3d@F@SameSide#$@E@TopAbs_Orientation#S0_#S0_#S0_#S0_#S
+// Source: c:@S@HLRBRep_LineTool@F@Circle#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@Continuity#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@DN#&1$@S@gp_Lin#d#I#S
+// Source: c:@S@HLRBRep_LineTool@F@Degree#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@Ellipse#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@FirstParameter#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@GetType#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@Hyperbola#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@IntervalContinuity#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@IntervalFirst#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@IntervalLast#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@IsClosed#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@IsPeriodic#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@IsRational#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@LastParameter#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@Line#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@NbIntervals#&1$@S@gp_Lin#$@E@GeomAbs_Shape#S
+// Source: c:@S@HLRBRep_LineTool@F@NbKnots#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@NbPoles#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@NbSamples#&1$@S@gp_Lin#d#d#S
+// Source: c:@S@HLRBRep_LineTool@F@Parabola#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@Period#&1$@S@gp_Lin#S
+// Source: c:@S@HLRBRep_LineTool@F@Resolution#&1$@S@gp_Lin#d#S
+// Source: c:@S@HLRBRep_LineTool@F@Value#&1$@S@gp_Lin#d#S
 // Source: c:@S@IntTools_Tools@F@ComputeIntRange#d#d#d#S
 // Source: c:@S@IntTools_Tools@F@IntermediatePoint#d#d#S
+// Source: c:@S@IntTools_Tools@F@IsDirsCoinside#&1$@S@gp_Dir#S0_#S
+// Source: c:@S@IntTools_Tools@F@IsDirsCoinside#&1$@S@gp_Dir#S0_#d#S
 // Source: c:@S@Intf@F@Contain#&1$@S@gp_Pnt#S0_#S0_#S0_#S
 // Source: c:@S@ShapeAlgo@F@Init#S
 // Source: c:@S@ShapeAnalysis@F@AdjustByPeriod#d#d#d#S
@@ -53,12 +84,15 @@
 // Source: c:@S@TopOpeBRepDS@F@IsTopology#$@E@TopOpeBRepDS_Kind#S
 // Source: c:@S@TopOpeBRepDS@F@KindToShape#$@E@TopOpeBRepDS_Kind#S
 // Source: c:@S@TopOpeBRepDS@F@ShapeToKind#$@E@TopAbs_ShapeEnum#S
+// Source: c:@S@TopOpeBRepTool_TOOL@F@Matter#&1$@S@gp_Vec#S0_#S0_#S
+// Source: c:@S@TopOpeBRepTool_TOOL@F@Matter#&1$@S@gp_Vec2d#S0_#S
 // Source: c:@S@TopTools@F@Dummy#I#S
 // Source: c:@S@TopTrans_SurfaceTransition@F@GetAfter#$@E@TopAbs_Orientation#S
 // Source: c:@S@TopTrans_SurfaceTransition@F@GetBefore#$@E@TopAbs_Orientation#S
 #pragma once
 
 #include "../../include/OcctSharp.Native.h"
+#include "../Foundation/OcctSharp.Foundation.GeometryValues.Generated.h"
 #include "../Geometry/OcctSharp.Geometry.Values.Generated.h"
 
 #ifdef __cplusplus
@@ -97,12 +131,22 @@ OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_boptools_algo_tools2_d_i
 
 OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_boptools_algo_tools3_d_min_step_in2d_static_min_step_in2d_0(void);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_boptools_algo_tools3_d_sense_flag_static_sense_flag_0(OcctSharp_Value_Direction3d aNF1, OcctSharp_Value_Direction3d aNF2, int32_t* generatedResult);
+
 OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_boptools_algo_tools_dtolerance_static_d_tolerance_0(void);
 
 OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_brep_builder_api_precision_static_precision_0(void);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_brep_builder_api_precision_static_precision_1(
   double P);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_builder_api_vertex_inspector_coord_static_coord_0(int32_t i, OcctSharp_Value_Coordinates3d thePnt, double* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_builder_api_vertex_inspector_shift_static_shift_0(OcctSharp_Value_Coordinates3d thePnt, double theTol, OcctSharp_Value_Coordinates3d* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_extrema_vertex_inspector_coord_static_coord_0(int32_t i, OcctSharp_Value_Coordinates3d thePnt, double* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_brep_extrema_vertex_inspector_shift_static_shift_0(OcctSharp_Value_Coordinates3d thePnt, double theTol, OcctSharp_Value_Coordinates3d* generatedResult);
 
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_brep_graph_layer_kind_bit_static_kind_bit_0(
   int32_t theKind);
@@ -154,6 +198,54 @@ OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_ch_fi3d_same_side_stati
   int32_t OrFace1,
   int32_t OrFace2);
 
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_circle_static_circle_0(OcctSharp_Value_Line3d C, OcctSharp_Value_Circle3d* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_continuity_static_continuity_0(OcctSharp_Value_Line3d C, int32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_dn_static_dn_0(OcctSharp_Value_Line3d C, double U, int32_t N, OcctSharp_Value_Vector3d* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_degree_static_degree_0(OcctSharp_Value_Line3d C, int32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_ellipse_static_ellipse_0(OcctSharp_Value_Line3d C, OcctSharp_Value_Ellipse3d* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_first_parameter_static_first_parameter_0(OcctSharp_Value_Line3d C, double* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_get_type_static_get_type_0(OcctSharp_Value_Line3d C, int32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_hyperbola_static_hyperbola_0(OcctSharp_Value_Line3d C, OcctSharp_Value_Hyperbola3d* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_interval_continuity_static_interval_continuity_0(OcctSharp_Value_Line3d C, int32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_interval_first_static_interval_first_0(OcctSharp_Value_Line3d C, double* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_interval_last_static_interval_last_0(OcctSharp_Value_Line3d C, double* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_is_closed_static_is_closed_0(OcctSharp_Value_Line3d C, int32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_is_periodic_static_is_periodic_0(OcctSharp_Value_Line3d C, int32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_is_rational_static_is_rational_0(OcctSharp_Value_Line3d C, int32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_last_parameter_static_last_parameter_0(OcctSharp_Value_Line3d C, double* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_line_static_line_0(OcctSharp_Value_Line3d C, OcctSharp_Value_Line3d* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_nb_intervals_static_nb_intervals_0(OcctSharp_Value_Line3d C, int32_t S, int32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_nb_knots_static_nb_knots_0(OcctSharp_Value_Line3d C, int32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_nb_poles_static_nb_poles_0(OcctSharp_Value_Line3d C, int32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_nb_samples_static_nb_samples_0(OcctSharp_Value_Line3d C, double U0, double U1, int32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_parabola_static_parabola_0(OcctSharp_Value_Line3d C, OcctSharp_Value_Parabola3d* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_period_static_period_0(OcctSharp_Value_Line3d C, double* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_resolution_static_resolution_0(OcctSharp_Value_Line3d C, double R3d, double* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_hlrbrep_line_tool_value_static_value_0(OcctSharp_Value_Line3d C, double U, OcctSharp_Point3d* generatedResult);
+
 OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_int_tools_tools_compute_int_range_static_compute_int_range_0(
   double theTol1,
   double theTol2,
@@ -162,6 +254,10 @@ OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_int_tools_tools_compute_
 OCCTSHARP_API double OCCTSHARP_CALL occtsharp_generated_int_tools_tools_intermediate_point_static_intermediate_point_0(
   double aFirst,
   double aLast);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_tools_tools_is_dirs_coinside_static_is_dirs_coinside_0(OcctSharp_Value_Direction3d D1, OcctSharp_Value_Direction3d D2, int32_t* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_int_tools_tools_is_dirs_coinside_static_is_dirs_coinside_1(OcctSharp_Value_Direction3d D1, OcctSharp_Value_Direction3d D2, double aTol, int32_t* generatedResult);
 
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_intf_contain_static_contain_0(
   OcctSharp_Point3d P1,
@@ -234,6 +330,10 @@ OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_top_ope_brep_ds_kind_to
 
 OCCTSHARP_API int32_t OCCTSHARP_CALL occtsharp_generated_top_ope_brep_ds_shape_to_kind_static_shape_to_kind_0(
   int32_t S);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_top_ope_brep_tool_tool_matter_static_matter_0(OcctSharp_Value_Vector3d d1, OcctSharp_Value_Vector3d d2, OcctSharp_Value_Vector3d ref, double* generatedResult);
+
+OCCTSHARP_API OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_top_ope_brep_tool_tool_matter_static_matter_1(OcctSharp_Value_Vector2d d1, OcctSharp_Value_Vector2d d2, double* generatedResult);
 
 OCCTSHARP_API void OCCTSHARP_CALL occtsharp_generated_top_tools_dummy_static_dummy_0(
   int32_t I);

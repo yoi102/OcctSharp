@@ -1,5 +1,21 @@
 # Type Mapping
 
+## Batch Y copied geometric values (ADR-0093)
+
+TM009 maps thirty gp types by value or const lvalue reference to explicit records:
+coordinates, points, vectors, directions, axes, matrices, quaternions, lines, conics,
+planes and elementary analytic surfaces. Managed records live in OcctSharp.Values
+in Foundation. Existing owning facade wrappers remain available with their original
+identities. Mutable/output references, pointers, arrays, gp_Trsf and gp_GTrsf remain
+outside this rule. Mapping a value does not emit its native constructors automatically.
+
+Input fields must be finite. Native constructors normalize directions and validate
+domains. Full axes contain origin, normal, X and Y; inconsistent axes reject. Axis3
+preserves both handedness choices and Axis22d preserves its orientation. Matrix fields
+are row-major; gp_Mat2d is reconstructed with two explicit column vectors. Native
+results use accessors, including sentinel values where the native API defines them.
+Thirty C/C# size and offset contracts and strict C11 headers are verified by the Y tests.
+
 ## Batch X numeric and copied-reference rules (ADR-0092)
 
 TM008 extends canonical numeric values and const-reference inputs with fixed ABI copies:

@@ -157,7 +157,7 @@ public static class EnumBindingEmitter
         return string.Concat(parts.Select(static part => char.ToUpperInvariant(part[0]) + part[1..]));
     }
 
-    private static string ToIdentifier(string value)
+    internal static string ToIdentifier(string value)
     {
         StringBuilder builder = new(value.Length + 1);
         foreach (char character in value)

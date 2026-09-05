@@ -8,6 +8,7 @@ broad generated numeric mappings and copied/retained const-reference returns, wi
 compatible old overload identities. Its local product gates pass; [STATUS](STATUS.md)
 owns final delivery evidence. Further migration should audit remaining pointer/output,
 value/sequence and nested-handle projection gaps instead of inheriting a fixed row count.
+Batch Y continues with [geometric value projections](BATCH_Y_GEOMETRIC_VALUE_EXPANSION.md) under ADR-0093.
 Follow [WORKFLOW](WORKFLOW.md) and ADR-0091: no fixed row/family count, flexible authorized
 intermediate commits, impact-based development checks and full product delivery gates.
 [STATUS](STATUS.md) owns current counts, active work and validation references.

@@ -2,7 +2,7 @@
 
 ## Current package set
 
-The current local preview package version is `8.0.1-preview.23` for .NET 10 and
+The current local preview package version is `8.0.1-preview.24` for .NET 10 and
 Windows x64. ADR-0074 produces 14 packages:
 
 - 12 managed module packages: Runtime, Foundation, Geometry, MeshData, Modeling, Mesh,

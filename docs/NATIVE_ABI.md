@@ -1,5 +1,15 @@
 # Native ABI
 
+## ABI 1.68 / Preview.24 (Batch Y)
+
+Bridge 0.76.0 adds checked geometric value inputs and copied results. Thirty fixed C
+records contain doubles and nested fixed records only; each size and field offset is
+asserted in native code and managed tests. Matrix entries use row-major field order.
+Input conversion runs inside the exception boundary; outputs initialize before work.
+Both older overload epochs preserve every previous native signature and function body.
+One native DLL and the existing status/diagnostic/registry boundaries remain.
+Actual export, runtime and packaging evidence belongs in STATUS.
+
 ## ABI 1.67 / Preview.23 (Batch X)
 
 Bridge 0.75.0 adds generated fixed-width numeric and copied/retained-reference calls

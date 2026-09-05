@@ -19,8 +19,10 @@
 // Source: c:@S@BRepMeshData_Model@F@GetFace#I#1
 // Source: c:@S@BRepMeshData_Model@F@GetMaxSize#1
 // Source: c:@S@BRepMeshData_Model@F@SetMaxSize#d#
+// Source: c:@S@BRepMeshData_PCurve@F@AddPoint#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@BRepMeshData_PCurve@F@Clear#b#
 // Source: c:@S@BRepMeshData_PCurve@F@DynamicType#1
+// Source: c:@S@BRepMeshData_PCurve@F@InsertPoint#I#&1$@S@gp_Pnt2d#d#
 // Source: c:@S@BRepMeshData_PCurve@F@ParametersNb#1
 // Source: c:@S@BRepMeshData_PCurve@F@RemovePoint#I#
 // Source: c:@S@BRepMeshData_Wire@F@DynamicType#1
@@ -29,6 +31,7 @@
 // Source: c:@S@BRepMesh_BaseMeshAlgo@F@DynamicType#1
 // Source: c:@S@BRepMesh_Classifier@F@BRepMesh_Classifier#
 // Source: c:@S@BRepMesh_Classifier@F@DynamicType#1
+// Source: c:@S@BRepMesh_Classifier@F@Perform#&1$@S@gp_Pnt2d#1
 // Source: c:@S@BRepMesh_ConstrainedBaseMeshAlgo@F@DynamicType#1
 // Source: c:@S@BRepMesh_Context@F@BRepMesh_Context#$@E@IMeshTools_MeshAlgoType#
 // Source: c:@S@BRepMesh_Context@F@DynamicType#1
@@ -719,6 +722,10 @@ internal static partial class MeshGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void BRepMeshDataModelRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_mesh_data_pcurve_method_add_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus BRepMeshDataPCurveMethodAddPoint0(BRepMeshDataPCurveHandle handle, global::OcctSharp.Values.Point2d thePoint, double theParamOnPCurve);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_mesh_data_pcurve_method_clear_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus BRepMeshDataPCurveMethodClear0(BRepMeshDataPCurveHandle handle, int isKeepEndPoints);
@@ -726,6 +733,10 @@ internal static partial class MeshGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_mesh_data_pcurve_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus BRepMeshDataPCurveMethodDynamicType0(BRepMeshDataPCurveHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_mesh_data_pcurve_method_insert_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus BRepMeshDataPCurveMethodInsertPoint0(BRepMeshDataPCurveHandle handle, int thePosition, global::OcctSharp.Values.Point2d thePoint, double theParamOnPCurve);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_mesh_data_pcurve_method_parameters_nb_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -815,6 +826,10 @@ internal static partial class MeshGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_mesh_classifier_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus BRepMeshClassifierMethodDynamicType0(BRepMeshClassifierHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_mesh_classifier_method_perform_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus BRepMeshClassifierMethodPerform0(BRepMeshClassifierHandle handle, global::OcctSharp.Values.Point2d thePoint, out int resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_brep_mesh_classifier_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

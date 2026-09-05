@@ -181,7 +181,7 @@ public sealed class InitialTypeMap
             return true;
         }
 
-        return false;
+        return GeometryValueProjections.TryMap(canonicalType, out projection);
     }
 
     private static bool IsSupportedPassMode(BindingType type, BindingTypeUsage usage)

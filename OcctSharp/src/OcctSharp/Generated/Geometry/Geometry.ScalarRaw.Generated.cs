@@ -3,7 +3,107 @@
 // Source: c:@S@BSplCLib@F@BoorIndex#I#I#I#S
 // Source: c:@S@BSplCLib@F@MaxDegree#S
 // Source: c:@S@BSplCLib@F@MaxUnitWeightsSize#S
+// Source: c:@S@ElCLib@F@CircleDN#d#&1$@S@gp_Ax2#d#I#S
+// Source: c:@S@ElCLib@F@CircleDN#d#&1$@S@gp_Ax22d#d#I#S
+// Source: c:@S@ElCLib@F@CircleParameter#&1$@S@gp_Ax2#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@CircleParameter#&1$@S@gp_Ax22d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@CircleValue#d#&1$@S@gp_Ax2#d#S
+// Source: c:@S@ElCLib@F@CircleValue#d#&1$@S@gp_Ax22d#d#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Circ#I#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Circ2d#I#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Elips#I#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Elips2d#I#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Hypr#I#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Hypr2d#I#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Lin#I#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Lin2d#I#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Parab#I#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Parab2d#I#S
+// Source: c:@S@ElCLib@F@EllipseDN#d#&1$@S@gp_Ax2#d#d#I#S
+// Source: c:@S@ElCLib@F@EllipseDN#d#&1$@S@gp_Ax22d#d#d#I#S
+// Source: c:@S@ElCLib@F@EllipseParameter#&1$@S@gp_Ax2#d#d#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@EllipseParameter#&1$@S@gp_Ax22d#d#d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@EllipseValue#d#&1$@S@gp_Ax2#d#d#S
+// Source: c:@S@ElCLib@F@EllipseValue#d#&1$@S@gp_Ax22d#d#d#S
+// Source: c:@S@ElCLib@F@HyperbolaDN#d#&1$@S@gp_Ax2#d#d#I#S
+// Source: c:@S@ElCLib@F@HyperbolaDN#d#&1$@S@gp_Ax22d#d#d#I#S
+// Source: c:@S@ElCLib@F@HyperbolaParameter#&1$@S@gp_Ax2#d#d#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@HyperbolaParameter#&1$@S@gp_Ax22d#d#d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@HyperbolaValue#d#&1$@S@gp_Ax2#d#d#S
+// Source: c:@S@ElCLib@F@HyperbolaValue#d#&1$@S@gp_Ax22d#d#d#S
 // Source: c:@S@ElCLib@F@InPeriod#d#d#d#S
+// Source: c:@S@ElCLib@F@LineDN#d#&1$@S@gp_Ax1#I#S
+// Source: c:@S@ElCLib@F@LineDN#d#&1$@S@gp_Ax2d#I#S
+// Source: c:@S@ElCLib@F@LineParameter#&1$@S@gp_Ax1#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@LineParameter#&1$@S@gp_Ax2d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@LineValue#d#&1$@S@gp_Ax1#S
+// Source: c:@S@ElCLib@F@LineValue#d#&1$@S@gp_Ax2d#S
+// Source: c:@S@ElCLib@F@ParabolaDN#d#&1$@S@gp_Ax2#d#I#S
+// Source: c:@S@ElCLib@F@ParabolaDN#d#&1$@S@gp_Ax22d#d#I#S
+// Source: c:@S@ElCLib@F@ParabolaParameter#&1$@S@gp_Ax2#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@ParabolaParameter#&1$@S@gp_Ax22d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@ParabolaValue#d#&1$@S@gp_Ax2#d#S
+// Source: c:@S@ElCLib@F@ParabolaValue#d#&1$@S@gp_Ax22d#d#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Circ#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Circ2d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Elips#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Elips2d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Hypr#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Hypr2d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Lin#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Lin2d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Parab#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Parab2d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Ax22d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Ax2d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Circ2d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Dir2d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Elips2d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Hypr2d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Lin2d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Parab2d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Vec2d#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Circ#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Circ2d#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Elips#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Elips2d#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Hypr#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Hypr2d#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Lin#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Lin2d#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Parab#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Parab2d#S
+// Source: c:@S@ElSLib@F@ConeDN#d#d#&1$@S@gp_Ax3#d#d#I#I#S
+// Source: c:@S@ElSLib@F@ConeUIso#&1$@S@gp_Ax3#d#d#d#S
+// Source: c:@S@ElSLib@F@ConeVIso#&1$@S@gp_Ax3#d#d#d#S
+// Source: c:@S@ElSLib@F@ConeValue#d#d#&1$@S@gp_Ax3#d#d#S
+// Source: c:@S@ElSLib@F@CylinderDN#d#d#&1$@S@gp_Ax3#d#I#I#S
+// Source: c:@S@ElSLib@F@CylinderUIso#&1$@S@gp_Ax3#d#d#S
+// Source: c:@S@ElSLib@F@CylinderVIso#&1$@S@gp_Ax3#d#d#S
+// Source: c:@S@ElSLib@F@CylinderValue#d#d#&1$@S@gp_Ax3#d#S
+// Source: c:@S@ElSLib@F@DN#d#d#&1$@S@gp_Cone#I#I#S
+// Source: c:@S@ElSLib@F@DN#d#d#&1$@S@gp_Cylinder#I#I#S
+// Source: c:@S@ElSLib@F@DN#d#d#&1$@S@gp_Pln#I#I#S
+// Source: c:@S@ElSLib@F@DN#d#d#&1$@S@gp_Sphere#I#I#S
+// Source: c:@S@ElSLib@F@DN#d#d#&1$@S@gp_Torus#I#I#S
+// Source: c:@S@ElSLib@F@PlaneDN#d#d#&1$@S@gp_Ax3#I#I#S
+// Source: c:@S@ElSLib@F@PlaneUIso#&1$@S@gp_Ax3#d#S
+// Source: c:@S@ElSLib@F@PlaneVIso#&1$@S@gp_Ax3#d#S
+// Source: c:@S@ElSLib@F@PlaneValue#d#d#&1$@S@gp_Ax3#S
+// Source: c:@S@ElSLib@F@SphereDN#d#d#&1$@S@gp_Ax3#d#I#I#S
+// Source: c:@S@ElSLib@F@SphereUIso#&1$@S@gp_Ax3#d#d#S
+// Source: c:@S@ElSLib@F@SphereVIso#&1$@S@gp_Ax3#d#d#S
+// Source: c:@S@ElSLib@F@SphereValue#d#d#&1$@S@gp_Ax3#d#S
+// Source: c:@S@ElSLib@F@TorusDN#d#d#&1$@S@gp_Ax3#d#d#I#I#S
+// Source: c:@S@ElSLib@F@TorusUIso#&1$@S@gp_Ax3#d#d#d#S
+// Source: c:@S@ElSLib@F@TorusVIso#&1$@S@gp_Ax3#d#d#d#S
+// Source: c:@S@ElSLib@F@TorusValue#d#d#&1$@S@gp_Ax3#d#d#S
+// Source: c:@S@ElSLib@F@Value#d#d#&1$@S@gp_Cone#S
+// Source: c:@S@ElSLib@F@Value#d#d#&1$@S@gp_Cylinder#S
+// Source: c:@S@ElSLib@F@Value#d#d#&1$@S@gp_Pln#S
+// Source: c:@S@ElSLib@F@Value#d#d#&1$@S@gp_Sphere#S
+// Source: c:@S@ElSLib@F@Value#d#d#&1$@S@gp_Torus#S
 // Source: c:@S@GCPnts_TangentialDeflection@F@ArcAngularStep#d#d#d#d#S
 // Source: c:@S@Geom2d_BSplineCurve@F@MaxDegree#S
 // Source: c:@S@Geom2d_BezierCurve@F@MaxDegree#S
@@ -16,8 +116,39 @@
 // Source: c:@S@PLib@F@Bin#I#I#S
 // Source: c:@S@PLib@F@ConstraintOrder#I#S
 // Source: c:@S@PLib@F@NivConstr#$@E@GeomAbs_Shape#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Cone#&1$@S@gp_Circ#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Cone#&1$@S@gp_Lin#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Cone#&1$@S@gp_Pnt#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Cylinder#&1$@S@gp_Circ#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Cylinder#&1$@S@gp_Lin#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Cylinder#&1$@S@gp_Pnt#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Pln#&1$@S@gp_Circ#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Pln#&1$@S@gp_Elips#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Pln#&1$@S@gp_Hypr#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Pln#&1$@S@gp_Lin#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Pln#&1$@S@gp_Parab#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Pln#&1$@S@gp_Pnt#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Sphere#&1$@S@gp_Circ#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Sphere#&1$@S@gp_Pnt#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Torus#&1$@S@gp_Circ#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Torus#&1$@S@gp_Pnt#S
+// Source: c:@S@gp@F@DX#S
+// Source: c:@S@gp@F@DX2d#S
+// Source: c:@S@gp@F@DY#S
+// Source: c:@S@gp@F@DY2d#S
+// Source: c:@S@gp@F@DZ#S
+// Source: c:@S@gp@F@OX#S
+// Source: c:@S@gp@F@OX2d#S
+// Source: c:@S@gp@F@OY#S
+// Source: c:@S@gp@F@OY2d#S
+// Source: c:@S@gp@F@OZ#S
 // Source: c:@S@gp@F@Origin#S
+// Source: c:@S@gp@F@Origin2d#S
 // Source: c:@S@gp@F@Resolution#S
+// Source: c:@S@gp@F@YOZ#S
+// Source: c:@S@gp@F@ZOX#S
+// Source: c:@S@gp_QuaternionNLerp@F@Interpolate#&1$@S@gp_Quaternion#S0_#d#S
+// Source: c:@S@gp_QuaternionSLerp@F@Interpolate#&1$@S@gp_Quaternion#S0_#d#S
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -41,10 +172,810 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_bspl_clib_static_max_unit_weights_size_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial int BSplCLibStaticMaxUnitWeightsSize0();
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_circle_dn_static_circle_dn_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticCircleDN0Checked(double U, global::OcctSharp.Values.Axis2 Pos, double Radius, int N, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElCLibStaticCircleDN0(double U, global::OcctSharp.Values.Axis2 Pos, double Radius, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticCircleDN0Checked(U, Pos, Radius, N, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_clib_circle_dn_static_circle_dn_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_circle_dn_static_circle_dn_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticCircleDN1Checked(double U, global::OcctSharp.Values.Axis22d Pos, double Radius, int N, out global::OcctSharp.Values.Vector2d generatedResult);
+    internal static global::OcctSharp.Values.Vector2d ElCLibStaticCircleDN1(double U, global::OcctSharp.Values.Axis22d Pos, double Radius, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticCircleDN1Checked(U, Pos, Radius, N, out global::OcctSharp.Values.Vector2d generatedResult), "occtsharp_generated_el_clib_circle_dn_static_circle_dn_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_circle_parameter_static_circle_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticCircleParameter0Checked(global::OcctSharp.Values.Axis2 Pos, Point3dRaw P, out double generatedResult);
+    internal static double ElCLibStaticCircleParameter0(global::OcctSharp.Values.Axis2 Pos, Point3dRaw P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticCircleParameter0Checked(Pos, P, out double generatedResult), "occtsharp_generated_el_clib_circle_parameter_static_circle_parameter_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_circle_parameter_static_circle_parameter_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticCircleParameter1Checked(global::OcctSharp.Values.Axis22d Pos, global::OcctSharp.Values.Point2d P, out double generatedResult);
+    internal static double ElCLibStaticCircleParameter1(global::OcctSharp.Values.Axis22d Pos, global::OcctSharp.Values.Point2d P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticCircleParameter1Checked(Pos, P, out double generatedResult), "occtsharp_generated_el_clib_circle_parameter_static_circle_parameter_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_circle_value_static_circle_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticCircleValue0Checked(double U, global::OcctSharp.Values.Axis2 Pos, double Radius, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElCLibStaticCircleValue0(double U, global::OcctSharp.Values.Axis2 Pos, double Radius)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticCircleValue0Checked(U, Pos, Radius, out Point3dRaw generatedResult), "occtsharp_generated_el_clib_circle_value_static_circle_value_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_circle_value_static_circle_value_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticCircleValue1Checked(double U, global::OcctSharp.Values.Axis22d Pos, double Radius, out global::OcctSharp.Values.Point2d generatedResult);
+    internal static global::OcctSharp.Values.Point2d ElCLibStaticCircleValue1(double U, global::OcctSharp.Values.Axis22d Pos, double Radius)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticCircleValue1Checked(U, Pos, Radius, out global::OcctSharp.Values.Point2d generatedResult), "occtsharp_generated_el_clib_circle_value_static_circle_value_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_dn_static_dn_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticDN0Checked(double U, global::OcctSharp.Values.Circle3d C, int N, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElCLibStaticDN0(double U, global::OcctSharp.Values.Circle3d C, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticDN0Checked(U, C, N, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_clib_dn_static_dn_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_dn_static_dn_5")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticDN5Checked(double U, global::OcctSharp.Values.Circle2d C, int N, out global::OcctSharp.Values.Vector2d generatedResult);
+    internal static global::OcctSharp.Values.Vector2d ElCLibStaticDN5(double U, global::OcctSharp.Values.Circle2d C, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticDN5Checked(U, C, N, out global::OcctSharp.Values.Vector2d generatedResult), "occtsharp_generated_el_clib_dn_static_dn_5");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_dn_static_dn_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticDN1Checked(double U, global::OcctSharp.Values.Ellipse3d E, int N, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElCLibStaticDN1(double U, global::OcctSharp.Values.Ellipse3d E, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticDN1Checked(U, E, N, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_clib_dn_static_dn_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_dn_static_dn_6")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticDN6Checked(double U, global::OcctSharp.Values.Ellipse2d E, int N, out global::OcctSharp.Values.Vector2d generatedResult);
+    internal static global::OcctSharp.Values.Vector2d ElCLibStaticDN6(double U, global::OcctSharp.Values.Ellipse2d E, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticDN6Checked(U, E, N, out global::OcctSharp.Values.Vector2d generatedResult), "occtsharp_generated_el_clib_dn_static_dn_6");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_dn_static_dn_2")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticDN2Checked(double U, global::OcctSharp.Values.Hyperbola3d H, int N, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElCLibStaticDN2(double U, global::OcctSharp.Values.Hyperbola3d H, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticDN2Checked(U, H, N, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_clib_dn_static_dn_2");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_dn_static_dn_7")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticDN7Checked(double U, global::OcctSharp.Values.Hyperbola2d H, int N, out global::OcctSharp.Values.Vector2d generatedResult);
+    internal static global::OcctSharp.Values.Vector2d ElCLibStaticDN7(double U, global::OcctSharp.Values.Hyperbola2d H, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticDN7Checked(U, H, N, out global::OcctSharp.Values.Vector2d generatedResult), "occtsharp_generated_el_clib_dn_static_dn_7");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_dn_static_dn_3")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticDN3Checked(double U, global::OcctSharp.Values.Line3d L, int N, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElCLibStaticDN3(double U, global::OcctSharp.Values.Line3d L, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticDN3Checked(U, L, N, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_clib_dn_static_dn_3");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_dn_static_dn_8")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticDN8Checked(double U, global::OcctSharp.Values.Line2d L, int N, out global::OcctSharp.Values.Vector2d generatedResult);
+    internal static global::OcctSharp.Values.Vector2d ElCLibStaticDN8(double U, global::OcctSharp.Values.Line2d L, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticDN8Checked(U, L, N, out global::OcctSharp.Values.Vector2d generatedResult), "occtsharp_generated_el_clib_dn_static_dn_8");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_dn_static_dn_4")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticDN4Checked(double U, global::OcctSharp.Values.Parabola3d Prb, int N, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElCLibStaticDN4(double U, global::OcctSharp.Values.Parabola3d Prb, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticDN4Checked(U, Prb, N, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_clib_dn_static_dn_4");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_dn_static_dn_9")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticDN9Checked(double U, global::OcctSharp.Values.Parabola2d Prb, int N, out global::OcctSharp.Values.Vector2d generatedResult);
+    internal static global::OcctSharp.Values.Vector2d ElCLibStaticDN9(double U, global::OcctSharp.Values.Parabola2d Prb, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticDN9Checked(U, Prb, N, out global::OcctSharp.Values.Vector2d generatedResult), "occtsharp_generated_el_clib_dn_static_dn_9");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_ellipse_dn_static_ellipse_dn_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticEllipseDN0Checked(double U, global::OcctSharp.Values.Axis2 Pos, double MajorRadius, double MinorRadius, int N, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElCLibStaticEllipseDN0(double U, global::OcctSharp.Values.Axis2 Pos, double MajorRadius, double MinorRadius, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticEllipseDN0Checked(U, Pos, MajorRadius, MinorRadius, N, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_clib_ellipse_dn_static_ellipse_dn_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_ellipse_dn_static_ellipse_dn_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticEllipseDN1Checked(double U, global::OcctSharp.Values.Axis22d Pos, double MajorRadius, double MinorRadius, int N, out global::OcctSharp.Values.Vector2d generatedResult);
+    internal static global::OcctSharp.Values.Vector2d ElCLibStaticEllipseDN1(double U, global::OcctSharp.Values.Axis22d Pos, double MajorRadius, double MinorRadius, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticEllipseDN1Checked(U, Pos, MajorRadius, MinorRadius, N, out global::OcctSharp.Values.Vector2d generatedResult), "occtsharp_generated_el_clib_ellipse_dn_static_ellipse_dn_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_ellipse_parameter_static_ellipse_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticEllipseParameter0Checked(global::OcctSharp.Values.Axis2 Pos, double MajorRadius, double MinorRadius, Point3dRaw P, out double generatedResult);
+    internal static double ElCLibStaticEllipseParameter0(global::OcctSharp.Values.Axis2 Pos, double MajorRadius, double MinorRadius, Point3dRaw P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticEllipseParameter0Checked(Pos, MajorRadius, MinorRadius, P, out double generatedResult), "occtsharp_generated_el_clib_ellipse_parameter_static_ellipse_parameter_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_ellipse_parameter_static_ellipse_parameter_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticEllipseParameter1Checked(global::OcctSharp.Values.Axis22d Pos, double MajorRadius, double MinorRadius, global::OcctSharp.Values.Point2d P, out double generatedResult);
+    internal static double ElCLibStaticEllipseParameter1(global::OcctSharp.Values.Axis22d Pos, double MajorRadius, double MinorRadius, global::OcctSharp.Values.Point2d P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticEllipseParameter1Checked(Pos, MajorRadius, MinorRadius, P, out double generatedResult), "occtsharp_generated_el_clib_ellipse_parameter_static_ellipse_parameter_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_ellipse_value_static_ellipse_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticEllipseValue0Checked(double U, global::OcctSharp.Values.Axis2 Pos, double MajorRadius, double MinorRadius, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElCLibStaticEllipseValue0(double U, global::OcctSharp.Values.Axis2 Pos, double MajorRadius, double MinorRadius)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticEllipseValue0Checked(U, Pos, MajorRadius, MinorRadius, out Point3dRaw generatedResult), "occtsharp_generated_el_clib_ellipse_value_static_ellipse_value_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_ellipse_value_static_ellipse_value_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticEllipseValue1Checked(double U, global::OcctSharp.Values.Axis22d Pos, double MajorRadius, double MinorRadius, out global::OcctSharp.Values.Point2d generatedResult);
+    internal static global::OcctSharp.Values.Point2d ElCLibStaticEllipseValue1(double U, global::OcctSharp.Values.Axis22d Pos, double MajorRadius, double MinorRadius)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticEllipseValue1Checked(U, Pos, MajorRadius, MinorRadius, out global::OcctSharp.Values.Point2d generatedResult), "occtsharp_generated_el_clib_ellipse_value_static_ellipse_value_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_hyperbola_dn_static_hyperbola_dn_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticHyperbolaDN0Checked(double U, global::OcctSharp.Values.Axis2 Pos, double MajorRadius, double MinorRadius, int N, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElCLibStaticHyperbolaDN0(double U, global::OcctSharp.Values.Axis2 Pos, double MajorRadius, double MinorRadius, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticHyperbolaDN0Checked(U, Pos, MajorRadius, MinorRadius, N, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_clib_hyperbola_dn_static_hyperbola_dn_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_hyperbola_dn_static_hyperbola_dn_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticHyperbolaDN1Checked(double U, global::OcctSharp.Values.Axis22d Pos, double MajorRadius, double MinorRadius, int N, out global::OcctSharp.Values.Vector2d generatedResult);
+    internal static global::OcctSharp.Values.Vector2d ElCLibStaticHyperbolaDN1(double U, global::OcctSharp.Values.Axis22d Pos, double MajorRadius, double MinorRadius, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticHyperbolaDN1Checked(U, Pos, MajorRadius, MinorRadius, N, out global::OcctSharp.Values.Vector2d generatedResult), "occtsharp_generated_el_clib_hyperbola_dn_static_hyperbola_dn_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_hyperbola_parameter_static_hyperbola_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticHyperbolaParameter0Checked(global::OcctSharp.Values.Axis2 Pos, double MajorRadius, double MinorRadius, Point3dRaw P, out double generatedResult);
+    internal static double ElCLibStaticHyperbolaParameter0(global::OcctSharp.Values.Axis2 Pos, double MajorRadius, double MinorRadius, Point3dRaw P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticHyperbolaParameter0Checked(Pos, MajorRadius, MinorRadius, P, out double generatedResult), "occtsharp_generated_el_clib_hyperbola_parameter_static_hyperbola_parameter_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_hyperbola_parameter_static_hyperbola_parameter_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticHyperbolaParameter1Checked(global::OcctSharp.Values.Axis22d Pos, double MajorRadius, double MinorRadius, global::OcctSharp.Values.Point2d P, out double generatedResult);
+    internal static double ElCLibStaticHyperbolaParameter1(global::OcctSharp.Values.Axis22d Pos, double MajorRadius, double MinorRadius, global::OcctSharp.Values.Point2d P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticHyperbolaParameter1Checked(Pos, MajorRadius, MinorRadius, P, out double generatedResult), "occtsharp_generated_el_clib_hyperbola_parameter_static_hyperbola_parameter_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_hyperbola_value_static_hyperbola_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticHyperbolaValue0Checked(double U, global::OcctSharp.Values.Axis2 Pos, double MajorRadius, double MinorRadius, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElCLibStaticHyperbolaValue0(double U, global::OcctSharp.Values.Axis2 Pos, double MajorRadius, double MinorRadius)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticHyperbolaValue0Checked(U, Pos, MajorRadius, MinorRadius, out Point3dRaw generatedResult), "occtsharp_generated_el_clib_hyperbola_value_static_hyperbola_value_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_hyperbola_value_static_hyperbola_value_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticHyperbolaValue1Checked(double U, global::OcctSharp.Values.Axis22d Pos, double MajorRadius, double MinorRadius, out global::OcctSharp.Values.Point2d generatedResult);
+    internal static global::OcctSharp.Values.Point2d ElCLibStaticHyperbolaValue1(double U, global::OcctSharp.Values.Axis22d Pos, double MajorRadius, double MinorRadius)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticHyperbolaValue1Checked(U, Pos, MajorRadius, MinorRadius, out global::OcctSharp.Values.Point2d generatedResult), "occtsharp_generated_el_clib_hyperbola_value_static_hyperbola_value_1");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_static_in_period_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial double ElCLibStaticInPeriod0(double U, double UFirst, double ULast);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_line_dn_static_line_dn_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticLineDN0Checked(double U, global::OcctSharp.Values.Axis1 Pos, int N, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElCLibStaticLineDN0(double U, global::OcctSharp.Values.Axis1 Pos, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticLineDN0Checked(U, Pos, N, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_clib_line_dn_static_line_dn_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_line_dn_static_line_dn_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticLineDN1Checked(double U, global::OcctSharp.Values.Axis2d Pos, int N, out global::OcctSharp.Values.Vector2d generatedResult);
+    internal static global::OcctSharp.Values.Vector2d ElCLibStaticLineDN1(double U, global::OcctSharp.Values.Axis2d Pos, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticLineDN1Checked(U, Pos, N, out global::OcctSharp.Values.Vector2d generatedResult), "occtsharp_generated_el_clib_line_dn_static_line_dn_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_line_parameter_static_line_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticLineParameter0Checked(global::OcctSharp.Values.Axis1 Pos, Point3dRaw P, out double generatedResult);
+    internal static double ElCLibStaticLineParameter0(global::OcctSharp.Values.Axis1 Pos, Point3dRaw P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticLineParameter0Checked(Pos, P, out double generatedResult), "occtsharp_generated_el_clib_line_parameter_static_line_parameter_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_line_parameter_static_line_parameter_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticLineParameter1Checked(global::OcctSharp.Values.Axis2d Pos, global::OcctSharp.Values.Point2d P, out double generatedResult);
+    internal static double ElCLibStaticLineParameter1(global::OcctSharp.Values.Axis2d Pos, global::OcctSharp.Values.Point2d P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticLineParameter1Checked(Pos, P, out double generatedResult), "occtsharp_generated_el_clib_line_parameter_static_line_parameter_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_line_value_static_line_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticLineValue0Checked(double U, global::OcctSharp.Values.Axis1 Pos, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElCLibStaticLineValue0(double U, global::OcctSharp.Values.Axis1 Pos)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticLineValue0Checked(U, Pos, out Point3dRaw generatedResult), "occtsharp_generated_el_clib_line_value_static_line_value_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_line_value_static_line_value_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticLineValue1Checked(double U, global::OcctSharp.Values.Axis2d Pos, out global::OcctSharp.Values.Point2d generatedResult);
+    internal static global::OcctSharp.Values.Point2d ElCLibStaticLineValue1(double U, global::OcctSharp.Values.Axis2d Pos)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticLineValue1Checked(U, Pos, out global::OcctSharp.Values.Point2d generatedResult), "occtsharp_generated_el_clib_line_value_static_line_value_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_parabola_dn_static_parabola_dn_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticParabolaDN0Checked(double U, global::OcctSharp.Values.Axis2 Pos, double Focal, int N, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElCLibStaticParabolaDN0(double U, global::OcctSharp.Values.Axis2 Pos, double Focal, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticParabolaDN0Checked(U, Pos, Focal, N, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_clib_parabola_dn_static_parabola_dn_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_parabola_dn_static_parabola_dn_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticParabolaDN1Checked(double U, global::OcctSharp.Values.Axis22d Pos, double Focal, int N, out global::OcctSharp.Values.Vector2d generatedResult);
+    internal static global::OcctSharp.Values.Vector2d ElCLibStaticParabolaDN1(double U, global::OcctSharp.Values.Axis22d Pos, double Focal, int N)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticParabolaDN1Checked(U, Pos, Focal, N, out global::OcctSharp.Values.Vector2d generatedResult), "occtsharp_generated_el_clib_parabola_dn_static_parabola_dn_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_parabola_parameter_static_parabola_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticParabolaParameter0Checked(global::OcctSharp.Values.Axis2 Pos, Point3dRaw P, out double generatedResult);
+    internal static double ElCLibStaticParabolaParameter0(global::OcctSharp.Values.Axis2 Pos, Point3dRaw P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticParabolaParameter0Checked(Pos, P, out double generatedResult), "occtsharp_generated_el_clib_parabola_parameter_static_parabola_parameter_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_parabola_parameter_static_parabola_parameter_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticParabolaParameter1Checked(global::OcctSharp.Values.Axis22d Pos, global::OcctSharp.Values.Point2d P, out double generatedResult);
+    internal static double ElCLibStaticParabolaParameter1(global::OcctSharp.Values.Axis22d Pos, global::OcctSharp.Values.Point2d P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticParabolaParameter1Checked(Pos, P, out double generatedResult), "occtsharp_generated_el_clib_parabola_parameter_static_parabola_parameter_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_parabola_value_static_parabola_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticParabolaValue0Checked(double U, global::OcctSharp.Values.Axis2 Pos, double Focal, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElCLibStaticParabolaValue0(double U, global::OcctSharp.Values.Axis2 Pos, double Focal)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticParabolaValue0Checked(U, Pos, Focal, out Point3dRaw generatedResult), "occtsharp_generated_el_clib_parabola_value_static_parabola_value_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_parabola_value_static_parabola_value_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticParabolaValue1Checked(double U, global::OcctSharp.Values.Axis22d Pos, double Focal, out global::OcctSharp.Values.Point2d generatedResult);
+    internal static global::OcctSharp.Values.Point2d ElCLibStaticParabolaValue1(double U, global::OcctSharp.Values.Axis22d Pos, double Focal)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticParabolaValue1Checked(U, Pos, Focal, out global::OcctSharp.Values.Point2d generatedResult), "occtsharp_generated_el_clib_parabola_value_static_parabola_value_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_parameter_static_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticParameter0Checked(global::OcctSharp.Values.Circle3d C, Point3dRaw P, out double generatedResult);
+    internal static double ElCLibStaticParameter0(global::OcctSharp.Values.Circle3d C, Point3dRaw P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticParameter0Checked(C, P, out double generatedResult), "occtsharp_generated_el_clib_parameter_static_parameter_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_parameter_static_parameter_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticParameter1Checked(global::OcctSharp.Values.Circle2d C, global::OcctSharp.Values.Point2d P, out double generatedResult);
+    internal static double ElCLibStaticParameter1(global::OcctSharp.Values.Circle2d C, global::OcctSharp.Values.Point2d P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticParameter1Checked(C, P, out double generatedResult), "occtsharp_generated_el_clib_parameter_static_parameter_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_parameter_static_parameter_2")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticParameter2Checked(global::OcctSharp.Values.Ellipse3d E, Point3dRaw P, out double generatedResult);
+    internal static double ElCLibStaticParameter2(global::OcctSharp.Values.Ellipse3d E, Point3dRaw P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticParameter2Checked(E, P, out double generatedResult), "occtsharp_generated_el_clib_parameter_static_parameter_2");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_parameter_static_parameter_3")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticParameter3Checked(global::OcctSharp.Values.Ellipse2d E, global::OcctSharp.Values.Point2d P, out double generatedResult);
+    internal static double ElCLibStaticParameter3(global::OcctSharp.Values.Ellipse2d E, global::OcctSharp.Values.Point2d P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticParameter3Checked(E, P, out double generatedResult), "occtsharp_generated_el_clib_parameter_static_parameter_3");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_parameter_static_parameter_4")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticParameter4Checked(global::OcctSharp.Values.Hyperbola3d H, Point3dRaw P, out double generatedResult);
+    internal static double ElCLibStaticParameter4(global::OcctSharp.Values.Hyperbola3d H, Point3dRaw P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticParameter4Checked(H, P, out double generatedResult), "occtsharp_generated_el_clib_parameter_static_parameter_4");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_parameter_static_parameter_5")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticParameter5Checked(global::OcctSharp.Values.Hyperbola2d H, global::OcctSharp.Values.Point2d P, out double generatedResult);
+    internal static double ElCLibStaticParameter5(global::OcctSharp.Values.Hyperbola2d H, global::OcctSharp.Values.Point2d P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticParameter5Checked(H, P, out double generatedResult), "occtsharp_generated_el_clib_parameter_static_parameter_5");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_parameter_static_parameter_6")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticParameter6Checked(global::OcctSharp.Values.Line3d L, Point3dRaw P, out double generatedResult);
+    internal static double ElCLibStaticParameter6(global::OcctSharp.Values.Line3d L, Point3dRaw P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticParameter6Checked(L, P, out double generatedResult), "occtsharp_generated_el_clib_parameter_static_parameter_6");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_parameter_static_parameter_7")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticParameter7Checked(global::OcctSharp.Values.Line2d L, global::OcctSharp.Values.Point2d P, out double generatedResult);
+    internal static double ElCLibStaticParameter7(global::OcctSharp.Values.Line2d L, global::OcctSharp.Values.Point2d P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticParameter7Checked(L, P, out double generatedResult), "occtsharp_generated_el_clib_parameter_static_parameter_7");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_parameter_static_parameter_8")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticParameter8Checked(global::OcctSharp.Values.Parabola3d Prb, Point3dRaw P, out double generatedResult);
+    internal static double ElCLibStaticParameter8(global::OcctSharp.Values.Parabola3d Prb, Point3dRaw P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticParameter8Checked(Prb, P, out double generatedResult), "occtsharp_generated_el_clib_parameter_static_parameter_8");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_parameter_static_parameter_9")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticParameter9Checked(global::OcctSharp.Values.Parabola2d Prb, global::OcctSharp.Values.Point2d P, out double generatedResult);
+    internal static double ElCLibStaticParameter9(global::OcctSharp.Values.Parabola2d Prb, global::OcctSharp.Values.Point2d P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticParameter9Checked(Prb, P, out double generatedResult), "occtsharp_generated_el_clib_parameter_static_parameter_9");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_to3d_static_to3d_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticTo3d1Checked(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Axis22d A, out global::OcctSharp.Values.Axis2 generatedResult);
+    internal static global::OcctSharp.Values.Axis2 ElCLibStaticTo3d1(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Axis22d A)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticTo3d1Checked(Pos, A, out global::OcctSharp.Values.Axis2 generatedResult), "occtsharp_generated_el_clib_to3d_static_to3d_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_to3d_static_to3d_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticTo3d0Checked(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Axis2d A, out global::OcctSharp.Values.Axis1 generatedResult);
+    internal static global::OcctSharp.Values.Axis1 ElCLibStaticTo3d0(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Axis2d A)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticTo3d0Checked(Pos, A, out global::OcctSharp.Values.Axis1 generatedResult), "occtsharp_generated_el_clib_to3d_static_to3d_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_to3d_static_to3d_2")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticTo3d2Checked(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Circle2d C, out global::OcctSharp.Values.Circle3d generatedResult);
+    internal static global::OcctSharp.Values.Circle3d ElCLibStaticTo3d2(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Circle2d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticTo3d2Checked(Pos, C, out global::OcctSharp.Values.Circle3d generatedResult), "occtsharp_generated_el_clib_to3d_static_to3d_2");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_to3d_static_to3d_3")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticTo3d3Checked(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Direction2d V, out global::OcctSharp.Values.Direction3d generatedResult);
+    internal static global::OcctSharp.Values.Direction3d ElCLibStaticTo3d3(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Direction2d V)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticTo3d3Checked(Pos, V, out global::OcctSharp.Values.Direction3d generatedResult), "occtsharp_generated_el_clib_to3d_static_to3d_3");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_to3d_static_to3d_4")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticTo3d4Checked(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Ellipse2d E, out global::OcctSharp.Values.Ellipse3d generatedResult);
+    internal static global::OcctSharp.Values.Ellipse3d ElCLibStaticTo3d4(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Ellipse2d E)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticTo3d4Checked(Pos, E, out global::OcctSharp.Values.Ellipse3d generatedResult), "occtsharp_generated_el_clib_to3d_static_to3d_4");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_to3d_static_to3d_5")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticTo3d5Checked(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Hyperbola2d H, out global::OcctSharp.Values.Hyperbola3d generatedResult);
+    internal static global::OcctSharp.Values.Hyperbola3d ElCLibStaticTo3d5(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Hyperbola2d H)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticTo3d5Checked(Pos, H, out global::OcctSharp.Values.Hyperbola3d generatedResult), "occtsharp_generated_el_clib_to3d_static_to3d_5");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_to3d_static_to3d_6")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticTo3d6Checked(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Line2d L, out global::OcctSharp.Values.Line3d generatedResult);
+    internal static global::OcctSharp.Values.Line3d ElCLibStaticTo3d6(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Line2d L)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticTo3d6Checked(Pos, L, out global::OcctSharp.Values.Line3d generatedResult), "occtsharp_generated_el_clib_to3d_static_to3d_6");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_to3d_static_to3d_7")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticTo3d7Checked(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Parabola2d Prb, out global::OcctSharp.Values.Parabola3d generatedResult);
+    internal static global::OcctSharp.Values.Parabola3d ElCLibStaticTo3d7(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Parabola2d Prb)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticTo3d7Checked(Pos, Prb, out global::OcctSharp.Values.Parabola3d generatedResult), "occtsharp_generated_el_clib_to3d_static_to3d_7");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_to3d_static_to3d_8")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticTo3d8Checked(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Point2d P, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElCLibStaticTo3d8(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Point2d P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticTo3d8Checked(Pos, P, out Point3dRaw generatedResult), "occtsharp_generated_el_clib_to3d_static_to3d_8");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_to3d_static_to3d_9")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticTo3d9Checked(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Vector2d V, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElCLibStaticTo3d9(global::OcctSharp.Values.Axis2 Pos, global::OcctSharp.Values.Vector2d V)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticTo3d9Checked(Pos, V, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_clib_to3d_static_to3d_9");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_value_static_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticValue0Checked(double U, global::OcctSharp.Values.Circle3d C, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElCLibStaticValue0(double U, global::OcctSharp.Values.Circle3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticValue0Checked(U, C, out Point3dRaw generatedResult), "occtsharp_generated_el_clib_value_static_value_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_value_static_value_5")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticValue5Checked(double U, global::OcctSharp.Values.Circle2d C, out global::OcctSharp.Values.Point2d generatedResult);
+    internal static global::OcctSharp.Values.Point2d ElCLibStaticValue5(double U, global::OcctSharp.Values.Circle2d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticValue5Checked(U, C, out global::OcctSharp.Values.Point2d generatedResult), "occtsharp_generated_el_clib_value_static_value_5");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_value_static_value_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticValue1Checked(double U, global::OcctSharp.Values.Ellipse3d E, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElCLibStaticValue1(double U, global::OcctSharp.Values.Ellipse3d E)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticValue1Checked(U, E, out Point3dRaw generatedResult), "occtsharp_generated_el_clib_value_static_value_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_value_static_value_6")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticValue6Checked(double U, global::OcctSharp.Values.Ellipse2d E, out global::OcctSharp.Values.Point2d generatedResult);
+    internal static global::OcctSharp.Values.Point2d ElCLibStaticValue6(double U, global::OcctSharp.Values.Ellipse2d E)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticValue6Checked(U, E, out global::OcctSharp.Values.Point2d generatedResult), "occtsharp_generated_el_clib_value_static_value_6");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_value_static_value_2")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticValue2Checked(double U, global::OcctSharp.Values.Hyperbola3d H, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElCLibStaticValue2(double U, global::OcctSharp.Values.Hyperbola3d H)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticValue2Checked(U, H, out Point3dRaw generatedResult), "occtsharp_generated_el_clib_value_static_value_2");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_value_static_value_7")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticValue7Checked(double U, global::OcctSharp.Values.Hyperbola2d H, out global::OcctSharp.Values.Point2d generatedResult);
+    internal static global::OcctSharp.Values.Point2d ElCLibStaticValue7(double U, global::OcctSharp.Values.Hyperbola2d H)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticValue7Checked(U, H, out global::OcctSharp.Values.Point2d generatedResult), "occtsharp_generated_el_clib_value_static_value_7");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_value_static_value_3")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticValue3Checked(double U, global::OcctSharp.Values.Line3d L, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElCLibStaticValue3(double U, global::OcctSharp.Values.Line3d L)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticValue3Checked(U, L, out Point3dRaw generatedResult), "occtsharp_generated_el_clib_value_static_value_3");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_value_static_value_8")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticValue8Checked(double U, global::OcctSharp.Values.Line2d L, out global::OcctSharp.Values.Point2d generatedResult);
+    internal static global::OcctSharp.Values.Point2d ElCLibStaticValue8(double U, global::OcctSharp.Values.Line2d L)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticValue8Checked(U, L, out global::OcctSharp.Values.Point2d generatedResult), "occtsharp_generated_el_clib_value_static_value_8");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_value_static_value_4")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticValue4Checked(double U, global::OcctSharp.Values.Parabola3d Prb, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElCLibStaticValue4(double U, global::OcctSharp.Values.Parabola3d Prb)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticValue4Checked(U, Prb, out Point3dRaw generatedResult), "occtsharp_generated_el_clib_value_static_value_4");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_clib_value_static_value_9")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElCLibStaticValue9Checked(double U, global::OcctSharp.Values.Parabola2d Prb, out global::OcctSharp.Values.Point2d generatedResult);
+    internal static global::OcctSharp.Values.Point2d ElCLibStaticValue9(double U, global::OcctSharp.Values.Parabola2d Prb)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElCLibStaticValue9Checked(U, Prb, out global::OcctSharp.Values.Point2d generatedResult), "occtsharp_generated_el_clib_value_static_value_9");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_cone_dn_static_cone_dn_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticConeDN0Checked(double U, double V, global::OcctSharp.Values.Axis3 Pos, double Radius, double SAngle, int Nu, int Nv, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElSLibStaticConeDN0(double U, double V, global::OcctSharp.Values.Axis3 Pos, double Radius, double SAngle, int Nu, int Nv)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticConeDN0Checked(U, V, Pos, Radius, SAngle, Nu, Nv, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_slib_cone_dn_static_cone_dn_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_cone_uiso_static_cone_u_iso_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticConeUIso0Checked(global::OcctSharp.Values.Axis3 Pos, double Radius, double SAngle, double U, out global::OcctSharp.Values.Line3d generatedResult);
+    internal static global::OcctSharp.Values.Line3d ElSLibStaticConeUIso0(global::OcctSharp.Values.Axis3 Pos, double Radius, double SAngle, double U)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticConeUIso0Checked(Pos, Radius, SAngle, U, out global::OcctSharp.Values.Line3d generatedResult), "occtsharp_generated_el_slib_cone_uiso_static_cone_u_iso_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_cone_viso_static_cone_v_iso_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticConeVIso0Checked(global::OcctSharp.Values.Axis3 Pos, double Radius, double SAngle, double V, out global::OcctSharp.Values.Circle3d generatedResult);
+    internal static global::OcctSharp.Values.Circle3d ElSLibStaticConeVIso0(global::OcctSharp.Values.Axis3 Pos, double Radius, double SAngle, double V)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticConeVIso0Checked(Pos, Radius, SAngle, V, out global::OcctSharp.Values.Circle3d generatedResult), "occtsharp_generated_el_slib_cone_viso_static_cone_v_iso_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_cone_value_static_cone_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticConeValue0Checked(double U, double V, global::OcctSharp.Values.Axis3 Pos, double Radius, double SAngle, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElSLibStaticConeValue0(double U, double V, global::OcctSharp.Values.Axis3 Pos, double Radius, double SAngle)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticConeValue0Checked(U, V, Pos, Radius, SAngle, out Point3dRaw generatedResult), "occtsharp_generated_el_slib_cone_value_static_cone_value_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_cylinder_dn_static_cylinder_dn_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticCylinderDN0Checked(double U, double V, global::OcctSharp.Values.Axis3 Pos, double Radius, int Nu, int Nv, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElSLibStaticCylinderDN0(double U, double V, global::OcctSharp.Values.Axis3 Pos, double Radius, int Nu, int Nv)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticCylinderDN0Checked(U, V, Pos, Radius, Nu, Nv, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_slib_cylinder_dn_static_cylinder_dn_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_cylinder_uiso_static_cylinder_u_iso_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticCylinderUIso0Checked(global::OcctSharp.Values.Axis3 Pos, double Radius, double U, out global::OcctSharp.Values.Line3d generatedResult);
+    internal static global::OcctSharp.Values.Line3d ElSLibStaticCylinderUIso0(global::OcctSharp.Values.Axis3 Pos, double Radius, double U)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticCylinderUIso0Checked(Pos, Radius, U, out global::OcctSharp.Values.Line3d generatedResult), "occtsharp_generated_el_slib_cylinder_uiso_static_cylinder_u_iso_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_cylinder_viso_static_cylinder_v_iso_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticCylinderVIso0Checked(global::OcctSharp.Values.Axis3 Pos, double Radius, double V, out global::OcctSharp.Values.Circle3d generatedResult);
+    internal static global::OcctSharp.Values.Circle3d ElSLibStaticCylinderVIso0(global::OcctSharp.Values.Axis3 Pos, double Radius, double V)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticCylinderVIso0Checked(Pos, Radius, V, out global::OcctSharp.Values.Circle3d generatedResult), "occtsharp_generated_el_slib_cylinder_viso_static_cylinder_v_iso_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_cylinder_value_static_cylinder_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticCylinderValue0Checked(double U, double V, global::OcctSharp.Values.Axis3 Pos, double Radius, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElSLibStaticCylinderValue0(double U, double V, global::OcctSharp.Values.Axis3 Pos, double Radius)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticCylinderValue0Checked(U, V, Pos, Radius, out Point3dRaw generatedResult), "occtsharp_generated_el_slib_cylinder_value_static_cylinder_value_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_dn_static_dn_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticDN0Checked(double U, double V, global::OcctSharp.Values.Cone C, int Nu, int Nv, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElSLibStaticDN0(double U, double V, global::OcctSharp.Values.Cone C, int Nu, int Nv)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticDN0Checked(U, V, C, Nu, Nv, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_slib_dn_static_dn_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_dn_static_dn_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticDN1Checked(double U, double V, global::OcctSharp.Values.Cylinder C, int Nu, int Nv, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElSLibStaticDN1(double U, double V, global::OcctSharp.Values.Cylinder C, int Nu, int Nv)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticDN1Checked(U, V, C, Nu, Nv, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_slib_dn_static_dn_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_dn_static_dn_2")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticDN2Checked(double U, double V, global::OcctSharp.Values.Plane Pl, int Nu, int Nv, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElSLibStaticDN2(double U, double V, global::OcctSharp.Values.Plane Pl, int Nu, int Nv)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticDN2Checked(U, V, Pl, Nu, Nv, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_slib_dn_static_dn_2");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_dn_static_dn_3")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticDN3Checked(double U, double V, global::OcctSharp.Values.Sphere S, int Nu, int Nv, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElSLibStaticDN3(double U, double V, global::OcctSharp.Values.Sphere S, int Nu, int Nv)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticDN3Checked(U, V, S, Nu, Nv, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_slib_dn_static_dn_3");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_dn_static_dn_4")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticDN4Checked(double U, double V, global::OcctSharp.Values.Torus T, int Nu, int Nv, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElSLibStaticDN4(double U, double V, global::OcctSharp.Values.Torus T, int Nu, int Nv)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticDN4Checked(U, V, T, Nu, Nv, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_slib_dn_static_dn_4");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_plane_dn_static_plane_dn_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticPlaneDN0Checked(double U, double V, global::OcctSharp.Values.Axis3 Pos, int Nu, int Nv, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElSLibStaticPlaneDN0(double U, double V, global::OcctSharp.Values.Axis3 Pos, int Nu, int Nv)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticPlaneDN0Checked(U, V, Pos, Nu, Nv, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_slib_plane_dn_static_plane_dn_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_plane_uiso_static_plane_u_iso_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticPlaneUIso0Checked(global::OcctSharp.Values.Axis3 Pos, double U, out global::OcctSharp.Values.Line3d generatedResult);
+    internal static global::OcctSharp.Values.Line3d ElSLibStaticPlaneUIso0(global::OcctSharp.Values.Axis3 Pos, double U)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticPlaneUIso0Checked(Pos, U, out global::OcctSharp.Values.Line3d generatedResult), "occtsharp_generated_el_slib_plane_uiso_static_plane_u_iso_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_plane_viso_static_plane_v_iso_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticPlaneVIso0Checked(global::OcctSharp.Values.Axis3 Pos, double V, out global::OcctSharp.Values.Line3d generatedResult);
+    internal static global::OcctSharp.Values.Line3d ElSLibStaticPlaneVIso0(global::OcctSharp.Values.Axis3 Pos, double V)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticPlaneVIso0Checked(Pos, V, out global::OcctSharp.Values.Line3d generatedResult), "occtsharp_generated_el_slib_plane_viso_static_plane_v_iso_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_plane_value_static_plane_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticPlaneValue0Checked(double U, double V, global::OcctSharp.Values.Axis3 Pos, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElSLibStaticPlaneValue0(double U, double V, global::OcctSharp.Values.Axis3 Pos)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticPlaneValue0Checked(U, V, Pos, out Point3dRaw generatedResult), "occtsharp_generated_el_slib_plane_value_static_plane_value_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_sphere_dn_static_sphere_dn_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticSphereDN0Checked(double U, double V, global::OcctSharp.Values.Axis3 Pos, double Radius, int Nu, int Nv, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElSLibStaticSphereDN0(double U, double V, global::OcctSharp.Values.Axis3 Pos, double Radius, int Nu, int Nv)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticSphereDN0Checked(U, V, Pos, Radius, Nu, Nv, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_slib_sphere_dn_static_sphere_dn_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_sphere_uiso_static_sphere_u_iso_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticSphereUIso0Checked(global::OcctSharp.Values.Axis3 Pos, double Radius, double U, out global::OcctSharp.Values.Circle3d generatedResult);
+    internal static global::OcctSharp.Values.Circle3d ElSLibStaticSphereUIso0(global::OcctSharp.Values.Axis3 Pos, double Radius, double U)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticSphereUIso0Checked(Pos, Radius, U, out global::OcctSharp.Values.Circle3d generatedResult), "occtsharp_generated_el_slib_sphere_uiso_static_sphere_u_iso_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_sphere_viso_static_sphere_v_iso_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticSphereVIso0Checked(global::OcctSharp.Values.Axis3 Pos, double Radius, double V, out global::OcctSharp.Values.Circle3d generatedResult);
+    internal static global::OcctSharp.Values.Circle3d ElSLibStaticSphereVIso0(global::OcctSharp.Values.Axis3 Pos, double Radius, double V)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticSphereVIso0Checked(Pos, Radius, V, out global::OcctSharp.Values.Circle3d generatedResult), "occtsharp_generated_el_slib_sphere_viso_static_sphere_v_iso_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_sphere_value_static_sphere_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticSphereValue0Checked(double U, double V, global::OcctSharp.Values.Axis3 Pos, double Radius, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElSLibStaticSphereValue0(double U, double V, global::OcctSharp.Values.Axis3 Pos, double Radius)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticSphereValue0Checked(U, V, Pos, Radius, out Point3dRaw generatedResult), "occtsharp_generated_el_slib_sphere_value_static_sphere_value_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_torus_dn_static_torus_dn_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticTorusDN0Checked(double U, double V, global::OcctSharp.Values.Axis3 Pos, double MajorRadius, double MinorRadius, int Nu, int Nv, out global::OcctSharp.Values.Vector3d generatedResult);
+    internal static global::OcctSharp.Values.Vector3d ElSLibStaticTorusDN0(double U, double V, global::OcctSharp.Values.Axis3 Pos, double MajorRadius, double MinorRadius, int Nu, int Nv)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticTorusDN0Checked(U, V, Pos, MajorRadius, MinorRadius, Nu, Nv, out global::OcctSharp.Values.Vector3d generatedResult), "occtsharp_generated_el_slib_torus_dn_static_torus_dn_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_torus_uiso_static_torus_u_iso_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticTorusUIso0Checked(global::OcctSharp.Values.Axis3 Pos, double MajorRadius, double MinorRadius, double U, out global::OcctSharp.Values.Circle3d generatedResult);
+    internal static global::OcctSharp.Values.Circle3d ElSLibStaticTorusUIso0(global::OcctSharp.Values.Axis3 Pos, double MajorRadius, double MinorRadius, double U)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticTorusUIso0Checked(Pos, MajorRadius, MinorRadius, U, out global::OcctSharp.Values.Circle3d generatedResult), "occtsharp_generated_el_slib_torus_uiso_static_torus_u_iso_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_torus_viso_static_torus_v_iso_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticTorusVIso0Checked(global::OcctSharp.Values.Axis3 Pos, double MajorRadius, double MinorRadius, double V, out global::OcctSharp.Values.Circle3d generatedResult);
+    internal static global::OcctSharp.Values.Circle3d ElSLibStaticTorusVIso0(global::OcctSharp.Values.Axis3 Pos, double MajorRadius, double MinorRadius, double V)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticTorusVIso0Checked(Pos, MajorRadius, MinorRadius, V, out global::OcctSharp.Values.Circle3d generatedResult), "occtsharp_generated_el_slib_torus_viso_static_torus_v_iso_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_torus_value_static_torus_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticTorusValue0Checked(double U, double V, global::OcctSharp.Values.Axis3 Pos, double MajorRadius, double MinorRadius, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElSLibStaticTorusValue0(double U, double V, global::OcctSharp.Values.Axis3 Pos, double MajorRadius, double MinorRadius)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticTorusValue0Checked(U, V, Pos, MajorRadius, MinorRadius, out Point3dRaw generatedResult), "occtsharp_generated_el_slib_torus_value_static_torus_value_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_value_static_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticValue0Checked(double U, double V, global::OcctSharp.Values.Cone C, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElSLibStaticValue0(double U, double V, global::OcctSharp.Values.Cone C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticValue0Checked(U, V, C, out Point3dRaw generatedResult), "occtsharp_generated_el_slib_value_static_value_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_value_static_value_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticValue1Checked(double U, double V, global::OcctSharp.Values.Cylinder C, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElSLibStaticValue1(double U, double V, global::OcctSharp.Values.Cylinder C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticValue1Checked(U, V, C, out Point3dRaw generatedResult), "occtsharp_generated_el_slib_value_static_value_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_value_static_value_2")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticValue2Checked(double U, double V, global::OcctSharp.Values.Plane Pl, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElSLibStaticValue2(double U, double V, global::OcctSharp.Values.Plane Pl)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticValue2Checked(U, V, Pl, out Point3dRaw generatedResult), "occtsharp_generated_el_slib_value_static_value_2");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_value_static_value_3")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticValue3Checked(double U, double V, global::OcctSharp.Values.Sphere S, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElSLibStaticValue3(double U, double V, global::OcctSharp.Values.Sphere S)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticValue3Checked(U, V, S, out Point3dRaw generatedResult), "occtsharp_generated_el_slib_value_static_value_3");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_el_slib_value_static_value_4")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ElSLibStaticValue4Checked(double U, double V, global::OcctSharp.Values.Torus T, out Point3dRaw generatedResult);
+    internal static Point3dRaw ElSLibStaticValue4(double U, double V, global::OcctSharp.Values.Torus T)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ElSLibStaticValue4Checked(U, V, T, out Point3dRaw generatedResult), "occtsharp_generated_el_slib_value_static_value_4");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gcpnts_tangential_deflection_static_arc_angular_step_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -93,6 +1024,214 @@ internal static partial class GeometryGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_plib_static_niv_constr_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial int PLibStaticNivConstr0(int ConstraintOrder);
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_project_static_project_3")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ProjLibStaticProject3Checked(global::OcctSharp.Values.Cone Co, global::OcctSharp.Values.Circle3d Ci, out global::OcctSharp.Values.Line2d generatedResult);
+    internal static global::OcctSharp.Values.Line2d ProjLibStaticProject3(global::OcctSharp.Values.Cone Co, global::OcctSharp.Values.Circle3d Ci)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ProjLibStaticProject3Checked(Co, Ci, out global::OcctSharp.Values.Line2d generatedResult), "occtsharp_generated_proj_lib_project_static_project_3");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_project_static_project_4")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ProjLibStaticProject4Checked(global::OcctSharp.Values.Cone Co, global::OcctSharp.Values.Line3d L, out global::OcctSharp.Values.Line2d generatedResult);
+    internal static global::OcctSharp.Values.Line2d ProjLibStaticProject4(global::OcctSharp.Values.Cone Co, global::OcctSharp.Values.Line3d L)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ProjLibStaticProject4Checked(Co, L, out global::OcctSharp.Values.Line2d generatedResult), "occtsharp_generated_proj_lib_project_static_project_4");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_project_static_project_11")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ProjLibStaticProject11Checked(global::OcctSharp.Values.Cone Co, Point3dRaw P, out global::OcctSharp.Values.Point2d generatedResult);
+    internal static global::OcctSharp.Values.Point2d ProjLibStaticProject11(global::OcctSharp.Values.Cone Co, Point3dRaw P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ProjLibStaticProject11Checked(Co, P, out global::OcctSharp.Values.Point2d generatedResult), "occtsharp_generated_proj_lib_project_static_project_11");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_project_static_project_5")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ProjLibStaticProject5Checked(global::OcctSharp.Values.Cylinder Cy, global::OcctSharp.Values.Circle3d Ci, out global::OcctSharp.Values.Line2d generatedResult);
+    internal static global::OcctSharp.Values.Line2d ProjLibStaticProject5(global::OcctSharp.Values.Cylinder Cy, global::OcctSharp.Values.Circle3d Ci)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ProjLibStaticProject5Checked(Cy, Ci, out global::OcctSharp.Values.Line2d generatedResult), "occtsharp_generated_proj_lib_project_static_project_5");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_project_static_project_6")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ProjLibStaticProject6Checked(global::OcctSharp.Values.Cylinder Cy, global::OcctSharp.Values.Line3d L, out global::OcctSharp.Values.Line2d generatedResult);
+    internal static global::OcctSharp.Values.Line2d ProjLibStaticProject6(global::OcctSharp.Values.Cylinder Cy, global::OcctSharp.Values.Line3d L)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ProjLibStaticProject6Checked(Cy, L, out global::OcctSharp.Values.Line2d generatedResult), "occtsharp_generated_proj_lib_project_static_project_6");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_project_static_project_12")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ProjLibStaticProject12Checked(global::OcctSharp.Values.Cylinder Cy, Point3dRaw P, out global::OcctSharp.Values.Point2d generatedResult);
+    internal static global::OcctSharp.Values.Point2d ProjLibStaticProject12(global::OcctSharp.Values.Cylinder Cy, Point3dRaw P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ProjLibStaticProject12Checked(Cy, P, out global::OcctSharp.Values.Point2d generatedResult), "occtsharp_generated_proj_lib_project_static_project_12");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_project_static_project_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ProjLibStaticProject0Checked(global::OcctSharp.Values.Plane Pl, global::OcctSharp.Values.Circle3d C, out global::OcctSharp.Values.Circle2d generatedResult);
+    internal static global::OcctSharp.Values.Circle2d ProjLibStaticProject0(global::OcctSharp.Values.Plane Pl, global::OcctSharp.Values.Circle3d C)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ProjLibStaticProject0Checked(Pl, C, out global::OcctSharp.Values.Circle2d generatedResult), "occtsharp_generated_proj_lib_project_static_project_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_project_static_project_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ProjLibStaticProject1Checked(global::OcctSharp.Values.Plane Pl, global::OcctSharp.Values.Ellipse3d E, out global::OcctSharp.Values.Ellipse2d generatedResult);
+    internal static global::OcctSharp.Values.Ellipse2d ProjLibStaticProject1(global::OcctSharp.Values.Plane Pl, global::OcctSharp.Values.Ellipse3d E)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ProjLibStaticProject1Checked(Pl, E, out global::OcctSharp.Values.Ellipse2d generatedResult), "occtsharp_generated_proj_lib_project_static_project_1");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_project_static_project_2")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ProjLibStaticProject2Checked(global::OcctSharp.Values.Plane Pl, global::OcctSharp.Values.Hyperbola3d H, out global::OcctSharp.Values.Hyperbola2d generatedResult);
+    internal static global::OcctSharp.Values.Hyperbola2d ProjLibStaticProject2(global::OcctSharp.Values.Plane Pl, global::OcctSharp.Values.Hyperbola3d H)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ProjLibStaticProject2Checked(Pl, H, out global::OcctSharp.Values.Hyperbola2d generatedResult), "occtsharp_generated_proj_lib_project_static_project_2");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_project_static_project_7")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ProjLibStaticProject7Checked(global::OcctSharp.Values.Plane Pl, global::OcctSharp.Values.Line3d L, out global::OcctSharp.Values.Line2d generatedResult);
+    internal static global::OcctSharp.Values.Line2d ProjLibStaticProject7(global::OcctSharp.Values.Plane Pl, global::OcctSharp.Values.Line3d L)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ProjLibStaticProject7Checked(Pl, L, out global::OcctSharp.Values.Line2d generatedResult), "occtsharp_generated_proj_lib_project_static_project_7");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_project_static_project_10")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ProjLibStaticProject10Checked(global::OcctSharp.Values.Plane Pl, global::OcctSharp.Values.Parabola3d P, out global::OcctSharp.Values.Parabola2d generatedResult);
+    internal static global::OcctSharp.Values.Parabola2d ProjLibStaticProject10(global::OcctSharp.Values.Plane Pl, global::OcctSharp.Values.Parabola3d P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ProjLibStaticProject10Checked(Pl, P, out global::OcctSharp.Values.Parabola2d generatedResult), "occtsharp_generated_proj_lib_project_static_project_10");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_project_static_project_13")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ProjLibStaticProject13Checked(global::OcctSharp.Values.Plane Pl, Point3dRaw P, out global::OcctSharp.Values.Point2d generatedResult);
+    internal static global::OcctSharp.Values.Point2d ProjLibStaticProject13(global::OcctSharp.Values.Plane Pl, Point3dRaw P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ProjLibStaticProject13Checked(Pl, P, out global::OcctSharp.Values.Point2d generatedResult), "occtsharp_generated_proj_lib_project_static_project_13");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_project_static_project_8")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ProjLibStaticProject8Checked(global::OcctSharp.Values.Sphere Sp, global::OcctSharp.Values.Circle3d Ci, out global::OcctSharp.Values.Line2d generatedResult);
+    internal static global::OcctSharp.Values.Line2d ProjLibStaticProject8(global::OcctSharp.Values.Sphere Sp, global::OcctSharp.Values.Circle3d Ci)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ProjLibStaticProject8Checked(Sp, Ci, out global::OcctSharp.Values.Line2d generatedResult), "occtsharp_generated_proj_lib_project_static_project_8");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_project_static_project_14")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ProjLibStaticProject14Checked(global::OcctSharp.Values.Sphere Sp, Point3dRaw P, out global::OcctSharp.Values.Point2d generatedResult);
+    internal static global::OcctSharp.Values.Point2d ProjLibStaticProject14(global::OcctSharp.Values.Sphere Sp, Point3dRaw P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ProjLibStaticProject14Checked(Sp, P, out global::OcctSharp.Values.Point2d generatedResult), "occtsharp_generated_proj_lib_project_static_project_14");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_project_static_project_9")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ProjLibStaticProject9Checked(global::OcctSharp.Values.Torus To, global::OcctSharp.Values.Circle3d Ci, out global::OcctSharp.Values.Line2d generatedResult);
+    internal static global::OcctSharp.Values.Line2d ProjLibStaticProject9(global::OcctSharp.Values.Torus To, global::OcctSharp.Values.Circle3d Ci)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ProjLibStaticProject9Checked(To, Ci, out global::OcctSharp.Values.Line2d generatedResult), "occtsharp_generated_proj_lib_project_static_project_9");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_proj_lib_project_static_project_15")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus ProjLibStaticProject15Checked(global::OcctSharp.Values.Torus To, Point3dRaw P, out global::OcctSharp.Values.Point2d generatedResult);
+    internal static global::OcctSharp.Values.Point2d ProjLibStaticProject15(global::OcctSharp.Values.Torus To, Point3dRaw P)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(ProjLibStaticProject15Checked(To, P, out global::OcctSharp.Values.Point2d generatedResult), "occtsharp_generated_proj_lib_project_static_project_15");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_static_dx_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus GpStaticDX0Checked(out global::OcctSharp.Values.Direction3d generatedResult);
+    internal static global::OcctSharp.Values.Direction3d GpStaticDX0()
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(GpStaticDX0Checked(out global::OcctSharp.Values.Direction3d generatedResult), "occtsharp_generated_gp_static_dx_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_static_dx2d_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus GpStaticDX2d0Checked(out global::OcctSharp.Values.Direction2d generatedResult);
+    internal static global::OcctSharp.Values.Direction2d GpStaticDX2d0()
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(GpStaticDX2d0Checked(out global::OcctSharp.Values.Direction2d generatedResult), "occtsharp_generated_gp_static_dx2d_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_static_dy_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus GpStaticDY0Checked(out global::OcctSharp.Values.Direction3d generatedResult);
+    internal static global::OcctSharp.Values.Direction3d GpStaticDY0()
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(GpStaticDY0Checked(out global::OcctSharp.Values.Direction3d generatedResult), "occtsharp_generated_gp_static_dy_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_static_dy2d_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus GpStaticDY2d0Checked(out global::OcctSharp.Values.Direction2d generatedResult);
+    internal static global::OcctSharp.Values.Direction2d GpStaticDY2d0()
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(GpStaticDY2d0Checked(out global::OcctSharp.Values.Direction2d generatedResult), "occtsharp_generated_gp_static_dy2d_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_static_dz_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus GpStaticDZ0Checked(out global::OcctSharp.Values.Direction3d generatedResult);
+    internal static global::OcctSharp.Values.Direction3d GpStaticDZ0()
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(GpStaticDZ0Checked(out global::OcctSharp.Values.Direction3d generatedResult), "occtsharp_generated_gp_static_dz_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_static_ox_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus GpStaticOX0Checked(out global::OcctSharp.Values.Axis1 generatedResult);
+    internal static global::OcctSharp.Values.Axis1 GpStaticOX0()
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(GpStaticOX0Checked(out global::OcctSharp.Values.Axis1 generatedResult), "occtsharp_generated_gp_static_ox_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_static_ox2d_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus GpStaticOX2d0Checked(out global::OcctSharp.Values.Axis2d generatedResult);
+    internal static global::OcctSharp.Values.Axis2d GpStaticOX2d0()
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(GpStaticOX2d0Checked(out global::OcctSharp.Values.Axis2d generatedResult), "occtsharp_generated_gp_static_ox2d_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_static_oy_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus GpStaticOY0Checked(out global::OcctSharp.Values.Axis1 generatedResult);
+    internal static global::OcctSharp.Values.Axis1 GpStaticOY0()
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(GpStaticOY0Checked(out global::OcctSharp.Values.Axis1 generatedResult), "occtsharp_generated_gp_static_oy_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_static_oy2d_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus GpStaticOY2d0Checked(out global::OcctSharp.Values.Axis2d generatedResult);
+    internal static global::OcctSharp.Values.Axis2d GpStaticOY2d0()
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(GpStaticOY2d0Checked(out global::OcctSharp.Values.Axis2d generatedResult), "occtsharp_generated_gp_static_oy2d_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_static_oz_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus GpStaticOZ0Checked(out global::OcctSharp.Values.Axis1 generatedResult);
+    internal static global::OcctSharp.Values.Axis1 GpStaticOZ0()
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(GpStaticOZ0Checked(out global::OcctSharp.Values.Axis1 generatedResult), "occtsharp_generated_gp_static_oz_0");
+        return generatedResult;
+    }
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_static_origin_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     private static partial global::OcctSharp.Interop.NativeStatus GpStaticOrigin0Checked(out Point3dRaw generatedResult);
@@ -101,8 +1240,48 @@ internal static partial class GeometryGeneratedNativeMethods
         global::OcctSharp.Interop.NativeError.ThrowIfFailed(GpStaticOrigin0Checked(out Point3dRaw generatedResult), "occtsharp_generated_gp_static_origin_0");
         return generatedResult;
     }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_static_origin2d_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus GpStaticOrigin2d0Checked(out global::OcctSharp.Values.Point2d generatedResult);
+    internal static global::OcctSharp.Values.Point2d GpStaticOrigin2d0()
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(GpStaticOrigin2d0Checked(out global::OcctSharp.Values.Point2d generatedResult), "occtsharp_generated_gp_static_origin2d_0");
+        return generatedResult;
+    }
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_static_resolution_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial double GpStaticResolution0();
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_static_yoz_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus GpStaticYOZ0Checked(out global::OcctSharp.Values.Axis2 generatedResult);
+    internal static global::OcctSharp.Values.Axis2 GpStaticYOZ0()
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(GpStaticYOZ0Checked(out global::OcctSharp.Values.Axis2 generatedResult), "occtsharp_generated_gp_static_yoz_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_static_zox_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus GpStaticZOX0Checked(out global::OcctSharp.Values.Axis2 generatedResult);
+    internal static global::OcctSharp.Values.Axis2 GpStaticZOX0()
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(GpStaticZOX0Checked(out global::OcctSharp.Values.Axis2 generatedResult), "occtsharp_generated_gp_static_zox_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_quaternion_nlerp_interpolate_static_interpolate_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus GpQuaternionNLerpStaticInterpolate0Checked(global::OcctSharp.Values.Quaternion theQStart, global::OcctSharp.Values.Quaternion theQEnd, double theT, out global::OcctSharp.Values.Quaternion generatedResult);
+    internal static global::OcctSharp.Values.Quaternion GpQuaternionNLerpStaticInterpolate0(global::OcctSharp.Values.Quaternion theQStart, global::OcctSharp.Values.Quaternion theQEnd, double theT)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(GpQuaternionNLerpStaticInterpolate0Checked(theQStart, theQEnd, theT, out global::OcctSharp.Values.Quaternion generatedResult), "occtsharp_generated_gp_quaternion_nlerp_interpolate_static_interpolate_0");
+        return generatedResult;
+    }
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_gp_quaternion_slerp_interpolate_static_interpolate_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    private static partial global::OcctSharp.Interop.NativeStatus GpQuaternionSLerpStaticInterpolate0Checked(global::OcctSharp.Values.Quaternion theQStart, global::OcctSharp.Values.Quaternion theQEnd, double theT, out global::OcctSharp.Values.Quaternion generatedResult);
+    internal static global::OcctSharp.Values.Quaternion GpQuaternionSLerpStaticInterpolate0(global::OcctSharp.Values.Quaternion theQStart, global::OcctSharp.Values.Quaternion theQEnd, double theT)
+    {
+        global::OcctSharp.Interop.NativeError.ThrowIfFailed(GpQuaternionSLerpStaticInterpolate0Checked(theQStart, theQEnd, theT, out global::OcctSharp.Values.Quaternion generatedResult), "occtsharp_generated_gp_quaternion_slerp_interpolate_static_interpolate_0");
+        return generatedResult;
+    }
 }

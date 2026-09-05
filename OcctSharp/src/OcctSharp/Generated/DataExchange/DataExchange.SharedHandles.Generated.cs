@@ -723,6 +723,8 @@
 // Source: c:@S@IGESAppli_NodalDisplAndRot@F@Node#I#1
 // Source: c:@S@IGESAppli_NodalDisplAndRot@F@NodeIdentifier#I#1
 // Source: c:@S@IGESAppli_NodalDisplAndRot@F@Note#I#1
+// Source: c:@S@IGESAppli_NodalDisplAndRot@F@RotationalParameter#I#I#1
+// Source: c:@S@IGESAppli_NodalDisplAndRot@F@TranslationParameter#I#I#1
 // Source: c:@S@IGESAppli_NodalResults@F@Data#I#I#1
 // Source: c:@S@IGESAppli_NodalResults@F@DynamicType#1
 // Source: c:@S@IGESAppli_NodalResults@F@IGESAppli_NodalResults#
@@ -737,6 +739,7 @@
 // Source: c:@S@IGESAppli_Node@F@Coord#1
 // Source: c:@S@IGESAppli_Node@F@DynamicType#1
 // Source: c:@S@IGESAppli_Node@F@IGESAppli_Node#
+// Source: c:@S@IGESAppli_Node@F@Init#&1$@S@gp_XYZ#&1$@N@opencascade@S@handle>#$@S@IGESGeom_TransformationMatrix#
 // Source: c:@S@IGESAppli_Node@F@System#1
 // Source: c:@S@IGESAppli_Node@F@SystemType#1
 // Source: c:@S@IGESAppli_Node@F@TransformedNodalCoord#1
@@ -918,8 +921,11 @@
 // Source: c:@S@IGESBasic_SingularSubfigure@F@DynamicType#1
 // Source: c:@S@IGESBasic_SingularSubfigure@F@HasScaleFactor#1
 // Source: c:@S@IGESBasic_SingularSubfigure@F@IGESBasic_SingularSubfigure#
+// Source: c:@S@IGESBasic_SingularSubfigure@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESBasic_SubfigureDef#&1$@S@gp_XYZ#b#d#
 // Source: c:@S@IGESBasic_SingularSubfigure@F@ScaleFactor#1
 // Source: c:@S@IGESBasic_SingularSubfigure@F@Subfigure#1
+// Source: c:@S@IGESBasic_SingularSubfigure@F@TransformedTranslation#1
+// Source: c:@S@IGESBasic_SingularSubfigure@F@Translation#1
 // Source: c:@S@IGESBasic_SpecificModule@F@DynamicType#1
 // Source: c:@S@IGESBasic_SpecificModule@F@IGESBasic_SpecificModule#
 // Source: c:@S@IGESBasic_SpecificModule@F@OwnCorrect#I#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
@@ -1230,13 +1236,21 @@
 // Source: c:@S@IGESDimen_AngularDimension@F@HasFirstWitnessLine#1
 // Source: c:@S@IGESDimen_AngularDimension@F@HasSecondWitnessLine#1
 // Source: c:@S@IGESDimen_AngularDimension@F@IGESDimen_AngularDimension#
+// Source: c:@S@IGESDimen_AngularDimension@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESDimen_GeneralNote#&1$@N@opencascade@S@handle>#$@S@IGESDimen_WitnessLine#S3_#&1$@S@gp_XY#d#&1$@N@opencascade@S@handle>#$@S@IGESDimen_LeaderArrow#S8_#
 // Source: c:@S@IGESDimen_AngularDimension@F@Note#1
 // Source: c:@S@IGESDimen_AngularDimension@F@Radius#1
 // Source: c:@S@IGESDimen_AngularDimension@F@SecondLeader#1
 // Source: c:@S@IGESDimen_AngularDimension@F@SecondWitnessLine#1
+// Source: c:@S@IGESDimen_AngularDimension@F@TransformedVertex#1
+// Source: c:@S@IGESDimen_AngularDimension@F@Vertex#1
 // Source: c:@S@IGESDimen_BasicDimension@F@DynamicType#1
 // Source: c:@S@IGESDimen_BasicDimension@F@IGESDimen_BasicDimension#
+// Source: c:@S@IGESDimen_BasicDimension@F@Init#I#&1$@S@gp_XY#S0_#S0_#S0_#
+// Source: c:@S@IGESDimen_BasicDimension@F@LowerLeft#1
+// Source: c:@S@IGESDimen_BasicDimension@F@LowerRight#1
 // Source: c:@S@IGESDimen_BasicDimension@F@NbPropertyValues#1
+// Source: c:@S@IGESDimen_BasicDimension@F@UpperLeft#1
+// Source: c:@S@IGESDimen_BasicDimension@F@UpperRight#1
 // Source: c:@S@IGESDimen_CenterLine@F@Datatype#1
 // Source: c:@S@IGESDimen_CenterLine@F@DynamicType#1
 // Source: c:@S@IGESDimen_CenterLine@F@IGESDimen_CenterLine#
@@ -1259,12 +1273,15 @@
 // Source: c:@S@IGESDimen_CurveDimension@F@SecondCurve#1
 // Source: c:@S@IGESDimen_CurveDimension@F@SecondLeader#1
 // Source: c:@S@IGESDimen_CurveDimension@F@SecondWitnessLine#1
+// Source: c:@S@IGESDimen_DiameterDimension@F@Center#1
 // Source: c:@S@IGESDimen_DiameterDimension@F@DynamicType#1
 // Source: c:@S@IGESDimen_DiameterDimension@F@FirstLeader#1
 // Source: c:@S@IGESDimen_DiameterDimension@F@HasSecondLeader#1
 // Source: c:@S@IGESDimen_DiameterDimension@F@IGESDimen_DiameterDimension#
+// Source: c:@S@IGESDimen_DiameterDimension@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESDimen_GeneralNote#&1$@N@opencascade@S@handle>#$@S@IGESDimen_LeaderArrow#S3_#&1$@S@gp_XY#
 // Source: c:@S@IGESDimen_DiameterDimension@F@Note#1
 // Source: c:@S@IGESDimen_DiameterDimension@F@SecondLeader#1
+// Source: c:@S@IGESDimen_DiameterDimension@F@TransformedCenter#1
 // Source: c:@S@IGESDimen_DimensionDisplayData@F@ArrowHeadOrientation#1
 // Source: c:@S@IGESDimen_DimensionDisplayData@F@CharacterSet#1
 // Source: c:@S@IGESDimen_DimensionDisplayData@F@DecimalSymbol#1
@@ -1358,11 +1375,13 @@
 // Source: c:@S@IGESDimen_GeneralSymbol@F@NbLeaders#1
 // Source: c:@S@IGESDimen_GeneralSymbol@F@Note#1
 // Source: c:@S@IGESDimen_GeneralSymbol@F@SetFormNumber#I#
+// Source: c:@S@IGESDimen_LeaderArrow@F@ArrowHead#1
 // Source: c:@S@IGESDimen_LeaderArrow@F@ArrowHeadHeight#1
 // Source: c:@S@IGESDimen_LeaderArrow@F@ArrowHeadWidth#1
 // Source: c:@S@IGESDimen_LeaderArrow@F@DynamicType#1
 // Source: c:@S@IGESDimen_LeaderArrow@F@IGESDimen_LeaderArrow#
 // Source: c:@S@IGESDimen_LeaderArrow@F@NbSegments#1
+// Source: c:@S@IGESDimen_LeaderArrow@F@SegmentTail#I#1
 // Source: c:@S@IGESDimen_LeaderArrow@F@SetFormNumber#I#
 // Source: c:@S@IGESDimen_LeaderArrow@F@TransformedArrowHead#1
 // Source: c:@S@IGESDimen_LeaderArrow@F@TransformedSegmentTail#I#1
@@ -1449,9 +1468,11 @@
 // Source: c:@S@IGESDimen_Protocol@F@NbResources#1
 // Source: c:@S@IGESDimen_Protocol@F@Resource#I#1
 // Source: c:@S@IGESDimen_Protocol@F@TypeNumber#&1$@N@opencascade@S@handle>#$@S@Standard_Type#1
+// Source: c:@S@IGESDimen_RadiusDimension@F@Center#1
 // Source: c:@S@IGESDimen_RadiusDimension@F@DynamicType#1
 // Source: c:@S@IGESDimen_RadiusDimension@F@HasLeader2#1
 // Source: c:@S@IGESDimen_RadiusDimension@F@IGESDimen_RadiusDimension#
+// Source: c:@S@IGESDimen_RadiusDimension@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESDimen_GeneralNote#&1$@N@opencascade@S@handle>#$@S@IGESDimen_LeaderArrow#&1$@S@gp_XY#S3_#
 // Source: c:@S@IGESDimen_RadiusDimension@F@InitForm#I#
 // Source: c:@S@IGESDimen_RadiusDimension@F@Leader#1
 // Source: c:@S@IGESDimen_RadiusDimension@F@Leader2#1
@@ -1518,6 +1539,7 @@
 // Source: c:@S@IGESDraw_ConnectPoint@F@HasOwnerSubfigure#1
 // Source: c:@S@IGESDraw_ConnectPoint@F@IGESDraw_ConnectPoint#
 // Source: c:@S@IGESDraw_ConnectPoint@F@IdentifierTemplate#1
+// Source: c:@S@IGESDraw_ConnectPoint@F@Init#&1$@S@gp_XYZ#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#I#I#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#&1$@N@opencascade@S@handle>#$@S@IGESGraph_TextDisplayTemplate#S5_#S8_#I#I#I#S2_#
 // Source: c:@S@IGESDraw_ConnectPoint@F@OwnerSubfigure#1
 // Source: c:@S@IGESDraw_ConnectPoint@F@Point#1
 // Source: c:@S@IGESDraw_ConnectPoint@F@PointIdentifier#1
@@ -1530,6 +1552,8 @@
 // Source: c:@S@IGESDraw_Drawing@F@NbAnnotations#1
 // Source: c:@S@IGESDraw_Drawing@F@NbViews#1
 // Source: c:@S@IGESDraw_Drawing@F@ViewItem#I#1
+// Source: c:@S@IGESDraw_Drawing@F@ViewOrigin#I#1
+// Source: c:@S@IGESDraw_Drawing@F@ViewToDrawing#I#&1$@S@gp_XYZ#1
 // Source: c:@S@IGESDraw_DrawingWithRotation@F@Annotation#I#1
 // Source: c:@S@IGESDraw_DrawingWithRotation@F@DynamicType#1
 // Source: c:@S@IGESDraw_DrawingWithRotation@F@IGESDraw_DrawingWithRotation#
@@ -1537,6 +1561,8 @@
 // Source: c:@S@IGESDraw_DrawingWithRotation@F@NbViews#1
 // Source: c:@S@IGESDraw_DrawingWithRotation@F@OrientationAngle#I#1
 // Source: c:@S@IGESDraw_DrawingWithRotation@F@ViewItem#I#1
+// Source: c:@S@IGESDraw_DrawingWithRotation@F@ViewOrigin#I#1
+// Source: c:@S@IGESDraw_DrawingWithRotation@F@ViewToDrawing#I#&1$@S@gp_XYZ#1
 // Source: c:@S@IGESDraw_GeneralModule@F@DynamicType#1
 // Source: c:@S@IGESDraw_GeneralModule@F@IGESDraw_GeneralModule#
 // Source: c:@S@IGESDraw_GeneralModule@F@OwnDeleteCase#I#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
@@ -1556,7 +1582,10 @@
 // Source: c:@S@IGESDraw_NetworkSubfigure@F@IGESDraw_NetworkSubfigure#
 // Source: c:@S@IGESDraw_NetworkSubfigure@F@NbConnectPoints#1
 // Source: c:@S@IGESDraw_NetworkSubfigure@F@ReferenceDesignator#1
+// Source: c:@S@IGESDraw_NetworkSubfigure@F@ScaleFactors#1
 // Source: c:@S@IGESDraw_NetworkSubfigure@F@SubfigureDefinition#1
+// Source: c:@S@IGESDraw_NetworkSubfigure@F@TransformedTranslation#1
+// Source: c:@S@IGESDraw_NetworkSubfigure@F@Translation#1
 // Source: c:@S@IGESDraw_NetworkSubfigure@F@TypeFlag#1
 // Source: c:@S@IGESDraw_NetworkSubfigureDef@F@Depth#1
 // Source: c:@S@IGESDraw_NetworkSubfigureDef@F@Designator#1
@@ -1572,19 +1601,25 @@
 // Source: c:@S@IGESDraw_NetworkSubfigureDef@F@PointEntity#I#1
 // Source: c:@S@IGESDraw_NetworkSubfigureDef@F@TypeFlag#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@BackPlaneDistance#1
+// Source: c:@S@IGESDraw_PerspectiveView@F@BottomRight#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@CenterOfProjection#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@DepthClip#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@DynamicType#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@FrontPlaneDistance#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@IGESDraw_PerspectiveView#
+// Source: c:@S@IGESDraw_PerspectiveView@F@Init#I#d#&1$@S@gp_XYZ#S0_#S0_#S0_#d#&1$@S@gp_XY#S2_#I#d#d#
 // Source: c:@S@IGESDraw_PerspectiveView@F@IsSingle#1
+// Source: c:@S@IGESDraw_PerspectiveView@F@ModelToView#&1$@S@gp_XYZ#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@NbViews#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@ScaleFactor#1
+// Source: c:@S@IGESDraw_PerspectiveView@F@TopLeft#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@ViewItem#I#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@ViewMatrix#1
+// Source: c:@S@IGESDraw_PerspectiveView@F@ViewNormalVector#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@ViewNumber#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@ViewPlaneDistance#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@ViewReferencePoint#1
+// Source: c:@S@IGESDraw_PerspectiveView@F@ViewUpVector#1
 // Source: c:@S@IGESDraw_Planar@F@DynamicType#1
 // Source: c:@S@IGESDraw_Planar@F@Entity#I#1
 // Source: c:@S@IGESDraw_Planar@F@IGESDraw_Planar#
@@ -1648,6 +1683,7 @@
 // Source: c:@S@IGESDraw_View@F@Init#I#d#&1$@N@opencascade@S@handle>#$@S@IGESGeom_Plane#S0_#S0_#S0_#S0_#S0_#
 // Source: c:@S@IGESDraw_View@F@IsSingle#1
 // Source: c:@S@IGESDraw_View@F@LeftPlane#1
+// Source: c:@S@IGESDraw_View@F@ModelToView#&1$@S@gp_XYZ#1
 // Source: c:@S@IGESDraw_View@F@NbViews#1
 // Source: c:@S@IGESDraw_View@F@RightPlane#1
 // Source: c:@S@IGESDraw_View@F@ScaleFactor#1
@@ -1686,6 +1722,7 @@
 // Source: c:@S@IGESGeom_BSplineCurve@F@Knot#I#1
 // Source: c:@S@IGESGeom_BSplineCurve@F@NbKnots#1
 // Source: c:@S@IGESGeom_BSplineCurve@F@NbPoles#1
+// Source: c:@S@IGESGeom_BSplineCurve@F@Normal#1
 // Source: c:@S@IGESGeom_BSplineCurve@F@Pole#I#1
 // Source: c:@S@IGESGeom_BSplineCurve@F@SetFormNumber#I#
 // Source: c:@S@IGESGeom_BSplineCurve@F@TransformedPole#I#1
@@ -1735,10 +1772,16 @@
 // Source: c:@S@IGESGeom_BoundedSurface@F@RepresentationType#1
 // Source: c:@S@IGESGeom_BoundedSurface@F@Surface#1
 // Source: c:@S@IGESGeom_CircularArc@F@Angle#1
+// Source: c:@S@IGESGeom_CircularArc@F@Axis#1
+// Source: c:@S@IGESGeom_CircularArc@F@Center#1
 // Source: c:@S@IGESGeom_CircularArc@F@DynamicType#1
+// Source: c:@S@IGESGeom_CircularArc@F@EndPoint#1
 // Source: c:@S@IGESGeom_CircularArc@F@IGESGeom_CircularArc#
+// Source: c:@S@IGESGeom_CircularArc@F@Init#d#&1$@S@gp_XY#S0_#S0_#
 // Source: c:@S@IGESGeom_CircularArc@F@IsClosed#1
 // Source: c:@S@IGESGeom_CircularArc@F@Radius#1
+// Source: c:@S@IGESGeom_CircularArc@F@StartPoint#1
+// Source: c:@S@IGESGeom_CircularArc@F@TransformedAxis#1
 // Source: c:@S@IGESGeom_CircularArc@F@TransformedCenter#1
 // Source: c:@S@IGESGeom_CircularArc@F@TransformedEndPoint#1
 // Source: c:@S@IGESGeom_CircularArc@F@TransformedStartPoint#1
@@ -1747,14 +1790,19 @@
 // Source: c:@S@IGESGeom_CompositeCurve@F@DynamicType#1
 // Source: c:@S@IGESGeom_CompositeCurve@F@IGESGeom_CompositeCurve#
 // Source: c:@S@IGESGeom_CompositeCurve@F@NbCurves#1
+// Source: c:@S@IGESGeom_ConicArc@F@Axis#1
 // Source: c:@S@IGESGeom_ConicArc@F@ComputedFormNumber#1
 // Source: c:@S@IGESGeom_ConicArc@F@DynamicType#1
+// Source: c:@S@IGESGeom_ConicArc@F@EndPoint#1
 // Source: c:@S@IGESGeom_ConicArc@F@IGESGeom_ConicArc#
+// Source: c:@S@IGESGeom_ConicArc@F@Init#d#d#d#d#d#d#d#&1$@S@gp_XY#S0_#
 // Source: c:@S@IGESGeom_ConicArc@F@IsClosed#1
 // Source: c:@S@IGESGeom_ConicArc@F@IsFromEllipse#1
 // Source: c:@S@IGESGeom_ConicArc@F@IsFromHyperbola#1
 // Source: c:@S@IGESGeom_ConicArc@F@IsFromParabola#1
 // Source: c:@S@IGESGeom_ConicArc@F@OwnCorrect#
+// Source: c:@S@IGESGeom_ConicArc@F@StartPoint#1
+// Source: c:@S@IGESGeom_ConicArc@F@TransformedAxis#1
 // Source: c:@S@IGESGeom_ConicArc@F@TransformedEndPoint#1
 // Source: c:@S@IGESGeom_ConicArc@F@TransformedStartPoint#1
 // Source: c:@S@IGESGeom_ConicArc@F@ZPlane#1
@@ -1770,6 +1818,8 @@
 // Source: c:@S@IGESGeom_CopiousData@F@SetClosedPath2D#
 // Source: c:@S@IGESGeom_CopiousData@F@SetPolyline#b#
 // Source: c:@S@IGESGeom_CopiousData@F@TransformedPoint#I#1
+// Source: c:@S@IGESGeom_CopiousData@F@TransformedVector#I#1
+// Source: c:@S@IGESGeom_CopiousData@F@Vector#I#1
 // Source: c:@S@IGESGeom_CopiousData@F@ZPlane#1
 // Source: c:@S@IGESGeom_CurveOnSurface@F@CreationMode#1
 // Source: c:@S@IGESGeom_CurveOnSurface@F@Curve3D#1
@@ -1781,12 +1831,17 @@
 // Source: c:@S@IGESGeom_CurveOnSurface@F@Surface#1
 // Source: c:@S@IGESGeom_Direction@F@DynamicType#1
 // Source: c:@S@IGESGeom_Direction@F@IGESGeom_Direction#
+// Source: c:@S@IGESGeom_Direction@F@Init#&1$@S@gp_XYZ#
+// Source: c:@S@IGESGeom_Direction@F@TransformedValue#1
+// Source: c:@S@IGESGeom_Direction@F@Value#1
 // Source: c:@S@IGESGeom_Flash@F@Dimension1#1
 // Source: c:@S@IGESGeom_Flash@F@Dimension2#1
 // Source: c:@S@IGESGeom_Flash@F@DynamicType#1
 // Source: c:@S@IGESGeom_Flash@F@HasReferenceEntity#1
 // Source: c:@S@IGESGeom_Flash@F@IGESGeom_Flash#
+// Source: c:@S@IGESGeom_Flash@F@Init#&1$@S@gp_XY#d#d#d#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#
 // Source: c:@S@IGESGeom_Flash@F@ReferenceEntity#1
+// Source: c:@S@IGESGeom_Flash@F@ReferencePoint#1
 // Source: c:@S@IGESGeom_Flash@F@Rotation#1
 // Source: c:@S@IGESGeom_Flash@F@SetFormNumber#I#
 // Source: c:@S@IGESGeom_Flash@F@TransformedReferencePoint#1
@@ -1796,6 +1851,7 @@
 // Source: c:@S@IGESGeom_Line@F@EndPoint#1
 // Source: c:@S@IGESGeom_Line@F@IGESGeom_Line#
 // Source: c:@S@IGESGeom_Line@F@Infinite#1
+// Source: c:@S@IGESGeom_Line@F@Init#&1$@S@gp_XYZ#S0_#
 // Source: c:@S@IGESGeom_Line@F@SetInfinite#I#
 // Source: c:@S@IGESGeom_Line@F@StartPoint#1
 // Source: c:@S@IGESGeom_Line@F@TransformedEndPoint#1
@@ -1810,20 +1866,27 @@
 // Source: c:@S@IGESGeom_OffsetCurve@F@FunctionParameter#1
 // Source: c:@S@IGESGeom_OffsetCurve@F@HasFunction#1
 // Source: c:@S@IGESGeom_OffsetCurve@F@IGESGeom_OffsetCurve#
+// Source: c:@S@IGESGeom_OffsetCurve@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#I#S0_#I#I#d#d#d#d#&1$@S@gp_XYZ#d#d#
+// Source: c:@S@IGESGeom_OffsetCurve@F@NormalVector#1
 // Source: c:@S@IGESGeom_OffsetCurve@F@OffsetType#1
 // Source: c:@S@IGESGeom_OffsetCurve@F@SecondOffsetDistance#1
 // Source: c:@S@IGESGeom_OffsetCurve@F@StartParameter#1
 // Source: c:@S@IGESGeom_OffsetCurve@F@TaperedOffsetType#1
+// Source: c:@S@IGESGeom_OffsetCurve@F@TransformedNormalVector#1
 // Source: c:@S@IGESGeom_OffsetSurface@F@Distance#1
 // Source: c:@S@IGESGeom_OffsetSurface@F@DynamicType#1
 // Source: c:@S@IGESGeom_OffsetSurface@F@IGESGeom_OffsetSurface#
+// Source: c:@S@IGESGeom_OffsetSurface@F@Init#&1$@S@gp_XYZ#d#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#
+// Source: c:@S@IGESGeom_OffsetSurface@F@OffsetIndicator#1
 // Source: c:@S@IGESGeom_OffsetSurface@F@Surface#1
+// Source: c:@S@IGESGeom_OffsetSurface@F@TransformedOffsetIndicator#1
 // Source: c:@S@IGESGeom_Plane@F@BoundingCurve#1
 // Source: c:@S@IGESGeom_Plane@F@DynamicType#1
 // Source: c:@S@IGESGeom_Plane@F@HasBoundingCurve#1
 // Source: c:@S@IGESGeom_Plane@F@HasBoundingCurveHole#1
 // Source: c:@S@IGESGeom_Plane@F@HasSymbolAttach#1
 // Source: c:@S@IGESGeom_Plane@F@IGESGeom_Plane#
+// Source: c:@S@IGESGeom_Plane@F@Init#d#d#d#d#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#&1$@S@gp_XYZ#d#
 // Source: c:@S@IGESGeom_Plane@F@SetFormNumber#I#
 // Source: c:@S@IGESGeom_Plane@F@SymbolAttach#1
 // Source: c:@S@IGESGeom_Plane@F@SymbolSize#1
@@ -1832,6 +1895,7 @@
 // Source: c:@S@IGESGeom_Point@F@DynamicType#1
 // Source: c:@S@IGESGeom_Point@F@HasDisplaySymbol#1
 // Source: c:@S@IGESGeom_Point@F@IGESGeom_Point#
+// Source: c:@S@IGESGeom_Point@F@Init#&1$@S@gp_XYZ#&1$@N@opencascade@S@handle>#$@S@IGESBasic_SubfigureDef#
 // Source: c:@S@IGESGeom_Point@F@TransformedValue#1
 // Source: c:@S@IGESGeom_Point@F@Value#1
 // Source: c:@S@IGESGeom_Protocol@F@DynamicType#1
@@ -1880,6 +1944,7 @@
 // Source: c:@S@IGESGeom_TabulatedCylinder@F@DynamicType#1
 // Source: c:@S@IGESGeom_TabulatedCylinder@F@EndPoint#1
 // Source: c:@S@IGESGeom_TabulatedCylinder@F@IGESGeom_TabulatedCylinder#
+// Source: c:@S@IGESGeom_TabulatedCylinder@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#&1$@S@gp_XYZ#
 // Source: c:@S@IGESGeom_TabulatedCylinder@F@TransformedEndPoint#1
 // Source: c:@S@IGESGeom_TransformationMatrix@F@Data#I#I#1
 // Source: c:@S@IGESGeom_TransformationMatrix@F@DynamicType#1
@@ -1978,6 +2043,7 @@
 // Source: c:@S@IGESGraph_TextDisplayTemplate@F@FontCode#1
 // Source: c:@S@IGESGraph_TextDisplayTemplate@F@FontEntity#1
 // Source: c:@S@IGESGraph_TextDisplayTemplate@F@IGESGraph_TextDisplayTemplate#
+// Source: c:@S@IGESGraph_TextDisplayTemplate@F@Init#d#d#I#&1$@N@opencascade@S@handle>#$@S@IGESGraph_TextFontDef#d#d#I#I#&1$@S@gp_XYZ#
 // Source: c:@S@IGESGraph_TextDisplayTemplate@F@IsFontEntity#1
 // Source: c:@S@IGESGraph_TextDisplayTemplate@F@IsIncremental#1
 // Source: c:@S@IGESGraph_TextDisplayTemplate@F@MirrorFlag#1
@@ -2000,7 +2066,10 @@
 // Source: c:@S@IGESGraph_TextFontDef@F@SupersededFontCode#1
 // Source: c:@S@IGESGraph_TextFontDef@F@SupersededFontEntity#1
 // Source: c:@S@IGESGraph_UniformRectGrid@F@DynamicType#1
+// Source: c:@S@IGESGraph_UniformRectGrid@F@GridPoint#1
+// Source: c:@S@IGESGraph_UniformRectGrid@F@GridSpacing#1
 // Source: c:@S@IGESGraph_UniformRectGrid@F@IGESGraph_UniformRectGrid#
+// Source: c:@S@IGESGraph_UniformRectGrid@F@Init#I#I#I#I#&1$@S@gp_XY#S0_#I#I#
 // Source: c:@S@IGESGraph_UniformRectGrid@F@IsFinite#1
 // Source: c:@S@IGESGraph_UniformRectGrid@F@IsLine#1
 // Source: c:@S@IGESGraph_UniformRectGrid@F@IsWeighted#1
@@ -2158,9 +2227,17 @@
 // Source: c:@S@IGESSolid_Block@F@Corner#1
 // Source: c:@S@IGESSolid_Block@F@DynamicType#1
 // Source: c:@S@IGESSolid_Block@F@IGESSolid_Block#
+// Source: c:@S@IGESSolid_Block@F@Init#&1$@S@gp_XYZ#S0_#S0_#S0_#
+// Source: c:@S@IGESSolid_Block@F@Size#1
 // Source: c:@S@IGESSolid_Block@F@TransformedCorner#1
+// Source: c:@S@IGESSolid_Block@F@TransformedXAxis#1
+// Source: c:@S@IGESSolid_Block@F@TransformedYAxis#1
+// Source: c:@S@IGESSolid_Block@F@TransformedZAxis#1
+// Source: c:@S@IGESSolid_Block@F@XAxis#1
 // Source: c:@S@IGESSolid_Block@F@XLength#1
+// Source: c:@S@IGESSolid_Block@F@YAxis#1
 // Source: c:@S@IGESSolid_Block@F@YLength#1
+// Source: c:@S@IGESSolid_Block@F@ZAxis#1
 // Source: c:@S@IGESSolid_Block@F@ZLength#1
 // Source: c:@S@IGESSolid_BooleanTree@F@DynamicType#1
 // Source: c:@S@IGESSolid_BooleanTree@F@IGESSolid_BooleanTree#
@@ -2168,12 +2245,15 @@
 // Source: c:@S@IGESSolid_BooleanTree@F@Length#1
 // Source: c:@S@IGESSolid_BooleanTree@F@Operand#I#1
 // Source: c:@S@IGESSolid_BooleanTree@F@Operation#I#1
+// Source: c:@S@IGESSolid_ConeFrustum@F@Axis#1
 // Source: c:@S@IGESSolid_ConeFrustum@F@DynamicType#1
 // Source: c:@S@IGESSolid_ConeFrustum@F@FaceCenter#1
 // Source: c:@S@IGESSolid_ConeFrustum@F@Height#1
 // Source: c:@S@IGESSolid_ConeFrustum@F@IGESSolid_ConeFrustum#
+// Source: c:@S@IGESSolid_ConeFrustum@F@Init#d#d#d#&1$@S@gp_XYZ#S0_#
 // Source: c:@S@IGESSolid_ConeFrustum@F@LargerRadius#1
 // Source: c:@S@IGESSolid_ConeFrustum@F@SmallerRadius#1
+// Source: c:@S@IGESSolid_ConeFrustum@F@TransformedAxis#1
 // Source: c:@S@IGESSolid_ConeFrustum@F@TransformedFaceCenter#1
 // Source: c:@S@IGESSolid_ConicalSurface@F@Axis#1
 // Source: c:@S@IGESSolid_ConicalSurface@F@DynamicType#1
@@ -2184,11 +2264,14 @@
 // Source: c:@S@IGESSolid_ConicalSurface@F@Radius#1
 // Source: c:@S@IGESSolid_ConicalSurface@F@ReferenceDir#1
 // Source: c:@S@IGESSolid_ConicalSurface@F@SemiAngle#1
+// Source: c:@S@IGESSolid_Cylinder@F@Axis#1
 // Source: c:@S@IGESSolid_Cylinder@F@DynamicType#1
 // Source: c:@S@IGESSolid_Cylinder@F@FaceCenter#1
 // Source: c:@S@IGESSolid_Cylinder@F@Height#1
 // Source: c:@S@IGESSolid_Cylinder@F@IGESSolid_Cylinder#
+// Source: c:@S@IGESSolid_Cylinder@F@Init#d#d#&1$@S@gp_XYZ#S0_#
 // Source: c:@S@IGESSolid_Cylinder@F@Radius#1
+// Source: c:@S@IGESSolid_Cylinder@F@TransformedAxis#1
 // Source: c:@S@IGESSolid_Cylinder@F@TransformedFaceCenter#1
 // Source: c:@S@IGESSolid_CylindricalSurface@F@Axis#1
 // Source: c:@S@IGESSolid_CylindricalSurface@F@DynamicType#1
@@ -2209,9 +2292,17 @@
 // Source: c:@S@IGESSolid_Ellipsoid@F@Center#1
 // Source: c:@S@IGESSolid_Ellipsoid@F@DynamicType#1
 // Source: c:@S@IGESSolid_Ellipsoid@F@IGESSolid_Ellipsoid#
+// Source: c:@S@IGESSolid_Ellipsoid@F@Init#&1$@S@gp_XYZ#S0_#S0_#S0_#
+// Source: c:@S@IGESSolid_Ellipsoid@F@Size#1
 // Source: c:@S@IGESSolid_Ellipsoid@F@TransformedCenter#1
+// Source: c:@S@IGESSolid_Ellipsoid@F@TransformedXAxis#1
+// Source: c:@S@IGESSolid_Ellipsoid@F@TransformedYAxis#1
+// Source: c:@S@IGESSolid_Ellipsoid@F@TransformedZAxis#1
+// Source: c:@S@IGESSolid_Ellipsoid@F@XAxis#1
 // Source: c:@S@IGESSolid_Ellipsoid@F@XLength#1
+// Source: c:@S@IGESSolid_Ellipsoid@F@YAxis#1
 // Source: c:@S@IGESSolid_Ellipsoid@F@YLength#1
+// Source: c:@S@IGESSolid_Ellipsoid@F@ZAxis#1
 // Source: c:@S@IGESSolid_Ellipsoid@F@ZLength#1
 // Source: c:@S@IGESSolid_Face@F@DynamicType#1
 // Source: c:@S@IGESSolid_Face@F@HasOuterLoop#1
@@ -2258,14 +2349,23 @@
 // Source: c:@S@IGESSolid_RightAngularWedge@F@Corner#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@DynamicType#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@IGESSolid_RightAngularWedge#
+// Source: c:@S@IGESSolid_RightAngularWedge@F@Init#&1$@S@gp_XYZ#d#S0_#S0_#S0_#
+// Source: c:@S@IGESSolid_RightAngularWedge@F@Size#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@TransformedCorner#1
+// Source: c:@S@IGESSolid_RightAngularWedge@F@TransformedXAxis#1
+// Source: c:@S@IGESSolid_RightAngularWedge@F@TransformedYAxis#1
+// Source: c:@S@IGESSolid_RightAngularWedge@F@TransformedZAxis#1
+// Source: c:@S@IGESSolid_RightAngularWedge@F@XAxis#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@XBigLength#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@XSmallLength#1
+// Source: c:@S@IGESSolid_RightAngularWedge@F@YAxis#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@YLength#1
+// Source: c:@S@IGESSolid_RightAngularWedge@F@ZAxis#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@ZLength#1
 // Source: c:@S@IGESSolid_SelectedComponent@F@Component#1
 // Source: c:@S@IGESSolid_SelectedComponent@F@DynamicType#1
 // Source: c:@S@IGESSolid_SelectedComponent@F@IGESSolid_SelectedComponent#
+// Source: c:@S@IGESSolid_SelectedComponent@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESSolid_BooleanTree#&1$@S@gp_XYZ#
 // Source: c:@S@IGESSolid_SelectedComponent@F@SelectPoint#1
 // Source: c:@S@IGESSolid_SelectedComponent@F@TransformedSelectPoint#1
 // Source: c:@S@IGESSolid_Shell@F@DynamicType#1
@@ -2290,21 +2390,28 @@
 // Source: c:@S@IGESSolid_SolidInstance@F@SetBrep#b#
 // Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@Curve#1
 // Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@DynamicType#1
+// Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@ExtrusionDirection#1
 // Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@ExtrusionLength#1
 // Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@IGESSolid_SolidOfLinearExtrusion#
+// Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#d#&1$@S@gp_XYZ#
+// Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@TransformedExtrusionDirection#1
+// Source: c:@S@IGESSolid_SolidOfRevolution@F@Axis#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@AxisPoint#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@Curve#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@DynamicType#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@Fraction#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@IGESSolid_SolidOfRevolution#
+// Source: c:@S@IGESSolid_SolidOfRevolution@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#d#&1$@S@gp_XYZ#S3_#
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@IsClosedToAxis#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@SetClosedToAxis#b#
+// Source: c:@S@IGESSolid_SolidOfRevolution@F@TransformedAxis#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@TransformedAxisPoint#1
 // Source: c:@S@IGESSolid_SpecificModule@F@DynamicType#1
 // Source: c:@S@IGESSolid_SpecificModule@F@IGESSolid_SpecificModule#
 // Source: c:@S@IGESSolid_Sphere@F@Center#1
 // Source: c:@S@IGESSolid_Sphere@F@DynamicType#1
 // Source: c:@S@IGESSolid_Sphere@F@IGESSolid_Sphere#
+// Source: c:@S@IGESSolid_Sphere@F@Init#d#&1$@S@gp_XYZ#
 // Source: c:@S@IGESSolid_Sphere@F@Radius#1
 // Source: c:@S@IGESSolid_Sphere@F@TransformedCenter#1
 // Source: c:@S@IGESSolid_SphericalSurface@F@Axis#1
@@ -2326,11 +2433,14 @@
 // Source: c:@S@IGESSolid_ToroidalSurface@F@MinorRadius#1
 // Source: c:@S@IGESSolid_ToroidalSurface@F@ReferenceDir#1
 // Source: c:@S@IGESSolid_ToroidalSurface@F@TransformedCenter#1
+// Source: c:@S@IGESSolid_Torus@F@Axis#1
 // Source: c:@S@IGESSolid_Torus@F@AxisPoint#1
 // Source: c:@S@IGESSolid_Torus@F@DiscRadius#1
 // Source: c:@S@IGESSolid_Torus@F@DynamicType#1
 // Source: c:@S@IGESSolid_Torus@F@IGESSolid_Torus#
+// Source: c:@S@IGESSolid_Torus@F@Init#d#d#&1$@S@gp_XYZ#S0_#
 // Source: c:@S@IGESSolid_Torus@F@MajorRadius#1
+// Source: c:@S@IGESSolid_Torus@F@TransformedAxis#1
 // Source: c:@S@IGESSolid_Torus@F@TransformedAxisPoint#1
 // Source: c:@S@IGESSolid_VertexList@F@DynamicType#1
 // Source: c:@S@IGESSolid_VertexList@F@IGESSolid_VertexList#
@@ -2681,17 +2791,21 @@
 // Source: c:@S@RWMesh_CafReader@F@Document#1
 // Source: c:@S@RWMesh_CafReader@F@DynamicType#1
 // Source: c:@S@RWMesh_CafReader@F@ExtraStatus#1
+// Source: c:@S@RWMesh_CafReader@F@FileCoordinateSystem#1
 // Source: c:@S@RWMesh_CafReader@F@FileLengthUnit#1
 // Source: c:@S@RWMesh_CafReader@F@HasFileCoordinateSystem#1
 // Source: c:@S@RWMesh_CafReader@F@HasSystemCoordinateSystem#1
 // Source: c:@S@RWMesh_CafReader@F@MemoryLimitMiB#1
 // Source: c:@S@RWMesh_CafReader@F@SetDocument#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#
 // Source: c:@S@RWMesh_CafReader@F@SetFileCoordinateSystem#$@E@RWMesh_CoordinateSystem#
+// Source: c:@S@RWMesh_CafReader@F@SetFileCoordinateSystem#&1$@S@gp_Ax3#
 // Source: c:@S@RWMesh_CafReader@F@SetFileLengthUnit#d#
 // Source: c:@S@RWMesh_CafReader@F@SetFillIncompleteDocument#b#
 // Source: c:@S@RWMesh_CafReader@F@SetMemoryLimitMiB#I#
 // Source: c:@S@RWMesh_CafReader@F@SetSystemCoordinateSystem#$@E@RWMesh_CoordinateSystem#
+// Source: c:@S@RWMesh_CafReader@F@SetSystemCoordinateSystem#&1$@S@gp_Ax3#
 // Source: c:@S@RWMesh_CafReader@F@SetSystemLengthUnit#d#
+// Source: c:@S@RWMesh_CafReader@F@SystemCoordinateSystem#1
 // Source: c:@S@RWMesh_CafReader@F@SystemLengthUnit#1
 // Source: c:@S@RWMesh_CafReader@F@ToFillIncompleteDocument#1
 // Source: c:@S@RWMesh_MaterialMap@F@CreateTextureFolder#
@@ -7276,6 +7390,8 @@
 // Source: c:@S@VrmlData_ArrayVec3d@F@Length#1
 // Source: c:@S@VrmlData_Box@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
 // Source: c:@S@VrmlData_Box@F@DynamicType#1
+// Source: c:@S@VrmlData_Box@F@SetSize#&1$@S@gp_XYZ#
+// Source: c:@S@VrmlData_Box@F@Size#1
 // Source: c:@S@VrmlData_Box@F@TShape#
 // Source: c:@S@VrmlData_Box@F@VrmlData_Box#
 // Source: c:@S@VrmlData_Color@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
@@ -7293,6 +7409,7 @@
 // Source: c:@S@VrmlData_Cone@F@TShape#
 // Source: c:@S@VrmlData_Cone@F@VrmlData_Cone#
 // Source: c:@S@VrmlData_Coordinate@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
+// Source: c:@S@VrmlData_Coordinate@F@Coordinate#I#1
 // Source: c:@S@VrmlData_Coordinate@F@DynamicType#1
 // Source: c:@S@VrmlData_Coordinate@F@VrmlData_Coordinate#
 // Source: c:@S@VrmlData_Cylinder@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
@@ -7366,6 +7483,7 @@
 // Source: c:@S@VrmlData_Node@F@WriteClosing#1
 // Source: c:@S@VrmlData_Normal@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
 // Source: c:@S@VrmlData_Normal@F@DynamicType#1
+// Source: c:@S@VrmlData_Normal@F@Normal#I#1
 // Source: c:@S@VrmlData_Normal@F@VrmlData_Normal#
 // Source: c:@S@VrmlData_ShapeNode@F@Appearance#1
 // Source: c:@S@VrmlData_ShapeNode@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
@@ -7391,9 +7509,15 @@
 // Source: c:@S@VrmlData_TextureCoordinate@F@DynamicType#1
 // Source: c:@S@VrmlData_TextureCoordinate@F@Length#
 // Source: c:@S@VrmlData_TextureCoordinate@F@VrmlData_TextureCoordinate#
+// Source: c:@S@VrmlData_TextureTransform@F@Center#1
 // Source: c:@S@VrmlData_TextureTransform@F@DynamicType#1
 // Source: c:@S@VrmlData_TextureTransform@F@Rotation#1
+// Source: c:@S@VrmlData_TextureTransform@F@Scale#1
+// Source: c:@S@VrmlData_TextureTransform@F@SetCenter#&1$@S@gp_XY#
 // Source: c:@S@VrmlData_TextureTransform@F@SetRotation#d#
+// Source: c:@S@VrmlData_TextureTransform@F@SetScale#&1$@S@gp_XY#
+// Source: c:@S@VrmlData_TextureTransform@F@SetTranslation#&1$@S@gp_XY#
+// Source: c:@S@VrmlData_TextureTransform@F@Translation#1
 // Source: c:@S@VrmlData_UnknownNode@F@DynamicType#1
 // Source: c:@S@VrmlData_UnknownNode@F@IsDefault#1
 // Source: c:@S@VrmlData_UnknownNode@F@VrmlData_UnknownNode#
@@ -7415,7 +7539,9 @@
 // Source: c:@S@Vrml_IndexedFaceSet@F@Vrml_IndexedFaceSet#
 // Source: c:@S@Vrml_IndexedLineSet@F@DynamicType#1
 // Source: c:@S@Vrml_IndexedLineSet@F@Vrml_IndexedLineSet#
+// Source: c:@S@Vrml_LOD@F@Center#1
 // Source: c:@S@Vrml_LOD@F@DynamicType#1
+// Source: c:@S@Vrml_LOD@F@SetCenter#&1$@S@gp_Vec#
 // Source: c:@S@Vrml_LOD@F@Vrml_LOD#
 // Source: c:@S@Vrml_Material@F@DynamicType#1
 // Source: c:@S@Vrml_Material@F@Vrml_Material#
@@ -20422,6 +20548,22 @@ public sealed class IGESAppliNodalDisplAndRot : IDisposable
         return global::OcctSharp.IGESDimenGeneralNote.FromNative(handleValue, "occtsharp_generated_igesappli_nodal_displ_and_rot_method_note_0");
     }
 
+    /// <summary>Invokes OCCT IGESAppli_NodalDisplAndRot::RotationalParameter.</summary>
+    public global::OcctSharp.Values.Coordinates3d RotationalParameter(int nodeNum, int caseNum)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESAppliNodalDisplAndRotMethodRotationalParameter0(handle, nodeNum, caseNum, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_igesappli_nodal_displ_and_rot_method_rotational_parameter_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESAppli_NodalDisplAndRot::TranslationParameter.</summary>
+    public global::OcctSharp.Values.Coordinates3d TranslationParameter(int nodeNum, int caseNum)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESAppliNodalDisplAndRotMethodTranslationParameter0(handle, nodeNum, caseNum, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_igesappli_nodal_displ_and_rot_method_translation_parameter_0");
+        return resultValue;
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -20667,6 +20809,13 @@ public sealed class IGESAppliNode : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESAppliNodeMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_igesappli_node_method_dynamic_type_0");
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_igesappli_node_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT IGESAppli_Node::Init.</summary>
+    public void Init(global::OcctSharp.Values.Coordinates3d aCoord, IGESGeomTransformationMatrix? aCoordSystem)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESAppliNodeMethodInit0(handle, aCoord, aCoordSystem is null ? nint.Zero : aCoordSystem.NativeHandle.DangerousGetHandle()), "occtsharp_generated_igesappli_node_method_init_0");
     }
 
     /// <summary>Invokes OCCT IGESAppli_Node::System.</summary>
@@ -24343,6 +24492,13 @@ public sealed class IGESBasicSingularSubfigure : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT IGESBasic_SingularSubfigure::Init.</summary>
+    public void Init(IGESBasicSubfigureDef? aSubfigureDef, global::OcctSharp.Values.Coordinates3d aTranslation, bool hasScale, double aScale)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESBasicSingularSubfigureMethodInit0(handle, aSubfigureDef is null ? nint.Zero : aSubfigureDef.NativeHandle.DangerousGetHandle(), aTranslation, hasScale ? 1 : 0, aScale), "occtsharp_generated_igesbasic_singular_subfigure_method_init_0");
+    }
+
     /// <summary>Invokes OCCT IGESBasic_SingularSubfigure::ScaleFactor.</summary>
     public double ScaleFactor()
     {
@@ -24357,6 +24513,22 @@ public sealed class IGESBasicSingularSubfigure : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESBasicSingularSubfigureMethodSubfigure0(handle, out nint handleValue), "occtsharp_generated_igesbasic_singular_subfigure_method_subfigure_0");
         return global::OcctSharp.IGESBasicSubfigureDef.FromNative(handleValue, "occtsharp_generated_igesbasic_singular_subfigure_method_subfigure_0");
+    }
+
+    /// <summary>Invokes OCCT IGESBasic_SingularSubfigure::TransformedTranslation.</summary>
+    public global::OcctSharp.Values.Coordinates3d TransformedTranslation()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESBasicSingularSubfigureMethodTransformedTranslation0(handle, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_igesbasic_singular_subfigure_method_transformed_translation_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESBasic_SingularSubfigure::Translation.</summary>
+    public global::OcctSharp.Values.Coordinates3d Translation()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESBasicSingularSubfigureMethodTranslation0(handle, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_igesbasic_singular_subfigure_method_translation_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -29921,6 +30093,13 @@ public sealed class IGESDimenAngularDimension : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT IGESDimen_AngularDimension::Init.</summary>
+    public void Init(IGESDimenGeneralNote? aNote, IGESDimenWitnessLine? aLine, IGESDimenWitnessLine? anotherLine, global::OcctSharp.Values.Coordinates2d aVertex, double aRadius, IGESDimenLeaderArrow? aLeader, IGESDimenLeaderArrow? anotherLeader)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenAngularDimensionMethodInit0(handle, aNote is null ? nint.Zero : aNote.NativeHandle.DangerousGetHandle(), aLine is null ? nint.Zero : aLine.NativeHandle.DangerousGetHandle(), anotherLine is null ? nint.Zero : anotherLine.NativeHandle.DangerousGetHandle(), aVertex, aRadius, aLeader is null ? nint.Zero : aLeader.NativeHandle.DangerousGetHandle(), anotherLeader is null ? nint.Zero : anotherLeader.NativeHandle.DangerousGetHandle()), "occtsharp_generated_igesdimen_angular_dimension_method_init_0");
+    }
+
     /// <summary>Invokes OCCT IGESDimen_AngularDimension::Note.</summary>
     public IGESDimenGeneralNote? Note()
     {
@@ -29951,6 +30130,22 @@ public sealed class IGESDimenAngularDimension : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenAngularDimensionMethodSecondWitnessLine0(handle, out nint handleValue), "occtsharp_generated_igesdimen_angular_dimension_method_second_witness_line_0");
         return global::OcctSharp.IGESDimenWitnessLine.FromNative(handleValue, "occtsharp_generated_igesdimen_angular_dimension_method_second_witness_line_0");
+    }
+
+    /// <summary>Invokes OCCT IGESDimen_AngularDimension::TransformedVertex.</summary>
+    public global::OcctSharp.Values.Point2d TransformedVertex()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenAngularDimensionMethodTransformedVertex0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesdimen_angular_dimension_method_transformed_vertex_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESDimen_AngularDimension::Vertex.</summary>
+    public global::OcctSharp.Values.Point2d Vertex()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenAngularDimensionMethodVertex0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesdimen_angular_dimension_method_vertex_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -30037,11 +30232,50 @@ public sealed class IGESDimenBasicDimension : IDisposable
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_igesdimen_basic_dimension_method_dynamic_type_0");
     }
 
+    /// <summary>Invokes OCCT IGESDimen_BasicDimension::Init.</summary>
+    public void Init(int nbPropVal, global::OcctSharp.Values.Coordinates2d lowerLeft, global::OcctSharp.Values.Coordinates2d lowerRight, global::OcctSharp.Values.Coordinates2d upperRight, global::OcctSharp.Values.Coordinates2d upperLeft)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenBasicDimensionMethodInit0(handle, nbPropVal, lowerLeft, lowerRight, upperRight, upperLeft), "occtsharp_generated_igesdimen_basic_dimension_method_init_0");
+    }
+
+    /// <summary>Invokes OCCT IGESDimen_BasicDimension::LowerLeft.</summary>
+    public global::OcctSharp.Values.Point2d LowerLeft()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenBasicDimensionMethodLowerLeft0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesdimen_basic_dimension_method_lower_left_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESDimen_BasicDimension::LowerRight.</summary>
+    public global::OcctSharp.Values.Point2d LowerRight()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenBasicDimensionMethodLowerRight0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesdimen_basic_dimension_method_lower_right_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESDimen_BasicDimension::NbPropertyValues.</summary>
     public int NbPropertyValues()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenBasicDimensionMethodNbPropertyValues0(handle, out int resultValue), "occtsharp_generated_igesdimen_basic_dimension_method_nb_property_values_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESDimen_BasicDimension::UpperLeft.</summary>
+    public global::OcctSharp.Values.Point2d UpperLeft()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenBasicDimensionMethodUpperLeft0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesdimen_basic_dimension_method_upper_left_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESDimen_BasicDimension::UpperRight.</summary>
+    public global::OcctSharp.Values.Point2d UpperRight()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenBasicDimensionMethodUpperRight0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesdimen_basic_dimension_method_upper_right_0");
         return resultValue;
     }
 
@@ -30431,6 +30665,14 @@ public sealed class IGESDimenDiameterDimension : IDisposable
         handle = CreateHandle(nativeHandle, "IGESDimenDiameterDimensionCreate0");
     }
 
+    /// <summary>Invokes OCCT IGESDimen_DiameterDimension::Center.</summary>
+    public global::OcctSharp.Values.Point2d Center()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenDiameterDimensionMethodCenter0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesdimen_diameter_dimension_method_center_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESDimen_DiameterDimension::DynamicType.</summary>
     public StandardType? DynamicType()
     {
@@ -30455,6 +30697,13 @@ public sealed class IGESDimenDiameterDimension : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT IGESDimen_DiameterDimension::Init.</summary>
+    public void Init(IGESDimenGeneralNote? aNote, IGESDimenLeaderArrow? aLeader, IGESDimenLeaderArrow? anotherLeader, global::OcctSharp.Values.Coordinates2d aCenter)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenDiameterDimensionMethodInit0(handle, aNote is null ? nint.Zero : aNote.NativeHandle.DangerousGetHandle(), aLeader is null ? nint.Zero : aLeader.NativeHandle.DangerousGetHandle(), anotherLeader is null ? nint.Zero : anotherLeader.NativeHandle.DangerousGetHandle(), aCenter), "occtsharp_generated_igesdimen_diameter_dimension_method_init_0");
+    }
+
     /// <summary>Invokes OCCT IGESDimen_DiameterDimension::Note.</summary>
     public IGESDimenGeneralNote? Note()
     {
@@ -30469,6 +30718,14 @@ public sealed class IGESDimenDiameterDimension : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenDiameterDimensionMethodSecondLeader0(handle, out nint handleValue), "occtsharp_generated_igesdimen_diameter_dimension_method_second_leader_0");
         return global::OcctSharp.IGESDimenLeaderArrow.FromNative(handleValue, "occtsharp_generated_igesdimen_diameter_dimension_method_second_leader_0");
+    }
+
+    /// <summary>Invokes OCCT IGESDimen_DiameterDimension::TransformedCenter.</summary>
+    public global::OcctSharp.Values.Point2d TransformedCenter()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenDiameterDimensionMethodTransformedCenter0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesdimen_diameter_dimension_method_transformed_center_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -31899,6 +32156,14 @@ public sealed class IGESDimenLeaderArrow : IDisposable
         handle = CreateHandle(nativeHandle, "IGESDimenLeaderArrowCreate0");
     }
 
+    /// <summary>Invokes OCCT IGESDimen_LeaderArrow::ArrowHead.</summary>
+    public global::OcctSharp.Values.Point2d ArrowHead()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenLeaderArrowMethodArrowHead0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesdimen_leader_arrow_method_arrow_head_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESDimen_LeaderArrow::ArrowHeadHeight.</summary>
     public double ArrowHeadHeight()
     {
@@ -31928,6 +32193,14 @@ public sealed class IGESDimenLeaderArrow : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenLeaderArrowMethodNbSegments0(handle, out int resultValue), "occtsharp_generated_igesdimen_leader_arrow_method_nb_segments_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESDimen_LeaderArrow::SegmentTail.</summary>
+    public global::OcctSharp.Values.Point2d SegmentTail(int index)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenLeaderArrowMethodSegmentTail0(handle, index, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesdimen_leader_arrow_method_segment_tail_0");
         return resultValue;
     }
 
@@ -33098,6 +33371,14 @@ public sealed class IGESDimenRadiusDimension : IDisposable
         handle = CreateHandle(nativeHandle, "IGESDimenRadiusDimensionCreate0");
     }
 
+    /// <summary>Invokes OCCT IGESDimen_RadiusDimension::Center.</summary>
+    public global::OcctSharp.Values.Point2d Center()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenRadiusDimensionMethodCenter0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesdimen_radius_dimension_method_center_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESDimen_RadiusDimension::DynamicType.</summary>
     public StandardType? DynamicType()
     {
@@ -33112,6 +33393,13 @@ public sealed class IGESDimenRadiusDimension : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenRadiusDimensionMethodHasLeader20(handle, out int resultValue), "occtsharp_generated_igesdimen_radius_dimension_method_has_leader2_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT IGESDimen_RadiusDimension::Init.</summary>
+    public void Init(IGESDimenGeneralNote? aNote, IGESDimenLeaderArrow? anArrow, global::OcctSharp.Values.Coordinates2d arcCenter, IGESDimenLeaderArrow? anotherArrow)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDimenRadiusDimensionMethodInit0(handle, aNote is null ? nint.Zero : aNote.NativeHandle.DangerousGetHandle(), anArrow is null ? nint.Zero : anArrow.NativeHandle.DangerousGetHandle(), arcCenter, anotherArrow is null ? nint.Zero : anotherArrow.NativeHandle.DangerousGetHandle()), "occtsharp_generated_igesdimen_radius_dimension_method_init_0");
     }
 
     /// <summary>Invokes OCCT IGESDimen_RadiusDimension::InitForm.</summary>
@@ -34115,6 +34403,13 @@ public sealed class IGESDrawConnectPoint : IDisposable
         return global::OcctSharp.IGESGraphTextDisplayTemplate.FromNative(handleValue, "occtsharp_generated_igesdraw_connect_point_method_identifier_template_0");
     }
 
+    /// <summary>Invokes OCCT IGESDraw_ConnectPoint::Init.</summary>
+    public void Init(global::OcctSharp.Values.Coordinates3d aPoint, IGESDataIGESEntity? aDisplaySymbol, int aTypeFlag, int aFunctionFlag, TCollectionHAsciiString? aFunctionIdentifier, IGESGraphTextDisplayTemplate? anIdentifierTemplate, TCollectionHAsciiString? aFunctionName, IGESGraphTextDisplayTemplate? aFunctionTemplate, int aPointIdentifier, int aFunctionCode, int aSwapFlag, IGESDataIGESEntity? anOwnerSubfigure)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawConnectPointMethodInit0(handle, aPoint, aDisplaySymbol is null ? nint.Zero : aDisplaySymbol.NativeHandle.DangerousGetHandle(), aTypeFlag, aFunctionFlag, aFunctionIdentifier is null ? nint.Zero : aFunctionIdentifier.NativeHandle.DangerousGetHandle(), anIdentifierTemplate is null ? nint.Zero : anIdentifierTemplate.NativeHandle.DangerousGetHandle(), aFunctionName is null ? nint.Zero : aFunctionName.NativeHandle.DangerousGetHandle(), aFunctionTemplate is null ? nint.Zero : aFunctionTemplate.NativeHandle.DangerousGetHandle(), aPointIdentifier, aFunctionCode, aSwapFlag, anOwnerSubfigure is null ? nint.Zero : anOwnerSubfigure.NativeHandle.DangerousGetHandle()), "occtsharp_generated_igesdraw_connect_point_method_init_0");
+    }
+
     /// <summary>Invokes OCCT IGESDraw_ConnectPoint::OwnerSubfigure.</summary>
     public IGESDataIGESEntity? OwnerSubfigure()
     {
@@ -34279,6 +34574,22 @@ public sealed class IGESDrawDrawing : IDisposable
         return global::OcctSharp.IGESDataViewKindEntity.FromNative(handleValue, "occtsharp_generated_igesdraw_drawing_method_view_item_0");
     }
 
+    /// <summary>Invokes OCCT IGESDraw_Drawing::ViewOrigin.</summary>
+    public global::OcctSharp.Values.Point2d ViewOrigin(int tViewIndex)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawDrawingMethodViewOrigin0(handle, tViewIndex, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesdraw_drawing_method_view_origin_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESDraw_Drawing::ViewToDrawing.</summary>
+    public global::OcctSharp.Values.Coordinates2d ViewToDrawing(int numView, global::OcctSharp.Values.Coordinates3d viewCoords)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawDrawingMethodViewToDrawing0(handle, numView, viewCoords, out global::OcctSharp.Values.Coordinates2d resultValue), "occtsharp_generated_igesdraw_drawing_method_view_to_drawing_0");
+        return resultValue;
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -34401,6 +34712,22 @@ public sealed class IGESDrawDrawingWithRotation : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawDrawingWithRotationMethodViewItem0(handle, index, out nint handleValue), "occtsharp_generated_igesdraw_drawing_with_rotation_method_view_item_0");
         return global::OcctSharp.IGESDataViewKindEntity.FromNative(handleValue, "occtsharp_generated_igesdraw_drawing_with_rotation_method_view_item_0");
+    }
+
+    /// <summary>Invokes OCCT IGESDraw_DrawingWithRotation::ViewOrigin.</summary>
+    public global::OcctSharp.Values.Point2d ViewOrigin(int index)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawDrawingWithRotationMethodViewOrigin0(handle, index, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesdraw_drawing_with_rotation_method_view_origin_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESDraw_DrawingWithRotation::ViewToDrawing.</summary>
+    public global::OcctSharp.Values.Coordinates2d ViewToDrawing(int numView, global::OcctSharp.Values.Coordinates3d viewCoords)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawDrawingWithRotationMethodViewToDrawing0(handle, numView, viewCoords, out global::OcctSharp.Values.Coordinates2d resultValue), "occtsharp_generated_igesdraw_drawing_with_rotation_method_view_to_drawing_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -34758,12 +35085,36 @@ public sealed class IGESDrawNetworkSubfigure : IDisposable
         return global::OcctSharp.TCollectionHAsciiString.FromNative(handleValue, "occtsharp_generated_igesdraw_network_subfigure_method_reference_designator_0");
     }
 
+    /// <summary>Invokes OCCT IGESDraw_NetworkSubfigure::ScaleFactors.</summary>
+    public global::OcctSharp.Values.Coordinates3d ScaleFactors()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawNetworkSubfigureMethodScaleFactors0(handle, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_igesdraw_network_subfigure_method_scale_factors_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESDraw_NetworkSubfigure::SubfigureDefinition.</summary>
     public IGESDrawNetworkSubfigureDef? SubfigureDefinition()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawNetworkSubfigureMethodSubfigureDefinition0(handle, out nint handleValue), "occtsharp_generated_igesdraw_network_subfigure_method_subfigure_definition_0");
         return global::OcctSharp.IGESDrawNetworkSubfigureDef.FromNative(handleValue, "occtsharp_generated_igesdraw_network_subfigure_method_subfigure_definition_0");
+    }
+
+    /// <summary>Invokes OCCT IGESDraw_NetworkSubfigure::TransformedTranslation.</summary>
+    public global::OcctSharp.Values.Coordinates3d TransformedTranslation()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawNetworkSubfigureMethodTransformedTranslation0(handle, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_igesdraw_network_subfigure_method_transformed_translation_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESDraw_NetworkSubfigure::Translation.</summary>
+    public global::OcctSharp.Values.Coordinates3d Translation()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawNetworkSubfigureMethodTranslation0(handle, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_igesdraw_network_subfigure_method_translation_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT IGESDraw_NetworkSubfigure::TypeFlag.</summary>
@@ -35030,6 +35381,14 @@ public sealed class IGESDrawPerspectiveView : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT IGESDraw_PerspectiveView::BottomRight.</summary>
+    public global::OcctSharp.Values.Point2d BottomRight()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawPerspectiveViewMethodBottomRight0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesdraw_perspective_view_method_bottom_right_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESDraw_PerspectiveView::CenterOfProjection.</summary>
     public Point3d CenterOfProjection()
     {
@@ -35062,12 +35421,27 @@ public sealed class IGESDrawPerspectiveView : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT IGESDraw_PerspectiveView::Init.</summary>
+    public void Init(int aViewNumber, double aScaleFactor, global::OcctSharp.Values.Coordinates3d aViewNormalVector, global::OcctSharp.Values.Coordinates3d aViewReferencePoint, global::OcctSharp.Values.Coordinates3d aCenterOfProjection, global::OcctSharp.Values.Coordinates3d aViewUpVector, double aViewPlaneDistance, global::OcctSharp.Values.Coordinates2d aTopLeft, global::OcctSharp.Values.Coordinates2d aBottomRight, int aDepthClip, double aBackPlaneDistance, double aFrontPlaneDistance)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawPerspectiveViewMethodInit0(handle, aViewNumber, aScaleFactor, aViewNormalVector, aViewReferencePoint, aCenterOfProjection, aViewUpVector, aViewPlaneDistance, aTopLeft, aBottomRight, aDepthClip, aBackPlaneDistance, aFrontPlaneDistance), "occtsharp_generated_igesdraw_perspective_view_method_init_0");
+    }
+
     /// <summary>Invokes OCCT IGESDraw_PerspectiveView::IsSingle.</summary>
     public bool IsSingle()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawPerspectiveViewMethodIsSingle0(handle, out int resultValue), "occtsharp_generated_igesdraw_perspective_view_method_is_single_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT IGESDraw_PerspectiveView::ModelToView.</summary>
+    public global::OcctSharp.Values.Coordinates3d ModelToView(global::OcctSharp.Values.Coordinates3d coords)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawPerspectiveViewMethodModelToView0(handle, coords, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_igesdraw_perspective_view_method_model_to_view_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT IGESDraw_PerspectiveView::NbViews.</summary>
@@ -35086,6 +35460,14 @@ public sealed class IGESDrawPerspectiveView : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT IGESDraw_PerspectiveView::TopLeft.</summary>
+    public global::OcctSharp.Values.Point2d TopLeft()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawPerspectiveViewMethodTopLeft0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesdraw_perspective_view_method_top_left_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESDraw_PerspectiveView::ViewItem.</summary>
     public IGESDataViewKindEntity? ViewItem(int num)
     {
@@ -35100,6 +35482,14 @@ public sealed class IGESDrawPerspectiveView : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawPerspectiveViewMethodViewMatrix0(handle, out nint handleValue), "occtsharp_generated_igesdraw_perspective_view_method_view_matrix_0");
         return global::OcctSharp.IGESDataTransfEntity.FromNative(handleValue, "occtsharp_generated_igesdraw_perspective_view_method_view_matrix_0");
+    }
+
+    /// <summary>Invokes OCCT IGESDraw_PerspectiveView::ViewNormalVector.</summary>
+    public global::OcctSharp.Values.Vector3d ViewNormalVector()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawPerspectiveViewMethodViewNormalVector0(handle, out global::OcctSharp.Values.Vector3d resultValue), "occtsharp_generated_igesdraw_perspective_view_method_view_normal_vector_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT IGESDraw_PerspectiveView::ViewNumber.</summary>
@@ -35124,6 +35514,14 @@ public sealed class IGESDrawPerspectiveView : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawPerspectiveViewMethodViewReferencePoint0(handle, out Point3dRaw resultValue), "occtsharp_generated_igesdraw_perspective_view_method_view_reference_point_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT IGESDraw_PerspectiveView::ViewUpVector.</summary>
+    public global::OcctSharp.Values.Vector3d ViewUpVector()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawPerspectiveViewMethodViewUpVector0(handle, out global::OcctSharp.Values.Vector3d resultValue), "occtsharp_generated_igesdraw_perspective_view_method_view_up_vector_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -36105,6 +36503,14 @@ public sealed class IGESDrawView : IDisposable
         return global::OcctSharp.IGESGeomPlane.FromNative(handleValue, "occtsharp_generated_igesdraw_view_method_left_plane_0");
     }
 
+    /// <summary>Invokes OCCT IGESDraw_View::ModelToView.</summary>
+    public global::OcctSharp.Values.Coordinates3d ModelToView(global::OcctSharp.Values.Coordinates3d coords)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESDrawViewMethodModelToView0(handle, coords, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_igesdraw_view_method_model_to_view_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESDraw_View::NbViews.</summary>
     public int NbViews()
     {
@@ -36610,6 +37016,14 @@ public sealed class IGESGeomBSplineCurve : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomBSplineCurveMethodNbPoles0(handle, out int resultValue), "occtsharp_generated_igesgeom_bspline_curve_method_nb_poles_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_BSplineCurve::Normal.</summary>
+    public global::OcctSharp.Values.Coordinates3d Normal()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomBSplineCurveMethodNormal0(handle, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_igesgeom_bspline_curve_method_normal_0");
         return resultValue;
     }
 
@@ -37283,12 +37697,43 @@ public sealed class IGESGeomCircularArc : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT IGESGeom_CircularArc::Axis.</summary>
+    public global::OcctSharp.Values.Direction3d Axis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomCircularArcMethodAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igesgeom_circular_arc_method_axis_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_CircularArc::Center.</summary>
+    public global::OcctSharp.Values.Point2d Center()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomCircularArcMethodCenter0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesgeom_circular_arc_method_center_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESGeom_CircularArc::DynamicType.</summary>
     public StandardType? DynamicType()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomCircularArcMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_igesgeom_circular_arc_method_dynamic_type_0");
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_igesgeom_circular_arc_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_CircularArc::EndPoint.</summary>
+    public global::OcctSharp.Values.Point2d EndPoint()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomCircularArcMethodEndPoint0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesgeom_circular_arc_method_end_point_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_CircularArc::Init.</summary>
+    public void Init(double aZT, global::OcctSharp.Values.Coordinates2d aCenter, global::OcctSharp.Values.Coordinates2d aStart, global::OcctSharp.Values.Coordinates2d anEnd)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomCircularArcMethodInit0(handle, aZT, aCenter, aStart, anEnd), "occtsharp_generated_igesgeom_circular_arc_method_init_0");
     }
 
     /// <summary>Invokes OCCT IGESGeom_CircularArc::IsClosed.</summary>
@@ -37304,6 +37749,22 @@ public sealed class IGESGeomCircularArc : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomCircularArcMethodRadius0(handle, out double resultValue), "occtsharp_generated_igesgeom_circular_arc_method_radius_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_CircularArc::StartPoint.</summary>
+    public global::OcctSharp.Values.Point2d StartPoint()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomCircularArcMethodStartPoint0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesgeom_circular_arc_method_start_point_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_CircularArc::TransformedAxis.</summary>
+    public global::OcctSharp.Values.Direction3d TransformedAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomCircularArcMethodTransformedAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igesgeom_circular_arc_method_transformed_axis_0");
         return resultValue;
     }
 
@@ -37515,6 +37976,14 @@ public sealed class IGESGeomConicArc : IDisposable
         handle = CreateHandle(nativeHandle, "IGESGeomConicArcCreate0");
     }
 
+    /// <summary>Invokes OCCT IGESGeom_ConicArc::Axis.</summary>
+    public global::OcctSharp.Values.Direction3d Axis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomConicArcMethodAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igesgeom_conic_arc_method_axis_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESGeom_ConicArc::ComputedFormNumber.</summary>
     public int ComputedFormNumber()
     {
@@ -37529,6 +37998,21 @@ public sealed class IGESGeomConicArc : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomConicArcMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_igesgeom_conic_arc_method_dynamic_type_0");
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_igesgeom_conic_arc_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_ConicArc::EndPoint.</summary>
+    public global::OcctSharp.Values.Point2d EndPoint()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomConicArcMethodEndPoint0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesgeom_conic_arc_method_end_point_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_ConicArc::Init.</summary>
+    public void Init(double a, double b, double c, double d, double e, double f, double zT, global::OcctSharp.Values.Coordinates2d aStart, global::OcctSharp.Values.Coordinates2d anEnd)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomConicArcMethodInit0(handle, a, b, c, d, e, f, zT, aStart, anEnd), "occtsharp_generated_igesgeom_conic_arc_method_init_0");
     }
 
     /// <summary>Invokes OCCT IGESGeom_ConicArc::IsClosed.</summary>
@@ -37569,6 +38053,22 @@ public sealed class IGESGeomConicArc : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomConicArcMethodOwnCorrect0(handle, out int resultValue), "occtsharp_generated_igesgeom_conic_arc_method_own_correct_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_ConicArc::StartPoint.</summary>
+    public global::OcctSharp.Values.Point2d StartPoint()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomConicArcMethodStartPoint0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesgeom_conic_arc_method_start_point_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_ConicArc::TransformedAxis.</summary>
+    public global::OcctSharp.Values.Direction3d TransformedAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomConicArcMethodTransformedAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igesgeom_conic_arc_method_transformed_axis_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT IGESGeom_ConicArc::TransformedEndPoint.</summary>
@@ -37755,6 +38255,22 @@ public sealed class IGESGeomCopiousData : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomCopiousDataMethodTransformedPoint0(handle, anIndex, out Point3dRaw resultValue), "occtsharp_generated_igesgeom_copious_data_method_transformed_point_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_CopiousData::TransformedVector.</summary>
+    public global::OcctSharp.Values.Vector3d TransformedVector(int anIndex)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomCopiousDataMethodTransformedVector0(handle, anIndex, out global::OcctSharp.Values.Vector3d resultValue), "occtsharp_generated_igesgeom_copious_data_method_transformed_vector_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_CopiousData::Vector.</summary>
+    public global::OcctSharp.Values.Vector3d Vector(int anIndex)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomCopiousDataMethodVector0(handle, anIndex, out global::OcctSharp.Values.Vector3d resultValue), "occtsharp_generated_igesgeom_copious_data_method_vector_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT IGESGeom_CopiousData::ZPlane.</summary>
@@ -37980,6 +38496,29 @@ public sealed class IGESGeomDirection : IDisposable
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_igesgeom_direction_method_dynamic_type_0");
     }
 
+    /// <summary>Invokes OCCT IGESGeom_Direction::Init.</summary>
+    public void Init(global::OcctSharp.Values.Coordinates3d aDirection)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomDirectionMethodInit0(handle, aDirection), "occtsharp_generated_igesgeom_direction_method_init_0");
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_Direction::TransformedValue.</summary>
+    public global::OcctSharp.Values.Vector3d TransformedValue()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomDirectionMethodTransformedValue0(handle, out global::OcctSharp.Values.Vector3d resultValue), "occtsharp_generated_igesgeom_direction_method_transformed_value_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_Direction::Value.</summary>
+    public global::OcctSharp.Values.Vector3d Value()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomDirectionMethodValue0(handle, out global::OcctSharp.Values.Vector3d resultValue), "occtsharp_generated_igesgeom_direction_method_value_0");
+        return resultValue;
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -38088,12 +38627,27 @@ public sealed class IGESGeomFlash : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT IGESGeom_Flash::Init.</summary>
+    public void Init(global::OcctSharp.Values.Coordinates2d aPoint, double aDim, double anotherDim, double aRotation, IGESDataIGESEntity? aReference)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomFlashMethodInit0(handle, aPoint, aDim, anotherDim, aRotation, aReference is null ? nint.Zero : aReference.NativeHandle.DangerousGetHandle()), "occtsharp_generated_igesgeom_flash_method_init_0");
+    }
+
     /// <summary>Invokes OCCT IGESGeom_Flash::ReferenceEntity.</summary>
     public IGESDataIGESEntity? ReferenceEntity()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomFlashMethodReferenceEntity0(handle, out nint handleValue), "occtsharp_generated_igesgeom_flash_method_reference_entity_0");
         return global::OcctSharp.IGESDataIGESEntity.FromNative(handleValue, "occtsharp_generated_igesgeom_flash_method_reference_entity_0");
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_Flash::ReferencePoint.</summary>
+    public global::OcctSharp.Values.Point2d ReferencePoint()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomFlashMethodReferencePoint0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesgeom_flash_method_reference_point_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT IGESGeom_Flash::Rotation.</summary>
@@ -38303,6 +38857,13 @@ public sealed class IGESGeomLine : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT IGESGeom_Line::Init.</summary>
+    public void Init(global::OcctSharp.Values.Coordinates3d aStart, global::OcctSharp.Values.Coordinates3d anEnd)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomLineMethodInit0(handle, aStart, anEnd), "occtsharp_generated_igesgeom_line_method_init_0");
+    }
+
     /// <summary>Invokes OCCT IGESGeom_Line::SetInfinite.</summary>
     public void SetInfinite(int status)
     {
@@ -38482,6 +39043,21 @@ public sealed class IGESGeomOffsetCurve : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT IGESGeom_OffsetCurve::Init.</summary>
+    public void Init(IGESDataIGESEntity? aBaseCurve, int anOffsetType, IGESDataIGESEntity? aFunction, int aFunctionCoord, int aTaperedOffsetType, double offDistance1, double arcLength1, double offDistance2, double arcLength2, global::OcctSharp.Values.Coordinates3d aNormalVec, double anOffsetParam, double anotherOffsetParam)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomOffsetCurveMethodInit0(handle, aBaseCurve is null ? nint.Zero : aBaseCurve.NativeHandle.DangerousGetHandle(), anOffsetType, aFunction is null ? nint.Zero : aFunction.NativeHandle.DangerousGetHandle(), aFunctionCoord, aTaperedOffsetType, offDistance1, arcLength1, offDistance2, arcLength2, aNormalVec, anOffsetParam, anotherOffsetParam), "occtsharp_generated_igesgeom_offset_curve_method_init_0");
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_OffsetCurve::NormalVector.</summary>
+    public global::OcctSharp.Values.Vector3d NormalVector()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomOffsetCurveMethodNormalVector0(handle, out global::OcctSharp.Values.Vector3d resultValue), "occtsharp_generated_igesgeom_offset_curve_method_normal_vector_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESGeom_OffsetCurve::OffsetType.</summary>
     public int OffsetType()
     {
@@ -38511,6 +39087,14 @@ public sealed class IGESGeomOffsetCurve : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomOffsetCurveMethodTaperedOffsetType0(handle, out int resultValue), "occtsharp_generated_igesgeom_offset_curve_method_tapered_offset_type_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_OffsetCurve::TransformedNormalVector.</summary>
+    public global::OcctSharp.Values.Vector3d TransformedNormalVector()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomOffsetCurveMethodTransformedNormalVector0(handle, out global::OcctSharp.Values.Vector3d resultValue), "occtsharp_generated_igesgeom_offset_curve_method_transformed_normal_vector_0");
         return resultValue;
     }
 
@@ -38606,12 +39190,35 @@ public sealed class IGESGeomOffsetSurface : IDisposable
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_igesgeom_offset_surface_method_dynamic_type_0");
     }
 
+    /// <summary>Invokes OCCT IGESGeom_OffsetSurface::Init.</summary>
+    public void Init(global::OcctSharp.Values.Coordinates3d anIndicatoR, double aDistance, IGESDataIGESEntity? aSurface)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomOffsetSurfaceMethodInit0(handle, anIndicatoR, aDistance, aSurface is null ? nint.Zero : aSurface.NativeHandle.DangerousGetHandle()), "occtsharp_generated_igesgeom_offset_surface_method_init_0");
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_OffsetSurface::OffsetIndicator.</summary>
+    public global::OcctSharp.Values.Vector3d OffsetIndicator()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomOffsetSurfaceMethodOffsetIndicator0(handle, out global::OcctSharp.Values.Vector3d resultValue), "occtsharp_generated_igesgeom_offset_surface_method_offset_indicator_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESGeom_OffsetSurface::Surface.</summary>
     public IGESDataIGESEntity? Surface()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomOffsetSurfaceMethodSurface0(handle, out nint handleValue), "occtsharp_generated_igesgeom_offset_surface_method_surface_0");
         return global::OcctSharp.IGESDataIGESEntity.FromNative(handleValue, "occtsharp_generated_igesgeom_offset_surface_method_surface_0");
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_OffsetSurface::TransformedOffsetIndicator.</summary>
+    public global::OcctSharp.Values.Vector3d TransformedOffsetIndicator()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomOffsetSurfaceMethodTransformedOffsetIndicator0(handle, out global::OcctSharp.Values.Vector3d resultValue), "occtsharp_generated_igesgeom_offset_surface_method_transformed_offset_indicator_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -38728,6 +39335,13 @@ public sealed class IGESGeomPlane : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomPlaneMethodHasSymbolAttach0(handle, out int resultValue), "occtsharp_generated_igesgeom_plane_method_has_symbol_attach_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_Plane::Init.</summary>
+    public void Init(double a, double b, double c, double d, IGESDataIGESEntity? aCurve, global::OcctSharp.Values.Coordinates3d attach, double aSize)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomPlaneMethodInit0(handle, a, b, c, d, aCurve is null ? nint.Zero : aCurve.NativeHandle.DangerousGetHandle(), attach, aSize), "occtsharp_generated_igesgeom_plane_method_init_0");
     }
 
     /// <summary>Invokes OCCT IGESGeom_Plane::SetFormNumber.</summary>
@@ -38859,6 +39473,13 @@ public sealed class IGESGeomPoint : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomPointMethodHasDisplaySymbol0(handle, out int resultValue), "occtsharp_generated_igesgeom_point_method_has_display_symbol_0");
         return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_Point::Init.</summary>
+    public void Init(global::OcctSharp.Values.Coordinates3d aPoint, IGESBasicSubfigureDef? aSymbol)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomPointMethodInit0(handle, aPoint, aSymbol is null ? nint.Zero : aSymbol.NativeHandle.DangerousGetHandle()), "occtsharp_generated_igesgeom_point_method_init_0");
     }
 
     /// <summary>Invokes OCCT IGESGeom_Point::TransformedValue.</summary>
@@ -39784,6 +40405,13 @@ public sealed class IGESGeomTabulatedCylinder : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomTabulatedCylinderMethodEndPoint0(handle, out Point3dRaw resultValue), "occtsharp_generated_igesgeom_tabulated_cylinder_method_end_point_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT IGESGeom_TabulatedCylinder::Init.</summary>
+    public void Init(IGESDataIGESEntity? aDirectrix, global::OcctSharp.Values.Coordinates3d anEnd)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGeomTabulatedCylinderMethodInit0(handle, aDirectrix is null ? nint.Zero : aDirectrix.NativeHandle.DangerousGetHandle(), anEnd), "occtsharp_generated_igesgeom_tabulated_cylinder_method_init_0");
     }
 
     /// <summary>Invokes OCCT IGESGeom_TabulatedCylinder::TransformedEndPoint.</summary>
@@ -41784,6 +42412,13 @@ public sealed class IGESGraphTextDisplayTemplate : IDisposable
         return global::OcctSharp.IGESGraphTextFontDef.FromNative(handleValue, "occtsharp_generated_igesgraph_text_display_template_method_font_entity_0");
     }
 
+    /// <summary>Invokes OCCT IGESGraph_TextDisplayTemplate::Init.</summary>
+    public void Init(double aWidth, double aHeight, int aFontCode, IGESGraphTextFontDef? aFontEntity, double aSlantAngle, double aRotationAngle, int aMirrorFlag, int aRotationFlag, global::OcctSharp.Values.Coordinates3d aCorner)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGraphTextDisplayTemplateMethodInit0(handle, aWidth, aHeight, aFontCode, aFontEntity is null ? nint.Zero : aFontEntity.NativeHandle.DangerousGetHandle(), aSlantAngle, aRotationAngle, aMirrorFlag, aRotationFlag, aCorner), "occtsharp_generated_igesgraph_text_display_template_method_init_0");
+    }
+
     /// <summary>Invokes OCCT IGESGraph_TextDisplayTemplate::IsFontEntity.</summary>
     public bool IsFontEntity()
     {
@@ -42101,6 +42736,29 @@ public sealed class IGESGraphUniformRectGrid : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGraphUniformRectGridMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_igesgraph_uniform_rect_grid_method_dynamic_type_0");
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_igesgraph_uniform_rect_grid_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT IGESGraph_UniformRectGrid::GridPoint.</summary>
+    public global::OcctSharp.Values.Point2d GridPoint()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGraphUniformRectGridMethodGridPoint0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_igesgraph_uniform_rect_grid_method_grid_point_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESGraph_UniformRectGrid::GridSpacing.</summary>
+    public global::OcctSharp.Values.Vector2d GridSpacing()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGraphUniformRectGridMethodGridSpacing0(handle, out global::OcctSharp.Values.Vector2d resultValue), "occtsharp_generated_igesgraph_uniform_rect_grid_method_grid_spacing_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESGraph_UniformRectGrid::Init.</summary>
+    public void Init(int nbProps, int finite, int line, int weighted, global::OcctSharp.Values.Coordinates2d aGridPoint, global::OcctSharp.Values.Coordinates2d aGridSpacing, int pointsX, int pointsY)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESGraphUniformRectGridMethodInit0(handle, nbProps, finite, line, weighted, aGridPoint, aGridSpacing, pointsX, pointsY), "occtsharp_generated_igesgraph_uniform_rect_grid_method_init_0");
     }
 
     /// <summary>Invokes OCCT IGESGraph_UniformRectGrid::IsFinite.</summary>
@@ -46537,12 +47195,59 @@ public sealed class IGESSolidBlock : IDisposable
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_igessolid_block_method_dynamic_type_0");
     }
 
+    /// <summary>Invokes OCCT IGESSolid_Block::Init.</summary>
+    public void Init(global::OcctSharp.Values.Coordinates3d aSize, global::OcctSharp.Values.Coordinates3d aCorner, global::OcctSharp.Values.Coordinates3d aXAxis, global::OcctSharp.Values.Coordinates3d aZAxis)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidBlockMethodInit0(handle, aSize, aCorner, aXAxis, aZAxis), "occtsharp_generated_igessolid_block_method_init_0");
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_Block::Size.</summary>
+    public global::OcctSharp.Values.Coordinates3d Size()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidBlockMethodSize0(handle, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_igessolid_block_method_size_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESSolid_Block::TransformedCorner.</summary>
     public Point3d TransformedCorner()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidBlockMethodTransformedCorner0(handle, out Point3dRaw resultValue), "occtsharp_generated_igessolid_block_method_transformed_corner_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_Block::TransformedXAxis.</summary>
+    public global::OcctSharp.Values.Direction3d TransformedXAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidBlockMethodTransformedXAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_block_method_transformed_xaxis_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_Block::TransformedYAxis.</summary>
+    public global::OcctSharp.Values.Direction3d TransformedYAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidBlockMethodTransformedYAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_block_method_transformed_yaxis_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_Block::TransformedZAxis.</summary>
+    public global::OcctSharp.Values.Direction3d TransformedZAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidBlockMethodTransformedZAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_block_method_transformed_zaxis_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_Block::XAxis.</summary>
+    public global::OcctSharp.Values.Direction3d XAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidBlockMethodXAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_block_method_xaxis_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT IGESSolid_Block::XLength.</summary>
@@ -46553,11 +47258,27 @@ public sealed class IGESSolidBlock : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT IGESSolid_Block::YAxis.</summary>
+    public global::OcctSharp.Values.Direction3d YAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidBlockMethodYAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_block_method_yaxis_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESSolid_Block::YLength.</summary>
     public double YLength()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidBlockMethodYLength0(handle, out double resultValue), "occtsharp_generated_igessolid_block_method_ylength_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_Block::ZAxis.</summary>
+    public global::OcctSharp.Values.Direction3d ZAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidBlockMethodZAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_block_method_zaxis_0");
         return resultValue;
     }
 
@@ -46761,6 +47482,14 @@ public sealed class IGESSolidConeFrustum : IDisposable
         handle = CreateHandle(nativeHandle, "IGESSolidConeFrustumCreate0");
     }
 
+    /// <summary>Invokes OCCT IGESSolid_ConeFrustum::Axis.</summary>
+    public global::OcctSharp.Values.Direction3d Axis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidConeFrustumMethodAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_cone_frustum_method_axis_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESSolid_ConeFrustum::DynamicType.</summary>
     public StandardType? DynamicType()
     {
@@ -46785,6 +47514,13 @@ public sealed class IGESSolidConeFrustum : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT IGESSolid_ConeFrustum::Init.</summary>
+    public void Init(double ht, double r1, double r2, global::OcctSharp.Values.Coordinates3d center, global::OcctSharp.Values.Coordinates3d anAxis)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidConeFrustumMethodInit0(handle, ht, r1, r2, center, anAxis), "occtsharp_generated_igessolid_cone_frustum_method_init_0");
+    }
+
     /// <summary>Invokes OCCT IGESSolid_ConeFrustum::LargerRadius.</summary>
     public double LargerRadius()
     {
@@ -46798,6 +47534,14 @@ public sealed class IGESSolidConeFrustum : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidConeFrustumMethodSmallerRadius0(handle, out double resultValue), "occtsharp_generated_igessolid_cone_frustum_method_smaller_radius_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_ConeFrustum::TransformedAxis.</summary>
+    public global::OcctSharp.Values.Direction3d TransformedAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidConeFrustumMethodTransformedAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_cone_frustum_method_transformed_axis_0");
         return resultValue;
     }
 
@@ -47024,6 +47768,14 @@ public sealed class IGESSolidCylinder : IDisposable
         handle = CreateHandle(nativeHandle, "IGESSolidCylinderCreate0");
     }
 
+    /// <summary>Invokes OCCT IGESSolid_Cylinder::Axis.</summary>
+    public global::OcctSharp.Values.Direction3d Axis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidCylinderMethodAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_cylinder_method_axis_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESSolid_Cylinder::DynamicType.</summary>
     public StandardType? DynamicType()
     {
@@ -47048,11 +47800,26 @@ public sealed class IGESSolidCylinder : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT IGESSolid_Cylinder::Init.</summary>
+    public void Init(double aHeight, double aRadius, global::OcctSharp.Values.Coordinates3d aCenter, global::OcctSharp.Values.Coordinates3d anAxis)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidCylinderMethodInit0(handle, aHeight, aRadius, aCenter, anAxis), "occtsharp_generated_igessolid_cylinder_method_init_0");
+    }
+
     /// <summary>Invokes OCCT IGESSolid_Cylinder::Radius.</summary>
     public double Radius()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidCylinderMethodRadius0(handle, out double resultValue), "occtsharp_generated_igessolid_cylinder_method_radius_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_Cylinder::TransformedAxis.</summary>
+    public global::OcctSharp.Values.Direction3d TransformedAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidCylinderMethodTransformedAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_cylinder_method_transformed_axis_0");
         return resultValue;
     }
 
@@ -47419,12 +48186,59 @@ public sealed class IGESSolidEllipsoid : IDisposable
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_igessolid_ellipsoid_method_dynamic_type_0");
     }
 
+    /// <summary>Invokes OCCT IGESSolid_Ellipsoid::Init.</summary>
+    public void Init(global::OcctSharp.Values.Coordinates3d aSize, global::OcctSharp.Values.Coordinates3d aCenter, global::OcctSharp.Values.Coordinates3d anXAxis, global::OcctSharp.Values.Coordinates3d anZAxis)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidEllipsoidMethodInit0(handle, aSize, aCenter, anXAxis, anZAxis), "occtsharp_generated_igessolid_ellipsoid_method_init_0");
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_Ellipsoid::Size.</summary>
+    public global::OcctSharp.Values.Coordinates3d Size()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidEllipsoidMethodSize0(handle, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_igessolid_ellipsoid_method_size_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESSolid_Ellipsoid::TransformedCenter.</summary>
     public Point3d TransformedCenter()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidEllipsoidMethodTransformedCenter0(handle, out Point3dRaw resultValue), "occtsharp_generated_igessolid_ellipsoid_method_transformed_center_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_Ellipsoid::TransformedXAxis.</summary>
+    public global::OcctSharp.Values.Direction3d TransformedXAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidEllipsoidMethodTransformedXAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_ellipsoid_method_transformed_xaxis_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_Ellipsoid::TransformedYAxis.</summary>
+    public global::OcctSharp.Values.Direction3d TransformedYAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidEllipsoidMethodTransformedYAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_ellipsoid_method_transformed_yaxis_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_Ellipsoid::TransformedZAxis.</summary>
+    public global::OcctSharp.Values.Direction3d TransformedZAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidEllipsoidMethodTransformedZAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_ellipsoid_method_transformed_zaxis_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_Ellipsoid::XAxis.</summary>
+    public global::OcctSharp.Values.Direction3d XAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidEllipsoidMethodXAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_ellipsoid_method_xaxis_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT IGESSolid_Ellipsoid::XLength.</summary>
@@ -47435,11 +48249,27 @@ public sealed class IGESSolidEllipsoid : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT IGESSolid_Ellipsoid::YAxis.</summary>
+    public global::OcctSharp.Values.Direction3d YAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidEllipsoidMethodYAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_ellipsoid_method_yaxis_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESSolid_Ellipsoid::YLength.</summary>
     public double YLength()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidEllipsoidMethodYLength0(handle, out double resultValue), "occtsharp_generated_igessolid_ellipsoid_method_ylength_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_Ellipsoid::ZAxis.</summary>
+    public global::OcctSharp.Values.Direction3d ZAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidEllipsoidMethodZAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_ellipsoid_method_zaxis_0");
         return resultValue;
     }
 
@@ -48353,12 +49183,59 @@ public sealed class IGESSolidRightAngularWedge : IDisposable
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_igessolid_right_angular_wedge_method_dynamic_type_0");
     }
 
+    /// <summary>Invokes OCCT IGESSolid_RightAngularWedge::Init.</summary>
+    public void Init(global::OcctSharp.Values.Coordinates3d aSize, double lowX, global::OcctSharp.Values.Coordinates3d aCorner, global::OcctSharp.Values.Coordinates3d anXAxis, global::OcctSharp.Values.Coordinates3d anZAxis)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidRightAngularWedgeMethodInit0(handle, aSize, lowX, aCorner, anXAxis, anZAxis), "occtsharp_generated_igessolid_right_angular_wedge_method_init_0");
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_RightAngularWedge::Size.</summary>
+    public global::OcctSharp.Values.Coordinates3d Size()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidRightAngularWedgeMethodSize0(handle, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_igessolid_right_angular_wedge_method_size_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESSolid_RightAngularWedge::TransformedCorner.</summary>
     public Point3d TransformedCorner()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidRightAngularWedgeMethodTransformedCorner0(handle, out Point3dRaw resultValue), "occtsharp_generated_igessolid_right_angular_wedge_method_transformed_corner_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_RightAngularWedge::TransformedXAxis.</summary>
+    public global::OcctSharp.Values.Direction3d TransformedXAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidRightAngularWedgeMethodTransformedXAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_right_angular_wedge_method_transformed_xaxis_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_RightAngularWedge::TransformedYAxis.</summary>
+    public global::OcctSharp.Values.Direction3d TransformedYAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidRightAngularWedgeMethodTransformedYAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_right_angular_wedge_method_transformed_yaxis_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_RightAngularWedge::TransformedZAxis.</summary>
+    public global::OcctSharp.Values.Direction3d TransformedZAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidRightAngularWedgeMethodTransformedZAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_right_angular_wedge_method_transformed_zaxis_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_RightAngularWedge::XAxis.</summary>
+    public global::OcctSharp.Values.Direction3d XAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidRightAngularWedgeMethodXAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_right_angular_wedge_method_xaxis_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT IGESSolid_RightAngularWedge::XBigLength.</summary>
@@ -48377,11 +49254,27 @@ public sealed class IGESSolidRightAngularWedge : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT IGESSolid_RightAngularWedge::YAxis.</summary>
+    public global::OcctSharp.Values.Direction3d YAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidRightAngularWedgeMethodYAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_right_angular_wedge_method_yaxis_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESSolid_RightAngularWedge::YLength.</summary>
     public double YLength()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidRightAngularWedgeMethodYLength0(handle, out double resultValue), "occtsharp_generated_igessolid_right_angular_wedge_method_ylength_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_RightAngularWedge::ZAxis.</summary>
+    public global::OcctSharp.Values.Direction3d ZAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidRightAngularWedgeMethodZAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_right_angular_wedge_method_zaxis_0");
         return resultValue;
     }
 
@@ -48483,6 +49376,13 @@ public sealed class IGESSolidSelectedComponent : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidSelectedComponentMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_igessolid_selected_component_method_dynamic_type_0");
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_igessolid_selected_component_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_SelectedComponent::Init.</summary>
+    public void Init(IGESSolidBooleanTree? anEntity, global::OcctSharp.Values.Coordinates3d selectPnt)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidSelectedComponentMethodInit0(handle, anEntity is null ? nint.Zero : anEntity.NativeHandle.DangerousGetHandle(), selectPnt), "occtsharp_generated_igessolid_selected_component_method_init_0");
     }
 
     /// <summary>Invokes OCCT IGESSolid_SelectedComponent::SelectPoint.</summary>
@@ -48953,11 +49853,34 @@ public sealed class IGESSolidSolidOfLinearExtrusion : IDisposable
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_igessolid_solid_of_linear_extrusion_method_dynamic_type_0");
     }
 
+    /// <summary>Invokes OCCT IGESSolid_SolidOfLinearExtrusion::ExtrusionDirection.</summary>
+    public global::OcctSharp.Values.Direction3d ExtrusionDirection()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidSolidOfLinearExtrusionMethodExtrusionDirection0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_solid_of_linear_extrusion_method_extrusion_direction_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESSolid_SolidOfLinearExtrusion::ExtrusionLength.</summary>
     public double ExtrusionLength()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidSolidOfLinearExtrusionMethodExtrusionLength0(handle, out double resultValue), "occtsharp_generated_igessolid_solid_of_linear_extrusion_method_extrusion_length_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_SolidOfLinearExtrusion::Init.</summary>
+    public void Init(IGESDataIGESEntity? aCurve, double aLength, global::OcctSharp.Values.Coordinates3d aDirection)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidSolidOfLinearExtrusionMethodInit0(handle, aCurve is null ? nint.Zero : aCurve.NativeHandle.DangerousGetHandle(), aLength, aDirection), "occtsharp_generated_igessolid_solid_of_linear_extrusion_method_init_0");
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_SolidOfLinearExtrusion::TransformedExtrusionDirection.</summary>
+    public global::OcctSharp.Values.Direction3d TransformedExtrusionDirection()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidSolidOfLinearExtrusionMethodTransformedExtrusionDirection0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_solid_of_linear_extrusion_method_transformed_extrusion_direction_0");
         return resultValue;
     }
 
@@ -49037,6 +49960,14 @@ public sealed class IGESSolidSolidOfRevolution : IDisposable
         handle = CreateHandle(nativeHandle, "IGESSolidSolidOfRevolutionCreate0");
     }
 
+    /// <summary>Invokes OCCT IGESSolid_SolidOfRevolution::Axis.</summary>
+    public global::OcctSharp.Values.Direction3d Axis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidSolidOfRevolutionMethodAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_solid_of_revolution_method_axis_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESSolid_SolidOfRevolution::AxisPoint.</summary>
     public Point3d AxisPoint()
     {
@@ -49069,6 +50000,13 @@ public sealed class IGESSolidSolidOfRevolution : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT IGESSolid_SolidOfRevolution::Init.</summary>
+    public void Init(IGESDataIGESEntity? aCurve, double aFract, global::OcctSharp.Values.Coordinates3d aAxisPnt, global::OcctSharp.Values.Coordinates3d aDirection)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidSolidOfRevolutionMethodInit0(handle, aCurve is null ? nint.Zero : aCurve.NativeHandle.DangerousGetHandle(), aFract, aAxisPnt, aDirection), "occtsharp_generated_igessolid_solid_of_revolution_method_init_0");
+    }
+
     /// <summary>Invokes OCCT IGESSolid_SolidOfRevolution::IsClosedToAxis.</summary>
     public bool IsClosedToAxis()
     {
@@ -49082,6 +50020,14 @@ public sealed class IGESSolidSolidOfRevolution : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidSolidOfRevolutionMethodSetClosedToAxis0(handle, mode ? 1 : 0), "occtsharp_generated_igessolid_solid_of_revolution_method_set_closed_to_axis_0");
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_SolidOfRevolution::TransformedAxis.</summary>
+    public global::OcctSharp.Values.Direction3d TransformedAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidSolidOfRevolutionMethodTransformedAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_solid_of_revolution_method_transformed_axis_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT IGESSolid_SolidOfRevolution::TransformedAxisPoint.</summary>
@@ -49266,6 +50212,13 @@ public sealed class IGESSolidSphere : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidSphereMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_igessolid_sphere_method_dynamic_type_0");
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_igessolid_sphere_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_Sphere::Init.</summary>
+    public void Init(double aRadius, global::OcctSharp.Values.Coordinates3d aCenter)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidSphereMethodInit0(handle, aRadius, aCenter), "occtsharp_generated_igessolid_sphere_method_init_0");
     }
 
     /// <summary>Invokes OCCT IGESSolid_Sphere::Radius.</summary>
@@ -49646,6 +50599,14 @@ public sealed class IGESSolidTorus : IDisposable
         handle = CreateHandle(nativeHandle, "IGESSolidTorusCreate0");
     }
 
+    /// <summary>Invokes OCCT IGESSolid_Torus::Axis.</summary>
+    public global::OcctSharp.Values.Direction3d Axis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidTorusMethodAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_torus_method_axis_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IGESSolid_Torus::AxisPoint.</summary>
     public Point3d AxisPoint()
     {
@@ -49670,11 +50631,26 @@ public sealed class IGESSolidTorus : IDisposable
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_igessolid_torus_method_dynamic_type_0");
     }
 
+    /// <summary>Invokes OCCT IGESSolid_Torus::Init.</summary>
+    public void Init(double r1, double r2, global::OcctSharp.Values.Coordinates3d aPoint, global::OcctSharp.Values.Coordinates3d anAxisdir)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidTorusMethodInit0(handle, r1, r2, aPoint, anAxisdir), "occtsharp_generated_igessolid_torus_method_init_0");
+    }
+
     /// <summary>Invokes OCCT IGESSolid_Torus::MajorRadius.</summary>
     public double MajorRadius()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidTorusMethodMajorRadius0(handle, out double resultValue), "occtsharp_generated_igessolid_torus_method_major_radius_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IGESSolid_Torus::TransformedAxis.</summary>
+    public global::OcctSharp.Values.Direction3d TransformedAxis()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.IGESSolidTorusMethodTransformedAxis0(handle, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_igessolid_torus_method_transformed_axis_0");
         return resultValue;
     }
 
@@ -55716,6 +56692,14 @@ public sealed class RWMeshCafReader : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT RWMesh_CafReader::FileCoordinateSystem.</summary>
+    public global::OcctSharp.Values.Axis3 FileCoordinateSystem()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.RWMeshCafReaderMethodFileCoordinateSystem0(handle, out global::OcctSharp.Values.Axis3 resultValue), "occtsharp_generated_rwmesh_caf_reader_method_file_coordinate_system_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT RWMesh_CafReader::FileLengthUnit.</summary>
     public double FileLengthUnit()
     {
@@ -55762,6 +56746,13 @@ public sealed class RWMeshCafReader : IDisposable
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.RWMeshCafReaderMethodSetFileCoordinateSystem0(handle, (int)theCS), "occtsharp_generated_rwmesh_caf_reader_method_set_file_coordinate_system_0");
     }
 
+    /// <summary>Invokes OCCT RWMesh_CafReader::SetFileCoordinateSystem.</summary>
+    public void SetFileCoordinateSystem(global::OcctSharp.Values.Axis3 theCS)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.RWMeshCafReaderMethodSetFileCoordinateSystem1(handle, theCS), "occtsharp_generated_rwmesh_caf_reader_method_set_file_coordinate_system_1");
+    }
+
     /// <summary>Invokes OCCT RWMesh_CafReader::SetFileLengthUnit.</summary>
     public void SetFileLengthUnit(double theUnits)
     {
@@ -55790,11 +56781,26 @@ public sealed class RWMeshCafReader : IDisposable
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.RWMeshCafReaderMethodSetSystemCoordinateSystem0(handle, (int)theCS), "occtsharp_generated_rwmesh_caf_reader_method_set_system_coordinate_system_0");
     }
 
+    /// <summary>Invokes OCCT RWMesh_CafReader::SetSystemCoordinateSystem.</summary>
+    public void SetSystemCoordinateSystem(global::OcctSharp.Values.Axis3 theCS)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.RWMeshCafReaderMethodSetSystemCoordinateSystem1(handle, theCS), "occtsharp_generated_rwmesh_caf_reader_method_set_system_coordinate_system_1");
+    }
+
     /// <summary>Invokes OCCT RWMesh_CafReader::SetSystemLengthUnit.</summary>
     public void SetSystemLengthUnit(double theUnits)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.RWMeshCafReaderMethodSetSystemLengthUnit0(handle, theUnits), "occtsharp_generated_rwmesh_caf_reader_method_set_system_length_unit_0");
+    }
+
+    /// <summary>Invokes OCCT RWMesh_CafReader::SystemCoordinateSystem.</summary>
+    public global::OcctSharp.Values.Axis3 SystemCoordinateSystem()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.RWMeshCafReaderMethodSystemCoordinateSystem0(handle, out global::OcctSharp.Values.Axis3 resultValue), "occtsharp_generated_rwmesh_caf_reader_method_system_coordinate_system_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT RWMesh_CafReader::SystemLengthUnit.</summary>
@@ -148263,6 +149269,21 @@ public sealed class VrmlDataBox : IDisposable
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_vrml_data_box_method_dynamic_type_0");
     }
 
+    /// <summary>Invokes OCCT VrmlData_Box::SetSize.</summary>
+    public void SetSize(global::OcctSharp.Values.Coordinates3d theSize)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.VrmlDataBoxMethodSetSize0(handle, theSize), "occtsharp_generated_vrml_data_box_method_set_size_0");
+    }
+
+    /// <summary>Invokes OCCT VrmlData_Box::Size.</summary>
+    public global::OcctSharp.Values.Coordinates3d Size()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.VrmlDataBoxMethodSize0(handle, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_vrml_data_box_method_size_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT VrmlData_Box::TShape.</summary>
     public TopoDSTShape? TShape()
     {
@@ -148598,6 +149619,14 @@ public sealed class VrmlDataCoordinate : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.VrmlDataCoordinateMethodOcctClone0(handle, theOther is null ? nint.Zero : theOther.NativeHandle.DangerousGetHandle(), out nint handleValue), "occtsharp_generated_vrml_data_coordinate_method_clone_0");
         return global::OcctSharp.VrmlDataNode.FromNative(handleValue, "occtsharp_generated_vrml_data_coordinate_method_clone_0");
+    }
+
+    /// <summary>Invokes OCCT VrmlData_Coordinate::Coordinate.</summary>
+    public global::OcctSharp.Values.Coordinates3d Coordinate(int i)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.VrmlDataCoordinateMethodCoordinate0(handle, i, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_vrml_data_coordinate_method_coordinate_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT VrmlData_Coordinate::DynamicType.</summary>
@@ -149845,6 +150874,14 @@ public sealed class VrmlDataNormal : IDisposable
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_vrml_data_normal_method_dynamic_type_0");
     }
 
+    /// <summary>Invokes OCCT VrmlData_Normal::Normal.</summary>
+    public global::OcctSharp.Values.Coordinates3d Normal(int i)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.VrmlDataNormalMethodNormal0(handle, i, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_vrml_data_normal_method_normal_0");
+        return resultValue;
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -150372,6 +151409,14 @@ public sealed class VrmlDataTextureTransform : IDisposable
 
     private VrmlDataTextureTransform(VrmlDataTextureTransformHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT VrmlData_TextureTransform::Center.</summary>
+    public global::OcctSharp.Values.Coordinates2d Center()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.VrmlDataTextureTransformMethodCenter0(handle, out global::OcctSharp.Values.Coordinates2d resultValue), "occtsharp_generated_vrml_data_texture_transform_method_center_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT VrmlData_TextureTransform::DynamicType.</summary>
     public StandardType? DynamicType()
     {
@@ -150388,11 +151433,48 @@ public sealed class VrmlDataTextureTransform : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT VrmlData_TextureTransform::Scale.</summary>
+    public global::OcctSharp.Values.Coordinates2d Scale()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.VrmlDataTextureTransformMethodScale0(handle, out global::OcctSharp.Values.Coordinates2d resultValue), "occtsharp_generated_vrml_data_texture_transform_method_scale_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT VrmlData_TextureTransform::SetCenter.</summary>
+    public void SetCenter(global::OcctSharp.Values.Coordinates2d v)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.VrmlDataTextureTransformMethodSetCenter0(handle, v), "occtsharp_generated_vrml_data_texture_transform_method_set_center_0");
+    }
+
     /// <summary>Invokes OCCT VrmlData_TextureTransform::SetRotation.</summary>
     public void SetRotation(double v)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.VrmlDataTextureTransformMethodSetRotation0(handle, v), "occtsharp_generated_vrml_data_texture_transform_method_set_rotation_0");
+    }
+
+    /// <summary>Invokes OCCT VrmlData_TextureTransform::SetScale.</summary>
+    public void SetScale(global::OcctSharp.Values.Coordinates2d v)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.VrmlDataTextureTransformMethodSetScale0(handle, v), "occtsharp_generated_vrml_data_texture_transform_method_set_scale_0");
+    }
+
+    /// <summary>Invokes OCCT VrmlData_TextureTransform::SetTranslation.</summary>
+    public void SetTranslation(global::OcctSharp.Values.Coordinates2d v)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.VrmlDataTextureTransformMethodSetTranslation0(handle, v), "occtsharp_generated_vrml_data_texture_transform_method_set_translation_0");
+    }
+
+    /// <summary>Invokes OCCT VrmlData_TextureTransform::Translation.</summary>
+    public global::OcctSharp.Values.Coordinates2d Translation()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.VrmlDataTextureTransformMethodTranslation0(handle, out global::OcctSharp.Values.Coordinates2d resultValue), "occtsharp_generated_vrml_data_texture_transform_method_translation_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -151044,12 +152126,27 @@ public sealed class VrmlLOD : IDisposable
         handle = CreateHandle(nativeHandle, "VrmlLODCreate0");
     }
 
+    /// <summary>Invokes OCCT Vrml_LOD::Center.</summary>
+    public global::OcctSharp.Values.Vector3d Center()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.VrmlLODMethodCenter0(handle, out global::OcctSharp.Values.Vector3d resultValue), "occtsharp_generated_vrml_lod_method_center_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT Vrml_LOD::DynamicType.</summary>
     public StandardType? DynamicType()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.VrmlLODMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_vrml_lod_method_dynamic_type_0");
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_vrml_lod_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT Vrml_LOD::SetCenter.</summary>
+    public void SetCenter(global::OcctSharp.Values.Vector3d aCenter)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DataExchangeGeneratedNativeMethods.VrmlLODMethodSetCenter0(handle, aCenter), "occtsharp_generated_vrml_lod_method_set_center_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>

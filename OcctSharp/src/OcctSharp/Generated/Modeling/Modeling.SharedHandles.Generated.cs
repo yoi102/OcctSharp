@@ -75,19 +75,25 @@
 // Source: c:@S@BRepAdaptor_CompCurve@F@BRepAdaptor_CompCurve#
 // Source: c:@S@BRepAdaptor_CompCurve@F@BSpline#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@Bezier#1
+// Source: c:@S@BRepAdaptor_CompCurve@F@Circle#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@Continuity#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@Degree#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@DynamicType#1
+// Source: c:@S@BRepAdaptor_CompCurve@F@Ellipse#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@EvalD0#d#1
+// Source: c:@S@BRepAdaptor_CompCurve@F@EvalDN#d#I#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@FirstParameter#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@GetType#1
+// Source: c:@S@BRepAdaptor_CompCurve@F@Hyperbola#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@IsClosed#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@IsPeriodic#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@IsRational#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@LastParameter#1
+// Source: c:@S@BRepAdaptor_CompCurve@F@Line#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@NbKnots#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@NbPoles#1
+// Source: c:@S@BRepAdaptor_CompCurve@F@Parabola#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@Period#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@Resolution#d#1
 // Source: c:@S@BRepAdaptor_CompCurve@F@ShallowCopy#1
@@ -247,6 +253,8 @@
 // Source: c:@S@BRepFill_PipeShell@F@IsBuildHistory#1
 // Source: c:@S@BRepFill_PipeShell@F@IsReady#1
 // Source: c:@S@BRepFill_PipeShell@F@MakeSolid#
+// Source: c:@S@BRepFill_PipeShell@F@Set#&1$@S@gp_Ax2#
+// Source: c:@S@BRepFill_PipeShell@F@Set#&1$@S@gp_Dir#
 // Source: c:@S@BRepFill_PipeShell@F@Set#b#
 // Source: c:@S@BRepFill_PipeShell@F@SetDiscrete#
 // Source: c:@S@BRepFill_PipeShell@F@SetForceApproxC1#b#
@@ -334,8 +342,10 @@
 // Source: c:@S@BRepTopAdaptor_HVertex@F@Orientation#
 // Source: c:@S@BRepTopAdaptor_HVertex@F@Parameter#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#
 // Source: c:@S@BRepTopAdaptor_HVertex@F@Resolution#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#
+// Source: c:@S@BRepTopAdaptor_HVertex@F@Value#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@BRepTopAdaptor_TopolTool#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@BRepTopAdaptor_TopolTool#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#
+// Source: c:@S@BRepTopAdaptor_TopolTool@F@Classify#&1$@S@gp_Pnt2d#d#b#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@ComputeSamplePoints#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@Destroy#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@DomainIsInfinite#
@@ -346,6 +356,7 @@
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@Initialize#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@Initialize#&1$@N@opencascade@S@handle>#$@S@Adaptor2d_Curve2d#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@Initialize#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Surface#
+// Source: c:@S@BRepTopAdaptor_TopolTool@F@IsThePointOn#&1$@S@gp_Pnt2d#d#b#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@More#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@MoreVertex#
 // Source: c:@S@BRepTopAdaptor_TopolTool@F@NbSamples#
@@ -380,6 +391,7 @@
 // Source: c:@S@BRep_CurveOnClosedSurface@F@IsRegularity#1
 // Source: c:@S@BRep_CurveOnClosedSurface@F@PCurve2#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#
 // Source: c:@S@BRep_CurveOnClosedSurface@F@PCurve2#1
+// Source: c:@S@BRep_CurveOnClosedSurface@F@SetUVPoints2#&1$@S@gp_Pnt2d#S0_#
 // Source: c:@S@BRep_CurveOnClosedSurface@F@Surface2#1
 // Source: c:@S@BRep_CurveOnClosedSurface@F@Update#
 // Source: c:@S@BRep_CurveOnSurface@F@Copy#1
@@ -387,6 +399,7 @@
 // Source: c:@S@BRep_CurveOnSurface@F@IsCurveOnSurface#1
 // Source: c:@S@BRep_CurveOnSurface@F@PCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#
 // Source: c:@S@BRep_CurveOnSurface@F@PCurve#1
+// Source: c:@S@BRep_CurveOnSurface@F@SetUVPoints#&1$@S@gp_Pnt2d#S0_#
 // Source: c:@S@BRep_CurveOnSurface@F@Surface#1
 // Source: c:@S@BRep_CurveOnSurface@F@Update#
 // Source: c:@S@BRep_CurveRepresentation@F@Continuity#$@E@GeomAbs_Shape#
@@ -524,33 +537,42 @@
 // Source: c:@S@ChFiDS_ChamfSpine@F@SetDistAngle#d#d#
 // Source: c:@S@ChFiDS_ChamfSpine@F@SetDists#d#d#
 // Source: c:@S@ChFiDS_ChamfSpine@F@SetMode#$@E@ChFiDS_ChamfMode#
+// Source: c:@S@ChFiDS_ElSpine@F@AddVertexWithTangent#&1$@S@gp_Ax1#
 // Source: c:@S@ChFiDS_ElSpine@F@BSpline#1
 // Source: c:@S@ChFiDS_ElSpine@F@Bezier#1
 // Source: c:@S@ChFiDS_ElSpine@F@ChFiDS_ElSpine#
+// Source: c:@S@ChFiDS_ElSpine@F@Circle#1
 // Source: c:@S@ChFiDS_ElSpine@F@Continuity#1
 // Source: c:@S@ChFiDS_ElSpine@F@DynamicType#1
+// Source: c:@S@ChFiDS_ElSpine@F@Ellipse#1
 // Source: c:@S@ChFiDS_ElSpine@F@EvalD0#d#1
 // Source: c:@S@ChFiDS_ElSpine@F@FirstParameter#1
 // Source: c:@S@ChFiDS_ElSpine@F@FirstParameter#d#
 // Source: c:@S@ChFiDS_ElSpine@F@GetSavedFirstParameter#1
 // Source: c:@S@ChFiDS_ElSpine@F@GetSavedLastParameter#1
 // Source: c:@S@ChFiDS_ElSpine@F@GetType#1
+// Source: c:@S@ChFiDS_ElSpine@F@Hyperbola#1
 // Source: c:@S@ChFiDS_ElSpine@F@IsPeriodic#1
 // Source: c:@S@ChFiDS_ElSpine@F@LastParameter#1
 // Source: c:@S@ChFiDS_ElSpine@F@LastParameter#d#
+// Source: c:@S@ChFiDS_ElSpine@F@Line#1
 // Source: c:@S@ChFiDS_ElSpine@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@ChFiDS_ElSpine@F@NbVertices#1
 // Source: c:@S@ChFiDS_ElSpine@F@Next#1
+// Source: c:@S@ChFiDS_ElSpine@F@Parabola#1
 // Source: c:@S@ChFiDS_ElSpine@F@Period#1
 // Source: c:@S@ChFiDS_ElSpine@F@Previous#1
 // Source: c:@S@ChFiDS_ElSpine@F@Resolution#d#1
 // Source: c:@S@ChFiDS_ElSpine@F@SaveFirstParameter#
 // Source: c:@S@ChFiDS_ElSpine@F@SaveLastParameter#
 // Source: c:@S@ChFiDS_ElSpine@F@SetCurve#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#
+// Source: c:@S@ChFiDS_ElSpine@F@SetFirstPointAndTgt#&1$@S@gp_Pnt#&1$@S@gp_Vec#
+// Source: c:@S@ChFiDS_ElSpine@F@SetLastPointAndTgt#&1$@S@gp_Pnt#&1$@S@gp_Vec#
 // Source: c:@S@ChFiDS_ElSpine@F@SetOrigin#d#
 // Source: c:@S@ChFiDS_ElSpine@F@SetPeriodic#b#
 // Source: c:@S@ChFiDS_ElSpine@F@ShallowCopy#1
 // Source: c:@S@ChFiDS_ElSpine@F@Trim#d#d#d#1
+// Source: c:@S@ChFiDS_ElSpine@F@VertexWithTangent#I#1
 // Source: c:@S@ChFiDS_FilSpine@F@AppendElSpine#&1$@N@opencascade@S@handle>#$@S@ChFiDS_ElSpine#
 // Source: c:@S@ChFiDS_FilSpine@F@ChFiDS_FilSpine#
 // Source: c:@S@ChFiDS_FilSpine@F@ChFiDS_FilSpine#d#
@@ -563,6 +585,7 @@
 // Source: c:@S@ChFiDS_FilSpine@F@Radius#I#1
 // Source: c:@S@ChFiDS_FilSpine@F@Reset#b#
 // Source: c:@S@ChFiDS_FilSpine@F@SetRadius#&1$@N@opencascade@S@handle>#$@S@Law_Function#I#
+// Source: c:@S@ChFiDS_FilSpine@F@SetRadius#&1$@S@gp_XY#I#
 // Source: c:@S@ChFiDS_FilSpine@F@SetRadius#d#
 // Source: c:@S@ChFiDS_Spine@F@Absc#d#
 // Source: c:@S@ChFiDS_Spine@F@Absc#d#I#
@@ -570,6 +593,7 @@
 // Source: c:@S@ChFiDS_Spine@F@AppendOffsetElSpine#&1$@N@opencascade@S@handle>#$@S@ChFiDS_ElSpine#
 // Source: c:@S@ChFiDS_Spine@F@ChFiDS_Spine#
 // Source: c:@S@ChFiDS_Spine@F@ChFiDS_Spine#d#
+// Source: c:@S@ChFiDS_Spine@F@Circle#1
 // Source: c:@S@ChFiDS_Spine@F@CurrentIndexOfElementarySpine#1
 // Source: c:@S@ChFiDS_Spine@F@DynamicType#1
 // Source: c:@S@ChFiDS_Spine@F@ElSpine#I#1
@@ -591,6 +615,7 @@
 // Source: c:@S@ChFiDS_Spine@F@LastParameter#I#1
 // Source: c:@S@ChFiDS_Spine@F@LastStatus#1
 // Source: c:@S@ChFiDS_Spine@F@Length#I#1
+// Source: c:@S@ChFiDS_Spine@F@Line#1
 // Source: c:@S@ChFiDS_Spine@F@Load#
 // Source: c:@S@ChFiDS_Spine@F@Mode#1
 // Source: c:@S@ChFiDS_Spine@F@NbEdges#1
@@ -669,6 +694,7 @@
 // Source: c:@S@ChFiDS_SurfData@F@FirstExtensionValue#d#
 // Source: c:@S@ChFiDS_SurfData@F@FirstSpineParam#1
 // Source: c:@S@ChFiDS_SurfData@F@FirstSpineParam#d#
+// Source: c:@S@ChFiDS_SurfData@F@Get2dPoints#b#I#1
 // Source: c:@S@ChFiDS_SurfData@F@Index#I#1
 // Source: c:@S@ChFiDS_SurfData@F@IndexOfC#I#1
 // Source: c:@S@ChFiDS_SurfData@F@IndexOfC1#1
@@ -684,6 +710,7 @@
 // Source: c:@S@ChFiDS_SurfData@F@LastSpineParam#d#
 // Source: c:@S@ChFiDS_SurfData@F@Orientation#1
 // Source: c:@S@ChFiDS_SurfData@F@ResetSimul#
+// Source: c:@S@ChFiDS_SurfData@F@Set2dPoints#&1$@S@gp_Pnt2d#S0_#S0_#S0_#
 // Source: c:@S@ChFiDS_SurfData@F@SetIndexOfC1#I#
 // Source: c:@S@ChFiDS_SurfData@F@SetIndexOfC2#I#
 // Source: c:@S@ChFiDS_SurfData@F@SetSimul#&1$@N@opencascade@S@handle>#$@S@Standard_Transient#
@@ -713,6 +740,7 @@
 // Source: c:@S@Contap_TheIWLineOfTheIWalking@F@Reverse#
 // Source: c:@S@Contap_TheIWLineOfTheIWalking@F@SetTangencyAtBegining#b#
 // Source: c:@S@Contap_TheIWLineOfTheIWalking@F@SetTangencyAtEnd#b#
+// Source: c:@S@Contap_TheIWLineOfTheIWalking@F@SetTangentVector#&1$@S@gp_Vec#I#
 // Source: c:@S@Draft_Modification@F@Clear#
 // Source: c:@S@Draft_Modification@F@DynamicType#1
 // Source: c:@S@Draft_Modification@F@Error#1
@@ -867,6 +895,7 @@
 // Source: c:@S@HelixGeom_HelixCurve@F@Continuity#1
 // Source: c:@S@HelixGeom_HelixCurve@F@DynamicType#1
 // Source: c:@S@HelixGeom_HelixCurve@F@EvalD0#d#1
+// Source: c:@S@HelixGeom_HelixCurve@F@EvalDN#d#I#1
 // Source: c:@S@HelixGeom_HelixCurve@F@FirstParameter#1
 // Source: c:@S@HelixGeom_HelixCurve@F@HelixGeom_HelixCurve#
 // Source: c:@S@HelixGeom_HelixCurve@F@IsClosed#1
@@ -877,12 +906,14 @@
 // Source: c:@S@HelixGeom_HelixCurve@F@NbIntervals#$@E@GeomAbs_Shape#1
 // Source: c:@S@HelixGeom_HelixCurve@F@Period#1
 // Source: c:@S@HelixGeom_HelixCurve@F@Resolution#d#1
+// Source: c:@S@IntCurvesFace_Intersector@F@ClassifyUVPoint#&1$@S@gp_Pnt2d#1
 // Source: c:@S@IntCurvesFace_Intersector@F@DynamicType#1
 // Source: c:@S@IntCurvesFace_Intersector@F@GetUseBoundToler#1
 // Source: c:@S@IntCurvesFace_Intersector@F@IsDone#1
 // Source: c:@S@IntCurvesFace_Intersector@F@IsParallel#1
 // Source: c:@S@IntCurvesFace_Intersector@F@NbPnt#1
 // Source: c:@S@IntCurvesFace_Intersector@F@Perform#&1$@N@opencascade@S@handle>#$@S@Adaptor3d_Curve#d#d#
+// Source: c:@S@IntCurvesFace_Intersector@F@Perform#&1$@S@gp_Lin#d#d#
 // Source: c:@S@IntCurvesFace_Intersector@F@Pnt#I#1
 // Source: c:@S@IntCurvesFace_Intersector@F@SetUseBoundToler#b#
 // Source: c:@S@IntCurvesFace_Intersector@F@State#I#1
@@ -899,11 +930,31 @@
 // Source: c:@S@IntPatch_ALine@F@SetFirstPoint#I#
 // Source: c:@S@IntPatch_ALine@F@SetLastPoint#I#
 // Source: c:@S@IntPatch_ALine@F@Value#d#
+// Source: c:@S@IntPatch_GLine@F@Circle#1
 // Source: c:@S@IntPatch_GLine@F@ComputeVertexParameters#d#
 // Source: c:@S@IntPatch_GLine@F@DynamicType#1
+// Source: c:@S@IntPatch_GLine@F@Ellipse#1
 // Source: c:@S@IntPatch_GLine@F@HasFirstPoint#1
 // Source: c:@S@IntPatch_GLine@F@HasLastPoint#1
+// Source: c:@S@IntPatch_GLine@F@Hyperbola#1
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Circ#b#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Circ#b#$@E@IntSurf_Situation#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Circ#b#$@E@IntSurf_TypeTrans#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Elips#b#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Elips#b#$@E@IntSurf_Situation#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Elips#b#$@E@IntSurf_TypeTrans#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Hypr#b#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Hypr#b#$@E@IntSurf_Situation#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Hypr#b#$@E@IntSurf_TypeTrans#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Lin#b#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Lin#b#$@E@IntSurf_Situation#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Lin#b#$@E@IntSurf_TypeTrans#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Parab#b#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Parab#b#$@E@IntSurf_Situation#S2_#
+// Source: c:@S@IntPatch_GLine@F@IntPatch_GLine#&1$@S@gp_Parab#b#$@E@IntSurf_TypeTrans#S2_#
+// Source: c:@S@IntPatch_GLine@F@Line#1
 // Source: c:@S@IntPatch_GLine@F@NbVertex#1
+// Source: c:@S@IntPatch_GLine@F@Parabola#1
 // Source: c:@S@IntPatch_GLine@F@SetFirstPoint#I#
 // Source: c:@S@IntPatch_GLine@F@SetLastPoint#I#
 // Source: c:@S@IntPatch_Line@F@ArcType#1
@@ -936,6 +987,8 @@
 // Source: c:@S@IntPatch_RLine@F@IsArcOnS1#1
 // Source: c:@S@IntPatch_RLine@F@IsArcOnS2#1
 // Source: c:@S@IntPatch_RLine@F@IsOutBox#&1$@S@gp_Pnt#1
+// Source: c:@S@IntPatch_RLine@F@IsOutSurf1Box#&1$@S@gp_Pnt2d#1
+// Source: c:@S@IntPatch_RLine@F@IsOutSurf2Box#&1$@S@gp_Pnt2d#1
 // Source: c:@S@IntPatch_RLine@F@NbPnts#1
 // Source: c:@S@IntPatch_RLine@F@NbVertex#1
 // Source: c:@S@IntPatch_RLine@F@RemoveVertex#I#
@@ -964,6 +1017,7 @@
 // Source: c:@S@IntPatch_TheIWLineOfTheIWalking@F@Reverse#
 // Source: c:@S@IntPatch_TheIWLineOfTheIWalking@F@SetTangencyAtBegining#b#
 // Source: c:@S@IntPatch_TheIWLineOfTheIWalking@F@SetTangencyAtEnd#b#
+// Source: c:@S@IntPatch_TheIWLineOfTheIWalking@F@SetTangentVector#&1$@S@gp_Vec#I#
 // Source: c:@S@IntPatch_WLine@F@ClearVertexes#
 // Source: c:@S@IntPatch_WLine@F@ComputeVertexParameters#d#
 // Source: c:@S@IntPatch_WLine@F@Curve#1
@@ -981,6 +1035,8 @@
 // Source: c:@S@IntPatch_WLine@F@IntPatch_WLine#&1$@N@opencascade@S@handle>#$@S@IntSurf_LineOn2S#b#$@E@IntSurf_Situation#S3_#
 // Source: c:@S@IntPatch_WLine@F@IntPatch_WLine#&1$@N@opencascade@S@handle>#$@S@IntSurf_LineOn2S#b#$@E@IntSurf_TypeTrans#S3_#
 // Source: c:@S@IntPatch_WLine@F@IsOutBox#&1$@S@gp_Pnt#1
+// Source: c:@S@IntPatch_WLine@F@IsOutSurf1Box#&1$@S@gp_Pnt2d#1
+// Source: c:@S@IntPatch_WLine@F@IsOutSurf2Box#&1$@S@gp_Pnt2d#1
 // Source: c:@S@IntPatch_WLine@F@IsPurgingAllowed#
 // Source: c:@S@IntPatch_WLine@F@NbPnts#1
 // Source: c:@S@IntPatch_WLine@F@NbVertex#1
@@ -1000,6 +1056,8 @@
 // Source: c:@S@IntSurf_LineOn2S@F@DynamicType#1
 // Source: c:@S@IntSurf_LineOn2S@F@IntSurf_LineOn2S#&1$@N@opencascade@S@handle>#$@S@NCollection_BaseAllocator#
 // Source: c:@S@IntSurf_LineOn2S@F@IsOutBox#&1$@S@gp_Pnt#
+// Source: c:@S@IntSurf_LineOn2S@F@IsOutSurf1Box#&1$@S@gp_Pnt2d#
+// Source: c:@S@IntSurf_LineOn2S@F@IsOutSurf2Box#&1$@S@gp_Pnt2d#
 // Source: c:@S@IntSurf_LineOn2S@F@NbPoints#1
 // Source: c:@S@IntSurf_LineOn2S@F@RemovePoint#I#
 // Source: c:@S@IntSurf_LineOn2S@F@Reverse#
@@ -1062,9 +1120,11 @@
 // Source: c:@S@ShapeAnalysis_Surface@F@Init#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#
 // Source: c:@S@ShapeAnalysis_Surface@F@Init#&1$@N@opencascade@S@handle>#$@S@ShapeAnalysis_Surface#
 // Source: c:@S@ShapeAnalysis_Surface@F@IsDegenerated#&1$@S@gp_Pnt#d#
+// Source: c:@S@ShapeAnalysis_Surface@F@IsDegenerated#&1$@S@gp_Pnt2d#S0_#d#d#
 // Source: c:@S@ShapeAnalysis_Surface@F@IsUClosed#d#
 // Source: c:@S@ShapeAnalysis_Surface@F@IsVClosed#d#
 // Source: c:@S@ShapeAnalysis_Surface@F@NbSingularities#d#
+// Source: c:@S@ShapeAnalysis_Surface@F@NextValueOfUV#&1$@S@gp_Pnt2d#&1$@S@gp_Pnt#d#d#
 // Source: c:@S@ShapeAnalysis_Surface@F@SetDomain#d#d#d#d#
 // Source: c:@S@ShapeAnalysis_Surface@F@ShapeAnalysis_Surface#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#
 // Source: c:@S@ShapeAnalysis_Surface@F@Surface#1
@@ -1073,7 +1133,9 @@
 // Source: c:@S@ShapeAnalysis_Surface@F@UIso#d#
 // Source: c:@S@ShapeAnalysis_Surface@F@VCloseVal#1
 // Source: c:@S@ShapeAnalysis_Surface@F@VIso#d#
+// Source: c:@S@ShapeAnalysis_Surface@F@Value#&1$@S@gp_Pnt2d#
 // Source: c:@S@ShapeAnalysis_Surface@F@Value#d#d#
+// Source: c:@S@ShapeAnalysis_Surface@F@ValueOfUV#&1$@S@gp_Pnt#d#
 // Source: c:@S@ShapeAnalysis_TransferParameters@F@DynamicType#1
 // Source: c:@S@ShapeAnalysis_TransferParameters@F@IsSameRange#1
 // Source: c:@S@ShapeAnalysis_TransferParameters@F@Perform#d#b#
@@ -1189,6 +1251,7 @@
 // Source: c:@S@ShapeExtend_ComplexCurve@F@Continuity#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@DynamicType#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@EvalD0#d#1
+// Source: c:@S@ShapeExtend_ComplexCurve@F@EvalDN#d#I#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@FirstParameter#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@IsCN#I#1
 // Source: c:@S@ShapeExtend_ComplexCurve@F@IsClosed#1
@@ -1201,16 +1264,20 @@
 // Source: c:@S@ShapeExtend_CompositeSurface@F@Copy#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@DynamicType#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@EvalD0#d#d#1
+// Source: c:@S@ShapeExtend_CompositeSurface@F@EvalDN#d#d#I#I#1
+// Source: c:@S@ShapeExtend_CompositeSurface@F@GlobalToLocal#I#I#&1$@S@gp_Pnt2d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@IsCNu#I#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@IsCNv#I#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@IsUClosed#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@IsUPeriodic#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@IsVClosed#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@IsVPeriodic#1
+// Source: c:@S@ShapeExtend_CompositeSurface@F@LocalToGlobal#I#I#&1$@S@gp_Pnt2d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@LocateUParameter#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@LocateVParameter#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@NbUPatches#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@NbVPatches#1
+// Source: c:@S@ShapeExtend_CompositeSurface@F@Patch#&1$@S@gp_Pnt2d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@Patch#I#I#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@Patch#d#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@SetUFirstValue#d#
@@ -1228,6 +1295,7 @@
 // Source: c:@S@ShapeExtend_CompositeSurface@F@VLocalToGlobal#I#I#d#1
 // Source: c:@S@ShapeExtend_CompositeSurface@F@VReverse#
 // Source: c:@S@ShapeExtend_CompositeSurface@F@VReversedParameter#d#1
+// Source: c:@S@ShapeExtend_CompositeSurface@F@Value#&1$@S@gp_Pnt2d#1
 // Source: c:@S@ShapeExtend_MsgRegistrator@F@DynamicType#1
 // Source: c:@S@ShapeExtend_MsgRegistrator@F@ShapeExtend_MsgRegistrator#
 // Source: c:@S@ShapeExtend_WireData@F@Add#&1$@N@opencascade@S@handle>#$@S@ShapeExtend_WireData#I#
@@ -5334,6 +5402,14 @@ public sealed class BRepAdaptorCompCurve : IDisposable
         return global::OcctSharp.GeomBSplineCurve.FromNative(handleValue, "occtsharp_generated_brep_adaptor_comp_curve_method_bspline_0");
     }
 
+    /// <summary>Invokes OCCT BRepAdaptor_CompCurve::Circle.</summary>
+    public global::OcctSharp.Values.Circle3d Circle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepAdaptorCompCurveMethodCircle0(handle, out global::OcctSharp.Values.Circle3d resultValue), "occtsharp_generated_brep_adaptor_comp_curve_method_circle_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT BRepAdaptor_CompCurve::Continuity.</summary>
     public GeomAbsShape Continuity()
     {
@@ -5358,12 +5434,28 @@ public sealed class BRepAdaptorCompCurve : IDisposable
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_brep_adaptor_comp_curve_method_dynamic_type_0");
     }
 
+    /// <summary>Invokes OCCT BRepAdaptor_CompCurve::Ellipse.</summary>
+    public global::OcctSharp.Values.Ellipse3d Ellipse()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepAdaptorCompCurveMethodEllipse0(handle, out global::OcctSharp.Values.Ellipse3d resultValue), "occtsharp_generated_brep_adaptor_comp_curve_method_ellipse_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT BRepAdaptor_CompCurve::EvalD0.</summary>
     public Point3d EvalD0(double theU)
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepAdaptorCompCurveMethodEvalD00(handle, theU, out Point3dRaw resultValue), "occtsharp_generated_brep_adaptor_comp_curve_method_eval_d0_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT BRepAdaptor_CompCurve::EvalDN.</summary>
+    public global::OcctSharp.Values.Vector3d EvalDN(double theU, int theN)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepAdaptorCompCurveMethodEvalDN0(handle, theU, theN, out global::OcctSharp.Values.Vector3d resultValue), "occtsharp_generated_brep_adaptor_comp_curve_method_eval_dn_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT BRepAdaptor_CompCurve::FirstParameter.</summary>
@@ -5380,6 +5472,14 @@ public sealed class BRepAdaptorCompCurve : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepAdaptorCompCurveMethodOcctGetType0(handle, out int resultValue), "occtsharp_generated_brep_adaptor_comp_curve_method_get_type_0");
         return (GeomAbsCurveType)resultValue;
+    }
+
+    /// <summary>Invokes OCCT BRepAdaptor_CompCurve::Hyperbola.</summary>
+    public global::OcctSharp.Values.Hyperbola3d Hyperbola()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepAdaptorCompCurveMethodHyperbola0(handle, out global::OcctSharp.Values.Hyperbola3d resultValue), "occtsharp_generated_brep_adaptor_comp_curve_method_hyperbola_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT BRepAdaptor_CompCurve::IsClosed.</summary>
@@ -5414,6 +5514,14 @@ public sealed class BRepAdaptorCompCurve : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT BRepAdaptor_CompCurve::Line.</summary>
+    public global::OcctSharp.Values.Line3d Line()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepAdaptorCompCurveMethodLine0(handle, out global::OcctSharp.Values.Line3d resultValue), "occtsharp_generated_brep_adaptor_comp_curve_method_line_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT BRepAdaptor_CompCurve::NbIntervals.</summary>
     public int NbIntervals(GeomAbsShape s)
     {
@@ -5435,6 +5543,14 @@ public sealed class BRepAdaptorCompCurve : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepAdaptorCompCurveMethodNbPoles0(handle, out int resultValue), "occtsharp_generated_brep_adaptor_comp_curve_method_nb_poles_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT BRepAdaptor_CompCurve::Parabola.</summary>
+    public global::OcctSharp.Values.Parabola3d Parabola()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepAdaptorCompCurveMethodParabola0(handle, out global::OcctSharp.Values.Parabola3d resultValue), "occtsharp_generated_brep_adaptor_comp_curve_method_parabola_0");
         return resultValue;
     }
 
@@ -8504,6 +8620,20 @@ public sealed class BRepFillPipeShell : IDisposable
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepFillPipeShellMethodSet0(handle, frenet ? 1 : 0), "occtsharp_generated_brep_fill_pipe_shell_method_set_0");
     }
 
+    /// <summary>Invokes OCCT BRepFill_PipeShell::Set.</summary>
+    public void Set(global::OcctSharp.Values.Axis2 axe)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepFillPipeShellMethodSet1(handle, axe), "occtsharp_generated_brep_fill_pipe_shell_method_set_1");
+    }
+
+    /// <summary>Invokes OCCT BRepFill_PipeShell::Set.</summary>
+    public void Set(global::OcctSharp.Values.Direction3d biNormal)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepFillPipeShellMethodSet2(handle, biNormal), "occtsharp_generated_brep_fill_pipe_shell_method_set_2");
+    }
+
     /// <summary>Invokes OCCT BRepFill_PipeShell::SetDiscrete.</summary>
     public void SetDiscrete()
     {
@@ -10590,6 +10720,14 @@ public sealed class BRepTopAdaptorHVertex : IDisposable
         return resultValue;
     }
 
+    /// <summary>Invokes OCCT BRepTopAdaptor_HVertex::Value.</summary>
+    public global::OcctSharp.Values.Point2d Value()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepTopAdaptorHVertexMethodValue0(handle, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_brep_top_adaptor_hvertex_method_value_0");
+        return resultValue;
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -10674,6 +10812,14 @@ public sealed class BRepTopAdaptorTopolTool : IDisposable
         handle = CreateHandle(nativeHandle, "BRepTopAdaptorTopolToolCreate1");
     }
 
+    /// <summary>Invokes OCCT BRepTopAdaptor_TopolTool::Classify.</summary>
+    public TopAbsState Classify(global::OcctSharp.Values.Point2d p2d, double tol, bool recadreOnPeriodic)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepTopAdaptorTopolToolMethodClassify0(handle, p2d, tol, recadreOnPeriodic ? 1 : 0, out int resultValue), "occtsharp_generated_brep_top_adaptor_topol_tool_method_classify_0");
+        return (TopAbsState)resultValue;
+    }
+
     /// <summary>Invokes OCCT BRepTopAdaptor_TopolTool::ComputeSamplePoints.</summary>
     public void ComputeSamplePoints()
     {
@@ -10745,6 +10891,14 @@ public sealed class BRepTopAdaptorTopolTool : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepTopAdaptorTopolToolMethodInitialize2(handle, s is null ? nint.Zero : s.NativeHandle.DangerousGetHandle()), "occtsharp_generated_brep_top_adaptor_topol_tool_method_initialize_2");
+    }
+
+    /// <summary>Invokes OCCT BRepTopAdaptor_TopolTool::IsThePointOn.</summary>
+    public bool IsThePointOn(global::OcctSharp.Values.Point2d p2d, double tol, bool recadreOnPeriodic)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepTopAdaptorTopolToolMethodIsThePointOn0(handle, p2d, tol, recadreOnPeriodic ? 1 : 0, out int resultValue), "occtsharp_generated_brep_top_adaptor_topol_tool_method_is_the_point_on_0");
+        return resultValue != 0;
     }
 
     /// <summary>Invokes OCCT BRepTopAdaptor_TopolTool::More.</summary>
@@ -11217,6 +11371,13 @@ public sealed class BRepCurveOnClosedSurface : IDisposable
         return global::OcctSharp.Geom2dCurve.FromNative(handleValue, "occtsharp_generated_brep_curve_on_closed_surface_method_pcurve2_1");
     }
 
+    /// <summary>Invokes OCCT BRep_CurveOnClosedSurface::SetUVPoints2.</summary>
+    public void SetUVPoints2(global::OcctSharp.Values.Point2d p1, global::OcctSharp.Values.Point2d p2)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepCurveOnClosedSurfaceMethodSetUVPoints20(handle, p1, p2), "occtsharp_generated_brep_curve_on_closed_surface_method_set_uvpoints2_0");
+    }
+
     /// <summary>Invokes OCCT BRep_CurveOnClosedSurface::Surface2.</summary>
     public GeomSurface? Surface2()
     {
@@ -11337,6 +11498,13 @@ public sealed class BRepCurveOnSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepCurveOnSurfaceMethodPCurve1(handle, out nint handleValue), "occtsharp_generated_brep_curve_on_surface_method_pcurve_1");
         return global::OcctSharp.Geom2dCurve.FromNative(handleValue, "occtsharp_generated_brep_curve_on_surface_method_pcurve_1");
+    }
+
+    /// <summary>Invokes OCCT BRep_CurveOnSurface::SetUVPoints.</summary>
+    public void SetUVPoints(global::OcctSharp.Values.Point2d p1, global::OcctSharp.Values.Point2d p2)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.BRepCurveOnSurfaceMethodSetUVPoints0(handle, p1, p2), "occtsharp_generated_brep_curve_on_surface_method_set_uvpoints_0");
     }
 
     /// <summary>Invokes OCCT BRep_CurveOnSurface::Surface.</summary>
@@ -13555,6 +13723,13 @@ public sealed class ChFiDSElSpine : IDisposable
         handle = CreateHandle(nativeHandle, "ChFiDSElSpineCreate0");
     }
 
+    /// <summary>Invokes OCCT ChFiDS_ElSpine::AddVertexWithTangent.</summary>
+    public void AddVertexWithTangent(global::OcctSharp.Values.Axis1 anAx1)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSElSpineMethodAddVertexWithTangent0(handle, anAx1), "occtsharp_generated_ch_fi_ds_el_spine_method_add_vertex_with_tangent_0");
+    }
+
     /// <summary>Invokes OCCT ChFiDS_ElSpine::Bezier.</summary>
     public GeomBezierCurve? Bezier()
     {
@@ -13571,6 +13746,14 @@ public sealed class ChFiDSElSpine : IDisposable
         return global::OcctSharp.GeomBSplineCurve.FromNative(handleValue, "occtsharp_generated_ch_fi_ds_el_spine_method_bspline_0");
     }
 
+    /// <summary>Invokes OCCT ChFiDS_ElSpine::Circle.</summary>
+    public global::OcctSharp.Values.Circle3d Circle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSElSpineMethodCircle0(handle, out global::OcctSharp.Values.Circle3d resultValue), "occtsharp_generated_ch_fi_ds_el_spine_method_circle_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT ChFiDS_ElSpine::Continuity.</summary>
     public GeomAbsShape Continuity()
     {
@@ -13585,6 +13768,14 @@ public sealed class ChFiDSElSpine : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSElSpineMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_ch_fi_ds_el_spine_method_dynamic_type_0");
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_ch_fi_ds_el_spine_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT ChFiDS_ElSpine::Ellipse.</summary>
+    public global::OcctSharp.Values.Ellipse3d Ellipse()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSElSpineMethodEllipse0(handle, out global::OcctSharp.Values.Ellipse3d resultValue), "occtsharp_generated_ch_fi_ds_el_spine_method_ellipse_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT ChFiDS_ElSpine::EvalD0.</summary>
@@ -13634,6 +13825,14 @@ public sealed class ChFiDSElSpine : IDisposable
         return (GeomAbsCurveType)resultValue;
     }
 
+    /// <summary>Invokes OCCT ChFiDS_ElSpine::Hyperbola.</summary>
+    public global::OcctSharp.Values.Hyperbola3d Hyperbola()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSElSpineMethodHyperbola0(handle, out global::OcctSharp.Values.Hyperbola3d resultValue), "occtsharp_generated_ch_fi_ds_el_spine_method_hyperbola_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT ChFiDS_ElSpine::IsPeriodic.</summary>
     public bool IsPeriodic()
     {
@@ -13655,6 +13854,14 @@ public sealed class ChFiDSElSpine : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSElSpineMethodLastParameter1(handle, p), "occtsharp_generated_ch_fi_ds_el_spine_method_last_parameter_1");
+    }
+
+    /// <summary>Invokes OCCT ChFiDS_ElSpine::Line.</summary>
+    public global::OcctSharp.Values.Line3d Line()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSElSpineMethodLine0(handle, out global::OcctSharp.Values.Line3d resultValue), "occtsharp_generated_ch_fi_ds_el_spine_method_line_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT ChFiDS_ElSpine::NbIntervals.</summary>
@@ -13679,6 +13886,14 @@ public sealed class ChFiDSElSpine : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSElSpineMethodNext0(handle, out nint handleValue), "occtsharp_generated_ch_fi_ds_el_spine_method_next_0");
         return global::OcctSharp.ChFiDSSurfData.FromNative(handleValue, "occtsharp_generated_ch_fi_ds_el_spine_method_next_0");
+    }
+
+    /// <summary>Invokes OCCT ChFiDS_ElSpine::Parabola.</summary>
+    public global::OcctSharp.Values.Parabola3d Parabola()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSElSpineMethodParabola0(handle, out global::OcctSharp.Values.Parabola3d resultValue), "occtsharp_generated_ch_fi_ds_el_spine_method_parabola_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT ChFiDS_ElSpine::Period.</summary>
@@ -13726,6 +13941,20 @@ public sealed class ChFiDSElSpine : IDisposable
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSElSpineMethodSetCurve0(handle, c is null ? nint.Zero : c.NativeHandle.DangerousGetHandle()), "occtsharp_generated_ch_fi_ds_el_spine_method_set_curve_0");
     }
 
+    /// <summary>Invokes OCCT ChFiDS_ElSpine::SetFirstPointAndTgt.</summary>
+    public void SetFirstPointAndTgt(Point3d p, global::OcctSharp.Values.Vector3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSElSpineMethodSetFirstPointAndTgt0(handle, new Point3dRaw(p.X, p.Y, p.Z), t), "occtsharp_generated_ch_fi_ds_el_spine_method_set_first_point_and_tgt_0");
+    }
+
+    /// <summary>Invokes OCCT ChFiDS_ElSpine::SetLastPointAndTgt.</summary>
+    public void SetLastPointAndTgt(Point3d p, global::OcctSharp.Values.Vector3d t)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSElSpineMethodSetLastPointAndTgt0(handle, new Point3dRaw(p.X, p.Y, p.Z), t), "occtsharp_generated_ch_fi_ds_el_spine_method_set_last_point_and_tgt_0");
+    }
+
     /// <summary>Invokes OCCT ChFiDS_ElSpine::SetOrigin.</summary>
     public void SetOrigin(double o)
     {
@@ -13754,6 +13983,14 @@ public sealed class ChFiDSElSpine : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSElSpineMethodTrim0(handle, first, last, tol, out nint handleValue), "occtsharp_generated_ch_fi_ds_el_spine_method_trim_0");
         return global::OcctSharp.Adaptor3dCurve.FromNative(handleValue, "occtsharp_generated_ch_fi_ds_el_spine_method_trim_0");
+    }
+
+    /// <summary>Invokes OCCT ChFiDS_ElSpine::VertexWithTangent.</summary>
+    public global::OcctSharp.Values.Axis1 VertexWithTangent(int index)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSElSpineMethodVertexWithTangent0(handle, index, out global::OcctSharp.Values.Axis1 resultValue), "occtsharp_generated_ch_fi_ds_el_spine_method_vertex_with_tangent_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -13924,6 +14161,13 @@ public sealed class ChFiDSFilSpine : IDisposable
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSFilSpineMethodSetRadius1(handle, c is null ? nint.Zero : c.NativeHandle.DangerousGetHandle(), iinC), "occtsharp_generated_ch_fi_ds_fil_spine_method_set_radius_1");
     }
 
+    /// <summary>Invokes OCCT ChFiDS_FilSpine::SetRadius.</summary>
+    public void SetRadius(global::OcctSharp.Values.Coordinates2d uandR, int iinC)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSFilSpineMethodSetRadius2(handle, uandR, iinC), "occtsharp_generated_ch_fi_ds_fil_spine_method_set_radius_2");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -14036,6 +14280,14 @@ public sealed class ChFiDSSpine : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSSpineMethodAppendOffsetElSpine0(handle, els is null ? nint.Zero : els.NativeHandle.DangerousGetHandle()), "occtsharp_generated_ch_fi_ds_spine_method_append_offset_el_spine_0");
+    }
+
+    /// <summary>Invokes OCCT ChFiDS_Spine::Circle.</summary>
+    public global::OcctSharp.Values.Circle3d Circle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSSpineMethodCircle0(handle, out global::OcctSharp.Values.Circle3d resultValue), "occtsharp_generated_ch_fi_ds_spine_method_circle_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT ChFiDS_Spine::CurrentIndexOfElementarySpine.</summary>
@@ -14203,6 +14455,14 @@ public sealed class ChFiDSSpine : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSSpineMethodLength0(handle, indexSpine, out double resultValue), "occtsharp_generated_ch_fi_ds_spine_method_length_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT ChFiDS_Spine::Line.</summary>
+    public global::OcctSharp.Values.Line3d Line()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSSpineMethodLine0(handle, out global::OcctSharp.Values.Line3d resultValue), "occtsharp_generated_ch_fi_ds_spine_method_line_0");
         return resultValue;
     }
 
@@ -14922,6 +15182,14 @@ public sealed class ChFiDSSurfData : IDisposable
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSSurfDataMethodFirstSpineParam1(handle, par), "occtsharp_generated_ch_fi_ds_surf_data_method_first_spine_param_1");
     }
 
+    /// <summary>Invokes OCCT ChFiDS_SurfData::Get2dPoints.</summary>
+    public global::OcctSharp.Values.Point2d Get2dPoints(bool first, int onS)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSSurfDataMethodGet2dPoints0(handle, first ? 1 : 0, onS, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_ch_fi_ds_surf_data_method_get2d_points_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT ChFiDS_SurfData::Index.</summary>
     public int Index(int ofS)
     {
@@ -15037,6 +15305,13 @@ public sealed class ChFiDSSurfData : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSSurfDataMethodResetSimul0(handle), "occtsharp_generated_ch_fi_ds_surf_data_method_reset_simul_0");
+    }
+
+    /// <summary>Invokes OCCT ChFiDS_SurfData::Set2dPoints.</summary>
+    public void Set2dPoints(global::OcctSharp.Values.Point2d p2df1, global::OcctSharp.Values.Point2d p2dl1, global::OcctSharp.Values.Point2d p2df2, global::OcctSharp.Values.Point2d p2dl2)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ChFiDSSurfDataMethodSet2dPoints0(handle, p2df1, p2dl1, p2df2, p2dl2), "occtsharp_generated_ch_fi_ds_surf_data_method_set2d_points_0");
     }
 
     /// <summary>Invokes OCCT ChFiDS_SurfData::SetIndexOfC1.</summary>
@@ -15324,6 +15599,13 @@ public sealed class ContapTheIWLineOfTheIWalking : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ContapTheIWLineOfTheIWalkingMethodSetTangencyAtEnd0(handle, isTangent ? 1 : 0), "occtsharp_generated_contap_the_iwline_of_the_iwalking_method_set_tangency_at_end_0");
+    }
+
+    /// <summary>Invokes OCCT Contap_TheIWLineOfTheIWalking::SetTangentVector.</summary>
+    public void SetTangentVector(global::OcctSharp.Values.Vector3d v, int index)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ContapTheIWLineOfTheIWalkingMethodSetTangentVector0(handle, v, index), "occtsharp_generated_contap_the_iwline_of_the_iwalking_method_set_tangent_vector_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -17860,6 +18142,14 @@ public sealed class HelixGeomHelixCurve : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT HelixGeom_HelixCurve::EvalDN.</summary>
+    public global::OcctSharp.Values.Vector3d EvalDN(double theU, int theN)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.HelixGeomHelixCurveMethodEvalDN0(handle, theU, theN, out global::OcctSharp.Values.Vector3d resultValue), "occtsharp_generated_helix_geom_helix_curve_method_eval_dn_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT HelixGeom_HelixCurve::FirstParameter.</summary>
     public double FirstParameter()
     {
@@ -17998,6 +18288,14 @@ public sealed class IntCurvesFaceIntersector : IDisposable
 
     private IntCurvesFaceIntersector(IntCurvesFaceIntersectorHandle handle) => this.handle = handle;
 
+    /// <summary>Invokes OCCT IntCurvesFace_Intersector::ClassifyUVPoint.</summary>
+    public TopAbsState ClassifyUVPoint(global::OcctSharp.Values.Point2d puv)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntCurvesFaceIntersectorMethodClassifyUVPoint0(handle, puv, out int resultValue), "occtsharp_generated_int_curves_face_intersector_method_classify_uvpoint_0");
+        return (TopAbsState)resultValue;
+    }
+
     /// <summary>Invokes OCCT IntCurvesFace_Intersector::DynamicType.</summary>
     public StandardType? DynamicType()
     {
@@ -18043,6 +18341,13 @@ public sealed class IntCurvesFaceIntersector : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntCurvesFaceIntersectorMethodPerform0(handle, hCu is null ? nint.Zero : hCu.NativeHandle.DangerousGetHandle(), pInf, pSup), "occtsharp_generated_int_curves_face_intersector_method_perform_0");
+    }
+
+    /// <summary>Invokes OCCT IntCurvesFace_Intersector::Perform.</summary>
+    public void Perform(global::OcctSharp.Values.Line3d l, double pInf, double pSup)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntCurvesFaceIntersectorMethodPerform1(handle, l, pInf, pSup), "occtsharp_generated_int_curves_face_intersector_method_perform_1");
     }
 
     /// <summary>Invokes OCCT IntCurvesFace_Intersector::Pnt.</summary>
@@ -18305,6 +18610,134 @@ public sealed class IntPatchGLine : IDisposable
 
     private IntPatchGLine(IntPatchGLineHandle handle) => this.handle = handle;
 
+    /// <summary>Creates a retained OCCT IntPatch_GLine shared object.</summary>
+    public IntPatchGLine(global::OcctSharp.Values.Circle3d c, bool tang)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineCreate0(c, tang ? 1 : 0, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "IntPatchGLineCreate0");
+    }
+
+    /// <summary>Creates a retained OCCT IntPatch_GLine shared object.</summary>
+    public IntPatchGLine(global::OcctSharp.Values.Circle3d c, bool tang, IntSurfSituation situ1, IntSurfSituation situ2)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineCreate1(c, tang ? 1 : 0, (int)situ1, (int)situ2, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "IntPatchGLineCreate1");
+    }
+
+    /// <summary>Creates a retained OCCT IntPatch_GLine shared object.</summary>
+    public IntPatchGLine(global::OcctSharp.Values.Circle3d c, bool tang, IntSurfTypeTrans trans1, IntSurfTypeTrans trans2)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineCreate2(c, tang ? 1 : 0, (int)trans1, (int)trans2, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "IntPatchGLineCreate2");
+    }
+
+    /// <summary>Creates a retained OCCT IntPatch_GLine shared object.</summary>
+    public IntPatchGLine(global::OcctSharp.Values.Ellipse3d e, bool tang)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineCreate3(e, tang ? 1 : 0, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "IntPatchGLineCreate3");
+    }
+
+    /// <summary>Creates a retained OCCT IntPatch_GLine shared object.</summary>
+    public IntPatchGLine(global::OcctSharp.Values.Ellipse3d e, bool tang, IntSurfSituation situ1, IntSurfSituation situ2)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineCreate4(e, tang ? 1 : 0, (int)situ1, (int)situ2, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "IntPatchGLineCreate4");
+    }
+
+    /// <summary>Creates a retained OCCT IntPatch_GLine shared object.</summary>
+    public IntPatchGLine(global::OcctSharp.Values.Ellipse3d e, bool tang, IntSurfTypeTrans trans1, IntSurfTypeTrans trans2)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineCreate5(e, tang ? 1 : 0, (int)trans1, (int)trans2, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "IntPatchGLineCreate5");
+    }
+
+    /// <summary>Creates a retained OCCT IntPatch_GLine shared object.</summary>
+    public IntPatchGLine(global::OcctSharp.Values.Hyperbola3d h, bool tang)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineCreate6(h, tang ? 1 : 0, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "IntPatchGLineCreate6");
+    }
+
+    /// <summary>Creates a retained OCCT IntPatch_GLine shared object.</summary>
+    public IntPatchGLine(global::OcctSharp.Values.Hyperbola3d h, bool tang, IntSurfSituation situ1, IntSurfSituation situ2)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineCreate7(h, tang ? 1 : 0, (int)situ1, (int)situ2, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "IntPatchGLineCreate7");
+    }
+
+    /// <summary>Creates a retained OCCT IntPatch_GLine shared object.</summary>
+    public IntPatchGLine(global::OcctSharp.Values.Hyperbola3d h, bool tang, IntSurfTypeTrans trans1, IntSurfTypeTrans trans2)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineCreate8(h, tang ? 1 : 0, (int)trans1, (int)trans2, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "IntPatchGLineCreate8");
+    }
+
+    /// <summary>Creates a retained OCCT IntPatch_GLine shared object.</summary>
+    public IntPatchGLine(global::OcctSharp.Values.Line3d l, bool tang)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineCreate9(l, tang ? 1 : 0, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "IntPatchGLineCreate9");
+    }
+
+    /// <summary>Creates a retained OCCT IntPatch_GLine shared object.</summary>
+    public IntPatchGLine(global::OcctSharp.Values.Line3d l, bool tang, IntSurfSituation situ1, IntSurfSituation situ2)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineCreate10(l, tang ? 1 : 0, (int)situ1, (int)situ2, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "IntPatchGLineCreate10");
+    }
+
+    /// <summary>Creates a retained OCCT IntPatch_GLine shared object.</summary>
+    public IntPatchGLine(global::OcctSharp.Values.Line3d l, bool tang, IntSurfTypeTrans trans1, IntSurfTypeTrans trans2)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineCreate11(l, tang ? 1 : 0, (int)trans1, (int)trans2, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "IntPatchGLineCreate11");
+    }
+
+    /// <summary>Creates a retained OCCT IntPatch_GLine shared object.</summary>
+    public IntPatchGLine(global::OcctSharp.Values.Parabola3d p, bool tang)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineCreate12(p, tang ? 1 : 0, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "IntPatchGLineCreate12");
+    }
+
+    /// <summary>Creates a retained OCCT IntPatch_GLine shared object.</summary>
+    public IntPatchGLine(global::OcctSharp.Values.Parabola3d p, bool tang, IntSurfSituation situ1, IntSurfSituation situ2)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineCreate13(p, tang ? 1 : 0, (int)situ1, (int)situ2, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "IntPatchGLineCreate13");
+    }
+
+    /// <summary>Creates a retained OCCT IntPatch_GLine shared object.</summary>
+    public IntPatchGLine(global::OcctSharp.Values.Parabola3d p, bool tang, IntSurfTypeTrans trans1, IntSurfTypeTrans trans2)
+    {
+        OcctRuntime.EnsureCompatible();
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineCreate14(p, tang ? 1 : 0, (int)trans1, (int)trans2, out nint nativeHandle), "generated_shared_create");
+        handle = CreateHandle(nativeHandle, "IntPatchGLineCreate14");
+    }
+
+    /// <summary>Invokes OCCT IntPatch_GLine::Circle.</summary>
+    public global::OcctSharp.Values.Circle3d Circle()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineMethodCircle0(handle, out global::OcctSharp.Values.Circle3d resultValue), "occtsharp_generated_int_patch_gline_method_circle_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IntPatch_GLine::ComputeVertexParameters.</summary>
     public void ComputeVertexParameters(double tol)
     {
@@ -18318,6 +18751,14 @@ public sealed class IntPatchGLine : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineMethodDynamicType0(handle, out nint handleValue), "occtsharp_generated_int_patch_gline_method_dynamic_type_0");
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_int_patch_gline_method_dynamic_type_0");
+    }
+
+    /// <summary>Invokes OCCT IntPatch_GLine::Ellipse.</summary>
+    public global::OcctSharp.Values.Ellipse3d Ellipse()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineMethodEllipse0(handle, out global::OcctSharp.Values.Ellipse3d resultValue), "occtsharp_generated_int_patch_gline_method_ellipse_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT IntPatch_GLine::HasFirstPoint.</summary>
@@ -18336,11 +18777,35 @@ public sealed class IntPatchGLine : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT IntPatch_GLine::Hyperbola.</summary>
+    public global::OcctSharp.Values.Hyperbola3d Hyperbola()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineMethodHyperbola0(handle, out global::OcctSharp.Values.Hyperbola3d resultValue), "occtsharp_generated_int_patch_gline_method_hyperbola_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IntPatch_GLine::Line.</summary>
+    public global::OcctSharp.Values.Line3d Line()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineMethodLine0(handle, out global::OcctSharp.Values.Line3d resultValue), "occtsharp_generated_int_patch_gline_method_line_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT IntPatch_GLine::NbVertex.</summary>
     public int NbVertex()
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineMethodNbVertex0(handle, out int resultValue), "occtsharp_generated_int_patch_gline_method_nb_vertex_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT IntPatch_GLine::Parabola.</summary>
+    public global::OcctSharp.Values.Parabola3d Parabola()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchGLineMethodParabola0(handle, out global::OcctSharp.Values.Parabola3d resultValue), "occtsharp_generated_int_patch_gline_method_parabola_0");
         return resultValue;
     }
 
@@ -18797,6 +19262,22 @@ public sealed class IntPatchRLine : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT IntPatch_RLine::IsOutSurf1Box.</summary>
+    public bool IsOutSurf1Box(global::OcctSharp.Values.Point2d theP)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchRLineMethodIsOutSurf1Box0(handle, theP, out int resultValue), "occtsharp_generated_int_patch_rline_method_is_out_surf1_box_0");
+        return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT IntPatch_RLine::IsOutSurf2Box.</summary>
+    public bool IsOutSurf2Box(global::OcctSharp.Values.Point2d theP)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchRLineMethodIsOutSurf2Box0(handle, theP, out int resultValue), "occtsharp_generated_int_patch_rline_method_is_out_surf2_box_0");
+        return resultValue != 0;
+    }
+
     /// <summary>Invokes OCCT IntPatch_RLine::NbPnts.</summary>
     public int NbPnts()
     {
@@ -19075,6 +19556,13 @@ public sealed class IntPatchTheIWLineOfTheIWalking : IDisposable
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchTheIWLineOfTheIWalkingMethodSetTangencyAtEnd0(handle, isTangent ? 1 : 0), "occtsharp_generated_int_patch_the_iwline_of_the_iwalking_method_set_tangency_at_end_0");
     }
 
+    /// <summary>Invokes OCCT IntPatch_TheIWLineOfTheIWalking::SetTangentVector.</summary>
+    public void SetTangentVector(global::OcctSharp.Values.Vector3d v, int index)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchTheIWLineOfTheIWalkingMethodSetTangentVector0(handle, v, index), "occtsharp_generated_int_patch_the_iwline_of_the_iwalking_method_set_tangent_vector_0");
+    }
+
     /// <summary>Gets the OCCT intrusive reference count.</summary>
     public int ReferenceCount
     {
@@ -19272,6 +19760,22 @@ public sealed class IntPatchWLine : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchWLineMethodIsOutBox0(handle, new Point3dRaw(theP.X, theP.Y, theP.Z), out int resultValue), "occtsharp_generated_int_patch_wline_method_is_out_box_0");
+        return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT IntPatch_WLine::IsOutSurf1Box.</summary>
+    public bool IsOutSurf1Box(global::OcctSharp.Values.Point2d theP)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchWLineMethodIsOutSurf1Box0(handle, theP, out int resultValue), "occtsharp_generated_int_patch_wline_method_is_out_surf1_box_0");
+        return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT IntPatch_WLine::IsOutSurf2Box.</summary>
+    public bool IsOutSurf2Box(global::OcctSharp.Values.Point2d theP)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntPatchWLineMethodIsOutSurf2Box0(handle, theP, out int resultValue), "occtsharp_generated_int_patch_wline_method_is_out_surf2_box_0");
         return resultValue != 0;
     }
 
@@ -19552,6 +20056,22 @@ public sealed class IntSurfLineOn2S : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntSurfLineOn2SMethodIsOutBox0(handle, new Point3dRaw(theP.X, theP.Y, theP.Z), out int resultValue), "occtsharp_generated_int_surf_line_on2_s_method_is_out_box_0");
+        return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT IntSurf_LineOn2S::IsOutSurf1Box.</summary>
+    public bool IsOutSurf1Box(global::OcctSharp.Values.Point2d theP)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntSurfLineOn2SMethodIsOutSurf1Box0(handle, theP, out int resultValue), "occtsharp_generated_int_surf_line_on2_s_method_is_out_surf1_box_0");
+        return resultValue != 0;
+    }
+
+    /// <summary>Invokes OCCT IntSurf_LineOn2S::IsOutSurf2Box.</summary>
+    public bool IsOutSurf2Box(global::OcctSharp.Values.Point2d theP)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.IntSurfLineOn2SMethodIsOutSurf2Box0(handle, theP, out int resultValue), "occtsharp_generated_int_surf_line_on2_s_method_is_out_surf2_box_0");
         return resultValue != 0;
     }
 
@@ -20649,6 +21169,14 @@ public sealed class ShapeAnalysisSurface : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT ShapeAnalysis_Surface::IsDegenerated.</summary>
+    public bool IsDegenerated(global::OcctSharp.Values.Point2d p2d1, global::OcctSharp.Values.Point2d p2d2, double tol, double ratio)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ShapeAnalysisSurfaceMethodIsDegenerated1(handle, p2d1, p2d2, tol, ratio, out int resultValue), "occtsharp_generated_shape_analysis_surface_method_is_degenerated_1");
+        return resultValue != 0;
+    }
+
     /// <summary>Invokes OCCT ShapeAnalysis_Surface::IsUClosed.</summary>
     public bool IsUClosed(double preci)
     {
@@ -20670,6 +21198,14 @@ public sealed class ShapeAnalysisSurface : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ShapeAnalysisSurfaceMethodNbSingularities0(handle, preci, out int resultValue), "occtsharp_generated_shape_analysis_surface_method_nb_singularities_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT ShapeAnalysis_Surface::NextValueOfUV.</summary>
+    public global::OcctSharp.Values.Point2d NextValueOfUV(global::OcctSharp.Values.Point2d p2dPrev, Point3d p3D, double preci, double maxpreci)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ShapeAnalysisSurfaceMethodNextValueOfUV0(handle, p2dPrev, new Point3dRaw(p3D.X, p3D.Y, p3D.Z), preci, maxpreci, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_shape_analysis_surface_method_next_value_of_uv_0");
         return resultValue;
     }
 
@@ -20718,6 +21254,22 @@ public sealed class ShapeAnalysisSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ShapeAnalysisSurfaceMethodValue0(handle, u, v, out Point3dRaw resultValue), "occtsharp_generated_shape_analysis_surface_method_value_0");
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT ShapeAnalysis_Surface::Value.</summary>
+    public Point3d Value(global::OcctSharp.Values.Point2d p2d)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ShapeAnalysisSurfaceMethodValue1(handle, p2d, out Point3dRaw resultValue), "occtsharp_generated_shape_analysis_surface_method_value_1");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
+    }
+
+    /// <summary>Invokes OCCT ShapeAnalysis_Surface::ValueOfUV.</summary>
+    public global::OcctSharp.Values.Point2d ValueOfUV(Point3d p3D, double preci)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ShapeAnalysisSurfaceMethodValueOfUV0(handle, new Point3dRaw(p3D.X, p3D.Y, p3D.Z), preci, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_shape_analysis_surface_method_value_of_uv_0");
+        return resultValue;
     }
 
     /// <summary>Invokes OCCT ShapeAnalysis_Surface::VCloseVal.</summary>
@@ -22651,6 +23203,14 @@ public sealed class ShapeExtendComplexCurve : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT ShapeExtend_ComplexCurve::EvalDN.</summary>
+    public global::OcctSharp.Values.Vector3d EvalDN(double u, int n)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ShapeExtendComplexCurveMethodEvalDN0(handle, u, n, out global::OcctSharp.Values.Vector3d resultValue), "occtsharp_generated_shape_extend_complex_curve_method_eval_dn_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT ShapeExtend_ComplexCurve::FirstParameter.</summary>
     public double FirstParameter()
     {
@@ -22822,6 +23382,22 @@ public sealed class ShapeExtendCompositeSurface : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT ShapeExtend_CompositeSurface::EvalDN.</summary>
+    public global::OcctSharp.Values.Vector3d EvalDN(double u, double v, int nu, int nv)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ShapeExtendCompositeSurfaceMethodEvalDN0(handle, u, v, nu, nv, out global::OcctSharp.Values.Vector3d resultValue), "occtsharp_generated_shape_extend_composite_surface_method_eval_dn_0");
+        return resultValue;
+    }
+
+    /// <summary>Invokes OCCT ShapeExtend_CompositeSurface::GlobalToLocal.</summary>
+    public global::OcctSharp.Values.Point2d GlobalToLocal(int i, int j, global::OcctSharp.Values.Point2d uV)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ShapeExtendCompositeSurfaceMethodGlobalToLocal0(handle, i, j, uV, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_shape_extend_composite_surface_method_global_to_local_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT ShapeExtend_CompositeSurface::IsCNu.</summary>
     public bool IsCNu(int n)
     {
@@ -22870,6 +23446,14 @@ public sealed class ShapeExtendCompositeSurface : IDisposable
         return resultValue != 0;
     }
 
+    /// <summary>Invokes OCCT ShapeExtend_CompositeSurface::LocalToGlobal.</summary>
+    public global::OcctSharp.Values.Point2d LocalToGlobal(int i, int j, global::OcctSharp.Values.Point2d uv)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ShapeExtendCompositeSurfaceMethodLocalToGlobal0(handle, i, j, uv, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_shape_extend_composite_surface_method_local_to_global_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT ShapeExtend_CompositeSurface::LocateUParameter.</summary>
     public int LocateUParameter(double u)
     {
@@ -22916,6 +23500,14 @@ public sealed class ShapeExtendCompositeSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ShapeExtendCompositeSurfaceMethodPatch1(handle, i, j, out nint handleValue), "occtsharp_generated_shape_extend_composite_surface_method_patch_1");
         return global::OcctSharp.GeomSurface.FromNative(handleValue, "occtsharp_generated_shape_extend_composite_surface_method_patch_1");
+    }
+
+    /// <summary>Invokes OCCT ShapeExtend_CompositeSurface::Patch.</summary>
+    public GeomSurface? Patch(global::OcctSharp.Values.Point2d pnt)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ShapeExtendCompositeSurfaceMethodPatch2(handle, pnt, out nint handleValue), "occtsharp_generated_shape_extend_composite_surface_method_patch_2");
+        return global::OcctSharp.GeomSurface.FromNative(handleValue, "occtsharp_generated_shape_extend_composite_surface_method_patch_2");
     }
 
     /// <summary>Invokes OCCT ShapeExtend_CompositeSurface::SetUFirstValue.</summary>
@@ -22977,6 +23569,14 @@ public sealed class ShapeExtendCompositeSurface : IDisposable
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ShapeExtendCompositeSurfaceMethodUReversedParameter0(handle, u, out double resultValue), "occtsharp_generated_shape_extend_composite_surface_method_ureversed_parameter_0");
         return resultValue;
+    }
+
+    /// <summary>Invokes OCCT ShapeExtend_CompositeSurface::Value.</summary>
+    public Point3d Value(global::OcctSharp.Values.Point2d pnt)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(ModelingGeneratedNativeMethods.ShapeExtendCompositeSurfaceMethodValue0(handle, pnt, out Point3dRaw resultValue), "occtsharp_generated_shape_extend_composite_surface_method_value_0");
+        return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
     /// <summary>Invokes OCCT ShapeExtend_CompositeSurface::VGlobalToLocal.</summary>

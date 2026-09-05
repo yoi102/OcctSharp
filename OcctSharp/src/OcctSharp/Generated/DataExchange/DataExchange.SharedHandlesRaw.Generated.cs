@@ -723,6 +723,8 @@
 // Source: c:@S@IGESAppli_NodalDisplAndRot@F@Node#I#1
 // Source: c:@S@IGESAppli_NodalDisplAndRot@F@NodeIdentifier#I#1
 // Source: c:@S@IGESAppli_NodalDisplAndRot@F@Note#I#1
+// Source: c:@S@IGESAppli_NodalDisplAndRot@F@RotationalParameter#I#I#1
+// Source: c:@S@IGESAppli_NodalDisplAndRot@F@TranslationParameter#I#I#1
 // Source: c:@S@IGESAppli_NodalResults@F@Data#I#I#1
 // Source: c:@S@IGESAppli_NodalResults@F@DynamicType#1
 // Source: c:@S@IGESAppli_NodalResults@F@IGESAppli_NodalResults#
@@ -737,6 +739,7 @@
 // Source: c:@S@IGESAppli_Node@F@Coord#1
 // Source: c:@S@IGESAppli_Node@F@DynamicType#1
 // Source: c:@S@IGESAppli_Node@F@IGESAppli_Node#
+// Source: c:@S@IGESAppli_Node@F@Init#&1$@S@gp_XYZ#&1$@N@opencascade@S@handle>#$@S@IGESGeom_TransformationMatrix#
 // Source: c:@S@IGESAppli_Node@F@System#1
 // Source: c:@S@IGESAppli_Node@F@SystemType#1
 // Source: c:@S@IGESAppli_Node@F@TransformedNodalCoord#1
@@ -918,8 +921,11 @@
 // Source: c:@S@IGESBasic_SingularSubfigure@F@DynamicType#1
 // Source: c:@S@IGESBasic_SingularSubfigure@F@HasScaleFactor#1
 // Source: c:@S@IGESBasic_SingularSubfigure@F@IGESBasic_SingularSubfigure#
+// Source: c:@S@IGESBasic_SingularSubfigure@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESBasic_SubfigureDef#&1$@S@gp_XYZ#b#d#
 // Source: c:@S@IGESBasic_SingularSubfigure@F@ScaleFactor#1
 // Source: c:@S@IGESBasic_SingularSubfigure@F@Subfigure#1
+// Source: c:@S@IGESBasic_SingularSubfigure@F@TransformedTranslation#1
+// Source: c:@S@IGESBasic_SingularSubfigure@F@Translation#1
 // Source: c:@S@IGESBasic_SpecificModule@F@DynamicType#1
 // Source: c:@S@IGESBasic_SpecificModule@F@IGESBasic_SpecificModule#
 // Source: c:@S@IGESBasic_SpecificModule@F@OwnCorrect#I#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
@@ -1230,13 +1236,21 @@
 // Source: c:@S@IGESDimen_AngularDimension@F@HasFirstWitnessLine#1
 // Source: c:@S@IGESDimen_AngularDimension@F@HasSecondWitnessLine#1
 // Source: c:@S@IGESDimen_AngularDimension@F@IGESDimen_AngularDimension#
+// Source: c:@S@IGESDimen_AngularDimension@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESDimen_GeneralNote#&1$@N@opencascade@S@handle>#$@S@IGESDimen_WitnessLine#S3_#&1$@S@gp_XY#d#&1$@N@opencascade@S@handle>#$@S@IGESDimen_LeaderArrow#S8_#
 // Source: c:@S@IGESDimen_AngularDimension@F@Note#1
 // Source: c:@S@IGESDimen_AngularDimension@F@Radius#1
 // Source: c:@S@IGESDimen_AngularDimension@F@SecondLeader#1
 // Source: c:@S@IGESDimen_AngularDimension@F@SecondWitnessLine#1
+// Source: c:@S@IGESDimen_AngularDimension@F@TransformedVertex#1
+// Source: c:@S@IGESDimen_AngularDimension@F@Vertex#1
 // Source: c:@S@IGESDimen_BasicDimension@F@DynamicType#1
 // Source: c:@S@IGESDimen_BasicDimension@F@IGESDimen_BasicDimension#
+// Source: c:@S@IGESDimen_BasicDimension@F@Init#I#&1$@S@gp_XY#S0_#S0_#S0_#
+// Source: c:@S@IGESDimen_BasicDimension@F@LowerLeft#1
+// Source: c:@S@IGESDimen_BasicDimension@F@LowerRight#1
 // Source: c:@S@IGESDimen_BasicDimension@F@NbPropertyValues#1
+// Source: c:@S@IGESDimen_BasicDimension@F@UpperLeft#1
+// Source: c:@S@IGESDimen_BasicDimension@F@UpperRight#1
 // Source: c:@S@IGESDimen_CenterLine@F@Datatype#1
 // Source: c:@S@IGESDimen_CenterLine@F@DynamicType#1
 // Source: c:@S@IGESDimen_CenterLine@F@IGESDimen_CenterLine#
@@ -1259,12 +1273,15 @@
 // Source: c:@S@IGESDimen_CurveDimension@F@SecondCurve#1
 // Source: c:@S@IGESDimen_CurveDimension@F@SecondLeader#1
 // Source: c:@S@IGESDimen_CurveDimension@F@SecondWitnessLine#1
+// Source: c:@S@IGESDimen_DiameterDimension@F@Center#1
 // Source: c:@S@IGESDimen_DiameterDimension@F@DynamicType#1
 // Source: c:@S@IGESDimen_DiameterDimension@F@FirstLeader#1
 // Source: c:@S@IGESDimen_DiameterDimension@F@HasSecondLeader#1
 // Source: c:@S@IGESDimen_DiameterDimension@F@IGESDimen_DiameterDimension#
+// Source: c:@S@IGESDimen_DiameterDimension@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESDimen_GeneralNote#&1$@N@opencascade@S@handle>#$@S@IGESDimen_LeaderArrow#S3_#&1$@S@gp_XY#
 // Source: c:@S@IGESDimen_DiameterDimension@F@Note#1
 // Source: c:@S@IGESDimen_DiameterDimension@F@SecondLeader#1
+// Source: c:@S@IGESDimen_DiameterDimension@F@TransformedCenter#1
 // Source: c:@S@IGESDimen_DimensionDisplayData@F@ArrowHeadOrientation#1
 // Source: c:@S@IGESDimen_DimensionDisplayData@F@CharacterSet#1
 // Source: c:@S@IGESDimen_DimensionDisplayData@F@DecimalSymbol#1
@@ -1358,11 +1375,13 @@
 // Source: c:@S@IGESDimen_GeneralSymbol@F@NbLeaders#1
 // Source: c:@S@IGESDimen_GeneralSymbol@F@Note#1
 // Source: c:@S@IGESDimen_GeneralSymbol@F@SetFormNumber#I#
+// Source: c:@S@IGESDimen_LeaderArrow@F@ArrowHead#1
 // Source: c:@S@IGESDimen_LeaderArrow@F@ArrowHeadHeight#1
 // Source: c:@S@IGESDimen_LeaderArrow@F@ArrowHeadWidth#1
 // Source: c:@S@IGESDimen_LeaderArrow@F@DynamicType#1
 // Source: c:@S@IGESDimen_LeaderArrow@F@IGESDimen_LeaderArrow#
 // Source: c:@S@IGESDimen_LeaderArrow@F@NbSegments#1
+// Source: c:@S@IGESDimen_LeaderArrow@F@SegmentTail#I#1
 // Source: c:@S@IGESDimen_LeaderArrow@F@SetFormNumber#I#
 // Source: c:@S@IGESDimen_LeaderArrow@F@TransformedArrowHead#1
 // Source: c:@S@IGESDimen_LeaderArrow@F@TransformedSegmentTail#I#1
@@ -1449,9 +1468,11 @@
 // Source: c:@S@IGESDimen_Protocol@F@NbResources#1
 // Source: c:@S@IGESDimen_Protocol@F@Resource#I#1
 // Source: c:@S@IGESDimen_Protocol@F@TypeNumber#&1$@N@opencascade@S@handle>#$@S@Standard_Type#1
+// Source: c:@S@IGESDimen_RadiusDimension@F@Center#1
 // Source: c:@S@IGESDimen_RadiusDimension@F@DynamicType#1
 // Source: c:@S@IGESDimen_RadiusDimension@F@HasLeader2#1
 // Source: c:@S@IGESDimen_RadiusDimension@F@IGESDimen_RadiusDimension#
+// Source: c:@S@IGESDimen_RadiusDimension@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESDimen_GeneralNote#&1$@N@opencascade@S@handle>#$@S@IGESDimen_LeaderArrow#&1$@S@gp_XY#S3_#
 // Source: c:@S@IGESDimen_RadiusDimension@F@InitForm#I#
 // Source: c:@S@IGESDimen_RadiusDimension@F@Leader#1
 // Source: c:@S@IGESDimen_RadiusDimension@F@Leader2#1
@@ -1518,6 +1539,7 @@
 // Source: c:@S@IGESDraw_ConnectPoint@F@HasOwnerSubfigure#1
 // Source: c:@S@IGESDraw_ConnectPoint@F@IGESDraw_ConnectPoint#
 // Source: c:@S@IGESDraw_ConnectPoint@F@IdentifierTemplate#1
+// Source: c:@S@IGESDraw_ConnectPoint@F@Init#&1$@S@gp_XYZ#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#I#I#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#&1$@N@opencascade@S@handle>#$@S@IGESGraph_TextDisplayTemplate#S5_#S8_#I#I#I#S2_#
 // Source: c:@S@IGESDraw_ConnectPoint@F@OwnerSubfigure#1
 // Source: c:@S@IGESDraw_ConnectPoint@F@Point#1
 // Source: c:@S@IGESDraw_ConnectPoint@F@PointIdentifier#1
@@ -1530,6 +1552,8 @@
 // Source: c:@S@IGESDraw_Drawing@F@NbAnnotations#1
 // Source: c:@S@IGESDraw_Drawing@F@NbViews#1
 // Source: c:@S@IGESDraw_Drawing@F@ViewItem#I#1
+// Source: c:@S@IGESDraw_Drawing@F@ViewOrigin#I#1
+// Source: c:@S@IGESDraw_Drawing@F@ViewToDrawing#I#&1$@S@gp_XYZ#1
 // Source: c:@S@IGESDraw_DrawingWithRotation@F@Annotation#I#1
 // Source: c:@S@IGESDraw_DrawingWithRotation@F@DynamicType#1
 // Source: c:@S@IGESDraw_DrawingWithRotation@F@IGESDraw_DrawingWithRotation#
@@ -1537,6 +1561,8 @@
 // Source: c:@S@IGESDraw_DrawingWithRotation@F@NbViews#1
 // Source: c:@S@IGESDraw_DrawingWithRotation@F@OrientationAngle#I#1
 // Source: c:@S@IGESDraw_DrawingWithRotation@F@ViewItem#I#1
+// Source: c:@S@IGESDraw_DrawingWithRotation@F@ViewOrigin#I#1
+// Source: c:@S@IGESDraw_DrawingWithRotation@F@ViewToDrawing#I#&1$@S@gp_XYZ#1
 // Source: c:@S@IGESDraw_GeneralModule@F@DynamicType#1
 // Source: c:@S@IGESDraw_GeneralModule@F@IGESDraw_GeneralModule#
 // Source: c:@S@IGESDraw_GeneralModule@F@OwnDeleteCase#I#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#1
@@ -1556,7 +1582,10 @@
 // Source: c:@S@IGESDraw_NetworkSubfigure@F@IGESDraw_NetworkSubfigure#
 // Source: c:@S@IGESDraw_NetworkSubfigure@F@NbConnectPoints#1
 // Source: c:@S@IGESDraw_NetworkSubfigure@F@ReferenceDesignator#1
+// Source: c:@S@IGESDraw_NetworkSubfigure@F@ScaleFactors#1
 // Source: c:@S@IGESDraw_NetworkSubfigure@F@SubfigureDefinition#1
+// Source: c:@S@IGESDraw_NetworkSubfigure@F@TransformedTranslation#1
+// Source: c:@S@IGESDraw_NetworkSubfigure@F@Translation#1
 // Source: c:@S@IGESDraw_NetworkSubfigure@F@TypeFlag#1
 // Source: c:@S@IGESDraw_NetworkSubfigureDef@F@Depth#1
 // Source: c:@S@IGESDraw_NetworkSubfigureDef@F@Designator#1
@@ -1572,19 +1601,25 @@
 // Source: c:@S@IGESDraw_NetworkSubfigureDef@F@PointEntity#I#1
 // Source: c:@S@IGESDraw_NetworkSubfigureDef@F@TypeFlag#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@BackPlaneDistance#1
+// Source: c:@S@IGESDraw_PerspectiveView@F@BottomRight#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@CenterOfProjection#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@DepthClip#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@DynamicType#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@FrontPlaneDistance#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@IGESDraw_PerspectiveView#
+// Source: c:@S@IGESDraw_PerspectiveView@F@Init#I#d#&1$@S@gp_XYZ#S0_#S0_#S0_#d#&1$@S@gp_XY#S2_#I#d#d#
 // Source: c:@S@IGESDraw_PerspectiveView@F@IsSingle#1
+// Source: c:@S@IGESDraw_PerspectiveView@F@ModelToView#&1$@S@gp_XYZ#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@NbViews#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@ScaleFactor#1
+// Source: c:@S@IGESDraw_PerspectiveView@F@TopLeft#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@ViewItem#I#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@ViewMatrix#1
+// Source: c:@S@IGESDraw_PerspectiveView@F@ViewNormalVector#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@ViewNumber#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@ViewPlaneDistance#1
 // Source: c:@S@IGESDraw_PerspectiveView@F@ViewReferencePoint#1
+// Source: c:@S@IGESDraw_PerspectiveView@F@ViewUpVector#1
 // Source: c:@S@IGESDraw_Planar@F@DynamicType#1
 // Source: c:@S@IGESDraw_Planar@F@Entity#I#1
 // Source: c:@S@IGESDraw_Planar@F@IGESDraw_Planar#
@@ -1648,6 +1683,7 @@
 // Source: c:@S@IGESDraw_View@F@Init#I#d#&1$@N@opencascade@S@handle>#$@S@IGESGeom_Plane#S0_#S0_#S0_#S0_#S0_#
 // Source: c:@S@IGESDraw_View@F@IsSingle#1
 // Source: c:@S@IGESDraw_View@F@LeftPlane#1
+// Source: c:@S@IGESDraw_View@F@ModelToView#&1$@S@gp_XYZ#1
 // Source: c:@S@IGESDraw_View@F@NbViews#1
 // Source: c:@S@IGESDraw_View@F@RightPlane#1
 // Source: c:@S@IGESDraw_View@F@ScaleFactor#1
@@ -1686,6 +1722,7 @@
 // Source: c:@S@IGESGeom_BSplineCurve@F@Knot#I#1
 // Source: c:@S@IGESGeom_BSplineCurve@F@NbKnots#1
 // Source: c:@S@IGESGeom_BSplineCurve@F@NbPoles#1
+// Source: c:@S@IGESGeom_BSplineCurve@F@Normal#1
 // Source: c:@S@IGESGeom_BSplineCurve@F@Pole#I#1
 // Source: c:@S@IGESGeom_BSplineCurve@F@SetFormNumber#I#
 // Source: c:@S@IGESGeom_BSplineCurve@F@TransformedPole#I#1
@@ -1735,10 +1772,16 @@
 // Source: c:@S@IGESGeom_BoundedSurface@F@RepresentationType#1
 // Source: c:@S@IGESGeom_BoundedSurface@F@Surface#1
 // Source: c:@S@IGESGeom_CircularArc@F@Angle#1
+// Source: c:@S@IGESGeom_CircularArc@F@Axis#1
+// Source: c:@S@IGESGeom_CircularArc@F@Center#1
 // Source: c:@S@IGESGeom_CircularArc@F@DynamicType#1
+// Source: c:@S@IGESGeom_CircularArc@F@EndPoint#1
 // Source: c:@S@IGESGeom_CircularArc@F@IGESGeom_CircularArc#
+// Source: c:@S@IGESGeom_CircularArc@F@Init#d#&1$@S@gp_XY#S0_#S0_#
 // Source: c:@S@IGESGeom_CircularArc@F@IsClosed#1
 // Source: c:@S@IGESGeom_CircularArc@F@Radius#1
+// Source: c:@S@IGESGeom_CircularArc@F@StartPoint#1
+// Source: c:@S@IGESGeom_CircularArc@F@TransformedAxis#1
 // Source: c:@S@IGESGeom_CircularArc@F@TransformedCenter#1
 // Source: c:@S@IGESGeom_CircularArc@F@TransformedEndPoint#1
 // Source: c:@S@IGESGeom_CircularArc@F@TransformedStartPoint#1
@@ -1747,14 +1790,19 @@
 // Source: c:@S@IGESGeom_CompositeCurve@F@DynamicType#1
 // Source: c:@S@IGESGeom_CompositeCurve@F@IGESGeom_CompositeCurve#
 // Source: c:@S@IGESGeom_CompositeCurve@F@NbCurves#1
+// Source: c:@S@IGESGeom_ConicArc@F@Axis#1
 // Source: c:@S@IGESGeom_ConicArc@F@ComputedFormNumber#1
 // Source: c:@S@IGESGeom_ConicArc@F@DynamicType#1
+// Source: c:@S@IGESGeom_ConicArc@F@EndPoint#1
 // Source: c:@S@IGESGeom_ConicArc@F@IGESGeom_ConicArc#
+// Source: c:@S@IGESGeom_ConicArc@F@Init#d#d#d#d#d#d#d#&1$@S@gp_XY#S0_#
 // Source: c:@S@IGESGeom_ConicArc@F@IsClosed#1
 // Source: c:@S@IGESGeom_ConicArc@F@IsFromEllipse#1
 // Source: c:@S@IGESGeom_ConicArc@F@IsFromHyperbola#1
 // Source: c:@S@IGESGeom_ConicArc@F@IsFromParabola#1
 // Source: c:@S@IGESGeom_ConicArc@F@OwnCorrect#
+// Source: c:@S@IGESGeom_ConicArc@F@StartPoint#1
+// Source: c:@S@IGESGeom_ConicArc@F@TransformedAxis#1
 // Source: c:@S@IGESGeom_ConicArc@F@TransformedEndPoint#1
 // Source: c:@S@IGESGeom_ConicArc@F@TransformedStartPoint#1
 // Source: c:@S@IGESGeom_ConicArc@F@ZPlane#1
@@ -1770,6 +1818,8 @@
 // Source: c:@S@IGESGeom_CopiousData@F@SetClosedPath2D#
 // Source: c:@S@IGESGeom_CopiousData@F@SetPolyline#b#
 // Source: c:@S@IGESGeom_CopiousData@F@TransformedPoint#I#1
+// Source: c:@S@IGESGeom_CopiousData@F@TransformedVector#I#1
+// Source: c:@S@IGESGeom_CopiousData@F@Vector#I#1
 // Source: c:@S@IGESGeom_CopiousData@F@ZPlane#1
 // Source: c:@S@IGESGeom_CurveOnSurface@F@CreationMode#1
 // Source: c:@S@IGESGeom_CurveOnSurface@F@Curve3D#1
@@ -1781,12 +1831,17 @@
 // Source: c:@S@IGESGeom_CurveOnSurface@F@Surface#1
 // Source: c:@S@IGESGeom_Direction@F@DynamicType#1
 // Source: c:@S@IGESGeom_Direction@F@IGESGeom_Direction#
+// Source: c:@S@IGESGeom_Direction@F@Init#&1$@S@gp_XYZ#
+// Source: c:@S@IGESGeom_Direction@F@TransformedValue#1
+// Source: c:@S@IGESGeom_Direction@F@Value#1
 // Source: c:@S@IGESGeom_Flash@F@Dimension1#1
 // Source: c:@S@IGESGeom_Flash@F@Dimension2#1
 // Source: c:@S@IGESGeom_Flash@F@DynamicType#1
 // Source: c:@S@IGESGeom_Flash@F@HasReferenceEntity#1
 // Source: c:@S@IGESGeom_Flash@F@IGESGeom_Flash#
+// Source: c:@S@IGESGeom_Flash@F@Init#&1$@S@gp_XY#d#d#d#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#
 // Source: c:@S@IGESGeom_Flash@F@ReferenceEntity#1
+// Source: c:@S@IGESGeom_Flash@F@ReferencePoint#1
 // Source: c:@S@IGESGeom_Flash@F@Rotation#1
 // Source: c:@S@IGESGeom_Flash@F@SetFormNumber#I#
 // Source: c:@S@IGESGeom_Flash@F@TransformedReferencePoint#1
@@ -1796,6 +1851,7 @@
 // Source: c:@S@IGESGeom_Line@F@EndPoint#1
 // Source: c:@S@IGESGeom_Line@F@IGESGeom_Line#
 // Source: c:@S@IGESGeom_Line@F@Infinite#1
+// Source: c:@S@IGESGeom_Line@F@Init#&1$@S@gp_XYZ#S0_#
 // Source: c:@S@IGESGeom_Line@F@SetInfinite#I#
 // Source: c:@S@IGESGeom_Line@F@StartPoint#1
 // Source: c:@S@IGESGeom_Line@F@TransformedEndPoint#1
@@ -1810,20 +1866,27 @@
 // Source: c:@S@IGESGeom_OffsetCurve@F@FunctionParameter#1
 // Source: c:@S@IGESGeom_OffsetCurve@F@HasFunction#1
 // Source: c:@S@IGESGeom_OffsetCurve@F@IGESGeom_OffsetCurve#
+// Source: c:@S@IGESGeom_OffsetCurve@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#I#S0_#I#I#d#d#d#d#&1$@S@gp_XYZ#d#d#
+// Source: c:@S@IGESGeom_OffsetCurve@F@NormalVector#1
 // Source: c:@S@IGESGeom_OffsetCurve@F@OffsetType#1
 // Source: c:@S@IGESGeom_OffsetCurve@F@SecondOffsetDistance#1
 // Source: c:@S@IGESGeom_OffsetCurve@F@StartParameter#1
 // Source: c:@S@IGESGeom_OffsetCurve@F@TaperedOffsetType#1
+// Source: c:@S@IGESGeom_OffsetCurve@F@TransformedNormalVector#1
 // Source: c:@S@IGESGeom_OffsetSurface@F@Distance#1
 // Source: c:@S@IGESGeom_OffsetSurface@F@DynamicType#1
 // Source: c:@S@IGESGeom_OffsetSurface@F@IGESGeom_OffsetSurface#
+// Source: c:@S@IGESGeom_OffsetSurface@F@Init#&1$@S@gp_XYZ#d#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#
+// Source: c:@S@IGESGeom_OffsetSurface@F@OffsetIndicator#1
 // Source: c:@S@IGESGeom_OffsetSurface@F@Surface#1
+// Source: c:@S@IGESGeom_OffsetSurface@F@TransformedOffsetIndicator#1
 // Source: c:@S@IGESGeom_Plane@F@BoundingCurve#1
 // Source: c:@S@IGESGeom_Plane@F@DynamicType#1
 // Source: c:@S@IGESGeom_Plane@F@HasBoundingCurve#1
 // Source: c:@S@IGESGeom_Plane@F@HasBoundingCurveHole#1
 // Source: c:@S@IGESGeom_Plane@F@HasSymbolAttach#1
 // Source: c:@S@IGESGeom_Plane@F@IGESGeom_Plane#
+// Source: c:@S@IGESGeom_Plane@F@Init#d#d#d#d#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#&1$@S@gp_XYZ#d#
 // Source: c:@S@IGESGeom_Plane@F@SetFormNumber#I#
 // Source: c:@S@IGESGeom_Plane@F@SymbolAttach#1
 // Source: c:@S@IGESGeom_Plane@F@SymbolSize#1
@@ -1832,6 +1895,7 @@
 // Source: c:@S@IGESGeom_Point@F@DynamicType#1
 // Source: c:@S@IGESGeom_Point@F@HasDisplaySymbol#1
 // Source: c:@S@IGESGeom_Point@F@IGESGeom_Point#
+// Source: c:@S@IGESGeom_Point@F@Init#&1$@S@gp_XYZ#&1$@N@opencascade@S@handle>#$@S@IGESBasic_SubfigureDef#
 // Source: c:@S@IGESGeom_Point@F@TransformedValue#1
 // Source: c:@S@IGESGeom_Point@F@Value#1
 // Source: c:@S@IGESGeom_Protocol@F@DynamicType#1
@@ -1880,6 +1944,7 @@
 // Source: c:@S@IGESGeom_TabulatedCylinder@F@DynamicType#1
 // Source: c:@S@IGESGeom_TabulatedCylinder@F@EndPoint#1
 // Source: c:@S@IGESGeom_TabulatedCylinder@F@IGESGeom_TabulatedCylinder#
+// Source: c:@S@IGESGeom_TabulatedCylinder@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#&1$@S@gp_XYZ#
 // Source: c:@S@IGESGeom_TabulatedCylinder@F@TransformedEndPoint#1
 // Source: c:@S@IGESGeom_TransformationMatrix@F@Data#I#I#1
 // Source: c:@S@IGESGeom_TransformationMatrix@F@DynamicType#1
@@ -1978,6 +2043,7 @@
 // Source: c:@S@IGESGraph_TextDisplayTemplate@F@FontCode#1
 // Source: c:@S@IGESGraph_TextDisplayTemplate@F@FontEntity#1
 // Source: c:@S@IGESGraph_TextDisplayTemplate@F@IGESGraph_TextDisplayTemplate#
+// Source: c:@S@IGESGraph_TextDisplayTemplate@F@Init#d#d#I#&1$@N@opencascade@S@handle>#$@S@IGESGraph_TextFontDef#d#d#I#I#&1$@S@gp_XYZ#
 // Source: c:@S@IGESGraph_TextDisplayTemplate@F@IsFontEntity#1
 // Source: c:@S@IGESGraph_TextDisplayTemplate@F@IsIncremental#1
 // Source: c:@S@IGESGraph_TextDisplayTemplate@F@MirrorFlag#1
@@ -2000,7 +2066,10 @@
 // Source: c:@S@IGESGraph_TextFontDef@F@SupersededFontCode#1
 // Source: c:@S@IGESGraph_TextFontDef@F@SupersededFontEntity#1
 // Source: c:@S@IGESGraph_UniformRectGrid@F@DynamicType#1
+// Source: c:@S@IGESGraph_UniformRectGrid@F@GridPoint#1
+// Source: c:@S@IGESGraph_UniformRectGrid@F@GridSpacing#1
 // Source: c:@S@IGESGraph_UniformRectGrid@F@IGESGraph_UniformRectGrid#
+// Source: c:@S@IGESGraph_UniformRectGrid@F@Init#I#I#I#I#&1$@S@gp_XY#S0_#I#I#
 // Source: c:@S@IGESGraph_UniformRectGrid@F@IsFinite#1
 // Source: c:@S@IGESGraph_UniformRectGrid@F@IsLine#1
 // Source: c:@S@IGESGraph_UniformRectGrid@F@IsWeighted#1
@@ -2158,9 +2227,17 @@
 // Source: c:@S@IGESSolid_Block@F@Corner#1
 // Source: c:@S@IGESSolid_Block@F@DynamicType#1
 // Source: c:@S@IGESSolid_Block@F@IGESSolid_Block#
+// Source: c:@S@IGESSolid_Block@F@Init#&1$@S@gp_XYZ#S0_#S0_#S0_#
+// Source: c:@S@IGESSolid_Block@F@Size#1
 // Source: c:@S@IGESSolid_Block@F@TransformedCorner#1
+// Source: c:@S@IGESSolid_Block@F@TransformedXAxis#1
+// Source: c:@S@IGESSolid_Block@F@TransformedYAxis#1
+// Source: c:@S@IGESSolid_Block@F@TransformedZAxis#1
+// Source: c:@S@IGESSolid_Block@F@XAxis#1
 // Source: c:@S@IGESSolid_Block@F@XLength#1
+// Source: c:@S@IGESSolid_Block@F@YAxis#1
 // Source: c:@S@IGESSolid_Block@F@YLength#1
+// Source: c:@S@IGESSolid_Block@F@ZAxis#1
 // Source: c:@S@IGESSolid_Block@F@ZLength#1
 // Source: c:@S@IGESSolid_BooleanTree@F@DynamicType#1
 // Source: c:@S@IGESSolid_BooleanTree@F@IGESSolid_BooleanTree#
@@ -2168,12 +2245,15 @@
 // Source: c:@S@IGESSolid_BooleanTree@F@Length#1
 // Source: c:@S@IGESSolid_BooleanTree@F@Operand#I#1
 // Source: c:@S@IGESSolid_BooleanTree@F@Operation#I#1
+// Source: c:@S@IGESSolid_ConeFrustum@F@Axis#1
 // Source: c:@S@IGESSolid_ConeFrustum@F@DynamicType#1
 // Source: c:@S@IGESSolid_ConeFrustum@F@FaceCenter#1
 // Source: c:@S@IGESSolid_ConeFrustum@F@Height#1
 // Source: c:@S@IGESSolid_ConeFrustum@F@IGESSolid_ConeFrustum#
+// Source: c:@S@IGESSolid_ConeFrustum@F@Init#d#d#d#&1$@S@gp_XYZ#S0_#
 // Source: c:@S@IGESSolid_ConeFrustum@F@LargerRadius#1
 // Source: c:@S@IGESSolid_ConeFrustum@F@SmallerRadius#1
+// Source: c:@S@IGESSolid_ConeFrustum@F@TransformedAxis#1
 // Source: c:@S@IGESSolid_ConeFrustum@F@TransformedFaceCenter#1
 // Source: c:@S@IGESSolid_ConicalSurface@F@Axis#1
 // Source: c:@S@IGESSolid_ConicalSurface@F@DynamicType#1
@@ -2184,11 +2264,14 @@
 // Source: c:@S@IGESSolid_ConicalSurface@F@Radius#1
 // Source: c:@S@IGESSolid_ConicalSurface@F@ReferenceDir#1
 // Source: c:@S@IGESSolid_ConicalSurface@F@SemiAngle#1
+// Source: c:@S@IGESSolid_Cylinder@F@Axis#1
 // Source: c:@S@IGESSolid_Cylinder@F@DynamicType#1
 // Source: c:@S@IGESSolid_Cylinder@F@FaceCenter#1
 // Source: c:@S@IGESSolid_Cylinder@F@Height#1
 // Source: c:@S@IGESSolid_Cylinder@F@IGESSolid_Cylinder#
+// Source: c:@S@IGESSolid_Cylinder@F@Init#d#d#&1$@S@gp_XYZ#S0_#
 // Source: c:@S@IGESSolid_Cylinder@F@Radius#1
+// Source: c:@S@IGESSolid_Cylinder@F@TransformedAxis#1
 // Source: c:@S@IGESSolid_Cylinder@F@TransformedFaceCenter#1
 // Source: c:@S@IGESSolid_CylindricalSurface@F@Axis#1
 // Source: c:@S@IGESSolid_CylindricalSurface@F@DynamicType#1
@@ -2209,9 +2292,17 @@
 // Source: c:@S@IGESSolid_Ellipsoid@F@Center#1
 // Source: c:@S@IGESSolid_Ellipsoid@F@DynamicType#1
 // Source: c:@S@IGESSolid_Ellipsoid@F@IGESSolid_Ellipsoid#
+// Source: c:@S@IGESSolid_Ellipsoid@F@Init#&1$@S@gp_XYZ#S0_#S0_#S0_#
+// Source: c:@S@IGESSolid_Ellipsoid@F@Size#1
 // Source: c:@S@IGESSolid_Ellipsoid@F@TransformedCenter#1
+// Source: c:@S@IGESSolid_Ellipsoid@F@TransformedXAxis#1
+// Source: c:@S@IGESSolid_Ellipsoid@F@TransformedYAxis#1
+// Source: c:@S@IGESSolid_Ellipsoid@F@TransformedZAxis#1
+// Source: c:@S@IGESSolid_Ellipsoid@F@XAxis#1
 // Source: c:@S@IGESSolid_Ellipsoid@F@XLength#1
+// Source: c:@S@IGESSolid_Ellipsoid@F@YAxis#1
 // Source: c:@S@IGESSolid_Ellipsoid@F@YLength#1
+// Source: c:@S@IGESSolid_Ellipsoid@F@ZAxis#1
 // Source: c:@S@IGESSolid_Ellipsoid@F@ZLength#1
 // Source: c:@S@IGESSolid_Face@F@DynamicType#1
 // Source: c:@S@IGESSolid_Face@F@HasOuterLoop#1
@@ -2258,14 +2349,23 @@
 // Source: c:@S@IGESSolid_RightAngularWedge@F@Corner#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@DynamicType#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@IGESSolid_RightAngularWedge#
+// Source: c:@S@IGESSolid_RightAngularWedge@F@Init#&1$@S@gp_XYZ#d#S0_#S0_#S0_#
+// Source: c:@S@IGESSolid_RightAngularWedge@F@Size#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@TransformedCorner#1
+// Source: c:@S@IGESSolid_RightAngularWedge@F@TransformedXAxis#1
+// Source: c:@S@IGESSolid_RightAngularWedge@F@TransformedYAxis#1
+// Source: c:@S@IGESSolid_RightAngularWedge@F@TransformedZAxis#1
+// Source: c:@S@IGESSolid_RightAngularWedge@F@XAxis#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@XBigLength#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@XSmallLength#1
+// Source: c:@S@IGESSolid_RightAngularWedge@F@YAxis#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@YLength#1
+// Source: c:@S@IGESSolid_RightAngularWedge@F@ZAxis#1
 // Source: c:@S@IGESSolid_RightAngularWedge@F@ZLength#1
 // Source: c:@S@IGESSolid_SelectedComponent@F@Component#1
 // Source: c:@S@IGESSolid_SelectedComponent@F@DynamicType#1
 // Source: c:@S@IGESSolid_SelectedComponent@F@IGESSolid_SelectedComponent#
+// Source: c:@S@IGESSolid_SelectedComponent@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESSolid_BooleanTree#&1$@S@gp_XYZ#
 // Source: c:@S@IGESSolid_SelectedComponent@F@SelectPoint#1
 // Source: c:@S@IGESSolid_SelectedComponent@F@TransformedSelectPoint#1
 // Source: c:@S@IGESSolid_Shell@F@DynamicType#1
@@ -2290,21 +2390,28 @@
 // Source: c:@S@IGESSolid_SolidInstance@F@SetBrep#b#
 // Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@Curve#1
 // Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@DynamicType#1
+// Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@ExtrusionDirection#1
 // Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@ExtrusionLength#1
 // Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@IGESSolid_SolidOfLinearExtrusion#
+// Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#d#&1$@S@gp_XYZ#
+// Source: c:@S@IGESSolid_SolidOfLinearExtrusion@F@TransformedExtrusionDirection#1
+// Source: c:@S@IGESSolid_SolidOfRevolution@F@Axis#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@AxisPoint#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@Curve#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@DynamicType#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@Fraction#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@IGESSolid_SolidOfRevolution#
+// Source: c:@S@IGESSolid_SolidOfRevolution@F@Init#&1$@N@opencascade@S@handle>#$@S@IGESData_IGESEntity#d#&1$@S@gp_XYZ#S3_#
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@IsClosedToAxis#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@SetClosedToAxis#b#
+// Source: c:@S@IGESSolid_SolidOfRevolution@F@TransformedAxis#1
 // Source: c:@S@IGESSolid_SolidOfRevolution@F@TransformedAxisPoint#1
 // Source: c:@S@IGESSolid_SpecificModule@F@DynamicType#1
 // Source: c:@S@IGESSolid_SpecificModule@F@IGESSolid_SpecificModule#
 // Source: c:@S@IGESSolid_Sphere@F@Center#1
 // Source: c:@S@IGESSolid_Sphere@F@DynamicType#1
 // Source: c:@S@IGESSolid_Sphere@F@IGESSolid_Sphere#
+// Source: c:@S@IGESSolid_Sphere@F@Init#d#&1$@S@gp_XYZ#
 // Source: c:@S@IGESSolid_Sphere@F@Radius#1
 // Source: c:@S@IGESSolid_Sphere@F@TransformedCenter#1
 // Source: c:@S@IGESSolid_SphericalSurface@F@Axis#1
@@ -2326,11 +2433,14 @@
 // Source: c:@S@IGESSolid_ToroidalSurface@F@MinorRadius#1
 // Source: c:@S@IGESSolid_ToroidalSurface@F@ReferenceDir#1
 // Source: c:@S@IGESSolid_ToroidalSurface@F@TransformedCenter#1
+// Source: c:@S@IGESSolid_Torus@F@Axis#1
 // Source: c:@S@IGESSolid_Torus@F@AxisPoint#1
 // Source: c:@S@IGESSolid_Torus@F@DiscRadius#1
 // Source: c:@S@IGESSolid_Torus@F@DynamicType#1
 // Source: c:@S@IGESSolid_Torus@F@IGESSolid_Torus#
+// Source: c:@S@IGESSolid_Torus@F@Init#d#d#&1$@S@gp_XYZ#S0_#
 // Source: c:@S@IGESSolid_Torus@F@MajorRadius#1
+// Source: c:@S@IGESSolid_Torus@F@TransformedAxis#1
 // Source: c:@S@IGESSolid_Torus@F@TransformedAxisPoint#1
 // Source: c:@S@IGESSolid_VertexList@F@DynamicType#1
 // Source: c:@S@IGESSolid_VertexList@F@IGESSolid_VertexList#
@@ -2681,17 +2791,21 @@
 // Source: c:@S@RWMesh_CafReader@F@Document#1
 // Source: c:@S@RWMesh_CafReader@F@DynamicType#1
 // Source: c:@S@RWMesh_CafReader@F@ExtraStatus#1
+// Source: c:@S@RWMesh_CafReader@F@FileCoordinateSystem#1
 // Source: c:@S@RWMesh_CafReader@F@FileLengthUnit#1
 // Source: c:@S@RWMesh_CafReader@F@HasFileCoordinateSystem#1
 // Source: c:@S@RWMesh_CafReader@F@HasSystemCoordinateSystem#1
 // Source: c:@S@RWMesh_CafReader@F@MemoryLimitMiB#1
 // Source: c:@S@RWMesh_CafReader@F@SetDocument#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#
 // Source: c:@S@RWMesh_CafReader@F@SetFileCoordinateSystem#$@E@RWMesh_CoordinateSystem#
+// Source: c:@S@RWMesh_CafReader@F@SetFileCoordinateSystem#&1$@S@gp_Ax3#
 // Source: c:@S@RWMesh_CafReader@F@SetFileLengthUnit#d#
 // Source: c:@S@RWMesh_CafReader@F@SetFillIncompleteDocument#b#
 // Source: c:@S@RWMesh_CafReader@F@SetMemoryLimitMiB#I#
 // Source: c:@S@RWMesh_CafReader@F@SetSystemCoordinateSystem#$@E@RWMesh_CoordinateSystem#
+// Source: c:@S@RWMesh_CafReader@F@SetSystemCoordinateSystem#&1$@S@gp_Ax3#
 // Source: c:@S@RWMesh_CafReader@F@SetSystemLengthUnit#d#
+// Source: c:@S@RWMesh_CafReader@F@SystemCoordinateSystem#1
 // Source: c:@S@RWMesh_CafReader@F@SystemLengthUnit#1
 // Source: c:@S@RWMesh_CafReader@F@ToFillIncompleteDocument#1
 // Source: c:@S@RWMesh_MaterialMap@F@CreateTextureFolder#
@@ -7276,6 +7390,8 @@
 // Source: c:@S@VrmlData_ArrayVec3d@F@Length#1
 // Source: c:@S@VrmlData_Box@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
 // Source: c:@S@VrmlData_Box@F@DynamicType#1
+// Source: c:@S@VrmlData_Box@F@SetSize#&1$@S@gp_XYZ#
+// Source: c:@S@VrmlData_Box@F@Size#1
 // Source: c:@S@VrmlData_Box@F@TShape#
 // Source: c:@S@VrmlData_Box@F@VrmlData_Box#
 // Source: c:@S@VrmlData_Color@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
@@ -7293,6 +7409,7 @@
 // Source: c:@S@VrmlData_Cone@F@TShape#
 // Source: c:@S@VrmlData_Cone@F@VrmlData_Cone#
 // Source: c:@S@VrmlData_Coordinate@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
+// Source: c:@S@VrmlData_Coordinate@F@Coordinate#I#1
 // Source: c:@S@VrmlData_Coordinate@F@DynamicType#1
 // Source: c:@S@VrmlData_Coordinate@F@VrmlData_Coordinate#
 // Source: c:@S@VrmlData_Cylinder@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
@@ -7366,6 +7483,7 @@
 // Source: c:@S@VrmlData_Node@F@WriteClosing#1
 // Source: c:@S@VrmlData_Normal@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
 // Source: c:@S@VrmlData_Normal@F@DynamicType#1
+// Source: c:@S@VrmlData_Normal@F@Normal#I#1
 // Source: c:@S@VrmlData_Normal@F@VrmlData_Normal#
 // Source: c:@S@VrmlData_ShapeNode@F@Appearance#1
 // Source: c:@S@VrmlData_ShapeNode@F@Clone#&1$@N@opencascade@S@handle>#$@S@VrmlData_Node#1
@@ -7391,9 +7509,15 @@
 // Source: c:@S@VrmlData_TextureCoordinate@F@DynamicType#1
 // Source: c:@S@VrmlData_TextureCoordinate@F@Length#
 // Source: c:@S@VrmlData_TextureCoordinate@F@VrmlData_TextureCoordinate#
+// Source: c:@S@VrmlData_TextureTransform@F@Center#1
 // Source: c:@S@VrmlData_TextureTransform@F@DynamicType#1
 // Source: c:@S@VrmlData_TextureTransform@F@Rotation#1
+// Source: c:@S@VrmlData_TextureTransform@F@Scale#1
+// Source: c:@S@VrmlData_TextureTransform@F@SetCenter#&1$@S@gp_XY#
 // Source: c:@S@VrmlData_TextureTransform@F@SetRotation#d#
+// Source: c:@S@VrmlData_TextureTransform@F@SetScale#&1$@S@gp_XY#
+// Source: c:@S@VrmlData_TextureTransform@F@SetTranslation#&1$@S@gp_XY#
+// Source: c:@S@VrmlData_TextureTransform@F@Translation#1
 // Source: c:@S@VrmlData_UnknownNode@F@DynamicType#1
 // Source: c:@S@VrmlData_UnknownNode@F@IsDefault#1
 // Source: c:@S@VrmlData_UnknownNode@F@VrmlData_UnknownNode#
@@ -7415,7 +7539,9 @@
 // Source: c:@S@Vrml_IndexedFaceSet@F@Vrml_IndexedFaceSet#
 // Source: c:@S@Vrml_IndexedLineSet@F@DynamicType#1
 // Source: c:@S@Vrml_IndexedLineSet@F@Vrml_IndexedLineSet#
+// Source: c:@S@Vrml_LOD@F@Center#1
 // Source: c:@S@Vrml_LOD@F@DynamicType#1
+// Source: c:@S@Vrml_LOD@F@SetCenter#&1$@S@gp_Vec#
 // Source: c:@S@Vrml_LOD@F@Vrml_LOD#
 // Source: c:@S@Vrml_Material@F@DynamicType#1
 // Source: c:@S@Vrml_Material@F@Vrml_Material#
@@ -21388,6 +21514,14 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESAppliNodalDisplAndRotMethodNote0(IGESAppliNodalDisplAndRotHandle handle, int index, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesappli_nodal_displ_and_rot_method_rotational_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESAppliNodalDisplAndRotMethodRotationalParameter0(IGESAppliNodalDisplAndRotHandle handle, int nodeNum, int caseNum, out global::OcctSharp.Values.Coordinates3d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesappli_nodal_displ_and_rot_method_translation_parameter_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESAppliNodalDisplAndRotMethodTranslationParameter0(IGESAppliNodalDisplAndRotHandle handle, int nodeNum, int caseNum, out global::OcctSharp.Values.Coordinates3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesappli_nodal_displ_and_rot_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESAppliNodalDisplAndRotClone(IGESAppliNodalDisplAndRotHandle source, out nint handle);
@@ -21481,6 +21615,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesappli_node_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESAppliNodeMethodDynamicType0(IGESAppliNodeHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesappli_node_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESAppliNodeMethodInit0(IGESAppliNodeHandle handle, global::OcctSharp.Values.Coordinates3d aCoord, nint aCoordSystem);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesappli_node_method_system_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -22833,6 +22971,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESBasicSingularSubfigureMethodHasScaleFactor0(IGESBasicSingularSubfigureHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesbasic_singular_subfigure_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESBasicSingularSubfigureMethodInit0(IGESBasicSingularSubfigureHandle handle, nint aSubfigureDef, global::OcctSharp.Values.Coordinates3d aTranslation, int hasScale, double aScale);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesbasic_singular_subfigure_method_scale_factor_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESBasicSingularSubfigureMethodScaleFactor0(IGESBasicSingularSubfigureHandle handle, out double resultValue);
@@ -22840,6 +22982,14 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesbasic_singular_subfigure_method_subfigure_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESBasicSingularSubfigureMethodSubfigure0(IGESBasicSingularSubfigureHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesbasic_singular_subfigure_method_transformed_translation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESBasicSingularSubfigureMethodTransformedTranslation0(IGESBasicSingularSubfigureHandle handle, out global::OcctSharp.Values.Coordinates3d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesbasic_singular_subfigure_method_translation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESBasicSingularSubfigureMethodTranslation0(IGESBasicSingularSubfigureHandle handle, out global::OcctSharp.Values.Coordinates3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesbasic_singular_subfigure_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -24955,6 +25105,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenAngularDimensionMethodHasSecondWitnessLine0(IGESDimenAngularDimensionHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_angular_dimension_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenAngularDimensionMethodInit0(IGESDimenAngularDimensionHandle handle, nint aNote, nint aLine, nint anotherLine, global::OcctSharp.Values.Coordinates2d aVertex, double aRadius, nint aLeader, nint anotherLeader);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_angular_dimension_method_note_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenAngularDimensionMethodNote0(IGESDimenAngularDimensionHandle handle, out nint handleValue);
@@ -24970,6 +25124,14 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_angular_dimension_method_second_witness_line_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenAngularDimensionMethodSecondWitnessLine0(IGESDimenAngularDimensionHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_angular_dimension_method_transformed_vertex_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenAngularDimensionMethodTransformedVertex0(IGESDimenAngularDimensionHandle handle, out global::OcctSharp.Values.Point2d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_angular_dimension_method_vertex_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenAngularDimensionMethodVertex0(IGESDimenAngularDimensionHandle handle, out global::OcctSharp.Values.Point2d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_angular_dimension_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -24998,9 +25160,29 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenBasicDimensionMethodDynamicType0(IGESDimenBasicDimensionHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_basic_dimension_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenBasicDimensionMethodInit0(IGESDimenBasicDimensionHandle handle, int nbPropVal, global::OcctSharp.Values.Coordinates2d lowerLeft, global::OcctSharp.Values.Coordinates2d lowerRight, global::OcctSharp.Values.Coordinates2d upperRight, global::OcctSharp.Values.Coordinates2d upperLeft);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_basic_dimension_method_lower_left_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenBasicDimensionMethodLowerLeft0(IGESDimenBasicDimensionHandle handle, out global::OcctSharp.Values.Point2d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_basic_dimension_method_lower_right_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenBasicDimensionMethodLowerRight0(IGESDimenBasicDimensionHandle handle, out global::OcctSharp.Values.Point2d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_basic_dimension_method_nb_property_values_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenBasicDimensionMethodNbPropertyValues0(IGESDimenBasicDimensionHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_basic_dimension_method_upper_left_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenBasicDimensionMethodUpperLeft0(IGESDimenBasicDimensionHandle handle, out global::OcctSharp.Values.Point2d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_basic_dimension_method_upper_right_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenBasicDimensionMethodUpperRight0(IGESDimenBasicDimensionHandle handle, out global::OcctSharp.Values.Point2d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_basic_dimension_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -25151,6 +25333,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenDiameterDimensionCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_diameter_dimension_method_center_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenDiameterDimensionMethodCenter0(IGESDimenDiameterDimensionHandle handle, out global::OcctSharp.Values.Point2d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_diameter_dimension_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenDiameterDimensionMethodDynamicType0(IGESDimenDiameterDimensionHandle handle, out nint handleValue);
@@ -25163,6 +25349,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenDiameterDimensionMethodHasSecondLeader0(IGESDimenDiameterDimensionHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_diameter_dimension_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenDiameterDimensionMethodInit0(IGESDimenDiameterDimensionHandle handle, nint aNote, nint aLeader, nint anotherLeader, global::OcctSharp.Values.Coordinates2d aCenter);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_diameter_dimension_method_note_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenDiameterDimensionMethodNote0(IGESDimenDiameterDimensionHandle handle, out nint handleValue);
@@ -25170,6 +25360,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_diameter_dimension_method_second_leader_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenDiameterDimensionMethodSecondLeader0(IGESDimenDiameterDimensionHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_diameter_dimension_method_transformed_center_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenDiameterDimensionMethodTransformedCenter0(IGESDimenDiameterDimensionHandle handle, out global::OcctSharp.Values.Point2d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_diameter_dimension_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -25737,6 +25931,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenLeaderArrowCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_leader_arrow_method_arrow_head_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenLeaderArrowMethodArrowHead0(IGESDimenLeaderArrowHandle handle, out global::OcctSharp.Values.Point2d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_leader_arrow_method_arrow_head_height_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenLeaderArrowMethodArrowHeadHeight0(IGESDimenLeaderArrowHandle handle, out double resultValue);
@@ -25752,6 +25950,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_leader_arrow_method_nb_segments_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenLeaderArrowMethodNbSegments0(IGESDimenLeaderArrowHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_leader_arrow_method_segment_tail_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenLeaderArrowMethodSegmentTail0(IGESDimenLeaderArrowHandle handle, int index, out global::OcctSharp.Values.Point2d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_leader_arrow_method_set_form_number_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -26234,6 +26436,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenRadiusDimensionCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_radius_dimension_method_center_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenRadiusDimensionMethodCenter0(IGESDimenRadiusDimensionHandle handle, out global::OcctSharp.Values.Point2d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_radius_dimension_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenRadiusDimensionMethodDynamicType0(IGESDimenRadiusDimensionHandle handle, out nint handleValue);
@@ -26241,6 +26447,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_radius_dimension_method_has_leader2_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenRadiusDimensionMethodHasLeader20(IGESDimenRadiusDimensionHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_radius_dimension_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDimenRadiusDimensionMethodInit0(IGESDimenRadiusDimensionHandle handle, nint aNote, nint anArrow, global::OcctSharp.Values.Coordinates2d arcCenter, nint anotherArrow);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdimen_radius_dimension_method_init_form_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -26639,6 +26849,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawConnectPointMethodIdentifierTemplate0(IGESDrawConnectPointHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_connect_point_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawConnectPointMethodInit0(IGESDrawConnectPointHandle handle, global::OcctSharp.Values.Coordinates3d aPoint, nint aDisplaySymbol, int aTypeFlag, int aFunctionFlag, nint aFunctionIdentifier, nint anIdentifierTemplate, nint aFunctionName, nint aFunctionTemplate, int aPointIdentifier, int aFunctionCode, int aSwapFlag, nint anOwnerSubfigure);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_connect_point_method_owner_subfigure_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawConnectPointMethodOwnerSubfigure0(IGESDrawConnectPointHandle handle, out nint handleValue);
@@ -26706,6 +26920,14 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawDrawingMethodViewItem0(IGESDrawDrawingHandle handle, int viewIndex, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_drawing_method_view_origin_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawDrawingMethodViewOrigin0(IGESDrawDrawingHandle handle, int tViewIndex, out global::OcctSharp.Values.Point2d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_drawing_method_view_to_drawing_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawDrawingMethodViewToDrawing0(IGESDrawDrawingHandle handle, int numView, global::OcctSharp.Values.Coordinates3d viewCoords, out global::OcctSharp.Values.Coordinates2d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_drawing_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawDrawingClone(IGESDrawDrawingHandle source, out nint handle);
@@ -26752,6 +26974,14 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_drawing_with_rotation_method_view_item_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawDrawingWithRotationMethodViewItem0(IGESDrawDrawingWithRotationHandle handle, int index, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_drawing_with_rotation_method_view_origin_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawDrawingWithRotationMethodViewOrigin0(IGESDrawDrawingWithRotationHandle handle, int index, out global::OcctSharp.Values.Point2d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_drawing_with_rotation_method_view_to_drawing_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawDrawingWithRotationMethodViewToDrawing0(IGESDrawDrawingWithRotationHandle handle, int numView, global::OcctSharp.Values.Coordinates3d viewCoords, out global::OcctSharp.Values.Coordinates2d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_drawing_with_rotation_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -26886,9 +27116,21 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawNetworkSubfigureMethodReferenceDesignator0(IGESDrawNetworkSubfigureHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_network_subfigure_method_scale_factors_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawNetworkSubfigureMethodScaleFactors0(IGESDrawNetworkSubfigureHandle handle, out global::OcctSharp.Values.Coordinates3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_network_subfigure_method_subfigure_definition_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawNetworkSubfigureMethodSubfigureDefinition0(IGESDrawNetworkSubfigureHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_network_subfigure_method_transformed_translation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawNetworkSubfigureMethodTransformedTranslation0(IGESDrawNetworkSubfigureHandle handle, out global::OcctSharp.Values.Coordinates3d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_network_subfigure_method_translation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawNetworkSubfigureMethodTranslation0(IGESDrawNetworkSubfigureHandle handle, out global::OcctSharp.Values.Coordinates3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_network_subfigure_method_type_flag_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -26992,6 +27234,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawPerspectiveViewMethodBackPlaneDistance0(IGESDrawPerspectiveViewHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_perspective_view_method_bottom_right_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawPerspectiveViewMethodBottomRight0(IGESDrawPerspectiveViewHandle handle, out global::OcctSharp.Values.Point2d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_perspective_view_method_center_of_projection_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawPerspectiveViewMethodCenterOfProjection0(IGESDrawPerspectiveViewHandle handle, out Point3dRaw resultValue);
@@ -27008,9 +27254,17 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawPerspectiveViewMethodFrontPlaneDistance0(IGESDrawPerspectiveViewHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_perspective_view_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawPerspectiveViewMethodInit0(IGESDrawPerspectiveViewHandle handle, int aViewNumber, double aScaleFactor, global::OcctSharp.Values.Coordinates3d aViewNormalVector, global::OcctSharp.Values.Coordinates3d aViewReferencePoint, global::OcctSharp.Values.Coordinates3d aCenterOfProjection, global::OcctSharp.Values.Coordinates3d aViewUpVector, double aViewPlaneDistance, global::OcctSharp.Values.Coordinates2d aTopLeft, global::OcctSharp.Values.Coordinates2d aBottomRight, int aDepthClip, double aBackPlaneDistance, double aFrontPlaneDistance);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_perspective_view_method_is_single_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawPerspectiveViewMethodIsSingle0(IGESDrawPerspectiveViewHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_perspective_view_method_model_to_view_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawPerspectiveViewMethodModelToView0(IGESDrawPerspectiveViewHandle handle, global::OcctSharp.Values.Coordinates3d coords, out global::OcctSharp.Values.Coordinates3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_perspective_view_method_nb_views_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -27020,6 +27274,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawPerspectiveViewMethodScaleFactor0(IGESDrawPerspectiveViewHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_perspective_view_method_top_left_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawPerspectiveViewMethodTopLeft0(IGESDrawPerspectiveViewHandle handle, out global::OcctSharp.Values.Point2d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_perspective_view_method_view_item_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawPerspectiveViewMethodViewItem0(IGESDrawPerspectiveViewHandle handle, int num, out nint handleValue);
@@ -27027,6 +27285,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_perspective_view_method_view_matrix_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawPerspectiveViewMethodViewMatrix0(IGESDrawPerspectiveViewHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_perspective_view_method_view_normal_vector_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawPerspectiveViewMethodViewNormalVector0(IGESDrawPerspectiveViewHandle handle, out global::OcctSharp.Values.Vector3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_perspective_view_method_view_number_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -27039,6 +27301,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_perspective_view_method_view_reference_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawPerspectiveViewMethodViewReferencePoint0(IGESDrawPerspectiveViewHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_perspective_view_method_view_up_vector_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawPerspectiveViewMethodViewUpVector0(IGESDrawPerspectiveViewHandle handle, out global::OcctSharp.Values.Vector3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_perspective_view_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -27425,6 +27691,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawViewMethodLeftPlane0(IGESDrawViewHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_view_method_model_to_view_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawViewMethodModelToView0(IGESDrawViewHandle handle, global::OcctSharp.Values.Coordinates3d coords, out global::OcctSharp.Values.Coordinates3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesdraw_view_method_nb_views_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESDrawViewMethodNbViews0(IGESDrawViewHandle handle, out int resultValue);
@@ -27633,6 +27903,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_bspline_curve_method_nb_poles_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomBSplineCurveMethodNbPoles0(IGESGeomBSplineCurveHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_bspline_curve_method_normal_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomBSplineCurveMethodNormal0(IGESGeomBSplineCurveHandle handle, out global::OcctSharp.Values.Coordinates3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_bspline_curve_method_pole_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -27910,9 +28184,25 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomCircularArcMethodAngle0(IGESGeomCircularArcHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_circular_arc_method_axis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomCircularArcMethodAxis0(IGESGeomCircularArcHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_circular_arc_method_center_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomCircularArcMethodCenter0(IGESGeomCircularArcHandle handle, out global::OcctSharp.Values.Point2d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_circular_arc_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomCircularArcMethodDynamicType0(IGESGeomCircularArcHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_circular_arc_method_end_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomCircularArcMethodEndPoint0(IGESGeomCircularArcHandle handle, out global::OcctSharp.Values.Point2d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_circular_arc_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomCircularArcMethodInit0(IGESGeomCircularArcHandle handle, double aZT, global::OcctSharp.Values.Coordinates2d aCenter, global::OcctSharp.Values.Coordinates2d aStart, global::OcctSharp.Values.Coordinates2d anEnd);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_circular_arc_method_is_closed_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -27921,6 +28211,14 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_circular_arc_method_radius_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomCircularArcMethodRadius0(IGESGeomCircularArcHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_circular_arc_method_start_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomCircularArcMethodStartPoint0(IGESGeomCircularArcHandle handle, out global::OcctSharp.Values.Point2d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_circular_arc_method_transformed_axis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomCircularArcMethodTransformedAxis0(IGESGeomCircularArcHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_circular_arc_method_transformed_center_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -27996,6 +28294,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomConicArcCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_conic_arc_method_axis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomConicArcMethodAxis0(IGESGeomConicArcHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_conic_arc_method_computed_form_number_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomConicArcMethodComputedFormNumber0(IGESGeomConicArcHandle handle, out int resultValue);
@@ -28003,6 +28305,14 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_conic_arc_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomConicArcMethodDynamicType0(IGESGeomConicArcHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_conic_arc_method_end_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomConicArcMethodEndPoint0(IGESGeomConicArcHandle handle, out global::OcctSharp.Values.Point2d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_conic_arc_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomConicArcMethodInit0(IGESGeomConicArcHandle handle, double a, double b, double c, double d, double e, double f, double zT, global::OcctSharp.Values.Coordinates2d aStart, global::OcctSharp.Values.Coordinates2d anEnd);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_conic_arc_method_is_closed_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -28023,6 +28333,14 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_conic_arc_method_own_correct_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomConicArcMethodOwnCorrect0(IGESGeomConicArcHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_conic_arc_method_start_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomConicArcMethodStartPoint0(IGESGeomConicArcHandle handle, out global::OcctSharp.Values.Point2d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_conic_arc_method_transformed_axis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomConicArcMethodTransformedAxis0(IGESGeomConicArcHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_conic_arc_method_transformed_end_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -28102,6 +28420,14 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_copious_data_method_transformed_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomCopiousDataMethodTransformedPoint0(IGESGeomCopiousDataHandle handle, int anIndex, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_copious_data_method_transformed_vector_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomCopiousDataMethodTransformedVector0(IGESGeomCopiousDataHandle handle, int anIndex, out global::OcctSharp.Values.Vector3d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_copious_data_method_vector_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomCopiousDataMethodVector0(IGESGeomCopiousDataHandle handle, int anIndex, out global::OcctSharp.Values.Vector3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_copious_data_method_zplane_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -28185,6 +28511,18 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomDirectionMethodDynamicType0(IGESGeomDirectionHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_direction_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomDirectionMethodInit0(IGESGeomDirectionHandle handle, global::OcctSharp.Values.Coordinates3d aDirection);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_direction_method_transformed_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomDirectionMethodTransformedValue0(IGESGeomDirectionHandle handle, out global::OcctSharp.Values.Vector3d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_direction_method_value_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomDirectionMethodValue0(IGESGeomDirectionHandle handle, out global::OcctSharp.Values.Vector3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_direction_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomDirectionClone(IGESGeomDirectionHandle source, out nint handle);
@@ -28224,9 +28562,17 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomFlashMethodHasReferenceEntity0(IGESGeomFlashHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_flash_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomFlashMethodInit0(IGESGeomFlashHandle handle, global::OcctSharp.Values.Coordinates2d aPoint, double aDim, double anotherDim, double aRotation, nint aReference);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_flash_method_reference_entity_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomFlashMethodReferenceEntity0(IGESGeomFlashHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_flash_method_reference_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomFlashMethodReferencePoint0(IGESGeomFlashHandle handle, out global::OcctSharp.Values.Point2d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_flash_method_rotation_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -28301,6 +28647,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_line_method_infinite_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomLineMethodInfinite0(IGESGeomLineHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_line_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomLineMethodInit0(IGESGeomLineHandle handle, global::OcctSharp.Values.Coordinates3d aStart, global::OcctSharp.Values.Coordinates3d anEnd);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_line_method_set_infinite_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -28377,6 +28727,14 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomOffsetCurveMethodHasFunction0(IGESGeomOffsetCurveHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_offset_curve_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomOffsetCurveMethodInit0(IGESGeomOffsetCurveHandle handle, nint aBaseCurve, int anOffsetType, nint aFunction, int aFunctionCoord, int aTaperedOffsetType, double offDistance1, double arcLength1, double offDistance2, double arcLength2, global::OcctSharp.Values.Coordinates3d aNormalVec, double anOffsetParam, double anotherOffsetParam);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_offset_curve_method_normal_vector_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomOffsetCurveMethodNormalVector0(IGESGeomOffsetCurveHandle handle, out global::OcctSharp.Values.Vector3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_offset_curve_method_offset_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomOffsetCurveMethodOffsetType0(IGESGeomOffsetCurveHandle handle, out int resultValue);
@@ -28392,6 +28750,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_offset_curve_method_tapered_offset_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomOffsetCurveMethodTaperedOffsetType0(IGESGeomOffsetCurveHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_offset_curve_method_transformed_normal_vector_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomOffsetCurveMethodTransformedNormalVector0(IGESGeomOffsetCurveHandle handle, out global::OcctSharp.Values.Vector3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_offset_curve_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -28424,9 +28786,21 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomOffsetSurfaceMethodDynamicType0(IGESGeomOffsetSurfaceHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_offset_surface_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomOffsetSurfaceMethodInit0(IGESGeomOffsetSurfaceHandle handle, global::OcctSharp.Values.Coordinates3d anIndicatoR, double aDistance, nint aSurface);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_offset_surface_method_offset_indicator_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomOffsetSurfaceMethodOffsetIndicator0(IGESGeomOffsetSurfaceHandle handle, out global::OcctSharp.Values.Vector3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_offset_surface_method_surface_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomOffsetSurfaceMethodSurface0(IGESGeomOffsetSurfaceHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_offset_surface_method_transformed_offset_indicator_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomOffsetSurfaceMethodTransformedOffsetIndicator0(IGESGeomOffsetSurfaceHandle handle, out global::OcctSharp.Values.Vector3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_offset_surface_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -28470,6 +28844,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_plane_method_has_symbol_attach_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomPlaneMethodHasSymbolAttach0(IGESGeomPlaneHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_plane_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomPlaneMethodInit0(IGESGeomPlaneHandle handle, double a, double b, double c, double d, nint aCurve, global::OcctSharp.Values.Coordinates3d attach, double aSize);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_plane_method_set_form_number_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -28521,6 +28899,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_point_method_has_display_symbol_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomPointMethodHasDisplaySymbol0(IGESGeomPointHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_point_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomPointMethodInit0(IGESGeomPointHandle handle, global::OcctSharp.Values.Coordinates3d aPoint, nint aSymbol);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_point_method_transformed_value_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -28865,6 +29247,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_tabulated_cylinder_method_end_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomTabulatedCylinderMethodEndPoint0(IGESGeomTabulatedCylinderHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_tabulated_cylinder_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGeomTabulatedCylinderMethodInit0(IGESGeomTabulatedCylinderHandle handle, nint aDirectrix, global::OcctSharp.Values.Coordinates3d anEnd);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgeom_tabulated_cylinder_method_transformed_end_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -29600,6 +29986,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGraphTextDisplayTemplateMethodFontEntity0(IGESGraphTextDisplayTemplateHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgraph_text_display_template_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGraphTextDisplayTemplateMethodInit0(IGESGraphTextDisplayTemplateHandle handle, double aWidth, double aHeight, int aFontCode, nint aFontEntity, double aSlantAngle, double aRotationAngle, int aMirrorFlag, int aRotationFlag, global::OcctSharp.Values.Coordinates3d aCorner);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgraph_text_display_template_method_is_font_entity_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGraphTextDisplayTemplateMethodIsFontEntity0(IGESGraphTextDisplayTemplateHandle handle, out int resultValue);
@@ -29729,6 +30119,18 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgraph_uniform_rect_grid_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESGraphUniformRectGridMethodDynamicType0(IGESGraphUniformRectGridHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgraph_uniform_rect_grid_method_grid_point_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGraphUniformRectGridMethodGridPoint0(IGESGraphUniformRectGridHandle handle, out global::OcctSharp.Values.Point2d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgraph_uniform_rect_grid_method_grid_spacing_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGraphUniformRectGridMethodGridSpacing0(IGESGraphUniformRectGridHandle handle, out global::OcctSharp.Values.Vector2d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgraph_uniform_rect_grid_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESGraphUniformRectGridMethodInit0(IGESGraphUniformRectGridHandle handle, int nbProps, int finite, int line, int weighted, global::OcctSharp.Values.Coordinates2d aGridPoint, global::OcctSharp.Values.Coordinates2d aGridSpacing, int pointsX, int pointsY);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igesgraph_uniform_rect_grid_method_is_finite_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -31251,17 +31653,49 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidBlockMethodDynamicType0(IGESSolidBlockHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_block_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidBlockMethodInit0(IGESSolidBlockHandle handle, global::OcctSharp.Values.Coordinates3d aSize, global::OcctSharp.Values.Coordinates3d aCorner, global::OcctSharp.Values.Coordinates3d aXAxis, global::OcctSharp.Values.Coordinates3d aZAxis);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_block_method_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidBlockMethodSize0(IGESSolidBlockHandle handle, out global::OcctSharp.Values.Coordinates3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_block_method_transformed_corner_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidBlockMethodTransformedCorner0(IGESSolidBlockHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_block_method_transformed_xaxis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidBlockMethodTransformedXAxis0(IGESSolidBlockHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_block_method_transformed_yaxis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidBlockMethodTransformedYAxis0(IGESSolidBlockHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_block_method_transformed_zaxis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidBlockMethodTransformedZAxis0(IGESSolidBlockHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_block_method_xaxis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidBlockMethodXAxis0(IGESSolidBlockHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_block_method_xlength_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidBlockMethodXLength0(IGESSolidBlockHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_block_method_yaxis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidBlockMethodYAxis0(IGESSolidBlockHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_block_method_ylength_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidBlockMethodYLength0(IGESSolidBlockHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_block_method_zaxis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidBlockMethodZAxis0(IGESSolidBlockHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_block_method_zlength_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -31333,6 +31767,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidConeFrustumCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_cone_frustum_method_axis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidConeFrustumMethodAxis0(IGESSolidConeFrustumHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_cone_frustum_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidConeFrustumMethodDynamicType0(IGESSolidConeFrustumHandle handle, out nint handleValue);
@@ -31345,6 +31783,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidConeFrustumMethodHeight0(IGESSolidConeFrustumHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_cone_frustum_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidConeFrustumMethodInit0(IGESSolidConeFrustumHandle handle, double ht, double r1, double r2, global::OcctSharp.Values.Coordinates3d center, global::OcctSharp.Values.Coordinates3d anAxis);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_cone_frustum_method_larger_radius_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidConeFrustumMethodLargerRadius0(IGESSolidConeFrustumHandle handle, out double resultValue);
@@ -31352,6 +31794,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_cone_frustum_method_smaller_radius_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidConeFrustumMethodSmallerRadius0(IGESSolidConeFrustumHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_cone_frustum_method_transformed_axis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidConeFrustumMethodTransformedAxis0(IGESSolidConeFrustumHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_cone_frustum_method_transformed_face_center_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -31435,6 +31881,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidCylinderCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_cylinder_method_axis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidCylinderMethodAxis0(IGESSolidCylinderHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_cylinder_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidCylinderMethodDynamicType0(IGESSolidCylinderHandle handle, out nint handleValue);
@@ -31447,9 +31897,17 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidCylinderMethodHeight0(IGESSolidCylinderHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_cylinder_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidCylinderMethodInit0(IGESSolidCylinderHandle handle, double aHeight, double aRadius, global::OcctSharp.Values.Coordinates3d aCenter, global::OcctSharp.Values.Coordinates3d anAxis);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_cylinder_method_radius_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidCylinderMethodRadius0(IGESSolidCylinderHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_cylinder_method_transformed_axis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidCylinderMethodTransformedAxis0(IGESSolidCylinderHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_cylinder_method_transformed_face_center_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -31588,17 +32046,49 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidEllipsoidMethodDynamicType0(IGESSolidEllipsoidHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_ellipsoid_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidEllipsoidMethodInit0(IGESSolidEllipsoidHandle handle, global::OcctSharp.Values.Coordinates3d aSize, global::OcctSharp.Values.Coordinates3d aCenter, global::OcctSharp.Values.Coordinates3d anXAxis, global::OcctSharp.Values.Coordinates3d anZAxis);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_ellipsoid_method_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidEllipsoidMethodSize0(IGESSolidEllipsoidHandle handle, out global::OcctSharp.Values.Coordinates3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_ellipsoid_method_transformed_center_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidEllipsoidMethodTransformedCenter0(IGESSolidEllipsoidHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_ellipsoid_method_transformed_xaxis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidEllipsoidMethodTransformedXAxis0(IGESSolidEllipsoidHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_ellipsoid_method_transformed_yaxis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidEllipsoidMethodTransformedYAxis0(IGESSolidEllipsoidHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_ellipsoid_method_transformed_zaxis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidEllipsoidMethodTransformedZAxis0(IGESSolidEllipsoidHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_ellipsoid_method_xaxis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidEllipsoidMethodXAxis0(IGESSolidEllipsoidHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_ellipsoid_method_xlength_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidEllipsoidMethodXLength0(IGESSolidEllipsoidHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_ellipsoid_method_yaxis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidEllipsoidMethodYAxis0(IGESSolidEllipsoidHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_ellipsoid_method_ylength_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidEllipsoidMethodYLength0(IGESSolidEllipsoidHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_ellipsoid_method_zaxis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidEllipsoidMethodZAxis0(IGESSolidEllipsoidHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_ellipsoid_method_zlength_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -31936,9 +32426,33 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidRightAngularWedgeMethodDynamicType0(IGESSolidRightAngularWedgeHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_right_angular_wedge_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidRightAngularWedgeMethodInit0(IGESSolidRightAngularWedgeHandle handle, global::OcctSharp.Values.Coordinates3d aSize, double lowX, global::OcctSharp.Values.Coordinates3d aCorner, global::OcctSharp.Values.Coordinates3d anXAxis, global::OcctSharp.Values.Coordinates3d anZAxis);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_right_angular_wedge_method_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidRightAngularWedgeMethodSize0(IGESSolidRightAngularWedgeHandle handle, out global::OcctSharp.Values.Coordinates3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_right_angular_wedge_method_transformed_corner_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidRightAngularWedgeMethodTransformedCorner0(IGESSolidRightAngularWedgeHandle handle, out Point3dRaw resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_right_angular_wedge_method_transformed_xaxis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidRightAngularWedgeMethodTransformedXAxis0(IGESSolidRightAngularWedgeHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_right_angular_wedge_method_transformed_yaxis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidRightAngularWedgeMethodTransformedYAxis0(IGESSolidRightAngularWedgeHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_right_angular_wedge_method_transformed_zaxis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidRightAngularWedgeMethodTransformedZAxis0(IGESSolidRightAngularWedgeHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_right_angular_wedge_method_xaxis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidRightAngularWedgeMethodXAxis0(IGESSolidRightAngularWedgeHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_right_angular_wedge_method_xbig_length_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -31948,9 +32462,17 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidRightAngularWedgeMethodXSmallLength0(IGESSolidRightAngularWedgeHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_right_angular_wedge_method_yaxis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidRightAngularWedgeMethodYAxis0(IGESSolidRightAngularWedgeHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_right_angular_wedge_method_ylength_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidRightAngularWedgeMethodYLength0(IGESSolidRightAngularWedgeHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_right_angular_wedge_method_zaxis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidRightAngularWedgeMethodZAxis0(IGESSolidRightAngularWedgeHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_right_angular_wedge_method_zlength_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -31986,6 +32508,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_selected_component_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidSelectedComponentMethodDynamicType0(IGESSolidSelectedComponentHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_selected_component_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidSelectedComponentMethodInit0(IGESSolidSelectedComponentHandle handle, nint anEntity, global::OcctSharp.Values.Coordinates3d selectPnt);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_selected_component_method_select_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -32163,9 +32689,21 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidSolidOfLinearExtrusionMethodDynamicType0(IGESSolidSolidOfLinearExtrusionHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_solid_of_linear_extrusion_method_extrusion_direction_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidSolidOfLinearExtrusionMethodExtrusionDirection0(IGESSolidSolidOfLinearExtrusionHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_solid_of_linear_extrusion_method_extrusion_length_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidSolidOfLinearExtrusionMethodExtrusionLength0(IGESSolidSolidOfLinearExtrusionHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_solid_of_linear_extrusion_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidSolidOfLinearExtrusionMethodInit0(IGESSolidSolidOfLinearExtrusionHandle handle, nint aCurve, double aLength, global::OcctSharp.Values.Coordinates3d aDirection);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_solid_of_linear_extrusion_method_transformed_extrusion_direction_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidSolidOfLinearExtrusionMethodTransformedExtrusionDirection0(IGESSolidSolidOfLinearExtrusionHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_solid_of_linear_extrusion_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -32190,6 +32728,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidSolidOfRevolutionCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_solid_of_revolution_method_axis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidSolidOfRevolutionMethodAxis0(IGESSolidSolidOfRevolutionHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_solid_of_revolution_method_axis_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidSolidOfRevolutionMethodAxisPoint0(IGESSolidSolidOfRevolutionHandle handle, out Point3dRaw resultValue);
@@ -32206,6 +32748,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidSolidOfRevolutionMethodFraction0(IGESSolidSolidOfRevolutionHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_solid_of_revolution_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidSolidOfRevolutionMethodInit0(IGESSolidSolidOfRevolutionHandle handle, nint aCurve, double aFract, global::OcctSharp.Values.Coordinates3d aAxisPnt, global::OcctSharp.Values.Coordinates3d aDirection);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_solid_of_revolution_method_is_closed_to_axis_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidSolidOfRevolutionMethodIsClosedToAxis0(IGESSolidSolidOfRevolutionHandle handle, out int resultValue);
@@ -32213,6 +32759,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_solid_of_revolution_method_set_closed_to_axis_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidSolidOfRevolutionMethodSetClosedToAxis0(IGESSolidSolidOfRevolutionHandle handle, int mode);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_solid_of_revolution_method_transformed_axis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidSolidOfRevolutionMethodTransformedAxis0(IGESSolidSolidOfRevolutionHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_solid_of_revolution_method_transformed_axis_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -32275,6 +32825,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_sphere_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidSphereMethodDynamicType0(IGESSolidSphereHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_sphere_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidSphereMethodInit0(IGESSolidSphereHandle handle, double aRadius, global::OcctSharp.Values.Coordinates3d aCenter);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_sphere_method_radius_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -32421,6 +32975,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidTorusCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_torus_method_axis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidTorusMethodAxis0(IGESSolidTorusHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_torus_method_axis_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidTorusMethodAxisPoint0(IGESSolidTorusHandle handle, out Point3dRaw resultValue);
@@ -32433,9 +32991,17 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidTorusMethodDynamicType0(IGESSolidTorusHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_torus_method_init_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidTorusMethodInit0(IGESSolidTorusHandle handle, double r1, double r2, global::OcctSharp.Values.Coordinates3d aPoint, global::OcctSharp.Values.Coordinates3d anAxisdir);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_torus_method_major_radius_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidTorusMethodMajorRadius0(IGESSolidTorusHandle handle, out double resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_torus_method_transformed_axis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus IGESSolidTorusMethodTransformedAxis0(IGESSolidTorusHandle handle, out global::OcctSharp.Values.Direction3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_igessolid_torus_method_transformed_axis_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -34768,6 +35334,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus RWMeshCafReaderMethodExtraStatus0(RWMeshCafReaderHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_rwmesh_caf_reader_method_file_coordinate_system_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus RWMeshCafReaderMethodFileCoordinateSystem0(RWMeshCafReaderHandle handle, out global::OcctSharp.Values.Axis3 resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_rwmesh_caf_reader_method_file_length_unit_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus RWMeshCafReaderMethodFileLengthUnit0(RWMeshCafReaderHandle handle, out double resultValue);
@@ -34792,6 +35362,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus RWMeshCafReaderMethodSetFileCoordinateSystem0(RWMeshCafReaderHandle handle, int theCS);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_rwmesh_caf_reader_method_set_file_coordinate_system_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus RWMeshCafReaderMethodSetFileCoordinateSystem1(RWMeshCafReaderHandle handle, global::OcctSharp.Values.Axis3 theCS);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_rwmesh_caf_reader_method_set_file_length_unit_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus RWMeshCafReaderMethodSetFileLengthUnit0(RWMeshCafReaderHandle handle, double theUnits);
@@ -34808,9 +35382,17 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus RWMeshCafReaderMethodSetSystemCoordinateSystem0(RWMeshCafReaderHandle handle, int theCS);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_rwmesh_caf_reader_method_set_system_coordinate_system_1")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus RWMeshCafReaderMethodSetSystemCoordinateSystem1(RWMeshCafReaderHandle handle, global::OcctSharp.Values.Axis3 theCS);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_rwmesh_caf_reader_method_set_system_length_unit_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus RWMeshCafReaderMethodSetSystemLengthUnit0(RWMeshCafReaderHandle handle, double theUnits);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_rwmesh_caf_reader_method_system_coordinate_system_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus RWMeshCafReaderMethodSystemCoordinateSystem0(RWMeshCafReaderHandle handle, out global::OcctSharp.Values.Axis3 resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_rwmesh_caf_reader_method_system_length_unit_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -69131,6 +69713,14 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataBoxMethodDynamicType0(VrmlDataBoxHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_box_method_set_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataBoxMethodSetSize0(VrmlDataBoxHandle handle, global::OcctSharp.Values.Coordinates3d theSize);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_box_method_size_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataBoxMethodSize0(VrmlDataBoxHandle handle, out global::OcctSharp.Values.Coordinates3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_box_method_tshape_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataBoxMethodTShape0(VrmlDataBoxHandle handle, out nint handleValue);
@@ -69255,6 +69845,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_coordinate_method_clone_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataCoordinateMethodOcctClone0(VrmlDataCoordinateHandle handle, nint theOther, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_coordinate_method_coordinate_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataCoordinateMethodCoordinate0(VrmlDataCoordinateHandle handle, int i, out global::OcctSharp.Values.Coordinates3d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_coordinate_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -69738,6 +70332,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataNormalMethodDynamicType0(VrmlDataNormalHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_normal_method_normal_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataNormalMethodNormal0(VrmlDataNormalHandle handle, int i, out global::OcctSharp.Values.Coordinates3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_normal_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataNormalClone(VrmlDataNormalHandle source, out nint handle);
@@ -69929,6 +70527,10 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial void VrmlDataTextureCoordinateRelease(nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_texture_transform_method_center_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataTextureTransformMethodCenter0(VrmlDataTextureTransformHandle handle, out global::OcctSharp.Values.Coordinates2d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_texture_transform_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataTextureTransformMethodDynamicType0(VrmlDataTextureTransformHandle handle, out nint handleValue);
@@ -69937,9 +70539,29 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataTextureTransformMethodRotation0(VrmlDataTextureTransformHandle handle, out double resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_texture_transform_method_scale_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataTextureTransformMethodScale0(VrmlDataTextureTransformHandle handle, out global::OcctSharp.Values.Coordinates2d resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_texture_transform_method_set_center_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataTextureTransformMethodSetCenter0(VrmlDataTextureTransformHandle handle, global::OcctSharp.Values.Coordinates2d v);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_texture_transform_method_set_rotation_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataTextureTransformMethodSetRotation0(VrmlDataTextureTransformHandle handle, double v);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_texture_transform_method_set_scale_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataTextureTransformMethodSetScale0(VrmlDataTextureTransformHandle handle, global::OcctSharp.Values.Coordinates2d v);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_texture_transform_method_set_translation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataTextureTransformMethodSetTranslation0(VrmlDataTextureTransformHandle handle, global::OcctSharp.Values.Coordinates2d v);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_texture_transform_method_translation_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus VrmlDataTextureTransformMethodTranslation0(VrmlDataTextureTransformHandle handle, out global::OcctSharp.Values.Coordinates2d resultValue);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_data_texture_transform_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -70162,9 +70784,17 @@ internal static partial class DataExchangeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus VrmlLODCreate0(out nint handle);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_lod_method_center_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus VrmlLODMethodCenter0(VrmlLODHandle handle, out global::OcctSharp.Values.Vector3d resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_lod_method_dynamic_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus VrmlLODMethodDynamicType0(VrmlLODHandle handle, out nint handleValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_lod_method_set_center_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus VrmlLODMethodSetCenter0(VrmlLODHandle handle, global::OcctSharp.Values.Vector3d aCenter);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_vrml_lod_clone")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

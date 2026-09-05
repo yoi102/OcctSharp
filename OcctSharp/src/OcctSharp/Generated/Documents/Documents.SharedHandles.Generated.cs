@@ -1102,12 +1102,16 @@
 // Source: c:@S@TDataXtd_Triangulation@F@NbTriangles#1
 // Source: c:@S@TDataXtd_Triangulation@F@NewEmpty#1
 // Source: c:@S@TDataXtd_Triangulation@F@Node#I#1
+// Source: c:@S@TDataXtd_Triangulation@F@Normal#I#1
 // Source: c:@S@TDataXtd_Triangulation@F@Paste#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#&1$@N@opencascade@S@handle>#$@S@TDF_RelocationTable#1
 // Source: c:@S@TDataXtd_Triangulation@F@RemoveUVNodes#
 // Source: c:@S@TDataXtd_Triangulation@F@Restore#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#
 // Source: c:@S@TDataXtd_Triangulation@F@Set#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#
 // Source: c:@S@TDataXtd_Triangulation@F@SetNode#I#&1$@S@gp_Pnt#
+// Source: c:@S@TDataXtd_Triangulation@F@SetNormal#I#&1$@S@gp_Dir#
+// Source: c:@S@TDataXtd_Triangulation@F@SetUVNode#I#&1$@S@gp_Pnt2d#
 // Source: c:@S@TDataXtd_Triangulation@F@TDataXtd_Triangulation#
+// Source: c:@S@TDataXtd_Triangulation@F@UVNode#I#1
 // Source: c:@S@TDocStd_Application@F@Close#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#
 // Source: c:@S@TDocStd_Application@F@DynamicType#1
 // Source: c:@S@TDocStd_Application@F@GetDocument#I#1
@@ -1457,9 +1461,11 @@
 // Source: c:@S@TObj_TReference@F@Restore#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#
 // Source: c:@S@TObj_TReference@F@TObj_TReference#
 // Source: c:@S@TObj_TXYZ@F@DynamicType#1
+// Source: c:@S@TObj_TXYZ@F@Get#1
 // Source: c:@S@TObj_TXYZ@F@NewEmpty#1
 // Source: c:@S@TObj_TXYZ@F@Paste#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#&1$@N@opencascade@S@handle>#$@S@TDF_RelocationTable#1
 // Source: c:@S@TObj_TXYZ@F@Restore#&1$@N@opencascade@S@handle>#$@S@TDF_Attribute#
+// Source: c:@S@TObj_TXYZ@F@Set#&1$@S@gp_XYZ#
 // Source: c:@S@TObj_TXYZ@F@TObj_TXYZ#
 // Source: c:@S@XmlDrivers_DocumentRetrievalDriver@F@AttributeDrivers#&1$@N@opencascade@S@handle>#$@S@Message_Messenger#
 // Source: c:@S@XmlDrivers_DocumentRetrievalDriver@F@DynamicType#1
@@ -21206,6 +21212,14 @@ public sealed class TDataXtdTriangulation : IDisposable
         return new Point3d(resultValue.X, resultValue.Y, resultValue.Z);
     }
 
+    /// <summary>Invokes OCCT TDataXtd_Triangulation::Normal.</summary>
+    public global::OcctSharp.Values.Direction3d Normal(int theIndex)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DocumentsGeneratedNativeMethods.TDataXtdTriangulationMethodNormal0(handle, theIndex, out global::OcctSharp.Values.Direction3d resultValue), "occtsharp_generated_tdata_xtd_triangulation_method_normal_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT TDataXtd_Triangulation::Paste.</summary>
     public void Paste(TDFAttribute? into, TDFRelocationTable? rT)
     {
@@ -21239,6 +21253,28 @@ public sealed class TDataXtdTriangulation : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DocumentsGeneratedNativeMethods.TDataXtdTriangulationMethodSetNode0(handle, theIndex, new Point3dRaw(theNode.X, theNode.Y, theNode.Z)), "occtsharp_generated_tdata_xtd_triangulation_method_set_node_0");
+    }
+
+    /// <summary>Invokes OCCT TDataXtd_Triangulation::SetNormal.</summary>
+    public void SetNormal(int theIndex, global::OcctSharp.Values.Direction3d theNormal)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DocumentsGeneratedNativeMethods.TDataXtdTriangulationMethodSetNormal0(handle, theIndex, theNormal), "occtsharp_generated_tdata_xtd_triangulation_method_set_normal_0");
+    }
+
+    /// <summary>Invokes OCCT TDataXtd_Triangulation::SetUVNode.</summary>
+    public void SetUVNode(int theIndex, global::OcctSharp.Values.Point2d theUVNode)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DocumentsGeneratedNativeMethods.TDataXtdTriangulationMethodSetUVNode0(handle, theIndex, theUVNode), "occtsharp_generated_tdata_xtd_triangulation_method_set_uvnode_0");
+    }
+
+    /// <summary>Invokes OCCT TDataXtd_Triangulation::UVNode.</summary>
+    public global::OcctSharp.Values.Point2d UVNode(int theIndex)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DocumentsGeneratedNativeMethods.TDataXtdTriangulationMethodUVNode0(handle, theIndex, out global::OcctSharp.Values.Point2d resultValue), "occtsharp_generated_tdata_xtd_triangulation_method_uvnode_0");
+        return resultValue;
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>
@@ -26558,6 +26594,14 @@ public sealed class TObjTXYZ : IDisposable
         return global::OcctSharp.StandardType.FromNative(handleValue, "occtsharp_generated_tobj_txyz_method_dynamic_type_0");
     }
 
+    /// <summary>Invokes OCCT TObj_TXYZ::Get.</summary>
+    public global::OcctSharp.Values.Coordinates3d Get()
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DocumentsGeneratedNativeMethods.TObjTXYZMethodGet0(handle, out global::OcctSharp.Values.Coordinates3d resultValue), "occtsharp_generated_tobj_txyz_method_get_0");
+        return resultValue;
+    }
+
     /// <summary>Invokes OCCT TObj_TXYZ::NewEmpty.</summary>
     public TDFAttribute? NewEmpty()
     {
@@ -26578,6 +26622,13 @@ public sealed class TObjTXYZ : IDisposable
     {
         ObjectDisposedException.ThrowIf(handle.IsClosed, this);
         Interop.NativeError.ThrowIfFailed(DocumentsGeneratedNativeMethods.TObjTXYZMethodRestore0(handle, theWith is null ? nint.Zero : theWith.NativeHandle.DangerousGetHandle()), "occtsharp_generated_tobj_txyz_method_restore_0");
+    }
+
+    /// <summary>Invokes OCCT TObj_TXYZ::Set.</summary>
+    public void Set(global::OcctSharp.Values.Coordinates3d theXYZ)
+    {
+        ObjectDisposedException.ThrowIf(handle.IsClosed, this);
+        Interop.NativeError.ThrowIfFailed(DocumentsGeneratedNativeMethods.TObjTXYZMethodSet0(handle, theXYZ), "occtsharp_generated_tobj_txyz_method_set_0");
     }
 
     /// <summary>Gets the OCCT intrusive reference count.</summary>

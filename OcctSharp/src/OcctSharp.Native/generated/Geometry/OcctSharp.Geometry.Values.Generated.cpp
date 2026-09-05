@@ -3,7 +3,107 @@
 // Source: c:@S@BSplCLib@F@BoorIndex#I#I#I#S
 // Source: c:@S@BSplCLib@F@MaxDegree#S
 // Source: c:@S@BSplCLib@F@MaxUnitWeightsSize#S
+// Source: c:@S@ElCLib@F@CircleDN#d#&1$@S@gp_Ax2#d#I#S
+// Source: c:@S@ElCLib@F@CircleDN#d#&1$@S@gp_Ax22d#d#I#S
+// Source: c:@S@ElCLib@F@CircleParameter#&1$@S@gp_Ax2#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@CircleParameter#&1$@S@gp_Ax22d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@CircleValue#d#&1$@S@gp_Ax2#d#S
+// Source: c:@S@ElCLib@F@CircleValue#d#&1$@S@gp_Ax22d#d#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Circ#I#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Circ2d#I#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Elips#I#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Elips2d#I#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Hypr#I#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Hypr2d#I#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Lin#I#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Lin2d#I#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Parab#I#S
+// Source: c:@S@ElCLib@F@DN#d#&1$@S@gp_Parab2d#I#S
+// Source: c:@S@ElCLib@F@EllipseDN#d#&1$@S@gp_Ax2#d#d#I#S
+// Source: c:@S@ElCLib@F@EllipseDN#d#&1$@S@gp_Ax22d#d#d#I#S
+// Source: c:@S@ElCLib@F@EllipseParameter#&1$@S@gp_Ax2#d#d#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@EllipseParameter#&1$@S@gp_Ax22d#d#d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@EllipseValue#d#&1$@S@gp_Ax2#d#d#S
+// Source: c:@S@ElCLib@F@EllipseValue#d#&1$@S@gp_Ax22d#d#d#S
+// Source: c:@S@ElCLib@F@HyperbolaDN#d#&1$@S@gp_Ax2#d#d#I#S
+// Source: c:@S@ElCLib@F@HyperbolaDN#d#&1$@S@gp_Ax22d#d#d#I#S
+// Source: c:@S@ElCLib@F@HyperbolaParameter#&1$@S@gp_Ax2#d#d#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@HyperbolaParameter#&1$@S@gp_Ax22d#d#d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@HyperbolaValue#d#&1$@S@gp_Ax2#d#d#S
+// Source: c:@S@ElCLib@F@HyperbolaValue#d#&1$@S@gp_Ax22d#d#d#S
 // Source: c:@S@ElCLib@F@InPeriod#d#d#d#S
+// Source: c:@S@ElCLib@F@LineDN#d#&1$@S@gp_Ax1#I#S
+// Source: c:@S@ElCLib@F@LineDN#d#&1$@S@gp_Ax2d#I#S
+// Source: c:@S@ElCLib@F@LineParameter#&1$@S@gp_Ax1#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@LineParameter#&1$@S@gp_Ax2d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@LineValue#d#&1$@S@gp_Ax1#S
+// Source: c:@S@ElCLib@F@LineValue#d#&1$@S@gp_Ax2d#S
+// Source: c:@S@ElCLib@F@ParabolaDN#d#&1$@S@gp_Ax2#d#I#S
+// Source: c:@S@ElCLib@F@ParabolaDN#d#&1$@S@gp_Ax22d#d#I#S
+// Source: c:@S@ElCLib@F@ParabolaParameter#&1$@S@gp_Ax2#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@ParabolaParameter#&1$@S@gp_Ax22d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@ParabolaValue#d#&1$@S@gp_Ax2#d#S
+// Source: c:@S@ElCLib@F@ParabolaValue#d#&1$@S@gp_Ax22d#d#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Circ#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Circ2d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Elips#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Elips2d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Hypr#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Hypr2d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Lin#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Lin2d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Parab#&1$@S@gp_Pnt#S
+// Source: c:@S@ElCLib@F@Parameter#&1$@S@gp_Parab2d#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Ax22d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Ax2d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Circ2d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Dir2d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Elips2d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Hypr2d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Lin2d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Parab2d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Pnt2d#S
+// Source: c:@S@ElCLib@F@To3d#&1$@S@gp_Ax2#&1$@S@gp_Vec2d#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Circ#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Circ2d#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Elips#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Elips2d#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Hypr#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Hypr2d#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Lin#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Lin2d#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Parab#S
+// Source: c:@S@ElCLib@F@Value#d#&1$@S@gp_Parab2d#S
+// Source: c:@S@ElSLib@F@ConeDN#d#d#&1$@S@gp_Ax3#d#d#I#I#S
+// Source: c:@S@ElSLib@F@ConeUIso#&1$@S@gp_Ax3#d#d#d#S
+// Source: c:@S@ElSLib@F@ConeVIso#&1$@S@gp_Ax3#d#d#d#S
+// Source: c:@S@ElSLib@F@ConeValue#d#d#&1$@S@gp_Ax3#d#d#S
+// Source: c:@S@ElSLib@F@CylinderDN#d#d#&1$@S@gp_Ax3#d#I#I#S
+// Source: c:@S@ElSLib@F@CylinderUIso#&1$@S@gp_Ax3#d#d#S
+// Source: c:@S@ElSLib@F@CylinderVIso#&1$@S@gp_Ax3#d#d#S
+// Source: c:@S@ElSLib@F@CylinderValue#d#d#&1$@S@gp_Ax3#d#S
+// Source: c:@S@ElSLib@F@DN#d#d#&1$@S@gp_Cone#I#I#S
+// Source: c:@S@ElSLib@F@DN#d#d#&1$@S@gp_Cylinder#I#I#S
+// Source: c:@S@ElSLib@F@DN#d#d#&1$@S@gp_Pln#I#I#S
+// Source: c:@S@ElSLib@F@DN#d#d#&1$@S@gp_Sphere#I#I#S
+// Source: c:@S@ElSLib@F@DN#d#d#&1$@S@gp_Torus#I#I#S
+// Source: c:@S@ElSLib@F@PlaneDN#d#d#&1$@S@gp_Ax3#I#I#S
+// Source: c:@S@ElSLib@F@PlaneUIso#&1$@S@gp_Ax3#d#S
+// Source: c:@S@ElSLib@F@PlaneVIso#&1$@S@gp_Ax3#d#S
+// Source: c:@S@ElSLib@F@PlaneValue#d#d#&1$@S@gp_Ax3#S
+// Source: c:@S@ElSLib@F@SphereDN#d#d#&1$@S@gp_Ax3#d#I#I#S
+// Source: c:@S@ElSLib@F@SphereUIso#&1$@S@gp_Ax3#d#d#S
+// Source: c:@S@ElSLib@F@SphereVIso#&1$@S@gp_Ax3#d#d#S
+// Source: c:@S@ElSLib@F@SphereValue#d#d#&1$@S@gp_Ax3#d#S
+// Source: c:@S@ElSLib@F@TorusDN#d#d#&1$@S@gp_Ax3#d#d#I#I#S
+// Source: c:@S@ElSLib@F@TorusUIso#&1$@S@gp_Ax3#d#d#d#S
+// Source: c:@S@ElSLib@F@TorusVIso#&1$@S@gp_Ax3#d#d#d#S
+// Source: c:@S@ElSLib@F@TorusValue#d#d#&1$@S@gp_Ax3#d#d#S
+// Source: c:@S@ElSLib@F@Value#d#d#&1$@S@gp_Cone#S
+// Source: c:@S@ElSLib@F@Value#d#d#&1$@S@gp_Cylinder#S
+// Source: c:@S@ElSLib@F@Value#d#d#&1$@S@gp_Pln#S
+// Source: c:@S@ElSLib@F@Value#d#d#&1$@S@gp_Sphere#S
+// Source: c:@S@ElSLib@F@Value#d#d#&1$@S@gp_Torus#S
 // Source: c:@S@GCPnts_TangentialDeflection@F@ArcAngularStep#d#d#d#d#S
 // Source: c:@S@Geom2d_BSplineCurve@F@MaxDegree#S
 // Source: c:@S@Geom2d_BezierCurve@F@MaxDegree#S
@@ -16,11 +116,42 @@
 // Source: c:@S@PLib@F@Bin#I#I#S
 // Source: c:@S@PLib@F@ConstraintOrder#I#S
 // Source: c:@S@PLib@F@NivConstr#$@E@GeomAbs_Shape#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Cone#&1$@S@gp_Circ#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Cone#&1$@S@gp_Lin#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Cone#&1$@S@gp_Pnt#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Cylinder#&1$@S@gp_Circ#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Cylinder#&1$@S@gp_Lin#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Cylinder#&1$@S@gp_Pnt#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Pln#&1$@S@gp_Circ#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Pln#&1$@S@gp_Elips#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Pln#&1$@S@gp_Hypr#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Pln#&1$@S@gp_Lin#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Pln#&1$@S@gp_Parab#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Pln#&1$@S@gp_Pnt#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Sphere#&1$@S@gp_Circ#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Sphere#&1$@S@gp_Pnt#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Torus#&1$@S@gp_Circ#S
+// Source: c:@S@ProjLib@F@Project#&1$@S@gp_Torus#&1$@S@gp_Pnt#S
+// Source: c:@S@gp@F@DX#S
+// Source: c:@S@gp@F@DX2d#S
+// Source: c:@S@gp@F@DY#S
+// Source: c:@S@gp@F@DY2d#S
+// Source: c:@S@gp@F@DZ#S
+// Source: c:@S@gp@F@OX#S
+// Source: c:@S@gp@F@OX2d#S
+// Source: c:@S@gp@F@OY#S
+// Source: c:@S@gp@F@OY2d#S
+// Source: c:@S@gp@F@OZ#S
 // Source: c:@S@gp@F@Origin#S
+// Source: c:@S@gp@F@Origin2d#S
 // Source: c:@S@gp@F@Resolution#S
+// Source: c:@S@gp@F@YOZ#S
+// Source: c:@S@gp@F@ZOX#S
 // Source: c:@S@gp_Pnt@F@gp_Pnt#
 // Source: c:@S@gp_Pnt@F@gp_Pnt#&1$@S@gp_Pnt#
 // Source: c:@S@gp_Pnt@F@gp_Pnt#d#d#d#
+// Source: c:@S@gp_QuaternionNLerp@F@Interpolate#&1$@S@gp_Quaternion#S0_#d#S
+// Source: c:@S@gp_QuaternionSLerp@F@Interpolate#&1$@S@gp_Quaternion#S0_#d#S
 #include "OcctSharp.Geometry.Values.Generated.h"
 #include <climits>
 #include <cstdint>
@@ -37,6 +168,7 @@ static_assert(sizeof(double) == 8 && std::numeric_limits<double>::is_iec559);
 #include <AdvApp2Var_SysBase.hxx>
 #include <BSplCLib.hxx>
 #include <ElCLib.hxx>
+#include <ElSLib.hxx>
 #include <GCPnts_TangentialDeflection.hxx>
 #include <Geom2d_BSplineCurve.hxx>
 #include <Geom2d_BezierCurve.hxx>
@@ -47,7 +179,10 @@ static_assert(sizeof(double) == 8 && std::numeric_limits<double>::is_iec559);
 #include <Geom_BezierSurface.hxx>
 #include <Law_BSpline.hxx>
 #include <PLib.hxx>
+#include <ProjLib.hxx>
 #include <gp.hxx>
+#include <gp_QuaternionNLerp.hxx>
+#include <gp_QuaternionSLerp.hxx>
 
 static_assert(sizeof(OcctSharp_Point3d) == 24);
 static_assert(alignof(OcctSharp_Point3d) == 8);
@@ -98,12 +233,1533 @@ int32_t OCCTSHARP_CALL occtsharp_generated_bspl_clib_static_max_unit_weights_siz
   return BSplCLib::MaxUnitWeightsSize();
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_circle_dn_static_circle_dn_0(double U, OcctSharp_Value_Axis2 Pos, double Radius, int32_t N, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::CircleDN(U, OcctSharp_GeometryValues::ToNative(Pos), Radius, N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_circle_dn_static_circle_dn_1(double U, OcctSharp_Value_Axis22d Pos, double Radius, int32_t N, OcctSharp_Value_Vector2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::CircleDN(U, OcctSharp_GeometryValues::ToNative(Pos), Radius, N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_circle_parameter_static_circle_parameter_0(OcctSharp_Value_Axis2 Pos, OcctSharp_Point3d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::CircleParameter(OcctSharp_GeometryValues::ToNative(Pos), gp_Pnt(P.x, P.y, P.z));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_circle_parameter_static_circle_parameter_1(OcctSharp_Value_Axis22d Pos, OcctSharp_Value_Point2d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::CircleParameter(OcctSharp_GeometryValues::ToNative(Pos), OcctSharp_GeometryValues::ToNative(P));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_circle_value_static_circle_value_0(double U, OcctSharp_Value_Axis2 Pos, double Radius, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElCLib::CircleValue(U, OcctSharp_GeometryValues::ToNative(Pos), Radius);
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_circle_value_static_circle_value_1(double U, OcctSharp_Value_Axis22d Pos, double Radius, OcctSharp_Value_Point2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::CircleValue(U, OcctSharp_GeometryValues::ToNative(Pos), Radius));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_dn_static_dn_0(double U, OcctSharp_Value_Circle3d C, int32_t N, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::DN(U, OcctSharp_GeometryValues::ToNative(C), N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_dn_static_dn_5(double U, OcctSharp_Value_Circle2d C, int32_t N, OcctSharp_Value_Vector2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::DN(U, OcctSharp_GeometryValues::ToNative(C), N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_dn_static_dn_1(double U, OcctSharp_Value_Ellipse3d E, int32_t N, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::DN(U, OcctSharp_GeometryValues::ToNative(E), N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_dn_static_dn_6(double U, OcctSharp_Value_Ellipse2d E, int32_t N, OcctSharp_Value_Vector2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::DN(U, OcctSharp_GeometryValues::ToNative(E), N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_dn_static_dn_2(double U, OcctSharp_Value_Hyperbola3d H, int32_t N, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::DN(U, OcctSharp_GeometryValues::ToNative(H), N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_dn_static_dn_7(double U, OcctSharp_Value_Hyperbola2d H, int32_t N, OcctSharp_Value_Vector2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::DN(U, OcctSharp_GeometryValues::ToNative(H), N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_dn_static_dn_3(double U, OcctSharp_Value_Line3d L, int32_t N, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::DN(U, OcctSharp_GeometryValues::ToNative(L), N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_dn_static_dn_8(double U, OcctSharp_Value_Line2d L, int32_t N, OcctSharp_Value_Vector2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::DN(U, OcctSharp_GeometryValues::ToNative(L), N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_dn_static_dn_4(double U, OcctSharp_Value_Parabola3d Prb, int32_t N, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::DN(U, OcctSharp_GeometryValues::ToNative(Prb), N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_dn_static_dn_9(double U, OcctSharp_Value_Parabola2d Prb, int32_t N, OcctSharp_Value_Vector2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::DN(U, OcctSharp_GeometryValues::ToNative(Prb), N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_ellipse_dn_static_ellipse_dn_0(double U, OcctSharp_Value_Axis2 Pos, double MajorRadius, double MinorRadius, int32_t N, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::EllipseDN(U, OcctSharp_GeometryValues::ToNative(Pos), MajorRadius, MinorRadius, N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_ellipse_dn_static_ellipse_dn_1(double U, OcctSharp_Value_Axis22d Pos, double MajorRadius, double MinorRadius, int32_t N, OcctSharp_Value_Vector2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::EllipseDN(U, OcctSharp_GeometryValues::ToNative(Pos), MajorRadius, MinorRadius, N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_ellipse_parameter_static_ellipse_parameter_0(OcctSharp_Value_Axis2 Pos, double MajorRadius, double MinorRadius, OcctSharp_Point3d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::EllipseParameter(OcctSharp_GeometryValues::ToNative(Pos), MajorRadius, MinorRadius, gp_Pnt(P.x, P.y, P.z));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_ellipse_parameter_static_ellipse_parameter_1(OcctSharp_Value_Axis22d Pos, double MajorRadius, double MinorRadius, OcctSharp_Value_Point2d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::EllipseParameter(OcctSharp_GeometryValues::ToNative(Pos), MajorRadius, MinorRadius, OcctSharp_GeometryValues::ToNative(P));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_ellipse_value_static_ellipse_value_0(double U, OcctSharp_Value_Axis2 Pos, double MajorRadius, double MinorRadius, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElCLib::EllipseValue(U, OcctSharp_GeometryValues::ToNative(Pos), MajorRadius, MinorRadius);
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_ellipse_value_static_ellipse_value_1(double U, OcctSharp_Value_Axis22d Pos, double MajorRadius, double MinorRadius, OcctSharp_Value_Point2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::EllipseValue(U, OcctSharp_GeometryValues::ToNative(Pos), MajorRadius, MinorRadius));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_hyperbola_dn_static_hyperbola_dn_0(double U, OcctSharp_Value_Axis2 Pos, double MajorRadius, double MinorRadius, int32_t N, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::HyperbolaDN(U, OcctSharp_GeometryValues::ToNative(Pos), MajorRadius, MinorRadius, N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_hyperbola_dn_static_hyperbola_dn_1(double U, OcctSharp_Value_Axis22d Pos, double MajorRadius, double MinorRadius, int32_t N, OcctSharp_Value_Vector2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::HyperbolaDN(U, OcctSharp_GeometryValues::ToNative(Pos), MajorRadius, MinorRadius, N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_hyperbola_parameter_static_hyperbola_parameter_0(OcctSharp_Value_Axis2 Pos, double MajorRadius, double MinorRadius, OcctSharp_Point3d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::HyperbolaParameter(OcctSharp_GeometryValues::ToNative(Pos), MajorRadius, MinorRadius, gp_Pnt(P.x, P.y, P.z));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_hyperbola_parameter_static_hyperbola_parameter_1(OcctSharp_Value_Axis22d Pos, double MajorRadius, double MinorRadius, OcctSharp_Value_Point2d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::HyperbolaParameter(OcctSharp_GeometryValues::ToNative(Pos), MajorRadius, MinorRadius, OcctSharp_GeometryValues::ToNative(P));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_hyperbola_value_static_hyperbola_value_0(double U, OcctSharp_Value_Axis2 Pos, double MajorRadius, double MinorRadius, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElCLib::HyperbolaValue(U, OcctSharp_GeometryValues::ToNative(Pos), MajorRadius, MinorRadius);
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_hyperbola_value_static_hyperbola_value_1(double U, OcctSharp_Value_Axis22d Pos, double MajorRadius, double MinorRadius, OcctSharp_Value_Point2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::HyperbolaValue(U, OcctSharp_GeometryValues::ToNative(Pos), MajorRadius, MinorRadius));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
 double OCCTSHARP_CALL occtsharp_generated_el_clib_static_in_period_0(
   const double U,
   const double UFirst,
   const double ULast)
 {
   return ElCLib::InPeriod(U, UFirst, ULast);
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_line_dn_static_line_dn_0(double U, OcctSharp_Value_Axis1 Pos, int32_t N, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::LineDN(U, OcctSharp_GeometryValues::ToNative(Pos), N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_line_dn_static_line_dn_1(double U, OcctSharp_Value_Axis2d Pos, int32_t N, OcctSharp_Value_Vector2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::LineDN(U, OcctSharp_GeometryValues::ToNative(Pos), N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_line_parameter_static_line_parameter_0(OcctSharp_Value_Axis1 Pos, OcctSharp_Point3d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::LineParameter(OcctSharp_GeometryValues::ToNative(Pos), gp_Pnt(P.x, P.y, P.z));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_line_parameter_static_line_parameter_1(OcctSharp_Value_Axis2d Pos, OcctSharp_Value_Point2d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::LineParameter(OcctSharp_GeometryValues::ToNative(Pos), OcctSharp_GeometryValues::ToNative(P));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_line_value_static_line_value_0(double U, OcctSharp_Value_Axis1 Pos, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElCLib::LineValue(U, OcctSharp_GeometryValues::ToNative(Pos));
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_line_value_static_line_value_1(double U, OcctSharp_Value_Axis2d Pos, OcctSharp_Value_Point2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::LineValue(U, OcctSharp_GeometryValues::ToNative(Pos)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_parabola_dn_static_parabola_dn_0(double U, OcctSharp_Value_Axis2 Pos, double Focal, int32_t N, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::ParabolaDN(U, OcctSharp_GeometryValues::ToNative(Pos), Focal, N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_parabola_dn_static_parabola_dn_1(double U, OcctSharp_Value_Axis22d Pos, double Focal, int32_t N, OcctSharp_Value_Vector2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::ParabolaDN(U, OcctSharp_GeometryValues::ToNative(Pos), Focal, N));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_parabola_parameter_static_parabola_parameter_0(OcctSharp_Value_Axis2 Pos, OcctSharp_Point3d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::ParabolaParameter(OcctSharp_GeometryValues::ToNative(Pos), gp_Pnt(P.x, P.y, P.z));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_parabola_parameter_static_parabola_parameter_1(OcctSharp_Value_Axis22d Pos, OcctSharp_Value_Point2d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::ParabolaParameter(OcctSharp_GeometryValues::ToNative(Pos), OcctSharp_GeometryValues::ToNative(P));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_parabola_value_static_parabola_value_0(double U, OcctSharp_Value_Axis2 Pos, double Focal, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElCLib::ParabolaValue(U, OcctSharp_GeometryValues::ToNative(Pos), Focal);
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_parabola_value_static_parabola_value_1(double U, OcctSharp_Value_Axis22d Pos, double Focal, OcctSharp_Value_Point2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::ParabolaValue(U, OcctSharp_GeometryValues::ToNative(Pos), Focal));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_parameter_static_parameter_0(OcctSharp_Value_Circle3d C, OcctSharp_Point3d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::Parameter(OcctSharp_GeometryValues::ToNative(C), gp_Pnt(P.x, P.y, P.z));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_parameter_static_parameter_1(OcctSharp_Value_Circle2d C, OcctSharp_Value_Point2d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::Parameter(OcctSharp_GeometryValues::ToNative(C), OcctSharp_GeometryValues::ToNative(P));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_parameter_static_parameter_2(OcctSharp_Value_Ellipse3d E, OcctSharp_Point3d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::Parameter(OcctSharp_GeometryValues::ToNative(E), gp_Pnt(P.x, P.y, P.z));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_parameter_static_parameter_3(OcctSharp_Value_Ellipse2d E, OcctSharp_Value_Point2d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::Parameter(OcctSharp_GeometryValues::ToNative(E), OcctSharp_GeometryValues::ToNative(P));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_parameter_static_parameter_4(OcctSharp_Value_Hyperbola3d H, OcctSharp_Point3d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::Parameter(OcctSharp_GeometryValues::ToNative(H), gp_Pnt(P.x, P.y, P.z));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_parameter_static_parameter_5(OcctSharp_Value_Hyperbola2d H, OcctSharp_Value_Point2d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::Parameter(OcctSharp_GeometryValues::ToNative(H), OcctSharp_GeometryValues::ToNative(P));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_parameter_static_parameter_6(OcctSharp_Value_Line3d L, OcctSharp_Point3d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::Parameter(OcctSharp_GeometryValues::ToNative(L), gp_Pnt(P.x, P.y, P.z));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_parameter_static_parameter_7(OcctSharp_Value_Line2d L, OcctSharp_Value_Point2d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::Parameter(OcctSharp_GeometryValues::ToNative(L), OcctSharp_GeometryValues::ToNative(P));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_parameter_static_parameter_8(OcctSharp_Value_Parabola3d Prb, OcctSharp_Point3d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::Parameter(OcctSharp_GeometryValues::ToNative(Prb), gp_Pnt(P.x, P.y, P.z));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_parameter_static_parameter_9(OcctSharp_Value_Parabola2d Prb, OcctSharp_Value_Point2d P, double* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = ElCLib::Parameter(OcctSharp_GeometryValues::ToNative(Prb), OcctSharp_GeometryValues::ToNative(P));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_to3d_static_to3d_1(OcctSharp_Value_Axis2 Pos, OcctSharp_Value_Axis22d A, OcctSharp_Value_Axis2* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::To3d(OcctSharp_GeometryValues::ToNative(Pos), OcctSharp_GeometryValues::ToNative(A)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_to3d_static_to3d_0(OcctSharp_Value_Axis2 Pos, OcctSharp_Value_Axis2d A, OcctSharp_Value_Axis1* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::To3d(OcctSharp_GeometryValues::ToNative(Pos), OcctSharp_GeometryValues::ToNative(A)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_to3d_static_to3d_2(OcctSharp_Value_Axis2 Pos, OcctSharp_Value_Circle2d C, OcctSharp_Value_Circle3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::To3d(OcctSharp_GeometryValues::ToNative(Pos), OcctSharp_GeometryValues::ToNative(C)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_to3d_static_to3d_3(OcctSharp_Value_Axis2 Pos, OcctSharp_Value_Direction2d V, OcctSharp_Value_Direction3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::To3d(OcctSharp_GeometryValues::ToNative(Pos), OcctSharp_GeometryValues::ToNative(V)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_to3d_static_to3d_4(OcctSharp_Value_Axis2 Pos, OcctSharp_Value_Ellipse2d E, OcctSharp_Value_Ellipse3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::To3d(OcctSharp_GeometryValues::ToNative(Pos), OcctSharp_GeometryValues::ToNative(E)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_to3d_static_to3d_5(OcctSharp_Value_Axis2 Pos, OcctSharp_Value_Hyperbola2d H, OcctSharp_Value_Hyperbola3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::To3d(OcctSharp_GeometryValues::ToNative(Pos), OcctSharp_GeometryValues::ToNative(H)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_to3d_static_to3d_6(OcctSharp_Value_Axis2 Pos, OcctSharp_Value_Line2d L, OcctSharp_Value_Line3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::To3d(OcctSharp_GeometryValues::ToNative(Pos), OcctSharp_GeometryValues::ToNative(L)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_to3d_static_to3d_7(OcctSharp_Value_Axis2 Pos, OcctSharp_Value_Parabola2d Prb, OcctSharp_Value_Parabola3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::To3d(OcctSharp_GeometryValues::ToNative(Pos), OcctSharp_GeometryValues::ToNative(Prb)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_to3d_static_to3d_8(OcctSharp_Value_Axis2 Pos, OcctSharp_Value_Point2d P, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElCLib::To3d(OcctSharp_GeometryValues::ToNative(Pos), OcctSharp_GeometryValues::ToNative(P));
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_to3d_static_to3d_9(OcctSharp_Value_Axis2 Pos, OcctSharp_Value_Vector2d V, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::To3d(OcctSharp_GeometryValues::ToNative(Pos), OcctSharp_GeometryValues::ToNative(V)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_value_static_value_0(double U, OcctSharp_Value_Circle3d C, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElCLib::Value(U, OcctSharp_GeometryValues::ToNative(C));
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_value_static_value_5(double U, OcctSharp_Value_Circle2d C, OcctSharp_Value_Point2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::Value(U, OcctSharp_GeometryValues::ToNative(C)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_value_static_value_1(double U, OcctSharp_Value_Ellipse3d E, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElCLib::Value(U, OcctSharp_GeometryValues::ToNative(E));
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_value_static_value_6(double U, OcctSharp_Value_Ellipse2d E, OcctSharp_Value_Point2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::Value(U, OcctSharp_GeometryValues::ToNative(E)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_value_static_value_2(double U, OcctSharp_Value_Hyperbola3d H, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElCLib::Value(U, OcctSharp_GeometryValues::ToNative(H));
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_value_static_value_7(double U, OcctSharp_Value_Hyperbola2d H, OcctSharp_Value_Point2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::Value(U, OcctSharp_GeometryValues::ToNative(H)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_value_static_value_3(double U, OcctSharp_Value_Line3d L, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElCLib::Value(U, OcctSharp_GeometryValues::ToNative(L));
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_value_static_value_8(double U, OcctSharp_Value_Line2d L, OcctSharp_Value_Point2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::Value(U, OcctSharp_GeometryValues::ToNative(L)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_value_static_value_4(double U, OcctSharp_Value_Parabola3d Prb, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElCLib::Value(U, OcctSharp_GeometryValues::ToNative(Prb));
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_clib_value_static_value_9(double U, OcctSharp_Value_Parabola2d Prb, OcctSharp_Value_Point2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElCLib::Value(U, OcctSharp_GeometryValues::ToNative(Prb)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_cone_dn_static_cone_dn_0(double U, double V, OcctSharp_Value_Axis3 Pos, double Radius, double SAngle, int32_t Nu, int32_t Nv, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::ConeDN(U, V, OcctSharp_GeometryValues::ToNative(Pos), Radius, SAngle, Nu, Nv));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_cone_uiso_static_cone_u_iso_0(OcctSharp_Value_Axis3 Pos, double Radius, double SAngle, double U, OcctSharp_Value_Line3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::ConeUIso(OcctSharp_GeometryValues::ToNative(Pos), Radius, SAngle, U));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_cone_viso_static_cone_v_iso_0(OcctSharp_Value_Axis3 Pos, double Radius, double SAngle, double V, OcctSharp_Value_Circle3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::ConeVIso(OcctSharp_GeometryValues::ToNative(Pos), Radius, SAngle, V));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_cone_value_static_cone_value_0(double U, double V, OcctSharp_Value_Axis3 Pos, double Radius, double SAngle, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElSLib::ConeValue(U, V, OcctSharp_GeometryValues::ToNative(Pos), Radius, SAngle);
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_cylinder_dn_static_cylinder_dn_0(double U, double V, OcctSharp_Value_Axis3 Pos, double Radius, int32_t Nu, int32_t Nv, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::CylinderDN(U, V, OcctSharp_GeometryValues::ToNative(Pos), Radius, Nu, Nv));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_cylinder_uiso_static_cylinder_u_iso_0(OcctSharp_Value_Axis3 Pos, double Radius, double U, OcctSharp_Value_Line3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::CylinderUIso(OcctSharp_GeometryValues::ToNative(Pos), Radius, U));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_cylinder_viso_static_cylinder_v_iso_0(OcctSharp_Value_Axis3 Pos, double Radius, double V, OcctSharp_Value_Circle3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::CylinderVIso(OcctSharp_GeometryValues::ToNative(Pos), Radius, V));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_cylinder_value_static_cylinder_value_0(double U, double V, OcctSharp_Value_Axis3 Pos, double Radius, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElSLib::CylinderValue(U, V, OcctSharp_GeometryValues::ToNative(Pos), Radius);
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_dn_static_dn_0(double U, double V, OcctSharp_Value_Cone C, int32_t Nu, int32_t Nv, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::DN(U, V, OcctSharp_GeometryValues::ToNative(C), Nu, Nv));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_dn_static_dn_1(double U, double V, OcctSharp_Value_Cylinder C, int32_t Nu, int32_t Nv, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::DN(U, V, OcctSharp_GeometryValues::ToNative(C), Nu, Nv));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_dn_static_dn_2(double U, double V, OcctSharp_Value_Plane Pl, int32_t Nu, int32_t Nv, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::DN(U, V, OcctSharp_GeometryValues::ToNative(Pl), Nu, Nv));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_dn_static_dn_3(double U, double V, OcctSharp_Value_Sphere S, int32_t Nu, int32_t Nv, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::DN(U, V, OcctSharp_GeometryValues::ToNative(S), Nu, Nv));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_dn_static_dn_4(double U, double V, OcctSharp_Value_Torus T, int32_t Nu, int32_t Nv, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::DN(U, V, OcctSharp_GeometryValues::ToNative(T), Nu, Nv));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_plane_dn_static_plane_dn_0(double U, double V, OcctSharp_Value_Axis3 Pos, int32_t Nu, int32_t Nv, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::PlaneDN(U, V, OcctSharp_GeometryValues::ToNative(Pos), Nu, Nv));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_plane_uiso_static_plane_u_iso_0(OcctSharp_Value_Axis3 Pos, double U, OcctSharp_Value_Line3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::PlaneUIso(OcctSharp_GeometryValues::ToNative(Pos), U));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_plane_viso_static_plane_v_iso_0(OcctSharp_Value_Axis3 Pos, double V, OcctSharp_Value_Line3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::PlaneVIso(OcctSharp_GeometryValues::ToNative(Pos), V));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_plane_value_static_plane_value_0(double U, double V, OcctSharp_Value_Axis3 Pos, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElSLib::PlaneValue(U, V, OcctSharp_GeometryValues::ToNative(Pos));
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_sphere_dn_static_sphere_dn_0(double U, double V, OcctSharp_Value_Axis3 Pos, double Radius, int32_t Nu, int32_t Nv, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::SphereDN(U, V, OcctSharp_GeometryValues::ToNative(Pos), Radius, Nu, Nv));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_sphere_uiso_static_sphere_u_iso_0(OcctSharp_Value_Axis3 Pos, double Radius, double U, OcctSharp_Value_Circle3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::SphereUIso(OcctSharp_GeometryValues::ToNative(Pos), Radius, U));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_sphere_viso_static_sphere_v_iso_0(OcctSharp_Value_Axis3 Pos, double Radius, double V, OcctSharp_Value_Circle3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::SphereVIso(OcctSharp_GeometryValues::ToNative(Pos), Radius, V));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_sphere_value_static_sphere_value_0(double U, double V, OcctSharp_Value_Axis3 Pos, double Radius, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElSLib::SphereValue(U, V, OcctSharp_GeometryValues::ToNative(Pos), Radius);
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_torus_dn_static_torus_dn_0(double U, double V, OcctSharp_Value_Axis3 Pos, double MajorRadius, double MinorRadius, int32_t Nu, int32_t Nv, OcctSharp_Value_Vector3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::TorusDN(U, V, OcctSharp_GeometryValues::ToNative(Pos), MajorRadius, MinorRadius, Nu, Nv));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_torus_uiso_static_torus_u_iso_0(OcctSharp_Value_Axis3 Pos, double MajorRadius, double MinorRadius, double U, OcctSharp_Value_Circle3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::TorusUIso(OcctSharp_GeometryValues::ToNative(Pos), MajorRadius, MinorRadius, U));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_torus_viso_static_torus_v_iso_0(OcctSharp_Value_Axis3 Pos, double MajorRadius, double MinorRadius, double V, OcctSharp_Value_Circle3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ElSLib::TorusVIso(OcctSharp_GeometryValues::ToNative(Pos), MajorRadius, MinorRadius, V));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_torus_value_static_torus_value_0(double U, double V, OcctSharp_Value_Axis3 Pos, double MajorRadius, double MinorRadius, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElSLib::TorusValue(U, V, OcctSharp_GeometryValues::ToNative(Pos), MajorRadius, MinorRadius);
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_value_static_value_0(double U, double V, OcctSharp_Value_Cone C, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElSLib::Value(U, V, OcctSharp_GeometryValues::ToNative(C));
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_value_static_value_1(double U, double V, OcctSharp_Value_Cylinder C, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElSLib::Value(U, V, OcctSharp_GeometryValues::ToNative(C));
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_value_static_value_2(double U, double V, OcctSharp_Value_Plane Pl, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElSLib::Value(U, V, OcctSharp_GeometryValues::ToNative(Pl));
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_value_static_value_3(double U, double V, OcctSharp_Value_Sphere S, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElSLib::Value(U, V, OcctSharp_GeometryValues::ToNative(S));
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_el_slib_value_static_value_4(double U, double V, OcctSharp_Value_Torus T, OcctSharp_Point3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    const gp_Pnt copiedPoint = ElSLib::Value(U, V, OcctSharp_GeometryValues::ToNative(T));
+    *generatedResult = {copiedPoint.X(), copiedPoint.Y(), copiedPoint.Z()};
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }
 
 double OCCTSHARP_CALL occtsharp_generated_gcpnts_tangential_deflection_static_arc_angular_step_0(
@@ -179,6 +1835,396 @@ int32_t OCCTSHARP_CALL occtsharp_generated_plib_static_niv_constr_0(
   return PLib::NivConstr(static_cast<const GeomAbs_Shape>(ConstraintOrder));
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_project_static_project_3(OcctSharp_Value_Cone Co, OcctSharp_Value_Circle3d Ci, OcctSharp_Value_Line2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ProjLib::Project(OcctSharp_GeometryValues::ToNative(Co), OcctSharp_GeometryValues::ToNative(Ci)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_project_static_project_4(OcctSharp_Value_Cone Co, OcctSharp_Value_Line3d L, OcctSharp_Value_Line2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ProjLib::Project(OcctSharp_GeometryValues::ToNative(Co), OcctSharp_GeometryValues::ToNative(L)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_project_static_project_11(OcctSharp_Value_Cone Co, OcctSharp_Point3d P, OcctSharp_Value_Point2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ProjLib::Project(OcctSharp_GeometryValues::ToNative(Co), gp_Pnt(P.x, P.y, P.z)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_project_static_project_5(OcctSharp_Value_Cylinder Cy, OcctSharp_Value_Circle3d Ci, OcctSharp_Value_Line2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ProjLib::Project(OcctSharp_GeometryValues::ToNative(Cy), OcctSharp_GeometryValues::ToNative(Ci)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_project_static_project_6(OcctSharp_Value_Cylinder Cy, OcctSharp_Value_Line3d L, OcctSharp_Value_Line2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ProjLib::Project(OcctSharp_GeometryValues::ToNative(Cy), OcctSharp_GeometryValues::ToNative(L)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_project_static_project_12(OcctSharp_Value_Cylinder Cy, OcctSharp_Point3d P, OcctSharp_Value_Point2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ProjLib::Project(OcctSharp_GeometryValues::ToNative(Cy), gp_Pnt(P.x, P.y, P.z)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_project_static_project_0(OcctSharp_Value_Plane Pl, OcctSharp_Value_Circle3d C, OcctSharp_Value_Circle2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ProjLib::Project(OcctSharp_GeometryValues::ToNative(Pl), OcctSharp_GeometryValues::ToNative(C)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_project_static_project_1(OcctSharp_Value_Plane Pl, OcctSharp_Value_Ellipse3d E, OcctSharp_Value_Ellipse2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ProjLib::Project(OcctSharp_GeometryValues::ToNative(Pl), OcctSharp_GeometryValues::ToNative(E)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_project_static_project_2(OcctSharp_Value_Plane Pl, OcctSharp_Value_Hyperbola3d H, OcctSharp_Value_Hyperbola2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ProjLib::Project(OcctSharp_GeometryValues::ToNative(Pl), OcctSharp_GeometryValues::ToNative(H)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_project_static_project_7(OcctSharp_Value_Plane Pl, OcctSharp_Value_Line3d L, OcctSharp_Value_Line2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ProjLib::Project(OcctSharp_GeometryValues::ToNative(Pl), OcctSharp_GeometryValues::ToNative(L)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_project_static_project_10(OcctSharp_Value_Plane Pl, OcctSharp_Value_Parabola3d P, OcctSharp_Value_Parabola2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ProjLib::Project(OcctSharp_GeometryValues::ToNative(Pl), OcctSharp_GeometryValues::ToNative(P)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_project_static_project_13(OcctSharp_Value_Plane Pl, OcctSharp_Point3d P, OcctSharp_Value_Point2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ProjLib::Project(OcctSharp_GeometryValues::ToNative(Pl), gp_Pnt(P.x, P.y, P.z)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_project_static_project_8(OcctSharp_Value_Sphere Sp, OcctSharp_Value_Circle3d Ci, OcctSharp_Value_Line2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ProjLib::Project(OcctSharp_GeometryValues::ToNative(Sp), OcctSharp_GeometryValues::ToNative(Ci)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_project_static_project_14(OcctSharp_Value_Sphere Sp, OcctSharp_Point3d P, OcctSharp_Value_Point2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ProjLib::Project(OcctSharp_GeometryValues::ToNative(Sp), gp_Pnt(P.x, P.y, P.z)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_project_static_project_9(OcctSharp_Value_Torus To, OcctSharp_Value_Circle3d Ci, OcctSharp_Value_Line2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ProjLib::Project(OcctSharp_GeometryValues::ToNative(To), OcctSharp_GeometryValues::ToNative(Ci)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_proj_lib_project_static_project_15(OcctSharp_Value_Torus To, OcctSharp_Point3d P, OcctSharp_Value_Point2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(ProjLib::Project(OcctSharp_GeometryValues::ToNative(To), gp_Pnt(P.x, P.y, P.z)));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gp_static_dx_0(OcctSharp_Value_Direction3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(gp::DX());
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gp_static_dx2d_0(OcctSharp_Value_Direction2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(gp::DX2d());
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gp_static_dy_0(OcctSharp_Value_Direction3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(gp::DY());
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gp_static_dy2d_0(OcctSharp_Value_Direction2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(gp::DY2d());
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gp_static_dz_0(OcctSharp_Value_Direction3d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(gp::DZ());
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gp_static_ox_0(OcctSharp_Value_Axis1* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(gp::OX());
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gp_static_ox2d_0(OcctSharp_Value_Axis2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(gp::OX2d());
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gp_static_oy_0(OcctSharp_Value_Axis1* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(gp::OY());
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gp_static_oy2d_0(OcctSharp_Value_Axis2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(gp::OY2d());
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gp_static_oz_0(OcctSharp_Value_Axis1* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(gp::OZ());
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
 OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gp_static_origin_0(OcctSharp_Point3d* generatedResult)
 {
   if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
@@ -195,7 +2241,82 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gp_static_origin_0(OcctSharp
   catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }
 
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gp_static_origin2d_0(OcctSharp_Value_Point2d* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(gp::Origin2d());
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
 double OCCTSHARP_CALL occtsharp_generated_gp_static_resolution_0(void)
 {
   return gp::Resolution();
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gp_static_yoz_0(OcctSharp_Value_Axis2* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(gp::YOZ());
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gp_static_zox_0(OcctSharp_Value_Axis2* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(gp::ZOX());
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gp_quaternion_nlerp_interpolate_static_interpolate_0(OcctSharp_Value_Quaternion theQStart, OcctSharp_Value_Quaternion theQEnd, double theT, OcctSharp_Value_Quaternion* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(gp_QuaternionNLerp::Interpolate(OcctSharp_GeometryValues::ToNative(theQStart), OcctSharp_GeometryValues::ToNative(theQEnd), theT));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
+}
+
+OcctSharp_Status OCCTSHARP_CALL occtsharp_generated_gp_quaternion_slerp_interpolate_static_interpolate_0(OcctSharp_Value_Quaternion theQStart, OcctSharp_Value_Quaternion theQEnd, double theT, OcctSharp_Value_Quaternion* generatedResult)
+{
+  if (generatedResult == nullptr) { OcctSharp_Internal_SetLastError("Generated scalar output is null."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
+  *generatedResult = {};
+  OcctSharp_Internal_SetLastError("");
+  try
+  {
+    *generatedResult = OcctSharp_GeometryValues::FromNative(gp_QuaternionSLerp::Interpolate(OcctSharp_GeometryValues::ToNative(theQStart), OcctSharp_GeometryValues::ToNative(theQEnd), theT));
+    return OCCTSHARP_STATUS_SUCCESS;
+  }
+  catch (const Standard_Failure& error) { OcctSharp_Internal_SetLastError(error.GetMessageString()); return OCCTSHARP_STATUS_OCCT_FAILURE; }
+  catch (const std::exception& error) { OcctSharp_Internal_SetLastError(error.what()); return OCCTSHARP_STATUS_STANDARD_EXCEPTION; }
+  catch (...) { OcctSharp_Internal_SetLastError("Unknown C++ exception in generated scalar binding."); return OCCTSHARP_STATUS_UNKNOWN_EXCEPTION; }
 }

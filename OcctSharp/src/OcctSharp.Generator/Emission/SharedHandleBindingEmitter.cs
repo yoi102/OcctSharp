@@ -722,6 +722,10 @@ public static class SharedHandleBindingEmitter
         {
             builder.AppendLine($"    *out_value = static_cast<int32_t>({invocation});");
         }
+        else if (method.ReturnProjection.RuleId == "TM009")
+        {
+            builder.AppendLine($"    *out_value = OcctSharp_GeometryValues::FromNative({invocation});");
+        }
         else
         {
             builder.AppendLine($"    *out_value = {invocation};");
@@ -1052,6 +1056,7 @@ public static class SharedHandleBindingEmitter
             "TM004" => $"static_cast<{parameter.Parameter.Type.BaseCanonicalSpelling}>({parameter.Name})",
             "TM005" => $"gp_Pnt({parameter.Name}.x, {parameter.Name}.y, {parameter.Name}.z)",
             "TM008" => $"static_cast<{parameter.Parameter.Type.BaseCanonicalSpelling}>({parameter.Name})",
+            "TM009" => $"OcctSharp_GeometryValues::ToNative({parameter.Name})",
             _ => parameter.Name,
         };
     }

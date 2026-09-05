@@ -4,6 +4,15 @@ Execution cadence and task sizing follow [WORKFLOW](WORKFLOW.md) under ADR-0091.
 The technical boundaries below remain applicable; their historical batch counts and
 validation numbers are evidence snapshots. Current progress is maintained in [STATUS](STATUS.md).
 
+## Batch Y geometric value boundary
+
+ADR-0093 adds thirty explicit geometric records in the existing Foundation module,
+under OcctSharp.Values. The central TM009 table drives C records, immutable managed
+records and native field conversions. It introduces no owner, native layout coupling
+or module. Existing facade geometry types retain their identities. Preview.22 and
+Preview.23 immutable epochs preserve old generated overloads, while new declarations
+append. SC-062 retains an exact reverse-module projection as Blocked.
+
 ## Batch X generated projection boundary
 
 ADR-0092 broadens the centralized type map and emitters across existing modules. An

@@ -5,6 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="Emission/preview22-stable-ids.json" />
+    <EmbeddedResource Include="Emission/preview23-added-stable-ids.json" />
     <PackageReference Include="ClangSharp" />
     <PackageReference Include="libClangSharp" />
     <PackageReference Include="libClangSharp.runtime.win-x64" />

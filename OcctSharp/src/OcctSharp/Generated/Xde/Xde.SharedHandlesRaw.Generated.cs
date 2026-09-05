@@ -110,6 +110,8 @@
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@AddModifier#$@E@XCAFDimTolObjects_DimensionModif#
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@DynamicType#1
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@GetAngularQualifier#1
+// Source: c:@S@XCAFDimTolObjects_DimensionObject@F@GetConnectionAxis#1
+// Source: c:@S@XCAFDimTolObjects_DimensionObject@F@GetConnectionAxis2#1
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@GetConnectionName#1
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@GetConnectionName2#1
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@GetDescription#I#1
@@ -141,6 +143,8 @@
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@RemoveDescription#I#
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetAngularQualifier#$@E@XCAFDimTolObjects_AngularQualifier#
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetClassOfTolerance#b#$@E@XCAFDimTolObjects_DimensionFormVariance#$@E@XCAFDimTolObjects_DimensionGrade#
+// Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetConnectionAxis#&1$@S@gp_Ax2#
+// Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetConnectionAxis2#&1$@S@gp_Ax2#
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetConnectionName#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetConnectionName2#&1$@N@opencascade@S@handle>#$@S@TCollection_HAsciiString#
 // Source: c:@S@XCAFDimTolObjects_DimensionObject@F@SetLowerBound#d#
@@ -174,6 +178,7 @@
 // Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@HasPlane#1
 // Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@HasPoint#1
 // Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@HasPointText#1
+// Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@SetAffectedPlane#&1$@S@gp_Pln#
 // Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@SetAffectedPlaneType#$@E@XCAFDimTolObjects_ToleranceZoneAffectedPlane#
 // Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@SetMaterialRequirementModifier#$@E@XCAFDimTolObjects_GeomToleranceMatReqModif#
 // Source: c:@S@XCAFDimTolObjects_GeomToleranceObject@F@SetMaxValueModifier#d#
@@ -404,12 +409,14 @@
 // Source: c:@S@XCAFDoc_Volume@F@Set#d#
 // Source: c:@S@XCAFDoc_Volume@F@XCAFDoc_Volume#
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@DynamicType#1
+// Source: c:@S@XCAFNoteObjects_NoteObject@F@GetPlane#1
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@GetPoint#1
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@GetPointText#1
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@HasPlane#1
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@HasPoint#1
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@HasPointText#1
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@Reset#
+// Source: c:@S@XCAFNoteObjects_NoteObject@F@SetPlane#&1$@S@gp_Ax2#
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@SetPoint#&1$@S@gp_Pnt#
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@SetPointText#&1$@S@gp_Pnt#
 // Source: c:@S@XCAFNoteObjects_NoteObject@F@XCAFNoteObjects_NoteObject#
@@ -1937,6 +1944,14 @@ internal static partial class XdeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus XCAFDimTolObjectsDimensionObjectMethodGetAngularQualifier0(XCAFDimTolObjectsDimensionObjectHandle handle, out int resultValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_connection_axis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus XCAFDimTolObjectsDimensionObjectMethodGetConnectionAxis0(XCAFDimTolObjectsDimensionObjectHandle handle, out global::OcctSharp.Values.Axis2 resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_connection_axis2_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus XCAFDimTolObjectsDimensionObjectMethodGetConnectionAxis20(XCAFDimTolObjectsDimensionObjectHandle handle, out global::OcctSharp.Values.Axis2 resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_get_connection_name_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus XCAFDimTolObjectsDimensionObjectMethodGetConnectionName0(XCAFDimTolObjectsDimensionObjectHandle handle, out nint handleValue);
@@ -2060,6 +2075,14 @@ internal static partial class XdeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_class_of_tolerance_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus XCAFDimTolObjectsDimensionObjectMethodSetClassOfTolerance0(XCAFDimTolObjectsDimensionObjectHandle handle, int theHole, int theFormVariance, int theGrade);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_connection_axis_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus XCAFDimTolObjectsDimensionObjectMethodSetConnectionAxis0(XCAFDimTolObjectsDimensionObjectHandle handle, global::OcctSharp.Values.Axis2 theAxis);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_connection_axis2_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus XCAFDimTolObjectsDimensionObjectMethodSetConnectionAxis20(XCAFDimTolObjectsDimensionObjectHandle handle, global::OcctSharp.Values.Axis2 theAxis);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_xcafdim_tol_objects_dimension_object_method_set_connection_name_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -2211,6 +2234,10 @@ internal static partial class XdeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_has_point_text_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus XCAFDimTolObjectsGeomToleranceObjectMethodHasPointText0(XCAFDimTolObjectsGeomToleranceObjectHandle handle, out int resultValue);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_affected_plane_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus XCAFDimTolObjectsGeomToleranceObjectMethodSetAffectedPlane0(XCAFDimTolObjectsGeomToleranceObjectHandle handle, global::OcctSharp.Values.Plane thePlane);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_xcafdim_tol_objects_geom_tolerance_object_method_set_affected_plane_type_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
@@ -3740,6 +3767,10 @@ internal static partial class XdeGeneratedNativeMethods
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus XCAFNoteObjectsNoteObjectMethodDynamicType0(XCAFNoteObjectsNoteObjectHandle handle, out nint handleValue);
 
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_xcafnote_objects_note_object_method_get_plane_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus XCAFNoteObjectsNoteObjectMethodGetPlane0(XCAFNoteObjectsNoteObjectHandle handle, out global::OcctSharp.Values.Axis2 resultValue);
+
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_xcafnote_objects_note_object_method_get_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus XCAFNoteObjectsNoteObjectMethodGetPoint0(XCAFNoteObjectsNoteObjectHandle handle, out Point3dRaw resultValue);
@@ -3763,6 +3794,10 @@ internal static partial class XdeGeneratedNativeMethods
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_xcafnote_objects_note_object_method_reset_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     internal static partial global::OcctSharp.Interop.NativeStatus XCAFNoteObjectsNoteObjectMethodReset0(XCAFNoteObjectsNoteObjectHandle handle);
+
+    [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_xcafnote_objects_note_object_method_set_plane_0")]
+    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+    internal static partial global::OcctSharp.Interop.NativeStatus XCAFNoteObjectsNoteObjectMethodSetPlane0(XCAFNoteObjectsNoteObjectHandle handle, global::OcctSharp.Values.Axis2 thePlane);
 
     [LibraryImport(LibraryName, EntryPoint = "occtsharp_generated_xcafnote_objects_note_object_method_set_point_0")]
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

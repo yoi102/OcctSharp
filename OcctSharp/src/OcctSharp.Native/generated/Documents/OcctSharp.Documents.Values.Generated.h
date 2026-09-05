@@ -18,6 +18,7 @@
 #pragma once
 
 #include "../../include/OcctSharp.Native.h"
+#include "../Foundation/OcctSharp.Foundation.GeometryValues.Generated.h"
 #include "../Geometry/OcctSharp.Geometry.Values.Generated.h"
 
 #ifdef __cplusplus
