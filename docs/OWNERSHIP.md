@@ -1,5 +1,23 @@
 # Ownership and Lifetime
 
+## Batch T parametric graph contract
+
+ParametricDocument.Create/Open owns its OCAF/XDE parent; Attach borrows the existing
+parent and never disposes it. All operations check both wrapper and parent disposal.
+Definitions/values/expressions copy managed inputs. Algorithms, TFunction graphs,
+TNaming iterators, relocation tables and temporary buffers stay call-local; no new
+handle registry, native callback or cross-DLL allocator is introduced.
+
+Successful candidate results publish only after the entire selected closure finishes.
+Failure/cancellation releases every candidate, rolls back edits and leaves last-good
+geometry available only through explicit stale access. GetResult deep-copies geometry
+and triangulations. Selection/history results have independent registered Shape
+ownership and survive document disposal; callers dispose each returned history item.
+Result-generation GUIDs index immutable history labels, not OCCT transaction levels.
+Boolean/S source-owner history does not claim exact persistent subshape mapping.
+Duplicate uses real TDF topology relocation and rewrites identities and metadata paths.
+Viewer review owns thread/parent-bound IDs and replaces them on recompute/undo.
+
 ## Batch S authoring implementation contract
 
 Scalar laws and conversion pieces own copied immutable data. Sweep and fill plans own

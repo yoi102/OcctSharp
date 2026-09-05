@@ -1,9 +1,9 @@
 # Batch T: Parametric document recompute and persistent topology selection
 
-- Status: scope preparation complete; implementation **0/40**; new compile/runtime gates **NOT RUN**.
+- Status: all original **40/40** rows implemented and locally validated; full release-check passes. Final document-package and local commit evidence is in STATUS.
 - Decision: [ADR-0082](adr/0082-broad-batch-q-through-t-preparation.md).
 - Preparation baseline: commit `6b04bd9`, package `8.0.1-preview.15`, OCCT 8.0.1.
-- Planned local package slot: `8.0.1-preview.19`; not a version change or publication.
+- Local package version: `8.0.1-preview.19`; no publication.
 - Execution contract and shared gates: [Q-T preparation](BATCH_Q_T_PREPARATION.md).
 - Frozen configuration: [batch-t-parametric-document-recompute.json](../OcctSharp/config/batches/batch-t-parametric-document-recompute.json).
 
@@ -25,8 +25,8 @@ existing public operations; they do not imply new OCCT class roots.
 
 ## Frozen capability and acceptance matrix
 
-All rows are prepared and unimplemented. Each acceptance statement is a required future
-test, not a report that it has passed. Shared lifetime/negative/package gates apply to
+All forty rows remain the frozen scope. Each acceptance statement is a required
+test, not by itself a report that it has passed. Shared lifetime/negative/package gates apply to
 every applicable row and are not counted as additional capabilities.
 
 | ID | Root group | New capability | Required observable acceptance |
@@ -72,6 +72,62 @@ every applicable row and are not counted as additional capabilities.
 | T-39 | Integration | Recomputed exact-result STEP/IGES delivery | Export/reopen supported exact geometry and metadata; explicitly exclude the parametric graph and discrete-only outputs from format guarantees. |
 | T-40 | Integration | Parametric result and failed-feature viewer review | Refresh result presentations on recompute and undo, highlight failed feature inputs and reject stale parent-bound selection IDs. |
 
+## Implementation-to-acceptance evidence
+
+The following tests are in OcctSharp.Runtime.Tests; each row appears exactly once.
+The shared public-only workflow is also compiled into the clean package consumer.
+Passing a focused case does not replace full exit gates, whose results are in STATUS.
+
+| Capability | Executable evidence |
+|---|---|
+| `T-01` | UnknownSchemaAndEscapedFeaturePathsRejectWithoutMutationAndAttachedOwnerRemainsOwnedByCaller |
+| `T-02` | NativeParameterStoragePreservesEmptyUnicodeTypedValuesAndAbort |
+| `T-03` | PrimitiveExpressionUnitsScalarAndDisposedDocumentAreEnforced |
+| `T-04` | ExpressionsEnforceUnitsBoundedArithmeticAndMissingInputs |
+| `T-05` | PlansResolveCrossFeatureParametersAndRejectExpressionCycles |
+| `T-06` | SubgraphRelocationRewritesIdsExpressionsAndNativeDependencies |
+| `T-07` | PlansRejectMissingInputsAndIncompatibleOutputKinds |
+| `T-08` | NativeGraphRewireRejectsCyclesBeforeChangingEitherDirection |
+| `T-09` | PlansResolveCrossFeatureParametersAndRejectExpressionCycles |
+| `T-10` | IncrementalFullTargetedRecomputePreserveIndependentGenerationsAndUndo |
+| `T-11` | IncrementalFullTargetedRecomputePreserveIndependentGenerationsAndUndo |
+| `T-12` | IncrementalFullTargetedRecomputePreserveIndependentGenerationsAndUndo |
+| `T-13` | IncrementalFullTargetedRecomputePreserveIndependentGenerationsAndUndo |
+| `T-14` | MalformedPersistedPathsFailBeforeMutationAndInterruptedStatesRecoverDownstream |
+| `T-15` | IncrementalFullTargetedRecomputePreserveIndependentGenerationsAndUndo; FailedMiddleNodeKeepsAllLastGoodResultsAndBlocksDependants |
+| `T-16` | NativeDependencyAndCurrentResultRevisionCorruptionRejectBeforeUse |
+| `T-17` | PrimitiveExpressionUnitsScalarAndDisposedDocumentAreEnforced |
+| `T-18` | IncrementalFullTargetedRecomputePreserveIndependentGenerationsAndUndo |
+| `T-19` | ExtrusionAndRevolutionUseTypedParametersAndReferencedProfiles |
+| `T-20` | TypedBooleanRepairAndMeshRecipesExecuteWithoutChangingExactInputs (four formats) |
+| `T-21` | TypedBooleanRepairAndMeshRecipesExecuteWithoutChangingExactInputs (four formats) |
+| `T-22` | PersistedGuidedLawAndConstrainedFillRecipesReexecuteRealKernels (four formats) |
+| `T-23` | PersistedGuidedLawAndConstrainedFillRecipesReexecuteRealKernels (four formats) |
+| `T-24` | TypedBooleanRepairAndMeshRecipesExecuteWithoutChangingExactInputs (four formats) |
+| `T-25` | LaterKernelFailureRollsBackEarlierSuccessfulCandidates |
+| `T-26` | FailedMiddleNodeKeepsAllLastGoodResultsAndBlocksDependants |
+| `T-27` | CancellationAfterSuccessfulCandidateAbortsBeforeTheNextKernelAndPreservesRevisions |
+| `T-28` | ActualExtrusionEvolutionHasOwningGeneratedAndTransactionSelectedHistory; NativeNamingReportsMultipleSuccessorsAsAmbiguousAndMissingContextAsDeleted |
+| `T-29` | HistorySelectsDurableResultGenerationsAcrossUndoRedoAndReopen |
+| `T-30` | DedicatedSelectionTracksActualTransformHistoryAndRejectsForeignStaleContexts |
+| `T-31` | DedicatedSelectionTracksActualTransformHistoryAndRejectsForeignStaleContexts |
+| `T-32` | NativeNamingReportsMultipleSuccessorsAsAmbiguousAndMissingContextAsDeleted |
+| `T-33` | RelocatedSelectionsStayIndependentAndTamperedTokensAreRejected |
+| `T-34` | SubgraphRelocationRewritesIdsExpressionsAndNativeDependencies; RelocatedSelectionsStayIndependentAndTamperedTokensAreRejected |
+| `T-35` | SubgraphRelocationRewritesIdsExpressionsAndNativeDependencies |
+| `T-36` | FourFormatsReopenFunctionsParametersAndSelectionsThenReallyRecompute; both four-format recipe tests |
+| `T-37` | HistorySelectsDurableResultGenerationsAcrossUndoRedoAndReopen; shared BatchTParametricWorkflow |
+| `T-38` | SubshapeMetadataConflictsPreventPublicationWithoutChangingOccurrences; shared BatchTParametricWorkflow |
+| `T-39` | RecomputedSharedDefinitionsExchangeAndRealHwndReview |
+| `T-40` | RecomputedSharedDefinitionsExchangeAndRealHwndReview |
+
+Additional raw boundary, copied-array/schema and failure tests apply across the matrix.
+Exact SC-057 accounting reconciles 65 new Manual IDs and zero other identity/disposition
+changes against frozen S. Exit inventory SHA256:
+`1A4B9369EA89E89F9A71BC12E190196FD010B716681939E935BEAC840A69FDBA`.
+Three negative accounting cases reject wrong baseline, input overwrite and missing
+implementation; original inputs remain unchanged.
+
 ## Native decision roots and dependency closure
 
 | Root group | Exact inventory roots |
@@ -112,8 +168,23 @@ root appears here.
 
 ## Implementation ownership and source placement
 
+### Post-S entry (2026-09-05)
+
+Baseline `580bb22` / Preview.18; original Preview.15 evidence and config are retained.
+The separate `batch-t-entry.json` and fresh 128-header inventory establish
+SHA256 `78F5F2380209C17EC0A2C5A164B485B821563757EE073ABC23598F5CB76CE0D1`.
+The exact delta contains 222 prior Blocked-to-Manual transitions, 11 in T roots,
+zero added/removed/identity changes. Current 52 roots: 1,981 candidates, 855 Blocked,
+536 Emitted, 112 Manual and 478 Skipped. Repeated root reports match SHA256
+`61E5C27D2A14AB593A6636E0D244D26C2D1F81B85E15DA2692DEE857831497C7`.
+New ownership/execution decisions are in ADR-0087. This entry evidence does not validate
+new runtime operations. Expanded focused evidence includes four-format Q/R/S reexecution, exact source transforms,
+relocated selectors, real HWND and durable result-generation history. Final counts and
+full exit gates are recorded in STATUS; completion is not inferred from entry evidence.
+
 Native: new `Documents/FunctionGraph.cpp`, `Documents/ParametricState.cpp` and
-`Documents/TopologyNaming.cpp`. Documents owns storage/naming only and must not include
+`Documents/TopologyNaming.cpp`, `Documents/ParametricRelocation.cpp` and
+`Modeling/ParametricTransform.cpp`. Documents owns storage/naming only and must not include
 higher Mesh/Xde/Visualization domain headers. Managed Documents owns copied schema and
 low-level persistence; built-in Q/R/S execution and XDE/viewer coordination belong in
 the existing facade (or appropriate higher existing owner), not in a new project and
@@ -125,7 +196,7 @@ release path and source-disposal tests. Shape owners reuse the current registrat
 and release family. Document labels and viewer IDs remain parent-bound and thread rules
 remain unchanged. Concurrent release/use is not newly supported. Before introducing an
 actual handle/layout/manual binding exception, update OWNERSHIP, NATIVE_ABI and
-SPECIAL_CASES with exact directly invoked stable IDs; this preparation does not add one.
+SPECIAL_CASES with exact directly invoked stable IDs; SC-057 and ADR-0087 record this implementation boundary.
 
 ## Constraints and non-goals
 

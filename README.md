@@ -5,7 +5,7 @@ versioned native C ABI, generated low-level bindings, and friendly managed CAD A
 modeling, STEP/IGES/STL exchange, XDE assemblies and metadata, meshing, inspection, and
 Windows visualization.
 
-Current local preview: `8.0.1-preview.18` for Windows x64. The NuGet graph contains 12 managed
+Current local preview: `8.0.1-preview.19` for Windows x64. The NuGet graph contains 12 managed
 modules, the `OcctSharp` compatibility/facade package, and one shared
 `OcctSharp.Native.win-x64` runtime package. The native package places the complete
 62-DLL runtime in the application's `occt/` directory; no machine-wide OCCT installation
@@ -14,17 +14,17 @@ or `PATH` change is required.
 ## Install
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.18 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp --version 8.0.1-preview.19 --source ./OcctSharp/artifacts/packages
 ```
 
 A narrow consumer can reference a module directly, for example:
 
 ```powershell
-dotnet add package OcctSharp.Modeling --version 8.0.1-preview.18 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.19 --source ./OcctSharp/artifacts/packages
 ```
 
 The supported runtime baseline is .NET 10, Windows x64, and OCCT 8.0.1.
-Preview.18 is a local-only build; it is not published on NuGet.org. Create the
+Preview.19 is a local-only build; it is not published on NuGet.org. Create the
 local package feed with `OcctSharp/eng/pack.ps1` using the contributor toolchain, or run
 the repository samples directly with the committed runtime.
 
@@ -39,6 +39,32 @@ using Shape cylinder = ShapeFactory.CreateCylinder(6, 20);
 Console.WriteLine($"Box faces: {box.FaceCount}");
 Console.WriteLine($"Cylinder faces: {cylinder.FaceCount}");
 ```
+
+## Recompute a persisted parametric feature
+
+```csharp
+using OcctSharp;
+
+static ParametricParameter Mm(double value) =>
+    ParametricParameter.FromValue(ParametricValue.FromReal(value, ParametricUnit.Millimeter));
+
+using var graph = ParametricDocument.Create();
+var box = new ParametricFeatureDefinition(Guid.NewGuid(), "Parametric box", ParametricFeatureKind.Box,
+    new Dictionary<string, ParametricParameter> { ["x"] = Mm(40), ["y"] = Mm(30), ["z"] = Mm(20) }, []);
+graph.Add(box);
+var report = graph.Recompute();
+if (!report.Succeeded) throw new InvalidOperationException(string.Join("; ", report.Issues.Select(x => x.Message)));
+using var result = graph.GetResult(box.Id); // Independent owning shape, no stale result by default.
+string file = graph.Save("parametric.cbf", DocumentStorageFormat.BinOcaf);
+using var reopened = ParametricDocument.Open(file, graph.RootEntry);
+var changed = reopened.EditAndRecompute(box.WithParameter("x", Mm(60)));
+Console.WriteLine($"Recomputed: {changed.Succeeded}");
+```
+
+Incremental/full/targeted recompute supports typed primitives, profile features, Boolean,
+repair, guided sweep/fill and mesh recipes. Failed runs retain explicitly stale last-good
+results; persistent selections can report unsupported or ambiguous topology changes.
+See [Preview.19 notes](docs/RELEASE_NOTES_8.0.1_PREVIEW_19.md) for ownership and format limits.
 
 ## Build a 2D sketch with a hole and extrude it
 

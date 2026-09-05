@@ -1,5 +1,29 @@
 # Special Cases
 
+## SC-057: Typed parametric state, recompute, naming and relocation
+
+- Status: T implementation and focused verification active; complete exit gates in STATUS.
+- Scope: 65 exact newly invoked Blocked overloads in
+  [batch-t-manual-calls.json](../OcctSharp/config/batches/batch-t-manual-calls.json).
+  No whole root is accepted implicitly; reused historical support remains unchanged.
+- Documents owns copied typed parameters/expressions and native-local TFunction,
+  TNaming and TDF relocation operations. The facade executes Q/R/S feature recipes,
+  publishes one atomic transaction and composes XDE/exchange/viewer delivery.
+- Existing document/Shape/FeatureResult owners and their matching release paths are
+  reused; no registry, project, native DLL or managed TFunction_Driver callback is added.
+- NamedData Has checks precede Get and distinguish missing/zero/empty arrays. Logbook
+  mutations explicitly Backup to preserve undo. Relocation adds labels before roots,
+  checks external references and rewrites copied feature identities/paths/graph IDs.
+- TNaming selection uses a dedicated child and an exact selected-TShape anchor.
+  Failed/ambiguous/deleted/type-invalid mappings never fall back to nearest topology.
+  Actual transform ModifiedShape correspondence is recorded, while Boolean and sweep
+  input-owner associations do not masquerade as source-subshape naming evidence.
+- Immutable evolution labels are indexed by result-generation GUID; TDF transaction
+  nesting is not a persisted version. Four-format reopen must perform real recompute.
+- ABI 1.63 / bridge 0.71.0 / Preview.19 add sixteen C calls; schema remains 1.13.
+  Replace this exception only when generated ownership and callback-free contracts
+  preserve the same atomicity, persistence, ambiguity and lifetime guarantees.
+
 ## SC-056: Copied laws, guided sweeps, constrained filling and patch provenance
 
 - Status: all 40 Batch S capabilities implemented and locally validated under ADR-0086;

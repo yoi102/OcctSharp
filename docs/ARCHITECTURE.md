@@ -1,5 +1,18 @@
 # Architecture
 
+## Batch T parametric execution boundary
+
+ADR-0087 places copied versioned feature/parameter/expression plans and internal
+TFunction/TNaming/TDF storage in Documents. Existing OcafDocument/XdeDocument facade
+identities are retained; ParametricDocument borrows or owns the existing parent,
+never a second registry entry. Q/R/S evaluation, delivery and viewer review remain
+in the facade, with no reverse Documents dependency. Four Documents translation
+units own graph, typed state, naming and relocation; one Modeling unit owns exact
+transform correspondence. One DLL and the existing project graph are unchanged.
+Candidates are temporary owners until a whole selected closure succeeds. Result
+generations and durable history GUIDs survive reopen and undo; raw OCAF transaction
+levels are not used as persistent revision numbers. Selection can explicitly fail.
+
 ## Batch S guided authoring boundary
 
 ADR-0086 places copied immutable scalar laws in Geometry and owning dependency-graph
@@ -54,7 +67,7 @@ S in cohesive Modeling/Surfaces units, T storage/naming in Documents. T feature 
 and XDE/viewer coordination belong in the existing facade/higher owners, so Documents
 does not gain reverse dependencies on Mesh/XDE/Visualization. R MeshData similarly must
 not reference Modeling or XDE material objects. Q is now implemented as described above;
-R/S are implemented in the boundaries above; T placement remains planned. See [Q-T preparation](BATCH_Q_T_PREPARATION.md).
+R/S/T are implemented and locally validated in the boundaries above; final evidence is recorded in STATUS. See [Q-T preparation](BATCH_Q_T_PREPARATION.md).
 
 ## Full historical native source extraction
 

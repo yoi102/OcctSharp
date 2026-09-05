@@ -42,6 +42,11 @@ set(OCCTSHARP_MANUAL_NATIVE_SOURCES
   src/Mesh/MeshTopology.cpp
   src/Documents/Lifecycle.cpp
   src/Documents/State.cpp
+  src/Documents/FunctionGraph.cpp
+  src/Documents/ParametricState.cpp
+  src/Documents/TopologyNaming.cpp
+  src/Documents/ParametricRelocation.cpp
+  src/Modeling/ParametricTransform.cpp
   src/Xde/Document.cpp
   src/Xde/Metadata.cpp
   src/Xde/Pmi.cpp
@@ -81,6 +86,7 @@ add_library(OcctSharp.Native SHARED
   include/OcctSharp.Native.Repair.h
   include/OcctSharp.Native.Mesh.h
   include/OcctSharp.Native.Authoring.h
+  include/OcctSharp.Native.Parametric.h
   src/Surfaces/SurfaceCommon.hxx
   ${OCCTSHARP_MANUAL_NATIVE_SOURCES}
   ${OCCTSHARP_GENERATED_NATIVE_SOURCES})

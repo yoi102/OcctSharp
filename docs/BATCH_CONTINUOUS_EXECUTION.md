@@ -1,9 +1,9 @@
 # Continuous implementation runbook: Q through W
 
-- Status: **CONTINUE — Batch Q/R COMMITTED; Batch S implementing**, explicitly started by the user on 2026-09-05.
+- Status: **CONTINUE — Batch Q/R/S COMMITTED; Batch T VALIDATED**, explicitly started by the user on 2026-09-05. Final document-package/commit evidence is in STATUS.
 - Decision: [ADR-0083](adr/0083-extended-batches-and-continuous-execution.md).
 - Queue: **Q -> R -> S -> T -> U -> V -> W**, 40 capabilities each, **280 total**.
-- Current implementation and local validation: **80/280**; Q is committed as `1a3662a`. R is committed as `86e069c`; S entry is revalidated and full implementation is active.
+- Current completed implementation and local product/release validation: **160/280 (57.1%)**; Q is committed as `1a3662a`, R as `86e069c`, S as `580bb22`. T retains its original 40 rows and passes the full release-check. Complete its final document-package verification/local commit, then immediately U entry.
 - Machine-readable queue: [continuous-plan.json](../OcctSharp/config/batches/continuous-plan.json).
 
 ## Start and continuation contract
@@ -32,7 +32,7 @@ earlier algorithm.
 | Q | [Repair/topology](BATCH_Q_SHAPE_REPAIR_TOPOLOGY_GAP_INVENTORY.md) | None | 8.0.1-preview.16 |
 | R | [Mesh authoring/editing](BATCH_R_MESH_AUTHORING_EDITING_GAP_INVENTORY.md) | None | 8.0.1-preview.17 |
 | S | [Guided sweeps/constraints](BATCH_S_GUIDED_SWEEP_CONSTRAINED_SURFACE_GAP_INVENTORY.md) | None | 8.0.1-preview.18 |
-| T | [Parametric recompute/naming](BATCH_T_PARAMETRIC_DOCUMENT_RECOMPUTE_GAP_INVENTORY.md) | Q repair, R mesh, S guide/constraint results | 8.0.1-preview.19 |
+| T | [Parametric recompute](BATCH_T_PARAMETRIC_DOCUMENT_RECOMPUTE_GAP_INVENTORY.md) | Q repair, R mesh and S authoring recipes | 8.0.1-preview.19 |
 | U | [Advanced local features](BATCH_U_ADVANCED_LOCAL_FEATURES_GAP_INVENTORY.md) | Q acceptance, S laws, T recipe execution | 8.0.1-preview.20 |
 | V | [Partition/volume workflows](BATCH_V_PARTITION_VOLUME_GAP_INVENTORY.md) | Q repair, R grouped mesh, T multi-output publication | 8.0.1-preview.21 |
 | W | [Lighting/material/frame review](BATCH_W_VIEWER_LIGHTING_FRAME_CAPTURE_GAP_INVENTORY.md) | R attributed mesh, existing viewer/XDE material contracts | 8.0.1-preview.22 |
@@ -82,8 +82,8 @@ paths/hash evidence; a short comment such as “tested” is insufficient.
 |---|---|---|---|---|---|
 | Q | COMMITTED | 40/40 | `3491c1e`; zero product delta from `6b04bd9`; frozen 52-root audit revalidated | Focused 25/25; Release/Debug Generator 91/91 and Runtime 205/205; actual Debug-native 205/205; full release-check, 14 packages/two consumers, 106-ID exact reconciliation; final documents and package bytes verified | `1a3662a` |
 | R | COMMITTED | 40/40 | `1a3662a` / Preview.16; fresh 128-header inventory matches `7917A78F`; 106 prior Blocked-to-Manual changes, nine within R roots, zero identity changes; entry reports match `1C8F1B3E` | Focused 24/24; final Release/Debug Generator 91/91 and Runtime 229/229; actual Debug-native 229/229; 36 standalone headers; 29,432 matching native exports, 404 additive managed signatures/no removals; exact 48-ID accounting; final full release-check PASS after OBJ hardening; 94-file clean regeneration and both consumers PASS | `86e069c` |
-| S | VERIFYING FINAL PACKAGE | All 40 rows implemented and locally validated | `86e069c` / Preview.17; 154 prior transitions, 21 in S roots, zero identity changes; 52 roots / 2,432 candidates; repeat hash `71D65197` | Focused 44/44 and ten repeats; Release/Debug Generator 91/91 and Runtime 273/273; actual Debug-native 273/273; 39 strict headers, six layout negatives; 500 additive managed signatures/no removals; 68-ID exact accounting; 94-file cold regeneration, both consumers and full release-check PASS. Final document/package-byte check is in STATUS | Pending local completion commit |
-| T | PREPARED | 0/40 | Preview.15 frozen; pending post-S delta | NOT RUN | None |
+| S | COMMITTED | 40/40 | `86e069c` / Preview.17; 154 prior transitions, 21 in S roots, zero identity changes; 52 roots / 2,432 candidates; repeat hash `71D65197` | Focused 44/44 and ten repeats; Release/Debug Generator 91/91 and Runtime 273/273; actual Debug-native 273/273; 39 strict headers, six layout negatives; 500 additive managed signatures/no removals; 68-ID exact accounting; 94-file cold regeneration, both consumers and full release-check PASS. Final 172 stable docs, 73 runtime/license files and five checksums match | `580bb22` |
+| T | VALIDATED | 40/40 | `580bb22` / Preview.18; fresh 128-header inventory matches `78F5F238`; 222 prior transitions, 11 in T roots, zero identity changes; 52 roots / 1,981 candidates; repeated root audit `61E5C27D` | Focused 40/40 and ten repeats; Release/Debug Generator 91/91 and Runtime 313/313; actual Debug-native 313/313; 40 strict headers, six layout negatives; 464 additive managed signatures/no removals; 65 exact Manual transitions. Both consumers, 94-file cold regeneration and full release-check PASS. Exit hash `1A4B9369`; final document-package evidence in STATUS | Whole-batch commit follows final package-content verification; next entry records its hash |
 | U | PREPARED | 0/40 | Preview.15 frozen; pending post-T delta | NOT RUN | None |
 | V | PREPARED | 0/40 | Preview.15 frozen; pending post-U delta | NOT RUN | None |
 | W | PREPARED | 0/40 | Preview.15 frozen; pending post-V delta | NOT RUN | None |

@@ -3,7 +3,7 @@
 - Date: 2026-09-05.
 - Decision: [ADR-0082](adr/0082-broad-batch-q-through-t-preparation.md).
 - Scope preparation: **4/4 batches**, **160 capability rows** (40 per batch).
-- Active implementation and local validation: **40/160**, all in Q. The frozen preparation evidence below is unchanged.
+- Active implementation and local validation: **160/160**, Q/R/S committed and T's complete product/release gates pass; final T document-package/commit evidence is in STATUS. The frozen preparation evidence below is unchanged.
 - Baseline: `6b04bd9`, completed B-P plus full historical Native extraction (ADR-0081).
 - Delivery after implementation is one local checked commit per whole batch. No automatic NuGet publication or GitHub push.
 
@@ -23,9 +23,9 @@ These four batches are a high-value next tranche, **not all remaining OCCT migra
 | Order | Whole-batch outcome | New scope | Planned local version | Implementation |
 |---|---|---|---|---|
 | Q | [Shape repair and topology normalization](BATCH_Q_SHAPE_REPAIR_TOPOLOGY_GAP_INVENTORY.md) | 40 capabilities | 8.0.1-preview.16 | 40/40 locally validated |
-| R | [Mesh authoring editing and discrete model delivery](BATCH_R_MESH_AUTHORING_EDITING_GAP_INVENTORY.md) | 40 capabilities | 8.0.1-preview.17 | 0/40 |
-| S | [Guided sweeps and constrained surface authoring](BATCH_S_GUIDED_SWEEP_CONSTRAINED_SURFACE_GAP_INVENTORY.md) | 40 capabilities | 8.0.1-preview.18 | 0/40 |
-| T | [Parametric document recompute and persistent topology selection](BATCH_T_PARAMETRIC_DOCUMENT_RECOMPUTE_GAP_INVENTORY.md) | 40 capabilities | 8.0.1-preview.19 | 0/40 |
+| R | [Mesh authoring editing and discrete model delivery](BATCH_R_MESH_AUTHORING_EDITING_GAP_INVENTORY.md) | 40 capabilities | 8.0.1-preview.17 | 40/40 locally validated |
+| S | [Guided sweeps and constrained surface authoring](BATCH_S_GUIDED_SWEEP_CONSTRAINED_SURFACE_GAP_INVENTORY.md) | 40 capabilities | 8.0.1-preview.18 | 40/40 locally validated |
+| T | [Parametric document recompute and persistent topology selection](BATCH_T_PARAMETRIC_DOCUMENT_RECOMPUTE_GAP_INVENTORY.md) | 40 capabilities | 8.0.1-preview.19 | 40/40 locally validated |
 
 At preparation the versions reserved OCCT-aligned slots under ADR-0065 against package
 `8.0.1-preview.15`, ABI `1.59`, bridge `0.67.0` and schema `1.13`. Q now targets

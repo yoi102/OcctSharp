@@ -1,5 +1,17 @@
 # Native source responsibilities
 
+## Batch T additions
+
+Four Documents units add FunctionGraph.cpp, ParametricState.cpp, TopologyNaming.cpp
+and ParametricRelocation.cpp; Modeling/ParametricTransform.cpp owns exact transform
+correspondence. Documents/Parametric.hxx contains only local graph helper declarations
+and ABI assertions. OcctSharp.Native.Parametric.h is a fixed C companion. No new
+owner/registry/project/DLL or reverse Documents dependency is introduced. Source
+layout is verified at 68 manual units, 585 C exports and 40 standalone strict private
+headers; six negative cases pass. Binary compatibility verifies 29,459 identical
+Release/Debug names, preserving all S exports and adding exactly sixteen C calls.
+Final whole-batch validation is reported in STATUS.
+
 ## Batch S additions
 
 Eight units add `Modeling/ScalarLaws.cpp`, `GuidedInputs.cpp`, `GuidedSweep.cpp`,

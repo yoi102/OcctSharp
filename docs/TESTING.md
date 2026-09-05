@@ -1,5 +1,26 @@
 # Testing and Validation
 
+## Batch T parametric validation
+
+BatchTStorageTests, BatchTRecomputeTests, BatchTPersistenceTests, BatchTAuthoringTests,
+BatchTFailureTests and BatchTBoundaryTests cover all forty original acceptance rows.
+Run the complete focused set with `--filter FullyQualifiedName~BatchT`, using the current
+built bridge. Cases exercise four-format Q/R/S recipe reopen and real re-execution,
+durable GUID history/undo/redo, dependency corruption, atomic candidate rollback,
+deterministic cancellation after an actual successful feature call, raw ABI capacity
+sentinels, relocated selections and independent owning histories. An internal synchronous
+observer exists only to validate the call boundary; no public/native callback is added.
+The shared BatchTParametricWorkflow also runs in the clean facade consumer and checks
+XDE shared definitions, Unicode STEP/IGES, actual HWND review, undo, stale IDs and
+wrong-thread rejection. `OCCTSHARP_BATCH_T_EVIDENCE` retains three viewport captures.
+Complete Release/Debug/actual Debug-native, strict source/dependency/compatibility,
+exact accounting, clean generation and both package consumers remain separate gates.
+The final current-source focused set passes 40/40 and ten consecutive repeats.
+Release/Debug and cold-source Generator 91/91 and Runtime 313/313 pass; isolated
+actual Debug-native Runtime 313/313 verifies all 62 DLL hashes. Both clean consumers,
+94-file byte-identical regeneration, 40 strict headers and six source-layout negatives
+pass. The final complete release gate and package-content evidence are in STATUS.
+
 ## Batch S authoring validation
 
 The unchanged 40-row matrix maps to BatchSAuthoringTests, BatchSClosureTests and

@@ -6,7 +6,7 @@ evidence; creating files or generating a large method count is not sufficient.
 The retired B00–B20 capability milestones and future package boundaries are documented
 in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the completed
 product-scale batch `B`; none is a separate current batch or commit boundary.
-Batch B through Batch R are complete for their accepted local implementation scopes.
+Batch B through Batch T are locally validated for their accepted implementation scopes.
 Batch P closes one expanded 32-capability surface/UV workflow under ADR-0079/0080.
 It was not split into projection, seam, repair, exchange, viewer, or package checkpoints.
 
@@ -15,10 +15,12 @@ It was not split into projection, seam, repair, exchange, viewer, or package che
 [ADR-0083](adr/0083-extended-batches-and-continuous-execution.md) adds three more
 40-capability scopes: U advanced contour/limit-driven features, V exact partition and
 volume workflows, W light/material/texture and copied-frame review. Together with Q-T,
-scope preparation is 7/7; Q/R are 80/80 implemented and locally validated, overall 80/280
-validated. S implements all original 40 rows and is running its complete exit gates
-at Preview.18; focused tests and 39 strict private-header checks pass. T-W follow S's
-whole-batch local commit automatically. Preview.20-22 extend the planned
+scope preparation is 7/7; Q-T are 160/160 implemented and locally validated.
+Overall validated progress is 160/280 (57.1%). T retains its original forty rows under
+ADR-0087 at Preview.19. Focused 40/40 and ten repeats, Runtime 313/313 in Release/Debug
+and actual Debug-native, both consumers, 94-file cold regeneration, 65-ID exact accounting
+and full local release-check pass. Final T document-package/commit evidence is in STATUS.
+U-W follow T's whole-batch local commit automatically. Preview.20-22 extend the planned
 slots only; no package/API/DLL versions change during preparation.
 
 The [continuous runbook](BATCH_CONTINUOUS_EXECUTION.md) defines Q -> R -> S -> T -> U ->
@@ -33,7 +35,7 @@ No scheduler, NuGet upload or GitHub push is part of this preparation or executi
 [the Q-T preparation record](BATCH_Q_T_PREPARATION.md) freeze four 40-capability waves:
 Q repair/topology normalization, R mesh authoring/editing, S guided sweeps/constrained
 surfaces and T parametric recompute/persistent topology selection. Scope preparation is
-4/4; implementation and local validation are 80/160 (Q/R). These are broader than P's 32-capability wave, not small
+4/4; implementation and local validation are 160/160 (Q-T). These are broader than P's 32-capability wave, not small
 per-family checkpoints and not a claim to exhaust all remaining OCCT APIs.
 
 Implement Q -> R -> S -> T, finishing all local gates and one local commit for each.
@@ -49,8 +51,9 @@ Generator 91/91, Runtime 229/229, actual Debug-native 229/229, both consumers,
 S delivers Preview.18 / ABI 1.62 / bridge 0.70.0: all 40 capabilities implemented,
 focused 44/44 and ten repeats, Release/Debug and actual Debug-native Runtime 273/273,
 both consumers, 94-file cold regeneration, exact 68-ID accounting and full release-check
-pass. Final document/package byte verification and local commit are recorded in STATUS;
-then reconcile T's entry and continue T-W without routine confirmation.
+pass. S's final package bytes were verified and committed as `580bb22`.
+T delivers Preview.19 / ABI 1.63 / bridge 0.71.0 with all forty original capabilities
+and complete local product/release validation. Continue U-W without routine confirmation.
 Keep the existing modules, facade, source boundaries and one native DLL; no automatic
 NuGet publication or GitHub push.
 
@@ -153,7 +156,14 @@ signing, and NuGet publication remain separate
 release-readiness work rather than
 unfinished batch implementation.
 
-## Current release baseline: Preview.16 local validation
+## Current release baseline: Preview.19 local validation
+
+ADR-0087 completes T's typed parametric execution, atomic recompute, durable result
+history, fallible persistent selection and document/exchange/viewer closure. All forty
+capabilities pass focused and whole-library gates, including actual Debug-native and
+clean consumers/regeneration. STATUS records final package bytes and the local commit.
+
+### Earlier baseline: Preview.16
 
 ADR-0084 completes Q's 40-capability source-bound repair and topology normalization
 wave on top of Preview.15: copied diagnostics, selected/protected staged operations,

@@ -1,6 +1,6 @@
 # Batch S: Guided sweeps and constrained surface authoring
 
-- Status: all original 40/40 rows implemented and locally validated under ADR-0086; final package-byte audit and local commit are tracked in STATUS.
+- Status: all original 40/40 rows implemented, fully locally validated and committed as `580bb22` under ADR-0086; final package bytes verified in STATUS.
 - Decision: [ADR-0082](adr/0082-broad-batch-q-through-t-preparation.md).
 - Preparation baseline: commit `6b04bd9`, package `8.0.1-preview.15`, OCCT 8.0.1.
 - Local package: `8.0.1-preview.18`, ABI 1.62, bridge 0.70.0; no publication.

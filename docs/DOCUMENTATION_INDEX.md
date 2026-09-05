@@ -6,12 +6,15 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 
 ## Start here
 
+- [Preview.19 release notes](RELEASE_NOTES_8.0.1_PREVIEW_19.md) — typed parametric
+  recompute, durable history, persistent selections and cross-family delivery.
+
 - [Architecture](ARCHITECTURE.md) — system boundaries and component ownership.
 - [Native source responsibilities](NATIVE_SOURCE_LAYOUT.md) — full historical extraction,
   domain-owned private contracts and independent-compilation/ABI checks under ADR-0081.
 - [Repository layout](REPOSITORY_LAYOUT.md) — physical separation of documentation
   and code-related files.
-- [Roadmap](ROADMAP.md) — completed B-P, locally validated Q, prepared R-W and local-release boundary.
+- [Roadmap](ROADMAP.md) — locally validated B-T, prepared U-W and local-release boundary.
 - [Continuous Q-W execution](BATCH_CONTINUOUS_EXECUTION.md) — seven whole 40-capability
   batches, next-run automatic advancement, per-batch gates/commits and recovery journal.
 - [U-W additional preparation](BATCH_U_W_PREPARATION.md) — 120 further capabilities,
@@ -27,11 +30,11 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Batch Q repair and topology](BATCH_Q_SHAPE_REPAIR_TOPOLOGY_GAP_INVENTORY.md) — protected
   staged healing, diagnostics, normalization and composed history; 40/40 locally validated.
 - [Batch R mesh authoring/editing](BATCH_R_MESH_AUTHORING_EDITING_GAP_INVENTORY.md) — caller
-  arrays, attributed edits/remapping and discrete-model delivery; full 40-row closure in exit verification.
+  arrays, attributed edits/remapping and discrete-model delivery; 40/40 locally validated and committed.
 - [Batch S guided sweep/constrained surfaces](BATCH_S_GUIDED_SWEEP_CONSTRAINED_SURFACE_GAP_INVENTORY.md)
-  — scalar laws, guides, constraint fulfilment and patch provenance; prepared, 0/40 implemented.
+  — scalar laws, guides, constraint fulfilment and patch provenance; 40/40 validated and committed.
 - [Batch T parametric recompute/naming](BATCH_T_PARAMETRIC_DOCUMENT_RECOMPUTE_GAP_INVENTORY.md)
-  — typed executable graph, atomic incremental recompute and fallible selectors; prepared, 0/40 implemented.
+  — typed executable graph, atomic incremental recompute and fallible selectors; 40/40 locally validated.
 - [Complete migration plan](MIGRATION_PLAN.md) — completed Batch C, Batch D, and Batch E
   matrices, large-wave rules, module/package boundaries, metrics,
   and product-scale gates.

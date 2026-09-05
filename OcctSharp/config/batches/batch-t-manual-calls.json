@@ -1,0 +1,399 @@
+{
+  "schemaVersion": "1.0",
+  "batch": "T",
+  "specialCaseId": "SC-057",
+  "baselineInventorySha256": "78F5F2380209C17EC0A2C5A164B485B821563757EE073ABC23598F5CB76CE0D1",
+  "note": "Exact newly invoked Blocked overloads for typed state, TFunction, TNaming, relocation and transform correspondence. Existing Emitted/Manual and historical shared support or template internals are not reclassified. BRepBuilderAPI_Transform refines the unchanged 40-row closure.",
+  "calls": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Transform@F@BRepBuilderAPI_Transform#&1$@S@TopoDS_Shape#&1$@S@gp_Trsf#b#b#",
+      "nativeName": "BRepBuilderAPI_Transform::BRepBuilderAPI_Transform",
+      "header": "BRepBuilderAPI_Transform.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Transform@F@ModifiedShape#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepBuilderAPI_Transform::ModifiedShape",
+      "header": "BRepBuilderAPI_Transform.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Standard_GUID@F@CheckGUIDFormat#*1C#S",
+      "nativeName": "Standard_GUID::CheckGUIDFormat",
+      "header": "Standard_GUID.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Standard_GUID@F@Standard_GUID#*1C#",
+      "nativeName": "Standard_GUID::Standard_GUID",
+      "header": "Standard_GUID.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetArrayOfIntegers#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDataStd_NamedData::GetArrayOfIntegers",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetArrayOfReals#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDataStd_NamedData::GetArrayOfReals",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetID#S",
+      "nativeName": "TDataStd_NamedData::GetID",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetInteger#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDataStd_NamedData::GetInteger",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetReal#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDataStd_NamedData::GetReal",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetString#&1$@S@TCollection_ExtendedString#",
+      "nativeName": "TDataStd_NamedData::GetString",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@HasArrayOfIntegers#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TDataStd_NamedData::HasArrayOfIntegers",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@HasArrayOfReals#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TDataStd_NamedData::HasArrayOfReals",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@HasInteger#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TDataStd_NamedData::HasInteger",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@HasReal#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TDataStd_NamedData::HasReal",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@HasString#&1$@S@TCollection_ExtendedString#1",
+      "nativeName": "TDataStd_NamedData::HasString",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@Set#&1$@S@TDF_Label#S",
+      "nativeName": "TDataStd_NamedData::Set",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@SetArrayOfIntegers#&1$@S@TCollection_ExtendedString#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#",
+      "nativeName": "TDataStd_NamedData::SetArrayOfIntegers",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@SetArrayOfReals#&1$@S@TCollection_ExtendedString#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#",
+      "nativeName": "TDataStd_NamedData::SetArrayOfReals",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@SetInteger#&1$@S@TCollection_ExtendedString#I#",
+      "nativeName": "TDataStd_NamedData::SetInteger",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@SetReal#&1$@S@TCollection_ExtendedString#d#",
+      "nativeName": "TDataStd_NamedData::SetReal",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@SetString#&1$@S@TCollection_ExtendedString#S0_#",
+      "nativeName": "TDataStd_NamedData::SetString",
+      "header": "TDataStd_NamedData.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDF_CopyTool@F@Copy#&1$@N@opencascade@S@handle>#$@S@TDF_DataSet#&1$@N@opencascade@S@handle>#$@S@TDF_RelocationTable#S",
+      "nativeName": "TDF_CopyTool::Copy",
+      "header": "TDF_CopyTool.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDF_DataSet@F@AddLabel#&1$@S@TDF_Label#",
+      "nativeName": "TDF_DataSet::AddLabel",
+      "header": "TDF_DataSet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDF_DataSet@F@AddRoot#&1$@S@TDF_Label#",
+      "nativeName": "TDF_DataSet::AddRoot",
+      "header": "TDF_DataSet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDF_DataSet@F@Attributes#",
+      "nativeName": "TDF_DataSet::Attributes",
+      "header": "TDF_DataSet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDF_DataSet@F@ContainsLabel#&1$@S@TDF_Label#1",
+      "nativeName": "TDF_DataSet::ContainsLabel",
+      "header": "TDF_DataSet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDF_DataSet@F@Labels#",
+      "nativeName": "TDF_DataSet::Labels",
+      "header": "TDF_DataSet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@ForgetAllAttributes#b#1",
+      "nativeName": "TDF_Label::ForgetAllAttributes",
+      "header": "TDF_Label.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@HasAttribute#1",
+      "nativeName": "TDF_Label::HasAttribute",
+      "header": "TDF_Label.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@HasChild#1",
+      "nativeName": "TDF_Label::HasChild",
+      "header": "TDF_Label.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@IsDescendant#&1$@S@TDF_Label#1",
+      "nativeName": "TDF_Label::IsDescendant",
+      "header": "TDF_Label.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@Root#1",
+      "nativeName": "TDF_Label::Root",
+      "header": "TDF_Label.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TDF_RelocationTable@F@SetRelocation#&1$@S@TDF_Label#S0_#",
+      "nativeName": "TDF_RelocationTable::SetRelocation",
+      "header": "TDF_RelocationTable.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_Function@F@GetID#S",
+      "nativeName": "TFunction_Function::GetID",
+      "header": "TFunction_Function.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_Function@F@Set#&1$@S@TDF_Label#&1$@S@Standard_GUID#S",
+      "nativeName": "TFunction_Function::Set",
+      "header": "TFunction_Function.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_GraphNode@F@GetID#S",
+      "nativeName": "TFunction_GraphNode::GetID",
+      "header": "TFunction_GraphNode.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_GraphNode@F@GetNext#1",
+      "nativeName": "TFunction_GraphNode::GetNext",
+      "header": "TFunction_GraphNode.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_GraphNode@F@GetPrevious#1",
+      "nativeName": "TFunction_GraphNode::GetPrevious",
+      "header": "TFunction_GraphNode.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_GraphNode@F@Set#&1$@S@TDF_Label#S",
+      "nativeName": "TFunction_GraphNode::Set",
+      "header": "TFunction_GraphNode.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@GetID#S",
+      "nativeName": "TFunction_Logbook::GetID",
+      "header": "TFunction_Logbook.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@GetImpacted#1",
+      "nativeName": "TFunction_Logbook::GetImpacted",
+      "header": "TFunction_Logbook.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@GetTouched#1",
+      "nativeName": "TFunction_Logbook::GetTouched",
+      "header": "TFunction_Logbook.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@GetValid#1",
+      "nativeName": "TFunction_Logbook::GetValid",
+      "header": "TFunction_Logbook.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@Set#&1$@S@TDF_Label#S",
+      "nativeName": "TFunction_Logbook::Set",
+      "header": "TFunction_Logbook.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@SetImpacted#&1$@S@TDF_Label#b#",
+      "nativeName": "TFunction_Logbook::SetImpacted",
+      "header": "TFunction_Logbook.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@SetTouched#&1$@S@TDF_Label#",
+      "nativeName": "TFunction_Logbook::SetTouched",
+      "header": "TFunction_Logbook.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@SetValid#&1$@S@TDF_Label#b#",
+      "nativeName": "TFunction_Logbook::SetValid",
+      "header": "TFunction_Logbook.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@AddFunction#&1$@S@TDF_Label#",
+      "nativeName": "TFunction_Scope::AddFunction",
+      "header": "TFunction_Scope.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@GetFunction#&1$@S@TDF_Label#1",
+      "nativeName": "TFunction_Scope::GetFunction",
+      "header": "TFunction_Scope.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@GetFunction#I#1",
+      "nativeName": "TFunction_Scope::GetFunction",
+      "header": "TFunction_Scope.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@GetID#S",
+      "nativeName": "TFunction_Scope::GetID",
+      "header": "TFunction_Scope.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@HasFunction#&1$@S@TDF_Label#1",
+      "nativeName": "TFunction_Scope::HasFunction",
+      "header": "TFunction_Scope.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@RemoveFunction#&1$@S@TDF_Label#",
+      "nativeName": "TFunction_Scope::RemoveFunction",
+      "header": "TFunction_Scope.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@Set#&1$@S@TDF_Label#S",
+      "nativeName": "TFunction_Scope::Set",
+      "header": "TFunction_Scope.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TNaming_Builder@F@Delete#&1$@S@TopoDS_Shape#",
+      "nativeName": "TNaming_Builder::Delete",
+      "header": "TNaming_Builder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TNaming_Builder@F@Generated#&1$@S@TopoDS_Shape#S0_#",
+      "nativeName": "TNaming_Builder::Generated",
+      "header": "TNaming_Builder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TNaming_Iterator@F@Evolution#1",
+      "nativeName": "TNaming_Iterator::Evolution",
+      "header": "TNaming_Iterator.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TNaming_Iterator@F@More#1",
+      "nativeName": "TNaming_Iterator::More",
+      "header": "TNaming_Iterator.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TNaming_Iterator@F@NewShape#1",
+      "nativeName": "TNaming_Iterator::NewShape",
+      "header": "TNaming_Iterator.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TNaming_Iterator@F@Next#",
+      "nativeName": "TNaming_Iterator::Next",
+      "header": "TNaming_Iterator.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TNaming_Iterator@F@OldShape#1",
+      "nativeName": "TNaming_Iterator::OldShape",
+      "header": "TNaming_Iterator.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TNaming_Iterator@F@TNaming_Iterator#&1$@S@TDF_Label#I#",
+      "nativeName": "TNaming_Iterator::TNaming_Iterator",
+      "header": "TNaming_Iterator.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TNaming_Selector@F@Select#&1$@S@TopoDS_Shape#S0_#b#b#1",
+      "nativeName": "TNaming_Selector::Select",
+      "header": "TNaming_Selector.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TNaming_Selector@F@Solve#&$@S@NCollection_Map>#$@S@TDF_Label#$@S@NCollection_DefaultHasher>#S2_#1",
+      "nativeName": "TNaming_Selector::Solve",
+      "header": "TNaming_Selector.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TNaming_Selector@F@TNaming_Selector#&1$@S@TDF_Label#",
+      "nativeName": "TNaming_Selector::TNaming_Selector",
+      "header": "TNaming_Selector.hxx",
+      "baselineState": "Blocked"
+    }
+  ]
+}

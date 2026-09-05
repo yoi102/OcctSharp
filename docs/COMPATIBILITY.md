@@ -1,5 +1,18 @@
 # Compatibility
 
+## Preview.19 additive parametric API
+
+T adds Documents-owned copied schema/expressions/plans and facade-owned execution,
+history, selection, delivery and review. Existing public assembly identities remain;
+new Documents types receive deterministic facade forwarders. Native ABI 1.63 and bridge
+0.71.0 add sixteen C operations using existing Shape/document/FeatureResult ownership.
+No managed project/DLL split or generator schema change is introduced. The managed
+comparison against S adds 464 signatures and removes none (41,795 total). Release and
+Debug export the same 29,459 names, preserving every S export plus sixteen C functions.
+Release/Debug Generator 91/91 and Runtime 313/313, isolated actual Debug-native 313/313,
+both clean consumers and 94-file cold regeneration pass. Exact 65-ID accounting and
+runtime manifest comparison pass; final whole-batch release evidence is in STATUS.
+
 ## Preview.18 additive guided authoring API
 
 S's managed comparison against R adds 500 signatures and removes none (41,331 total).
@@ -45,6 +58,7 @@ reported as supported.
 
 | OcctSharp | Generator | Native ABI | OCCT | Platform | Compiler | .NET | Status |
 |---|---|---|---|---|---|---|---|
+| 8.0.1-preview.19 workspace | ClangSharp 21.1.8.4 | 1.63 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Release/Debug and actual Debug-native 313/313; both clean consumers and cold regeneration pass |
 | 8.0.1-preview.18 workspace | ClangSharp 21.1.8.4 | 1.62 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Release/Debug and actual Debug-native 273/273; final inventory/package evidence in STATUS |
 | 8.0.1-preview.17 workspace | ClangSharp 21.1.8.4 | 1.61 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Local native/managed regression verified |
 | 8.0.1-preview.9 workspace | ClangSharp 21.1.8.4 | 1.54 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |

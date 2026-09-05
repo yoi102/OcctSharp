@@ -167,6 +167,266 @@
   ],
   "manualBindings": [
     {
+      "stableId": "c:@S@BRepBuilderAPI_Transform@F@BRepBuilderAPI_Transform#&1$@S@TopoDS_Shape#&1$@S@gp_Trsf#b#b#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Transform@F@ModifiedShape#&1$@S@TopoDS_Shape#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@Standard_GUID@F@CheckGUIDFormat#*1C#S",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@Standard_GUID@F@Standard_GUID#*1C#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetArrayOfIntegers#&1$@S@TCollection_ExtendedString#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetArrayOfReals#&1$@S@TCollection_ExtendedString#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetID#S",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetInteger#&1$@S@TCollection_ExtendedString#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetReal#&1$@S@TCollection_ExtendedString#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@GetString#&1$@S@TCollection_ExtendedString#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@HasArrayOfIntegers#&1$@S@TCollection_ExtendedString#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@HasArrayOfReals#&1$@S@TCollection_ExtendedString#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@HasInteger#&1$@S@TCollection_ExtendedString#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@HasReal#&1$@S@TCollection_ExtendedString#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@HasString#&1$@S@TCollection_ExtendedString#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@Set#&1$@S@TDF_Label#S",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@SetArrayOfIntegers#&1$@S@TCollection_ExtendedString#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#I#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@SetArrayOfReals#&1$@S@TCollection_ExtendedString#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#d#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@SetInteger#&1$@S@TCollection_ExtendedString#I#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@SetReal#&1$@S@TCollection_ExtendedString#d#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDataStd_NamedData@F@SetString#&1$@S@TCollection_ExtendedString#S0_#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDF_CopyTool@F@Copy#&1$@N@opencascade@S@handle>#$@S@TDF_DataSet#&1$@N@opencascade@S@handle>#$@S@TDF_RelocationTable#S",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDF_DataSet@F@AddLabel#&1$@S@TDF_Label#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDF_DataSet@F@AddRoot#&1$@S@TDF_Label#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDF_DataSet@F@Attributes#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDF_DataSet@F@ContainsLabel#&1$@S@TDF_Label#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDF_DataSet@F@Labels#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@ForgetAllAttributes#b#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@HasAttribute#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@HasChild#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@IsDescendant#&1$@S@TDF_Label#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDF_Label@F@Root#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TDF_RelocationTable@F@SetRelocation#&1$@S@TDF_Label#S0_#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_Function@F@GetID#S",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_Function@F@Set#&1$@S@TDF_Label#&1$@S@Standard_GUID#S",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_GraphNode@F@GetID#S",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_GraphNode@F@GetNext#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_GraphNode@F@GetPrevious#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_GraphNode@F@Set#&1$@S@TDF_Label#S",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@GetID#S",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@GetImpacted#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@GetTouched#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@GetValid#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@Set#&1$@S@TDF_Label#S",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@SetImpacted#&1$@S@TDF_Label#b#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@SetTouched#&1$@S@TDF_Label#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_Logbook@F@SetValid#&1$@S@TDF_Label#b#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@AddFunction#&1$@S@TDF_Label#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@GetFunction#&1$@S@TDF_Label#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@GetFunction#I#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@GetID#S",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@HasFunction#&1$@S@TDF_Label#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@RemoveFunction#&1$@S@TDF_Label#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TFunction_Scope@F@Set#&1$@S@TDF_Label#S",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TNaming_Builder@F@Delete#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TNaming_Builder@F@Generated#&1$@S@TopoDS_Shape#S0_#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TNaming_Iterator@F@Evolution#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TNaming_Iterator@F@More#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TNaming_Iterator@F@NewShape#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TNaming_Iterator@F@Next#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TNaming_Iterator@F@OldShape#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TNaming_Iterator@F@TNaming_Iterator#&1$@S@TDF_Label#I#",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TNaming_Selector@F@Select#&1$@S@TopoDS_Shape#S0_#b#b#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TNaming_Selector@F@Solve#&$@S@NCollection_Map>#$@S@TDF_Label#$@S@NCollection_DefaultHasher>#S2_#1",
+      "specialCaseId": "SC-057"
+    },
+    {
+      "stableId": "c:@S@TNaming_Selector@F@TNaming_Selector#&1$@S@TDF_Label#",
+      "specialCaseId": "SC-057"
+    },
+    {
       "stableId": "c:@S@BRepFill_CompatibleWires@F@BRepFill_CompatibleWires#&1$@S@NCollection_Sequence>#$@S@TopoDS_Shape#",
       "specialCaseId": "SC-056"
     },

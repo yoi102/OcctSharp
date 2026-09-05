@@ -1,5 +1,20 @@
 # Native ABI
 
+## ABI 1.63 / Preview.19 (Batch T)
+
+Bridge 0.71.0 adds sixteen C functions in OcctSharp.Native.Parametric.h: six function
+graph/state/logbook calls, four typed/text storage calls, four naming calls, one
+relocation call and one exact transform/history call. Existing signatures and schema
+1.13 remain unchanged. ParameterInfo is 24 bytes, aligned to eight, with real_value
+at offset 16; native assertions and managed raw tests enforce this layout.
+Mutations require an open document command. UTF-8 buffers are length-delimited except
+document entries, metadata keys and relocation entry arrays, which are NUL-terminated.
+Counts/capacities are checked before writes; output owners start null on failure.
+Transform uses the existing FeatureResult release; naming returns independent Shape
+owners. No C++ iterator/label/handle layout or callback crosses the ABI. Native history
+transaction arguments address active OCAF levels only; persistent versions are indexed
+separately in the managed graph schema. Full compatibility evidence remains in STATUS.
+
 ## ABI 1.62 / Preview.18 (Batch S)
 
 Bridge 0.70.0 adds nine C exports in `OcctSharp.Native.Authoring.h`: law evaluation,

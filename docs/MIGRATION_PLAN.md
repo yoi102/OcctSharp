@@ -32,9 +32,9 @@ no new active product batch is implied by their existence.
 [ADR-0083](adr/0083-extended-batches-and-continuous-execution.md) extends the initial
 Q-T preparation with U advanced contour/local features, V exact partition/volume
 workflows and W lighting/material/copied-frame review. Scope preparation is 7/7;
-Q and R are committed (80/80); S's original 40 rows are implemented and undergoing
-whole-batch exit validation at Preview.18. Complete validated progress remains 80/280
-until S's remaining gates pass.
+Q-T are implemented and locally validated (160/160), retaining each original forty-row
+closure. Complete product/release validated progress is 160/280 (57.1%); STATUS records
+T's final documentation-package verification and local completion commit before U entry.
 [The continuous runbook](BATCH_CONTINUOUS_EXECUTION.md)
 requires the active Q -> R -> S -> T -> U -> V -> W execution, each whole batch fully
 validated and locally committed before automatic advancement, without routine user
@@ -47,15 +47,15 @@ is authorized. Baseline deltas and genuine external/authority stop conditions re
 [Q-T preparation](BATCH_Q_T_PREPARATION.md) lock four 40-capability waves: Q controlled
 repair/topology normalization, R mesh authoring/editing, S guided sweeps/constrained
 surfaces, T parametric recompute/persistent selection. Preparation is 4/4; implementation
-and full local validation are 80/160 (Q/R); S entry passed and validation is active. B-P and ADR-0081
+and full local validation are 160/160 (Q-T); T's full release-check passes. B-P and ADR-0081
 are the original completed Preview.15 preparation baseline.
 
 R is committed as `86e069c` after Q's `1a3662a`; S entry records 154 prior transitions
-and zero identity changes. After S's whole-batch local commit, revalidate T and continue. T genuinely depends on Q/R/S
+and zero identity changes. S is committed as `580bb22`; T's post-S entry has been revalidated. T genuinely depends on Q/R/S
 contracts; delivery order does not invent hard dependencies between unrelated algorithms.
 Every following baseline change needs an explicit delta; no silent root-hash rebase.
 Keep existing modules, source owners and one Native DLL. Preview.16 is Q, Preview.17
-is R, Preview.18 is S in validation and Preview.19 remains T's slot; no automatic NuGet publication/GitHub push.
+is R, Preview.18 is committed S and Preview.19 is locally validated T; no automatic NuGet publication/GitHub push.
 
 ## Product and project structure
 
@@ -134,8 +134,8 @@ batch fragments remain forbidden. ADR-0064 closes product-scale batch `D` with t
 | P — Surface UV and Curve-on-Surface | Complete (32/32, local implementation) | Preview.15 closes ADR-0079/0080 surface/UV projection, curves, topology, exchange/review and local gates; ADR-0081 then closes historical source extraction without API changes | None inside Batch P |
 | Q — Shape Repair and Topology Normalization | Complete (40/40, local implementation) | Preview.16 / ADR-0084 passes all gates and 106 exact manual transitions; committed `1a3662a` | None inside Q |
 | R — Mesh Authoring and Editing | Complete (40/40, local implementation) | Preview.17 / ADR-0085 passes all gates and 48 exact manual transitions; committed `86e069c` | None inside R |
-| S — Guided Sweeps and Constrained Surfaces | Implemented; whole-batch validation active | Preview.18 / ADR-0086; 44 focused tests, Release/Debug 273/273, actual Debug-native, source/layout/API gates and clean consumers pass | Finish cold regeneration/inventory/package evidence, then one local completion commit |
-| T — Parametric Recompute and Persistent Selection | Prepared (0/40 implemented) | ADR-0082 freezes typed feature execution, incremental state, atomic results and fallible TNaming; 52-root baseline audit | Completed Q/R/S contracts and explicit post-S baseline delta; implement/validate all 40 rows and commit locally |
+| S — Guided Sweeps and Constrained Surfaces | Complete 40/40; committed `580bb22` | Preview.18 / ADR-0086; all focused/full/runtime/actual Debug-native, exact accounting, clean generation/consumers/package gates pass | T entry and implementation |
+| T — Parametric Recompute and Persistent Selection | Implementation and complete exit verification active | ADR-0087; post-S 52-root entry and exact 65-ID accounting pass; focused tests exercise four-format Q/R/S reexecution and generation-safe history | Finish all forty-row acceptance/gates, commit locally, then U |
 | U — Advanced Contour and Local Features | Prepared (0/40 implemented) | ADR-0083 freezes contour laws/simulation, chamfer modes, draft/limited local features; 44-root baseline audit | Completed Q/S/T prerequisites; explicit post-T delta, all 40 rows and local commit |
 | V — Exact Partition and Volume Workflows | Prepared (0/40 implemented) | ADR-0083 freezes full cell programs, material interfaces, face-set volumes and bounded voids; 43-root baseline audit | Completed Q/R/T prerequisites; explicit post-U delta, all 40 rows and local commit |
 | W — Viewer Lighting and Copied Frames | Prepared (0/40 implemented) | ADR-0083 freezes light/texture/material resources, render profiles and copied frame review; 54-root baseline audit | R and existing viewer/material prerequisites; explicit post-V delta, all 40 rows and local commit |

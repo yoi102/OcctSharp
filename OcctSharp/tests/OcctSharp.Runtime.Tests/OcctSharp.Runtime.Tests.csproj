@@ -19,5 +19,6 @@
     <Compile Include="../Shared/BatchQRepairWorkflow.cs" Link="BatchQRepairWorkflow.cs" />
     <Compile Include="../Shared/BatchRMeshWorkflow.cs" Link="BatchRMeshWorkflow.cs" />
     <Compile Include="../Shared/BatchSGuidedWorkflow.cs" Link="BatchSGuidedWorkflow.cs" />
+    <Compile Include="../Shared/BatchTParametricWorkflow.cs" Link="BatchTParametricWorkflow.cs" />
   </ItemGroup>
 </Project>

@@ -3,7 +3,7 @@
     <OutputType>Exe</OutputType>
     <ManagePackageVersionsCentrally>false</ManagePackageVersionsCentrally>
     <RestorePackagesWithLockFile>false</RestorePackagesWithLockFile>
-    <OcctSharpPackageVersion Condition="'$(OcctSharpPackageVersion)' == ''">8.0.1-preview.18</OcctSharpPackageVersion>
+    <OcctSharpPackageVersion Condition="'$(OcctSharpPackageVersion)' == ''">8.0.1-preview.19</OcctSharpPackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="OcctSharp" Version="$(OcctSharpPackageVersion)" />
@@ -11,5 +11,6 @@
     <Compile Include="../Shared/BatchQRepairWorkflow.cs" Link="BatchQRepairWorkflow.cs" />
     <Compile Include="../Shared/BatchRMeshWorkflow.cs" Link="BatchRMeshWorkflow.cs" />
     <Compile Include="../Shared/BatchSGuidedWorkflow.cs" Link="BatchSGuidedWorkflow.cs" />
+    <Compile Include="../Shared/BatchTParametricWorkflow.cs" Link="BatchTParametricWorkflow.cs" />
   </ItemGroup>
 </Project>
