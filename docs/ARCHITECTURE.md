@@ -1,5 +1,16 @@
 # Architecture
 
+## Prepared Q-T source and dependency placement
+
+[ADR-0082](adr/0082-broad-batch-q-through-t-preparation.md) prepares four broader API
+waves without changing physical projects/DLLs or current ownership. Q repair operations
+belong in Modeling, R data in MeshData and algorithms/adapters in existing higher owners,
+S in cohesive Modeling/Surfaces units, T storage/naming in Documents. T feature execution
+and XDE/viewer coordination belong in the existing facade/higher owners, so Documents
+does not gain reverse dependencies on Mesh/XDE/Visualization. R MeshData similarly must
+not reference Modeling or XDE material objects. All proposed files are future work,
+not implemented source. See [Q-T preparation](BATCH_Q_T_PREPARATION.md).
+
 ## Full historical native source extraction
 
 ADR-0081 extracts the old native implementation into domain-owned Runtime, Foundation,
@@ -29,7 +40,8 @@ registry, allocator, release and error boundary instead of extending the legacy 
 The existing 12 managed modules, compatibility facade, shared native runtime package
 and one Native DLL remain appropriate. The generated dependency graph is closed and
 acyclic; native-DLL splitting is still not ready because cross-DLL lifetime/allocator
-routing is not established. Moving legacy viewer/XDE implementation is separate work.
+routing is not established. Legacy viewer/XDE source extraction was subsequently
+completed by ADR-0081 without changing the binary boundary.
 See [ADR-0080](adr/0080-expanded-surface-wave-and-native-source-boundaries.md).
 
 ## Purpose

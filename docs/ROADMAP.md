@@ -10,6 +10,23 @@ Batch B through Batch P are complete for their accepted local implementation sco
 Batch P closes one expanded 32-capability surface/UV workflow under ADR-0079/0080.
 It was not split into projection, seam, repair, exchange, viewer, or package checkpoints.
 
+## Prepared priorities: four broad Q-T batches
+
+[ADR-0082](adr/0082-broad-batch-q-through-t-preparation.md) and
+[the Q-T preparation record](BATCH_Q_T_PREPARATION.md) freeze four 40-capability waves:
+Q repair/topology normalization, R mesh authoring/editing, S guided sweeps/constrained
+surfaces and T parametric recompute/persistent topology selection. Scope preparation is
+4/4; implementation is 0/160. These are broader than P's 32-capability wave, not small
+per-family checkpoints and not a claim to exhaust all remaining OCCT APIs.
+
+Implement Q -> R -> S -> T, finishing all local gates and one local commit for each.
+Q/R/S reuse the completed baseline; T has real dependencies on their recipe/result
+contracts. All scopes were audited against Preview.15 and need explicit baseline-delta
+revalidation after preceding implementation commits. Preview.16-19 are planned slots
+only. Preparation changes no product code, runtime bytes or version properties.
+Keep the existing modules, facade, source boundaries and one native DLL; no automatic
+NuGet publication or GitHub push.
+
 ## Completed architecture workstream: historical Native source responsibilities
 
 ADR-0081 and [the native source map](NATIVE_SOURCE_LAYOUT.md) cover one complete extraction

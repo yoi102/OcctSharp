@@ -159,6 +159,18 @@ Same-baseline managed API comparison requires zero additions and zero removals.
 Current validation results and final DLL/package hashes are in repository
 `docs/STATUS.md`, which is intentionally excluded from package documentation.
 
+## Prepared Q-T additions (not implemented)
+
+ADR-0082 keeps this complete baseline map and the one-DLL boundary. Q's repair,
+diagnosis and normalization belong in cohesive Modeling units; R authoring/editing/
+discrete adapters in Mesh; S law/guided-sweep and filling/patch conversion in
+Modeling/Surfaces; T graph/state/naming storage in Documents. Cross-family orchestration
+must not create reverse private-header dependencies or duplicate Runtime owners.
+In particular, do not expand the 855-line Freeform.cpp for all of S. Register future
+units explicitly and retain the 1,000-line ceiling and standalone-header checks.
+The four proposed placements and integration owners are detailed in
+[Q-T preparation](BATCH_Q_T_PREPARATION.md); they do not change today's 42/34 source counts.
+
 ## Rules for subsequent work
 
 1. Put a new operation with its owning responsibility above; use a private contract

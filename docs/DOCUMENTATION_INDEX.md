@@ -11,7 +11,17 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   domain-owned private contracts and independent-compilation/ABI checks under ADR-0081.
 - [Repository layout](REPOSITORY_LAYOUT.md) — physical separation of documentation
   and code-related files.
-- [Roadmap](ROADMAP.md) — completed Batch B-P outcomes and local-release boundary.
+- [Roadmap](ROADMAP.md) — completed B-P, prepared Q-T and local-release boundary.
+- [Q-T broad-batch preparation](BATCH_Q_T_PREPARATION.md) — four prepared 40-capability
+  waves, deduplicated root audit, source/lifetime closure and explicit baseline-delta protocol.
+- [Batch Q repair and topology](BATCH_Q_SHAPE_REPAIR_TOPOLOGY_GAP_INVENTORY.md) — protected
+  staged healing, diagnostics, normalization and composed history; prepared, 0/40 implemented.
+- [Batch R mesh authoring/editing](BATCH_R_MESH_AUTHORING_EDITING_GAP_INVENTORY.md) — caller
+  arrays, attributed edits/remapping and discrete-model delivery; prepared, 0/40 implemented.
+- [Batch S guided sweep/constrained surfaces](BATCH_S_GUIDED_SWEEP_CONSTRAINED_SURFACE_GAP_INVENTORY.md)
+  — scalar laws, guides, constraint fulfilment and patch provenance; prepared, 0/40 implemented.
+- [Batch T parametric recompute/naming](BATCH_T_PARAMETRIC_DOCUMENT_RECOMPUTE_GAP_INVENTORY.md)
+  — typed executable graph, atomic incremental recompute and fallible selectors; prepared, 0/40 implemented.
 - [Complete migration plan](MIGRATION_PLAN.md) — completed Batch C, Batch D, and Batch E
   matrices, large-wave rules, module/package boundaries, metrics,
   and product-scale gates.

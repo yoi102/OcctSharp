@@ -1,5 +1,17 @@
 # Ownership and Lifetime
 
+## Prepared Q-T lifetime constraints (no ownership change)
+
+ADR-0082's [four prepared waves](BATCH_Q_T_PREPARATION.md) retain O001-O013. Definitions,
+recipes, diagnostic/history/index maps and graph snapshots are copied; temporary
+algorithms, laws, iterators and Poly/TNaming containers remain native-local. Accepted
+topology uses the existing Shape owner. A future owning preview/result container must
+have a matching release operation, failure cleanup and source-disposal evidence.
+Labels and selectors remain document-bound; viewer IDs remain parent-bound/thread-affine.
+Revision-scoped IDs do not promise persistent topology identity. TNaming selection uses
+dedicated labels to avoid clearing user data. Preparation adds no handles or ownership
+categories; actual implementation must record any new concrete lifetime contract here.
+
 ## Native source ownership after ADR-0081
 
 Source extraction does not change O001-O013 or add an ownership category. The manual

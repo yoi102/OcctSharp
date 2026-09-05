@@ -1,6 +1,7 @@
 # Current Status
 
 - Last updated: 2026-09-05
+- Latest preparation workstream: ADR-0082 prepares Q, R, S and T as four whole 40-capability batches (160 rows). Scope preparation 4/4; implementation 0/160. Exact-root audits, 153 SDK headers, 7 representative exports and 8 negative checks pass. No production API/DLL/version change; Q is next, not started.
 - Latest architecture workstream: ADR-0081 full historical Native source extraction is complete locally. Release/Debug Generator 91/91 and Runtime 180/180 pass, as does isolated actual Debug-native Runtime 180/180. All 29,402 native exports match and the managed API has zero additions/removals. Batch P remains complete; no API/ABI/package version changes.
 - Current phase: Batch B through Batch P are complete locally. Batch P completes one expanded 32-capability wave under ADR-0080 with Preview.15 local validation. No NuGet publication or GitHub push is part of batch delivery
 - Batch B engineering progress: 100% for the accepted local implementation scope (not a claim that every OCCT declaration is a managed API or that public release is ready)
@@ -22,6 +23,38 @@
 - Accepted surface: 16,353 generated manifest IDs plus 709 accepted manual stable IDs; Release and Debug native/managed builds, Generator 91/91, Runtime 180/180, discovery/report determinism, generated dependency closure, and dependency profiles 6/6 pass
 - Last complete full inventory: 116,272/116,272 declarations and 7,090/7,090 headers have final dispositions; `Emitted` 16,353, `Manual` 709, `SupportedUnselected` 0, `Skipped` 49,344, `Blocked` 49,866, pending 0, HD099 0; SHA256 `CCB81F47CE09A7712D346C16EE45A9AF783D000DCFC64DF4B69FA3C1DE96DF48`
 - Overall state: Preview.15 validates Batch P with twelve module assemblies plus the `OcctSharp` compatibility/facade assembly sharing one `OcctSharp.Native.dll` and one `OcctSharp.Native.win-x64` runtime package. Native-DLL splitting remains deliberately deferred. Validated identities are package 8.0.1-preview.15, managed assembly/file 0.1.0.0, native ABI 1.59, bridge 0.67.0, and schema 1.13. Every batch is locally packed, checked, and committed; publication requires a new explicit request
+
+### ADR-0082 broad Q-T preparation checkpoint
+
+- [The preparation record](BATCH_Q_T_PREPARATION.md) and four matrices lock Q model
+  repair/topology, R authored/edited meshes, S guided sweeps/constrained surfaces and
+  T parametric recompute/naming. Each contains 40 capabilities (25% broader than P's
+  32-row denominator), required acceptance, existing coverage exclusions, source owners
+  and lifetime/format limits. Preparation is complete; implementation is 0/40 each.
+- Baseline is `6b04bd9`, Preview.15. Q/R/S reuse B-P; T requires Q/R/S result contracts.
+  After each whole-batch implementation/validation/commit, the following batch requires
+  explicit baseline-delta revalidation. Planned Preview.16-19 slots do not change current
+  version properties, ABI 1.59, bridge 0.67.0 or schema 1.13.
+- Exact-root audits run twice per batch with identical bytes: Q 52 roots/2,306 candidates;
+  R 46/2,213; S 52/2,432; T 52/1,981. Deduplicated union is 149 roots/5,289 stable IDs:
+  2,494 Blocked, 1,114 Emitted, 239 Manual, 1,442 Skipped. The 8,932 per-batch candidate
+  occurrences include 3,643 repeated occurrences; none is a new API completion count.
+- `eng/verify-batch-q-t-preparation.ps1` passes all four exact 40-row matrices,
+  decision/support partitions, 153 distinct SDK headers, seven representative binary
+  exports already covered by CMake toolkits, four wrong-baseline and four input-overwrite
+  rejections. Input hashes remain unchanged; per-batch hashes are in the preparation record.
+- Template aliases without exact declaration roots are recorded as header dependencies,
+  not fabricated inventory entries. Sweep/contact limits, filling residuals, dedicated
+  TNaming selector labels and missing-versus-zero parameter semantics are documented.
+- Native source-layout audit passes with 42 independent units, 530 manual C exports
+  and 22 unique shared-storage definitions; binary export comparison is NOT RUN.
+  All 15 touched Markdown documents pass 265 local-link target and fence checks;
+  whitespace checks pass. The complete preparation summary SHA256 is
+  `11CB6DA68AF4659AD14573A982F2DF068B1C12C5BA706427E8209FBDC68D2FB2`.
+- Existing twelve modules/facade, one Native DLL and ADR-0081 source boundaries remain.
+  Only preparation docs/configs/verifier change. New Q-T API compilation/runtime,
+  packaging, DLL refresh, hosted CI, signing, NuGet publication and GitHub push: NOT RUN.
+  Earlier Generator 91/91 and Runtime 180/180 evidence belongs only to the baseline.
 
 ### ADR-0081 historical Native source responsibility completion
 
@@ -53,7 +86,8 @@
   `67C49B29886F3EB5D422DADFE80BC3301322D578CE0707AB67F1E9C7594833DE`.
   All 62 committed Release DLLs and 11 notice/license files pass manifest verification.
 - Full source ownership and future maintenance rules are in `NATIVE_SOURCE_LAYOUT.md`.
-  Batch Q is not prepared or implemented; physical native-DLL splitting is not included.
+  That architecture checkpoint did not prepare or implement Batch Q; Q-T preparation
+  is now separately recorded under ADR-0082. Physical native-DLL splitting is not included.
   Hosted CI, signing, NuGet publication and GitHub push are NOT RUN.
 - Final documentation was repacked and both clean consumers passed again. The final
   facade nupkg SHA256 is
@@ -830,7 +864,9 @@ Product batches B through P are complete for their finite accepted local denomin
 Batch P closes the expanded 32-capability surface/UV wave at commit `5620ae5`.
 ADR-0081's complete historical Native source extraction is implemented and locally
 validated. All public contracts and existing algorithm bodies are preserved, with
-explicit source/private-header ownership. No subsequent API batch is opened here.
+explicit source/private-header ownership. ADR-0082 now prepares Q-T, 40 capabilities
+each, with implementation 0/160. Next implementation is Q after baseline revalidation;
+this preparation-only checkpoint does not start API work.
 Batch delivery remains local validation and one commit; publication and GitHub push
 are excluded.
 
@@ -1548,8 +1584,9 @@ are excluded.
 ## Next tasks
 
 1. Preserve the completed ADR-0081 source boundaries and one native DLL in future work.
-2. Audit and lock the next requested broad common-API dependency closure before adding
-   APIs. Batch Q is not prepared or implemented by this architecture work.
+2. On the next implementation request, revalidate Q's frozen baseline and implement its
+   entire 40-row repair/topology closure. Q-T preparation is complete; implementation
+   remains 0/40 each. R/S/T require explicit baseline deltas after preceding checkpoints.
 3. Keep local pack/check/commit separate from publication. No NuGet upload or GitHub
    push is authorized by completing this workstream.
 
@@ -1602,11 +1639,12 @@ The exact baseline hashes are recorded in the Preview.15 completion section abov
 
 ```text
 LOOP_STATE: CHECKPOINT_COMPLETE
-CURRENT_WORKSTREAM: ADR-0081 COMPLETE HISTORICAL NATIVE SOURCE RESPONSIBILITIES
+CURRENT_WORKSTREAM: ADR-0082 Q-T LARGE-BATCH PREPARATION COMPLETE
 CURRENT_PRODUCT_BASELINE: B THROUGH P COMPLETE; P 32/32 COMMITTED 5620ae5
 ARCHITECTURE_PROGRESS: COMPLETE; INDEPENDENT COMPILE, ABI, RUNTIME, PACKAGE AND CLEAN-SOURCE GATES PASS
-NEXT_ACTION: AUDIT THE NEXT REQUESTED CROSS-FAMILY API WAVE; RETAIN THE SOURCE BOUNDARIES
-NEXT_PRODUCT_BATCH: NOT PREPARED; NO PRODUCT API EXPANSION IN THIS WORKSTREAM
+PREPARATION_PROGRESS: Q/R/S/T 4/4; 40 CAPABILITIES EACH; IMPLEMENTATION 0/160
+NEXT_ACTION: ON IMPLEMENTATION REQUEST, REVALIDATE Q BASELINE AND COMPLETE ITS WHOLE 40-ROW WAVE
+NEXT_PRODUCT_BATCH: Q; R/S/T SCOPE-PREPARED, REBASE EXPLICITLY AFTER EACH COMPLETED CHECKPOINT
 BINDING_COVERAGE: 16353 GENERATED PLUS 709 ACCEPTED MANUAL STABLE IDS
 FULL_PROFILE_ACCOUNTING: 116272 CLASSIFIED; 49866 BLOCKED; 49344 SKIPPED; ZERO PENDING/HD099
 LAST_COMPLETED_PRODUCT_VALIDATION: PREVIEW.15 GENERATOR 91/91, RUNTIME 177/177, FOCUSED P 13/13, CLEAN CONSUMERS AND LOCAL RELEASE GATES PASS
