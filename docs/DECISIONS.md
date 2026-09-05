@@ -93,13 +93,11 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0084](adr/0084-source-bound-repair-previews.md) | Source-bound copied repair snapshots, selected/protected stages, verified budgets and atomic publication | Accepted and locally validated |
 | [ADR-0085](adr/0085-immutable-authored-mesh-revisions.md) | Immutable attributed mesh revisions, exact index correspondence, call-local Poly editing and discrete delivery | Accepted and locally validated |
 | [ADR-0086](adr/0086-guided-authoring-laws-constraints-and-provenance.md) | Copied laws, owning guided/constraint graphs, independent residuals and exact provenance | Accepted and locally validated; final packaging/commit in STATUS |
-
 | [ADR-0087](adr/0087-parametric-recompute-and-persistent-selection.md) | Typed parametric DAG execution, atomic publication, durable generation history and fallible persistent selection | Accepted and locally validated; final package-content/commit evidence in STATUS |
-
 | [ADR-0088](adr/0088-source-bound-contour-and-local-feature-programs.md) | Source-bound copied contour programs, explicit local-feature limits and diagnostic-only partial results | Accepted and locally validated; final documentation delivery in STATUS |
-
 | [ADR-0089](adr/0089-exact-partition-and-volume-programs.md) | Exact partition/material programs and bounded volume construction with copied revisions and atomic named outputs | Accepted and locally validated |
 | [ADR-0090](adr/0090-viewer-owned-render-resources-and-copied-frames.md) | Viewer-owned rendering resources, explicit asset recipes and copied color/depth frames | Accepted; complete exit evidence in STATUS |
+| [ADR-0091](adr/0091-proportionate-development-workflow.md) | Flexible work/commit sizing, proportionate validation, current-state separation and bounded source-size exceptions | Accepted |
 
 ## Pending decisions
 

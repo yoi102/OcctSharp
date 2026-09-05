@@ -1,5 +1,16 @@
 # Documentation Index
 
+## Current entry points
+
+- [Current status](STATUS.md) — the single current progress and evidence summary.
+- [Development workflow](WORKFLOW.md) — task sizing, commits, validation selection and documentation maintenance.
+- [ADR-0091](adr/0091-proportionate-development-workflow.md) — accepted workflow relaxation and source-size exception policy.
+- [Historical status](STATUS_HISTORY_THROUGH_PREVIEW_22.md) — preserved checkpoint evidence; old active-loop text is not current.
+- [Current migration prompt](AI_MIGRATION_LOOP_PROMPT.md) — reusable routing without fixed batch counts.
+
+The batch links below retain historical contracts. They do not independently define
+current progress or override WORKFLOW for future tasks.
+
 This directory is the authoritative documentation area for OcctSharp. Documents
 describe either accepted rules, current project state, or explicitly unresolved
 decisions. Recommendations are not accepted decisions unless an ADR says so.

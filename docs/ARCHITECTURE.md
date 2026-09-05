@@ -1,5 +1,9 @@
 # Architecture
 
+Execution cadence and task sizing follow [WORKFLOW](WORKFLOW.md) under ADR-0091.
+The technical boundaries below remain applicable; their historical batch counts and
+validation numbers are evidence snapshots. Current progress is maintained in [STATUS](STATUS.md).
+
 ## Batch W review boundary
 
 ADR-0090 retains the existing Viewer owner, creating thread, modules and native DLL.

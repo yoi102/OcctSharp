@@ -1,5 +1,11 @@
 # Continuous implementation runbook: Q through W
 
+> Historical Q-W scope and execution record. Q-W completed at `15fd671` (280/280).
+> Original frozen rows, preparation inputs and acceptance evidence remain unchanged.
+> Future task sizing, intermediate commits and validation cadence follow
+> [WORKFLOW](WORKFLOW.md) and ADR-0091; imperative text below applies to that completed
+> run and does not create a new queue. [STATUS](STATUS.md) is the current progress source.
+
 - Status: **COMPLETE — Q-W, 280/280 locally validated; W is this completion checkpoint**, explicitly started by the user on 2026-09-05.
 - Decision: [ADR-0083](adr/0083-extended-batches-and-continuous-execution.md).
 - Queue: **Q -> R -> S -> T -> U -> V -> W**, 40 capabilities each, **280 total**.

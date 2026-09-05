@@ -1,5 +1,11 @@
 # U-W preparation and extended Q-W coverage
 
+> Historical Q-W scope and execution record. Q-W completed at `15fd671` (280/280).
+> Original frozen rows, preparation inputs and acceptance evidence remain unchanged.
+> Future task sizing, intermediate commits and validation cadence follow
+> [WORKFLOW](WORKFLOW.md) and ADR-0091; imperative text below applies to that completed
+> run and does not create a new queue. [STATUS](STATUS.md) is the current progress source.
+
 - Decision: [ADR-0083](adr/0083-extended-batches-and-continuous-execution.md).
 - New scope: U/V/W, **40 capabilities each, 120 total; implementation 0/120**.
 - Combined queue: Q-W, **7 prepared scopes, 280 capabilities; implementation 0/280**.

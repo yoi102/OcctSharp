@@ -6,15 +6,20 @@ These instructions apply to the entire repository.
 
 Before making a material change, read:
 
-1. `docs/STATUS.md`
-2. `docs/ARCHITECTURE.md`
-3. `docs/ROADMAP.md`
-4. The topic document relevant to the change
-5. `docs/DECISIONS.md` and any relevant ADR
+1. `docs/STATUS.md` and `docs/WORKFLOW.md`
+2. The relevant sections of `docs/ARCHITECTURE.md` and the topic contract
+3. Relevant ADRs; consult `docs/DECISIONS.md` when changing a design boundary
+4. `docs/ROADMAP.md` when selecting or changing priorities
 
-The detailed historical AI rules remain in `docs/AI_INSTRUCTIONS_OCCT_NET.md`.
-If that document conflicts with an accepted ADR or the current status document,
-the accepted ADR and current status take precedence.
+Reuse context already read in the current session. Trivial documentation fixes need
+only the affected context. ADR-0091 and WORKFLOW define current execution policy:
+future work has no fixed capability count, authorized intermediate commits are allowed,
+and validation is selected by impact with full product-delivery gates retained.
+
+The detailed historical AI rules remain in `docs/AI_INSTRUCTIONS_OCCT_NET.md` as
+reference only, not an additional mandatory checklist. Completed batch instructions
+apply to their historical scope, not automatically to future tasks. Current user
+instructions, current execution policy and applicable accepted contracts take priority.
 
 ## Repository boundary
 

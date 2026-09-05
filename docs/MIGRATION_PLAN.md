@@ -1,5 +1,18 @@
 # Complete OCCT Migration Plan
 
+## Current planning policy (2026-09-06)
+
+B-W and Q-W's 280/280 accepted capabilities are locally complete at `15fd671`.
+No successor product scope is selected. For further migration, audit remaining
+projection/ownership/dependency gaps and select a useful generator or product outcome.
+Follow [WORKFLOW](WORKFLOW.md) and ADR-0091: no fixed row/family count, flexible authorized
+intermediate commits, impact-based development checks and full product delivery gates.
+[STATUS](STATUS.md) owns current counts, active work and validation references.
+
+The batch-specific plans, ordering instructions, versions and completion criteria below
+are historical records for their named scopes. Do not turn them into a new active queue
+or apply their fixed batch/commit rules to unrelated future work.
+
 ## Objective
 
 OcctSharp targets complete, regeneratable C# coverage of the selected OCCT profile.

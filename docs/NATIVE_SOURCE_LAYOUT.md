@@ -1,5 +1,14 @@
 # Native source responsibilities
 
+## Current size policy
+
+[ADR-0091](adr/0091-proportionate-development-workflow.md) keeps the 1,000-line default
+but permits exact-file finite exceptions with a cohesion rationale in
+`OcctSharp/config/native-source-layout-exceptions.json`. See [WORKFLOW](WORKFLOW.md).
+There are no initial exceptions. The verifier reports used exceptions and retains
+all registration, independent compilation, shared-state and export checks.
+Historic source counts below are checkpoint snapshots; current product facts are in STATUS.
+
 ## Batch W additions
 
 Visualization owns RenderProfiles.cpp, Lighting.cpp, Appearance.cpp, Textures.cpp,
@@ -236,7 +245,7 @@ and corrected an implicit `Standard_GUID.hxx` dependency in `Xde/Structure.hxx`.
 
 `eng/verify-native-source-layout.ps1` runs from the normal build. It checks explicit
 CMake registration, duplicate C entry points, unique registry/error storage owners,
-the 1,000-line implementation ceiling, and the prohibition on included implementations,
+the default 1,000-line threshold with bounded ADR-0091 exceptions, and the prohibition on included implementations,
 manual PCH and unity builds. Its optional DLL comparison checks the complete native
 export-name set, including generated exports. The JSON report is written under
 `OcctSharp/artifacts/native-source-layout.json`. Six negative fixture checks in
@@ -251,7 +260,7 @@ Same-baseline managed API comparison requires zero additions and zero removals.
 Current validation results and final DLL/package hashes are in repository
 `docs/STATUS.md`, which is intentionally excluded from package documentation.
 
-## Prepared Q-T additions (not implemented)
+## Historical Q-T preparation (subsequently implemented)
 
 ADR-0082 keeps this complete baseline map and the one-DLL boundary. Q's repair,
 diagnosis and normalization belong in cohesive Modeling units; R authoring/editing/
@@ -259,7 +268,7 @@ discrete adapters in Mesh; S law/guided-sweep and filling/patch conversion in
 Modeling/Surfaces; T graph/state/naming storage in Documents. Cross-family orchestration
 must not create reverse private-header dependencies or duplicate Runtime owners.
 In particular, do not expand the 855-line Freeform.cpp for all of S. Register future
-units explicitly and retain the 1,000-line ceiling and standalone-header checks.
+units explicitly and retain the default size threshold (ADR-0091 exceptions allowed) and standalone-header checks.
 The four proposed placements and integration owners are detailed in
 [Q-T preparation](BATCH_Q_T_PREPARATION.md); they do not change today's 42/34 source counts.
 

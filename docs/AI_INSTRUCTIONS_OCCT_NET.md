@@ -1,5 +1,11 @@
 # AI_INSTRUCTIONS.md
 
+> Historical reference only as of 2026-09-06. [WORKFLOW](WORKFLOW.md) and
+> [ADR-0091](adr/0091-proportionate-development-workflow.md) replace the per-task
+> reading/checklist, work-size and commit-cadence rules below. Do not treat this document
+> as a second active instruction set. Current technical contracts live in the topic
+> documents and accepted ADRs linked from AGENTS/ARCHITECTURE.
+
 > 当前仓库说明（2026-08-21）：本文件保留为长篇背景规则。自动化 Agent 的入口是
 > 根目录 `AGENTS.md`；当前架构、目录和进度以 `docs/DOCUMENTATION_INDEX.md` 索引的专题文档、
 > 已接受 ADR 及 `docs/STATUS.md` 为准。本文件中把 `src/`、`tests/`、`reports/`

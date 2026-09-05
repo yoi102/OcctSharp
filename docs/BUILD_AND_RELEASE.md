@@ -1,5 +1,11 @@
 # Build and Release
 
+Use [WORKFLOW](WORKFLOW.md) to select validation during development. Commands in this
+document retain their full checks; a documentation-only or focused tooling change does
+not require invoking the complete product-release pipeline. New package deliveries
+must include and validate their actual documentation, manifests and checksums. The last
+validated package is historical until repacked; see [STATUS](STATUS.md).
+
 This document defines the build and release process. Local packaging and reproducible
 Release evidence tooling is implemented inside batch B; public publication remains externally gated.
 

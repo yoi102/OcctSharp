@@ -1,5 +1,19 @@
 # Testing and Validation
 
+## Current validation selection
+
+Use the change-impact matrix and product-delivery gates in [WORKFLOW](WORKFLOW.md).
+Focused development checks do not require a complete release run after each commit.
+Documentation/tooling-only changes use their relevant checks; product/binding delivery
+retains full local validation. Batch-specific test counts and repetitions below describe
+their historical evidence and risks, not a universal repetition quota. Current results
+and reused product baselines are recorded in [STATUS](STATUS.md).
+
+The source-layout tool supports exact-file, bounded, reasoned size exceptions in
+`OcctSharp/config/native-source-layout-exceptions.json`. Run
+`eng/test-native-source-layout.ps1` for unapproved oversize, accepted/reporting behavior,
+invalid exception rejection and structural checks even inside an excepted file.
+
 ## Batch T parametric validation
 
 BatchTStorageTests, BatchTRecomputeTests, BatchTPersistenceTests, BatchTAuthoringTests,

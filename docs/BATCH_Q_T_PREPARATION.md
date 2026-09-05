@@ -1,5 +1,11 @@
 # Prepared large batches Q through T
 
+> Historical Q-W scope and execution record. Q-W completed at `15fd671` (280/280).
+> Original frozen rows, preparation inputs and acceptance evidence remain unchanged.
+> Future task sizing, intermediate commits and validation cadence follow
+> [WORKFLOW](WORKFLOW.md) and ADR-0091; imperative text below applies to that completed
+> run and does not create a new queue. [STATUS](STATUS.md) is the current progress source.
+
 - Date: 2026-09-05.
 - Decision: [ADR-0082](adr/0082-broad-batch-q-through-t-preparation.md).
 - Scope preparation: **4/4 batches**, **160 capability rows** (40 per batch).
