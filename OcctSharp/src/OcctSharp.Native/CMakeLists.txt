@@ -3,16 +3,62 @@ file(GLOB_RECURSE OCCTSHARP_GENERATED_NATIVE_SOURCES CONFIGURE_DEPENDS
   "${CMAKE_CURRENT_SOURCE_DIR}/generated/*.h"
   "${CMAKE_CURRENT_SOURCE_DIR}/generated/*.hxx")
 
-add_library(OcctSharp.Native SHARED
-  include/OcctSharp.Native.h
-  include/OcctSharp.Native.Internal.hxx
-  ${OCCTSHARP_GENERATED_NATIVE_SOURCES}
-  src/OcctSharp.Native.cpp
-  include/OcctSharp.Native.Surface.h
-  src/Surfaces/SurfaceCommon.hxx
+set(OCCTSHARP_MANUAL_NATIVE_SOURCES
+  src/Runtime/Abi.cpp
+  src/Runtime/Error.cpp
+  src/Runtime/Registry.cpp
+  src/Runtime/Shape.cpp
+  src/Runtime/Validation.cpp
+  src/Foundation/Collections.cpp
+  src/Foundation/Text.cpp
+  src/Foundation/Transient.cpp
+  src/Geometry/Conversions.cpp
+  src/Geometry/Transforms.cpp
+  src/Geometry/Values.cpp
+  src/Modeling/Construction.cpp
+  src/Modeling/Drawing.cpp
+  src/Modeling/Features.cpp
+  src/Modeling/Freeform.cpp
+  src/Modeling/GeometryInspection.cpp
+  src/Modeling/Inspection.cpp
+  src/Modeling/Operations.cpp
+  src/Modeling/Properties.cpp
+  src/Modeling/Sketch.cpp
+  src/Modeling/Topology.cpp
+  src/Mesh/Triangulation.cpp
+  src/Documents/Lifecycle.cpp
+  src/Documents/State.cpp
+  src/Xde/Document.cpp
+  src/Xde/Metadata.cpp
+  src/Xde/Pmi.cpp
+  src/Xde/SavedViews.cpp
+  src/Xde/Structure.cpp
+  src/Exchange/ShapeExchange.cpp
+  src/Exchange/StepAssembly.cpp
+  src/Exchange/XdeExchange.cpp
+  src/Visualization/Clipping.cpp
+  src/Visualization/Context.cpp
+  src/Visualization/Dimensions.cpp
+  src/Visualization/Manipulators.cpp
+  src/Visualization/Navigation.cpp
+  src/Visualization/Presentations.cpp
+  src/Visualization/Selection.cpp
   src/Surfaces/SurfaceInspection.cpp
   src/Surfaces/SurfaceCurves.cpp
   src/Surfaces/SurfaceTopology.cpp)
+
+# Prove each manual responsibility declares its own dependencies. Generated shards
+# retain their existing PCH for build cost, but manual files cannot depend on it.
+set_source_files_properties(${OCCTSHARP_MANUAL_NATIVE_SOURCES}
+  PROPERTIES SKIP_PRECOMPILE_HEADERS ON)
+
+add_library(OcctSharp.Native SHARED
+  include/OcctSharp.Native.h
+  include/OcctSharp.Native.Internal.hxx
+  include/OcctSharp.Native.Surface.h
+  src/Surfaces/SurfaceCommon.hxx
+  ${OCCTSHARP_MANUAL_NATIVE_SOURCES}
+  ${OCCTSHARP_GENERATED_NATIVE_SOURCES})
 
 target_compile_features(OcctSharp.Native PRIVATE cxx_std_20)
 target_compile_definitions(OcctSharp.Native PRIVATE OCCTSHARP_NATIVE_EXPORTS NOMINMAX WIN32_LEAN_AND_MEAN)
@@ -20,6 +66,8 @@ if(MSVC)
   target_compile_options(OcctSharp.Native PRIVATE /bigobj)
 endif()
 target_include_directories(OcctSharp.Native
+  PRIVATE
+    "${CMAKE_CURRENT_SOURCE_DIR}/src"
   PUBLIC
     "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>")
 
@@ -87,6 +135,7 @@ set(OCCTSHARP_CORE_TOOLKITS
 target_link_libraries(OcctSharp.Native PRIVATE ${OCCTSHARP_CORE_TOOLKITS})
 
 set_target_properties(OcctSharp.Native PROPERTIES
+  UNITY_BUILD OFF
   OUTPUT_NAME "OcctSharp.Native"
   RUNTIME_OUTPUT_DIRECTORY "${OCCTSHARP_NATIVE_OUTPUT_DIR}/$<CONFIG>"
   LIBRARY_OUTPUT_DIRECTORY "${OCCTSHARP_NATIVE_OUTPUT_DIR}/$<CONFIG>"

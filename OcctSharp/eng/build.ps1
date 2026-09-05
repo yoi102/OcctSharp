@@ -87,6 +87,7 @@ $env:OCCTSHARP_OCCT_ROOT = $resolvedOcctRoot
 
 Push-Location $workspaceRoot
 try {
+    & (Join-Path $PSScriptRoot 'verify-native-source-layout.ps1')
     $sdkVersion = (& dotnet --version).Trim()
     if (-not $sdkVersion.StartsWith('10.0.', [StringComparison]::Ordinal)) {
         throw "Expected the .NET 10 SDK selected by global.json, but dotnet reported '$sdkVersion'."
@@ -173,6 +174,7 @@ try {
     }
 
     if (-not $SkipTests) {
+        & .\eng\test-native-source-layout.ps1
         & dotnet test .\OcctSharp.slnx --no-build --configuration $Configuration
         if ($LASTEXITCODE -ne 0) { throw "dotnet test failed with exit code $LASTEXITCODE." }
     }

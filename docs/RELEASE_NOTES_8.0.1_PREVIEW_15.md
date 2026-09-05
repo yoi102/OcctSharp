@@ -17,6 +17,21 @@ The closed 12-module managed graph, facade and single Native DLL are retained; a
 cross-DLL ownership protocol is not introduced. SC-053 reconciles 100 exact direct calls,
 including native-local analytic constructors, location/vector helpers and measurements.
 
+## Historical Native source organization
+
+ADR-0081 subsequently extracts the complete 13,510-line historical implementation into
+39 domain-owned source files and 33 private headers. Including the existing surface
+files, 42 manual translation units compile independently without PCH or unity builds.
+Runtime registry/error storage each has one owner, and the public ABI and generated
+sources remain unchanged. The same-baseline API has zero additions/removals; this
+architecture work adds no product capabilities and does not increment Preview.15.
+See [the complete responsibility map](NATIVE_SOURCE_LAYOUT.md) and repository STATUS
+for the final refactor validation, which is separate from the original Batch P results.
+The completed extraction passes Generator 91/91 and Runtime 180/180 in Release/Debug,
+including an isolated actual Debug-native run. All 34 private headers compile alone,
+29,402 native exports are unchanged, and fresh-source regeneration and local release
+checks pass. No public NuGet release is made by this workstream.
+
 ## Contracts and limitations
 
 - Topology outputs are independently owning; copied DTOs retain no native parents.

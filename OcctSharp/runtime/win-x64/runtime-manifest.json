@@ -89,8 +89,8 @@
     },
     {
       "path": "occt/OcctSharp.Native.dll",
-      "size": 15490560,
-      "sha256": "2230D43CC32F749615A2202EAA2FB8891BB9D4EC09345B3FEB1E165C75C91710"
+      "size": 15444480,
+      "sha256": "7505EC19831B809DB419EAA1C86FC1BDF2AFFC242E59D4CC7B2D4B8B14F8A8FB"
     },
     {
       "path": "occt/openvr_api.dll",

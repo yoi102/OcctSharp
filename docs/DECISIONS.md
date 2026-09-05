@@ -87,8 +87,10 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0078](adr/0078-2d-sketch-planar-modeling-batch.md) | Define Batch O as one 24-capability copied 2D sketch, planar topology, feature, exchange, and viewer wave | Accepted and implemented |
 | [ADR-0079](adr/0079-surface-uv-curve-on-surface-batch.md) | Define Batch P as one surface/UV, pcurve projection and lifting, seam topology, repair, exchange, and viewer wave; expanded to 32 capabilities by ADR-0080 | Accepted and implemented |
 | [ADR-0080](adr/0080-expanded-surface-wave-and-native-source-boundaries.md) | Expand Batch P to 32 capabilities and separate new native source responsibilities while retaining the existing managed modules and one native DLL | Accepted and implemented |
+| [ADR-0081](adr/0081-native-source-responsibility-extraction.md) | Extract all historical native source responsibilities, preserving one DLL and the complete existing ABI/ownership contract | Accepted and implemented |
 
 ## Pending decisions
+
 
 | ID | Decision needed | Required by |
 |---|---|---|

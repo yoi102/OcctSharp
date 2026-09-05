@@ -1,5 +1,16 @@
 # Ownership and Lifetime
 
+## Native source ownership after ADR-0081
+
+Source extraction does not change O001-O013 or add an ownership category. The manual
+live sets and mutex have one storage owner in `Runtime/Registry.cpp`; the error buffer
+has one thread-local owner in `Runtime/Error.cpp`. `Runtime/Shape.cpp` implements the
+same creator/validation/release path used by generated bindings and all manual domains.
+Other owning handle definitions and operations reside with their domain, while registry
+templates still access that single manual state. Generated per-type registries are not
+moved or replaced. Separate source files do not make concurrent release/use safe, and
+they do not establish any cross-DLL allocator or release protocol.
+
 ## Batch P surface workflow boundary
 
 Surface descriptors, grids, UV definitions, boundary loops, projection solutions,

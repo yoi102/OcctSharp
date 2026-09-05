@@ -78,6 +78,25 @@ model and real-header discovery twice, and executes the configured generator and
 tests. Build output stays under ignored inner
 workspace `artifacts/`, `build/`, `bin/`, and `obj/` directories.
 
+ADR-0081 adds native source-boundary verification to this entry point. All 42 manual
+translation units compile without the generated PCH or unity builds. Source-list,
+implementation-size, unique manual registry/TLS ownership, and six negative fixture
+checks guard against reintroducing the historical monolith. See
+[the complete source map](NATIVE_SOURCE_LAYOUT.md).
+
+For an architecture-only extraction, preserve the pre-change DLL and compare the
+complete export-name set as well as the ordinary API compatibility baseline:
+
+```powershell
+.\eng\verify-native-source-layout.ps1 `
+  -NativeLibraryPath artifacts/native/Release/OcctSharp.Native.dll `
+  -BaselineNativeLibraryPath artifacts/native-layout/baseline-native.dll
+```
+
+The baseline path above is an example local evidence file, not a distributed runtime.
+Ordinary Debug managed tests still load the committed Release runtime; an actual
+Debug-native lifetime regression must separately use the rebuilt Debug DLL closure.
+
 To verify that committed generated output is current, run:
 
 ```powershell

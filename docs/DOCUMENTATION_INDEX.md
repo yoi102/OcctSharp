@@ -7,6 +7,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 ## Start here
 
 - [Architecture](ARCHITECTURE.md) — system boundaries and component ownership.
+- [Native source responsibilities](NATIVE_SOURCE_LAYOUT.md) — full historical extraction,
+  domain-owned private contracts and independent-compilation/ABI checks under ADR-0081.
 - [Repository layout](REPOSITORY_LAYOUT.md) — physical separation of documentation
   and code-related files.
 - [Roadmap](ROADMAP.md) — completed Batch B-P outcomes and local-release boundary.

@@ -1,5 +1,16 @@
 # Architecture
 
+## Full historical native source extraction
+
+ADR-0081 extracts the old native implementation into domain-owned Runtime, Foundation,
+Geometry, Modeling, Mesh, Documents, Xde, Exchange and Visualization translation units,
+alongside the existing Surfaces units. The public C header, generated support contract,
+managed modules and single native DLL are unchanged. Private headers own handle layouts
+and cross-unit helper declarations; `Runtime/Registry.cpp` is the unique owner of manual
+live sets/mutex, and `Runtime/Error.cpp` owns the shared thread-local diagnostic buffer.
+All manual files compile independently without the generated PCH or unity builds.
+See [Native source responsibilities](NATIVE_SOURCE_LAYOUT.md) for the source map and gates.
+
 ## Preview.14 sketch boundary
 
 ADR-0078 adds the Batch O copied 2D sketch workflow to the cross-family facade.

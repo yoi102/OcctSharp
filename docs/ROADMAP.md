@@ -10,6 +10,18 @@ Batch B through Batch P are complete for their accepted local implementation sco
 Batch P closes one expanded 32-capability surface/UV workflow under ADR-0079/0080.
 It was not split into projection, seam, repair, exchange, viewer, or package checkpoints.
 
+## Completed architecture workstream: historical Native source responsibilities
+
+ADR-0081 and [the native source map](NATIVE_SOURCE_LAYOUT.md) cover one complete extraction
+of the 13,510-line historical implementation. Preserve the public API/ABI, algorithms,
+manual stable-ID classification, managed modules and one DLL. Domain-owned private
+headers, one registry/error state, explicit CMake compilation without manual PCH/unity,
+export/body comparisons and full local regression are the exit criteria. This is not
+Batch Q and introduces no new product capabilities. All 42 manual translation units,
+34 standalone private headers, unchanged export/API comparisons, Release/Debug Runtime
+180/180, fresh-source regeneration and the complete local release checks pass. Delivery
+is one local commit, not NuGet publication or GitHub push.
+
 ## Completed priority: Batch P surface UV and curve-on-surface workflows
 
 ADR-0079 and [the Batch P gap inventory](BATCH_P_SURFACE_UV_CURVE_GAP_INVENTORY.md)
