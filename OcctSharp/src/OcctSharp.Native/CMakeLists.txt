@@ -23,6 +23,13 @@ set(OCCTSHARP_MANUAL_NATIVE_SOURCES
   src/Modeling/Inspection.cpp
   src/Modeling/Operations.cpp
   src/Modeling/Properties.cpp
+  src/Modeling/RepairData.cpp
+  src/Modeling/RepairDiagnostics.cpp
+  src/Modeling/RepairBoundaries.cpp
+  src/Modeling/RepairFixers.cpp
+  src/Modeling/RepairExecution.cpp
+  src/Modeling/RepairSewing.cpp
+  src/Modeling/TopologyNormalization.cpp
   src/Modeling/Sketch.cpp
   src/Modeling/Topology.cpp
   src/Mesh/Triangulation.cpp
@@ -33,6 +40,7 @@ set(OCCTSHARP_MANUAL_NATIVE_SOURCES
   src/Xde/Pmi.cpp
   src/Xde/SavedViews.cpp
   src/Xde/Structure.cpp
+  src/Xde/RepairPublication.cpp
   src/Exchange/ShapeExchange.cpp
   src/Exchange/StepAssembly.cpp
   src/Exchange/XdeExchange.cpp
@@ -43,6 +51,7 @@ set(OCCTSHARP_MANUAL_NATIVE_SOURCES
   src/Visualization/Navigation.cpp
   src/Visualization/Presentations.cpp
   src/Visualization/Selection.cpp
+  src/Visualization/RepairReview.cpp
   src/Surfaces/SurfaceInspection.cpp
   src/Surfaces/SurfaceCurves.cpp
   src/Surfaces/SurfaceTopology.cpp)
@@ -56,6 +65,7 @@ add_library(OcctSharp.Native SHARED
   include/OcctSharp.Native.h
   include/OcctSharp.Native.Internal.hxx
   include/OcctSharp.Native.Surface.h
+  include/OcctSharp.Native.Repair.h
   src/Surfaces/SurfaceCommon.hxx
   ${OCCTSHARP_MANUAL_NATIVE_SOURCES}
   ${OCCTSHARP_GENERATED_NATIVE_SOURCES})

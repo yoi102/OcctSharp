@@ -1,0 +1,645 @@
+{
+  "schemaVersion": "1.0",
+  "batch": "Q",
+  "specialCaseId": "SC-054",
+  "baselineInventorySha256": "CCB81F47CE09A7712D346C16EE45A9AF783D000DCFC64DF4B69FA3C1DE96DF48",
+  "note": "Exact directly used Blocked declarations; not an exhaustive list of all native support calls.",
+  "calls": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@ContigousEdge#I#1",
+      "nativeName": "BRepBuilderAPI_Sewing::ContigousEdge",
+      "header": "BRepBuilderAPI_Sewing.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@DeletedFace#I#1",
+      "nativeName": "BRepBuilderAPI_Sewing::DeletedFace",
+      "header": "BRepBuilderAPI_Sewing.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@FreeEdge#I#1",
+      "nativeName": "BRepBuilderAPI_Sewing::FreeEdge",
+      "header": "BRepBuilderAPI_Sewing.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@IsModified#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepBuilderAPI_Sewing::IsModified",
+      "header": "BRepBuilderAPI_Sewing.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@IsModifiedSubShape#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepBuilderAPI_Sewing::IsModifiedSubShape",
+      "header": "BRepBuilderAPI_Sewing.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@Modified#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepBuilderAPI_Sewing::Modified",
+      "header": "BRepBuilderAPI_Sewing.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@ModifiedSubShape#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepBuilderAPI_Sewing::ModifiedSubShape",
+      "header": "BRepBuilderAPI_Sewing.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@MultipleEdge#I#1",
+      "nativeName": "BRepBuilderAPI_Sewing::MultipleEdge",
+      "header": "BRepBuilderAPI_Sewing.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepGProp@F@SurfaceProperties#&1$@S@TopoDS_Shape#&$@S@GProp_GProps#b#b#S",
+      "nativeName": "BRepGProp::SurfaceProperties",
+      "header": "BRepGProp.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepGProp@F@VolumeProperties#&1$@S@TopoDS_Shape#&$@S@GProp_GProps#b#b#b#S",
+      "nativeName": "BRepGProp::VolumeProperties",
+      "header": "BRepGProp.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepLib@F@UpdateTolerances#&1$@S@TopoDS_Shape#b#S",
+      "nativeName": "BRepLib::UpdateTolerances",
+      "header": "BRepLib.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepTools@F@Write#&1$@S@TopoDS_Shape#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#b#b#$@E@TopTools_FormatVersion#&1$@S@Message_ProgressRange#S",
+      "nativeName": "BRepTools::Write",
+      "header": "BRepTools.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@Generated#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepTools_History::Generated",
+      "header": "BRepTools_History.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@IsRemoved#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepTools_History::IsRemoved",
+      "header": "BRepTools_History.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@Modified#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepTools_History::Modified",
+      "header": "BRepTools_History.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepTools_ReShape@F@IsRecorded#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepTools_ReShape::IsRecorded",
+      "header": "BRepTools_ReShape.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepTools_ReShape@F@Value#&1$@S@TopoDS_Shape#1",
+      "nativeName": "BRepTools_ReShape::Value",
+      "header": "BRepTools_ReShape.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepTools_WireExplorer@F@BRepTools_WireExplorer#&1$@S@TopoDS_Wire#",
+      "nativeName": "BRepTools_WireExplorer::BRepTools_WireExplorer",
+      "header": "BRepTools_WireExplorer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Pnt#&1$@S@TopoDS_Vertex#S",
+      "nativeName": "BRep_Tool::Pnt",
+      "header": "BRep_Tool.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_CheckSmallFace@F@CheckSpotFace#&1$@S@TopoDS_Face#d#",
+      "nativeName": "ShapeAnalysis_CheckSmallFace::CheckSpotFace",
+      "header": "ShapeAnalysis_CheckSmallFace.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_CheckSmallFace@F@CheckStripFace#&1$@S@TopoDS_Face#&$@S@TopoDS_Edge#S2_#d#",
+      "nativeName": "ShapeAnalysis_CheckSmallFace::CheckStripFace",
+      "header": "ShapeAnalysis_CheckSmallFace.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_CheckSmallFace@F@ShapeAnalysis_CheckSmallFace#",
+      "nativeName": "ShapeAnalysis_CheckSmallFace::ShapeAnalysis_CheckSmallFace",
+      "header": "ShapeAnalysis_CheckSmallFace.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_FreeBounds@F@GetClosedWires#1",
+      "nativeName": "ShapeAnalysis_FreeBounds::GetClosedWires",
+      "header": "ShapeAnalysis_FreeBounds.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_FreeBounds@F@GetOpenWires#1",
+      "nativeName": "ShapeAnalysis_FreeBounds::GetOpenWires",
+      "header": "ShapeAnalysis_FreeBounds.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_FreeBounds@F@ShapeAnalysis_FreeBounds#&1$@S@TopoDS_Shape#b#b#b#",
+      "nativeName": "ShapeAnalysis_FreeBounds::ShapeAnalysis_FreeBounds",
+      "header": "ShapeAnalysis_FreeBounds.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Shell@F@BadEdges#1",
+      "nativeName": "ShapeAnalysis_Shell::BadEdges",
+      "header": "ShapeAnalysis_Shell.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Shell@F@CheckOrientedShells#&1$@S@TopoDS_Shape#b#b#",
+      "nativeName": "ShapeAnalysis_Shell::CheckOrientedShells",
+      "header": "ShapeAnalysis_Shell.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Shell@F@HasBadEdges#1",
+      "nativeName": "ShapeAnalysis_Shell::HasBadEdges",
+      "header": "ShapeAnalysis_Shell.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Shell@F@ShapeAnalysis_Shell#",
+      "nativeName": "ShapeAnalysis_Shell::ShapeAnalysis_Shell",
+      "header": "ShapeAnalysis_Shell.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@ShapeAnalysis_Wire#&1$@S@TopoDS_Wire#&1$@S@TopoDS_Face#d#",
+      "nativeName": "ShapeAnalysis_Wire::ShapeAnalysis_Wire",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@WireData#1",
+      "nativeName": "ShapeAnalysis_Wire::WireData",
+      "header": "ShapeAnalysis_Wire.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_WireOrder@F@Add#&1$@S@gp_XYZ#S0_#",
+      "nativeName": "ShapeAnalysis_WireOrder::Add",
+      "header": "ShapeAnalysis_WireOrder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_WireOrder@F@IsDone#1",
+      "nativeName": "ShapeAnalysis_WireOrder::IsDone",
+      "header": "ShapeAnalysis_WireOrder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_WireOrder@F@NbChains#1",
+      "nativeName": "ShapeAnalysis_WireOrder::NbChains",
+      "header": "ShapeAnalysis_WireOrder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_WireOrder@F@NbEdges#1",
+      "nativeName": "ShapeAnalysis_WireOrder::NbEdges",
+      "header": "ShapeAnalysis_WireOrder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_WireOrder@F@Ordered#I#1",
+      "nativeName": "ShapeAnalysis_WireOrder::Ordered",
+      "header": "ShapeAnalysis_WireOrder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_WireOrder@F@Perform#b#",
+      "nativeName": "ShapeAnalysis_WireOrder::Perform",
+      "header": "ShapeAnalysis_WireOrder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_WireOrder@F@SetChains#d#",
+      "nativeName": "ShapeAnalysis_WireOrder::SetChains",
+      "header": "ShapeAnalysis_WireOrder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_WireOrder@F@ShapeAnalysis_WireOrder#b#d#b#",
+      "nativeName": "ShapeAnalysis_WireOrder::ShapeAnalysis_WireOrder",
+      "header": "ShapeAnalysis_WireOrder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeBuild_ReShape@F@Apply#&1$@S@TopoDS_Shape#$@E@TopAbs_ShapeEnum#",
+      "nativeName": "ShapeBuild_ReShape::Apply",
+      "header": "ShapeBuild_ReShape.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_WireData@F@Edge#I#1",
+      "nativeName": "ShapeExtend_WireData::Edge",
+      "header": "ShapeExtend_WireData.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@FixAddNaturalBoundMode#",
+      "nativeName": "ShapeFix_Face::FixAddNaturalBoundMode",
+      "header": "ShapeFix_Face.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@FixOrientationMode#",
+      "nativeName": "ShapeFix_Face::FixOrientationMode",
+      "header": "ShapeFix_Face.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@FixSmallAreaWireMode#",
+      "nativeName": "ShapeFix_Face::FixSmallAreaWireMode",
+      "header": "ShapeFix_Face.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@FixWireMode#",
+      "nativeName": "ShapeFix_Face::FixWireMode",
+      "header": "ShapeFix_Face.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@RemoveSmallAreaFaceMode#",
+      "nativeName": "ShapeFix_Face::RemoveSmallAreaFaceMode",
+      "header": "ShapeFix_Face.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_FixSmallFace@F@Init#&1$@S@TopoDS_Shape#",
+      "nativeName": "ShapeFix_FixSmallFace::Init",
+      "header": "ShapeFix_FixSmallFace.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_FixSmallFace@F@Shape#",
+      "nativeName": "ShapeFix_FixSmallFace::Shape",
+      "header": "ShapeFix_FixSmallFace.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_FixSmallSolid@F@Remove#&1$@S@TopoDS_Shape#&1$@N@opencascade@S@handle>#$@S@ShapeBuild_ReShape#1",
+      "nativeName": "ShapeFix_FixSmallSolid::Remove",
+      "header": "ShapeFix_FixSmallSolid.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_ShapeTolerance@F@LimitTolerance#&1$@S@TopoDS_Shape#d#d#$@E@TopAbs_ShapeEnum#1",
+      "nativeName": "ShapeFix_ShapeTolerance::LimitTolerance",
+      "header": "ShapeFix_ShapeTolerance.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_ShapeTolerance@F@ShapeFix_ShapeTolerance#",
+      "nativeName": "ShapeFix_ShapeTolerance::ShapeFix_ShapeTolerance",
+      "header": "ShapeFix_ShapeTolerance.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Shell@F@FixFaceMode#",
+      "nativeName": "ShapeFix_Shell::FixFaceMode",
+      "header": "ShapeFix_Shell.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Shell@F@FixFaceOrientation#&1$@S@TopoDS_Shell#b#b#",
+      "nativeName": "ShapeFix_Shell::FixFaceOrientation",
+      "header": "ShapeFix_Shell.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Solid@F@CreateOpenSolidMode#",
+      "nativeName": "ShapeFix_Solid::CreateOpenSolidMode",
+      "header": "ShapeFix_Solid.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Solid@F@FixShellMode#",
+      "nativeName": "ShapeFix_Solid::FixShellMode",
+      "header": "ShapeFix_Solid.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Solid@F@FixShellOrientationMode#",
+      "nativeName": "ShapeFix_Solid::FixShellOrientationMode",
+      "header": "ShapeFix_Solid.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Solid@F@Perform#&1$@S@Message_ProgressRange#",
+      "nativeName": "ShapeFix_Solid::Perform",
+      "header": "ShapeFix_Solid.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Solid@F@ShapeFix_Solid#&1$@S@TopoDS_Solid#",
+      "nativeName": "ShapeFix_Solid::ShapeFix_Solid",
+      "header": "ShapeFix_Solid.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Solid@F@Solid#1",
+      "nativeName": "ShapeFix_Solid::Solid",
+      "header": "ShapeFix_Solid.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@ClosedWireMode#",
+      "nativeName": "ShapeFix_Wire::ClosedWireMode",
+      "header": "ShapeFix_Wire.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@Load#&1$@S@TopoDS_Wire#",
+      "nativeName": "ShapeFix_Wire::Load",
+      "header": "ShapeFix_Wire.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@ModifyGeometryMode#",
+      "nativeName": "ShapeFix_Wire::ModifyGeometryMode",
+      "header": "ShapeFix_Wire.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@ModifyTopologyMode#",
+      "nativeName": "ShapeFix_Wire::ModifyTopologyMode",
+      "header": "ShapeFix_Wire.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@SetFace#&1$@S@TopoDS_Face#",
+      "nativeName": "ShapeFix_Wire::SetFace",
+      "header": "ShapeFix_Wire.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@Wire#1",
+      "nativeName": "ShapeFix_Wire::Wire",
+      "header": "ShapeFix_Wire.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wireframe@F@ModeDropSmallEdges#",
+      "nativeName": "ShapeFix_Wireframe::ModeDropSmallEdges",
+      "header": "ShapeFix_Wireframe.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wireframe@F@Shape#",
+      "nativeName": "ShapeFix_Wireframe::Shape",
+      "header": "ShapeFix_Wireframe.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wireframe@F@ShapeFix_Wireframe#&1$@S@TopoDS_Shape#",
+      "nativeName": "ShapeFix_Wireframe::ShapeFix_Wireframe",
+      "header": "ShapeFix_Wireframe.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_RemoveInternalWires@F@GetResult#1",
+      "nativeName": "ShapeUpgrade_RemoveInternalWires::GetResult",
+      "header": "ShapeUpgrade_RemoveInternalWires.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_RemoveInternalWires@F@MinArea#",
+      "nativeName": "ShapeUpgrade_RemoveInternalWires::MinArea",
+      "header": "ShapeUpgrade_RemoveInternalWires.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_RemoveInternalWires@F@Perform#&1$@S@NCollection_Sequence>#$@S@TopoDS_Shape#",
+      "nativeName": "ShapeUpgrade_RemoveInternalWires::Perform",
+      "header": "ShapeUpgrade_RemoveInternalWires.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_RemoveInternalWires@F@RemoveFaceMode#",
+      "nativeName": "ShapeUpgrade_RemoveInternalWires::RemoveFaceMode",
+      "header": "ShapeUpgrade_RemoveInternalWires.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_RemoveInternalWires@F@RemovedWires#1",
+      "nativeName": "ShapeUpgrade_RemoveInternalWires::RemovedWires",
+      "header": "ShapeUpgrade_RemoveInternalWires.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_RemoveInternalWires@F@ShapeUpgrade_RemoveInternalWires#&1$@S@TopoDS_Shape#",
+      "nativeName": "ShapeUpgrade_RemoveInternalWires::ShapeUpgrade_RemoveInternalWires",
+      "header": "ShapeUpgrade_RemoveInternalWires.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_RemoveLocations@F@GetResult#1",
+      "nativeName": "ShapeUpgrade_RemoveLocations::GetResult",
+      "header": "ShapeUpgrade_RemoveLocations.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_RemoveLocations@F@ModifiedShape#&1$@S@TopoDS_Shape#1",
+      "nativeName": "ShapeUpgrade_RemoveLocations::ModifiedShape",
+      "header": "ShapeUpgrade_RemoveLocations.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_RemoveLocations@F@Remove#&1$@S@TopoDS_Shape#",
+      "nativeName": "ShapeUpgrade_RemoveLocations::Remove",
+      "header": "ShapeUpgrade_RemoveLocations.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivide@F@GetContext#1",
+      "nativeName": "ShapeUpgrade_ShapeDivide::GetContext",
+      "header": "ShapeUpgrade_ShapeDivide.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivide@F@Perform#b#",
+      "nativeName": "ShapeUpgrade_ShapeDivide::Perform",
+      "header": "ShapeUpgrade_ShapeDivide.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivide@F@Result#1",
+      "nativeName": "ShapeUpgrade_ShapeDivide::Result",
+      "header": "ShapeUpgrade_ShapeDivide.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivide@F@SetMaxTolerance#d#",
+      "nativeName": "ShapeUpgrade_ShapeDivide::SetMaxTolerance",
+      "header": "ShapeUpgrade_ShapeDivide.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivide@F@SetMinTolerance#d#",
+      "nativeName": "ShapeUpgrade_ShapeDivide::SetMinTolerance",
+      "header": "ShapeUpgrade_ShapeDivide.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivide@F@SetPrecision#d#",
+      "nativeName": "ShapeUpgrade_ShapeDivide::SetPrecision",
+      "header": "ShapeUpgrade_ShapeDivide.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivide@F@Status#$@E@ShapeExtend_Status#1",
+      "nativeName": "ShapeUpgrade_ShapeDivide::Status",
+      "header": "ShapeUpgrade_ShapeDivide.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideAngle@F@ShapeUpgrade_ShapeDivideAngle#d#&1$@S@TopoDS_Shape#",
+      "nativeName": "ShapeUpgrade_ShapeDivideAngle::ShapeUpgrade_ShapeDivideAngle",
+      "header": "ShapeUpgrade_ShapeDivideAngle.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideArea@F@MaxArea#",
+      "nativeName": "ShapeUpgrade_ShapeDivideArea::MaxArea",
+      "header": "ShapeUpgrade_ShapeDivideArea.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideArea@F@ShapeUpgrade_ShapeDivideArea#&1$@S@TopoDS_Shape#",
+      "nativeName": "ShapeUpgrade_ShapeDivideArea::ShapeUpgrade_ShapeDivideArea",
+      "header": "ShapeUpgrade_ShapeDivideArea.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideClosed@F@SetNbSplitPoints#I#",
+      "nativeName": "ShapeUpgrade_ShapeDivideClosed::SetNbSplitPoints",
+      "header": "ShapeUpgrade_ShapeDivideClosed.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideClosed@F@ShapeUpgrade_ShapeDivideClosed#&1$@S@TopoDS_Shape#",
+      "nativeName": "ShapeUpgrade_ShapeDivideClosed::ShapeUpgrade_ShapeDivideClosed",
+      "header": "ShapeUpgrade_ShapeDivideClosed.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideClosedEdges@F@SetNbSplitPoints#I#",
+      "nativeName": "ShapeUpgrade_ShapeDivideClosedEdges::SetNbSplitPoints",
+      "header": "ShapeUpgrade_ShapeDivideClosedEdges.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideClosedEdges@F@ShapeUpgrade_ShapeDivideClosedEdges#&1$@S@TopoDS_Shape#",
+      "nativeName": "ShapeUpgrade_ShapeDivideClosedEdges::ShapeUpgrade_ShapeDivideClosedEdges",
+      "header": "ShapeUpgrade_ShapeDivideClosedEdges.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideContinuity@F@SetBoundaryCriterion#$@E@GeomAbs_Shape#",
+      "nativeName": "ShapeUpgrade_ShapeDivideContinuity::SetBoundaryCriterion",
+      "header": "ShapeUpgrade_ShapeDivideContinuity.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideContinuity@F@SetPCurveCriterion#$@E@GeomAbs_Shape#",
+      "nativeName": "ShapeUpgrade_ShapeDivideContinuity::SetPCurveCriterion",
+      "header": "ShapeUpgrade_ShapeDivideContinuity.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideContinuity@F@SetSurfaceCriterion#$@E@GeomAbs_Shape#",
+      "nativeName": "ShapeUpgrade_ShapeDivideContinuity::SetSurfaceCriterion",
+      "header": "ShapeUpgrade_ShapeDivideContinuity.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideContinuity@F@SetTolerance#d#",
+      "nativeName": "ShapeUpgrade_ShapeDivideContinuity::SetTolerance",
+      "header": "ShapeUpgrade_ShapeDivideContinuity.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideContinuity@F@SetTolerance2d#d#",
+      "nativeName": "ShapeUpgrade_ShapeDivideContinuity::SetTolerance2d",
+      "header": "ShapeUpgrade_ShapeDivideContinuity.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideContinuity@F@ShapeUpgrade_ShapeDivideContinuity#&1$@S@TopoDS_Shape#",
+      "nativeName": "ShapeUpgrade_ShapeDivideContinuity::ShapeUpgrade_ShapeDivideContinuity",
+      "header": "ShapeUpgrade_ShapeDivideContinuity.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_UnifySameDomain@F@History#",
+      "nativeName": "ShapeUpgrade_UnifySameDomain::History",
+      "header": "ShapeUpgrade_UnifySameDomain.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_UnifySameDomain@F@KeepShape#&1$@S@TopoDS_Shape#",
+      "nativeName": "ShapeUpgrade_UnifySameDomain::KeepShape",
+      "header": "ShapeUpgrade_UnifySameDomain.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TNaming_Builder@F@Modify#&1$@S@TopoDS_Shape#S0_#",
+      "nativeName": "TNaming_Builder::Modify",
+      "header": "TNaming_Builder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TopExp@F@MapShapes#&1$@S@TopoDS_Shape#&$@S@NCollection_IndexedMap>#S1_#$@S@TopTools_ShapeMapHasher#b#b#S",
+      "nativeName": "TopExp::MapShapes",
+      "header": "TopExp.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TopExp@F@Vertices#&1$@S@TopoDS_Wire#&$@S@TopoDS_Vertex#S2_#S",
+      "nativeName": "TopExp::Vertices",
+      "header": "TopExp.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@AddSubShape#&1$@S@TDF_Label#&1$@S@TopoDS_Shape#1",
+      "nativeName": "XCAFDoc_ShapeTool::AddSubShape",
+      "header": "XCAFDoc_ShapeTool.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetShape#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ShapeTool::GetShape",
+      "header": "XCAFDoc_ShapeTool.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetSubShapes#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#S",
+      "nativeName": "XCAFDoc_ShapeTool::GetSubShapes",
+      "header": "XCAFDoc_ShapeTool.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsSimpleShape#&1$@S@TDF_Label#S",
+      "nativeName": "XCAFDoc_ShapeTool::IsSimpleShape",
+      "header": "XCAFDoc_ShapeTool.hxx",
+      "baselineState": "Blocked"
+    }
+  ]
+}

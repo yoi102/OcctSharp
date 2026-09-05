@@ -78,7 +78,7 @@ model and real-header discovery twice, and executes the configured generator and
 tests. Build output stays under ignored inner
 workspace `artifacts/`, `build/`, `bin/`, and `obj/` directories.
 
-ADR-0081 adds native source-boundary verification to this entry point. All 42 manual
+ADR-0081 adds native source-boundary verification to this entry point. With Batch Q, all 51 manual
 translation units compile without the generated PCH or unity builds. Source-list,
 implementation-size, unique manual registry/TLS ownership, and six negative fixture
 checks guard against reintroducing the historical monolith. See
@@ -170,14 +170,14 @@ Application Framework, Visualization, and required third-party DLL closure. See
 - Geometry and metadata-aware STEP/IGES read, import, compose, round-trip, and export;
   OCAF/XDE documents, stable parent-bound labels, transactions, history, persistence,
   assemblies, PMI, scene/mesh exchange, and the Windows HWND viewer.
-- Fourteen OCCT-aligned Preview.14 packages: 12 managed modules, the compatibility/facade
+- Fourteen OCCT-aligned Preview.16 packages: 12 managed modules, the compatibility/facade
   package, and one shared native package containing the manifest-verified 62-DLL runtime
   plus 11 third-party notice/license files. Local SBOM, provenance, checksums, isolation,
   and clean facade/direct-module consumers pass.
 
 The generated surface remains deliberately selective rather than full OCCT coverage,
 and unknown ownership still fails closed. Hosted full release execution, package signing,
-Preview.14 NuGet publication/indexing, and a public-source consumer are not implemented
+Preview.16 NuGet publication/indexing, and a public-source consumer are not implemented
 or run; local package creation and the complete local release evidence pipeline are.
 
 ## Build principles
@@ -281,13 +281,15 @@ and Git whitespace pass.
 
 ```powershell
 cd OcctSharp
-.\eng\release-check.ps1 -PackageVersion 8.0.1-preview.15
+.\eng\release-check.ps1 -PackageVersion 8.0.1-preview.16
 ```
 
 Release evidence is written below `OcctSharp/artifacts/release/`: `api-diff.json`,
 `sbom.cdx.json`, `provenance.json`, `release-gates.json`, and `checksums.sha256`.
 
 Preview.14 adds Batch O's complete sketch/planar-feature, STEP/IGES, and viewer consumer.
+Preview.16 additionally validates Batch Q's source-bound repair, transactional shared-
+definition publication, protected metadata, STEP/IGES and real-viewer review workflow.
 The release-check command builds Release and Debug, verifies the committed runtime,
 regenerates a clean source copy, checks the 14 local packages with both consumers, and
 generates inventory/API/SBOM/provenance/checksum evidence. STATUS records the final

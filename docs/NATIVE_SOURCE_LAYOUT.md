@@ -1,5 +1,22 @@
 # Native source responsibilities
 
+## Batch Q additions (locally validated)
+
+The current implementation has 51 independent units, 35 private headers, 544 manual
+C exports and 23 unique shared storage definitions. The ADR-0081 counts below remain
+the historical extraction baseline. Q adds `RepairData`, `RepairDiagnostics`,
+`RepairBoundaries`, `RepairFixers`, `RepairExecution`, `RepairSewing` and
+`TopologyNormalization` under Modeling, `RepairPublication` under Xde and
+`RepairReview` under Visualization. `Modeling/Repair.hxx` owns only private repair
+contracts. `OcctSharp.Native.Repair.h` is the new public C companion; Xde/Visualization
+consume its copied ABI values without including Modeling's private header.
+`Runtime/Registry.cpp` alone owns `LiveRepairResults`. Explicit CMake registration,
+no-PCH/unity and the source-size/unique-storage audit pass. The single native DLL and
+the existing managed project graph are preserved.
+All 35 private headers pass standalone MSVC checks. Release/Debug retain all 29,402
+previous export names and expose the same 29,416-name additive surface. Complete
+regression, actual Debug-native lifetime and fresh-source rebuild gates pass.
+
 Status: fully implemented and locally validated under ADR-0081.
 
 The delivered library remains one `OcctSharp.Native.dll`. Source folders describe

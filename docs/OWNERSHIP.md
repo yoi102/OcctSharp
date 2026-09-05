@@ -1,5 +1,22 @@
 # Ownership and Lifetime
 
+## Batch Q validated implementation contract
+
+Repair snapshots own independently copied topology; source and result indices are
+scoped to a managed snapshot ID and revision. Public diagnostic/recipe/history values
+are copied. A native `OcctSharp_RepairResultHandle` owns stage output and copied history
+until its matching `occtsharp_repair_result_release`; the existing Runtime registry
+owns its live set. A separately retrieved Shape has its own registered owner and
+survives result release. Algorithms, ReShape contexts and iterators remain call-local.
+No borrowed OCCT pointers cross the ABI. Managed preview acceptance is all-or-nothing;
+failed stages and unavailable required budgets cannot publish a result. Public copy
+operations isolate mutable topology/geometry; retained external pcurve support is
+read-only. Focused tests now cover source/preview/result disposal, 48 repeated native
+result lifecycles, invalid/stale handles, negative/undersized buffers, failed-stage
+cleanup, protected/outside-selection guards and conflict-free XDE publication. Final
+Release/Debug and isolated actual Debug-native Runtime sweeps pass 205/205; both
+clean package consumers pass, including independent direct-Modeling repair ownership.
+
 ## Prepared Q-T lifetime constraints (no ownership change)
 
 ADR-0082's [four prepared waves](BATCH_Q_T_PREPARATION.md) retain O001-O013. Definitions,

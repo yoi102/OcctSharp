@@ -1,18 +1,17 @@
 # Continuous implementation runbook: Q through W
 
-- Status: prepared for the next explicitly started implementation run; **not running**.
+- Status: **CONTINUE — Batch Q VALIDATED, finalizing local commit**, explicitly started by the user on 2026-09-05.
 - Decision: [ADR-0083](adr/0083-extended-batches-and-continuous-execution.md).
 - Queue: **Q -> R -> S -> T -> U -> V -> W**, 40 capabilities each, **280 total**.
-- Current implementation: **0/280**; completed product baseline remains B-P / Preview.15.
+- Current implementation and local validation: **40/280**; Q's 40/40 passes all required local code gates. Final documentation packaging/commit precedes R entry.
 - Machine-readable queue: [continuous-plan.json](../OcctSharp/config/batches/continuous-plan.json).
 
 ## Start and continuation contract
 
-The user requested planning now and uninterrupted sequential implementation next time.
-This checkpoint does not start feature code, a scheduler, a background process or a new
-task. On the next instruction to begin this continuous run, start the first incomplete
-batch and continue through the queue without asking routine permission after each
-successful local commit. No exact magic phrase is required.
+The user explicitly started uninterrupted sequential implementation on 2026-09-05.
+Continue the first incomplete batch through full validation and local commit, then
+advance without routine permission. This is active task work, not a scheduler,
+background service or new task.
 
 A completed batch is a durable checkpoint, **not a reason to end the authorized run**.
 After its full gates and local commit, record the next baseline delta and proceed.
@@ -81,7 +80,7 @@ paths/hash evidence; a short comment such as “tested” is insufficient.
 
 | Batch | State | Implementation | Entry baseline/delta | Exit evidence | Local completion commit |
 |---|---|---|---|---|---|
-| Q | PREPARED | 0/40 | Preview.15 frozen; revalidate at start | NOT RUN | None |
+| Q | VALIDATED | 40/40 | `3491c1e`; zero product delta from `6b04bd9`; frozen 52-root audit revalidated | Focused 25/25; Release/Debug Generator 91/91 and Runtime 205/205; actual Debug-native 205/205; full release-check, 14 packages/two consumers, 106-ID exact reconciliation; final docs packaging in progress | Completion commit being finalized; record its hash on R entry |
 | R | PREPARED | 0/40 | Preview.15 frozen; pending post-Q delta | NOT RUN | None |
 | S | PREPARED | 0/40 | Preview.15 frozen; pending post-R delta | NOT RUN | None |
 | T | PREPARED | 0/40 | Preview.15 frozen; pending post-S delta | NOT RUN | None |

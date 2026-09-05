@@ -89,6 +89,10 @@ void PreTransferStepStyleTargets(STEPCAFControl_Reader& reader)
 {
   const occ::handle<XSControl_WorkSession> work_session = reader.Reader().WS();
   if (work_session.IsNull() || work_session->Model().IsNull()) return;
+  // Establish complete product geometry before transferring isolated styled edges
+  // or faces. Otherwise their context-free cached binders can leave an assembly's
+  // shell-based surface definition empty when the product root is transferred.
+  reader.ChangeReader().TransferRoots();
   for (int32_t index = 1; index <= work_session->Model()->NbEntities(); ++index)
   {
     const occ::handle<StepVisual_StyledItem> style =

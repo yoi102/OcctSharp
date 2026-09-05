@@ -1,9 +1,9 @@
 # Batch Q: Shape repair and topology normalization
 
-- Status: scope preparation complete; implementation **0/40**; new compile/runtime gates **NOT RUN**.
+- Status: **40/40 implemented and locally validated**, delivered as one whole-batch completion commit.
 - Decision: [ADR-0082](adr/0082-broad-batch-q-through-t-preparation.md).
 - Preparation baseline: commit `6b04bd9`, package `8.0.1-preview.15`, OCCT 8.0.1.
-- Planned local package slot: `8.0.1-preview.16`; not a version change or publication.
+- Local package: `8.0.1-preview.16`, ABI 1.60, bridge 0.68.0, schema 1.13; not published.
 - Execution contract and shared gates: [Q-T preparation](BATCH_Q_T_PREPARATION.md).
 - Frozen configuration: [batch-q-shape-repair-topology.json](../OcctSharp/config/batches/batch-q-shape-repair-topology.json).
 
@@ -25,9 +25,9 @@ existing public operations; they do not imply new OCCT class roots.
 
 ## Frozen capability and acceptance matrix
 
-All rows are prepared and unimplemented. Each acceptance statement is a required future
-test, not a report that it has passed. Shared lifetime/negative/package gates apply to
-every applicable row and are not counted as additional capabilities.
+The original acceptance statements below remain unchanged. Their implementation/test
+mapping follows the matrix. Focused tests and all required whole-batch local gates pass.
+Shared lifetime/negative/package gates are not extra capabilities.
 
 | ID | Root group | New capability | Required observable acceptance |
 |---|---|---|---|
@@ -74,6 +74,60 @@ every applicable row and are not counted as additional capabilities.
 
 ## Native decision roots and dependency closure
 
+### Implementation and acceptance evidence
+
+All named tests belong to `BatchQCompletionTests`, spread across
+`BatchQCompletionTests.cs`, `BatchQRepairEdgeCaseTests.cs` and
+`BatchQRepairContractTests.cs` in `OcctSharp/tests/OcctSharp.Runtime.Tests/`.
+The integration fixture is shared verbatim with the clean facade package consumer in
+`OcctSharp/tests/Shared/BatchQRepairWorkflow.cs`. The mapping is mechanically checked:
+all 40 rows appear exactly once and all 25 named tests exist. Each row inherits the
+complete shared local gates below; no row is accepted from a test count alone.
+
+| Rows | Executable evidence | Checked outcome |
+|---|---|---|
+| 01, 02 | `SnapshotOwnsTopologyAndCopiedToleranceProvenance`; `BrokenWireShellDegeneracyAndThinFacesHaveScopedFindings` | Copied topology IDs, per-kind tolerance statistics and scoped defects; original disposal is safe. |
+| 03, 04, 07, 08 | `BrokenWireShellDegeneracyAndThinFacesHaveScopedFindings`; `IntersectionsOpenChainsAndNonplanarBoundariesRemainExplicit`; `ReversedWireEdgesAndNaturalFaceBoundsHaveDistinctRepairControls` | Broken chains/shells, reversed edges, intersecting edge pairs, sphere degeneracies and strip/small/singular faces are distinguished. |
+| 05, 06 | `FreeBoundariesMeasurePlanarLoopsAndSurviveSourceDisposal`; `IntersectionsOpenChainsAndNonplanarBoundariesRemainExplicit` | Owning closed/open wires, source edge maps, planar areas 4/100, length 48 and explicit nonplanar-area unavailability. |
+| 09, 10 | `AtomicPreviewComposesHistoryAndRejectsForeignAndUnverifiedInputs`; `InvalidPortableRecordsAndContradictoryControlsAreRejected`; `SelectedSolidFilteringDoesNotTouchSiblingAndReportsRemoval` | Immutable controls, foreign/stale/cyclic/conflicting inputs and selected-only modifications. |
+| 11, 12 | `HoleRemovalBudgetsAndProtectedWireAreAtomic`; `OverBudgetGapsAndProtectedSmallEdgesRejectAtomically` | Protected holes/edges reject atomically; area drift, tolerance and unavailable volume cannot bypass acceptance. |
+| 13, 14, 15 | `WireRepairsConnectWithinBudgetWithoutMutatingTheDamagedSource`; `ReversedWireEdgesAndNaturalFaceBoundsHaveDistinctRepairControls`; `OverBudgetGapsAndProtectedSmallEdgesRejectAtomically` | Reorder/reconnect/gap correction, four result vertices and explicit many-to-one vertex history; source fingerprint unchanged and large gaps rejected. Actual 0.0001 UV gap measured before and below 1e-7 after repair; result-bound edge pairs and missing-support unavailability are verified. |
+| 16, 22 | `SmallEdgesAndScopedTolerancesHaveVerifiedResults`; `OverBudgetGapsAndProtectedSmallEdgesRejectAtomically` | Real small-edge reduction with unchanged protected corner and changed/deleted edge history; selected vertex tolerance changes without sibling changes. |
+| 17 | `ReversedWireEdgesAndNaturalFaceBoundsHaveDistinctRepairControls` | Natural-bound completion of a finite unbounded Bezier face, separate orientation-only control retaining both hole wires. |
+| 18, 19 | `BrokenShellAndSolidOrientationsCanBeNormalized`; `NonmanifoldSewingReportsMultipleEdgesAndContinuitySplitsRealKinks` | Broken face-use orientation repaired; shell coherence and bounded-solid orientation distinguished; nonmanifold boundaries explicitly diagnosed. |
+| 20 | `SelectedSmallFaceRepairRemovesOnlyTheEligibleFace` | Selected spot removed, sibling face/area retained, deleted history and protected-face rejection. |
+| 21 | `SelectedSolidFilteringDoesNotTouchSiblingAndReportsRemoval` | Small solid removed explicitly, larger sibling unchanged and each removed solid mapped. |
+| 23, 24 | `SewingReturnsBoundaryReviewAndExplicitEditsComposeDeletions`; `SewingContiguousEdgesAndProtectedUnificationHaveActualTopologyChanges`; `NonmanifoldSewingReportsMultipleEdgesAndContinuitySplitsRealKinks` | Actual sewing, free/multiple/contiguous boundaries and owning copies with provenance. |
+| 25, 26 | `SelectedHoleRemovalAndLocationBakingPreserveTheirScopes`; `HoleRemovalBudgetsAndProtectedWireAreAtomic` | Selected hole removed; placed solid retains world bounds/volume while serialized location count becomes zero and history records changes. |
+| 27 | `AllParametricContinuityModesAndClosedEdgesAreChecked`; `NonmanifoldSewingReportsMultipleEdgesAndContinuitySplitsRealKinks` | All C0/C1/C2/C3/CN modes, G1/G2 rejection, real C0 kink split into two faces with preserved area. |
+| 28, 29, 30, 31 | `DivisionPreservesAreaAndBoundsGrowth`; `AllParametricContinuityModesAndClosedEdgesAreChecked` | Cylinder subdivision creates extra faces/edges with preserved area/validity; resource failure retains original and skips later stages. |
+| 32 | `SewingContiguousEdgesAndProtectedUnificationHaveActualTopologyChanges` | Adjacent same-domain faces actually unify; protected shared edge prevents merging and retains two faces. |
+| 33, 34 | `ReplacementHistoryAndConflictingSelectionsAreExplicit`; `SewingReturnsBoundaryReviewAndExplicitEditsComposeDeletions`; `AtomicPreviewComposesHistoryAndRejectsForeignAndUnverifiedInputs` | Replacement/deletion and composed history; type mismatch, cycles and nested/conflicting edits rejected without invented identity. |
+| 35, 36 | `AtomicPreviewComposesHistoryAndRejectsForeignAndUnverifiedInputs`; `DivisionPreservesAreaAndBoundsGrowth`; `InvalidPortableRecordsAndContradictoryControlsAreRejected`; `NativeRepairBuffersHandlesAndRepeatedOwnershipAreChecked` | One-time atomic acceptance, failed/skipped outcomes, independent accepted owners and 48 native create/release lifecycles. |
+| 37, 38, 39 | `SharedDefinitionRepairReopensStepIgesAndSelectsRealViewerDefects`; `MetadataConflictsForeignAndStaleSessionsNeverPublishPartialChanges` | One shared definition/two placements, names/colors, undo/redo, valid STEP/IGES reopen with area 200, real HWND selection/screenshots; conflicts and stale/foreign inputs reject. |
+| 40 | `PortableRecipesRebindOnlyMatchingGeometryUnitsAndRevision`; `InvalidPortableRecordsAndContradictoryControlsAreRejected` | JSON contains no handles; fingerprint/unit/revision binding, deterministic re-execution and malformed/inconsistent record rejection. |
+
+Final `artifacts/batch-q-final-focused.log` passes 25/25. The complete
+`artifacts/batch-q-release-check.log` passes Release/Debug Generator 91/91 and Runtime
+205/205, fresh-source build with 94 byte-identical generated files, both clean consumers,
+14 package audits, inventory, compatibility and local release gates. The isolated actual
+Debug-native run passes 205/205; all 35 private headers compile standalone. Native exports
+retain the old 29,402 names and add fourteen; managed signatures add 540 against
+Preview.15 and remove none. Full final inventory has 16,353 Emitted, 815 Manual,
+49,760 Blocked, 49,344 Skipped and zero pending. Final hashes/evidence are in STATUS.
+
+SC-054 records exactly 106 directly used formerly Blocked stable IDs in
+`config/batches/batch-q-manual-calls.json`. Their dependency refinement includes native-
+local inherited divider methods and wire/shape/naming helpers; it does not change the
+frozen 52 roots, 40-row denominator or previous audit. No unused overload is accepted
+merely because its class appears in the candidate set.
+The final per-edge residual checks reuse four already Emitted `ShapeAnalysis_Wire`
+gap/distance methods; they do not inflate the 106-ID Manual delta. Reconcile with
+`eng/verify-batch-manual-accounting.ps1` against the preserved Preview.15 full inventory;
+the verifier also rejects unaudited state/reason/identity changes outside the exact list.
+
+### Audited root closure
+
 | Root group | Exact inventory roots |
 |---|---|
 | Diagnosis | `ShapeAnalysis_ShapeContents`, `ShapeAnalysis_ShapeTolerance`, `ShapeAnalysis_FreeBounds`, `ShapeAnalysis_FreeBoundsProperties`, `ShapeAnalysis_Wire`, `ShapeAnalysis_WireOrder`, `ShapeAnalysis_Shell`, `ShapeAnalysis_CheckSmallFace` |
@@ -115,8 +169,11 @@ root appears here.
 
 ## Implementation ownership and source placement
 
-Native: new `Modeling/RepairDiagnostics.cpp`, `Modeling/RepairExecution.cpp` and
-`Modeling/TopologyNormalization.cpp`, with private contracts only where needed.
+Native: seven cohesive Modeling units (`RepairData`, `RepairDiagnostics`,
+`RepairBoundaries`, `RepairFixers`, `RepairExecution`, `RepairSewing` and
+`TopologyNormalization`), plus Xde `RepairPublication` and Visualization `RepairReview`.
+`Modeling/Repair.hxx` contains the private contract; the public C companion is
+`OcctSharp.Native.Repair.h`. The existing Runtime registry owns the result live set.
 Managed: Modeling-owned copied contracts/shape operations and facade workflow orchestration;
 XDE/exchange/viewer integration stays with its existing owner. Reuse Runtime/Shape,
 Modeling/Features history conventions and the one registry. No new project or DLL.
@@ -125,9 +182,9 @@ Builders, adaptors, iterators and temporary arrays remain native-call-local; cop
 results contain no borrowed pointers. Any owning result container needs a matching
 release path and source-disposal tests. Shape owners reuse the current registration
 and release family. Document labels and viewer IDs remain parent-bound and thread rules
-remain unchanged. Concurrent release/use is not newly supported. Before introducing an
-actual handle/layout/manual binding exception, update OWNERSHIP, NATIVE_ABI and
-SPECIAL_CASES with exact directly invoked stable IDs; this preparation does not add one.
+remain unchanged. Concurrent release/use is not newly supported. OWNERSHIP, NATIVE_ABI,
+SPECIAL_CASES and ADR-0084 record the implemented result owner, copied layouts,
+matching release and 106 exact direct manual calls.
 
 ## Constraints and non-goals
 
@@ -141,7 +198,7 @@ blocks publication of that result, not just its diagnostic flag.
 ## Entry and completion gates
 
 Use the shared [entry/delta protocol and validation gates](BATCH_Q_T_PREPARATION.md).
-Q is the next implementation batch; B-P and ADR-0081 are its completed baseline.
+Q was implemented against completed B-P and ADR-0081; all local gates now pass.
 The capability count stays 40 when the baseline changes; already delivered capabilities
 are prerequisites, not a reason to pad the denominator. A substantive unsupported
 capability or changed product outcome requires an explicit documented scope decision,

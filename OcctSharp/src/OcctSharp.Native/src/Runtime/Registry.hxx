@@ -2,6 +2,7 @@
 
 // Private native Runtime/Registry contract; never a public ABI or a second owner.
 #include "OcctSharp.Native.h"
+#include "OcctSharp.Native.Repair.h"
 #include <mutex>
 #include <unordered_set>
 
@@ -48,6 +49,7 @@ extern std::unordered_set<const OcctSharp_ViewerHandle*> LiveViewers;
 extern std::unordered_set<const OcctSharp_StepReaderHandle*> LiveStepReaders;
 
 extern std::unordered_set<const OcctSharp_FeatureResultHandle*> LiveFeatureResults;
+extern std::unordered_set<const OcctSharp_RepairResultHandle*> LiveRepairResults;
 
 template <typename T>
 void RegisterValue(T* handle, std::unordered_set<const T*>& live)

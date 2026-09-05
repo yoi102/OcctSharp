@@ -10,16 +10,17 @@ Batch B through Batch P are complete for their accepted local implementation sco
 Batch P closes one expanded 32-capability surface/UV workflow under ADR-0079/0080.
 It was not split into projection, seam, repair, exchange, viewer, or package checkpoints.
 
-## Next continuous run: Q-W, seven whole batches
+## Active continuous run: Q-W, seven whole batches
 
 [ADR-0083](adr/0083-extended-batches-and-continuous-execution.md) adds three more
 40-capability scopes: U advanced contour/limit-driven features, V exact partition and
 volume workflows, W light/material/texture and copied-frame review. Together with Q-T,
-scope preparation is 7/7; implementation remains 0/280. Preview.20-22 extend the planned
+scope preparation is 7/7; Q is 40/40 implemented and locally validated, overall 40/280
+validated. Preview.20-22 extend the planned
 slots only; no package/API/DLL versions change during preparation.
 
 The [continuous runbook](BATCH_CONTINUOUS_EXECUTION.md) defines Q -> R -> S -> T -> U ->
-V -> W. On the next explicit start, finish each whole batch's gates and local commit,
+V -> W. The user has started this run: finish each whole batch's gates and local commit,
 then automatically reconcile the next baseline and continue without routine confirmation.
 Failures are repaired inside their batch; hard external/authority blockers are reported.
 No scheduler, NuGet upload or GitHub push is part of this preparation or execution queue.
@@ -30,14 +31,17 @@ No scheduler, NuGet upload or GitHub push is part of this preparation or executi
 [the Q-T preparation record](BATCH_Q_T_PREPARATION.md) freeze four 40-capability waves:
 Q repair/topology normalization, R mesh authoring/editing, S guided sweeps/constrained
 surfaces and T parametric recompute/persistent topology selection. Scope preparation is
-4/4; implementation is 0/160. These are broader than P's 32-capability wave, not small
+4/4; implementation and local validation are 40/160 (Q). These are broader than P's 32-capability wave, not small
 per-family checkpoints and not a claim to exhaust all remaining OCCT APIs.
 
 Implement Q -> R -> S -> T, finishing all local gates and one local commit for each.
 Q/R/S reuse the completed baseline; T has real dependencies on their recipe/result
 contracts. All scopes were audited against Preview.15 and need explicit baseline-delta
 revalidation after preceding implementation commits. Preview.16-19 are planned slots
-only. Preparation changes no product code, runtime bytes or version properties.
+only at preparation. Q delivers Preview.16 / ABI 1.60 / bridge 0.68.0 with schema 1.13;
+focused 25/25, Release/Debug Generator 91/91 and Runtime 205/205, actual Debug-native,
+both consumers, clean regeneration, inventory and all local release gates pass. R-W
+implementation follows Q's local completion commit after explicit baseline reconciliation.
 Keep the existing modules, facade, source boundaries and one native DLL; no automatic
 NuGet publication or GitHub push.
 
@@ -140,7 +144,16 @@ signing, and NuGet publication remain separate
 release-readiness work rather than
 unfinished batch implementation.
 
-## Current release baseline: Preview.15 local completion
+## Current release baseline: Preview.16 local validation
+
+ADR-0084 completes Q's 40-capability source-bound repair and topology normalization
+wave on top of Preview.15: copied diagnostics, selected/protected staged operations,
+measured residuals/budgets, composed history, atomic acceptance/publication and real
+STEP/IGES/HWND delivery. Fourteen local packages retain the same twelve-module/facade/
+single-native-DLL structure. Every required local gate passes; signing, hosted CI,
+NuGet publication and GitHub push remain NOT RUN and outside automatic batch delivery.
+
+### Previous baseline: Preview.15
 
 ADR-0079/0080 complete the package-visible Batch P wave while retaining ADR-0074's managed
 module graph and one-native-DLL architecture. Preview.15 adds surface/UV inspection,

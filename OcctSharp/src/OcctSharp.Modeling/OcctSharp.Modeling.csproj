@@ -2,6 +2,7 @@
   <Import Project="..\OcctSharp.Module.props" />
   <PropertyGroup><Description>OCCT topology, BRep, construction, and modeling bindings for OcctSharp.</Description></PropertyGroup>
   <ItemGroup>
+    <Compile Include="Repair\**\*.cs" />
     <Compile Include="..\OcctSharp\Generated\Modeling\**\*.cs" Link="Generated\%(RecursiveDir)%(Filename)%(Extension)" />
     <Compile Include="..\OcctSharp\Interop\**\*.cs" Exclude="..\OcctSharp\Interop\NativeError.cs;..\OcctSharp\Interop\NativeLibraryResolver.cs;..\OcctSharp\Interop\NativeStatus.cs" Link="Interop\%(RecursiveDir)%(Filename)%(Extension)" />
     <Compile Include="..\OcctSharp\Shape.cs" Link="Shape.cs" />

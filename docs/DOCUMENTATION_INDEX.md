@@ -11,7 +11,7 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   domain-owned private contracts and independent-compilation/ABI checks under ADR-0081.
 - [Repository layout](REPOSITORY_LAYOUT.md) — physical separation of documentation
   and code-related files.
-- [Roadmap](ROADMAP.md) — completed B-P, prepared Q-W and local-release boundary.
+- [Roadmap](ROADMAP.md) — completed B-P, locally validated Q, prepared R-W and local-release boundary.
 - [Continuous Q-W execution](BATCH_CONTINUOUS_EXECUTION.md) — seven whole 40-capability
   batches, next-run automatic advancement, per-batch gates/commits and recovery journal.
 - [U-W additional preparation](BATCH_U_W_PREPARATION.md) — 120 further capabilities,
@@ -25,7 +25,7 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Q-T broad-batch preparation](BATCH_Q_T_PREPARATION.md) — four prepared 40-capability
   waves, deduplicated root audit, source/lifetime closure and explicit baseline-delta protocol.
 - [Batch Q repair and topology](BATCH_Q_SHAPE_REPAIR_TOPOLOGY_GAP_INVENTORY.md) — protected
-  staged healing, diagnostics, normalization and composed history; prepared, 0/40 implemented.
+  staged healing, diagnostics, normalization and composed history; 40/40 locally validated.
 - [Batch R mesh authoring/editing](BATCH_R_MESH_AUTHORING_EDITING_GAP_INVENTORY.md) — caller
   arrays, attributed edits/remapping and discrete-model delivery; prepared, 0/40 implemented.
 - [Batch S guided sweep/constrained surfaces](BATCH_S_GUIDED_SWEEP_CONSTRAINED_SURFACE_GAP_INVENTORY.md)
@@ -89,6 +89,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   mixed loops, planar topology/features, STEP/IGES, and local validation contract.
 - [Preview.15 release notes](RELEASE_NOTES_8.0.1_PREVIEW_15.md) — Batch P surface/UV,
   projection, repair, trimmed topology and source-organization boundaries.
+- [Preview.16 release notes](RELEASE_NOTES_8.0.1_PREVIEW_16.md) — Batch Q source-bound
+  repair previews, budgets, composed history, transactional publication and defect review.
 - [Preview.13 release notes](RELEASE_NOTES_8.0.1_PREVIEW_13.md) — complete Batch N
   IGESCAF/XDE metadata, Unicode paths, mixed-format composition, viewer, and local evidence.
 - [Preview.12 release notes](RELEASE_NOTES_8.0.1_PREVIEW_12.md) — STEP/XCAF style

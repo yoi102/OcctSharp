@@ -3,7 +3,7 @@
 - Date: 2026-09-05.
 - Decision: [ADR-0082](adr/0082-broad-batch-q-through-t-preparation.md).
 - Scope preparation: **4/4 batches**, **160 capability rows** (40 per batch).
-- Implementation: **0/160**. No new API, DLL, ABI, package version or binding disposition is changed.
+- Active implementation and local validation: **40/160**, all in Q. The frozen preparation evidence below is unchanged.
 - Baseline: `6b04bd9`, completed B-P plus full historical Native extraction (ADR-0081).
 - Delivery after implementation is one local checked commit per whole batch. No automatic NuGet publication or GitHub push.
 
@@ -22,13 +22,14 @@ These four batches are a high-value next tranche, **not all remaining OCCT migra
 
 | Order | Whole-batch outcome | New scope | Planned local version | Implementation |
 |---|---|---|---|---|
-| Q | [Shape repair and topology normalization](BATCH_Q_SHAPE_REPAIR_TOPOLOGY_GAP_INVENTORY.md) | 40 capabilities | 8.0.1-preview.16 | 0/40 |
+| Q | [Shape repair and topology normalization](BATCH_Q_SHAPE_REPAIR_TOPOLOGY_GAP_INVENTORY.md) | 40 capabilities | 8.0.1-preview.16 | 40/40 locally validated |
 | R | [Mesh authoring editing and discrete model delivery](BATCH_R_MESH_AUTHORING_EDITING_GAP_INVENTORY.md) | 40 capabilities | 8.0.1-preview.17 | 0/40 |
 | S | [Guided sweeps and constrained surface authoring](BATCH_S_GUIDED_SWEEP_CONSTRAINED_SURFACE_GAP_INVENTORY.md) | 40 capabilities | 8.0.1-preview.18 | 0/40 |
 | T | [Parametric document recompute and persistent topology selection](BATCH_T_PARAMETRIC_DOCUMENT_RECOMPUTE_GAP_INVENTORY.md) | 40 capabilities | 8.0.1-preview.19 | 0/40 |
 
-The versions reserve the next OCCT-aligned preview slots under ADR-0065; current package
-`8.0.1-preview.15`, ABI `1.59`, bridge `0.67.0` and schema `1.13` remain unchanged.
+At preparation the versions reserved OCCT-aligned slots under ADR-0065 against package
+`8.0.1-preview.15`, ABI `1.59`, bridge `0.67.0` and schema `1.13`. Q now targets
+Preview.16 / ABI 1.60 / bridge 0.68.0, retaining schema 1.13; all required local gates pass.
 If a separate authorized fix consumes a preview slot, explicitly revise the preparation
 record before implementation. Do not infer ABI/bridge numbers from package counters.
 

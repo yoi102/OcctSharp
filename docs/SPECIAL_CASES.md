@@ -1,5 +1,143 @@
 # Special Cases
 
+## SC-054: Source-bound repair and topology normalization
+
+- Status: implemented; whole-batch Release/Debug/package acceptance in progress (ADR-0084).
+- Scope: exactly 106 directly used baseline Blocked stable IDs for the Q closure.
+  The 52-root candidate audit is not a migration count; existing Emitted/Manual
+  declarations and unrelated overloads keep their dispositions.
+- Reason: diagnosis, fixers, ReShape/sewing/division histories and XDE publication
+  require native-local algorithms, scoped selectors, owning results and atomic
+  acceptance. Containers and mutable OCCT algorithm objects must not cross the ABI.
+- Contract: one repair-result registry category with matching release, owning deep
+  snapshots, copied topology/diagnostics/history, immutable recipes, explicit unknown
+  mappings, protected selections, and measured acceptance budgets. Twenty typed stage
+  contracts compose the single 40-capability batch.
+- Additional direct support beyond the frozen decision roots includes the inherited
+  ShapeUpgrade_ShapeDivide methods, BRepTools_WireExplorer, ShapeExtend_WireData,
+  TNaming_Builder and existing ShapeBuild_Edge copy support. They reuse the current
+  TKShHealing/TKTopAlgo/TKCAF toolkit closure. This is a dependency refinement, not a
+  capability-denominator change. The frozen audit/config remains unchanged.
+- STEP recovery refinement: transfer product roots before independent style targets;
+  context-free edge/face transfer can otherwise leave shell-based shared definitions
+  empty. Keep disconnected-style recovery and its existing regressions.
+- Validation: 25 focused tests pass, including repaired STEP/IGES assemblies, real HWND
+  review, success/negative geometry, exact ownership and repeated-release checks.
+  Full final gate evidence is recorded in STATUS only after running it.
+- Upgrade impact: recheck pcurve-copy semantics, wire traversal/order, contour removal,
+  SameParameter after division, fixer statuses, signed shell versus solid orientation,
+  all selected overloads, and XCAF transfer ordering.
+- Removal criterion: generated contracts must preserve these same lifetime, mapping,
+  atomicity and end-to-end package guarantees before replacing this exception.
+- Exact IDs:
+
+  1. `c:@S@BRepBuilderAPI_Sewing@F@ContigousEdge#I#1`
+  2. `c:@S@BRepBuilderAPI_Sewing@F@DeletedFace#I#1`
+  3. `c:@S@BRepBuilderAPI_Sewing@F@FreeEdge#I#1`
+  4. `c:@S@BRepBuilderAPI_Sewing@F@IsModified#&1$@S@TopoDS_Shape#1`
+  5. `c:@S@BRepBuilderAPI_Sewing@F@IsModifiedSubShape#&1$@S@TopoDS_Shape#1`
+  6. `c:@S@BRepBuilderAPI_Sewing@F@Modified#&1$@S@TopoDS_Shape#1`
+  7. `c:@S@BRepBuilderAPI_Sewing@F@ModifiedSubShape#&1$@S@TopoDS_Shape#1`
+  8. `c:@S@BRepBuilderAPI_Sewing@F@MultipleEdge#I#1`
+  9. `c:@S@BRepGProp@F@SurfaceProperties#&1$@S@TopoDS_Shape#&$@S@GProp_GProps#b#b#S`
+  10. `c:@S@BRepGProp@F@VolumeProperties#&1$@S@TopoDS_Shape#&$@S@GProp_GProps#b#b#b#S`
+  11. `c:@S@BRepLib@F@UpdateTolerances#&1$@S@TopoDS_Shape#b#S`
+  12. `c:@S@BRepTools@F@Write#&1$@S@TopoDS_Shape#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#b#b#$@E@TopTools_FormatVersion#&1$@S@Message_ProgressRange#S`
+  13. `c:@S@BRepTools_History@F@Generated#&1$@S@TopoDS_Shape#1`
+  14. `c:@S@BRepTools_History@F@IsRemoved#&1$@S@TopoDS_Shape#1`
+  15. `c:@S@BRepTools_History@F@Modified#&1$@S@TopoDS_Shape#1`
+  16. `c:@S@BRepTools_ReShape@F@IsRecorded#&1$@S@TopoDS_Shape#1`
+  17. `c:@S@BRepTools_ReShape@F@Value#&1$@S@TopoDS_Shape#1`
+  18. `c:@S@BRepTools_WireExplorer@F@BRepTools_WireExplorer#&1$@S@TopoDS_Wire#`
+  19. `c:@S@BRep_Tool@F@Pnt#&1$@S@TopoDS_Vertex#S`
+  20. `c:@S@ShapeAnalysis_CheckSmallFace@F@CheckSpotFace#&1$@S@TopoDS_Face#d#`
+  21. `c:@S@ShapeAnalysis_CheckSmallFace@F@CheckStripFace#&1$@S@TopoDS_Face#&$@S@TopoDS_Edge#S2_#d#`
+  22. `c:@S@ShapeAnalysis_CheckSmallFace@F@ShapeAnalysis_CheckSmallFace#`
+  23. `c:@S@ShapeAnalysis_FreeBounds@F@GetClosedWires#1`
+  24. `c:@S@ShapeAnalysis_FreeBounds@F@GetOpenWires#1`
+  25. `c:@S@ShapeAnalysis_FreeBounds@F@ShapeAnalysis_FreeBounds#&1$@S@TopoDS_Shape#b#b#b#`
+  26. `c:@S@ShapeAnalysis_Shell@F@BadEdges#1`
+  27. `c:@S@ShapeAnalysis_Shell@F@CheckOrientedShells#&1$@S@TopoDS_Shape#b#b#`
+  28. `c:@S@ShapeAnalysis_Shell@F@HasBadEdges#1`
+  29. `c:@S@ShapeAnalysis_Shell@F@ShapeAnalysis_Shell#`
+  30. `c:@S@ShapeAnalysis_Wire@F@ShapeAnalysis_Wire#&1$@S@TopoDS_Wire#&1$@S@TopoDS_Face#d#`
+  31. `c:@S@ShapeAnalysis_Wire@F@WireData#1`
+  32. `c:@S@ShapeAnalysis_WireOrder@F@Add#&1$@S@gp_XYZ#S0_#`
+  33. `c:@S@ShapeAnalysis_WireOrder@F@IsDone#1`
+  34. `c:@S@ShapeAnalysis_WireOrder@F@NbChains#1`
+  35. `c:@S@ShapeAnalysis_WireOrder@F@NbEdges#1`
+  36. `c:@S@ShapeAnalysis_WireOrder@F@Ordered#I#1`
+  37. `c:@S@ShapeAnalysis_WireOrder@F@Perform#b#`
+  38. `c:@S@ShapeAnalysis_WireOrder@F@SetChains#d#`
+  39. `c:@S@ShapeAnalysis_WireOrder@F@ShapeAnalysis_WireOrder#b#d#b#`
+  40. `c:@S@ShapeBuild_ReShape@F@Apply#&1$@S@TopoDS_Shape#$@E@TopAbs_ShapeEnum#`
+  41. `c:@S@ShapeExtend_WireData@F@Edge#I#1`
+  42. `c:@S@ShapeFix_Face@F@FixAddNaturalBoundMode#`
+  43. `c:@S@ShapeFix_Face@F@FixOrientationMode#`
+  44. `c:@S@ShapeFix_Face@F@FixSmallAreaWireMode#`
+  45. `c:@S@ShapeFix_Face@F@FixWireMode#`
+  46. `c:@S@ShapeFix_Face@F@RemoveSmallAreaFaceMode#`
+  47. `c:@S@ShapeFix_FixSmallFace@F@Init#&1$@S@TopoDS_Shape#`
+  48. `c:@S@ShapeFix_FixSmallFace@F@Shape#`
+  49. `c:@S@ShapeFix_FixSmallSolid@F@Remove#&1$@S@TopoDS_Shape#&1$@N@opencascade@S@handle>#$@S@ShapeBuild_ReShape#1`
+  50. `c:@S@ShapeFix_ShapeTolerance@F@LimitTolerance#&1$@S@TopoDS_Shape#d#d#$@E@TopAbs_ShapeEnum#1`
+  51. `c:@S@ShapeFix_ShapeTolerance@F@ShapeFix_ShapeTolerance#`
+  52. `c:@S@ShapeFix_Shell@F@FixFaceMode#`
+  53. `c:@S@ShapeFix_Shell@F@FixFaceOrientation#&1$@S@TopoDS_Shell#b#b#`
+  54. `c:@S@ShapeFix_Solid@F@CreateOpenSolidMode#`
+  55. `c:@S@ShapeFix_Solid@F@FixShellMode#`
+  56. `c:@S@ShapeFix_Solid@F@FixShellOrientationMode#`
+  57. `c:@S@ShapeFix_Solid@F@Perform#&1$@S@Message_ProgressRange#`
+  58. `c:@S@ShapeFix_Solid@F@ShapeFix_Solid#&1$@S@TopoDS_Solid#`
+  59. `c:@S@ShapeFix_Solid@F@Solid#1`
+  60. `c:@S@ShapeFix_Wire@F@ClosedWireMode#`
+  61. `c:@S@ShapeFix_Wire@F@Load#&1$@S@TopoDS_Wire#`
+  62. `c:@S@ShapeFix_Wire@F@ModifyGeometryMode#`
+  63. `c:@S@ShapeFix_Wire@F@ModifyTopologyMode#`
+  64. `c:@S@ShapeFix_Wire@F@SetFace#&1$@S@TopoDS_Face#`
+  65. `c:@S@ShapeFix_Wire@F@Wire#1`
+  66. `c:@S@ShapeFix_Wireframe@F@ModeDropSmallEdges#`
+  67. `c:@S@ShapeFix_Wireframe@F@Shape#`
+  68. `c:@S@ShapeFix_Wireframe@F@ShapeFix_Wireframe#&1$@S@TopoDS_Shape#`
+  69. `c:@S@ShapeUpgrade_RemoveInternalWires@F@GetResult#1`
+  70. `c:@S@ShapeUpgrade_RemoveInternalWires@F@MinArea#`
+  71. `c:@S@ShapeUpgrade_RemoveInternalWires@F@Perform#&1$@S@NCollection_Sequence>#$@S@TopoDS_Shape#`
+  72. `c:@S@ShapeUpgrade_RemoveInternalWires@F@RemoveFaceMode#`
+  73. `c:@S@ShapeUpgrade_RemoveInternalWires@F@RemovedWires#1`
+  74. `c:@S@ShapeUpgrade_RemoveInternalWires@F@ShapeUpgrade_RemoveInternalWires#&1$@S@TopoDS_Shape#`
+  75. `c:@S@ShapeUpgrade_RemoveLocations@F@GetResult#1`
+  76. `c:@S@ShapeUpgrade_RemoveLocations@F@ModifiedShape#&1$@S@TopoDS_Shape#1`
+  77. `c:@S@ShapeUpgrade_RemoveLocations@F@Remove#&1$@S@TopoDS_Shape#`
+  78. `c:@S@ShapeUpgrade_ShapeDivide@F@GetContext#1`
+  79. `c:@S@ShapeUpgrade_ShapeDivide@F@Perform#b#`
+  80. `c:@S@ShapeUpgrade_ShapeDivide@F@Result#1`
+  81. `c:@S@ShapeUpgrade_ShapeDivide@F@SetMaxTolerance#d#`
+  82. `c:@S@ShapeUpgrade_ShapeDivide@F@SetMinTolerance#d#`
+  83. `c:@S@ShapeUpgrade_ShapeDivide@F@SetPrecision#d#`
+  84. `c:@S@ShapeUpgrade_ShapeDivide@F@Status#$@E@ShapeExtend_Status#1`
+  85. `c:@S@ShapeUpgrade_ShapeDivideAngle@F@ShapeUpgrade_ShapeDivideAngle#d#&1$@S@TopoDS_Shape#`
+  86. `c:@S@ShapeUpgrade_ShapeDivideArea@F@MaxArea#`
+  87. `c:@S@ShapeUpgrade_ShapeDivideArea@F@ShapeUpgrade_ShapeDivideArea#&1$@S@TopoDS_Shape#`
+  88. `c:@S@ShapeUpgrade_ShapeDivideClosed@F@SetNbSplitPoints#I#`
+  89. `c:@S@ShapeUpgrade_ShapeDivideClosed@F@ShapeUpgrade_ShapeDivideClosed#&1$@S@TopoDS_Shape#`
+  90. `c:@S@ShapeUpgrade_ShapeDivideClosedEdges@F@SetNbSplitPoints#I#`
+  91. `c:@S@ShapeUpgrade_ShapeDivideClosedEdges@F@ShapeUpgrade_ShapeDivideClosedEdges#&1$@S@TopoDS_Shape#`
+  92. `c:@S@ShapeUpgrade_ShapeDivideContinuity@F@SetBoundaryCriterion#$@E@GeomAbs_Shape#`
+  93. `c:@S@ShapeUpgrade_ShapeDivideContinuity@F@SetPCurveCriterion#$@E@GeomAbs_Shape#`
+  94. `c:@S@ShapeUpgrade_ShapeDivideContinuity@F@SetSurfaceCriterion#$@E@GeomAbs_Shape#`
+  95. `c:@S@ShapeUpgrade_ShapeDivideContinuity@F@SetTolerance#d#`
+  96. `c:@S@ShapeUpgrade_ShapeDivideContinuity@F@SetTolerance2d#d#`
+  97. `c:@S@ShapeUpgrade_ShapeDivideContinuity@F@ShapeUpgrade_ShapeDivideContinuity#&1$@S@TopoDS_Shape#`
+  98. `c:@S@ShapeUpgrade_UnifySameDomain@F@History#`
+  99. `c:@S@ShapeUpgrade_UnifySameDomain@F@KeepShape#&1$@S@TopoDS_Shape#`
+  100. `c:@S@TNaming_Builder@F@Modify#&1$@S@TopoDS_Shape#S0_#`
+  101. `c:@S@TopExp@F@MapShapes#&1$@S@TopoDS_Shape#&$@S@NCollection_IndexedMap>#S1_#$@S@TopTools_ShapeMapHasher#b#b#S`
+  102. `c:@S@TopExp@F@Vertices#&1$@S@TopoDS_Wire#&$@S@TopoDS_Vertex#S2_#S`
+  103. `c:@S@XCAFDoc_ShapeTool@F@AddSubShape#&1$@S@TDF_Label#&1$@S@TopoDS_Shape#1`
+  104. `c:@S@XCAFDoc_ShapeTool@F@GetShape#&1$@S@TDF_Label#S`
+  105. `c:@S@XCAFDoc_ShapeTool@F@GetSubShapes#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#S`
+  106. `c:@S@XCAFDoc_ShapeTool@F@IsSimpleShape#&1$@S@TDF_Label#S`
+
 ## SC-053: Surface UV, pcurves and owning trimmed topology
 
 - Decision: ADR-0079 and ADR-0080; Preview.15, ABI 1.59, bridge 0.67.0, schema 1.13.

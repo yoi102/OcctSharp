@@ -1,5 +1,24 @@
 # Native ABI
 
+## ABI 1.60 / Preview.16
+
+Batch Q adds fourteen C exports in `OcctSharp.Native.Repair.h`, bridge 0.68.0,
+without changing previous signatures or schema 1.13. Snapshot copy/serialization,
+topology/diagnostic/boundary buffers, stage execution and result shape/history/findings/
+release use the existing status, TLS diagnostics and owning Shape category. A single
+registered repair-result owner has a matching release. A retrieved shape survives its
+result owner's disposal; public snapshot/acceptance copies isolate later mutation.
+XDE publication and viewer selection retain document/creating-thread ownership.
+
+Windows x64 sequential layouts are: RepairTopology 24, RepairFinding 32,
+RepairMetrics 48, RepairInspectionOptions 32, RepairStage 56, RepairRelation 16,
+RepairBoundary 40 bytes. Native static assertions and managed layout tests agree.
+Indices are zero-based; -1 means unavailable/no related topology. Buffers use
+count/capacity/copy semantics, and null output plus zero capacity queries the count.
+Selections, protection and replacement arrays are call-borrowed, never retained.
+Null result release succeeds; stale/foreign handles fail before dereference.
+Concurrent use/release is not supported. No C++ containers/layouts cross the C ABI.
+
 ## ABI 1.59 / Preview.15
 
 Batch P uses bridge 0.67.0 and schema 1.13. The additive surface ABI is declared in

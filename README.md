@@ -5,7 +5,7 @@ versioned native C ABI, generated low-level bindings, and friendly managed CAD A
 modeling, STEP/IGES/STL exchange, XDE assemblies and metadata, meshing, inspection, and
 Windows visualization.
 
-Current local preview: `8.0.1-preview.15` for Windows x64. The NuGet graph contains 12 managed
+Current local preview: `8.0.1-preview.16` for Windows x64. The NuGet graph contains 12 managed
 modules, the `OcctSharp` compatibility/facade package, and one shared
 `OcctSharp.Native.win-x64` runtime package. The native package places the complete
 62-DLL runtime in the application's `occt/` directory; no machine-wide OCCT installation
@@ -14,17 +14,17 @@ or `PATH` change is required.
 ## Install
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.15 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp --version 8.0.1-preview.16 --source ./OcctSharp/artifacts/packages
 ```
 
 A narrow consumer can reference a module directly, for example:
 
 ```powershell
-dotnet add package OcctSharp.Modeling --version 8.0.1-preview.15 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.16 --source ./OcctSharp/artifacts/packages
 ```
 
 The supported runtime baseline is .NET 10, Windows x64, and OCCT 8.0.1.
-Preview.15 is a local-only build; it is not published on NuGet.org. Create the
+Preview.16 is a local-only build; it is not published on NuGet.org. Create the
 local package feed with `OcctSharp/eng/pack.ps1` using the contributor toolchain, or run
 the repository samples directly with the committed runtime.
 
@@ -90,6 +90,41 @@ world coordinates; UV values are surface-local. UV offset distance is not world-
 distance. Definitions and reports are copied; returned shapes and repair/split result
 containers must be disposed. See the [32-capability Batch P scope](docs/BATCH_P_SURFACE_UV_CURVE_GAP_INVENTORY.md)
 and [Preview.15 notes](docs/RELEASE_NOTES_8.0.1_PREVIEW_15.md).
+
+## Inspect and preview a bounded repair
+
+```csharp
+using OcctSharp;
+
+using Shape original = ShapeExchange.ReadStep("part.step");
+using RepairSnapshot source = RepairSnapshot.Create(original, unit: "mm");
+RepairPlan plan = new(source, [
+    new("Normalize shells", new ShellNormalizationRepair()),
+    new("Normalize solid orientation", new SolidNormalizationRepair())],
+    tolerance: new(Minimum: 1e-7, Maximum: 1e-3),
+    budget: new(MaximumTolerance: 1e-3, MaximumRelativeVolumeChange: 0.001));
+using RepairPreview preview = ShapeRepair.Preview(source, plan);
+
+if (preview.CanAccept)
+{
+    using Shape repaired = preview.Accept();
+    ShapeExchange.WriteStep(repaired, "repaired.step");
+}
+else
+{
+    foreach (RepairBudgetCheck check in preview.BudgetChecks)
+        Console.WriteLine($"{check.Name}: {check.State}");
+}
+```
+
+Snapshots and previews own independent copies. Selections bind to a snapshot/revision;
+history reports modified/generated/deleted/unknown mappings, never native addresses.
+An unavailable required budget (for example closed volume for an open shell) blocks
+acceptance. Hole/small-feature removal is opt-in. `RepairDocumentSession` publishes a
+shared XDE definition transactionally only when metadata mapping is unambiguous;
+`RepairViewerReview` selects copied defects and rejects stale review selections.
+See [Batch Q's 40 capabilities](docs/BATCH_Q_SHAPE_REPAIR_TOPOLOGY_GAP_INVENTORY.md)
+and [Preview.16 notes](docs/RELEASE_NOTES_8.0.1_PREVIEW_16.md).
 
 ## Read ordinary STEP geometry
 

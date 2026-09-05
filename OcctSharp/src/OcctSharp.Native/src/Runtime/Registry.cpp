@@ -49,4 +49,5 @@ std::unordered_set<const OcctSharp_ViewerHandle*> LiveViewers;
 std::unordered_set<const OcctSharp_StepReaderHandle*> LiveStepReaders;
 
 std::unordered_set<const OcctSharp_FeatureResultHandle*> LiveFeatureResults;
+std::unordered_set<const OcctSharp_RepairResultHandle*> LiveRepairResults;
 }

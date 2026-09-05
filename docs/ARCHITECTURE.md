@@ -1,5 +1,17 @@
 # Architecture
 
+## Batch Q repair boundary
+
+ADR-0084 adds Modeling-owned immutable repair snapshots/plans, typed stages and
+owning previews with copied diagnostics, history and budget verdicts. Cross-family
+document publication and defect review stay in the facade. Nine cohesive native
+units add seven Modeling, one Xde and one Visualization responsibility; the unique
+Runtime registry owns the repair-result live set. No project or DLL is added.
+Geometry copies preserve occurrence orientation and external pcurve support; contour
+ordering, SameParameter repair and geometric budgets are verified on private results.
+The existing STEP style-recovery path now transfers product roots before independent
+style targets to preserve shell-based shared assembly definitions.
+
 ## Prepared U-W extensions
 
 [ADR-0083](adr/0083-extended-batches-and-continuous-execution.md) adds U contour/local
@@ -18,8 +30,8 @@ belong in Modeling, R data in MeshData and algorithms/adapters in existing highe
 S in cohesive Modeling/Surfaces units, T storage/naming in Documents. T feature execution
 and XDE/viewer coordination belong in the existing facade/higher owners, so Documents
 does not gain reverse dependencies on Mesh/XDE/Visualization. R MeshData similarly must
-not reference Modeling or XDE material objects. All proposed files are future work,
-not implemented source. See [Q-T preparation](BATCH_Q_T_PREPARATION.md).
+not reference Modeling or XDE material objects. Q is now implemented as described above;
+R/S/T placements remain planned. See [Q-T preparation](BATCH_Q_T_PREPARATION.md).
 
 ## Full historical native source extraction
 

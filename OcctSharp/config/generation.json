@@ -3001,6 +3001,430 @@
     {
       "stableId": "c:@S@gp_Vec@F@Z#1",
       "specialCaseId": "SC-053"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@ContigousEdge#I#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@DeletedFace#I#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@FreeEdge#I#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@IsModified#&1$@S@TopoDS_Shape#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@IsModifiedSubShape#&1$@S@TopoDS_Shape#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@Modified#&1$@S@TopoDS_Shape#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@ModifiedSubShape#&1$@S@TopoDS_Shape#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@BRepBuilderAPI_Sewing@F@MultipleEdge#I#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@BRepGProp@F@SurfaceProperties#&1$@S@TopoDS_Shape#&$@S@GProp_GProps#b#b#S",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@BRepGProp@F@VolumeProperties#&1$@S@TopoDS_Shape#&$@S@GProp_GProps#b#b#b#S",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@BRepLib@F@UpdateTolerances#&1$@S@TopoDS_Shape#b#S",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@BRepTools@F@Write#&1$@S@TopoDS_Shape#&$@N@std@S@basic_ostream>#C#$@N@std@S@char_traits>#C#b#b#$@E@TopTools_FormatVersion#&1$@S@Message_ProgressRange#S",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@Generated#&1$@S@TopoDS_Shape#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@IsRemoved#&1$@S@TopoDS_Shape#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@BRepTools_History@F@Modified#&1$@S@TopoDS_Shape#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@BRepTools_ReShape@F@IsRecorded#&1$@S@TopoDS_Shape#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@BRepTools_ReShape@F@Value#&1$@S@TopoDS_Shape#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@BRepTools_WireExplorer@F@BRepTools_WireExplorer#&1$@S@TopoDS_Wire#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Pnt#&1$@S@TopoDS_Vertex#S",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_CheckSmallFace@F@CheckSpotFace#&1$@S@TopoDS_Face#d#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_CheckSmallFace@F@CheckStripFace#&1$@S@TopoDS_Face#&$@S@TopoDS_Edge#S2_#d#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_CheckSmallFace@F@ShapeAnalysis_CheckSmallFace#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_FreeBounds@F@GetClosedWires#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_FreeBounds@F@GetOpenWires#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_FreeBounds@F@ShapeAnalysis_FreeBounds#&1$@S@TopoDS_Shape#b#b#b#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Shell@F@BadEdges#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Shell@F@CheckOrientedShells#&1$@S@TopoDS_Shape#b#b#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Shell@F@HasBadEdges#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Shell@F@ShapeAnalysis_Shell#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@ShapeAnalysis_Wire#&1$@S@TopoDS_Wire#&1$@S@TopoDS_Face#d#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_Wire@F@WireData#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_WireOrder@F@Add#&1$@S@gp_XYZ#S0_#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_WireOrder@F@IsDone#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_WireOrder@F@NbChains#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_WireOrder@F@NbEdges#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_WireOrder@F@Ordered#I#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_WireOrder@F@Perform#b#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_WireOrder@F@SetChains#d#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeAnalysis_WireOrder@F@ShapeAnalysis_WireOrder#b#d#b#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeBuild_ReShape@F@Apply#&1$@S@TopoDS_Shape#$@E@TopAbs_ShapeEnum#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeExtend_WireData@F@Edge#I#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@FixAddNaturalBoundMode#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@FixOrientationMode#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@FixSmallAreaWireMode#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@FixWireMode#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Face@F@RemoveSmallAreaFaceMode#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_FixSmallFace@F@Init#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_FixSmallFace@F@Shape#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_FixSmallSolid@F@Remove#&1$@S@TopoDS_Shape#&1$@N@opencascade@S@handle>#$@S@ShapeBuild_ReShape#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_ShapeTolerance@F@LimitTolerance#&1$@S@TopoDS_Shape#d#d#$@E@TopAbs_ShapeEnum#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_ShapeTolerance@F@ShapeFix_ShapeTolerance#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Shell@F@FixFaceMode#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Shell@F@FixFaceOrientation#&1$@S@TopoDS_Shell#b#b#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Solid@F@CreateOpenSolidMode#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Solid@F@FixShellMode#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Solid@F@FixShellOrientationMode#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Solid@F@Perform#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Solid@F@ShapeFix_Solid#&1$@S@TopoDS_Solid#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Solid@F@Solid#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@ClosedWireMode#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@Load#&1$@S@TopoDS_Wire#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@ModifyGeometryMode#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@ModifyTopologyMode#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@SetFace#&1$@S@TopoDS_Face#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wire@F@Wire#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wireframe@F@ModeDropSmallEdges#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wireframe@F@Shape#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeFix_Wireframe@F@ShapeFix_Wireframe#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_RemoveInternalWires@F@GetResult#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_RemoveInternalWires@F@MinArea#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_RemoveInternalWires@F@Perform#&1$@S@NCollection_Sequence>#$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_RemoveInternalWires@F@RemoveFaceMode#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_RemoveInternalWires@F@RemovedWires#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_RemoveInternalWires@F@ShapeUpgrade_RemoveInternalWires#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_RemoveLocations@F@GetResult#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_RemoveLocations@F@ModifiedShape#&1$@S@TopoDS_Shape#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_RemoveLocations@F@Remove#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivide@F@GetContext#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivide@F@Perform#b#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivide@F@Result#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivide@F@SetMaxTolerance#d#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivide@F@SetMinTolerance#d#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivide@F@SetPrecision#d#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivide@F@Status#$@E@ShapeExtend_Status#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideAngle@F@ShapeUpgrade_ShapeDivideAngle#d#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideArea@F@MaxArea#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideArea@F@ShapeUpgrade_ShapeDivideArea#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideClosed@F@SetNbSplitPoints#I#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideClosed@F@ShapeUpgrade_ShapeDivideClosed#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideClosedEdges@F@SetNbSplitPoints#I#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideClosedEdges@F@ShapeUpgrade_ShapeDivideClosedEdges#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideContinuity@F@SetBoundaryCriterion#$@E@GeomAbs_Shape#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideContinuity@F@SetPCurveCriterion#$@E@GeomAbs_Shape#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideContinuity@F@SetSurfaceCriterion#$@E@GeomAbs_Shape#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideContinuity@F@SetTolerance#d#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideContinuity@F@SetTolerance2d#d#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_ShapeDivideContinuity@F@ShapeUpgrade_ShapeDivideContinuity#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_UnifySameDomain@F@History#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@ShapeUpgrade_UnifySameDomain@F@KeepShape#&1$@S@TopoDS_Shape#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@TNaming_Builder@F@Modify#&1$@S@TopoDS_Shape#S0_#",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@TopExp@F@MapShapes#&1$@S@TopoDS_Shape#&$@S@NCollection_IndexedMap>#S1_#$@S@TopTools_ShapeMapHasher#b#b#S",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@TopExp@F@Vertices#&1$@S@TopoDS_Wire#&$@S@TopoDS_Vertex#S2_#S",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@AddSubShape#&1$@S@TDF_Label#&1$@S@TopoDS_Shape#1",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetShape#&1$@S@TDF_Label#S",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@GetSubShapes#&1$@S@TDF_Label#&$@S@NCollection_Sequence>#S1_#S",
+      "specialCaseId": "SC-054"
+    },
+    {
+      "stableId": "c:@S@XCAFDoc_ShapeTool@F@IsSimpleShape#&1$@S@TDF_Label#S",
+      "specialCaseId": "SC-054"
     }
   ],
   "excludedBindings": [
