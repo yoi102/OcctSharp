@@ -7,7 +7,12 @@ add_library(OcctSharp.Native SHARED
   include/OcctSharp.Native.h
   include/OcctSharp.Native.Internal.hxx
   ${OCCTSHARP_GENERATED_NATIVE_SOURCES}
-  src/OcctSharp.Native.cpp)
+  src/OcctSharp.Native.cpp
+  include/OcctSharp.Native.Surface.h
+  src/Surfaces/SurfaceCommon.hxx
+  src/Surfaces/SurfaceInspection.cpp
+  src/Surfaces/SurfaceCurves.cpp
+  src/Surfaces/SurfaceTopology.cpp)
 
 target_compile_features(OcctSharp.Native PRIVATE cxx_std_20)
 target_compile_definitions(OcctSharp.Native PRIVATE OCCTSHARP_NATIVE_EXPORTS NOMINMAX WIN32_LEAN_AND_MEAN)

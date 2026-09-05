@@ -1,6 +1,6 @@
 # Batch P surface UV and curve-on-surface gap inventory
 
-Preparation: **COMPLETE**. Implementation: **0/24, NOT RUN**. This is one indivisible
+Preparation: **COMPLETE**. Implementation: **COMPLETE (32/32)**. This is one indivisible
 cross-family wave over the completed Batch O/Preview.14 baseline, not separate surface,
 projection, seam, repair, or viewer mini-batches. ADR-0079 owns the accepted boundary.
 
@@ -18,7 +18,7 @@ definitions and planar loops. These implementations are dependencies, not missin
 to reimplement or count again. In particular, the current face projector returns one
 nearest solution plus a count; it does not copy every solution or classify holes.
 
-## Locked 24-capability denominator
+## Locked 32-capability denominator
 
 | # | Capability and incremental contract | Required exit evidence |
 |---:|---|---|
@@ -46,8 +46,18 @@ nearest solution plus a count; it does not copy every solution or classify holes
 | 22 | Smoothly interpolate and approximate copied UV B-splines with degree/continuity/tolerance controls | Actual higher-degree interpolation, residual bound, periodicity, invalid input; no degree-one substitute |
 | 23 | Preserve named/colored/layered surface-workflow results through XDE and STEP/IGES, retaining copied data and owning results after source disposal | Two-format round-trip and metadata/lifetime assertions |
 | 24 | Execute the full surface/UV/projection/repair/exchange workflow in a real HWND and clean packages, without changing physical modules | Selection/screenshot, facade workflow, facade-free direct Modeling consumer, complete local gates |
+| 25 | Intersect a supported face with an explicit plane and retain owning section edges with face pcurves | Trimmed domain, section geometry, source disposal |
+| 26 | Intersect two trimmed analytic/freeform faces with owning section curves and support pcurves | Plane/cylinder and freeform cases, no intersection, source independence |
+| 27 | Copy 3D curve/surface intersection points and coincident intervals with native curve parameters and UV witnesses | Point and overlap results, holes, located faces, bounded intervals |
+| 28 | Project a copied batch of 3D points with stable source indices and all per-point solutions | Empty/no-solution groups, ordering, bounded allocation and atomic failures |
+| 29 | Summarize each oriented boundary loop with 3D perimeter, copied UV area, outer/hole and seam occurrence counts | Planar holes versus curved metric, seam and degenerate-edge diagnostics |
+| 30 | Construct explicitly bounded plane/cylinder/sphere/cone/torus faces from copied frame and analytic parameters | Finite ranges, radii/angles, placement, topology and evaluation |
+| 31 | Offset a copied UV curve with tolerance/residual diagnostics, then lift it onto a surface | UV-unit contract, exact/approximated geometry, source independence |
+| 32 | Trace projected point sequences continuously across periodic seams using copied UV shifts and residual diagnostics | Cylinder seam crossing, failed point groups, preserved sequence order |
 
-The denominator is immutable. Reuse rows are accepted only when their new composition,
+The original preparation committed at `72854bd` covered 24 capabilities. Before any
+implementation, the user's explicit request for a broader wave expands the denominator
+to 32 capabilities under ADR-0080. The expanded denominator is now immutable. Reuse rows are accepted only when their new composition,
 validation, and lifecycle requirements pass; their existing scalar calls do not imply
 Batch P completion. No row is a separate implementation/commit checkpoint.
 
@@ -56,7 +66,7 @@ Batch P completion. No row is a separate implementation/commit checkpoint.
 Source baseline: Preview.14 at local completion commit `d6e9e18`. Full inventory SHA256:
 `176C37BFF338B3E0BA59EFB7CF7BA3803ABC0030B881D0A526873139F89AC2C5`.
 
-The exact 24 decision-driving roots are committed in
+The exact 32 decision-driving roots are committed in
 `OcctSharp/config/batches/batch-p-surface-uv.json`: `BRepAdaptor_Surface`,
 `BRepAdaptor_Curve2d`, `BRep_Tool`, `BRepTools`, `BRepLib`,
 `GeomAPI_ProjectPointOnSurf`, `GeomProjLib`, `BRepOffsetAPI_NormalProjection`,
@@ -64,15 +74,17 @@ The exact 24 decision-driving roots are committed in
 `ShapeFix_Edge`, `ShapeFix_Wire`, `Geom2dAPI_Interpolate`, `Geom2dAPI_PointsToBSpline`,
 `Geom2dAdaptor_Curve`, `GCPnts_AbscissaPoint`, `GCPnts_UniformAbscissa`, `Geom_Surface`,
 `Geom_Plane`, `Geom_CylindricalSurface`, `Geom_SphericalSurface`,
-`BRepBuilderAPI_MakeEdge`, and `BRepBuilderAPI_MakeFace`.
+`BRepBuilderAPI_MakeEdge`, `BRepBuilderAPI_MakeFace`, `Geom_ConicalSurface`,
+`Geom_ToroidalSurface`, `GeomAPI_IntCS`, `GeomAPI_IntSS`, `Geom2d_OffsetCurve`,
+`Geom2dConvert`, `BRepAlgoAPI_Section`, and `BRepGProp`.
 
 | State | Count | Treatment |
 |---|---:|---|
-| Blocked | 516 | Candidates only; exact direct calls may later enter SC-053 |
-| Emitted | 153 | Reuse accepted generated ownership where appropriate |
-| Manual | 31 | Inherited behavior stays attributed to existing special cases |
-| Skipped | 263 | Existing language/visibility/ownership exclusions remain |
-| Total | 963 | Deduplicated stable IDs, not a product-completion denominator |
+| Blocked | 608 | Candidates only; exact direct calls may later enter SC-053 |
+| Emitted | 204 | Reuse accepted generated ownership where appropriate |
+| Manual | 41 | Inherited behavior stays attributed to existing special cases |
+| Skipped | 325 | Existing language/visibility/ownership exclusions remain |
+| Total | 1,178 | Deduplicated stable IDs, not a product-completion denominator |
 
 Run from the inner workspace:
 
@@ -83,10 +95,34 @@ Run from the inner workspace:
 The audit selects exact `NativeName` roots before `::`, rejects a changed inventory hash,
 duplicate roots or IDs, missing roots, incomplete classification, and overwriting inputs.
 It changes no binding dispositions. Two actual runs produce identical report SHA256
-`D0B99F166A8686CE5312CB81B42E0A04DC05D3C26241596CBD5D8919143A2886`.
-All 24 headers exist in the pinned OCCT 8.0.1 SDK. Wrong-inventory and input-overwrite
+`A8E6C84A4E6333E54EDD9E9E0BE657F7BAF6EB64C434ECD1228D89F3B726A955`.
+All 32 headers exist in the pinned OCCT 8.0.1 SDK. Wrong-inventory and input-overwrite
 negative checks also pass without changing either input. The audited inventory remains a local
 artifact; its hash and root config make the preparation reproducible and fail closed.
+
+After implementation, use `-InventoryPath` to point at the frozen Preview.14 inventory,
+not the newly classified Preview.15 inventory. This run preserves that local baseline at
+`artifacts/generator-reports/batch-p-baseline-inventory.json`.
+
+## Executable acceptance map
+
+The 13 facts in `BatchPCompletionTests` cover the whole matrix, not separate batches:
+
+| Matrix rows | Primary regression evidence |
+|---|---|
+| 1-4, 30 | Analytic frames/derivatives/curvature/singular charts; located topology |
+| 5-7, 28-29 | Holed-domain projection/grid/boundary metrics; periodic/degenerate controls |
+| 8-10, 12, 15 | Lifted/copied/derived curves, iso edges and 3D arc-length composition |
+| 13-14, 32 | Seam branches, periodic shifts and continuous point traces |
+| 16-17 | Missing-3D reconstruction and deliberately inconsistent BREP flags; source isolation |
+| 18-21 | Shuffled wires, non-planar holes, split count/area/validity and source independence |
+| 22, 31 | Smooth/periodic fitting, measured residuals, continuity, offsets and freeform faces |
+| 11, 25-27 | Normal projection controls, sections and bounded point/holed-overlap intersections |
+| 23-24 | Shared public-only STEP/IGES metadata, lifetime, real-HWND selection/screenshot workflow |
+| All input boundaries | Wrong-kind, disposed, invalid range/count/enum and failed-result cases |
+
+The shared workflow is compiled by both Runtime.Tests and PackageConsumer. The direct
+Modeling consumer separately proves that the physical module/runtime graph stays facade-free.
 
 ## Full dependency and ownership closure
 
@@ -110,7 +146,7 @@ artifact; its hash and root config make the preparation reproducible and fail cl
   copied grids/samples include singularity/domain status. Counts use overflow-checked
   allocations and count/copy contracts. Native and normalized parameter conventions
   are explicit and preserve reversed curves.
-- Managed code: proposed copied surface/UV DTOs and a cross-family `SurfaceModeling`
+- Managed code: copied surface/UV DTOs and a cross-family `SurfaceModeling`
   facade compose existing Modeling `Shape`, Batch F, and Batch O. No new project,
   native DLL, registry, allocator, resolver, or alternate ownership model is added.
   DTO snapshots retain no native parent. Topology results have independent registered
@@ -120,26 +156,36 @@ artifact; its hash and root config make the preparation reproducible and fail cl
   Metadata round-trips and source/document-disposal tests are required, not implied.
 - Toolkit closure: use the existing TKMath/TKG2d/TKG3d/TKGeomBase/TKGeomAlgo/TKBRep/
   TKTopAlgo/TKShHealing/TKBO/TKBool/TKOffset plus XDE/exchange/viewer runtime graph.
-  The 24 roots are an audit anchor, not an assertion that support classes are absent.
+  The 32 roots are an audit anchor, not an assertion that support classes are absent.
   Every newly invoked blocked support declaration must also receive an exact SC-053 ID.
 
 ## Identity, gates, and explicit limits
 
-Reserve package `8.0.1-preview.15`, ABI 1.59, bridge 0.67.0, and schema 1.13. These are
-preparation reservations only: current build/package/runtime identities remain Preview.14,
-ABI 1.58, and bridge 0.66.0 until implementation begins. SC-053 is reserved, not registered
-as implemented; no candidate is promoted by this document.
+The implementation uses package `8.0.1-preview.15`, ABI 1.59, bridge 0.67.0, and schema
+1.13. SC-053 registers 100 exact directly invoked blocked IDs from the baseline inventory,
+including support declarations outside the 32-root audit. No root or overload family
+is bulk-promoted; inherited Manual/Emitted/Skipped attribution stays unchanged.
 
-Required gates: the complete 24-row matrix; exact stable-ID audit; Release/Debug native
+Required gates: the complete 32-row matrix; exact stable-ID audit; Release/Debug native
 and managed builds; Generator/Runtime suites plus the real native Debug sweep; analytic,
 periodic, seam, holed, singular, freeform and located/reversed fixtures; invalid inputs,
 copy isolation and lifetime; real XDE/STEP/IGES/HWND; both local package consumers;
 generated closure/determinism/freshness/clean regeneration; additive API comparison;
 full inventory; runtime/package hashes; SBOM/provenance/checksums; docs and Git checks.
-Implementation, compile, runtime, and Preview.15 package gates are **NOT RUN**.
+All implementation and local validation gates pass. Focused regression is 13/13;
+Release/Debug Generator is 91/91 and Runtime is 177/177, including an isolated run
+against actual Debug native binaries. Both clean consumers and the complete release
+check pass; all 94 generated files remain byte-identical after clean regeneration.
+API comparison against alpha.38 is additive at 39,281 additions and zero removals.
+The final inventory has 16,353 Emitted, 709 Manual, 49,866 Blocked and 49,344 Skipped
+declarations, with zero pending/HD099. Its SHA256 is
+`CCB81F47CE09A7712D346C16EE45A9AF783D000DCFC64DF4B69FA3C1DE96DF48`.
+The native bridge SHA256 is
+`2230D43CC32F749615A2202EAA2FB8891BB9D4EC09345B3FEB1E165C75C91710`.
+Final package hashes and completion evidence are recorded in STATUS.
 
-Preparation only validates the baseline audit and its reproducibility. Completion will
-require one local Batch P implementation commit after all gates pass. NuGet publication
+Preparation validated the baseline audit and its reproducibility before implementation.
+The complete wave is delivered in one local Batch P implementation commit. NuGet publication
 and GitHub push are not batch work. Parametric constraints, arbitrary unbounded domains,
 global UV atlas/unwrapping, geodesics, remeshing/flattening, cross-platform rendering,
 D3DImage, callbacks, and physical native splitting are outside Batch P.

@@ -1,6 +1,6 @@
 # ADR-0079: Implement surface UV and curve-on-surface workflows as Batch P
 
-- Status: Accepted for implementation
+- Status: Accepted and implemented
 - Date: 2026-09-05
 - Scope: Batch P denominator, projection/lifting, seam topology, repair, and ownership
 
@@ -14,10 +14,10 @@ a complete copied curve definition or both branches of a seam.
 
 ## Decision
 
-Freeze the 24 capabilities in
+Freeze the 32 capabilities in
 [the Batch P gap inventory](../BATCH_P_SURFACE_UV_CURVE_GAP_INVENTORY.md) as one wave.
-Preparation audits 24 exact roots and 963 declarations over the hash-pinned Preview.14
-inventory: 516 blocked, 153 emitted, 31 manual, and 263 skipped.
+Preparation audits 32 exact roots and 1,178 declarations over the hash-pinned Preview.14
+inventory: 608 blocked, 204 emitted, 41 manual, and 325 skipped.
 
 Compose existing Shape, freeform, sketch, XDE, exchange, and viewer APIs through copied
 surface/UV records and a cross-family facade. Native adaptors, projectors, classifiers,
@@ -51,8 +51,8 @@ managed modules, facade, one native DLL and shared runtime package.
 
 ## Consequences and migration impact
 
-Preparation is complete; implementation remains **0/24, NOT RUN**. No public signature,
-runtime identity, accepted stable-ID disposition, or generated output changes here.
+Preparation was completed before implementation. Batch P now implements the expanded
+32-capability scope under ADR-0080; final validation and identities are recorded in STATUS.
 The complete dependency closure, baseline reuse and actual preparation evidence are
 recorded in the gap inventory. A repeatable audit rejects silent baseline drift.
 General UV atlases, geodesics, constraints, native splitting and renderer work remain
@@ -60,12 +60,15 @@ out of scope. Batch completion means local validation and commit, not NuGet publ
 
 ## Validation required
 
-All 24 rows must pass together across analytic/freeform, located/reversed, holed,
+All 32 rows must pass together across analytic/freeform, located/reversed, holed,
 periodic/seam and singular fixtures. Include copied/owning lifetime, failed-result
 cleanup, unchanged input topology after repair, exact SC-053 reconciliation, Release/
 Debug and a real native Debug test run, STEP/IGES metadata, real HWND, both clean package
 consumers, generation/compatibility/inventory/runtime and package hashes, release
-metadata, documentation, and Git whitespace. No implementation gate is claimed by this ADR.
+metadata, documentation, and Git whitespace. All local implementation gates now pass:
+32/32 capabilities, focused 13/13, Generator 91/91, Runtime 177/177 in Release/Debug
+and an actual Debug-native sweep, clean consumers and 94-file clean regeneration.
+STATUS and the gap inventory record final identities, hashes and validation boundaries.
 
 ## Related decisions
 

@@ -1,7 +1,7 @@
 # Current Status
 
 - Last updated: 2026-09-05
-- Current phase: Batch B through Batch O are complete locally; Batch O completion is committed at d6e9e18. Batch P preparation is complete and implementation is 0/24. Preview.14 is the latest validated local release; no NuGet publication or GitHub push is part of batch delivery
+- Current phase: Batch B through Batch P are complete locally. Batch P completes one expanded 32-capability wave under ADR-0080 with Preview.15 local validation. No NuGet publication or GitHub push is part of batch delivery
 - Batch B engineering progress: 100% for the accepted local implementation scope (not a claim that every OCCT declaration is a managed API or that public release is ready)
 - Batch C implementation progress: 100% of the finite local implementation denominator; locked wave denominators are 14/14, 7/7, 8/8, and final 15/15 capabilities validated
 - Batch D implementation progress: 24/24 capabilities (100%); ADR-0064's one large cross-family wave passes all implementation, compile, runtime, real-HWND, clean-package, inventory, and local release gates
@@ -16,28 +16,60 @@
 - Batch M implementation progress: 24/24 capabilities (100%); ADR-0075's presentation/manipulator, rigid XDE placement, named history, DMU, exchange, and real-HWND wave passes every local gate
 - Batch N preparation and implementation progress: 24/24 capabilities (100%). ADR-0077's metadata-aware IGES/XDE, Unicode-path, mixed-format, viewer, lifetime, and package wave passes every local gate
 - Batch O preparation and implementation progress: 24/24 (100%); focused regression 7/7, complete local release checks, and final Release-native/Debug-native Runtime 164/164 pass
-- Batch P preparation progress: complete; ADR-0079 freezes 24 capabilities and a reproducible 24-root/963-candidate audit. Implementation and Preview.15 gates are NOT RUN; no runtime identity or stable-ID disposition changed during preparation
-- Complete-migration batch progress: B, C, D, E, F, G, H, I, J, K, L, M, N, and O are complete locally; retired B00-B20 and forbidden numbered/dotted batch labels are not counted as batches
-- Accepted surface: 16,353 generated manifest IDs plus 609 accepted manual stable IDs; Release and Debug native/managed builds, Generator 91/91, Runtime 164/164, discovery/report determinism, generated dependency closure, and dependency profiles 6/6 pass
-- Last complete full inventory: 116,272/116,272 declarations and 7,090/7,090 headers have final dispositions; `Emitted` 16,353, `Manual` 609, `SupportedUnselected` 0, `Skipped` 49,344, `Blocked` 49,966, pending 0, HD099 0; SHA256 `176C37BFF338B3E0BA59EFB7CF7BA3803ABC0030B881D0A526873139F89AC2C5`
-- Overall state: Preview.14 validates Batch O with twelve module assemblies plus the `OcctSharp` compatibility/facade assembly sharing one `OcctSharp.Native.dll` and one `OcctSharp.Native.win-x64` runtime package. Native-DLL splitting remains deliberately deferred. Validated identities are package 8.0.1-preview.14, managed assembly/file 0.1.0.0, native ABI 1.58, bridge 0.66.0, and schema 1.13. Every batch is locally packed, checked, and committed; publication requires a new explicit request
+- Batch P preparation and implementation progress: 32/32 capabilities (100%); reproducible 32-root/1,178-candidate preparation, focused 13/13, Generator 91/91, Runtime 177/177, actual Debug-native regression, and complete local release checks pass
+- Complete-migration batch progress: B, C, D, E, F, G, H, I, J, K, L, M, N, O, and P are complete locally; retired B00-B20 and forbidden numbered/dotted batch labels are not counted as batches
+- Accepted surface: 16,353 generated manifest IDs plus 709 accepted manual stable IDs; Release and Debug native/managed builds, Generator 91/91, Runtime 177/177, discovery/report determinism, generated dependency closure, and dependency profiles 6/6 pass
+- Last complete full inventory: 116,272/116,272 declarations and 7,090/7,090 headers have final dispositions; `Emitted` 16,353, `Manual` 709, `SupportedUnselected` 0, `Skipped` 49,344, `Blocked` 49,866, pending 0, HD099 0; SHA256 `CCB81F47CE09A7712D346C16EE45A9AF783D000DCFC64DF4B69FA3C1DE96DF48`
+- Overall state: Preview.15 validates Batch P with twelve module assemblies plus the `OcctSharp` compatibility/facade assembly sharing one `OcctSharp.Native.dll` and one `OcctSharp.Native.win-x64` runtime package. Native-DLL splitting remains deliberately deferred. Validated identities are package 8.0.1-preview.15, managed assembly/file 0.1.0.0, native ABI 1.59, bridge 0.67.0, and schema 1.13. Every batch is locally packed, checked, and committed; publication requires a new explicit request
 
-### Batch P surface UV and curve-on-surface preparation
+### Preview.15 Batch P expanded surface UV completion
 
-- The completed Preview.14 baseline at `d6e9e18` was audited for exactly 24 roots and
-  963 stable IDs: 516 blocked, 153 emitted, 31 manual, and 263 skipped. Existing face
+- The completed Preview.14 baseline at `d6e9e18` was audited for exactly 32 roots and
+  1,178 stable IDs: 608 blocked, 204 emitted, 41 manual, and 325 skipped. Existing face
   evaluation, pcurve inspection, freeform topology, and Batch O definitions are explicit
   dependencies rather than being counted again as missing APIs.
-- ADR-0079 locks one 24-capability surface-domain, complete projection, copied pcurve,
+- ADR-0079/0080 lock one 32-capability surface-domain, complete projection, copied pcurve,
   lifting, seam, arc-length sampling, copied-topology repair, loop/hole/trim/split,
-  smooth UV interpolation, XDE/STEP/IGES, real-HWND, and package closure.
+  smooth UV interpolation, XDE/STEP/IGES, real-HWND, and package closure, expanded with
+  sections/intersections, batch projection, metrics, analytic faces, offsets and tracing.
 - `eng/audit-batch-roots.ps1` verifies the exact baseline hash, root and stable-ID
   uniqueness, completeness, and input/output separation. Two runs are byte-identical
-  at SHA256 `D0B99F166A8686CE5312CB81B42E0A04DC05D3C26241596CBD5D8919143A2886`.
-  All 24 SDK headers exist; wrong-inventory and input-overwrite negative checks pass.
-- Preview.15/ABI 1.59/bridge 0.67.0/schema 1.13 and SC-053 are reserved only. Current
-  compiled/package identities remain Preview.14/ABI 1.58/bridge 0.66.0. Implementation,
-  native/managed compile, runtime, and Preview.15 package/release gates are NOT RUN.
+  at SHA256 `A8E6C84A4E6333E54EDD9E9E0BE657F7BAF6EB64C434ECD1228D89F3B726A955`.
+  All 32 SDK headers exist. Expanded wrong-inventory and input-overwrite negative checks
+  were also repeated: 2/2 pass without changing the baseline or root configuration.
+- Preview.15/ABI 1.59/bridge 0.67.0/schema 1.13 and 100 exact SC-053 stable IDs are
+  implemented. Three new native translation units share the existing registry, with
+  managed workflows in Surfaces/. No new managed project or Native DLL is warranted.
+  Focused 13/13 includes located/reversed topology, copy isolation, missing-curve and
+  consistency repair, holed overlap clipping, smooth/periodic fitting, STEP/IGES metadata
+  and real HWND. The complete 32-row acceptance map is recorded in the gap inventory.
+- Release and Debug solution builds pass with zero warnings/errors; Generator 91/91,
+  Runtime 177/177, and dependency profiles 6/6 pass. A separate isolated runtime sweep
+  loads the actual Debug native DLLs and also passes 177/177. Console sample smoke passes.
+  The shared public-only surface workflow passes in Runtime.Tests and the clean facade
+  package consumer, including metadata, source disposal, real selection and screenshots.
+  The direct Modeling consumer remains facade-free with the same 62-DLL runtime.
+- All 94 generated files are current and byte-identical after a fresh-source rebuild.
+  The complete generated graph remains acyclic with 27 cross-shard edges and 3,233 facade
+  type forwarders. Native source is organized into three new surface translation units;
+  cross-DLL allocator/registry/release semantics remain unproved, so one DLL is retained.
+  Clean native compilation emits only the known MSB8029 temporary-directory advisory.
+- API comparison against alpha.38 reports 39,281 additions, zero removals and no breaking
+  change. SC-053 reconciles exactly 100 directly invoked blocked declarations. The full
+  inventory closes all 116,272 declarations and 7,090 headers; 7,058 headers are parsed
+  semantically and 32 retain explicit exclusions, not pending/HD099 classifications.
+  Final inventory SHA256 is
+  `CCB81F47CE09A7712D346C16EE45A9AF783D000DCFC64DF4B69FA3C1DE96DF48`.
+- The committed 15,490,560-byte native bridge matches the Release rebuild at SHA256
+  `2230D43CC32F749615A2202EAA2FB8891BB9D4EC09345B3FEB1E165C75C91710`.
+  Fourteen local Preview.15 packages, runtime/notice isolation, both clean consumers,
+  SBOM, provenance, checksums, Git whitespace and complete local release gates pass.
+  Hosted CI, signing, NuGet publication and GitHub push are NOT RUN.
+- Final documentation was repacked and both clean consumers passed again. The final
+  facade nupkg SHA256 is
+  `DB0316F2B043E9661221C52BC818161E5473E1E13D0F8D8D1374E2AB55E9084D`.
+  All 62 packaged DLLs and 11 notice/license files match the committed runtime bytes;
+  nine final packaged documentation files and all five release checksum entries match.
 
 ### Preview.14 Batch O 2D sketch and planar-modeling completion
 

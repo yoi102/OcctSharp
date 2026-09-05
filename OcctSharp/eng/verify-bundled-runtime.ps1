@@ -17,9 +17,9 @@ if ($manifest.schemaVersion -ne '1.0' -or
     $manifest.platform -ne 'windows' -or
     $manifest.architecture -ne 'x64' -or
     $manifest.occtVersion -ne '8.0.1' -or
-    $manifest.nativeAbi -ne '1.58' -or
-    $manifest.bridgeVersion -ne '0.66.0') {
-    throw 'Bundled runtime manifest identity is not the accepted Windows x64 OCCT 8.0.1 / ABI 1.58 / bridge 0.66.0 baseline.'
+    $manifest.nativeAbi -ne '1.59' -or
+    $manifest.bridgeVersion -ne '0.67.0') {
+    throw 'Bundled runtime manifest identity is not the accepted Windows x64 OCCT 8.0.1 / ABI 1.59 / bridge 0.67.0 baseline.'
 }
 
 $expectedPaths = @($manifest.files | ForEach-Object path)

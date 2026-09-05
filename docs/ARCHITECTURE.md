@@ -9,11 +9,17 @@ stay call-local. Registered topology ownership, the twelve managed modules, the 
 and the single native DLL remain unchanged. Area is integrated over curve derivatives;
 containment is classified by OCCT; bounds include native topology tolerance.
 
-## Batch P preparation
+## Batch P surface source boundaries
 
-ADR-0079 prepares Batch P's surface/UV and curve-on-surface closure using the same
-copied-data, owning-topology, and cross-family facade boundaries. No Batch P runtime API
-or physical layout change is implemented by preparation; see its gap inventory.
+ADR-0079/0080 expand Batch P to 32 capabilities. `Surfaces/` contains the managed
+surface inspection, curve and topology facade; native inspection, curve and topology
+translation units share one private support header. They reuse the original shape
+registry, allocator, release and error boundary instead of extending the legacy monolith.
+The existing 12 managed modules, compatibility facade, shared native runtime package
+and one Native DLL remain appropriate. The generated dependency graph is closed and
+acyclic; native-DLL splitting is still not ready because cross-DLL lifetime/allocator
+routing is not established. Moving legacy viewer/XDE implementation is separate work.
+See [ADR-0080](adr/0080-expanded-surface-wave-and-native-source-boundaries.md).
 
 ## Purpose
 
@@ -137,7 +143,7 @@ The accepted boundaries are recorded in ADRs:
   Batch N metadata-aware IGES/XDE, Unicode-path, mixed-format, viewer, and package wave.
 - [ADR-0078](adr/0078-2d-sketch-planar-modeling-batch.md): one finite Batch O copied
   2D-sketch, planar topology/feature, exchange, viewer, and package wave.
-- [ADR-0079](adr/0079-surface-uv-curve-on-surface-batch.md): one prepared Batch P
+- [ADR-0079](adr/0079-surface-uv-curve-on-surface-batch.md): one expanded Batch P
   surface-domain, pcurve projection/lifting, seam, repair, and trimmed-topology wave.
 
 ## Components

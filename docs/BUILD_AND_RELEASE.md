@@ -262,7 +262,7 @@ and Git whitespace pass.
 
 ```powershell
 cd OcctSharp
-.\eng\release-check.ps1 -PackageVersion 8.0.1-preview.14
+.\eng\release-check.ps1 -PackageVersion 8.0.1-preview.15
 ```
 
 Release evidence is written below `OcctSharp/artifacts/release/`: `api-diff.json`,

@@ -9,7 +9,7 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Architecture](ARCHITECTURE.md) — system boundaries and component ownership.
 - [Repository layout](REPOSITORY_LAYOUT.md) — physical separation of documentation
   and code-related files.
-- [Roadmap](ROADMAP.md) — completed Batch B-O outcomes, prepared Batch P, and local-release boundary.
+- [Roadmap](ROADMAP.md) — completed Batch B-P outcomes and local-release boundary.
 - [Complete migration plan](MIGRATION_PLAN.md) — completed Batch C, Batch D, and Batch E
   matrices, large-wave rules, module/package boundaries, metrics,
   and product-scale gates.
@@ -47,8 +47,10 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   — completed immutable 24-capability copied 2D definition, inspection/edit, planar topology,
   solid-feature, STEP/IGES, viewer, and clean-package denominator.
 - [Batch P surface UV and curve-on-surface gap inventory](BATCH_P_SURFACE_UV_CURVE_GAP_INVENTORY.md)
-  — prepared immutable 24-capability surface/domain, pcurve, projection/lifting, seam,
-  repair, trimmed-topology, exchange, and viewer closure; implementation is NOT RUN.
+  — completed immutable 32-capability surface/domain, pcurve, projection/lifting, seam,
+  repair, trimmed-topology, section/intersection, exchange and viewer closure.
+- [Native source boundaries](adr/0080-expanded-surface-wave-and-native-source-boundaries.md)
+  — retain 12 managed modules and one Native DLL; separate new surface translation units.
 - [AI migration loop prompt](AI_MIGRATION_LOOP_PROMPT.md) — reusable re-entrant prompt
   for executing the largest coherent common-workflow wave instead of per-class tasks.
 - [Status](STATUS.md) — current phase, blockers, and last verified results.
@@ -63,6 +65,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   and header dispositions, reason codes, and complete-versus-generated metrics.
 - [Preview.14 release notes](RELEASE_NOTES_8.0.1_PREVIEW_14.md) — Batch O copied sketch,
   mixed loops, planar topology/features, STEP/IGES, and local validation contract.
+- [Preview.15 release notes](RELEASE_NOTES_8.0.1_PREVIEW_15.md) — Batch P surface/UV,
+  projection, repair, trimmed topology and source-organization boundaries.
 - [Preview.13 release notes](RELEASE_NOTES_8.0.1_PREVIEW_13.md) — complete Batch N
   IGESCAF/XDE metadata, Unicode paths, mixed-format composition, viewer, and local evidence.
 - [Preview.12 release notes](RELEASE_NOTES_8.0.1_PREVIEW_12.md) — STEP/XCAF style

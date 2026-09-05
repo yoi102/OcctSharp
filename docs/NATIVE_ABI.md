@@ -1,5 +1,17 @@
 # Native ABI
 
+## ABI 1.59 / Preview.15
+
+Batch P uses bridge 0.67.0 and schema 1.13. The additive surface ABI is declared in
+`OcctSharp.Native.Surface.h` and implemented by three surface translation units.
+Describe/evaluate/classify/project/sample/definition operations return copied records;
+lift/project/wire/face/repair/split/section operations return registered owning shapes.
+UV fitting and offsets exchange bounded copied B-splines, never Geom2d handles.
+SurfaceInfo, SurfaceSample, SurfacePointSolution and SurfaceCurveInfo occupy 72, 160,
+56 and 72 bytes on Windows x64. Arrays use count/capacity/copy conventions; failure
+does not transfer partial shape ownership. Every exception stays behind the same
+status and thread-local error boundary; all units use the original allocator/registry.
+
 ## ABI 1.58 / Preview.14
 
 The additive Batch O boundary uses bridge 0.66.0 and schema 1.13. It adds

@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 58)
-    || runtime.BridgeVersion != "0.66.0"
+if (runtime.AbiVersion != new Version(1, 59)
+    || runtime.BridgeVersion != "0.67.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -1829,6 +1829,8 @@ finally
 {
     Directory.Delete(exchangeDirectory, recursive: true);
 }
+
+OcctSharp.Validation.BatchPSurfaceWorkflow.Run();
 
 Console.WriteLine(
     $"Package consumer passed with {nativeFiles.Length} DLLs in 'occt', "

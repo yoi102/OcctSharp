@@ -3,7 +3,7 @@
   "baselinePackageVersion": "8.0.1-preview.14",
   "baselineInventorySha256": "176C37BFF338B3E0BA59EFB7CF7BA3803ABC0030B881D0A526873139F89AC2C5",
   "plannedPackageVersion": "8.0.1-preview.15",
-  "capabilityCount": 24,
+  "capabilityCount": 32,
   "roots": [
     "BRepAdaptor_Surface",
     "BRepAdaptor_Curve2d",
@@ -28,6 +28,14 @@
     "Geom_CylindricalSurface",
     "Geom_SphericalSurface",
     "BRepBuilderAPI_MakeEdge",
-    "BRepBuilderAPI_MakeFace"
+    "BRepBuilderAPI_MakeFace",
+    "Geom_ConicalSurface",
+    "Geom_ToroidalSurface",
+    "GeomAPI_IntCS",
+    "GeomAPI_IntSS",
+    "Geom2d_OffsetCurve",
+    "Geom2dConvert",
+    "BRepAlgoAPI_Section",
+    "BRepGProp"
   ]
 }

@@ -1,5 +1,136 @@
 # Special Cases
 
+## SC-053: Surface UV, pcurves and owning trimmed topology
+
+- Decision: ADR-0079 and ADR-0080; Preview.15, ABI 1.59, bridge 0.67.0, schema 1.13.
+- Scope: The immutable 32-capability Batch P closure. Algorithms remain native-local;
+  descriptors, derivatives, curvatures, UV definitions, intersections and diagnostics
+  are copied values. Edges, wires, faces, repairs, sections and splits are registered owners.
+- Reason: Generated handles do not encode trimmed-domain classification, external
+  support pcurve retention, seam occurrence identity, mutation isolation or bulk snapshots.
+- Implementation: Three surface translation units share the existing registry and
+  error boundary. Generic topology copies are supplemented with explicit copied pcurves
+  and 3D curves; supporting surfaces remain shared read-only. No input flags, tolerances,
+  vertices or curve objects are mutated by repair/wire/trim/split operations.
+- Geometry: Location is applied once. Surface values are world-space, UV remains local.
+  Reversal negates the normal and swaps/negates principal curvatures. Singular charts
+  are explicit even where OCCT supplies a limiting normal. Holes use native classifiers
+  and non-destructive Boolean interval clipping, not rectangle/midpoint approximations.
+- Approximation: Copied B-splines distinguish exact geometry from preserved parameters.
+  Fit residual is measured at input points in UV; converter error is in UV units;
+  derivation reports a 65-sample world-space residual, not a certified global bound.
+  UV offsets are not constant world-distance offsets. Period shifts are explicit.
+- Validation: `BatchPCompletionTests` plus the shared public-only
+  `tests/Shared/BatchPSurfaceWorkflow.cs` exercise both repository and NuGet consumers.
+  Final Release/Debug, lifetime, metadata, HWND and release evidence belongs in STATUS.
+- Upgrade/removal: Recheck external pcurve copying, face support identity, SameParameter,
+  periodic branches, converter parameterization, interval clipping and all exact IDs.
+  Remove only when generated APIs preserve the same copied/owning and failure contract.
+- Exact reconciliation: 100 directly called, previously blocked stable IDs, verified
+  against the Preview.14 inventory. Existing emitted/manual/skipped IDs are unchanged;
+  no complete root or overload family is promoted.
+
+1. `c:@S@BRepFeat_SplitShape@F@BRepFeat_SplitShape#&1$@S@TopoDS_Shape#`
+2. `c:@S@BRepFeat_SplitShape@F@Add#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#`
+3. `c:@S@BRepFeat_SplitShape@F@Add#&1$@S@TopoDS_Wire#&1$@S@TopoDS_Face#`
+4. `c:@S@BRepFeat_SplitShape@F@Build#&1$@S@Message_ProgressRange#`
+5. `c:@S@BRepLib@F@BuildCurve3d#&1$@S@TopoDS_Edge#d#$@E@GeomAbs_Shape#I#I#S`
+6. `c:@S@BRepLib@F@BuildCurves3d#&1$@S@TopoDS_Shape#d#$@E@GeomAbs_Shape#I#I#S`
+7. `c:@S@BRepLib@F@CheckSameRange#&1$@S@TopoDS_Edge#d#S`
+8. `c:@S@BRepLib@F@SameParameter#&1$@S@TopoDS_Edge#d#S`
+9. `c:@S@BRepLib@F@SameParameter#&1$@S@TopoDS_Shape#d#b#S`
+10. `c:@S@BRepOffsetAPI_NormalProjection@F@BRepOffsetAPI_NormalProjection#&1$@S@TopoDS_Shape#`
+11. `c:@S@BRepOffsetAPI_NormalProjection@F@Add#&1$@S@TopoDS_Shape#`
+12. `c:@S@BRepOffsetAPI_NormalProjection@F@Build#&1$@S@Message_ProgressRange#`
+13. `c:@S@BRepOffsetAPI_NormalProjection@F@Compute3d#b#`
+14. `c:@S@BRepOffsetAPI_NormalProjection@F@IsDone#1`
+15. `c:@S@BRepOffsetAPI_NormalProjection@F@Projection#1`
+16. `c:@S@BRepOffsetAPI_NormalProjection@F@SetLimit#b#`
+17. `c:@S@BRepOffsetAPI_NormalProjection@F@SetMaxDistance#d#`
+18. `c:@S@BRepOffsetAPI_NormalProjection@F@SetParams#d#d#$@E@GeomAbs_Shape#I#I#`
+19. `c:@S@BRepTools@F@OuterWire#&1$@S@TopoDS_Face#S`
+20. `c:@S@BRepTools@F@UVBounds#&1$@S@TopoDS_Face#&d#S2_#S2_#S2_#S`
+21. `c:@S@BRepTools_WireExplorer@F@BRepTools_WireExplorer#&1$@S@TopoDS_Wire#&1$@S@TopoDS_Face#`
+22. `c:@S@BRepTools_WireExplorer@F@Current#1`
+23. `c:@S@BRepTools_WireExplorer@F@More#1`
+24. `c:@S@BRepTools_WireExplorer@F@Next#`
+25. `c:@S@BRep_Tool@F@Curve#&1$@S@TopoDS_Edge#&$@S@TopLoc_Location#&d#S4_#S`
+26. `c:@S@BRep_Tool@F@Degenerated#&1$@S@TopoDS_Edge#S`
+27. `c:@S@BRep_Tool@F@IsClosed#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#S`
+28. `c:@S@BRep_Tool@F@SameParameter#&1$@S@TopoDS_Edge#S`
+29. `c:@S@BRep_Tool@F@SameRange#&1$@S@TopoDS_Edge#S`
+30. `c:@S@BRep_Tool@F@Surface#&1$@S@TopoDS_Face#&$@S@TopLoc_Location#S`
+31. `c:@S@BRep_Builder@F@UpdateEdge#&1$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#&1$@S@TopLoc_Location#d#1`
+32. `c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#`
+33. `c:@S@BRepBuilderAPI_MakeEdge@F@BRepBuilderAPI_MakeEdge#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#d#`
+34. `c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#&1$@S@TopoDS_Wire#b#`
+35. `c:@S@BRepBuilderAPI_MakeFace@F@BRepBuilderAPI_MakeFace#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#d#d#d#d#d#`
+36. `c:@S@BRepClass_FaceClassifier@F@BRepClass_FaceClassifier#&1$@S@TopoDS_Face#&1$@S@gp_Pnt2d#d#b#d#`
+37. `c:@S@GCPnts_UniformAbscissa@F@GCPnts_UniformAbscissa#&1$@S@Adaptor3d_Curve#I#d#d#d#`
+38. `c:@S@GCPnts_UniformAbscissa@F@IsDone#1`
+39. `c:@S@GCPnts_UniformAbscissa@F@NbPoints#1`
+40. `c:@S@GCPnts_UniformAbscissa@F@Parameter#I#1`
+41. `c:@S@Geom2dAPI_Interpolate@F@Geom2dAPI_Interpolate#&1$@N@opencascade@S@handle>#$@S@NCollection_HArray1>#$@S@gp_Pnt2d#b#d#`
+42. `c:@S@Geom2dAPI_Interpolate@F@Curve#1`
+43. `c:@S@Geom2dAPI_Interpolate@F@IsDone#1`
+44. `c:@S@Geom2dAPI_Interpolate@F@Perform#`
+45. `c:@S@Geom2dAPI_PointsToBSpline@F@Geom2dAPI_PointsToBSpline#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#I#I#$@E@GeomAbs_Shape#d#`
+46. `c:@S@Geom2dAPI_PointsToBSpline@F@Curve#1`
+47. `c:@S@Geom2dAPI_PointsToBSpline@F@IsDone#1`
+48. `c:@S@Geom2dConvert_ApproxCurve@F@Geom2dConvert_ApproxCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#d#$@E@GeomAbs_Shape#I#I#`
+49. `c:@S@Geom2dConvert_ApproxCurve@F@Curve#1`
+50. `c:@S@Geom2dConvert_ApproxCurve@F@HasResult#1`
+51. `c:@S@Geom2dConvert_ApproxCurve@F@IsDone#1`
+52. `c:@S@Geom2dConvert_ApproxCurve@F@MaxError#1`
+53. `c:@S@Geom2dConvert@F@CurveToBSplineCurve#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#$@E@Convert_ParameterisationType#S`
+54. `c:@S@Geom2dAPI_ProjectPointOnCurve@F@Geom2dAPI_ProjectPointOnCurve#&1$@S@gp_Pnt2d#&1$@N@opencascade@S@handle>#$@S@Geom2d_Curve#`
+55. `c:@S@Geom2dAPI_ProjectPointOnCurve@F@LowerDistance#1`
+56. `c:@S@GeomAPI_ProjectPointOnSurf@F@Parameters#I#&d#S0_#1`
+57. `c:@S@ShapeBuild_Edge@F@CopyPCurves#&1$@S@TopoDS_Edge#S0_#1`
+58. `c:@S@ShapeConstruct_ProjectCurveOnSurface@F@Perform#&1$@N@opencascade@S@handle>#$@S@Geom_Curve#d#d#&$@N@opencascade@S@handle>#$@S@Geom2d_Curve#d#d#`
+59. `c:@S@BRepBuilderAPI_ModifyShape@F@ModifiedShape#&1$@S@TopoDS_Shape#1`
+60. `c:@S@BRepBuilderAPI_MakeWire@F@Add#&1$@S@NCollection_List>#$@S@TopoDS_Shape#`
+61. `c:@S@BRepAlgoAPI_Section@F@ComputePCurveOn1#b#`
+62. `c:@S@BRepAlgoAPI_Section@F@ComputePCurveOn2#b#`
+63. `c:@S@BRepBuilderAPI_MakeWire@F@IsDone#1`
+64. `c:@S@BRepGProp@F@LinearProperties#&1$@S@TopoDS_Shape#&$@S@GProp_GProps#b#b#S`
+65. `c:@S@GProp_GProps@F@Mass#1`
+66. `c:@S@gp_Ax3@F@gp_Ax3#&1$@S@gp_Pnt#&1$@S@gp_Dir#S2_#`
+67. `c:@S@gp_Dir@F@Reverse#`
+68. `c:@S@gp_Dir@F@Transformed#&1$@S@gp_Trsf#1`
+69. `c:@S@gp_Dir@F@gp_Dir#&1$@S@gp_Vec#`
+70. `c:@S@gp_Pnt@F@Distance#&1$@S@gp_Pnt#1`
+71. `c:@S@gp_Pnt@F@Transformed#&1$@S@gp_Trsf#1`
+72. `c:@S@gp_Pnt@F@XYZ#1`
+73. `c:@S@gp_Trsf@F@Inverted#1`
+74. `c:@S@gp_Trsf@F@ScaleFactor#1`
+75. `c:@S@gp_Vec@F@Crossed#&1$@S@gp_Vec#1`
+76. `c:@S@gp_Vec@F@Dot#&1$@S@gp_Vec#1`
+77. `c:@S@gp_Vec@F@Magnitude#1`
+78. `c:@S@gp_Vec@F@Normalize#`
+79. `c:@S@gp_Vec@F@Reverse#`
+80. `c:@S@gp_Vec@F@SquareMagnitude#1`
+81. `c:@S@gp_Vec@F@Transformed#&1$@S@gp_Trsf#1`
+82. `c:@S@gp_Vec@F@gp_Vec#`
+83. `c:@S@gp_Vec@F@gp_Vec#&1$@S@gp_XYZ#`
+84. `c:@S@Geom_ConicalSurface@F@Geom_ConicalSurface#&1$@S@gp_Ax3#d#d#`
+85. `c:@S@Geom_CylindricalSurface@F@Geom_CylindricalSurface#&1$@S@gp_Ax3#d#`
+86. `c:@S@Geom_Geometry@F@Transformed#&1$@S@gp_Trsf#1`
+87. `c:@S@Geom_Plane@F@Geom_Plane#&1$@S@gp_Ax3#`
+88. `c:@S@Geom_SphericalSurface@F@Geom_SphericalSurface#&1$@S@gp_Ax3#d#`
+89. `c:@S@Geom_ToroidalSurface@F@Geom_ToroidalSurface#&1$@S@gp_Ax3#d#d#`
+90. `c:@S@TopLoc_Location@F@Inverted#1`
+91. `c:@S@TopLoc_Location@F@Transformation#1`
+92. `c:@S@gp_Dir@F@X#1`
+93. `c:@S@gp_Dir@F@Y#1`
+94. `c:@S@gp_Dir@F@Z#1`
+95. `c:@S@gp_Pnt@F@X#1`
+96. `c:@S@gp_Pnt@F@Y#1`
+97. `c:@S@gp_Pnt@F@Z#1`
+98. `c:@S@gp_Vec@F@X#1`
+99. `c:@S@gp_Vec@F@Y#1`
+100. `c:@S@gp_Vec@F@Z#1`
+
 ## SC-052: Copied 2D sketch and planar topology
 
 - Decision: ADR-0078; package `8.0.1-preview.14`, ABI 1.58, bridge 0.66.0,

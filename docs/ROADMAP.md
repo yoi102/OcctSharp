@@ -6,23 +6,30 @@ evidence; creating files or generating a large method count is not sufficient.
 The retired B00–B20 capability milestones and future package boundaries are documented
 in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the completed
 product-scale batch `B`; none is a separate current batch or commit boundary.
-Batch B through Batch O are complete for their accepted local implementation scopes.
-Batch O closes its one 24-capability copied-sketch/planar-modeling wave under ADR-0078.
-It was not split into curve, loop, feature, exchange, viewer, or package checkpoints.
+Batch B through Batch P are complete for their accepted local implementation scopes.
+Batch P closes one expanded 32-capability surface/UV workflow under ADR-0079/0080.
+It was not split into projection, seam, repair, exchange, viewer, or package checkpoints.
 
-## Current priority: Batch P surface UV and curve-on-surface workflows
+## Completed priority: Batch P surface UV and curve-on-surface workflows
 
 ADR-0079 and [the Batch P gap inventory](BATCH_P_SURFACE_UV_CURVE_GAP_INVENTORY.md)
-freeze one 24-capability closure across copied face/UV data, full projections, pcurve
+freeze one 32-capability closure under ADR-0080 across copied face/UV data, full projections, pcurve
 definitions and seam branches, 3D curve lifting and sampling, copied-topology repair,
 oriented loops and holes, trimmed/split faces, XDE/STEP/IGES, real HWND and clean packages.
 Existing scalar evaluation and freeform/sketch APIs are reused explicitly. Preparation
-is complete; implementation is 0/24 and its gates are NOT RUN. The hash-pinned Preview.14
-audit covers 24 roots and 963 declarations: 516 blocked, 153 emitted, 31 manual, and
-263 skipped. Two audit runs agree, all root headers exist, and negative baseline/overwrite
-checks pass. Preview.15/ABI 1.59/bridge 0.67.0/schema 1.13 are reserved, not current runtime
-identities. One complete implementation wave and local completion commit follow preparation;
-no NuGet upload or GitHub push is part of the loop.
+and implementation are complete at 32/32. The expanded hash-pinned
+Preview.14 audit covers 32 roots and 1,178 declarations: 608 blocked, 204 emitted,
+41 manual, and 325 skipped. Two audit runs agree and all 32 SDK headers exist.
+The added scope covers sections/intersections, batch projection, boundary metrics,
+analytic faces, UV offset and continuous tracing. The focused suite passes 13/13;
+Preview.15/ABI 1.59/bridge 0.67.0/schema 1.13 pass all local gates. Release/Debug,
+Generator 91/91, Runtime 177/177, an actual Debug-native sweep, both clean package
+consumers, 94-file clean regeneration, API compatibility, inventory and release metadata
+pass. SC-053 reconciles 100 exact direct blocked stable IDs. The complete acyclic graph
+retains 12 managed modules, the facade and one Native DLL; new surface implementation
+uses three native translation units. STATUS records the final identities and hashes.
+The next product wave requires a new broad root audit and cross-family dependency
+closure before implementation. No NuGet upload or GitHub push is part of the loop.
 
 ## Completed priority: Batch O 2D sketch and planar modeling
 
@@ -90,11 +97,11 @@ signing, and NuGet publication remain separate
 release-readiness work rather than
 unfinished batch implementation.
 
-## Current release priority: Preview.14 local completion
+## Current release baseline: Preview.15 local completion
 
-ADR-0078 completes the package-visible Batch O wave while retaining ADR-0074's managed
-module graph and one-native-DLL architecture. Preview.14 adds copied 2D curves, inspection
-and edits, mixed loops and holes, planar topology and solid features, STEP/IGES, and
+ADR-0079/0080 complete the package-visible Batch P wave while retaining ADR-0074's managed
+module graph and one-native-DLL architecture. Preview.15 adds surface/UV inspection,
+projection/lifting, repair, trimmed topology, sections/intersections, STEP/IGES, and
 viewer behavior. Release/Debug, real-file/HWND, 14-package isolation,
 committed-runtime identity, clean regeneration, local consumers, API/inventory, and
 release-metadata gates pass. Hosted full release execution, signing, NuGet publication/

@@ -85,7 +85,8 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0076](adr/0076-xcaf-disconnected-step-presentation-style-recovery.md) | Recover disconnected STEP styles into copied XDE snapshots and viewer-native presentation overrides | Accepted and implemented |
 | [ADR-0077](adr/0077-iges-xde-metadata-path-interoperability-batch.md) | Define Batch N as one 24-capability metadata-aware IGES/XDE, Unicode-path, viewer, and package wave | Accepted and implemented |
 | [ADR-0078](adr/0078-2d-sketch-planar-modeling-batch.md) | Define Batch O as one 24-capability copied 2D sketch, planar topology, feature, exchange, and viewer wave | Accepted and implemented |
-| [ADR-0079](adr/0079-surface-uv-curve-on-surface-batch.md) | Define Batch P as one 24-capability surface/UV, pcurve projection and lifting, seam topology, repair, exchange, and viewer wave | Accepted for implementation |
+| [ADR-0079](adr/0079-surface-uv-curve-on-surface-batch.md) | Define Batch P as one surface/UV, pcurve projection and lifting, seam topology, repair, exchange, and viewer wave; expanded to 32 capabilities by ADR-0080 | Accepted and implemented |
+| [ADR-0080](adr/0080-expanded-surface-wave-and-native-source-boundaries.md) | Expand Batch P to 32 capabilities and separate new native source responsibilities while retaining the existing managed modules and one native DLL | Accepted and implemented |
 
 ## Pending decisions
 

@@ -508,8 +508,8 @@ struct OcctSharp_FeatureResultHandle
 
 namespace
 {
-constexpr uint32_t AbiVersion = 0x0001003AU;
-constexpr const char* BridgeVersion = "0.66.0";
+constexpr uint32_t AbiVersion = 0x0001003BU;
+constexpr const char* BridgeVersion = "0.67.0";
 thread_local std::string LastError;
 std::mutex LiveShapesMutex;
 std::unordered_set<const OcctSharp_ShapeHandle*> LiveShapes;
@@ -2088,6 +2088,12 @@ OcctSharp_Status OcctSharp_Internal_TryGetShape(
 OcctSharp_ShapeHandle* OcctSharp_Internal_AllocateShape(TopoDS_Shape shape)
 {
   return AllocateShape(std::move(shape));
+}
+
+OcctSharp_Status OcctSharp_Internal_BuildSketchCurve(
+  const OcctSharp_SketchCurve& definition, opencascade::handle<Geom2d_Curve>& curve)
+{
+  return Guard([&] { curve = BuildSketchCurve(definition); });
 }
 
 uint32_t OCCTSHARP_CALL occtsharp_get_abi_version(void)

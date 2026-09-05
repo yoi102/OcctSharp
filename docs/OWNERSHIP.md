@@ -1,5 +1,21 @@
 # Ownership and Lifetime
 
+## Batch P surface workflow boundary
+
+Surface descriptors, grids, UV definitions, boundary loops, projection solutions,
+intersections, traces and diagnostics contain only copied managed values. No surface,
+pcurve, adaptor, iterator, intersector or temporary builder escapes a native call.
+Topology results use the existing registered Shape owner and survive their source.
+Repair and split result containers own their Shape and must be disposed.
+
+Copying an edge without its support face through OCCT's generic copier drops external
+pcurves. Batch P explicitly restores copied pcurves and copies 3D curve geometry onto
+independent topology; supporting surfaces are shared read-only. Flags, vertices and
+tolerances are modified only on the result. All intermediate owners are released on
+failure. Count/copy boundaries expose no native arrays. XDE labels remain document-bound;
+viewer presentations remain viewer-bound and creation-thread-affine. SC-053 and ADR-0080
+do not create a second registry or cross-DLL allocation contract.
+
 ## Preview.14 sketch ownership
 
 Batch O public definitions and arrays are immutable managed copies. Geom2d curves,

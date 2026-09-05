@@ -5,7 +5,7 @@ versioned native C ABI, generated low-level bindings, and friendly managed CAD A
 modeling, STEP/IGES/STL exchange, XDE assemblies and metadata, meshing, inspection, and
 Windows visualization.
 
-Current local preview: `8.0.1-preview.14` for Windows x64. The NuGet graph contains 12 managed
+Current local preview: `8.0.1-preview.15` for Windows x64. The NuGet graph contains 12 managed
 modules, the `OcctSharp` compatibility/facade package, and one shared
 `OcctSharp.Native.win-x64` runtime package. The native package places the complete
 62-DLL runtime in the application's `occt/` directory; no machine-wide OCCT installation
@@ -14,17 +14,17 @@ or `PATH` change is required.
 ## Install
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.14 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp --version 8.0.1-preview.15 --source ./OcctSharp/artifacts/packages
 ```
 
 A narrow consumer can reference a module directly, for example:
 
 ```powershell
-dotnet add package OcctSharp.Modeling --version 8.0.1-preview.14 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.15 --source ./OcctSharp/artifacts/packages
 ```
 
 The supported runtime baseline is .NET 10, Windows x64, and OCCT 8.0.1.
-Preview.14 is built and checked locally; it is not published on NuGet.org. Create the
+Preview.15 is a local-only build; it is not published on NuGet.org. Create the
 local package feed with `OcctSharp/eng/pack.ps1` using the contributor toolchain, or run
 the repository samples directly with the committed runtime.
 
@@ -64,6 +64,32 @@ intersection, trim/split/reverse, translation, rotation, uniform scale, and mirr
 Bezier and B-spline definitions support rational weights; `Interpolate` creates a
 degree-one, piecewise-linear B-spline. Wire/face/feature results are independent
 `IDisposable` shapes. The API does not include a parametric constraint solver.
+
+## Work on a curved surface in UV space
+
+```csharp
+using OcctSharp;
+
+using Shape cylinder = SurfaceModeling.CreateAnalyticFace(
+    AnalyticSurfaceKind.Cylinder, SketchPlane.XY,
+    new SurfaceParameterBounds(0, Math.Tau, 0, 20), radius: 8);
+SurfaceEvaluationPoint sample = SurfaceModeling.Evaluate(cylinder, new(1, 5));
+SurfaceCurveDefinition uv = SurfaceModeling.InterpolateUv(
+    [new(0.3, 2), new(1.5, 8), new(3.2, 17)]);
+using Shape edge = SurfaceModeling.LiftCurve(cylinder, uv.Curve);
+IReadOnlyList<SurfaceCurveSample> samples = SurfaceModeling.SampleCurve(cylinder, edge, 50);
+using Shape section = SurfaceModeling.IntersectPlane(cylinder,
+    new SketchPlane(new(0, 0, 10), new(1, 0, 0), new(0, 1, 0)),
+    new SurfaceParameterBounds(-10, 10, -10, 10));
+```
+
+`SurfaceModeling` also supports hole-aware UV classification, full/batch projections,
+seam branches and tracing, UV offsets, boundary measurements, trimmed faces, copied
+topology repair, and face splitting with diagnostics. Points and derivatives are in
+world coordinates; UV values are surface-local. UV offset distance is not world-space
+distance. Definitions and reports are copied; returned shapes and repair/split result
+containers must be disposed. See the [32-capability Batch P scope](docs/BATCH_P_SURFACE_UV_CURVE_GAP_INVENTORY.md)
+and [Preview.15 notes](docs/RELEASE_NOTES_8.0.1_PREVIEW_15.md).
 
 ## Read ordinary STEP geometry
 
