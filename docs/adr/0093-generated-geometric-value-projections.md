@@ -1,6 +1,6 @@
 # ADR-0093: Broad generated geometric value projections
 
-- Status: Accepted for implementation; actual validation is recorded in STATUS.
+- Status: Accepted and implemented; actual validation is recorded in STATUS.
 - Date: 2026-09-06.
 - Entry: Batch X `2cbe55e`, Preview.23; 19,682 generated and 1,217 manual IDs.
 

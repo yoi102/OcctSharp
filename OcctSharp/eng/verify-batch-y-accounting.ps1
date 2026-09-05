@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param(
-    [string]$BaselineDirectory = 'artifacts/preparation-baselines/preview23-batch-y',
+    [string]$BaselineDirectory = 'artifacts/preparation-baselines/preview23-batch-x',
     [string]$InventoryPath = 'artifacts/generator-reports/full-inventory.json',
     [string]$OutputPath = 'artifacts/batch-y-accounting.json'
 )

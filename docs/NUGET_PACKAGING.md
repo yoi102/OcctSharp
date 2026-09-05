@@ -23,7 +23,7 @@ contains a package hash and would make the artifact self-referential. Release no
 the stable architecture/topic documents are packaged; status remains authoritative in
 the repository.
 
-Preview.22 is local-only and is not published. The release workstream produces
+Preview.24 is local-only and is not published. The release workstream produces
 immutable native provenance, SBOM/checksum evidence, API diff, and CI configuration.
 The project license and bundled third-party notice layout are resolved by ADR-0059;
 hosted release execution and signing remain separate gates. Publication evidence is

@@ -29,6 +29,13 @@ indexed elements and one retained surface handle. None describes a sequence star
 Native sentinel results (for example an undefined mouse point) are copied as returned;
 the finite check applies to input conversion, not to native output semantics.
 
+The new BRepExtrema_ProximityValueTool include also includes BRepExtrema_TriangleSet.hxx.
+Its inline `Standard_EXPORT GetVertices()` accessor contributes exactly one incidental
+decorated C++ export, `?GetVertices@BRepExtrema_TriangleSet@@QEBAAEBV?$NCollection_LinearVector@V?$NCollection_Vec3@N@@@@XZ`.
+The Y export audit therefore requires 968 generated C additions plus this exact SDK
+symbol, zero removals and identical Release/Debug sets. The C++ symbol is not a supported
+C ABI binding and contributes no emitted declaration ID or managed API signature.
+
 ## SC-061: Batch X declaration-level reference and artifact exceptions
 
 The generic X type rules do not override SDK-specific return semantics or binary availability.

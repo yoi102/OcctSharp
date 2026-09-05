@@ -2,6 +2,7 @@
 
 Batch Y implements [ADR-0093](adr/0093-generated-geometric-value-projections.md).
 It adds 968 generated declaration IDs, from 19,682 to 20,650, across eight modules.
+The managed public API adds 1,085 signatures and removes none.
 Thirty immutable records in OcctSharp.Values cover coordinates, vectors, directions,
 axes, matrices, quaternions, lines, conics, planes and elementary surfaces. Constructors
 and getters can now exchange these values without native object-layout marshaling.
@@ -14,7 +15,8 @@ Existing public type identities and generated overload signatures remain compati
 
 Mutable/output references, bulk arrays and general transformation internals are later
 work. One exact reverse-module contract remains Blocked; two exact missing-artifact
-signatures are excluded in SC-062. No manual ID is added. Declaration coverage is not
+signatures are excluded in SC-062. The initial gp_Pnt(gp_XYZ) constructor emission path
+also remains Blocked. No manual ID is added. Declaration coverage is not
 functional completeness; full OCCT migration remains incomplete.
 
 Package Preview.24 / ABI 1.68 / bridge 0.76.0 preserve twelve modules, the facade,
