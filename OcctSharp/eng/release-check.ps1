@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [string]$OcctRoot,
-    [string]$PackageVersion = '8.0.1-preview.19',
+    [string]$PackageVersion = '8.0.1-preview.20',
     [string]$ApiBaselineVersion = '0.1.0-alpha.38'
 )
 

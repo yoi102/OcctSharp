@@ -1,5 +1,20 @@
 # Native ABI
 
+## ABI 1.64 / Preview.20 (Batch U, validation in progress)
+
+Bridge 0.72.0 adds eleven C calls in OcctSharp.Native.LocalFeatures.h: fillet,
+chamfer, face/shell draft, prism/sweep, rib/slot, hole, copied snapshot/history and
+private selected-subshape sharing. Existing C signatures/owners remain unchanged.
+All temporary result owners reuse FeatureResult release; copied history shapes use
+Shape release. No iterator, builder, C++ layout or managed callback crosses the ABI.
+LocalFeatureInfo/ContourInfo are 56 bytes, ContourEdge 40, FilletSection 112,
+Fault 16, History 24, FilletOptions 72, FilletProgram 40, FaceDraftProgram 96,
+ShellDraftOptions 72, LimitedFeatureOptions 96, RibSlotOptions 192 and HoleOptions 88.
+History's last field is the exact final-result topology index or -1. It is not an
+index into diagnostic partials. Count/capacity checks precede every array write;
+failure clears outputs. Assembly/file 0.1.0.0 and binding schema 1.13 remain unchanged.
+The target identity is not a claim of passing whole-batch release validation; see STATUS.
+
 ## ABI 1.63 / Preview.19 (Batch T)
 
 Bridge 0.71.0 adds sixteen C functions in OcctSharp.Native.Parametric.h: six function

@@ -1,5 +1,55 @@
 # Known Issues
 
+## KI-034: Debug shell-draft limits assert in OCCT internal history
+
+- Status: bridge precondition and edge-only history adaptation locally validated
+  in Release/Debug and actual Debug-native 409/409. Upstream SDK/DLLs are not patched.
+- Evidence: actual Debug-native testhost asserted in TKBRep `BRepTools_History.cxx:165`.
+  `artifacts/diagnostics/batch-u-crt.dmp` and `batch-u-crt-stack.log` identify
+  `DraftShellExtentAndStopsCreateIndependentShells` -> native ShellDraft. Source
+  `BRepFill_Draft::Fuse` queries unsupported sweep-section shapes. Both right and
+  round closed-polygon limit probes assert; this is not a catchable OCCT exception.
+- Limit-driven modes now explicitly require one analytic line/circle boundary edge,
+  identically in Release and Debug. Cornered/multi-edge profiles are rejected before
+  the kernel. Length-only cornered profiles remain supported. This is a disclosed
+  eligibility restriction, not an upstream fix or a claim of arbitrary shell support.
+- `BRepFill_Draft::Generated` also casts every input to Edge. Only source edges are
+  queried; no vertex cast, fabricated deletion, or unavailable Modified mapping is used.
+- The open straight-edge/unbounded-surface case can finish but produce invalid
+  topology. Diagnostics retain that distinction and RequireShape rejects it. Circle
+  surface limits and circle/line shape limits have independent numeric success tests.
+- `Shell()` is the pre-restriction sweep, not necessarily a final lateral group.
+  It is labelled PreLimitShape; final laterals require native-generated face membership.
+- No assertion is disabled/ignored, no Boolean fallback, new DLL, or vendored LGPL
+  implementation is introduced. Original U-21/22/23 outcomes retain positive geometry
+  tests and explicit cornered-limit rejection tests.
+
+## KI-033: Pinned BRepFeat limiter preconditions are not uniform
+
+- Status: exposed and covered by Batch U positive/negative regressions; no SDK patch.
+- MakeDPrism UntilEnd derives slanted length from the largest base-box dimension.
+  On a cube it can stop short of the far cap and throw a map-lookup failure. An
+  adequately wide base succeeds. The bridge returns diagnostic failure, not a fallback.
+- Limited MakePipe can fail converting untrimmed Geom_Line to BSpline. The supported
+  success fixture uses a bounded Bezier spine; a line-spine failure has an explicit test.
+- Planar stop faces may denote unbounded support surfaces. Revolved limits use native
+  base-side selection; they are not guaranteed to stop at the first positive angle.
+- Public options and ADR-0088 disclose these semantics; no feature may silently replace
+  a failed local builder with a global Boolean.
+
+## KI-032: OCCT 8.0.1 fillet Law_Function radius setter loses the supplied law
+
+- Status: U workaround locally validated, including actual Debug-native 409/409.
+- Severity: High (native access violation).
+- Evidence: `artifacts/batch-u-first-runtime.log` records a test-host `0xC0000005`
+  abort in nonconstant-law fillet simulation. In the pinned SDK's source,
+  `ChFiDS_FilSpine::SetRadius(Law_Function, ...)` populates only a temporary composite
+  then clears the persistent radius sequence. Compute also clears post-simulation laws.
+- Workaround: source-bound copied laws become checked native sample programs, with
+  explicit interpolation/probe diagnostics and per-edge global arc-length mapping.
+  Do not retry the unsafe setter or present sampled agreement as an exact/global bound.
+- Decision: [ADR-0088](adr/0088-source-bound-contour-and-local-feature-programs.md).
+
 ## KI-031: OCCT 8.0.1 per-constraint filling residual getters corrupt temporary storage
 
 - Status: resolved in the Preview.18 bridge; final whole-batch evidence is in STATUS.

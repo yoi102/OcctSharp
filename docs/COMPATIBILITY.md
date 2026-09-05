@@ -1,5 +1,18 @@
 # Compatibility
 
+## Preview.20 additive local-feature API
+
+U adds copied source-bound local-feature programs without changing existing type or
+assembly identities. The managed comparison against T adds 592 signatures and removes
+none (42,387 total). ABI 1.64 / bridge 0.72.0 adds eleven C functions; the final-source
+export audit found 29,470 identical Release/Debug names and zero removals. Actual
+Debug-native passes 409/409; Release/Debug, both consumers, cold regeneration and the
+complete local release-check pass. Final documentation delivery is recorded in STATUS.
+Schema remains 1.13 and assembly/file 0.1.0.0.
+KI-034 explicitly limits the new shell-limit API's accepted profile types and separates
+algorithm completion, validity and diagnostic/pre-limit topology. This is not a removal
+from the T public surface or an assertion that arbitrary OCCT shell drafts are safe.
+
 ## Preview.19 additive parametric API
 
 T adds Documents-owned copied schema/expressions/plans and facade-owned execution,

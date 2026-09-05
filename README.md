@@ -5,7 +5,8 @@ versioned native C ABI, generated low-level bindings, and friendly managed CAD A
 modeling, STEP/IGES/STL exchange, XDE assemblies and metadata, meshing, inspection, and
 Windows visualization.
 
-Current local preview: `8.0.1-preview.19` for Windows x64. The NuGet graph contains 12 managed
+Current local preview target: `8.0.1-preview.20` for Windows x64 (validation status in
+[STATUS](docs/STATUS.md)). The NuGet graph contains 12 managed
 modules, the `OcctSharp` compatibility/facade package, and one shared
 `OcctSharp.Native.win-x64` runtime package. The native package places the complete
 62-DLL runtime in the application's `occt/` directory; no machine-wide OCCT installation
@@ -14,17 +15,17 @@ or `PATH` change is required.
 ## Install
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.19 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp --version 8.0.1-preview.20 --source ./OcctSharp/artifacts/packages
 ```
 
 A narrow consumer can reference a module directly, for example:
 
 ```powershell
-dotnet add package OcctSharp.Modeling --version 8.0.1-preview.19 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.20 --source ./OcctSharp/artifacts/packages
 ```
 
 The supported runtime baseline is .NET 10, Windows x64, and OCCT 8.0.1.
-Preview.19 is a local-only build; it is not published on NuGet.org. Create the
+Preview.20 is local-only; it is not published on NuGet.org. Create the
 local package feed with `OcctSharp/eng/pack.ps1` using the contributor toolchain, or run
 the repository samples directly with the committed runtime.
 
@@ -39,6 +40,28 @@ using Shape cylinder = ShapeFactory.CreateCylinder(6, 20);
 Console.WriteLine($"Box faces: {box.FaceCount}");
 Console.WriteLine($"Cylinder faces: {cylinder.FaceCount}");
 ```
+
+## Apply a source-bound variable-radius fillet
+
+```csharp
+using OcctSharp;
+
+using var box = ShapeFactory.CreateBox(10, 12, 15);
+using var source = RepairSnapshot.Create(box);
+var seed = source.Topology.First(t => t.Kind == ShapeKind.Edge).Selection;
+var law = ScalarLawDefinition.Linear(new LawDomain(0, 1), .5, 1.5);
+var recipe = ContourFilletRecipe.Create(source, [FilletContourProgram.FromLaw(seed, law)]);
+using var sections = recipe.Simulate(source); // Copied circle sections, no native builder.
+using var result = recipe.Build(source);
+using var acceptance = LocalFeatureAcceptance.Inspect(source, result);
+using var accepted = acceptance.Accept(); // Independent topology after Q budget checks.
+Console.WriteLine($"Sections: {sections.SimulatedSections.Count}; faces: {accepted.FaceCount}");
+```
+
+Recipes also support contour chamfers, per-face draft and explicit local-feature
+limits. Partial fillets are diagnostics, never accepted fallback geometry. Radius-law
+interpolation and pinned SDK limiter limitations are disclosed in
+[Preview.20 notes](docs/RELEASE_NOTES_8.0.1_PREVIEW_20.md).
 
 ## Recompute a persisted parametric feature
 

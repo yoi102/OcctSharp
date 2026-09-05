@@ -160,6 +160,11 @@ public sealed partial class ParametricDocument
                         if (meshRecipe.RecomputeNormals) mesh = MeshEditing.RebuildNormals(mesh).Mesh;
                         return new(MeshTopology.CreateFace(mesh));
                     }
+                case ParametricFeatureKind.ContourFillet:
+                case ParametricFeatureKind.ContourChamfer:
+                case ParametricFeatureKind.FaceDraft:
+                case ParametricFeatureKind.LimitedFeature:
+                    return EvaluateLocalFeature(definition, Input, name => Length(name));
                 default: throw new NotSupportedException("No built-in evaluator exists for this feature.");
             }
         }

@@ -51,5 +51,14 @@ guidedPlan.Dispose(); guidedSpine.Dispose(); guidedProfile.Dispose();
 if (!guidedResult.Diagnostics.IsSolid || !guidedResult.RequireShape().IsValid || guidedResult.RequireShape().FaceCount != 6)
     throw new InvalidOperationException("The facade-free Modeling consumer failed the owning guided sweep.");
 
+using RepairSnapshot contourSource = RepairSnapshot.Create(box);
+var seed = contourSource.Topology.First(t => t.Kind == ShapeKind.Edge).Selection;
+var contourRecipe = ContourFilletRecipe.Create(contourSource, [FilletContourProgram.FromLaw(seed, ScalarLawDefinition.Linear(new(0, 1), .5, 1))]);
+using LocalFeatureResult contourResult = contourRecipe.Build(contourSource);
+using LocalFeatureResult contourSections = contourRecipe.Simulate(contourSource);
+contourSource.Dispose();
+if (!contourResult.RequireShape().IsValid || contourSections.SimulatedSections.Count == 0)
+    throw new InvalidOperationException("The facade-free Modeling consumer failed the owning law-driven fillet.");
+
 Console.WriteLine(
     $"Direct Modeling consumer passed: {box.Kind}, {box.FaceCount} faces, owning guided sweep, OCCT {runtime.OcctVersion}.");

@@ -1,5 +1,24 @@
 # Ownership and Lifetime
 
+## Batch U local-feature contract
+
+Modeling recipes own copied scalar programs and revision-bound selections. Limited,
+rib and shell plans own one deep-copied input graph; every native call makes a further
+private graph copy while preserving exact support/sliding sharing. Native builders,
+maps, iterators, laws and section arrays never escape. Result diagnostics reuse the
+existing FeatureResult owner; result/history topology reuses Shape registration.
+The internal selected-subshape bridge returns an owning TopoDS value sharing only a
+private snapshot, preserving exact support identity for the next whole-graph copy.
+It is not a borrowed pointer and adds no registry or public mutable snapshot property.
+
+LocalFeatureAcceptance verifies source/result fingerprints and Q budgets, then owns
+a private candidate snapshot. Protected topology requires exact Unchanged history
+and matching canonical standalone geometry, never a proximity match. Accept returns
+another independent copy and consumes the acceptance once. Failed algorithm roots
+are cleared; HasResult-gated fillet partials remain diagnostic history owners only.
+T evaluation stays in the facade with original Documents ownership unchanged.
+Current evidence and missing whole-batch gates are recorded in STATUS.
+
 ## Batch T parametric graph contract
 
 ParametricDocument.Create/Open owns its OCAF/XDE parent; Attach borrows the existing

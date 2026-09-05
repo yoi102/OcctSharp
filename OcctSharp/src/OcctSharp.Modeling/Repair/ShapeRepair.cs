@@ -144,7 +144,7 @@ public static class ShapeRepair
         }
         return Array.AsReadOnly(result.Distinct().ToArray());
     }
-    private static ReadOnlyCollection<RepairBudgetCheck> CheckBudget(RepairMetrics before, RepairMetrics after, RepairBudget budget)
+    internal static ReadOnlyCollection<RepairBudgetCheck> CheckBudget(RepairMetrics before, RepairMetrics after, RepairBudget budget)
     {
         List<RepairBudgetCheck> checks = [];
         checks.Add(new("validity", !budget.RequireValid ? RepairCheckState.NotRequired : after.IsValid ? RepairCheckState.Passed : RepairCheckState.Failed,

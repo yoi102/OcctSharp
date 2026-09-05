@@ -1,8 +1,37 @@
 # Special Cases
 
+## SC-058: Source-bound advanced local-feature programs
+
+ADR-0088 implements the original forty-row U scope through call-local fillet/chamfer,
+draft, BRepFeat prism/sweep/rib/hole builders and existing Shape/FeatureResult owners.
+S radius laws use measured bounded interpolation because the pinned SDK law setter
+discards its law and can crash. RibSlot historical getters assume map membership and
+reuse static scratch state: a private native adapter reads checked protected maps,
+retains only actual final-result targets and marks absent relations Unmapped, not
+Deleted. Form cap queries similarly require checked map membership after limiting.
+These native-local adapters do not expose C++ class layouts across the ABI.
+
+Draft ConnectedFaces requires a completed probe Build, not merely AddDone. The probe
+determines the effective tangent set before whole-program acceptance. MakeDraft Length
+is the slanted generatrix extent, not projected height. Penetration chamfer dimensions
+follow the SDK-specific construction and are not ordinary two-distance setbacks.
+Actual Debug-native evidence also requires KI-034's analytic single-edge limit-profile
+precondition and edge-only MakeDraft Generated queries. Length-only cornered drafts
+remain available; unavailable vertex/face Modified/Deleted relations are not fabricated.
+
+The exact 108 blocked direct/virtual-dispatch overloads are listed in
+[batch-u-manual-calls.json](../OcctSharp/config/batches/batch-u-manual-calls.json)
+and mirrored individually in generation.json. Additional circle-section and oriented
+cylinder-sector support refines the same forty-row closure. Unsafe Law_Function
+setters and unchecked RibSlot getters are deliberately not reclassified. The final
+inventory confirms exactly 108 SC-058 transitions and zero other changes; no whole
+root is relabelled. Accounting negatives preserve all inputs. Focused 96/96 and ten
+repeats, Release/Debug and actual Debug-native 409/409, updated runtime, full release
+checks and final document-package verification pass. Local commit is recorded in STATUS.
+
 ## SC-057: Typed parametric state, recompute, naming and relocation
 
-- Status: T implementation and focused verification active; complete exit gates in STATUS.
+- Status: all forty T capabilities and complete local gates pass; committed as `bfb8811`.
 - Scope: 65 exact newly invoked Blocked overloads in
   [batch-t-manual-calls.json](../OcctSharp/config/batches/batch-t-manual-calls.json).
   No whole root is accepted implicitly; reused historical support remains unchanged.

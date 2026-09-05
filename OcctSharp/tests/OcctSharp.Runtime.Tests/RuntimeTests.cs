@@ -11,8 +11,8 @@ public sealed class RuntimeTests
     {
         OcctRuntimeInfo info = OcctRuntime.Info;
 
-        Assert.Equal(new Version(1, 63), info.AbiVersion);
-        Assert.Equal("0.71.0", info.BridgeVersion);
+        Assert.Equal(new Version(1, 64), info.AbiVersion);
+        Assert.Equal("0.72.0", info.BridgeVersion);
         Assert.Equal("8.0.1", info.OcctVersion);
     }
 

@@ -1,5 +1,19 @@
 # Architecture
 
+## Batch U local-feature boundary
+
+ADR-0088 adds copied source-bound contour, per-face draft and local-feature plans in
+Modeling. Eight cohesive native units own diagnostics, fillets, chamfers, draft,
+prisms, sweeps, ribs/slots and holes. Two private headers share only native-local
+input/result and contour helpers; the public LocalFeatures companion contains fixed
+C records and eleven calls. Existing Shape/FeatureResult ownership, module assemblies
+and the single native DLL remain unchanged. The facade alone composes parametric
+evaluation, XDE publication/exchange and parent/thread-bound viewer review.
+Protected acceptance uses Q budgets and exact unchanged correspondence. Partial
+fillets are diagnostic owners, never accepted output. Native-local checked Form/RibSlot
+adapters preserve absent mappings and final-result membership without exporting builders.
+Validation and remaining gates are reported in STATUS; V/W remain prepared.
+
 ## Batch T parametric execution boundary
 
 ADR-0087 places copied versioned feature/parameter/expression plans and internal
@@ -55,8 +69,9 @@ features and V partition/volume work in cohesive Modeling units, and W lighting,
 appearance and frame capture in Visualization. T recipe execution remains higher-layer
 orchestration; Documents must not gain reverse dependencies. W CPU frame DTOs remain
 independent of WPF; the sample consumes copies. New viewer resource IDs stay within the
-existing context/thread lifetime. All files/contracts are planned, not implemented;
-one Native DLL and the existing module/source boundaries remain.
+existing context/thread lifetime. U is implemented in the boundary above and is being
+validated; V/W files/contracts remain planned. One Native DLL and the existing
+module/source boundaries remain.
 
 ## Prepared Q-T source and dependency placement
 

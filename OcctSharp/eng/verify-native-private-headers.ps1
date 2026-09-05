@@ -4,6 +4,8 @@ param([string]$OutputDirectory = 'artifacts/private-header-validation')
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 $workspaceRoot = Split-Path -Parent $PSScriptRoot
+$originalEnvironment = [Environment]::GetEnvironmentVariables('Process')
+try {
 $settings = Get-Content -LiteralPath (Join-Path $workspaceRoot 'config/local.settings.json') -Raw | ConvertFrom-Json
 $vcvars = Join-Path $settings.visualStudioRoot 'VC/Auxiliary/Build/vcvars64.bat'
 $environmentLines = @(& cmd.exe /d /c ('call "' + $vcvars + '" >nul && set'))
@@ -28,3 +30,16 @@ foreach ($header in $headers) {
 $report = [ordered]@{ schemaVersion='1.0'; state='PASS'; headerCount=$checked.Count; compiler=(Get-Command cl.exe).Source; headers=$checked }
 [IO.File]::WriteAllText((Join-Path $outputRoot 'result.json'), ($report | ConvertTo-Json -Depth 4) + [Environment]::NewLine)
 Write-Host "Standalone private headers PASS: $($checked.Count)/$($checked.Count), MSVC /Zs /W4 /WX, no PCH."
+}
+finally {
+    # vcvars supplies Platform=x64; leaking it into a following managed solution
+    # restore makes dotnet select the nonexistent Debug|x64 configuration.
+    foreach ($name in @([Environment]::GetEnvironmentVariables('Process').Keys)) {
+        if (-not $originalEnvironment.Contains($name)) {
+            [Environment]::SetEnvironmentVariable($name, [NullString]::Value, 'Process')
+        }
+    }
+    foreach ($name in $originalEnvironment.Keys) {
+        [Environment]::SetEnvironmentVariable($name, $originalEnvironment[$name], 'Process')
+    }
+}

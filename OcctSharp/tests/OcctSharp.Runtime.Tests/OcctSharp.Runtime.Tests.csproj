@@ -20,5 +20,6 @@
     <Compile Include="../Shared/BatchRMeshWorkflow.cs" Link="BatchRMeshWorkflow.cs" />
     <Compile Include="../Shared/BatchSGuidedWorkflow.cs" Link="BatchSGuidedWorkflow.cs" />
     <Compile Include="../Shared/BatchTParametricWorkflow.cs" Link="BatchTParametricWorkflow.cs" />
+    <Compile Include="../Shared/BatchULocalFeatureWorkflow.cs" Link="BatchULocalFeatureWorkflow.cs" />
   </ItemGroup>
 </Project>

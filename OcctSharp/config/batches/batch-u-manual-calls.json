@@ -1,0 +1,657 @@
+{
+  "schemaVersion": "1.0",
+  "batch": "U",
+  "specialCaseId": "SC-058",
+  "baselineInventorySha256": "1A4B9369EA89E89F9A71BC12E190196FD010B716681939E935BEAC840A69FDBA",
+  "note": "Exact call-local U overloads, including virtual contour dispatch. CircSection circle snapshots and oriented cylinder-sector construction refine the unchanged 40-row closure. Unsafe law setters and RibSlot history getters are not reclassified; checked protected maps are a documented native-local adapter.",
+  "calls": [
+    {
+      "stableId": "c:@S@BRepBuilderAPI_MakeWire@F@BRepBuilderAPI_MakeWire#&1$@S@TopoDS_Edge#",
+      "nativeName": "BRepBuilderAPI_MakeWire::BRepBuilderAPI_MakeWire",
+      "header": "BRepBuilderAPI_MakeWire.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_Form@F@CurrentStatusError#1",
+      "nativeName": "BRepFeat_Form::CurrentStatusError",
+      "header": "BRepFeat_Form.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_Form@F@Generated#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepFeat_Form::Generated",
+      "header": "BRepFeat_Form.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_Form@F@IsDeleted#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepFeat_Form::IsDeleted",
+      "header": "BRepFeat_Form.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_Form@F@Modified#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepFeat_Form::Modified",
+      "header": "BRepFeat_Form.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeCylindricalHole@F@BRepFeat_MakeCylindricalHole#",
+      "nativeName": "BRepFeat_MakeCylindricalHole::BRepFeat_MakeCylindricalHole",
+      "header": "BRepFeat_MakeCylindricalHole.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeCylindricalHole@F@Build#",
+      "nativeName": "BRepFeat_MakeCylindricalHole::Build",
+      "header": "BRepFeat_MakeCylindricalHole.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeCylindricalHole@F@Init#&1$@S@TopoDS_Shape#&1$@S@gp_Ax1#",
+      "nativeName": "BRepFeat_MakeCylindricalHole::Init",
+      "header": "BRepFeat_MakeCylindricalHole.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeCylindricalHole@F@Perform#d#",
+      "nativeName": "BRepFeat_MakeCylindricalHole::Perform",
+      "header": "BRepFeat_MakeCylindricalHole.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeCylindricalHole@F@Perform#d#d#d#b#",
+      "nativeName": "BRepFeat_MakeCylindricalHole::Perform",
+      "header": "BRepFeat_MakeCylindricalHole.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeCylindricalHole@F@PerformBlind#d#d#b#",
+      "nativeName": "BRepFeat_MakeCylindricalHole::PerformBlind",
+      "header": "BRepFeat_MakeCylindricalHole.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeCylindricalHole@F@PerformThruNext#d#b#",
+      "nativeName": "BRepFeat_MakeCylindricalHole::PerformThruNext",
+      "header": "BRepFeat_MakeCylindricalHole.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeCylindricalHole@F@PerformUntilEnd#d#b#",
+      "nativeName": "BRepFeat_MakeCylindricalHole::PerformUntilEnd",
+      "header": "BRepFeat_MakeCylindricalHole.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeCylindricalHole@F@Status#1",
+      "nativeName": "BRepFeat_MakeCylindricalHole::Status",
+      "header": "BRepFeat_MakeCylindricalHole.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeDPrism@F@Add#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#",
+      "nativeName": "BRepFeat_MakeDPrism::Add",
+      "header": "BRepFeat_MakeDPrism.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeDPrism@F@BRepFeat_MakeDPrism#&1$@S@TopoDS_Shape#&1$@S@TopoDS_Face#S2_#d#I#b#",
+      "nativeName": "BRepFeat_MakeDPrism::BRepFeat_MakeDPrism",
+      "header": "BRepFeat_MakeDPrism.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeDPrism@F@Perform#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepFeat_MakeDPrism::Perform",
+      "header": "BRepFeat_MakeDPrism.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeDPrism@F@Perform#&1$@S@TopoDS_Shape#S0_#",
+      "nativeName": "BRepFeat_MakeDPrism::Perform",
+      "header": "BRepFeat_MakeDPrism.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeDPrism@F@Perform#d#",
+      "nativeName": "BRepFeat_MakeDPrism::Perform",
+      "header": "BRepFeat_MakeDPrism.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeDPrism@F@PerformFromEnd#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepFeat_MakeDPrism::PerformFromEnd",
+      "header": "BRepFeat_MakeDPrism.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeDPrism@F@PerformThruAll#",
+      "nativeName": "BRepFeat_MakeDPrism::PerformThruAll",
+      "header": "BRepFeat_MakeDPrism.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeDPrism@F@PerformUntilEnd#",
+      "nativeName": "BRepFeat_MakeDPrism::PerformUntilEnd",
+      "header": "BRepFeat_MakeDPrism.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeDPrism@F@PerformUntilHeight#&1$@S@TopoDS_Shape#d#",
+      "nativeName": "BRepFeat_MakeDPrism::PerformUntilHeight",
+      "header": "BRepFeat_MakeDPrism.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeLinearForm@F@Add#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#",
+      "nativeName": "BRepFeat_MakeLinearForm::Add",
+      "header": "BRepFeat_MakeLinearForm.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeLinearForm@F@BRepFeat_MakeLinearForm#&1$@S@TopoDS_Shape#&1$@S@TopoDS_Wire#&1$@N@opencascade@S@handle>#$@S@Geom_Plane#&1$@S@gp_Vec#S7_#I#b#",
+      "nativeName": "BRepFeat_MakeLinearForm::BRepFeat_MakeLinearForm",
+      "header": "BRepFeat_MakeLinearForm.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeLinearForm@F@Perform#",
+      "nativeName": "BRepFeat_MakeLinearForm::Perform",
+      "header": "BRepFeat_MakeLinearForm.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakePipe@F@Add#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#",
+      "nativeName": "BRepFeat_MakePipe::Add",
+      "header": "BRepFeat_MakePipe.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakePipe@F@BRepFeat_MakePipe#&1$@S@TopoDS_Shape#S0_#&1$@S@TopoDS_Face#&1$@S@TopoDS_Wire#I#b#",
+      "nativeName": "BRepFeat_MakePipe::BRepFeat_MakePipe",
+      "header": "BRepFeat_MakePipe.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakePipe@F@Perform#",
+      "nativeName": "BRepFeat_MakePipe::Perform",
+      "header": "BRepFeat_MakePipe.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakePipe@F@Perform#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepFeat_MakePipe::Perform",
+      "header": "BRepFeat_MakePipe.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakePipe@F@Perform#&1$@S@TopoDS_Shape#S0_#",
+      "nativeName": "BRepFeat_MakePipe::Perform",
+      "header": "BRepFeat_MakePipe.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakePrism@F@Add#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#",
+      "nativeName": "BRepFeat_MakePrism::Add",
+      "header": "BRepFeat_MakePrism.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakePrism@F@BRepFeat_MakePrism#&1$@S@TopoDS_Shape#S0_#&1$@S@TopoDS_Face#&1$@S@gp_Dir#I#b#",
+      "nativeName": "BRepFeat_MakePrism::BRepFeat_MakePrism",
+      "header": "BRepFeat_MakePrism.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakePrism@F@Perform#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepFeat_MakePrism::Perform",
+      "header": "BRepFeat_MakePrism.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakePrism@F@Perform#&1$@S@TopoDS_Shape#S0_#",
+      "nativeName": "BRepFeat_MakePrism::Perform",
+      "header": "BRepFeat_MakePrism.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakePrism@F@Perform#d#",
+      "nativeName": "BRepFeat_MakePrism::Perform",
+      "header": "BRepFeat_MakePrism.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakePrism@F@PerformFromEnd#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepFeat_MakePrism::PerformFromEnd",
+      "header": "BRepFeat_MakePrism.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakePrism@F@PerformThruAll#",
+      "nativeName": "BRepFeat_MakePrism::PerformThruAll",
+      "header": "BRepFeat_MakePrism.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakePrism@F@PerformUntilEnd#",
+      "nativeName": "BRepFeat_MakePrism::PerformUntilEnd",
+      "header": "BRepFeat_MakePrism.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakePrism@F@PerformUntilHeight#&1$@S@TopoDS_Shape#d#",
+      "nativeName": "BRepFeat_MakePrism::PerformUntilHeight",
+      "header": "BRepFeat_MakePrism.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeRevol@F@Add#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#",
+      "nativeName": "BRepFeat_MakeRevol::Add",
+      "header": "BRepFeat_MakeRevol.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeRevol@F@BRepFeat_MakeRevol#&1$@S@TopoDS_Shape#S0_#&1$@S@TopoDS_Face#&1$@S@gp_Ax1#I#b#",
+      "nativeName": "BRepFeat_MakeRevol::BRepFeat_MakeRevol",
+      "header": "BRepFeat_MakeRevol.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeRevol@F@Perform#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepFeat_MakeRevol::Perform",
+      "header": "BRepFeat_MakeRevol.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeRevol@F@Perform#&1$@S@TopoDS_Shape#S0_#",
+      "nativeName": "BRepFeat_MakeRevol::Perform",
+      "header": "BRepFeat_MakeRevol.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeRevol@F@Perform#d#",
+      "nativeName": "BRepFeat_MakeRevol::Perform",
+      "header": "BRepFeat_MakeRevol.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeRevol@F@PerformThruAll#",
+      "nativeName": "BRepFeat_MakeRevol::PerformThruAll",
+      "header": "BRepFeat_MakeRevol.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeRevol@F@PerformUntilAngle#&1$@S@TopoDS_Shape#d#",
+      "nativeName": "BRepFeat_MakeRevol::PerformUntilAngle",
+      "header": "BRepFeat_MakeRevol.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeRevolutionForm@F@Add#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#",
+      "nativeName": "BRepFeat_MakeRevolutionForm::Add",
+      "header": "BRepFeat_MakeRevolutionForm.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeRevolutionForm@F@BRepFeat_MakeRevolutionForm#&1$@S@TopoDS_Shape#&1$@S@TopoDS_Wire#&1$@N@opencascade@S@handle>#$@S@Geom_Plane#&1$@S@gp_Ax1#d#d#I#&b#",
+      "nativeName": "BRepFeat_MakeRevolutionForm::BRepFeat_MakeRevolutionForm",
+      "header": "BRepFeat_MakeRevolutionForm.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_MakeRevolutionForm@F@Perform#",
+      "nativeName": "BRepFeat_MakeRevolutionForm::Perform",
+      "header": "BRepFeat_MakeRevolutionForm.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_RibSlot@F@CurrentStatusError#1",
+      "nativeName": "BRepFeat_RibSlot::CurrentStatusError",
+      "header": "BRepFeat_RibSlot.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFeat_RibSlot@F@FacesForDraft#1",
+      "nativeName": "BRepFeat_RibSlot::FacesForDraft",
+      "header": "BRepFeat_RibSlot.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@AddDA#d#d#&1$@S@TopoDS_Edge#&1$@S@TopoDS_Face#",
+      "nativeName": "BRepFilletAPI_MakeChamfer::AddDA",
+      "header": "BRepFilletAPI_MakeChamfer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@Closed#I#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::Closed",
+      "header": "BRepFilletAPI_MakeChamfer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@ClosedAndTangent#I#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::ClosedAndTangent",
+      "header": "BRepFilletAPI_MakeChamfer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@Contour#&1$@S@TopoDS_Edge#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::Contour",
+      "header": "BRepFilletAPI_MakeChamfer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@Edge#I#I#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::Edge",
+      "header": "BRepFilletAPI_MakeChamfer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@FirstVertex#I#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::FirstVertex",
+      "header": "BRepFilletAPI_MakeChamfer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@LastVertex#I#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::LastVertex",
+      "header": "BRepFilletAPI_MakeChamfer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@Length#I#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::Length",
+      "header": "BRepFilletAPI_MakeChamfer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@NbContours#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::NbContours",
+      "header": "BRepFilletAPI_MakeChamfer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@NbEdges#I#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::NbEdges",
+      "header": "BRepFilletAPI_MakeChamfer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@RelativeAbscissa#I#&1$@S@TopoDS_Vertex#1",
+      "nativeName": "BRepFilletAPI_MakeChamfer::RelativeAbscissa",
+      "header": "BRepFilletAPI_MakeChamfer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeChamfer@F@SetMode#$@E@ChFiDS_ChamfMode#",
+      "nativeName": "BRepFilletAPI_MakeChamfer::SetMode",
+      "header": "BRepFilletAPI_MakeChamfer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Add#&1$@S@TopoDS_Edge#",
+      "nativeName": "BRepFilletAPI_MakeFillet::Add",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@BadShape#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::BadShape",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Closed#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::Closed",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@ClosedAndTangent#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::ClosedAndTangent",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Contour#&1$@S@TopoDS_Edge#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::Contour",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Edge#I#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::Edge",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@FaultyContour#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::FaultyContour",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@FaultyVertex#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::FaultyVertex",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@FirstVertex#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::FirstVertex",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@HasResult#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::HasResult",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@LastVertex#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::LastVertex",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Length#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::Length",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@NbContours#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::NbContours",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@NbEdges#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::NbEdges",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@NbFaultyContours#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::NbFaultyContours",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@NbFaultyVertices#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::NbFaultyVertices",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@NbSurf#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::NbSurf",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@NbSurfaces#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::NbSurfaces",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@NewFaces#I#",
+      "nativeName": "BRepFilletAPI_MakeFillet::NewFaces",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@RelativeAbscissa#I#&1$@S@TopoDS_Vertex#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::RelativeAbscissa",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Sect#I#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::Sect",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@SetContinuity#$@E@GeomAbs_Shape#d#",
+      "nativeName": "BRepFilletAPI_MakeFillet::SetContinuity",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@SetParams#d#d#d#d#d#d#",
+      "nativeName": "BRepFilletAPI_MakeFillet::SetParams",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@SetRadius#&1$@S@NCollection_Array1>#$@S@gp_Pnt2d#I#I#",
+      "nativeName": "BRepFilletAPI_MakeFillet::SetRadius",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@SetRadius#d#I#&1$@S@TopoDS_Edge#",
+      "nativeName": "BRepFilletAPI_MakeFillet::SetRadius",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@SetRadius#d#I#&1$@S@TopoDS_Vertex#",
+      "nativeName": "BRepFilletAPI_MakeFillet::SetRadius",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@Simulate#I#",
+      "nativeName": "BRepFilletAPI_MakeFillet::Simulate",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepFilletAPI_MakeFillet@F@StripeStatus#I#1",
+      "nativeName": "BRepFilletAPI_MakeFillet::StripeStatus",
+      "header": "BRepFilletAPI_MakeFillet.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@ConnectedFaces#&1$@S@TopoDS_Face#1",
+      "nativeName": "BRepOffsetAPI_DraftAngle::ConnectedFaces",
+      "header": "BRepOffsetAPI_DraftAngle.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@ModifiedFaces#1",
+      "nativeName": "BRepOffsetAPI_DraftAngle::ModifiedFaces",
+      "header": "BRepOffsetAPI_DraftAngle.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@ProblematicShape#1",
+      "nativeName": "BRepOffsetAPI_DraftAngle::ProblematicShape",
+      "header": "BRepOffsetAPI_DraftAngle.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_DraftAngle@F@Status#1",
+      "nativeName": "BRepOffsetAPI_DraftAngle::Status",
+      "header": "BRepOffsetAPI_DraftAngle.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeDraft@F@BRepOffsetAPI_MakeDraft#&1$@S@TopoDS_Shape#&1$@S@gp_Dir#d#",
+      "nativeName": "BRepOffsetAPI_MakeDraft::BRepOffsetAPI_MakeDraft",
+      "header": "BRepOffsetAPI_MakeDraft.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeDraft@F@Generated#&1$@S@TopoDS_Shape#",
+      "nativeName": "BRepOffsetAPI_MakeDraft::Generated",
+      "header": "BRepOffsetAPI_MakeDraft.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeDraft@F@Perform#&1$@N@opencascade@S@handle>#$@S@Geom_Surface#b#",
+      "nativeName": "BRepOffsetAPI_MakeDraft::Perform",
+      "header": "BRepOffsetAPI_MakeDraft.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeDraft@F@Perform#&1$@S@TopoDS_Shape#b#",
+      "nativeName": "BRepOffsetAPI_MakeDraft::Perform",
+      "header": "BRepOffsetAPI_MakeDraft.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeDraft@F@Perform#d#",
+      "nativeName": "BRepOffsetAPI_MakeDraft::Perform",
+      "header": "BRepOffsetAPI_MakeDraft.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeDraft@F@SetDraft#b#",
+      "nativeName": "BRepOffsetAPI_MakeDraft::SetDraft",
+      "header": "BRepOffsetAPI_MakeDraft.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeDraft@F@SetOptions#$@E@BRepBuilderAPI_TransitionMode#d#d#",
+      "nativeName": "BRepOffsetAPI_MakeDraft::SetOptions",
+      "header": "BRepOffsetAPI_MakeDraft.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepOffsetAPI_MakeDraft@F@Shell#1",
+      "nativeName": "BRepOffsetAPI_MakeDraft::Shell",
+      "header": "BRepOffsetAPI_MakeDraft.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRepPrimAPI_MakeCylinder@F@BRepPrimAPI_MakeCylinder#&1$@S@gp_Ax2#d#d#d#",
+      "nativeName": "BRepPrimAPI_MakeCylinder::BRepPrimAPI_MakeCylinder",
+      "header": "BRepPrimAPI_MakeCylinder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@ChFiDS_CircSection@F@Get#&$@S@gp_Circ#&d#S2_#1",
+      "nativeName": "ChFiDS_CircSection::Get",
+      "header": "ChFiDS_CircSection.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@TopExp@F@Vertices#&1$@S@TopoDS_Edge#&$@S@TopoDS_Vertex#S2_#b#S",
+      "nativeName": "TopExp::Vertices",
+      "header": "TopExp.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@gp_Ax2@F@gp_Ax2#&1$@S@gp_Pnt#&1$@S@gp_Dir#S2_#",
+      "nativeName": "gp_Ax2::gp_Ax2",
+      "header": "gp_Ax2.hxx",
+      "baselineState": "Blocked"
+    }
+  ]
+}

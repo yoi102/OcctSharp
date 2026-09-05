@@ -195,9 +195,9 @@ static_assert(offsetof(OcctSharp_StepAssemblyInput, translation_x) == 8);
 
 static_assert(offsetof(OcctSharp_StepAssemblyInput, rotation_angle_radians) == 56);
 
-constexpr uint32_t AbiVersion = 0x0001003FU;
+constexpr uint32_t AbiVersion = 0x00010040U;
 
-constexpr const char* BridgeVersion = "0.71.0";
+constexpr const char* BridgeVersion = "0.72.0";
 }
 
 using namespace OcctSharp::Native;

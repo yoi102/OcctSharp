@@ -17,6 +17,8 @@ struct OcctSharp_FeatureHistoryEntry
   int32_t SourceKind = -1;
 };
 
+struct OcctSharp_LocalFeatureData;
+
 struct OcctSharp_FeatureResultHandle
 {
   OcctSharp_FeatureResultInfo Info{};
@@ -24,6 +26,8 @@ struct OcctSharp_FeatureResultHandle
   std::vector<OcctSharp_FeatureHistoryEntry> History;
   std::vector<int32_t> Deleted;
   std::string Message;
+  // Optional copied diagnostics owned by this existing result, never a builder or registry.
+  std::shared_ptr<OcctSharp_LocalFeatureData> LocalFeature;
 };
 
 namespace OcctSharp::Native

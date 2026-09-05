@@ -96,6 +96,8 @@ Superseded ADRs remain available and point to their replacements.
 
 | [ADR-0087](adr/0087-parametric-recompute-and-persistent-selection.md) | Typed parametric DAG execution, atomic publication, durable generation history and fallible persistent selection | Accepted and locally validated; final package-content/commit evidence in STATUS |
 
+| [ADR-0088](adr/0088-source-bound-contour-and-local-feature-programs.md) | Source-bound copied contour programs, explicit local-feature limits and diagnostic-only partial results | Accepted and locally validated; final documentation delivery in STATUS |
+
 ## Pending decisions
 
 | ID | Decision needed | Required by |

@@ -1,9 +1,9 @@
 # Batch U: Advanced contour finishing and limit-driven local features
 
-- Status: scope prepared, implementation **0/40**. New API compile/runtime: **NOT RUN**.
+- Status: original **40/40 rows implemented and locally validated**, including final documentation-package verification. Focused **96/96**, ten repeats and actual Debug-native **409/409 PASS**. Local commit recorded in STATUS/runbook.
 - Decision: [ADR-0083](adr/0083-extended-batches-and-continuous-execution.md).
-- Preparation commit: `eacd0ed`; product baseline remains Preview.15 / OCCT 8.0.1.
-- Planned local package slot: `8.0.1-preview.20`; current versions are unchanged.
+- Historical preparation commit: `eacd0ed` / Preview.15. Implementation entry is T `bfb8811` / Preview.19; OCCT remains 8.0.1.
+- Locally validated package: `8.0.1-preview.20`, ABI 1.64, bridge 0.72.0; full release-check and final documentation delivery PASS.
 - Frozen roots: [batch-u-advanced-local-features.json](../OcctSharp/config/batches/batch-u-advanced-local-features.json).
 - Shared preparation: [U-W evidence](BATCH_U_W_PREPARATION.md).
 - Delivery: [continuous Q-W runbook](BATCH_CONTINUOUS_EXECUTION.md); one complete batch per local commit.
@@ -15,8 +15,8 @@ FeatureModeling already implements selected constant/start-end-radius fillets, s
 A supported CAD part -> tangent-contour law finishing and simulated sections -> tapered/limited prism or rib -> protected acceptance -> T recompute -> shared XDE definition replacement -> STEP/IGES and viewer failure/result review.
 
 All 40 rows are one delivery unit. A row is a newly observable workflow, not a getter,
-test, overload or standalone family checkpoint. Acceptance below is future required
-evidence, not a claim of implementation. Existing lower generated wrappers are reused
+test, overload or standalone family checkpoint. The original acceptance criteria below
+remain required; current named runtime evidence follows the matrix. Existing lower generated wrappers are reused
 where ownership permits; candidate root membership alone does not mean a missing API.
 
 ## Frozen capability matrix
@@ -64,6 +64,61 @@ where ownership permits; candidate root membership alone does not mean a missing
 | U-39 | Integration | Advanced-feature exact exchange delivery | STEP/IGES reopen representative law-fillet and rib/limited-prism results with geometric and supported metadata assertions. |
 | U-40 | Integration | Contour and stop-surface viewer review | Review simulated sections, faulty chains and limiting surfaces alongside the accepted shape using real parent-bound viewer identities. |
 
+
+## Implementation assertion map
+
+All original forty rows remain unchanged. Focused current-source tests pass 96/96;
+and the full release-check passes separately. Final documentation delivery is recorded
+in STATUS. Named tests below live in
+[Runtime tests](../OcctSharp/tests/OcctSharp.Runtime.Tests/) and reuse the public-only
+[shared workflow](../OcctSharp/tests/Shared/BatchULocalFeatureWorkflow.cs).
+RawSnapshotsValidateEveryCapacityBeforeWritingAndClearFailedOutputs additionally
+checks ABI buffer sentinels and failed output initialization.
+
+| Row | Named assertions | Observable evidence |
+|---|---|---|
+| U-01 | `TangentChainLawUsesTheWholeOrderedContourDomain`; `ClosedCircularContourHasExplicitSeamCorrespondence` | ordered membership, closure, abscissae and duplicate/foreign rejection |
+| U-02 | `NonconstantRadiusProfilesChangeActualGeometry`; `TangentChainLawUsesTheWholeOrderedContourDomain` | actual simulated radii, measured adapter error and changed solid |
+| U-03 | `NonconstantRadiusProfilesChangeActualGeometry`; `ClosedLawsRejectValueAndDerivativeSeamsBeforeKernelBuild` | sampled interpolation, full domain and seam checks |
+| U-04 | `IndependentContoursAndVertexProgramsRejectAmbiguousAssignments` | independent dimensions and exact numeric material removal |
+| U-05 | `LawAnchorsAreConsistencyConstraintsAndSharedJunctionsCannotConflict`; `IndependentContoursAndVertexProgramsRejectAmbiguousAssignments` | constant overrides, law consistency and shared junction rejection |
+| U-06 | `RepresentationAndContinuityHaveIndependentNumericValidation` | all three representations and volume tolerance |
+| U-07 | `RepresentationAndContinuityHaveIndependentNumericValidation`; `RealCornerPlateFailureReturnsOnlyAnOwningDiagnosticPartial` | all continuities, numeric result and over-coarse approximation failure |
+| U-08 | `ContourDiscoverySimulationAndOwningPatchResults` | copied circle sections, radius and post-source-disposal lifetime |
+| U-09 | `ContourDiscoverySimulationAndOwningPatchResults` | owning surface-patch groups and source evolution |
+| U-10 | `FailureCannotProduceAnAcceptedRoot`; `RealCornerPlateFailureReturnsOnlyAnOwningDiagnosticPartial` | faulty contour and actual corner fault, no successful root |
+| U-11 | `RealCornerPlateFailureReturnsOnlyAnOwningDiagnosticPartial` | real HasResult/BadShape, partial lifetime, no acceptance |
+| U-12 | `RecipesReplayOriginalSourceAndRejectForeignSelections` | replace/remove replay and original-source validation |
+| U-13 | `ChamferModesMeasureTheActualSupportingSection` | distance-angle setbacks and section area |
+| U-14 | `ChamferModesMeasureTheActualSupportingSection` | perpendicular-support throat measurement |
+| U-15 | `ChamferModesMeasureTheActualSupportingSection` | native penetration setbacks and volume |
+| U-16 | `IndependentChamferContoursKeepTheirOwnDimensions` | two contour programs with separate dimensions |
+| U-17 | `ChamferModesMeasureTheActualSupportingSection`; `IndependentChamferContoursKeepTheirOwnDimensions` | seed/member/vertex contour correspondence |
+| U-18 | `PerFaceDraftPreflightAndIndependentAnglesPreserveTheOriginal` | different angles and unchanged source |
+| U-19 | `TangentDraftReportsTheEffectiveChainAndRejectsSelectedFaceOnly` | rounded-part tangent chain, preflight and propagation rejection |
+| U-20 | `DraftFailurePreservesTheActualProblemFace` | actual Add failure, original problem-face index and SDK status |
+| U-21 | `DraftShellExtentAndStopsCreateIndependentShells` | slanted length and independent shell |
+| U-22 | `DraftShellExtentAndStopsCreateIndependentShells`; `AnalyticEdgeShellLimitsReportMeasuredGeometryAndEdgeOnlyHistory`; `CorneredShellLimitProfilesRejectBeforeEnteringTheUnsafeSdkPath` | analytic surface stop and measured height; invalid open-line results and unsafe cornered profiles explicitly reject |
+| U-23 | `DraftShellExtentAndStopsCreateIndependentShells`; `AnalyticEdgeShellLimitsReportMeasuredGeometryAndEdgeOnlyHistory` | circle/line shape stops, owning limit history, exact final lateral membership and source disposal |
+| U-24 | `SlidingProfileEdgesRetainSharedMembershipAndRejectForeignPairs` | real sliding pocket, duplicate/foreign graph rejection |
+| U-25 | `LocalPrismsUseRealSupportAndLimits`; `UnreachableLimiterIsNotReplacedByAnUnboundedFeature` | numeric Until success and parallel unreachable stop |
+| U-26 | `LocalPrismsUseRealSupportAndLimits` | From/Until volume, valid shape and final group indices |
+| U-27 | `SemiInfinitePrismModesHaveFiniteCutResults`; `DraftedUntilEndInsufficientAxialReachRemainsADiagnosticFailure` | eight modes and disclosed insufficient-reach failure |
+| U-28 | `LocalPrismsUseRealSupportAndLimits`; `DraftedCutHeightMeasuresTheActualTaper` | additive/subtractive drafted height and exact taper integral |
+| U-29 | `LocalPrismsUseRealSupportAndLimits`; `SemiInfinitePrismModesHaveFiniteCutResults`; `UnreachableLimiterIsNotReplacedByAnUnboundedFeature` | drafted limits, stop-plus-height and failures |
+| U-30 | `RevolvedFeaturesUseRadialProfileAndPlanarStop` | Extent/Until/FromUntil volume, negative-Y side and single solid |
+| U-31 | `PipeFeatureStopsUseTheSharedSupportGraph`; `LimitedLineSpineReportsThePinnedSdkCurveConversionFailure` | bounded Bezier success and disclosed untrimmed-line failure |
+| U-32 | `LinearRibsAndSlotsChangeMaterialThroughNativeForms` | add/cut material changes and native history |
+| U-33 | `RevolutionRibsAndSlotsUseLinearThickness`; `AngularRibClippingPreservesBaseOutsideTheSelectedInterval` | linear thickness, material-only angular clipping and base preservation |
+| U-34 | `LocalHolesUseNativeBoundedConstruction` | bounded/next/end/blind hole volume |
+| U-35 | `LocalPrismsUseRealSupportAndLimits`; `LinearRibsAndSlotsChangeMaterialThroughNativeForms`; `AnalyticEdgeShellLimitsReportMeasuredGeometryAndEdgeOnlyHistory` | final cap/lateral/contact correspondence; unavailable cap remains absent and pre-limit shell is not a final lateral |
+| U-36 | `ProtectedAcceptanceEnforcesExactHistoryAndBudgetsBeforeSingleConsumption` | exact protected mapping, budgets, rejection, independent single acceptance |
+| U-37 | `PersistedContourRecipeReexecutesAndFailedParametersKeepLastGood`; `LimitedRecipeReopenRebuildsWithExactSupportSharing`; `AdditionalFinishingRecipesExecuteThroughTheFacade` | four-format reopen actually reruns kernels; explicit last-good and rebind |
+| U-38 | `SharedDefinitionExchangeAndRealHwndReview`; `ChangedOccurrenceOrDefinitionCannotPublishAStaleCandidate`; `AmbiguousMetadataForeignSourcesAndDisposedParentsRejectPublication` | shared placements, metadata, undo/redo and atomic rejection |
+| U-39 | `SharedDefinitionExchangeAndRealHwndReview` | fillet/rib/limited prism STEP+IGES area, name, color and disclosure |
+| U-40 | `SharedDefinitionExchangeAndRealHwndReview` | real HWND sections/limits/fault context, atomic replacement, foreign/disposed/thread guards |
+
+
 ## Root, dependency and source closure
 
 | Root group | Exact decision roots |
@@ -81,7 +136,12 @@ than requiring a second copy of their native bindings. S provides copied scalar 
 Delivery order alone is not an algorithm dependency. Every prerequisite must actually
 pass its whole-batch gates before U starts.
 
-Native: cohesive Modeling/ContourFinishing.cpp, Modeling/LocalDraft.cpp and Modeling/LimitedFeatures.cpp. Reuse Modeling/Features result/history helpers and Runtime owners; do not append another large operation switch to Features.cpp. Managed contracts/operations stay in Modeling or existing facade as required; T integration, XDE and viewer orchestration stay above Documents.
+Native implementation uses eight cohesive Modeling units: LocalFeatureData,
+ContourFinishing, ChamferContours, LocalDraft, LimitedPrisms, LimitedSweeps,
+RibSlotFeatures and LocalHoles. Reuse Modeling/Features result/history helpers and
+Runtime owners; no large operation switch is appended to Features.cpp. Managed
+contracts/operations stay in Modeling; T integration, XDE and viewer orchestration
+stay in the existing facade above Documents.
 
 Private headers stay acyclic and domain-owned. Native builders, iterators and temporary
 arrays are local to a call. Recipes and diagnostic/index/history records are copied.
@@ -92,6 +152,17 @@ evidence during implementation, not new independent registries. Do not expose na
 session/GPU pointers. No new ownership category or binary split is created by preparation.
 
 ## OCCT limitations and non-goals
+
+KI-034 narrows the previously assumed shell-limit eligibility after actual Debug
+evidence: limit-driven profiles require one analytic line/circle boundary edge;
+cornered/multi-edge inputs reject before the unsafe SDK path. Length-only cornered
+drafts remain supported. `AnalyticEdgeShellLimitsReportMeasuredGeometryAndEdgeOnlyHistory`
+checks both transitions, independent geometry and final lateral membership;
+`CorneredShellLimitProfilesRejectBeforeEnteringTheUnsafeSdkPath` preserves the former
+cornered-limit cases as explicit rejections. A completed but invalid open-line/surface
+result is diagnostic-only and RequireShape rejects it. U-21/22/23 still require and
+have positive length/surface/shape-limit evidence; no row is removed. PreLimitShape
+is distinct from final laterals, and only source-edge generation history is supported.
 
 Arbitrary callback laws and persistent native fillet/feature builders remain excluded. Radius samples use normalized contour parameters; discontinuities, incompatible tangent chains and junctions may fail. BadShape is a diagnostic partial result, not a success fallback. Throat and penetration chamfers have different geometry from ordinary chamfers. BRepFeat support/sliding/limit preconditions are validated, not hidden by a generic Boolean fallback.
 

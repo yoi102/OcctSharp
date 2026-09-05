@@ -18,6 +18,14 @@ set(OCCTSHARP_MANUAL_NATIVE_SOURCES
   src/Modeling/Construction.cpp
   src/Modeling/Drawing.cpp
   src/Modeling/Features.cpp
+  src/Modeling/LocalFeatureData.cpp
+  src/Modeling/ContourFinishing.cpp
+  src/Modeling/ChamferContours.cpp
+  src/Modeling/LocalDraft.cpp
+  src/Modeling/LimitedPrisms.cpp
+  src/Modeling/LimitedSweeps.cpp
+  src/Modeling/RibSlotFeatures.cpp
+  src/Modeling/LocalHoles.cpp
   src/Modeling/Freeform.cpp
   src/Modeling/ScalarLaws.cpp
   src/Modeling/GuidedInputs.cpp
@@ -87,6 +95,7 @@ add_library(OcctSharp.Native SHARED
   include/OcctSharp.Native.Mesh.h
   include/OcctSharp.Native.Authoring.h
   include/OcctSharp.Native.Parametric.h
+  include/OcctSharp.Native.LocalFeatures.h
   src/Surfaces/SurfaceCommon.hxx
   ${OCCTSHARP_MANUAL_NATIVE_SOURCES}
   ${OCCTSHARP_GENERATED_NATIVE_SOURCES})

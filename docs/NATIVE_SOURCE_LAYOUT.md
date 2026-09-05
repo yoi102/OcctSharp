@@ -1,5 +1,16 @@
 # Native source responsibilities
 
+## Batch U additions
+
+Modeling adds LocalFeatureData.cpp, ContourFinishing.cpp, ChamferContours.cpp,
+LocalDraft.cpp, LimitedPrisms.cpp, LimitedSweeps.cpp, RibSlotFeatures.cpp and
+LocalHoles.cpp. LocalFeatures.hxx owns the copied input/history contract and checked
+Form adapter; ContourPrograms.hxx owns ordered contour snapshots. The existing
+FeatureResult storage has an optional copied local-feature payload; no registry is
+added. Facade-only document/evaluation/viewer orchestration introduces no reverse
+Documents dependency. The public LocalFeatures C companion adds eleven calls.
+Current audit and binary evidence belong in STATUS, not in historical counts below.
+
 ## Batch T additions
 
 Four Documents units add FunctionGraph.cpp, ParametricState.cpp, TopologyNaming.cpp

@@ -6,6 +6,9 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 
 ## Start here
 
+- [Preview.20 release notes](RELEASE_NOTES_8.0.1_PREVIEW_20.md) — contour finishing,
+  explicit local limits and diagnostic-only partial results; validation status in STATUS.
+
 - [Preview.19 release notes](RELEASE_NOTES_8.0.1_PREVIEW_19.md) — typed parametric
   recompute, durable history, persistent selections and cross-family delivery.
 

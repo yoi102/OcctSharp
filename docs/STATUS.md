@@ -1,12 +1,12 @@
 # Current Status
 
 - Last updated: 2026-09-05
-- Resume: T is fully locally validated under ADR-0087, retaining all forty rows. Final documentation repack, both consumers and package-content verification pass; make the whole T local commit, then U-W immediately without publication/push. Focused 40/40 and ten repeats, Release/Debug and cold-source Generator 91/91 and Runtime 313/313, actual Debug-native 313/313 and 94 byte-identical generated files pass. Exact 65-ID accounting has zero other changes. Preview.19 / ABI 1.63 / bridge 0.71.0 and the 62-DLL/11-license manifest match; bundled bridge SHA256 `371A9D67EEE63F8D06B4A3FB1AD0876878F9256A286FDCC6914DD39F6BB15CCB`.
+- Resume: U's original forty rows and every local gate PASS at Preview.20 / ABI 1.64 / bridge 0.72.0: Generator 91/91, Runtime 409/409 in Release, Debug and actual Debug-native. Final documentation packages, both clean consumers, all 176 stable documents, 73 runtime/license files and five checksums/provenance pass. Create one U completion commit, then V-W automatically. No publication or push.
 - Batch S: all original 40/40 capabilities complete locally. Focused 44/44 and ten repeats, Release/Debug Generator 91/91 and Runtime 273/273, actual Debug-native 273/273, both clean consumers, 94-file clean regeneration, 68-ID exact accounting and full local release-check pass. Final documentation was repacked and both consumers passed again; all package bytes/checksums/provenance match.
-- Active execution: continuous Q-W remains CONTINUE. Q is COMMITTED as `1a3662a`; R as `86e069c`; S as `580bb22`. Q-T complete local validation is 160/280 (57.1%); T's final document-package verification passes and its local commit is the immediate next action. Preview.19 / ABI 1.63 / bridge 0.71.0 is the T checkpoint. U-W follow automatically; no NuGet publication or GitHub push.
-- Latest preparation workstream: ADR-0083 prepares seven whole 40-capability batches (280 rows). Q-T are locally validated; U-W remain prepared. The preparation-era zero implementation/no-code-change statements below are historical evidence, not the current product state.
+- Active execution: continuous Q-W remains CONTINUE. Q is COMMITTED as `1a3662a`; R as `86e069c`; S as `580bb22`; T as `bfb8811`. Q-T complete local validation/commits: 160/280 (57.1%). U entry then complete U-V-W automatically; no NuGet publication or GitHub push.
+- Latest preparation workstream: ADR-0083 prepares seven whole 40-capability batches (280 rows). Q-U are locally validated at 200/280 (71.4%); V/W remain prepared. Completion-commit progress is tracked separately in the runbook. Preparation-era zero implementation/no-code-change statements below are historical, not current product state.
 - Latest architecture workstream: ADR-0081 full historical Native source extraction is complete locally. Release/Debug Generator 91/91 and Runtime 180/180 pass, as does isolated actual Debug-native Runtime 180/180. All 29,402 native exports match and the managed API has zero additions/removals. Batch P remains complete; no API/ABI/package version changes.
-- Current phase: B-T are complete locally; T local commit then U-W entry and implementation. No routine reconfirmation, NuGet publication or GitHub push.
+- Current phase: B-U are complete locally; U completion commit then V entry are next. No routine reconfirmation, NuGet publication or GitHub push.
 - Batch B engineering progress: 100% for the accepted local implementation scope (not a claim that every OCCT declaration is a managed API or that public release is ready)
 - Batch C implementation progress: 100% of the finite local implementation denominator; locked wave denominators are 14/14, 7/7, 8/8, and final 15/15 capabilities validated
 - Batch D implementation progress: 24/24 capabilities (100%); ADR-0064's one large cross-family wave passes all implementation, compile, runtime, real-HWND, clean-package, inventory, and local release gates
@@ -26,10 +26,63 @@
 - Batch R preparation and implementation progress: 40/40 capabilities (100%); exact 46-root entry, 24 focused tests, all local gates and 48 exact SC-055 transitions pass.
 - Batch S preparation and implementation progress: 40/40 capabilities (100%); exact 52-root entry, 44 focused cases, all local gates and 68 exact SC-056 transitions pass.
 - Batch T preparation and implementation progress: 40/40 capabilities (100%); focused 40/40 and ten repeats, Release/Debug and actual Debug-native Runtime 313/313, exact 65-ID accounting, full local release-check and final document-package verification pass.
-- Complete-migration batch progress: B through T are complete locally; retired B00-B20 and forbidden numbered/dotted labels are not counted as batches.
-- Accepted surface: 16,353 generated manifest IDs plus 996 accepted manual stable IDs; Release/Debug native/managed builds, Generator 91/91, Runtime 313/313, discovery/report determinism, generated dependency closure and dependency profiles 6/6 pass.
-- Last complete full inventory: 116,272 declarations and 7,090 headers have final dispositions; Emitted 16,353, Manual 996, SupportedUnselected 0, Skipped 49,344, Blocked 49,579, pending 0, HD099 0. SHA256 `1A4B9369EA89E89F9A71BC12E190196FD010B716681939E935BEAC840A69FDBA`. 7,058 headers were semantically parsed; 32 retain their previous explicit exclusions. T exact accounting passes for 65 SC-057 transitions and zero other changes; product regression is independently validated.
-- Overall state: Preview.19 validates Batch T with twelve module assemblies plus the compatibility/facade assembly, one Native DLL and one shared native runtime package. Identities: package 8.0.1-preview.19, assembly/file 0.1.0.0, ABI 1.63, bridge 0.71.0, schema 1.13. Physical Native DLL splitting, hosted CI, signing, NuGet publication and GitHub push are not included.
+- Batch U: 40/40 original capabilities implemented and locally validated under ADR-0088, with KI-034's explicit shell-limit eligibility. Focused 96/96 and ten repeats; Release/Debug and actual Debug-native 409/409; full release-check, exact 108-ID accounting and final documentation-package verification pass.
+- Complete-migration batch progress: B through U are complete locally; retired B00-B20 and forbidden numbered/dotted labels are not counted as batches.
+- Accepted surface: 16,353 generated manifest IDs plus 1,104 accepted manual stable IDs; Release/Debug native/managed builds, Generator 91/91, Runtime 409/409, discovery/report determinism, generated dependency closure and dependency profiles 6/6 pass.
+- Last complete full inventory: 116,272 declarations and 7,090 headers have final dispositions; Emitted 16,353, Manual 1,104, SupportedUnselected 0, Skipped 49,344, Blocked 49,471, pending 0, HD099 0. SHA256 `77900ED81AE3D7BFB70201F8F8D9921F970F79AE3537050788C616848036252D`. 7,058 headers were semantically parsed; 32 retain their previous explicit exclusions. U accounting passes for exactly 108 SC-058 transitions and zero other changes; classification is not a claim of complete OCCT API migration.
+- Overall state: Preview.20 validates Batch U with twelve module assemblies plus the compatibility/facade assembly, one Native DLL and one shared native runtime package. Identities: package 8.0.1-preview.20, assembly/file 0.1.0.0, ABI 1.64, bridge 0.72.0, schema 1.13. Physical Native DLL splitting, hosted CI, signing, NuGet publication and GitHub push are not included.
+
+### Preview.20 Batch U local validation
+
+- Fresh 128-header inventory repeats the T exit hash `1A4B9369EA89E89F9A71BC12E190196FD010B716681939E935BEAC840A69FDBA`.
+  Exact comparison against the frozen Preview.15 inventory finds 287 classification
+  changes (16 affecting U roots), zero added/removed declarations and zero identity changes.
+- Both exact 44-root / 2,045-candidate reports match SHA256
+  `43FF988F7A234BE1CFC15C654951BA01853F81F9DD35581E2B2984960DD65BB3`:
+  927 Blocked, 431 Emitted, 129 Manual and 558 Skipped. Frozen configuration is preserved;
+  post-T configuration is `config/batches/batch-u-entry.json`.
+- Entry artifacts: `artifacts/generator-reports/batch-u-entry-inventory-128.json`,
+  `batch-u-entry-delta.json`, `batch-u-entry-roots-1.json` and `batch-u-entry-roots-2.json`.
+  U implementation now passes 96/96 focused cases in `artifacts/batch-u-current-runtime.log`,
+  including ten final-source consecutive repeats in `batch-u-repeat-1.log` through `-10.log`.
+  This includes a real HasResult/BadShape corner-plate failure, all eight semi-infinite
+  prism modes, closed-law seams and compatible/conflicting vertex anchors, tangent draft
+  propagation/problem faces, sliding membership, final-group correspondence, raw capacity
+  sentinels, stale/ambiguous XDE publication, and four-format limited/fillet recipe reexecution.
+  The original forty-row assertion map is retained in the U matrix. No exploratory test
+  substitutes for partial-result acceptance. Current target is Preview.20 / ABI 1.64 /
+  bridge 0.72.0; schema and assembly versions stay unchanged. SC-058 records 108 exact
+  direct/virtual-dispatch blocked IDs. The first Release build stopped at stale facade
+  forwarders; the supported forwarder generator regenerated 3,418 entries, and the fresh
+  final whole Release build passes Generator 91/91 and Runtime 409/409 with zero warnings/errors.
+  Regeneration is deterministic at 94 files; source layout passes 76 units / 596 manual
+  exports / 23 storage definitions and all six negative cases. The rebuilt Release
+  runtime matches all 62 bundled DLLs and eleven unchanged notice/license files.
+  Full Debug managed also passes Generator 91/91 and Runtime 409/409. Actual Debug-native
+  exposed KI-034's shell-draft SDK assertion and unsafe non-edge Generated query.
+  Edge-only history and explicit single analytic-edge limit preconditions are now
+  implemented with expanded success/rejection tests. Actual Debug-native passes 409/409
+  with all 62 DLL hashes checked (`artifacts/batch-u-actual-debug-accepted.log` and
+  `batch-u-validation/actual-debug/result.json`). Final laterals are exact native-generated
+  final faces, distinct from PreLimitShape. The new Release bridge is 15,867,904 bytes,
+  SHA256 `7B88C356749F6502DDFF47657695C562BBC0E20A65912F3D9821CD2BCB5CBA50`;
+  it matches the bundled runtime. All 42 strict headers pass; current Release/Debug
+  exports match at 29,470 (11 additions, zero removals); managed API adds 592/no removals.
+  Final full release-check passes in `artifacts/batch-u-release-check-final2.log`, including
+  both clean consumers, all 14 packages and 94 byte-identical cold-regenerated files.
+  Cold-source Generator 91/91 and Runtime 409/409 pass. SC-058 accounting passes exactly
+  108 transitions/no other changes, plus all accounting negatives. Header verification
+  restores the complete process environment on success and failure, tested in
+  `artifacts/batch-u-validation/header-environment/result.json`; this prevents vcvars
+  Platform=x64 from contaminating subsequent .NET solution restores. Final viewer
+  sections/limit/fault screenshots have been inspected with their base-shape context.
+  Final documents were repacked and both consumers passed again; package-content
+  verification passes for 176 stable documents, 73 runtime/license files, five checksums
+  and final provenance. Evidence: `artifacts/batch-u-final-doc-package.log`,
+  `batch-u-final-doc-content.log` and `artifacts/release/package-content.json`.
+  Exit baselines are retained under `artifacts/preparation-baselines/preview20-batch-u/`:
+  `api.json` (42,387 signatures), the verified Native DLL and `full-inventory-128.json`.
+  Create the whole-batch completion commit and immediately reconcile V's entry baseline.
 
 ### Preview.19 Batch T local validation
 
@@ -74,7 +127,7 @@
   five checksums and final provenance. Facade package SHA256:
   `DBEE1D865A164A2ECE87E6E8834AD3A2C5D6210D238AE916083D6ECC32D22529`.
   All 317 changed-document local links, fences and the original forty-row matrix pass.
-  Make the whole T local commit, then record that commit for U entry; Q-W CONTINUE at 160/280.
+  Whole T local completion commit: `bfb8811`. U entry follows; Q-W CONTINUE at 160/280.
 
 ### Preview.18 Batch S local validation
 
