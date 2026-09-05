@@ -1,0 +1,33 @@
+{
+  "batch": "P",
+  "baselinePackageVersion": "8.0.1-preview.14",
+  "baselineInventorySha256": "176C37BFF338B3E0BA59EFB7CF7BA3803ABC0030B881D0A526873139F89AC2C5",
+  "plannedPackageVersion": "8.0.1-preview.15",
+  "capabilityCount": 24,
+  "roots": [
+    "BRepAdaptor_Surface",
+    "BRepAdaptor_Curve2d",
+    "BRep_Tool",
+    "BRepTools",
+    "BRepLib",
+    "GeomAPI_ProjectPointOnSurf",
+    "GeomProjLib",
+    "BRepOffsetAPI_NormalProjection",
+    "ShapeConstruct_ProjectCurveOnSurface",
+    "ShapeAnalysis_Surface",
+    "ShapeAnalysis_Edge",
+    "ShapeFix_Edge",
+    "ShapeFix_Wire",
+    "Geom2dAPI_Interpolate",
+    "Geom2dAPI_PointsToBSpline",
+    "Geom2dAdaptor_Curve",
+    "GCPnts_AbscissaPoint",
+    "GCPnts_UniformAbscissa",
+    "Geom_Surface",
+    "Geom_Plane",
+    "Geom_CylindricalSurface",
+    "Geom_SphericalSurface",
+    "BRepBuilderAPI_MakeEdge",
+    "BRepBuilderAPI_MakeFace"
+  ]
+}

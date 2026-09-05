@@ -1,7 +1,7 @@
 # Current Status
 
 - Last updated: 2026-09-05
-- Current phase: Batch B through Batch O are complete locally. Batch O closes its indivisible 24-capability 2D-sketch/planar-modeling wave. Preview.14 is the latest validated local release; no NuGet publication or GitHub push is part of batch delivery
+- Current phase: Batch B through Batch O are complete locally; Batch O completion is committed at d6e9e18. Batch P preparation is complete and implementation is 0/24. Preview.14 is the latest validated local release; no NuGet publication or GitHub push is part of batch delivery
 - Batch B engineering progress: 100% for the accepted local implementation scope (not a claim that every OCCT declaration is a managed API or that public release is ready)
 - Batch C implementation progress: 100% of the finite local implementation denominator; locked wave denominators are 14/14, 7/7, 8/8, and final 15/15 capabilities validated
 - Batch D implementation progress: 24/24 capabilities (100%); ADR-0064's one large cross-family wave passes all implementation, compile, runtime, real-HWND, clean-package, inventory, and local release gates
@@ -16,10 +16,28 @@
 - Batch M implementation progress: 24/24 capabilities (100%); ADR-0075's presentation/manipulator, rigid XDE placement, named history, DMU, exchange, and real-HWND wave passes every local gate
 - Batch N preparation and implementation progress: 24/24 capabilities (100%). ADR-0077's metadata-aware IGES/XDE, Unicode-path, mixed-format, viewer, lifetime, and package wave passes every local gate
 - Batch O preparation and implementation progress: 24/24 (100%); focused regression 7/7, complete local release checks, and final Release-native/Debug-native Runtime 164/164 pass
+- Batch P preparation progress: complete; ADR-0079 freezes 24 capabilities and a reproducible 24-root/963-candidate audit. Implementation and Preview.15 gates are NOT RUN; no runtime identity or stable-ID disposition changed during preparation
 - Complete-migration batch progress: B, C, D, E, F, G, H, I, J, K, L, M, N, and O are complete locally; retired B00-B20 and forbidden numbered/dotted batch labels are not counted as batches
 - Accepted surface: 16,353 generated manifest IDs plus 609 accepted manual stable IDs; Release and Debug native/managed builds, Generator 91/91, Runtime 164/164, discovery/report determinism, generated dependency closure, and dependency profiles 6/6 pass
 - Last complete full inventory: 116,272/116,272 declarations and 7,090/7,090 headers have final dispositions; `Emitted` 16,353, `Manual` 609, `SupportedUnselected` 0, `Skipped` 49,344, `Blocked` 49,966, pending 0, HD099 0; SHA256 `176C37BFF338B3E0BA59EFB7CF7BA3803ABC0030B881D0A526873139F89AC2C5`
 - Overall state: Preview.14 validates Batch O with twelve module assemblies plus the `OcctSharp` compatibility/facade assembly sharing one `OcctSharp.Native.dll` and one `OcctSharp.Native.win-x64` runtime package. Native-DLL splitting remains deliberately deferred. Validated identities are package 8.0.1-preview.14, managed assembly/file 0.1.0.0, native ABI 1.58, bridge 0.66.0, and schema 1.13. Every batch is locally packed, checked, and committed; publication requires a new explicit request
+
+### Batch P surface UV and curve-on-surface preparation
+
+- The completed Preview.14 baseline at `d6e9e18` was audited for exactly 24 roots and
+  963 stable IDs: 516 blocked, 153 emitted, 31 manual, and 263 skipped. Existing face
+  evaluation, pcurve inspection, freeform topology, and Batch O definitions are explicit
+  dependencies rather than being counted again as missing APIs.
+- ADR-0079 locks one 24-capability surface-domain, complete projection, copied pcurve,
+  lifting, seam, arc-length sampling, copied-topology repair, loop/hole/trim/split,
+  smooth UV interpolation, XDE/STEP/IGES, real-HWND, and package closure.
+- `eng/audit-batch-roots.ps1` verifies the exact baseline hash, root and stable-ID
+  uniqueness, completeness, and input/output separation. Two runs are byte-identical
+  at SHA256 `D0B99F166A8686CE5312CB81B42E0A04DC05D3C26241596CBD5D8919143A2886`.
+  All 24 SDK headers exist; wrong-inventory and input-overwrite negative checks pass.
+- Preview.15/ABI 1.59/bridge 0.67.0/schema 1.13 and SC-053 are reserved only. Current
+  compiled/package identities remain Preview.14/ABI 1.58/bridge 0.66.0. Implementation,
+  native/managed compile, runtime, and Preview.15 package/release gates are NOT RUN.
 
 ### Preview.14 Batch O 2D sketch and planar-modeling completion
 
@@ -740,8 +758,9 @@
 Product batches B through O are complete for their finite accepted local denominators.
 ADR-0078 closes copied 2D values/definitions, native-local inspection/edit, planar
 topology/features, XDE plus STEP/IGES, real-HWND, lifetime, and clean-package evidence
-as one wave at 24/24. The next whole-letter batch requires a new full root audit and
-cross-family closure over Preview.14. Batch delivery is local checks plus a local commit;
+as one wave at 24/24. ADR-0079 and the Batch P inventory now lock the next complete
+24-capability cross-family closure over Preview.14; implementation remains 0/24.
+Batch delivery is local checks plus a local commit;
 hosted full release, signing, NuGet publication/indexing, and public-source consumption
 remain separate, unrequested release-readiness work.
 
@@ -1458,8 +1477,9 @@ remain separate, unrequested release-readiness work.
 1. Preserve ADR-0074's managed module/facade ownership and one native DLL. Regenerate
    facade forwarders whenever exported module types move; do not split the native bridge
    until a separate ADR proves cross-DLL registry, allocator, validation, and release routing.
-2. Audit and lock the next complete cross-family dependency closure over the final
-   Preview.14 inventory before starting implementation. Do not reopen Batch O as fragments.
+2. Implement ADR-0079's complete 24-capability Batch P dependency closure as one wave,
+   reusing prior APIs and reconciling only exact directly invoked blocked SC-053 IDs.
+   Reserve copied geometry/results and copy topology before repair; do not split mini-batches.
 3. For every completed batch, run local build/test/package/consumer/metadata checks and
    create one local completion commit. Do not publish NuGet or push GitHub. Earlier
    package upload permission does not carry forward to later versions.
@@ -1492,7 +1512,7 @@ remain separate, unrequested release-readiness work.
 | Full-inventory classification | PASS | 16,353 emitted, 609 manual, 0 supported-unselected, 49,344 skipped, 49,966 blocked; 116,272/116,272 declarations and 7,090/7,090 headers classified; current report SHA256 `176C37BFF338B3E0BA59EFB7CF7BA3803ABC0030B881D0A526873139F89AC2C5` |
 | Discovery determinism | PASS | Two-run SHA256 `B912158066FEA7F9749F1E92C00195D6512E1EF24A6997AF9EE3201FB1AF2F64` |
 | Model determinism | PASS | Two runs SHA256 `B4C30059AE03D16D78F032ADACD3FCD0BF674D3BE8F203FD924523EE611F9DA1` |
-| Documentation navigation | PASS | 229 local file targets across 152 Markdown files verified; external URLs and anchor contents are not checked |
+| Documentation navigation | PASS | After Batch P preparation, 234 local file targets across 154 Markdown files verified; external URLs and anchor contents are not checked |
 | Structured canonical model compile | PASS | Generator Release build, 0 warnings and 0 errors |
 | Structured canonical model tests | PASS | 3 generator tests; signature, qualifier, inheritance, template/handle facts |
 | Structured OCCT fact inventory | PASS | Binding-model schema 1.3 retains abstract-record facts and fail-closed product-module identity in the selected semantic model |
@@ -1536,6 +1556,7 @@ remain separate, unrequested release-readiness work.
 | Batch N IGES/XDE interoperability | PASS | 24/24; focused 4/4 and full Release/Debug Runtime 156/156 cover IGESCAF read/import/write, names/colors/layers/visibility, diagnostics/units, Unicode input/output and cleanup, mixed STEP/IGES composition, round-trip, XDE-label display, real HWND, source/session disposal, and clean-package execution |
 | B18 optional dependency profiles | PASS | Release/Debug build audit classifies 6/6 profiles; IVtk/VTK and EGL/GLES blockers are named; core package unchanged |
 | Batch O 2D sketch and planar modeling | PASS | 24/24; focused 7/7, final Release-native and Debug-native Runtime 164/164 cover copied analytic/freeform curves, parameters/transforms, loops/holes, measurement/tolerance, topology/features, lifetime, STEP/IGES metadata, real HWND, and clean packages |
+| Batch P preparation | PASS (audit only) | 24 roots, 963 exact stable IDs, identical two-run report hash, 24 SDK headers, wrong-baseline/input-overwrite guards, and PowerShell syntax pass; implementation/build/runtime/Preview.15 package gates NOT RUN |
 | Preview.12 STEP/XCAF presentation styles | PASS | Focused ownership/style tests plus real STEP inspection recover 244 styles/17 colors from `ArduinoUnoRev3PCB.step` and 763 styles/19 colors from `fullArduinoUnoRev3PCB.step`; WPF visually renders non-uniform component colors |
 | Native runtime dependency closure | PASS | 62 DLLs in the committed Preview.14 shared-native manifest with ABI 1.58/bridge 0.66.0; the complete Release rebuild is byte-identical and loads from `occt`; bridge SHA256 `0E4CA204356B83C158A40B74D99CA6047D59D9FB975A62C1168FF2A650979D90` |
 | XDE two-box assembly | PASS | One XDE assembly root, two occurrences, and 12-face STEP round-trip |
@@ -1558,13 +1579,13 @@ remain separate, unrequested release-readiness work.
 
 ```text
 LOOP_STATE: CONTINUE
-CURRENT_BATCH: O — COMPLETE; NEXT WHOLE-LETTER BATCH AUDIT PENDING
-CURRENT_WORKSTREAM: BATCH O FINAL LOCAL CHECKS COMPLETE; PREPARE THE NEXT CROSS-FAMILY CLOSURE
-COMPLETED_THIS_TURN: BATCH O 24/24; SC-052 52 EXACT IDS; DEBUG HISTORY GUARD; FINAL DLL, DOCUMENTS, TESTS, PACKAGES, AND METADATA
-NEXT_WORKSTREAM: AUDIT AND FREEZE THE NEXT COMPLETE CROSS-FAMILY DENOMINATOR OVER PREVIEW.14
-NEXT_ACTION: CREATE THE BATCH O LOCAL COMPLETION COMMIT, THEN PREPARE THE NEXT WHOLE BATCH; NO NUGET UPLOAD OR GITHUB PUSH
-ENGINEERING_PROGRESS: B 100% COMPLETE; C 100% COMPLETE; D 24/24 COMPLETE (100%); E 24/24 COMPLETE (100%); F 24/24 COMPLETE (100%); G 24/24 COMPLETE (100%); H 24/24 COMPLETE (100%); I 24/24 COMPLETE (100%); J 24/24 COMPLETE (100%); K 24/24 COMPLETE (100%); L 24/24 COMPLETE (100%); M 24/24 COMPLETE (100%); N 24/24 COMPLETE (100%); O 24/24 COMPLETE (100%)
-BATCH_PROGRESS: B THROUGH O COMPLETE
+CURRENT_BATCH: P — SURFACE UV AND CURVE-ON-SURFACE WORKFLOWS
+CURRENT_WORKSTREAM: BATCH P PREPARATION COMPLETE; IMPLEMENTATION 0/24
+COMPLETED_THIS_TURN: BATCH O 24/24 COMMITTED d6e9e18; BATCH P 24-ROOT/963-CANDIDATE AUDIT, COMPLETE DEPENDENCY CLOSURE, AND ADR-0079 FROZEN
+NEXT_WORKSTREAM: IMPLEMENT THE INDIVISIBLE 24-CAPABILITY BATCH P WAVE OVER PREVIEW.14
+NEXT_ACTION: IMPLEMENT ALL 24 CAPABILITIES, RECONCILE EXACT SC-053 IDS, THEN RUN EVERY LOCAL GATE AND COMMIT; NO NUGET UPLOAD OR GITHUB PUSH
+ENGINEERING_PROGRESS: B 100% COMPLETE; C 100% COMPLETE; D 24/24 COMPLETE (100%); E 24/24 COMPLETE (100%); F 24/24 COMPLETE (100%); G 24/24 COMPLETE (100%); H 24/24 COMPLETE (100%); I 24/24 COMPLETE (100%); J 24/24 COMPLETE (100%); K 24/24 COMPLETE (100%); L 24/24 COMPLETE (100%); M 24/24 COMPLETE (100%); N 24/24 COMPLETE (100%); O 24/24 COMPLETE (100%); P PREPARED 0/24 (0%)
+BATCH_PROGRESS: B THROUGH O COMPLETE; P PREPARATION COMPLETE AND IMPLEMENTATION 0/24
 B_BASELINE_BINDING_COVERAGE: 16353 generated plus 609 accepted manual stable IDs; zero supported-unselected declarations
 C_COMMON_WORKFLOW_COVERAGE: FIRST-WAVE 14/14, SECOND-WAVE 7/7, THIRD-WAVE 8/8, AND FINAL-WAVE 15/15 DENOMINATORS VALIDATED (100% EACH)
 D_VIEWPORT_REVIEW_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
@@ -1579,6 +1600,7 @@ L_INTERFERENCE_CLEARANCE_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
 M_INTERACTIVE_PLACEMENT_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
 N_IGES_XDE_INTEROPERABILITY_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
 O_2D_SKETCH_PLANAR_MODELING_COVERAGE: 24/24 IMPLEMENTED AND VALIDATED (100%)
+P_SURFACE_UV_CURVE_COVERAGE: PREPARATION COMPLETE; IMPLEMENTATION 0/24 (0%); IMPLEMENTATION GATES NOT RUN
 FULL_PROFILE_ACCOUNTING: 116272/116272 declarations classified; 49966 have narrow blocked dispositions and are not claimed as managed APIs
 INVENTORY_COMPLETENESS: 7058/7090 headers semantically scanned (99.5487%); 116272/116272 discovered declarations and 7090/7090 catalogued headers classified
 LAST_VALIDATION: Preview.14 complete local release check plus final-code verification PASS; Release/Debug native Runtime 164/164, Generator 91/91, profiles 6/6, 94-file clean regeneration, 14 local packages, both consumers, API/inventory/SBOM/provenance/checksums PASS
@@ -1586,7 +1608,7 @@ L_COMPLETION_VALIDATION: Focused 4/4, independent adjacent and face/face-edge/ed
 M_COMPLETION_VALIDATION: Focused 4/4, presentation/manipulator and rigid occurrence edit/history/DMU/STEP-XDE/HWND evidence, ABI 1.55, bridge 0.63.0, schema 1.13, SC-049 exact accounting, and all local gates PASS
 N_COMPLETION_VALIDATION: Focused 4/4, IGES metadata/options/diagnostics/units/Unicode/mixed-format/round-trip/lifetime/HWND evidence, ABI 1.57, bridge 0.65.0, schema 1.13, SC-051 exact accounting, and all local gates PASS
 O_COMPLETION_VALIDATION: Focused 7/7, exact SC-052 52 IDs, ABI 1.58, bridge 0.66.0, schema 1.13, final native Debug/Release 164/164, and all local gates PASS
-BLOCKER: NONE FOR NEXT-BATCH PREPARATION; HOSTED FULL RELEASE, SIGNING, PUBLICATION/INDEXING, AND PUBLIC CONSUMER REMAIN SEPARATE NOT RUN GATES
+BLOCKER: NONE FOR BATCH P IMPLEMENTATION; HOSTED FULL RELEASE, SIGNING, PUBLICATION/INDEXING, AND PUBLIC CONSUMER REMAIN SEPARATE NOT RUN GATES
 ```
 
 ## Known risks

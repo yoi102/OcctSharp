@@ -9,6 +9,12 @@ stay call-local. Registered topology ownership, the twelve managed modules, the 
 and the single native DLL remain unchanged. Area is integrated over curve derivatives;
 containment is classified by OCCT; bounds include native topology tolerance.
 
+## Batch P preparation
+
+ADR-0079 prepares Batch P's surface/UV and curve-on-surface closure using the same
+copied-data, owning-topology, and cross-family facade boundaries. No Batch P runtime API
+or physical layout change is implemented by preparation; see its gap inventory.
+
 ## Purpose
 
 OcctSharp is an OCCT C++ to .NET binding generator and managed SDK. The system must
@@ -131,6 +137,8 @@ The accepted boundaries are recorded in ADRs:
   Batch N metadata-aware IGES/XDE, Unicode-path, mixed-format, viewer, and package wave.
 - [ADR-0078](adr/0078-2d-sketch-planar-modeling-batch.md): one finite Batch O copied
   2D-sketch, planar topology/feature, exchange, viewer, and package wave.
+- [ADR-0079](adr/0079-surface-uv-curve-on-surface-batch.md): one prepared Batch P
+  surface-domain, pcurve projection/lifting, seam, repair, and trimmed-topology wave.
 
 ## Components
 

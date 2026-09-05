@@ -10,6 +10,20 @@ Batch B through Batch O are complete for their accepted local implementation sco
 Batch O closes its one 24-capability copied-sketch/planar-modeling wave under ADR-0078.
 It was not split into curve, loop, feature, exchange, viewer, or package checkpoints.
 
+## Current priority: Batch P surface UV and curve-on-surface workflows
+
+ADR-0079 and [the Batch P gap inventory](BATCH_P_SURFACE_UV_CURVE_GAP_INVENTORY.md)
+freeze one 24-capability closure across copied face/UV data, full projections, pcurve
+definitions and seam branches, 3D curve lifting and sampling, copied-topology repair,
+oriented loops and holes, trimmed/split faces, XDE/STEP/IGES, real HWND and clean packages.
+Existing scalar evaluation and freeform/sketch APIs are reused explicitly. Preparation
+is complete; implementation is 0/24 and its gates are NOT RUN. The hash-pinned Preview.14
+audit covers 24 roots and 963 declarations: 516 blocked, 153 emitted, 31 manual, and
+263 skipped. Two audit runs agree, all root headers exist, and negative baseline/overwrite
+checks pass. Preview.15/ABI 1.59/bridge 0.67.0/schema 1.13 are reserved, not current runtime
+identities. One complete implementation wave and local completion commit follow preparation;
+no NuGet upload or GitHub push is part of the loop.
+
 ## Completed priority: Batch O 2D sketch and planar modeling
 
 ADR-0078 and [the Batch O gap inventory](BATCH_O_2D_SKETCH_PLANAR_MODELING_GAP_INVENTORY.md)
