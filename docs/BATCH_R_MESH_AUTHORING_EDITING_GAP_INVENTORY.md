@@ -1,9 +1,9 @@
 # Batch R: Mesh authoring editing and discrete model delivery
 
-- Status: scope preparation complete; implementation **0/40**; new compile/runtime gates **NOT RUN**.
+- Status: **40/40 locally validated**; focused **24/24**, all complete local gates PASS. One local completion commit pending, followed immediately by S.
 - Decision: [ADR-0082](adr/0082-broad-batch-q-through-t-preparation.md).
 - Preparation baseline: commit `6b04bd9`, package `8.0.1-preview.15`, OCCT 8.0.1.
-- Planned local package slot: `8.0.1-preview.17`; not a version change or publication.
+- Implemented local package slot: `8.0.1-preview.17`, ABI 1.61, bridge 0.69.0; no publication.
 - Execution contract and shared gates: [Q-T preparation](BATCH_Q_T_PREPARATION.md).
 - Frozen configuration: [batch-r-mesh-authoring-editing.json](../OcctSharp/config/batches/batch-r-mesh-authoring-editing.json).
 
@@ -25,8 +25,8 @@ existing public operations; they do not imply new OCCT class roots.
 
 ## Frozen capability and acceptance matrix
 
-All rows are prepared and unimplemented. Each acceptance statement is a required future
-test, not a report that it has passed. Shared lifetime/negative/package gates apply to
+The original acceptance statements below are unchanged. Their implementation and named
+test mapping follow the matrix. Shared lifetime/negative/package gates apply to
 every applicable row and are not counted as additional capabilities.
 
 | ID | Root group | New capability | Required observable acceptance |
@@ -73,6 +73,91 @@ every applicable row and are not counted as additional capabilities.
 | R-40 | Integration | Authored mesh viewer review and replacement | Display the owning discrete result with group materials, fit/select it, replace an edited revision and reject stale IDs on the real HWND path. |
 
 ## Native decision roots and dependency closure
+
+### Implementation-to-test acceptance map
+
+The following row numbers map exactly once to the frozen 40 capabilities above.
+Test names are in `BatchRMeshEditingTests`, `BatchRMeshContractTests` and
+`BatchRMeshDeliveryTests`; the latter's integration test runs the public-only
+`tests/Shared/BatchRMeshWorkflow.cs`, also compiled into the clean facade consumer.
+All focused checks pass. A focused pass alone is not the whole-batch exit gate.
+
+| Rows | Named executable evidence | Observable assertions |
+|---|---|---|
+| 01, 02 | `AuthoredChannelsAreCopiedFiniteAndExplicitlyOptional`; `BoundedInputIsRejectedBeforeEnumeratingOrAllocatingReportedExcess` | Source array independence, absent/undefined channels, cardinality/NaN/index/count rejection and ABI sizes. |
+| 03, 04 | `PolylinesAndCornerSeamsRetainLogicalOrigins` | Both polygon forms become owning edges; closedness/parameters and copied corner UV seams retain source origins. |
+| 05, 06, 07, 09, 10, 12 | `PositionConnectivityDeletionExtractionCompactionAndMapCompositionAreImmutable` | Source unchanged, affected regions, exact deleted/retained maps, standalone extraction, polyline-aware compaction, chained maps and stale revision rejection. |
+| 08 | `ConcatenationPreservesDistinctGroupsMaterialsAndSourceMaps` | Source offsets, independent group/material identity, origin maps and incompatible channel rejection. |
+| 11, 17, 18 | `CoherentPatchInsertionIsAtomicAndDegenerationAndDuplicatesHaveExactDeletionMaps` | Actual coherent insertion/replacement, invalid adjacency atomicity, exact degenerate deletions and explicit opposite-facing duplicate policy. |
+| 13, 14, 15, 16 | `FullAdjacencyBoundariesComponentsAndConstrainedExpansionAreObservable` | Full vertex/edge incidence, all nonmanifold uses, ordered boundary/branch reports, usable components and constrained ring expansion. |
+| 19, 20 | `WeldingUsesActualNativeIndicesAndPreservesExplicitAttributeSeams`; `MaterialPartitionsAndFloatHashPrecisionCannotSilentlyCollapseGeometry` | Native merge indices actually change topology; UV/material seams and double-precision distance guard prevent silent loss. |
+| 21 | `CreaseSplittingOrientationNormalsAndUvEditingAreRevisionBound`; `LocalSplittingPreservesUnselectedVertexFansAndEmptySelectionChannels` | One-to-many vertex correspondence, local crease split and untouched unselected fans/empty channels. |
+| 22 | `CreaseSplittingOrientationNormalsAndUvEditingAreRevisionBound`; `NonOrientableManifoldCycleIsReportedWithoutGuessing` | Winding repair on an orientable patch and explicit failure on a manifold Mobius strip without source mutation. |
+| 23, 25, 26 | `CreaseSplittingOrientationNormalsAndUvEditingAreRevisionBound` | Whole-component reversal with normals, normalized channel replacement and selected UV edits; partial shared-boundary operations reject. |
+| 24 | `CreaseSplittingOrientationNormalsAndUvEditingAreRevisionBound`; `AreaWeightingAndAffineNormalsAgreeWithIndependentCrossProducts` | Crease-aware reconstruction, unequal-area weighting and explicit undefined degenerate normals. |
+| 27, 28, 29, 30 | `AffineMirrorUnitsAndSelectedMeasurementsRetainGeometryAndProvenance`; `AreaWeightingAndAffineNormalsAgreeWithIndependentCrossProducts` | Rigid/affine geometry and determinant winding, independent inverse-transpose normal check, unit/up-axis/handedness roundtrip, area/bounds/provenance and whole-mesh inspection. |
+| 31, 32, 33, 34 | `DiscreteOwnersAndExactCacheCopiesHaveSeparateCapabilitiesAndLifetimes`; `CacheCopiesRetainUnselectedMeshesAndIndependentGeometryAcrossRepeatedDisposal` | Surface-backed/discrete rejection, no-remesh snapshot, independent copy lifetime, exact geometry/source-cache retention and selected remesh across 12 disposal loops. |
+| 35, 36 | `EditableObjChannelsSeamsMissingValuesAndMalformedLimitsAreExplicit`; `EditedMaterialsFormatsAssemblyAndRealViewerCompleteThePublicWorkflow` | Real STL/OBJ reads, Unicode paths, seams, partial channels, unit assumptions, malformed sizes/indices and roundtrip area. |
+| 37, 38, 39 | `EditedMaterialsFormatsAssemblyAndRealViewerCompleteThePublicWorkflow`; `DeliveryFailuresLeaveDocumentAndExistingOutputIntact`; `FormatOutputNeverFillsAbsentOrUndefinedOptionalChannels` | Two material groups/shared definitions/repeated placements; transaction/undo/redo; real STL/OBJ/glTF/GLB/PLY, independent PLY channels/color readback, scale and sidecars; fail-closed exact exports/optional channels. |
+| 40 | `EditedMaterialsFormatsAssemblyAndRealViewerCompleteThePublicWorkflow` | Real HWND styled display/fit/select, red-blue and edited-blue captures, atomic failed replacement, stale revision/presentation IDs, thread affinity and viewer-first disposal. |
+
+`NativeCapacityInvalidFlagsAndShapeFailureOutputsAreAtomic` additionally validates raw
+ABI pointer/count/capacity/flag/handle rejection and unchanged output sentinels.
+`EditableObjRejectsInventedChannelsAndNormalMagnitudeDoesNotLoseDirection` covers
+out-of-range/missing attribute index arrays and stable normalization of 1e30/1e-30
+OBJ normals. Its failing-before/fixed-after evidence supplements the import rows.
+The direct Modeling package consumer creates/snapshots an independent discrete Shape
+after source disposal without acquiring the facade. Copied data has no Dispose lifetime.
+
+### Revalidated R entry (after Q)
+
+Frozen preparation stays at Preview.15 / `6b04bd9`. The separate
+`config/batches/batch-r-entry.json` pins Preview.16 / `1a3662a` and inventory SHA256
+`7917A78FB700FB5C6A3B9B2EB6C27BAECE8E5CB7E5163296DC3DEFD200AE0426`.
+Two exact-root audits are byte-identical at
+`1C8F1B3E1C5D4C139E4C3BAABEF58EA04343C965468034E7E740C06F8D93BB90`.
+The same 46 roots/2,213 candidates now contain 1,002 Blocked, 526 Emitted, 94 Manual
+and 591 Skipped. Full entry delta: 106 Blocked-to-Manual IDs, nine within R roots;
+no added/removed declarations or identity changes. These are Q prerequisites, not R work.
+
+SC-055 lists 48 exact directly used previously Blocked IDs. `RWObj_Reader` and
+`BRepTools` are explicit dependency refinements outside the frozen decision roots;
+the frozen configuration is not widened. Reader overrides stay native-local and do
+not invent public stable IDs. Exact accounting passes: all 48 SC-055 transitions and
+zero other declaration/identity/classification changes. Final inventory SHA256 is
+`4E90AB503456D7617CE81E21116CBAA0119042B2E63EEAD9A5C06CD20DE807E6`;
+116,272 declarations: 16,353 Emitted, 863 Manual, 49,712 Blocked, 49,344 Skipped,
+zero pending/SupportedUnselected/HD099. Three accounting negative cases also pass.
+
+### Implementation boundaries and focused evidence
+
+ADR-0085 implements immutable MeshData values/revision maps, Mesh editing/graphs,
+Modeling-owned discrete/cache adapters and facade XDE/format/viewer composition.
+The Native mesh algorithms are call-local with no new registry or owner family.
+The four new units bring the audited source to 55 independent units, 560 manual C
+exports and 23 unique storage definitions. Layout negative checks pass 6/6 and all
+36 private headers pass standalone MSVC `/Zs /W4 /WX` without PCH/unity.
+
+Format limitations are observable disclosures: STL drops vertex attributes/materials;
+editable OBJ does not retain MTL/groups/lines, partial UV is absent, partial normals
+are undefined. Writers omit an undefined normal channel rather than emit SDK-default
++Z. glTF uses metre/Y-up float coordinates; PLY retains supported vertex attributes,
+colors and part IDs, not full PBR/assembly structure. Exact STEP/IGES delivery rejects.
+Existing snapshots and direct exports never invoke meshing. Cache replacement nodes
+are face-local; exact cache remeshing operates only on independent selected copies.
+
+Final focused evidence: `artifacts/batch-r-focused-post-hardening.log` (24/24),
+`artifacts/batch-r-private-headers.log` (36/36), and real material screenshots
+`artifacts/batch-r-validation/mesh-groups.png` / `mesh-blue.png`.
+Final `artifacts/batch-r-release-check-final.log` passes Release/Debug Generator 91/91
+and Runtime 229/229, both clean consumers, 14 package audits, fresh-source build and
+94 byte-identical generated files. Actual Debug-native 229/229 passes with all 62 DLL
+hashes verified in `artifacts/batch-r-validation/actual-debug-final/result.json`.
+Native exports match at 29,432 (16 additions, zero removals); managed comparison
+adds 404 signatures with zero removals against Q. The bundled Release bridge is
+15,615,488 bytes, SHA256 `13DF60762BBF4BEE9EC92A63B2060C9D8EF1EC3088257DF507AB29D409CF6D18`.
+Final documentation is repacked and byte-checked before the local completion commit;
+STATUS records final package hash evidence. Public release readiness remains false.
 
 | Root group | Exact inventory roots |
 |---|---|

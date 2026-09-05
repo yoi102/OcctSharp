@@ -1,5 +1,28 @@
 # Native ABI
 
+## ABI 1.61 / Preview.17 (Batch R verification)
+
+Bridge 0.69.0 adds sixteen mesh C exports in `OcctSharp.Native.Mesh.h`; all previous
+signatures and schema 1.13 remain unchanged. AuthoredVertex is 72 bytes (8-byte alignment,
+flags at offset 64); AuthoredTriangle is 16 bytes. Managed/native assertions check this.
+Vertex flags are 1 defined normal, 2 present UVs, 4 present normal channel; reserved is
+zero. Channels must be absent or full-cardinality, with explicit zero/undefined normals.
+Indices are zero-based; arrays and aggregate polyline indices are bounded to 5,000,000.
+
+Transform/conversion/weld/patch/removal calls use borrowed call-duration inputs and
+copied outputs. Shape results use the existing registered allocator/release contract.
+Count/capacity/copy snapshots read only existing triangulations, including world placement;
+cache replacement nodes use selected-face local coordinates. Remeshing is explicit and
+requires surface-backed faces. General affine normals use inverse transpose and mirrors
+reverse winding. Welding validates OCCT's actual merge indices against the double tolerance.
+
+Editable STL/OBJ import has a caller byte limit (64 MiB default; at most 256 MiB), bounded
+node/facet counts and disclosed missing channels. Writers operate on existing discrete
+data without remeshing; document geometry is canonical mm/Z-up/right-handed. Export
+format is 1 OBJ, 2 glTF, 3 PLY; optional channel bits are 1 normals and 2 UVs. The glTF
+path retains UVs even without texture assets. Exact STEP/IGES is not a discrete promise.
+All calls reuse Guard/status/TLS diagnostics; no Poly object/container crosses the ABI.
+
 ## ABI 1.60 / Preview.16
 
 Batch Q adds fourteen C exports in `OcctSharp.Native.Repair.h`, bridge 0.68.0,

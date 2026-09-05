@@ -32,5 +32,15 @@ if (!acceptedRepair.IsValid || acceptedRepair.FaceCount != 6)
     throw new InvalidOperationException("The direct Modeling repair result did not survive preview disposal.");
 }
 
+AuthoredMesh authored = new([new(0, 0, 0), new(2, 0, 0), new(0, 2, 0)], [new(0, 1, 2)]);
+using DiscreteMeshModel discrete = MeshTopology.Create(authored);
+using Shape discreteCopy = discrete.CopyShape();
+discrete.Dispose();
+AuthoredMesh roundtripMesh = MeshTopology.SnapshotExisting(discreteCopy).Mesh;
+if (MeshTopology.IsSurfaceBacked(discreteCopy) || roundtripMesh.Triangles.Count != 1 || roundtripMesh.Positions[1].X != 2)
+{
+    throw new InvalidOperationException("The facade-free Modeling consumer failed the authored mesh lifetime roundtrip.");
+}
+
 Console.WriteLine(
     $"Direct Modeling consumer passed: {box.Kind}, {box.FaceCount} faces, OCCT {runtime.OcctVersion}.");

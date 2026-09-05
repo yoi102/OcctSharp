@@ -1,5 +1,23 @@
 # Ownership and Lifetime
 
+## Batch R authored mesh contract
+
+`AuthoredMesh` and its channels, groups, polylines, origins, selections and maps own
+immutable managed copies and do not require disposal. Edits create unique revisions;
+map composition checks intermediate revision and cardinality. One-to-many splitting
+and deletions are explicit, not inferred by address, proximity or matching counts.
+`DiscreteMeshModel` owns an existing registered Shape and private copied metadata;
+public shape copies duplicate geometry and triangulation. No public mutable alias can
+change its private topology. Exact-face cache replacement/remeshing also works on
+private copies. Poly builders, graphs and merge maps remain call-local, with no new
+allocator/registry or borrowed pointers. Null outputs stay null on failure.
+
+Mesh assembly publication owns one transaction; labels are document-bound while its
+scene is a copied publication-time snapshot. A viewer review owns one parent-bound
+presentation on the creating thread; successful replacement invalidates old IDs/tokens,
+and failure keeps the original. Output staging promotes the complete sidecar set.
+Focused disposal/copy/isolation/transaction tests pass; full gates remain in STATUS.
+
 ## Batch Q validated implementation contract
 
 Repair snapshots own independently copied topology; source and result indices are

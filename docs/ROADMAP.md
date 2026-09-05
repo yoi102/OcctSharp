@@ -6,7 +6,7 @@ evidence; creating files or generating a large method count is not sufficient.
 The retired B00–B20 capability milestones and future package boundaries are documented
 in [the complete migration plan](MIGRATION_PLAN.md). They all belong to the completed
 product-scale batch `B`; none is a separate current batch or commit boundary.
-Batch B through Batch P are complete for their accepted local implementation scopes.
+Batch B through Batch R are complete for their accepted local implementation scopes.
 Batch P closes one expanded 32-capability surface/UV workflow under ADR-0079/0080.
 It was not split into projection, seam, repair, exchange, viewer, or package checkpoints.
 
@@ -15,7 +15,7 @@ It was not split into projection, seam, repair, exchange, viewer, or package che
 [ADR-0083](adr/0083-extended-batches-and-continuous-execution.md) adds three more
 40-capability scopes: U advanced contour/limit-driven features, V exact partition and
 volume workflows, W light/material/texture and copied-frame review. Together with Q-T,
-scope preparation is 7/7; Q is 40/40 implemented and locally validated, overall 40/280
+scope preparation is 7/7; Q/R are 80/80 implemented and locally validated, overall 80/280
 validated. Preview.20-22 extend the planned
 slots only; no package/API/DLL versions change during preparation.
 
@@ -31,7 +31,7 @@ No scheduler, NuGet upload or GitHub push is part of this preparation or executi
 [the Q-T preparation record](BATCH_Q_T_PREPARATION.md) freeze four 40-capability waves:
 Q repair/topology normalization, R mesh authoring/editing, S guided sweeps/constrained
 surfaces and T parametric recompute/persistent topology selection. Scope preparation is
-4/4; implementation and local validation are 40/160 (Q). These are broader than P's 32-capability wave, not small
+4/4; implementation and local validation are 80/160 (Q/R). These are broader than P's 32-capability wave, not small
 per-family checkpoints and not a claim to exhaust all remaining OCCT APIs.
 
 Implement Q -> R -> S -> T, finishing all local gates and one local commit for each.
@@ -40,8 +40,11 @@ contracts. All scopes were audited against Preview.15 and need explicit baseline
 revalidation after preceding implementation commits. Preview.16-19 are planned slots
 only at preparation. Q delivers Preview.16 / ABI 1.60 / bridge 0.68.0 with schema 1.13;
 focused 25/25, Release/Debug Generator 91/91 and Runtime 205/205, actual Debug-native,
-both consumers, clean regeneration, inventory and all local release gates pass. R-W
-implementation follows Q's local completion commit after explicit baseline reconciliation.
+both consumers, clean regeneration, inventory and all local release gates pass.
+R delivers Preview.17 / ABI 1.61 / bridge 0.69.0: focused 24/24, Release/Debug
+Generator 91/91, Runtime 229/229, actual Debug-native 229/229, both consumers,
+94-file clean regeneration, exact 48-ID accounting and full local release-check pass.
+Immediately after R's local completion commit, reconcile S's entry and implement S-W.
 Keep the existing modules, facade, source boundaries and one native DLL; no automatic
 NuGet publication or GitHub push.
 

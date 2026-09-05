@@ -1,0 +1,297 @@
+{
+  "schemaVersion": "1.0",
+  "batch": "R",
+  "specialCaseId": "SC-055",
+  "baselineInventorySha256": "7917A78FB700FB5C6A3B9B2EB6C27BAECE8E5CB7E5163296DC3DEFD200AE0426",
+  "note": "Exact directly invoked Blocked declarations; not every candidate root or inherited/generated support call. RWObj_Reader and BRepTools refine the unchanged frozen dependency scope.",
+  "calls": [
+    {
+      "stableId": "c:@S@BRepTools@F@Clean#&1$@S@TopoDS_Shape#b#S",
+      "nativeName": "BRepTools::Clean",
+      "header": "BRepTools.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@MakeEdge#&$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Poly_Polygon3D#1",
+      "nativeName": "BRep_Builder::MakeEdge",
+      "header": "BRep_Builder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@MakeFace#&$@S@TopoDS_Face#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#1",
+      "nativeName": "BRep_Builder::MakeFace",
+      "header": "BRep_Builder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateFace#&1$@S@TopoDS_Face#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#b#1",
+      "nativeName": "BRep_Builder::UpdateFace",
+      "header": "BRep_Builder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Triangulation#&1$@S@TopoDS_Face#&$@S@TopLoc_Location#i#S",
+      "nativeName": "BRep_Tool::Triangulation",
+      "header": "BRep_Tool.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangle@F@Node#I#1",
+      "nativeName": "Poly_CoherentTriangle::Node",
+      "header": "Poly_CoherentTriangle.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@AddTriangle#I#I#I#",
+      "nativeName": "Poly_CoherentTriangulation::AddTriangle",
+      "header": "Poly_CoherentTriangulation.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@RemoveTriangle#&$@S@Poly_CoherentTriangle#",
+      "nativeName": "Poly_CoherentTriangulation::RemoveTriangle",
+      "header": "Poly_CoherentTriangulation.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@ReplaceNodes#&$@S@Poly_CoherentTriangle#I#I#I#",
+      "nativeName": "Poly_CoherentTriangulation::ReplaceNodes",
+      "header": "Poly_CoherentTriangulation.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@SetNode#&1$@S@gp_XYZ#I#",
+      "nativeName": "Poly_CoherentTriangulation::SetNode",
+      "header": "Poly_CoherentTriangulation.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@Triangle#I#1",
+      "nativeName": "Poly_CoherentTriangulation::Triangle",
+      "header": "Poly_CoherentTriangulation.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Poly_Connect@F@Poly_Connect#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#",
+      "nativeName": "Poly_Connect::Poly_Connect",
+      "header": "Poly_Connect.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Poly_Connect@F@Triangles#I#&I#S0_#S0_#1",
+      "nativeName": "Poly_Connect::Triangles",
+      "header": "Poly_Connect.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Poly_MergeNodesTool@F@AddTriangle#*1$@S@gp_XYZ#",
+      "nativeName": "Poly_MergeNodesTool::AddTriangle",
+      "header": "Poly_MergeNodesTool.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Poly_MergeNodesTool@F@ChangeOutput#",
+      "nativeName": "Poly_MergeNodesTool::ChangeOutput",
+      "header": "Poly_MergeNodesTool.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Poly_Polygon3D#&1$@S@NCollection_Array1>#$@S@gp_Pnt#",
+      "nativeName": "Poly_Polygon3D::Poly_Polygon3D",
+      "header": "Poly_Polygon3D.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Poly_Polygon3D#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Poly_Polygon3D::Poly_Polygon3D",
+      "header": "Poly_Polygon3D.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Poly_PolygonOnTriangulation#&1$@S@NCollection_Array1>#I#",
+      "nativeName": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation",
+      "header": "Poly_PolygonOnTriangulation.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Poly_PolygonOnTriangulation#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#d#",
+      "nativeName": "Poly_PolygonOnTriangulation::Poly_PolygonOnTriangulation",
+      "header": "Poly_PolygonOnTriangulation.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Normal#I#&$@S@NCollection_Vec3>#f#1",
+      "nativeName": "Poly_Triangulation::Normal",
+      "header": "Poly_Triangulation.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@SetNormal#I#&1$@S@NCollection_Vec3>#f#",
+      "nativeName": "Poly_Triangulation::SetNormal",
+      "header": "Poly_Triangulation.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@SetTriangle#I#&1$@S@Poly_Triangle#",
+      "nativeName": "Poly_Triangulation::SetTriangle",
+      "header": "Poly_Triangulation.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@SetUVNode#I#&1$@S@gp_Pnt2d#",
+      "nativeName": "Poly_Triangulation::SetUVNode",
+      "header": "Poly_Triangulation.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Triangle#I#1",
+      "nativeName": "Poly_Triangulation::Triangle",
+      "header": "Poly_Triangulation.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S5_#$@S@NCollection_DefaultHasher>#S5_#&1$@S@Message_ProgressRange#",
+      "nativeName": "RWGltf_CafWriter::Perform",
+      "header": "RWGltf_CafWriter.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@RWGltf_CafWriter#&1$@S@TCollection_AsciiString#b#",
+      "nativeName": "RWGltf_CafWriter::RWGltf_CafWriter",
+      "header": "RWGltf_CafWriter.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@SetCoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#",
+      "nativeName": "RWGltf_CafWriter::SetCoordinateSystemConverter",
+      "header": "RWGltf_CafWriter.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetInputCoordinateSystem#$@E@RWMesh_CoordinateSystem#",
+      "nativeName": "RWMesh_CoordinateSystemConverter::SetInputCoordinateSystem",
+      "header": "RWMesh_CoordinateSystemConverter.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetInputLengthUnit#d#",
+      "nativeName": "RWMesh_CoordinateSystemConverter::SetInputLengthUnit",
+      "header": "RWMesh_CoordinateSystemConverter.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetOutputCoordinateSystem#$@E@RWMesh_CoordinateSystem#",
+      "nativeName": "RWMesh_CoordinateSystemConverter::SetOutputCoordinateSystem",
+      "header": "RWMesh_CoordinateSystemConverter.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetOutputLengthUnit#d#",
+      "nativeName": "RWMesh_CoordinateSystemConverter::SetOutputLengthUnit",
+      "header": "RWMesh_CoordinateSystemConverter.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@TransformNormal#&$@S@NCollection_Vec3>#f#1",
+      "nativeName": "RWMesh_CoordinateSystemConverter::TransformNormal",
+      "header": "RWMesh_CoordinateSystemConverter.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@TransformPosition#&$@S@gp_XYZ#1",
+      "nativeName": "RWMesh_CoordinateSystemConverter::TransformPosition",
+      "header": "RWMesh_CoordinateSystemConverter.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S5_#$@S@NCollection_DefaultHasher>#S5_#&1$@S@Message_ProgressRange#",
+      "nativeName": "RWObj_CafWriter::Perform",
+      "header": "RWObj_CafWriter.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@RWObj_CafWriter#&1$@S@TCollection_AsciiString#",
+      "nativeName": "RWObj_CafWriter::RWObj_CafWriter",
+      "header": "RWObj_CafWriter.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@SetCoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#",
+      "nativeName": "RWObj_CafWriter::SetCoordinateSystemConverter",
+      "header": "RWObj_CafWriter.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWObj_Reader@F@Read#&1$@S@TCollection_AsciiString#&1$@S@Message_ProgressRange#",
+      "nativeName": "RWObj_Reader::Read",
+      "header": "RWObj_Reader.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWObj_Reader@F@SetMemoryLimit#k#",
+      "nativeName": "RWObj_Reader::SetMemoryLimit",
+      "header": "RWObj_Reader.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWPly_CafWriter@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S5_#$@S@NCollection_DefaultHasher>#S5_#&1$@S@Message_ProgressRange#",
+      "nativeName": "RWPly_CafWriter::Perform",
+      "header": "RWPly_CafWriter.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWPly_CafWriter@F@RWPly_CafWriter#&1$@S@TCollection_AsciiString#",
+      "nativeName": "RWPly_CafWriter::RWPly_CafWriter",
+      "header": "RWPly_CafWriter.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWPly_CafWriter@F@SetCoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#",
+      "nativeName": "RWPly_CafWriter::SetCoordinateSystemConverter",
+      "header": "RWPly_CafWriter.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWStl@F@ReadFile#*1C#&1$@S@Message_ProgressRange#S",
+      "nativeName": "RWStl::ReadFile",
+      "header": "RWStl.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWStl@F@WriteAscii#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@S@OSD_Path#&1$@S@Message_ProgressRange#S",
+      "nativeName": "RWStl::WriteAscii",
+      "header": "RWStl.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@RWStl@F@WriteBinary#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@S@OSD_Path#&1$@S@Message_ProgressRange#S",
+      "nativeName": "RWStl::WriteBinary",
+      "header": "RWStl.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@gp_GTrsf@F@SetValue#I#I#d#",
+      "nativeName": "gp_GTrsf::SetValue",
+      "header": "gp_GTrsf.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@gp_GTrsf@F@Transforms#&$@S@gp_XYZ#1",
+      "nativeName": "gp_GTrsf::Transforms",
+      "header": "gp_GTrsf.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@gp_GTrsf@F@VectorialPart#1",
+      "nativeName": "gp_GTrsf::VectorialPart",
+      "header": "gp_GTrsf.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@gp_GTrsf@F@gp_GTrsf#",
+      "nativeName": "gp_GTrsf::gp_GTrsf",
+      "header": "gp_GTrsf.hxx",
+      "baselineState": "Blocked"
+    }
+  ]
+}

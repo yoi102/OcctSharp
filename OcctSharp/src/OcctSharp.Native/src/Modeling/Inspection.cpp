@@ -1,6 +1,7 @@
 // Native Modeling/Inspection implementation. Public contracts and ownership are unchanged.
 #include "Geometry/Conversions.hxx"
 #include "Modeling/Inspection.hxx"
+#include "Modeling/Topology.hxx"
 #include "OcctSharp.Native.Internal.hxx"
 #include "Runtime/Error.hxx"
 #include "Runtime/Registry.hxx"
@@ -417,6 +418,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_inspection_properties(
   {
     ValidateUsableShape(shape);
     const TopAbs_ShapeEnum kind = shape->Value.ShapeType();
+    RequireExactFaceSupport(shape->Value);
     GProp_GProps result;
     switch (property_kind)
     {

@@ -2,6 +2,7 @@
   <Import Project="..\OcctSharp.Module.props" />
   <PropertyGroup><Description>OCCT triangulation and polygon data bindings for OcctSharp.</Description></PropertyGroup>
   <ItemGroup><Compile Include="..\OcctSharp\Generated\MeshData\**\*.cs" Link="Generated\%(RecursiveDir)%(Filename)%(Extension)" /></ItemGroup>
+  <ItemGroup><Compile Include="Authoring\**\*.cs" /></ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OcctSharp.Runtime\OcctSharp.Runtime.csproj" />
     <ProjectReference Include="..\OcctSharp.Foundation\OcctSharp.Foundation.csproj" />

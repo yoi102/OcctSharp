@@ -1,5 +1,17 @@
 # Architecture
 
+## Batch R authored mesh boundary
+
+ADR-0085 places immutable `AuthoredMesh`, optional channels, polylines and revision-bound
+index maps in MeshData. Editing/connectivity/normal orchestration belongs to Mesh;
+owning discrete topology and exact-face cache copy-on-write belong to Modeling. The
+facade composes XDE materials/occurrences, direct format delivery and viewer replacement.
+Four independent native units add Mesh authoring/editing/topology and Exchange delivery;
+all temporary Poly algorithms remain call-local. There is no new native owner registry,
+project or DLL. MeshData has no Modeling/XDE reference. Snapshots and direct writers do
+not invoke a mesher; exact operations reject triangulation-only faces. Missing attributes
+stay absent/undefined; unsupported format channels have explicit disclosures.
+
 ## Batch Q repair boundary
 
 ADR-0084 adds Modeling-owned immutable repair snapshots/plans, typed stages and
@@ -31,7 +43,7 @@ S in cohesive Modeling/Surfaces units, T storage/naming in Documents. T feature 
 and XDE/viewer coordination belong in the existing facade/higher owners, so Documents
 does not gain reverse dependencies on Mesh/XDE/Visualization. R MeshData similarly must
 not reference Modeling or XDE material objects. Q is now implemented as described above;
-R/S/T placements remain planned. See [Q-T preparation](BATCH_Q_T_PREPARATION.md).
+R is implemented in the boundaries above; S/T placements remain planned. See [Q-T preparation](BATCH_Q_T_PREPARATION.md).
 
 ## Full historical native source extraction
 

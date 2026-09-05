@@ -23,8 +23,8 @@ if (nativeFiles.Length < 2)
 }
 
 OcctRuntimeInfo runtime = OcctRuntime.Info;
-if (runtime.AbiVersion != new Version(1, 60)
-    || runtime.BridgeVersion != "0.68.0"
+if (runtime.AbiVersion != new Version(1, 61)
+    || runtime.BridgeVersion != "0.69.0"
     || runtime.OcctVersion != "8.0.1")
 {
     throw new InvalidOperationException(
@@ -1832,6 +1832,7 @@ finally
 
 OcctSharp.Validation.BatchPSurfaceWorkflow.Run();
 OcctSharp.Validation.BatchQRepairWorkflow.Run();
+OcctSharp.Validation.BatchRMeshWorkflow.Run();
 
 Console.WriteLine(
     $"Package consumer passed with {nativeFiles.Length} DLLs in 'occt', "

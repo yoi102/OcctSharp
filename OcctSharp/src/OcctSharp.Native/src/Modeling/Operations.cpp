@@ -41,7 +41,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_extrude(
   *out_shape = nullptr;
   return Guard([&]
   {
-    ValidateUsableShape(shape); ValidateVector(direction);
+    ValidateUsableShape(shape); RequireExactFaceSupport(shape->Value); ValidateVector(direction);
     if (direction->Value.SquareMagnitude() <= 0.0)
       throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The extrusion direction must be non-zero.");
     BRepPrimAPI_MakePrism builder(shape->Value, direction->Value, false, false);
@@ -66,7 +66,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_revolve(
   }
   return Guard([&]
   {
-    ValidateUsableShape(shape); ValidateAxis(axis);
+    ValidateUsableShape(shape); RequireExactFaceSupport(shape->Value); ValidateAxis(axis);
     BRepPrimAPI_MakeRevol builder(shape->Value, axis->Value, angle_radians, false);
     if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT revolution did not complete.");
     TopoDS_Shape result = builder.Shape();
@@ -83,7 +83,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_fillet_all(
   if (!std::isfinite(radius) || radius <= 0.0) { SetLastError("The fillet radius must be finite and greater than zero."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
   return Guard([&]
   {
-    ValidateUsableShape(shape);
+    ValidateUsableShape(shape); RequireExactFaceSupport(shape->Value);
     NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> edges;
     TopExp::MapShapes(shape->Value, TopAbs_EDGE, edges);
     if (edges.IsEmpty()) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The source shape has no edges to fillet.");
@@ -106,7 +106,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_fillet_edge(
   if (!std::isfinite(radius) || radius <= 0.0) { SetLastError("The fillet radius must be finite and greater than zero."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
   return Guard([&]
   {
-    ValidateUsableShape(shape); ValidateUsableShape(edge);
+    ValidateUsableShape(shape); RequireExactFaceSupport(shape->Value); ValidateUsableShape(edge);
     if (edge->Value.ShapeType() != TopAbs_EDGE)
       throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Fillet construction requires an edge shape.");
     BRepFilletAPI_MakeFillet builder(shape->Value);
@@ -127,7 +127,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_chamfer_all(
   if (!std::isfinite(distance) || distance <= 0.0) { SetLastError("The chamfer distance must be finite and greater than zero."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
   return Guard([&]
   {
-    ValidateUsableShape(shape);
+    ValidateUsableShape(shape); RequireExactFaceSupport(shape->Value);
     NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> edges;
     TopExp::MapShapes(shape->Value, TopAbs_EDGE, edges);
     if (edges.IsEmpty()) throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT, "The source shape has no edges to chamfer.");
@@ -150,7 +150,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_chamfer_edge(
   if (!std::isfinite(distance) || distance <= 0.0) { SetLastError("The chamfer distance must be finite and greater than zero."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
   return Guard([&]
   {
-    ValidateUsableShape(shape); ValidateUsableShape(edge);
+    ValidateUsableShape(shape); RequireExactFaceSupport(shape->Value); ValidateUsableShape(edge);
     if (edge->Value.ShapeType() != TopAbs_EDGE)
       throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Chamfer construction requires an edge shape.");
     BRepFilletAPI_MakeChamfer builder(shape->Value);
@@ -176,7 +176,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_offset(
   }
   return Guard([&]
   {
-    ValidateUsableShape(shape);
+    ValidateUsableShape(shape); RequireExactFaceSupport(shape->Value);
     BRepOffsetAPI_MakeOffsetShape builder;
     builder.PerformByJoin(shape->Value, offset, tolerance);
     if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT offset construction did not complete.");
@@ -202,7 +202,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_make_thick_solid(
   }
   return Guard([&]
   {
-    ValidateUsableShape(shape);
+    ValidateUsableShape(shape); RequireExactFaceSupport(shape->Value);
     if (shape->Value.ShapeType() != TopAbs_SOLID)
       throw OperationFailure(OCCTSHARP_STATUS_TYPE_MISMATCH, "Thick-solid construction requires a solid source shape.");
     NCollection_List<TopoDS_Shape> faces;
@@ -229,7 +229,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_section(
   *out_shape = nullptr;
   return Guard([&]
   {
-    ValidateUsableShape(left); ValidateUsableShape(right);
+    ValidateUsableShape(left); RequireExactFaceSupport(left->Value); ValidateUsableShape(right); RequireExactFaceSupport(right->Value);
     BRepAlgoAPI_Section builder(left->Value, right->Value, false);
     builder.Build();
     if (!builder.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT section construction did not complete.");
@@ -247,7 +247,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_boolean_fuse(
   *out_shape = nullptr;
   return Guard([&]
   {
-    ValidateUsableShape(left); ValidateUsableShape(right);
+    ValidateUsableShape(left); RequireExactFaceSupport(left->Value); ValidateUsableShape(right); RequireExactFaceSupport(right->Value);
     BRepAlgoAPI_Fuse operation(left->Value, right->Value);
     operation.Build();
     if (!operation.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT boolean fuse did not complete.");
@@ -263,7 +263,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_boolean_cut(
   *out_shape = nullptr;
   return Guard([&]
   {
-    ValidateUsableShape(left); ValidateUsableShape(right);
+    ValidateUsableShape(left); RequireExactFaceSupport(left->Value); ValidateUsableShape(right); RequireExactFaceSupport(right->Value);
     BRepAlgoAPI_Cut operation(left->Value, right->Value);
     operation.Build();
     if (!operation.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT boolean cut did not complete.");
@@ -279,7 +279,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_boolean_common(
   *out_shape = nullptr;
   return Guard([&]
   {
-    ValidateUsableShape(left); ValidateUsableShape(right);
+    ValidateUsableShape(left); RequireExactFaceSupport(left->Value); ValidateUsableShape(right); RequireExactFaceSupport(right->Value);
     BRepAlgoAPI_Common operation(left->Value, right->Value);
     operation.Build();
     if (!operation.IsDone()) throw OperationFailure(OCCTSHARP_STATUS_OCCT_FAILURE, "OCCT boolean common did not complete.");
@@ -304,8 +304,8 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_boolean_with_history(
   { SetLastError("Boolean history tracked kind must be Compound through Vertex."); return OCCTSHARP_STATUS_INVALID_ARGUMENT; }
   return Guard([&]
   {
-    ValidateUsableShape(left);
-    ValidateUsableShape(right);
+    ValidateUsableShape(left); RequireExactFaceSupport(left->Value);
+    ValidateUsableShape(right); RequireExactFaceSupport(right->Value);
     std::unique_ptr<BRepAlgoAPI_BooleanOperation> operation;
     if (operation_kind == 0) operation = std::make_unique<BRepAlgoAPI_Fuse>(left->Value, right->Value);
     else if (operation_kind == 1) operation = std::make_unique<BRepAlgoAPI_Cut>(left->Value, right->Value);
@@ -369,7 +369,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_fix(
   *out_shape = nullptr;
   return Guard([&]
   {
-    ValidateUsableShape(shape);
+    ValidateUsableShape(shape); RequireExactFaceSupport(shape->Value);
     ShapeFix_Shape fixer(shape->Value);
     fixer.Perform();
     TopoDS_Shape fixed = fixer.Shape();
@@ -393,7 +393,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_shape_unify_same_domain(
   *out_shape = nullptr;
   return Guard([&]
   {
-    ValidateUsableShape(shape);
+    ValidateUsableShape(shape); RequireExactFaceSupport(shape->Value);
     ShapeUpgrade_UnifySameDomain operation(shape->Value, true, true, false);
     operation.Build();
     TopoDS_Shape unified = operation.Shape();

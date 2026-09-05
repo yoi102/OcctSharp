@@ -2,7 +2,7 @@
 
 ## Current package set
 
-The current local preview package version is `8.0.1-preview.16` for .NET 10 and
+The current local preview package version is `8.0.1-preview.17` for .NET 10 and
 Windows x64. ADR-0074 produces 14 packages:
 
 - 12 managed module packages: Runtime, Foundation, Geometry, MeshData, Modeling, Mesh,
@@ -23,7 +23,7 @@ contains a package hash and would make the artifact self-referential. Release no
 the stable architecture/topic documents are packaged; status remains authoritative in
 the repository.
 
-Preview.16 is local-only and is not published. The release workstream produces
+Preview.17 is local-only and is not published. The release workstream produces
 immutable native provenance, SBOM/checksum evidence, API diff, and CI configuration.
 The project license and bundled third-party notice layout are resolved by ADR-0059;
 hosted release execution and signing remain separate gates. Publication evidence is
@@ -114,6 +114,14 @@ publication, names/colors, repeated placements, undo/redo, STEP/IGES reimport an
 defect selection/screenshots. The direct Modeling consumer additionally accepts an
 independently owning repair result and verifies that it survives source/preview disposal.
 
+Preview.17 adds R's 40-capability authored/edited mesh closure. The shared public-only
+workflow verifies groups/materials, repeated shared XDE definitions, rigid placements,
+undo/redo, Unicode STL/OBJ/glTF/GLB/PLY delivery, optional channels, independent PLY
+readback and real-HWND revision replacement. Direct Modeling also snapshots an owning
+discrete copy after source disposal. No mesher is invoked by the direct delivery path.
+The native package keeps notices/licenses at their original relative paths beneath
+`licenses/`, without duplicating dependency directories.
+
 The direct module consumer creates and inspects a six-face box, verifies OCCT 8.0.1 and
 the same 62-DLL `occt/` closure, and fails if the `OcctSharp.dll` facade is present.
 
@@ -122,13 +130,13 @@ the same 62-DLL `occt/` closure, and fails if the `OcctSharp.dll` facade is pres
 Once a package source contains the package, an application uses the normal command:
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.16 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp --version 8.0.1-preview.17 --source ./OcctSharp/artifacts/packages
 ```
 
 A narrow consumer can instead select a module, for example:
 
 ```powershell
-dotnet add package OcctSharp.Modeling --version 8.0.1-preview.16 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.17 --source ./OcctSharp/artifacts/packages
 ```
 
 The application must run as a Windows x64 process on the current compatibility matrix.
@@ -147,17 +155,20 @@ CycloneDX SBOM, provenance, gate report, and SHA256 checksum list under
 `artifacts/release/`. The checksum list covers the four JSON evidence records and the
 `.nupkg` after the gate report is finalized. A passing local package consumer and
 completed release tooling do not override a `BLOCKED` or `NOT RUN` publication gate.
+After any final documentation repack, regenerate metadata/checksums and run
+`eng/verify-package-content.ps1` to compare all stable documents, runtime/license bytes
+and final checksum/provenance identities. Stale package documents must not pass delivery.
 
 ## Managed split evidence
 
-Preview.16 package verification runs from the inner `OcctSharp/` workspace, where
+Preview.17 package verification runs from the inner `OcctSharp/` workspace, where
 `global.json` selects SDK 10.0.400. Direct nupkg inspection confirms 13 managed packages
 with one managed DLL and zero native DLLs each, plus one native package with exactly 62
 DLLs. Every nupkg contains the shared README and icon. Package and informational versions
-are `8.0.1-preview.16`; managed assembly/file identity remains `0.1.0.0`; ABI is 1.60
-and bridge is 0.68.0.
+are `8.0.1-preview.17`; managed assembly/file identity remains `0.1.0.0`; ABI is 1.61
+and bridge is 0.69.0.
 
-The compatibility consumer restores, publishes locally, and runs the Batch D-Q paths.
+The compatibility consumer restores, publishes locally, and runs the Batch D-R paths.
 The direct Modeling consumer proves module-only consumption without the facade. Both
 converge on one application-local `occt` directory. Toolkit-per-package fragmentation and
 native bridge splitting are not planned. Signing, hosted full release execution, NuGet

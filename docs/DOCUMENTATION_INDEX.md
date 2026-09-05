@@ -27,7 +27,7 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
 - [Batch Q repair and topology](BATCH_Q_SHAPE_REPAIR_TOPOLOGY_GAP_INVENTORY.md) — protected
   staged healing, diagnostics, normalization and composed history; 40/40 locally validated.
 - [Batch R mesh authoring/editing](BATCH_R_MESH_AUTHORING_EDITING_GAP_INVENTORY.md) — caller
-  arrays, attributed edits/remapping and discrete-model delivery; prepared, 0/40 implemented.
+  arrays, attributed edits/remapping and discrete-model delivery; full 40-row closure in exit verification.
 - [Batch S guided sweep/constrained surfaces](BATCH_S_GUIDED_SWEEP_CONSTRAINED_SURFACE_GAP_INVENTORY.md)
   — scalar laws, guides, constraint fulfilment and patch provenance; prepared, 0/40 implemented.
 - [Batch T parametric recompute/naming](BATCH_T_PARAMETRIC_DOCUMENT_RECOMPUTE_GAP_INVENTORY.md)
@@ -91,6 +91,8 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   projection, repair, trimmed topology and source-organization boundaries.
 - [Preview.16 release notes](RELEASE_NOTES_8.0.1_PREVIEW_16.md) — Batch Q source-bound
   repair previews, budgets, composed history, transactional publication and defect review.
+- [Preview.17 release notes](RELEASE_NOTES_8.0.1_PREVIEW_17.md) — Batch R immutable mesh
+  authoring, exact correspondence, attributed editing and discrete-model delivery.
 - [Preview.13 release notes](RELEASE_NOTES_8.0.1_PREVIEW_13.md) — complete Batch N
   IGESCAF/XDE metadata, Unicode paths, mixed-format composition, viewer, and local evidence.
 - [Preview.12 release notes](RELEASE_NOTES_8.0.1_PREVIEW_12.md) — STEP/XCAF style

@@ -29,6 +29,14 @@
 
 namespace OcctSharp::Native
 {
+void RequireExactFaceSupport(const TopoDS_Shape& shape)
+{
+  for (TopExp_Explorer explorer(shape, TopAbs_FACE); explorer.More(); explorer.Next())
+    if (BRep_Tool::Surface(TopoDS::Face(explorer.Current())).IsNull())
+      throw OperationFailure(OCCTSHARP_STATUS_INVALID_ARGUMENT,
+        "Exact modeling requires surface-backed faces; triangulation-only input is not an exact BRep.");
+}
+
 bool SupportsShapeHistory(const TopoDS_Shape& shape)
 {
   const TopAbs_ShapeEnum kind = shape.ShapeType();

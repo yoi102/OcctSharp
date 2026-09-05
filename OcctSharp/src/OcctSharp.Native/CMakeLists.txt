@@ -33,6 +33,9 @@ set(OCCTSHARP_MANUAL_NATIVE_SOURCES
   src/Modeling/Sketch.cpp
   src/Modeling/Topology.cpp
   src/Mesh/Triangulation.cpp
+  src/Mesh/MeshAuthoring.cpp
+  src/Mesh/MeshEditing.cpp
+  src/Mesh/MeshTopology.cpp
   src/Documents/Lifecycle.cpp
   src/Documents/State.cpp
   src/Xde/Document.cpp
@@ -42,6 +45,7 @@ set(OCCTSHARP_MANUAL_NATIVE_SOURCES
   src/Xde/Structure.cpp
   src/Xde/RepairPublication.cpp
   src/Exchange/ShapeExchange.cpp
+  src/Exchange/MeshExchange.cpp
   src/Exchange/StepAssembly.cpp
   src/Exchange/XdeExchange.cpp
   src/Visualization/Clipping.cpp
@@ -66,6 +70,7 @@ add_library(OcctSharp.Native SHARED
   include/OcctSharp.Native.Internal.hxx
   include/OcctSharp.Native.Surface.h
   include/OcctSharp.Native.Repair.h
+  include/OcctSharp.Native.Mesh.h
   src/Surfaces/SurfaceCommon.hxx
   ${OCCTSHARP_MANUAL_NATIVE_SOURCES}
   ${OCCTSHARP_GENERATED_NATIVE_SOURCES})

@@ -167,6 +167,198 @@
   ],
   "manualBindings": [
     {
+      "stableId": "c:@S@BRepTools@F@Clean#&1$@S@TopoDS_Shape#b#S",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@MakeEdge#&$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Poly_Polygon3D#1",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@MakeFace#&$@S@TopoDS_Face#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#1",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@BRep_Builder@F@UpdateFace#&1$@S@TopoDS_Face#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#b#1",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@BRep_Tool@F@Triangulation#&1$@S@TopoDS_Face#&$@S@TopLoc_Location#i#S",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangle@F@Node#I#1",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@AddTriangle#I#I#I#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@RemoveTriangle#&$@S@Poly_CoherentTriangle#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@ReplaceNodes#&$@S@Poly_CoherentTriangle#I#I#I#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@SetNode#&1$@S@gp_XYZ#I#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@Poly_CoherentTriangulation@F@Triangle#I#1",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@Poly_Connect@F@Poly_Connect#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@Poly_Connect@F@Triangles#I#&I#S0_#S0_#1",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@Poly_MergeNodesTool@F@AddTriangle#*1$@S@gp_XYZ#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@Poly_MergeNodesTool@F@ChangeOutput#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Poly_Polygon3D#&1$@S@NCollection_Array1>#$@S@gp_Pnt#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@Poly_Polygon3D@F@Poly_Polygon3D#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Poly_PolygonOnTriangulation#&1$@S@NCollection_Array1>#I#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@Poly_PolygonOnTriangulation@F@Poly_PolygonOnTriangulation#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#d#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Normal#I#&$@S@NCollection_Vec3>#f#1",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@SetNormal#I#&1$@S@NCollection_Vec3>#f#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@SetTriangle#I#&1$@S@Poly_Triangle#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@SetUVNode#I#&1$@S@gp_Pnt2d#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@Poly_Triangulation@F@Triangle#I#1",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S5_#$@S@NCollection_DefaultHasher>#S5_#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@RWGltf_CafWriter#&1$@S@TCollection_AsciiString#b#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWGltf_CafWriter@F@SetCoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetInputCoordinateSystem#$@E@RWMesh_CoordinateSystem#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetInputLengthUnit#d#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetOutputCoordinateSystem#$@E@RWMesh_CoordinateSystem#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@SetOutputLengthUnit#d#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@TransformNormal#&$@S@NCollection_Vec3>#f#1",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWMesh_CoordinateSystemConverter@F@TransformPosition#&$@S@gp_XYZ#1",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S5_#$@S@NCollection_DefaultHasher>#S5_#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@RWObj_CafWriter#&1$@S@TCollection_AsciiString#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWObj_CafWriter@F@SetCoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWObj_Reader@F@Read#&1$@S@TCollection_AsciiString#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWObj_Reader@F@SetMemoryLimit#k#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWPly_CafWriter@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S5_#$@S@NCollection_DefaultHasher>#S5_#&1$@S@Message_ProgressRange#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWPly_CafWriter@F@RWPly_CafWriter#&1$@S@TCollection_AsciiString#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWPly_CafWriter@F@SetCoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWStl@F@ReadFile#*1C#&1$@S@Message_ProgressRange#S",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWStl@F@WriteAscii#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@S@OSD_Path#&1$@S@Message_ProgressRange#S",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@RWStl@F@WriteBinary#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@S@OSD_Path#&1$@S@Message_ProgressRange#S",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@gp_GTrsf@F@SetValue#I#I#d#",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@gp_GTrsf@F@Transforms#&$@S@gp_XYZ#1",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@gp_GTrsf@F@VectorialPart#1",
+      "specialCaseId": "SC-055"
+    },
+    {
+      "stableId": "c:@S@gp_GTrsf@F@gp_GTrsf#",
+      "specialCaseId": "SC-055"
+    },
+    {
       "stableId": "c:@S@BRepAlgoAPI_Section@F@BRepAlgoAPI_Section#&1$@S@TopoDS_Shape#S0_#b#",
       "specialCaseId": "SC-032"
     },

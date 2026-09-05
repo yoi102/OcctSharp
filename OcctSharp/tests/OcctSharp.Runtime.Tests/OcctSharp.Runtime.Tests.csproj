@@ -17,5 +17,6 @@
     <ProjectReference Include="../../src/OcctSharp/OcctSharp.csproj" />
     <Compile Include="../Shared/BatchPSurfaceWorkflow.cs" Link="BatchPSurfaceWorkflow.cs" />
     <Compile Include="../Shared/BatchQRepairWorkflow.cs" Link="BatchQRepairWorkflow.cs" />
+    <Compile Include="../Shared/BatchRMeshWorkflow.cs" Link="BatchRMeshWorkflow.cs" />
   </ItemGroup>
 </Project>

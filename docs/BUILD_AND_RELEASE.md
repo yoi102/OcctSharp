@@ -66,6 +66,31 @@ From the inner `OcctSharp/` workspace:
 .\eng\build.ps1 -Configuration Debug
 ```
 
+Whole-batch verification additionally checks the actual Debug native closure (the
+ordinary managed Debug build intentionally uses the bundled Release runtime):
+
+```powershell
+.\eng\verify-native-private-headers.ps1
+.\eng\verify-debug-native-runtime.ps1 -OutputDirectory artifacts/debug-native-validation
+.\eng\verify-native-source-layout.ps1 `
+  -NativeLibraryPath artifacts/native/Release/OcctSharp.Native.dll `
+  -BaselineNativeLibraryPath artifacts/native/Debug/OcctSharp.Native.dll
+```
+
+The isolated verifier copies managed tests into a unique evidence directory and all
+62 rebuilt Debug DLLs into a fresh `occt/` directory, including `tbb12_debug.dll`
+instead of the Release `tbb12.dll`. It compares every DLL hash, runs all Runtime
+tests with TRX evidence and leaves the normal test/runtime outputs untouched.
+It is not evidence of a Debug-native run if only the managed assembly is Debug.
+Use `inventory.ps1 -BatchSize 128` for batch accounting; the batch-entry and
+manual-accounting scripts reject changed baseline hashes or unaudited stable IDs.
+
+After the final documentation repack and release metadata/checksum update, run
+`eng/verify-package-content.ps1`. It compares every stable packaged document with its
+source, all 62 DLLs and 11 notices/licenses with the manifest/source bytes, and all
+five release checksums and package provenance. It rejects missing, stale or duplicated
+documentation paths; STATUS remains repository-only to avoid a package-hash cycle.
+
 The machine-specific OCCT and Visual Studio roots come from ignored
 `config/local.settings.json`, environment variable/parameters, and committed examples.
 `global.json` locks the .NET SDK to 10.0.400.

@@ -5,7 +5,7 @@ versioned native C ABI, generated low-level bindings, and friendly managed CAD A
 modeling, STEP/IGES/STL exchange, XDE assemblies and metadata, meshing, inspection, and
 Windows visualization.
 
-Current local preview: `8.0.1-preview.16` for Windows x64. The NuGet graph contains 12 managed
+Current local preview: `8.0.1-preview.17` for Windows x64. The NuGet graph contains 12 managed
 modules, the `OcctSharp` compatibility/facade package, and one shared
 `OcctSharp.Native.win-x64` runtime package. The native package places the complete
 62-DLL runtime in the application's `occt/` directory; no machine-wide OCCT installation
@@ -14,17 +14,17 @@ or `PATH` change is required.
 ## Install
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.16 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp --version 8.0.1-preview.17 --source ./OcctSharp/artifacts/packages
 ```
 
 A narrow consumer can reference a module directly, for example:
 
 ```powershell
-dotnet add package OcctSharp.Modeling --version 8.0.1-preview.16 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.17 --source ./OcctSharp/artifacts/packages
 ```
 
 The supported runtime baseline is .NET 10, Windows x64, and OCCT 8.0.1.
-Preview.16 is a local-only build; it is not published on NuGet.org. Create the
+Preview.17 is a local-only build; it is not published on NuGet.org. Create the
 local package feed with `OcctSharp/eng/pack.ps1` using the contributor toolchain, or run
 the repository samples directly with the committed runtime.
 
@@ -125,6 +125,37 @@ shared XDE definition transactionally only when metadata mapping is unambiguous;
 `RepairViewerReview` selects copied defects and rejects stale review selections.
 See [Batch Q's 40 capabilities](docs/BATCH_Q_SHAPE_REPAIR_TOPOLOGY_GAP_INVENTORY.md)
 and [Preview.16 notes](docs/RELEASE_NOTES_8.0.1_PREVIEW_16.md).
+
+## Author, edit and deliver a mesh
+
+```csharp
+using OcctSharp;
+
+AuthoredMesh mesh = new(
+    [new(0, 0, 0), new(20, 0, 0), new(20, 20, 0), new(0, 20, 0)],
+    [new(0, 1, 2), new(0, 2, 3)]);
+MeshEditResult edited = MeshEditing.SetPositions(
+    mesh, mesh.SelectVertices([2]), [new(20, 20, 5)]);
+AuthoredMesh withNormals = MeshEditing.RebuildNormals(edited.Mesh).Mesh;
+AuthoredMeshStatistics statistics = MeshEditing.Inspect(withNormals);
+
+using DiscreteMeshModel model = MeshTopology.Create(withNormals);
+using Shape independentShape = model.CopyShape();
+AuthoredMeshExportResult output = AuthoredMeshExchange.Write(withNormals, "edited.glb");
+Console.WriteLine($"Triangles: {statistics.TriangleCount}, area: {statistics.SurfaceArea}");
+foreach (string disclosure in output.Disclosures) Console.WriteLine(disclosure);
+```
+
+Mesh inputs and edits are immutable copies. Selections and exact one-to-many/deletion
+maps belong to specific revisions. Editing includes connected selections, welding,
+crease splitting, orientation, normal/UV channels, affine transforms and unit conversion.
+STL/OBJ can be loaded directly for editing; STL/OBJ/glTF/GLB/PLY export uses existing
+triangulations without remeshing. Missing channels are disclosed, not filled with zeros.
+`MeshAssembly` publishes grouped materials/repeated rigid occurrences; `MeshViewerReview`
+supports styled display and revision replacement on the existing HWND viewer.
+Discrete shapes are not exact CAD solids and cannot be exported as exact STEP/IGES.
+See [Batch R's 40 capabilities](docs/BATCH_R_MESH_AUTHORING_EDITING_GAP_INVENTORY.md)
+and [Preview.17 notes](docs/RELEASE_NOTES_8.0.1_PREVIEW_17.md).
 
 ## Read ordinary STEP geometry
 

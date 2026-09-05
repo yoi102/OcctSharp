@@ -1,5 +1,87 @@
 # Special Cases
 
+## SC-055: Immutable attributed mesh authoring and discrete delivery
+
+- Status: implemented for the unchanged 40-row R closure; full local gates in progress.
+- Scope: 48 exact directly invoked Preview.16 Blocked declarations, linked in
+  [batch-r-manual-calls.json](../OcctSharp/config/batches/batch-r-manual-calls.json).
+  Emitted/Manual support and unrelated overloads retain their dispositions.
+- Reason: call-local Poly editing/connectivity/welding, copied optional attributes,
+  exact revision-scoped correspondence, owning topology/cache isolation and native
+  format writers cannot safely expose temporary arrays or mutable borrowed objects.
+- Contract: ABI 1.61 / bridge 0.69.0 / Preview.17, schema 1.13 unchanged; sixteen
+  copied-buffer/owning-Shape exports, no new registry or DLL. MeshData stays below
+  Modeling/XDE. Missing attributes are absent/undefined rather than fabricated zeros.
+- Dependency refinement: inherited RWObj_Reader Read/SetMemoryLimit and BRepTools Clean
+  are directly used support beyond the unchanged frozen 46-root matrix. Native-local
+  RWObj virtual overrides preserve actual channel presence and bounded allocations;
+  protected callbacks do not cross the C ABI or create a managed callback contract.
+  The existing TKRWMesh/TKDEOBJ/TKDEGLTF/TKDEPLY/TKDESTL/TKBRep/TKMath closure is retained.
+- Welding uses OCCT representative indices and validates double-precision distance;
+  degenerate filtering removes facets without implicit vertex collapse/reconnection.
+  glTF explicitly forces authored UV export even without textures. Undefined export
+  normals are disclosed and omitted rather than replaced by OCCT's default +Z.
+- Validation: 24 focused tests currently pass, including actual format files, copied
+  material scenes, repeated instances/undo/redo and real-HWND replacement; additional
+  regression and all completion evidence are recorded in STATUS after execution.
+- OBJ import rejects parsed out-of-range UV/normal references instead of accepting
+  the SDK's default channel substitutions. Normalization scales first to retain
+  valid 1e30/1e-30 directions; the new regression fails before the fix and passes after.
+- Upgrade impact: recheck coherent node numbering, merge precision, reader virtual
+  channel indexing, UV writer options, coordinate conversion and cache-copy isolation.
+- Removal criterion: generated contracts must preserve these exact copied/owning,
+  revision, atomicity, optional-channel and package guarantees.
+- Exact IDs:
+
+  1. `c:@S@BRepTools@F@Clean#&1$@S@TopoDS_Shape#b#S`
+  2. `c:@S@BRep_Builder@F@MakeEdge#&$@S@TopoDS_Edge#&1$@N@opencascade@S@handle>#$@S@Poly_Polygon3D#1`
+  3. `c:@S@BRep_Builder@F@MakeFace#&$@S@TopoDS_Face#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#1`
+  4. `c:@S@BRep_Builder@F@UpdateFace#&1$@S@TopoDS_Face#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#b#1`
+  5. `c:@S@BRep_Tool@F@Triangulation#&1$@S@TopoDS_Face#&$@S@TopLoc_Location#i#S`
+  6. `c:@S@Poly_CoherentTriangle@F@Node#I#1`
+  7. `c:@S@Poly_CoherentTriangulation@F@AddTriangle#I#I#I#`
+  8. `c:@S@Poly_CoherentTriangulation@F@RemoveTriangle#&$@S@Poly_CoherentTriangle#`
+  9. `c:@S@Poly_CoherentTriangulation@F@ReplaceNodes#&$@S@Poly_CoherentTriangle#I#I#I#`
+  10. `c:@S@Poly_CoherentTriangulation@F@SetNode#&1$@S@gp_XYZ#I#`
+  11. `c:@S@Poly_CoherentTriangulation@F@Triangle#I#1`
+  12. `c:@S@Poly_Connect@F@Poly_Connect#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#`
+  13. `c:@S@Poly_Connect@F@Triangles#I#&I#S0_#S0_#1`
+  14. `c:@S@Poly_MergeNodesTool@F@AddTriangle#*1$@S@gp_XYZ#`
+  15. `c:@S@Poly_MergeNodesTool@F@ChangeOutput#`
+  16. `c:@S@Poly_Polygon3D@F@Poly_Polygon3D#&1$@S@NCollection_Array1>#$@S@gp_Pnt#`
+  17. `c:@S@Poly_Polygon3D@F@Poly_Polygon3D#&1$@S@NCollection_Array1>#$@S@gp_Pnt#&1$@S@NCollection_Array1>#d#`
+  18. `c:@S@Poly_PolygonOnTriangulation@F@Poly_PolygonOnTriangulation#&1$@S@NCollection_Array1>#I#`
+  19. `c:@S@Poly_PolygonOnTriangulation@F@Poly_PolygonOnTriangulation#&1$@S@NCollection_Array1>#I#&1$@S@NCollection_Array1>#d#`
+  20. `c:@S@Poly_Triangulation@F@Normal#I#&$@S@NCollection_Vec3>#f#1`
+  21. `c:@S@Poly_Triangulation@F@SetNormal#I#&1$@S@NCollection_Vec3>#f#`
+  22. `c:@S@Poly_Triangulation@F@SetTriangle#I#&1$@S@Poly_Triangle#`
+  23. `c:@S@Poly_Triangulation@F@SetUVNode#I#&1$@S@gp_Pnt2d#`
+  24. `c:@S@Poly_Triangulation@F@Triangle#I#1`
+  25. `c:@S@RWGltf_CafWriter@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S5_#$@S@NCollection_DefaultHasher>#S5_#&1$@S@Message_ProgressRange#`
+  26. `c:@S@RWGltf_CafWriter@F@RWGltf_CafWriter#&1$@S@TCollection_AsciiString#b#`
+  27. `c:@S@RWGltf_CafWriter@F@SetCoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#`
+  28. `c:@S@RWMesh_CoordinateSystemConverter@F@SetInputCoordinateSystem#$@E@RWMesh_CoordinateSystem#`
+  29. `c:@S@RWMesh_CoordinateSystemConverter@F@SetInputLengthUnit#d#`
+  30. `c:@S@RWMesh_CoordinateSystemConverter@F@SetOutputCoordinateSystem#$@E@RWMesh_CoordinateSystem#`
+  31. `c:@S@RWMesh_CoordinateSystemConverter@F@SetOutputLengthUnit#d#`
+  32. `c:@S@RWMesh_CoordinateSystemConverter@F@TransformNormal#&$@S@NCollection_Vec3>#f#1`
+  33. `c:@S@RWMesh_CoordinateSystemConverter@F@TransformPosition#&$@S@gp_XYZ#1`
+  34. `c:@S@RWObj_CafWriter@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S5_#$@S@NCollection_DefaultHasher>#S5_#&1$@S@Message_ProgressRange#`
+  35. `c:@S@RWObj_CafWriter@F@RWObj_CafWriter#&1$@S@TCollection_AsciiString#`
+  36. `c:@S@RWObj_CafWriter@F@SetCoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#`
+  37. `c:@S@RWObj_Reader@F@Read#&1$@S@TCollection_AsciiString#&1$@S@Message_ProgressRange#`
+  38. `c:@S@RWObj_Reader@F@SetMemoryLimit#k#`
+  39. `c:@S@RWPly_CafWriter@F@Perform#&1$@N@opencascade@S@handle>#$@S@TDocStd_Document#&1$@S@NCollection_IndexedDataMap>#$@S@TCollection_AsciiString#S5_#$@S@NCollection_DefaultHasher>#S5_#&1$@S@Message_ProgressRange#`
+  40. `c:@S@RWPly_CafWriter@F@RWPly_CafWriter#&1$@S@TCollection_AsciiString#`
+  41. `c:@S@RWPly_CafWriter@F@SetCoordinateSystemConverter#&1$@S@RWMesh_CoordinateSystemConverter#`
+  42. `c:@S@RWStl@F@ReadFile#*1C#&1$@S@Message_ProgressRange#S`
+  43. `c:@S@RWStl@F@WriteAscii#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@S@OSD_Path#&1$@S@Message_ProgressRange#S`
+  44. `c:@S@RWStl@F@WriteBinary#&1$@N@opencascade@S@handle>#$@S@Poly_Triangulation#&1$@S@OSD_Path#&1$@S@Message_ProgressRange#S`
+  45. `c:@S@gp_GTrsf@F@SetValue#I#I#d#`
+  46. `c:@S@gp_GTrsf@F@Transforms#&$@S@gp_XYZ#1`
+  47. `c:@S@gp_GTrsf@F@VectorialPart#1`
+  48. `c:@S@gp_GTrsf@F@gp_GTrsf#`
+
 ## SC-054: Source-bound repair and topology normalization
 
 - Status: implemented; whole-batch Release/Debug/package acceptance in progress (ADR-0084).

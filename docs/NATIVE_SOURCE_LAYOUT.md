@@ -1,8 +1,25 @@
 # Native source responsibilities
 
-## Batch Q additions (locally validated)
+## Batch R additions
 
-The current implementation has 51 independent units, 35 private headers, 544 manual
+R adds `Mesh/MeshAuthoring.cpp`, `Mesh/MeshEditing.cpp`, `Mesh/MeshTopology.cpp` and
+`Exchange/MeshExchange.cpp`, with the private `Mesh/MeshAuthoring.hxx` and public
+`OcctSharp.Native.Mesh.h` copied-buffer contract. These units own validation/authored
+triangulation, call-local Poly editing, existing-cache/owning-topology adapters, and
+direct editable import/no-remesh format delivery respectively. No new registry/live
+set is introduced. Shared exact-face validation belongs to `Modeling/Topology`.
+
+The current source audit passes with 55 independent units, 36 private headers,
+560 manual C exports and 23 unique storage definitions; all six negative fixtures
+pass. Every private header passes standalone MSVC `/Zs /W4 /WX`, with no PCH/unity.
+Release and Debug have identical 29,432 export names, retaining all 29,416 Q names
+and adding sixteen mesh exports. Managed comparison against Q adds 404 signatures
+and removes none. Release/Debug and isolated actual Debug-native Runtime pass 229/229.
+The following Q/ADR-0081 counts remain their historical checkpoints.
+
+## Batch Q additions (locally validated historical checkpoint)
+
+The Q implementation has 51 independent units, 35 private headers, 544 manual
 C exports and 23 unique shared storage definitions. The ADR-0081 counts below remain
 the historical extraction baseline. Q adds `RepairData`, `RepairDiagnostics`,
 `RepairBoundaries`, `RepairFixers`, `RepairExecution`, `RepairSewing` and
@@ -28,7 +45,7 @@ implementation responsibilities, not independent allocators, ABI packages or DLL
 | Foundation | Copied text, owning string/collection operations and shared transient support |
 | Geometry | Copied geometric values, transforms and parameter conversions |
 | Modeling | Construction, topology/geometry inspection, features/history, freeform, sketch, measurement and drawing |
-| Mesh | Triangulation and copied mesh snapshots |
+| Mesh | Triangulation, copied/authored mesh snapshots, call-local Poly editing and owning discrete/cache adapters |
 | Documents | OCAF lifecycle, attributes, references, trees, named shapes and history |
 | Xde | Assembly structure, labels, metadata, presentation styles, PMI and saved views |
 | Exchange | Shape/session exchange, XDE STEP/IGES/mesh exchange and transfer recovery |
@@ -37,7 +54,7 @@ implementation responsibilities, not independent allocators, ABI packages or DLL
 
 Private headers own native-only handle layouts and the small helper contracts needed by
 other translation units. C++ helper visibility is internal to the bridge, while public
-C declarations stay in `include/OcctSharp.Native.h` and its existing Surface companion.
+C declarations stay in `include/OcctSharp.Native.h` and the Surface, Repair and Mesh companions.
 Generated code remains generator-owned and uses the unchanged Internal support header.
 
 ## Scope and unchanged boundaries

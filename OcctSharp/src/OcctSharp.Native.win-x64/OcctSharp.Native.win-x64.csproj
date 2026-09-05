@@ -25,7 +25,7 @@
           PackagePath="buildTransitive\win-x64\occt\" />
     <None Include="$(OcctSharpBundledRuntimeRoot)\licenses\**\*"
           Pack="true"
-          PackagePath="licenses\%(RecursiveDir)" />
+          PackagePath="licenses\" />
     <None Include="$(OcctSharpBundledRuntimeRoot)\THIRD_PARTY_NOTICES.md"
           Pack="true"
           PackagePath="licenses\" />

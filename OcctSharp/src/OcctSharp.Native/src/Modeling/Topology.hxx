@@ -17,6 +17,9 @@ struct ValidationData
 
 bool SupportsShapeHistory(const TopoDS_Shape& shape);
 
+// Exact algorithms may accept edges/wires, but must not infer surfaces from cached triangles.
+void RequireExactFaceSupport(const TopoDS_Shape& shape);
+
 int32_t CheckedTopologyCount(const TopoDS_Shape& shape, const TopAbs_ShapeEnum kind, const bool unique);
 
 OcctSharp_TopologyCounts BuildTopologyCounts(const TopoDS_Shape& shape, const bool unique);

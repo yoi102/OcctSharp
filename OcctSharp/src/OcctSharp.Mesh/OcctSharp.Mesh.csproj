@@ -2,6 +2,7 @@
   <Import Project="..\OcctSharp.Module.props" />
   <PropertyGroup><Description>OCCT meshing algorithm bindings for OcctSharp.</Description></PropertyGroup>
   <ItemGroup><Compile Include="..\OcctSharp\Generated\Mesh\**\*.cs" Link="Generated\%(RecursiveDir)%(Filename)%(Extension)" /></ItemGroup>
+  <ItemGroup><Compile Include="Editing\**\*.cs" /></ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OcctSharp.Runtime\OcctSharp.Runtime.csproj" />
     <ProjectReference Include="..\OcctSharp.Foundation\OcctSharp.Foundation.csproj" />

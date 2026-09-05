@@ -1,5 +1,20 @@
 # Compatibility
 
+## Preview.17 additive authored mesh API
+
+R retains all 29,416 Q native export names and adds sixteen mesh functions; Release
+and Debug expose the same 29,432-name set. Managed comparison against Q's 40,427
+signatures adds 404 and removes none. Package 8.0.1-preview.17 uses ABI 1.61,
+bridge 0.69.0 and unchanged schema 1.13 / assembly/file identity 0.1.0.0.
+The existing twelve module assemblies, facade and one native DLL remain.
+MeshData's immutable copied contracts do not depend on Modeling or XDE.
+
+Release/Debug Generator 91/91 and Runtime 229/229 pass, as does isolated actual
+Debug-native Runtime 229/229 with all 62 DLL hashes checked. This verifies the pinned
+Windows x64 OCCT 8.0.1 configuration, not another platform or package publication.
+Discrete-only faces now fail closed at exact-operation boundaries; this intentionally
+rejects unsupported inputs rather than implying exact solid semantics for a mesh.
+
 ## Preview.14 additive sketch API
 
 Batch O targets .NET 10 / Windows x64 / OCCT 8.0.1 with package 8.0.1-preview.14,
@@ -17,6 +32,7 @@ reported as supported.
 
 | OcctSharp | Generator | Native ABI | OCCT | Platform | Compiler | .NET | Status |
 |---|---|---|---|---|---|---|---|
+| 8.0.1-preview.17 workspace | ClangSharp 21.1.8.4 | 1.61 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Local native/managed regression verified |
 | 8.0.1-preview.9 workspace | ClangSharp 21.1.8.4 | 1.54 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
 | 8.0.1-preview.8 workspace | ClangSharp 21.1.8.4 | 1.53 | 8.0.1 VC14 x64 combined | Windows x64 | MSVC 19.51 / VS 2026 | net10.0 / SDK 10.0.400 | Experimental |
 

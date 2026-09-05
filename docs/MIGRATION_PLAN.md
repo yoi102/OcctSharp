@@ -32,11 +32,12 @@ no new active product batch is implied by their existence.
 [ADR-0083](adr/0083-extended-batches-and-continuous-execution.md) extends the initial
 Q-T preparation with U advanced contour/local features, V exact partition/volume
 workflows and W lighting/material/copied-frame review. Scope preparation is 7/7;
-implementation is 0/280. [The continuous runbook](BATCH_CONTINUOUS_EXECUTION.md)
-requires next-run Q -> R -> S -> T -> U -> V -> W execution, each whole batch fully
+Q is committed (40/40); R's complete 40-row closure passes all local gates.
+[The continuous runbook](BATCH_CONTINUOUS_EXECUTION.md)
+requires the active Q -> R -> S -> T -> U -> V -> W execution, each whole batch fully
 validated and locally committed before automatic advancement, without routine user
-confirmation. It does not start implementation now, create a scheduler or authorize
-publication. Baseline deltas and genuine external/authority stop conditions remain.
+confirmation. The user has started implementation, but no scheduler or publication
+is authorized. Baseline deltas and genuine external/authority stop conditions remain.
 
 ## Initial preparation: four broad Q-T waves
 
@@ -44,14 +45,15 @@ publication. Baseline deltas and genuine external/authority stop conditions rema
 [Q-T preparation](BATCH_Q_T_PREPARATION.md) lock four 40-capability waves: Q controlled
 repair/topology normalization, R mesh authoring/editing, S guided sweeps/constrained
 surfaces, T parametric recompute/persistent selection. Preparation is 4/4; implementation
-is 0/160. B-P and ADR-0081 are complete locally at Preview.15.
+and local validation are 80/160 (Q/R), with S entry next. B-P and ADR-0081
+are the original completed Preview.15 preparation baseline.
 
-Q is next. Complete its entire closure and local gates before its local commit, then
-revalidate R on that new baseline, and likewise S/T. T genuinely depends on Q/R/S
+R follows Q's `1a3662a` checkpoint, with its exact entry delta already revalidated.
+After R's whole-batch local commit, revalidate S and continue, and likewise T. T genuinely depends on Q/R/S
 contracts; delivery order does not invent hard dependencies between unrelated algorithms.
 Every following baseline change needs an explicit delta; no silent root-hash rebase.
-Keep existing modules, source owners and one Native DLL. Preview.16-19 are reservations,
-not package changes; no automatic NuGet publication/GitHub push.
+Keep existing modules, source owners and one Native DLL. Preview.16 is Q, Preview.17
+is R and Preview.18-19 remain planned S/T slots; no automatic NuGet publication/GitHub push.
 
 ## Product and project structure
 

@@ -1102,7 +1102,7 @@ public sealed class OcctViewer : IDisposable
         throw new IOException("No writable ASCII staging directory is available for the OCCT screenshot bridge.");
     }
 
-    private void EnsureThread()
+    internal void EnsureThread()
     {
         ObjectDisposedException.ThrowIf(IsDisposed, this);
         if (Environment.CurrentManagedThreadId != _ownerThreadId)
