@@ -1,0 +1,525 @@
+{
+  "schemaVersion": "1.0",
+  "batch": "W",
+  "specialCaseId": "SC-060",
+  "baselineInventorySha256": "91357F174339FB5C17927D4B5BA0B3C4B8D5AC28C8FE51DDCCBE7DC6806FE5D0",
+  "note": "Exact directly called blocked render, light, appearance, image, camera and layer-support overloads; existing emitted/manual calls are reused. No root-wide promotion. Auxiliary CView/Structure, drawer and driver helpers stay native-local.",
+  "calls": [
+    {
+      "stableId": "c:@S@AIS_ColoredShape@F@CustomAspectsMap#1",
+      "nativeName": "AIS_ColoredShape::CustomAspectsMap",
+      "header": "AIS_ColoredShape.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@AIS_Shape@F@Shape#1",
+      "nativeName": "AIS_Shape::Shape",
+      "header": "AIS_Shape.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Aspects@F@SetAlphaMode#$@E@Graphic3d_AlphaMode#f#",
+      "nativeName": "Graphic3d_Aspects::SetAlphaMode",
+      "header": "Graphic3d_Aspects.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Aspects@F@SetBackInteriorColor#&1$@S@Quantity_ColorRGBA#",
+      "nativeName": "Graphic3d_Aspects::SetBackInteriorColor",
+      "header": "Graphic3d_Aspects.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Aspects@F@SetBackMaterial#&1$@S@Graphic3d_MaterialAspect#",
+      "nativeName": "Graphic3d_Aspects::SetBackMaterial",
+      "header": "Graphic3d_Aspects.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Aspects@F@SetFrontMaterial#&1$@S@Graphic3d_MaterialAspect#",
+      "nativeName": "Graphic3d_Aspects::SetFrontMaterial",
+      "header": "Graphic3d_Aspects.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Aspects@F@SetInteriorColor#&1$@S@Quantity_ColorRGBA#",
+      "nativeName": "Graphic3d_Aspects::SetInteriorColor",
+      "header": "Graphic3d_Aspects.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@Eye#1",
+      "nativeName": "Graphic3d_Camera::Eye",
+      "header": "Graphic3d_Camera.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@OrientationMatrix#1",
+      "nativeName": "Graphic3d_Camera::OrientationMatrix",
+      "header": "Graphic3d_Camera.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@ProjectionMatrix#1",
+      "nativeName": "Graphic3d_Camera::ProjectionMatrix",
+      "header": "Graphic3d_Camera.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@SetUp#&1$@S@gp_Dir#",
+      "nativeName": "Graphic3d_Camera::SetUp",
+      "header": "Graphic3d_Camera.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@Up#1",
+      "nativeName": "Graphic3d_Camera::Up",
+      "header": "Graphic3d_Camera.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Angle#1",
+      "nativeName": "Graphic3d_CLight::Angle",
+      "header": "Graphic3d_CLight.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Color#1",
+      "nativeName": "Graphic3d_CLight::Color",
+      "header": "Graphic3d_CLight.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Concentration#1",
+      "nativeName": "Graphic3d_CLight::Concentration",
+      "header": "Graphic3d_CLight.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@ConstAttenuation#1",
+      "nativeName": "Graphic3d_CLight::ConstAttenuation",
+      "header": "Graphic3d_CLight.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Direction#1",
+      "nativeName": "Graphic3d_CLight::Direction",
+      "header": "Graphic3d_CLight.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Intensity#1",
+      "nativeName": "Graphic3d_CLight::Intensity",
+      "header": "Graphic3d_CLight.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@LinearAttenuation#1",
+      "nativeName": "Graphic3d_CLight::LinearAttenuation",
+      "header": "Graphic3d_CLight.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Position#1",
+      "nativeName": "Graphic3d_CLight::Position",
+      "header": "Graphic3d_CLight.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Range#1",
+      "nativeName": "Graphic3d_CLight::Range",
+      "header": "Graphic3d_CLight.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetAngle#f#",
+      "nativeName": "Graphic3d_CLight::SetAngle",
+      "header": "Graphic3d_CLight.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetAttenuation#f#f#",
+      "nativeName": "Graphic3d_CLight::SetAttenuation",
+      "header": "Graphic3d_CLight.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetColor#&1$@S@Quantity_Color#",
+      "nativeName": "Graphic3d_CLight::SetColor",
+      "header": "Graphic3d_CLight.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetConcentration#f#",
+      "nativeName": "Graphic3d_CLight::SetConcentration",
+      "header": "Graphic3d_CLight.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetDirection#&1$@S@gp_Dir#",
+      "nativeName": "Graphic3d_CLight::SetDirection",
+      "header": "Graphic3d_CLight.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetIntensity#f#",
+      "nativeName": "Graphic3d_CLight::SetIntensity",
+      "header": "Graphic3d_CLight.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetRange#f#",
+      "nativeName": "Graphic3d_CLight::SetRange",
+      "header": "Graphic3d_CLight.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CubeMapOrder@F@Graphic3d_CubeMapOrder#c#c#c#c#c#c#",
+      "nativeName": "Graphic3d_CubeMapOrder::Graphic3d_CubeMapOrder",
+      "header": "Graphic3d_CubeMapOrder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CubeMapOrder@F@Validated#1",
+      "nativeName": "Graphic3d_CubeMapOrder::Validated",
+      "header": "Graphic3d_CubeMapOrder.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CubeMapPacked@F@Graphic3d_CubeMapPacked#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#&1$@S@Graphic3d_ValidatedCubeMapOrder#",
+      "nativeName": "Graphic3d_CubeMapPacked::Graphic3d_CubeMapPacked",
+      "header": "Graphic3d_CubeMapPacked.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CubeMapSeparate@F@Graphic3d_CubeMapSeparate#&1$@S@NCollection_Array1>#$@N@opencascade@S@handle>#$@S@Image_PixMap#",
+      "nativeName": "Graphic3d_CubeMapSeparate::Graphic3d_CubeMapSeparate",
+      "header": "Graphic3d_CubeMapSeparate.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CView@F@DisplayedStructures#&$@S@NCollection_Map>#$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#$@S@NCollection_DefaultHasher>#S2_#1",
+      "nativeName": "Graphic3d_CView::DisplayedStructures",
+      "header": "Graphic3d_CView.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_MaterialAspect@F@Graphic3d_MaterialAspect#",
+      "nativeName": "Graphic3d_MaterialAspect::Graphic3d_MaterialAspect",
+      "header": "Graphic3d_MaterialAspect.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_MaterialAspect@F@SetAmbientColor#&1$@S@Quantity_Color#",
+      "nativeName": "Graphic3d_MaterialAspect::SetAmbientColor",
+      "header": "Graphic3d_MaterialAspect.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_MaterialAspect@F@SetDiffuseColor#&1$@S@Quantity_Color#",
+      "nativeName": "Graphic3d_MaterialAspect::SetDiffuseColor",
+      "header": "Graphic3d_MaterialAspect.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_MaterialAspect@F@SetPBRMaterial#&1$@S@Graphic3d_PBRMaterial#",
+      "nativeName": "Graphic3d_MaterialAspect::SetPBRMaterial",
+      "header": "Graphic3d_MaterialAspect.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_MaterialAspect@F@SetTransparency#f#",
+      "nativeName": "Graphic3d_MaterialAspect::SetTransparency",
+      "header": "Graphic3d_MaterialAspect.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_PBRMaterial@F@Graphic3d_PBRMaterial#",
+      "nativeName": "Graphic3d_PBRMaterial::Graphic3d_PBRMaterial",
+      "header": "Graphic3d_PBRMaterial.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_PBRMaterial@F@SetColor#&1$@S@Quantity_ColorRGBA#",
+      "nativeName": "Graphic3d_PBRMaterial::SetColor",
+      "header": "Graphic3d_PBRMaterial.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_PBRMaterial@F@SetEmission#&1$@S@NCollection_Vec3>#f#",
+      "nativeName": "Graphic3d_PBRMaterial::SetEmission",
+      "header": "Graphic3d_PBRMaterial.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_PBRMaterial@F@SetIOR#f#",
+      "nativeName": "Graphic3d_PBRMaterial::SetIOR",
+      "header": "Graphic3d_PBRMaterial.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_PBRMaterial@F@SetMetallic#f#",
+      "nativeName": "Graphic3d_PBRMaterial::SetMetallic",
+      "header": "Graphic3d_PBRMaterial.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_PBRMaterial@F@SetRoughness#f#",
+      "nativeName": "Graphic3d_PBRMaterial::SetRoughness",
+      "header": "Graphic3d_PBRMaterial.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Texture2Dplane@F@SetPlaneS#f#f#f#f#",
+      "nativeName": "Graphic3d_Texture2Dplane::SetPlaneS",
+      "header": "Graphic3d_Texture2Dplane.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Texture2Dplane@F@SetPlaneT#f#f#f#f#",
+      "nativeName": "Graphic3d_Texture2Dplane::SetPlaneT",
+      "header": "Graphic3d_Texture2Dplane.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_TextureParams@F@SetRotation#f#",
+      "nativeName": "Graphic3d_TextureParams::SetRotation",
+      "header": "Graphic3d_TextureParams.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_TextureParams@F@SetScale#$@S@NCollection_Vec2>#f#",
+      "nativeName": "Graphic3d_TextureParams::SetScale",
+      "header": "Graphic3d_TextureParams.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_TextureParams@F@SetTranslation#$@S@NCollection_Vec2>#f#",
+      "nativeName": "Graphic3d_TextureParams::SetTranslation",
+      "header": "Graphic3d_TextureParams.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ZLayerSettings@F@Graphic3d_ZLayerSettings#",
+      "nativeName": "Graphic3d_ZLayerSettings::Graphic3d_ZLayerSettings",
+      "header": "Graphic3d_ZLayerSettings.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ZLayerSettings@F@Graphic3d_ZLayerSettings#&1$@S@Graphic3d_ZLayerSettings#",
+      "nativeName": "Graphic3d_ZLayerSettings::Graphic3d_ZLayerSettings",
+      "header": "Graphic3d_ZLayerSettings.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ZLayerSettings@F@SetClearDepth#b#",
+      "nativeName": "Graphic3d_ZLayerSettings::SetClearDepth",
+      "header": "Graphic3d_ZLayerSettings.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ZLayerSettings@F@SetEnableDepthTest#b#",
+      "nativeName": "Graphic3d_ZLayerSettings::SetEnableDepthTest",
+      "header": "Graphic3d_ZLayerSettings.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ZLayerSettings@F@SetEnableDepthWrite#b#",
+      "nativeName": "Graphic3d_ZLayerSettings::SetEnableDepthWrite",
+      "header": "Graphic3d_ZLayerSettings.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ZLayerSettings@F@SetImmediate#b#",
+      "nativeName": "Graphic3d_ZLayerSettings::SetImmediate",
+      "header": "Graphic3d_ZLayerSettings.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Image_AlienPixMap@F@Load#*1c#k#&1$@S@TCollection_AsciiString#",
+      "nativeName": "Image_AlienPixMap::Load",
+      "header": "Image_AlienPixMap.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@ChangeRow#k#",
+      "nativeName": "Image_PixMap::ChangeRow",
+      "header": "Image_PixMap.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@InitTrash#$@E@Image_Format#k#k#k#",
+      "nativeName": "Image_PixMap::InitTrash",
+      "header": "Image_PixMap.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@PixelColor#I#I#b#1",
+      "nativeName": "Image_PixMap::PixelColor",
+      "header": "Image_PixMap.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@Row#k#1",
+      "nativeName": "Image_PixMap::Row",
+      "header": "Image_PixMap.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@SetPixelColor#I#I#&1$@S@Quantity_ColorRGBA#b#",
+      "nativeName": "Image_PixMap::SetPixelColor",
+      "header": "Image_PixMap.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@SizeX#1",
+      "nativeName": "Image_PixMap::SizeX",
+      "header": "Image_PixMap.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@SizeY#1",
+      "nativeName": "Image_PixMap::SizeY",
+      "header": "Image_PixMap.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@OpenGl_GraphicDriver@F@GetSharedContext#b#1",
+      "nativeName": "OpenGl_GraphicDriver::GetSharedContext",
+      "header": "OpenGl_GraphicDriver.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Prs3d_Drawer@F@ShadingAspect#1",
+      "nativeName": "Prs3d_Drawer::ShadingAspect",
+      "header": "Prs3d_Drawer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Prs3d_ShadingAspect@F@Aspect#1",
+      "nativeName": "Prs3d_ShadingAspect::Aspect",
+      "header": "Prs3d_ShadingAspect.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@PrsMgr_PresentableObject@F@Attributes#1",
+      "nativeName": "PrsMgr_PresentableObject::Attributes",
+      "header": "PrsMgr_PresentableObject.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Blue#1",
+      "nativeName": "Quantity_Color::Blue",
+      "header": "Quantity_Color.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Green#1",
+      "nativeName": "Quantity_Color::Green",
+      "header": "Quantity_Color.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Red#1",
+      "nativeName": "Quantity_Color::Red",
+      "header": "Quantity_Color.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@V3d_ImageDumpOptions@F@V3d_ImageDumpOptions#",
+      "nativeName": "V3d_ImageDumpOptions::V3d_ImageDumpOptions",
+      "header": "V3d_ImageDumpOptions.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@ActiveLights#1",
+      "nativeName": "V3d_View::ActiveLights",
+      "header": "V3d_View.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Camera#1",
+      "nativeName": "V3d_View::Camera",
+      "header": "V3d_View.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@ChangeRenderingParams#",
+      "nativeName": "V3d_View::ChangeRenderingParams",
+      "header": "V3d_View.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@IsActiveLight#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#1",
+      "nativeName": "V3d_View::IsActiveLight",
+      "header": "V3d_View.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@RenderingParams#1",
+      "nativeName": "V3d_View::RenderingParams",
+      "header": "V3d_View.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@SetLightOn#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#",
+      "nativeName": "V3d_View::SetLightOn",
+      "header": "V3d_View.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@ToPixMap#&$@S@Image_PixMap#&1$@S@V3d_ImageDumpOptions#",
+      "nativeName": "V3d_View::ToPixMap",
+      "header": "V3d_View.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@View#1",
+      "nativeName": "V3d_View::View",
+      "header": "V3d_View.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@ActiveLights#1",
+      "nativeName": "V3d_Viewer::ActiveLights",
+      "header": "V3d_Viewer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@AddZLayer#&I#&1$@S@Graphic3d_ZLayerSettings#",
+      "nativeName": "V3d_Viewer::AddZLayer",
+      "header": "V3d_Viewer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@GetAllZLayers#&$@S@NCollection_Sequence>#I#1",
+      "nativeName": "V3d_Viewer::GetAllZLayers",
+      "header": "V3d_Viewer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@SetLightOff#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#",
+      "nativeName": "V3d_Viewer::SetLightOff",
+      "header": "V3d_Viewer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@SetLightOn#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#",
+      "nativeName": "V3d_Viewer::SetLightOn",
+      "header": "V3d_Viewer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@SetZLayerSettings#I#&1$@S@Graphic3d_ZLayerSettings#",
+      "nativeName": "V3d_Viewer::SetZLayerSettings",
+      "header": "V3d_Viewer.hxx",
+      "baselineState": "Blocked"
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@ZLayerSettings#I#1",
+      "nativeName": "V3d_Viewer::ZLayerSettings",
+      "header": "V3d_Viewer.hxx",
+      "baselineState": "Blocked"
+    }
+  ]
+}

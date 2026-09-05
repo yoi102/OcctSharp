@@ -19,6 +19,28 @@ https://github.com/user-attachments/assets/2f3e5b9b-bc01-4aeb-b36e-64ade2463fe4
 - Detect and select geometry with add, toggle, remove, and clear-selection behavior.
 - Rotate, pan, and zoom with the mouse.
 - Display current file, operation status, and selection count through MVVM-bound state.
+- Capture an independent frozen 360 x 240 review thumbnail beside the live viewport.
+
+## Copied review snapshot
+
+Use **Capture snapshot** after loading a model. `CaptureSnapshotCommand` calls the
+viewer service on the creating UI thread, copies `ViewerColorFrame` pixels and adapts
+them to a frozen WPF `WriteableBitmap` in `ViewerSnapshotBitmap`. The thumbnail remains
+usable when the live camera changes or the viewer closes. It uses opaque Bgr32 rather
+than misinterpreting the renderer's composite alpha as a straight-alpha WPF image.
+
+This is an opt-in still image, not a live D3DImage bridge. The interactive viewport
+still uses HwndHost and retains its airspace restriction; put ordinary WPF controls
+beside it or over the copied thumbnail, not over the native child window.
+
+For an automated real-WPF snapshot smoke check after building:
+
+```powershell
+.\samples\OcctSharpViewer.Wpf\bin\Release\net10.0-windows\win-x64\OcctSharpViewer.Wpf.exe --snapshot-smoke C:\Temp\occt-review.png
+```
+
+The diagnostic uses the same MVVM command and bitmap adapter, checks frozen dimensions,
+and writes the requested PNG. It still requires a Windows desktop/OpenGL context.
 
 ## Requirements
 

@@ -1,5 +1,15 @@
 # Compatibility
 
+## Preview.22 additive rendering API
+
+W retains the module graph, assembly identities and one Native DLL. The comparison
+against V adds 318 managed signatures with zero removals. Three copied frame/scope
+types live in Visualization with regenerated facade forwarders and no WPF dependency.
+ABI 1.66 / bridge 0.74.0 adds sixteen C calls for bounded copied render data; schema
+stays 1.13 and assembly/file stays 0.1.0.0. Actual Release/Debug native export parity,
+all runtime gates and the two package consumers are recorded in STATUS when executed.
+Rendering driver restrictions are explicit in KI-035; no old V export is replaced.
+
 ## Preview.20 additive local-feature API
 
 U adds copied source-bound local-feature programs without changing existing type or

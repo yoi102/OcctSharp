@@ -1,5 +1,20 @@
 # Ownership and Lifetime
 
+## Batch W render-resource contract
+
+The existing creating-thread Viewer context owns light, texture, environment and layer
+IDs; no independent global registry or GPU handle escapes. Pixel inputs are copied.
+Environment images retain their original owned storage even after source textures are
+replaced or removed. Appearance overrides clone effective shading aspects and keep
+original parent/custom drawer aspects for reset; XDE documents are never mutated.
+Capture outputs own managed arrays with fresh-copy accessors and capture-time matrices,
+surviving viewer disposal. Capturing temporarily masks layer state and restores it.
+Portable recipes contain copied settings and explicit application keys, not native IDs
+or local paths. Replay resolves all referenced assets before setting changes; individual
+settings are atomic, but the whole replay is not a document transaction.
+Focused lifetime tests and full Release/Debug/actual Debug-native sweeps pass;
+the complete exit record remains in STATUS and ADR-0090.
+
 ## Batch V partition and volume contract (locally validated)
 
 ADR-0089 keeps builders/PaveFillers and their mutable material/history tables local

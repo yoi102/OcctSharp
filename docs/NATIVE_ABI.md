@@ -1,5 +1,28 @@
 # Native ABI
 
+## ABI 1.66 / Preview.22 (Batch W)
+
+Bridge 0.74.0 adds sixteen fixed C calls in OcctSharp.Native.Rendering.h: capabilities,
+quality profile, complete camera, rig replace/snapshot, pixel/file texture input and
+removal, appearance override/reset, environment create/set/remove, layer set/assign/remove
+and copied frame capture. Release/Debug export parity is 29,491, sixteen added and none
+removed against V. No GPU/driver pointer or borrowed image crosses the ABI.
+
+Windows x64 record sizes: RenderCaps 56, RenderProfile 80, Light 144, PixelInput 24,
+ReviewMaterial 64, Appearance 280, ReviewLayer 16, FrameRequest 32, FrameInfo 160,
+ReviewCamera 120 bytes. FrameRequest.layer is at offset 24; FrameInfo's row-major
+inverse-view-projection matrix is at offset 32. Buffer capacities are bytes for pixels
+and frames, element counts for lights and ID arrays. IDs are existing-context-local;
+managed resources also check parent identity and creating thread. Reserved fields and
+Boolean values reject malformed input. Single-layer capture requires an explicit layer.
+
+Frame byte output is copied only after the complete capture succeeds. Depth bytes carry
+IEEE float samples and copied projection metadata; color bytes are top-down RGBA8.
+Temporary FBO, camera and layer mutations are restored; no frame owner/release API is
+introduced. Texture/cubemap input storage is copied, not borrowed. Native statuses and
+TLS errors retain the established boundary. Schema 1.13 and assembly/file 0.1.0.0 stay
+unchanged. Full validation evidence remains in STATUS.
+
 ## ABI 1.65 / Preview.21 (Batch V, locally validated)
 
 Bridge 0.73.0 adds five calls in OcctSharp.Native.Regions.h: partition_build,

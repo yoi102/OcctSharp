@@ -68,6 +68,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_create(
     viewer->Window = new WNT_Window(reinterpret_cast<Aspect_Handle>(window_handle));
     viewer->View->SetWindow(viewer->Window);
     viewer->View->MustBeResized();
+    CaptureInitialReviewLights(viewer.get());
     *out_viewer = AllocateValue(viewer.release(), LiveViewers);
   });
 }
@@ -88,6 +89,7 @@ void OCCTSHARP_CALL occtsharp_viewer_release(OcctSharp_ViewerHandle* viewer)
     viewer->ClipPlanes.clear();
     viewer->Presentations.clear();
     viewer->Dimensions.clear();
+    viewer->Rendering = ViewerRenderResources();
     viewer->View.Nullify();
     viewer->Context.Nullify();
     viewer->Viewer.Nullify();

@@ -1,12 +1,13 @@
 # Current Status
 
-- Last updated: 2026-09-05
-- Resume: V's original forty rows pass every local gate, including final document-package delivery. Create the V completion commit, then immediately revalidate W entry and implement its original forty rows. Q-U are committed through `2c48460`; no publication or push.
+- Last updated: 2026-09-06
+- Resume: Q-W implementation and full local validation are complete, 280/280. This checkpoint closes W as one whole batch; no queued implementation remains. Final documentation-package evidence is recorded below. No NuGet publication or GitHub push.
+- W outcome: all original forty rows close viewer-owned profiles/lights/appearance/textures/environments/layers, copied color/depth frames, complete cameras, explicit-key recipe replay and WPF snapshots. Real PBR/MSAA/OIT/path-tracing/IBL, missing-UV and XDE reset/isolation tests pass. Explicit FBO ownership restores capture state without screen fallback. Preview.22 / ABI 1.66 / bridge 0.74.0 and the bundled DLL are synchronized.
 - Batch S: all original 40/40 capabilities complete locally. Focused 44/44 and ten repeats, Release/Debug Generator 91/91 and Runtime 273/273, actual Debug-native 273/273, both clean consumers, 94-file clean regeneration, 68-ID exact accounting and full local release-check pass. Final documentation was repacked and both consumers passed again; all package bytes/checksums/provenance match.
-- Active execution: continuous Q-W remains CONTINUE. Q is COMMITTED as `1a3662a`; R as `86e069c`; S as `580bb22`; T as `bfb8811`; U as `2c48460`. Complete local validation/commits: 200/280 (71.4%). V entry then complete V-W automatically; no NuGet publication or GitHub push.
-- Latest preparation workstream: ADR-0083 prepares seven whole 40-capability batches (280 rows). Q-V are locally validated at 240/280 (85.7%); W remains prepared. Completion-commit progress is tracked separately in the runbook. Preparation-era zero implementation/no-code-change statements below are historical, not current product state.
+- Execution: continuous Q-W is COMPLETE, 280/280 (100%) in the finite prepared scope. Q `1a3662a`, R `86e069c`, S `580bb22`, T `bfb8811`, U `2c48460`, V `2c76e10`; W is this whole-batch completion checkpoint. No NuGet publication or GitHub push.
+- Preparation workstream: ADR-0083's seven whole 40-capability batches (280 rows) are implemented and locally validated. Original preparation inputs remain frozen. Preparation-era zero implementation/no-code-change statements below are historical, not current product state.
 - Latest architecture workstream: ADR-0081 full historical Native source extraction is complete locally. Release/Debug Generator 91/91 and Runtime 180/180 pass, as does isolated actual Debug-native Runtime 180/180. All 29,402 native exports match and the managed API has zero additions/removals. Batch P remains complete; no API/ABI/package version changes.
-- Current phase: B-V are locally validated; V final documentation delivery/local commit is active. No routine reconfirmation, NuGet publication or GitHub push.
+- Current phase: B-W are locally complete for their accepted finite scopes. The authorized Q-W queue has no remaining batch. This is not a claim that every OCCT declaration has been migrated or that public-release gates are complete.
 - Batch B engineering progress: 100% for the accepted local implementation scope (not a claim that every OCCT declaration is a managed API or that public release is ready)
 - Batch C implementation progress: 100% of the finite local implementation denominator; locked wave denominators are 14/14, 7/7, 8/8, and final 15/15 capabilities validated
 - Batch D implementation progress: 24/24 capabilities (100%); ADR-0064's one large cross-family wave passes all implementation, compile, runtime, real-HWND, clean-package, inventory, and local release gates
@@ -28,10 +29,54 @@
 - Batch T preparation and implementation progress: 40/40 capabilities (100%); focused 40/40 and ten repeats, Release/Debug and actual Debug-native Runtime 313/313, exact 65-ID accounting, full local release-check and final document-package verification pass.
 - Batch U: 40/40 original capabilities implemented and locally validated under ADR-0088, with KI-034's explicit shell-limit eligibility. Focused 96/96 and ten repeats; Release/Debug and actual Debug-native 409/409; full release-check, exact 108-ID accounting and final documentation-package verification pass.
 - Batch V: 40/40 original capabilities locally validated. Focused 37/37 and ten repeats, Release/Debug Generator 91/91 and Runtime 446/446, actual Debug-native 446/446, both consumers, 94-file clean regeneration, exact 27-ID accounting and complete release-check pass.
-- Complete-migration batch progress: B through V are complete locally; retired B00-B20 and forbidden numbered/dotted labels are not counted as batches.
-- Accepted surface: 16,353 generated manifest IDs plus 1,131 accepted manual stable IDs; Release/Debug native/managed builds, Generator 91/91, Runtime 446/446, discovery/report determinism, generated dependency closure and dependency profiles 6/6 pass.
-- Last complete full inventory: 116,272 declarations and 7,090 headers have final dispositions; Emitted 16,353, Manual 1,131, SupportedUnselected 0, Skipped 49,344, Blocked 49,444, pending 0, HD099 0. SHA256 `91357F174339FB5C17927D4B5BA0B3C4B8D5AC28C8FE51DDCCBE7DC6806FE5D0`. 7,058 headers were semantically parsed; 32 retain their previous explicit exclusions. V accounting passes for exactly 27 SC-059 transitions and zero other changes; classification is not a claim of complete OCCT API migration.
-- Overall state: Preview.21 validates Batch V with twelve module assemblies plus the compatibility/facade assembly, one Native DLL and one shared native runtime package. Identities: package 8.0.1-preview.21, assembly/file 0.1.0.0, ABI 1.65, bridge 0.73.0, schema 1.13. Physical Native DLL splitting, hosted CI, signing, NuGet publication and GitHub push are not included.
+- Batch W: 40/40 locally complete. Focused 23/23 and ten repeats; Release/Debug Generator 91/91 and Runtime 469/469; actual Debug-native 469/469; exact86 accounting, both consumers, 94-file cold regeneration and complete local release-check pass.
+- Complete-migration batch progress: B through W are complete locally; retired B00-B20 and forbidden numbered/dotted labels are not counted as batches.
+- Accepted surface: 16,353 generated manifest IDs plus 1,217 accepted manual stable IDs; Release/Debug native/managed builds, Generator 91/91, Runtime 469/469, discovery/report determinism, generated dependency closure and dependency profiles 6/6 pass.
+- Last complete full inventory: 116,272 declarations and 7,090 headers have final dispositions; Emitted 16,353, Manual 1,217, SupportedUnselected 0, Skipped 49,344, Blocked 49,358, pending 0, HD099 0. SHA256 `260AE9A603E7B68F717C38C3FAF9C68A83F866D0154E84E1CD7FD811DB0C6A2C`. 7,058 headers were semantically parsed; 32 retain their previous explicit exclusions. W accounting passes for exactly 86 SC-060 transitions and zero other changes; classification is not a claim of complete OCCT API migration.
+- Overall state: Preview.22 validates Batch W with twelve module assemblies plus the compatibility/facade assembly, one Native DLL and one shared native runtime package. Identities: package 8.0.1-preview.22, assembly/file 0.1.0.0, ABI 1.66, bridge 0.74.0, schema 1.13. Physical Native DLL splitting, hosted CI, signing, NuGet publication and GitHub push are not included.
+
+### Preview.22 Batch W local validation
+
+- Original forty rows are implemented and mapped to named assertions. Final-source
+  focused 23/23 and ten repeats pass. Release/Debug Generator 91/91 and Runtime 469/469
+  pass. The isolated actual Debug-native run also passes 469/469 with all 62 DLLs
+  hash-verified (`artifacts/batch-w-actual-debug.log`). Full release-check passes in
+  `artifacts/batch-w-release-check.log`, including a clean-source build with the same
+  91/91 + 469/469 tests and all 94 generated files byte-identical.
+- Source gates pass: 86 independent native units, 617 manual C exports, 23 unique
+  storage definitions, 44/44 strict standalone headers, six layout negatives and
+  header-verifier environment restoration. New C record sizes/offsets pass the
+  standalone layout probe, pure C header compilation and ten managed Marshal sizes.
+  Release/Debug exports match 29,491 names: sixteen added,
+  none removed. Managed API comparison against V adds 318 signatures, removes zero.
+  The facade regenerates 3,461 type forwarders; frame DTOs have no WPF dependency.
+- Bundled Release bridge is 15,994,368 bytes, SHA256
+  `72239B4632872D26BA5F742A765A0E535C154E3618287342A20FC1BDDAF73E0D`.
+  Actual Debug bridge SHA256 is
+  `7C16B78641A1040F0E730FABC3145789FEAE8FCFC92C5C2821D20EA8D5BC0EF4`.
+  The runtime manifest checks all 62 DLLs and eleven license/notice files.
+- Final WPF build and `--snapshot-smoke` pass; `artifacts/batch-w-wpf-final.png` is
+  visually inspected. Final real STEP/XDE source/review captures in
+  `artifacts/batch-w-viewer-final/` are inspected; exact reset and source material/
+  topology invariance pass. All images remain local test artifacts.
+- Frozen Q-W preparation still passes 280 rows, 223 SDK headers, 7,668 unique candidates,
+  fourteen negative cases and sixteen representative SDK symbols. Original scope and
+  baseline are unchanged. Independent W exit inventory/accounting and three negatives
+  pass: exactly 86 Blocked-to-Manual transitions, no other changes. Hash:
+  `260AE9A603E7B68F717C38C3FAF9C68A83F866D0154E84E1CD7FD811DB0C6A2C`.
+  Emitted 16,353 / Manual 1,217 / Blocked 49,358 / Skipped 49,344; no pending states.
+  Exit inventory/API/DLL copies are in `artifacts/preparation-baselines/preview22-batch-w/`.
+  The complete release-check independently reproduces the same inventory hash.
+- Fourteen local packages and both fresh-cache consumers pass, including W's shared
+  public XDE workflow and direct Visualization frame use without facade/WPF. Final
+  documentation repack and both consumers pass again in
+  `artifacts/batch-w-document-package-final.log`. Package-content validation verifies
+  180 stable documents, 73 runtime/license files and five checksums/provenance.
+  Final facade package SHA256:
+  `0B4DCB376CC28F427E14E937765297E0557EE05D545DB53345B47908AD629E28`.
+  All 397 local Markdown links, paired fences and whitespace checks pass. This
+  whole-batch checkpoint closes the authorized Q-W run at 280/280 (100%).
+  Hosted CI, signing, NuGet publication and GitHub push are NOT RUN and outside scope.
 
 ### Preview.21 Batch V local validation
 
@@ -82,7 +127,7 @@
   178 stable documents, 73 runtime/license files and five checksums/provenance.
   Final facade package SHA256:
   `D9A3208CC22F6D53EF6E71D7CD30A7A33B3B5500D75C6656F5100D539746A988`.
-  One whole-batch local commit is next; W then advances automatically.
+  Whole-batch local commit is `2c76e10`; W entry has advanced automatically.
   Public-release readiness remains false: hosted CI, signing, publication and push
   are NOT RUN and outside this local implementation run.
 

@@ -5,7 +5,7 @@ versioned native C ABI, generated low-level bindings, and friendly managed CAD A
 modeling, STEP/IGES/STL exchange, XDE assemblies and metadata, meshing, inspection, and
 Windows visualization.
 
-Current local preview target: `8.0.1-preview.21` for Windows x64 (validation status in
+Current local preview target: `8.0.1-preview.22` for Windows x64 (validation status in
 [STATUS](docs/STATUS.md)). The NuGet graph contains 12 managed
 modules, the `OcctSharp` compatibility/facade package, and one shared
 `OcctSharp.Native.win-x64` runtime package. The native package places the complete
@@ -15,19 +15,48 @@ or `PATH` change is required.
 ## Install
 
 ```powershell
-dotnet add package OcctSharp --version 8.0.1-preview.21 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp --version 8.0.1-preview.22 --source ./OcctSharp/artifacts/packages
 ```
 
 A narrow consumer can reference a module directly, for example:
 
 ```powershell
-dotnet add package OcctSharp.Modeling --version 8.0.1-preview.21 --source ./OcctSharp/artifacts/packages
+dotnet add package OcctSharp.Modeling --version 8.0.1-preview.22 --source ./OcctSharp/artifacts/packages
 ```
 
 The supported runtime baseline is .NET 10, Windows x64, and OCCT 8.0.1.
-Preview.21 is local-only; it is not published on NuGet.org. Create the
+Preview.22 is local-only; it is not published on NuGet.org. Create the
 local package feed with `OcctSharp/eng/pack.ps1` using the contributor toolchain, or run
 the repository samples directly with the committed runtime.
+
+## Configure review lighting and capture copied frames
+
+With an existing live `OcctViewer viewer` on its creating UI thread:
+
+```csharp
+using var box = ShapeFactory.CreateBox(40, 30, 20);
+using var presentation = viewer.Display(box);
+presentation.SetDisplayMode(ViewerDisplayMode.Shaded);
+viewer.FitAll();
+var rendering = viewer.Rendering;
+rendering.ReplaceLightRig([
+    new(ViewerLightKind.Ambient, new(.2, .2, .2)),
+    new(ViewerLightKind.Directional, new(1, 1, 1))
+    { Direction = new(0, 0, -1), Headlight = true }
+]);
+rendering.SetAppearance(presentation, new()
+{ Front = new(new(.15, .45, .8)), Shading = ViewerShading.Phong });
+ViewerColorFrame frame = rendering.CaptureColor(new(1024, 768, TileSize: 256));
+byte[] rgba = frame.CopyPixels(); // Independent top-down RGBA8, even after disposal.
+ViewerDepthFrame depth = rendering.CaptureDepth(new(1024, 768));
+if (depth.TryReconstruct(512, 384, out var hit)) Console.WriteLine(hit);
+rendering.ResetAppearance(presentation); // Restores original effective XDE/default style.
+```
+
+See [W review/capture contracts](docs/RELEASE_NOTES_8.0.1_PREVIEW_22.md) and the
+[WPF viewer snapshot example](OcctSharp/samples/OcctSharpViewer.Wpf/README.md).
+Captures still require a live HWND/OpenGL context. PBR/IBL and advanced quality modes
+are capability-checked; copied frames do not provide live D3DImage compositing.
 
 ## Create a solid
 
@@ -78,7 +107,7 @@ Console.WriteLine($"Sections: {sections.SimulatedSections.Count}; faces: {accept
 Recipes also support contour chamfers, per-face draft and explicit local-feature
 limits. Partial fillets are diagnostics, never accepted fallback geometry. Radius-law
 interpolation and pinned SDK limiter limitations are disclosed in
-[Preview.21 notes](docs/RELEASE_NOTES_8.0.1_PREVIEW_20.md).
+[Preview.20 notes](docs/RELEASE_NOTES_8.0.1_PREVIEW_20.md).
 
 ## Recompute a persisted parametric feature
 

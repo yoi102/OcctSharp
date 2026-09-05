@@ -2,6 +2,7 @@
 
 // Private native Visualization/Context contract; never a public ABI or a second owner.
 #include "OcctSharp.Native.h"
+#include "Visualization/RenderResources.hxx"
 #include <AIS_ColoredShape.hxx>
 #include <AIS_InteractiveContext.hxx>
 #include <AIS_Manipulator.hxx>
@@ -50,6 +51,7 @@ struct OcctSharp_ViewerHandle
   int64_t NextClipPlaneId = 1;
   int64_t NextManipulatorId = 1;
   std::thread::id OwnerThread;
+  ViewerRenderResources Rendering;
 };
 
 namespace OcctSharp::Native

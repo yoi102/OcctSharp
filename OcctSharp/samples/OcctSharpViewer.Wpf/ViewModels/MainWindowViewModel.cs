@@ -1,6 +1,7 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.IO;
+using System.Windows.Media.Imaging;
 using OcctSharp;
 using OcctSharpViewer.Wpf.Services;
 
@@ -23,6 +24,9 @@ public partial class MainWindowViewModel : ObservableObject
 
     [ObservableProperty]
     private bool isViewerReady;
+
+    [ObservableProperty]
+    private WriteableBitmap? reviewSnapshot;
 
     public MainWindowViewModel(IFileDialogService fileDialog) => this.fileDialog = fileDialog;
 
@@ -94,6 +98,11 @@ public partial class MainWindowViewModel : ObservableObject
         SelectionCount = 0;
     }
 
+    [RelayCommand(CanExecute = nameof(CanUseViewer))]
+    private void CaptureSnapshot() => RunViewerAction(
+        () => ReviewSnapshot = ViewerSnapshotBitmap.Create(viewer!.CaptureSnapshot()),
+        "Copied snapshot captured. The live viewport remains HWND-hosted.");
+
     public void DetachViewer()
     {
         viewer = null;
@@ -134,5 +143,6 @@ public partial class MainWindowViewModel : ObservableObject
         ShadedCommand.NotifyCanExecuteChanged();
         WireframeCommand.NotifyCanExecuteChanged();
         ClearSelectionCommand.NotifyCanExecuteChanged();
+        CaptureSnapshotCommand.NotifyCanExecuteChanged();
     }
 }

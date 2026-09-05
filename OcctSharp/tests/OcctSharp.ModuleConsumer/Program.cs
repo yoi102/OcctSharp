@@ -1,5 +1,12 @@
 using OcctSharp;
 
+byte[] frameInput = [10,20,30,255];
+var frame = ViewerColorFrame.FromRgba(1,1,frameInput);
+frameInput[0] = 99;
+if (frame.CopyOpaqueBgra()[2] != 10 || typeof(ViewerColorFrame).Assembly.GetName().Name != "OcctSharp.Visualization" ||
+    typeof(ViewerColorFrame).Assembly.GetReferencedAssemblies().Any(x => x.Name is "PresentationCore" or "PresentationFramework" or "OcctSharp"))
+    throw new InvalidOperationException("Copied Visualization frames must remain independent of the facade and WPF.");
+
 OcctRuntimeInfo runtime = OcctRuntime.Info;
 if (runtime.OcctVersion != "8.0.1")
 {

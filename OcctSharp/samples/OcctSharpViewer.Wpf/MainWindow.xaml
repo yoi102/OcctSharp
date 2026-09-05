@@ -21,6 +21,7 @@
         <Button Content="Shaded" Command="{Binding ShadedCommand}" />
         <Button Content="Wireframe" Command="{Binding WireframeCommand}" />
         <Button Content="Clear selection" Command="{Binding ClearSelectionCommand}" />
+        <Button Content="Capture snapshot" Command="{Binding CaptureSnapshotCommand}" />
       </WrapPanel>
     </Border>
 
@@ -61,6 +62,10 @@
             <TextBlock Foreground="#1E3A8A" TextWrapping="Wrap"
                        Text="The OCCT view is hosted in a native child window. WPF controls remain around the viewport." />
           </Border>
+          <TextBlock Margin="0,16,0,6" Text="Copied review snapshot" FontWeight="SemiBold" />
+          <Image Source="{Binding ReviewSnapshot}" MaxHeight="145" Stretch="Uniform" />
+          <TextBlock Margin="0,5,0,0" FontSize="11" Foreground="#6B7280" TextWrapping="Wrap"
+                     Text="Opt-in CPU copy. WPF controls can overlay this snapshot, not the live HWND viewport." />
         </StackPanel>
       </Border>
 

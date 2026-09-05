@@ -30,6 +30,13 @@ The repository supplies the 62-DLL Windows x64 Release closure. Both Debug and R
 managed configurations use it. The smoke command verifies runtime identity and creates
 an OCCT box, without reading local settings or building C++.
 
+For native contributors, a Debug managed build alone is not proof of the Debug OCCT
+runtime. After building both configurations, `eng/verify-debug-native-runtime.ps1`
+copies a fresh isolated Debug test/runtime closure, checks all 62 DLL hashes (including
+the SDK's Debug oneTBB name), and runs the full suite. Batch W also exercises actual
+PBR/MSAA/OIT/path-tracing success paths on the current driver; a desktop with unsupported
+hardware cannot substitute only rejection tests for those success gates.
+
 ## Native contributor configuration
 
 Copy `OcctSharp/config/local.settings.example.json` to

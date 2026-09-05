@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <Import Project="..\OcctSharp.Module.props" />
   <PropertyGroup><Description>OCCT visualization and selection bindings for OcctSharp.</Description></PropertyGroup>
+  <ItemGroup><Compile Include="Frames\**\*.cs" /></ItemGroup>
   <ItemGroup><Compile Include="..\OcctSharp\Generated\Visualization\**\*.cs" Link="Generated\%(RecursiveDir)%(Filename)%(Extension)" /></ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OcctSharp.Runtime\OcctSharp.Runtime.csproj" />

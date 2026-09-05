@@ -167,6 +167,350 @@
   ],
   "manualBindings": [
     {
+      "stableId": "c:@S@AIS_ColoredShape@F@CustomAspectsMap#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@AIS_Shape@F@Shape#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Aspects@F@SetAlphaMode#$@E@Graphic3d_AlphaMode#f#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Aspects@F@SetBackInteriorColor#&1$@S@Quantity_ColorRGBA#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Aspects@F@SetBackMaterial#&1$@S@Graphic3d_MaterialAspect#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Aspects@F@SetFrontMaterial#&1$@S@Graphic3d_MaterialAspect#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Aspects@F@SetInteriorColor#&1$@S@Quantity_ColorRGBA#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@Eye#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@OrientationMatrix#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@ProjectionMatrix#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@SetUp#&1$@S@gp_Dir#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Camera@F@Up#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Angle#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Color#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Concentration#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@ConstAttenuation#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Direction#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Intensity#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@LinearAttenuation#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Position#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@Range#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetAngle#f#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetAttenuation#f#f#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetColor#&1$@S@Quantity_Color#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetConcentration#f#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetDirection#&1$@S@gp_Dir#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetIntensity#f#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CLight@F@SetRange#f#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CubeMapOrder@F@Graphic3d_CubeMapOrder#c#c#c#c#c#c#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CubeMapOrder@F@Validated#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CubeMapPacked@F@Graphic3d_CubeMapPacked#&1$@N@opencascade@S@handle>#$@S@Image_PixMap#&1$@S@Graphic3d_ValidatedCubeMapOrder#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CubeMapSeparate@F@Graphic3d_CubeMapSeparate#&1$@S@NCollection_Array1>#$@N@opencascade@S@handle>#$@S@Image_PixMap#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_CView@F@DisplayedStructures#&$@S@NCollection_Map>#$@N@opencascade@S@handle>#$@S@Graphic3d_Structure#$@S@NCollection_DefaultHasher>#S2_#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_MaterialAspect@F@Graphic3d_MaterialAspect#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_MaterialAspect@F@SetAmbientColor#&1$@S@Quantity_Color#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_MaterialAspect@F@SetDiffuseColor#&1$@S@Quantity_Color#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_MaterialAspect@F@SetPBRMaterial#&1$@S@Graphic3d_PBRMaterial#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_MaterialAspect@F@SetTransparency#f#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_PBRMaterial@F@Graphic3d_PBRMaterial#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_PBRMaterial@F@SetColor#&1$@S@Quantity_ColorRGBA#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_PBRMaterial@F@SetEmission#&1$@S@NCollection_Vec3>#f#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_PBRMaterial@F@SetIOR#f#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_PBRMaterial@F@SetMetallic#f#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_PBRMaterial@F@SetRoughness#f#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Texture2Dplane@F@SetPlaneS#f#f#f#f#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_Texture2Dplane@F@SetPlaneT#f#f#f#f#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_TextureParams@F@SetRotation#f#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_TextureParams@F@SetScale#$@S@NCollection_Vec2>#f#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_TextureParams@F@SetTranslation#$@S@NCollection_Vec2>#f#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ZLayerSettings@F@Graphic3d_ZLayerSettings#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ZLayerSettings@F@Graphic3d_ZLayerSettings#&1$@S@Graphic3d_ZLayerSettings#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ZLayerSettings@F@SetClearDepth#b#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ZLayerSettings@F@SetEnableDepthTest#b#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ZLayerSettings@F@SetEnableDepthWrite#b#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Graphic3d_ZLayerSettings@F@SetImmediate#b#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Image_AlienPixMap@F@Load#*1c#k#&1$@S@TCollection_AsciiString#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@ChangeRow#k#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@InitTrash#$@E@Image_Format#k#k#k#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@PixelColor#I#I#b#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@Row#k#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@SetPixelColor#I#I#&1$@S@Quantity_ColorRGBA#b#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@SizeX#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Image_PixMap@F@SizeY#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@OpenGl_GraphicDriver@F@GetSharedContext#b#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Prs3d_Drawer@F@ShadingAspect#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Prs3d_ShadingAspect@F@Aspect#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@PrsMgr_PresentableObject@F@Attributes#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Blue#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Green#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@Quantity_Color@F@Red#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@V3d_ImageDumpOptions@F@V3d_ImageDumpOptions#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@ActiveLights#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@Camera#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@ChangeRenderingParams#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@IsActiveLight#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@RenderingParams#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@SetLightOn#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@ToPixMap#&$@S@Image_PixMap#&1$@S@V3d_ImageDumpOptions#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@V3d_View@F@View#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@ActiveLights#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@AddZLayer#&I#&1$@S@Graphic3d_ZLayerSettings#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@GetAllZLayers#&$@S@NCollection_Sequence>#I#1",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@SetLightOff#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@SetLightOn#&1$@N@opencascade@S@handle>#$@S@Graphic3d_CLight#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@SetZLayerSettings#I#&1$@S@Graphic3d_ZLayerSettings#",
+      "specialCaseId": "SC-060"
+    },
+    {
+      "stableId": "c:@S@V3d_Viewer@F@ZLayerSettings#I#1",
+      "specialCaseId": "SC-060"
+    },
+    {
       "stableId": "c:@S@BOPAlgo_Builder@F@Images#1",
       "specialCaseId": "SC-059"
     },

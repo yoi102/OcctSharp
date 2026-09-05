@@ -1,5 +1,14 @@
 # Architecture
 
+## Batch W review boundary
+
+ADR-0090 retains the existing Viewer owner, creating thread, modules and native DLL.
+Seven cohesive Visualization source units own rendering, lighting, appearance, image
+input, environment, capture and complete copied cameras. Independent color/depth DTOs
+belong to the Visualization assembly without a WPF dependency. Friendly review recipes
+and explicit asset resolution stay in the facade; only the WPF sample adapts copied
+pixels into frozen WriteableBitmap thumbnails. Required exit evidence remains in STATUS.
+
 ## Batch V partition and bounded-volume boundary
 
 ADR-0089 adds immutable input/region programs and owning partition/volume results in
@@ -25,7 +34,7 @@ evaluation, XDE publication/exchange and parent/thread-bound viewer review.
 Protected acceptance uses Q budgets and exact unchanged correspondence. Partial
 fillets are diagnostic owners, never accepted output. Native-local checked Form/RibSlot
 adapters preserve absent mappings and final-result membership without exporting builders.
-Validation and remaining gates are reported in STATUS; V is locally validated and W remains prepared.
+Validation is reported in STATUS; V is locally validated and W is implemented in its review boundary above.
 
 ## Batch T parametric execution boundary
 
@@ -83,7 +92,7 @@ appearance and frame capture in Visualization. T recipe execution remains higher
 orchestration; Documents must not gain reverse dependencies. W CPU frame DTOs remain
 independent of WPF; the sample consumes copies. New viewer resource IDs stay within the
 existing context/thread lifetime. U is locally validated; V is implemented in the
-boundary above and locally validated; W remains planned. One Native DLL and the existing
+boundary above and locally validated; W follows the implemented review boundary above. One Native DLL and the existing
 module/source boundaries remain.
 
 ## Prepared Q-T source and dependency placement

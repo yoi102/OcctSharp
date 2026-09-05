@@ -1,5 +1,35 @@
 # Special Cases
 
+## SC-060: Viewer-owned rendering resources and copied frames
+
+ADR-0090 keeps lights, textures, environment images, appearance and layers within the
+existing creating-thread viewer. Seven Visualization units and sixteen fixed C calls
+expose bounded copied input/output, not GPU pointers, driver handles or borrowed images.
+The exact 86 newly called Blocked overloads are listed in
+[batch-w-manual-calls.json](../OcctSharp/config/batches/batch-w-manual-calls.json),
+pinned to V inventory `91357F17`, and mirrored individually in generation.json.
+Existing Emitted/Manual calls are reused. Abstract CView FBO virtuals dispatch only
+against the existing concrete driver; their SK015 pure-virtual declaration exclusions
+remain unchanged. Auxiliary CView/Structure, colored drawers and driver helpers extend
+the implementation dependency closure, not the frozen 54-root decision scope.
+
+Ambient lights reject headlight mode; global lights are removed individually because
+the SDK bulk overload throws while membership still exists. Replacement texture sets
+are staged and synchronized into all presentations. Overrides save original XDE
+custom drawers for exact reset without changing source material or topology.
+PBR requires both the view pipeline and presentation shading. IBL needs an active
+ambient light; its visible background is independent. Unlit rejects distinguished
+front/back colors, which the SDK does not render independently.
+
+Capture owns an explicit temporary FBO (no screen fallback), restores camera, automatic
+depth, immediate mode, FBO and actual drawing-order layer scope, and returns owned
+top-down RGBA/depth copies. Default depth excludes depth-clearing overlay layers.
+Skipped FBO abstract methods are not claims of general public wrapper support.
+Recipes resolve explicit application keys before mutation; replay is not a transaction.
+ABI 1.66 / bridge 0.74.0 / Preview.22 retain schema 1.13 and assembly/file 0.1.0.0.
+Replace this exception only when generated ownership preserves the same context,
+buffer, recovery and no-document-mutation guarantees. Executed gates remain in STATUS.
+
 ## SC-059: Exact partition/material programs and bounded volumes
 
 ADR-0089 uses 27 exact directly called overloads recorded in

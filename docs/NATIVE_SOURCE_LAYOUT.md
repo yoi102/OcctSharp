@@ -1,5 +1,18 @@
 # Native source responsibilities
 
+## Batch W additions
+
+Visualization owns RenderProfiles.cpp, Lighting.cpp, Appearance.cpp, Textures.cpp,
+Environments.cpp, FrameCapture.cpp and ReviewCamera.cpp. RenderResources.hxx contains
+only context-owned records and helper declarations. The Rendering public companion
+contains fixed copied records and sixteen C calls. Existing registry, shared error
+boundary, managed projects and single DLL remain unchanged. Pure frame DTOs compile
+in Visualization; resource orchestration remains beside the facade's OcctViewer.
+The sample alone references WPF bitmap types. Source gates pass 86 independent units,
+617 manual exports, 23 storage definitions and 44 strict standalone headers. Binary
+parity preserves 29,491 Release/Debug exports (sixteen additions, none removed).
+Current full validation is in STATUS.
+
 ## Batch V additions
 
 Modeling adds PartitionRegions.cpp (selection/program finalization), RegionInspection.cpp

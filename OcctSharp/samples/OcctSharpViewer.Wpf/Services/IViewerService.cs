@@ -9,4 +9,5 @@ public interface IViewerService
     void SetProjection(ViewerProjection projection);
     void SetDisplayMode(ViewerDisplayMode displayMode);
     void ClearSelection();
+    ViewerColorFrame CaptureSnapshot();
 }

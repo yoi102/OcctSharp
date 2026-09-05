@@ -305,6 +305,7 @@ OcctSharp_Status OCCTSHARP_CALL occtsharp_viewer_remove_presentation(
     const opencascade::handle<AIS_ColoredShape> presentation = FindPresentation(viewer, presentation_id);
     DetachManipulatorsForPresentation(viewer, presentation_id);
     viewer->Context->Remove(presentation, false);
+    viewer->Rendering.Appearances.erase(presentation_id);
     viewer->Presentations.erase(presentation_id);
   });
 }

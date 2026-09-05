@@ -15,6 +15,11 @@ standard orthographic views, switches between shaded and wireframe display, and 
 selection. Right-drag rotates, middle-drag pans, the mouse wheel zooms, and left-click
 selects; Shift, Ctrl, and Alt apply add, toggle, and remove selection semantics.
 
+Preview.22 adds **Capture snapshot**: an opt-in frozen 360 x 240 WriteableBitmap
+thumbnail beside the live viewport, driven by CommunityToolkit.Mvvm and the viewer
+service. `ViewerColorFrame` itself remains a copied, WPF-independent Visualization
+value. See the project README for the `--snapshot-smoke` command and alpha semantics.
+
 STEP files use the XDE/STEPCAF reader instead of the geometry-only reader. Each free XDE
 root is displayed through `OcctViewer.Display(XdeLabel)`, which applies OCCT's inherited
 occurrence, part, face, edge, material-base, alpha, and visibility styles to one colored

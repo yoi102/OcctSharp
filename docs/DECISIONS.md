@@ -99,6 +99,7 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0088](adr/0088-source-bound-contour-and-local-feature-programs.md) | Source-bound copied contour programs, explicit local-feature limits and diagnostic-only partial results | Accepted and locally validated; final documentation delivery in STATUS |
 
 | [ADR-0089](adr/0089-exact-partition-and-volume-programs.md) | Exact partition/material programs and bounded volume construction with copied revisions and atomic named outputs | Accepted and locally validated |
+| [ADR-0090](adr/0090-viewer-owned-render-resources-and-copied-frames.md) | Viewer-owned rendering resources, explicit asset recipes and copied color/depth frames | Accepted; complete exit evidence in STATUS |
 
 ## Pending decisions
 

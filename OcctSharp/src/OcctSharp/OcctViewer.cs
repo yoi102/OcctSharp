@@ -18,12 +18,16 @@ public sealed class OcctViewer : IDisposable
         Handle = handle;
         _ownerThreadId = Environment.CurrentManagedThreadId;
         Input = new ViewerInputController(this);
+        Rendering = new ViewerRendering(this);
     }
 
     internal ViewerHandle Handle { get; }
 
     /// <summary>Gets the parent-bound application input adapter for this viewer.</summary>
     public ViewerInputController Input { get; }
+
+    /// <summary>Gets the parent/thread-bound light, appearance, render-resource and copied-frame controller.</summary>
+    public ViewerRendering Rendering { get; }
 
     /// <summary>Creates a viewer for a non-zero HWND on the calling UI thread.</summary>
     public static OcctViewer Create(nint windowHandle)
@@ -816,6 +820,7 @@ public sealed class OcctViewer : IDisposable
             RemoveManipulator(manipulator);
         NativeError.ThrowIfFailed(NativeMethods.RemoveViewerPresentation(Handle, presentation.Id), "viewer_remove_presentation");
         _presentations.Remove(presentation.Id);
+        Rendering.ForgetPresentation(presentation);
         _isolationVisibility?.Remove(presentation.Id);
         presentation.MarkRemoved();
     }

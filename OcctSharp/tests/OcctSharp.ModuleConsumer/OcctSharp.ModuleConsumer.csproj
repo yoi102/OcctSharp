@@ -3,9 +3,10 @@
     <OutputType>Exe</OutputType>
     <ManagePackageVersionsCentrally>false</ManagePackageVersionsCentrally>
     <RestorePackagesWithLockFile>false</RestorePackagesWithLockFile>
-    <OcctSharpPackageVersion Condition="'$(OcctSharpPackageVersion)' == ''">8.0.1-preview.21</OcctSharpPackageVersion>
+    <OcctSharpPackageVersion Condition="'$(OcctSharpPackageVersion)' == ''">8.0.1-preview.22</OcctSharpPackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="OcctSharp.Modeling" Version="$(OcctSharpPackageVersion)" />
+    <PackageReference Include="OcctSharp.Visualization" Version="$(OcctSharpPackageVersion)" />
   </ItemGroup>
 </Project>

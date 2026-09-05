@@ -1,5 +1,25 @@
 # Known Issues
 
+## KI-035: Viewer rendering and capture semantics depend on OCCT and the driver
+
+- W explicitly validates PBR, MSAA, OIT, anisotropy and path-tracing requests; there is
+  no silent quality downgrade. Success tests require an appropriate real OpenGL driver.
+- Exposure/white point/filmic mapping affect path tracing, not raster output. IBL needs
+  an active ambient light and the PBR view pipeline; disabling IBL restores SDK defaults,
+  not necessarily black lighting. Unlit cannot distinguish independent front/back colors.
+- Default depth selects the model layer because upper OCCT layers clear depth even
+  when empty. Explicit single/through-layer captures disclose their copied scope.
+  Depth is normalized buffer data; only capture-time matrices reconstruct world points.
+- SDK multilayer dumps compare numeric IDs. W instead masks structures by drawing
+  order and restores visibility/depth clears. Explicit FBO ownership guards screenshot
+  cleanup and rejects unavailable offscreen buffers; a live HWND/context is still needed.
+- Copied RGBA alpha is renderer composite coverage, not a straight-alpha texture.
+  The WPF thumbnail uses opaque Bgr32; HwndHost airspace is unchanged. No D3DImage,
+  headless service or universal cross-GPU screenshot byte identity is promised.
+- Recipe replay resolves all asset keys first but is not a multi-setting transaction.
+  A later unsupported setting can leave earlier settings applied; apply to a fresh
+  review view when all-or-nothing application-level presentation is required.
+
 ## KI-034: Debug shell-draft limits assert in OCCT internal history
 
 - Status: bridge precondition and edge-only history adaptation locally validated

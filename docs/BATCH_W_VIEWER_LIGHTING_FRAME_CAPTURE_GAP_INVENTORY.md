@@ -1,9 +1,9 @@
 # Batch W: Viewer lighting, presentation materials and copied frame capture
 
-- Status: scope prepared, implementation **0/40**. New API compile/runtime: **NOT RUN**.
+- Status: **COMPLETE locally, 40/40**, original forty rows unchanged. Entry audit passed against committed V `2c76e10`; all implementation, driver/runtime, clean-consumer, regeneration and local release gates pass. This is one whole-batch checkpoint; final delivery evidence is in STATUS.
 - Decision: [ADR-0083](adr/0083-extended-batches-and-continuous-execution.md).
 - Preparation commit: `eacd0ed`; product baseline remains Preview.15 / OCCT 8.0.1.
-- Planned local package slot: `8.0.1-preview.22`; current versions are unchanged.
+- Local package target: `8.0.1-preview.22`; ABI 1.66, bridge 0.74.0, schema 1.13 unchanged.
 - Frozen roots: [batch-w-viewer-lighting-frame-capture.json](../OcctSharp/config/batches/batch-w-viewer-lighting-frame-capture.json).
 - Shared preparation: [U-W evidence](BATCH_U_W_PREPARATION.md).
 - Delivery: [continuous Q-W runbook](BATCH_CONTINUOUS_EXECUTION.md); one complete batch per local commit.
@@ -15,8 +15,8 @@ D already supplies camera restore, clipping, backgrounds, subshape styles and RG
 Load exact/discrete assembly -> configure bounded light rig/material/UV texture/environment -> render-profile validation -> capture RGBA/depth/tiled/layer frames -> copied WPF snapshot review -> clear/recreate resources on the creating thread.
 
 All 40 rows are one delivery unit. A row is a newly observable workflow, not a getter,
-test, overload or standalone family checkpoint. Acceptance below is future required
-evidence, not a claim of implementation. Existing lower generated wrappers are reused
+test, overload or standalone family checkpoint. Acceptance below is satisfied by the
+named assertion map and full local gates in STATUS. Existing lower generated wrappers are reused
 where ownership permits; candidate root membership alone does not mean a missing API.
 
 ## Frozen capability matrix
@@ -63,6 +63,56 @@ where ownership permits; candidate root membership alone does not mean a missing
 | W-38 | Render | Layer-scoped frame capture | Capture supported single/through-layer buffers with explicit included layer IDs, preserving live scene visibility afterwards. |
 | W-39 | Integration | Self-contained review appearance recipe | Snapshot camera/light/material/texture reference settings for replay in the same asset scope; no embedded private paths or native IDs by default. |
 | W-40 | Integration | WPF copied-frame review example | Add an opt-in WriteableBitmap snapshot/thumbnail path using copied buffers and live HwndHost review; do not promise D3DImage or continuous airspace-free rendering. |
+
+## Named implementation assertions
+
+The frozen rows above are unchanged. These are assertion mappings, not additional
+capabilities. Test classes live under `OcctSharp.Runtime.Tests`; the shared workflow
+also runs through the clean public package consumer. Initial final-source focused
+run and all ten repeats pass 23/23; full exit evidence is recorded in STATUS.
+
+| Row | Named test / independently observed invariant |
+|---|---|
+| W-01 | `DriverProfilesAndFourLightKindsHaveAtomicPortableState`: actual driver limits; `ActualDriverRendersShadingAndQualityModes`: logged capability report. |
+| W-02 | Same profile tests: invalid samples/exposure preserve effective state; supported quality settings produce pixels. |
+| W-03 | `LightActivationChangesRenderedPixels(Ambient)` and rig test: create/update/remove and measured light contribution. |
+| W-04 | Rig test: normalized copied direction; `HeadlightRotatesWithCameraWhileWorldLightDoesNot`: directional pixels. |
+| W-05 | `LightActivationChangesRenderedPixels(Positional)`: position/range/intensity and active policy. |
+| W-06 | `LightActivationChangesRenderedPixels(Spot)` and rig test: cone/direction pixels and invalid angle rejection. |
+| W-07 | Rig test: invalid ambient headlight/spot preserves the complete prior rig. |
+| W-08 | Headlight test: world-fixed light goes dark under rotation; camera-relative light remains lit. |
+| W-09 | Three activation cases: inactive entries remain owned and reactivation restores contribution. |
+| W-10 | Rig and `ReviewRecipeSerializesKeysAndReplaysIntoFreshResources`: copied definitions restore; old IDs dispose. |
+| W-11 | Three `ActualDriverRendersShadingAndQualityModes` cases: unlit/Phong/PBR succeed on the current driver. |
+| W-12 | `XdeStyleResetMetadataAndPublicConsumerWorkflow`: real STEP/XDE material and volume unchanged. |
+| W-13 | `TwoSidedMaterialCullingAndAlphaAreVisualOnly`: front red/back blue with camera reversal. |
+| W-14 | Same two-sided test: front/back culling changes pixels, not topology. |
+| W-15 | Same test: alpha mask removes pixels, blend changes contribution; shared workflow preserves source material. |
+| W-16 | `OwnedTextureReplacementAppearanceResetAndEnvironmentLifetimeRender` and XDE workflow: invalid profile preserves state; exact pixel reset. |
+| W-17 | `TextureInputOriginSamplingTransformsAndLocalDecodeAreOwned`: RGBA/BGRA, bottom-up and caller-buffer mutation. |
+| W-18 | Same test: real PNG decode survives file deletion; URL rejects. |
+| W-19 | `MissingMeshUvsRejectUntilPlanarMappingIsExplicit`: missing UV rejects, authored channel remains absent; texture input test binds exact surface UVs. |
+| W-20 | Missing-UV and texture tests: explicit planar visual mapping succeeds without creating geometry UVs. |
+| W-21 | Texture test: rotation/translation change image; shared workflow proves original topology/volume unchanged. |
+| W-22 | Texture test: supported filtering and anisotropy combinations render; effective mapping is copied. |
+| W-23 | Owned texture test: red-to-blue replacement updates pixels and retains binding; raw malformed input rejects. |
+| W-24 | Resource rejection and `RawBuffersFlagsStaleIdsAndRepeatedLifetimesAreChecked`: cross-parent, stale, detached, disposed resources and 24 loops. |
+| W-25 | `SixFaceAndPackedCubeOrderingAgreeForEveryCameraDirection`: six distinct colors; unequal faces reject. |
+| W-26 | Same test: explicit packed permutation matches six faces in every direction; invalid permutation rejects. |
+| W-27 | `CubemapPackingBackgroundAndPbrIlluminationAreIndependent`: bright/dark environments measurably change PBR lighting. |
+| W-28 | Same test: visible background and IBL vary independently; removal restores defaults. |
+| W-29 | Driver quality cases: actual MSAA and resolution scaling render without camera changes; incompatible combination rejects. |
+| W-30 | Driver quality cases: actual weighted OIT renders transparency; excess samples reject. |
+| W-31 | `PathTracingExposureAndFilmicSettingsHaveActualPixelEffects`: exposure changes measured energy and filmic capture succeeds. |
+| W-32 | `LayerScopesFollowDrawingOrderAndPreservePicking`: assignment, removal-to-default and selection remain valid. |
+| W-33 | `ColorDepthSizedTiledFramesAreIndependentAndRestoreView`: independent RGBA arrays; copied frame survives viewer disposal. |
+| W-34 | Both `CopiedCameraReconstructsOrthographicAndPerspectiveDepth` cases: copied depth, background, range and pixel validation. |
+| W-35 | Same cases: reconstruction lands within .001 of the known surface; later camera edits do not affect it. |
+| W-36 | Same camera cases: sized capture and invalid tile restore complete camera; owned FBO blocks screen fallback. |
+| W-37 | Color/depth tests: tiled pixel error bounded, depth world-point agreement within .001. |
+| W-38 | Layer-scope test: single/through scopes, copied IDs, excluded layer pixels and exact live-view restoration. |
+| W-39 | Recipe and shared XDE workflow: JSON keys, scope/asset rejection before mutation, replay into fresh resources. |
+| W-40 | Real WPF `--snapshot-smoke`: MVVM command, frozen 360 x 240 bitmap, PNG inspected; frame DTO direct-module consumer has no WPF/facade dependency. |
 
 ## Root, dependency and source closure
 

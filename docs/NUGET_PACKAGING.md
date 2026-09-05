@@ -2,7 +2,7 @@
 
 ## Current package set
 
-The current local preview package version is `8.0.1-preview.17` for .NET 10 and
+The current local preview package version is `8.0.1-preview.22` for .NET 10 and
 Windows x64. ADR-0074 produces 14 packages:
 
 - 12 managed module packages: Runtime, Foundation, Geometry, MeshData, Modeling, Mesh,
@@ -23,7 +23,7 @@ contains a package hash and would make the artifact self-referential. Release no
 the stable architecture/topic documents are packaged; status remains authoritative in
 the repository.
 
-Preview.17 is local-only and is not published. The release workstream produces
+Preview.22 is local-only and is not published. The release workstream produces
 immutable native provenance, SBOM/checksum evidence, API diff, and CI configuration.
 The project license and bundled third-party notice layout are resolved by ADR-0059;
 hosted release execution and signing remain separate gates. Publication evidence is

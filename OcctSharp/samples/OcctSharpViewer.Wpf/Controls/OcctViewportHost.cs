@@ -164,6 +164,18 @@ public sealed class OcctViewportHost : HwndHost, IViewerService
 
     private OcctViewer GetViewer() => viewer ?? throw new InvalidOperationException("The OCCT viewport is not initialized.");
 
+    public ViewerColorFrame CaptureSnapshot() => GetViewer().Rendering.CaptureColor(new(360, 240));
+
+    internal void DisplaySnapshotSmokeShape()
+    {
+        using Shape box = ShapeFactory.CreateBox(20, 15, 10);
+        ViewerPresentation presentation = GetViewer().Display(box);
+        presentation.SetDisplayMode(ViewerDisplayMode.Shaded);
+        presentation.SetColor(new(.15, .45, .8));
+        presentations.Add(presentation);
+        GetViewer().FitAll();
+    }
+
     private static List<ViewerPresentation> DisplayExchange(OcctViewer viewer, string filePath)
     {
         using XdeDocument document = XdeDocument.ReadExchange(filePath);

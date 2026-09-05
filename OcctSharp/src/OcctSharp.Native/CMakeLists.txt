@@ -73,6 +73,13 @@ set(OCCTSHARP_MANUAL_NATIVE_SOURCES
   src/Visualization/Dimensions.cpp
   src/Visualization/Manipulators.cpp
   src/Visualization/Navigation.cpp
+  src/Visualization/RenderProfiles.cpp
+  src/Visualization/Lighting.cpp
+  src/Visualization/Appearance.cpp
+  src/Visualization/Textures.cpp
+  src/Visualization/Environments.cpp
+  src/Visualization/FrameCapture.cpp
+  src/Visualization/ReviewCamera.cpp
   src/Visualization/Presentations.cpp
   src/Visualization/Selection.cpp
   src/Visualization/RepairReview.cpp
@@ -100,6 +107,7 @@ add_library(OcctSharp.Native SHARED
   include/OcctSharp.Native.Parametric.h
   include/OcctSharp.Native.LocalFeatures.h
   include/OcctSharp.Native.Regions.h
+  include/OcctSharp.Native.Rendering.h
   src/Surfaces/SurfaceCommon.hxx
   ${OCCTSHARP_MANUAL_NATIVE_SOURCES}
   ${OCCTSHARP_GENERATED_NATIVE_SOURCES})
