@@ -89,6 +89,7 @@ Superseded ADRs remain available and point to their replacements.
 | [ADR-0080](adr/0080-expanded-surface-wave-and-native-source-boundaries.md) | Expand Batch P to 32 capabilities and separate new native source responsibilities while retaining the existing managed modules and one native DLL | Accepted and implemented |
 | [ADR-0081](adr/0081-native-source-responsibility-extraction.md) | Extract all historical native source responsibilities, preserving one DLL and the complete existing ABI/ownership contract | Accepted and implemented |
 | [ADR-0082](adr/0082-broad-batch-q-through-t-preparation.md) | Prepare Q-T as four 40-capability whole waves with exact-root audits, preserved source boundaries and explicit per-batch baseline revalidation | Accepted for preparation; implementation 0/160 |
+| [ADR-0083](adr/0083-extended-batches-and-continuous-execution.md) | Add U-W and prepare continuous Q-W execution with full per-batch validation/local commits and automatic advancement after explicit start | Accepted for preparation; implementation 0/280 |
 
 ## Pending decisions
 

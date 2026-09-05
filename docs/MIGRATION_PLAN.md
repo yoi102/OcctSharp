@@ -27,7 +27,18 @@ The completed execution priority was not maximum raw OCCT coverage. ADR-0066 clo
 freeform-authoring outcome. Cold or optional declarations remain classified separately;
 no new active product batch is implied by their existence.
 
-## Current preparation: four broad Q-T waves
+## Current continuous queue: Q-W, seven 40-capability batches
+
+[ADR-0083](adr/0083-extended-batches-and-continuous-execution.md) extends the initial
+Q-T preparation with U advanced contour/local features, V exact partition/volume
+workflows and W lighting/material/copied-frame review. Scope preparation is 7/7;
+implementation is 0/280. [The continuous runbook](BATCH_CONTINUOUS_EXECUTION.md)
+requires next-run Q -> R -> S -> T -> U -> V -> W execution, each whole batch fully
+validated and locally committed before automatic advancement, without routine user
+confirmation. It does not start implementation now, create a scheduler or authorize
+publication. Baseline deltas and genuine external/authority stop conditions remain.
+
+## Initial preparation: four broad Q-T waves
 
 [ADR-0082](adr/0082-broad-batch-q-through-t-preparation.md) and
 [Q-T preparation](BATCH_Q_T_PREPARATION.md) lock four 40-capability waves: Q controlled
@@ -121,11 +132,14 @@ batch fragments remain forbidden. ADR-0064 closes product-scale batch `D` with t
 | R — Mesh Authoring and Editing | Prepared (0/40 implemented) | ADR-0082 freezes attributed caller mesh edits, index maps and discrete-model delivery; 46-root baseline audit | Explicit post-Q baseline delta; implement/validate all 40 rows and commit locally |
 | S — Guided Sweeps and Constrained Surfaces | Prepared (0/40 implemented) | ADR-0082 freezes scalar laws, framing/guide/contact modes, constraints/residuals and patch conversion; 52-root baseline audit | Explicit post-R baseline delta; implement/validate all 40 rows and commit locally |
 | T — Parametric Recompute and Persistent Selection | Prepared (0/40 implemented) | ADR-0082 freezes typed feature execution, incremental state, atomic results and fallible TNaming; 52-root baseline audit | Completed Q/R/S contracts and explicit post-S baseline delta; implement/validate all 40 rows and commit locally |
+| U — Advanced Contour and Local Features | Prepared (0/40 implemented) | ADR-0083 freezes contour laws/simulation, chamfer modes, draft/limited local features; 44-root baseline audit | Completed Q/S/T prerequisites; explicit post-T delta, all 40 rows and local commit |
+| V — Exact Partition and Volume Workflows | Prepared (0/40 implemented) | ADR-0083 freezes full cell programs, material interfaces, face-set volumes and bounded voids; 43-root baseline audit | Completed Q/R/T prerequisites; explicit post-U delta, all 40 rows and local commit |
+| W — Viewer Lighting and Copied Frames | Prepared (0/40 implemented) | ADR-0083 freezes light/texture/material resources, render profiles and copied frame review; 54-root baseline audit | R and existing viewer/material prerequisites; explicit post-V delta, all 40 rows and local commit |
 
 Current B completion is not represented by counting retired planning labels. Engineering
 progress, selected binding coverage, full-profile coverage, inventory completeness,
 validation coverage, and publication readiness are reported independently. B through P
-are 100% for their accepted local denominators; Q-T are scope-prepared at 0/40 implemented
+are 100% for their accepted local denominators; Q-W are scope-prepared at 0/40 implemented
 each. Completed batches have every local exit condition above
 backed by evidence; this does not make the public package release-ready. Future implementation
 is never reported by reopening B/C/D/E/F/G/H/I/J/K/L/M/N/O/P or inventing numbered or dotted
@@ -461,15 +475,17 @@ global catalog.
 
 ## Completed product-batch execution boundary
 
-1. Keep completed B-P evidence immutable. Q-T are prepared under ADR-0082, with no
+1. Keep completed B-P evidence immutable. Q-W are prepared under ADR-0082/0083, with no
    implementation started by the preparation checkpoint; Q is the next execution target.
 2. ADR-0059 resolves the MIT project license and bundled third-party notice layout;
    keep those files and the runtime manifest current for every distribution change.
 3. Package signing, credentials, and NuGet publication require explicit authorization.
 4. B-P are completed product batches and remain immutable evidence.
-5. Q-T each have an accepted finite 40-row denominator. Before each implementation,
+5. Q-W each have an accepted finite 40-row denominator. Before each implementation,
    explicitly revalidate its baseline and prerequisites; connected families are not
    permission for partial completion or a smaller delivery checkpoint.
+   In the next authorized continuous run, a verified local commit advances to the
+   next queued batch without routine confirmation, following BATCH_CONTINUOUS_EXECUTION.
 6. Arbitrary callbacks, custom rendering, optional integrations, and cold schema remain
    outside the completed Batch F denominator. Managed physical splitting is independently
    completed by ADR-0074; native physical splitting remains out of scope.

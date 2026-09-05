@@ -12,6 +12,16 @@ Revision-scoped IDs do not promise persistent topology identity. TNaming selecti
 dedicated labels to avoid clearing user data. Preparation adds no handles or ownership
 categories; actual implementation must record any new concrete lifetime contract here.
 
+## Prepared U-W resources (no new category)
+
+ADR-0083 extends the same constraints to native-local contour sections, partition/volume
+builders and copied diagnostics. Partial fillet results are explicitly failed previews,
+not automatically accepted shapes. W light/texture IDs are viewer-bound and thread-affine;
+their concrete release/replacement contract is implementation work. Pixel/cubemap inputs
+and frame outputs are owned copies with declared stride/format/origin, never borrowed
+GPU/PixMap pointers. Documents does not own a renderer and core frame data does not own
+WPF objects. No new handle or registry exists merely because this scope is prepared.
+
 ## Native source ownership after ADR-0081
 
 Source extraction does not change O001-O013 or add an ownership category. The manual

@@ -7,6 +7,11 @@
 - Baseline: `6b04bd9`, completed B-P plus full historical Native extraction (ADR-0081).
 - Delivery after implementation is one local checked commit per whole batch. No automatic NuGet publication or GitHub push.
 
+ADR-0083 extends this initial queue with [U-W](BATCH_U_W_PREPARATION.md), producing
+seven 40-capability batches. The [continuous runbook](BATCH_CONTINUOUS_EXECUTION.md)
+governs next-run automatic advancement after each verified local commit. Q-T's scope,
+frozen baseline and original audit evidence below remain unchanged.
+
 ## Why these are the next broad waves
 
 The preceding P wave contained 32 capabilities; earlier product waves generally contained
@@ -227,9 +232,10 @@ Root audit hashes:
 The verifier passes: 160 rows, 153 headers, 7 representative symbols, 8 negative cases,
 unchanged input hashes and deterministic per-batch reports. Summary report SHA256:
 `11CB6DA68AF4659AD14573A982F2DF068B1C12C5BA706427E8209FBDC68D2FB2`.
-The existing source-layout audit also passes (42 units, 530 C exports, 22 unique shared
-storage definitions; binary comparison NOT RUN). Fifteen touched Markdown documents
-pass 265 local-link target checks and balanced-fence checks; whitespace checks pass.
+At the original ADR-0082 checkpoint, the source-layout audit also passed (42 units,
+530 C exports, 22 unique shared storage definitions; binary comparison NOT RUN).
+Fifteen touched Markdown documents
+passed 265 local-link target checks and balanced-fence checks; whitespace checks passed.
 Current preparation evidence is also recorded in STATUS.
 New API compilation, new runtime tests, packaging, DLL refresh, hosted CI, signing,
 NuGet publication and GitHub push are **NOT RUN** in this preparation-only checkpoint.

@@ -11,10 +11,11 @@ The loop does not mean blindly generating declarations. Every large wave must pr
 native semantics, ownership, ABI safety, deterministic regeneration, and truthful
 validation evidence.
 
-Current routing (ADR-0082, 2026-09-05): B-P and ADR-0081 are complete. Q-T scope
-preparation is complete, 40 capabilities each, implementation 0/160. Q is next only
-when implementation is requested. See STATUS and BATCH_Q_T_PREPARATION; do not execute
-the archived Batch F prompt below. Preparation-only requests stop at their preparation
+Current routing (ADR-0083, 2026-09-05): B-P and ADR-0081 are complete. Q-W scope
+preparation is complete, 40 capabilities each, implementation 0/280. The next explicitly
+started continuous run follows Q -> R -> S -> T -> U -> V -> W without routine
+confirmation at each successful local commit. See STATUS and BATCH_CONTINUOUS_EXECUTION;
+do not execute the archived Batch F prompt below. Preparation-only requests stop at their preparation
 checkpoint and do not automatically start APIs. Local pack/check/commit and publication
 are distinct; no automatic NuGet upload or GitHub push.
 
@@ -24,7 +25,8 @@ are distinct; no automatic NuGet upload or GitHub push.
 Recover the current user request, AGENTS.md, STATUS, ARCHITECTURE, ROADMAP,
 MIGRATION_PLAN, OWNERSHIP, DECISIONS, relevant ADRs and the selected batch matrix.
 Use current STATUS and accepted ADRs over archived prompt/batch instructions.
-B-P and ADR-0081 are completed evidence. ADR-0082 prepares Q/R/S/T at 40 rows each.
+B-P and ADR-0081 are completed evidence. ADR-0082/0083 prepare Q-W at 40 rows each.
+Read BATCH_CONTINUOUS_EXECUTION and its resume journal before a continuous run.
 
 If the user requests preparation only, audit/freeze the requested complete scopes,
 dependencies, source owners, baseline hashes, non-goals and acceptance criteria.
@@ -39,8 +41,12 @@ Use generated-code rules and exact manually invoked stable IDs; never relabel ev
 root candidate as migrated. Keep existing modules/facade, source ownership and one DLL.
 
 Run the complete local gates in BATCH_Q_T_PREPARATION, update acceptance evidence and
-STATUS, then make the local batch commit when authorized. Only continue into another
-whole batch when the user requested continuing implementation. Never infer a request
+STATUS and the resume journal, then make the local batch commit when authorized.
+During the requested continuous run, immediately revalidate and start the next queued
+batch after the previous whole-batch commit; do not end merely at an intermediate
+checkpoint or ask routine permission. Repair failed gates inside their batch.
+Keep LOOP_STATE CONTINUE until the authorized queue completes, the user stops/changes
+scope, or safe progress genuinely requires external input. Never infer a request
 to publish NuGet, push GitHub, sign or run hosted release from a local checkpoint.
 Report actual preparation/implementation denominators and NOT RUN validation gates.
 An interruption resumes the same batch; it does not authorize partial completion.
@@ -53,7 +59,8 @@ An interruption resumes the same batch; it does not authorize partial completion
 3. At the end of the turn, inspect `LOOP_STATE`:
    - `CONTINUE`: submit the same prompt again.
    - `BLOCKED`: provide the named prerequisite, then submit the same prompt again.
-   - `COMPLETE`: independently review the final completion gates before publication.
+   - `CHECKPOINT_COMPLETE`: preparation-only completion; do not start APIs automatically.
+   - `COMPLETE`: the authorized queue is complete, not merely one intermediate batch.
 4. Do not replace the prompt with “continue” in an unattended loop unless the agent
    still has the full repository instructions. Reusing the complete prompt is safer.
 
@@ -61,7 +68,7 @@ An interruption resumes the same batch; it does not authorize partial completion
 
 The remainder preserves the old F-era detailed template for historical reference only.
 Its F/24-row stop conditions, active-batch labels and version baselines are superseded
-by current STATUS, ADR-0082 and the current reusable prompt above. Do not copy it as
+by current STATUS, ADR-0082/0083 and the current reusable prompt above. Do not copy it as
 the active loop prompt. Generic safety requirements still apply where not superseded.
 
 ```text

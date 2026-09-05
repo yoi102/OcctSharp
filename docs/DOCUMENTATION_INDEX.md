@@ -11,7 +11,17 @@ decisions. Recommendations are not accepted decisions unless an ADR says so.
   domain-owned private contracts and independent-compilation/ABI checks under ADR-0081.
 - [Repository layout](REPOSITORY_LAYOUT.md) — physical separation of documentation
   and code-related files.
-- [Roadmap](ROADMAP.md) — completed B-P, prepared Q-T and local-release boundary.
+- [Roadmap](ROADMAP.md) — completed B-P, prepared Q-W and local-release boundary.
+- [Continuous Q-W execution](BATCH_CONTINUOUS_EXECUTION.md) — seven whole 40-capability
+  batches, next-run automatic advancement, per-batch gates/commits and recovery journal.
+- [U-W additional preparation](BATCH_U_W_PREPARATION.md) — 120 further capabilities,
+  exact-root audit, SDK limitations and combined Q-W overlap evidence.
+- [Batch U advanced local features](BATCH_U_ADVANCED_LOCAL_FEATURES_GAP_INVENTORY.md)
+  — contour laws, finishing diagnostics and support/limit-driven features; prepared 0/40.
+- [Batch V partition and volume](BATCH_V_PARTITION_VOLUME_GAP_INVENTORY.md)
+  — complete cell programs/interfaces, bounded volumes/voids and assembly provenance; prepared 0/40.
+- [Batch W lighting and frame capture](BATCH_W_VIEWER_LIGHTING_FRAME_CAPTURE_GAP_INVENTORY.md)
+  — viewer resources, capability-aware rendering and copied frame/WPF snapshots; prepared 0/40.
 - [Q-T broad-batch preparation](BATCH_Q_T_PREPARATION.md) — four prepared 40-capability
   waves, deduplicated root audit, source/lifetime closure and explicit baseline-delta protocol.
 - [Batch Q repair and topology](BATCH_Q_SHAPE_REPAIR_TOPOLOGY_GAP_INVENTORY.md) — protected

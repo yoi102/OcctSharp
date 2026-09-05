@@ -10,7 +10,21 @@ Batch B through Batch P are complete for their accepted local implementation sco
 Batch P closes one expanded 32-capability surface/UV workflow under ADR-0079/0080.
 It was not split into projection, seam, repair, exchange, viewer, or package checkpoints.
 
-## Prepared priorities: four broad Q-T batches
+## Next continuous run: Q-W, seven whole batches
+
+[ADR-0083](adr/0083-extended-batches-and-continuous-execution.md) adds three more
+40-capability scopes: U advanced contour/limit-driven features, V exact partition and
+volume workflows, W light/material/texture and copied-frame review. Together with Q-T,
+scope preparation is 7/7; implementation remains 0/280. Preview.20-22 extend the planned
+slots only; no package/API/DLL versions change during preparation.
+
+The [continuous runbook](BATCH_CONTINUOUS_EXECUTION.md) defines Q -> R -> S -> T -> U ->
+V -> W. On the next explicit start, finish each whole batch's gates and local commit,
+then automatically reconcile the next baseline and continue without routine confirmation.
+Failures are repaired inside their batch; hard external/authority blockers are reported.
+No scheduler, NuGet upload or GitHub push is part of this preparation or execution queue.
+
+## Initial prepared segment: four broad Q-T batches
 
 [ADR-0082](adr/0082-broad-batch-q-through-t-preparation.md) and
 [the Q-T preparation record](BATCH_Q_T_PREPARATION.md) freeze four 40-capability waves:

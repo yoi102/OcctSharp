@@ -171,6 +171,12 @@ units explicitly and retain the 1,000-line ceiling and standalone-header checks.
 The four proposed placements and integration owners are detailed in
 [Q-T preparation](BATCH_Q_T_PREPARATION.md); they do not change today's 42/34 source counts.
 
+ADR-0083 additionally plans U contour finishing/local draft/limited features and V
+partition regions/volume construction/region inspection as cohesive Modeling units;
+W lighting/appearance/frame capture belongs in Visualization and reuses Context.hxx.
+Do not enlarge the historical Features.cpp switch into another monolith. The source
+counts above remain unchanged; see [U-W preparation](BATCH_U_W_PREPARATION.md).
+
 ## Rules for subsequent work
 
 1. Put a new operation with its owning responsibility above; use a private contract

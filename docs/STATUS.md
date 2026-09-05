@@ -1,7 +1,7 @@
 # Current Status
 
 - Last updated: 2026-09-05
-- Latest preparation workstream: ADR-0082 prepares Q, R, S and T as four whole 40-capability batches (160 rows). Scope preparation 4/4; implementation 0/160. Exact-root audits, 153 SDK headers, 7 representative exports and 8 negative checks pass. No production API/DLL/version change; Q is next, not started.
+- Latest preparation workstream: ADR-0083 adds U/V/W (120 rows) to Q-T, forming seven whole 40-capability batches (280 rows). Scope preparation 7/7; implementation 0/280. Combined root audits, 223 SDK headers, 16 representative exports and 14 negative checks pass. Next explicit start runs Q-W continuously with full per-batch gates/local commits, without routine reconfirmation. Not started; no production API/DLL/version change.
 - Latest architecture workstream: ADR-0081 full historical Native source extraction is complete locally. Release/Debug Generator 91/91 and Runtime 180/180 pass, as does isolated actual Debug-native Runtime 180/180. All 29,402 native exports match and the managed API has zero additions/removals. Batch P remains complete; no API/ABI/package version changes.
 - Current phase: Batch B through Batch P are complete locally. Batch P completes one expanded 32-capability wave under ADR-0080 with Preview.15 local validation. No NuGet publication or GitHub push is part of batch delivery
 - Batch B engineering progress: 100% for the accepted local implementation scope (not a claim that every OCCT declaration is a managed API or that public release is ready)
@@ -23,6 +23,48 @@
 - Accepted surface: 16,353 generated manifest IDs plus 709 accepted manual stable IDs; Release and Debug native/managed builds, Generator 91/91, Runtime 180/180, discovery/report determinism, generated dependency closure, and dependency profiles 6/6 pass
 - Last complete full inventory: 116,272/116,272 declarations and 7,090/7,090 headers have final dispositions; `Emitted` 16,353, `Manual` 709, `SupportedUnselected` 0, `Skipped` 49,344, `Blocked` 49,866, pending 0, HD099 0; SHA256 `CCB81F47CE09A7712D346C16EE45A9AF783D000DCFC64DF4B69FA3C1DE96DF48`
 - Overall state: Preview.15 validates Batch P with twelve module assemblies plus the `OcctSharp` compatibility/facade assembly sharing one `OcctSharp.Native.dll` and one `OcctSharp.Native.win-x64` runtime package. Native-DLL splitting remains deliberately deferred. Validated identities are package 8.0.1-preview.15, managed assembly/file 0.1.0.0, native ABI 1.59, bridge 0.67.0, and schema 1.13. Every batch is locally packed, checked, and committed; publication requires a new explicit request
+
+### ADR-0083 U-W preparation and continuous Q-W execution
+
+- [U-W preparation](BATCH_U_W_PREPARATION.md) adds U advanced contour/local features,
+  V exact partition/material regions/volume construction, and W viewer lights/materials/
+  textures/copied frames. Each has 40 capability/acceptance rows; U-W implementation
+  is 0/120, combined Q-W implementation 0/280. Earlier Q-T scopes are preserved.
+- [The continuous runbook](BATCH_CONTINUOUS_EXECUTION.md) and machine-readable queue
+  lock Q -> R -> S -> T -> U -> V -> W for the next explicit implementation start.
+  Complete every batch's preparation delta, 40-row implementation, full local gates
+  and local commit, then advance without routine user confirmation. The resume journal
+  records baseline, implementation/gates and completion commits. This is not a scheduler
+  or a background execution promise; preparation-only work stops at this checkpoint.
+- Baseline preparation commit is `eacd0ed`; product baseline remains Preview.15 and
+  inventory SHA256 `CCB81F47CE09A7712D346C16EE45A9AF783D000DCFC64DF4B69FA3C1DE96DF48`.
+  Planned Preview.20-22 slots extend Q-T's Preview.16-19 reservations only. Current
+  package/ABI/bridge/schema, production sources, generated files and runtime bytes do not change.
+- U audits 44 exact roots/2,045 candidates; V 43/2,075; W 54/2,582. U-W union:
+  105 roots/4,290 IDs, including 1,886 Blocked, 927 Emitted, 181 Manual and 1,296 Skipped.
+  Its 2,379 additional IDs beyond Q-T are audit candidates, not newly migrated APIs.
+- Combined Q-W union: 219 roots/7,668 IDs, including 3,513 Blocked, 1,561 Emitted,
+  305 Manual and 2,289 Skipped. The 15,634 per-batch occurrences contain 7,966 repeats;
+  neither candidate occurrences nor classified declarations measure implementation.
+- Shared `eng/verify-prepared-batches.ps1` passes UVW and QW scopes: exact matrices,
+  dependency ordering, root partitions, repeated byte-identical audits, 223 combined
+  headers, 16 representative SDK symbols in existing CMake toolkits, and 14 combined
+  wrong-hash/input-overwrite negative checks. The original Q-T entry remains a wrapper.
+  U-W summary SHA256: `38404B079DDD71866085898B0FB248CBA5B41F1ADDA42AA3850160618A2B3A53`.
+  Q-W summary SHA256: `B62D2786E20D3B63016AF3811471EC2504FC42E7750AB610357E21D7FBA21458`.
+- The Q-T compatibility wrapper was rerun and preserves the original summary SHA256
+  `11CB6DA68AF4659AD14573A982F2DF068B1C12C5BA706427E8209FBDC68D2FB2`.
+  All 16 touched Markdown documents pass 297 local-link target checks and balanced
+  fences; whitespace checks pass. Production/generated/version/runtime files are unchanged.
+- Native source-layout audit passes: 42 units, 530 manual C exports and 22 unique shared
+  storage definitions; binary export comparison NOT RUN. Current source owners remain;
+  U/V future Modeling units and W Visualization units do not introduce new projects/DLLs.
+- SDK constraints explicitly include failed fillet partial results, material-zero and
+  mixed-dimension cells, MakerVolume non-intersection preconditions, retained texture
+  backing memory and real-HWND offscreen capture versus headless/D3DImage limits.
+- New API compilation/runtime/driver-success tests, packing, DLL refresh, hosted CI,
+  signing, NuGet publication and GitHub push: NOT RUN. Baseline tests are not reused
+  as evidence for unimplemented Q-W APIs.
 
 ### ADR-0082 broad Q-T preparation checkpoint
 
@@ -864,9 +906,10 @@ Product batches B through P are complete for their finite accepted local denomin
 Batch P closes the expanded 32-capability surface/UV wave at commit `5620ae5`.
 ADR-0081's complete historical Native source extraction is implemented and locally
 validated. All public contracts and existing algorithm bodies are preserved, with
-explicit source/private-header ownership. ADR-0082 now prepares Q-T, 40 capabilities
-each, with implementation 0/160. Next implementation is Q after baseline revalidation;
-this preparation-only checkpoint does not start API work.
+explicit source/private-header ownership. ADR-0082/0083 now prepare Q-W, 40 capabilities
+each, with implementation 0/280. The next explicitly started continuous run begins Q
+after baseline revalidation and advances through W after per-batch verification/local
+commits without routine confirmation. This checkpoint does not start API work.
 Batch delivery remains local validation and one commit; publication and GitHub push
 are excluded.
 
@@ -1584,9 +1627,10 @@ are excluded.
 ## Next tasks
 
 1. Preserve the completed ADR-0081 source boundaries and one native DLL in future work.
-2. On the next implementation request, revalidate Q's frozen baseline and implement its
-   entire 40-row repair/topology closure. Q-T preparation is complete; implementation
-   remains 0/40 each. R/S/T require explicit baseline deltas after preceding checkpoints.
+2. On the next continuous implementation start, follow BATCH_CONTINUOUS_EXECUTION:
+   Q -> R -> S -> T -> U -> V -> W. All seven scopes are prepared; implementation
+   remains 0/40 each. Revalidate each entry baseline, finish all gates, commit locally
+   and proceed to the next batch without routine confirmation; preserve hard stop boundaries.
 3. Keep local pack/check/commit separate from publication. No NuGet upload or GitHub
    push is authorized by completing this workstream.
 
@@ -1639,12 +1683,13 @@ The exact baseline hashes are recorded in the Preview.15 completion section abov
 
 ```text
 LOOP_STATE: CHECKPOINT_COMPLETE
-CURRENT_WORKSTREAM: ADR-0082 Q-T LARGE-BATCH PREPARATION COMPLETE
+CURRENT_WORKSTREAM: ADR-0083 U-W EXTENSION AND CONTINUOUS Q-W PREPARATION COMPLETE
 CURRENT_PRODUCT_BASELINE: B THROUGH P COMPLETE; P 32/32 COMMITTED 5620ae5
 ARCHITECTURE_PROGRESS: COMPLETE; INDEPENDENT COMPILE, ABI, RUNTIME, PACKAGE AND CLEAN-SOURCE GATES PASS
-PREPARATION_PROGRESS: Q/R/S/T 4/4; 40 CAPABILITIES EACH; IMPLEMENTATION 0/160
-NEXT_ACTION: ON IMPLEMENTATION REQUEST, REVALIDATE Q BASELINE AND COMPLETE ITS WHOLE 40-ROW WAVE
-NEXT_PRODUCT_BATCH: Q; R/S/T SCOPE-PREPARED, REBASE EXPLICITLY AFTER EACH COMPLETED CHECKPOINT
+PREPARATION_PROGRESS: Q/R/S/T/U/V/W 7/7; 40 CAPABILITIES EACH; IMPLEMENTATION 0/280
+CONTINUOUS_RUN: PREPARED, NOT STARTED; Q -> R -> S -> T -> U -> V -> W
+NEXT_ACTION: ON EXPLICIT START, REVALIDATE Q; FULL GATES AND LOCAL COMMIT PER BATCH, THEN ADVANCE WITHOUT ROUTINE CONFIRMATION
+NEXT_PRODUCT_BATCH: Q; ALL FOLLOWING SCOPES REQUIRE EXPLICIT BASELINE DELTAS AFTER PRECEDING COMMITS
 BINDING_COVERAGE: 16353 GENERATED PLUS 709 ACCEPTED MANUAL STABLE IDS
 FULL_PROFILE_ACCOUNTING: 116272 CLASSIFIED; 49866 BLOCKED; 49344 SKIPPED; ZERO PENDING/HD099
 LAST_COMPLETED_PRODUCT_VALIDATION: PREVIEW.15 GENERATOR 91/91, RUNTIME 177/177, FOCUSED P 13/13, CLEAN CONSUMERS AND LOCAL RELEASE GATES PASS

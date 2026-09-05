@@ -1,0 +1,199 @@
+{
+  "schemaVersion": "1.0",
+  "executionOrder": [
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W"
+  ],
+  "capabilities": 280,
+  "startCondition": "Explicit implementation-start request; this checkpoint is preparation only.",
+  "autoAdvanceAfterVerifiedLocalCommit": true,
+  "baselineRevalidationBeforeEveryBatch": true,
+  "localCommitPerCompletedBatch": true,
+  "allowNuGetPublish": false,
+  "allowGitHubPush": false,
+  "allowSkippedRequiredGates": false,
+  "batches": [
+    {
+      "batch": "Q",
+      "config": "config/batches/batch-q-shape-repair-topology.json",
+      "matrix": "BATCH_Q_SHAPE_REPAIR_TOPOLOGY_GAP_INVENTORY.md",
+      "capabilities": 40,
+      "requires": []
+    },
+    {
+      "batch": "R",
+      "config": "config/batches/batch-r-mesh-authoring-editing.json",
+      "matrix": "BATCH_R_MESH_AUTHORING_EDITING_GAP_INVENTORY.md",
+      "capabilities": 40,
+      "requires": []
+    },
+    {
+      "batch": "S",
+      "config": "config/batches/batch-s-guided-sweep-constrained-surface.json",
+      "matrix": "BATCH_S_GUIDED_SWEEP_CONSTRAINED_SURFACE_GAP_INVENTORY.md",
+      "capabilities": 40,
+      "requires": []
+    },
+    {
+      "batch": "T",
+      "config": "config/batches/batch-t-parametric-document-recompute.json",
+      "matrix": "BATCH_T_PARAMETRIC_DOCUMENT_RECOMPUTE_GAP_INVENTORY.md",
+      "capabilities": 40,
+      "requires": [
+        "Q",
+        "R",
+        "S"
+      ]
+    },
+    {
+      "batch": "U",
+      "config": "config/batches/batch-u-advanced-local-features.json",
+      "matrix": "BATCH_U_ADVANCED_LOCAL_FEATURES_GAP_INVENTORY.md",
+      "capabilities": 40,
+      "requires": [
+        "Q",
+        "S",
+        "T"
+      ]
+    },
+    {
+      "batch": "V",
+      "config": "config/batches/batch-v-partition-volume-workflows.json",
+      "matrix": "BATCH_V_PARTITION_VOLUME_GAP_INVENTORY.md",
+      "capabilities": 40,
+      "requires": [
+        "Q",
+        "R",
+        "T"
+      ]
+    },
+    {
+      "batch": "W",
+      "config": "config/batches/batch-w-viewer-lighting-frame-capture.json",
+      "matrix": "BATCH_W_VIEWER_LIGHTING_FRAME_CAPTURE_GAP_INVENTORY.md",
+      "capabilities": 40,
+      "requires": [
+        "R"
+      ]
+    }
+  ],
+  "sdkChecks": [
+    {
+      "batches": [
+        "Q"
+      ],
+      "toolkit": "TKShHealing",
+      "symbol": "FixWireGaps@ShapeFix_Wireframe"
+    },
+    {
+      "batches": [
+        "Q"
+      ],
+      "toolkit": "TKTopAlgo",
+      "symbol": "Perform@BRepBuilderAPI_Sewing"
+    },
+    {
+      "batches": [
+        "R"
+      ],
+      "toolkit": "TKMath",
+      "symbol": "RemoveDegenerated@Poly_CoherentTriangulation"
+    },
+    {
+      "batches": [
+        "S"
+      ],
+      "toolkit": "TKOffset",
+      "symbol": "SetLaw@BRepOffsetAPI_MakePipeShell"
+    },
+    {
+      "batches": [
+        "S"
+      ],
+      "toolkit": "TKOffset",
+      "symbol": "Add@BRepOffsetAPI_MakeFilling"
+    },
+    {
+      "batches": [
+        "T"
+      ],
+      "toolkit": "TKLCAF",
+      "symbol": "AddPrevious@TFunction_GraphNode"
+    },
+    {
+      "batches": [
+        "T"
+      ],
+      "toolkit": "TKCAF",
+      "symbol": "Solve@TNaming_Selector"
+    },
+    {
+      "batches": [
+        "U"
+      ],
+      "toolkit": "TKFillet",
+      "symbol": "Simulate@BRepFilletAPI_MakeFillet"
+    },
+    {
+      "batches": [
+        "U"
+      ],
+      "toolkit": "TKFillet",
+      "symbol": "AddDA@BRepFilletAPI_MakeChamfer"
+    },
+    {
+      "batches": [
+        "U"
+      ],
+      "toolkit": "TKFeat",
+      "symbol": "Perform@BRepFeat_MakeDPrism"
+    },
+    {
+      "batches": [
+        "V"
+      ],
+      "toolkit": "TKBO",
+      "symbol": "Perform@BOPAlgo_MakerVolume"
+    },
+    {
+      "batches": [
+        "V"
+      ],
+      "toolkit": "TKBO",
+      "symbol": "RemoveInternalBoundaries@BOPAlgo_CellsBuilder"
+    },
+    {
+      "batches": [
+        "V"
+      ],
+      "toolkit": "TKBO",
+      "symbol": "Perform@BOPAlgo_ShellSplitter"
+    },
+    {
+      "batches": [
+        "W"
+      ],
+      "toolkit": "TKService",
+      "symbol": "SetIntensity@Graphic3d_CLight"
+    },
+    {
+      "batches": [
+        "W"
+      ],
+      "toolkit": "TKService",
+      "symbol": "SetMetallic@Graphic3d_PBRMaterial"
+    },
+    {
+      "batches": [
+        "W"
+      ],
+      "toolkit": "TKV3d",
+      "symbol": "ToPixMap@V3d_View"
+    }
+  ]
+}

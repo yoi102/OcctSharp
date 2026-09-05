@@ -1,5 +1,15 @@
 # Architecture
 
+## Prepared U-W extensions
+
+[ADR-0083](adr/0083-extended-batches-and-continuous-execution.md) adds U contour/local
+features and V partition/volume work in cohesive Modeling units, and W lighting,
+appearance and frame capture in Visualization. T recipe execution remains higher-layer
+orchestration; Documents must not gain reverse dependencies. W CPU frame DTOs remain
+independent of WPF; the sample consumes copies. New viewer resource IDs stay within the
+existing context/thread lifetime. All files/contracts are planned, not implemented;
+one Native DLL and the existing module/source boundaries remain.
+
 ## Prepared Q-T source and dependency placement
 
 [ADR-0082](adr/0082-broad-batch-q-through-t-preparation.md) prepares four broader API
